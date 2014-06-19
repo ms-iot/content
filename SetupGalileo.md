@@ -25,9 +25,9 @@ permalink: /SetupGalileo.htm
     <div class="panel-body">This step is only required if your kit does not have an SD card with a Windows image.</div>
   </div>
   You will need to attain a microSD card (We suggest at least 8 GB) and reformat it.<br/>
-  <a href="http://codebox/wod/Project/FileDownload.aspx?DownloadId=c06723e3-5de7-e311-9daf-00155d199ab4&ReturnUrl=http%3a%2f%2fcodebox%2fRelease%2fProjectReleases.aspx%3fProjectName%3dwod%26ReleaseId%3d38861">Download apply-bootmedia.cmd</a>
+  <a href="<placeholder>">Download apply-bootmedia.cmd</a>
   <br/>
-  <a href="http://codebox/wod/Project/FileDownload.aspx?DownloadId=945ad032-66f6-e311-884a-00155d190355&ReturnUrl=http%3a%2f%2fcodebox%2fRelease%2fProjectReleases.aspx%3fProjectName%3dwod%26ReleaseId%3d38861">Download the .wim</a>
+  <a href="<placeholder>">Download the .wim</a>
   <br/>
   Then run the following from an elevated Command Prompt:<br/>
   <kbd>apply-bootmedia.cmd -destination {YourSDCardDrive} -image {.wimFile} -hostname {WhateverYouFeelLike} -password {WhateverYouFeelLike}</kbd>
@@ -83,5 +83,5 @@ permalink: /SetupGalileo.htm
   </ol>
   <hr/>
 
-  <a class="btn btn-default" href="Index.htm" role="button">Return to homepage</a>
+  <a class="btn btn-default" href="index.htm" role="button">Return to homepage</a>
   <a class="btn btn-default" href="SampleApps.htm" role="button">Continue to Samples &raquo;</a>

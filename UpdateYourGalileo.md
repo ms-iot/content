@@ -116,7 +116,6 @@ permalink: /UpdateYourGalileo.htm
       </ul>
     </li>
   </ol>
-  <hr/>
-
-  <a class="btn btn-default" href="Index.htm" role="button">Return to homepage</a>
+  
+  <a class="btn btn-default" href="index.htm" role="button">Return to homepage</a>
   <a class="btn btn-default" href="SetupPC.htm" role="button">Continue to Step 2 &raquo;</a>

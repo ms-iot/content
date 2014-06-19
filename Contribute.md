@@ -14,38 +14,26 @@ permalink: /Contribute.htm
 <div class="container">
   <h1>Checkout the repository</h1>
   <p>If you want to contribute to the development kit, read on!</p>
-  <p>
-    Our source control system is Git. Familiarize yourself with git by reading through <a href="http://git-scm.com/documentation">The Git documentation</a>.
-  </p>
-  <p>
-    Please install git from <a href="http://git-scm.com/">Git-scm.com</a>
-  </p>
-  <h4>Set your username:</h4>
-  <kbd>
-    git config --global user.name &quot;<i>Username</i>&quot;
-  </kbd><br/>
-  <kbd>
-    git config --global user.name &quot;<i>Microsoft Email</i>&quot;
-  </kbd><br/>
+  <p>The first time you'd like to commit a change to a repository, perform the following:</p>
 
-  <h4>Clone the repository and switch to develop branch</h4>
-  Open a Windows command prompt and issue the following commands<br/>
 
-  <kbd>cd /d c:\</kbd><br/>
-  <kbd>git clone http://vstfcodebox:8080/tfs/Iota/_git/wod</kbd><br/>
-  <kbd>git checkout develop</kbd>
-  <p>
-    This will clone the git repository into a directory called <kbd>c:\wod</kbd>.
-  </p>
-  <div class="panel panel-info">
-    <div class="panel-heading">NOTE:</div>
-    <div class="panel-body">
-      If you get an error, please send mail to <a href="mailto:wodcontrib@microsoft.com">WodContrib</a> with the output from this command.
-    </div>
-  </div>
-
+  <ol>
+  <li>Familiarize yourself with git by reading through <a href="https://help.github.com/">the GitHub documentation</a>.</li>
+  <li>Create a GitHub account by starting at <a href="https://github.com/">GitHub home</a></li>
+  <li>Now that you have an account, you need to install Git on your computer. Please follow the instructions on <a href="https://help.github.com/articles/set-up-git">Setting up Git tutorial</a>.</li>
+  <li>Once you have Git installed, fork this repository. Goto the top of the page and click the <b>Fork</b> button. <br/>You now have a fork of this repository on GitHub which you can use to edit content.</li>
+  <li>Clone your repository to your machine. For this open GitBash or Windows command prompt and clone the repository:<br>
+    <p><kbd>git clone https://github.com/&lt;your user name&gt;/content.git</kbd></p>
+    <p>Now create a reference to the root repository by issuing the following:</p>
+    <p>
+      <kbd>
+        cd content<br/>
+        git remote add upstream https://github.com/ms-iot/content.git<br/>
+        git fetch upsteam
+      </kbd>
+    </p>
+  </ol>
   <hr/>
-
   <h1>Making changes</h1>
   <p>
     We will be following the GitFlow branching methodology as described at <a href="https://www.atlassian.com/git/workflows#!workflow-gitflow">Altassian</a>. Do not check directly into master.
@@ -72,13 +60,6 @@ permalink: /Contribute.htm
         For Example: <br/>
         <kbd>git checkout -b lamadio_arduino_firmata_port</kbd><br/>
       </p>
-      <div class="panel panel-info">
-        <div class="panel-heading">Git note:</div>
-        <div class="panel-body">
-          Git is not like source depot. Branches are intended to be short lived for a specific feature, then removed in order to keep history clean.<br/>
-          Usually only one person works in a feature branch at a time.
-        </div>
-      </div>
     </li>
     <li>Make your edits, build and test. </li>
     <li>

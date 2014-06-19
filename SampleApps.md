@@ -33,4 +33,4 @@ permalink: /SampleApps.htm
   </div>
   <hr/>
 
-  <a class="btn btn-default" href="Index.htm" role="button">Return to homepage</a>
+  <a class="btn btn-default" href="index.htm" role="button">Return to homepage</a>

@@ -115,3 +115,7 @@ permalink: /SetupPC.htm
       <kbd>Password: admin</kbd><br/>
     </div>
   </div>
+
+  <a class="btn btn-default" href="index.htm" role="button">Return to homepage</a>
+  <a class="btn btn-default" href="SetupGalileo.htm" role="button">Continue to Setting up your Galileo &raquo;</a>
+
