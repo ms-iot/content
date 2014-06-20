@@ -109,10 +109,9 @@ Under *Projects and Solutions*, select *General*
 ![Package Config](images/Nuget_PackageSourceConfig_VSE2013.png)
 
 ##Build the Nuget package
-Please download the Nuget command line utility [nuget.exe](http://nuget.org/nuget.exe) into `c:\wod\Source\cppgalileosdk`
+Please download the Nuget command line utility [nuget.exe](http://nuget.org/nuget.exe) into the Galileo-SDK root folder.
 
 {% highlight PowerShell %}
-cd /d c:\wod\Source\cppgalileosdk
 build-nupkg.cmd
 {% endhighlight %}
 
