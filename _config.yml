@@ -8,3 +8,4 @@ url: "http://windowsondevices.com"
 # Build settings
 markdown: kramdown
 permalink: pretty
+hylighter: pygments
