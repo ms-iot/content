@@ -34,13 +34,13 @@ void loop()
 {
   if (state)
   {
-    GpioWrite(QUARK_LED_PIN, 1); // Writes to the pin, setting it's value to HIGH
+    GpioWrite(QUARK_LED_PIN, 1); // Writes to the pin, setting its value to HIGH
     CustomLogging("LED OFF\n");
     state = !state;
   }
   else
   {
-    GpioWrite(QUARK_LED_PIN, 0); // Writes to the pin, setting it's value to LOW
+    GpioWrite(QUARK_LED_PIN, 0); // Writes to the pin, setting its value to LOW
     CustomLogging("LED ON\n");
     state = !state;
   }
