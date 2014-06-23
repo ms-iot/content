@@ -65,7 +65,7 @@ permalink: /SetupGalileo.htm
       <br/>
       Make sure to allow it through the firewall when the security dialog comes up.
       <br/>
-      <img src="images\GalileoWatcherFirewallDialog.png">
+      <img src="images\GalileoWatcherFirewallDialog.PNG">
       <br/>
       Once your Galileo board finishes booting up (SD LED should stop flashing with activity) it should begin broadcasting its IP Address and Host Name. This data should show up on GalileoWatcher like below.
     </li>
