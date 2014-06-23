@@ -130,11 +130,11 @@ Now you need to make changes to the Nuget, you’ll need to uninstall it first. 
 
 Now Uninstall the Galileo SDK by clicking the uninstall button:
 
-!(images/Nuget_Install.png)
+![Nuget Install](images/Nuget_Install.png)
 
 Then select *Online* and *Local Source*
 
-!(images/Nuget_ReInstall.png)
+![Nuget Reinstall](images/Nuget_ReInstall.png)
 
 ###Install it!
 Your updates will be there.
