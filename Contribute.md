@@ -40,7 +40,9 @@ git fetch upsteam
 ___
 
 ##Making changes
-We will be following the GitFlow branching methodology as described at [Altassian](https://www.atlassian.com/git/workflows#!workflow-gitflow). Do not check directly into master.
+We will be following the GitFlow branching methodology as described at [Altassian](https://www.atlassian.com/git/workflows#!workflow-gitflow). Do not check directly into master. 
+
+If you are editing a fork of ms-iot/content, please branch off of gh_pages.
 
 ###Making a change
 1. Open GitBash
