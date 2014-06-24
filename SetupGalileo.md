@@ -90,7 +90,7 @@ permalink: /SetupGalileo.htm
     <div class="panel-heading">NOTE:</div>
     <div class="panel-body">
       Your Galileo has been assigned a username and password:<br/>
-      <kbd>Username: \Administrator</kbd><br/>
+      <kbd>Username: Administrator</kbd><br/>
       <kbd>Password: admin</kbd><br/>
     </div>
   </div>
