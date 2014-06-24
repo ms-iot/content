@@ -109,10 +109,9 @@ permalink: /SetupPC.htm
   </p>
   <div class="panel panel-info">
     <div class="panel-heading">NOTE:</div>
-    <!-- Telnet doesn't use backslash to remove domain -->
     <div class="panel-body">
       Your Galileo has been assigned a username and password:<br/>
-      <kbd>Username: Administrator</kbd><br/>
+      <kbd>Username: \Administrator</kbd><br/>
       <kbd>Password: admin</kbd><br/>
     </div>
   </div>

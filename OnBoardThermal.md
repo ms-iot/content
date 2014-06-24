@@ -12,14 +12,6 @@ Create a new project and configure for deployment like was done in [Hello Blinky
 # Code
 
 {% highlight C++ %}
-#include "stdafx.h"
-#include "arduino.h"
-
-int _tmain(int argc, _TCHAR* argv[])
-{
-  return RunArduinoSketch();
-}
-
 int size = 1000; // the size of our buffer string
 char temp[1000]; // for our buffer string
 int tempPin = -1; // The on-board thermal sensor

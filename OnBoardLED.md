@@ -13,14 +13,6 @@ Create a new project and configure for deployment like was done in [Hello Blinky
 # Code
 
 {% highlight C++ %}
-#include "stdafx.h"
-#include "arduino.h"
-
-int _tmain(int argc, _TCHAR* argv[])
-{
-  return RunArduinoSketch();
-}
-
 //This application flashes the GP LED on the Galileo board by calling the direct GPIO Writes and Sets
 static LONG QUARK_LED_PIN = QRK_LEGACY_RESUME_SUS1; //Uses the Quark legacy GPIO Pins
 bool state = false; // keeps track of the state of the GP LED

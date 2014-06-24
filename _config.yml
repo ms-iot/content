@@ -7,5 +7,6 @@ url: "http://windowsondevices.com"
 
 # Build settings
 markdown: kramdown
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
 permalink: pretty
-hylighter: pygments
+highlighter: pygments
