@@ -15,33 +15,31 @@ permalink: /HelloBlinky.htm
   <img src="images/Nuget_AppCreate.png"/></p>
 
   <p>Open <kbd>main.cpp</kbd> and replace the code with the following:<br>
-  <pre>
-    <code>
-      #include "stdafx.h"
-      #include "arduino.h"
+{% highlight C++ %}
+#include "stdafx.h"
+#include "arduino.h"
 
-      int _tmain(int argc, _TCHAR* argv[])
-      {
-        return RunArduinoSketch();
-      }
+int _tmain(int argc, _TCHAR* argv[])
+{
+  return RunArduinoSketch();
+}
 
-      int led = 13;  // This is the pin the LED is attached to.
+int led = 13;  // This is the pin the LED is attached to.
 
-      void setup()
-      {
-        pinMode(led, OUTPUT); // Configure the pin for OUTPUT so you can turn on the LED.
-      }
+void setup()
+{
+  pinMode(led, OUTPUT); // Configure the pin for OUTPUT so you can turn on the LED.
+}
 
-      // the loop routine runs over and over again forever:
-      void loop()
-      {
-        digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
-        delay(1000);               // wait for a second
-        digitalWrite(led, HIGH);    // turn the LED on by making the voltage HIGH
-        delay(1000);               // wait for a second
-      }
-    </code>
-  </pre>
+// the loop routine runs over and over again forever:
+void loop()
+{
+  digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);               // wait for a second
+  digitalWrite(led, HIGH);    // turn the LED on by making the voltage HIGH
+  delay(1000);               // wait for a second
+}
+{% endhighlight %}
 
   <h3>Configure remote debugging</h3>
 

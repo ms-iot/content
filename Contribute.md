@@ -21,75 +21,73 @@ We're actively accepting work for the following areas:
 
 
 1. Familiarize yourself with git by reading through the [GitHub documentation](https://help.github.com/ "GitHub help")
+1. Familiarize yourself with the GitHub app for Windows via the [GitHub app documentation](https://help.github.com/categories/58/articles)
 1. Create a GitHub account by starting at [GitHub home](https://github.com/)
-1. Now that you have an account, you need to install Git on your computer. Please follow the instructions on [Setting up Git tutorial](https://help.github.com/articles/set-up-git)
-1. Once you have Git installed, fork this repository. Goto the top of the page and click the *Fork* button. 
-You now have a fork of the repository you are editing on GitHub which you can use to edit content.
-1. Clone your repository to your machine. For this open GitBash or Windows command prompt and clone the repository:
-  {% highlight bash %}
-  git clone https://github.com/<your user name>/content.git
-  {% endhighlight %}
+1. Now that you have an account, you need to install the [GitHub app](https://windows.github.com/) on your computer.
+1. Goto [GitHub home](https://github.com/) and navigate to the repository you'd like to contribute to, click *Fork*  
+  ![Fork](images/GitHubFork.png)
 
-  Now create a reference to the root repository by issuing the following:
-  
-  {% highlight bash %}
-cd content
-git remote add upstream https://github.com/ms-iot/content.git
-git fetch upsteam
-  {% endhighlight %}
+1. On the right hand side of the repository, you'll see 'Clone in Desktop'  
+  ![Clone](images/GitHubClone.png)   
+
 ___
 
 ##Making changes
-We will be following the GitFlow branching methodology as described at [Altassian](https://www.atlassian.com/git/workflows#!workflow-gitflow). Do not check directly into master. 
+If you are editing a fork of ms-iot/content, please submit pull request off of gh_pages.
 
-If you are editing a fork of ms-iot/content, please branch off of gh_pages.
+1. Make your edits, build and test. Use the repository's readme for specific editing requirements, build instructions, and testing method.
+1. Add your edits via the GitHub app  
+  ![Commit](images/GitHubCommit.png) 
 
-###Making a change
-1. Open GitBash
-1. Create a branch for your feature
-
-   {% highlight bash %}
-   git pull upstream master:<new branch name>`
-   {% endhighlight %}
-  
-   For Example:
-
-   {% highlight bash %}
-   git pull upstream master:firmata_port
-   {% endhighlight %}
-    
-1. Checkout your branch
-
-   {% highlight bash %}
-   git checkout <new branch name>
-   {% endhighlight %}
-
-1. Make your edits, build and test.
-1. Add your edits and commit
-
-   {% highlight bash %}
-git add .
-git commit -v -a -m "<Describe the changes made in this commit>"
-   {% endhighlight %}
-
-1. Push your changes to your fork
-   {% highlight bash %}
-git push origin <new branch name>
-   {% endhighlight %}
-
+1. Push your changes to your fork  
+  ![Sync](images/GitHubSync.png) 
 
 ###Submitting a Pull Request
 1. Goto [GitHub](GitHub.com) and navigate to your fork
-1. Click the *Pull Request* at the top of the page
-1. Ensure that the Base Branch is `ms-iot/content@master` and the Head branch is `<your username>/content@<branch name>`
+1. Click the *Pull Request* at the top of the page  
+  ![Pull](images/GitHubPullRequest.png)
 1. Click the Update Commit Range
 1. Give your pull request a title and describe the change to be made, including the task or issue number.
 1. Submit your pull request
 
 ___
 
+#Iterating on the Documentation
+Fork the ms-iot/content as described above in the contribute section.. Ensure you are working in the gh_pages branch.
+
+### Set up Jekyll on Windows
+1. Install [Ruby](http://rubyinstaller.org/downloads/) and add it to your system path environment variable
+1.   Install [Ruby DevKit](http://rubyinstaller.org/downloads/), extract into a permanent folder, and add it to your system path environment variable
+1. Install [Python 2.7.7](https://www.python.org/downloads/) or above
+1. Install jekyll using ruby gems
+{% highlight PowerShell %}
+gem install jekyll
+{% endhighlight %}
+1. Uninstall pygments.rb - (it currently is incompatible with windows)
+{% highlight PowerShell %}
+gem uninstall pygments.rb
+{% endhighlight %}
+1. Install pygments.rb version 0.5.0 using ruby gems
+{% highlight PowerShell %}
+gem install pygments.rb --version 0.5.0
+{% endhighlight %}
+
+### Iterating on documentation
+1. Launch a GitShell from the GitHub app
+1. Launch your [favorite text editor](http://www.sublimetext.com/).
+1. from within the content folder
+{% highlight PowerShell %}
+jekyll serve --watch
+{% endhighlight %}
+1. If prompted by the firewall, allow Jekyll to serve content
+1. Open your web browser and point it to the local server. [localhost:4000](localhost:4000) is the default
+1. Make changes using [Jekyll's Kramdown flavored Markdown](http://jekyllrb.com/docs/home/)
+
+
+___
+
 #Iterating on the Galileo SDK
-Fork the Galileo-SDK as described above.
+Fork  ms-iot/galileo-sdk as described above in the contribute section.
 
 ##Configure Visual Studio
 You’ll want to redirect visual studio’s *user templates* to the repository you are working in.

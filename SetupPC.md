@@ -10,7 +10,6 @@ permalink: /SetupPC.htm
 
   <h2> Visual Studio </h2>
   <p>Install and configure Visual Studio 2013.</p>
-
   <div class="panel-group" id="accordion">
     <div class="panel panel-default">
       <div class="panel-heading">
