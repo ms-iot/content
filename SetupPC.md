@@ -104,17 +104,6 @@ permalink: /SetupPC.htm
       <li>Restart your PC</li>
     </ol>
   </p>
-  <p>
-    On your desktop select Start->Run and type <kbd>telnet mygalileo</kbd>.<br/><img src="images\TelnetLogin.png"/>
-  </p>
-  <div class="panel panel-info">
-    <div class="panel-heading">NOTE:</div>
-    <div class="panel-body">
-      Your Galileo has been assigned a username and password:<br/>
-      <kbd>Username: \Administrator</kbd><br/>
-      <kbd>Password: admin</kbd><br/>
-    </div>
-  </div>
 
   <a class="btn btn-default" href="index.htm" role="button">Return to homepage</a>
   <a class="btn btn-default" href="SetupGalileo.htm" role="button">Continue to Setting up your Galileo &raquo;</a>
