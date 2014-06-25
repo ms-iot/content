@@ -2,7 +2,7 @@
 Please refer to our [contribution page](http://ms-iot.github.io/content/Contribute.htm) for general guidelines on how to contribute.
 
 #Contributing to documentation
-### Set up Jekyll on Windows
+### Setting up Jekyll on Windows
 1. Install [Ruby](http://rubyinstaller.org/downloads/) and add it to your system path environment variable
 1. Install [Ruby DevKit](http://rubyinstaller.org/downloads/), extract into a permanent folder, and add it to your system path environment variable
 1. Install [Python 2.7.7](https://www.python.org/downloads/) or above
