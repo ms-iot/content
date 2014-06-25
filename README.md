@@ -5,7 +5,7 @@ Please refer to our [contribution page](http://ms-iot.github.io/content/Contribu
 ### Setting up Jekyll on Windows
 1. Install [Ruby](http://rubyinstaller.org/downloads/) and add it to your system path environment variable
 1. Install [Ruby DevKit](http://rubyinstaller.org/downloads/), extract into a permanent folder, and add it to your system path environment variable
-1. Install [Python 2.7.7](https://www.python.org/downloads/) or above
+1. Install [Python 2.7.7](https://www.python.org/downloads/)
 1. Install jekyll using ruby gems
 {% highlight PowerShell %}
 gem install jekyll
