@@ -11,9 +11,9 @@ permalink: /SetupGalileo.htm
   <h2>What is in the box?</h2>
   Included with your Windows for Galileo development kit are the following:
   <ul>
-    <li>Galileo SoC</li>
+    <li>Intel Galileo</li>
     <li>Power Adapter</li>
-    <li>SD Card (<i>containing the Windows image</i>)</li>
+    <li>SD card case conaining a microSD card in an SD card adapter</li>
     <li>Ethernet cable</li>
   </ul>
   If you do NOT have an SD card containing the Windows image, follow the steps below to build your own image.
@@ -22,25 +22,29 @@ permalink: /SetupGalileo.htm
   <h2>Building your own image</h2>
   <div class="panel panel-info">
     <div class="panel-heading">NOTE:</div>
-    <div class="panel-body">This step is only required if your kit does not have an SD card with a Windows image.</div>
+    <div class="panel-body">This step is only required if your kit does not have an microSD card with a Windows image.</div>
   </div>
   You will need to attain a microSD card (We suggest at least 8 GB) and reformat it.<br/>
-  <a href="<placeholder>">Download apply-bootmedia.cmd</a>
+  <a href="http://go.microsoft.com/fwlink/?LinkID=403150">Download the Windows package.</a>
   <br/>
-  <a href="<placeholder>">Download the .wim</a>
-  <br/>
-  Then run the following from an elevated Command Prompt:<br/>
-  <kbd>apply-bootmedia.cmd -destination {YourSDCardDrive} -image {.wimFile} -hostname {WhateverYouFeelLike} -password {WhateverYouFeelLike}</kbd>
+  Unzip the downloaded Windows package.<br/>
+  Run the included script from an <b>elevated</b> Command Prompt:<br/>
+  <kbd>apply-bootmedia.cmd -destination {YourSDCardDrive} -image {.wimFile} -hostname mygalileo -password admin</kbd><br/>
   <hr/>
 
-  <h2>Put your micro-SD card into your galileo in the micro-SD card slot</h2>
+  <h2>Insert the microSD card</h2>
+  <ol>
+    <li>Open the SD card transport case</li>
+    <li>Remove the SD card adapter from the case</li>
+    <li>Slide the microSD card from the adapter</li>
+    <li>Insert the microSD card into the Galileo's microSD card slot near the power port</li>
+  </ol>
   <hr/>
 
   <h2>Connect Ethernet on Galileo to Ethernet Directly to PC or Laptop</h2>
   Connecting the Galileo directly to your computer will allow you to communicate with just your Galileo. You will still have internet connectivity, and your computer will be able to communicate with your Galileo.
   <ol>
     <li>Connect one end to the Ethernet port on your Galileo</li>
-    <li>Connect the other end to the USB Ethernet adapter.</li>
     <li>Connect the other end to the USB Ethernet adapter.</li>
     <li>Plug the USB Ethernet adapter into your PC</li>
   </ol>
@@ -53,7 +57,7 @@ permalink: /SetupGalileo.htm
   </div>
 
   <ol>
-    <li>You should see activity on the SD light as it boots (bottom left of this picture, circled in yellow).</li>
+    <li>You should see activity on the microSD light as it boots (bottom left of this picture, circled in yellow).</li>
     <br/>
     <p>
       <img src="images\SDLed.png"/>
@@ -67,7 +71,7 @@ permalink: /SetupGalileo.htm
       <br/>
       <img src="images\GalileoWatcherFirewallDialog.PNG">
       <br/>
-      Once your Galileo board finishes booting up (SD LED should stop flashing with activity) it should begin broadcasting its IP Address and Host Name. This data should show up on GalileoWatcher like below.
+      Once your Galileo board finishes booting up (microSD LED should stop flashing with activity) it should begin broadcasting its IP Address and Host Name. This data should show up on GalileoWatcher like below.
     </li>
     <p>
       <img src="images\GalileoWatcherExample.png"/>
