@@ -34,6 +34,7 @@ ___
 
 ##Making changes
 If you are editing a fork of ms-iot/content, please submit pull request off of gh_pages.
+If you are editing a fork of ms-iot/galileo-sdk, please submit pull request off of develop.
 
 1. Make your edits, build and test. Use the repository's readme for specific editing requirements, build instructions, and testing method.
 1. Add your edits via the GitHub app  
@@ -46,43 +47,8 @@ If you are editing a fork of ms-iot/content, please submit pull request off of g
 1. Goto [GitHub](GitHub.com) and navigate to your fork
 1. Click the *Pull Request* at the top of the page  
   ![Pull](images/GitHubPullRequest.png)
-1. Click the Update Commit Range
 1. Give your pull request a title and describe the change to be made, including the task or issue number.
 1. Submit your pull request
-
-___
-
-#Iterating on the Documentation
-Fork the ms-iot/content as described above in the contribute section.. Ensure you are working in the gh_pages branch.
-
-### Set up Jekyll on Windows
-1. Install [Ruby](http://rubyinstaller.org/downloads/) and add it to your system path environment variable
-1.   Install [Ruby DevKit](http://rubyinstaller.org/downloads/), extract into a permanent folder, and add it to your system path environment variable
-1. Install [Python 2.7.7](https://www.python.org/downloads/) or above
-1. Install jekyll using ruby gems
-{% highlight PowerShell %}
-gem install jekyll
-{% endhighlight %}
-1. Uninstall pygments.rb - (it currently is incompatible with windows)
-{% highlight PowerShell %}
-gem uninstall pygments.rb
-{% endhighlight %}
-1. Install pygments.rb version 0.5.0 using ruby gems
-{% highlight PowerShell %}
-gem install pygments.rb --version 0.5.0
-{% endhighlight %}
-
-### Iterating on documentation
-1. Launch a GitShell from the GitHub app
-1. Launch your [favorite text editor](http://www.sublimetext.com/).
-1. from within the content folder
-{% highlight PowerShell %}
-jekyll serve --watch
-{% endhighlight %}
-1. If prompted by the firewall, allow Jekyll to serve content
-1. Open your web browser and point it to the local server. [localhost:4000](localhost:4000) is the default
-1. Make changes using [Jekyll's Kramdown flavored Markdown](http://jekyllrb.com/docs/home/)
-
 
 ___
 
@@ -132,7 +98,7 @@ Now Uninstall the Galileo SDK by clicking the uninstall button:
 
 Then select *Online* and *Local Source*
 
-![Nuget Reinstall](images/Nuget_ReInstall.png)
+![Nuget Reinstall](images/Nuget_Reinstall.png)
 
 ###Install it!
 Your updates will be there.
@@ -141,15 +107,12 @@ Your updates will be there.
 ### Notes!
 * While you can change your local headers, they will get nuked when reinstalling the nuget package.
 * Don’t check in your packages...
-* Don’t check in Binaries
+* Don’t check in binaries
 * You do not need to bump the version when you commit – we’ll bump at release. This requires a change to EVERY project. Nuget doesn’t have wildcards as far as I can tell.
 
 ___
 
 #Best Practices
-
-##Do not check directly into develop or master!
-Please create feature branches for any changes. This allows us to code review before pulling into develop.
 
 ##Do not check in binaries
 Git is not a good binary store. Once a binary is added to the repository, it will be there forever unless extraordinary actions are taken.

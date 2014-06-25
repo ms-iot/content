@@ -21,7 +21,7 @@ permalink: /SetupPC.htm
       </div>
       <div id="collapseOne" class="panel-collapse collapse">
         <div class="panel-body">
-          Please install the <a href="">Windows Development Kit for IoT</a>
+          Please install the <a href="http://go.microsoft.com/fwlink/?LinkID=403151">Windows Development Kit for IoT</a>
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@ permalink: /SetupPC.htm
               Install the <a href="http://visualstudiogallery.msdn.microsoft.com/4ec1526c-4a8c-4a84-b702-b21a8f5293ca">Nuget package manager</a> for Visual Studio 2013
             </li>
             <li>
-              Install the <a href="">Windows Development Kit for IoT</a>
+              Install the <a href="http://go.microsoft.com/fwlink/?LinkID=403151">Windows Development Kit for IoT</a>
             </li>
           </ol>
         </div>
@@ -64,7 +64,7 @@ permalink: /SetupPC.htm
               Install the <a href="http://visualstudiogallery.msdn.microsoft.com/4ec1526c-4a8c-4a84-b702-b21a8f5293ca">Nuget package manager</a> for Visual Studio 2013
             </li>
             <li>
-              Install the <a href="">Windows Development Kit for IoT</a>
+              Install the <a href="http://go.microsoft.com/fwlink/?LinkID=403151">Windows Development Kit for IoT</a>
             </li>
           </ol>
         </div>
