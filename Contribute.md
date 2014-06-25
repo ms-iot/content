@@ -34,6 +34,7 @@ ___
 
 ##Making changes
 If you are editing a fork of ms-iot/content, please submit pull request off of gh_pages.
+If you are editing a fork of ms-iot/galileo-sdk, please submit pull request off of develop.
 
 1. Make your edits, build and test. Use the repository's readme for specific editing requirements, build instructions, and testing method.
 1. Add your edits via the GitHub app  
