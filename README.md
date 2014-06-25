@@ -1,5 +1,5 @@
 #Contribute
-Please refer to our [contribution page](ms-iot.github.io/content/Contribute.htm) for general guidelines on how to contribute.
+Please refer to our [contribution page](http://ms-iot.github.io/content/Contribute.htm) for general guidelines on how to contribute.
 
 #Contributing to documentation
 ### Set up Jekyll on Windows
