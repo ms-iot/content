@@ -29,10 +29,10 @@ permalink: /ContactUs.htm
       </p>
     </div>
     <div class="col-md-4">
-      <h2>Reddit</h2>
-      <p>Microsoft monitors a Subreddit called /r/WindowsOnDevices</p>
+      <h2>MSDN: forum</h2>
+      <p>Post questions and see responses about the Developer Program on the MSDN forums.</p>
       <p>
-        <a class="btn btn-default" href="http://www.reddit.com/r/WindowsOnDevices/" role="button">View details &raquo;</a>
+        <a class="btn btn-default" href="http://social.msdn.microsoft.com/Forums/windowshardware/en-US/home?forum=HardwareBoards" role="button">View details &raquo;</a>
       </p>
     </div>
     <div class="col-md-4">
@@ -40,17 +40,6 @@ permalink: /ContactUs.htm
       <p>Our community monitors and answers questions on Stack Overflow tagged WindowsOnDevices.</p>
       <p>
         <a class="btn btn-default" href="http://stackoverflow.com/questions/tagged/windowsondevices" role="button">View details &raquo;</a>
-      </p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4">
-    </div>
-    <div class="col-md-4">
-      <h2>Twitter</h2>
-      <p>Like 140 character snipits? Our Twitter will keep you up to date.</p>
-      <p>
-        <a class="btn btn-default" href="mailto:IoTQuark@microsoft.com" role="button">View details &raquo;</a>
       </p>
     </div>
   </div>
