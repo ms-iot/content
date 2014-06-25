@@ -7,11 +7,11 @@ permalink: /ContactUs.htm
 
 <div class="jumbotron">
   <div class="container">
-  <h1>Contact Us</h1>
-  <p>
-    Thank you for your interest in the Windows Developer Program for IoT on Intel Galileo.
-    <br/>The following forums of communication are monitored by the engineering team and we are eager to help!
-  </p>
+    <h1>Contact Us</h1>
+    <p>
+        Thank you for your interest in the Windows Developer Program for IoT on Intel Galileo.
+        <br/>The following forums of communication are monitored by the engineering team and we are eager to help!
+    </p>
   </div>
 </div>
 

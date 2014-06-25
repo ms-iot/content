@@ -86,6 +86,19 @@ permalink: /SetupGalileo.htm
     </p>
   </ol>
   <hr/>
+  <h2>Now you can telnet into your Galileo</h2>
+  <p>
+    On your desktop select Start->Run and type <kbd>telnet mygalileo</kbd>.<br/><img src="images\TelnetLogin.png"/>
+  </p>
+  <div class="panel panel-info">
+    <div class="panel-heading">NOTE:</div>
+    <div class="panel-body">
+      Your Galileo has been assigned a username and password:<br/>
+      <kbd>Username: Administrator</kbd><br/>
+      <kbd>Password: admin</kbd><br/>
+    </div>
+  </div>
+  <hr/>
 
   <a class="btn btn-default" href="index.htm" role="button">Return to homepage</a>
   <a class="btn btn-default" href="SampleApps.htm" role="button">Continue to Samples &raquo;</a>
