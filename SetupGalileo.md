@@ -25,12 +25,11 @@ permalink: /SetupGalileo.htm
     <div class="panel-body">This step is only required if your kit does not have an microSD card with a Windows image.</div>
   </div>
   You will need to attain a microSD card (We suggest at least 8 GB) and reformat it.<br/>
-  <a href="<placeholder>">Download apply-bootmedia.cmd</a>
+  <a href="http://go.microsoft.com/fwlink/?LinkID=403150">Download the Windows package.</a>
   <br/>
-  <a href="<placeholder>">Download the .wim</a>
-  <br/>
-  Then run the following from an elevated Command Prompt:<br/>
-  <kbd>apply-bootmedia.cmd -destination {YourSDCardDrive} -image {.wimFile} -hostname {WhateverYouFeelLike} -password {WhateverYouFeelLike}</kbd>
+  Unzip the downloaded Windows package.<br/>
+  Run the included script from an <b>elevated</b> Command Prompt:<br/>
+  <kbd>apply-bootmedia.cmd -destination {YourSDCardDrive} -image {.wimFile} -hostname mygalileo -password admin</kbd><br/>
   <hr/>
 
   <h2>Insert the microSD card</h2>
