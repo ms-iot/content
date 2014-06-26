@@ -26,8 +26,8 @@ permalink: /UpdateYourGalileo.htm
   <hr/>
 
   <h2>Flashing your Galileo's firmware</h2>
-  <p>Flashing your Galileo's firmware you to use a terminal program to connect to the Galileo at boot. There are <b>timing sensitive commands</b>, so it would be helpful to read through this guide and understand what is needed before you start. If you miss one of the timeouts, you'll need to start over by removing the power and plug it back in.</p>
-  <p>Flashing your Galileo requires you to flash it twice - once with a low level upgrade, the second with a secure boot upgrade. You will need to follow the enter the UEFI shell in both cases, so this has been called out as a common step.</p>
+  <p>To flash your Galileo's firmware you will use a terminal to interact with the Galileo during boot. There are <b>timing sensitive commands</b>, so it would be helpful to read through this guide and understand what is needed before you start. If you miss one of the timeouts, you'll need to start over by removing the power and plug it back in.</p>
+  <p>Flashing your Galileo requires you to flash it twice with two different firmware patches. You will need to follow the enter the UEFI shell in both cases, so this has been called out as a common step.</p>
   <div class="panel panel-danger">
     <div class="panel-heading">IMPORTANT:</div>
     <div class="panel-body">Please wait until instructed to plug the power into the Galileo.</div>

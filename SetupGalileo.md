@@ -53,7 +53,7 @@ permalink: /SetupGalileo.htm
   <h2>Plug the power cord into the Galileo.</h2>
   <div class="panel panel-info">
     <div class="panel-heading">NOTE:</div>
-    <div class="panel-body">Windows on Galileo can take a about 2 minutes to boot. During this time you will see the microSD activity LED flashing rapidly. Once it stops flashing for a few seconds, the Galileo is fully booted.</div>
+    <div class="panel-body">Windows on Galileo can take about 2 minutes to boot. During this time you will see the microSD activity LED flashing rapidly. Once it stops flashing for a few seconds, the Galileo is fully booted.</div>
   </div>
 
   <ol>

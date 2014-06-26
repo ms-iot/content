@@ -8,7 +8,7 @@ permalink: /HelloBlinky.htm
   <h1>Hello Blinky</h1>
   <p>Learn to Create, Deploy and Debug a Windows for Intel Galileo project.</p>
   <h3>Wire your Galileo with an LED</h3>
-  <p>LEDs are a diode which will emit light when powered. They are polarized - meaning they work only when plugged in correctly. If you find that your LED isn't blinking when you run this sample - flip it.</p><p>In this sample, we are not protecting the LED with a resistor. It dim over time.</p>
+  <p>LEDs are a diode which will emit light when powered. They are polarized - meaning they work only when plugged in correctly. If you find that your LED isn't blinking when you run this sample - flip it.</p><p>In this sample, we are not protecting the LED with a resistor. It will dim over time.</p>
   <img src="images\HelloBlinky.png"/>
 
   <h3>Create a new Project</h3>
