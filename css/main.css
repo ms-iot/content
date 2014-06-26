@@ -1,16 +1,25 @@
 
 body 
 {
-  font-family: "Segoe UI Light","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+  font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
   font-size: 12pt;
+}
+
+@media only screen and (min-width: 1200px)
+{
+  .headerBackground
+  {
+    background-image: url('../images/Iot.jpg');
+    background-color: #3C3C3C;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    height: 400px;
+  }
 }
 
 .headerBackground
 {
-  background-image: url('../images/Iot.jpg');
   background-color: #3C3C3C;
-  background-position: 100%;
-  background-repeat: no-repeat;
   height: 400px;
 }
 

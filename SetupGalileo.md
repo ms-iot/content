@@ -16,7 +16,7 @@ permalink: /SetupGalileo.htm
     <li>SD card case conaining a microSD card in an SD card adapter</li>
     <li>Ethernet cable</li>
   </ul>
-  If you do NOT have an SD card containing the Windows image or if a new Windows build has been released, you'll want to follow the steps below to build your own image.
+  If you do NOT have an SD card containing the Windows image or if a new Windows build has been released, you can follow the steps below to build your own image.
   <hr/>
 
   <h2>Building your own image</h2>
