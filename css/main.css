@@ -1,11 +1,21 @@
 
 body 
 {
-  font-family: Segoe, sans-serif;
+  font-family: "Segoe UI Light","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+  font-size: 12pt;
+}
+
+.headerBackground
+{
+  background-image: url('images/banner.jpg');
+  background-color: #3C3C3C;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 .navbar-brand
 { 
+  font-family: "Segoe UI Light","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
   color: #00188f;
 }
 
@@ -26,9 +36,22 @@ body
 
 .jumbotron
 {
-  background-color: #3f3f3f;
+  background-color: #3C3C3C;
   color: #ffffff;
 }
+
+.jumbotron h1
+{
+  background-color: #3C3C3C;
+  color: #ffffff;
+  font-family: "Segoe UI Light","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+
+.jumbotron p
+{
+  font-family: "Segoe UI Semibold","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+
 
 .jumbotron.jumbo-linklist
 {
@@ -38,11 +61,21 @@ body
 
 .jumbotron.jumbo-linklist  a
 {
-  color: #00188f;
+  color: #1e75bb;
+  /*font-family: "Segoe UI Light","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;*/
+  font-family: "Segoe UI Semibold","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
 }
 
 .btn-default
 {
   color: #ffffff;
   background-color: #00188f;
+}
+
+.HomepageTileLink
+{
+  font-size: 1em;
+  color: #1e75bb;
+  font-family: "Segoe UI Semibold","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+  line-height: 1.429em;
 }
