@@ -7,10 +7,11 @@ body
 
 .headerBackground
 {
-  background-image: url('images/banner.jpg');
+  background-image: url('../images/Iot.jpg');
   background-color: #3C3C3C;
-  background-position: 50% 50%;
+  background-position: 100%;
   background-repeat: no-repeat;
+  height: 400px;
 }
 
 .navbar-brand
@@ -42,8 +43,6 @@ body
 
 .jumbotron h1
 {
-  background-color: #3C3C3C;
-  color: #ffffff;
   font-family: "Segoe UI Light","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
 }
 
