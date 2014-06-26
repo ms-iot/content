@@ -6,8 +6,9 @@ permalink: /HelloBlinky.htm
 
 <div class="container">
   <h1>Hello Blinky</h1>
-  <p>Learn to Create, Deploy and Debug a Windows for IoT for Intel Galileo project.</p>
+  <p>Learn to Create, Deploy and Debug a Windows for Intel Galileo project.</p>
   <h3>Wire your Galileo with an LED</h3>
+  <p>LEDs are a diode which will emit light when powered. They are polarized - meaning they work only when plugged in correctly. If you find that your LED isn't blinking when you run this sample - flip it.</p><p>In this sample, we are not protecting the LED with a resistor. It dim over time.</p>
   <img src="images\HelloBlinky.png"/>
 
   <h3>Create a new Project</h3>
@@ -56,7 +57,7 @@ void loop()
   <div class="panel panel-info">
     <div class="panel-heading">Visual Studio Debug Settings</div>
     <div class="panel-body">
-      You need to verify the following settings to configure remote debugging:<br/>
+      Please change the following settings to configure remote debugging:<br/>
       Remote Command: <kbd>c:\test\$(TargetFileName)</kbd><br/>
       Working Directory: <kbd>c:\test</kbd><br/>
       Remote Server Nane: <kbd>mygalileo</kbd><br/>
@@ -66,7 +67,7 @@ void loop()
 
   <div class="panel panel-danger">
     <div class="panel-heading">Laptop Users please note:</div>
-    <div class="panel-body">If you are connecting galileo to your laptop either directly or via a USB Ethernet adapter, please disable Wireless. Visual Studio will not find your computer by name if you leave wireless on. </div>
+    <div class="panel-body">If you are connecting Galileo to your laptop either directly or via a USB Ethernet adapter, please disable Wireless. Visual Studio may not find your computer by name if you leave wireless on. </div>
   </div>
 
   <h3>Configure remote debugging</h3>
@@ -75,7 +76,7 @@ void loop()
   <img src="images\EnableDeployment.png"/>
 
   <h3>Build and deploy</h3>
-  Press F5 to build and deploy your project.  You should see the light blinking.<br/>
+  Press F5 to build and deploy your project.  You should see the light blinking. If it isn't blinking, try flipping the LED leads.<br/>
   <hr/>
 
   <a class="btn btn-default" href="SampleApps.htm" role="button">&laquo; Return to Samples</a>

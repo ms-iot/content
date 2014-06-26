@@ -37,7 +37,8 @@ permalink: /SetupPC.htm
         <div class="panel-body">
           <ol>
             <li>
-              Install the <a href="http://visualstudiogallery.msdn.microsoft.com/4ec1526c-4a8c-4a84-b702-b21a8f5293ca">Nuget package manager</a> for Visual Studio 2013
+              The Galileo-SDK is installed into your project using the Nuget Package Manager.<br/> Visual Studio Express does not include this extension, so please install 
+              <a href="http://visualstudiogallery.msdn.microsoft.com/4ec1526c-4a8c-4a84-b702-b21a8f5293ca">Nuget package manager</a> for Visual Studio 2013
             </li>
             <li>
               Install the <a href="http://go.microsoft.com/fwlink/?LinkID=403151">Windows Development Kit for IoT</a>
@@ -90,19 +91,15 @@ permalink: /SetupPC.htm
   <hr/>
 
   <h2>Telnet</h2>
-  <h4>(<i>Installation requires restarting your PC</i>)</h4>
   <p>
-    While using Visual Studio will be your primary interface with the Galileo. However, since Galileo is a headless device you'll likely need to use a command line interface on the galileo when things go south. It is helpful to have the command line interface set up before needing it. You'll need telnet in order to <a href="Troubleshooting.htm">troubleshoot your galileo.</a>
+  Telnet is required for certain steps later in the Getting Started guide. Now is a good time to install it if you do not have it installed.
   </p>
-  <p>
-    You may need to install the Windows Telnet client.
-    <ol>
-      <li>On your desktop machine, go into Control Panel->Programs and Features.</li>
-      <li>In the left hand column, select “Turn Windows Features on of off”</li>
-      <li>Select “Telnet Client” in the list.<br/><img src="images\Telnet.png"/></li>
-      <li>Restart your PC</li>
-    </ol>
-  </p>
+  <ol>
+    <li>On your desktop machine, go to the Control Panel and open:<br/>(if in icon view) Programs and Features<br/> or<br/> (if in category view) Programs -> Programs and Features.</li>
+    <li>In the left hand column, select “Turn Windows Features on or off”</li>
+    <li>Select “Telnet Client” in the list.<br/><img src="images\Telnet.png"/></li>
+    <li>Restart your PC</li>
+  </ol>
 
   <a class="btn btn-default" href="index.htm" role="button">Return to homepage</a>
   <a class="btn btn-default" href="SetupGalileo.htm" role="button">Continue to Setting up your Galileo &raquo;</a>
