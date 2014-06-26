@@ -16,7 +16,7 @@ permalink: /SetupGalileo.htm
     <li>SD card case conaining a microSD card in an SD card adapter</li>
     <li>Ethernet cable</li>
   </ul>
-  If you do NOT have an SD card containing the Windows image, follow the steps below to build your own image.
+  If you do NOT have an SD card containing the Windows image or if a new Windows build has been released, you'll want to follow the steps below to build your own image.
   <hr/>
 
   <h2>Building your own image</h2>
@@ -24,7 +24,7 @@ permalink: /SetupGalileo.htm
     <div class="panel-heading">NOTE:</div>
     <div class="panel-body">This step is only required if your kit does not have an microSD card with a Windows image.</div>
   </div>
-  You will need to attain a microSD card (We suggest at least 8 GB) and reformat it.<br/>
+  You will need to attain a microSD card (We suggest at least 8 GB) and format it Fat32.<br/>
   <a href="http://go.microsoft.com/fwlink/?LinkID=403150">Download the Windows package.</a>
   <br/>
   Unzip the downloaded Windows package.<br/>
@@ -53,18 +53,18 @@ permalink: /SetupGalileo.htm
   <h2>Plug the power cord into the Galileo.</h2>
   <div class="panel panel-info">
     <div class="panel-heading">NOTE:</div>
-    <div class="panel-body">Windows on Galileo can take about 2 minutes to fully boot.</div>
+    <div class="panel-body">Windows on Galileo can take about 2 minutes to boot. During this time you will see the microSD activity LED flashing rapidly. Once it stops flashing for a few seconds, the Galileo is fully booted.</div>
   </div>
 
   <ol>
-    <li>You should see activity on the microSD light as it boots (bottom left of this picture, circled in yellow).</li>
+    <li>You should see activity on the microSD light as it boots. The LED is at the bottom left of this picture.</li>
     <br/>
     <p>
       <img src="images\SDLed.png"/>
     </p>
     <li>
       <b>
-        As soon as you see data coming through the connection (light flashing on your Ethernet port or usb converter), open GalileoWatcher.exe
+        As soon as you see data coming through the connection by light flashing on your Galileo's Ethernet port, open GalileoWatcher.exe
       </b>
       <br/>
       Make sure to allow it through the firewall when the security dialog comes up.
@@ -86,17 +86,27 @@ permalink: /SetupGalileo.htm
     </p>
   </ol>
   <hr/>
-  <h2>Now you can telnet into your Galileo</h2>
-  <p>
-    On your desktop select Start->Run and type <kbd>telnet mygalileo</kbd>.<br/><img src="images\TelnetLogin.png"/>
-  </p>
+  <h2>Telnet into your Galileo</h2>
+  The main reason you'll want to telnet into your Galileo is so that you can gracefully shut it down. Many of the <a href="Tips.htm">tips and tricks</a> and <a href="Troubleshooting.htm">trouble shooting steps</a> are available through telnet.
+
+  <p>On your desktop select Start->Run and type <kbd>telnet mygalileo</kbd>.</p>
+  When prompted by telnet, use the following username and password:<br/>
+  <p><kbd>Username: Administrator</kbd><br/>
+  <kbd>Password: admin</kbd></p>
+  <p><img src="images\TelnetLogin.png"/></p>
+
+  <h3>Shutting down the Galileo</h3>
+  Before you unplug the power from the Galileo, it is advisable to gracefully shut it down. To do this:<br />
+  <ol>
+    <li>Telnet to the Galileo as described above</li>
+    <li>Enter the following command to shutdown:<br/>
+    <kbd>shutdown /s /t 0</kbd>
+    </li>
+  </ol>
+  <p>After the microSD activity LED stops blinking, you may unplug the Galileo.</p>
   <div class="panel panel-info">
     <div class="panel-heading">NOTE:</div>
-    <div class="panel-body">
-      Your Galileo has been assigned a username and password:<br/>
-      <kbd>Username: Administrator</kbd><br/>
-      <kbd>Password: admin</kbd><br/>
-    </div>
+    <div class="panel-body">If you do not shut the Galileo down, the next boot will take much longer. During this time, Windows will run a check disk on the SD card to verify the integrity of the file system. Please allow this to finish.</div>
   </div>
   <hr/>
 
