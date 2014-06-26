@@ -20,21 +20,21 @@ permalink: /UpdateYourGalileo.htm
       <a href="http://ttssh2.sourceforge.jp/index.html.en">TeraTerm</a> Terminal Program for Windows
     </li>
     <li>
-      Download the <a href="<placeholder>">Firmware Update Software Package</a> and unpack to an SD card formatted fat32.
+      Download the <a href="<placeholder>">Firmware Update Software Package</a> and unpack to a microSD card formatted fat32.
     </li>
   </ul>
   <hr/>
 
   <h2>Flashing your Galileo's firmware</h2>
-  <p>Flashing your galileo's firmware you to use a terminal program to connect to the Galileo at boot. There are timing sensitive commands, so it would be helpful to read through this guide and understand what is needed before you start.</p>
-  <p>Flashing your Galileo requires you to flash it twice - once with a low level upgrade, the second with a secure boot upgrade. You will need to follow the enter the UEFI shell in both cases, so this has been called out as a common step.</p>
+  <p>To flash your Galileo's firmware you will use a terminal to interact with the Galileo during boot. There are <b>timing sensitive commands</b>, so it would be helpful to read through this guide and understand what is needed before you start. If you miss one of the timeouts, you'll need to start over by removing the power and plug it back in.</p>
+  <p>Flashing your Galileo requires you to flash it twice with two different firmware patches. You will need to follow the enter the UEFI shell in both cases, so this has been called out as a common step.</p>
   <div class="panel panel-danger">
     <div class="panel-heading">IMPORTANT:</div>
     <div class="panel-body">Please wait until instructed to plug the power into the Galileo.</div>
   </div>
   <h3>Physically connecting your Galileo</h3>
   <ol>
-    <li>Connect your Intel Galileo serial cable to the 2.5mm audio-like jack on the Galileo board.</li>
+    <li>Connect your Intel Galileo serial cable to the 3.5mm audio-like jack on the Galileo board.</li>
     <li>Connect the serial DB-9 to your PC's Serial port or to the Serial to USB device.</li>
     <li>On your PC, open up the device manager. Identify which COM port for the Galileo.</li>
     <li>Open TeraTerm.</li>
@@ -47,11 +47,11 @@ permalink: /UpdateYourGalileo.htm
   </a>
   <ol>
     <li>
-      Format an SD card as Fat32 and copy the contents of <a href="<placeholder>">Quark.FirmwareUpdate.zip</a> to the root of this card.
+      Format a microSD card as Fat32 and copy the contents of <a href="<placeholder>">Quark.FirmwareUpdate.zip</a> to the root of this card.
     </li>
-    <li>Put this card into the SD slot on your Galileo</li>
+    <li>Put this card into the microSD slot on your Galileo</li>
     <li>
-      Plug the power adapter into the Galileo
+      Plug the power adapter into the Galileo. 
       <ul>
         <li>You should see the following out output in the terminal window you launched above. </li>
         <li>
@@ -73,14 +73,14 @@ permalink: /UpdateYourGalileo.htm
       <ul>
         <li>Ignore the cursor position.</li>
         <li>
-          You are selecting the <kbd>UEFI Internal Shell</kbd>, but the cursor doesn’t show this as highlighted.
+          You are selecting the <kbd>UEFI Internal Shell</kbd>, but the cursor doesn't show this as highlighted.
         </li>
       </ul>
       <br/><br/><img src="images\TermBootScreen4.png"/><br/>
     </li>
-    <li>Wait for it to time out.</li>
+    <li>Let the menu time out.</li>
     <li>
-      After the timeout is complete, you will be at the command prompt that we’ll use for the flashing process<br/><br/><img src="images\TermBootScreen5.png"/>
+      After the timeout is complete, you will be at the command prompt that you will use for the flashing process<br/><br/><img src="images\TermBootScreen5.png"/>
     </li>
   </ol>
   <h3>Flash the PDAT Capsule</h3>
@@ -116,6 +116,14 @@ permalink: /UpdateYourGalileo.htm
       </ul>
     </li>
   </ol>
-  
+  <h3>Next step</h3>
+  After you've flashed the firmware above and the Galileo has rebooted for the last time:
+  <ol>
+    <li>Shutdown TeraTerm. (If you leave it connected, you will see raw Windows kernel debugger output)</li>
+    <li>Unplug the Galileo. (There is no graceful shutdown for this stage)</li>
+    <li>Remove the microSD card you used to flash the board</li>
+    <li>You are now ready for the next step.</li>
+  </ol>
+
   <a class="btn btn-default" href="index.htm" role="button">Return to homepage</a>
   <a class="btn btn-default" href="SetupPC.htm" role="button">Continue to Step 2 &raquo;</a>
