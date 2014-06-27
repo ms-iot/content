@@ -47,7 +47,7 @@ permalink: /UpdateYourGalileo.htm
   </a>
   <ol>
     <li>
-      Format a microSD card as Fat32 and copy the contents of <a href="<placeholder>">Quark.FirmwareUpdate.zip</a> to the root of this card.
+      Format a microSD card as Fat32 and copy the contents of <a href="<placeholder>">v1_0_2_Firmware.zip</a> to the root of this card.
     </li>
     <li>Put this card into the microSD slot on your Galileo</li>
     <li>
@@ -55,9 +55,10 @@ permalink: /UpdateYourGalileo.htm
       <ul>
         <li>You should see the following out output in the terminal window you launched above. </li>
         <li>
-          If you do not see any output, goto the <a href="TroubleShooting.htm">Troubleshooting Firmware Update</a> section. <br/><br/><img src="images\TermBootScreen1.png"/><br/><br/>
+          If you do not see any output, goto the <a href="TroubleShooting.htm">Troubleshooting Firmware Update</a> section.
         </li>
       </ul>
+      <br/><br/><img src="images\TermBootScreen1.png"/>
     </li>
     <li>
       Ensure that the terminal program on your computer is selected and press the <kbd>F7</kbd> key when the GRUB menu is displayed.
@@ -92,7 +93,7 @@ permalink: /UpdateYourGalileo.htm
       Type the following at the Shell> prompt <kbd>fs0:</kbd>
     </li>
     <li>
-      Type the following at the fs0: prompt <kbd>CapsuleApp.efi PDAT.cap</kbd>
+      Type the following at the fs0: prompt <kbd>CapsuleApp.efi Flash-missingPDAT.cap</kbd>
       <ul>
         <li>This update will take several minutes</li>
         <li>The Galileo will reboot.</li>
@@ -109,19 +110,20 @@ permalink: /UpdateYourGalileo.htm
       Type the following at the Shell> prompt <kbd>fs0:</kbd>
     </li>
     <li>
-      Type the following at the fs0: prompt <kbd>CapsuleApp.efi QuarkPlatformPkgReset.Cap.signed</kbd>
+      Type the following at the fs0: prompt <kbd>CapsuleApp.efi Flash-EDkII.cap</kbd>
       <ul>
         <li>This update will take several minutes</li>
         <li>The Galileo will reboot.</li>
       </ul>
+      <br/><br/><img src="images\TermBootScreen7.png"/>
     </li>
   </ol>
   <h3>Next step</h3>
   After you've flashed the firmware above and the Galileo has rebooted for the last time:
   <ol>
-    <li>Shutdown TeraTerm. (If you leave it connected, you will see raw Windows kernel debugger output)</li>
-    <li>Unplug the Galileo. (There is no graceful shutdown for this stage)</li>
-    <li>Remove the microSD card you used to flash the board</li>
+    <li>Shutdown TeraTerm.</li>
+    <li>Unplug the Galileo.</li>
+    <li>Remove the microSD card you used to flash the board.</li>
     <li>You are now ready for the next step.</li>
   </ol>
 
