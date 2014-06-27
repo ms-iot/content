@@ -19,17 +19,24 @@ permalink: /SetupGalileo.htm
   If you do NOT have an SD card containing the Windows image or if a new Windows build has been released, you can follow the steps below to build your own image.
   <hr/>
 
-  <h2>Building your own image</h2>
+  <h2>Building your own Windows image</h2>
   <div class="panel panel-info">
     <div class="panel-heading">NOTE:</div>
     <div class="panel-body">This step is only required if your kit does not have an microSD card with a Windows image.</div>
   </div>
   You will need to attain a microSD card (We suggest at least 8 GB) and format it Fat32.<br/>
-  <a href="http://go.microsoft.com/fwlink/?LinkID=403150">Download the Windows package.</a>
+  Please download the following files from the Windows Developer Program for IoT download site:
+  <ul>
+  <li><a href="http://go.microsoft.com/fwlink/?LinkID=403150">Windows Developer Program for IOT CTP1 - WIM</a></li>
+  <li><a href="http://go.microsoft.com/fwlink/?LinkID=403151">apply-BootMedia.cmd</a></li>
+  </ul>
   <br/>
-  Unzip the downloaded Windows package.<br/>
-  Run the included script from an <b>elevated</b> Command Prompt:<br/>
-  <kbd>apply-bootmedia.cmd -destination {YourSDCardDrive} -image {.wimFile} -hostname mygalileo -password admin</kbd><br/>
+  <p>Run the included script from an <b>elevated</b> Command Prompt:<br/>
+  <kbd>apply-bootmedia.cmd -destination {YourSDCardDrive} -image {.wimFile} -hostname mygalileo -password admin</kbd></p>
+
+  <p>For example:</p>
+  <kbd>apply-bootmedia.cmd -destination e:\ -image BootMe-Galileo-8967-Mon.06.16.2014.17.47.29.42.wim -hostname mygalileo -password admin</kbd>
+  <br/><br/><p>This process will take some time.</p>
   <hr/>
 
   <h2>Insert the microSD card</h2>
