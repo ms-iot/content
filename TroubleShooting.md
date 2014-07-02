@@ -4,8 +4,14 @@ title: Troubleshooting
 permalink: /TroubleShooting.htm
 ---
 
+<div class="jumbotron">
+  <div class="container">
+    <h1>Troubleshooting</h1>
+  </div>
+</div>
+
 <div class="container">
-  <h3>Troubleshooting Hardware</h3>
+  <h3>Hardware</h3>
   <div class="panel-group" id="accordion1">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -29,7 +35,7 @@ permalink: /TroubleShooting.htm
     </div>
   </div>
 
-  <h3>Troubleshooting Firmware Update</h3>
+  <h3>Firmware Update</h3>
   <div class="panel-group" id="accordion2">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -55,7 +61,7 @@ permalink: /TroubleShooting.htm
     </div>
   </div>
 
-  <h3>Troubleshooting Visual Studio</h3>
+  <h3>Visual Studio</h3>
   <div class="panel-group" id="accordion3">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -80,7 +86,7 @@ permalink: /TroubleShooting.htm
     </div>
   </div>
 
-  <h3>Troubleshooting Windows on Galileo</h3>
+  <h3>Windows on Galileo</h3>
   <div class="panel-group" id="accordion4">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -113,7 +119,7 @@ permalink: /TroubleShooting.htm
     </div>
   </div>
 
-  <h3>Troubleshooting GalileoWatcher</h3>
+  <h3>GalileoWatcher</h3>
   <div class="panel-group" id="accordian5">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -129,6 +135,71 @@ permalink: /TroubleShooting.htm
 
           To check it's firewall configurations go to Control Panel > System and Security > Windows Firewall > Allowed Apps</li>
           <img src="images\GalileoWatcherFirewall.png"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Remote Deployment</h3>
+  <div class="panel-group" id="accordian6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordian6" href="#collapseRemoteDeployment1">
+            Operation is taking longer than expected
+          </a>
+        </h4>
+      </div>
+      <div id="collapseRemoteDeployment1" class="panel-collapse collapse">
+        <div class="panel-body">
+            Don't freak out! This happens due to the debugging over ethernet.
+        </div>
+      </div>
+    </div>
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordian7" href="#collapseRemoteDeployment2">
+            Unable to start debugging. The connection with the remote endpoint was terminated.
+          </a>
+        </h4>
+      </div>
+      <div id="collapseRemoteDeployment2" class="panel-collapse collapse">
+        <div class="panel-body">
+            This can sometimes happen when the name resolution is not working. Try using the IP Address shown for your Galileo in the the GalileoWatcher.
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordian9" href="#collapseRemoteDeployment4">
+            Unable to start program 'c:\{File}'. The system cannot find the file specified.
+          </a>
+        </h4>
+      </div>
+      <div id="collapseRemoteDeployment4" class="panel-collapse collapse">
+        <div class="panel-body">
+            <h3>Configure remote deploying for your project</h3>
+            Right click on your project and select Properties.<br/>
+            Select the <kbd>Configuration Manager...</kbd> button from the upper right corner.<br/>
+            Make sure "Deploy" is checked for your project<br/>
+            Also make sure that your remote Debugger settings are set correctly. See <a href="Tips.htm">Configure Remote Debugging</a> in the Tips section.
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordian10" href="#collapseRemoteDeployment5">
+            Unable to start debugging. The debugger cannot connect to the remote computer. The debugger was unable to resolve the specified computer name.
+          </a>
+        </h4>
+      </div>
+      <div id="collapseRemoteDeployment5" class="panel-collapse collapse">
+        <div class="panel-body">
+            Make sure your project's remote debugger settings have the correct Remote Server Name. It should match the name of your Galileo board.
         </div>
       </div>
     </div>

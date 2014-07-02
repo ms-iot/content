@@ -21,14 +21,8 @@ int _tmain(int argc, _TCHAR* argv[])
 }
 
 int size = 1000; // the size of our buffer string
-char temp[1000]; // for our buffer string
+wchar_t temp[1000]; // for our buffer string
 int tempPin = -1; // The on-board thermal sensor
-
-void CustomLogging(char* str)
-{
-  OutputDebugStringA(str); // for VS Output
-  printf(str); // for commandline output
-}
 
 void setup()
 {
@@ -39,8 +33,7 @@ void loop()
 {
   float temperatureInDegreesCelcius = 1.0f;	// Storage for the temperature value
   temperatureInDegreesCelcius = (float) analogRead(tempPin) / 4.0f;	// reads the analog value from this pin
-  sprintf_s(temp, size, "%lf\n", temperatureInDegreesCelcius);
-  CustomLogging(temp);
+  Log(L"Temperature: %lf\n", temperatureInDegreesCelcius);
   Sleep(100);		// Provides a delay for our visual pleasure
 }
 {% endhighlight %}
