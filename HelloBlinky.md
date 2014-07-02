@@ -47,13 +47,11 @@ void loop()
   <h3>Build and deploy</h3>
   <p>Press F5 to build and deploy your project.</p>
   <p>You may be prompted for credentials. Enter:<br/>
-  Username: <kbd>\Administrator</kbd><br/>
+  Username: <kbd>mygalileo\Administrator</kbd><br/>
   Password: <kbd>admin</kbd><br/></p>
   <p><img src="images/VSDeployCred.png" /></p>
-  <div class="panel panel-info">
-    <div class="panel-heading">NOTE:</div>
-    <div class="panel-body">The Backslash in the username makes it relative to the Galileo instead of your host computer or domain.</div>
-  </div>
+
+  <h3>Result</h3>
   <p>You should see the light blinking. If it isn't blinking, try reversing the LED leads.</p>
   <hr/>
 
