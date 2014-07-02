@@ -24,14 +24,6 @@ int _tmain(int argc, _TCHAR* argv[])
 //This application flashes the GP LED on the Galileo board by calling the direct GPIO Writes and Sets
 static LONG QUARK_LED_PIN = QRK_LEGACY_RESUME_SUS1; //Uses the Quark legacy GPIO Pins
 bool state = false; // keeps track of the state of the GP LED
-int size = 1000; // the size of our buffer string
-char temp[1000]; // for our buffer string
-
-void CustomLogging(char* str)
-{
-  OutputDebugStringA(str); // for VS Output
-  printf(str); // for commandline output
-}
 
 void setup()
 {
@@ -43,13 +35,13 @@ void loop()
   if (state)
   {
     GpioWrite(QUARK_LED_PIN, 1); // Writes to the pin, setting its value to HIGH
-    CustomLogging("LED OFF\n");
+    Log(L"LED OFF\n");
     state = !state;
   }
   else
   {
     GpioWrite(QUARK_LED_PIN, 0); // Writes to the pin, setting its value to LOW
-    CustomLogging("LED ON\n");
+    Log(L"LED ON\n");
     state = !state;
   }
   Sleep(1000);
