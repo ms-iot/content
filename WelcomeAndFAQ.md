@@ -1,7 +1,7 @@
 ---
 layout: code
 title: FAQ
-permalink: /WelcomeAndFaq.htm
+permalink: /WelcomeAndFAQ.htm
 ---
 
 ### *Dear Community,*
