@@ -20,8 +20,6 @@ int _tmain(int argc, _TCHAR* argv[])
   return RunArduinoSketch();
 }
 
-int size = 1000; // the size of our buffer string
-wchar_t temp[1000]; // for our buffer string
 int tempPin = -1; // The on-board thermal sensor
 
 void setup()
