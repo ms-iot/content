@@ -28,7 +28,7 @@ permalink: /SetupGalileo.htm
   Please download the following files from the Windows Developer Program for IoT download site:
   <ul>
   <li><a href="http://go.microsoft.com/fwlink/?LinkID=403150">Windows Developer Program for IOT CTP1 - WIM</a></li>
-  <li><a href="http://go.microsoft.com/fwlink/?LinkID=403151">apply-BootMedia.cmd</a></li>
+  <li><a href="http://go.microsoft.com/fwlink/?LinkID=403796">apply-BootMedia.cmd</a></li>
   </ul>
   <br/>
   <p>Run the included script from an <b>elevated</b> Command Prompt:<br/>

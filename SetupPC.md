@@ -7,7 +7,9 @@ permalink: /SetupPC.htm
 <div class="container">
   <h1>Setting up your PC</h1>
   <hr/>
-
+  <h2> Microsoft Connect </h2>
+  In order to access the binaries for this program, please sign up for the Windows Developer Program for IoT on <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558">Microsoft Connect</a>.
+  
   <h2> Visual Studio </h2>
   <p>Install and configure Visual Studio 2013.</p>
   <div class="panel-group" id="accordion">
