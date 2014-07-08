@@ -8,8 +8,17 @@ permalink: /SetupPC.htm
   <h1>Setting up your PC</h1>
   <hr/>
   <h2> Microsoft Connect </h2>
-  In order to access the binaries for this program, please sign up for the Windows Developer Program for IoT on <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558">Microsoft Connect</a>.
-  
+  Before you configure Visual Studio, please sign up for the Windows Developer Program for IoT on <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558" target="_blank">Microsoft Connect</a>.<br/>
+  <br/>
+  <div class="panel panel-danger">
+    <div class="panel-heading">Note:</div>
+    <div class="panel-body">
+        When you are attempting to download anything from Microsoft Connect, you will want to use the correct link shown below unless you want a dlm file for FTM.
+        <br/>
+        <img src="images\ConnectDownloadClarification.png" style="height:auto; width:75%;">
+    </div>
+  </div>
+  <hr/>
   <h2> Visual Studio </h2>
   <p>Install and configure Visual Studio 2013.</p>
   <div class="panel-group" id="accordion">
@@ -23,7 +32,7 @@ permalink: /SetupPC.htm
       </div>
       <div id="collapseOne" class="panel-collapse collapse">
         <div class="panel-body">
-          Please install the <a href="http://go.microsoft.com/fwlink/?LinkID=403151">WindowsDeveloperProgramforIOT.msi</a>
+          Please install the <a href="http://go.microsoft.com/fwlink/?LinkID=403151" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
         </div>
       </div>
     </div>
@@ -39,11 +48,29 @@ permalink: /SetupPC.htm
         <div class="panel-body">
           <ol>
             <li>
-              The Galileo-SDK is installed into your project using the Nuget Package Manager.<br/> Visual Studio Express does not include this extension, so please install 
-              <a href="http://visualstudiogallery.msdn.microsoft.com/4ec1526c-4a8c-4a84-b702-b21a8f5293ca">Nuget package manager</a> for Visual Studio 2013
+              Install the Nuget package manager for Visual Studio 2013 by following these steps:
+              <ol>
+                <li>
+                    Open Visual Studio 2013
+                </li>
+                <li>
+                    Click to Tools in the navigation bar and go to "Extensions and Updates"
+                    <br/>
+                    <img src="images/InstallNugetPackageManagerStepOne.png">
+                </li>
+                <br/>
+                <li>
+                    Then click on the Online tab and Search for "NuGet Package Manager".
+                    <br/>
+                    <img src="images/InstallNugetPackageManagerStepTwo.png">
+                </li>
+                <li>
+                    Download and install it.
+                </li>
+              </ol>
             </li>
             <li>
-              Install the <a href="http://go.microsoft.com/fwlink/?LinkID=403151">WindowsDeveloperProgramforIOT.msi</a>
+              Install the <a href="http://go.microsoft.com/fwlink/?LinkID=403151" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
             </li>
           </ol>
         </div>
@@ -61,13 +88,32 @@ permalink: /SetupPC.htm
         <div class="panel-body">
           <ol>
             <li>
-              Install <a href="http://www.visualstudio.com/downloads/download-visual-studio-vs">Visual Studio 2013 Express for Windows Desktops</a>.
+              Install <a href="http://www.visualstudio.com/downloads/download-visual-studio-vs" target="_blank">Visual Studio 2013 Express for Windows Desktops</a>.
             </li>
             <li>
-              Install the <a href="http://visualstudiogallery.msdn.microsoft.com/4ec1526c-4a8c-4a84-b702-b21a8f5293ca">Nuget package manager</a> for Visual Studio 2013
+              Install the Nuget package manager for Visual Studio 2013 by following these steps:
+              <ol>
+                <li>
+                    Open Visual Studio 2013
+                </li>
+                <li>
+                    Click to Tools in the navigation bar and go to "Extensions and Updates"
+                    <br/>
+                    <img src="images/InstallNugetPackageManagerStepOne.png">
+                </li>
+                <br/>
+                <li>
+                    Then click on the Online tab and Search for "NuGet Package Manager".
+                    <br/>
+                    <img src="images/InstallNugetPackageManagerStepTwo.png">
+                </li>
+                <li>
+                    Download and install it.
+                </li>
+              </ol>
             </li>
             <li>
-              Install the <a href="http://go.microsoft.com/fwlink/?LinkID=403151">WindowsDeveloperProgramforIOT.msiT</a>
+              Install the <a href="http://go.microsoft.com/fwlink/?LinkID=403151" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
             </li>
           </ol>
         </div>
@@ -83,9 +129,8 @@ permalink: /SetupPC.htm
       </div>
       <div id="collapseThree" class="panel-collapse collapse">
         <div class="panel-body">
-          Visual Studio 2014 is not currently supported. Our Windows image contains msvsmon.exe for 2013 which is incompatible with 2014. We are working on upgrading this, however we need to ensure that 2013 is still supported.
-
-          Please install Visual Studio 2013 express until we can correct this.
+          Visual Studio 2014 is not currently supported.<br/>
+          Please install Visual Studio 2013 and follow those steps. Feel free to use Visual Studio 2013 Professional, Premium, Ultimate, or Express for Windows Desktops.      
         </div>
       </div>
     </div>

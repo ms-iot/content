@@ -9,13 +9,17 @@ permalink: /SetupGalileo.htm
   <hr/>
 
   <h2>What is in the box?</h2>
-  Included with your Windows for Galileo development kit are the following:
+  Included with your Windows Developer Program for IoT kit are the following:
   <ul>
     <li>Intel Galileo</li>
     <li>Power Adapter</li>
-    <li>SD card case conaining a microSD card in an SD card adapter</li>
+    <li>SD card case containing a microSD card in an SD card adapter</li>
     <li>Ethernet cable</li>
+    <li>an LED</li>
+    <li>USB to Ethernet adapter</li>
   </ul>
+  
+  <!--
   If you do NOT have an SD card containing the Windows image or if a new Windows build has been released, you can follow the steps below to build your own image.
   <hr/>
 
@@ -27,8 +31,8 @@ permalink: /SetupGalileo.htm
   You will need to attain a microSD card (We suggest at least 8 GB) and format it Fat32.<br/>
   Please download the following files from the Windows Developer Program for IoT download site:
   <ul>
-  <li><a href="http://go.microsoft.com/fwlink/?LinkID=403150">Windows Developer Program for IOT CTP1 - WIM</a></li>
-  <li><a href="http://go.microsoft.com/fwlink/?LinkID=403796">apply-BootMedia.cmd</a></li>
+  <li><a href="http://go.microsoft.com/fwlink/?LinkID=403150" target="_blank">Windows Developer Program for IOT CTP1 - WIM</a></li>
+  <li><a href="http://go.microsoft.com/fwlink/?LinkID=403796" target="_blank">apply-BootMedia.cmd</a></li>
   </ul>
   <br/>
   <p>Run the included script from an <b>elevated</b> Command Prompt:<br/>
@@ -37,6 +41,7 @@ permalink: /SetupGalileo.htm
   <p>For example:</p>
   <kbd>apply-bootmedia.cmd -destination e:\ -image BootMe-Galileo-8967-Mon.06.16.2014.17.47.29.42.wim -hostname mygalileo -password admin</kbd>
   <br/><br/><p>This process will take some time.</p>
+  -->
   <hr/>
 
   <h2>Insert the microSD card</h2>
@@ -71,7 +76,7 @@ permalink: /SetupGalileo.htm
     </p>
     <li>
       <b>
-        As soon as you see data coming through the connection by light flashing on your Galileo's Ethernet port, open GalileoWatcher.exe
+        As soon as you see data coming through the connection by light flashing on your Galileo's Ethernet port, open GalileoWatcher.exe from C:\Program Files (x86)\Microsoft IoT\
       </b>
       <br/>
       Make sure to allow it through the firewall when the security dialog comes up.
