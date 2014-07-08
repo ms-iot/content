@@ -130,7 +130,8 @@ permalink: /SetupPC.htm
       <div id="collapseThree" class="panel-collapse collapse">
         <div class="panel-body">
           Visual Studio 2014 is not currently supported.<br/>
-          Please install Visual Studio 2013 and follow those steps. Feel free to use Visual Studio 2013 Professional, Premium, Ultimate, or Express for Windows Desktops.      
+          If you have Visual Studio 2013 Professional, Premium, Ultimate, or Express for Windows Desktops, follow the instructions for that above.
+          Otherwise, follow the instructions for "I do not have Visual Studio 2013 installed" above.
         </div>
       </div>
     </div>
