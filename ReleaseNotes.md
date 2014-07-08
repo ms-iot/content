@@ -21,6 +21,9 @@ permalink: /ReleaseNotes.htm
       <li>
         <code>strncmp()</code> is not implemented.
       </li>
+      <li>
+        <code>int</code> represents an eight-bit integer on the Arduino Uno and a 32-bit integer on Windows. To guarantee a specific behavior with bitwise operations, you should cast the data to the explicit desired type (i.e. <code>uint8_t</code>).
+      </li>
     </ol>
   </p>
   <hr/>
