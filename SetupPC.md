@@ -33,6 +33,8 @@ permalink: /SetupPC.htm
       <div id="collapseOne" class="panel-collapse collapse">
         <div class="panel-body">
           Please install the <a href="http://go.microsoft.com/fwlink/?LinkID=403151" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
+          <br/>
+          (During the install process, you may be prompted by the User Account Control twice. Once for the MSI and once for VSIXInstaller. To properly install the needed components, you will need to click yes.)
         </div>
       </div>
     </div>
@@ -71,6 +73,8 @@ permalink: /SetupPC.htm
             </li>
             <li>
               Install the <a href="http://go.microsoft.com/fwlink/?LinkID=403151" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
+              <br/>
+              (During the install process, you may be prompted by the User Account Control twice. Once for the MSI and once for VSIXInstaller. To properly install the needed components, you will need to click yes.)
             </li>
           </ol>
         </div>
@@ -114,6 +118,8 @@ permalink: /SetupPC.htm
             </li>
             <li>
               Install the <a href="http://go.microsoft.com/fwlink/?LinkID=403151" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
+              <br/>
+              (During the install process, you may be prompted by the User Account Control twice. Once for the MSI and once for VSIXInstaller. To properly install the needed components, you will need to click yes.)
             </li>
           </ol>
         </div>
