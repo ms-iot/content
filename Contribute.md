@@ -26,9 +26,9 @@ The first time you'd like to commit a change to a repository, perform the follow
   ![Fork](images/GitHubFork.png)
 1. On GitHub, Navigate to your account's fork of the repository
 1. Clone the repository in one of two ways:
-    * You can use command line <br/>
+    1. You can use command line <br/>
     <kbd>git clone git://github.com/LinkToRepo.git NameYourLocalFolder</kbd>
-    * Or launch the GitHub app by clicking 'Clone in Desktop' on the right hand side of the repository  
+    1. Or launch the GitHub app by clicking 'Clone in Desktop' on the right hand side of the repository  
     ![Clone](images/GitHubClone.png)   
 
 ___
@@ -44,7 +44,8 @@ For clarification, what we mean when we say:<br/>
 
 ####Making changes
 1. Make your edits, build, and test. Use the repository's readme for any specific editing requirements, build instructions, and testing methods.
-1. Commit your changes to your local repository (NOTE: Do not push these changes to your forked repository)
+1. Commit your changes to your local repository. <br/> <b>NOTE: Do not push these changes to your forked repository, because this can cause duplications of commits when rebasing.</b>
+
 
 ####Submitting a Pull Request
 1. Rebase your local repository on top of the main repository in order to sync the changes that have been made to the main repository since you forked.
@@ -53,7 +54,7 @@ For clarification, what we mean when we say:<br/>
 1. Now submit your pull request from your forked repository using the GitHub website.
 
 ####Making changes to a Pull Request
-1. Make your changes again, commit them, and push to your forked repository.
+1. Make your changes, commit to your local repository, and push to your forked repository.
     * If changes were made to the main repository while you were making your changes, you will have to merge with main to fix this.
 1. The pull request should automatically update unless it was closed.
     * If it was closed, you will have to re-open it or submit a new pull-request.

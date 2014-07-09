@@ -11,9 +11,9 @@ permalink: /SetupPC.htm
   Before you configure Visual Studio, please sign up for the Windows Developer Program for IoT on <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558" target="_blank">Microsoft Connect</a>.<br/>
   <br/>
   <div class="panel panel-danger">
-    <div class="panel-heading">Note:</div>
+    <div class="panel-heading">NOTE:</div>
     <div class="panel-body">
-        When you are attempting to download anything from Microsoft Connect, you will want to use the correct link shown below unless you want a dlm file for FTM.
+        When you are attempting to download anything from Microsoft Connect, you will want to use the link shown below unless you want a dlm file for FTM.
         <br/>
         <img src="images\ConnectDownloadClarification.png" style="height:auto; width:75%;">
     </div>
