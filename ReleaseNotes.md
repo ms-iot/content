@@ -24,6 +24,8 @@ permalink: /ReleaseNotes.htm
       <li>
         <code>int</code> represents an eight-bit integer on the Arduino Uno and a 32-bit integer on Windows. To guarantee a specific behavior with bitwise operations, you should cast the data to the explicit desired type (i.e. <code>uint8_t</code>).
       </li>
+	  <li>
+        <code>analogReference()</code> is not supported by the Galileo board. Even when I/O voltage is set to 3.3V externally (making it safe to only use 3.3V), the reference will still be 5V.
     </ol>
   </p>
   <hr/>
