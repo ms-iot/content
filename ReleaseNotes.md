@@ -26,6 +26,7 @@ permalink: /ReleaseNotes.htm
       </li>
 	  <li>
         <code>analogReference()</code> is not supported by the Galileo board. Even when I/O voltage is set to 3.3V externally (making it safe to only use 3.3V), the reference will still be 5V.
+	  </li>
     </ol>
   </p>
   <hr/>
