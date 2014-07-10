@@ -10,29 +10,56 @@ permalink: /AdvancedUsage.htm
   </div>
 </div>
 
-
-## Making your Galileo run an exe on boot
-Edit the autorun.cmd file in Windows\System32\Boot and add the following line<br/>
-<kbd>start "YourAppLocation\YourAppName"</kbd>
-
----
-
-## Changing your Galileo's Name
-Through telnet, run SetComputerName using the following line<br/>
-<kbd>SetComputerName {YourNewName}</kbd> <br/>
-
-<div class="panel panel-danger">
-    <div class="panel-heading">Note:</div>
-    <div class="panel-body">If you change your Galileo's name, it will break the remote deployment scripts and you will need to change the settings in your projects.</div>
-</div>
-
----
-
 <div class="panel-group" id="accordion1">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion1" href="#collapseRemoteDebugging">
+          <a data-toggle="collapse" data-parent="#accordion1" href="#collapseGalileoAutorun">
+            <h2>Making your Galileo run an exe on boot</h2>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseGalileoAutorun" class="panel-collapse collapse">
+        <div class="panel-body">
+            Edit the autorun.cmd file in Windows\System32\Boot and add the following line<br/>
+            <kbd>start "YourAppLocation\YourAppName"</kbd>
+        </div>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="panel-group" id="accordion2">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion2" href="#collapseGalileoName">
+            <h2>Changing your Galileo's Name</h2>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseGalileoName" class="panel-collapse collapse">
+        <div class="panel-body">
+            Through telnet, run SetComputerName using the following line<br/>
+            <kbd>SetComputerName {YourNewName}</kbd> <br/>
+            
+            <div class="panel panel-danger">
+                <div class="panel-heading">Note:</div>
+                <div class="panel-body">If you change your Galileo's name, it will break the remote deployment scripts and you will need to change the settings in your projects.</div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="panel-group" id="accordion3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion3" href="#collapseRemoteDebugging">
             <h2>Configure remote debugging</h2>
           </a>
         </h4>
@@ -74,8 +101,8 @@ Through telnet, run SetComputerName using the following line<br/>
             Make sure "Deploy" is checked for your project<br/>
             <img src="images\EnableDeployment.png"/><br/>
         </div>
-      </div>
     </div>
   </div>
+</div>
   
   
