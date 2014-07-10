@@ -42,7 +42,7 @@ void loop()
 {% endhighlight %}
 
   <h3>Wire your Galileo with an LED</h3>
-  <p>LEDs are a diode which will emit light when powered. They are polarized - meaning they work only when plugged in correctly. Typically, the longer leg is the positive lead, so plug it into pin 13 and the shorter leg into ground.</p>
+  <p>LEDs are diodes which will emit light when powered. They are polarized - meaning they work only when plugged in correctly. Typically, the longer leg is the positive lead, so plug it into pin 13 and the shorter leg into ground.</p>
   <img src="images\HelloBlinky.png"/>
   <p>NOTE: In this sample, we are not protecting the LED with a resistor. It will dim over time. Also, the color of the LED can vary, without creating problems.</p>
 
