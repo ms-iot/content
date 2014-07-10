@@ -6,16 +6,13 @@ permalink: /HelloBlinky.htm
 
 <div class="container">
   <h1>Hello Blinky</h1>
-  <p>Learn to Create, Deploy and Debug a Windows for Intel Galileo project.</p>
-  <h3>Wire your Galileo with an LED</h3>
-  <p>LEDs are a diode which will emit light when powered. They are polarized - meaning they work only when plugged in correctly. If you find that your LED isn't blinking when you run this sample - flip it.</p><p>In this sample, we are not protecting the LED with a resistor. It will dim over time.</p>
-  <img src="images\HelloBlinky.png"/>
+  <p>Learn to Create, Deploy and Debug a Windows Developer Program for IoT project.</p>
 
   <h3>Create a new Project</h3>
-  <p>Open Visual Studio. Select File -> New Project and Select Templates -> Visual C++ -> Windows for IoT -> Galileo Wiring app:<br>
-  <img src="images/Nuget_AppCreate.png"/></p>
+  <p>Open Visual Studio. Select File -> New Project and Select Templates -> Visual C++ -> Windows for IoT -> Galileo Wiring app</p>
+  <img src="images/Nuget_AppCreate.png"/>
 
-  <p>Open <kbd>main.cpp</kbd> and replace the code with the following:<br>
+  <h3>Code</h3>
 {% highlight C++ %}
 #include "stdafx.h"
 #include "arduino.h"
@@ -43,6 +40,11 @@ void loop()
   delay(1000);               // wait for a second
 }
 {% endhighlight %}
+
+  <h3>Wire your Galileo with an LED</h3>
+  <p>LEDs are diodes which will emit light when powered. They are polarized - meaning they work only when plugged in correctly. Typically, the longer leg is the positive lead, so plug it into pin 13 and the shorter leg into ground.</p>
+  <img src="images\HelloBlinky.png"/>
+  <p>NOTE: In this sample, we are not protecting the LED with a resistor. It will dim over time. Also, the color of the LED can vary, without creating problems.</p>
 
   <h3>Build and deploy</h3>
   <p>Press F5 to build and deploy your project.</p>
