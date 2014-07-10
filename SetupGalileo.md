@@ -99,8 +99,7 @@ permalink: /SetupGalileo.htm
   </ol>
   <hr/>
   <h2>Telnet into your Galileo</h2>
-  The main reason you'll want to telnet into your Galileo is so that you can gracefully shut it down. Many of the <a href="Tips.htm">tips and tricks</a> and <a href="TroubleShooting.htm">trouble shooting steps</a> are available through telnet.
-
+  The main reason you'll want to telnet into your Galileo is so that you can interact with your Galileo and gracefully shut it down.
   <p>On your desktop select Start->Run and type <kbd>telnet mygalileo</kbd>.</p>
   When prompted by telnet, use the following username and password:<br/>
   <p><kbd>Username: Administrator</kbd><br/>
