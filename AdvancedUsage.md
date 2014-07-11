@@ -68,8 +68,8 @@ permalink: /AdvancedUsage.htm
         <div class="panel-body">
             <p>With your project open in Visual Studio:
                 <ul>
-                    <li>select the <kbd>Project</kbd> menu</li>
-                    <li>select <kbd>Properties</kbd></li>
+                    <li>Right click on your project (not solution) in the Solution Explorer and select <kbd>Properties</kbd></li>
+                        <img src="images\ConfigureRemoteDebugger1.png"/>
                     <li>expand <kbd>Configuration Properties</kbd></li>
                     <li>select the <kbd>Debugging</kbd> tree item</li>
                     <li>Change the <kbd>Debugger to launch</kbd> to <kbd>Remote Windows Debugger</kbd></li>
