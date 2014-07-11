@@ -15,6 +15,9 @@ permalink: /ReleaseNotes.htm
   <h2> Software Limitations </h2>
   <p>
     <ol>
+	  <li>
+	    <code>LED_ONBOARD</code> constant only works when calling directly into embprpusr.dll functionality.
+	  </li>
       <li>
         <code>millis()</code> rolls roughly every 50 days the application is running.
       </li>

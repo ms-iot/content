@@ -5,46 +5,40 @@ permalink: /OnBoardLED.htm
 ---
 
 # On Board LED
-Learn how to use the on board thermal sensor.
+Learn how to toggle the GP Led on the Galileo on and off.
 
 # Create a new project
-Create a new project and configure for deployment like was done in [Hello Blinky](HelloBlinky.htm)
+Create a new project from the template and replace the existing code in main.cpp with the following code:
 
 # Code
 
 {% highlight C++ %}
+// Main.cpp : Defines the entry point for the console application.
+//
+
 #include "stdafx.h"
 #include "arduino.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-  return RunArduinoSketch();
+    return RunArduinoSketch();
 }
 
-//This application flashes the GP LED on the Galileo board by calling the direct GPIO Writes and Sets
-static LONG QUARK_LED_PIN = QRK_LEGACY_RESUME_SUS1; //Uses the Quark legacy GPIO Pins
+//This application flashes the on board LED of the Galileo board by calling GPIO functions directly in the embprpusr.dll instead of using the Arduino layer.
+
 bool state = false; // keeps track of the state of the GP LED
 
 void setup()
 {
-  GpioSetDir(QUARK_LED_PIN, 1); // Sets the pin to Output
+    GpioSetDir(LED_BUILTIN, OUTPUT); // Sets the pin to output
 }
 
 void loop()
 {
-  if (state)
-  {
-    GpioWrite(QUARK_LED_PIN, 1); // Writes to the pin, setting its value to HIGH
-    Log(L"LED OFF\n");
     state = !state;
-  }
-  else
-  {
-    GpioWrite(QUARK_LED_PIN, 0); // Writes to the pin, setting its value to LOW
-    Log(L"LED ON\n");
-    state = !state;
-  }
-  Sleep(1000);
+    GpioWrite(LED_BUILTIN, state); // Writes to the pin, setting its value to HIGH
+    Log(L"LED %s\n", (state ? L"ON" : L"OFF"));
+    Sleep(1000);
 }
 {% endhighlight %}
 
