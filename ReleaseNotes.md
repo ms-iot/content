@@ -22,10 +22,10 @@ permalink: /ReleaseNotes.htm
         <code>strncmp()</code> is not implemented.
       </li>
       <li>
-        <code>int</code> represents an eight-bit integer on the Arduino Uno and a 32-bit integer on Windows. To guarantee a specific behavior with bitwise operations, you should cast the data to the explicit desired type (i.e. <code>uint8_t</code>).
+        <code>int</code> represents different bit-lengths on different Arduino platforms. To guarantee a specific behavior with bitwise operations, you should cast the data to the explicit desired type using variable types from the inttypes.h header (i.e. <code>uint8_t</code>).
       </li>
 	  <li>
-        <code>analogReference()</code> is not supported by the Galileo board. Even when I/O voltage is set to 3.3V externally (making it safe to only use 3.3V), the reference will still be 5V.
+        <code>analogReference()</code> is not supported by the Galileo board.  Analog inputs are scaled on a range of 0-5 volts (resulting in analog readings of 0-4095) regardless of the setting of the IOREF jumper (5v or 3.3v). However, when the IOREF jumper is set to the 3.3v position, analog input signals are only considered safe from 0-3.3 volts.
 	  </li>
     </ol>
   </p>
@@ -34,7 +34,7 @@ permalink: /ReleaseNotes.htm
   <h2> Hardware Limitations </h2>
   <p>
     <ol>
-      <li>GPIO pins are very slow (caused by Cypress I/O port expander).</li>
+      <li>The fastest most GPIO pins can be changed is about once every 25 milliseconds. This is because of the speed of the Cypress I/O port expander used on the Galileo. Pins 2, 3 and 10 can be driven directly by the processor and can be changed roughly every 2 milliseconds.</li>
       <li>CPU architecture does not support the LOCK_ prefix on kernel instructions.</li>
       <li>No SSE registers, Windows functionality requiring this hardware cannot work.</li>
     </ol>
