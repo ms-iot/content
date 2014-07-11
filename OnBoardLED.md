@@ -5,7 +5,7 @@ permalink: /OnBoardLED.htm
 ---
 
 # On Board LED
-Learn how to toggle the GP Led on the Galileo on and off.
+Learn how to toggle the on-board LED on the Galileo on and off.
 
 # Create a new project
 Create a new project from the template and replace the existing code in main.cpp with the following code:
@@ -26,7 +26,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 //This application flashes the on board LED of the Galileo board by calling GPIO functions directly in the embprpusr.dll instead of using the Arduino layer.
 
-bool state = false; // keeps track of the state of the GP LED
+ULONG state = LOW; // keeps track of the state of the on-board LED
 
 void setup()
 {
@@ -35,9 +35,13 @@ void setup()
 
 void loop()
 {
-    state = !state;
-    GpioWrite(LED_BUILTIN, state); // Writes to the pin, setting its value to HIGH
-    Log(L"LED %s\n", (state ? L"ON" : L"OFF"));
+    if ( HIGH == state ) {
+	    state = LOW;
+	} else {
+	    state = HIGH;
+	}
+    GpioWrite(LED_BUILTIN, state); // Writes to the pin, setting its value either HIGH (on) or LOW (off)
+    Log(L"LED %s\n", (HIGH == state ? L"ON" : L"OFF"));
     Sleep(1000);
 }
 {% endhighlight %}
