@@ -4,7 +4,7 @@ title: On Board Thermal
 permalink: /OnBoardThermal.htm
 ---
 # On Board Thermal Sample
-Learn how to use Analog Read to read values from the OnBoard Thermal Sensor.
+Learn how to use AnalogRead() to read values from the on-board thermal sensor.
 
 # Create a new project
 Create a new project from the template and replace the existing code in main.cpp with the following code:
