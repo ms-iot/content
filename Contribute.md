@@ -18,9 +18,12 @@ We're actively accepting work for the following areas:
 
 The first time you'd like to commit a change to a repository, perform the following:
 
+## References
+1. <a href="https://help.github.com/" title="GitHub documentation" target="_blank">GitHub Documentation</a>
+1. <a href="https://github.com/github/training-materials/blob/master/downloads/github-git-cheat-sheet.pdf?raw=true" title="Git Cheatsheet!">Git Cheatsheet!</a>
+1. <a href="http://www.git-scm.com/book/en/" title="Git Documentation">Git Documentation</a>
+
 ## Fork the repository
-1. Familiarize yourself with git by reading through the <a href="https://help.github.com/" title="GitHub help" target="_blank">GitHub documentation</a>
-1. Familiarize yourself with the <a href="https://github.com/github/training-materials/blob/master/downloads/github-git-cheat-sheet.pdf?raw=true">Git Cheatsheat!</a>
 1. Create a GitHub account by starting at <a href="https://github.com/" target="_blank">GitHub Home</a>
 1. Go to <a href="https://github.com/" target="_blank">GitHub Home</a> and navigate to the repository you'd like to contribute to, click *Fork*  
   ![Fork](images/GitHubFork.png)
