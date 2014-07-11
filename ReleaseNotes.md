@@ -25,7 +25,7 @@ permalink: /ReleaseNotes.htm
         <code>int</code> represents different bit-lengths on different Arduino platforms. To guarantee a specific behavior with bitwise operations, you should cast the data to the explicit desired type using variable types from the inttypes.h header (i.e. <code>uint8_t</code>).
       </li>
 	  <li>
-        <code>analogReference()</code> is not supported by the Galileo board.  Analog inputs are scaled on a range of 0-5 volts (resulting in analog readings of 0-4095) regardless of the setting of the IOREF jumper (5v or 3.3v). However, when the IOREF jumper is set to the 3.3v position, analog input signals are only considered safe from 0-3.3 volts.
+        <code>analogReference()</code> is not supported by the Galileo board.  Analog inputs are scaled on a range of 0-5 volts (resulting in analog readings of 0-4095) regardless of the setting of the IOREF jumper (5v or 3.3v). However, when the IOREF jumper is set to the 3.3v position, analog input signals are only safe from 0-3.3 volts.
 	  </li>
     </ol>
   </p>
