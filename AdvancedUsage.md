@@ -22,7 +22,7 @@ permalink: /AdvancedUsage.htm
       <div id="collapseGalileoAutorun" class="panel-collapse collapse">
         <div class="panel-body">
             Edit the autorun.cmd file in Windows\System32\Boot and add the following line<br/>
-            <kbd>start "YourAppLocation\YourAppName"</kbd>
+            <kbd>start YourAppLocation\YourAppName</kbd>
         </div>
     </div>
   </div>
@@ -66,7 +66,7 @@ permalink: /AdvancedUsage.htm
       </div>
       <div id="collapseRemoteDebugging" class="panel-collapse collapse">
         <div class="panel-body">
-            <p>Inside Visual Studio:
+            <p>With your project open in Visual Studio:
                 <ul>
                     <li>select the <kbd>Project</kbd> menu</li>
                     <li>select <kbd>Properties</kbd></li>

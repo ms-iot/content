@@ -39,8 +39,8 @@ If you are editing a fork of ms-iot/galileo-sdk, please submit pull request off 
 
 For clarification, what we mean when we say:<br/>
 **local repository:** the cloned repository that you have one on your machine<br/>
-**forked repository:** the fork you made from the main repository. This sits up on github's servers. (Also known as origin)<br/>
-**main repository:** the original repository that you forked from. This is the common ms-iot repository hosted on github's servers. (Also known as upstream)<br/>
+**forked repository:** the fork you made from the main repository. This sits up on github's servers. (Also known as <b>"origin"</b>)<br/>
+**main repository:** the original repository that you forked from. This is the common ms-iot repository hosted on github's servers. (Also known as <b>"upstream"</b>)<br/>
 
 ####Making changes
 1. Make your edits, build, and test. Use the repository's readme for any specific editing requirements, build instructions, and testing methods.
@@ -59,7 +59,7 @@ For clarification, what we mean when we say:<br/>
 1. The pull request should automatically update unless it was closed.
     * If it was closed, you will have to re-open it or submit a new pull-request.
 
-    ___
+___
 
 #Iterating on the Galileo SDK
 Fork  ms-iot/galileo-sdk as described above in the contribute section.
@@ -77,11 +77,23 @@ Under *Projects and Solutions*, select *General*
 *Tools -> Library Package Manager -> Package Manager Settings*
 
 ![Package Config](images/Nuget_PackageSourceConfig_VSU2013.png)
+<br/>
+
+1. Click the "+" button to add a new source
+1. Set the name to something descriptive, such as: "Local Source"
+1. Click the "..." button and navigate to your local sources directory
+1. Click the "Update" button to save the Package Sources changes
 
 ###For Visual Studio Express
 *Tools -> Nuget Package Manager -> Package Manager Settings*
 
 ![Package Config](images/Nuget_PackageSourceConfig_VSE2013.png)
+<br/>
+
+1. Click the "+" button to add a new source
+1. Set the name to something descriptive, such as: "Local Source"
+1. Click the "..." button and navigate to your local sources directory
+1. Click the "Update" button to save the Package Sources changes
 
 ##Build the Nuget package
 Please download the Nuget command line utility [nuget.exe](http://nuget.org/nuget.exe) into the Galileo-SDK source folder.
@@ -98,8 +110,8 @@ You can now goto *File -> New Project* then Select *Templates -> Visual C++ -> G
 ###Build the app
 You can now build the application. Please refer to the [Hello Blinky Sample](HelloBlinky.htm) for details on how to build and deploy an application.
 
-###Iterate in the Nuget
-Now you need to make changes to the Nuget, you’ll need to uninstall it first. Right click on the Project in the solution and select *Manage Nuget Packages*.
+###Iterate in the Nuget Package
+Now you need to make changes to the Nuget Package, you’ll need to uninstall it first. Right click on the Project in the solution and select *Manage Nuget Packages*.
 
 Now Uninstall the Galileo SDK by clicking the uninstall button:
 

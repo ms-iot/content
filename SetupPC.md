@@ -13,7 +13,7 @@ permalink: /SetupPC.htm
   <div class="panel panel-danger">
     <div class="panel-heading">NOTE:</div>
     <div class="panel-body">
-        When you are attempting to download anything from Microsoft Connect, you will want to use the link shown below unless you want a dlm file for FTM.
+        When you are attempting to download anything from Microsoft Connect, you will want to use the link shown below.
         <br/>
         <img src="images\ConnectDownloadClarification.png" style="height:auto; width:75%;">
     </div>
@@ -34,7 +34,7 @@ permalink: /SetupPC.htm
         <div class="panel-body">
           Please install the <a href="http://go.microsoft.com/fwlink/?LinkID=403151" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
           <br/>
-          (During the install process, you may be prompted by the User Account Control twice. Once for the MSI and once for VSIXInstaller. To properly install the needed components, you will need to click yes.)
+          (During the install process, you may be prompted twice by the User Account Control. Once for the MSI and once for VSIXInstaller. To properly install the needed components, you will need to click yes.)
         </div>
       </div>
     </div>
@@ -74,7 +74,7 @@ permalink: /SetupPC.htm
             <li>
               Install the <a href="http://go.microsoft.com/fwlink/?LinkID=403151" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
               <br/>
-              (During the install process, you may be prompted by the User Account Control twice. Once for the MSI and once for VSIXInstaller. To properly install the needed components, you will need to click yes.)
+              (During the install process, you may be prompted twice by the User Account Control. Once for the MSI and once for VSIXInstaller. To properly install the needed components, you will need to click yes.)
             </li>
           </ol>
         </div>
@@ -119,7 +119,7 @@ permalink: /SetupPC.htm
             <li>
               Install the <a href="http://go.microsoft.com/fwlink/?LinkID=403151" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
               <br/>
-              (During the install process, you may be prompted by the User Account Control twice. Once for the MSI and once for VSIXInstaller. To properly install the needed components, you will need to click yes.)
+              (During the install process, you may be prompted twice by the User Account Control. Once for the MSI and once for VSIXInstaller. To properly install the needed components, you will need to click yes.)
             </li>
           </ol>
         </div>
@@ -151,7 +151,8 @@ permalink: /SetupPC.htm
   <ol>
     <li>On your desktop machine, go to the Control Panel and open:<br/>(if in icon view) Programs and Features<br/> or<br/> (if in category view) Programs -> Programs and Features.</li>
     <li>In the left hand column, select “Turn Windows Features on or off”</li>
-    <li>Select “Telnet Client” in the list.<br/><img src="images\Telnet.png"/></li>
+    <li>In the list, “Telnet Client” needs to be checked.<br/><img src="images\Telnet.png"/></li>
+    <li>Click "Ok"</li>
     <li>Restart your PC</li>
   </ol>
 

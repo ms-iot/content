@@ -46,10 +46,7 @@ permalink: /SetupGalileo.htm
 
   <h2>Insert the microSD card</h2>
   <ol>
-    <li>Open the SD card transport case</li>
-    <li>Remove the SD card adapter from the case</li>
-    <li>Slide the microSD card from the adapter</li>
-    <li>Insert the microSD card into the Galileo's microSD card slot near the power port</li>
+    <li>Insert the microSD card with the Windows Image (provided in the box) into the Galileo's microSD card slot near the power port. (Note: This step must be done prior to plugging in the power.)</li>
   </ol>
   <hr/>
 
