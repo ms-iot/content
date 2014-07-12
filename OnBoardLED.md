@@ -5,7 +5,7 @@ permalink: /OnBoardLED.htm
 ---
 
 # On Board LED
-Learn how to use the on board thermal sensor.
+Learn how to use the on board LED.
 
 # Create a new project
 Create a new project and configure for deployment like was done in [Hello Blinky](HelloBlinky.htm)
