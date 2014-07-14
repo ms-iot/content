@@ -15,7 +15,7 @@ permalink: /HelloBlinky.htm
     <div class="panel panel-info">
         <div class="panel-heading">NOTE:</div>
         <div class="panel-body">
-            The location of Visual C++ templates may vary. If you do not see Visual C++ listed under templates, try looking under "Other Languages" or "Other Project Types".
+            The location of Visual C++ templates may vary due to your Visual Studio Settings. If you do not see Visual C++ listed under templates, try looking under "Other Languages" or "Other Project Types".
         </div>
     </div>
   </p>
