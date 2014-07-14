@@ -22,12 +22,12 @@ permalink: /SampleApps.htm
    </div>
    <div class="col-md-4">
       <h2>Onboard LED</h2>
-      <p>Learn how to toggle the GP Led on the Galileo on and off.</p>
+      <p>Learn how to toggle the on-board LED on the Galileo on and off.</p>
       <p><a class="btn btn-default" href="OnBoardLED.htm" role="button">View details &raquo;</a></p>
     </div>
     <div class="col-md-4">
       <h2>OnBoard Thermal Sensor</h2>
-      <p>Learn how to use Analog Read to read values from the OnBoard Thermal Sensor.</p>
+      <p>Learn how to use <code>AnalogRead()</code> to read values from the on-board thermal sensor.</p>
       <p><a class="btn btn-default" href="OnBoardThermal.htm" role="button">View details &raquo;</a></p>
     </div> 
   </div>
