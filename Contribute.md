@@ -16,12 +16,14 @@ We're actively accepting work for the following areas:
 * Adding or removing pointers to Library Ports
 * Adding or removing pointers to Arduino Shield Ports
 
-The first time you'd like to commit a change to a repository, perform the following:
+___
 
 ## References
 1. <a href="https://help.github.com/" title="GitHub documentation" target="_blank">GitHub Documentation</a>
 1. <a href="https://github.com/github/training-materials/blob/master/downloads/github-git-cheat-sheet.pdf?raw=true" title="Git Cheatsheet!">Git Cheatsheet!</a>
 1. <a href="http://www.git-scm.com/book/en/" title="Git Documentation">Git Documentation</a>
+
+___
 
 ## Fork the repository
 1. Create a GitHub account by starting at <a href="https://github.com/" target="_blank">GitHub Home</a>
@@ -36,7 +38,7 @@ The first time you'd like to commit a change to a repository, perform the follow
 
 ___
 
-##Steps for Using Git
+##Using Git
 If you are editing a fork of ms-iot/content, please submit pull request off of gh_pages.<br/>
 If you are editing a fork of ms-iot/galileo-sdk, please submit pull request off of develop.
 
