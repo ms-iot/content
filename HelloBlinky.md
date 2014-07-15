@@ -9,37 +9,39 @@ permalink: /HelloBlinky.htm
   <p>Learn to Create, Deploy and Debug a Windows Developer Program for IoT project.</p>
 
   <h3>Create a new Project</h3>
-  <p>Open Visual Studio. Select File -> New Project and Select Templates -> Visual C++ -> Windows for IoT -> Galileo Wiring app</p>
+  <p>
+    Open Visual Studio. Select File -> New Project and Select Templates -> Visual C++ -> Windows for IoT -> Galileo Wiring app
+  </p>
   <img src="images/Nuget_AppCreate.png"/>
 
   <h3>Code</h3>
-  {% highlight C++ %}
-  #include "stdafx.h"
-  #include "arduino.h"
+{% highlight C++ %}
+#include "stdafx.h"
+#include "arduino.h"
 
-  int _tmain(int argc, _TCHAR* argv[])
-  {
-    return RunArduinoSketch();
-  }
+int _tmain(int argc, _TCHAR* argv[])
+{
+  return RunArduinoSketch();
+}
 
-  int led = 13;  // This is the pin the LED is attached to.
+int led = 13;  // This is the pin the LED is attached to.
 
-  void setup()
-  {
-    pinMode(led, OUTPUT); // Configure the pin for OUTPUT so you can turn on the LED.
-  }
+void setup()
+{
+  pinMode(led, OUTPUT); // Configure the pin for OUTPUT so you can turn on the LED.
+}
 
-  // the loop routine runs over and over again forever:
-  void loop()
-  {
-    digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
-    Log(L"LED OFF\n");
-    delay(1000);               // wait for a second
-    digitalWrite(led, HIGH);    // turn the LED on by making the voltage HIGH
-    Log(L"LED ON\n");
-    delay(1000);               // wait for a second
-  }
-  {% endhighlight %}
+// the loop routine runs over and over again forever:
+void loop()
+{
+  digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
+  Log(L"LED OFF\n");
+  delay(1000);               // wait for a second
+  digitalWrite(led, HIGH);    // turn the LED on by making the voltage HIGH
+  Log(L"LED ON\n");
+  delay(1000);               // wait for a second
+}
+{% endhighlight %}
   <i>This code is included in the default template, and is included here for reference.</i>
 
   <h3>Wire your Galileo with an LED</h3>
