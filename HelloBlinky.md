@@ -11,13 +11,6 @@ permalink: /HelloBlinky.htm
   <h3>Create a new Project</h3>
   <p>
     Open Visual Studio. Select File -> New Project and Select Templates -> Visual C++ -> Windows for IoT -> Galileo Wiring app
-    <br/>
-    <div class="panel panel-info">
-        <div class="panel-heading">NOTE:</div>
-        <div class="panel-body">
-            The location of Visual C++ templates may vary due to your Visual Studio Settings. If you do not see Visual C++ listed under templates, try looking under "Other Languages" or "Other Project Types".
-        </div>
-    </div>
   </p>
   <img src="images/Nuget_AppCreate.png"/>
 
