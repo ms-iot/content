@@ -16,25 +16,30 @@ We're actively accepting work for the following areas:
 * Adding or removing pointers to Library Ports
 * Adding or removing pointers to Arduino Shield Ports
 
-The first time you'd like to commit a change to a repository, perform the following:
+___
+
+## References
+1. <a href="https://help.github.com/" title="GitHub documentation" target="_blank">GitHub Documentation</a>
+1. <a href="https://github.com/github/training-materials/blob/master/downloads/github-git-cheat-sheet.pdf?raw=true" title="Git Cheatsheet!">Git Cheatsheet!</a>
+1. <a href="http://www.git-scm.com/book/en/" title="Git Documentation">Git Documentation</a>
+
+___
 
 ## Fork the repository
-1. Familiarize yourself with git by reading through the <a href="https://help.github.com/" title="GitHub help" target="_blank">GitHub documentation</a>
-1. Familiarize yourself with the <a href="https://github.com/github/training-materials/blob/master/downloads/github-git-cheat-sheet.pdf?raw=true">Git Cheatsheat!</a>
 1. Create a GitHub account by starting at <a href="https://github.com/" target="_blank">GitHub Home</a>
 1. Go to <a href="https://github.com/" target="_blank">GitHub Home</a> and navigate to the repository you'd like to contribute to, click *Fork*  
   ![Fork](images/GitHubFork.png)
 1. On GitHub, Navigate to your account's fork of the repository
 1. Clone the repository in one of two ways:
     1. You can use command line <br/>
-    <kbd>git clone git://github.com/LinkToRepo.git NameYourLocalFolder</kbd>
+    <kbd>git clone [link to .git] [NameYourLocalFolder]</kbd>
     1. Or launch the GitHub app by clicking 'Clone in Desktop' on the right hand side of the repository  
     ![Clone](images/GitHubClone.png)   
 
 ___
 
-##Steps for Using Git
-If you are editing a fork of ms-iot/content, please submit pull request off of gh_pages.<br/>
+##Using Git
+If you are editing a fork of ms-iot/content, please submit pull request off of develop.<br/>
 If you are editing a fork of ms-iot/galileo-sdk, please submit pull request off of develop.
 
 For clarification, what we mean when we say:<br/>
@@ -42,23 +47,34 @@ For clarification, what we mean when we say:<br/>
 **forked repository:** the fork you made from the main repository. This sits up on github's servers. (Also known as <b>"origin"</b>)<br/>
 **main repository:** the original repository that you forked from. This is the common ms-iot repository hosted on github's servers. (Also known as <b>"upstream"</b>)<br/>
 
+####Setting up
+1. Set up your upstream 
+    * <kbd>git remote add upstream [link to .git]</kbd>
+
 ####Making changes
 1. Make your edits, build, and test. Use the repository's readme for any specific editing requirements, build instructions, and testing methods.
-1. Commit your changes to your local repository. <br/> <b>NOTE: Do not push these changes to your forked repository, because this can cause duplications of commits when rebasing.</b>
-
-
+    * <kbd>git add [file]</kbd>
+1. Commit your changes to your local repository.
+    * <kbd>git commit -m "[descriptive message]" </kbd>
+    
 ####Submitting a Pull Request
-1. Rebase your local repository on top of the main repository in order to sync the changes that have been made to the main repository since you forked.
-    * This should now put your changes on top of the main repository's history
-1. Push your changes to your forked repository.
+1. Fetch upstream
+    * <kbd>git fetch --all</kbd>
+1. Rebase upstream (This should now put your changes on top of the main repository's history.)
+    * <kbd>git rebase -i upstream/develop</kbd>
+    * This may highlight conflicts that you will have to hand-merge
+        * You can use your favorite merging tool or even notepad for this.
+    * After hand-merging, you can continue the rebase
+        * <kbd>git add [fileYouHandMerged]</kbd>
+        * <kbd>git rebase --continue</kbd>
+1. Force-push your changes to your forked repository.
+    * <kbd>git push -f origin develop</kbd>
 1. Now submit your pull request from your forked repository using the GitHub website.
 
 ####Making changes to a Pull Request
-1. Make your changes, commit to your local repository, and push to your forked repository.
-    * If changes were made to the main repository while you were making your changes, you will have to merge with main to fix this.
-1. The pull request should automatically update unless it was closed.
-    * If it was closed, you will have to re-open it or submit a new pull-request.
-
+1. Make your new changes, fetch upstream, rebase upstream, and force-push your changes.
+    * If your pull request was never closed, you should not have to submit a new pull request. It should automatically update.
+    
 ___
 
 #Iterating on the Galileo SDK
@@ -144,5 +160,3 @@ Please do not add binaries to Git including:
 
 Acceptable binaries:
 * PNG, JPG, or other image formats
-
-
