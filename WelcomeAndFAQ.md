@@ -19,7 +19,7 @@ As a first step, we’ve crafted a device development experience where you run a
 
 So, if you're a hardware developer who dabbles in software, you can bring your Arduino sketches and shields directly into your project, while leveraging Windows code for cloud connectivity and other computing-intensive tasks.
 
-And if you're already a software guy, you can write a regular Windows application that also has easy, direct access to hardware through the Arduino Wiring API set, extending your solution into the physical world.
+And if you're already a software dev, you can write a regular Windows application that also has easy, direct access to hardware through the Arduino Wiring API set, extending your solution into the physical world.
 
 Of course, this first program is just the beginning.  After all, we’re a devices *and* services company.  
 
