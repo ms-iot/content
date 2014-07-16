@@ -8,8 +8,6 @@ permalink: /ContributionGuidelines.htm
 
 ___
 
-**Maintainers** – (noun) – the people managing the merging of pull requests and the state of the GitHub repositories.
-
 ### Coding Guidelines:
 
 1. Top Level API consistency
