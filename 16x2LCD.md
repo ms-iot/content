@@ -34,6 +34,12 @@ If you are using the 16x2 LCD listed above, follow the diagram below:<br/>
 #include "LiquidCrystal.h" // we need this library for the LCD commands
 
 LiquidCrystal *lcd; // define our LCD and which pins to use
+int RS = 4;
+int ENABLE = 5;
+int D0 = 6;
+int D1 = 7;
+int D2 = 8;
+int D3 = 9;
 
 int _tmain(int argc, _TCHAR* argv [])
 {
@@ -44,7 +50,7 @@ void setup()
 {
     Log(L"LCD Sample\n");
 
-    lcd = new LiquidCrystal(4, 5, 6, 7, 8, 9);
+    lcd = new LiquidCrystal(RS, ENABLE, D0, D1, D2, D3);
     lcd->begin(16, 2); // need to specify how many columns and rows are in the LCD unit
     lcd->clear();      // this clears the LCD. You can use this at any time
 
