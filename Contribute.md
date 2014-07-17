@@ -1,10 +1,10 @@
 ---
 layout: code
-title: Contribute
+title: How to Contribute
 permalink: /Contribute.htm
 ---
 
-# Contribute
+# How to Contribute
 Thank you for your interest in contributing to Windows Developer Program for IoT for Intel Galileo.
 
 We're actively accepting work for the following areas:
@@ -23,6 +23,9 @@ ___
 1. <a href="https://github.com/github/training-materials/blob/master/downloads/github-git-cheat-sheet.pdf?raw=true" title="Git Cheatsheet!">Git Cheatsheet!</a>
 1. <a href="http://www.git-scm.com/book/en/" title="Git Documentation">Git Documentation</a>
 
+___
+
+## <a href="/ContributionGuidelines.htm">Guidelines</a>
 ___
 
 ## Fork the repository
