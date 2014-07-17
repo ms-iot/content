@@ -47,17 +47,18 @@ For clarification, what we mean when we say:<br/>
 **forked repository:** the fork you made from the main repository. This sits up on github's servers. (Also known as <b>"origin"</b>)<br/>
 **main repository:** the original repository that you forked from. This is the common ms-iot repository hosted on github's servers. (Also known as <b>"upstream"</b>)<br/>
 
-####Setting up
+###Setting up
 1. Set up your upstream 
     * <kbd>git remote add upstream [link to .git]</kbd>
 
-####Making changes
+###Making changes
 1. Make your edits, build, and test. Use the repository's readme for any specific editing requirements, build instructions, and testing methods.
     * <kbd>git add [file]</kbd>
 1. Commit your changes to your local repository.
     * <kbd>git commit -m "[descriptive message]" </kbd>
     
-####Submitting a Pull Request
+###Submitting a Pull Request
+1. Before you submit your first pull request, we ask you to fill out a <a href="https://cla.msopentech.com" target="_blank">Microsoft Open Technologies Contribution License Agreement</a>. Without this on file, we unfortunately cannot accept a pull request. In the agreement, please include the GitHub user id you are submitting the pull request from. You only need to do this once.
 1. Fetch upstream
     * <kbd>git fetch --all</kbd>
 1. Rebase upstream (This should now put your changes on top of the main repository's history.)
@@ -71,7 +72,7 @@ For clarification, what we mean when we say:<br/>
     * <kbd>git push -f origin develop</kbd>
 1. Now submit your pull request from your forked repository using the GitHub website.
 
-####Making changes to a Pull Request
+###Making changes to a Pull Request
 1. Make your new changes, fetch upstream, rebase upstream, and force-push your changes.
     * If your pull request was never closed, you should not have to submit a new pull request. It should automatically update.
     
