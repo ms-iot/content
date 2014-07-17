@@ -20,12 +20,12 @@ ___
 
 ## References
 1. <a href="https://help.github.com/" title="GitHub documentation" target="_blank">GitHub Documentation</a>
-1. <a href="https://github.com/github/training-materials/blob/master/downloads/github-git-cheat-sheet.pdf?raw=true" title="Git Cheatsheet!">Git Cheatsheet!</a>
-1. <a href="http://www.git-scm.com/book/en/" title="Git Documentation">Git Documentation</a>
+1. <a href="https://github.com/github/training-materials/blob/master/downloads/github-git-cheat-sheet.pdf?raw=true" title="Git Cheatsheet!" target="_blank">Git Cheatsheet!</a>
+1. <a href="http://www.git-scm.com/book/en/" title="Git Documentation" target="_blank">Git Documentation</a>
 
 ___
 
-## <a href="/ContributionGuidelines.htm">Guidelines</a>
+## <a href="ContributionGuidelines.htm">Guidelines</a>
 ___
 
 ## Fork the repository
