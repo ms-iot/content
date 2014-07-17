@@ -62,5 +62,6 @@ void loop()
 {
 }
 {% endhighlight %}
+  <hr/>
 
-[&laquo; Return to Samples](SampleApps.htm)
+<a class="btn btn-default" href="SampleApps.htm" role="button">&laquo; Return to Samples</a>
