@@ -54,9 +54,9 @@ permalink: /SetupGalileo.htm
   <h2>Connect Ethernet on Galileo to Ethernet Directly to PC or Laptop</h2>
   Connecting the Galileo directly to your computer will allow you to communicate with just your Galileo. You will still have internet connectivity, and your computer will be able to communicate with your Galileo.
   <ol>
-    <li>Connect one end to the Ethernet port on your Galileo</li>
-    <li>Connect the other end to the USB Ethernet adapter.</li>
-    <li>Plug the USB Ethernet adapter into your PC</li>
+    <li>Connect one end of the network cable to the ethernet port on your Galileo</li>
+    <li>Connect the other end of the network cable to the USB ethernet adapter</li>
+    <li>Plug the USB Ethernet adapter into your PC's USB adapter</li>
   </ol>
   <hr/>
 
