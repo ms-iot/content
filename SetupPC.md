@@ -15,7 +15,7 @@ permalink: /SetupPC.htm
     <div class="panel-body">
         When you are attempting to download anything from Microsoft Connect, you will want to use the link shown below.
         <br/>
-        <img src="images\ConnectDownloadClarification.png" style="height:auto; width:75%;">
+        <img src="images/ConnectDownloadClarification.png" style="height:auto; width:75%;">
     </div>
   </div>
   <hr/>
@@ -151,7 +151,7 @@ permalink: /SetupPC.htm
   <ol>
     <li>On your desktop machine, go to the Control Panel and open:<br/>(if in icon view) Programs and Features<br/> or<br/> (if in category view) Programs -> Programs and Features.</li>
     <li>In the left hand column, select “Turn Windows Features on or off”</li>
-    <li>In the list, “Telnet Client” needs to be checked.<br/><img src="images\Telnet.png"/></li>
+    <li>In the list, “Telnet Client” needs to be checked.<br/><img src="images/Telnet.png"/></li>
     <li>Click "Ok"</li>
     <li>Restart your PC</li>
   </ol>
