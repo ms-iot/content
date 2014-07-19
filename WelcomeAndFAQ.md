@@ -177,7 +177,7 @@ During Steve T's IoT session at Build 2014, we announced that we're increasing o
 **A:** Microsoft has long been involved in the IoT space through products like Windows Embedded and the .NET Micro Framework (NETMF). In recognition of the uniqueness and importance of this space, the IoT team was formed as part of the reorganization which happened last year. The IoT team brings together the Windows Embedded team along with teams building services and SDKs to help tie everything together.
  
 **Q:** What bits are open source?  
-**A:** The SDKs (Arduino headers, Arduino implementation, and porting functions), documentation, sample projects, and shield/library ports for Windows on the Galileo are open source, hosted on [Github](http://ms-iot.github.com)
+**A:** The SDKs (Arduino headers, Arduino implementation, and porting functions), documentation, sample projects, and shield/library ports for Windows on the Galileo are open source, hosted on [Github](https://github.com/ms-iot)
 
 **Q:** Are you accepting/encouraging OSS contributions?  
 **A:** Yes! Please see our [Github Contribute page](http://ms-iot.github.io/content/Contribute.htm) for more information.
