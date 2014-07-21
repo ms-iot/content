@@ -70,7 +70,7 @@ permalink: /SetupGalileo.htm
     <li>You should see activity on the microSD light as it boots. The LED is at the bottom left of this picture.</li>
     <br/>
     <p>
-      <img src="images\SDLed.png"/>
+      <img src="images/SDLed.png"/>
     </p>
     <li>
       <b>
@@ -79,12 +79,12 @@ permalink: /SetupGalileo.htm
       <br/>
       Make sure to allow it through the firewall when the security dialog comes up.
       <br/>
-      <img src="images\GalileoWatcherFirewallDialog.PNG">
+      <img src="images/GalileoWatcherFirewallDialog.PNG">
       <br/>
       Once your Galileo board finishes booting up (microSD LED should stop flashing with activity) it should begin broadcasting its IP Address and Host Name. This data should show up on GalileoWatcher like below.
     </li>
     <p>
-      <img src="images\GalileoWatcherExample.png"/>
+      <img src="images/GalileoWatcherExample.png"/>
     </p>
     <br/>
     <li>
@@ -92,7 +92,7 @@ permalink: /SetupGalileo.htm
     </li>
     <br/>
     <p>
-      <img src="images\ping.png"/>
+      <img src="images/ping.png"/>
     </p>
   </ol>
   <hr/>
@@ -102,7 +102,7 @@ permalink: /SetupGalileo.htm
   When prompted by telnet, use the following username and password:<br/>
   <p><kbd>Username: Administrator</kbd><br/>
   <kbd>Password: admin</kbd></p>
-  <p><img src="images\TelnetLogin.png"/></p>
+  <p><img src="images/TelnetLogin.png"/></p>
 
   <h3>Shutting down the Galileo</h3>
   Before you unplug the power from the Galileo, it is advisable to gracefully shut it down. To do this:<br />

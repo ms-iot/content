@@ -69,12 +69,12 @@ permalink: /AdvancedUsage.htm
             <p>With your project open in Visual Studio:
                 <ul>
                     <li>Right click on your project (not solution) in the Solution Explorer and select <kbd>Properties</kbd></li>
-                        <img src="images\ConfigureRemoteDebugger1.png"/>
+                        <img src="images/ConfigureRemoteDebugger1.png"/>
                     <li>expand <kbd>Configuration Properties</kbd></li>
                     <li>select the <kbd>Debugging</kbd> tree item</li>
                     <li>Change the <kbd>Debugger to launch</kbd> to <kbd>Remote Windows Debugger</kbd></li>
                     <li>Configure the debug page like the following picture, paying close attention to the debug settings:<br>
-                        <img src="images\ConfigureRemoteDebugger.png"/>
+                        <img src="images/ConfigureRemoteDebugger.png"/>
                     </li>
                 </ul>
             </p>
@@ -95,7 +95,7 @@ permalink: /AdvancedUsage.htm
             <h3>Configure remote deploying</h3>
             Before you close the Property Pages, select the <kbd>Configuration Manager...</kbd> button from the upper right corner.<br/>
             Make sure "Deploy" is checked for your project<br/>
-            <img src="images\EnableDeployment.png"/><br/>
+            <img src="images/EnableDeployment.png"/><br/>
         </div>
     </div>
   </div>

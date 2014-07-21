@@ -134,7 +134,7 @@ permalink: /TroubleShooting.htm
           Make sure you have allowed it through the firewall.
 
           To check it's firewall configurations go to Control Panel > System and Security > Windows Firewall > Allowed Apps</li>
-          <img src="images\GalileoWatcherFirewall.png"/>
+          <img src="images/GalileoWatcherFirewall.png"/>
         </div>
       </div>
     </div>
