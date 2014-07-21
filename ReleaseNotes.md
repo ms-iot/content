@@ -16,7 +16,7 @@ permalink: /ReleaseNotes.htm
   <p>
     <ol>
 	  <li>
-		The <code>word(h, l)</code> conversion function is unavailable due to type constructor conflicts. A helper function <code>makeWord(h,l)</code> has been supplied as a workaround.
+		The <code>word(h,l)</code> conversion function is unavailable due to type constructor conflicts. A helper function <code>makeWord(h,l)</code> has been supplied as a workaround.
 	  </li>
       <li>
         <code>LED_BUILTIN</code> constant only works when calling directly into embprpusr.dll functionality.
