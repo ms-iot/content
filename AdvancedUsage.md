@@ -10,6 +10,26 @@ permalink: /AdvancedUsage.htm
   </div>
 </div>
 
+<div class="panel-group" id="accordion0">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion0" href="#collapseNetworkShare">
+            <h2>Open a network share to your Galileo</h2>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseNetworkShare" class="panel-collapse collapse">
+        <div class="panel-body">
+			Open up a file explorer window and type the following into the address bar:<br/>
+            <kbd>\\YourGalileoName\c$</kbd>
+        </div>
+    </div>
+  </div>
+</div>
+
+---
+
 <div class="panel-group" id="accordion1">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -21,8 +41,12 @@ permalink: /AdvancedUsage.htm
       </div>
       <div id="collapseGalileoAutorun" class="panel-collapse collapse">
         <div class="panel-body">
-            Edit the autorun.cmd file in Windows\System32\Boot and add the following line<br/>
-            <kbd>start YourAppLocation\YourAppName</kbd>
+         <ol>
+            <li>From a file explorer window, navigate to <kbd>\\mygalileo\c$\Windows\System32\Boot</kbd></li>
+            <li>If prompted enter the username as \Administrator and the password as admin</li>
+            <li>Right click on <kbd>autorun.cmd</kbd> and select Edit</li>
+            <li>At the end of the file add: <kbd>start YourAppLocation\YourAppName.exe</kbd></li>
+         </ol>
         </div>
     </div>
   </div>
