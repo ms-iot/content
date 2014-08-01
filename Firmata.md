@@ -16,16 +16,16 @@ The Standard Firmata software will be running in Windows on the Intel Galileo bo
 
 First, you'll need to create a new project. Open Visual Studio. Select File -> New Project and Select Templates -> Visual C++ -> Windows for IoT -> Galileo Wiring app.
 
-Next, you'll need to download files from Firmata and add them to your project directory. Please don't add them to your project directly.
+Next, you'll need to download files from Firmata and add them to your project directory. These files should not be added to the project in Visual Studio as they are included by main.cpp.
 
-* [Boards.h](https://raw.githubusercontent.com/ms-iot/arduino/master/Boards.h)
-* [Firmata.h](https://raw.githubusercontent.com/ms-iot/arduino/master/Firmata.h)
-* [Firmata.cpp](https://raw.githubusercontent.com/ms-iot/arduino/master/Firmata.cpp)
-* [StandardFirmata.ino](https://raw.githubusercontent.com/ms-iot/arduino/master/examples/StandardFirmata/StandardFirmata.ino)
+* [Boards.h](https://raw.githubusercontent.com/ms-iot/arduino/master/Boards.h){:target="_blank"}
+* [Firmata.h](https://raw.githubusercontent.com/ms-iot/arduino/master/Firmata.h){:target="_blank"}
+* [Firmata.cpp](https://raw.githubusercontent.com/ms-iot/arduino/master/Firmata.cpp){:target="_blank"}
+* [StandardFirmata.ino](https://raw.githubusercontent.com/ms-iot/arduino/master/examples/StandardFirmata/StandardFirmata.ino){:target="_blank"}
 
-_ino_ files require additional headers when compiling on Windows, so they cannot be added directly to your project. To support this, we are including them into a C++ file, so they can be built as part of a large file.
+_ino_ files require additional headers when compiling on Microsoft Windows. To support building an ino file, we are including them into a C++ file.
 
-You'll need to edit the project settings - right click on the Project in the Solution Explorer, then select Properties. Under Configuration Properties -> C/C++ -> Preprocessor, add <kbd>USE_NETWORKSERIAL;_CRT_SECURE_NO_WARNINGS;INTEL_GALILEO;</kbd> to Preprocessor Definitions.
+You'll need to edit the project settings - right click on the Project in the Solution Explorer, then select Properties. Under Configuration Properties -> C/C++ -> Preprocessor, add `USE_NETWORKSERIAL;_CRT_SECURE_NO_WARNINGS;INTEL_GALILEO;` to Preprocessor Definitions.
 
 ![Preprocessor](images/FirmataProjectSettings.png)
 
@@ -55,11 +55,11 @@ Finally, build and deploy this app to your board.
 # Cylon
 You'll use Cylon.js through Node.js on your development to communicate with Standard Firmata over a network socket. 
 
-* Install [Node.js](http://nodejs.org/). 
-* Optionally install the [Node.js extension for Visual Studio](https://nodejstools.codeplex.com/). This will allow you to debug your Node.js app.
+* Install [Node.js](http://nodejs.org/){:target="_blank"}. 
+* Optionally install the [Node.js extension for Visual Studio](https://nodejstools.codeplex.com/){:target="_blank"}. This will allow you to debug your Node.js app.
 * Open the Node.js command prompt, and navigate to your Intel Galileo project
 * Create a directory called Server
-* Install cylon - <kbd>npm install cylon</kbd>
+* Install cylon - `npm install cylon`
 * Create a file called main.js in the Server directory
 
 Copy the following code into main.js:
@@ -96,11 +96,11 @@ robot.start();
 {% endhighlight %}
 
 # Run Cylon on your development machine
-From the Node.js command prompt, launch your program
-<kbd>node main.js</kbd>
+From the Node.js command prompt, launch your program:
+
+`node main.js`
 
 You should see the LED blinking.
 
-
-<hr/>
-<a class="btn btn-default" href="SampleApps.htm" role="button">&laquo; Return to Samples</a>
+---
+[&laquo; Return to Samples](SampleApps.htm){: .btn .btn-default} 
