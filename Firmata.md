@@ -60,6 +60,7 @@ You'll use Cylon.js through Node.js on your development to communicate with Stan
 * Open the Node.js command prompt, and navigate to your Intel Galileo project
 * Create a directory called Server
 * Install cylon - `npm install cylon`
+* Install cylon-firmata - `npm install cylon-firmata`
 * Create a file called main.js in the Server directory
 
 Copy the following code into main.js:
