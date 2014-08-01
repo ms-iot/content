@@ -47,6 +47,11 @@ permalink: /SampleApps.htm
       <p>Learn how to interact with your board using Firmata and Cylon .</p>
       <p><a class="btn btn-default" href="Firmata.htm" role="button">View details &raquo;</a></p>
     </div> 
+    <div class="col-md-4">
+      <h2>Smart Fan</h2>
+      <p>Use a motor, thermoresistor, and temperature sensor to create a smart fan.</p>
+      <p><a class="btn btn-default" href="SmartFan.htm" role="button">View details &raquo;</a></p>
+    </div>  
   </div>
   <hr/>
 
