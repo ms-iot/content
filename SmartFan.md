@@ -41,52 +41,53 @@ const double FAN_ON_TEMP = 20.0;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	return RunArduinoSketch();
+    return RunArduinoSketch();
 }
 
 void init_motor() {
-	pinMode(MOTOR_PIN, OUTPUT);
-	analogWrite(MOTOR_PIN, 0);
+    pinMode(MOTOR_PIN, OUTPUT);
+    analogWrite(MOTOR_PIN, 0);
 }
 
 void toggle_motor(bool motor_is_on) {
-	if (motor_is_on) {
-		// Turn off motor
-		motor_is_on = false;
-		analogWrite(MOTOR_PIN, 0);
-	}
-	else {
-		// Turn on motor
-		motor_is_on = true;
-		analogWrite(MOTOR_PIN, 50);
-	}
+    if (motor_is_on) {
+        // Turn off motor
+        motor_is_on = false;
+        analogWrite(MOTOR_PIN, 0);
+	} else {
+        // Turn on motor
+        motor_is_on = true;
+        analogWrite(MOTOR_PIN, 150);
+        delay(1);
+        analogWrite(MOTOR_PIN, 50);
+    }
 }
 
 void setup() {
-	init_motor();
+    init_motor();
 }
 
 // Analog read returns between 0 - 4095
 // Reading between 0 - 5 V Therefore 5 volts / 1024 units
 double raw_to_voltage(int reading) {
-	return reading * (5.0 / 4096.0);
+    return reading * (5.0 / 4096.0);
 }
 
 // Convert the voltage 
 double voltage_to_celcius(double voltage) {
-	return 100 * voltage - 50;
+    return 100 * voltage - 50;
 }
 
 bool auto_tune_light(int light_sensor_reading) {
-	static int min_reading = 4096;
-	static int max_reading = 0;
-	min_reading = min(min_reading, light_sensor_reading);
-	max_reading = max(max_reading, light_sensor_reading);
+    static int min_reading = 4096;
+    static int max_reading = 0;
+    min_reading = min(min_reading, light_sensor_reading);
+    max_reading = max(max_reading, light_sensor_reading);
 
-	// Arbitrary choice here
-	if (max_reading - min_reading < 50) return false;
+    // Arbitrary choice here
+    if (max_reading - min_reading < 50) return false;
 
-	return (light_sensor_reading > (max_reading - min_reading) * 0.4 + min_reading);
+    return (light_sensor_reading > (max_reading - min_reading) * 0.4 + min_reading);
 }
 
 int compare_ints(const void* a, const void* b)   // comparison function
@@ -99,10 +100,10 @@ int compare_ints(const void* a, const void* b)   // comparison function
 }
 
 int median_filter(int data_point) {
-	static const size_t FRAME_SIZE = 10;
-	static int data[FRAME_SIZE];
-	static int sorted_data[FRAME_SIZE];
-	static size_t data_size = 0;
+    static const size_t FRAME_SIZE = 10;
+    static int data[FRAME_SIZE];
+    static int sorted_data[FRAME_SIZE];
+    static size_t data_size = 0;
 
     //shift data
     data_size = min(FRAME_SIZE, data_size + 1);
@@ -123,27 +124,26 @@ int median_filter(int data_point) {
 void loop() {
     static bool motor_is_on = false;
 
-	int light_sensor_reading = analogRead(LIGHT_PIN);
-	int temp_sensor_reading  = analogRead(TEMP_PIN);
+    int light_sensor_reading = analogRead(LIGHT_PIN);
+    int temp_sensor_reading  = analogRead(TEMP_PIN);
 
     int filtered_temp = median_filter(temp_sensor_reading);
 
     double temp_in_c = voltage_to_celcius(raw_to_voltage(filtered_temp));
-	bool is_light = auto_tune_light(light_sensor_reading);
+    bool is_light = auto_tune_light(light_sensor_reading);
 
     Log(L"Temp: %f\r\n", temp_in_c);
     Log(L"Light: %d\r\n", light_sensor_reading);
 
-	if (is_light && temp_in_c >= FAN_ON_TEMP && !motor_is_on) {
-		toggle_motor(motor_is_on);
+    if (is_light && temp_in_c >= FAN_ON_TEMP && !motor_is_on) {
+        toggle_motor(motor_is_on);
         motor_is_on = true;
         Log(L"Motor On\r\n");
-	}
-	else if ((!is_light || temp_in_c < FAN_ON_TEMP) && motor_is_on) {
-		toggle_motor(motor_is_on);
+    } else if ((!is_light || temp_in_c < FAN_ON_TEMP) && motor_is_on) {
+        toggle_motor(motor_is_on);
         motor_is_on = false;
         Log(L"Motor Off\r\n");
-	}
+    }
 }
 {% endhighlight %}
 
@@ -166,5 +166,9 @@ Create a Web Application that will allow you to set your ambient temperature, or
 
 ### Add Sensors and Complexity to the Fan
 Connect an RGB light to change color depending on fan speed or temperature of the room.
+
+### Create your own ideas?
+We want to hear your ideas and see your Add-ons. Email us a small video clip of a cool new feature you added for the SmartFan for a chance at showing off your ideas to the world.
+
 
 <a class="btn btn-default" href="SampleApps.htm" role="button">&laquo; Return to Samples</a>
