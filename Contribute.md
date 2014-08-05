@@ -5,7 +5,7 @@ permalink: /Contribute.htm
 ---
 
 # How to Contribute
-Thank you for your interest in contributing to Windows Developer Program for IoT for Intel Galileo.
+Thank you for your interest in contributing to the Windows Developer Program for IoT.
 
 We're actively accepting work for the following areas:
 
@@ -63,14 +63,14 @@ For clarification, what we mean when we say:<br/>
 ###Submitting a Pull Request
 1. Before you submit your first pull request, we ask you to fill out a <a href="https://cla.msopentech.com" target="_blank">Microsoft Open Technologies Contribution License Agreement</a>. Without this on file, we unfortunately cannot accept a pull request. In the agreement, please include the GitHub user id you are submitting the pull request from. You only need to do this once.
 1. Fetch upstream
-    * <kbd>git fetch --all</kbd>
+    * <kbd>git fetch \-\-all</kbd>
 1. Rebase upstream (This should now put your changes on top of the main repository's history.)
     * <kbd>git rebase -i upstream/develop</kbd>
     * This may highlight conflicts that you will have to hand-merge
         * You can use your favorite merging tool or even notepad for this.
     * After hand-merging, you can continue the rebase
         * <kbd>git add [fileYouHandMerged]</kbd>
-        * <kbd>git rebase --continue</kbd>
+        * <kbd>git rebase \-\-continue</kbd>
 1. Force-push your changes to your forked repository.
     * <kbd>git push -f origin develop</kbd>
 1. Now submit your pull request from your forked repository using the GitHub website.
