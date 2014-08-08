@@ -7,6 +7,17 @@ permalink: /IBoughtAGalileo.htm
 # Running Windows on my Intel Galileo
 If you have bought your own Intel Galileo or received one through the Windows Developer Program for IoT, now you can update it to run Windows. The version of Microsoft Windows released for the Windows Developer Program for IoT requires an Intel Galileo Gen 1 with 1.0.2 firmware. Gen 2 of the Galileo is not supported by this release.
 
+
+# Before you image your miniSD card
+Please ensure that you are imaging your miniSD card for a known reason. If you are experiencing a bug, please do not image. Instead, please visit [Microsoft Connect](http://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"} to file a bug, and the MS IoT team will respond.
+
+Known reasons to image your miniSD card include:
+
+
+* You are updating to a new version of the Microsoft Windows image supplied as part of the Windows Developer Program for IoT.
+* You updated your Intel Galileo firmware, but did not update your Microsoft Windows image. Your Intel Galileo boots, but running sketches fails.
+* You have a corrupted SD card.
+
 # Applying Microsoft Windows to an microSD card
 Requirements:
 
