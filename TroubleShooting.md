@@ -34,6 +34,7 @@ permalink: /TroubleShooting.htm
       </div>
     </div>
   </div>
+  <hr/>
 
   <h3>Firmware Update</h3>
   <div class="panel-group" id="accordion2">
@@ -60,6 +61,7 @@ permalink: /TroubleShooting.htm
       </div>
     </div>
   </div>
+  <hr/>
 
   <h3>Visual Studio</h3>
   <div class="panel-group" id="accordion3">
@@ -84,7 +86,43 @@ permalink: /TroubleShooting.htm
         </div>
       </div>
     </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion3_1" href="#collapseNoNuGet">
+            fatal error C1083: Cannot open include file: 'arduino.h': No such file or directory
+          </a>
+        </h4>
+      </div>
+      <div id="collapseNoNuGet" class="panel-collapse collapse">
+        <div class="panel-body">
+          <p>When you have received this message after creating a new project and trying to build and compile, then you may be missing the Galileo C++ SDK NuGet package. Also, Intellisense will be underlining all code relating the Arduino SDK (pictured below).</p>
+		  <img src="images/vs_missing_nuget_build_errors.png"><br/><br/>
+		  <p>
+            To recover, go to the <b><i>TOOLS-&gt;NuGet Package Manager-&gt;Manage NuGet Packages for Solution...</i></b> menu.<br/>
+			<ul>
+			  <li>
+			    Confirm the NuGet Package is not already installed...
+		        <img src="images/nuget_not_installed.png">
+			  </li>
+			  <br/>
+		      <li>
+			    Search for the <b><i>Galileo C++ SDK</i></b> NuGet package</p>
+		        <img src="images/nuget_search.png">
+			  </li>
+			  <br/>
+			  <li>
+                Install the NuGet package
+		        <img src="images/nuget_search_galileo.png">
+			  </li>
+		    </ul>
+		    When you return to your project, the Intellisense errors should be cleared up and your project should compile.
+		  </p>
+        </div>
+      </div>
+    </div>
   </div>
+  <hr/>
 
   <h3>Windows on Galileo</h3>
   <div class="panel-group" id="accordion4">
@@ -118,6 +156,7 @@ permalink: /TroubleShooting.htm
       </div>
     </div>
   </div>
+  <hr/>
 
   <h3>GalileoWatcher</h3>
   <div class="panel-group" id="accordian5">
@@ -139,6 +178,7 @@ permalink: /TroubleShooting.htm
       </div>
     </div>
   </div>
+  <hr/>
 
   <h3>Remote Deployment</h3>
   <div class="panel-group" id="accordian6">
@@ -204,3 +244,7 @@ permalink: /TroubleShooting.htm
       </div>
     </div>
   </div>
+  <hr/>
+
+  <a class="btn btn-default" href="index.htm" role="button">Return to homepage</a>
+</div>
