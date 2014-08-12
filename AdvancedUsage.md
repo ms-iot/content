@@ -127,5 +127,26 @@ permalink: /AdvancedUsage.htm
   </div>
   <hr/>
 
+  <h3>Network Connectivity</h3>
+  <div class="panel-group" id="accordion2">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion2" href="#collapseWifiToEthernetAdapter">
+            Setup a Wi-Fi to Ethernet adapter
+          </a>
+        </h4>
+      </div>
+      <div id="collapseWifiToEthernetAdapter" class="panel-collapse collapse">
+        <div class="panel-body">
+          <p>An often overlooked option for wirelessly connecting your Galileo to the internet is to use a <a href="http://www.newegg.com/Product/ProductList.aspx?Submit=ENE&DEPA=0&Order=BESTMATCH&Description=wireless+to+ethernet+adapter&N=-1&isNodeId=1" target="_blank">Wi-Fi to Ethernet adapter</a>.</p>
+		  <img src="images/galileo-wifi-bridge.png"><br/>
+		  <i>Netgear WNCE2001 pictured</i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr/>
+
   <a class="btn btn-default" href="index.htm" role="button">Return to homepage</a>
 </div>
