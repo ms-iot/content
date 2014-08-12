@@ -145,6 +145,38 @@ permalink: /AdvancedUsage.htm
         </div>
       </div>
     </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion2" href="#collapseBridgeNetworkConnection">
+            Bridge your PC's network connection to the Galileo
+          </a>
+        </h4>
+      </div>
+      <div id="collapseBridgeNetworkConnection" class="panel-collapse collapse">
+        <div class="panel-body">
+          <p>You can provide internet connectivity (wireless or other) by sharing, or "bridging", your PC's network connection.</p>
+		  <p>When you connect your Galileo to your PC directly (as outlined <a href="./SetupGalileo.htm" target="_blank">here</a>), then you can share the network connection the PC is using to connect to the internet with the Galileo by following these steps:</p>
+		  <ul>
+		    <li>Open the "<b>Network and Sharing Center</b>" from the Start Screen.</li>
+			<img src="images/Start_NetworkandSharingCenter.png"><br/><br/>
+			<li>Select "<b>Change adapter settings</b>" from the left hand column.</li>
+			<img src="images/NetworkandSharingCenter.png"><br/><br/>
+			<li>In the network connection settings select "<b>Layout->Menu bar</b>" from the "<b>Organize</b>" drop down menu.</li>
+			<img src="images/NetworkConnections.png"><br/><br/>
+			<li>Select your "Ethernet" connection (to the Galileo) and your other connection (to the internet) [<i>"Wi-Fi" pictured</i>].</li>
+			<img src="images/NetworkBridgeConnections.png"><br/><br/>
+			<li>Wait for connection to be created...</li>
+			<img src="images/Status_BridgeWait.png"><br/><br/>
+			<li>Once the bridge has been created and new connection will appear, labelled "Network Bridge".</li>
+			<img src="images/NetworkBridge.png"><br/><br/>
+		  </ul>
+		  <p>Now that your network bridge has been setup, your Galileo should be able to access the internet via your PC's internet connection.</p>
+		  <p>Use <kbd>ping bing.com</kbd> from a telnet session to your Galileo to confirm.</p>
+        </div>
+      </div>
+    </div>
   </div>
   <hr/>
 
