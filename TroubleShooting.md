@@ -36,33 +36,6 @@ permalink: /TroubleShooting.htm
   </div>
   <hr/>
 
-  <h3>Firmware Update</h3>
-  <div class="panel-group" id="accordion2">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion2" href="#collapseNothing">
-            Nothing appears in terminal during boot.
-          </a>
-        </h4>
-      </div>
-      <div id="collapseNothing" class="panel-collapse collapse">
-        <div class="panel-body">
-          Try the following:
-          <ul>
-            <li>
-              Check the Serial connection. <ol>
-                <li>Verify that the audio like cable is plugged into the Galileo.</li>
-                <li>that the DB-9 connector is seated in your computer or the Serial to USB adapter</li>
-              </ol>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr/>
-
   <h3>Visual Studio</h3>
   <div class="panel-group" id="accordion3">
     <div class="panel panel-default">
