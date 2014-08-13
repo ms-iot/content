@@ -10,14 +10,7 @@ permalink: /SetupPC.htm
   <h2> Microsoft Connect </h2>
   Before you configure Visual Studio, please sign up for the Windows Developer Program for IoT on <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558" target="_blank">Microsoft Connect</a>.<br/>
   <br/>
-  <div class="panel panel-danger">
-    <div class="panel-heading">NOTE:</div>
-    <div class="panel-body">
-        When you are attempting to download anything from Microsoft Connect, you will want to use the link shown below.
-        <br/>
-        <img src="images/ConnectDownloadClarification.png" style="height:auto; width:75%;">
-    </div>
-  </div>
+  You can find step by step instructions for signing up for Microsoft Connect <a href="SigninMSConnect.htm" target="_blank">here</a><br/>
   <hr/>
   <h2> Visual Studio </h2>
   <p>Install and configure Visual Studio 2013.</p>
