@@ -67,6 +67,7 @@ NOTE:
 * Windows will take about 2 minutes to boot.
 
 
+<a class="btn btn-default" href="index.htm" role="button">Return to homepage</a>
 
 
 
