@@ -38,12 +38,13 @@ Please follow the [Intel's Getting Started Guide](https://communities.intel.com/
 NOTE:
 : When extracting the Intel Galileo package, please extract into the root of your drive.
 
-## Write Windows to the microSD card
+# Write Windows to the microSD card
 * Format the microSD card with the Fat32 file system. 
 * Open an Administrative command prompt:
   * Open the Start screen
   * type `cmd`
   * right click or tap and hold on `Command Prompt`, then select `Run as Administrator`
+* If you are running on Windows 7 please follow [these instructions](ImageOnWin7.htm){:target="_blank"} before proceeding.
 * In the command window, type the following:
 
 ~~~
@@ -66,7 +67,7 @@ NOTE:
 * Power on your board.
 * Windows will take about 2 minutes to boot.
 
-
+<br/>
 <a class="btn btn-default" href="index.htm" role="button">Return to homepage</a>
 
 
