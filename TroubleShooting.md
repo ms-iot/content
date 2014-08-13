@@ -97,7 +97,7 @@ permalink: /TroubleShooting.htm
   </div>
   <hr/>
 
-  <h3>Windows on Galileo</h3>
+  <h3>Windows on Intel Galileo</h3>
   <div class="panel-group" id="accordion4">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -124,7 +124,7 @@ permalink: /TroubleShooting.htm
             <li>Boot windows and look for failures.</li>
           </ol>
 
-          The most likley cause of Windows boot failure is incompatible Galileo Firmware. Ensure that you are <a href="UpdateYourGalileo.htm">running the latest firmware</a>.
+          The most likley cause of Windows boot failure is incompatible Galileo Firmware. Ensure that you are <a href="IBoughtAGalileo.htm">running the latest firmware</a>.
         </div>
       </div>
     </div>
