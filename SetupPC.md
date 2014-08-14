@@ -8,7 +8,7 @@ permalink: /SetupPC.htm
   <h1>Setting up your PC</h1>
   <hr/>
   <h2> Microsoft Connect </h2>
-  Before you configure Visual Studio, please sign up for the Windows Developer Program for IoT on <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558" target="_blank">Microsoft Connect</a>.<br/>
+  Before you configure Visual Studio or download any software, please sign up for the Windows Developer Program for IoT on <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558" target="_blank">Microsoft Connect</a>.<br/>
   <br/>
   You can find step by step instructions for signing up for Microsoft Connect <a href="SigninMSConnect.htm" target="_blank">here</a><br/>
   <hr/>

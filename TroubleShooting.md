@@ -36,33 +36,6 @@ permalink: /TroubleShooting.htm
   </div>
   <hr/>
 
-  <h3>Firmware Update</h3>
-  <div class="panel-group" id="accordion2">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion2" href="#collapseNothing">
-            Nothing appears in terminal during boot.
-          </a>
-        </h4>
-      </div>
-      <div id="collapseNothing" class="panel-collapse collapse">
-        <div class="panel-body">
-          Try the following:
-          <ul>
-            <li>
-              Check the Serial connection. <ol>
-                <li>Verify that the audio like cable is plugged into the Galileo.</li>
-                <li>that the DB-9 connector is seated in your computer or the Serial to USB adapter</li>
-              </ol>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr/>
-
   <h3>Visual Studio</h3>
   <div class="panel-group" id="accordion3">
     <div class="panel panel-default">
@@ -124,7 +97,7 @@ permalink: /TroubleShooting.htm
   </div>
   <hr/>
 
-  <h3>Windows on Galileo</h3>
+  <h3>Windows on Intel Galileo</h3>
   <div class="panel-group" id="accordion4">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -151,7 +124,7 @@ permalink: /TroubleShooting.htm
             <li>Boot windows and look for failures.</li>
           </ol>
 
-          The most likley cause of Windows boot failure is incompatible Galileo Firmware. Ensure that you are <a href="UpdateYourGalileo.htm">running the latest firmware</a>.
+          The most likley cause of Windows boot failure is incompatible Galileo Firmware. Ensure that you are <a href="IBoughtAGalileo.htm">running the latest firmware</a>.
         </div>
       </div>
     </div>
