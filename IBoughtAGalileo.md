@@ -27,8 +27,8 @@ Requirements:
 
 Please download the following files to your computer:
 
-* [Microsoft Windows for the Windows Developer Program for IoT](http://go.microsoft.com/fwlink/?LinkID=403150)
-* [apply-BootMedia.cmd](http://go.microsoft.com/fwlink/?LinkID=403796)
+* [Microsoft Windows for the Windows Developer Program for IoT](http://go.microsoft.com/fwlink/?LinkID=403150){:target="_blank"}
+* [apply-BootMedia.cmd](http://go.microsoft.com/fwlink/?LinkID=403796){:target="_blank"}
 
 # Intel Galileo Firmware Update
 Intel has released Firmware version 1.0.2 which needs to be applied to your board before running Microsoft Windows. 
