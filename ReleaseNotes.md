@@ -12,7 +12,7 @@ permalink: /ReleaseNotes.htm
 </div>
 <div class="container">
 
-  <h2> Software Limitations </h2>
+  <h2>Software Limitations</h2>
   <p>
     <ol>
       <li>
@@ -36,11 +36,14 @@ permalink: /ReleaseNotes.htm
       <li>
         Unless the Galileo is rebooted, the GPIO pins start in the "last known" operational state when a sketch starts.
       </li>
+      <li>
+        <code>void serialEvent()</code> functionality is not implemented.
+      </li>
     </ol>
   </p>
   <hr/>
 
-  <h2> Hardware Limitations </h2>
+  <h2>Hardware Limitations</h2>
   <p>
     <ol>
       <li>The fastest most GPIO pins can be changed is about once every 25 milliseconds. This is because of the speed of the Cypress I/O port expander used on the Galileo. Pins 2, 3 and 10 can be driven directly by the processor and can be changed roughly every 2 milliseconds.</li>
@@ -50,4 +53,56 @@ permalink: /ReleaseNotes.htm
   </p>
   <hr/>
 
+  <h2>Processes running on Galileo</h2>
+  <p>
+    <ul>
+      <li>System Process</li>
+      <li>
+        System
+        <ul>
+          <li>smss.exe</li>
+		</ul>
+      </li>
+      <li>csrss.exe</li>
+      <li>
+        wininit.exe
+        <ul>
+          <li>
+            services.exe
+            <ul>
+              <li>C:\windows\system32\svchost.exe -k DcomLaunch</li>
+              <li>C:\windows\system32\svchost.exe -k RPCSS</li>
+              <li>C:\windows\system32\svchost.exe -k netsvcs</li>
+              <li>C:\windows\System32\svchost.exe -k LocalServiceNetworkRestricted</li>
+              <li>C:\windows\system32\svchost.exe -k LocalService</li>
+              <li>C:\windows\system32\svchost.exe -k NetworkService</li>
+              <li>
+                C:\windows\system32\svchost.exe -k Bootshsvc
+                <ul>
+                  <li>httpsrv.exe</li>
+                  <li>ftpd.exe</li>
+                  <li>telnetd.exe</li>
+                  <li>mwstartnet.exe</li>
+                </ul>
+              </li>
+              <li>C:\windows\system32\svchost.exe -k CoreUI</li>
+			</ul>
+          </li>
+          <li>lsass.exe</li>
+		</ul>
+      </li>
+      <li>csrss.exe</li>
+      <li>winlogon.exe</li>
+      <li>C:\windows\system32\cmd.exe  /K C:\Windows\System32\Boot\synctime.cmd</li>
+      <li>
+        C:\Tools\RemoteDebugger\msvsmon.exe  /silent /nostatus /nosecuritywarn /nofirewallwarn /noclrwarn
+        <ul>
+          <li>C:\Tools\RemoteDebugger\msvsmon.exe /CHILDSERVER f8 "+:4018" {7CD1671D-D6E3-4455-8FE8-22C0AA188E15} 0x0 f4 ec e8 f0 /silent+ /servicemode-</li>
+        </ul>
+	  </li>
+      <li>Galileo_eboot.exe</li>
+      <li>cmd.exe</li>
+    </ul>
+  </p>
+  <hr/>
   <a class="btn btn-default" href="index.htm" role="button">Return to homepage</a>

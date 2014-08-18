@@ -5,7 +5,7 @@ permalink: /Contribute.htm
 ---
 
 # How to Contribute
-Thank you for your interest in contributing to Windows Developer Program for IoT for Intel Galileo.
+Thank you for your interest in contributing to the Windows Developer Program for IoT.
 
 We're actively accepting work for the following areas:
 
@@ -63,14 +63,14 @@ For clarification, what we mean when we say:<br/>
 ###Submitting a Pull Request
 1. Before you submit your first pull request, we ask you to fill out a <a href="https://cla.msopentech.com" target="_blank">Microsoft Open Technologies Contribution License Agreement</a>. Without this on file, we unfortunately cannot accept a pull request. In the agreement, please include the GitHub user id you are submitting the pull request from. You only need to do this once.
 1. Fetch upstream
-    * <kbd>git fetch --all</kbd>
+    * <kbd>git fetch \-\-all</kbd>
 1. Rebase upstream (This should now put your changes on top of the main repository's history.)
     * <kbd>git rebase -i upstream/develop</kbd>
     * This may highlight conflicts that you will have to hand-merge
         * You can use your favorite merging tool or even notepad for this.
     * After hand-merging, you can continue the rebase
         * <kbd>git add [fileYouHandMerged]</kbd>
-        * <kbd>git rebase --continue</kbd>
+        * <kbd>git rebase \-\-continue</kbd>
 1. Force-push your changes to your forked repository.
     * <kbd>git push -f origin develop</kbd>
 1. Now submit your pull request from your forked repository using the GitHub website.
@@ -82,73 +82,7 @@ For clarification, what we mean when we say:<br/>
 ___
 
 #Iterating on the Galileo SDK
-Fork  ms-iot/galileo-sdk as described above in the contribute section.
-
-##Configure Visual Studio
-You’ll want to redirect visual studio’s *user templates* to the repository you are working in.
-*Tools -> Options*
-
-![Template Config](images/Nuget_TemplateConfig.png)
-
-Under *Projects and Solutions*, select *General*
-
-###For Visual Studio Pro and Ultimate
-
-*Tools -> Library Package Manager -> Package Manager Settings*
-
-![Package Config](images/Nuget_PackageSourceConfig_VSU2013.png)
-<br/>
-
-1. Click the "+" button to add a new source
-1. Set the name to something descriptive, such as: "Local Source"
-1. Click the "..." button and navigate to your local sources directory
-1. Click the "Update" button to save the Package Sources changes
-
-###For Visual Studio Express
-*Tools -> Nuget Package Manager -> Package Manager Settings*
-
-![Package Config](images/Nuget_PackageSourceConfig_VSE2013.png)
-<br/>
-
-1. Click the "+" button to add a new source
-1. Set the name to something descriptive, such as: "Local Source"
-1. Click the "..." button and navigate to your local sources directory
-1. Click the "Update" button to save the Package Sources changes
-
-##Build the Nuget package
-Please download the Nuget command line utility [nuget.exe](http://nuget.org/nuget.exe) into the Galileo-SDK source folder.
-
-{% highlight PowerShell %}
-build-nupkg.cmd
-{% endhighlight %}
-
-##Building the Project
-You can now goto *File -> New Project* then Select *Templates -> Visual C++ -> Galileo -> Galileo Wiring app*:
-
-![App Create](images/Nuget_AppCreate.png)
-
-###Build the app
-You can now build the application. Please refer to the [Hello Blinky Sample](HelloBlinky.htm) for details on how to build and deploy an application.
-
-###Iterate in the Nuget Package
-Now you need to make changes to the Nuget Package, you’ll need to uninstall it first. Right click on the Project in the solution and select *Manage Nuget Packages*.
-
-Now Uninstall the Galileo SDK by clicking the uninstall button:
-
-![Nuget Install](images/Nuget_Install.png)
-
-Then select *Online* and *Local Source*
-
-![Nuget Reinstall](images/Nuget_Reinstall.png)
-
-###Install it!
-Your updates will be there.
-
-
-### Notes!
-* While you can change your local headers, they will get nuked when reinstalling the nuget package.
-* Don’t check in your packages...
-* Don’t check in binaries
+Fork  ms-iot/galileo-sdk as described above in the contribute section and follow the README instructions.
 
 ___
 

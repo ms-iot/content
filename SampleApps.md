@@ -42,6 +42,16 @@ permalink: /SampleApps.htm
       <p>Learn how to interact with a GPIO port expander and MIDI shield to imitate a piano.</p>
       <p><a class="btn btn-default" href="https://github.com/ms-iot/piano" role="button">View details &raquo;</a></p>
     </div> 
+    <div class="col-md-4">
+      <h2>Firmata and Cylon</h2>
+      <p>Learn how to interact with your board using Firmata and Cylon .</p>
+      <p><a class="btn btn-default" href="Firmata.htm" role="button">View details &raquo;</a></p>
+    </div> 
+    <div class="col-md-4">
+      <h2>Smart Fan</h2>
+      <p>Use a motor, thermoresistor, and temperature sensor to create a smart fan.</p>
+      <p><a class="btn btn-default" href="SmartFan.htm" role="button">View details &raquo;</a></p>
+    </div>  
   </div>
   <hr/>
 
