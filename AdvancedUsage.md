@@ -164,7 +164,7 @@ permalink: /AdvancedUsage.htm
           <p>
             Through telnet, run 'kill PID' or 'kill Name' to kill a currently running task<br/>
             <kbd>C:\>kill 1284</kbd><br/>
-			<samp>process TemperatureSensor.exe (1284) - '' killed</samp><br/>
+			<samp>process TemperatureSensor.exe (1284) - '' killed</samp><br/><br/>
 			<kbd>C:\>kill TemperatureSensor.exe</kbd><br/>
 			<samp>process TemperatureSensor.exe (1284) - '' killed</samp><br/>
           </p>
