@@ -124,6 +124,58 @@ permalink: /AdvancedUsage.htm
         </div>
       </div>
     </div>
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion1" href="#collapseTaskList">
+            View/Close Active Tasks
+          </a>
+        </h4>
+      </div>
+      <div id="collapseTaskList" class="panel-collapse collapse">
+        <div class="panel-body">
+		  <p>
+            Through telnet, run 'tlist' to view currently running tasks<br/>
+            <kbd>C:\>tlist</kbd><br/>
+			<samp>0 System Process<br/>
+				 4 System<br/>176 smss.exe<br/>
+				 256 csrss.exe<br/>
+				 284 wininit.exe<br/>
+				 292 csrss.exe<br/>
+				 308 winlogon.exe<br/>
+				 328 services.exe<br/>
+				 340 lsass.exe<br/>
+				 420 svchost.exe<br/>
+				 752 cmd.exe<br/>
+				 764 msvsmon.exe<br/>
+				 772 Galileo_eboot.exe<br/>
+				 780 httpsrv.exe<br/>
+				 788 ftpd.exe<br/>
+				 796 telnetd.exe<br/>
+				 804 mwstartnet.exe<br/>
+				 860 msvsmon.exe<br/>
+				 1284 TemperatureSensor.exe<br/>
+				 1472 cmd.exe<br/>
+				 112 tlist.exe
+			</samp><br/>
+          </p>
+          <p>
+            Through telnet, run 'kill PID' or 'kill name' to close a currently running task<br/>
+            <kbd>C:\>kill 1284</kbd><br/>
+			<samp>process TemperatureSensor.exe (1284) - '' killed</samp><br/>
+			<kbd>C:\>kill TemperatureSensor.exe</kbd><br/>
+			<samp>process TemperatureSensor.exe (1284) - '' killed</samp><br/>
+          </p>
+          <div class="panel panel-danger">
+            <div class="panel-heading">Note:</div>
+            <div class="panel-body">
+              Using 'kill name' will close all tasks with that name.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>	
   </div>
   <hr/>
 
