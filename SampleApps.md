@@ -53,6 +53,18 @@ permalink: /SampleApps.htm
       <p><a class="btn btn-default" href="SmartFan.htm" role="button">View details &raquo;</a></p>
     </div>  
   </div>
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Smart Fan</h2>
+      <p>Use a motor, thermoresistor, and temperature sensor to create a smart fan.</p>
+      <p><a class="btn btn-default" href="SmartFan.htm" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>NeoPixel</h2>
+      <p>Learn how to use a NeoPixel Strip</p>
+      <p><a class="btn btn-default" href="NeoPixel.htm" role="button">View details &raquo;</a></p>
+    </div>  
+  </div>
   <hr/>
 
   <a class="btn btn-default" href="index.htm" role="button">Return to homepage</a>
