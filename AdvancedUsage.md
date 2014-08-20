@@ -124,13 +124,12 @@ permalink: /AdvancedUsage.htm
         </div>
       </div>
     </div>
-  </div>
   
-      <div class="panel panel-default">
+    <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion1" href="#collapseTaskList">
-            View/Kill Active Tasks
+            View/Close Active Tasks
           </a>
         </h4>
       </div>
@@ -162,7 +161,7 @@ permalink: /AdvancedUsage.htm
 			</samp><br/>
           </p>
           <p>
-            Through telnet, run 'kill PID' or 'kill Name' to kill a currently running task<br/>
+            Through telnet, run 'kill PID' or 'kill name' to close a currently running task<br/>
             <kbd>C:\>kill 1284</kbd><br/>
 			<samp>process TemperatureSensor.exe (1284) - '' killed</samp><br/>
 			<kbd>C:\>kill TemperatureSensor.exe</kbd><br/>
@@ -171,13 +170,12 @@ permalink: /AdvancedUsage.htm
           <div class="panel panel-danger">
             <div class="panel-heading">Note:</div>
             <div class="panel-body">
-              Using 'kill Name' on will close all tasks with that name.
+              Using 'kill name' will close all tasks with that name.
             </div>
           </div>
         </div>
       </div>
-    </div>
-	
+    </div>	
   </div>
   <hr/>
 
