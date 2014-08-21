@@ -9,7 +9,8 @@ Learn how to use HardwareSerial to read and write to the UART port.
 
 # Info on using UART and HardwareSerial
 
-* Serial1 = COM2 = UART port<br/>
+* HardwareSerial defines an object called Serial1.
+    * This reads and writes to COM2 on the Windows Image which is linked to the UART port on the Galileo board.<br/>
 * To use <code>serialEvent1()</code> you’ll need to edit the project settings
     * Right click on the Project in the Solution Explorer, then select <kbd>Properties</kbd>.
     * Under Configuration Properties -> C/C++ -> Preprocessor, add <kbd>SERIAL_EVENT1;</kbd> to Preprocessor Definitions.
@@ -21,7 +22,7 @@ Learn how to use HardwareSerial to read and write to the UART port.
 # Allow UART to be used for HardwareSerial (This will change it from kernel debugger use)
 
 1. Shut down Galileo and remove power
-1. Remove microSD card and plug it in to a PC (Windows will automatically assign a drive letter, in our case it is K)
+1. Remove microSD card and plug it in to a PC (Windows will automatically assign a drive letter, in our case it was "k")
 1. Open an Administrative command prompt on your development machine:
 	* <kbd>bcdedit /store k:\efi\microsoft\boot\bcd /enum</kbd>
 	* Verify you got bcd contents
@@ -40,7 +41,11 @@ Learn how to use HardwareSerial to read and write to the UART port.
 <img src="images/uart.png">
 1. Plug the USB end of the cable into your computer's USB port.
 1. Open up Device Manager on your development machine and find out which COM port is being used by the adapter.
-1. Open a terminal program and set it to monitor the serial connection from the COM port you found above in order to view the serial data coming in.
+1. Open a terminal program like <a href="http://download.cnet.com/Tera-Term/3000-20432_4-75766675.html" target="_blank">Tera Term</a>
+1. Set the program to monitor the serial connection from the COM port you found in Step 5.
+1. Make sure your options are as shown below (with the Port set to the COM port you found in Step 5):<br/>
+    <img src="images/TeraTermSerialConfig.png"><br/>
+    * If you are using Tera Term, you can get to the menu shown above by clicking on Setup -> Serial port..
 1. Replace the existing code in main.cpp with the following code:
 
 # Code
@@ -60,19 +65,30 @@ void setup()
     Serial1.begin(CBR_9600, Serial.SERIAL_8N1);
 }
 
-int count = 0;
+char output = 'a';  // The character being written
 
 void loop()
 {
-    if (Serial1.write('a' + count) != 1)
+    // Handles the writing
+    if (Serial1.write(output) != 1)
     {
         Log(L"Serial1.write failed\n");
     }
     else
     {
-        Log(L"%c being sent\n", 'a' + count++);
+        Log(L"%c being sent\n", output);
     }
-    if (count == 26) { count = 0; }
+    
+    // Loops the character from a to z
+    if (output == 'z')
+    {
+        output = 'a';
+    }
+    else
+    {
+        output++;
+    }
+    
     Sleep(1000);
 }
 {% endhighlight %}
