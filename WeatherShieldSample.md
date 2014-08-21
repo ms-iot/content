@@ -16,8 +16,8 @@ Place the weather shield on top of the Galileo board making sure to line the pin
 # Create a new project
 
 1. Create a new project from the template.
-1. Go to <a href="https://github.com/ms-iot/HTU21D_Breakout/tree/master/Library/HTU21D_Humidity" target="_blank">HTU21D Repo</a> and download the HTU21D.cpp and HTU21D.h files.
-1. Go to <a href="https://github.com/ms-iot/MPL3115A2_Breakout/tree/master/library/MPL3115A2_Pressure" target="_blank">MPL3115A2 Repo</a> and download the MPL3115A2.cpp and MPL3115A2.h files.
+1. Go to <a href="https://github.com/sparkfun/HTU21D_Breakout/tree/master/library/HTU21D_Humidity" target="_blank">HTU21D Repo</a> and download the HTU21D.cpp and HTU21D.h files.
+1. Go to <a href="https://github.com/sparkfun/MPL3115A2_Breakout/tree/master/library/MPL3115A2_Pressure" target="_blank">MPL3115A2 Repo</a> and download the MPL3115A2.cpp and MPL3115A2.h files.
 1. Place the HTU21D and MPL3115A2 library files in your new project.
 1. Replace the existing code in main.cpp with the following code:
 
