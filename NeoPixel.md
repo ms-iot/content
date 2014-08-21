@@ -7,6 +7,9 @@ permalink: /NeoPixel.htm
 # NeoPixel
 Learn how to use a NeoPixel Strip.
 
+
+<img src="images/NeoPixel.jpg" width="400"/>
+
 # Required Components
 * <a href="http://www.adafruit.com/products/306" target="_blank">Neopixel Strip</a>
 * <a href="http://www.adafruit.com/products/276" target="_blank">5V Power Supply (WARNING: do not exceed 6V DC)</a>
