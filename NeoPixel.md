@@ -7,18 +7,17 @@ permalink: /NeoPixel.htm
 # NeoPixel
 Learn how to use a NeoPixel Strip.
 
-
-<img src="images/NeoPixel.jpg" width="400"/>
+![](images/NeoPixel.jpg){:width="400"}
 
 # Required Components
-* <a href="http://www.adafruit.com/products/306" target="_blank">Neopixel Strip</a>
-* <a href="http://www.adafruit.com/products/276" target="_blank">5V Power Supply (WARNING: do not exceed 6V DC)</a>
+* [Neopixel Strip](http://www.adafruit.com/products/306){:target="_blank"}
+* [5V Power Supply (WARNING: do not exceed 6V DC)](http://www.adafruit.com/products/276){:target="_blank"}
     * Note: The strip draws 120mA per 2.5" strip segment, so choose your power supply accordingly.
-* <a href="http://www.adafruit.com/products/368" target="_blank">Female DC Power adapter</a>
+* [Female DC Power adapter](http://www.adafruit.com/products/368){:target="_blank"}
 
 # Hooking up Components
-* <a href="https://learn.adafruit.com/digital-led-strip/powering" target="_blank">Info on how to power the strip with the DC Power Supply and Female DC Power Adapter</a>
-* <a href="https://learn.adafruit.com/digital-led-strip/wiring" target="_blank">Info on how to wire the NeoPixel Strip for use.</a>
+* [Info on how to power the strip with the DC Power Supply and Female DC Power Adapter](https://learn.adafruit.com/digital-led-strip/powering){:target="_blank"}
+* [Info on how to wire the NeoPixel Strip for use.](https://learn.adafruit.com/digital-led-strip/wiring){:target="_blank"}
 
 # Create a new project
 
@@ -207,6 +206,7 @@ void ShiftAllPixels()
     }
 }
 {% endhighlight %}
-  <hr/>
 
-<a class="btn btn-default" href="SampleApps.htm" role="button">&laquo; Return to Samples</a>
+---
+
+[&laquo; Return to Samples](SampleApps.htm){:role="button"}{:class="btn btn-default"}
