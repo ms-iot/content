@@ -59,7 +59,9 @@ apply-bootmedia.cmd -destination e:\ -image 9600.16384.x86fre.winblue_rtm_iotbui
 ~~~
 
 NOTE:
-: Depending on the speed of your microSD card, SD card reader and computer, writing Microsoft Windows to the microSD card can take between 30 minutes and 2 hours.
+* Beware the path where your files are stored on your PC not to contain spaces or you will get in a known BUG at install. (https://connect.microsoft.com/windowsembeddedIoT/feedbackdetail/view/953685)
+* Depending on the speed of your microSD card, SD card reader and computer, writing Microsoft Windows to the microSD card can take between 30 minutes and 2 hours.
+
 
 ## Booting Windows
 * Remove power from your Intel Galileo.
