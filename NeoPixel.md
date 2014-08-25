@@ -64,7 +64,7 @@ void setup()
     pinMode(stripData, OUTPUT);
     digitalWrite(stripClock, LOW);
     digitalWrite(stripData, LOW);
-    _PinFunction(stripData, DEFAULT_MUX);
+    _PinFunction(stripData, DEFAULT_MUX); // Sets the data pin to Digital Functionality
 
     // Reset all the pixels
     for (int i = 0; i < stripLen; i++)
@@ -128,6 +128,7 @@ void loop()
     ShiftAllPixels();
 }
 
+// Sets the pixel color in our array
 void SetPixel(int pixel, BYTE Red, BYTE Green, BYTE Blue)
 {
     if (pixel < stripLen)
@@ -138,6 +139,7 @@ void SetPixel(int pixel, BYTE Red, BYTE Green, BYTE Blue)
     }
 }
 
+// Sends the color of a pixel to the strip
 void ShiftPixel(int pixel)
 {
     PPIXEL_VALUES PixelValues = &Pixels[pixel];
@@ -167,6 +169,7 @@ void ShiftPixel(int pixel)
     }
 }
 
+// Sends all the pixel colors to the strip
 void ShiftAllPixels()
 {
     int i;
