@@ -40,17 +40,17 @@ permalink: /AdvancedUsage.htm
       <div id="collapseRemoteDebugging" class="panel-collapse collapse">
         <div class="panel-body">
           <p>
-		    With your project open in Visual Studio:
+            With your project open in Visual Studio:
             <ul>
               <li>
-			    Right click on your project (not solution) in the Solution Explorer and select <kbd>Properties</kbd><br/>
+                Right click on your project (not solution) in the Solution Explorer and select <kbd>Properties</kbd><br/>
                 <img src="images/ConfigureRemoteDebugger1.png"/>
-			  </li>
+              </li>
               <li>Expand <kbd>Configuration Properties</kbd></li>
               <li>Select the <kbd>Debugging</kbd> tree item</li>
               <li>Change the <kbd>Debugger to launch</kbd> to <kbd>Remote Windows Debugger</kbd></li>
               <li>
-				Configure the debug page like the following picture, paying close attention to the debug settings:<br>
+                Configure the debug page like the following picture, paying close attention to the debug settings:<br>
                 <img src="images/ConfigureRemoteDebugger.png"/>
               </li>
             </ul>
@@ -111,7 +111,7 @@ permalink: /AdvancedUsage.htm
       </div>
       <div id="collapseGalileoName" class="panel-collapse collapse">
         <div class="panel-body">
-		  <p>
+          <p>
             Through telnet, run SetComputerName using the following line<br/>
             <kbd>SetComputerName YourNewName</kbd><br/>
           </p>
@@ -134,37 +134,37 @@ permalink: /AdvancedUsage.htm
       </div>
       <div id="collapseTaskList" class="panel-collapse collapse">
         <div class="panel-body">
-		  <p>
+          <p>
             Through telnet, run 'tlist' to view currently running tasks<br/>
             <kbd>C:\>tlist</kbd><br/>
-			<samp>0 System Process<br/>
-				 4 System<br/>176 smss.exe<br/>
-				 256 csrss.exe<br/>
-				 284 wininit.exe<br/>
-				 292 csrss.exe<br/>
-				 308 winlogon.exe<br/>
-				 328 services.exe<br/>
-				 340 lsass.exe<br/>
-				 420 svchost.exe<br/>
-				 752 cmd.exe<br/>
-				 764 msvsmon.exe<br/>
-				 772 Galileo_eboot.exe<br/>
-				 780 httpsrv.exe<br/>
-				 788 ftpd.exe<br/>
-				 796 telnetd.exe<br/>
-				 804 mwstartnet.exe<br/>
-				 860 msvsmon.exe<br/>
-				 1284 TemperatureSensor.exe<br/>
-				 1472 cmd.exe<br/>
-				 112 tlist.exe
-			</samp><br/>
+            <samp>  0 System Process<br/>
+                    4 System<br/>176 smss.exe<br/>
+                  256 csrss.exe<br/>
+                  284 wininit.exe<br/>
+                  292 csrss.exe<br/>
+                  308 winlogon.exe<br/>
+                  328 services.exe<br/>
+                  340 lsass.exe<br/>
+                  420 svchost.exe<br/>
+                  752 cmd.exe<br/>
+                  764 msvsmon.exe<br/>
+                  772 Galileo_eboot.exe<br/>
+                  780 httpsrv.exe<br/>
+                  788 ftpd.exe<br/>
+                  796 telnetd.exe<br/>
+                  804 mwstartnet.exe<br/>
+                  860 msvsmon.exe<br/>
+                 1284 TemperatureSensor.exe<br/>
+                 1472 cmd.exe<br/>
+                  112 tlist.exe
+            </samp><br/>
           </p>
           <p>
             Through telnet, run 'kill PID' or 'kill Name' to kill a currently running task<br/>
             <kbd>C:\>kill 1284</kbd><br/>
-			<samp>process TemperatureSensor.exe (1284) - '' killed</samp><br/>
-			<kbd>C:\>kill TemperatureSensor.exe</kbd><br/>
-			<samp>process TemperatureSensor.exe (1284) - '' killed</samp><br/>
+            <samp>process TemperatureSensor.exe (1284) - '' killed</samp><br/>
+            <kbd>C:\>kill TemperatureSensor.exe</kbd><br/>
+            <samp>process TemperatureSensor.exe (1284) - '' killed</samp><br/>
           </p>
           <div class="panel panel-danger">
             <div class="panel-heading">Note:</div>
@@ -174,7 +174,7 @@ permalink: /AdvancedUsage.htm
           </div>
         </div>
       </div>
-    </div>	
+    </div>
   </div>
   <hr/>
 
@@ -191,8 +191,8 @@ permalink: /AdvancedUsage.htm
       <div id="collapseWifiToEthernetAdapter" class="panel-collapse collapse">
         <div class="panel-body">
           <p>An often overlooked option for wirelessly connecting your Galileo to the internet is to use a <a href="http://www.newegg.com/Product/ProductList.aspx?Submit=ENE&DEPA=0&Order=BESTMATCH&Description=wireless+to+ethernet+adapter&N=-1&isNodeId=1" target="_blank">Wi-Fi to Ethernet adapter</a>.</p>
-		  <img src="images/galileo-wifi-bridge.png"><br/>
-		  <i>Netgear WNCE2001 pictured</i>
+          <img src="images/galileo-wifi-bridge.png"><br/>
+          <i>Netgear WNCE2001 pictured</i>
         </div>
       </div>
     </div>
@@ -208,23 +208,23 @@ permalink: /AdvancedUsage.htm
       <div id="collapseBridgeNetworkConnection" class="panel-collapse collapse">
         <div class="panel-body">
           <p>You can provide internet connectivity (wireless or other) by sharing, or "bridging", your PC's network connection.</p>
-		  <p>When you connect your Galileo to your PC directly (as outlined <a href="./SetupGalileo.htm" target="_blank">here</a>), then you can share the network connection the PC is using to connect to the internet with the Galileo by following these steps:</p>
-		  <ul>
-		    <li>Open the "<b>Network and Sharing Center</b>" from the Start Screen.</li>
-			<img src="images/Start_NetworkandSharingCenter.png"><br/><br/>
-			<li>Select "<b>Change adapter settings</b>" from the left hand column.</li>
-			<img src="images/NetworkandSharingCenter.png"><br/><br/>
-			<li>In the network connection settings select "<b>Layout->Menu bar</b>" from the "<b>Organize</b>" drop down menu.</li>
-			<img src="images/NetworkConnections.png"><br/><br/>
-			<li>Select your "Ethernet" connection (to the Galileo) and your other connection (to the internet) [<i>"Wi-Fi" pictured</i>].</li>
-			<img src="images/NetworkBridgeConnections.png"><br/><br/>
-			<li>Wait for connection to be created...</li>
-			<img src="images/Status_BridgeWait.png"><br/><br/>
-			<li>Once the bridge has been created and new connection will appear, labelled "Network Bridge".</li>
-			<img src="images/NetworkBridge.png"><br/><br/>
-		  </ul>
-		  <p>Now that your network bridge has been setup, your Galileo should be able to access the internet via your PC's internet connection.</p>
-		  <p>Use <kbd>ping bing.com</kbd> from a telnet session to your Galileo to confirm.</p>
+          <p>When you connect your Galileo to your PC directly (as outlined <a href="./SetupGalileo.htm" target="_blank">here</a>), then you can share the network connection the PC is using to connect to the internet with the Galileo by following these steps:</p>
+          <ul>
+            <li>Open the "<b>Network and Sharing Center</b>" from the Start Screen.</li>
+            <img src="images/Start_NetworkandSharingCenter.png"><br/><br/>
+            <li>Select "<b>Change adapter settings</b>" from the left hand column.</li>
+            <img src="images/NetworkandSharingCenter.png"><br/><br/>
+            <li>In the network connection settings select "<b>Layout->Menu bar</b>" from the "<b>Organize</b>" drop down menu.</li>
+            <img src="images/NetworkConnections.png"><br/><br/>
+            <li>Select your "Ethernet" connection (to the Galileo) and your other connection (to the internet) [<i>"Wi-Fi" pictured</i>].</li>
+            <img src="images/NetworkBridgeConnections.png"><br/><br/>
+            <li>Wait for connection to be created...</li>
+            <img src="images/Status_BridgeWait.png"><br/><br/>
+            <li>Once the bridge has been created and new connection will appear, labelled "Network Bridge".</li>
+            <img src="images/NetworkBridge.png"><br/><br/>
+          </ul>
+          <p>Now that your network bridge has been setup, your Galileo should be able to access the internet via your PC's internet connection.</p>
+          <p>Use <kbd>ping bing.com</kbd> from a telnet session to your Galileo to confirm.</p>
         </div>
       </div>
     </div>
