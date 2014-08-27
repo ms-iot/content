@@ -12,6 +12,10 @@ Learn how to use the SeedStudio GSM shield
 # Required Components
 * [Seed Studio GSM shield](http://www.seeedstudio.com/depot/GPRS-Shield-V20-p-1379.html){:target="_blank"}
 
+# Shield setup
+* Move the two switches to the rigth (Serial port select as indicates in the image) to select the hardware serial 
+![](images/GPRS_Shield_interface_function.jpg){:width="400"}
+
 # Create a new project
 
 1. Create a new project from the template.
