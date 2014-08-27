@@ -9,7 +9,7 @@ permalink: /SetupGalileo.htm
   <hr/>
 
   <h2>What is in the box?</h2>
-  Included with your Windows Developer Program for IoT kit are the following:
+  If you received a kit from Microsoft, included with your Windows Developer Program for IoT kit are the following:
   <ul>
     <li>Intel Galileo</li>
     <li>Power Adapter</li>
@@ -19,6 +19,7 @@ permalink: /SetupGalileo.htm
     <li>USB to Ethernet adapter</li>
   </ul>
   
+  If you are using your own Galileo board, please follow these instructions for updating your UEFI and creating a Windows SD card: <a href="http://ms-iot.github.io/content/IBoughtAGalileo.htm"> Self-setup</a>
   <!--
   If you do NOT have an SD card containing the Windows image or if a new Windows build has been released, you can follow the steps below to build your own image.
   <hr/>
