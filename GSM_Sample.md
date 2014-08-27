@@ -4,8 +4,8 @@ title: GSM Shield
 permalink: /GSM Shield.htm
 ---
 
-# Gravitech 7-Segment Shield
-Learn how to use a Gravitech 7-Segment Shield.
+# SeedStudio GSM shield
+Learn how to use the SeedStudio GSM shield
 
 ![](images/GSM.jpg){:width="400"}
 
@@ -17,7 +17,7 @@ Learn how to use a Gravitech 7-Segment Shield.
 1. Create a new project from the template.
 2. Replace the existing code in main.cpp with the following code:
 3. Add to the project the files GSM.cpp, HWSerial.cpp, SIM900.cpp and sms.cpp
-   found in * [GSM Library](https://github.com/dacolgit/GSM-GPRS-GPS-Shield)
+   found in [GSM Library](https://github.com/dacolgit/GSM-GPRS-GPS-Shield)
 
 # Code
 
