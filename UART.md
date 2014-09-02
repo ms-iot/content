@@ -16,8 +16,8 @@ Learn how to use HardwareSerial to read and write to the UART port.
     * Under Configuration Properties -> C/C++ -> Preprocessor, add <kbd>SERIAL_EVENT1;</kbd> to Preprocessor Definitions.
 
 # Required Components
-* <a href="http://www.amazon.com/SF-Cable-Female-Serial-Cable-6/dp/B004T9BBJC/ref=sr_1_1?ie=UTF8&qid=1407960957&sr=8-1&keywords=audio+to+serial+cable" target="_blank">DB9 Female to 3.5mm Cable</a>
-* <a href="http://www.amazon.com/TRENDnet-RS-232-Serial-Converter-TU-S9/dp/B0007T27H8/ref=sr_1_1?ie=UTF8&qid=1407961117&sr=8-1&keywords=serial+to+usb" target="_blank">USB to Serial Cable</a>
+* [DB9 Female to 3.5mm Cable](http://www.amazon.com/SF-Cable-Female-Serial-Cable-6/dp/B004T9BBJC/ref=sr_1_1?ie=UTF8&qid=1407960957&sr=8-1&keywords=audio+to+serial+cable){:target="_blank"}
+* [USB to Serial Cable](http://www.amazon.com/TRENDnet-RS-232-Serial-Converter-TU-S9/dp/B0007T27H8/ref=sr_1_1?ie=UTF8&qid=1407961117&sr=8-1&keywords=serial+to+usb){:target="_blank"}
 
 # Allow UART to be used for HardwareSerial (This will change it from kernel debugger use)
 
@@ -38,13 +38,13 @@ Learn how to use HardwareSerial to read and write to the UART port.
 1. Create a new project from the template.
 1. Plug the two serial ends of the cables together.
 1. Plug the 3.5mm end of the cable into the UART jack on the Galileo board.<br/>
-<img src="images/uart.png">
+![](images/uart.png)
 1. Plug the USB end of the cable into your computer's USB port.
 1. Open up Device Manager on your development machine and find out which COM port is being used by the adapter.
-1. Open a terminal program like <a href="http://download.cnet.com/Tera-Term/3000-20432_4-75766675.html" target="_blank">Tera Term</a>
+1. Open a terminal program like [Tera Term](http://download.cnet.com/Tera-Term/3000-20432_4-75766675.html){:target="_blank"}
 1. Set the program to monitor the serial connection from the COM port you found in Step 5.
 1. Make sure your options are as shown below (with the Port set to the COM port you found in Step 5):<br/>
-    <img src="images/TeraTermSerialConfig.png"><br/>
+    ![](images/TeraTermSerialConfig.png)<br/>
     * If you are using Tera Term, you can get to the menu shown above by clicking on Setup -> Serial port..
 1. Replace the existing code in main.cpp with the following code:
 
@@ -92,6 +92,7 @@ void loop()
     Sleep(1000);
 }
 {% endhighlight %}
-  <hr/>
 
-<a class="btn btn-default" href="SampleApps.htm" role="button">&laquo; Return to Samples</a>
+---
+
+[&laquo; Return to Samples](SampleApps.htm){:role="button"}{:class="btn btn-default"}
