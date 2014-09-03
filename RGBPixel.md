@@ -1,23 +1,23 @@
 ---
 layout: code
-title: NeoPixel
-permalink: /NeoPixel.htm
+title: RGBPixel
+permalink: /RGBPixel.htm
 ---
 
-# NeoPixel
-Learn how to use a NeoPixel Strip.
+# Adafruit RGB Pixel Strip
+Learn how to use a RGB Pixel Strip.
 
-![](images/NeoPixel.jpg){:width="400"}
+![](images/RGBPixel.jpg){:width="400"}
 
 # Required Components
-* [Neopixel Strip](http://www.adafruit.com/products/306){:target="_blank"}
+* [RGB Pixel Strip](http://www.adafruit.com/products/306){:target="_blank"}
 * [5V Power Supply (WARNING: do not exceed 6V DC)](http://www.adafruit.com/products/276){:target="_blank"}
     * Note: The strip draws 120mA per 2.5" strip segment, so choose your power supply accordingly.
 * [Female DC Power adapter](http://www.adafruit.com/products/368){:target="_blank"}
 
 # Hooking up Components
 * [Info on how to power the strip with the DC Power Supply and Female DC Power Adapter](https://learn.adafruit.com/digital-led-strip/powering){:target="_blank"}
-* [Info on how to wire the NeoPixel Strip for use.](https://learn.adafruit.com/digital-led-strip/wiring){:target="_blank"}
+* [Info on how to wire the RGB Pixel Strip for use.](https://learn.adafruit.com/digital-led-strip/wiring){:target="_blank"}
 
 # Create a new project
 
@@ -47,7 +47,7 @@ typedef struct _PIXEL_VALUES {
 // Array of stored Pixel values
 PIXEL_VALUES Pixels[stripLen];
 
-// Custom Functions for working with the NeoPixel Strip
+// Custom Functions for working with the RGB Pixel Strip
 void SetPixel(int pixel, BYTE Red, BYTE Green, BYTE Blue);
 void ShiftPixel(int pixel);
 void ShiftAllPixels();
