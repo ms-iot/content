@@ -67,6 +67,7 @@ permalink: /SampleApps.htm
   </div>
   <div class="row">
     <div class="col-md-4">
+<<<<<<< HEAD
       <h2>Weather Shield Sensors</h2>
       <p>Learn how to create a simple app that uses the Weather Shield's sensors.</p>
       <p><a class="btn btn-default" href="WeatherShieldSensors.htm" role="button">View details &raquo;</a></p>
@@ -74,6 +75,10 @@ permalink: /SampleApps.htm
     <div class="col-md-4">
       <h2>&quot;Windows on Fridges&quot;</h2>
       <p>See how IoT Explorer Interns leveraged Windows On Devices for a robot which delivers soft drinks.</p>
+=======
+      <h2>Windows On Fridges</h2>
+      <p>See a project which leverages Windows on Devices to navigate a floor plan.</p>
+>>>>>>> 1648627... Added Explorer link
       <p><a class="btn btn-default" href="http://ms-iot.github.io/windows-on-fridges/overview/introduction/" role="button">View details &raquo;</a></p>
     </div>
   </div>
