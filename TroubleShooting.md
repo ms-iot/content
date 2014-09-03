@@ -198,7 +198,7 @@ permalink: /TroubleShooting.htm
             Right click on your project and select Properties.<br/>
             Select the <kbd>Configuration Manager...</kbd> button from the upper right corner.<br/>
             Make sure "Deploy" is checked for your project<br/>
-            Also make sure that your remote Debugger settings are set correctly. See <a href="Tips.htm">Configure Remote Debugging</a> in the Tips section.
+            Also make sure that your remote Debugger settings are set correctly. See <a href="AdvancedUsage.htm#collapseRemoteDebugging">Configure Remote Debugging</a> on the "Advanced Usage" page.
         </div>
       </div>
     </div>
