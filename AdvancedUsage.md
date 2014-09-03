@@ -76,6 +76,35 @@ permalink: /AdvancedUsage.htm
         </div>
       </div>
     </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion0" href="#collapseUART">
+            Allow UART port to be used by HardwareSerial
+          </a>
+        </h4>
+      </div>
+      <div id="collapseUART" class="panel-collapse collapse">
+        <div class="panel-body">
+            This will change it from Kernel Debugger use.
+            <ol>
+                <li> Shut down Galileo and remove power </li>
+                <li> Remove micro-SD card and plug it in to a PC--it mounted as drive “K:” </li>
+                <li> In Admin cmd window on PC: </li>
+                    <ul>
+                        <li> <kbd>bcdedit /store k:\efi\microsoft\boot\bcd /enum</kbd> </li>
+                        <li> Verify you got bcd contents </li>
+                        <li> <kbd>bcdedit /store k:\efi\microsoft\boot\bcd /set {default} debug No</kbd> </li>
+                        <li> <kbd>bcdedit /store c:\efi\microsoft\boot\bcd /set {default} testsigning OFF</kbd> </li>
+                        <li> <kbd>bcdedit /store k:\efi\microsoft\boot\bcd /enum</kbd> </li>
+                        <li> Verify debug and testsigning are now “No” </li>
+                    </ul>
+                <li> Safe dismount of micro-SD from PC (eject from Windows Explorer) </li>
+                <li> Put micro-SD in Galileo and powered up </li>
+            </ol>
+        </div>
+      </div>
+    </div>
   </div>
   <hr/>
   

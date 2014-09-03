@@ -46,12 +46,19 @@ permalink: /SampleApps.htm
       <h2>Firmata and Cylon</h2>
       <p>Learn how to interact with your board using Firmata and Cylon .</p>
       <p><a class="btn btn-default" href="Firmata.htm" role="button">View details &raquo;</a></p>
-    </div> 
+    </div>  
+  </div>
+  <div class="row">
     <div class="col-md-4">
       <h2>Smart Fan</h2>
       <p>Use a motor, thermoresistor, and temperature sensor to create a smart fan.</p>
       <p><a class="btn btn-default" href="SmartFan.htm" role="button">View details &raquo;</a></p>
-    </div>  
+    </div>
+    <div class="col-md-4">
+      <h2>UART</h2>
+      <p>Learn how to use HardwareSerial and write to UART.</p>
+      <p><a class="btn btn-default" href="UART.htm" role="button">View details &raquo;</a></p>
+    </div>
   </div>
   <div class="row">
     <div class="col-md-4">
