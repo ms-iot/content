@@ -78,7 +78,7 @@ permalink: /SampleApps.htm
     </div>
     <div class="col-md-4">
       <h2>TX/RX</h2>
-      <p>Learn how to use HardwareSerial and write/read using the TX/RX pins.</p>
+      <p>Learn how to use HardwareSerial to communicate across TX/RX pins.</p>
       <p><a class="btn btn-default" href="TXRX.htm" role="button">View details &raquo;</a></p>
     </div> 
   </div>

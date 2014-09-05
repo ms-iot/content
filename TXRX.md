@@ -4,8 +4,8 @@ title: TX/RX Sample
 permalink: /TXRX.htm
 ---
 
-# Writing and reading from TX/RX pins
-Learn how to use HardwareSerial to read and write from the TX/RX pins.
+# Communicating through TX/RX pins
+Learn how to use HardwareSerial to communicate across TX/RX pins and view it on the computer using a USB TTL Serial Cable
 
 # Info on using HardwareSerial
 * Serial = COM1 = TX/RX pins<br/>
@@ -14,16 +14,22 @@ Learn how to use HardwareSerial to read and write from the TX/RX pins.
     * Under Configuration Properties -> C/C++ -> Preprocessor, add <kbd>SERIAL_EVENT;</kbd> to Preprocessor Definitions.
 
 # Required Components
-* 2 Galileos
-* 3 wires to connect the Ground, TX, and RX pins between the two boards
+* [FTDI Cable](https://www.sparkfun.com/products/9717){:target="_blank"}
+* 2 wires to connect the TX and RX pins to the FTDI Cable
 
-# Create the projects
+# Create the project
 
-1. Create 2 new project from the template.
-1. Follow the diagram below for hooking up the two galileos<br/>
-<img src="images/txrx.png">
-1. Replace the existing code in main.cpp of the 1st project (the write) with the code below:
-1. Replace the existing code in main.cpp of the 2nd project (the read) with the code below:
+1. Create a new project from the template.
+1. Plug the USB end of the cable into your computer's USB port.
+1. Open up Device Manager on your development machine and find out which COM port is being used by the adapter.
+1. Open a terminal program like [Tera Term](http://download.cnet.com/Tera-Term/3000-20432_4-75766675.html){:target="_blank"}
+1. Set the program to monitor the serial connection from the COM port you found in Step 5.
+1. Make sure your options are as shown below (with the Port set to the COM port you found in Step 5):<br/>
+    ![](images/TeraTermSerialConfigForTXRX.png)<br/>
+    * If you are using Tera Term, you can get to the menu shown above by clicking on Setup -> Serial port..
+1. Hook up the Orange pin from the cable to RX (pin 0)on your Galileo
+1. Hook up the Yellow pin from the cable to TX (pin 1) on your Galileo
+1. Replace the existing code in main.cpp of the project with the code below:
 
 # Code
 
@@ -57,47 +63,6 @@ void loop()
 }
 {% endhighlight %}
 
-### Main.cpp of the Read Project
-{% highlight C++ %}
-#define SERIAL_EVENT
-#include "stdafx.h"
-#include "arduino.h"
+---
 
-int _tmain(int argc, _TCHAR* argv [])
-{
-    return RunArduinoSketch();
-}
-
-void setup()
-{
-    Serial.begin(CBR_300, Serial.SERIAL_7O2);
-}
-
-void loop()
-{
-    //int c = Serial.read();
-    //if (c < 0)
-    //{
-    //    Log(L"Serial.read failed\n");
-    //}
-    //else{
-    //    Log(L"Loop: %c\n", c);
-    //}
-}
-
-void serialEvent()
-{
-    int c = Serial.read();
-    if (c < 0)
-    {
-        Log(L"SerialEvent Serial.read failed\n");
-    }
-    else{
-        Log(L"serialEvent: %c\n", c);
-    }
-}
-{% endhighlight %}
-
-  <hr/>
-
-<a class="btn btn-default" href="SampleApps.htm" role="button">&laquo; Return to Samples</a>
+[&laquo; Return to Samples](SampleApps.htm){:role="button"}{:class="btn btn-default"}
