@@ -60,9 +60,9 @@ permalink: /SampleApps.htm
       <p><a class="btn btn-default" href="UART.htm" role="button">View details &raquo;</a></p>
     </div>
     <div class="col-md-4">
-      <h2>NeoPixel</h2>
-      <p>Learn how to use a NeoPixel Strip</p>
-      <p><a class="btn btn-default" href="NeoPixel.htm" role="button">View details &raquo;</a></p>
+      <h2>RGB Pixel</h2>
+      <p>Learn how to use a Adafruit RGB Pixel Strip</p>
+      <p><a class="btn btn-default" href="RGBPixel.htm" role="button">View details &raquo;</a></p>
     </div>  
   </div>
   <div class="row">
@@ -71,6 +71,11 @@ permalink: /SampleApps.htm
       <p>Learn how to create a simple app that uses the Weather Shield's sensors.</p>
       <p><a class="btn btn-default" href="WeatherShieldSensors.htm" role="button">View details &raquo;</a></p>
     </div>
+    <div class="col-md-4">
+      <h2>&quot;Windows on Fridges&quot;</h2>
+      <p>See how IoT Explorer Interns leveraged Windows On Devices for a robot which delivers soft drinks.</p>
+      <p><a class="btn btn-default" href="http://ms-iot.github.io/windows-on-fridges/overview/introduction/" role="button">View details &raquo;</a></p>
+    </div>  
   </div>
   <hr/>
 
