@@ -4,13 +4,6 @@ title: What's new
 permalink: /WhatsNew.htm
 ---
 
-# 9/3/2014
-  * Improved flow for Makers who purchased their own Intel Galileo board.
-  * Added RGB pixel sample.
-  * Added UART sample
-  * Added IoT Intern project
-  
-
 # 8/18/2014
 
   * [Self Update for the Intel Galileo Generation 1](IBoughtAGalileo.htm){:target="_blank"} - Now you can image the firmware and Windows yourself
