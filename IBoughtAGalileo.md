@@ -35,8 +35,8 @@ Intel has released Firmware version 1.0.2 which needs to be applied to your boar
 
 Please follow the [Intel's Getting Started Guide](https://communities.intel.com/docs/DOC-22796){:target="_blank"}. Once you've followed the firmware update instructions, you do not need to continue following the Getting Started guide as the instructions do not apply to Microsoft Windows running on the Intel Galileo board.
 
-NOTE:
-: When extracting the Intel Galileo package, please extract into the root of your drive.
+**NOTE:**
+: When extracting the Intel Galileo package, please extract into the root of your drive and make sure that the path does not contain spaces.
 
 # Write Windows to the microSD card
 * Format the microSD card with the Fat32 file system. 
@@ -58,8 +58,9 @@ apply-bootmedia.cmd -destination {YourSDCardDrive} -image {.wimFile} -hostname m
 apply-bootmedia.cmd -destination e:\ -image 9600.16384.x86fre.winblue_rtm_iotbuild.140731-1000_galileo_v1.wim -hostname mygalileo -password admin
 ~~~
 
-NOTE:
-* Beware the path where your files are stored on your PC not to contain spaces or you will get in a known BUG at install. (https://connect.microsoft.com/windowsembeddedIoT/feedbackdetail/view/953685)
+**NOTE:**
+
+* The path where your files are stored on your PC should not contain spaces or you will reach a known [bug](https://connect.microsoft.com/windowsembeddedIoT/feedbackdetail/view/953685) during installation.
 * Depending on the speed of your microSD card, SD card reader and computer, writing Microsoft Windows to the microSD card can take between 30 minutes and 2 hours.
 
 
