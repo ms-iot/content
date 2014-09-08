@@ -135,7 +135,7 @@ The board we’re using for this release, the Intel Galileo, is an Arduino-certi
 **A:** Response to the program was fantastic. The only downside is that we received more requests than we have hardware to distribute. Unfortunately, that means that not everyone who signed up will receive a development kit and Galileo board.
  
 **Q:** I didn't sign up for the developer preview. Can I buy an Intel Galileo and install Windows?  
-**A:** Initially, we're focusing on ensuring a great experience for the customers who registered for the program. We're evaluating how to scale this program once we've worked with the early adopters.
+**A:** Yes you can! Please see [bought or updating your Intel Galileo](http://ms-iot.github.io/content/IBoughtAGalileo.htm)
  
 **Q:** Where can I go to find out more information about IoT at Microsoft?  
 **A:** There are several sites and resources which are of interest:
