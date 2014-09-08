@@ -75,7 +75,12 @@ permalink: /SampleApps.htm
       <h2>&quot;Windows on Fridges&quot;</h2>
       <p>See how IoT Explorer Interns leveraged Windows On Devices for a robot which delivers soft drinks.</p>
       <p><a class="btn btn-default" href="http://ms-iot.github.io/windows-on-fridges/overview/introduction/" role="button">View details &raquo;</a></p>
-    </div>  
+    </div>
+    <div class="col-md-4">
+      <h2>TX/RX</h2>
+      <p>Learn how to use HardwareSerial to communicate across TX/RX pins.</p>
+      <p><a class="btn btn-default" href="TXRX.htm" role="button">View details &raquo;</a></p>
+    </div> 
   </div>
   <hr/>
 
