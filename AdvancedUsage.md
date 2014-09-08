@@ -61,7 +61,7 @@ permalink: /AdvancedUsage.htm
               Please change the following settings to configure remote debugging:<br/>
               Remote Command: <kbd>c:\test\$(TargetFileName)</kbd><br/>
               Working Directory: <kbd>c:\test</kbd><br/>
-              Remote Server Nane: <kbd>mygalileo</kbd><br/>
+              Remote Server Name: <kbd>mygalileo</kbd><br/>
               Deployment Directory: <kbd>c:\test</kbd><br/>
               <br/>
               <b>NOTE:</b> If you want to change the directory that your project is deployed to and run out of you will need to change all of the places it says c:\test\ to your desired path.<br/>
