@@ -41,36 +41,36 @@ or the [2/2/2](http://www.phidgets.com/products.php?category=0&product_id=1011_0
 // A handler for when a device is attached that prints the device name and serial number
 int CCONV AttachHandler(CPhidgetHandle IFK, void *userptr)
 {
-	int serialNo;
-	const char *name;
+    int serialNo;
+    const char *name;
 
-	CPhidget_getDeviceName(IFK, &name);
-	CPhidget_getSerialNumber(IFK, &serialNo);
+    CPhidget_getDeviceName(IFK, &name);
+    CPhidget_getSerialNumber(IFK, &serialNo);
 
-	Log(L"%S %10d attached!\n", name, serialNo);
+    Log(L"%S %10d attached!\n", name, serialNo);
 
-	return 0;
+    return 0;
 }
 
 // A handler for when a device is detached that prints the device name and serial number
 int CCONV DetachHandler(CPhidgetHandle IFK, void *userptr)
 {
-	int serialNo;
-	const char *name;
+    int serialNo;
+    const char *name;
 
-	CPhidget_getDeviceName(IFK, &name);
-	CPhidget_getSerialNumber(IFK, &serialNo);
+    CPhidget_getDeviceName(IFK, &name);
+    CPhidget_getSerialNumber(IFK, &serialNo);
 
     Log(L"%S %10d detached!\n", name, serialNo);
 
-	return 0;
+    return 0;
 }
 
 // A handler for errors
 int CCONV ErrorHandler(CPhidgetHandle IFK, void *userptr, int ErrorCode, const char *unknown)
 {
     Log(L"Error handled. %d - %S", ErrorCode, unknown);
-	return 0;
+    return 0;
 }
 
 //callback that will run if the sensor value changes by more than the OnSensorChange trigger.
@@ -78,63 +78,63 @@ int CCONV ErrorHandler(CPhidgetHandle IFK, void *userptr, int ErrorCode, const c
 int CCONV SensorChangeHandler(CPhidgetInterfaceKitHandle IFK, void *usrptr, int Index, int Value)
 {
     Log(L"Sensor: %d > Value: %d\n", Index, Value);
-	return 0;
+    return 0;
 }
 
 // Sets up the interfacing with Phidgets I/O board and sensors
 int interfacekit_simple()
 {
-	int result;
-	const char *err;
+    int result;
+    const char *err;
 
-	//Declare an InterfaceKit handle
-	CPhidgetInterfaceKitHandle ifKit = 0;
+    //Declare an InterfaceKit handle
+    CPhidgetInterfaceKitHandle ifKit = 0;
 
-	//create the InterfaceKit object
-	CPhidgetInterfaceKit_create(&ifKit);
+    //create the InterfaceKit object
+    CPhidgetInterfaceKit_create(&ifKit);
 
-	//Set the handlers to be run when the device is plugged in or opened from software, unplugged or closed from software, or generates an error.
-	CPhidget_set_OnAttach_Handler((CPhidgetHandle)ifKit, AttachHandler, NULL);
-	CPhidget_set_OnDetach_Handler((CPhidgetHandle)ifKit, DetachHandler, NULL);
-	CPhidget_set_OnError_Handler((CPhidgetHandle)ifKit, ErrorHandler, NULL);
+    //Set the handlers to be run when the device is plugged in or opened from software, unplugged or closed from software, or generates an error.
+    CPhidget_set_OnAttach_Handler((CPhidgetHandle)ifKit, AttachHandler, NULL);
+    CPhidget_set_OnDetach_Handler((CPhidgetHandle)ifKit, DetachHandler, NULL);
+    CPhidget_set_OnError_Handler((CPhidgetHandle)ifKit, ErrorHandler, NULL);
 
-	//Registers a callback that will run if the sensor value changes by more than the OnSensorChange trig-ger.
-	//Requires the handle for the IntefaceKit, the function that will be called, and an arbitrary pointer that will be supplied to the callback function (may be NULL).
-	CPhidgetInterfaceKit_set_OnSensorChange_Handler(ifKit, SensorChangeHandler, NULL);
+    //Registers a callback that will run if the sensor value changes by more than the OnSensorChange trig-ger.
+    //Requires the handle for the IntefaceKit, the function that will be called, and an arbitrary pointer that will be supplied to the callback function (may be NULL).
+    CPhidgetInterfaceKit_set_OnSensorChange_Handler(ifKit, SensorChangeHandler, NULL);
 
-	//open the interfacekit for device connections
-	CPhidget_open((CPhidgetHandle)ifKit, -1);
+    //open the interfacekit for device connections
+    CPhidget_open((CPhidgetHandle)ifKit, -1);
 
-	//get the program to wait for an interface kit device to be attached
+    //get the program to wait for an interface kit device to be attached
     Log(L"Waiting for interface kit to be attached....\n");
-	if ((result = CPhidget_waitForAttachment((CPhidgetHandle)ifKit, 10000)))
-	{
-		CPhidget_getErrorDescription(result, &err);
+    if ((result = CPhidget_waitForAttachment((CPhidgetHandle)ifKit, 10000)))
+    {
+        CPhidget_getErrorDescription(result, &err);
         Log(L"Problem waiting for attachment: %S\n", err);
-		return 0;
-	}
+        return 0;
+    }
 
-	// Phidget 1133 (Audio Sensor is a non Ratiometric device) - set to non Ratiometric mode.
-	CPhidgetInterfaceKit_setRatiometric(ifKit, 0);
+    // Phidget 1133 (Audio Sensor is a non Ratiometric device) - set to non Ratiometric mode.
+    CPhidgetInterfaceKit_setRatiometric(ifKit, 0);
 
-	//read interface kit event data
+    //read interface kit event data
     Log(L"Reading.....\n");
 
-	//keep displaying interface kit data until user input is read
+    //keep displaying interface kit data until user input is read
     Log(L"Press any key to exit\n");
-	getchar();
+    getchar();
 
     Log(L"Closing...\n");
-	CPhidget_close((CPhidgetHandle)ifKit);
-	CPhidget_delete((CPhidgetHandle)ifKit);
+    CPhidget_close((CPhidgetHandle)ifKit);
+    CPhidget_delete((CPhidgetHandle)ifKit);
 
-	//all done, exit
-	return 0;
+    //all done, exit
+    return 0;
 }
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	interfacekit_simple();
+    interfacekit_simple();
 }
 {% endhighlight %}
 
