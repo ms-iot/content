@@ -7,6 +7,11 @@ body
 
 @media only screen and (min-width: 1200px)
 {
+  body
+  {
+    padding-top: 101px;
+  }
+
   .headerBackground
   {
     background-image: url('../images/Iot.jpg');
