@@ -70,7 +70,7 @@ char output = 'a';  // The character being written
 void loop()
 {
     // Handles the writing
-    if (Serial1.write(output) != 1)
+    if (Serial1.write((uint8_t)output) != 1)
     {
         Log(L"Serial1.write failed\n");
     }
