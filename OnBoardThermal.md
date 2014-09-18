@@ -30,8 +30,11 @@ void setup()
 void loop()
 {
   float temperatureInDegreesCelcius = 1.0f;	// Storage for the temperature value
-  temperatureInDegreesCelcius = (float) analogRead(tempPin) / 4.0f;	// reads the analog value from this pin
-  Log(L"Temperature: %lf\n", temperatureInDegreesCelcius);
+
+  // reads the analog value from this pin (values range from 0-1023)
+  temperatureInDegreesCelcius = (float) analogRead(tempPin);	
+  
+  Log(L"Temperature: %lf Celcius\n", temperatureInDegreesCelcius);
   Sleep(100);		// Provides a delay for our visual pleasure
 }
 {% endhighlight %}
