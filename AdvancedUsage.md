@@ -95,7 +95,7 @@ permalink: /AdvancedUsage.htm
                         <li> <kbd>bcdedit /store k:\efi\microsoft\boot\bcd /enum</kbd> </li>
                         <li> Verify you got bcd contents </li>
                         <li> <kbd>bcdedit /store k:\efi\microsoft\boot\bcd /set {default} debug No</kbd> </li>
-                        <li> <kbd>bcdedit /store c:\efi\microsoft\boot\bcd /set {default} testsigning OFF</kbd> </li>
+                        <li> <kbd>bcdedit /store k:\efi\microsoft\boot\bcd /set {default} testsigning OFF</kbd> </li>
                         <li> <kbd>bcdedit /store k:\efi\microsoft\boot\bcd /enum</kbd> </li>
                         <li> Verify debug and testsigning are now “No” </li>
                     </ul>
