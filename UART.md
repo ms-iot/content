@@ -11,7 +11,8 @@ Learn how to use HardwareSerial to read and write to the UART port.
 
 * HardwareSerial defines an object called Serial1.
     * This reads and writes to COM2 on the Windows Image which is linked to the UART port on the Galileo board.<br/>
-* To use <code>serialEvent1()</code> you’ll need to edit the project settings
+* While this sample doesn't use a serial event, if you want to use serialEvent1, you will need to:
+    * Create a method for <code>serialEvent1()</code> that returns void and has no parameters in your main.cpp. This method will be called when data is available on the serial1 port at the end of the loop.
     * Right click on the Project in the Solution Explorer, then select <kbd>Properties</kbd>.
     * Under Configuration Properties -> C/C++ -> Preprocessor, add <kbd>SERIAL_EVENT1;</kbd> to Preprocessor Definitions.
 
@@ -27,7 +28,7 @@ Learn how to use HardwareSerial to read and write to the UART port.
 	* <kbd>bcdedit /store k:\efi\microsoft\boot\bcd /enum</kbd>
 	* Verify you got bcd contents
 	* <kbd>bcdedit /store k:\efi\microsoft\boot\bcd /set {default} debug No</kbd>
-	* <kbd>bcdedit /store c:\efi\microsoft\boot\bcd /set {default} testsigning OFF</kbd>
+	* <kbd>bcdedit /store k:\efi\microsoft\boot\bcd /set {default} testsigning OFF</kbd>
 	* <kbd>bcdedit /store k:\efi\microsoft\boot\bcd /enum</kbd>
 	* Verify debug and testsigning are now “No”
 1. Safe dismount of microSD from PC by ejecting in Windows Explorer.

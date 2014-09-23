@@ -9,7 +9,8 @@ Learn how to use HardwareSerial to communicate across TX/RX pins and view it on 
 
 # Info on using HardwareSerial
 * Serial = COM1 = TX/RX pins<br/>
-* To use <code>serialEvent()</code> you’ll need to edit the project settings
+* While this sample doesn't use a serial event, if you want to use serialEvent, you will need to:
+    * Create a method for <code>serialEvent()</code> that returns void and has no parameters in your main.cpp. This method will be called when data is available on the serial1 port at the end of the loop.
     * Right click on the Project in the Solution Explorer, then select <kbd>Properties</kbd>.
     * Under Configuration Properties -> C/C++ -> Preprocessor, add <kbd>SERIAL_EVENT;</kbd> to Preprocessor Definitions.
 

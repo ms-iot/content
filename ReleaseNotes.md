@@ -36,9 +36,6 @@ permalink: /ReleaseNotes.htm
       <li>
         Unless the Galileo is rebooted, the GPIO pins start in the "last known" operational state when a sketch starts.
       </li>
-      <li>
-        <code>void serialEvent()</code> functionality is not implemented.
-      </li>
     </ol>
   </p>
   <hr/>
