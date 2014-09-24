@@ -25,7 +25,7 @@ permalink: /ReleaseNotes.htm
         <code>INPUT_PULLUP</code> is not implemented.
       </li>
       <li>
-        <code>strncmp()</code> is not implemented.
+        <code>strncmp()</code> functionality is available with <code>#include &lt;string.h&gt;</code>
       </li>
       <li>
         <code>int</code> represents different bit-lengths on different Arduino platforms. To guarantee a specific behavior with bitwise operations, you should cast the data to the explicit desired type using variable types from the inttypes.h header (i.e. <code>uint8_t</code>).
