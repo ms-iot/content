@@ -36,6 +36,9 @@ permalink: /ReleaseNotes.htm
       <li>
         Unless the Galileo is rebooted, the GPIO pins start in the "last known" operational state when a sketch starts.
       </li>
+      <li>
+        The Wire API does not include <code>onReceive()</code> or <code>onRequest()</code>, because the Galileo does not support I2C slave functionality.
+      </li>
     </ol>
   </p>
   <hr/>
