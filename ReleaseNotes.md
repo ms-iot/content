@@ -11,6 +11,13 @@ permalink: /ReleaseNotes.htm
   </div>
 </div>
 <div class="container">
+  <h2>Intel Galileo Gen2 Software Limitations</h2>
+  <p>
+    <ol>
+      <li>PWM is not implemented</li>
+      <li>ADC is not implemented</li>
+    </ol>
+  </p>
 
   <h2>Software Limitations</h2>
   <p>
@@ -25,7 +32,7 @@ permalink: /ReleaseNotes.htm
         <code>INPUT_PULLUP</code> is not implemented.
       </li>
       <li>
-        <code>strncmp()</code> is not implemented.
+        <code>strncmp()</code> functionality is available with <code>#include &lt;string.h&gt;</code>
       </li>
       <li>
         <code>int</code> represents different bit-lengths on different Arduino platforms. To guarantee a specific behavior with bitwise operations, you should cast the data to the explicit desired type using variable types from the inttypes.h header (i.e. <code>uint8_t</code>).
@@ -35,6 +42,9 @@ permalink: /ReleaseNotes.htm
       </li>
       <li>
         Unless the Galileo is rebooted, the GPIO pins start in the "last known" operational state when a sketch starts.
+      </li>
+      <li>
+        The Wire API does not include <code>onReceive()</code> or <code>onRequest()</code>, because the Galileo does not support I2C slave functionality.
       </li>
     </ol>
   </p>
