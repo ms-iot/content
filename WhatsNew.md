@@ -4,6 +4,11 @@ title: What's new
 permalink: /WhatsNew.htm
 ---
 
+# 9/25/2014
+  * Galileo Gen2 Support!
+  * Please revisit [Setup your PC](SetupPC.htm)
+  * Please revisit [Setup your Galileo](SetupGalileo.htm)
+
 # 9/3/2014
   * Improved flow for Makers who purchased their own Intel Galileo board.
   * Added RGB pixel sample.
