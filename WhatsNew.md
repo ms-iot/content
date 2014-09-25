@@ -4,6 +4,11 @@ title: What's new
 permalink: /WhatsNew.htm
 ---
 
+# 9/29/2014
+  * Galileo Gen2 Support!
+  * Please revisit [Setup your PC](SetupPC.htm)
+  * Please revisit [Setup your Galileo](SetupGalileo.htm)
+
 # 9/26/2014
   * Updated documentation for [shield compatibility](ShieldCompat.htm){:target="_blank"}
   * Updated documentation for [Visual Studio](VisualStudio.htm){:target="_blank"} specificities

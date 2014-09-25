@@ -11,6 +11,13 @@ permalink: /ReleaseNotes.htm
   </div>
 </div>
 <div class="container">
+  <h2>Intel Galileo Gen2 Software Limitations</h2>
+  <p>
+    <ol>
+      <li>PWM is not implemented</li>
+      <li>ADC is not implemented</li>
+    </ol>
+  </p>
 
   <h2>Software Limitations</h2>
   <p>
