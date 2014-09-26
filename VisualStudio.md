@@ -6,7 +6,7 @@ permalink: /VisualStudio.htm
 
 #Using #pragmas
 #pragmas are a way to help inform the compiler to complete actions while your program is being compiled. 
-You can find out more about #pragmas [here](http://www.programmershare.com/2784880/){:target="_blank"}
+You can find out more about #pragmas [here](http://www.programmershare.com/2784880/){:target="_blank"}.
 
 ##Using #pragmas in Visual Studio
 In Visual Studio we use [#pragma once](http://en.wikipedia.org/wiki/Pragma_once){:target="_blank"}.
