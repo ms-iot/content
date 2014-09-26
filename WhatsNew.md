@@ -6,7 +6,7 @@ permalink: /WhatsNew.htm
 
 # 9/26/2014
   * Updated documentation for [shield compatibility](ShieldCompat.htm){:target="_blank"}
-  * Updated documentation [Visual Studio](VisualStudio.htm){:target="_blank"} specificities
+  * Updated documentation for [Visual Studio](VisualStudio.htm){:target="_blank"} specificities
   * Updated documentation for Hardware Serial and UART
 
 # 9/3/2014
