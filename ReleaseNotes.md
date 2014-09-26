@@ -39,6 +39,9 @@ permalink: /ReleaseNotes.htm
       <li>
         The Wire API does not include <code>onReceive()</code> or <code>onRequest()</code>, because the Galileo does not support I2C slave functionality.
       </li>
+      <li>
+        There is no plan for a USB host library. While the Intel Galileo hardware does support this, the host USB stack is not planned for this version of Windows.
+      </li>
     </ol>
   </p>
   <hr/>
