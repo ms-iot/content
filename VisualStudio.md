@@ -22,6 +22,6 @@ They make compilation even more efficient than using #pragmas.
 
 The default Wiring template creates a few files (stdafx.h and stdafx.cpp) in your project that are used to manage precompiled headers.
 You can find more info about these files [here](http://msdn.microsoft.com/en-us/library/h552b3ca.aspx){:target="_blank"}.
+Please note that precompiled headers are disabled in our default projects to ensure source compatibility with Arduino Wiring.
 
-<br/>
-<a class="btn btn-default" href="index.htm" role="button">Return to homepage</a>
+[&laquo; Return to Homepage](index.htm){: .btn .btn-default} 
