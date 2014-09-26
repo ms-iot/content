@@ -42,6 +42,9 @@ permalink: /ReleaseNotes.htm
       <li>
         There is no plan for a USB host library. While the Intel Galileo hardware does support this, the host USB stack is not planned for this version of Windows.
       </li>
+      <li>
+        There is no plan to implement the Arduino USB Keyboard and Mouse standard libraries. These are designed for Leonardo and Due compatibility, and the Microsoft IoT team does not believe these are important for Intel Galileo scenarios.
+      </li>
     </ol>
   </p>
   <hr/>
