@@ -1,14 +1,15 @@
 ---
 layout: code
-title: Setup your Galileo
+title: Setup your Intel Galileo
 permalink: /SetupGalileo.htm
 ---
 
+# Setup your Intel Galileo
 This guide will show you how to install and run the Windows Developer Program for IoT on an Intel Galileo Gen1 or Gen2.
 
-# Creating a Microsoft Windows bootable microSD card
+## Creating a Microsoft Windows bootable microSD card
 
-## Before you image your microSD card
+### Before you image your microSD card
 Please ensure that you are imaging your miniSD card for a known reason. If you are experiencing a Windows problem, please visit [Microsoft Connect](http://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"} to file a bug, and the MS IoT team will respond.
 
 Known reasons to image your microSD card include:
@@ -33,7 +34,7 @@ Software Packages:
 Depending on which Intel Galileo generation you are using, download one of the following:
 
 * [Microsoft Windows Intel Galileo Gen 1](http://go.microsoft.com/fwlink/?LinkID=403150){:target="_blank"}
-* [Microsoft Windows Intel Galileo Gen 2](file://wod/release/Galileo/9600.16384.x86fre.winblue_rtm_iotbuild.140815-1515_galileo_v2.wim){:target="_blank"}
+* [Microsoft Windows Intel Galileo Gen 2](http://wod/release/Galileo/9600.16384.x86fre.winblue_rtm_iotbuild.140815-1515_galileo_v2.wim){:target="_blank"}
 
 # Write Windows to the microSD card
 
@@ -51,7 +52,7 @@ apply-bootmedia.cmd -destination {YourSDCardDrive} -image {.wimFile downloaded a
 ~~~
 
 
-# Intel Galileo Gen 1 Setup
+## Intel Galileo Gen 1 Setup
 Intel has released Firmware version 1.0.2 which needs to be applied to your board before running Microsoft Windows. 
 
 Please follow the [Intel's Getting Started Guide](https://communities.intel.com/docs/DOC-22796){:target="_blank"}. Once you've followed the firmware update instructions, you do not need to continue following the Getting Started guide as the instructions do not apply to Microsoft Windows running on the Intel Galileo board.
@@ -59,12 +60,12 @@ Please follow the [Intel's Getting Started Guide](https://communities.intel.com/
 **NOTE:**
 : When extracting the Intel Galileo package, please extract into the root of your drive and make sure that the path does not contain spaces.
 
-# Intel Galileo Gen 2 Setup
+## Intel Galileo Gen 2 Setup
 **Gen2 Preflight NOTE:**
 : The Intel Galileo Gen 2 does not currently require a firmware update, but WILL the next time the WIM is updated.
 : Also note that the Gen 2 requires a registry fix after first boot.
 
-# Connecting and booting Windows
+## Connecting and booting Windows
 Connecting the Galileo directly to your computer will allow you to communicate with just your Galileo. You will still have internet connectivity, and your computer will be able to communicate with your Galileo.
 
 1. Connect one end of the network cable to the ethernet port on your Galileo
@@ -79,7 +80,7 @@ NOTE:
   
 
 
-# Telnet into your Galileo
+## Telnet into your Galileo
 The main reason you'll want to telnet into your Galileo is so that you can interact with your Galileo and gracefully shut it down.
 
 On your desktop select Start->Run and type ```telnet mygalileo```.
@@ -92,17 +93,17 @@ Password: admin
 
 ![](images/TelnetLogin.png)
 
-# Apply Gen 2 GPIO Fix
+## Apply Gen 2 GPIO Fix
 In order to use GPIO on Gen 2, you need to apply a registry fix after first boot.
 
-1. Download [Gen 2 GPIO patch](file://wod/release/Galileo/DSDT.reg){:target="_blank"}
+1. Download [Gen 2 GPIO patch](http://wod/release/Galileo/DSDT.reg){:target="_blank"}
 1. Copy the patch above to your galileo - from a command line - ```copy DSDT.reg \\mygalileo\c$\```
 1. Telnet to mygalileo
 1. from the command line in telnet run ```reg import DSDT.reg```
 1. from the command line in telnet run ```shutdown /r /t 0```
 1. Wait for a reboot.
 
-# Shutting down the Galileo
+## Shutting down the Galileo
 Before you unplug the power from the Galileo, it is advisable to gracefully shut it down. To do this:
 
 1. Telnet to the Galileo as described above
