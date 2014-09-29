@@ -45,6 +45,9 @@ permalink: /ReleaseNotes.htm
       <li>
         There is no plan to implement the Arduino USB Keyboard and Mouse standard libraries. 
       </li>
+      <li>
+        <code>SoftwareSerial</code> is currently not implemented.
+      </li>
     </ol>
   </p>
   <hr/>
