@@ -36,7 +36,7 @@ permalink: /SampleApps.htm
       <h2>16x2 LCD</h2>
       <p>Learn how to use the 16x2 LCD shield with the Arduino Liquid Crystal Library.</p>
       <p><a class="btn btn-default" href="16x2LCD.htm" role="button">View details &raquo;</a></p>
-    </div> 
+    </div>
     <div class="col-md-4">
       <h2>//Build Piano</h2>
       <p>Learn how to interact with a GPIO port expander and MIDI shield to imitate a piano.</p>
@@ -75,8 +75,26 @@ permalink: /SampleApps.htm
       <h2>&quot;Windows on Fridges&quot;</h2>
       <p>See how IoT Explorer Interns leveraged Windows On Devices for a robot which delivers soft drinks.</p>
       <p><a class="btn btn-default" href="http://ms-iot.github.io/windows-on-fridges/overview/introduction/" role="button">View details &raquo;</a></p>
-    </div>  
+    </div>
+    <div class="col-md-4">
+      <h2>TX/RX</h2>
+      <p>Learn how to use HardwareSerial to communicate across TX/RX pins.</p>
+      <p><a class="btn btn-default" href="TXRX.htm" role="button">View details &raquo;</a></p>
+    </div> 
   </div>
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Phidgets Sensors</h2>
+      <p>Learn how to use the Phidgets Library and talk with a Phidgets Sound Pressure Level Sensor.</p>
+      <p><a class="btn btn-default" href="PhidgetsSensors.htm" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Servo</h2>
+      <p>Learn how to use the basics of the Servo Library and interact with a Servo.</p>
+      <p><a class="btn btn-default" href="Servo.htm" role="button">View details &raquo;</a></p>
+    </div>
+  </div>
+  
   <hr/>
 
   <a class="btn btn-default" href="index.htm" role="button">Return to homepage</a>

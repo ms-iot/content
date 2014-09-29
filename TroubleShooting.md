@@ -124,7 +124,25 @@ permalink: /TroubleShooting.htm
             <li>Boot windows and look for failures.</li>
           </ol>
 
-          The most likley cause of Windows boot failure is incompatible Galileo Firmware. Ensure that you are <a href="IBoughtAGalileo.htm">running the latest firmware</a>.
+          The most likely cause of Windows boot failure is incompatible Galileo Firmware. Ensure that you are <a href="IBoughtAGalileo.htm">running the latest firmware</a>.
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion4" href="#collapseApplyBootMedia">
+            ApplyBootMedia.cmd does not work
+          </a>
+        </h4>
+      </div>
+      <div id="collapseApplyBootMedia" class="panel-collapse collapse">
+        <div class="panel-body">
+            If ApplyBootMedia is failing, follow these steps to check for known issues:<br/>
+            <ul>
+                <li>Make sure that the SD card has been reformatted with the FAT32 system and that it is empty.</li>
+                <li>Make sure that the path for both the .wim and ApplyBootMedia.cmd do not contain spaces.</li>
+            </ul>
         </div>
       </div>
     </div>
@@ -198,7 +216,7 @@ permalink: /TroubleShooting.htm
             Right click on your project and select Properties.<br/>
             Select the <kbd>Configuration Manager...</kbd> button from the upper right corner.<br/>
             Make sure "Deploy" is checked for your project<br/>
-            Also make sure that your remote Debugger settings are set correctly. See <a href="Tips.htm">Configure Remote Debugging</a> in the Tips section.
+            Also make sure that your remote Debugger settings are set correctly. See <a href="AdvancedUsage.htm#collapseRemoteDebugging">Configure Remote Debugging</a> on the "Advanced Usage" page.
         </div>
       </div>
     </div>

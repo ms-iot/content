@@ -25,7 +25,7 @@ permalink: /ReleaseNotes.htm
         <code>INPUT_PULLUP</code> is not implemented.
       </li>
       <li>
-        <code>strncmp()</code> is not implemented.
+        <code>strncmp()</code> functionality is available with <code>#include &lt;string.h&gt;</code>
       </li>
       <li>
         <code>int</code> represents different bit-lengths on different Arduino platforms. To guarantee a specific behavior with bitwise operations, you should cast the data to the explicit desired type using variable types from the inttypes.h header (i.e. <code>uint8_t</code>).
@@ -37,7 +37,16 @@ permalink: /ReleaseNotes.htm
         Unless the Galileo is rebooted, the GPIO pins start in the "last known" operational state when a sketch starts.
       </li>
       <li>
-        <code>void serialEvent()</code> functionality is not implemented.
+        The Wire API does not include <code>onReceive()</code> or <code>onRequest()</code>, because the Galileo does not support I2C slave functionality.
+      </li>
+      <li>
+        There is no plan for a USB host library. While the Intel Galileo hardware does support this, the host USB stack is not planned for this version of Windows.
+      </li>
+      <li>
+        There is no plan to implement the Arduino USB Keyboard and Mouse standard libraries. 
+      </li>
+      <li>
+        <code>SoftwareSerial</code> is currently not implemented.
       </li>
     </ol>
   </p>
