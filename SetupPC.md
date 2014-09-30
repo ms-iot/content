@@ -14,6 +14,12 @@ permalink: /SetupPC.htm
   <hr/>
   <h2> Visual Studio </h2>
   <p>Install and configure Visual Studio 2013.</p>
+  <div class="panel panel-danger">
+    <div class="panel-heading">Note:</div>
+    <div class="panel-body">
+      Please ensure that Visual studio is not running at this time.
+    </div>
+  </div>
   <div class="panel-group" id="accordion">
     <div class="panel panel-default">
       <div class="panel-heading">
