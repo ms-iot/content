@@ -5,11 +5,13 @@ permalink: /WhatsNew.htm
 ---
 
 # 9/29/2014
-  * Galileo Gen2 Support!
+  * [Intel Galileo Gen2 **Alpha** Support](Gen2.htm)!
   * Please revisit [Setup your PC](SetupPC.htm)
   * Please revisit [Setup your Galileo](SetupGalileo.htm)
 
 # 9/26/2014
+  * Network resiliency fixes and other customer reported bugs in GalileoWatcher and the OS image
+  * Enhanced information in GalileoWatcher (OsVersion, BiosVersion, Platform Type)
   * Updated documentation for [shield compatibility](ShieldCompat.htm){:target="_blank"}
   * Updated documentation for [Visual Studio](VisualStudio.htm){:target="_blank"} specificities
   * Updated documentation for Hardware Serial and UART
