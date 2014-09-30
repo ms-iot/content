@@ -9,8 +9,8 @@ The Microsoft IoT Team is pleased to make this **Alpha** release of Windows for 
 
 This release contains the following:
 
-1. An updated **Alpha** Windows Image ([WIM](FWLINK)) that supports the Intel Galileo Gen 2
-2. An updated **Alpha** Microsoft Installer ([MSI](FWLINK)) that supports targeting the Intel Galileo Gen 2 and the Intel Galileo Gen 1 
+1. An updated **Alpha** Windows Image ([WIM](http://go.microsoft.com/fwlink/?LinkID=513083&clcid=0x409){:target="_blank"}) that supports the Intel Galileo Gen 2
+2. An updated **Alpha** Microsoft Installer ([MSI](http://go.microsoft.com/fwlink/?LinkID=513082&clcid=0x409){:target="_blank"}) that supports targeting the Intel Galileo Gen 2 and the Intel Galileo Gen 1 
 3. An updated **Alpha** Open Source NuGet Package - installed as part of project creation through the MSI
 
 The intent of this release is to announce and enable support for Gen 2, get the community experimenting and providing feedback about Gen 2 support.
