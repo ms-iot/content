@@ -5,7 +5,7 @@ permalink: /WhatsNew.htm
 ---
 
 # 9/29/2014
-  * [Galileo Gen2 **Alpha** Support](Gen2.htm)!
+  * [Intel Galileo Gen2 **Alpha** Support](Gen2.htm)!
   * Please revisit [Setup your PC](SetupPC.htm)
   * Please revisit [Setup your Galileo](SetupGalileo.htm)
 
