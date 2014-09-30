@@ -34,7 +34,7 @@ Software Packages:
 Depending on which Intel Galileo generation you are using, download one of the following:
 
 * [Microsoft Windows Intel Galileo Gen 1](http://go.microsoft.com/fwlink/?LinkID=403150){:target="_blank"}
-* [Microsoft Windows Intel Galileo Gen 2](http://wod/release/Galileo/9600.16384.x86fre.winblue_rtm_iotbuild.140815-1515_galileo_v2.wim){:target="_blank"}
+* [Microsoft Windows Intel Galileo Gen 2](http://go.microsoft.com/fwlink/?LinkID=513083&clcid=0x409){:target="_blank"}
 
 **NOTE:**
 : Please use the correct Windows image for the board you are using. They are not interchangable.
