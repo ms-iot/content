@@ -10,7 +10,7 @@ This guide will show you how to install and run the Windows Developer Program fo
 ## Creating a Microsoft Windows bootable microSD card
 
 ### Before you image your microSD card
-Please ensure that you are imaging your miniSD card for a known reason. If you are experiencing a Windows problem, please visit [Microsoft Connect](http://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"} to file a bug, and the MS IoT team will respond.
+Please ensure that you are imaging your microSD card for a known reason. If you are experiencing a Windows problem, please visit [Microsoft Connect](http://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"} to file a bug, and the MS IoT team will respond.
 
 Known reasons to image your microSD card include:
 
@@ -24,7 +24,7 @@ Known reasons to image your microSD card include:
 Requirements:
 
 * A microSD card reader or SD card reader with a microSD card adapter
-* A 16gig or 32gig microSD card
+* A 16gig or larger microSD card
 * Ensure that you are enrolled in the [Windows Developer Program for IoT](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"}. 
 
 Software Packages:
@@ -35,6 +35,9 @@ Depending on which Intel Galileo generation you are using, download one of the f
 
 * [Microsoft Windows Intel Galileo Gen 1](http://go.microsoft.com/fwlink/?LinkID=403150){:target="_blank"}
 * [Microsoft Windows Intel Galileo Gen 2](http://wod/release/Galileo/9600.16384.x86fre.winblue_rtm_iotbuild.140815-1515_galileo_v2.wim){:target="_blank"}
+
+**NOTE:**
+: Please use the correct Windows image for the board you are using. They are not interchangable.
 
 # Write Windows to the microSD card
 
@@ -52,24 +55,22 @@ apply-bootmedia.cmd -destination {YourSDCardDrive} -image {.wimFile downloaded a
 ~~~
 
 
-## Intel Galileo Gen 1 Setup
-Intel has released Firmware version 1.0.2 which needs to be applied to your board before running Microsoft Windows. 
+## Intel Galileo Gen 1 Firmware Update
+Intel has released Firmware version 1.0.3 which needs to be applied to your board before running Microsoft Windows. 
 
 Please follow the [Intel's Getting Started Guide](https://communities.intel.com/docs/DOC-22796){:target="_blank"}. Once you've followed the firmware update instructions, you do not need to continue following the Getting Started guide as the instructions do not apply to Microsoft Windows running on the Intel Galileo board.
 
 **NOTE:**
 : When extracting the Intel Galileo package, please extract into the root of your drive and make sure that the path does not contain spaces.
 
-## Intel Galileo Gen 2 Setup
-**Gen2 Preflight NOTE:**
-: The Intel Galileo Gen 2 does not currently require a firmware update, but WILL the next time the WIM is updated.
-: Also note that the Gen 2 requires a registry fix after first boot.
+## Intel Galileo Gen 2 Firmware Update
+The Intel Galileo Gen 2 does not currently require a firmware update.
 
 ## Connecting and booting Windows
-Connecting the Galileo directly to your computer will allow you to communicate with just your Galileo. You will still have internet connectivity, and your computer will be able to communicate with your Galileo.
+Connecting the Galileo directly to your computer will allow you to communicate with just your Galileo. Your computer will still have internet connectivity, and your computer will be able to communicate with your Galileo.
 
 1. Connect one end of the network cable to the ethernet port on your Galileo
-1. Connect the other end of the network cable to your computer using the built in Ethernet port or a USB Ethernet adapter.
+1. Connect the other end of the network cable to your computer using a built in Ethernet port or a USB Ethernet adapter.
 1. Plug the power cord in
 1. You should see activity on the microSD light as it boots. The LED is at the bottom left of this picture.
 
@@ -77,8 +78,6 @@ Connecting the Galileo directly to your computer will allow you to communicate w
 
 NOTE:
 : Windows on Galileo can take about 2 minutes to boot. During this time you will see the microSD activity LED flashing rapidly. Once it stops flashing for a few seconds, the Galileo is fully booted.
-  
-
 
 ## Telnet into your Galileo
 The main reason you'll want to telnet into your Galileo is so that you can interact with your Galileo and gracefully shut it down.
@@ -92,16 +91,6 @@ Password: admin
 ~~~
 
 ![](images/TelnetLogin.png)
-
-## Apply Gen 2 GPIO Fix
-In order to use GPIO on Gen 2, you need to apply a registry fix after first boot.
-
-1. Download [Gen 2 GPIO patch](http://wod/release/Galileo/DSDT.reg){:target="_blank"}
-1. Copy the patch above to your galileo - from a command line - ```copy DSDT.reg \\mygalileo\c$\```
-1. Telnet to mygalileo
-1. from the command line in telnet run ```reg import DSDT.reg```
-1. from the command line in telnet run ```shutdown /r /t 0```
-1. Wait for a reboot.
 
 ## Shutting down the Galileo
 Before you unplug the power from the Galileo, it is advisable to gracefully shut it down. To do this:
