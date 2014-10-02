@@ -14,6 +14,12 @@ permalink: /SetupPC.htm
   <hr/>
   <h2> Visual Studio </h2>
   <p>Install and configure Visual Studio 2013.</p>
+  <div class="panel panel-danger">
+    <div class="panel-heading">Note:</div>
+    <div class="panel-body">
+      Please ensure that Visual studio is not running at this time.
+    </div>
+  </div>
   <div class="panel-group" id="accordion">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -25,7 +31,7 @@ permalink: /SetupPC.htm
       </div>
       <div id="collapseOne" class="panel-collapse collapse">
         <div class="panel-body">
-          Please install the <a href="http://go.microsoft.com/fwlink/?LinkID=403151" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
+          Please install the <a href="SDKRedirect.htm" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
           <br/>
           (During the install process, you may be prompted twice by the User Account Control. Once for the MSI and once for VSIXInstaller. To properly install the needed components, you will need to click yes.)
         </div>
@@ -65,7 +71,7 @@ permalink: /SetupPC.htm
               </ol>
             </li>
             <li>
-              Install the <a href="http://go.microsoft.com/fwlink/?LinkID=403151" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
+              Install the <a href="SDKRedirect.htm" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
               <br/>
               (During the install process, you may be prompted twice by the User Account Control. Once for the MSI and once for VSIXInstaller. To properly install the needed components, you will need to click yes.)
             </li>
@@ -110,7 +116,7 @@ permalink: /SetupPC.htm
               </ol>
             </li>
             <li>
-              Install the <a href="http://go.microsoft.com/fwlink/?LinkID=403151" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
+              Install the <a href="SDKRedirect.htm" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
               <br/>
               (During the install process, you may be prompted twice by the User Account Control. Once for the MSI and once for VSIXInstaller. To properly install the needed components, you will need to click yes.)
             </li>

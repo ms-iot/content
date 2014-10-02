@@ -4,6 +4,11 @@ title: What's new
 permalink: /WhatsNew.htm
 ---
 
+# 9/29/2014
+  * [Intel Galileo Gen2 **Alpha** Support](Gen2.htm)!
+  * Please revisit [Setup your PC](SetupPC.htm)
+  * Please revisit [Setup your Galileo](SetupGalileo.htm)
+
 # 9/26/2014
   * Network resiliency fixes and other customer reported bugs in GalileoWatcher and the OS image
   * Enhanced information in GalileoWatcher (OsVersion, BiosVersion, Platform Type)
