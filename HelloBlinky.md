@@ -48,6 +48,7 @@ LEDs are diodes which will emit light when powered. They are polarized - meaning
 
 ##Build and deploy
 Press F5 to build and deploy your project.
+
 You may be prompted for credentials. Enter:
 
 ~~~

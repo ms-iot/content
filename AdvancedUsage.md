@@ -13,23 +13,23 @@ This page describes things you can do with Windows running on Intel Galileo.
 Open up a file explorer window and type the following into the address bar:
 
 ~~~
-\\YourGalileoName\c$
+\\<name of your Galileo>\c$
 ~~~
 
 ### Allow UART port to be used by HardwareSerial
 This will change it from Kernel Debugger use.
+
 1. Shut down Galileo and remove power
 1. Remove micro-SD card and plug it in to a PC -- in this example, it is mounted as drive `K:`
 1. Run a command prompt as an Administrator
 
-~~~
-bcdedit /store k:\efi\microsoft\boot\bcd /enum
-bcdedit /store k:\efi\microsoft\boot\bcd /set {default} debug No
-bcdedit /store k:\efi\microsoft\boot\bcd /set {default} testsigning OFF
-bcdedit /store k:\efi\microsoft\boot\bcd /enum
-~~~
-Verify debug and testsigning are now “No” 
-
+   ~~~
+   bcdedit /store k:\efi\microsoft\boot\bcd /enum
+   bcdedit /store k:\efi\microsoft\boot\bcd /set {default} debug No
+   bcdedit /store k:\efi\microsoft\boot\bcd /set {default} testsigning OFF
+   bcdedit /store k:\efi\microsoft\boot\bcd /enum
+   ~~~
+1. Verify debug and testsigning are now “No” 
 1. Safe dismount of micro-SD from PC (eject from Windows Explorer)
 1. Put micro-SD in Galileo and powered up
 
@@ -45,22 +45,28 @@ You can provide internet connectivity (wireless or other) by sharing, or "bridgi
 When you connect your Galileo to your PC directly (as outlined [here](SetupGalileo.htm){:target="_blank"}, then you can share the network connection the PC is using to connect to the internet with the Galileo by following these steps:
 
 1. Open the "<b>Network and Sharing Center</b>" from the Start Screen.
-  ![](images/Start_NetworkandSharingCenter.png)
+
+   ![](images/Start_NetworkandSharingCenter.png)
 
 1. Select ```Change adapter settings``` from the left hand column.
-  ![](images/NetworkandSharingCenter.png)
+
+   ![](images/NetworkandSharingCenter.png)
 
 1. In the network connection settings select ```Layout->Menu bar``` from the ```Organize``` drop down menu.
-  ![](images/NetworkConnections.png)
+
+   ![](images/NetworkConnections.png)
 
 1. Select your "Ethernet" connection (to the Galileo) and your other connection (to the internet) ["Wi-Fi" pictured].
-  ![](images/NetworkBridgeConnections.png)
+
+   ![](images/NetworkBridgeConnections.png)
 
 1. Wait for connection to be created 
-  ![](images/Status_BridgeWait.png)
+
+   ![](images/Status_BridgeWait.png)
 
 1. Once the bridge has been created and new connection will appear, labeled "Network Bridge".
-  ![](images/NetworkBridge.png)
+
+   ![](images/NetworkBridge.png)
 
 Now that your network bridge has been setup, your Galileo should be able to access the internet via your PC's internet connection.
 Use ```ping bing.com``` from a telnet session to your Galileo to confirm.
@@ -70,7 +76,7 @@ Use ```ping bing.com``` from a telnet session to your Galileo to confirm.
 ##Customizing Windows
 
 ### Making your Galileo run an exe on boot
-1. From a file explorer window, navigate to ```\mygalileo\c$\Windows\System32\Boot```
+1. From a file explorer window, navigate to ```\\mygalileo\c$\Windows\System32\Boot```
 1. If prompted enter the username as \Administrator and the password as admin
 1. Right click on ```autorun.cmd``` and select Edit
 1. At the end of the file add: ```start YourAppLocation\YourAppName.exe```
@@ -123,7 +129,7 @@ C:\>kill TemperatureSensor.exe
 process TemperatureSensor.exe (1284) - '' killed
 ~~~
 
-Using 'kill Name' on will close all tasks with that name.
+Using 'kill Name' will close all tasks with that name.
 	
 
 ##Add a driver to Windows
