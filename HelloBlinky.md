@@ -73,5 +73,19 @@ Paste the copied IP address into the 'Remote Server Name' field on the debugging
 ##Result
 You should see the light blinking. If it isn't blinking, try reversing the LED leads.
 
+## Update your project
+The Microsoft IoT team and the community are adding features and fixing bugs in the SDK. In order to take advantage of these changes, you'll need to manually update your project.
+
+1. From within your existing solution, right click on the project and select ```Manage Nuget Packages```
+1. Select ```Updates``` from the left column
+
+   ![Updates](images/NugetUpdates.png)
+
+1. If you'd like to use a prerelease version, select ```Include Prereleases``` from the dropdown
+
+   ![Prerelease](images/Prerelease.png)
+
+1. Click the ```Update``` button to update your project.
+
 ---
 [&laquo; Return to Samples](SampleApps.htm){: .btn .btn-default} 
