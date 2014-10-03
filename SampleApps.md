@@ -93,6 +93,11 @@ permalink: /SampleApps.htm
       <p>Learn how to use the basics of the Servo Library and interact with a Servo.</p>
       <p><a class="btn btn-default" href="Servo.htm" role="button">View details &raquo;</a></p>
     </div>
+	 <div class="col-md-4">
+      <h2>XBee</h2>
+      <p>Learn how to use HardwareSerial to communicate with an XBee device by reading and writing to the UART port.</p>
+      <p><a class="btn btn-default" href="XBee.htm" role="button">View details &raquo;</a></p>
+    </div>
   </div>
   
   <hr/>

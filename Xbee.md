@@ -7,16 +7,17 @@ permalink: /XBee.htm
 # Communicating with an XBee device
 Learn how to use HardwareSerial to communicate with an XBee device by reading and writing to the UART port.
 
-# Info on using UART and HardwareSerial
+# Info on using HardwareSerial
 
 * HardwareSerial defines an object called Serial.
-    * This reads and writes to COM1 on the Windows Image which is linked to the RX and TX pinson the Galileo board.<br/>
+    * This reads and writes to COM1 on the Windows Image which is linked to the RX and TX pins on the Galileo board.<br/>
+* Serial = COM1 = TX/RX pins
 
 # Required Components
-* [XBeeZB device](http://www.digi.com/products/wireless-wired-embedded-solutions/zigbee-rf-modules/zigbee-mesh-module/xbee-zb-module){:target="_blank"}
-* Wires to connect RX, TX, 3.3v power and Ground wires to the XBee.
+* [XBee ZB device](http://www.digi.com/products/wireless-wired-embedded-solutions/zigbee-rf-modules/zigbee-mesh-module/xbee-zb-module){:target="_blank"}
+* Wires to connect RX, TX, 3.3v power and ground wires to the XBee.
 
-The XBeeZB device should be loaded with the API Firmware using XCTU.
+The XBee ZB device should be loaded with the API Firmware using [XCTU](http://www.digi.com/support/productdetail?pid=3352&osvid=57&type=utilities){:target="_blank"}.
 
 # Create a new project
 
@@ -25,8 +26,8 @@ The XBeeZB device should be loaded with the API Firmware using XCTU.
     * Under Configuration Properties -> C/C++ -> Preprocessor, add <kbd>SERIAL_EVENT;</kbd> to Preprocessor Definitions.
 1. Connect the TX pin on the Galileo board to the RX pin (#3) on the XBee
 1. Connect the RX pin on the Galileo board to the TX pin (#2) on the XBee
-1. Connect the 3.3v pin on the Galileo board to the 3.3v pin (#1) on the XBee
 1. Connect the GND pin on the Galileo board to the GND pin (#10) on the XBee
+1. Connect the 3.3v pin on the Galileo board to the 3.3v pin (#1) on the XBee
 
 <img src="images/XbeeGalileoWiring.png">
 
@@ -47,26 +48,26 @@ int _tmain(int argc, _TCHAR* argv[])
 void setup()
 {
     Serial.begin(CBR_9600, Serial.SERIAL_8N1);
-    //Write the ID Request command
-    uint8_t idRequest[5] = { 0x03, 0x03, 0x00, 0x03, 0x03 };
-    writeMessage(idRequest);
+    //Send the AT Request for the device's 'ID'
+    uint8_t idRequest[5] = { 0x7E, 0x00, 0x00, 0x03, 0x03 };
+    writeMessage(idRequest, 5);
 }
 
-void writeMessage(uint8_t[] data)
-{
-   for (int i = 0; i < data.length; i++)
-   {
-   
-      if (Serial.write(dataArray[i]) != 1) 
-      { 
-          Log("Error writing Serial1! %d\n", count); 
-      } 
+  void writeMessage(uint8_t* message, int count)
+  {
+    for (int i = 0; i < count; i++)
+    {
+
+      if (Serial.write(message[i]) != 1)
+      {
+        Log("Error writing Serial1! %d\n", count);
+      }
       else
       {
-          Log(L"%X sent\n", dataArray[i]);
+        Log(L"%X sent\n", message[i]);
       }
-   }
-}
+    }
+  }
 
 // This method will be called when data is available on the Serial port at the end of the loop
 void serialEvent()
@@ -74,7 +75,7 @@ void serialEvent()
    //This is called when we get a message
    int available = Serial.available(); 
    if (available) 
- { 
+  { 
       Log("Received %d bytes: ", available); 
       for (int i = 0; i < available; i++) 
       { 
@@ -87,7 +88,7 @@ void serialEvent()
 
 void loop()
 {
-    Sleep(1000);
+    Sleep(250);
 }
 {% endhighlight %}
 
