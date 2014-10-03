@@ -5,7 +5,7 @@ permalink: /XBee.htm
 ---
 
 # Communicating with an XBee device
-Learn how to use HardwareSerial to communicate with an XBee device by reading and writing to the UART port.
+Learn how to use HardwareSerial to communicate to and XBee device across the TX/RX pins.
 
 # Info on using HardwareSerial
 
