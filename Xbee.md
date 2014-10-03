@@ -28,6 +28,8 @@ The XBeeZB device should be loaded with the API Firmware using XCTU.
 1. Connect the 3.3v pin on the Galileo board to the 3.3v pin (#1) on the XBee
 1. Connect the GND pin on the Galileo board to the GND pin (#10) on the XBee
 
+<img src="images/XbeeGalileoWiring.png">
+
 If you have an XBee Adapter, connect the wires to the equivalent pin-outs on the adapter.
 
 # Code
