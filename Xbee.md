@@ -94,7 +94,7 @@ void serialEvent()
     for (int i = 0; i < available; i++) 
     { 
       auto byte = (uint8_t) Serial.read(); 
-      Log("%X,", byte); 
+      Log("%.2X,", byte); 
     } 
     Log("\n"); 
    }
