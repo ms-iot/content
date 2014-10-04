@@ -45,24 +45,32 @@ int _tmain(int argc, _TCHAR* argv[])
   return RunArduinoSketch();
 }
 
-void writeXBeeApiMessage(uint8_t messageType, uint8_t frameId, uint8_t* message, USHORT count)
+/**
+  Writes a message to the XBee device using the API protocol (AP=2).
+
+  @param[in]  messageType The XBee API Message type
+  @param[in]  frameId     An ID for the message frame to associate with the response. Set to 0x00 if no response is required
+  @param[in]  frame       A byte array with the payload of the message
+  @param[in]  frameLen    The length of the frame array
+*/
+void writeXBeeApiMessage(uint8_t messageType, uint8_t frameId, uint8_t* frame, USHORT frameLen)
 {
-  int sentLen = Serial.write(0x7E); //Write header
+  int sentLen = Serial.write((uint8_t) 0x7E); //Write header
   //Write message length
-  USHORT len = count + 2;
-  sentLen += Serial.write((uint8_t) (len & 0xFF));
+  USHORT len = frameLen + 2;
   sentLen += Serial.write((uint8_t) (len >> 8));
+  sentLen += Serial.write((uint8_t) (len & 0xFF));
   sentLen += Serial.write(messageType); //write message type
   byte checksum = 0xFF - messageType;
   sentLen += Serial.write(frameId); //write frame id
-  checksum -= frameId;    
-  for (int i = 0; i < count; i++) //write body
+  checksum -= frameId;
+  for (int i = 0; i < frameLen; i++) //write body
   {
-    sentLen += Serial.write(message[i]);
-    checksum -= message[i];
+    sentLen += Serial.write(frame[i]);
+    checksum -= frame[i];
   }
   sentLen += Serial.write(checksum); //write checksum
-  if (sentLen == count + 6)
+  if (sentLen == frameLen + 6)
     Log(L"Sent %d bytes\n", sentLen);
   else
     Log(L"Error writing bytes");
@@ -71,7 +79,6 @@ void writeXBeeApiMessage(uint8_t messageType, uint8_t frameId, uint8_t* message,
 void setup()
 {
   Serial.begin(CBR_9600, Serial.SERIAL_8N1);
-  
   //Send the AT Request (0x08) for the device's ID (0x49, 0x44)
   uint8_t idRequest[8] = { 0x49, 0x44 };
   writeXBeeApiMessage(0x08, 0x01, idRequest, 2);
