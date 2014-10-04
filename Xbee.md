@@ -5,7 +5,7 @@ permalink: /XBee.htm
 ---
 
 # Communicating with an XBee device
-Learn how to use HardwareSerial to communicate to and XBee device across the TX/RX pins.
+Learn how to use HardwareSerial to communicate to an XBee device across the TX/RX pins.
 
 # Info on using HardwareSerial
 
@@ -17,7 +17,7 @@ Learn how to use HardwareSerial to communicate to and XBee device across the TX/
 * [XBee ZB device](http://www.digi.com/products/wireless-wired-embedded-solutions/zigbee-rf-modules/zigbee-mesh-module/xbee-zb-module){:target="_blank"}
 * Wires to connect RX, TX, 3.3v power and ground wires to the XBee.
 
-The XBee ZB device should be loaded with the API Firmware using [XCTU](http://www.digi.com/support/productdetail?pid=3352&osvid=57&type=utilities){:target="_blank"}.
+This sample requires the XBee to run in API mode, by setting AP=2. If you are using Series 2 XBee, you'll need to install the API Firmware with [X-CTU](http://www.digi.com/support/productdetail?pid=3352&osvid=57&type=utilities){:target="_blank"} (Series 2 are manufactured with AT firmware), then set AP=2. This software will not work correctly with AP=1
 
 # Create a new project
 
@@ -42,53 +42,60 @@ If you have an XBee Adapter, connect the wires to the equivalent pin-outs on the
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-    return RunArduinoSketch();
+  return RunArduinoSketch();
+}
+
+void writeXBeeApiMessage(uint8_t messageType, uint8_t frameId, uint8_t* message, USHORT count)
+{
+  int sentLen = Serial.write(0x7E); //Write header
+  //Write message length
+  USHORT len = count + 2;
+  sentLen += Serial.write((uint8_t) (len & 0xFF));
+  sentLen += Serial.write((uint8_t) (len >> 8));
+  sentLen += Serial.write(messageType); //write message type
+  byte checksum = 0xFF - messageType;
+  sentLen += Serial.write(frameId); //write frame id
+  checksum -= frameId;    
+  for (int i = 0; i < count; i++) //write body
+  {
+    sentLen += Serial.write(message[i]);
+    checksum -= message[i];
+  }
+  sentLen += Serial.write(checksum); //write checksum
+  if (sentLen == count + 6)
+    Log(L"Sent %d bytes\n", sentLen);
+  else
+    Log(L"Error writing bytes");
 }
 
 void setup()
 {
-    Serial.begin(CBR_9600, Serial.SERIAL_8N1);
-    //Send the AT Request for the device's 'ID'
-    uint8_t idRequest[5] = { 0x7E, 0x00, 0x00, 0x03, 0x03 };
-    writeMessage(idRequest, 5);
+  Serial.begin(CBR_9600, Serial.SERIAL_8N1);
+  
+  //Send the AT Request (0x08) for the device's ID (0x49, 0x44)
+  uint8_t idRequest[8] = { 0x49, 0x44 };
+  writeXBeeApiMessage(0x08, 0x01, idRequest, 2);
 }
-
-  void writeMessage(uint8_t* message, int count)
-  {
-    for (int i = 0; i < count; i++)
-    {
-
-      if (Serial.write(message[i]) != 1)
-      {
-        Log("Error writing Serial1! %d\n", count);
-      }
-      else
-      {
-        Log(L"%X sent\n", message[i]);
-      }
-    }
-  }
 
 // This method will be called when data is available on the Serial port at the end of the loop
 void serialEvent()
 {
-   //This is called when we get a message
-   int available = Serial.available(); 
-   if (available) 
+  int available = Serial.available(); 
+  if (available) 
   { 
-      Log("Received %d bytes: ", available); 
-      for (int i = 0; i < available; i++) 
-      { 
-          auto byte = (uint8_t) Serial.read(); 
-          Log("%X,", byte); 
-      } 
-      Log("\n"); 
+    Log("Received %d bytes: ", available); 
+    for (int i = 0; i < available; i++) 
+    { 
+      auto byte = (uint8_t) Serial.read(); 
+      Log("%X,", byte); 
+    } 
+    Log("\n"); 
    }
 }
 
 void loop()
 {
-    Sleep(250);
+  Sleep(250);
 }
 {% endhighlight %}
 
