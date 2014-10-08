@@ -93,6 +93,18 @@ permalink: /SampleApps.htm
       <p>Learn how to use the basics of the Servo Library and interact with a Servo.</p>
       <p><a class="btn btn-default" href="Servo.htm" role="button">View details &raquo;</a></p>
     </div>
+	 <div class="col-md-4">
+      <h2>XBee</h2>
+      <p>Learn how to use HardwareSerial to communicate to an XBee device across the TX/RX pins.</p>
+      <p><a class="btn btn-default" href="XBee.htm" role="button">View details &raquo;</a></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Win32 Networking</h2>
+      <p>This MSDN sample shows how to run a winsock client and server.</p>
+      <p><a class="btn btn-default" href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms737889(v=vs.85).aspx" role="button">View details &raquo;</a></p>
+    </div>
   </div>
   
   <hr/>
