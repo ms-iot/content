@@ -4,6 +4,12 @@ title: What's new
 permalink: /WhatsNew.htm
 ---
 
+# 10/9/2014
+  * Updated Wiring Implementation - Interrupts, ShiftIn, ShiftOut, tone, Analog I/O
+  * Updated Wiring Libraries - TFT, Software Serial, SPI, Stream, Stepper, Motor, LiquidCrystal, EEPROM, GSM
+  * Updated Phidget Sample
+  * Removed need for long/wide character formats
+
 # 9/29/2014
   * [Intel Galileo Gen2 **Alpha** Support](Gen2.htm)!
   * Please revisit [Setup your PC](SetupPC.htm)
