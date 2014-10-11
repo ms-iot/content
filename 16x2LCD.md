@@ -13,13 +13,14 @@ Learn how to use the 16x2 LCD shield with the Arduino Liquid Crystal Library.
 
 # Hooking up Components
 If you are using the 16x2 LCD listed above, follow the diagram below:
-[16x2](images/16x2LCDDiagram.png)
+
+![16x2](images/16x2LCDDiagram.png)
 
 # Create a new project
 
 1. Create a new project from the template.
-1. Go to Arduino's Liquid Crystal Library GitHub](https://github.com/arduino/Arduino/tree/master/libraries/LiquidCrystal){:target="_blank"}and download the LiquidCrystal.cpp and LiquidCrystal.h files.
-1. Place the LiquidCrystal.cpp and LiquidCrystal.h files in your new project.
+1. Go to [Arduino's Liquid Crystal Library GitHub](https://github.com/arduino/Arduino/tree/master/libraries/LiquidCrystal){:target="_blank"} and download the LiquidCrystal.cpp and LiquidCrystal.h files.
+1. Place the LiquidCrystal.cpp and LiquidCrystal.h files in your new project's folder via Windows Explorer
 1. Based on your 16x2 LCD you may need to specify other pins for use with the LiquidCrystal library.
 1. Replace the existing code in stdafx.h and main.cpp with the following code:
 
