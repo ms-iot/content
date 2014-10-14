@@ -4,8 +4,13 @@ title: Setup your Intel Galileo
 permalink: /SetupGalileo.htm
 ---
 
+# Before you start
+Please make sure you've visited [Setup Your PC](SetupPC.htm) before continuing with these instructions. 
+
+Please ensure that you are enrolled in the [Windows Developer Program for IoT](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"}. 
+
 # Setup your Intel Galileo
-This guide will show you how to install and run the Windows Developer Program for IoT on an Intel Galileo Gen1 or Gen2.
+This guide will show you how to install and run the Windows Developer Program for IoT on an Intel Galileo Gen1 or Gen2. 
 
 ## Creating a Microsoft Windows bootable microSD card
 
@@ -25,7 +30,6 @@ Requirements:
 
 * A microSD card reader or SD card reader with a microSD card adapter
 * A 16gig or larger microSD card
-* Ensure that you are enrolled in the [Windows Developer Program for IoT](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"}. 
 
 Software Packages:
 
@@ -69,12 +73,18 @@ The Intel Galileo Gen 2 does not currently require a firmware update.
 ## Connecting and booting Windows
 Connecting the Galileo directly to your computer will allow you to communicate with just your Galileo. Your computer will still have internet connectivity, and your computer will be able to communicate with your Galileo.
 
+**IMPORTANT NOTE:**
+: Intel Galileo Gen1 and Gen2 use different power supplies. Please only use the 12 volt power supply with the Gen2 and a 5 volt power supply with Gen1. 
+
+
 1. Connect one end of the network cable to the ethernet port on your Galileo
 1. Connect the other end of the network cable to your computer using a built in Ethernet port or a USB Ethernet adapter.
 1. Plug the power cord in
-1. You should see activity on the microSD light as it boots. The LED is at the bottom left of this picture.
+1. You should see activity on the microSD light as it boots. The LED is circled in green in the following pictures.
 
 ![](images/SDLed.png)
+
+![](images/IntelGalileoGen2.jpg)
 
 NOTE:
 : Windows on Galileo can take about 2 minutes to boot. During this time you will see the microSD activity LED flashing rapidly. Once it stops flashing for a few seconds, the Galileo is fully booted.
