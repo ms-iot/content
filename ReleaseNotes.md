@@ -62,7 +62,7 @@ permalink: /ReleaseNotes.htm
   <h2>Hardware Limitations</h2>
   <p>
     <ol>
-      <li>The fastest most GPIO pins can be changed is about once every 25 milliseconds. This is because of the speed of the Cypress I/O port expander used on the Galileo. Pins 2, 3 and 10 can be driven directly by the processor and can be changed roughly every 2 milliseconds.</li>
+      <li>Intel Galileo Gen1: The fastest most GPIO pins can be changed is about once every 25 milliseconds. This is because of the speed of the Cypress I/O port expander used on the Galileo. Pins 2, 3 and 10 can be driven directly by the processor and can be changed roughly every 2 milliseconds.</li>
       <li>CPU architecture does not support the LOCK_ prefix on kernel instructions.</li>
       <li>No SSE registers, Windows functionality requiring this hardware cannot work.</li>
     </ol>

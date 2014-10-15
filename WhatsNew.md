@@ -4,6 +4,16 @@ title: What's new
 permalink: /WhatsNew.htm
 ---
 
+# 10/15/2014
+  * PWM and ADC are now supported on Intel Galileo Gen2.
+  * Minor content updates for [Setup your PC](SetupPC.htm) and [Setup your Galileo](SetupGalileo.htm)
+  * Learn how to update your existing project when a new SDK is released in [Hello Blinky](HelloBlinky.htm)
+  * Temporarily removed Cylon and Firmata from [Samples](SampleApps.htm). The sample needs to be refactored due to repository changes.
+
+# 10/9/2014
+  * Updated Phidget Sample
+  * Removed need for long/wide character formats
+
 # 9/29/2014
   * [Intel Galileo Gen2 **Alpha** Support](Gen2.htm)!
   * Please revisit [Setup your PC](SetupPC.htm)
@@ -29,5 +39,5 @@ permalink: /WhatsNew.htm
   * [pulseIn](http://arduino.cc/en/Reference/PulseIn){:target="_blank"} - Based on your requests, we now have an implementation of pulseIn
   * Improved network resiliancy in the GalileoWatcher
 
-<br/>
-<a class="btn btn-default" href="index.htm" role="button">Return to homepage</a>
+---
+[&laquo; Return to homepage](index.htm){: .btn .btn-default} 

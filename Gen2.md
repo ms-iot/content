@@ -20,7 +20,6 @@ In addition to fundamental Windows support for the Intel Galileo Gen 2, we are p
 These performance improvements, called **Lightning**, represent a re-architecture of the user mode/kernel driver model for pin hardware I/O in Windows.
 As a programmer you access the pins exactly the same. The response time is improved for you.
 
-For this **Alpha** release we only support the digital I/O Pins - D0 through D13.
 All digital pins are faster than on Gen 1, but **Lightning** improvements are best realized in the following order (most improved first, all on the same line are the same):
 
 1. GPIO fabric pins - D0, D1, D2, D3, D10, D12
@@ -35,7 +34,6 @@ This **Alpha** release:
 
 * Contains a separate WIM for Gen2. We will be enabling 1 Windows image for both Galileo platforms in an upcoming release.
 * Enables targeting Gen1 and Gen2 platforms separately when Visual Studio creates a new project. We will be enabling targeting of both Galileo Platforms with 1 project in an upcoming release.
-* Only supports Digital IO (GPIO, I2C, SPI, UART). We will be enabling analog support in an upcoming release.
 * Only support **Lighting** for Gen2. We are evaluating **Lightning** support for Gen1.
 
 # Compatibility Notes
