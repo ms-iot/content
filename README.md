@@ -6,7 +6,7 @@ Please refer to our [contribution page](http://ms-iot.github.io/content/Contribu
 1. Install [Ruby](http://rubyinstaller.org/downloads/) and add it to your system path environment variable
 1. Download the [Ruby DevKit](http://rubyinstaller.org/downloads/), and follow the installation instructions [here](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit)
 1. Install [Python 2.7.x](https://www.python.org/downloads/)
-1. Using Command Prompt, Install jekyll 2.0.3 using ruby gems.
+1. Using Command Prompt, Install jekyll using ruby gems.
 ```gem install jekyll```
 
 ### Iterating on documentation
