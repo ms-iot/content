@@ -11,8 +11,6 @@ permalink: /WhatsNew.htm
   * Temporarily removed Cylon and Firmata from [Samples](SampleApps.htm). The sample needs to be refactored due to repository changes.
 
 # 10/9/2014
-  * Updated Wiring Implementation - Interrupts, ShiftIn, ShiftOut, tone, Analog I/O
-  * Updated Wiring Libraries - TFT, Software Serial, SPI, Stream, Stepper, Motor, LiquidCrystal, EEPROM, GSM
   * Updated Phidget Sample
   * Removed need for long/wide character formats
 
