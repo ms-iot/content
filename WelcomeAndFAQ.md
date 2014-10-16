@@ -183,8 +183,10 @@ During Steve T's IoT session at Build 2014, we announced that we're increasing o
 **A:** Yes! Please see our [Github Contribute page](http://ms-iot.github.io/content/Contribute.htm) for more information.
  
 **Q:** What about Raspberry Pi?  
-**A:**  We admire the work done by the Raspberry Pi team and we think they have a great model for development hardware.
+**A:** We admire the work done by the Raspberry Pi team and we think they have a great model for development hardware.
 
+**Q:** Does Microsoft have any plans to deliver hardware kits for education and schools?
+**A:** Microsoft has a long and standing engagement with education. An example is our [Youthspark program](http://tinyurl.com/95cdflq). We have identified specific youth/education partners for our kit (to be announced later). We are not setting up a specific allotment of our kits only for education, but we encourage educators and students to sign up for the program. 
 
 ###My question isn't answered. Who should I talk to?
 
