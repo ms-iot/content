@@ -105,6 +105,11 @@ permalink: /SampleApps.htm
       <p>Learn how to interact with your board using Firmata and Cylon .</p>
       <p><a class="btn btn-default" href="Firmata.htm" role="button">View details &raquo;</a></p>
     </div-->  
+    <div class="col-md-4">
+      <h2>C++ REST SDK</h2>
+      <p>The C++ REST SDK (codename "Casablanca") is a Microsoft project for cloud-based client-server communication in native code using a modern asynchronous C++ API design.</p>
+      <p><a class="btn btn-default" href="Casablanca.htm" role="button">View details &raquo;</a></p>
+    </div>  
   </div>
   
   <hr/>
