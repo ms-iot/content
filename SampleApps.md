@@ -93,6 +93,11 @@ permalink: /SampleApps.htm
       <p>Learn how to use the basics of the Servo Library and interact with a Servo.</p>
       <p><a class="btn btn-default" href="Servo.htm" role="button">View details &raquo;</a></p>
     </div>
+    <div class="col-md-4">
+      <h2>Set Gen1 Powerup States</h2>
+      <p>Learn how to set the power-up states of the Gen1 I/O Expander GPIO pins.</p>
+      <p><a class="btn btn-default" href="SetGen1PowerupStates.htm" role="button">View details &raquo;</a></p>
+    </div>
   </div>
   
   <hr/>
