@@ -9,11 +9,12 @@ Learn to run node.js on a galileo and call APIs from a javscript file.
 
 ##Running Node on Galileo
 
-* Make sure you are using the latest WIM.
-* Make a directory in the root of your image named "node".
-* Download the 32-bit Windows Binary (.exe) of node from [nodejs.org](http://nodejs.org/download/){:target="_blank"} and place it inside the new "node" directory.
-* Download the latest zipped version of npm from [nodejs.org](http://nodejs.org/dist/npm/){:target="_blank"} and extract the contents into the new "node" directory.
-* Add these "node" folder to your Galileo image's path and restart using the following commands:
+* Make sure you are using the latest [windows image](https://connect.microsoft.com/windowsembeddedIoT/Downloads){:target="_blank"}.
+* Make a directory in the root of your image named `node`:
+    * Using File Explorer on your PC, open `\\mygalileo\c$` then right click and create a new folder called `node`
+* Download the 32-bit Windows Binary (.exe) of node from [nodejs.org](http://nodejs.org/download/){:target="_blank"} and place it inside the new `node` directory.
+* Download the latest zipped version of npm from [nodejs.org](http://nodejs.org/dist/npm/){:target="_blank"} and extract the contents into the new `node` directory.
+* Using Telnet, add this `node` folder to your Galileo image's path and restart using the following commands:
 
 ~~~
 setx path "%path%;c:\node" /M
@@ -21,20 +22,22 @@ shutdown /r /t 0
 ~~~
 
 * Create a main.js with contents from the code section below.
+    * Using File Explorer on your PC, open `\\mygalileo\c$` then right click and create a new text file called `main.js`
+    * You can open this file directly from a text editor by navigating to `\\mygalileo\c$\main.js` in a File Explorer.
 * Install the ms-iot-wiring package into the location of main.js using npm:
 
 ~~~
 npm install ms-iot-wiring
 ~~~
 
-* Using a telnet connection to your galileo, change directories to the location of main.js.
+* Using a telnet connection to your galileo, change directories to the location of `main.js`.
 * Run the command: <kbd>node main.js</kbd>
 
 ##Code
-The code below shows usages of the APIs available through the nodewiring extension.
+The code below shows usage of the APIs available through the ms-iot-wiring extension.
 
 {% highlight Javascript %}
-var galileo = require("./ms-iot-wiring"); // adds the nodewiring module
+var galileo = require("./ms-iot-wiring"); // adds the ms-iot-wiring module
 
 var led = 13;
 
