@@ -100,6 +100,11 @@ permalink: /SampleApps.htm
     </div>
   </div>
   <div class="row">
+    <div class="col-md-4">
+      <h2>NodeJS</h2>
+      <p>Learn to run node.js on a galileo and call APIs from a javscript file.</p>
+      <p><a class="btn btn-default" href="NodeJS.htm" role="button">View details &raquo;</a></p>
+    </div>
     <!-- div class="col-md-4">
       <h2>Firmata and Cylon</h2>
       <p>Learn how to interact with your board using Firmata and Cylon .</p>
