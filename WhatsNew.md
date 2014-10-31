@@ -5,9 +5,9 @@ permalink: /WhatsNew.htm
 ---
 
 # 10/31/2014
-  * Announcing [Lightning](Lightning.htm) for Intel Galileo Gen1 and Gen2!
+  * Announcing [Lightning](Lightning.htm){:target="_blank"} for Intel Galileo Gen1 and Gen2!
   * Significant support for Wiring Language, Libraries and Classes
-  * Node.JS support with a new Wiring library
+  * Node.JS support with a new [Wiring library](https://www.npmjs.org/package/ms-iot-wiring){:target="_blank"}
 
 # 10/15/2014
   * PWM and ADC are now supported on Intel Galileo Gen2.
