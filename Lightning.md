@@ -5,7 +5,7 @@ permalink: /Lightning.htm
 ---
 
 # New Lightning Functionality
-In addition to fundamental Windows support for the Intel Galileo Gen 1 and Gen 2, we are pleased to announce performance improvements for I/O.
+In addition to fundamental Windows support for the Intel Galileo Gen 1 and Gen 2, we are pleased to announce performance improvements for I/O on both platforms.
 These performance improvements, called **Lightning**, represent a re-architecture of the user mode/kernel driver model for pin hardware I/O in Windows.
 As a programmer you access the pins exactly the same. The response time is improved for you.
 
@@ -20,7 +20,7 @@ All analog pins have improved performance for ADC and PWM, as well.
 #Setup Instructions
 Just follow the instructions for [Setting up your PC](SetupPC.htm){:target="_blank"}
 
-# In this Release
+# With this Release
 * Contains a single WIM for Intel Galileo Gen1 and Gen2. 
 * Enables targeting Intel Galileo Gen1 and Gen2 platforms agnostically when Visual Studio creates a new project. 
 * Supports Digital I/O (GPIO, I2C, SPI, UART). 
