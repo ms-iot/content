@@ -20,11 +20,11 @@ All analog pins have improved performance for ADC and PWM, as well.
 #Setup Instructions
 Just follow the instructions for [Setting up your PC](SetupPC.htm){:target="_blank"}
 
-# With this Release
+# This Release
 * Contains a single WIM for Intel Galileo Gen1 and Gen2. 
 * Enables targeting Intel Galileo Gen1 and Gen2 platforms agnostically when Visual Studio creates a new project. 
-* Supports Digital I/O (GPIO, I2C, SPI, UART). 
-* Supports Analog I/O (PWM, ADC).
+* Supports Digital I/O (GPIO, I2C, SPI, UART) for Intel Galileo Gen1 and Gen2.
+* Supports Analog I/O (PWM, ADC) for Intel Galileo Gen1 and Gen2.
 * Supports **Lighting** for Intel Galileo Gen1 and Gen2. 
 
 ---
