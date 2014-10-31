@@ -5,7 +5,7 @@ permalink: /WhatsNew.htm
 ---
 
 # 10/31/2014
-  * Announcing [Lightning](Lighning.htm) for Intel Galileo Gen1 and Gen2!
+  * Announcing [Lightning](Lightning.htm) for Intel Galileo Gen1 and Gen2!
   * Significant support for Wiring Language, Libraries and Classes
   * Node.JS support with a new Wiring library
 
