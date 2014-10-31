@@ -4,6 +4,11 @@ title: What's new
 permalink: /WhatsNew.htm
 ---
 
+# 10/31/2014
+  * Announcing [Lightning](Lighning.htm) for Intel Galileo Gen1 and Gen2!
+  * Significant support for Wiring Language, Libraries and Classes
+  * Node.JS support with a new Wiring library
+
 # 10/15/2014
   * PWM and ADC are now supported on Intel Galileo Gen2.
   * Minor content updates for [Setup your PC](SetupPC.htm) and [Setup your Galileo](SetupGalileo.htm)
