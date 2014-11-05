@@ -30,7 +30,7 @@ Requirements:
 * A 16gig or larger microSD card
 
 
-**PLEASE NOTE:** [YOU MUST ENROLL HERE FIRST!](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"} or the links below will fail.
+**PLEASE NOTE:** [YOU MUST ENROLL IN WDP FOR IOT CONNECT HERE FIRST!](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"} or the links below will fail.
 
 Boot media script:
 
@@ -43,6 +43,8 @@ Depending on which Intel Galileo generation you are using, download one of the f
 
 **NOTE:**
 : Please use the correct Windows image for the board you are using. They are not interchangeable.
+
+**PLEASE NOTE:** If these download links are failing, please ensure you are enrolled in the WDP for IoT Connect program as outlined above.
 
 # Write Windows to the microSD card
 
