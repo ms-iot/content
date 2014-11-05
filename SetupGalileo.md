@@ -7,8 +7,6 @@ permalink: /SetupGalileo.htm
 # Before you start
 Please make sure you've visited [Setup Your PC](SetupPC.htm) before continuing with these instructions. 
 
-Please ensure that you are enrolled in the [Windows Developer Program for IoT](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"}. 
-
 # Setup your Intel Galileo
 This guide will show you how to install and run the Windows Developer Program for IoT on an Intel Galileo Gen1 or Gen2. 
 
@@ -31,17 +29,20 @@ Requirements:
 * A microSD card reader or SD card reader with a microSD card adapter
 * A 16gig or larger microSD card
 
-Software Packages:
+**PLEASE NOTE:** [YOU MUST ENROLL IN WDP FOR IOT CONNECT HERE FIRST!](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"} or the links below will fail.
 
+Boot media script:
 * [apply-BootMedia.cmd](http://go.microsoft.com/fwlink/?LinkID=403796){:target="_blank"}
 
-Depending on which Intel Galileo generation you are using, download one of the following:
+Depending on which Intel Galileo generation you are using, download one of the following OS images:
 
 * [Microsoft Windows Intel Galileo Gen 1](http://go.microsoft.com/fwlink/?LinkID=403150){:target="_blank"}
 * [Microsoft Windows Intel Galileo Gen 2](http://go.microsoft.com/fwlink/?LinkID=513083&clcid=0x409){:target="_blank"}
 
 **NOTE:**
-: Please use the correct Windows image for the board you are using. They are not interchangable.
+  Please use the correct Windows image for the board you are using. They are not interchangeable.
+
+**PLEASE NOTE:** If these download links are failing, please ensure you are enrolled in the WDP for IoT Connect program as outlined above.
 
 # Write Windows to the microSD card
 
