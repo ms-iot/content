@@ -7,7 +7,7 @@ permalink: /SetupGalileo.htm
 # Before you start
 Please make sure you've visited [Setup Your PC](SetupPC.htm) before continuing with these instructions. 
 
-Please ensure that you are enrolled in the [Windows Developer Program for IoT](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"}. 
+Please ensure that you are enrolled at the [Microsoft Connect site](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"}. 
 
 # Setup your Intel Galileo
 This guide will show you how to install and run the Windows Developer Program for IoT on an Intel Galileo Gen1 or Gen2. 
@@ -40,8 +40,11 @@ Depending on which Intel Galileo generation you are using, download one of the f
 * [Microsoft Windows Intel Galileo Gen 1](http://go.microsoft.com/fwlink/?LinkID=403150){:target="_blank"}
 * [Microsoft Windows Intel Galileo Gen 2](http://go.microsoft.com/fwlink/?LinkID=513083&clcid=0x409){:target="_blank"}
 
+**NOTE:**  Please ensure that you are enrolled in [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558), or these links will fail.
+
+
 **NOTE:**
-: Please use the correct Windows image for the board you are using. They are not interchangable.
+Please use the correct Windows image for the board you are using. They are not interchangeable.
 
 # Write Windows to the microSD card
 
