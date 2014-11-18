@@ -4,14 +4,12 @@ title: What's new
 permalink: /WhatsNew.htm
 ---
 
-# 10/31/2014
+# 11/21/2014
   * Announcing [Lightning](Lightning.htm){:target="_blank"} for Intel Galileo Gen1 and Gen2!
   * Significant support for Wiring Language, Libraries and Classes
-  * Node.JS support with a new [Wiring library](https://www.npmjs.org/package/ms-iot-wiring){:target="_blank"}
   * You spoke, we listened! We put the "I" in IoT with new networking [samples](SampleApps.htm) and documentation
-    * Basic Win32 networking
-    * Office 365 and OneNote
-    * Audio streaming
+    * [C++ REST SDK](Casablanca.htm)
+    * [Audio streaming](https://github.com/ms-iot/sample-twoway-communicator)
 
 # 10/15/2014
   * PWM and ADC are now supported on Intel Galileo Gen2.
