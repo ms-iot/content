@@ -34,14 +34,10 @@ Requirements:
 Software Packages:
 
 * [apply-BootMedia.cmd](http://go.microsoft.com/fwlink/?LinkID=403796){:target="_blank"}
+* [Microsoft Windows for Intel Galileo](http://go.microsoft.com/fwlink/?LinkID=513083&clcid=0x409){:target="_blank"}
 
-Depending on which Intel Galileo generation you are using, download one of the following:
-
-* [Microsoft Windows Intel Galileo Gen 1](http://go.microsoft.com/fwlink/?LinkID=403150){:target="_blank"}
-* [Microsoft Windows Intel Galileo Gen 2](http://go.microsoft.com/fwlink/?LinkID=513083&clcid=0x409){:target="_blank"}
-
-**NOTE:**
-: Please use the correct Windows image for the board you are using. They are not interchangable.
+***NOTE:***
+As of November 2014, only a single Windows image is needed for either Intel Galileo Gen1 or Gen2.
 
 # Write Windows to the microSD card
 
