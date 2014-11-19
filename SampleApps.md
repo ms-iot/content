@@ -86,7 +86,7 @@ permalink: /SampleApps.htm
   <div class="row">
     <div class="col-md-4">
       <h2>Win32 Networking</h2>
-      <span class="label label-default">New</span>
+      <span class="label label-info">New</span>
       <p>This MSDN sample shows how to run a winsock client and server.</p>
       <p><a class="btn btn-default" href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms737889(v=vs.85).aspx" role="button">View details &raquo;</a></p>
     </div>
