@@ -116,7 +116,7 @@ permalink: /TroubleShooting.htm
               Install <a href="http://msdn.microsoft.com/en-US/windows/desktop/bg162891">Debugging tools for Windows</a>
             </li>
             <li>
-              Connect to your Galileo via serial. (See <a href="UpdateYourGalileo.htm">Updating your Galileo</a> for details on how to connect a serial connection.
+              Connect to your Galileo via serial. Gen1 requires an RS232 serial cable with a 3.5mm jack. Gen2 requires an RS232 with 6 way inline connector.
             </li>
             <li>
               Open <kbd>WinDBG</kbd> and connect the kernel debugger (File -> Kernel Debugger...) to the COM port above.
