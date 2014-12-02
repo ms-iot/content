@@ -64,7 +64,6 @@ void setup()
     pinMode(stripData, OUTPUT);
     digitalWrite(stripClock, LOW);
     digitalWrite(stripData, LOW);
-    _PinFunction(stripData, DEFAULT_MUX); // Sets the data pin to Digital Functionality
 
     // Reset all the pixels
     for (int i = 0; i < stripLen; i++)
