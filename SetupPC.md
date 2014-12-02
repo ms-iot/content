@@ -13,7 +13,7 @@ permalink: /SetupPC.htm
   You can find step by step instructions for signing up for Microsoft Connect <a href="SigninMSConnect.htm" target="_blank">here</a><br/>
   <hr/>
   <h2> Windows Developer Program for IoT Developer Tools</h2>
-  <span class="label label-default">Visual Studio extension updated: 11/21/2014</span>
+  <span class="label label-default">Visual Studio extension updated: 12/2/2014</span>
   <p>The Windows Developer Program for IoT contains tools and templates which allow you to build applications for the Intel Galileo.</p>
   <div class="panel panel-danger">
     <div class="panel-heading">Note:</div>

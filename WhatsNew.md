@@ -4,12 +4,16 @@ title: What's new
 permalink: /WhatsNew.htm
 ---
 
-# 11/21/2014
+# 12/2/2014
   * Announcing [Lightning](Lightning.htm){:target="_blank"} for Intel Galileo Gen1 and Gen2!
   * Significant support for Wiring Language, Libraries and Classes
   * You spoke, we listened! We put the "I" in IoT with new networking [samples](SampleApps.htm) and documentation
     * [C++ REST SDK](Casablanca.htm)
     * [Audio streaming](https://github.com/ms-iot/sample-twoway-communicator)
+  * This update contains changes in every release package. 
+    * Please revisit [Setup your PC](SetupPC.htm)
+    * Please revisit [Setup your Galileo](SetupGalileo.htm)
+    * Please revisit [Hello Blinky](HelloBlinky.htm)
 
 # 10/15/2014
   * PWM and ADC are now supported on Intel Galileo Gen2.

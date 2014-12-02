@@ -5,7 +5,7 @@ permalink: /HelloBlinky.htm
 ---
 
 #Hello Blinky
-Learn to Create, Deploy and Debug a Windows Developer Program for IoT project.
+Learn to Create or Update, Deploy and Debug a Windows Developer Program for IoT project.
 
 ##Create a new Project
 Open Visual Studio. Select File -> New Project and Select Templates -> Visual C++ -> Windows for IoT -> Galileo Wiring app
@@ -73,6 +73,22 @@ Paste the copied IP address into the 'Remote Server Name' field on the debugging
 
 ##Result
 You should see the light blinking. If it isn't blinking, try reversing the LED leads.
+
+##Convert to Lightning
+If you have a project which was created before December 1st, 2014, you will need to convert it to Lightning. 
+
+1. From within your existing solution, right click on the project and select ```Manage Nuget Packages```
+1. Select ```Installed Packages``` in the left column
+
+   ![Installed](images/HelloBlinky_UninstallGalileoSDK.PNG)
+
+1. Select ```Online``` then Nuget.org
+1. In the ```Search``` box in the upper right hand corner of the dialog, search for ```Microsoft IoT C++```
+1. Select install
+
+   ![Installed](images/HelloBlinky_InstallNative.PNG)
+
+1. Rebuild your project
 
 ## Update your project
 The Microsoft IoT team and the community are adding features and fixing bugs in the SDK. In order to take advantage of these changes, you'll need to manually update your project.
