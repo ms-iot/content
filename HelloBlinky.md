@@ -82,9 +82,10 @@ If you have a project which was created before December 1st, 2014, you will need
 
    ![Installed](images/HelloBlinky_UninstallGalileoSDK.PNG)
 
-1. Select ```Online``` then Nuget.org
+1. Select ```Uninstall``` to remove ```Galileo C++ SDK```
+1. Expand ```Online``` then select ```Nuget.org```
 1. In the ```Search``` box in the upper right hand corner of the dialog, search for ```Microsoft IoT C++```
-1. Select install
+1. Select ```Install```
 
    ![Installed](images/HelloBlinky_InstallNative.PNG)
 
