@@ -33,18 +33,13 @@ Requirements:
 
 Software Packages:
 
-* [apply-BootMedia.cmd](http://go.microsoft.com/fwlink/?LinkID=403796){:target="_blank"}
+* [apply-BootMedia.cmd](http://go.microsoft.com/fwlink/?LinkID=403796){:target="_blank"} 
+* [Microsoft Windows for Intel Galileo](http://go.microsoft.com/fwlink/?LinkID=513083&clcid=0x409){:target="_blank"}
 
-Depending on which Intel Galileo generation you are using, download one of the following:
+***NOTE:***
+As of December 2014, only a single Windows image is needed for either Intel Galileo Gen1 or Gen2.
+Please ensure that you are enrolled in [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558), or these links will fail.
 
-* [Microsoft Windows Intel Galileo Gen 1](http://go.microsoft.com/fwlink/?LinkID=403150){:target="_blank"}
-* [Microsoft Windows Intel Galileo Gen 2](http://go.microsoft.com/fwlink/?LinkID=513083&clcid=0x409){:target="_blank"}
-
-**NOTE:**  Please ensure that you are enrolled in [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558), or these links will fail.
-
-
-**NOTE:**
-Please use the correct Windows image for the board you are using. They are not interchangeable.
 
 # Write Windows to the microSD card
 
@@ -71,7 +66,7 @@ Please follow the [Intel's Getting Started Guide](https://communities.intel.com/
 : When extracting the Intel Galileo package, please extract into the root of your drive and make sure that the path does not contain spaces.
 
 ## Intel Galileo Gen 2 Firmware Update
-The Intel Galileo Gen 2 does not currently require a firmware update.
+The Intel Galileo Gen 2 does not require a firmware update.
 
 ## Connecting and booting Windows
 Connecting the Galileo directly to your computer will allow you to communicate with just your Galileo. Your computer will still have internet connectivity, and your computer will be able to communicate with your Galileo.
