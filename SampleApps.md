@@ -90,13 +90,16 @@ permalink: /SampleApps.htm
       <p>This MSDN sample shows how to run a winsock client and server.</p>
       <p><a class="btn btn-default" href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms737889(v=vs.85).aspx" role="button">View details &raquo;</a></p>
     </div>
-    <!-- Node.js support is temporarily unavailable. 
-    div class="col-md-4">
+    <div class="col-md-4">
+      <h2>Forwarders and Stubs</h2>
+      <p>Learn about Forwarders and Stubs for Win32 APIs which have move or are missing from the Windows image.</p>
+      <p><a class="btn btn-default" href="Forwarders.htm" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
       <h2>NodeJS</h2>
       <p>Learn to run node.js on a galileo and call APIs from a javscript file.</p>
       <p><a class="btn btn-default" href="NodeJS.htm" role="button">View details &raquo;</a></p>
     </div>
-    -->
     <!-- This section has been removed until the sample can be rewritten for Lightning 
     div class="col-md-4">
       <h2>Firmata and Cylon</h2>
