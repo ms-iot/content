@@ -77,17 +77,11 @@ void loop()
 5. Reopen the terminal program for the Bluetooth. You will see the number 0 appear, going to 1 when you push the button
 6. I used "kill NameOfFile.exe" to exit program.
 
-# Troubleshooting
-1. Check that the switch on the sheild is set to "RUN", not "PROG"
-2. Using the Tera Term default configuration, you will see nothing, I just had to type something in the terminal, like "Enter"
-
-
 # Result
 ![Result](images/IOExpansionBTButton02.jpg)
 
+# Troubleshooting
+1. Check that the switch on the shield is set to "RUN", not "PROG"
+2. Using the Tera Term default configuration, you will see nothing, I just had to type something in the terminal, like "Enter"
+
 ---
-
-
-
-
-
