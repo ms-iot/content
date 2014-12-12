@@ -7,13 +7,15 @@ permalink: /IoExpansionShieldV7BluetoothBeeButton.htm
 # IO Expansion Shield V7 with Serial Bluetooth and Button
 Learn how to use the DFRobot IO Expansion Shield V7 with Serial Bluetooth Communication and Button
 
+![SetUp](images/IOExpansionBTButton01.jpg)
+
 # Required Components
 * [DFRobot IO Expansion Shield V7 or V7.1](http://www.dfrobot.com/index.php?route=product/product&product_id=1009#.Ui0468Ywceo)
 * [Bluetooth Bee](http://www.dfrobot.com/index.php?route=product/product&product_id=193&search=bluetooth+bee&description=true)
 * Push button
-* Wires
+* Wires (M/M and M/F)
 
-# Info on using HardwareSerial
+# Info on using Serial
 * A tutorial already exist [See how here](https://github.com/ms-iot/content/blob/develop/TXRX.md)
 
 # Bluetooth configuration with computer (assuming you already have Bluetooth configured on your PC)
@@ -69,10 +71,19 @@ void loop()
 
 # Build and Run
 1. Build the exe
-2. Copy the exe using Explorer (remember the folder where you copy it)
+2. Copy the exe in Galileo SD Card using Explorer 
 3. Open telnet session to galileo (telnet mygalileo)
-4. Type start /b NameOfFile.exe to run the file
-5. In the opened Serial terminal window, you will see the number 0 going to 1 when you push the button
+4. Go to file folder and type "start /b NameOfFile.exe" to run the file 
+5. Reopen the terminal program for the Bluetooth. You will see the number 0 appear, going to 1 when you push the button
+6. I used "kill NameOfFile.exe" to exit program.
+
+# Troubleshooting
+1. Check that the switch on the sheild is set to "RUN",not "PROG"
+2. Using the Tera Term default configuration, you will see nothing, I just had to type something in the terminal, like "Enter"
+
+
+# Result
+![Result](images/IOExpansionBTButton02.jpg)
 
 ---
 
