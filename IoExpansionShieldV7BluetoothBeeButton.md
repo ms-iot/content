@@ -72,7 +72,7 @@ void loop()
 2. Copy the exe using Explorer (remember the folder where you copy it)
 3. Open telnet session to galileo (telnet mygalileo)
 4. Type start /b NameOfFile.exe to run the file
-5. In the terminal window, you will see the number 0 going to 1 when you push the button
+5. In the opened Serial terminal window, you will see the number 0 going to 1 when you push the button
 
 ---
 
