@@ -12,11 +12,13 @@ Learn how to build a project using the C++ REST SDK NuGet package
 
 # Build Casablanca
 1. Download the [Casablanca CodePlex Git repository](http://casablanca.codeplex.com/SourceControl/latest){:target="_blank"}
-2. Open *git_root_folder*\casablanca\casablanca120.desktop.sln
-3. Set the casablanca120 project build settings to target IA32 architecture
+2. Checkout Tag v2.2.0 on the master branch (9cc7758d714bebbc00d66bf9a49bb648e9a57c17)
+* `git checkout v2.2.0`
+3. Open *git_root_folder*\casablanca\casablanca120.desktop.sln
+4. Set the casablanca120 project build settings to target IA32 architecture
 * Project >> Properties >> Configuration Properties >> C/C++ >> Code Generation
 * Set `Enable Enhanced Instruction Set` = `No Enhanced Instructions (/arch:IA32)` for both Debug and Release
-4. Build the solution
+5. Build the solution
 
 # Place the lib on the Galileo
 1. Navigate to `\\mygalileo\c$\test` in file explorer (create the "test" folder if necessary).
@@ -25,7 +27,7 @@ Learn how to build a project using the C++ REST SDK NuGet package
 # Create a new project
 1. Create a new project from the template.
 2. Tools >> NuGet Package Manager >> Package Manager Console
-* Type `Install-Package cpprestsdk` into the command line.
+* Type `Install-Package cpprestsdk -Version 2.2.0` into the command line.
 3. Replace the existing code in main.cpp with the following code:
 
 
