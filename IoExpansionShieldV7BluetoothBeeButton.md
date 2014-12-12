@@ -15,7 +15,63 @@ Learn how to use the DFRobot IO Expansion Shield V7 with Serial Bluetooth Commun
 
 # Info on using HardwareSerial
 * A tutorial already exist [See how here](https://github.com/ms-iot/content/blob/develop/TXRX.md)
-* 
+
+# Bluetooth configuration with computer (assuming you already have Bluetooth configured on your PC)
+1. Connect Bluetooth Bee to IO Expansion shield
+2. Power up the Galileo
+3. In Windows, add the Bluetooth Bee (default code is 1234), go in Bluetooth Bee properties to see what COM port is taken by the device (COMXX...)
+3. Open a terminal program ([Tera Term](http://ttssh2.sourceforge.jp/) is what I use)
+4. Open a session using the Com port
+4. Default for Bluetooth Bee is 9600baud, Data 8bit, Parity None, 1bit so be sure your terminal program is configured that way (usually by default)
+5. 
+
+# Create the project
+1. Create a new project from the template.
+2. 
+
+# Code
+
+### Main.cpp
+// Main.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "arduino.h"
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	return RunArduinoSketch();
+}
+
+int pushButton = 2;
+
+// the setup routine runs once when you press reset:
+void setup() {
+	// initialize serial communication at 9600 bits per second:
+	Serial.begin(9600);
+	// make the pushbutton's pin an input:
+	pinMode(pushButton, INPUT);
+}
+
+// the loop routine runs over and over again forever:
+void serialEvent() {
+	// read the input pin:
+	int buttonState = digitalRead(pushButton);
+	// print out the state of the button:
+	Serial.println(buttonState);
+	delay(100);        // delay in between reads for stability
+}
+
+void loop()
+{
+	Sleep(250);
+}
+
+{% endhighlight %}
+
+---
+
+
 
 
 
