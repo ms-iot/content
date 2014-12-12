@@ -29,7 +29,7 @@ Learn how to use the DFRobot IO Expansion Shield V7 with Serial Bluetooth Commun
 
 # Create the project
 1. Create a new project from the template.
-2. 
+2. Copy code below and build (From Visual Studio: Build -> Build Solution)
 
 # Code
 
@@ -78,7 +78,7 @@ void loop()
 6. I used "kill NameOfFile.exe" to exit program.
 
 # Troubleshooting
-1. Check that the switch on the sheild is set to "RUN",not "PROG"
+1. Check that the switch on the sheild is set to "RUN", not "PROG"
 2. Using the Tera Term default configuration, you will see nothing, I just had to type something in the terminal, like "Enter"
 
 
