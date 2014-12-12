@@ -82,6 +82,6 @@ void loop()
 
 # Troubleshooting
 1. Check that the switch on the shield is set to "RUN", not "PROG"
-2. Using the Tera Term default configuration, you will see nothing, I just had to type something in the terminal, like "Enter"
+2. If nothing happens in the terminal, just type something like "Enter" key
 
 ---
