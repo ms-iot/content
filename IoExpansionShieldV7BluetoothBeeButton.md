@@ -22,7 +22,7 @@ Learn how to use the DFRobot IO Expansion Shield V7 with Serial Bluetooth Commun
 3. In Windows, add the Bluetooth Bee (default code is 1234), go in Bluetooth Bee properties to see what COM port is taken by the device (COMXX...)
 3. Open a terminal program ([Tera Term](http://ttssh2.sourceforge.jp/) is what I use)
 4. Open a session using the COM port
-4. Default for Bluetooth Bee is 9600baud, Data 8bit, Parity None, 1bit so be sure your terminal program is configured that way (usually by default)
+4. Default for Bluetooth Bee is 9600baud, Data: 8bit, Parity: None, Stop: 1bit. Be sure your terminal program is configured that way (usually by default)
 5. 
 
 # Create the project
@@ -66,6 +66,13 @@ void loop()
 {
 	Sleep(250);
 }
+
+# Build
+1. Build the exe
+2. Copy the exe using Explorer (remember the folder)
+3. Open telnet session to galileo (telnet mygalileo)
+4. Type start /b NameOfFile.exe to run the file
+5. In the terminal window, you will see the number 0 going to 1 when you push the button
 
 ---
 
