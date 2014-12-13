@@ -21,11 +21,18 @@ Learn how to use the DFRobot IO Expansion Shield V7 with Serial Bluetooth Commun
 # Bluetooth Bee connection with computer (assuming you already have Bluetooth configured on your PC)
 1. Connect Bluetooth Bee to IO Expansion shield
 2. Power up the Galileo
-3. In Windows, add the Bluetooth Bee (default code is 1234), go in Bluetooth Bee device properties to see what COM port is taken (COMXX...)
+3. In Windows, pair the Bluetooth Bee (default code is 1234), go in Bluetooth Bee device properties to see what COM port is taken (COMXX...)
 3. Open a terminal program ([Tera Term](http://ttssh2.sourceforge.jp/) is what I use)
 4. Open a session using the COM port
 4. Default for Bluetooth Bee is 9600baud, Data: 8bit, Parity: None, Stop: 1bit. Be sure your terminal program is configured that way (usually by default)
-5. 
+
+# Bluetooth Bee connection with Windows Phone
+1. Connect Bluetooth Bee to IO Expansion shield
+2. Power up the Galileo
+3. On phone: Open Settings - Bluetooth
+4. Pair with Bluetooth Bee using 1234 code
+5. Install BT Terminal from Store
+4. Open BT Terminal app and select Bluetooth Bee
 
 # Create the project
 1. Create a new project from the template.
@@ -79,6 +86,9 @@ void loop()
 
 # Result
 ![Result](images/IOExpansionBTButton02.jpg)
+
+From Windows Phone:
+![Result](images/IOExpansionBTButton03.jpg)
 
 # Troubleshooting
 1. Check that the switch on the shield is set to "RUN", not "PROG"
