@@ -13,6 +13,7 @@ Learn how to use the DFRobot IO Expansion Shield V7 with Serial Bluetooth Commun
 * [DFRobot IO Expansion Shield V7 or V7.1](http://www.dfrobot.com/index.php?route=product/product&product_id=1009#.Ui0468Ywceo)
 * [Bluetooth Bee](http://www.dfrobot.com/index.php?route=product/product&product_id=193&search=bluetooth+bee&description=true)
 * Push button
+* 1x 10k resistor
 * Wires (M/M and M/F)
 
 # Info on using Serial
