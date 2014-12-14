@@ -10,20 +10,20 @@ Learn how to use the DFRobot IO Expansion Shield V7 with Serial Bluetooth Commun
 ![SetUp](images/IOExpansionBTButton01.jpg)
 
 # Required Components
-* [DFRobot IO Expansion Shield V7 or V7.1](http://www.dfrobot.com/index.php?route=product/product&product_id=1009#.Ui0468Ywceo)
-* [Bluetooth Bee](http://www.dfrobot.com/index.php?route=product/product&product_id=193&search=bluetooth+bee&description=true)
+* [DFRobot IO Expansion Shield V7 or V7.1](http://www.dfrobot.com/index.php?route=product/product&product_id=1009#.Ui0468Ywceo) {:target="_blank"}
+* [Bluetooth Bee](http://www.dfrobot.com/index.php?route=product/product&product_id=193&search=bluetooth+bee&description=true) {:target="_blank"}
 * Push button
 * 1x 10k resistor
 * Wires (M/M and M/F)
 
 # Info on using Serial
-* A tutorial already exist [See how here](https://github.com/ms-iot/content/blob/develop/TXRX.md)
+* A tutorial already exist [See how here](https://github.com/ms-iot/content/blob/develop/TXRX.md) {:target="_blank"}
 
 # Bluetooth Bee connection with computer (assuming you already have Bluetooth configured on your PC)
 1. Connect Bluetooth Bee to IO Expansion shield
 2. Power up the Galileo
 3. In Windows, pair the Bluetooth Bee (default code is 1234), go in Bluetooth Bee device properties to see what COM port is taken (COMXX...)
-3. Open a terminal program ([Tera Term](http://ttssh2.sourceforge.jp/) is what I use)
+3. Open a terminal program ([Tera Term](http://ttssh2.sourceforge.jp/) {:target="_blank"} is what I use)
 4. Open a session using the COM port
 4. Default for Bluetooth Bee is 9600baud, Data: 8bit, Parity: None, Stop: 1bit. Be sure your terminal program is configured that way (usually by default)
 
@@ -42,6 +42,7 @@ Learn how to use the DFRobot IO Expansion Shield V7 with Serial Bluetooth Commun
 # Code
 
 ### Main.cpp
+{% highlight C++ %}
 // Main.cpp : Defines the entry point for the console application.
 //
 
@@ -76,6 +77,7 @@ void loop()
 {
 	Sleep(250);
 }
+{% endhighlight %}
 
 # Build and Run
 1. Build the exe
