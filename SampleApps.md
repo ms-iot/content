@@ -100,14 +100,21 @@ permalink: /SampleApps.htm
       <p>Learn to run node.js on a galileo and call APIs from a javscript file.</p>
       <p><a class="btn btn-default" href="NodeJS.htm" role="button">View details &raquo;</a></p>
     </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <h2>MCP23017 Port Expander</h2>
+      <span class="label label-info">New</span>
+      <p>Learn how to extend the Galileo i2c bus with 16 I/O Ports.</p>
+      <p><a class="btn btn-default" href="MCP23017Sample.htm" role="button">View details &raquo;</a></p>
+    </div>
     <!-- This section has been removed until the sample can be rewritten for Lightning 
     div class="col-md-4">
       <h2>Firmata and Cylon</h2>
       <p>Learn how to interact with your board using Firmata and Cylon .</p>
       <p><a class="btn btn-default" href="Firmata.htm" role="button">View details &raquo;</a></p>
-    </div-->  
-  </div>
-  
+    </div-->
+  </div>  
   <hr/>
 
   <a class="btn btn-default" href="index.htm" role="button">Return to homepage</a>
