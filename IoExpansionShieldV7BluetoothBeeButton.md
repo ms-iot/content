@@ -19,6 +19,8 @@ Learn how to use the DFRobot IO Expansion Shield V7 with Serial Bluetooth Commun
 # Button Wiring
 ![Button wiring](images/IOExpansionBTButton04.jpg)
 
+* Also, connect from any 5 volts (RED) connector on the shield to the positive rail on breadboard (RED), then connect from a ground (BLACK) connector the the negative rail on breadboard. (See on first picture)
+
 # Info on using Serial
 * A tutorial already exist [See how here](https://github.com/ms-iot/content/blob/develop/TXRX.md) {:target="_blank"}
 
