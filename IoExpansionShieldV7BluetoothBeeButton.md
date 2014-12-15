@@ -16,6 +16,7 @@ Learn how to use the DFRobot IO Expansion Shield V7 with Serial Bluetooth Commun
 * 1x 10k resistor
 * Wires (M/M and M/F)
 
+# Button Wiring
 ![Button wiring](images/IOExpansionBTButton04.jpg)
 
 # Info on using Serial
