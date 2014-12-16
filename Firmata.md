@@ -18,10 +18,10 @@ First, you'll need to create a new project. Open Visual Studio. Select File -> N
 
 Next, you'll need to download files from Firmata and add them to your project directory. These files should not be added to the project in Visual Studio as they are included by main.cpp.
 
-* [Boards.h](https://raw.githubusercontent.com/ms-iot/arduino/master/Boards.h){:target="_blank"}
-* [Firmata.h](https://raw.githubusercontent.com/ms-iot/arduino/master/Firmata.h){:target="_blank"}
-* [Firmata.cpp](https://raw.githubusercontent.com/ms-iot/arduino/master/Firmata.cpp){:target="_blank"}
-* [StandardFirmata.ino](https://raw.githubusercontent.com/ms-iot/arduino/master/examples/StandardFirmata/StandardFirmata.ino){:target="_blank"}
+* [Boards.h](https://raw.githubusercontent.com/ooeygui/arduino/dev/Boards.h){:target="_blank"}
+* [Firmata.h](https://raw.githubusercontent.com/ooeygui/arduino/dev/Firmata.h){:target="_blank"}
+* [Firmata.cpp](https://raw.githubusercontent.com/ooeygui/arduino/dev/Firmata.cpp){:target="_blank"}
+* [StandardFirmata.ino](https://raw.githubusercontent.com/ooeygui/arduino/dev/examples/StandardFirmata/StandardFirmata.ino){:target="_blank"}
 
 _ino_ files require additional headers when compiling on Microsoft Windows. To support building an ino file, we are including them into a C++ file.
 
