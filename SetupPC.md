@@ -32,7 +32,7 @@ permalink: /SetupPC.htm
       </div>
       <div id="collapseOne" class="panel-collapse collapse">
         <div class="panel-body">
-          Please install the <a href="SDKRedirect.htm" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
+          Please install the <a href="http://go.microsoft.com/fwlink/?LinkID=513082" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
           <br/>
           (During the install process, you may be prompted twice by the User Account Control. Once for the MSI and once for VSIXInstaller. To properly install the needed components, you will need to click yes.)
         </div>
@@ -72,7 +72,7 @@ permalink: /SetupPC.htm
               </ol>
             </li>
             <li>
-              Install the <a href="SDKRedirect.htm" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
+              Install the <a href="http://go.microsoft.com/fwlink/?LinkID=513082" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
               <br/>
               (During the install process, you may be prompted twice by the User Account Control. Once for the MSI and once for VSIXInstaller. To properly install the needed components, you will need to click yes.)
             </li>
@@ -117,7 +117,7 @@ permalink: /SetupPC.htm
               </ol>
             </li>
             <li>
-              Install the <a href="SDKRedirect.htm" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
+              Install the <a href="http://go.microsoft.com/fwlink/?LinkID=513082" target="_blank">WindowsDeveloperProgramforIOT.msi</a>
               <br/>
               (During the install process, you may be prompted twice by the User Account Control. Once for the MSI and once for VSIXInstaller. To properly install the needed components, you will need to click yes.)
             </li>
