@@ -129,14 +129,14 @@ permalink: /SetupPC.htm
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-            I have Visual Studio 2014 installed
+            I have Visual Studio 2014 or Visual Studio 2015 installed
           </a>
         </h4>
       </div>
       <div id="collapseThree" class="panel-collapse collapse">
         <div class="panel-body">
-          Visual Studio 2014 is not currently supported.<br/>
-          If you have Visual Studio 2013 Professional, Premium, Ultimate, or Express for Windows Desktops, follow the instructions for that above.
+          Visual Studio 2014 and Visual Studio 2015 are not currently supported.<br/>
+          If you have Visual Studio 2013 Professional, Premium, Ultimate, Community or Express for Windows Desktops, follow the instructions for that above.
           Otherwise, follow the instructions for "I do not have Visual Studio 2013 installed" above.
         </div>
       </div>
