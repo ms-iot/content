@@ -100,12 +100,11 @@ permalink: /SampleApps.htm
       <p>Learn to run node.js on a galileo and call APIs from a javscript file.</p>
       <p><a class="btn btn-default" href="NodeJS.htm" role="button">View details &raquo;</a></p>
     </div>
-    <!-- This section has been removed until the sample can be rewritten for Lightning 
-    div class="col-md-4">
+    <div class="col-md-4">
       <h2>Firmata and Cylon</h2>
       <p>Learn how to interact with your board using Firmata and Cylon .</p>
       <p><a class="btn btn-default" href="Firmata.htm" role="button">View details &raquo;</a></p>
-    </div-->  
+    </div>  
   </div>
   
   <hr/>
