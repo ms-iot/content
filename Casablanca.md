@@ -22,6 +22,7 @@ Learn how to build a project using the C++ REST SDK NuGet package
 
 # Place the lib on the Galileo
 1. Navigate to `\\mygalileo\c$\test` in file explorer (create the "test" folder if necessary).
+* (the "test" folder is the default deployment folder for template-generated new projects) 
 2. Copy the `cpprest120d_2_2.dll` file (generated during the build step and placed at *git_root_folder*\casablanca\Binaries\Win32\Debug), into the "test" folder from the previous step.
 
 # Create a new project
