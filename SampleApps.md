@@ -113,6 +113,12 @@ permalink: /SampleApps.htm
       <p>Learn how to interact with your board using Firmata and Cylon .</p>
       <p><a class="btn btn-default" href="Firmata.htm" role="button">View details &raquo;</a></p>
     </div>  
+    <div class="col-md-4">
+      <h2>OneNote API using http</h2>
+      <span class="label label-info">New</span>
+      <p>Learn how to use OneNote cloud services to Post/Get pages from/to your device for printing, with this basic ToDo-Sample.</p>
+      <p><a class="btn btn-default" href="TODO_Sample.htm" role="button">View details &raquo;</a></p>
+    </div>  
   </div>
   
   <hr/>
