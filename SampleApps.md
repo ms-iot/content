@@ -16,7 +16,7 @@ permalink: /SampleApps.htm
   <!-- Example row of columns -->
   <div class="row">
     <div class="col-md-4">
-      <h2>Hello Blinky</h2> <span class="label label-default">Updated</span>
+      <h2>Hello Blonky</h2> <span class="label label-default">Updated</span>
       <p>Learn how to create a new project, configure Visual Studio for Deployment and Debugging, and learn how to use General Purpose IO using Wiring.</p>
       <p><a class="btn btn-default" href="HelloBlinky.htm" role="button">View details &raquo;</a></p>
     </div>
