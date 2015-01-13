@@ -19,7 +19,6 @@ Learn how to use http messages to Get and Post OneNote pages
 ### Main.cpp
 {% highlight C++ %}
     // Main.cpp : Defines the entry point for the console application.
-    //
 
     #include "stdafx.h"
     #include "arduino.h"
@@ -37,7 +36,6 @@ Learn how to use http messages to Get and Post OneNote pages
     OneNoteHelper *One;
     std::list<std::wstring> skipIDs;
     MinSerClass * msc = nullptr;
-    int idlecount = 0;
 
     const char trailer[] = "\r\n\r\n\r\n----------\r\n\r\n\r\n";
     BYTE byteBuf[2048];
