@@ -5,19 +5,19 @@ permalink: /Forwarders.htm
 ---
 
 #Win32 API
-The version of Windows for the Intel Galileo is based on a mobile version of Windows. It is designed to run in a smaller memory and storage footprint. Because of this, much of the Win32 API is not available for applications which target the Desktop version of Windows.
+The version of Windows for the Intel Galileo is based on a *MinCore* of Windows. It is designed to run in a smaller memory and storage footprint. Because of this, much of the Win32 API is not available for applications which target the Desktop version of Windows.
 
 Win32 is a vast API, consisting of hundreds of thousands of application programming interfaces, spanning many technology stacks and language bindings. As the API set grew in size over the generations, it also grew in complexity and interconnectedness.
 
-Over the last few releases of Windows, the Win32 API has been refactored to enable smaller versions of Windows to run on new form factors. As the API set was refactored, APIs critical across the board were included in the smaller versions of Windows, while more and more APIs added to the larger and larger versions of Windows - culminating in the desktop version which contains the whole API set.
+Over the last few releases of Windows, the Win32 API has been refactored to enable smaller versions of Windows to run on new form factors. As the API set was refactored, many APIs were included in the smaller versions of Windows, while many more APIs added to the larger versions of Windows. The desktop version Windows contains the whole API set.
 
 If you want to run an application targeted for Desktop on a smaller device - like the Galileo, the APIs it needs from the operating system have to be made available - or the app won't run.
 
 To make them available, there are a few options:
 
+1. If you have access to the sources for the app you'd like to run, link against MinCore.lib instead of the default set of libraries for Desktop applications. 
 1. If the API is in Windows, but has moved, implement a Forwarder from the traditional API exposure to the new one.
 1. If the API is missing, implement a sub which emulates the API as best as possible.
-1. If you have access to the sources for the app you'd like to run, Remove the offending API and rebuild for the target version of Windows.
 
 ## API Sets
 Windows on Galileo is derived from Windows Phone 8.1. This mobile edition of Windows uses the [Windows 8.1 API Set](http://msdn.microsoft.com/en-us/library/windows/desktop/hh802935(v=vs.85).aspx){:target="_blank"}.
@@ -39,9 +39,7 @@ In this case, we've enabled loader snaps for node.exe. Running this under visual
 
 {% highlight bash %}
 0744:00c8 @ 14911546 - LdrpNameToOrdinal - WARNING: Procedure "GetProcessWindowStation" could not be located in DLL at base 0x75A20000.
-
 0744:00c8 @ 14911562 - LdrpReportError - ERROR: Locating export "GetProcessWindowStation" for DLL "c:\node\node.exe" failed with status: 0xc0000139.
-
 First-chance exception at 0x7758342A (ntdll.dll) in node.exe: 0xC0000139: Entry Point Not Found.
 {% endhighlight %}
 
@@ -77,18 +75,8 @@ VOID)
 {% endhighlight %}
 
 ## Forwarder and Stub Repository
-To help with porting, a [Forwarder and Stub repository](http://github.com/ms-iot/forwarders) has been created. Please feel commit only those APIs needed to run specific tasks. 
+To help with porting, a [Forwarder and Stub repository](http://github.com/ms-iot/forwarders) has been created. Please feel commit only those APIs needed to run specific tasks. Please follow the instructions in the [README](https://github.com/ms-iot/forwarders/blob/master/README.md).
 
-## Building and Deploying the Forwarder and Stubs
-Do use the forwarder and stubs:
-
-1. [download the forwarders project zip file](https://github.com/ms-iot/forwarders/archive/master.zip). 
-1. Extract all of the files from downloaded zip.
-1. Open the solution for the forwarder you require.
-1. Build the solution
-1. Right click on the project, select 'Open in File Explorer'
-1. Navigate up to the Release directory
-1. Copy the binary - such as `User32.dll` to `\\mygalileo\c$\test'
 
 
 
