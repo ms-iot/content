@@ -4,6 +4,14 @@ title: What's new
 permalink: /WhatsNew.htm
 ---
 
+# 1/21/2015
+  * Learn how to port Win32 apps to Galileo using [Forwarders and Stubs](Forwarders.htm)
+  * Learn how to run [Node.js](NodeJS.htm) on Galileo
+  * New Samples 
+    * Using the [MCP23017 GPIO Port Expander](MCP23017Sample.htm)
+    * Using the [OneNote API](TODO_Sample.htm)
+    * Reintrocuded [Firmata and Cylon](Firmata.htm)
+    
 # 12/2/2014
   * Announcing [Lightning](Lightning.htm){:target="_blank"} for Intel Galileo Gen1 and Gen2!
   * Significant support for Wiring Language, Libraries and Classes
