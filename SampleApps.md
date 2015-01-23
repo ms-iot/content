@@ -16,13 +16,12 @@ permalink: /SampleApps.htm
   <!-- Example row of columns -->
   <div class="row">
     <div class="col-md-4">
-      <h2>Hello Blinky</h2> <span class="label label-default">Updated</span>
+      <h2>Hello Blinky</h2>
       <p>Learn how to create a new project, configure Visual Studio for Deployment and Debugging, and learn how to use General Purpose IO using Wiring.</p>
       <p><a class="btn btn-default" href="HelloBlinky.htm" role="button">View details &raquo;</a></p>
     </div>
     <div class="col-md-4">
-      <h2>C++ REST SDK</h2>
-       <span class="label label-info">New</span>
+      <h2>C++ REST SDK</h2> <span class="label label-default">Updated</span>
       <p>The C++ REST SDK (codename "Casablanca") is a Microsoft project for cloud-based client-server communication in native code using a modern asynchronous C++ API design.</p>
       <p><a class="btn btn-default" href="Casablanca.htm" role="button">View details &raquo;</a></p>
     </div>  
@@ -86,17 +85,16 @@ permalink: /SampleApps.htm
   <div class="row">
     <div class="col-md-4">
       <h2>Win32 Networking</h2>
-      <span class="label label-info">New</span>
       <p>This MSDN sample shows how to run a winsock client and server.</p>
       <p><a class="btn btn-default" href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms737889(v=vs.85).aspx" role="button">View details &raquo;</a></p>
     </div>
     <div class="col-md-4">
-      <h2>Forwarders and Stubs</h2>
+      <h2>Forwarders and Stubs</h2>  <span class="label label-Info">New</span>
       <p>Learn about Forwarders and Stubs for Win32 APIs which have move or are missing from the Windows image.</p>
       <p><a class="btn btn-default" href="Forwarders.htm" role="button">View details &raquo;</a></p>
     </div>
     <div class="col-md-4">
-      <h2>NodeJS</h2>
+      <h2>NodeJS</h2>  <span class="label label-Info">New</span>
       <p>Learn to run node.js on a galileo and call APIs from a javscript file.</p>
       <p><a class="btn btn-default" href="NodeJS.htm" role="button">View details &raquo;</a></p>
     </div>
@@ -109,13 +107,12 @@ permalink: /SampleApps.htm
       <p><a class="btn btn-default" href="MCP23017Sample.htm" role="button">View details &raquo;</a></p>
     </div>
     <div class="col-md-4">
-      <h2>Firmata and Cylon</h2>
+      <h2>Firmata and Cylon</h2>  <span class="label label-default">Updated</span>
       <p>Learn how to interact with your board using Firmata and Cylon .</p>
       <p><a class="btn btn-default" href="Firmata.htm" role="button">View details &raquo;</a></p>
     </div>  
     <div class="col-md-4">
-      <h2>OneNote API using http</h2>
-      <span class="label label-info">New</span>
+      <h2>OneNote API using http</h2> <span class="label label-info">New</span>
       <p>Learn how to use OneNote cloud services to Post/Get pages from/to your device for printing, with this basic ToDo-Sample.</p>
       <p><a class="btn btn-default" href="TODO_Sample.htm" role="button">View details &raquo;</a></p>
     </div>  
