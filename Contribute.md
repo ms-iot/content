@@ -61,7 +61,7 @@ For clarification, what we mean when we say:<br/>
     * <kbd>git commit -m "[descriptive message]" </kbd>
     
 ###Submitting a Pull Request
-1. Before you submit your first pull request, we ask you to fill out a <a href="https://cla.msopentech.com" target="_blank">Microsoft Open Technologies Contribution License Agreement</a>. Without this on file, we unfortunately cannot accept a pull request. In the agreement, please include the GitHub user id you are submitting the pull request from. You only need to do this once.
+1. After you submit your first pull request, if you have not already signed a Contribution License Agreement then our Contribution License Agreement service will request you to sign a Contribution License Agreement. We request you to complete this electronic request. Without completing this step, we unfortunately cannot accept a pull request. You only need to do this once.
 1. Fetch upstream
     * <kbd>git fetch \-\-all</kbd>
 1. Rebase upstream (This should now put your changes on top of the main repository's history.)
