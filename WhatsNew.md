@@ -10,7 +10,7 @@ permalink: /WhatsNew.htm
   * New Samples 
     * Using the [MCP23017 GPIO Port Expander](MCP23017Sample.htm)
     * Using the [OneNote API](TODO_Sample.htm)
-    * Reintrocuded [Firmata and Cylon](Firmata.htm)
+    * Reintroduced [Firmata and Cylon](Firmata.htm)
     
 # 12/2/2014
   * Announcing [Lightning](Lightning.htm){:target="_blank"} for Intel Galileo Gen1 and Gen2!
