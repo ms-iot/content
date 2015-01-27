@@ -4,7 +4,7 @@ title: What's new
 permalink: /WhatsNew.htm
 ---
 
-# 1/21/2015
+# 1/27/2015
   * Learn how to port Win32 apps to Galileo using [Forwarders and Stubs](Forwarders.htm)
   * Learn how to run [Node.js](NodeJS.htm) on Galileo
   * New Samples 
