@@ -7,14 +7,18 @@ permalink: /NodeJS.htm
 #Node.js Sample
 Learn to run node.js on a galileo and call APIs from a javscript file.
 
+To make this work we decided to use the concept of [Forwarders and Stubs](Forwarders.htm) which allow changed or missing Win32 APIs to be emulated or redirected. We could have just made some changes to our implementation of User32.dll but then you would have been left with the possible problem of making native extensions work. We decided to give you a canonical example in our actual Node.js implementation.
+
 ##Running Node on Galileo
 
-* Make sure you are using the latest [windows image](https://connect.microsoft.com/windowsembeddedIoT/Downloads){:target="_blank"}.
-* Make a directory in the root of your image named `node`:
+1. Make sure you are using the latest [windows image](https://connect.microsoft.com/windowsembeddedIoT/Downloads){:target="_blank"}.
+1. Make a directory in the root of your image named `node`:
     * Using File Explorer on your PC, open `\\mygalileo\c$` then right click and create a new folder called `node`
-* Download the 32-bit Windows Binary (.exe) of node from [nodejs.org](http://nodejs.org/download/){:target="_blank"} and place it inside the new `node` directory.
-* Download the latest zipped version of npm from [nodejs.org](http://nodejs.org/dist/npm/){:target="_blank"} and extract the contents into the new `node` directory.
-* Using Telnet, add this `node` folder to your Galileo image's path and restart using the following commands:
+1. Download the 32-bit Windows Binary (.exe) of node from [nodejs.org](http://nodejs.org/download/){:target="_blank"} and place it inside the new `node` directory.
+1. Download the latest zipped version of npm from [nodejs.org](http://nodejs.org/dist/npm/){:target="_blank"} and extract the contents into the new `node` directory.
+1. Build User32.dll using the [Forwarders project](https://github.com/ms-iot/forwarders).
+1. Copy User32.dll from the Forwarders project release directory into the `node` directory.
+1. Using Telnet, add this `node` folder to your Galileo image's path and restart using the following commands:
 
 ~~~
 setx path "%path%;c:\node" /M

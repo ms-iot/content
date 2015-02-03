@@ -32,7 +32,7 @@ Learn how to build a project using the C++ REST SDK NuGet package
 
 
 ### NOTE:
-* The Galileo does not support the socket functionality of the C++ REST SDK library, please see the [Win32 Networking sample](http://msdn.microsoft.com/en-us/library/windows/desktop/ms737889(v=vs.85).aspx){:target="_blank"} for socket functionality.
+* The Galileo does not support the websocket functionality of the C++ REST SDK library, please see the [WinHTTP WebSocket sample](https://code.msdn.microsoft.com/windowsdesktop/WinHTTP-WebSocket-sample-50a140b5){:target="_blank"} for websocket functionality.
 
 # Code
 
@@ -74,7 +74,7 @@ void setup()
     // Handle response headers arriving.
     .then([=](web::http::http_response response)
     {
-        printf("Received response status code:%u\n", response.status_code());
+        Log("Received response status code:%u\n", response.status_code());
 
         // Write response body into the file.
         return response.body().read_to_end(fileStream->streambuf());
@@ -93,7 +93,7 @@ void setup()
     }
     catch (const std::exception &e)
     {
-        printf("Error exception:%s\n", e.what());
+        Log("Error exception:%s\n", e.what());
     }
 }
 

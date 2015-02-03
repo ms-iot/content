@@ -52,11 +52,8 @@ If you are using the 16x2 LCD listed above, follow the diagram below:
 
 int RS = 4;
 int ENABLE = 5;
-int D0 = 6;
-int D1 = 7;
-int D2 = 8;
-int D3 = 9;
-LiquidCrystal lcd = LiquidCrystal(RS, ENABLE, D0, D1, D2, D3); // define our LCD and which pins to use
+
+LiquidCrystal lcd = LiquidCrystal(RS, ENABLE, D6, D7, D8, D9); // define our LCD and which pins to use
 
 int _tmain(int argc, _TCHAR* argv [])
 {
