@@ -52,7 +52,6 @@ var galileo = require("ms-iot-wiring"); // adds the ms-iot-wiring module
 var led = 13;
 
 // setup
-//galileo.ioInit(); // needs to be done in order to initialize the board and pins
 galileo.pinMode(led, galileo.OUTPUT); // sets pin 13 to output
 
 // loop
