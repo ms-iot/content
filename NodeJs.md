@@ -113,24 +113,6 @@ while (1)
    console.log('AnalogWrite');
    galileo.analogWrite(3, 4095);
    
-   console.log("Temperature: ");
-   var temp = galileo.analogRead(1);
-   console.log(temp);
-   console.log("\n");
-   
-   console.log('Tone with 2 arguments on pin 10');
-   galileo.tone(10, 300);
-   console.log('1 second delay');
-   galileo.delay(1000);
-   console.log('NoTone on pin 10:');
-   galileo.noTone(10);
-   console.log('1 second delay');
-   galileo.delay(1000);
-   console.log('Tone with 3 arguments on pin 10 duration is 1 second');
-   galileo.tone(10, 300, 1000);
-   console.log('5 second delay');
-   galileo.delay(5000);
-   
    // SPI Tests
    console.log('\n----- SPI Tests -----');
    var spi = galileo.Spi();
