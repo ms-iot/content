@@ -21,7 +21,7 @@ To make this work we decided to use the concept of [Forwarders and Stubs](Forwar
 1. Using Telnet, add this `node` folder to your Galileo image's path and restart using the following commands:
 
 ~~~
-mkdir C:\windows\system32\config\systemprofile\AppData\Roaming\npm
+mkdir %systemroot%\system32\config\systemprofile\AppData\Roaming\npm
 setx path "%path%;c:\node" /M
 shutdown /r /t 0
 ~~~
