@@ -95,7 +95,7 @@ permalink: /SampleApps.htm
     </div>
     <div class="col-md-4">
       <h2>NodeJS</h2>  <span class="label label-Info">New</span>
-      <p>Learn to run node.js on a galileo and call APIs from a javscript file.</p>
+      <p>Learn to run node.js on a Galileo and call APIs from a JavaScript file.</p>
       <p><a class="btn btn-default" href="NodeJS.htm" role="button">View details &raquo;</a></p>
     </div>
   </div>
