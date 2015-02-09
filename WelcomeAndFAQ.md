@@ -50,7 +50,7 @@ This program is the fulfillment of our promise from Build 2014 to deliver develo
 **Q:**  Microsoft is a “devices and services” company.  Where’s the services?  
 **A:**  We’re serious about enabling you to make connected devices.  Microsoft has a bunch of great services that you can already integrate with your device (have you seen the Azure Data Marketplace)?.  We have samples showing how you can communicate remotely with your device using firmata and node.js (LINK).  And you can connect and mashup your device with the whole broader internet of services (if you’re looking for a list, [Programmable Web](http://www.programmableweb.com/apis/directory) is a good start).
 
-All that said, we’re also hard at work on some new Microsoft services that we think will delight folks in the IoT space.  For a good primer, check out the work being done on our [Intelligent Systems Service (ISS)](http://www.microsoft.com/windowsembedded/en-us/intelligent-systems-service.aspx).
+All that said, we’re also hard at work on some new Microsoft services that we think will delight folks in the IoT space.  For a good primer, check out the work being done on our [Intelligent Systems Service (ISS)](http://www.microsoft.com/en-us/server-cloud/internet-of-things.aspx).
 
 
 ###Software Questions:
