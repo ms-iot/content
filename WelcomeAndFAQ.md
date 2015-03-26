@@ -50,7 +50,7 @@ This program is the fulfillment of our promise from Build 2014 to deliver develo
 **Q:**  Microsoft is a “devices and services” company.  Where’s the services?  
 **A:**  We’re serious about enabling you to make connected devices.  Microsoft has a bunch of great services that you can already integrate with your device (have you seen the Azure Data Marketplace)?.  We have samples showing how you can communicate remotely with your device using firmata and node.js (LINK).  And you can connect and mashup your device with the whole broader internet of services (if you’re looking for a list, [Programmable Web](http://www.programmableweb.com/apis/directory) is a good start).
 
-All that said, we’re also hard at work on some new Microsoft services that we think will delight folks in the IoT space.  For a good primer, check out the work being done on our [Intelligent Systems Service (ISS)](http://www.microsoft.com/en-us/server-cloud/internet-of-things.aspx).
+All that said, we’re also hard at work on some new Microsoft services that we think will delight folks in the IoT space.  For a good primer, check out the work being done on our [Azure IoT Suite](http://www.microsoft.com/en-us/server-cloud/internet-of-things.aspx#Fragment_Scenario4).
 
 
 ###Software Questions:
@@ -135,7 +135,7 @@ The board we’re using for this release, the Intel Galileo, is an Arduino-certi
 **A:** Response to the program was fantastic. The only downside is that we received more requests than we have hardware to distribute. Unfortunately, that means that not everyone who signed up will receive a development kit and Galileo board.
  
 **Q:** I didn't sign up for the developer preview. Can I buy an Intel Galileo and install Windows?  
-**A:** Yes you can! Please see [bought or updating your Intel Galileo](http://ms-iot.github.io/content/IBoughtAGalileo.htm)
+**A:** Yes you can! Please see [WindowsOnDevices.com](http://www.windowsondevices.com) for a list of Galileo board suppliers.
  
 **Q:** Where can I go to find out more information about IoT at Microsoft?  
 **A:** There are several sites and resources which are of interest:
@@ -144,6 +144,7 @@ The board we’re using for this release, the Intel Galileo, is an Arduino-certi
 [Build 2014 IoT session](http://channel9.msdn.com/Events/Build/2014/2-511)  
 [Windows Embedded site](http://microsoft.com/windowsembedded)  
 [IoT blog](http://blogs.msdn.com/b/windows-embedded/)
+[Azure IoT Suite](http://www.microsoft.com/en-us/server-cloud/internet-of-things.aspx#Fragment_Scenario4)
 
 
 ###Lifecycle and Other Products
@@ -190,7 +191,7 @@ During Steve T's IoT session at Build 2014, we announced that we're increasing o
 
 ###My question isn't answered. Who should I talk to?
 
-For community resources, visit [WindowsOnDevices.com#Community](http://windowsondevices.com#Community)
+For community resources, visit [WindowsOnDevices.com](http://windowsondevices.com)
 
 Twitter:
 
