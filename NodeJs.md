@@ -14,7 +14,7 @@ To make this work we decided to use the concept of [Forwarders and Stubs](Forwar
 1. Make sure you are using the latest [windows image](https://connect.microsoft.com/windowsembeddedIoT/Downloads){:target="_blank"}.
 1. Make a directory in the root of your image named `node`:
     * Using File Explorer on your PC, open `\\mygalileo\c$` then right click and create a new folder called `node`
-1. Download the 32-bit Windows Binary (.exe) of node from [nodejs.org](http://nodejs.org/download/){:target="_blank"} and place it inside the new `node` directory.
+1. Download the 32-bit Windows Binary (.exe) of node from [nodejs.org v0.10.9](http://nodejs.org/dist/v0.10.9/){:target="_blank"} and place it inside the new `node` directory.
 1. Download the latest zipped version of npm from [nodejs.org](http://nodejs.org/dist/npm/){:target="_blank"} and extract the contents into the new `node` directory.
 1. Build User32.dll using the [Forwarders project](https://github.com/ms-iot/forwarders).
 1. Copy User32.dll from the Forwarders project release directory into the `node` directory.
