@@ -1,6 +1,6 @@
 ---
 layout: code
-title: Help improve the Windows Developer Program for IoT
+title: Help Us Improve
 permalink: /ExperienceImprovementEnable.htm
 ---
 
@@ -20,16 +20,16 @@ In order for us to get product insights, you'll need to associate your developer
   * Make sure your Galileo board is connected to the same subnet as your developer PC, or to the PC directly.
   * Start GalileoWatcher.  It is the locator tool which was installed on your PC from the WindowsDeveloperProgramforIOT.MSI, and used to enumerate connected boards.
   * Select your board name that shows up in GalileoWatcher.  You can optionally right-click to perform one of the listed actions.
-  * If your firewall settings were missed, or you do not see your board listed, review the GalileoWatcher information at the [TroubleShooting](http://ms-iot.github.io/content/TroubleShooting.htm) page.
+  * If your firewall settings were missed, or you do not see your board listed, review the GalileoWatcher information at the [TroubleShooting]({{site.baseurl}}/win8/TroubleShooting.htm) page.
 
-  ![](images\GalileoWatcherExample.png)
+  ![]({{site.baseurl}}/images/GalileoWatcherExample.png)
 
 ### 2) Opt into Visual Studio Experience Improvement.  
   * Launch Visual Studio as an administrator.
   * Select HELP from the menu bar, and click "Customer Feedback Options".
   * In the "Visual Studio Experience Improvement Program" dialog, make sure the radio button for "Yes, I am willing to participate" is selected, and click OK.
  
-  ![](images\VSFeedback.png)
+  ![]({{site.baseurl}}/images/VSFeedback.png)
 
 
 

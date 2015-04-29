@@ -3,11 +3,7 @@ Please refer to our [contribution page](http://ms-iot.github.io/content/Contribu
 
 #Contributing to documentation
 ### Setting up Jekyll on Windows
-1. Install [Ruby](http://rubyinstaller.org/downloads/) and add it to your system path environment variable
-1. Download the [Ruby DevKit](http://rubyinstaller.org/downloads/), and follow the installation instructions [here](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit)
-1. Install [Python 2.7.x](https://www.python.org/downloads/)
-1. Using Command Prompt, Install jekyll using ruby gems.
-```gem install jekyll```
+1. We use this easy to follow [Jekyll on Windows"](http://jekyllrb.com/docs/windows/) guide. Use the pygments option when you go through the install.
 
 ### Iterating on documentation
 1. Using Command Prompt, from within the content folder start a local server:
@@ -22,4 +18,3 @@ Please refer to our [contribution page](http://ms-iot.github.io/content/Contribu
 * For README.md files, please use [Github Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/) to get nice formatting on the file browser.
 * Please do not use HTML
 * For samples, please append ```{:target="_blank"}```, so the link opens in a new page
-

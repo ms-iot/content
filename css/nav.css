@@ -1,0 +1,47 @@
+.l2-nav > ul > li > a {
+    color: #505050;
+    border-radius: 0;
+    height: 100%;
+    text-align: center;
+    font-size: 11px;
+    line-height: 16px;
+}
+
+.l2-nav {
+    border-bottom: 1px solid #efefef;
+    max-width: 1206px;
+    margin: 0 auto;
+}
+
+.glyphicon-home,
+.glyphicon-play-circle,
+.glyphicon-wrench,
+.glyphicon-comment,
+.glyphicon-list-alt,
+.glyphicon-cloud-download,
+.glyphicon-globe {
+    color: #505050;
+    font-size: 16px;
+    height: 100%;
+}
+
+.l2-nav > ul > li > a > div {
+    padding-right: 5px;
+}
+
+.iot-nav {
+    width: 100%;
+    background-color: #505050;
+    color: #fff;
+    border-radius: 0;
+}
+
+    .iot-nav:hover {
+        background-color: #505050;
+        color: #fff;
+    }
+
+    .iot-nav:focus {
+        background-color: #505050;
+        color: #fff;
+    }

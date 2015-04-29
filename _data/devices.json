@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Raspberry Pi 2",
+        "link": "win10/SetupRPI.htm",
+        "buy": "http://www.raspberrypi.org/products/raspberry-pi-2-model-b/",
+        "image": "RPi2_0.png",
+        "text":  "The Raspberry Pi 2 is a low cost, credit-card sized computer that plugs into a computer monitor or TV, and uses a standard keyboard and mouse. The Raspberry Pi 2 runs Windows 10 IoT Core."
+
+    },
+    {
+        "name": "MinnowBoard Max",
+        "link": "win10/SetupMBM.htm",
+        "buy": "http://avnetexpress.avnet.com/store/em/EMController?langId=-1&storeId=500201&catalogId=500201&term=msdev&searchType=&advAction=&N=0&Ne=100000&action=products&x=0&y=0",
+        "image": "MBM_0.png",
+        "text":  "MinnowBoard MAX is an open hardware embedded board with the Intel Atom E38XX series SOC at its core. MinnowBoard MAX supports Windows 10 IoT Core Insider Preview."
+    },
+    {
+        "name": "Galileo",
+        "link": "win8/SetupGalileo.htm",
+        "buy": "http://www.intel.com/content/www/us/en/do-it-yourself/where-to-buy.html#galileo",
+        "image": "Galileo_0.png",
+        "text":  "Intel Galileo is the first in a line of Arduino-certified development boards based on Intel x86 architecture and is designed for the maker and education communities. Galileo supports only the previous versions of Windows, not Windows 10 IoT Core."
+    },
+    {
+        "name": "Windows Remote Arduino",
+        "link": "win10/SetupWRA.htm",
+        "buy": "http://store.arduino.cc",
+        "image": "Arduino_1.png",
+        "text":  "Windows Remote Arduino is an open-source Windows Runtime Component library which allows Makers to control an Arduino through a Bluetooth or USB connection. It is intended for Windows Runtime developers who want to harness the power of Arduino hardware using the Windows Runtime languages. Developers who include this component in their projects will automatically have access to its features in any of the WinRT languages (C++/CX, C# and JavaScript)."
+    },
+    {
+        "name": "Windows Virtual Shields for Arduino",
+        "link": "win10/SetupWVSA.htm",
+        "buy": "http://store.arduino.cc",
+        "image": "Arduino_1.png",
+        "text":  "Windows Virtual Shields for Arduino is an open-source library primarily for the Arduino UNO which communicates with an open-source Universal Windows application running on all Windows 10 devices, including Windows Lumia phones. The library exposes Lumia phones' sensors and capabilities to the an Arduino Wiring Sketch."
+    }
+]

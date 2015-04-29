@@ -1,12 +1,21 @@
 # Site settings
-title: Windows Developer Program for IoT
-email: 
+title: "Windows IoT"
+email:
 description: ""
-baseurl: ""
-url: "http://windowsondevices.com"
+baseurl: "/content"
+url: "http://ms-iot.github.io/content"
+repositoryurl: "https://github.com/ms-iot/content/blob/develop/"
+landingurl: "http://dev.windows.com/iot"
+hacksterurl: "http://microsoft.hackster.io"
+hardwareurl: "http://go.microsoft.com/fwlink/p/?linkID=532948"
+signupurl: "https://www.windowsondevices.com/signup.aspx"
+downloadurl: "http://connect.microsoft.com/windowsembeddedIoT/Downloads/"
+
 
 # Build settings
 markdown: kramdown
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
 permalink: pretty
 highlighter: pygments
+safe: true
+lsi: false

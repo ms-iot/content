@@ -1,0 +1,11 @@
+<div>
+    {% for device in site.data.devices %}
+    <div class="col-md-4 device">
+        <a href="{{device.link}}"><img src="{{site.baseurl}}/images/devices/{{device.image}}"></a>
+        <h3 class="text-left"><a href="{{device.link}}">{{device.name}}</a></h3>
+        <p>{{device.text}}</p>
+        <p><a href="{{device.link}}">Start Now</a></p>
+        <p><a href="{{device.buy}}">Buy a {{device.name}}</a></p>
+    </div>
+    {% endfor %}
+</div>

@@ -121,4 +121,4 @@ permalink: /ReleaseNotes.htm
     </ul>
   </p>
   <hr/>
-  <a class="btn btn-default" href="index.htm" role="button">Return to homepage</a>
+  <a class="btn btn-default" href="{{site.baseurl}}/index.htm" role="button">Return to homepage</a>
