@@ -36,6 +36,8 @@ permalink: /win10/SetupRPI.htm
     <h2>What you need</h2>
     <ol>
         <li>A PC running Windows 10 Insider Preview.</li>
+        <li>Register with the Microsoft Connect program to download the Windows 10 IoT Core Insider Preview image.</br>
+			We release the Windows 10 IoT Core for Raspberry Pi 2 through our program on Microsoft Connect. If you have not signed up yet, please go to our program site on <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558" target="_blank">Microsoft Connect</a> site to sign up. You can find step-by-step instructions for signing up for Microsoft Connect <a href="http://ms-iot.github.io/content/SigninMSConnect.htm" target="_blank">here</a>. If you're already signed up for this program on Microsoft Connect and try to sign up again, you will just see a blank page.
         <li>Raspberry Pi 2.</li>
         <li>5V micro USB power supply with at least 1.0A current.</li>
 			NOTE: You may want to use a higher current power supply (>2.0A) instead if you plan on using several USB peripherals or high-current devices.
@@ -52,8 +54,8 @@ permalink: /win10/SetupRPI.htm
     <p>Follow these instructions to configure your SD card:</p>
     <ol class="word-wrap">
         <li>NOTE: you will need to follow these instructions on a physical Windows machine (and not a VM) because you need access to the SD card reader.</li>
-        <li>Configure your connect account <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558">here</a>. Note that if your account was already configured, you'll see a blank page.</li>
-        <li>Make a local copy of the flash.ffu contained in Windows_IoT_Core_RPI2_BUILD.zip found <a href="{{site.downloadurl}}" target="_blank">here</a>.</li>
+        <li>Please download the package "Windows 10 IoT Core Insider Preview Image for Raspberry Pi 2" from the Microsoft Connect downloads folder <a href="http://connect.microsoft.com/windowsembeddedIoT/Downloads/" target="_blank">here</a>. If you see a blank page or no downloads listed, please make sure you are signed into Microsoft Connect by looking at your login information at top right part of the screen. If you did not sign up to the Connect program, please refer to the instructions in the "What you need" section.</li>
+        <li>Make a local copy of the flash.ffu contained in the downloaded package "Windows 10 IoT Core Insider Preview Image for Raspberry Pi 2".</li>
         <li>Insert an SD card into your SD card reader.</li>
         <li>Open an admininistrator command prompt and navigate to the folder containing your local flash.ffu.</li>
         <li>
@@ -87,7 +89,7 @@ permalink: /win10/SetupRPI.htm
     <h2>Boot Windows 10 IoT Core Insider Preview</h2>
     <ol class="word-wrap">
         <li>Windows 10 IoT Core Insider Preview will boot automatically after connecting power supply.</li>
-        <li>On the very first boot the Windows IoT Core will do some first boot configurations and it will display a default blue colored application while this is happening. Wait for a few minutes and the board will automatically restart. This will happen only once and then DefaultApp should come up, displaying the IP address of the Raspberry Pi 2.
+        <li>On the very first boot the you will see a blue windows logo and then a black screen for a long time (2 minutes or longer).  Do not power off the board while it is doing first-time setup.  The board will then reboot to a blue-screened application that says “MinWin” at the top.  It will sit on this screen also for a long time (2 minutes or longer).  Again, do not power off the board while this is occurring.  Finally the board will reboot a second time to show DefaultApp, displaying the IP address of the Raspberry Pi 2.
             <br /><br /><ul><img class="device-images" src="{{site.baseurl}}/images/DefaultAppRpi2.png"></ul><br />
         </li>
         <li>Follow the instructions <a href="{{site.baseurl}}/win10/samples/PowerShell.htm">here</a> to use PowerShell to connect to your running device.</li>
