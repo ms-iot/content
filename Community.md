@@ -16,6 +16,14 @@ permalink: /Community.htm
   <h3>New on the Window IoT Blog</h3>
   <div class="col-md-4">
     <div class="col-md-9">
+      <a href="http://blogs.windows.com/buildingapps/2015/04/29/microsoft-brings-windows-10-to-makers/">
+        <h4>Microsoft brings Windows 10 to Makers</h4>
+      </a>
+      <h4><em>Steve Teixeira, Apr 29 2015</em></h4>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="col-md-9">
       <a href="http://blogs.windows.com/bloggingwindows/2015/03/18/windows-10-iot-powering-the-internet-of-things/">
         <h4>Windows 10 IoT Core:<br />Powering the Internet of Things</h4>
       </a>
@@ -28,14 +36,6 @@ permalink: /Community.htm
         <h4>A first look at the Windows 10 Universal Windows Platform</h4>
       </a>
       <h4><em>Kevin Gallo, Mar 2 2015</em></h4>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="col-md-9">
-      <a href="http://blogs.windows.com/buildingapps/2015/02/02/windows-10-coming-to-raspberry-pi-2/">
-        <h4>Windows 10 coming to Raspberry Pi 2</h4>
-      </a>
-      <h4><em>Kevin Dallas, Feb 2 2015</em></h4>
     </div>
   </div>
 </div>
@@ -52,7 +52,7 @@ permalink: /Community.htm
     </p>
     <p>Raspberry Pi forums are the best place to direct Raspberry Pi 2 board-specific questions.</p>
     <p>
-    <a href="https://www.raspberrypi.org/forums/viewforum.php?f=56">Raspberry Pi Forums &raquo;</a>
+    <a href="https://www.raspberrypi.org/forums/viewforum.php?f=105">Raspberry Pi Forums &raquo;</a>
     </p>
     <p>Arduino forums are ideal for any Arduino development board-specific questions.
     </p>
