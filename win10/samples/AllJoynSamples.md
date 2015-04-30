@@ -1,7 +1,7 @@
 ---
 layout: default
 title: AllJoyn System Bridge templates and samples
-permalink: /win10/samples/AlljoynSamples.htm
+permalink: /win10/samples/AllJoynSamples.htm
 ---
 
 <div class="container" markdown="1">

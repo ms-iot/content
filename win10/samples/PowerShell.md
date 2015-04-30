@@ -29,7 +29,7 @@ Make sure to follow these steps to correctly configure your VM or device running
 
     Now you should see the PS console:
 
-    ![PowerShell console]({{site.baseurl}}/images/powershell/ps.png)
+    ![PowerShell console]({{site.baseurl}}/images/powershell/ps.PNG)
 
 * From the PS console, type the following (substitute `<machine-name or IP Address>` with the appropriate value):
 
