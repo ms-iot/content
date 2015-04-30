@@ -17,7 +17,7 @@ permalink: /win10/SetupWRA.htm
               <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="inactive">1. Select Your Device</h3></a>
             </li>
             <li>
-              <a href="{{site.baseurl}}/win10/SetupWRA.htm"><h3 class="active">2. Set up your Windows Remote Arduino</h3></a>
+              <a href="{{site.baseurl}}/win10/SetupWRA.htm"><h3 class="active">2. Set up your Device</h3></a>
               <span class="glyphicon glyphicon-time"></span> 15min
             </li>
             <li>
@@ -44,7 +44,7 @@ Windows Remote Arduino uses the [Firmata protocol](https://github.com/firmata/pr
 6. In the Arduino IDE, navigate to *File > Examples > Firmata > StandardFirmata*
 7. Press “Upload” to deploy the StandardFirmata sketch to the Arduino device.
 
-Your Arduino will now run the StandardFirmata sketch forever unless reprogrammed with a different sketch. You can now optionally disconnect your Arduino from the computer and power it in any way you choose. If you wish to use the recommended Bluetooth pairing between your devices, you will need to [hook up a Bluetooth device to the Arduino](http://github.com/ms-iot/remote-wiring/bluetooth.md). We recommend the [SparkFun Bluetooth Mate Silver](https://www.sparkfun.com/products/12576).
+Your Arduino will now run the StandardFirmata sketch forever unless reprogrammed with a different sketch. You can now optionally disconnect your Arduino from the computer and power it in any way you choose. If you wish to use the recommended Bluetooth pairing between your devices, you will need to [hook up a Bluetooth device to the Arduino](https://github.com/ms-iot/remote-wiring/blob/master/bluetooth.md). We recommend the [SparkFun Bluetooth Mate Silver](https://www.sparkfun.com/products/12576).
 
 
 ####Notes on Serial Commuinication
