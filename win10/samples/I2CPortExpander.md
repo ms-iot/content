@@ -403,7 +403,7 @@ Let's build, deploy and run the app on our Raspberry Pi 2.
 
 * If not already open, open in Visual Studio the app you created with the code above.
 
-* Set the 'Remote Debugging' setting to point to your device. See the 'Hello World' [sample]({{site.baseurl}}/Win10/Samples/HelloWorld.htm) if you need guidance on how to do this.
+* Set the 'Remote Debugging' setting to point to your device. See the 'Hello World' [sample]({{site.baseurl}}/win10/samples/HelloWorld.htm) if you need guidance on how to do this.
 
 * Press 'F5' or click on the 'Remote Machine' button in the Visual Studio toolbar.
 
