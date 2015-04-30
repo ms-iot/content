@@ -28,9 +28,9 @@ permalink: /Downloads.htm
                     <br />
                 </div>
                 <div class="col-md-3">
-                    <h4>Windows 10 for PC</h4>
+                    <h4>Windows 10 Insider Preview for PC</h4>
                     <p>Join the Windows 10 Insider Preview to use the tools that you need to develop for Windows IoT devices</p>
-                    <a href="http://windows.microsoft.com/en-us/windows/preview-iso">Learn More</a>
+                    <a href="https://insider.windows.com/">Learn More</a>
                 </div>
                 <div class="col-md-3">
                     <h4>Windows 10 IoT Core</h4>
