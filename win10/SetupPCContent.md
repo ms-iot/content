@@ -14,8 +14,9 @@ We have created a versions file describing the supported versions of the require
 
     <img class="device-images" src="{{site.baseurl}}/images/IoTCoreWatcher.PNG">
 
-### Connecting your Windows 10 IoT Core device directly to your PC & setting up Internet Connection Sharing (ICS)
+### Optional: Connecting your Windows 10 IoT Core device directly to your PC & setting up Internet Connection Sharing (ICS)
 
+If you don't have a local network to plug your device into, you can create a direct connection to your PC. 
 In order to connect and share the internet connection in your PC with your IoT Core device, you must have the following:
 
 * A spare Ethernet port on your development machine.  This can be either an extra PCI Ethernet card or a USB-to-Ethernet dongle.
