@@ -50,7 +50,8 @@ permalink: /win10/SetupMBM.htm
     <ol>
         <li>Connect a USB keyboard to one of the USB ports on the board.</li>
         <li>Connect an HDMI monitor to the microHDMI port on the board.</li>
-        <li>Connect a network cable to the Ethernet port on the board.</li>
+        <li>Connect a network cable from your local network to the Ethernet port on the board.</li>
+			NOTE: If you don't have a local network set up, see the <b>Connecting your Windows 10 IoT Core device directly to your PC</b> section on the <a href="{{site.baseurl}}/win10/SetupPC.htm">following page</a>
     </ol>
     <img class="device-images" src="{{site.baseurl}}/images/mbm.bmp">
 </div>
