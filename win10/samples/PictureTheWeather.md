@@ -1,6 +1,6 @@
 ---
 layout: default
-title: RGB LED Sample
+title: Picture the Weather
 permalink: /win10/samples/PictureTheWeather.htm
 ---
 <div class="container" markdown="1">
@@ -19,7 +19,7 @@ You will need the following components :
 
 * a [Digital RGB LED Weatherproof Strip - LPD8806 32 LED - (1m)](http://www.adafruit.com/products/306))
 
-* a SparkFun Bluetooth Modem - BlueSMiRF Silver](https://www.sparkfun.com/products/12577)
+* a [SparkFun Bluetooth Modem - BlueSMiRF Silver](https://www.sparkfun.com/products/12577)
 
 * solder and a soldering iron
 
@@ -40,7 +40,9 @@ You will need the following components :
 The RGB LED strips come with 48 LEDs in a strip.
 
 * Carefully split apart the RGB strips at the seams so that you have 6 strips of 8 lights.
+
 * Keeping the power connector (and other original wires) at the bottom right of the 6 strips,
+
 * ... solder wires between the splits so that the ends are reconnected through the wires.
 
 ![RGB Strip 2]({{site.baseurl}}/images/RGBSTRIP/rgbstrip_split2.JPG)
@@ -48,32 +50,55 @@ The RGB LED strips come with 48 LEDs in a strip.
 ###Placement of the RGB strip
 
 With the original power connector placed at the lower right,
-place the 6 strips of 8 LEDs onto the inside backing of the picture frame so that a 8x11" white paper (with artwork) separates the LEDs from the glass frame.
+place the 6 strips of 8 LEDs onto the inside backing of the picture frame so that a 8x11" white paper (with artwork) separates the LEDs from the glass frame. 
 
 Tape or connect the backing into/onto the frame.
 
 ![RGB Strip 1]({{site.baseurl}}/images/RGBSTRIP/rgbstrip_split1.JPG)
 
+###Hook up the RGB strip to the Arduino
+
+From the RGB LED strip:
+
+* Connect the ground wire to GND on the Arduino.
+
+* Connect the green wire to PIN 2 on the Arduino.
+
+* Connect the yellow wire to PIN 3 on the Arduino.
+
+* Connect the barrel power connector to a +5 volt power supply (per Adafruit's instructions).
+
+![RGB connection]({{site.baseurl}}/images/RGBSTRIP/rgbconnect.JPG)
+
 ###Upload to your device
 
-* In the Arduino IDE (set up from Connect to your Device : Arduino), choose the menu item File->Examples->VirtualShield->PictureTheWeather
+* In the Arduino IDE (set up from Connect to your Device : Arduino), choose the menu item File->Examples->VirtualShield->PictureTheWeather 
 
 * Upload to your Arduino.
 
 ###See it run
 
 * The phone will show "Web Weather Indicator," your coordinates and your weather forecast.
+
 * You can say "tomorrow," "in 3 days," "in 5 days" to see different forecasts for your location.
-* (There's also a no-so-secret debugging mode), try saying "show thunderstorms". Then, say "strike".
+
+* (There's also a not-so-secret debugging mode), try saying "show thunderstorms". Then, say "strike".
 
 ###Here's what's happening...
 
-The Arduino sketch is:
-* Getting your GPS
+Using the Windows Virtual Shields for Arduino, the Arduino sketch is:
+* Getting your GPS coordinates.
+
 * Using that to get the National Weather Service forecast and location using your coordinates
-* Presenting that information to you on screen as well as
-* Setting the animation on the RGB LED strip.
+
+* Presenting that information to you on screen as well as 
+
+* setting the animation on the RGB LED strip.
 
 ![Phone image]({{site.baseurl}}/images/RGBSTRIP/Phone.JPG)
+
+###Questions/Suggestions
+
+As always, for questions and feedback, [contact us]({{site.baseurl}}/ContactUs.htm).
 
 </div>
