@@ -169,7 +169,7 @@ permalink: /win10/StartCoding.htm
                         <a href="{{site.baseurl}}/win10/samples/ShiftRegisterSample.htm">Learn More</a>
                     </div>
                 </div>
-				
+
 				<div class="row section-heading">
                    <div class="col-md-3">
                         <h4>RGB LED (RPi2 Basic Kit Lab)</h4>
