@@ -129,7 +129,13 @@ For more information on writing addons, go to [https://nodejs.org/api/addons.htm
 
 
 ###Copy files to Windows IoT Core device
-Open up an explorer window on your PC and enter \\\\&lt;IP address of your device&gt;\C$ to access files on your device (Username: Administrator, Password: p@ssw0rd).
+Open up an explorer window on your PC and enter **\\\\\<IP address of your device\>\\C$** to access files on your device. The credentials are:
+
+    username: <IP address or device name, default is minwinpc>\Administrator
+    password: p@ssw0rd    
+
+NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/win10/samples/PowerShell.htm).  
+
 Create folder for Node on the device, C:\Node, and copy files from the host to the device:
 
 * ARM version of Node.exe  from &lt;local_repo&gt;\release
@@ -140,9 +146,7 @@ Here’s what the Node directory structure on the device should look like:
 
 ![Node Directory Structure]({{site.baseurl}}/images/Nodejs/memstatus-sample-file-structure.png)
 
-Connect to the device using PowerShell:
-
-* "EnterPSSession –ComputerName <IP Address> -Credential Administrator" (Password: p@ssw0rd)
+Connect to the device using PowerShell.  Please follow the instructions found [here]({{site.baseurl}}/win10/samples/PowerShell.htm)
 
 Allow Node.exe to communicate through the firewall with the following command:
 
