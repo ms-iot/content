@@ -14,7 +14,7 @@ permalink: /win10/StartCoding.htm
 		<p>We assume you already <a href="{{site.baseurl}}/GetStarted.htm">set up your environment</a>, have a working Visual Studio and have a device running Windows IoT Core (MinnowBoard Max, Raspberry Pi 2, or VM).</p>
 		<br/>
 		<h4>Questions/Suggestions</h4>
-		<p>Remember, you can always send <a href="{{site.baseurl}}/ContactUs.htm">contact us</a> for help and suggestions!</p>
+		<p>Remember, you can always send <a href="{{site.baseurl}}/Comunity#contact.htm">contact us</a> for help and suggestions!</p>
     </div>
     <div class="col-md-6">
         <div class="downloads-image"></div>
