@@ -20,7 +20,7 @@ Select the template `Blank App (Windows Universal)`
 
 Remember to give a good name to your first app! In this example, we called the project 'HelloWorld'.
 
-![App Template Location]({{site.baseurl}}/images/HelloWorld/new-cs-project-dialog.png)
+![App Template Location]({{site.baseurl}}/images/HelloWorld/new-cs-project-dialog.PNG)
 
 ###Developer Mode for Windows 10
 
@@ -62,7 +62,7 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 
 * Since this is a Windows Universal App, you can test this on your Visual Studio machine as well: Just press F5, and the app will run inside your machine. You should see something like this:
 
-    ![HelloWorld Running]({{site.baseurl}}/images/HelloWorld/HelloWorldAppLocal.png)
+    ![HelloWorld Running]({{site.baseurl}}/images/HelloWorld/HelloWorldAppLocal.PNG)
 
     Close the app after you're done validating it.
 
@@ -73,12 +73,12 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
     If you're building for Minnowboard Max, select `x86` in the Visual Studio toolbar architecture dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
 
     Next, in the Visual Studio toolbar, click on the `Local Machine` dropdown and select `Remote Machine`<br/>
-    
+
     ![RemoteMachine Target]({{site.baseurl}}/images/HelloWorld/cs-remote-machine-debugging.png)
 
 * At this point, Visual Studio will present the 'Remote Connections' dialog. Put the IP address or name of your Windows IoT Core device (in this example, we're using 'my-device') and select `None` for Windows Authentication. Then click 'Select'.
 
-    ![Remote Machine Debugging]({{site.baseurl}}/images/HelloWorld/cs-remote-connections.png)
+    ![Remote Machine Debugging]({{site.baseurl}}/images/HelloWorld/cs-remote-connections.PNG)
 
     Couple of notes:
 
@@ -86,7 +86,7 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 
     2. You can verify and/or modify these values navigating to the project properties (select 'Properties' in the Solution Explorer) and choose the 'Debug' tab on the left:
 
-    ![Project Properties Debug Tab]({{site.baseurl}}/images/HelloWorld/cs-debug-project-properties.png)
+    ![Project Properties Debug Tab]({{site.baseurl}}/images/HelloWorld/cs-debug-project-properties.PNG)
 
 * Now we're ready to deploy to the remote Windows IoT Core device. Simply press F5 (or select Debug \| Start Debugging) to start debugging our app. You should see the app come up in Windows IoT Core device screen, and you should be able to click on the button.
 
