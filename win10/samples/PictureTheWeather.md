@@ -50,7 +50,7 @@ The RGB LED strips come with 48 LEDs in a strip.
 ###Placement of the RGB strip
 
 With the original power connector placed at the lower right,
-place the 6 strips of 8 LEDs onto the inside backing of the picture frame so that a 8x11" white paper (with artwork) separates the LEDs from the glass frame. 
+place the 6 strips of 8 LEDs onto the inside backing of the picture frame so that a 8x11" white paper (with artwork) separates the LEDs from the glass frame.
 
 Tape or connect the backing into/onto the frame.
 
@@ -72,7 +72,7 @@ From the RGB LED strip:
 
 ###Upload to your device
 
-* In the Arduino IDE (set up from Connect to your Device : Arduino), choose the menu item File->Examples->VirtualShield->PictureTheWeather 
+* In the Arduino IDE (set up from Connect to your Device : Arduino), choose the menu item File->Examples->VirtualShield->PictureTheWeather
 
 * Upload to your Arduino.
 
@@ -91,14 +91,10 @@ Using the Windows Virtual Shields for Arduino, the Arduino sketch is:
 
 * Using that to get the National Weather Service forecast and location using your coordinates
 
-* Presenting that information to you on screen as well as 
+* Presenting that information to you on screen as well as
 
 * setting the animation on the RGB LED strip.
 
 ![Phone image]({{site.baseurl}}/images/RGBSTRIP/Phone.JPG)
-
-###Questions/Suggestions
-
-As always, for questions and feedback, [contact us]({{site.baseurl}}/ContactUs.htm).
 
 </div>
