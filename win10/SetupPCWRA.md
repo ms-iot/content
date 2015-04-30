@@ -17,7 +17,7 @@ permalink: /win10/SetupPCWRA.htm
         <a href="{{site.baseurl}}/win10/SetupWRA.htm"><h3 class="inactive">2. Set up your Device</h3></a>
       </li>
       <li>
-        <a href="{{site.baseurl}}/win10/SetupPCWRA.htm"><h3 class="active">3. Set up your PC for Windows Remote Arduino</h3></a>
+        <a href="{{site.baseurl}}/win10/SetupPCWRA.htm"><h3 class="active">3. Set up your PC</h3></a>
         <span class="glyphicon glyphicon-time"></span> 30-45min
       </li>
       <li>
@@ -239,21 +239,23 @@ You will need to add one of the following XML blocks to your manifest file, insi
 
 ###Windows 10
 
+```
 <DeviceCapability Name="bluetooth.rfcomm">
   <Device Id="any">
     <Function Type="name:serialPort"/>
   </Device>
 </DeviceCapability>
-
+```
 
 ###Windows 8.1
 
+```
 <m2:DeviceCapability Name="bluetooth.rfcomm">
   <m2:Device Id="any">
     <m2:Function Type="name:serialPort"/>
   </m2:Device>
 </m2:DeviceCapability>
-
+```
 
 
 ##Enabling USB Capabilities
@@ -261,20 +263,22 @@ You will need to add one of the following XML blocks to your manifest file in or
 
 ###Windows 10
 
+```
 <DeviceCapability Name="serialcommunication">
   <Device Id="any">
     <Function Type="name:serialPort"/>
   </Device>
 </DeviceCapability>
-
+```
 
 ###Windows 8.1
 
+```
 <m2:DeviceCapability Name="serialcommunication">
   <m2:Device Id="any">
     <m2:Function Type="name:serialPort"/>
   </m2:Device>
 </m2:DeviceCapability>
-
+```
 
  </div>
