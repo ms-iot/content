@@ -31,7 +31,7 @@ Make sure to follow these steps to correctly configure your VM or device running
 
     ![PowerShell console]({{site.baseurl}}/images/powershell/ps.PNG)
 
-* From the PS console, type the following (substitute `<machine-name or IP Address>` with the appropriate value):
+* From the PS console, type the following, substituting `<machine-name or IP Address>` with the appropriate value (using your **machine-name** is the easiest to use, but if your device is not uniquely named on your network, try the IP address):
 
         Set-Item WSMan:\localhost\Client\TrustedHosts -Value <machine-name or IP Address>
 
@@ -41,9 +41,13 @@ Make sure to follow these steps to correctly configure your VM or device running
 
         remove-module psreadline -force
 
+* Note: you may need to start the WinRM service on your desktop to enable remote connections using the following command:
+
+        net start WinRM
+
 * Now you can start a session with you Windows IoT Core device. From you administrator PS console, type:
 
-        Enter-PsSession -ComputerName <machine-name or IP Address> -Credential Administrator
+        Enter-PsSession -ComputerName <machine-name or IP Address> -Credential <machine-name or IP Address or localhost>\Administrator
 
     In the credential dialog enter the following default password: `p@ssw0rd`
 
