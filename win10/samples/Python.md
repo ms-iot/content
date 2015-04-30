@@ -61,6 +61,6 @@ print("Hello, World from IoT!")
 
 ###Questions/Suggestions
 
-Please refer to the [FAQ]({{site.baseurl}}/Faqs.htm) for issues.
+Please refer to the [FAQ]({{site.baseurl}}/FAQs.htm) for issues.
 
 </div>
