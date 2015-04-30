@@ -29,7 +29,7 @@
         "buy": "http://store.arduino.cc",
         "image": "Arduino_1.png",
         "text": "Windows Remote Arduino is an open-source Windows Runtime Component library which allows Makers to control an Arduino through a Bluetooth or USB connection. It is intended for Windows Runtime developers who want to harness the power of Arduino hardware using the Windows Runtime languages. Developers who include this component in their projects will automatically have access to its features in any of the WinRT languages (C++/CX, C# and JavaScript).",
-        "buy-text": "Buy an Arudino"
+        "buy-text": "Buy an Arduino"
     },
     {
         "name": "Windows Virtual Shields for Arduino",
@@ -37,6 +37,6 @@
         "buy": "http://store.arduino.cc",
         "image": "Arduino_1.png",
         "text": "Windows Virtual Shields for Arduino is an open-source library primarily for the Arduino UNO which communicates with an open-source Universal Windows application running on all Windows 10 devices, including Windows Lumia phones. The library exposes Lumia phones' sensors and capabilities to the an Arduino Wiring Sketch.",
-        "buy-text": "Buy an Arudino"
+        "buy-text": "Buy an Arduino"
     }
 ]
