@@ -76,8 +76,4 @@ The Arduino sketch is:
 
 ![Phone image]({{site.baseurl}}/images/RGBSTRIP/Phone.JPG)
 
-###Questions/Suggestions
-
-As always, for questions and feedback, [contact us]({{site.baseurl}}/ContactUs.htm).
-
 </div>
