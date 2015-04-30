@@ -12,7 +12,7 @@ Windows IoT Core can either be in headed or headless mode.  The difference betwe
 
     NOTE: if you put your device into headless mode, the default app will not be available to display the IP address, so be sure to make a note of your device's name and IP address.
 
-You can modify the headed/headless state of your device from a PowerShell session.  To review the PowerShell details, look [here]({{site.baseurl}}/win10/Samples/PowerShell.htm).
+You can modify the headed/headless state of your device from a PowerShell session.  To review the PowerShell details, look [here]({{site.baseurl}}/win10/samples/PowerShell.htm).
 
 * To display the current state of your device, use the `setbootoption` utility like this:
 

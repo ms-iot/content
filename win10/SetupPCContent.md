@@ -10,7 +10,7 @@ We have created a versions file describing the supported versions of the require
 
 * At this point, you are ready to develop apps.  Notice that the Windows IoT Core Watcher application automatically starts when you log on.  It can be used to find available Windows 10 IoT Core devices to deploy apps to.
 
-    <img class="device-images" src="{{site.baseurl}}/images/IoTCoreWatcher.png">
+    <img class="device-images" src="{{site.baseurl}}/images/IoTCoreWatcher.PNG">
 
 ### Connecting your Windows 10 IoT Core device directly to your PC & setting up Internet Connection Sharing (ICS)
 
