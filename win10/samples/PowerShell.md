@@ -61,7 +61,7 @@ Make sure to follow these steps to correctly configure your VM or device running
     
     * `net user Administrator [new password]` where `[new password]` represents a strong password of your choice.  
 
-    * `schtasks /Delete /TN Microsoft\Windows\IoT\Startup /F`
+    * `schtasks /Delete /TN Microsoft\Windows\IoT\Startup /F` (this only needs to be done once)
 
 
 ###Configure your Windows IoT Core device
