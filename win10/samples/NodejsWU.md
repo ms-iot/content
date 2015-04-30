@@ -47,11 +47,11 @@ http.createServer(function (req, res) {
 
 * When the server is running, open up a browser and enter the address http://&lt;IP address of your device&gt;:1337. The result should look like the picture below.
 
-    ![Hello World Result]({{site.baseurl}}/images/Nodejs/helloworld-ie.png)
+    ![Hello World Result]({{site.baseurl}}/images/Nodejs/helloworld-ie.PNG)
 
 * You can set breakpoints, see variable values, etc. To stop the server, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
 
-    ![Debugging Screenshot]({{site.baseurl}}/images/Nodejs/debugging-vs.png)
+    ![Debugging Screenshot]({{site.baseurl}}/images/Nodejs/debugging-vs.PNG)
 
 
 ### WinRT namespaces
@@ -75,6 +75,6 @@ winrt.close();
 
 The result from the code above should look like this:
 
-![DateTime Result]({{site.baseurl}}/images/Nodejs/datetime-ie.png)
+![DateTime Result]({{site.baseurl}}/images/Nodejs/datetime-ie.PNG)
 
 </div>
