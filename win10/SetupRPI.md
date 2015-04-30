@@ -87,7 +87,7 @@ permalink: /win10/SetupRPI.htm
     <h2>Boot Windows 10 IoT Core Insider Preview</h2>
     <ol class="word-wrap">
         <li>Windows 10 IoT Core Insider Preview will boot automatically after connecting power supply.</li>
-        <li>On the very first boot the Windows IoT Core will do some first boot configurations and it will display a default blue colored application while this is happening. Wait for a few minutes and the board will automatically restart. This will happen only once and then DefaultApp should come up, displaying the IP address of the Raspberry Pi 2.
+        <li>On the very first boot the you will see a blue windows logo and then a black screen for a long time (2 minutes or longer).  Do not power off the board while it is doing first-time setup.  The board will then reboot to a blue-screened application that says “MinWin” at the top.  It will sit on this screen also for a long time (2 minutes or longer).  Again, do not power off the board while this is occurring.  Finally the board will reboot a second time to show DefaultApp, displaying the IP address of the Raspberry Pi 2.
             <br /><br /><ul><img class="device-images" src="{{site.baseurl}}/images/DefaultAppRpi2.png"></ul><br />
         </li>
         <li>Follow the instructions <a href="{{site.baseurl}}/win10/samples/PowerShell.htm">here</a> to use PowerShell to connect to your running device.</li>
