@@ -11,7 +11,7 @@ permalink: /win10/samples/DriverLab.htm
 
 We assume you already [set up your environment]({{site.baseurl}}/GetStarted.htm), have a working Visual Studio, and have a device running Windows IoT Core.
 
-Remember, you can always [contact us]({{site.baseurl}}/Community.htm) for help and suggestions!
+Remember, you can always [contact us]({{site.baseurl}}/Community.htm#contact) for help and suggestions!
 
 ###Lab objective
 In this lab we will be walking through the process of creating and installing a simple peripheral device driver that will run on Windows IoT Core.  More specifically, we will be creating a Kernel Mode Device Framework driver (KMDF) using the Windows Driver Kit (WDK) and the Windows Driver Framework (WDF) APIs.

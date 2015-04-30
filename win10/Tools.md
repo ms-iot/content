@@ -15,7 +15,7 @@ We assume you already [set up your environment]({{site.baseurl}}/GetStarted.htm)
 
 ##Questions/Suggestions
 
-Remember, you can always send [contact us]({{site.baseurl}}/Community.htm) for help and suggestions!
+Remember, you can always send [contact us]({{site.baseurl}}/Community.htm#contact) for help and suggestions!
 
 ##Tools
 
