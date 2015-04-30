@@ -57,7 +57,7 @@ permalink: /win10/SetupMBM.htm
 <div class="row">
     <h2>Update your Firmware</h2>
     <ol class="word-wrap">
-        <li>For the current release, only 32 bit Windows 10 IoT Core is supported.  Download the latest 32-Bit Release pre-built BIOS firmware from <a href="http://uefidk.com/content/minnowboard-max" target="_blank">uefidk.com/content/minnowboard-max</a></li>
+        <li>For the current release, only 32 bit Windows 10 IoT Core is supported.  Download the latest 32-Bit Release pre-built BIOS firmware from <a href="http://firmware.intel.com/projects/minnowboard-max" target="_blank">firmware.intel.com/projects/minnowboard-max</a></li>
         <li>Unzip the downloaded file and copy the following files to a FAT formatted USB stick
             <ul>
                 <li>*.efi</li>
