@@ -235,7 +235,7 @@ Press `F5`
 Turn the potentiometer button around, you will see the number changes on the screen.
 And also, when the number is larger than 2^10/2, the LED will be ON. Otherwise, It gets turned off.
 
-<img src="{{site.baseurl}}/images/Potentiometer/Deploy.png" height="400">
+<img src="{{site.baseurl}}/images/Potentiometer/Deploy.PNG" height="400">
 
 
 </div>
