@@ -56,7 +56,7 @@ permalink: /win10/SetupWVSA.htm
  2. Try downloading an empty sketch (setup and loop only) to make sure that your board and port settings are correct (found under the Tools menu).
 
 ###Set up ArduinoJson library
- 1. From the [ArduinoJson repository](https://github.com/bblanchon/ArduinoJson), clone the reoprsitory or download the zip.
+ 1. From the [ArduinoJson repository](https://github.com/bblanchon/ArduinoJson), clone the repository or download the zip.
  2. Place the whole repository into your libraries folder (i.e. Documents\Arduino\libraries\ArduinoJson\).
 
 ###Set up this repository.
