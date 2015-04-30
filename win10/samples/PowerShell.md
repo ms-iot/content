@@ -55,7 +55,14 @@ Make sure to follow these steps to correctly configure your VM or device running
 
 * **Update account password:**
 
-	It is **highly recommended** that you update the default password for the Administrator account. To do this, you can issue the following command: `net user Administrator [new password]` where `[new password]` represents a strong password of your choice.
+	It is **highly recommended** that you update the default password for the Administrator account. 
+    
+    To do this, issue the following commands in your PowerShell connection: 
+    
+    * `net user Administrator [new password]` where `[new password]` represents a strong password of your choice.  
+
+    * `schtasks /Delete /TN Microsoft\Windows\IoT\Startup /F` (this only needs to be done once)
+
 
 ###Configure your Windows IoT Core device
 
