@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Home
-permalink: /FAQs.htm
+permalink: /Faqs.htm
 ---
 <div class="row col-md-12">
     <div class="col-md-2 col-xs-12 faq-nav section-heading">
