@@ -26,8 +26,8 @@ We also have a LED which indicates the output status. This sample only has C# ve
 
 Below are the pinouts of the MCP3002 and MCP3208 analog-to-digital converters (ADC) used in this sample.
 
-![Electrical Components]({{site.baseurl}}/images/Potentiometer/MCP3002.png)
-![Electrical Components]({{site.baseurl}}/images/Potentiometer/MCP3208.png)
+![Electrical Components]({{site.baseurl}}/images/Potentiometer/MCP3002.PNG)
+![Electrical Components]({{site.baseurl}}/images/Potentiometer/MCP3208.PNG)
 
 * Raspberry Pi 2
 
@@ -39,7 +39,7 @@ Below are the pinouts of the MCP3002 and MCP3208 analog-to-digital converters (A
 
 Detailed connection:
 
-![Overall Schematics]({{site.baseurl}}/images/Potentiometer/OverallCon-3002.png);
+![Overall Schematics]({{site.baseurl}}/images/Potentiometer/OverallCon-3002.PNG);
 
 With each model of Raspberry Pi 2, the pin layout might be a little different. But the pin connection with MCP3002 should be as below:
 
