@@ -49,7 +49,7 @@ permalink: /win10/SetupWVSA.htm
 ###What you need
  1. Arduino IDE 1.6 or better.
  2. ArduinoJson library.
- 3. This repository.
+ 3. This [repository](https://github.com/ms-iot/virtual-shields-arduino).
 
 ###Set up your Arduino IDE
  1. Download and install the [Arduino IDE](http://www.arduino.cc/en/Main/Software).
@@ -60,7 +60,7 @@ permalink: /win10/SetupWVSA.htm
  2. Place the whole repository into your libraries folder (i.e. Documents\Arduino\libraries\ArduinoJson\).
 
 ###Set up this repository.
- 1. Clone this repository or download the zip.
+ 1. Clone this [repository](https://github.com/ms-iot/virtual-shields-arduino) or download the zip.
  2.	Copy the Arduino/libraries/VirtualShield folder from your repository to your Arduino library (i.e. Documents\Arduino\libraries\VirtualShield\).
 
 ###Test your setup
