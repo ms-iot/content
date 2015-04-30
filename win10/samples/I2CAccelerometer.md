@@ -16,7 +16,7 @@ This is a headed sample.  To better understand what headed mode is and how to co
 
 You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/I2CAccelerometer).  Make a copy of the folder on your disk and open the project from Visual Studio.
 
-Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/Win10/Samples/HelloWorld.htm) if you need guidance.
+Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/win10/samples/HelloWorld.htm) if you need guidance.
 
 If you're building for Minnowboard Max, select `x86` in the architecture dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
 
@@ -30,7 +30,7 @@ You'll need a few components:
 
 * a breadboard and a couple of male-to-female connector wires
 
-* If you are using a MinnowBoard Max, you'll need a 100 &#x2126; resistor (this is a workaround for a [known I2C hardware issue]({{site.baseurl}}/Win10/Samples/PinMappingsMBM.htm))
+* If you are using a MinnowBoard Max, you'll need a 100 &#x2126; resistor (this is a workaround for a [known I2C hardware issue]({{site.baseurl}}/win10/samples/PinMappingsMBM.htm))
 
 Visit the **Raspberry Pi 2/MinnowBoard Max** sections below depending on which device you have:
 
@@ -39,7 +39,7 @@ Visit the **Raspberry Pi 2/MinnowBoard Max** sections below depending on which d
 ####Raspberry Pi 2
 If you have a Raspberry Pi 2, we need to hook up power, ground, and the I2C lines to the accelerometer.
 Those familiar with I2C know that normally pull-up resistors need to be installed. However, the Raspberry Pi 2 already has pull-up resistors on its I2C pins, so we don't need to add any additional external pull-ups here.
- See the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/Win10/Samples/PinMappingsRPi2.htm) for more details on the RPi2 IO pins.
+ See the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/win10/samples/PinMappingsRPi2.htm) for more details on the RPi2 IO pins.
 
 **Note: Make sure to power off the RPi2 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
 
@@ -66,7 +66,7 @@ Here are the schematics:
 
 ####MinnowBoard Max
 If you have a MinnowBoard Max, we need to hook up power, ground, and the I2C lines to the accelerometer. Those familiar with I2C know that normally pull-up resistors need to be installed. However, the MBM already has 10K pull-up resistors on its IO pins, so we don't need to add any additional external pull-ups here.
- See the [MBM pin mapping page]({{site.baseurl}}/Win10/Samples/PinMappingsMBM.htm) for more details on the MBM IO pins.
+ See the [MBM pin mapping page]({{site.baseurl}}/win10/samples/PinMappingsMBM.htm) for more details on the MBM IO pins.
 
 **Note: Make sure to power off the MBM when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
 

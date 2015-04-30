@@ -89,8 +89,8 @@ permalink: /win10/SetupRPI.htm
         <li>On the very first boot the Windows IoT Core will do some first boot configurations and it will display a default blue colored application while this is happening. Wait for a few minutes and the board will automatically restart. This will happen only once and then DefaultApp should come up, displaying the IP address of the Raspberry Pi 2.
             <br /><br /><ul><img class="device-images" src="{{site.baseurl}}/images/DefaultAppRpi2.png"></ul><br />
         </li>
-        <li>Follow the instructions <a href="{{site.baseurl}}/win10/Samples/PowerShell.htm">here</a> to use PowerShell to connect to your running device.</li>
-        <li>It is <b>highly recommended</b> that you update the default password for the Administrator account.  Please follow the instructions found in the <a href="{{site.baseurl}}/win10/Samples/PowerShell.htm">PowerShell</a> documentation.</li>
+        <li>Follow the instructions <a href="{{site.baseurl}}/win10/samples/PowerShell.htm">here</a> to use PowerShell to connect to your running device.</li>
+        <li>It is <b>highly recommended</b> that you update the default password for the Administrator account.  Please follow the instructions found in the <a href="{{site.baseurl}}/win10/samples/PowerShell.htm">PowerShell</a> documentation.</li>
         <li>Remote Debugger will launch automatically when your Raspberry Pi 2 boots. </li>
     </ol>
 </div>

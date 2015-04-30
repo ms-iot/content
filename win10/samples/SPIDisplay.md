@@ -16,7 +16,7 @@ This is a headed sample.  To better understand what headed mode is and how to co
 
 You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/SPIDisplay).  Make a copy of the folder on your disk and open the project from Visual Studio.
 
-Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/Win10/Samples/HelloWorld.htm) if you need guidance.
+Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/win10/samples/HelloWorld.htm) if you need guidance.
 
 Note that this app requires a device with a physical SPI port and will not work if running in an emulated environment.
 
@@ -33,7 +33,7 @@ Visit the **Raspberry Pi 2/MinnowBoard Max** sections below depending on which d
 ![Electrical Components]({{site.baseurl}}/images/SPIDisplay/components.png)
 
 ####Raspberry Pi 2
-For the Raspberry Pi 2, we need to hook up power, ground, SPI, and a few GPIO pins to the OLED display. For additional information on the Raspberry Pi 2 pins, visit the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/Win10/Samples/PinMappingsRPi2.htm)
+For the Raspberry Pi 2, we need to hook up power, ground, SPI, and a few GPIO pins to the OLED display. For additional information on the Raspberry Pi 2 pins, visit the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/win10/samples/PinMappingsRPi2.htm)
 
 **Note: Make sure to power off the RPi2 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
 

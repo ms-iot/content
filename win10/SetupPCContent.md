@@ -6,11 +6,11 @@ We have created a versions file describing the supported versions of the require
 
 * Install Visual Studio 2015 Preview from [here](https://dev.windows.com/en-US/downloads/install-dev-tools-visual-studio-2015).  Choose the Custom option when you kick off the installer, and then check the option to install the Windows 10 tools.
 
-* Install the IoT tools MSI from any of the Windows 10 IoT Core Insider Preview Image files [here]({{site.downloadurl}})
+* Install WindowsDeveloperProgramForIoT.msi.  It can be found inside any of the Windows 10 IoT Core Insider Preview Image files (for example, `Windows 10 IoT Core Insider Preview Image for Raspberry Pi 2.zip`) [here]({{site.downloadurl}})
 
 * At this point, you are ready to develop apps.  Notice that the Windows IoT Core Watcher application automatically starts when you log on.  It can be used to find available Windows 10 IoT Core devices to deploy apps to.
 
-    <img class="device-images" src="{{site.baseurl}}/images/IoTCoreWatcher.png">
+    <img class="device-images" src="{{site.baseurl}}/images/IoTCoreWatcher.PNG">
 
 ### Connecting your Windows 10 IoT Core device directly to your PC & setting up Internet Connection Sharing (ICS)
 
