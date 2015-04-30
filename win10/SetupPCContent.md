@@ -2,13 +2,11 @@
 
 We have created a versions file describing the supported versions of the required tools.  Use this as a blueprint for installing the required tools on your PC:
 
-* Install Windows 10 from [here]({{site.downloadurl}})
+* Install Windows 10 from [here](https://dev.windows.com/en-US/downloads/windows-10-developer-tools)
 
-* Install Visual Studio 2015 Preview from [here]({{site.downloadurl}}).  Choose the Custom option when you kick off the installer, and then check the option to install the Windows 10 tools.
+* Install Visual Studio 2015 Preview from [here](https://dev.windows.com/en-US/downloads/install-dev-tools-visual-studio-2015).  Choose the Custom option when you kick off the installer, and then check the option to install the Windows 10 tools.
 
-* If you are planning to develop drivers, install the WDK from [here]({{site.downloadurl}})
-
-* Install the IoT tools MSI from [here]({{site.downloadurl}})
+* Install the IoT tools MSI from any of the Windows 10 IoT Core Insider Preview Image files [here]({{site.downloadurl}})
 
 * At this point, you are ready to develop apps.  Notice that the Windows IoT Core Watcher application automatically starts when you log on.  It can be used to find available Windows 10 IoT Core devices to deploy apps to.
 
