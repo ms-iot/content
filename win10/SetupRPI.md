@@ -54,7 +54,7 @@ permalink: /win10/SetupRPI.htm
     <p>Follow these instructions to configure your SD card:</p>
     <ol class="word-wrap">
         <li>NOTE: you will need to follow these instructions on a physical Windows machine (and not a VM) because you need access to the SD card reader.</li>
-        <li>Please download the package "Windows 10 IoT Core Insider Preview Image for Raspberry Pi 2" from the Microsoft Connect downloads folder <a href="http://connect.microsoft.com/windowsembeddedIoT/Downloads/" target="_blank">here</a>. If you see a blank page or no downloads listed, please make sure you are signed into Microsoft Connect by looking at your login information at top right part of the screen. If you did not sign up to the Connect program, please refer to the instructions in the "What you need" section.</li>
+        <li>Please download the package "Windows 10 IoT Core Insider Preview Image for Raspberry Pi 2" from the Microsoft Connect <a href="http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57782" target="_blank">here</a>. If you see a blank page or no downloads listed, please make sure you are signed into Microsoft Connect by looking at your login information at top right part of the screen. If you did not sign up to the Microsoft Connect program, please refer to the instructions in the "What you need" section above.</li>
         <li>Make a local copy of the flash.ffu contained in the downloaded package "Windows 10 IoT Core Insider Preview Image for Raspberry Pi 2".</li>
         <li>Insert an SD card into your SD card reader.</li>
         <li>Open an admininistrator command prompt and navigate to the folder containing your local flash.ffu.</li>
