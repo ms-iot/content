@@ -106,7 +106,7 @@ permalink: /win10/SetupMBM.htm
     <p>Follow these instructions to configure your SD card:</p>
     <ol class="word-wrap">
         <li>NOTE: you will need to follow these instructions on a physical Windows machine (and not a VM) because you need access to the SD card reader.</li>
-        <li>Make a local copy of the flash.ffu contained in Windows_IoT_Core_MBM_BUILD.zip found [here]({{site.downloadurl}})S</li>
+        <li>Make a local copy of the flash.ffu contained in Windows_IoT_Core_MBM_BUILD.zip found <a href="{{site.downloadurl}}" target="_blank">here</a></li>
         <li>Insert an SD card into your SD card reader.</li>
         <li>Open an admininistrator command prompt and navigate to the folder containing your local flash.ffu.</li>
         <li>

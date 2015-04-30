@@ -19,11 +19,11 @@ You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/M
 Select the template 'Blank Windows IoT Core Console Application'<br/>
 Remember to give a good name to your first app! In this example, we called the project 'MemoryStatus'.
 
-    ![Console Application Template Location]({{site.baseurl}}/images/console/new_cpp_console_proj.png)
+    ![Console Application Template Location]({{site.baseurl}}/images/Console/new_cpp_console_proj.png)
 
 * Let's add some content to the console application. From Solution Explorer, select the 'ConsoleApplication.cpp' file.
 
-    ![ConsoleApplication File]({{site.baseurl}}/images/console/console_application.png)
+    ![ConsoleApplication File]({{site.baseurl}}/images/Console/console_application.png)
 
 * To add some functionality to our console, add the following memory status query and display code:
 <UL>
@@ -129,17 +129,17 @@ int main(int argc, char **argv)
 
     In Visual Studio, you can configure your target by editing your project's properties (be sure to make all of the highlighted changes as appropriate to your board's name or IP address):
 
-    ![RemoteMachineProjectSettings Target]({{site.baseurl}}/images/console/console_project_settings.png)
+    ![RemoteMachineProjectSettings Target]({{site.baseurl}}/images/Console/console_project_settings.png)
 
         Note: You can use the IP address instead of the Windows IoT Core device name.
 
 * The project configuration needs to be modified to enable deployment.  To do this, open the Configuration Manager by selecting the Configuration manger from the Solution Configuration drop-down menu on the toolbar.
 
-    ![SolutionConfiguration Target]({{site.baseurl}}/images/console/configuration_management.png)
+    ![SolutionConfiguration Target]({{site.baseurl}}/images/Console/configuration_management.png)
 
     From the Configuration Manager, ensure that the Deploy checkbox is selected for your project configuration (if this options is disabled, it is likely that the deployment options have not been fully entered into the Debugging tab of the project properties)
 
-    ![RemoteMachineProjectSettings Target]({{site.baseurl}}/images/console/deploy_checkbox.png)
+    ![RemoteMachineProjectSettings Target]({{site.baseurl}}/images/Console/deploy_checkbox.png)
 
 * Now we're ready to deploy to the remote Windows IoT Core device. Simply press F5 (or select Debug \| Start Debugging) to start debugging our app. You can also use Build \| Deploy Solution to simply deploy your application without starting a debug session.
 
@@ -151,6 +151,6 @@ int main(int argc, char **argv)
 
 * You can now run the application as you would any other application.  Simply open a PowerShell connection (instructions can be found [here]({{site.baseurl}}/win10/samples/PowerShell.htm)) and enter the Remote Command you specified above.
 
-    ![ConsoleOutput Target]({{site.baseurl}}/images/console/console_output.png)
+    ![ConsoleOutput Target]({{site.baseurl}}/images/Console/console_output.png)
 
 </div>
