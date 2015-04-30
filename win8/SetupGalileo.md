@@ -31,7 +31,7 @@ permalink: /win8/SetupGalileo.htm
 </div>
 <div class="col-md-12" markdown="1">
 ## Step 1: Sign up for Microsoft Connect
-We release Windows for Galileo through the Microsoft Connect program.  Please go to the [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"} site to sign up.  You can find step-by-step instructions for signing up for Microsoft Connect [here](SigninMSConnect.htm){:target="_blank"}.
+We release Windows for Galileo through the Microsoft Connect program.  Please go to the [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"} site to sign up.  You can find step-by-step instructions for signing up for Microsoft Connect [here]({{site.baseurl}}/SigninMSConnect.htm){:target="_blank"}.
 
 ## Creating a Microsoft Windows bootable microSD card
 
