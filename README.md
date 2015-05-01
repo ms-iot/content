@@ -3,7 +3,7 @@ Please refer to our [contribution page](http://ms-iot.github.io/content/Contribu
 
 #Contributing to documentation
 ### Setting up Jekyll on Windows
-1. We use this easy to follow [Jekyll on Windows"](http://jekyllrb.com/docs/windows/) guide. Use the pygments option when you go through the install.
+1. We use this easy to follow [Jekyll on Windows](http://jekyllrb.com/docs/windows/) guide. Use the pygments option when you go through the install.
 
 ### Iterating on documentation
 1. Using Command Prompt, from within the content folder start a local server:
