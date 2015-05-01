@@ -205,8 +205,10 @@ Manually compiling a WinRT component library produces .winmd and .dll files whic
  ![Locate Reference tags]({{site.baseurl}}/images/remote-wiring/ref_08.png)
 
 - You must add two tags to each of these `<Reference>` tags below the `<HintPath>` tag.<br/>
- `<IsWinMDFile>true</IsWinMDFile>`<br/>
- `<Implementation>%PROJECT%.dll</Implementation>`<br/>
+{% highlight XML %}
+ `<IsWinMDFile>true</IsWinMDFile>
+ `<Implementation>%PROJECT%.dll</Implementation>
+{% endhighlight %}
  Where *%PROJECT%* is the name of the project appropriate for that `<Reference>` tag. I have added all three here (although only one is highlighted). So you can add the text to match exactly what I have in the screenshot below. It does not matter where you have installed your projects, the `<HintPath>` tag takes care of that for us.
 
  ![Additional Tags]({{site.baseurl}}/images/remote-wiring/ref_09.png)
@@ -234,30 +236,32 @@ You will need to open the package.appxmanifest file of your project by right-cli
 ####Note:
 For **Windows 8.1**, you will need to add the following namespace to the top of the XML file, inside the `<Package>` tag.
 
-`xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest"`
+{% highlight XML %}
+xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest"
+{% endhighlight %}
 
 ##Enabling Bluetooth Capabilities
 You will need to add one of the following XML blocks to your manifest file, inside the <Capabilities> tag, in order to invoke the Bluetooth/USB capabilities of a WinRT application, depending on which OS version you are targetting.
 
 ###Windows 10
 
-```
+{% highlight XML %}
 <DeviceCapability Name="bluetooth.rfcomm">
   <Device Id="any">
     <Function Type="name:serialPort"/>
   </Device>
 </DeviceCapability>
-```
+{% endhighlight %}
 
 ###Windows 8.1
 
-```
+{% highlight XML %}
 <m2:DeviceCapability Name="bluetooth.rfcomm">
   <m2:Device Id="any">
     <m2:Function Type="name:serialPort"/>
   </m2:Device>
 </m2:DeviceCapability>
-```
+{% endhighlight %}
 
 
 ##Enabling USB Capabilities
@@ -265,22 +269,23 @@ You will need to add one of the following XML blocks to your manifest file in or
 
 ###Windows 10
 
-```
+{% highlight XML %}
 <DeviceCapability Name="serialcommunication">
   <Device Id="any">
     <Function Type="name:serialPort"/>
   </Device>
 </DeviceCapability>
-```
+{% endhighlight %}
 
 ###Windows 8.1
 
-```
+{% highlight XML %}
 <m2:DeviceCapability Name="serialcommunication">
   <m2:Device Id="any">
     <m2:Function Type="name:serialPort"/>
   </m2:Device>
 </m2:DeviceCapability>
-```
+{% endhighlight %}
+
 
  </div>

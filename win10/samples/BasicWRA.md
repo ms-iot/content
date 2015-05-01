@@ -41,16 +41,19 @@ You can always use a USB connection to get started, but let's cover simple hook 
 
 - You will need the following parts:
 	* An Arduino (Uno pictured here)
-	* A Bluetooth device ([Sparkfun Mate Silver](https://www.sparkfun.com/products/12576) pictured here)
+	* A Bluetooth device ([Sparkfun Mate Silver](https://www.sparkfun.com/products/12576) pictured here) **OR** a USB Cable
 	* A breadboard
 	* A 330Ω resistor
 	* An LED
 	* A few wires
+	<br/>
 	
 	![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/parts.JPG)
 	
 
 ###Set up
+
+This section will cover how to hook up a Bluetooth device and an LED in order to use Windows Remote Arduino to toggle the LED. You can skip the Bluetooth connection steps if you prefer to use USB!
 
 - Connect the power and ground rails on the breadboard to the 5V and GND pins, respectively, on the Arduino. Using color coded wires (red and black) will make it easy to keep track of the power connections.
 
@@ -83,7 +86,7 @@ You can always use a USB connection to get started, but let's cover simple hook 
 
  ![LED Power]({{site.baseurl}}/images/remote-wiring/samples/basic/step06.JPG)
 
-- You setup is now ready! It should look similar to the setup shown in the image below.
+- You setup is now ready! It should look similar to the setup shown in the image below. Again, if you would prefer to use USB, you may not have the serial wire connections shown here.
 
  ![Finished]({{site.baseurl}}/images/remote-wiring/samples/basic/final.JPG)
 
@@ -98,7 +101,28 @@ Now that we're all set up, let's get into some code!
 
  ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project00.png)
 
-- Next, I'm going to add a callback function to the ConnectionEstablished event on the BluetoothSerial object. This function will automatically be called when the Bluetooth device is connected. You'll notice that I haven't implemented anything in that function this time. Last, call `.begin()` on the connection object to tell it to connect.
+###Note for USB:
+ `USBSerial` has many options available to specify your device. In the constructor, you can provide the VID and PID of your device, the VID only, or a `DeviceInformation` object (obtained from the above mentioned `listAvailableDevicesAsync` function). Similarly, `BluetoothSerial` allows you to provide a device id (as a string), device name (also a string), or the `DeviceInformation` object.
+ 
+You can obtain the VID & PID combination of your USB device by following these steps:
+<ul>
+<li>Open Device Manager through the Control Panel or by pressing both <i>Windows + Pause</i> keys and choosing the <i>Device Manager</i> link on the left.</li>
+<li>Expand the <i>Ports (COM & LPT)</i> menu</li>
+<li>Right-click your Arduino Device and select Properties</li>
+<li>On the <i>Details</i> tab, select <i>Hardware Ids</i> from the drop-down menu.</li>
+<li>You may see multiple entries in the <i>Value</i> box, but any entries will have matching PID and VID.</li>
+<li>The entries will have the format "USB\VID_****&PID_****" where **** are the numeric ID values.</li>
+<li>You can put in *just* the numbers, or also include "VID_" to guarantee you will correctly identify the device. For example:<br/></li>
+</ul>
+`USBSerial usb = new USBSerial( "VID_2341", "PID_0043" );`<br/>
+is guaranteed to work **only** for the following hardware device:
+	
+![USB Device]({{site.baseurl}}/images/remote-wiring/samples/basic/vidpid.png)
+
+- Next, I'm going to add a callback function to the ConnectionEstablished event on the BluetoothSerial object. This function will automatically be called when the Bluetooth device is connected. You'll notice that I haven't implemented anything in that function at this time. Last, call `.begin()` on the connection object to tell it to connect.
+
+###Note for USB:
+The USBSerial class still has a ConnectionEstablished event that you can subscribe to. It will always be invoked at the proper time in both classes, so you are absolutely able to reuse your code in either scenario! The rest of the example will work exactly the same regardless of which connection type you are using!
 
  ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project01.png)
 
@@ -108,7 +132,7 @@ Now that we're all set up, let's get into some code!
 
 - I've implemented three functions in this step. First, the `OnConnectionEstablished` function now enables the buttons on the UI thread! This guarantees that the buttons will be enabled only when the Bluetooth connection is ready, as it typically takes a few seconds for this to happen.
 
- I've also set up the `.digitalWrite()` calls in the button callbacks `OnButton_Click` and `OffButton_Click`
+- I've also set up the `.digitalWrite()` calls in the button callbacks `OnButton_Click` and `OffButton_Click`
 
  ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project04.png)
 
