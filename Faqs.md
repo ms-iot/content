@@ -8,7 +8,7 @@ permalink: /Faqs.htm
         <h1>FAQs</h1>
         <a href="#rpi2"><h4>Setting up Raspberry Pi 2</h4></a>
 
-        <a href="#uap"><h4>UAP apps</h4></a>
+        <a href="#uwp"><h4>UWP apps</h4></a>
 
         <a href="#features"><h4>Features</h4></a>
 
@@ -20,6 +20,9 @@ permalink: /Faqs.htm
     <div class="col-md-8 col-md-offset-4 col-xs-8 col-xs-offset-4 section-heading">
         <a name="rpi2"></a>
         <h2 class="faq-h2">Setting up Raspberry Pi</h2>
+        <p><em>I can't download the Windows 10 IoT Core Insider Preview image for Raspberry Pi. I see a blank screen.</em></p>
+        <p>We release the Windows 10 IoT Core for Raspberry Pi 2 through our program on Microsoft Connect, which also provides a platform for bug reporting and providing feedback. To be able to download the image, you need to be signed up for our program on Microsoft Connect <u>and</u> signed in. If you have not signed up for our program on Microsoft Connect yet, please <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558" target="_blank">click here to sign up</a>. You can find step-by-step instructions for signing up or using Microsoft Connect <a href="http://ms-iot.github.io/content/SigninMSConnect.htm" target="_blank">here</a>. If you have already signed up for this program on Microsoft Connect, and try to sign up again, don't worry. You will just see a blank page.</p>
+        <p>Please make sure you are signed in to Microsoft Connect before trying to download the image.</p>
         <p><em>Why does my screen appear cropped or stretched?</em></p>
         <p>This can happen on some monitors.   To work around this force the board into DVI mode (vs. HDMI mode).  You can read more about this <a href='https://www.raspberrypi.org/forums/viewtopic.php?t=5851'>here</a>. Mount the SD card to a local PC and proceed to edit the file in the EFIESP partition. For example if the partition is mark as H drive, edit H:\config.txt by adding the following line.<br/><br/>
         hdmi_group=2                # forces DVI timing to be used
@@ -28,8 +31,8 @@ permalink: /Faqs.htm
 		<p><em>Why does my SD card have to be 8gb, do you really need all that space?</em></p>
         <p>The IoT Core image is under 1gb, the 8gb is meant to give you space to install additional content on your device.</p>
         <br />
-        <a name="uap"></a>
-        <h2 class="faq-h2">UAP Apps</h2>
+        <a name="uwp"></a>
+        <h2 class="faq-h2">Universal Windows Platform (UWP) Apps</h2>
         <p><em>Are true console apps supported on Windows 10 IoT Core?</em></p>
         <p>True “console” apps aren’t really going to be supported for the IoT core OS, headless or not. You can still deploy and run a standard win32 console app here, it just won’t be connected to any on-device console. When running headless you should just get that black screen. When running headed the only supported UI is via the UWP UI stacks (XAML, HTML, DirectX).</p>
         <br />
@@ -67,6 +70,10 @@ permalink: /Faqs.htm
         <p><em>My C++ or Python Background Application is building and deploying successfully, but hangs indefinitely after launching.  How do I resolve this?</em></p>
         <p>There is a known issue being actively investigated that sporadically occurs on some SD cards.  This can be worked around using the following command via a PowerShell session with the device:
         <div><b>reg add "hklm\software\microsoft\visualstudio\debugger" /v EmulateExclusiveBreakpoints /t REG_DWORD /d 0</b></div>        </p>
+        <br />
+        <p><em>My C#/VB UAP App successfully builds, deploys and launches using Visual Studio, but when I use iotstartup.exe to make my App the 'Startup App' all I see is the splash screen.  How do I resolve this?</em></p>
+        <p>There is a known issue being actively investigated that occurs with C#/VB Apps as the 'Startup App'.  This can be worked around by changing your App's configuration to Release (rather than Debug) and redeploying 
+        to your device.  Note that another workaround is to use C++ rather than C#/VB.</p>
         <br />
     </div>
 </div>
