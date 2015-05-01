@@ -41,16 +41,19 @@ You can always use a USB connection to get started, but let's cover simple hook 
 
 - You will need the following parts:
 	* An Arduino (Uno pictured here)
-	* A Bluetooth device ([Sparkfun Mate Silver](https://www.sparkfun.com/products/12576) pictured here)
+	* A Bluetooth device ([Sparkfun Mate Silver](https://www.sparkfun.com/products/12576) pictured here) OR a USB Cable
 	* A breadboard
 	* A 330Ω resistor
 	* An LED
 	* A few wires
+	<br/>
 	
 	![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/parts.JPG)
 	
 
 ###Set up
+
+This section will cover how to hook up a Bluetooth device and an LED in order to use Windows Remote Arduino to toggle the LED. You can skip the Bluetooth connection steps if you prefer to use USB!
 
 - Connect the power and ground rails on the breadboard to the 5V and GND pins, respectively, on the Arduino. Using color coded wires (red and black) will make it easy to keep track of the power connections.
 
@@ -83,7 +86,7 @@ You can always use a USB connection to get started, but let's cover simple hook 
 
  ![LED Power]({{site.baseurl}}/images/remote-wiring/samples/basic/step06.JPG)
 
-- You setup is now ready! It should look similar to the setup shown in the image below.
+- You setup is now ready! It should look similar to the setup shown in the image below. Again, if you would prefer to use USB, you may not have the serial wire connections shown here.
 
  ![Finished]({{site.baseurl}}/images/remote-wiring/samples/basic/final.JPG)
 
@@ -97,8 +100,26 @@ Now that we're all set up, let's get into some code!
  I've set up a project called RemoteBlinky by following the steps in the setup guide. In the screenshot below, you will see the code-behind file MainPage.xaml.cs which simply creates a Bluetooth connection object and passes it to the RemoteDevice class in the constructor. You'll see that I've specified my device name in this example. You may also enumerate the available devices by invoking the static `.listAvailableDevicesAsync()` function on BluetoothSerial (and USBSerial) class before constructing your object.
 
  ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project00.png)
+ 
+ ####Note for USB:
+ `USBSerial` has many options available to specify your device. In the constructor, you can provide the VID and PID of your device, the VID only, or a `DeviceInformation` object (obtained from the above mentioned `listAvailableDevicesAsync` function). Similarly, `BluetoothSerial` allows you to provide a device id (as a string), device name (also a string), or the `DeviceInformation` object.
+ 
+ You can obtain the VID & PID combination of your USB device by following these steps:
+ 1. Open Device Manager through the Control Panel or by pressing both *Windows + Pause* keys and choosing the *Device Manager* link on the left.
+ 2. Expand the *Ports (COM & LPT)* menu
+ 3. Right-click your Arduino Device and select Properties
+ 4. On the *Details* tab, select *Hardware Ids* from the drop-down menu.
+ 5. You may see multiple entries in the *Value* box, but any entries will have matching PID and VID.
+ 6. The entries will have the format "USB\VID_****&PID_****" where **** are the numeric ID values.
+ 7. You can put in *just* the numbers, or also include "VID_" to guarantee you will correctly identify the device. For example:
+    `USBSerial usb = new USBSerial( "VID_2341", "PID_0043" );` is guaranteed to work **only** for the following hardware device.
+	
+	![USB Device]({{site.baseurl}}/images/remote-wiring/samples/basic/vidpid.png)
 
-- Next, I'm going to add a callback function to the ConnectionEstablished event on the BluetoothSerial object. This function will automatically be called when the Bluetooth device is connected. You'll notice that I haven't implemented anything in that function this time. Last, call `.begin()` on the connection object to tell it to connect.
+- Next, I'm going to add a callback function to the ConnectionEstablished event on the BluetoothSerial object. This function will automatically be called when the Bluetooth device is connected. You'll notice that I haven't implemented anything in that function at this time. Last, call `.begin()` on the connection object to tell it to connect.
+
+ ####Note for USB:
+ The USBSerial class still has a ConnectionEstablished event that you can subscribe to. It will always be invoked at the proper time in both classes, so you are absolutely able to reuse your code in either scenario! The rest of the example will work exactly the same regardless of which connection type you are using!
 
  ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project01.png)
 

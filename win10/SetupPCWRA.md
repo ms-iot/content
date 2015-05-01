@@ -241,23 +241,20 @@ You will need to add one of the following XML blocks to your manifest file, insi
 
 ###Windows 10
 
-```
-<DeviceCapability Name="bluetooth.rfcomm">
-  <Device Id="any">
-    <Function Type="name:serialPort"/>
-  </Device>
-</DeviceCapability>
-```
+
+`<DeviceCapability Name="bluetooth.rfcomm">`<br/>
+`  <Device Id="any">`<br/>
+`    <Function Type="name:serialPort"/>`<br/>
+`  </Device>`<br/>
+`</DeviceCapability>`<br/>
 
 ###Windows 8.1
 
-```
-<m2:DeviceCapability Name="bluetooth.rfcomm">
-  <m2:Device Id="any">
-    <m2:Function Type="name:serialPort"/>
-  </m2:Device>
-</m2:DeviceCapability>
-```
+`<m2:DeviceCapability Name="bluetooth.rfcomm">`<br/>
+`  <m2:Device Id="any">`<br/>
+`    <m2:Function Type="name:serialPort"/>`<br/>
+`  </m2:Device>`<br/>
+`</m2:DeviceCapability>`<br/>
 
 
 ##Enabling USB Capabilities
@@ -265,22 +262,19 @@ You will need to add one of the following XML blocks to your manifest file in or
 
 ###Windows 10
 
-```
-<DeviceCapability Name="serialcommunication">
-  <Device Id="any">
-    <Function Type="name:serialPort"/>
-  </Device>
-</DeviceCapability>
-```
+`<DeviceCapability Name="serialcommunication">`<br/>
+`  <Device Id="any">`<br/>
+`    <Function Type="name:serialPort"/>`<br/>
+`  </Device>`<br/>
+`</DeviceCapability>`<br/>
 
 ###Windows 8.1
 
-```
-<m2:DeviceCapability Name="serialcommunication">
-  <m2:Device Id="any">
-    <m2:Function Type="name:serialPort"/>
-  </m2:Device>
-</m2:DeviceCapability>
-```
+`<m2:DeviceCapability Name="serialcommunication">`<br/>
+`  <m2:Device Id="any">`<br/>
+`    <m2:Function Type="name:serialPort"/>`<br/>
+`  </m2:Device>`<br/>
+`</m2:DeviceCapability>`<br/>
+
 
  </div>
