@@ -71,5 +71,9 @@ permalink: /Faqs.htm
         <p>There is a known issue being actively investigated that sporadically occurs on some SD cards.  This can be worked around using the following command via a PowerShell session with the device:
         <div><b>reg add "hklm\software\microsoft\visualstudio\debugger" /v EmulateExclusiveBreakpoints /t REG_DWORD /d 0</b></div>        </p>
         <br />
+        <p><em>My C#/VB UAP App successfully builds, deploys and launches using Visual Studio, but when I use iotstartup.exe to make my App the 'Startup App' all I see is the splash screen.  How do I resolve this?</em></p>
+        <p>There is a known issue being actively investigated that occurs with C#/VB Apps as the 'Startup App'.  This can be worked around by changing your App's configuration to Release (rather than Debug) and redeploying 
+        to your device.  Note that another workaround is to use C++ rather than C#/VB.</p>
+        <br />
     </div>
 </div>
