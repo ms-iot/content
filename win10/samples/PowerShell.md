@@ -31,6 +31,10 @@ Make sure to follow these steps to correctly configure your VM or device running
 
     ![PowerShell console]({{site.baseurl}}/images/powershell/ps.PNG)
 
+* Note: you may need to start the WinRM service on your desktop to enable remote connections. From the PS console type the following command:
+
+        net start WinRM
+
 * From the PS console, type the following, substituting `<machine-name or IP Address>` with the appropriate value (using your **machine-name** is the easiest to use, but if your device is not uniquely named on your network, try the IP address):
 
         Set-Item WSMan:\localhost\Client\TrustedHosts -Value <machine-name or IP Address>
@@ -40,10 +44,6 @@ Make sure to follow these steps to correctly configure your VM or device running
 * Note: there is a known issue with PS that can cause a StackOverflowException on the PS client machine.  To work around this type the following line before the Enter-PsSession:
 
         remove-module psreadline -force
-
-* Note: you may need to start the WinRM service on your desktop to enable remote connections using the following command:
-
-        net start WinRM
 
 * Now you can start a session with you Windows IoT Core device. From you administrator PS console, type:
 
