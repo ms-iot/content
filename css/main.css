@@ -45,12 +45,12 @@ body {
             line-height: 56px;
         }
 
-            .content-container > .row > h1 + div {
-                font-size: 24px;
-                font-weight: lighter;
-                line-height: 28px;
-                color: #6d6d6d;
-            }
+        .content-container > .row > h1 + div {
+            font-size: 24px;
+            font-weight: lighter;
+            line-height: 28px;
+            color: #6d6d6d;
+        }
 
 .chrome-header-wrapper .shell-header-wrapper, .chrome-footer-wrapper .shell-footer-wrapper {
     max-width: 1206px !important;
@@ -115,6 +115,14 @@ a.btn-get-started {
         color: #FFF;
     }
 
+a:link else, a:visited {
+    color: #0078D7;
+}
+
+a:link {
+    color: #006cd8;
+}
+
 .btn-build {
     background-color: #9E9E9E;
     color: #fff;
@@ -159,9 +167,9 @@ a.btn-get-started {
     margin-top: 50px;
 }
 
-.iot-site-footer > .row > div > p {
-    margin-bottom: 20px;
-}
+    .iot-site-footer > .row > div > p {
+        margin-bottom: 20px;
+    }
 
 /* ------ icons for landing page ------ */
 
@@ -304,7 +312,7 @@ a:hover {
 /* ---- End Media Query ---- */
 
 .device {
-    padding-left:0;
+    padding-left: 0;
 }
 
 .device-wrapper {
