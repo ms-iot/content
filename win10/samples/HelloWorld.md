@@ -103,6 +103,8 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 
 * You can also set this HelloWorld app to be the 'Startup App' for your Windows IoT Core device, so that when the device reboot, it will start HelloWorld automatically. To do so, you'll need to run a command line utility called iotstartup on the Windows IoT Core device. We will do this using PowerShell.
 
+        NOTE: We are working on a bug that currently affects C#/VB Debug projects.  Please only use iotstartup to configure Release projects.
+
 * Start a PowerShell (PS) session with your Windows IoT Core device as described [here]({{site.baseurl}}/win10/samples/PowerShell.htm).
 
 * From the PS session, type:
@@ -118,14 +120,10 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 * Now, it's easy to set this app as the 'Startup App'. Just type the command:
 
         iotstartup add headed HelloWorld
-
-    NOTE: We are working on a bug that currently affects C#/VB Debug projects.  Please only use iotstartup to configure Release projects.
     
     The utility will confirm that the new Startup headed app is now HelloWorld:
 
         AppId changed to HelloWorld_n2pe7ts0w7wey!App
-
-    
 
 * Go ahead and restart your Windows IoT Core device. From the PS session, you can issue the shutdown command:
 
