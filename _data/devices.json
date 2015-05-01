@@ -10,7 +10,7 @@
     {
         "name": "MinnowBoard Max",
         "link": "win10/SetupMBM.htm",
-        "buy": "http://avnetexpress.avnet.com/store/em/EMController?langId=-1&storeId=500201&catalogId=500201&term=msdev&searchType=&advAction=&N=0&Ne=100000&action=products&x=0&y=0",
+        "buy-inter": "win10/BuyMBM.htm",
         "image": "MBM_0.png",
         "text": "MinnowBoard MAX is an open hardware embedded board with the Intel Atom E38XX series SOC at its core. MinnowBoard MAX supports Windows 10 IoT Core Insider Preview.",
         "buy-text": "Buy a MinnowBoard Max"
