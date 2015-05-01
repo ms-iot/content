@@ -37,7 +37,7 @@ permalink: /Faqs.htm
         <p>In a later builds of windows there will be a settings page "For developers" that will allow you to control this.  Until then you can work around this using the Group Policy editor. </br>
         <ol>
         <li>Run Gpedit.msc </li>
-	<li>Under: Local Computer Policy > Computer Configuration > Administrative Templates > Windows Components > App Package Deployment</li>
+	<li>Under [Local Computer Policy > Computer Configuration > Administrative Templates > Windows Components > App Package Deployment] enable the following policies:</li>
 	<ul><li>Allow all trusted apps to install (will enable sideloading of trust signed apps such as for enterprise apps)</li>
 	<li>Allow development of Windows Store apps without installing a developer license (will enable developer F5 mode installs like the dev license would on win8.1)</li>
 	</ul></ol>
