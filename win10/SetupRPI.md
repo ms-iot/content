@@ -78,8 +78,7 @@ permalink: /win10/SetupRPI.htm
     <h2>Hook up your Board</h2>
     <ol class="word-wrap">
         <li>Insert micro SD card you prepared in the section above (the slot is on the opposite side of the board shown below).</li>
-        <li>Connect a network cable from your local network to the Ethernet port on the board.</li>
-			NOTE: If you don't have a local network set up, see the <b>Connecting your Windows 10 IoT Core device directly to your PC</b> section on the <a href="{{site.baseurl}}/win10/SetupPC.htm">following page</a>
+        <li>Connect a network cable to the Ethernet port on the board.</li>
         <li>Connect an HDMI monitor to the HDMI port on the board.</li>
         <li>Connect the power supply to the micro USB port on the board.</li>
     </ol>
