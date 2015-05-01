@@ -94,6 +94,8 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 
 * You can set breakpoints, see variable values, etc. To stop the app, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
 
+* Having successfully deployed and debugged your first UAP application, create a Release version by simply changing the Visual Studio toolbar configuration dropdown from `Debug` to `Release`.  You can now build and deploy your app to your device by selecting Build \| Rebuild Solution and Build \| Deploy Solution.
+
 * Congratulations! You just deployed your first UAP application to a device running Windows IoT Core!
 
 
@@ -117,9 +119,13 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 
         iotstartup add headed HelloWorld
 
+    NOTE: We are working on a bug that currently affects C#/VB Debug projects.  Please only use iotstartup to configure Release projects.
+    
     The utility will confirm that the new Startup headed app is now HelloWorld:
 
         AppId changed to HelloWorld_n2pe7ts0w7wey!App
+
+    
 
 * Go ahead and restart your Windows IoT Core device. From the PS session, you can issue the shutdown command:
 
