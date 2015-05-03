@@ -59,10 +59,11 @@ Some hardware setups may require additional considerations when it comes to sett
 
 - Many Arduino devices, such as the Leonardo and the Yun, use `Serial1` (Rather than just `Serial`) for serial communications over pins 0 and 1. If you are using one of these devices, you will need to change the serial initialization procedure. You will want to remove the line `Firmata.begin(57600);` and replace it with the code below:
 
- ```
-  Serial1.begin( 57600 );	//or your baud rate here, it will be 115200 if using the Bluetooth Mate Silver or Gold
-  while( !Serial1 );
-  Firmata.begin( Serial1 );
- ```
+
+{% highlight C++ %}
+Serial1.begin( 57600 );	//or your baud rate here, it will be 115200 if using the Bluetooth Mate Silver or Gold
+while( !Serial1 );
+Firmata.begin( Serial1 );
+{% endhighlight %}
 
 </div>
