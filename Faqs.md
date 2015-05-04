@@ -83,5 +83,10 @@ permalink: /Faqs.htm
         <p>There is a known issue being actively investigated that occurs with C#/VB Apps as the 'Startup App'.  This can be worked around by changing your App's configuration to Release (rather than Debug) and redeploying 
         to your device.  Note that another workaround is to use C++ rather than C#/VB.</p>
         <br />
+        <br />
+        <p><em>My C#/VB UAP App successfully builds, deploys but fails to start with the error "Unable to activate Windows Store App [appX]. The activation request failed with error 'The wait operation timed out'.  How do I resolve this?</em></p>
+        <p>This occurs if you have put Pi2 into headless mode instead of headed mode. To put this back to headed mode issue the following command from powershell </p>
+        <p>setbootoption.exe headed</p>
+        <br />
     </div>
 </div>
