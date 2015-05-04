@@ -42,12 +42,13 @@ permalink: /win10/SetupPCWVSA.htm
 ##Software
 
 ###What you need
- 1. Visual Studio 2015 to sideload UWA (phone app) onto a developer-unlocked phone - or download "Virtual Shields for Arduino" app from the Windows 10 app store when available.
- 2. This repository.
+ 1. Visual Studio 2015 to sideload UWA (phone app) onto a developer-unlocked phone.
+ (We are diligently working on getting the app into the app store in order to avoid side-loading)
+ 2. This [repository](https://github.com/ms-iot/virtual-shields-universal)
 
 ###Set up your Visual Studio 2015
  1. Get the Windows 10 Technical Preview tools, including Visual Studio 2015 from [dev.windows.com](https://dev.windows.com/en-us/windows-10-developer-preview-tools).
- 2. Load the Shield.sln from this repository (<repository>/Shield/Shield.sln).
+ 2. Load the Shield.sln from this [repository](https://github.com/ms-iot/virtual-shields-universal) (<repository>/Shield/Shield.sln).
  3. Ensure your phone is developer-unlocked. [This page](https://msdn.microsoft.com/en-us/library/windows/apps/dn614128.aspx) refers to Windows Phone 8.1, 8 and 7.1. However, the Registration steps are the same for Windows 10 phones.
  4. Deploy to your device.
  5. Run the Virtual Shields for Arduino application.

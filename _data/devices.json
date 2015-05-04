@@ -10,7 +10,7 @@
     {
         "name": "MinnowBoard Max",
         "link": "win10/SetupMBM.htm",
-        "buy": "http://avnetexpress.avnet.com/store/em/EMController?langId=-1&storeId=500201&catalogId=500201&term=msdev&searchType=&advAction=&N=0&Ne=100000&action=products&x=0&y=0",
+        "buy-inter": "win10/BuyMBM.htm",
         "image": "MBM_0.png",
         "text": "MinnowBoard MAX is an open hardware embedded board with the Intel Atom E38XX series SOC at its core. MinnowBoard MAX supports Windows 10 IoT Core Insider Preview.",
         "buy-text": "Buy a MinnowBoard Max"
@@ -27,7 +27,7 @@
         "name": "Windows Remote Arduino",
         "link": "win10/SetupWRA.htm",
         "buy": "http://store.arduino.cc",
-        "image": "Arduino_1.png",
+        "image": "WindowsPhone_0.png",
         "text": "Windows Remote Arduino is an open-source Windows Runtime Component library which allows Makers to control an Arduino through a Bluetooth or USB connection. It is intended for Windows Runtime developers who want to harness the power of Arduino hardware using the Windows Runtime languages. Developers who include this component in their projects will automatically have access to its features in any of the WinRT languages (C++/CX, C# and JavaScript).",
         "buy-text": "Buy an Arduino"
     },
