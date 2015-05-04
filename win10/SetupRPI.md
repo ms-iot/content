@@ -42,7 +42,7 @@ permalink: /win10/SetupRPI.htm
         <li>5V micro USB power supply with at least 1.0A current.</li>
 			NOTE: You may want to use a higher current power supply (>2.0A) instead if you plan on using several USB peripherals or high-current devices.
         <li>A 8gb Class 10 (or better) micro SD card.</li>
-			If you don't have an SD card, we suggest this <a href="http://www.amazon.com/gp/product/B00IVPU786?tag=thewire06-20&linkCode=as2&creative=374929&camp=211189">one</a> or this <a href="http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445/ref=sr_1_15?ie=UTF8&qid=1415926730&sr=8-15&keywords=micro+sd+xd">one</a>.
+			If you don't have an SD card, we suggest this <a href="http://www.amazon.com/gp/product/B00IVPU786">one</a> or this <a href="http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445">one</a>.
         <li>HDMI cable (if display is desired).</li>
         <li>Ethernet cable.</li>
     </ol>
