@@ -35,14 +35,15 @@ permalink: /win10/SetupWVSA.htm
 
 ###What you need
  1. Arduino Uno or compatible device.
- 2. Bluetooth module: SparkFun BlueSMiRF Silver (https://www.sparkfun.com/products/12577) and 4 wires to connect.
+ 2. Bluetooth module: [SparkFun BlueSMiRF Silver](https://www.sparkfun.com/products/12577) and 4 wires to connect.
 
 ###Set up your Arduino
  1. Prepare the Bluetooth module if necessary (the Bluetooth module may need to have headers soldered onto it).
  2. Except for one difference below, connect the Bluetooth module to the Arduino per your wiring diagram ([BlueSMiRF wiring diagram](https://learn.sparkfun.com/tutorials/using-the-bluesmirf/hardware-hookup)).
-    DIFFERENCE: Use pins 0 and 1 instead of 2 and 3:
-    The Bluetooth TX should connect to pin 0 (Arduino RX).
-    The Bluetooth RX should connect to pin 1 (Arduino TX).
+ 
+		DIFFERENCE: Use pins 0 and 1 instead of 2 and 3:
+		The Bluetooth TX should connect to pin 0 (Arduino RX).
+		The Bluetooth RX should connect to pin 1 (Arduino TX).
 
 ##Software
 
@@ -68,6 +69,6 @@ permalink: /win10/SetupWVSA.htm
  2. Before uploading, temporarily remove the Bluetooth TX and RX wires from the Arduino. (There is only one serial port shared between the USB and Bluetooth. The Bluetooth interferes with the upload).
  3. Upload the sketch.
  4. Replace the Bluetooth TX and RX wires into the Arduino pins. (Bluetooth TX to Arduino RX and Bluetooth RX to Arduino TX).
- 5. (In order to see anything on the phone, you will need to go to the next step (Set up your Phone and PC).
+ 5. In order to see anything on the phone, you will need to go to the next step (Set up your Phone and PC).
 
 </div>
