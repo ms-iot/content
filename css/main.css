@@ -123,6 +123,11 @@ a:link {
     color: #006cd8;
 }
 
+.bold {
+    font-weight: bold;
+    font-size: 18px;
+}
+
 .btn-build {
     background-color: #9E9E9E;
     color: #fff;
