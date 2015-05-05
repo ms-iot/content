@@ -48,8 +48,8 @@ permalink: /win10/SetupPCWVSA.htm
 
 ###Set up your Visual Studio 2015
  1. Get the Windows 10 Technical Preview tools, including Visual Studio 2015 from [dev.windows.com](https://dev.windows.com/en-us/windows-10-developer-preview-tools).
- 2. Load the Shield.sln from this [repository](https://github.com/ms-iot/virtual-shields-universal) (<repository>/Shield/Shield.sln).
- 3. Ensure your phone is developer-unlocked. [This page](https://msdn.microsoft.com/en-us/library/windows/apps/dn614128.aspx) refers to Windows Phone 8.1, 8 and 7.1. However, the Registration steps are the same for Windows 10 phones.
+ 2. Load the Shield.sln from this [repository](https://github.com/ms-iot/virtual-shields-universal).
+ 3. Ensure your phone is developer-unlocked. [This page](https://msdn.microsoft.com/en-us/library/windows/apps/dn614128.aspx) refers to Windows Phone 8.1, 8, and 7.1. However, the Registration steps are the same for Windows 10 phones.
  4. Deploy to your device.
  5. Run the Virtual Shields for Arduino application.
  6. In the app settings, find your previously paired Bluetooth device and Connect.
