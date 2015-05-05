@@ -87,10 +87,10 @@ permalink: /Community.htm
   <div class="col-md-3">
     <h3>Feedback</h3>
     <p>
-      Review or submit bugs for Microsoft and the community.
+      Review or submit bugs for Microsoft and the community. Please make sure you are signed up to our <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558" target="_blank">Microsoft Connect</a> program and signed in.
     </p>
     <p>
-      <a href="http://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558" >Submit Feedback &raquo;</a>
+      <a href="https://connect.microsoft.com/windowsembeddedIoT/Feedback" >Submit Feedback &raquo;</a>
     </p>
     <p>
       <a href='windows-feedback:?contextid=441&metadata={"Metadata":[{"OS":"IoTUAP"},{"Source":"WindowsOnDevices.com"}]}??'>Windows 10 feedback tool <br />(Windows 10 only) &raquo;</a>
