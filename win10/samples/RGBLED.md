@@ -54,6 +54,16 @@ Here is the pinout of the RPi2:
 
 <sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
 
+###Deploy your app
+
+You can find the entire code for this sample [here](https://github.com/ms-iot/samples/tree/develop/RGBLED/CS). This sample is written in C#. Make a copy of the folder on your disk and open the project from Visual Studio.
+
+Make sure you set the 'Remote Debugging' setting to point to your Windows IoT device. Refer to the basic 'Hello World' [sample]({{site.baseurl}}/win10/samples/HelloWorld.htm) if you need guidance.
+If you're building for Raspberry Pi 2, select `ARM`.
+
+When everything is set up, you should be able to press F5 from Visual Studio. The RGBLED app will deploy and start on the Windows IoT device, and you should see the LED blink in sync with the simulation on the screen.
+
+
 ###Let's look at the code
 The code for this sample is pretty simple. We use a timer, and each time the 'Tick' event is called, we flip the state of the LED.
 
