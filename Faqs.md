@@ -24,16 +24,28 @@ permalink: /Faqs.htm
         <p>We release the Windows 10 IoT Core for Raspberry Pi 2 through our program on Microsoft Connect, which also provides a platform for bug reporting and providing feedback. To be able to download the image, you need to be signed up for our program on Microsoft Connect <u>and</u> signed in. If you have not signed up for our program on Microsoft Connect yet, please <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558" target="_blank">click here to sign up</a>. You can find step-by-step instructions for signing up or using Microsoft Connect <a href="http://ms-iot.github.io/content/SigninMSConnect.htm" target="_blank">here</a>. If you have already signed up for this program on Microsoft Connect, and try to sign up again, don't worry. You will just see a blank page.</p>
         <p>Please make sure you are signed in to Microsoft Connect before trying to download the image.</p>
         <p class="bold"><em>Why does my screen appear cropped or stretched?</em></p>
-        <p>This can happen on some monitors.   To work around this force the board into DVI mode (vs. HDMI mode).  You can read more about this <a href='https://www.raspberrypi.org/forums/viewtopic.php?t=5851'>here</a>. Mount the SD card to a local PC and proceed to edit the file in the EFIESP partition. For example if the partition is mark as H drive, edit H:\config.txt by adding the following line.<br/><br/>
-        hdmi_group=2                # forces DVI timing to be used
+        <p>This can happen on some monitors. To work around this force the board into DVI mode (vs. HDMI mode).  You can read more about this <a href='https://www.raspberrypi.org/forums/viewtopic.php?t=5851'>here</a>. Mount the SD card to a local PC and proceed to edit the file in the EFIESP partition. For example if the partition is marked as H drive, edit H:\config.txt by adding the following line.<br/><br/>
+        <pre>hdmi_group=2                # forces DVI timing to be used</pre>
         <p class="bold"><em>Can I set up a Raspberry Pi 2 using Windows 8.1?</em></p>
         <p>You will need Windows 10 on your PC to be able to set up Raspberry Pi 2 running Windows 10 IoT Core.</p>
 		<p class="bold"><em>Why does my SD card have to be 8gb, do you really need all that space?</em></p>
         <p>The IoT Core image is under 1gb, the 8gb is meant to give you space to install additional content on your device.</p>
-        <br />
+		<p class="bold"><em>How do I remove Windows 10 IoT Core from my SD card?</em></p>
+        <p>After you've flashed the Windows 10 IoT Core image to your SD card, the reported size of the card will drop to 67.3MB. In order to restore the card back for general use, you'll need to run a series commands in an elevated command prompt (Simply reformatting the card alone won't work):
+		<ul>
+		<li><kbd>diskpart</kbd></li>
+		<li><kbd>list disk</kbd> (This command lists the drives you have connected to your computer. Take note of the disk number of your SD card)</li>
+		<li><kbd>select disk &lt;number&gt;</kbd> (Replace <kbd>&lt;number&gt;</kbd> with the disk number of your SD card from the previous step</li>
+		<li><kbd>clean</kbd></li>
+		<li><kbd>create partition primary</kbd></li>
+		<li><kbd>format fs=ntfs quick</kbd></li>
+		<li><kbd>exit</kbd></li>
+		</ul>
+		Your SD card is now ready for general purpose use again.
+       </p>
         <a name="uwp"></a>
         <h2 class="faq-h2">Universal Windows Platform (UWP) Apps</h2>
-        <p class="bold"><em>I get "You need to enable Developer Mode" on my Vistual Studio machine.  What do I do?</em></p>
+        <p class="bold"><em>I get "You need to enable Developer Mode" on my Visual Studio machine.  What do I do?</em></p>
         <p>In a later builds of windows there will be a settings page "For developers" that will allow you to control this.  Until then you can work around this using the Group Policy editor. </br>
         <ol>
         <li>Run Gpedit.msc </li>
