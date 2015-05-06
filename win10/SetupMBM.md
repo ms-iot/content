@@ -145,7 +145,7 @@ permalink: /win10/SetupMBM.htm
         <li>Commit these changes and exit. </li>
         <li>The MBM should automatically boot to the card (this initial boot may take up to 2 minutes, subsequent boots should take less than 30 seconds). If it does not, it will boot to the UEFI shell, and you will have to execute the following in the UEFI shell to boot Windows:<br/>
             <kbd>fs1:</kbd><br/>
-            <kbd>efi\boot\bootia3210:19 AM 4/27/2015.efi</kbd>
+            <kbd>efi\boot\bootia32.efi</kbd>
         </li>
         <li>On the very first boot the Windows 10 IoT Core will do some first boot configurations and it will display a default blue colored application while this is happening. Wait for a few minutes and the board will automatically restart. This will happen only once and then DefaultApp should come up, displaying the IP address of MBM.
             <br/><br/><ul><img class="device-images" src="{{site.baseurl}}/images/DefaultAppMBM.png"></ul><br/>
