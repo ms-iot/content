@@ -45,14 +45,14 @@ permalink: /Faqs.htm
        </p>
         <a name="uwp"></a>
         <h2 class="faq-h2">Universal Windows Platform (UWP) Apps</h2>
-        <p class="bold"><em>I get "You need to enable Developer Mode" on my Visual Studio machine.  What do I do?</em></p>
-        <p>In a later builds of windows there will be a settings page "For developers" that will allow you to control this.  Until then you can work around this using the Group Policy editor. </br>
+        <p class="bold"><em>I get "You need to enable Developer Mode" on my Vistual Studio machine.  What do I do?</em></p>
+        <p>In a later builds of windows there will be a settings page "For developers" that will allow you to control this.  Until then you can work around this using the Group Policy editor.  More details <a href='https://msdn.microsoft.com/en-us/library/windows/apps/dn706236.aspx'>here</a></br>
         <ol>
         <li>Run Gpedit.msc </li>
 	<li>Under [Local Computer Policy > Computer Configuration > Administrative Templates > Windows Components > App Package Deployment] enable the following policies:</li>
 	<ul><li>Allow all trusted apps to install (will enable sideloading of trust signed apps such as for enterprise apps)</li>
 	<li>Allow development of Windows Store apps without installing a developer license (will enable developer F5 mode installs like the dev license would on win8.1)</li>
-	</ul></ol>
+	</ul></ol></p>
         <p class="bold"><em>Are true console apps supported on Windows 10 IoT Core?</em></p>
         <p>True “console” apps aren’t really going to be supported for the IoT core OS, headless or not. You can still deploy and run a standard win32 console app here, it just won’t be connected to any on-device console. When running headless you should just get that black screen. When running headed the only supported UI is via the UWP UI stacks (XAML, HTML, DirectX).</p>
         <br />

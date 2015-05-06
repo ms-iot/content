@@ -36,8 +36,6 @@ permalink: /win10/SetupRPI.htm
     <h2>What you need</h2>
     <ol>
         <li>A PC running <a href="http://insider.windows.com" target="_blank">Windows 10 Insider Preview</a>.</li>
-        <li>Register with the Microsoft Connect program to download the Windows 10 IoT Core Insider Preview image.</li>
-			We release the Windows 10 IoT Core for Raspberry Pi 2 through our program on Microsoft Connect. If you have not signed up yet, please go to our program site on <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558" target="_blank">Microsoft Connect</a> site to sign up. You can find step-by-step instructions for signing up for Microsoft Connect <a href="http://ms-iot.github.io/content/SigninMSConnect.htm" target="_blank">here</a>. If you're already signed up for this program on Microsoft Connect and try to sign up again, you will just see a blank page.
         <li>Raspberry Pi 2.</li>
         <li>5V micro USB power supply with at least 1.0A current.</li>
 			NOTE: You may want to use a higher current power supply (>2.0A) instead if you plan on using several USB peripherals or high-current devices.
@@ -54,7 +52,8 @@ permalink: /win10/SetupRPI.htm
     <p>Follow these instructions to configure your SD card:</p>
     <ol class="word-wrap">
         <li>NOTE: you will need to follow these instructions on a physical Windows machine (and not a VM) because you need access to the SD card reader.</li>
-        <li>Please download the package "Windows 10 IoT Core Insider Preview Image for Raspberry Pi 2" from the Microsoft Connect <a href="http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57782" target="_blank">here</a>. If you see a blank page or no downloads listed, please make sure you are signed into Microsoft Connect by looking at your login information at top right part of the screen. If you did not sign up for the Microsoft Connect program, please refer to the instructions in the "What you need" section above.</li>
+        <li>Please sign up with our program on <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558">Microsoft Connect</a>, which is our software release management platform. You will need to have a Microsoft email account (<a href="http://outlook.com/">outlook.com</a>, <a href="http://hotmail.com/">hotmail.com</a>, <a href="http://live.com/">live.com</a> etc.). If you are already signed up with our program on Microsoft Connect, (or are not sure if you signed up earlier) and try to sign up again, don’t worry, you will just see a blank page. If you have not signed up for our program on Connect before, it will prompt you to create a social profile and accept license agreements. You can find step-by-step instructions for signing up for Microsoft Connect <a href="http://ms-iot.github.io/content/SigninMSConnect.htm">here</a>.</li>
+        <li><a href="http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57782">Download</a> the package "Windows 10 IoT Core Insider Preview Image for Raspberry Pi 2" from Microsoft Connect. If you see a blank page or no downloads listed, please make sure you are signed into Microsoft Connect by looking at your login information at top right part of the screen. Click sign in, if you are not signed in.</li>
         <li>Make a local copy of the flash.ffu contained in the downloaded package "Windows 10 IoT Core Insider Preview Image for Raspberry Pi 2".</li>
         <li>Insert an SD card into your SD card reader.</li>
         <li>Open an administrator command prompt and navigate to the folder containing your local flash.ffu.</li>

@@ -119,10 +119,11 @@ is guaranteed to work **only** for the following hardware device:
 	
 ![USB Device]({{site.baseurl}}/images/remote-wiring/samples/basic/vidpid.png)
 
-- Next, I'm going to add a callback function to the ConnectionEstablished event on the BluetoothSerial object. This function will automatically be called when the Bluetooth device is connected. You'll notice that I haven't implemented anything in that function at this time. Last, call `.begin()` on the connection object to tell it to connect.
+Next, I'm going to add a callback function to the ConnectionEstablished event on the BluetoothSerial object. This function will automatically be called when the Bluetooth device is connected. You'll notice that I haven't implemented anything in that function at this time. Last, call `.begin()` on the connection object to tell it to connect.
 
 ###Note for USB:
-The USBSerial class still has a ConnectionEstablished event that you can subscribe to. It will always be invoked at the proper time in both classes, so you are absolutely able to reuse your code in either scenario! The rest of the example will work exactly the same regardless of which connection type you are using!
+The USBSerial class still has a ConnectionEstablished event that you can subscribe to. It will always be invoked at the proper time in both classes, so you are able to reuse your code in either scenario!
+However, be aware that the `.begin()` function must be called before any connection attempt will be made. The parameters to the `.begin()` function *do not matter* for Bluetooth, but you must use `SerialConfig.8N1` as the 2nd parameter if you are connecting to an Arduino device! The rest of the example will work exactly the same regardless of which connection type you are using.
 
  ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project01.png)
 
