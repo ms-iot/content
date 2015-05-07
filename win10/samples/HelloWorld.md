@@ -135,7 +135,7 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 
         iotstartup add headed DefaultApp
 
-    The utility will confirm that the new Startup headed app is now HelloWorld:
+    The utility will confirm that the new Startup headed app is now DefaultApp:
 
         AppId changed to DefaultApp_cw5n1h2txyewy!App
 
