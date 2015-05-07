@@ -4,7 +4,7 @@ We have created a versions file describing the supported versions of the require
 
 * Install Windows 10 from [here](https://dev.windows.com/en-US/downloads/windows-10-developer-tools)
 
-* Install Visual Studio 2015 Preview from [here](https://dev.windows.com/en-US/downloads/install-dev-tools-visual-studio-2015).  Choose the Custom option when you kick off the installer, and then check the option to install the Windows 10 tools.
+* Install Visual Studio 2015 Preview from [here](https://dev.windows.com/en-US/downloads/install-dev-tools-visual-studio-2015).  Choose the Custom option when you kick off the installer, and then select "Universal Windows App Development Tools".  On the next page confirm that "Tools and Windows SDK", and "Emulators for Windows Mobile" options are going to be installed.
 
 * Make sure you've enabled developer mode by following [these instructions](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx).
 
