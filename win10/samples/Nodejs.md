@@ -15,7 +15,7 @@ Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/win10/sa
 * Install [Python 2.7](https://www.python.org/downloads/).
 
 ###Get the Node.js Source Code
-* Coming soon.
+* Clone the code from [Github](http://github.com/Microsoft/node).
 
 ###Create a staging location
 * md C:\NodeChakra
@@ -157,6 +157,6 @@ Allow Node.exe to communicate through the firewall with the following command:
 In PowerShell, run the command `C:\Node\Node.exe server.js` to start the server.
 Open up a browser and enter the address http://&lt;IP address of your device&gt;:1337. The result should look something like the picture below.
 
-![Memory Status Result]({{site.baseurl}}/images/Nodejs/memorystatus-ie.png)
+![Memory Status Result]({{site.baseurl}}/images/Nodejs/memorystatus-ie.PNG)
 
 </div>
