@@ -42,13 +42,35 @@ Looking to configure some of the settings on your device? The below tools all co
 
 	Use the startup editor to configure startup apps on your Windows IoT Core device. Run `IotStartup` with any of the following options:
 
-	* `IotStartup /d` displays the list of startup apps.
-	
-	* `IotStartup /a [name] [path]` adds an app with name `name` located at path `path` to the list of startup tasks.
+	* `IotStartup list` lists installed applications
+      
+    * `IotStartup list headed` lists installed headed applications
+      
+    * `IotStartup list headless` lists installed headless applications
 
-	* `IotStartup /r [name]` removes an app with name `name` from the list of startup tasks.
+    * `IotStartup list [MyApp]` list installed applications that match pattern `MyApp`
+
+    * `IotStartup add` adds headed and headless applications
+
+    * `IotStartup add headed [MyApp]` adds headed applications that match pattern `MyApp`.  Pattern must match only one application.
+
+    * `IotStartup add headless [Task1]` adds headless applications that match pattern `Task1`
+
+    * `IotStartup remove` removes headed and headless applications
+
+    * `IotStartup remove headed [MyApp]` removes headed applications that match pattern `MyApp`
+
+    * `IotStartup remove headless [Task1]` removes headless applications that match pattern `Task1`
+
+    * `IotStartup startup` lists headed and headless applications registered for startup
+
+    * `IotStartup startup [MyApp]` lists headed and headless applications registered for startup that match pattern `MyApp`
+
+    * `IotStartup startup headed [MyApp]` lists headed applications registered for startup that match `MyApp`
+
+    * `IotStartup startup headless [Task1]` lists headless applications registered for startup that match `Task1`
 	
-	* For further help, try `IotStartup.exe /?` 
+	* For further help, try `IotStartup help` 
 	
 * **Set Boot Option (Headless vs. headed boot):** 
 
