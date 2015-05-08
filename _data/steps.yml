@@ -1,0 +1,11 @@
+RPI2:
+    step1: '/GetStarted.htm'
+    step2: '/win10/SetupRPI.htm'
+    step3: '/win10/SetupPC.htm'
+    step4: '/win10/samples/Blinky.htm'
+
+MBM:
+    step1: '/GetStarted.htm'
+    step2: '/win10/SetupMBM.htm'
+    step3: '/win10/SetupPCMBM.htm'
+    step4: '/win10/samples/BlinkyMBM.htm'

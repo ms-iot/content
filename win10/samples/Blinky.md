@@ -2,9 +2,11 @@
 layout: default
 title: Blinky Sample
 permalink: /win10/samples/Blinky.htm
+device: RPI2
 ---
 
-<div class="row">
+{% include steps.html %}
+<!-- <div class="row">
     <ul class="nav nav-justified get-started-steps text-center">
         <li>
             <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="inactive">1. Select Your Device</h3></a>
@@ -19,6 +21,6 @@ permalink: /win10/samples/Blinky.htm
             <a href="{{site.baseurl}}/win10/samples/Blinky.htm"><h3 class="active">4. Develop</h3></a>
         </li>
     </ul>
-</div>
+</div> -->
 
 {% include_relative BlinkyContent.md %}

@@ -2,6 +2,7 @@
 layout: default
 title: SetupBoard
 permalink: /win10/SetupMBM.htm
+device: MBM
 ---
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -12,7 +13,8 @@ permalink: /win10/SetupMBM.htm
     <div class="col-md-8">
         <p>Learn how to set up the MinnowBoard Max hardware and connect it to your computer.</p>
     </div>
-     <div class="row">
+    {% include steps.html %}
+     <!-- <div class="row">
         <ul class="nav nav-justified get-started-steps text-center">
             <li>
               <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="inactive">1. Select Your Device</h3></a>
@@ -28,7 +30,7 @@ permalink: /win10/SetupMBM.htm
               <a href="{{site.baseurl}}/win10/samples/BlinkyMBM.htm"><h3 class="inactive">4. Develop</h3></a>
             </li>
         </ul>
-    </div>
+         </div> -->
 </div>
 
 <div class="row">
@@ -92,7 +94,7 @@ permalink: /win10/SetupMBM.htm
     Note: You might wonder why you need to invoke 'MinnowBoard.MAX.FirmwareUpdateX64.efi' even if we're only supporting a 32 bit version of Windows 10 IoT Core.
     The board usually comes with 64-bit firmware pre-installed on it.  The bitness of the EFI has to match the bitness of the current firmware.  Additionally, the bitness of the bin file has to match the desired bitness of the firmware after updating.
     So the first time you will likely need to use 64-bit EFI and 32-bit BIN.
-    The second time and every other time you need to use 32-bit EFI and 32-bit BIN.  
+    The second time and every other time you need to use 32-bit EFI and 32-bit BIN.
     The reason the bitness of the firmware has to match the bitness of the OS is that there is an EFI in the OS image that gets loaded to bootstrap the OS, and that EFI has to be the same bitness as the firmware as well.
 
 </div>

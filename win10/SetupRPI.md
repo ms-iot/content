@@ -2,6 +2,7 @@
 layout: default
 title: SetupBoard
 permalink: /win10/SetupRPI.htm
+device: RPI2
 ---
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -11,23 +12,24 @@ permalink: /win10/SetupRPI.htm
     <div class="col-md-8">
         <p>Learn how to set up the Raspberry Pi 2 and connect it to your computer. Note that this requires you to have a PC running Windows 10 Technical Preview.</p>
     </div>
-     <div class="row">
-        <ul class="nav nav-justified get-started-steps text-center">
-            <li>
-              <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="inactive">1. Select Your Device</h3></a>
-            </li>
-            <li>
-              <a href="{{site.baseurl}}/win10/SetupRPI.htm"><h3 class="active">2. Set up your Raspberry Pi 2</h3></a>
-              <span class="glyphicon glyphicon-time"></span> 30min
-            </li>
-            <li>
-              <a href="{{site.baseurl}}/win10/SetupPC.htm"><h3 class="inactive">3. Set up your PC</h3></a>
-            </li>
-            <li>
-              <a href="{{site.baseurl}}/win10/samples/Blinky.htm"><h3 class="inactive">4. Develop</h3></a>
-            </li>
-        </ul>
-    </div>
+    {% include steps.html %}
+    <!--  <div class="row">
+       <ul class="nav nav-justified get-started-steps text-center">
+           <li>
+             <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="inactive">1. Select Your Device</h3></a>
+           </li>
+           <li>
+             <a href="{{site.baseurl}}/win10/SetupRPI.htm"><h3 class="active">2. Set up your Raspberry Pi 2</h3></a>
+             <span class="glyphicon glyphicon-time"></span> 30min
+           </li>
+           <li>
+             <a href="{{site.baseurl}}/win10/SetupPC.htm"><h3 class="inactive">3. Set up your PC</h3></a>
+           </li>
+           <li>
+             <a href="{{site.baseurl}}/win10/samples/Blinky.htm"><h3 class="inactive">4. Develop</h3></a>
+           </li>
+       </ul>
+        </div> -->
 </div>
 
 
