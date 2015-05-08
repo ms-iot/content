@@ -9,3 +9,21 @@ MBM:
     step2: '/win10/SetupMBM.htm'
     step3: '/win10/SetupPCMBM.htm'
     step4: '/win10/samples/BlinkyMBM.htm'
+
+Galileo:
+    step1: '/GetStarted.htm'
+    step2: '/win8/SetupGalileo.htm'
+    step3: '/win8/SetupPC.htm'
+    step4: '/win8/samples/HelloBlinky.htm'
+
+WRA:
+    step1: '/GetStarted.htm'
+    step2: '/win10/SetupWRA.htm'
+    step3: '/win10/SetupPCWRA.htm'
+    step4: '/win10/samples/BasicWRA.htm'
+
+WVSA:
+    step1: '/GetStarted.htm'
+    step2: '/win10/SetupWVSA.htm'
+    step3: '/win10/SetupPCWVSA.htm'
+    step4: '/win10/samples/BlinkyWVSA.htm'

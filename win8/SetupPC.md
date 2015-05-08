@@ -2,6 +2,7 @@
 layout: default
 title: SetupPC
 permalink: /win8/SetupPC.htm
+device: Galileo
 ---
 
 <div class="row">
@@ -10,7 +11,8 @@ permalink: /win8/SetupPC.htm
   <div class="col-md-8">
     <p>Learn how to get your computer ready for Windows Developer Program for IoT.</p>
   </div>
-    <div class="row">
+  {% include steps.html %}
+    <!-- <div class="row">
       <ul class="nav nav-justified get-started-steps text-center">
           <li>
             <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="inactive">1. Select Your Device</h3></a>
@@ -26,7 +28,7 @@ permalink: /win8/SetupPC.htm
             <a href="{{site.baseurl}}/win8/samples/HelloBlinky.htm"><h3 class="inactive">4. Develop</h3></a>
           </li>
       </ul>
-    </div>
+    </div> -->
 </div>
 <div class="row">
   <h2>Windows Developer Program for IoT Developer Tools</h2>

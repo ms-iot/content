@@ -2,6 +2,7 @@
 layout: default
 title: SetupBoard
 permalink: /win10/SetupWRA.htm
+device: WRA
 ---
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -11,7 +12,8 @@ permalink: /win10/SetupWRA.htm
     <div class="col-md-8">
         <p>This section explains how to set up your Arduino and how to add the Windows Remote Arduino library to your Windows projects!</p>
     </div>
-     <div class="row">
+    {% include steps.html %}
+     <!-- <div class="row">
         <ul class="nav nav-justified get-started-steps text-center">
             <li>
               <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="inactive">1. Select Your Device</h3></a>
@@ -27,7 +29,7 @@ permalink: /win10/SetupWRA.htm
               <a href="{{site.baseurl}}/win10/samples/BasicWRA.htm"><h3 class="inactive">4. Develop</h3></a>
             </li>
         </ul>
-    </div>
+    </div> -->
 </div>
 
 <div class="col-md-12" markdown="1">

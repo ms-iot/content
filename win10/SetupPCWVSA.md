@@ -2,6 +2,7 @@
 layout: default
 title: SetupPCWRA
 permalink: /win10/SetupPCWVSA.htm
+device: WVSA
 ---
 
 <div class="row">
@@ -9,7 +10,8 @@ permalink: /win10/SetupPCWVSA.htm
   <div class="col-md-8">
     <p>Learn how to get your PC ready for developing IoT applications using Windows Remote Arduino.</p>
   </div>
-  <ul class="nav nav-justified get-started-steps text-center">
+  {% include steps.html %}
+  <!-- <ul class="nav nav-justified get-started-steps text-center">
       <li>
         <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="inactive">1. Select Your Device</h3></a>
       </li>
@@ -23,7 +25,7 @@ permalink: /win10/SetupPCWVSA.htm
       <li>
         <a href="{{site.baseurl}}/win10/samples/BlinkyWVSA.htm"><h3 class="inactive">4. Develop</h3></a>
       </li>
-  </ul>
+  </ul> -->
 </div>
 
 <div class="col-md-12" markdown="1">
