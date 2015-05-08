@@ -17,7 +17,7 @@ permalink: /win8/SetupGalileo.htm
               <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="inactive">1. Select Your Device</h3></a>
             </li>
             <li>
-              <a href="{{site.baseurl}}/win8/SetupGalileo.md"><h3 class="active">2. Set up your Intel Galileo</h3></a>
+              <a href="{{site.baseurl}}/win8/SetupGalileo.htm"><h3 class="active">2. Set up your Intel Galileo</h3></a>
               <span class="glyphicon glyphicon-time"></span> 30min
             </li>
             <li>
