@@ -29,6 +29,7 @@ permalink: /Downloads.htm
                 </div>
                 <div class="row downloads-background">
                     <div class="col-md-12">
+                        <h3>Downloads via Microsoft Connect</h3>
                         <p>Please sign up with our program on <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558">Microsoft Connect</a>,
                             which is our software release management platform. You will need to have a Microsoft email account (<a href="http://outlook.com/">outlook.com</a>,
                             <a href="http://hotmail.com/">hotmail.com</a>, <a href="http://live.com/">live.com</a> etc.). If you are already signed up with our program on Microsoft Connect,
@@ -38,14 +39,35 @@ permalink: /Downloads.htm
                         </p>
                     </div>
                     <div class="col-md-3">
+                        <h4>Windows 10 IoT Core</h4>
+                        <p>The Windows IoT platform that runs on devices like Raspberry Pi 2 and MinnowBoard MAX</p>
+                        {% include download-link.html %}
+                    </div>
+                    <div class="col-md-3">
+                        <h4>NTVS IoT Extension Beta 2015</h4>
+                        <p>Extends NTVS (Node.js Tools for Visual Studio) to support running Node.js on Windows 10 IoT Core</p>
+                        {% include download-link.html %}
+                    </div>
+                    <div class="col-md-3">
+                        <h4>PTVS for IoT Preview 2015</h4>
+                        <p>An IoT preview build of PTVS (Python Tools for Visual Studio) toolset extended to support running Python on Windows 10 IoT Core</p>
+                        {% include download-link.html %}
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Other Downloads</h3>
+                    </div>
+                    <div class="col-md-3">
                         <h4>Firmware Update</h4>
                         <p>Download firmware components and updates for the MinnowBoard MAX reference board from Intel</p>
                         <a href="http://firmware.intel.com/projects/minnowboard-max">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <h4>Windows 10 IoT Core</h4>
-                        <p>The Windows IoT platform that runs on devices like Raspberry Pi 2 and MinnowBoard MAX</p>
-                        {% include download-link.html %}
+                        <h4>Windows SDK</h4>
+                        <p>Contains headers, libraries and tools you can use when you create apps that run on Windows</p>
+                        <a href="https://dev.windows.com/en-US/windows-10-developer-preview-tools">Learn More</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Visual Studio 2015</h4>
@@ -57,32 +79,10 @@ permalink: /Downloads.htm
                         <p>Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 10</p>
                         <a href="https://dev.windows.com/en-US/featured/hardware/windows-10-hardware-preview-tools">Learn More</a>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2>Learn more</h2>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Windows SDK</h4>
-                        <p>Contains headers, libraries and tools you can use when you create apps that run on Windows</p>
-                        <a href="https://dev.windows.com/en-US/windows-10-developer-preview-tools">Learn More</a>
-                    </div>
-
                     <div class="col-md-3">
                         <h4>Tools</h4>
                         <p>Tools for Windows 10 that are required for developing for the Universal Windows App Platform</p>
                         <a href="https://dev.windows.com/en-us/develop/Building-universal-Windows-apps">Learn More</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>PTVS for IoT Preview 2015</h4>
-                        <p>An IoT preview build of PTVS (Python Tools for Visual Studio) toolset extended to support running Python on Windows 10 IoT Core</p>
-                        {% include download-link.html %}
-                    </div>
-
-                    <div class="col-md-3">
-                        <h4>NTVS IoT Extension Beta 2015</h4>
-                        <p>Extends NTVS (Node.js Tools for Visual Studio) to support running Node.js on Windows 10 IoT Core</p>
-                        {% include download-link.html %}
                     </div>
                 </div>
             </div>
