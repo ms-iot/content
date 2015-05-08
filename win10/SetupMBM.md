@@ -92,7 +92,7 @@ permalink: /win10/SetupMBM.htm
     Note: You might wonder why you need to invoke 'MinnowBoard.MAX.FirmwareUpdateX64.efi' even if we're only supporting a 32 bit version of Windows 10 IoT Core.
     The board usually comes with 64-bit firmware pre-installed on it.  The bitness of the EFI has to match the bitness of the current firmware.  Additionally, the bitness of the bin file has to match the desired bitness of the firmware after updating.
     So the first time you will likely need to use 64-bit EFI and 32-bit BIN.
-    The second time and every other time you need to use 32-bit EFI and 32-bit BIN.  
+    The second time and every other time you need to use 32-bit EFI and 32-bit BIN.
     The reason the bitness of the firmware has to match the bitness of the OS is that there is an EFI in the OS image that gets loaded to bootstrap the OS, and that EFI has to be the same bitness as the firmware as well.
 
 </div>
@@ -107,8 +107,8 @@ permalink: /win10/SetupMBM.htm
     <p>Follow these instructions to configure your SD card:</p>
     <ol class="word-wrap">
         <li>NOTE: you will need to follow these instructions on a physical Windows machine (and not a VM) because you need access to the SD card reader.</li>
-        <li>Please download the package "Windows 10 IoT Core Insider Preview Image for MinnowBoard MAX" from the Microsoft Connect <a href="https://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57783" target="_blank">here</a>. If you see a blank page or no downloads listed, please make sure you are signed into Microsoft Connect by looking at your login information at top right part of the screen. If you did not sign up to the Microsoft Connect program, please refer to the instructions in the "What you need" section above.</li>
-        <li>Make a local copy of the flash.ffu contained in the downloaded package "Windows 10 IoT Core Insider Preview Image for MinnowBoard MAX".</li>
+        <li>Please sign up with our program on <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558">Microsoft Connect</a>, which is our software release management platform. You will need to have a Microsoft email account (<a href="http://outlook.com/">outlook.com</a>, <a href="http://hotmail.com/">hotmail.com</a>, <a href="http://live.com/">live.com</a> etc.). If you are already signed up with our program on Microsoft Connect, (or are not sure if you signed up earlier) and try to sign up again, don’t worry, you will just see a blank page. If you have not signed up for our program on Connect before, it will prompt you to create a social profile and accept license agreements. You can find step-by-step instructions for signing up for Microsoft Connect <a href="https://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57783">here</a>.</li>
+        <li><a href="https://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57783">Download</a> the package "Windows 10 IoT Core Insider Preview Image for MinnowBoard MAX" from Microsoft Connect. If you see a blank page or no downloads listed, please make sure you are signed into Microsoft Connect by looking at your login information at top right part of the screen. Click sign in, if you are not signed in.</li>
         <li>Insert an SD card into your SD card reader.</li>
         <li>Open an admininistrator command prompt and navigate to the folder containing your local flash.ffu.</li>
         <li>
