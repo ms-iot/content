@@ -54,13 +54,13 @@ http.createServer(function (req, res) {
     ![Debugging Screenshot]({{site.baseurl}}/images/Nodejs/debugging-vs.PNG)
 
 
-### WinRT namespaces
-WinRT namespaces are available for you to use in Node.js. The code below returns the date and time instead of 'Hello World' in the previous example.
+### Universal Windows Platform (UWP) namespaces
+UWP namespaces are available for you to use in Node.js. The code below returns the date and time instead of 'Hello World' in the previous example.
 <UL>
 {% highlight JavaScript %}
 var http = require('http');
-var winrt = require("winrt");
-winrt.projectNamespace("Windows");
+var uwp = require("uwp");
+uwp.projectNamespace("Windows");
 var calendar = new Windows.Globalization.Calendar();
 
 http.createServer(function (req, res) {
@@ -69,7 +69,7 @@ http.createServer(function (req, res) {
     res.end(String(date));
 }).listen(1337);
 
-winrt.close();
+uwp.close();
 {% endhighlight %}
 </UL>
 
