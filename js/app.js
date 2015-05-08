@@ -2,17 +2,16 @@
     $('img:not(.nr)').addClass('img-responsive');
 
     var currentUrl = $(location).attr('pathname');
+    console.log(currentUrl);
 
     var urlArray = $('.steps').parent();
     // .attr('href');
 
-    console.log(urlArray);
-
-    // for(var i = 0; i < urlArray.length; i++) {
-    //     if((urlArray[i]).closest('a').attr('href') == currentUrl) {
-    //         var targetUrl = (urlArray[i]).closest('a').attr('href');
-    //         (targetUrl).removeClass('inactive').addClass('active');
-    //     }
-    // };
+    for(var i = 0; i < urlArray.length; i++) {
+        if($(urlArray[i]).attr('href') == currentUrl) {
+            console.log($(urlArray[i]).attr('href'));
+            $(urlArray[i]).removeClass('inactive').addClass('active');
+        }
+    };
 
 });
