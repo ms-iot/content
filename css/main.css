@@ -509,13 +509,17 @@ a.view-gallery {
     margin-bottom: 20px;
 }
 
-.inactive {
+.get-started-steps > li > a > h3 {
     color: #BFBFBF;
 }
 
-.active {
+/* .inactive {
+    color: #BFBFBF;
+} */
+
+/* .active {
     color: #000;
-}
+} */
 
 ul.get-started-steps > li > a:hover {
     background-color: #fff;

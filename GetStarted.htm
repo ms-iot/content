@@ -2,6 +2,7 @@
 layout: default
 title: Get Started
 permalink: /GetStarted.htm
+device: RPI
 ---
 
 <div class="row">
@@ -12,7 +13,8 @@ permalink: /GetStarted.htm
         </p>
         <p><a href="{{site.hardwareurl}}" target="_blank">Learn more about Windows IoT devices</a></p>
     </div>
-    <div class="row">
+    {% include steps.html %}
+    <!-- <div class="row">
         <ul class="nav nav-justified get-started-steps text-center">
             <li>
                 <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="active">1. Select Your Device</h3></a>
@@ -27,7 +29,7 @@ permalink: /GetStarted.htm
                 <a href="{{site.baseurl}}/win10/samples/Blinky.htm"><h3 class="inactive">4. Develop</h3></a>
             </li>
         </ul>
-    </div>
+    </div> -->
 </div>
 <div class="row">
     {% include devices.html %}
