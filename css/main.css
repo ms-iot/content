@@ -518,7 +518,7 @@ a.view-gallery {
 }
 
 .active {
-    color: #000 !important;
+    color: #000;
 }
 
 ul.get-started-steps > li > a:hover {
