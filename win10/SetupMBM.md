@@ -35,11 +35,9 @@ permalink: /win10/SetupMBM.htm
     <h2>What you need</h2>
     <ol>
         <li>A PC running Windows 10 Insider Preview.</li>
-        <li>Register with the Microsoft Connect program to download the Windows 10 IoT Core Insider Preview image. We release the Windows 10 IoT Core for Raspberry Pi 2 through our program on Microsoft Connect. If you have not signed up yet, please go to our program site on <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558" target="_blank">Microsoft Connect</a> site to sign up. You can find step-by-step instructions for signing up for Microsoft Connect <a href="http://ms-iot.github.io/content/SigninMSConnect.htm" target="_blank">here</a>. If you're already signed up for this program on Microsoft Connect and try to sign up again, you will just see a blank page.
         <li>MinnowBoard Max.</li>
         <li>Power supply.</li>
-        <li>A 8gb Class 10 (or better) micro SD card.</li>
-			If you don't have an SD card, we suggest this <a href="http://www.amazon.com/gp/product/B00IVPU786?tag=thewire06-20&linkCode=as2&creative=374929&camp=211189">one</a> or this <a href="http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445/ref=sr_1_15?ie=UTF8&qid=1415926730&sr=8-15&keywords=micro+sd+xd">one</a>.
+        <li>A 8gb Class 10 (or better) micro SD card. If you don't have an SD card, we suggest this <a href="http://www.amazon.com/gp/product/B00IVPU786?tag=thewire06-20&linkCode=as2&creative=374929&camp=211189">one</a> or this <a href="http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445/ref=sr_1_15?ie=UTF8&qid=1415926730&sr=8-15&keywords=micro+sd+xd">one</a>.</li>
         <li>HDMI cable (if display is desired).</li>
         <li>Ethernet cable.</li>
     </ol>
@@ -96,10 +94,6 @@ permalink: /win10/SetupMBM.htm
     The reason the bitness of the firmware has to match the bitness of the OS is that there is an EFI in the OS image that gets loaded to bootstrap the OS, and that EFI has to be the same bitness as the firmware as well.
 
 </div>
-
-<style>
-#foo {color: red}
-</style>
 
 <div class="row">
     <h2>Put the Windows 10 IoT Core Insider Preview image on your SD Card</h2>
