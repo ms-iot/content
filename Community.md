@@ -16,6 +16,14 @@ permalink: /Community.htm
   <h3>New on the Window IoT Blog</h3>
   <div class="col-md-4">
     <div class="col-md-9">
+      <a href="http://blogs.windows.com/buildingapps/2015/05/12/bringing-node-js-to-windows-10-iot-core/">
+        <h4>Bringing Node.js to Windows 10 IoT Core</h4>
+      </a>
+      <h4><em>Windows Apps Team, May 12 2015</em></h4>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="col-md-9">
       <a href="http://blogs.windows.com/buildingapps/2015/04/29/microsoft-brings-windows-10-to-makers/">
         <h4>Microsoft brings Windows 10 to Makers</h4>
       </a>
@@ -28,14 +36,6 @@ permalink: /Community.htm
         <h4>Windows 10 IoT Core:<br />Powering the Internet of Things</h4>
       </a>
       <h4><em>Kevin Dallas, Mar 18 2015</em></h4>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="col-md-9">
-      <a href="http://blogs.windows.com/buildingapps/2015/03/02/a-first-look-at-the-windows-10-universal-app-platform/">
-        <h4>A first look at the Windows 10 Universal Windows Platform</h4>
-      </a>
-      <h4><em>Kevin Gallo, Mar 2 2015</em></h4>
     </div>
   </div>
 </div>
