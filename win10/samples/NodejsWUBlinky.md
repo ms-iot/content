@@ -27,8 +27,8 @@ When the project has been created, open up server.js and replace the existing co
 {% highlight JavaScript %}
 var http = require('http');
 
-var winrt = require("winrt");
-winrt.projectNamespace("Windows");
+var uwp = require("uwp");
+uwp.projectNamespace("Windows");
 
 var gpioController = Windows.Devices.Gpio.GpioController.getDefault();
 var pin = gpioController.openPin(6);
