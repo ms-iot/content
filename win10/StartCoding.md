@@ -40,7 +40,7 @@ permalink: /win10/StartCoding.htm
                         <a href="{{site.baseurl}}/win10/tools/IoTAPIPortingTool.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <h4>Using powershell</h4>
+                        <h4>Using PowerShell</h4>
                         <p>Allows Remote Administration and Configuration so that you can remotely configure and manage any Windows IoT Core device</p>
                         <a href="{{site.baseurl}}/win10/samples/PowerShell.htm">Learn More</a>
                     </div>
@@ -70,6 +70,13 @@ permalink: /win10/StartCoding.htm
                         <h4>Using WINDBG</h4>
                         <p>Use WINDBG to debug</p>
                         <a href="{{site.baseurl}}/win10/Windbg.htm">Learn More</a>
+                    </div>
+                </div>
+                <div class="row section-heading">
+                    <div class="col-md-3">
+                        <h4>Glossary</h4>
+                        <p>A list of commonly used phrases and their meanings</p>
+                        <a href="{{site.baseurl}}/win10/Glossary.htm">Learn More</a>
                     </div>
                 </div>
             </div>
