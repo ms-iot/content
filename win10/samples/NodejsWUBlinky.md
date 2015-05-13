@@ -11,7 +11,7 @@ permalink: /win10/samples/NodejsWUBlinky.htm
 ###Set up your PC
 * Follow the instructions [here]({{site.baseurl}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
 * Install [Node.js Tools 1.1 Beta for Visual Studio 2015](http://aka.ms/ntvslatest).
-* Install [NTVS IoT Extension]({{site.downloadurl}})
+* Install [NTVS IoT Extension]({{site.downloadurl}}) (This step requires that you have signed up with our program on Microsoft Connect. Instructions on how to do that can be found [here]({{site.baseurl}}/Downloads.htm)).
 
 
 ###Set up your hardware
@@ -27,8 +27,8 @@ When the project has been created, open up server.js and replace the existing co
 {% highlight JavaScript %}
 var http = require('http');
 
-var winrt = require("winrt");
-winrt.projectNamespace("Windows");
+var uwp = require("uwp");
+uwp.projectNamespace("Windows");
 
 var gpioController = Windows.Devices.Gpio.GpioController.getDefault();
 var pin = gpioController.openPin(6);
