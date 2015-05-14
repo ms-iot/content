@@ -109,7 +109,7 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 
 * From the PS session, type:
 
-        iotstartup list HelloWorld
+        [192.168.0.243]: PS C:\> iotstartup list HelloWorld
 
     and you should see the full name of our HelloWorld UAP application, i.e. something like:
 
@@ -119,7 +119,7 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 
 * Now, it's easy to set this app as the 'Startup App'. Just type the command:
 
-        iotstartup add headed HelloWorld
+        [192.168.0.243]: PS C:\> iotstartup add headed HelloWorld
     
     The utility will confirm that the new Startup headed app is now HelloWorld:
 
@@ -127,13 +127,13 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 
 * Go ahead and restart your Windows IoT Core device. From the PS session, you can issue the shutdown command:
 
-        shutdown /r /t 0
+        [192.168.0.243]: PS C:\> shutdown /r /t 0
 
 * Once the device has restarted, you'll see HelloWorld start automatically.
 
 * At this point, you can revert back to using the DefaultApp as your 'Startup App'. Just type the command:
 
-        iotstartup add headed DefaultApp
+        [192.168.0.243]: PS C:\> iotstartup add headed DefaultApp
 
     The utility will confirm that the new Startup headed app is now DefaultApp:
 

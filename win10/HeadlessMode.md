@@ -16,17 +16,17 @@ You can modify the headed/headless state of your device from a PowerShell sessio
 
 * To display the current state of your device, use the `setbootoption` utility like this:
 
-        setbootoption.exe
+        [192.168.0.243]: PS C:\> setbootoption.exe
 
 * To modify the state of your device to enable headless mode, use the `setbootoption` utility with the `headless` arg:
 
-        setbootoption.exe headless
-        shutdown /r /t 0
+        [192.168.0.243]: PS C:\> setbootoption.exe headless
+        [192.168.0.243]: PS C:\> shutdown /r /t 0
 
 * To modify the state of your device to enable headed mode, use the `setbootoption` utility with the `headed` arg:
 
-        setbootoption.exe headed
-        shutdown /r /t 0
+        [192.168.0.243]: PS C:\> setbootoption.exe headed
+        [192.168.0.243]: PS C:\> shutdown /r /t 0
 
 
 </div>
