@@ -400,7 +400,9 @@ a.view-gallery {
     width: 100%;
     max-width: 600px;
 }
-
+.screen-snippet{
+    border:3px solid #9E9E9E;
+}
 .word-wrap > li {
     word-wrap: break-word;
 }
