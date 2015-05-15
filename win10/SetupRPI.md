@@ -43,11 +43,11 @@ permalink: /win10/SetupRPI.htm
         <li><b>Ethernet cable</b>.</li>
     </ol>
 
-		    Using several USB peripherals or high-current devices? Use a higher current power supply (>2.0A) 
+		    If you are using several USB peripherals or high-current devices, use a higher current power supply (>2.0A). 
 </div>
 
 <div class="row">
-    <h2>Put the Windows 10 IoT Core Insider Preview image on your SD Card</h2>
+    <h2>Put the Windows 10 IoT Core Insider Preview image on your SD card</h2>
     <p>We have provided a utility to provision your SD card with the Windows 10 IoT Core Insider Preview.  The following steps can only be executed on a system running <a href="https://insider.windows.com">Windows 10</a> (build 10069 or higher).</p>
     <p>NOTE: you will need to follow these instructions on a <b>physical Windows machine</b> (and not a VM) because you need access to the SD card reader.</p>
 	<p>Follow these instructions to configure your SD card:</p>
@@ -64,7 +64,7 @@ permalink: /win10/SetupRPI.htm
 			<img class="device-images" src="{{site.baseurl}}/images/SetupRPI/connect1.png">
 		</li>
 		<li>
-			<b><a href="http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57782">Download</a> the package</b> "Windows 10 IoT Core Insider Preview Image for Raspberry Pi 2" from Microsoft Connect.
+			<a href="http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57782">Download</a> the <b>package</b> "Windows 10 IoT Core Insider Preview Image for Raspberry Pi 2" from Microsoft Connect.
 			<ul>
 			<li>If you see a blank page or no downloads listed, please make sure you are signed into Microsoft Connect by looking at your login information at top right part of the screen. Click sign in, if you are not signed in.</li>
 			</ul>
@@ -85,7 +85,7 @@ permalink: /win10/SetupRPI.htm
 			<img src="{{site.baseurl}}/images/SetupRPI/flash2.png">
 		</li>
 		<li>
-			<b>Insert an SD card into your SD card reader.</b>
+			<b>Insert an SD card</b> into your SD card reader.
 		</li>
         <li>
 			Open an <b>admininistrator command prompt</b> 
@@ -93,14 +93,14 @@ permalink: /win10/SetupRPI.htm
 			and navigate to the folder containing your local flash.ffu.
 		</li>
         <li>
-            <b>Find the disk number</b> that your SD card is on your computer.  This will be used when the image is applied in the next step.  To do this, you can use the diskpart utility.  Run the following commands:<br />
+            <b>Find the disk number</b> that your SD card is on your computer.  This will be used when the image is applied in the next step.  To do this, you can use the <b>diskpart</b> utility.  Run the following commands:<br />
             <kbd>diskpart</kbd><br />
             <kbd>list disk</kbd><br />
             <kbd>exit</kbd>
 			<img  src="{{site.baseurl}}/images/SetupRPI/diskpart.png">
         </li>
         <li>
-            Using the admininistrator command prompt, apply the image to your SD card by running the following command (be sure to replace PhysicalDriveN with the value you found in the previous step, for example, if your SD card is disk number 3, use <kbd>/ApplyDrive:\\.\PhysicalDrive3</kbd> below):<br />
+            Using the administrator command prompt, apply the image to your SD card by running the following command (be sure to replace PhysicalDriveN with the value you found in the previous step, for example, if your SD card is disk number 3, use <kbd>/ApplyDrive:\\.\PhysicalDrive3</kbd> below):<br />
             <kbd>dism.exe /Apply-Image /ImageFile:<fullpath>flash.ffu /ApplyDrive:\\.\PhysicalDriveN /SkipPlatformCheck</fullpath></kbd>
 
 			<img  src="{{site.baseurl}}/images/SetupRPI/applyDrive.png">
@@ -113,9 +113,9 @@ permalink: /win10/SetupRPI.htm
 
 <div class="row">
 	<a name="hookupboard"></a>
-	<h2>Hook up your Board</h2>
+	<h2>Hook up your board</h2>
     <ol class="word-wrap">
-        <li><b>Insert micro SD card</b> you prepared in the section above (the slot is on the opposite side of the board shown below).</li>
+        <li><b>Insert the micro SD card</b> you prepared in the section above (the slot is on the opposite side of the board shown below).</li>
         <li><b>Connect a network cable</b> to the Ethernet port on the board.</li>
         <li><b>Connect an HDMI monitor</b> to the HDMI port on the board.</li>
         <li><b>Connect the power supply</b> to the micro USB port on the board.</li>
@@ -127,7 +127,7 @@ permalink: /win10/SetupRPI.htm
     <h2>Boot Windows 10 IoT Core Insider Preview</h2>
     <ol class="word-wrap">
         <li>Windows 10 IoT Core Insider Preview will boot automatically after connecting power supply.</li>
-        <li>On the very first boot the Windows IoT Core will do some first boot configurations and it will display a default blue colored application while this is happening. <b>Wait for a few minutes</b> and the board will automatically restart. This will happen only once and then DefaultApp should come up, displaying the IP address of the Raspberry Pi 2.
+        <li>On the very first boot Windows IoT Core will do some first boot configurations and it will display a default blue colored application while this is happening. <b>Wait for a few minutes</b> and the board will automatically restart. This will happen only once and then DefaultApp should come up, displaying the IP address of the Raspberry Pi 2.
             <br /><br /><ul><img class="device-images" src="{{site.baseurl}}/images/DefaultAppRpi2.png"></ul><br />
         </li>
         <li>Follow the instructions <a href="{{site.baseurl}}/win10/Samples/PowerShell.htm">here</a> to use PowerShell to connect to your running device.</li>

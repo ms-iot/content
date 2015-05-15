@@ -6,14 +6,13 @@ permalink: /win10/tools/Webb.htm
 
 <div class="container" markdown="1">
 
-##Web-based Device Management
+##Web-based device management
 
 ![Webb Home]({{site.baseurl}}/images/Webb/webb.png)
 
 ###Learn how to get advanced diagnostics about your machine from the web
 
-Web-based device management provides basic configuration and device management capabilities, in addition to advanced diagnostic tools to help you troubleshoot and view the real time performance of your IoT Device. Every Windows 10 IoT Core device, once connected to your local network, will allow you to do access these tools.
-
+Web-based device management provides basic configuration and device management capabilities, in addition to advanced diagnostic tools to help you troubleshoot and view the real time performance of your Windows IoT Device. Once connected to your local network, every Windows 10 IoT Core device will allow you to access these tools.
 
 ###Connect your board to the internet
  
@@ -28,7 +27,7 @@ You can find your IP address two ways:
 
     ![DefaultApp IP]({{site.baseurl}}/images/Webb/defaultapp_ip.png)
 
-2.	If you have already [set up your PC]({{site.baseurl}}/win10/SetupPC.htm), you should have **Windows IoT Core Watcher** installed on your PC. Launch Windows IoT Core Watcher and find your machine name. Listed next to the machine name is your boards IP address. If you cannot find your machine, either your PC or your board is not properly connected to your network. 
+2.	If you have already [set up your PC]({{site.baseurl}}/win10/SetupPC.htm), you should have **Windows IoT Core Watcher** installed on your PC. Launch Windows IoT Core Watcher and find your machine name. Listed next to the machine name is your board's IP address. If you cannot find your machine, either your PC or your board is not properly connected to your network. 
 
     ![IotWatcher IP]({{site.baseurl}}/images/IoTCoreWatcher.png)
 
@@ -42,7 +41,7 @@ You can find your IP address two ways:
 
 	![Webb Home]({{site.baseurl}}/images/Webb/webb.png)
 
-    You can also launch the Web-based Device Management tool from the Windows IoT Core Watcher by right clicking on your device, and clicking Launch in browser
+    You can also launch the Web-based device management tool from the Windows IoT Core Watcher by right clicking on your device, and clicking Launch in browser
 
 ###Top Toolbar
 The top toolbar allows you to shutdown, reboot and give feedback. 
@@ -52,9 +51,9 @@ The top toolbar allows you to shutdown, reboot and give feedback.
 * Shutdown - Shuts down the device
 * Reboot - Reboots the device
 * Feedback - Opens up the Windows 10 Feedback tool where you can enter any valuable feedback 
-* Help - The help button is currently in progress and will updated soon 
+* Help - The help button is currently in progress and will be updated soon 
 
-    Note: For Rpi2 users, the Shutdown button is not working correctly, and reboots the device. A fix will come soon
+    Note: For Rpi2 users, the Shutdown button is not working correctly, and reboots the device. A fix is coming soon
 
  
 ###Description of Web-based device management functionalities
@@ -81,15 +80,15 @@ The top toolbar allows you to shutdown, reboot and give feedback.
 
 * ####**Debugging, ETW Realtime, Perf Tracing**
 
-	These sections are currently a work in progress. More details are coming soon 
+	These sections are currently a work in progress. More details are coming soon. 
 
 * ####**Device Manager**
 
-	Enumerates all peripherals attached to your device
+	Enumerates all peripherals attached to your device.
 
 * ####**Networking**
 
-	Once your board is connected to the internet, the IP configuration section will allow you to view advanced network diagnostic information, such as your IP addres, and the description of the connection. 
+	Once your board is connected to the internet, the IP configuration section will allow you to view advanced network diagnostic information, such as your IP address, and the description of the connection.
 
 	    Wi-Fi adapters are not currently supported.  This will be coming soon.
 

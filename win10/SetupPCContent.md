@@ -6,14 +6,14 @@ We have created a versions file describing the supported versions of the require
 
 * **Install Visual Studio 2015 Preview** from [here](https://dev.windows.com/en-US/downloads/install-dev-tools-visual-studio-2015).  Choose the Custom option when you kick off the installer, and then select "Universal Windows App Development Tools".  On the next page confirm that "Tools and Windows SDK", and "Emulators for Windows Mobile" options are going to be installed.
 
-* Make sure you've **Enabled developer mode** by following [these instructions](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx).
+* Make sure you've **enabled developer mode** by following [these instructions](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx).
 
-	* Some customers report installation issues with the previous step. As a workaround, please <b>go to the Windows Developer Tools Preview page</b> [here](https://dev.windows.com/en-US/downloads/windows-10-developer-tools).
+	* Some customers report installation issues with the previous step. As a workaround, please go to the **Windows Developer Tools Preview page** [here](https://dev.windows.com/en-US/downloads/windows-10-developer-tools).
 
 	<img class="screen-snippet" src="{{site.baseurl}}/images/SetupPC/download.PNG">
 	Scroll down to the bottom of the page to the "Other download options" section and install "Standalone Windows 10 SDK for Windows 10" and "Microsoft Windows 10 Emulator for Mobile".
 
-* **Install WindowsDeveloperProgramForIoT.msi**.  It can be found **inside any** of the Windows 10 IoT Core Insider **Preview Image files** (for example, `Windows 10 IoT Core Insider Preview Image for Raspberry Pi 2.zip`) [here]({{site.downloadurl}})
+* **Install WindowsDeveloperProgramForIoT.msi**.  It can be found **inside any** of the Windows 10 IoT Core Insider Preview i**mage files** (for example, `Windows 10 IoT Core Insider Preview image for Raspberry Pi 2.zip`) [here]({{site.downloadurl}})
 	
 
 * At this point, you are ready to develop apps.  Notice that the Windows IoT Core Watcher application automatically starts when you log on.  It can be used to find available Windows 10 IoT Core devices to deploy apps to.
