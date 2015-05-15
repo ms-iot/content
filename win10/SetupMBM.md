@@ -81,9 +81,10 @@ permalink: /win10/SetupMBM.htm
                 <li>If your current firmware is 32 bit (if you have already modified the original firmware to be 32 bit)<br/>
                     <kbd>fs0:</kbd><br/>
                     <kbd>.\MinnowBoard.MAX.FirmwareUpdateIA32.efi <i>_filename_</i>.bin</kbd>
-                    e.g. 
-                    Shell> fs0:
-                    fs0:\> .\MinnowBoard.MAX.FirmwareUpdateIA32.efi MinnowBoard.MAX.I32.079.R01.bin
+            	</li>
+                <li> example:<br/>
+                    <kbd>Shell> fs0:</kbd><br/>
+                    <kbd>fs0:\> .\MinnowBoard.MAX.FirmwareUpdateIA32.efi MinnowBoard.MAX.I32.079.R01.bin</kbd>
                 </li>
             </ul>
         </li>
