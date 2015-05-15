@@ -96,7 +96,7 @@ permalink: /win10/SetupMBM.htm
     So the first time you will likely need to use 64-bit EFI and 32-bit BIN.
     The second time and every other time you need to use 32-bit EFI and 32-bit BIN.
     The reason the bitness of the firmware has to match the bitness of the OS is that there is an EFI in the OS image that gets loaded to bootstrap the OS, and that EFI has to be the same bitness as the firmware as well.
-    Note 2: If you are nto able to go to fs0 partition, try a different flash drive. Certain flash drives won't be bootable even after you copy efi/bin files.
+    Note 2: If you are not able to go to fs0 partition, try a different flash drive. Certain flash drives won't be bootable even after you copy efi/bin files.
     
 
 </div>
@@ -141,7 +141,7 @@ permalink: /win10/SetupMBM.htm
         </ol>
         <li>Navigate back to top level and select Boot Mainenance Manager-> Boot Options > Change Boot Order </li>
         <li>Highlight the boot order list (when it is highlighted, you will see "Change the order" on the right side of the screen) and press enter </li>
-        <li>Highlight "EFI Misc Device" and press '+' to move it to the top of the list </li>
+        <li>Highlight "EFI Misc Device" and press '+' to move it to the top of the list. If it does not move by '+', simply select "EFI Misc Device" and press enter to boot to it. </li>
         <li>Commit these changes and exit. </li>
         <li>The MBM should automatically boot to the card (this initial boot may take up to 2 minutes, subsequent boots should take less than 30 seconds). If it does not, it will boot to the UEFI shell, and you will have to execute the following in the UEFI shell to boot Windows:<br/>
             <kbd>fs1:</kbd><br/>
