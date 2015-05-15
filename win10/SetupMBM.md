@@ -81,6 +81,9 @@ permalink: /win10/SetupMBM.htm
                 <li>If your current firmware is 32 bit (if you have already modified the original firmware to be 32 bit)<br/>
                     <kbd>fs0:</kbd><br/>
                     <kbd>.\MinnowBoard.MAX.FirmwareUpdateIA32.efi <i>_filename_</i>.bin</kbd>
+                    e.g. 
+                    Shell> fs0:
+                    fs0:\> .\MinnowBoard.MAX.FirmwareUpdateIA32.efi MinnowBoard.MAX.I32.079.R01.bin
                 </li>
             </ul>
         </li>
@@ -92,6 +95,8 @@ permalink: /win10/SetupMBM.htm
     So the first time you will likely need to use 64-bit EFI and 32-bit BIN.
     The second time and every other time you need to use 32-bit EFI and 32-bit BIN.
     The reason the bitness of the firmware has to match the bitness of the OS is that there is an EFI in the OS image that gets loaded to bootstrap the OS, and that EFI has to be the same bitness as the firmware as well.
+    Note 2: If you are nto able to go to fs0 partition, try a different flash drive. Certain flash drives won't be bootable even after you copy efi/bin files.
+    
 
 </div>
 
