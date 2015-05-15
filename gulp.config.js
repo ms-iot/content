@@ -2,11 +2,9 @@ module.exports = function() {
     var js = './js/';
     var css = './css/';
     var config = {
-        venderJs:[
+        allJs:[
             js + 'jquery-1.11.2.min.js',
-            js + 'bootstrap.min.js'
-        ],
-        appJs: [
+            js + 'bootstrap.min.js',
             js + 'app.js'
         ],
         allCss: [
@@ -15,7 +13,7 @@ module.exports = function() {
             '!' + css + '*.css.map'
         ],
         minCss: css + 'all.min.css',
-        minJs: js + 'all.js',
+        minJs: js + 'all.min.js',
         js: js,
         css: css
     };
