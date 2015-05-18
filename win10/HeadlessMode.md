@@ -4,8 +4,6 @@ title: Headed/Headless Mode
 permalink: /win10/HeadlessMode.htm
 ---
 
-<div class="container" markdown="1">
-
 ##Headed and Headless mode
 
 Windows IoT Core can either be in headed or headless mode.  The difference between these two modes is the presence or absence of any form of UI.  By default, Windows 10 IoT Core is in headed mode and displays system information like the computer name and IP address.  In the headed mode, the standard UAP UI stack is available for fully interactive apps.  In headless mode, there is no UI stack available and apps are not interactive.  Headless mode apps can be thought of as services.
@@ -27,6 +25,3 @@ You can modify the headed/headless state of your device from a PowerShell sessio
 
         setbootoption.exe headed
         shutdown /r /t 0
-
-
-</div>

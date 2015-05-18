@@ -4,7 +4,6 @@ title: Buy MBM
 permalink: /win10/BuyMBM.htm
 ---
 
-<div class="container" markdown="1">
 #How to Buy a MinnowBoard Max
 
 You can buy a MinnowBoard Max by following the instructions below.
@@ -21,6 +20,3 @@ You can buy a MinnowBoard Max by following the instructions below.
 4. Click the "Check Out" button and go through Avnet.com's checkout process.
 
 5. After you get your board then come on back to [WindowsOnDevices.com]({{site.landingurl}}) to get your new MinnowBoard Max setup.
-
-
-</div>

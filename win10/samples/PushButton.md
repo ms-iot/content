@@ -3,7 +3,6 @@ layout: default
 title: Push Button Sample
 permalink: /win10/samples/PushButton.htm
 ---
-<div class="container" markdown="1">
 
 ##Push Button Sample
 
@@ -157,5 +156,3 @@ When Push Button is pressed, the input value is read and LED is turned ON.
 {% endhighlight %}
 
 Remember that we connected the other end of the LED to the 3.3 Volts power supply, so we need to drive the pin to low to have current flow into the LED.
-
-</div>

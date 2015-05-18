@@ -4,7 +4,6 @@ title: Python Blinky Sample
 permalink: /win10/samples/PythonBlinky.htm
 ---
 
-<div class="container" markdown="1">
 ##Python Blinky Sample
 
 We'll create a simple Python Blinky app and connect a LED to your Windows IoT Core device (Raspberry Pi 2 or MinnowBoard Max).  Be aware that the GPIO APIs are
@@ -83,5 +82,3 @@ Remember that we connected the other end of the LED to the 3.3 Volts power suppl
 ###Questions/Suggestions
 
 Please refer to the [FAQ]({{site.baseurl}}/Faqs.htm) for issues.
-
-</div>

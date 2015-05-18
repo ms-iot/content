@@ -11,8 +11,5 @@ permalink: /win10/Advanced.htm
   </div>
 </div>
 
-<div class="container" markdown="1">
 * TBD
 <!-- 1.  [Creating and Deploying Appx Packages](Appx.htm) --- Walkthrough on how to create Appx package using Visual Studio and deploy it on a Windows IoT Core device. -->
-
-</div>

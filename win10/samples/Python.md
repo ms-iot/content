@@ -4,7 +4,6 @@ title: Python for IoT Sample
 permalink: /win10/samples/Python.htm
 ---
 
-<div class="container" markdown="1">
 ##Python Apps
 
 ###Set up your PC
@@ -62,5 +61,3 @@ print("Hello, World from IoT!")
 ###Questions/Suggestions
 
 Please refer to the [FAQ]({{site.baseurl}}/Faqs.htm) for issues.
-
-</div>
