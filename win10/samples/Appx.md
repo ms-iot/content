@@ -31,7 +31,7 @@ We'll walk through the steps required to create an Appx Package from your Visual
 <GenerateAppxPackageOnBuild>true</GenerateAppxPackageOnBuild>
 {% endhighlight %}
 </UL>
-<UL>So that it looks something like the following</UL>
+* So that it looks something like the following
 <UL>
 {% highlight XML %}
 <PropertyGroup>

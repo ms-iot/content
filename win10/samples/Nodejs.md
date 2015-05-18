@@ -132,7 +132,7 @@ For more information on writing addons, go to [https://nodejs.org/api/addons.htm
 Open up an explorer window on your PC and enter **\\\\\<IP address of your device\>\\C$** to access files on your device. The credentials are:
 
     username: <IP address or device name, default is minwinpc>\Administrator
-    password: p@ssw0rd    
+    password: p@ssw0rd
 
 NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/win10/samples/PowerShell.htm).  
 
