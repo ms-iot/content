@@ -2,6 +2,7 @@
 layout: default
 title: SetupPCWRA
 permalink: /win10/samples/BasicWRA.htm
+device: WRA
 ---
 
 <div class="row">
@@ -9,7 +10,8 @@ permalink: /win10/samples/BasicWRA.htm
   <div class="col-md-8">
     <p>Learn how to get your PC ready for developing IoT applications using Windows Remote Arduino.</p>
   </div>
-  <div class="row">
+  {% include steps.html %}
+  <!-- <div class="row">
     <ul class="nav nav-justified get-started-steps text-center">
         <li>
           <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="inactive">1. Select Your Device</h3></a>
@@ -24,7 +26,7 @@ permalink: /win10/samples/BasicWRA.htm
           <a href="{{site.baseurl}}/win10/samples/BasicWRA.htm"><h3 class="active">4. Develop</h3></a>
         </li>
     </ul>
-  </div>
+  </div> -->
 </div>
 
 <div class="col-md-12" markdown="1">
@@ -47,9 +49,9 @@ You can always use a USB connection to get started, but let's cover simple hook 
 	* An LED
 	* A few wires
 	<br/>
-	
+
 	![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/parts.JPG)
-	
+
 
 ###Set up
 
@@ -103,7 +105,7 @@ Now that we're all set up, let's get into some code!
 
 ###Note for USB:
  `USBSerial` has many options available to specify your device. In the constructor, you can provide the VID and PID of your device, the VID only, or a `DeviceInformation` object (obtained from the above mentioned `listAvailableDevicesAsync` function). Similarly, `BluetoothSerial` allows you to provide a device id (as a string), device name (also a string), or the `DeviceInformation` object.
- 
+
 You can obtain the VID & PID combination of your USB device by following these steps:
 <ul>
 <li>Open Device Manager through the Control Panel or by pressing both <i>Windows + Pause</i> keys and choosing the <i>Device Manager</i> link on the left.</li>
@@ -116,7 +118,7 @@ You can obtain the VID & PID combination of your USB device by following these s
 </ul>
 `USBSerial usb = new USBSerial( "VID_2341", "PID_0043" );`<br/>
 is guaranteed to work **only** for the following hardware device:
-	
+
 ![USB Device]({{site.baseurl}}/images/remote-wiring/samples/basic/vidpid.png)
 
 Next, I'm going to add a callback function to the ConnectionEstablished event on the BluetoothSerial object. This function will automatically be called when the Bluetooth device is connected. You'll notice that I haven't implemented anything in that function at this time. Last, call `.begin()` on the connection object to tell it to connect.

@@ -2,6 +2,7 @@
 layout: default
 title: SetupWindowsVirualShieldsArduino
 permalink: /win10/SetupWVSA.htm
+device: WVSA
 ---
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -10,21 +11,7 @@ permalink: /win10/SetupWVSA.htm
     <div class="col-md-8">
         <p>This section explains how to set up your Windows Virtual Shields for Arduino!</p>
     </div>
-    <ul class="nav nav-justified get-started-steps text-center">
-        <li>
-          <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="inactive">1. Select Your Device</h3></a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}/win10/SetupWVSA.htm"><h3 class="active">2. Set up your Windows Virtual Shields for Arduino and PC</h3></a>
-          <span class="glyphicon glyphicon-time"></span> 30min
-        </li>
-        <li>
-          <a href="{{site.baseurl}}/win10/SetupPCWVSA.htm"><h3 class="inactive">3. Set up your Phone and PC</h3></a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}/win10/samples/BlinkyWVSA.htm"><h3 class="inactive">4. Develop</h3></a>
-        </li>
-    </ul>
+    {% include steps.html %}
 </div>
 
 <div class="col-md-12" markdown="1">
@@ -40,7 +27,7 @@ permalink: /win10/SetupWVSA.htm
 ###Set up your Arduino
  1. Prepare the Bluetooth module if necessary (the Bluetooth module may need to have headers soldered onto it).
  2. Except for one difference below, connect the Bluetooth module to the Arduino per your wiring diagram ([BlueSMiRF wiring diagram](https://learn.sparkfun.com/tutorials/using-the-bluesmirf/hardware-hookup)).
- 
+
 		DIFFERENCE: Use pins 0 and 1 instead of 2 and 3:
 		The Bluetooth TX should connect to pin 0 (Arduino RX).
 		The Bluetooth RX should connect to pin 1 (Arduino TX).
