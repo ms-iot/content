@@ -3,15 +3,10 @@ layout: default
 title: AppX Creation and Deployment
 permalink: /win10/samples/Appx.htm
 ---
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
-  <div class="container">
-    <h1>Creating and Deploying Appx to Windows IoT Core</h1>
-    <p>Learn how to create and deploy appx packages to Windows IoT Core.</p>
-  </div>
-</div>
 
-<div class="container" markdown="1">
+#Creating and Deploying Appx to Windows IoT Core
+
+Learn how to create and deploy appx packages to Windows IoT Core.
 
 ### How to Create an Appx package for your VS Project
 
@@ -26,13 +21,13 @@ We'll walk through the steps required to create an Appx Package from your Visual
   ![Edit Csproj Option]({{site.baseurl}}/images/appx/edit_projectproj.png)
 
 * This will open the <Project>.csproj file in Visual Studio. Now Add the following item to the "globals" property group of the .csproj file
-<UL>
+
 {% highlight XML %}
 <GenerateAppxPackageOnBuild>true</GenerateAppxPackageOnBuild>
 {% endhighlight %}
-</UL>
+
 * So that it looks something like the following
-<UL>
+
 {% highlight XML %}
 <PropertyGroup>
   <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -55,26 +50,26 @@ We'll walk through the steps required to create an Appx Package from your Visual
   <GenerateAppxPackageOnBuild>true</GenerateAppxPackageOnBuild>
 </PropertyGroup>
 {% endhighlight %}
-</UL>
+
 * Now reload the project by doing right click on the project and selecting Reload Project Option.
 * Open the Package.appxmanifest file and in the "Identity" field, update the "publisher" field as shown below
-<UL>
+
 {% highlight XML %}
 <Identity
   Name="MyApp"
   Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
   Version="1.0.0.0" />
 {% endhighlight %}
-</UL>
+
 * Rebuild the project (Build->Rebuild Solution)
 * Currently the only way to sign the appx package is to use the signtool utility from a razzle window.
 
   Launch a razzle window and run:
-<UL>
+
   {% highlight sh %}
   signtool sign /a /u 1.3.6.1.5.5.7.3.3 /r "Microsoft Testing Root Certificate Authority 2010" /fd SHA256 /s my /n "Microsoft Corporation" /c "1.3.6.1.4.1.311.21.8.7587021.751874.11030412.6202749.3702260.207.195000.4717730" <AppxFilePath>
   {% endhighlight %}
-</UL>
+
 
 ### How to Deploy an Appx package to your Windows IoT Core Machine
 
@@ -84,26 +79,23 @@ You can deploy/install an Appx package to your machine or VM running Windows Win
 * Telnet to the Windows IoT Core machine by using Username:DefaultAccount and empty password.
 * Run the following command
 
-<UL>
+
 {% highlight sh %}
 MinDeployAppX /add /PackagePath:<AppxFilePath>
 {% endhighlight %}
-</UL>
+
 
 * After installing the Appx, run the following command to get the App's UserModelId
 
-<UL>
+
 {% highlight sh %}
 MinDeployAppX /FetchAppUserModelId /PackagePath:<AppxFilePath>
 {% endhighlight %}
-</UL>
+
 
 * You can now launch the app by running the following command
 
-<UL>
+
 {% highlight sh %}
 Testapplauncher /AppID <AppUserModelID>
 {% endhighlight %}
-</UL>
-
-</div>
