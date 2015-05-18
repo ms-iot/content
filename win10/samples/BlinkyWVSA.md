@@ -2,19 +2,15 @@
 layout: default
 title: Blinky WVSA
 permalink: /win10/samples/BlinkyWVSA.htm
-device: WVSA
 ---
 
-<div class="row">
-  <h1>Get Started</h1>
-  <div class="col-md-8">
-    <p>Learn how to get your PC ready for developing IoT applications using Windows Remote Arduino.</p>
-  </div>
-  {% include steps.html %}
-</div>
+#Get Started
 
-<div class="col-md-12" markdown="1">
-#Hello World (Blinky) speech-enabled LED example
+Learn how to get your PC ready for developing IoT applications using Windows Remote Arduino.
+
+{% include steps.html device="WVSA" %}
+
+##Hello World (Blinky) speech-enabled LED example
 
 In your Arduino IDE (version 1.62 or better), go to the menu item File->Examples->VirtualShield->HelloWorld-Speech-Eventing.
 
@@ -83,4 +79,3 @@ void loop()
 	shield.checkSensors();		    // handles Virtual Shield events.
 }
 {% endhighlight %}
-</div>

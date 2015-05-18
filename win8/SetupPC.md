@@ -2,7 +2,6 @@
 layout: default
 title: SetupPC
 permalink: /win8/SetupPC.htm
-device: Galileo
 ---
 
 <div class="row">
@@ -11,7 +10,7 @@ device: Galileo
   <div class="col-md-8">
     <p>Learn how to get your computer ready for Windows Developer Program for IoT.</p>
   </div>
-  {% include steps.html %}
+  {% include steps.html device="Galileo" %}
 </div>
 <div class="row">
   <h2>Windows Developer Program for IoT Developer Tools</h2>

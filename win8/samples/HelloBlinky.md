@@ -2,11 +2,10 @@
 layout: default
 title: Hello Blinky
 permalink: /win8/samples/HelloBlinky.htm
-device: Galileo
 ---
-{% include steps.html %}
 
-<div class="col-md-12" markdown="1">
+{% include steps.html device="Galileo" %}
+
 #Hello Blinky
 Learn to Create or Update, Deploy and Debug a Windows Developer Program for IoT project.
 
@@ -107,7 +106,3 @@ The Microsoft IoT team and the community are adding features and fixing bugs in 
    ![Prerelease]({{site.baseurl}}/images/Prerelease.png)
 
 1. Click the ```Update``` button to update your project.
-
----
-[&laquo; Return to Samples](SampleApps.htm){: .btn .btn-default}
-</div>

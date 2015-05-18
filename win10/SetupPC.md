@@ -2,15 +2,12 @@
 layout: default
 title: Setup your PC for Raspberry Pi 2
 permalink: /win10/SetupPC.htm
-device: RPI2
 ---
 
-<div class="row">
-    <h1>Get Started</h1>
-        <div class="col-md-8">
-        <p>Learn how to get your computer ready for Windows Developer Program for IoT.</p>
-    </div>
-    {% include steps.html %}
-</div>
+#Get Started
+
+Learn how to get your computer ready for Windows Developer Program for IoT.
+
+{% include steps.html device="RPI2" %}
 
 {% include_relative SetupPCContent.md %}

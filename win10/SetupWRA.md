@@ -2,19 +2,13 @@
 layout: default
 title: SetupBoard
 permalink: /win10/SetupWRA.htm
-device: WRA
 ---
 
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="row">
-    <h1>Get Started</h1>
-    <div class="col-md-8">
-        <p>This section explains how to set up your Arduino and how to add the Windows Remote Arduino library to your Windows projects!</p>
-    </div>
-    {% include steps.html %}
-</div>
+#Get Started
 
-<div class="col-md-12" markdown="1">
+This section explains how to set up your Arduino and how to add the Windows Remote Arduino library to your Windows projects!
+
+{% include steps.html device="WRA" %}
 
 ##Arduino Setup
 
@@ -49,5 +43,3 @@ Serial1.begin( 57600 );	//or your baud rate here, it will be 115200 if using the
 while( !Serial1 );
 Firmata.begin( Serial1 );
 {% endhighlight %}
-
-</div>
