@@ -4,7 +4,6 @@ title: Nodejs
 permalink: /win10/samples/Nodejs.htm
 ---
 
-<div class="container" markdown="1">
 ##MemoryStatus Node.js (Console Application) Sample
 Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/win10/samples/ConsoleApp.htm)
 
@@ -158,5 +157,3 @@ In PowerShell, run the command `C:\Node\Node.exe server.js` to start the server.
 Open up a browser and enter the address http://&lt;IP address of your device&gt;:1337. The result should look something like the picture below.
 
 ![Memory Status Result]({{site.baseurl}}/images/Nodejs/memorystatus-ie.PNG)
-
-</div>

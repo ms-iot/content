@@ -4,7 +4,6 @@ title: Driver lab
 permalink: /win10/samples/DriverLab.htm
 ---
 
-<div class="container" markdown="1">
 ##Write a driver with Windows IoT Core
 
 ###Did you set up your environment?
@@ -45,5 +44,3 @@ In these tutorials, you will be required to run various commands. Please use an 
 2. [Use Visual Studio to build a driver]({{site.baseurl}}/win10/samples/DriverLab2.htm) --- In this exercise, you will use Visual Studio to compile a driver for a specific platform.
 
 3. [Deploy the driver and confirm the installation]({{site.baseurl}}/win10/samples/DriverLab3.htm) --- This exercise demonstrates how to manually copy and install the driver to a Windows IoT Core device.
-
-</div>

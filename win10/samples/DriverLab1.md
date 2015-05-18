@@ -4,7 +4,6 @@ title: Driver Lab - Open project for an existing driver
 permalink: /win10/samples/DriverLab1.htm
 ---
 
-<div class="container" markdown="1">
 ##Open project for an existing driver
 
 ###On the development computer
@@ -19,5 +18,3 @@ permalink: /win10/samples/DriverLab1.htm
 
 ###Next Step
 [Use Visual Studio to build the driver]({{site.baseurl}}/win10/samples/DriverLab2.htm)
-
-</div>
