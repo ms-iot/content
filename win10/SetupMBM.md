@@ -2,14 +2,13 @@
 layout: default
 title: SetupBoard
 permalink: /win10/SetupMBM.htm
-device: MBM
 ---
 
 #Get Started
 
 Learn how to set up the MinnowBoard Max hardware and connect it to your computer.
 
-{% include steps.html %}
+{% include steps.html device="MBM" %}
 
 ##What you need
 * A PC running Windows 10 Insider Preview.

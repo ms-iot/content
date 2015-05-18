@@ -2,14 +2,13 @@
 layout: default
 title: SetupBoard
 permalink: /win10/SetupRPI.htm
-device: RPI2
 ---
 
 #Get Started
 
 Learn how to set up the Raspberry Pi 2 and connect it to your computer. Note that this requires you to have a PC running Windows 10 Technical Preview.
 
-{% include steps.html %}
+{% include steps.html device="RPI2" %}
 
 ##What you need
 

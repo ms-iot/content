@@ -2,36 +2,15 @@
 layout: default
 title: SetupPCWRA
 permalink: /win10/samples/BasicWRA.htm
-device: WRA
 ---
 
-<div class="row">
-  <h1>Get Started</h1>
-  <div class="col-md-8">
-    <p>Learn how to get your PC ready for developing IoT applications using Windows Remote Arduino.</p>
-  </div>
-  {% include steps.html %}
-  <!-- <div class="row">
-    <ul class="nav nav-justified get-started-steps text-center">
-        <li>
-          <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="inactive">1. Select Your Device</h3></a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}/win10/SetupWRA.htm"><h3 class="inactive">2. Set up your Device</h3></a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}/win10/SetupPCWRA.htm"><h3 class="inactive">3. Set up your PC</h3></a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}/win10/samples/BasicWRA.htm"><h3 class="active">4. Develop</h3></a>
-        </li>
-    </ul>
-  </div> -->
-</div>
+#Get Started
 
-<div class="col-md-12" markdown="1">
+Learn how to get your PC ready for developing IoT applications using Windows Remote Arduino.
 
-#Basic Windows Remote Arduino
+{% include steps.html device="WRA" %}
+
+##Basic Windows Remote Arduino
 
 In this project, we will use Windows Remote Arduino to turn an LED on and off. It is a simple example, but will reveal the power that the library can give you to create many more advanced projects. Let's get started!
 
@@ -145,5 +124,3 @@ However, be aware that the `.begin()` function must be called before any connect
 
 
 I really hope you enjoy replicating this project and using it as a baseline for an incredible new set of Maker projects!
-
- </div>

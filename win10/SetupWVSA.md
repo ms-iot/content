@@ -2,19 +2,13 @@
 layout: default
 title: SetupWindowsVirualShieldsArduino
 permalink: /win10/SetupWVSA.htm
-device: WVSA
 ---
 
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="row">
-    <h1>Get Started</h1>
-    <div class="col-md-8">
-        <p>This section explains how to set up your Windows Virtual Shields for Arduino!</p>
-    </div>
-    {% include steps.html %}
-</div>
+#Get Started
 
-<div class="col-md-12" markdown="1">
+This section explains how to set up your Windows Virtual Shields for Arduino!
+
+{% include steps.html device="WVSA" %}
 
 #Setup for Windows Virtual Shields for Arduino (Arduino and PC)
 
@@ -57,5 +51,3 @@ device: WVSA
  3. Upload the sketch.
  4. Replace the Bluetooth TX and RX wires into the Arduino pins. (Bluetooth TX to Arduino RX and Bluetooth RX to Arduino TX).
  5. In order to see anything on the phone, you will need to go to the next step (Set up your Phone and PC).
-
-</div>
