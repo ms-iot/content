@@ -7,20 +7,20 @@ permalink: /WhatsNew.htm
 # 1/27/2015
   * Learn how to port Win32 apps to Galileo using [Forwarders and Stubs]({{site.baseurl}}/win8/samples/Forwarders.htm)
   * Learn how to run [Node.js]({{site.baseurl}}/win8/samples/NodeJS.htm) on Galileo
-  * New Samples 
+  * New Samples
     * Using the [MCP23017 GPIO Port Expander]({{site.baseurl}}/win8/samples/MCP23017Sample.htm)
     * Using the [OneNote API]({{site.baseurl}}/win8/samples/TODO_Sample.htm)
     * Reintroduced [Firmata and Cylon]({{site.baseurl}}/win8/samples/Firmata.htm)
 
   * Reminder: Help us, help you [Enabling Customer Experience Improvement Program]({{site.baseurl}}/ExperienceImprovementEnable.htm)
-    
+
 # 12/2/2014
   * Announcing [Lightning]({{site.baseurl}}/win8/Lightning.htm){:target="_blank"} for Intel Galileo Gen1 and Gen2!
   * Significant support for Wiring Language, Libraries and Classes
   * You spoke, we listened! We put the "I" in IoT with new networking [samples](SampleApps.htm) and documentation
     * [C++ REST SDK]({{site.baseurl}}/win8/samples/Casablanca.htm)
     * [Audio streaming](https://github.com/ms-iot/sample-twoway-communicator)
-  * This update contains changes in every release package. 
+  * This update contains changes in every release package.
     * Please revisit [Setup your PC]({{site.baseurl}}/win8/SetupPC.htm)
     * Please revisit [Setup your Galileo]({{site.baseurl}}/win8/SetupGalileo.htm)
     * Please revisit [Hello Blinky]({{site.baseurl}}/win8/samples/HelloBlinky.htm)
@@ -52,12 +52,9 @@ permalink: /WhatsNew.htm
   * Added RGB pixel sample.
   * Added UART sample
   * Added IoT Intern project - MakerBlock Rover
-  
+
 # 8/18/2014
 
   * [Updated Microsoft Connect sign-in instructions]({{site.baseurl}}/SigninMSConnect.htm){:target="_blank"} - Based on your feedback, we've offered more details to help you with Microsoft Connect
   * [pulseIn](http://arduino.cc/en/Reference/PulseIn){:target="_blank"} - Based on your requests, we now have an implementation of pulseIn
   * Improved network resiliancy in the GalileoWatcher
-
----
-[&laquo; Return to homepage]({{site.baseurl}}/index.htm){: .btn .btn-default} 
