@@ -2,6 +2,7 @@
 layout: default
 title: SetupBoard
 permalink: /win10/SetupMBM.htm
+device: MBM
 ---
 
 #Get Started
@@ -32,11 +33,11 @@ Learn how to set up the MinnowBoard Max hardware and connect it to your computer
 	* *.efi
     * *.bin
 * Power off your minnowboard
-* Remove any SD cards and external hard drives 
-* Plug in the USB stick to the minnowboard 
+* Remove any SD cards and external hard drives
+* Plug in the USB stick to the minnowboard
 * Connect an HDMI/DVI monitor and USB keyboard
         * It is also possible to interact with UEFI and BIOS over a serial connection
-* Power on your minnowboard 
+* Power on your minnowboard
 * You should see the UEFI prompt. Run the following commands at the UEFI prompt:
 	* If your current firmware is 64 bit (this is how the Minnowboard ships)
 
@@ -50,7 +51,7 @@ Learn how to set up the MinnowBoard Max hardware and connect it to your computer
 
 		<kbd>.\MinnowBoard.MAX.FirmwareUpdateIA32.efi _filename_.bin</kbd>
 
-* The system should shut down automatically after the firmware update is complete. 
+* The system should shut down automatically after the firmware update is complete.
 
 Note: You might wonder why you need to invoke 'MinnowBoard.MAX.FirmwareUpdateX64.efi' even if we're only supporting a 32 bit version of Windows 10 IoT Core.
 The board usually comes with 64-bit firmware pre-installed on it.  The bitness of the EFI has to match the bitness of the current firmware.  Additionally, the bitness of the bin file has to match the desired bitness of the firmware after updating.
@@ -70,17 +71,17 @@ Follow these instructions to configure your SD card:
 * Insert an SD card into your SD card reader.
 * Open an admininistrator command prompt and navigate to the folder containing your local flash.ffu.
 * Find the disk number that your SD card is on your computer.  This will be used when the image is applied in the next step.  To do this, you can use the diskpart utility.  Run the following commands:<br />
-    
-	<kbd>diskpart</kbd> 
+
+	<kbd>diskpart</kbd>
 
     <kbd>list disk</kbd>
 
     <kbd>exit</kbd>
-        
+
 * Using the admininistrator command prompt, apply the image to your SD card by running the following command (be sure to replace PhysicalDriveN with the value you found in the previous step, for example, if your SD card is disk number 3, use <kbd>/ApplyDrive:\\.\PhysicalDrive3</kbd> below):
-    
+
 	<kbd>dism.exe /Apply-Image /ImageFile:<fullpath>flash.ffu /ApplyDrive:\\.\PhysicalDriveN /SkipPlatformCheck</fullpath></kbd>
-        
+
 * Click on the "Safely Remove Hardware" icon in your task tray and select your USB SD card reader to safely remove it from the system.  Failing to do this can cause corruption of the image.
 **NOTE:** If you want to remove Windows 10 IoT Core from your SD card after you are done using it, see the [FAQ]({{site.baseurl}}/FAQs.htm) section titled **How do I remove Windows 10 IoT Core from my SD card?**.
 
@@ -89,25 +90,25 @@ Follow these instructions to configure your SD card:
 
 * Insert your newly flashed SD Card into your MBM.  At any point, if you turn on your MBM without an SD card inserted, you will be required to configure the boot order again.
 * Hook up a physical keyboard to the USB port on MBM. For display, you can either connect an HDMI monitor or use the serial port.
-* When you boot, press F2 to get to the BIOS settings. 
-* Navigate to Device Manager -> System Setup -> South Cluster Configuration -> LPSS & SCC Configuration 
-    * Set "LPSS & SCC Device Mode" to "ACPI Mode" 
-    * Set "DDR50 Capability Support for SDCard" to "Disable" 
+* When you boot, press F2 to get to the BIOS settings.
+* Navigate to Device Manager -> System Setup -> South Cluster Configuration -> LPSS & SCC Configuration
+    * Set "LPSS & SCC Device Mode" to "ACPI Mode"
+    * Set "DDR50 Capability Support for SDCard" to "Disable"
     * Set "ACPI Reporting MMC/SD As" to "Non-Removable"
-* Navigate back to top level and select Boot Mainenance Manager-> Boot Options > Change Boot Order 
-* Highlight the boot order list (when it is highlighted, you will see "Change the order" on the right side of the screen) and press enter 
-* Highlight "EFI Misc Device" and press '+' to move it to the top of the list 
-* Commit these changes and exit. 
+* Navigate back to top level and select Boot Mainenance Manager-> Boot Options > Change Boot Order
+* Highlight the boot order list (when it is highlighted, you will see "Change the order" on the right side of the screen) and press enter
+* Highlight "EFI Misc Device" and press '+' to move it to the top of the list
+* Commit these changes and exit.
 * The MBM should automatically boot to the card (this initial boot may take up to 2 minutes, subsequent boots should take less than 30 seconds). If it does not, it will boot to the UEFI shell, and you will have to execute the following in the UEFI shell to boot Windows:
-    
+
 	<kbd>fs1:</kbd><br/>
-    
+
 	<kbd>efi\boot\bootia32.efi</kbd>
-        
+
 * On the very first boot the Windows 10 IoT Core will do some first boot configurations and it will display a default blue colored application while this is happening. Wait for a few minutes and the board will automatically restart. This will happen only once and then DefaultApp should come up, displaying the IP address of MBM.
 ![mbm]({{site.baseurl}}/images/DefaultAppMBM.png){:device-images}
 
-        
+
 * Follow the instructions [here]({{site.baseurl}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.
 * It is **highly recommended** that you update the default password for the Administrator account. Please follow the instructions found in the [PowerShell]({{site.baseurl}}/win10/samples/PowerShell.htm) documentation.
-* Remote Debugger will launch automatically when your device boots. 
+* Remote Debugger will launch automatically when your device boots.

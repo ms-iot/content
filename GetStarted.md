@@ -2,6 +2,7 @@
 layout: default
 title: Get Started
 permalink: /GetStarted.htm
+device: RPI2
 ---
 
 #Get Started
