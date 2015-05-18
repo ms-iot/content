@@ -11,23 +11,6 @@ device: WRA
     <p>Learn how to get your PC ready for developing IoT applications using Windows Remote Arduino.</p>
   </div>
   {% include steps.html %}
-  <!-- <div class="row">
-    <ul class="nav nav-justified get-started-steps text-center">
-        <li>
-          <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="inactive">1. Select Your Device</h3></a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}/win10/SetupWRA.htm"><h3 class="inactive">2. Set up your Device</h3></a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}/win10/SetupPCWRA.htm"><h3 class="active">3. Set up your PC</h3></a>
-          <span class="glyphicon glyphicon-time"></span> 30-45min
-        </li>
-        <li>
-          <a href="{{site.baseurl}}/win10/samples/BasicWRA.htm"><h3 class="inactive">4. Develop</h3></a>
-        </li>
-    </ul>
-  </div> -->
 </div>
 
 <div class="col-md-12" markdown="1">

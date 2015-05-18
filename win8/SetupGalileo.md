@@ -13,23 +13,6 @@ device: Galileo
       <p>This guide will show you how to install and run the Windows Developer Program for IoT on an Intel Galileo Gen1 or Gen2.</p>
     </div>
     {% include steps.html %}
-     <!-- <div class="row">
-        <ul class="nav nav-justified get-started-steps text-center">
-            <li>
-              <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="inactive">1. Select Your Device</h3></a>
-            </li>
-            <li>
-              <a href="{{site.baseurl}}/win8/SetupGalileo.md"><h3 class="active">2. Set up your Intel Galileo</h3></a>
-              <span class="glyphicon glyphicon-time"></span> 30min
-            </li>
-            <li>
-              <a href="{{site.baseurl}}/win8/SetupPC.htm"><h3 class="inactive">3. Set up your PC</h3></a>
-            </li>
-            <li>
-              <a href="{{site.baseurl}}/win8/samples/HelloBlinky.htm"><h3 class="inactive">4. Develop</h3></a>
-            </li>
-        </ul>
-    </div> -->
 </div>
 <div class="col-md-12" markdown="1">
 ## Step 1: Sign up for Microsoft Connect

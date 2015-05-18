@@ -8,29 +8,11 @@ device: MBM
 <!-- Main jumbotron for a primary marketing message or call to action -->
 
 <div class="row">
-    <!-- <h1>Get Started - Setup Your MinnowBoard Max</h1> -->
     <h1>Get Started</h1>
     <div class="col-md-8">
         <p>Learn how to set up the MinnowBoard Max hardware and connect it to your computer.</p>
     </div>
     {% include steps.html %}
-     <!-- <div class="row">
-        <ul class="nav nav-justified get-started-steps text-center">
-            <li>
-              <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="inactive">1. Select Your Device</h3></a>
-            </li>
-            <li>
-              <a href="{{site.baseurl}}/win10/SetupMBM.htm"><h3 class="active">2. Set up your MinnowBoard Max</h3></a>
-              <span class="glyphicon glyphicon-time"></span> 30min
-            </li>
-            <li>
-              <a href="{{site.baseurl}}/win10/SetupPCMBM.htm"><h3 class="inactive">3. Set up your PC</h3></a>
-            </li>
-            <li>
-              <a href="{{site.baseurl}}/win10/samples/BlinkyMBM.htm"><h3 class="inactive">4. Develop</h3></a>
-            </li>
-        </ul>
-         </div> -->
 </div>
 
 <div class="row">

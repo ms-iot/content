@@ -12,21 +12,6 @@ device: WVSA
         <p>This section explains how to set up your Windows Virtual Shields for Arduino!</p>
     </div>
     {% include steps.html %}
-    <!-- <ul class="nav nav-justified get-started-steps text-center">
-        <li>
-          <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="inactive">1. Select Your Device</h3></a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}/win10/SetupWVSA.htm"><h3 class="active">2. Set up your Windows Virtual Shields for Arduino and PC</h3></a>
-          <span class="glyphicon glyphicon-time"></span> 30min
-        </li>
-        <li>
-          <a href="{{site.baseurl}}/win10/SetupPCWVSA.htm"><h3 class="inactive">3. Set up your Phone and PC</h3></a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}/win10/samples/BlinkyWVSA.htm"><h3 class="inactive">4. Develop</h3></a>
-        </li>
-    </ul> -->
 </div>
 
 <div class="col-md-12" markdown="1">

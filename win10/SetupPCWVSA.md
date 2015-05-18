@@ -11,21 +11,6 @@ device: WVSA
     <p>Learn how to get your PC ready for developing IoT applications using Windows Remote Arduino.</p>
   </div>
   {% include steps.html %}
-  <!-- <ul class="nav nav-justified get-started-steps text-center">
-      <li>
-        <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="inactive">1. Select Your Device</h3></a>
-      </li>
-      <li>
-        <a href="{{site.baseurl}}/win10/SetupWVSA.htm"><h3 class="inactive">2. Set up your Device</h3></a>
-      </li>
-      <li>
-        <a href="{{site.baseurl}}/win10/SetupPCWVSA.htm"><h3 class="active">3. Set up your PC for Windows Remote Arduino</h3></a>
-        <span class="glyphicon glyphicon-time"> 30-45min</span>
-      </li>
-      <li>
-        <a href="{{site.baseurl}}/win10/samples/BlinkyWVSA.htm"><h3 class="inactive">4. Develop</h3></a>
-      </li>
-  </ul> -->
 </div>
 
 <div class="col-md-12" markdown="1">
