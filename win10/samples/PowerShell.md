@@ -84,6 +84,10 @@ Make sure to follow these steps to correctly configure your VM or device running
     You will need to reboot the device for the change to take effect. You can use the `shutdown` command as follows:
     
         [192.168.0.243]: PS C:\> shutdown /r /t 0
+        
+    After you reboot, you may need to rerun this command in order to connect to your device using the new name:
+        
+        PS C:\> Set-Item WSMan:\localhost\Client\TrustedHosts -Value <new-name>
 
 ###Commonly used utilities
 
