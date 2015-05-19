@@ -78,8 +78,6 @@ Looking to configure some of the settings on your device? The below tools all co
 
 * **Task scheduler:**
 
-* **Task scheduler:**
-
 	To view the current list of scheduled tasks, use the `schtasks.exe` command. You can create new tasks with the `/create` switch or run on-demand tasks with the `/run` switch. For a full list of supported parameters, use `schtasks.exe /?`
 
 * **Device drivers:**
