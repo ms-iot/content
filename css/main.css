@@ -29,7 +29,7 @@ body {
         margin-right: 0;
     }
 
-        .content-container > .row h1 {
+        .content-container > h1#get-started {
             margin-top: 64px;
             margin-bottom: 6px;
             font-size: 46px;
@@ -37,7 +37,8 @@ body {
             line-height: 56px;
         }
 
-        .content-container > .row > h1 + div {
+        .content-container > h1#get-started + p,
+        .content-container > h1#get-started + p + p {
             font-size: 24px;
             font-weight: lighter;
             line-height: 28px;
