@@ -131,6 +131,10 @@ a:hover {
     max-width: 600px;
 }
 
+.screen-snippet{
+   border:3px solid #9E9E9E;
+}
+
 .downloads-image {
     background-image: url('../images/DevelopmentBoards.PNG');
     background-size: cover;
