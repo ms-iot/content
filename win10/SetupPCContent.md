@@ -2,15 +2,19 @@
 
 We have created a versions file describing the supported versions of the required tools.  Use this as a blueprint for installing the required tools on your PC:
 
-* Install Windows 10 from [here](https://dev.windows.com/en-US/downloads/windows-10-developer-tools)
+* **Install Windows 10** from [here](https://dev.windows.com/en-US/downloads/windows-10-developer-tools)
 
-* Install Visual Studio 2015 Preview from [here](https://dev.windows.com/en-US/downloads/install-dev-tools-visual-studio-2015).  Choose the Custom option when you kick off the installer, and then select "Universal Windows App Development Tools".  On the next page confirm that "Tools and Windows SDK", and "Emulators for Windows Mobile" options are going to be installed.
+* **Install Visual Studio 2015 Preview** from [here](https://dev.windows.com/en-US/downloads/install-dev-tools-visual-studio-2015).  Choose the Custom option when you kick off the installer, and then select "Universal Windows App Development Tools".  On the next page confirm that "Tools and Windows SDK", and "Emulators for Windows Mobile" options are going to be installed.
 
-* Make sure you've enabled developer mode by following [these instructions](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx).
+* Make sure you've **enabled developer mode** by following [these instructions](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx).
 
-* We have had some customers report installation issues with the previous step. As a workaround, please go to the Windows Developer Tools Preview page [here](https://dev.windows.com/en-US/downloads/windows-10-developer-tools), scroll down to the bottom of the page to the "Other download options" section and install "Standalone Windows 10 SDK for Windows 10" and "Microsoft Windows 10 Emulator for Mobile".
+	* Some customers report installation issues with the previous step. As a workaround, please go to the **Windows Developer Tools Preview page** [here](https://dev.windows.com/en-US/downloads/windows-10-developer-tools).
 
-* Install WindowsDeveloperProgramForIoT.msi.  It can be found inside any of the Windows 10 IoT Core Insider Preview Image files (for example, `Windows 10 IoT Core Insider Preview Image for Raspberry Pi 2.zip`) [here](http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57782). If you followed all the steps in "Set up your Raspberry Pi 2", then you should have the file downloaded already.
+	<img class="screen-snippet" src="{{site.baseurl}}/images/SetupPC/download.PNG">
+	Scroll down to the bottom of the page to the "Other download options" section and install "Standalone Windows 10 SDK for Windows 10" and "Microsoft Windows 10 Emulator for Mobile".
+
+* **Install WindowsDeveloperProgramForIoT.msi**.  It can be found **inside any** of the Windows 10 IoT Core Insider Preview i**mage files** (for example, `Windows 10 IoT Core Insider Preview image for Raspberry Pi 2.zip`) [here]({{site.downloadurl}})
+
 
 * At this point, you are ready to develop apps.  Notice that the Windows IoT Core Watcher application automatically starts when you log on.  It can be used to find available Windows 10 IoT Core devices to deploy apps to.
 
@@ -20,11 +24,11 @@ We have created a versions file describing the supported versions of the require
 There are two options for connecting to your Windows 10 IoT Core device from your development PC:
 
 #### Option 1: Plug your device into your local network
-The easiest way to connect to your device is to plug it into a local network that your development PC is already connected to. Plug the Ethernet cable from the device into a hub or switch on your network. 
+The easiest way to connect to your device is to plug it into a local network that your development PC is already connected to. Plug the **Ethernet cable** from the device into a hub or switch on your **network**.
 To keep things simple, it's best if you have a DHCP server (such as a router) present on your network so the device gets an IP address when it boots.
 
 #### Option 2: Connecting your Windows 10 IoT Core device directly to your PC & setting up Internet Connection Sharing (ICS)
-If you don't have a local network to plug your device into, you can create a direct connection to your PC. 
+If you don't have a local network to plug your device into, you can **create a direct connection to your PC.**
 In order to connect and share the internet connection in your PC with your IoT Core device, you must have the following:
 
 * A spare Ethernet port on your development machine.  This can be either an extra PCI Ethernet card or a USB-to-Ethernet dongle.
