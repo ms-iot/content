@@ -4,6 +4,7 @@ title: Python for IoT Sample
 permalink: /win10/samples/Python.htm
 ---
 
+<div class="container" markdown="1">
 ##Python Apps
 
 ###Set up your PC
@@ -12,15 +13,13 @@ permalink: /win10/samples/Python.htm
 
 * Install Python for Windows (3.*) from [http://www.python.org/downloads](http://www.python.org/downloads){:target="_blank"}
 
-* Download and extract PTVS (Python Tools for Visual Studio) IoT Preview VS 2015 content from [here]({{site.downloadurl}}).
+* Download and install PTVS (Python Tools for Visual Studio) **VS 2015** latest dev release from [here](https://github.com/microsoft/ptvs/releases){:target="_blank"}.
 
-* Install Python Tools for Visual Studio 2015: PTVS IoT Preview VS 2015.msi
-
-* Install Python UAP SDK: pyuapsdk.vsix
+* Download and install Python UWP SDK (pyuwpsdk.vsix) from [here](https://github.com/ms-iot/python/releases/v1.0Alpha){:target="_blank"}.
 
 ###Create new Python project
 
-* Create new project based on `Template > Python > Windows IoT Core > Background Application (IoT)`
+* Create new project based on `Template > Python > Windows 10 IoT Core > Background Application (IoT)`
 
 ###Output Hello World!
 
@@ -30,7 +29,7 @@ Modify *StartupTask.py* like this
 print("Hello, World from IoT!")
 {% endhighlight %}
 
-###Deploy Python app to your Windows IoT Core device
+###Deploy Python app to your Windows 10 IoT Core device
 
 * Right-click the Project node and select Properties
 
@@ -48,7 +47,7 @@ print("Hello, World from IoT!")
 
 * Click on Browse tab
 
-* Navigate to [here](https://github.com/ms-iot/samples/tree/master/PythonBlinky/windevices)
+* Download pywindevices content from [here](https://github.com/ms-iot/samples/tree/master/PyWinDevices)
 
 * Navigate to ARM for RPi2 or win32 for MBM
 
@@ -58,6 +57,10 @@ print("Hello, World from IoT!")
 
 * Start using gpio functions (similar steps for I2C or SPI)
 
+* WinDevices documentation can be found [here](https://github.com/ms-iot/samples/tree/master/PyWinDevices/docs)
+
 ###Questions/Suggestions
 
-Please refer to the [FAQ]({{site.baseurl}}/Faqs.htm) for issues.
+Please refer to the [FAQ]({{site.baseurl}}/FAQs.htm) for issues.
+
+</div>

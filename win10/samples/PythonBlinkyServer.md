@@ -4,21 +4,20 @@ title: Python Blinky Server Sample
 permalink: /win10/samples/PythonBlinkyServer.htm
 ---
 
+<div class="container" markdown="1">
 ##Python Blinky Server Sample
 
-We'll create a simple Python Blinky Web Server app and connect a LED to your Windows IoT Core device (Raspberry Pi 2 or MinnowBoard Max).  Be aware that the GPIO APIs are
+We'll create a simple Python Blinky Web Server app and connect a LED to your Windows 10 IoT Core device (Raspberry Pi 2 or MinnowBoard Max).  Be aware that the GPIO APIs are
 only available on Windows IoT Core, so this sample cannot run on your desktop.
 
 ###Set up your PC
-* Follow the instructions [here]({{site.baseurl}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
+* Follow the instructions [here][here]({{site.baseurl}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
 
 * Install Python for Windows (3.*) from [http://www.python.org/downloads](http://www.python.org/downloads){:target="_blank"}
 
-* Download and extract PTVS (Python Tools for Visual Studio) IoT Preview VS 2015 content from [here]({{site.downloadurl}}).
+* Download and install PTVS (Python Tools for Visual Studio) **VS 2015** latest dev release from [here](https://github.com/microsoft/ptvs/releases){:target="_blank"}.
 
-* Install Python Tools for Visual Studio 2015: PTVS IoT Preview VS 2015.msi
-
-* Install Python UAP SDK: pyuapsdk.vsix
+* Download and install Python UWP SDK (pyuwpsdk.vsix) from [here](https://github.com/ms-iot/python/releases/v1.0Alpha){:target="_blank"}.
 
 ###Set up your hardware
 The setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/win10/samples/Blinky.htm).
@@ -79,7 +78,7 @@ httpd.serve_forever()
 
 Remember that we connected the other end of the LED to the 3.3 Volts power supply, so we need to drive the pin to low to have current flow into the LED.
 
-###Deploy Python app to your Windows IoT Core device
+###Deploy Python app to your Windows 10 IoT Core device
 
 * Right-click the Project node and select Properties
 
@@ -93,4 +92,6 @@ Remember that we connected the other end of the LED to the 3.3 Volts power suppl
 
 ###Questions/Suggestions
 
-Please refer to the [FAQ]({{site.baseurl}}/Faqs.htm) for issues.
+Please refer to the [FAQ]({{site.baseurl}}/FAQs.htm) for issues.
+
+</div>
