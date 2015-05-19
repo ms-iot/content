@@ -4,31 +4,13 @@ title: SetupPCWRA
 permalink: /win10/SetupPCWVSA.htm
 ---
 
-<div class="row">
-  <h1>Get Started</h1>
-  <div class="col-md-8">
-    <p>Learn how to get your PC ready for developing IoT applications using Windows Remote Arduino.</p>
-  </div>
-  <ul class="nav nav-justified get-started-steps text-center">
-      <li>
-        <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="inactive">1. Select Your Device</h3></a>
-      </li>
-      <li>
-        <a href="{{site.baseurl}}/win10/SetupWVSA.htm"><h3 class="inactive">2. Set up your Device</h3></a>
-      </li>
-      <li>
-        <a href="{{site.baseurl}}/win10/SetupPCWVSA.htm"><h3 class="active">3. Set up your PC for Windows Remote Arduino</h3></a>
-        <span class="glyphicon glyphicon-time"> 30-45min</span>
-      </li>
-      <li>
-        <a href="{{site.baseurl}}/win10/samples/BlinkyWVSA.htm"><h3 class="inactive">4. Develop</h3></a>
-      </li>
-  </ul>
-</div>
+#Get Started
 
-<div class="col-md-12" markdown="1">
+Learn how to get your PC ready for developing IoT applications using Windows Remote Arduino.
 
-#Setup for Windows Virtual Shields for Arduino (Phone and PC)
+{% include steps.html device="WVSA" %}
+
+##Setup for Windows Virtual Shields for Arduino (Phone and PC)
 
 ##Hardware
 
@@ -60,5 +42,3 @@ permalink: /win10/SetupPCWVSA.htm
  3. and are viewing the main screen on the Virtual Shields for Arduino app,
  4. you can press the Reset button on your Arduino.
  5. You should see a hello message on the Virtual Shields for Arduino phone app.
-
-</div>

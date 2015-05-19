@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: 16x2 LCD
 permalink: /win8/samples/16x2LCD.htm
 ---

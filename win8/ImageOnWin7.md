@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: Imaging on Windows 7
 permalink: /win8/ImageOnWin7.htm
 ---

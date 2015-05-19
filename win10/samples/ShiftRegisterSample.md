@@ -4,7 +4,6 @@ title: Shift Register Sample
 permalink: /win10/samples/ShiftRegisterSample.htm
 ---
 
-<div class="container" markdown="1">
 ##Shift Register Sample
 
 ![Shift Register Sample Image]({{site.baseurl}}/images/ShiftRegister/ShiftRegisterProjectPicture_480.png)
@@ -629,5 +628,3 @@ namespace ShiftRegisterSample
     }
 }
 {% endhighlight %}
-
-</div>

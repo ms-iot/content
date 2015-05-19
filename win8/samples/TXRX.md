@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: TX/RX Sample
 permalink: /win8/samples/TXRX.htm
 ---

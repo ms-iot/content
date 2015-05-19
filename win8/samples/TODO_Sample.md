@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: OneNote cloud services
 permalink: /win8/samples/TODO_Sample.htm
 ---

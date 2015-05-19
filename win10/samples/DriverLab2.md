@@ -4,7 +4,6 @@ title: Driver Lab - Use Visual Studio to build a driver
 permalink: /win10/samples/DriverLab2.htm
 ---
 
-<div class="container" markdown="1">
 ##Use Visual Studio to build a driver
 
 A Windows IoT Core driver is made up of one or more files.  Some of these files are simple text files to aid during installation, while others are binaries built during compilation of the source code.  For this lab, we are interested in files with the following extensions: **SYS** and **INF**. In this exercise, you will use Visual Studio to compile a driver for a specific platform.
@@ -81,5 +80,3 @@ In the next section you will use these files (**ACPITABL.dat**, **gpiokmdfdemo.i
 ###Next Step
 
 [Deploy the driver and confirm the installation]({{site.baseurl}}/win10/samples/DriverLab3.htm)
-
-</div>

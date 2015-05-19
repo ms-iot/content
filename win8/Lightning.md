@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: Intel Galileo Gen 1 and Gen2 Lightning Support
 permalink: /win8/Lightning.htm
 ---

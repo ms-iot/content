@@ -4,8 +4,6 @@ title: Compatible USB Peripheral Devices
 permalink: /win10/Peripherals.htm
 ---
 
-<div class="container" markdown="1">
-
 ##Compatible USB Peripheral Devices
 
 Windows 10 IoT Core is compatible with a variety of USB devices. Here are the devices which have been validated on both the **Raspberry Pi 2** and **MinnowBoard Max**:
@@ -21,5 +19,3 @@ Windows 10 IoT Core is compatible with a variety of USB devices. Here are the de
 * External USB hard disk
 * USB flash drive
 * USB card reader
-
-</div>

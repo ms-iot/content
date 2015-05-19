@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: 7-SegmentShield
 permalink: /win8/samples/7-SegmentShield.htm
 ---

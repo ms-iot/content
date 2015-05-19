@@ -4,8 +4,6 @@ title: AllJoyn System Bridge templates and samples
 permalink: /win10/samples/AllJoynSamples.htm
 ---
 
-<div class="container" markdown="1">
-
 ##AllJoyn Z-Wave demo (Device System Bridge)
 
 This is preinstalled in Windows 10 IoT Core Technical Preview.  You can find the source code for this [here](https://github.com/ms-iot/samples/tree/develop/AllJoyn/AllJoynZWaveDemo):
@@ -34,5 +32,3 @@ This is a tool we use in several points when working with AllJoyn samples.  You 
 * [AllJoyn_Explorer_Setup_Guide_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_Setup_Guide_v1.0.pdf?raw=true) - this pdf contains the documentation for how to deploy the AllJoyn Explorer
 
 * [AllJoyn_Explorer_User_Guide_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_User_Guide_v1.0.pdf?raw=true) - this pdf contains the documentation for how to use the AllJoyn Explorer
-
-</div>

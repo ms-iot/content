@@ -4,8 +4,6 @@ title: Potentiometer Sample
 permalink: /win10/samples/potentiometer.htm
 ---
 
-<div class="container" markdown="1">
-
 ## Potentiometer Sensor Sample
 This sample uses two functionalities, SPI and GPIO.
 A potentiometer sensor is connected to a ADC, then ADC is connected to Raspberry Pi 2 through SPI pins. Raspberry Pi 2 reads the sensor analog input data and output it to the screen.
@@ -236,6 +234,3 @@ Turn the potentiometer button around, you will see the number changes on the scr
 And also, when the number is larger than 2^10/2, the LED will be ON. Otherwise, It gets turned off.
 
 <img src="{{site.baseurl}}/images/Potentiometer/Deploy.PNG" height="400">
-
-
-</div>

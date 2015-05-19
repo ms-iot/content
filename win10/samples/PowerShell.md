@@ -4,7 +4,6 @@ title: Use PowerShell to connect to a Windows IoT Core device.
 permalink: /win10/samples/PowerShell.htm
 ---
 
-<div class="container" markdown="1">
 ##Using PowerShell to connect and configure a device running Windows IoT Core
 
 ### Remote Administration and Configuration
@@ -55,10 +54,10 @@ Make sure to follow these steps to correctly configure your VM or device running
 
 * **Update account password:**
 
-	It is **highly recommended** that you update the default password for the Administrator account. 
-    
-    To do this, issue the following commands in your PowerShell connection: 
-    
+	It is **highly recommended** that you update the default password for the Administrator account.
+
+    To do this, issue the following commands in your PowerShell connection:
+
     * `net user Administrator [new password]` where `[new password]` represents a strong password of your choice.  
 
     * `schtasks /Delete /TN Microsoft\Windows\IoT\Startup /F` (this only needs to be done once)
@@ -81,5 +80,3 @@ Make sure to follow these steps to correctly configure your VM or device running
 ###Commonly used utilities
 
 See the [Command Line Utils]({{site.baseurl}}/win10/tools/CommandLineUtils.htm) page for a list of commands and utilities you can use with PowerShell.
-
-</div>

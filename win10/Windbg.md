@@ -4,8 +4,6 @@ title: Using WINDBG to debug
 permalink: /win10/Windbg.htm
 ---
 
-<div class="container" markdown="1">
-
 ###Connecting to a MinnowBoard Max (MBM)
 
 * Ensure that your ethernet cable is connected to your MBM
@@ -41,5 +39,3 @@ permalink: /win10/Windbg.htm
 * From your development machine, start WINDBG with the <PORT> you provided and the key that was generated in the previous step:
 
         "C:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k com:port=<PORT>,baud=921600
-
-</div>

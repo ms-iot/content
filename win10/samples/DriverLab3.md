@@ -4,7 +4,6 @@ title: Driver Lab - Deploy the driver and confirm the installation
 permalink: /win10/samples/DriverLab3.htm
 ---
 
-<div class="container" markdown="1">
 ##Deploy the driver and confirm the installation
 
 This exercise demonstrates how to manually copy and install the driver to a Windows IoT Core device. We will first use the File Transfer Protocol (FTP) to transfer files from the development machine to the target device (Windows IoT Core device). We will then use PowerShell to install the driver.
@@ -170,5 +169,3 @@ Driving the GPIO low will make the LED light-up because of the way the LED is co
 To turn the LED off, simply type:
 
     .\BlinkyApp_<PLATFORM>.exe high 2
-
-</div>

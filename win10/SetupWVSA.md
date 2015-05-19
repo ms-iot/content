@@ -4,30 +4,11 @@ title: SetupWindowsVirualShieldsArduino
 permalink: /win10/SetupWVSA.htm
 ---
 
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="row">
-    <h1>Get Started</h1>
-    <div class="col-md-8">
-        <p>This section explains how to set up your Windows Virtual Shields for Arduino!</p>
-    </div>
-    <ul class="nav nav-justified get-started-steps text-center">
-        <li>
-          <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="inactive">1. Select Your Device</h3></a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}/win10/SetupWVSA.htm"><h3 class="active">2. Set up your Windows Virtual Shields for Arduino and PC</h3></a>
-          <span class="glyphicon glyphicon-time"></span> 30min
-        </li>
-        <li>
-          <a href="{{site.baseurl}}/win10/SetupPCWVSA.htm"><h3 class="inactive">3. Set up your Phone and PC</h3></a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}/win10/samples/BlinkyWVSA.htm"><h3 class="inactive">4. Develop</h3></a>
-        </li>
-    </ul>
-</div>
+#Get Started
 
-<div class="col-md-12" markdown="1">
+This section explains how to set up your Windows Virtual Shields for Arduino!
+
+{% include steps.html device="WVSA" %}
 
 #Setup for Windows Virtual Shields for Arduino (Arduino and PC)
 
@@ -40,7 +21,7 @@ permalink: /win10/SetupWVSA.htm
 ###Set up your Arduino
  1. Prepare the Bluetooth module if necessary (the Bluetooth module may need to have headers soldered onto it).
  2. Except for one difference below, connect the Bluetooth module to the Arduino per your wiring diagram ([BlueSMiRF wiring diagram](https://learn.sparkfun.com/tutorials/using-the-bluesmirf/hardware-hookup)).
- 
+
 		DIFFERENCE: Use pins 0 and 1 instead of 2 and 3:
 		The Bluetooth TX should connect to pin 0 (Arduino RX).
 		The Bluetooth RX should connect to pin 1 (Arduino TX).
@@ -70,5 +51,3 @@ permalink: /win10/SetupWVSA.htm
  3. Upload the sketch.
  4. Replace the Bluetooth TX and RX wires into the Arduino pins. (Bluetooth TX to Arduino RX and Bluetooth RX to Arduino TX).
  5. In order to see anything on the phone, you will need to go to the next step (Set up your Phone and PC).
-
-</div>

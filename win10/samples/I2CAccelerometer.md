@@ -4,7 +4,6 @@ title: I2C Accelerometer Sample
 permalink: /win10/samples/I2CAccelerometer.htm
 ---
 
-<div class="container" markdown="1">
 ##I2C Accelerometer Sample
 
 We'll connect an I2C accelerometer to your Raspberry Pi 2/MinnowBoard Max and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of I2C is needed.
@@ -300,5 +299,3 @@ We separate out the data into their respective axes and concatenate the bytes us
  To convert this to G units, we divide by the ratio of full-scale range (8G) to the resolution (1024)
 
 * Now that we have the G unit values, we can display the data on screen. This process is repeated every 100mS so the information is constantly updated.
-
-</div>

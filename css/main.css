@@ -5,14 +5,6 @@ body {
     padding: 0;
 }
 
-.hero-body {
-    background: url('../images/hero2.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 800px;
-}
-
 .default-body {
     background-color: #fff;
 }
@@ -37,7 +29,7 @@ body {
         margin-right: 0;
     }
 
-        .content-container > .row h1 {
+        .content-container > h1#get-started {
             margin-top: 64px;
             margin-bottom: 6px;
             font-size: 46px;
@@ -45,7 +37,8 @@ body {
             line-height: 56px;
         }
 
-        .content-container > .row > h1 + div {
+        .content-container > h1#get-started + p,
+        .content-container > h1#get-started + p + p {
             font-size: 24px;
             font-weight: lighter;
             line-height: 28px;
@@ -56,64 +49,14 @@ body {
     max-width: 1206px !important;
 }
 
-.hero-main {
-    margin: 0;
-    padding: 0;
-    top: 0;
-}
-
-.hero-video {
-    margin-top: 30px;
-}
-
 .row {
     margin-left: 20px;
     margin-right: 20px;
 }
 
-.headerBackground > div > h1 {
-    margin-top: 100px;
-    text-shadow: 1px 1px 5px #000;
-    color: #fff;
-}
-
-.headerBackground > div > p {
-    margin-bottom: 75px;
-    text-shadow: 1px 1px 5px #000;
-    color: #fff;
-    font-weight: 600;
-}
-
 .btn {
     border-radius: 0;
 }
-
-a.btn-get-started {
-    border: 3px solid;
-    padding: 20px 50px;
-    margin-left: 10px;
-    margin-right: 10px;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    background-color: rgba(0,111,151,1);
-    -webkit-transition: background-color 0.5s;
-    -moz-transition: background-color 0.5s;
-    -0-transition: background-color 0.5s;
-    transition: background-color 0.5s;
-}
-
-    a.btn-get-started:visited {
-        text-decoration: none;
-        background-color: rgba(0,111,151,1);
-        color: #FFF;
-    }
-
-    a.btn-get-started:hover {
-        text-decoration: none;
-        background-color: rgba(0,111,151,0.7);
-        color: #FFF;
-    }
 
 a:link else, a:visited {
     color: #0078D7;
@@ -145,239 +88,26 @@ a:link {
     z-index: 9999;
 }
 
-.text-body {
-    background-color: #fff;
-    width: 100%;
-    height: 100%;
-}
-
-.headerBackground {
-    background-color: rgba(0,0,0,0.0);
-    color: #ffffff;
-    min-height: 400px;
-    margin-top: 0;
-    margin-bottom: 150px;
-}
-
-.row-contrast {
-    background-color: #efefef;
-    padding: 30px 0;
-}
-
-.container .jumbotron {
-    border-radius: 0;
-}
-
 .iot-site-footer {
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
     .iot-site-footer > .row > div > p {
         margin-bottom: 20px;
     }
 
-/* ------ icons for landing page ------ */
-
-@font-face {
-    font-family: 'iotMDL2';
-    src: url('../fonts/IOTMDL2.1.27.woff');
-}
-
-.icon-iot {
-    font-family: 'iotMDL2';
-    font-size: 50px;
-    color: #000;
-    margin-top: 50px;
-}
-
 a:hover {
     text-decoration: none;
 }
-
-.icon-iot-settings:before {
-    content: "\E713";
-}
-
-.icon-iot-cloud:before {
-    content: "\E753";
-}
-
-.icon-iot-system:before {
-    content: "\E770";
-}
-
-.icon-iot-lEDLight:before {
-    content: "\E781";
-}
-
-.icon-iot-education:before {
-    content: "\E7BE";
-}
-
-.icon-iot-printer3D:before {
-    content: "\E914";
-}
-
-.icon-iot-code:before {
-    content: "\E943";
-}
-
-.icon-iot-prototypingBoard:before {
-    content: "\E959";
-}
-
-.icon-iot-wire:before {
-    content: "\E95F";
-}
-
-.icon-iot-wearable:before {
-    content: "\E96C";
-}
-
-.icon-iot-transistor:before {
-    content: "\E997";
-}
-
-.icon-iot-chart:before {
-    content: "\E999";
-}
-
-.icon-iot-robot:before {
-    content: "\E99A";
-}
-
-.icon-iot-model3D:before {
-    content: "\E99B";
-}
-
-.icon-iot-manufacturing:before {
-    content: "\E99C";
-}
-
-.icon-iot-lasercutter:before {
-    content: "\E99D";
-}
-
-.icon-iot-circuit:before {
-    content: "\E99E";
-}
-
-.icon-iot-resistor:before {
-    content: "\E99F";
-}
-
-.icon-iot-capacitor:before {
-    content: "\E9A3";
-}
-
-.icon-iot-diode:before {
-    content: "\E9A4";
-}
-
-/* ------ Media Query ------ */
-
-@media screen and (max-width: 500px) {
-
-    a.btn-get-started {
-        padding: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    #learn-more-btn {
-        width: 100%;
-        font-size: 10px;
-    }
-
-    .headerBackground > div > h1 {
-        margin-top: 75px;
-        font-size: 30px;
-    }
-
-    .headerBackground > div > p {
-        margin-bottom: 50px;
-    }
-
-    .headerBackground {
-        margin-bottom: 50px;
-    }
-
-    .hero-body {
-        height: 700px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-
-    #srv_shellHeaderNav {
-        background-color: #fff !important;
-    }
-}
-
-/* ---- End Media Query ---- */
 
 .device {
     padding-left: 0;
 }
 
-.device-wrapper {
-    min-height: 800px;
-}
-
 .section-heading {
     margin-bottom: 50px;
 }
-
-a.view-gallery {
-    padding-top: 25px;
-}
-
-.device-header {
-    background-color: #00A4EF;
-    padding: 10px;
-}
-
-    .device-header > a {
-        color: #fff;
-    }
-
-.carousel-control.left, .carousel-control.right {
-    background: none !important;
-    filter: progid:none !important;
-}
-
-.carousel-indicators {
-    bottom: -20px;
-}
-
-    .carousel-indicators li {
-        border-color: #000;
-    }
-
-.carousel-inner > div > img {
-    margin: 0 auto;
-}
-
-.responsive-video {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 60px;
-    overflow: hidden;
-    margin: 20px auto;
-    height: 0;
-    max-width: 400px;
-}
-
-
-    .responsive-video iframe,
-    .responsive-video object,
-    .responsive-video embed {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
 
 .build2015-iframe,
 .sanmateo-iframe {
@@ -399,51 +129,6 @@ a.view-gallery {
 .device-images {
     width: 100%;
     max-width: 600px;
-}
-
-.word-wrap > li {
-    word-wrap: break-word;
-}
-
-    .word-wrap > li > a {
-        word-wrap: break-word;
-    }
-
-.calendar-background {
-    background-color: #505050;
-    width: 100px;
-    height: 100px;
-    color: #fff;
-}
-
-    .calendar-background > .date-container > h2 {
-        margin: 0;
-        padding: 0;
-    }
-
-.community-container,
-.events-container {
-    margin-top: 20px;
-}
-
-.event-text {
-    margin-left: 40px;
-}
-
-.community-image1 {
-    /*background-image: url('../images/SteveTei.png');*/
-    background-size: cover;
-    background-position: center;
-    width: 75px;
-    height: 75px;
-}
-
-.community-image2 {
-    /*background-image: url('../images/DanRose.png');*/
-    background-size: cover;
-    background-position: center;
-    width: 75px;
-    height: 75px;
 }
 
 .downloads-image {
@@ -469,7 +154,6 @@ a.view-gallery {
     .faq-nav > a > h4 {
         margin-bottom: 20px;
     }
-
 
 .build-2015-background {
     background-image: url('../images/sf_coverB.jpg');
@@ -501,12 +185,6 @@ a.view-gallery {
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 0;
-}
-
-.get-started-highlight {
-    background-color: #EAEAEA;
-    padding: 20px;
-    margin-bottom: 20px;
 }
 
 .inactive {

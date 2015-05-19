@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: Contribution Guidelines
 permalink: /ContributionGuidelines.htm
 ---
@@ -36,7 +36,7 @@ ___
 
 * Everything related to the Windows Developer Program for IoT effort. We will not be rejecting pull-requests just because they are not on our list of priorities.
 * We will provide a list of our top priorities at the time, including a list of things we are currently working on (to prevent community engagement overlap).
-    * You can choose to implement some of what is in this backlog and submit a pull-request or you can choose to do other things not on our list. 
+    * You can choose to implement some of what is in this backlog and submit a pull-request or you can choose to do other things not on our list.
 
 ### Review Process:
 
@@ -44,7 +44,3 @@ ___
 * Everyone can review a pull request, but only the maintainers can merge the pull request.
     * This way people can get feedback on pull-requests without the maintainers necessarily having to do the heavy lifting. The maintainers will still be doing a final review before any merge.
 * We will be working in a 4 week cadence with a pull from the develop branch every 4 weeks.
-
-___
-
-<a class="btn btn-default" href="Contribute.htm" role="button">&laquo; Return to How To Contribute</a>
