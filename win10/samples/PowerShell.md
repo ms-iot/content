@@ -32,36 +32,43 @@ Make sure to follow these steps to correctly configure your VM or device running
 
 * Note: you may need to start the WinRM service on your desktop to enable remote connections. From the PS console type the following command:
 
-        net start WinRM
+        PS C:\> net start WinRM
 
 * From the PS console, type the following, substituting `<machine-name or IP Address>` with the appropriate value (using your **machine-name** is the easiest to use, but if your device is not uniquely named on your network, try the IP address):
 
-        Set-Item WSMan:\localhost\Client\TrustedHosts -Value <machine-name or IP Address>
+        PS C:\> Set-Item WSMan:\localhost\Client\TrustedHosts -Value <machine-name or IP Address>
 
     Do enter `Y` to confirm the change.
 
 * Note: there is a known issue with PS that can cause a StackOverflowException on the PS client machine.  To work around this type the following line before the Enter-PsSession:
 
-        remove-module psreadline -force
+        PS C:\> remove-module psreadline -force
 
 * Now you can start a session with you Windows IoT Core device. From you administrator PS console, type:
 
-        Enter-PsSession -ComputerName <machine-name or IP Address> -Credential <machine-name or IP Address or localhost>\Administrator
+        PS C:\> Enter-PsSession -ComputerName <machine-name or IP Address> -Credential <machine-name or IP Address or localhost>\Administrator
 
     In the credential dialog enter the following default password: `p@ssw0rd`
 
         NOTE: The connection process is not immediate and can take up to 30 seconds.
 
+    If you successfully connected to the device, you should see the IP address of your device before the prompt.
+
+    ![PowerShell console]({{site.baseurl}}/images/powershell/ps_device.PNG)
+
 * **Update account password:**
 
-	It is **highly recommended** that you update the default password for the Administrator account.
+	It is **highly recommended** that you update the default password for the Administrator account. 
 
     To do this, issue the following commands in your PowerShell connection:
 
-    * `net user Administrator [new password]` where `[new password]` represents a strong password of your choice.  
+    Replace `[new password]` with a strong password:
 
-    * `schtasks /Delete /TN Microsoft\Windows\IoT\Startup /F` (this only needs to be done once)
+        [192.168.0.243]: PS C:\> net user Administrator [new password]
 
+    The following command only needs to be run once:
+
+        [192.168.0.243]: PS C:\> schtasks /Delete /TN Microsoft\Windows\IoT\Startup /F
 
 ###Configure your Windows IoT Core device
 
@@ -71,11 +78,15 @@ Make sure to follow these steps to correctly configure your VM or device running
 
 * If you want, you can also rename your device. To change the 'computer name', use the `setcomputername` utility:
 
-        setcomputername <new-name>
+        [192.168.0.243]: PS C:\> setcomputername <new-name>
 
     You will need to reboot the device for the change to take effect. You can use the `shutdown` command as follows:
 
-        shutdown /r /t 0
+        [192.168.0.243]: PS C:\> shutdown /r /t 0
+
+    After you reboot, you may need to rerun this command in order to connect to your device using the new name:
+
+        PS C:\> Set-Item WSMan:\localhost\Client\TrustedHosts -Value <new-name>
 
 ###Commonly used utilities
 
