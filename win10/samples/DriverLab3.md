@@ -50,13 +50,13 @@ This exercise demonstrates how to manually copy and install the driver to a Wind
 We will use **bcdedit** to enable test-signing on the target, that is, the Windows IoT Core device.
 Run the following command from the elevated PowerShell command window opened in the previous step:
 
-    bcdedit /store C:\EFIESP\EFI\Microsoft\boot\BCD /set testsigning on
+    [192.168.0.243]: PS C:\> bcdedit /store C:\EFIESP\EFI\Microsoft\boot\BCD /set testsigning on
 
 ### Reboot the target Windows IoT Core device
 
 From the PowerShell window, type the following command:
 
-    shutdown /r /t 0
+    [192.168.0.243]: PS C:\> shutdown /r /t 0
 
 The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/win10/samples/PowerShell.htm).
 
@@ -64,17 +64,17 @@ The target device will reboot.  After the reboot, make sure PowerShell is still 
 
 Using the PowerShell window, navigate to the `C:\Windows\System32` directory on the target device:
 
-    cd C:\Windows\System32
+    [192.168.0.243]: PS C:\> cd C:\Windows\System32
 
 We will use the `devcon.exe` tool to install our demo driver.  Type the following command in the PowerShell window:
 
-    devcon.exe install gpiokmdfdemo.inf ACPI\GPOT0001
+    [192.168.0.243]: PS C:\> devcon.exe install gpiokmdfdemo.inf ACPI\GPOT0001
 
 ### Reboot the target Windows IoT Core device
 
 From the PowerShell window, type the following command:
 
-    shutdown /r /t 0
+    [192.168.0.243]: PS C:\> shutdown /r /t 0
 
 The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/win10/samples/PowerShell.htm).
 
@@ -82,7 +82,7 @@ The target device will reboot.  After the reboot, make sure PowerShell is still 
 
 We will use the `devcon.exe` tool to remove the synthetic node.  Type the following command in the PowerShell window:
 
-    devcon.exe remove ACPI\GPOT0001
+    [192.168.0.243]: PS C:\> devcon.exe remove ACPI\GPOT0001
 
 Note:  The sample driver will only run once the synthetic node is removed.
 
@@ -90,7 +90,7 @@ Note:  The sample driver will only run once the synthetic node is removed.
 
 From the PowerShell window, type the following command:
 
-    shutdown /r /t 0
+    [192.168.0.243]: PS C:\> shutdown /r /t 0
 
 The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/win10/samples/PowerShell.htm).
 
@@ -98,7 +98,7 @@ The target device will reboot.  After the reboot, make sure PowerShell is still 
 
 From the PowerShell window, type the following command:
 
-    devcon status ACPI\GPOT0001
+    [192.168.0.243]: PS C:\> devcon status ACPI\GPOT0001
 
 You should see the following output:
 
@@ -122,7 +122,7 @@ You will need to copy this file to the target device (Windows IoT Core device) u
 
 In the PowerShell window, navigate to the folder you copied `BlinkyApp_<PLATFORM>.exe` to and type the following command:
 
-    .\BlinkyApp_<PLATFORM>.exe help
+    [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe help
 
 You should see a help menu similar to this:
 
@@ -161,11 +161,17 @@ You should see a help menu similar to this:
 
 If you are using GPIO #5 on the Raspberry Pi 2, type the following command to turn the LED on:
 
-    .\BlinkyApp_<PLATFORM>.exe low 2
+    [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe low 2
 
 ###Note:
 Driving the GPIO low will make the LED light-up because of the way the LED is connected as described [here]({{site.baseurl}}/win10/samples/Blinky.htm).
 
 To turn the LED off, simply type:
 
+<<<<<<< HEAD
     .\BlinkyApp_<PLATFORM>.exe high 2
+=======
+    [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe high 2
+
+</div>
+>>>>>>> 1f6f71aec48de89717d3334442f5dd6815c3658c
