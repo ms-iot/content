@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: Intel Galileo Gen 2 Alpha Support
 permalink: /win8/Gen2.htm
 ---

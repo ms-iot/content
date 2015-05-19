@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: GSM Shield
 permalink: /win8/samples/GSM Shield.htm
 ---

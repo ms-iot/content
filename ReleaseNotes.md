@@ -4,121 +4,66 @@ title: Release Notes
 permalink: /ReleaseNotes.htm
 ---
 
-<div class="jumbotron">
-  <div class="container">
-    <h1>Release Notes</h1>
-    <p>Limitations of the hardware and software along with known bugs.</p>
-  </div>
-</div>
-<div class="container">
-  <h2>Intel Galileo Gen2 Software Limitations</h2>
-  <p>
-    <ol>
-      <li>PWM is not implemented</li>
-      <li>ADC is not implemented</li>
-    </ol>
-  </p>
+#Release Notes
 
-  <h2>Software Limitations</h2>
-  <p>
-    <ol>
-      <li>
-        <code>LED_BUILTIN</code> constant only works when calling directly into embprpusr.dll functionality.
-      </li>
-      <li>
-        <code>millis()</code> rolls roughly every 50 days the application is running.
-      </li>
-      <li>
-        <code>INPUT_PULLUP</code> is not implemented.
-      </li>
-      <li>
-        <code>strncmp()</code> functionality is available with <code>#include &lt;string.h&gt;</code>
-      </li>
-      <li>
-        <code>int</code> represents different bit-lengths on different Arduino platforms. To guarantee a specific behavior with bitwise operations, you should cast the data to the explicit desired type using variable types from the inttypes.h header (i.e. <code>uint8_t</code>).
-      </li>
-      <li>
-        <code>analogReference()</code> is not supported by the Galileo board.  Analog inputs are scaled on a range of 0-5 volts (resulting in analog readings of 0-4095) regardless of the setting of the IOREF jumper (5v or 3.3v). However, when the IOREF jumper is set to the 3.3v position, analog input signals are only safe from 0-3.3 volts.
-      </li>
-      <li>
-        Unless the Galileo is rebooted, the GPIO pins start in the "last known" operational state when a sketch starts.
-      </li>
-      <li>
-        The Wire API does not include <code>onReceive()</code> or <code>onRequest()</code>, because the Galileo does not support I2C slave functionality.
-      </li>
-      <li>
-        There is no plan for a USB host library. While the Intel Galileo hardware does support this, the host USB stack is not planned for this version of Windows.
-      </li>
-      <li>
-        There is no plan to implement the Arduino USB Keyboard and Mouse standard libraries. 
-      </li>
-      <li>
-        <code>SoftwareSerial</code> is currently not implemented.
-      </li>
-    </ol>
-  </p>
-  <hr/>
+Limitations of the hardware and software along with known bugs.</p>
 
-  <h2>Hardware Limitations</h2>
-  <p>
-    <ol>
-      <li>Intel Galileo Gen1: The fastest most GPIO pins can be changed is about once every 25 milliseconds. This is because of the speed of the Cypress I/O port expander used on the Galileo. Pins 2, 3 and 10 can be driven directly by the processor and can be changed roughly every 2 milliseconds.</li>
-      <li>CPU architecture does not support the LOCK_ prefix on kernel instructions.</li>
-      <li>No SSE registers, Windows functionality requiring this hardware cannot work.</li>
-    </ol>
-  </p>
-  <hr/>
+##Intel Galileo Gen2 Software Limitations
 
-  <h2>Processes running on Galileo</h2>
-  <p>
-    <ul>
-      <li>System Process</li>
-      <li>
-        System
-        <ul>
-          <li>smss.exe</li>
-		</ul>
-      </li>
-      <li>csrss.exe</li>
-      <li>
-        wininit.exe
-        <ul>
-          <li>
-            services.exe
-            <ul>
-              <li>C:\windows\system32\svchost.exe -k DcomLaunch</li>
-              <li>C:\windows\system32\svchost.exe -k RPCSS</li>
-              <li>C:\windows\system32\svchost.exe -k netsvcs</li>
-              <li>C:\windows\System32\svchost.exe -k LocalServiceNetworkRestricted</li>
-              <li>C:\windows\system32\svchost.exe -k LocalService</li>
-              <li>C:\windows\system32\svchost.exe -k NetworkService</li>
-              <li>
-                C:\windows\system32\svchost.exe -k Bootshsvc
-                <ul>
-                  <li>httpsrv.exe</li>
-                  <li>ftpd.exe</li>
-                  <li>telnetd.exe</li>
-                  <li>mwstartnet.exe</li>
-                </ul>
-              </li>
-              <li>C:\windows\system32\svchost.exe -k CoreUI</li>
-			</ul>
-          </li>
-          <li>lsass.exe</li>
-		</ul>
-      </li>
-      <li>csrss.exe</li>
-      <li>winlogon.exe</li>
-      <li>C:\windows\system32\cmd.exe  /K C:\Windows\System32\Boot\synctime.cmd</li>
-      <li>
-        C:\Tools\RemoteDebugger\msvsmon.exe  /silent /nostatus /nosecuritywarn /nofirewallwarn /noclrwarn
-        <ul>
-          <li>C:\Tools\RemoteDebugger\msvsmon.exe /CHILDSERVER f8 "+:4018" {7CD1671D-D6E3-4455-8FE8-22C0AA188E15} 0x0 f4 ec e8 f0 /silent+ /servicemode-</li>
-        </ul>
-	  </li>
-      <li>Galileo_eboot.exe</li>
-      <li>cmd.exe</li>
-    </ul>
-  </p>
-  <hr/>
-  <a class="btn btn-default" href="{{site.baseurl}}/index.htm" role="button">Return to homepage</a>
+1. PWM is not implemented</li>
+2. ADC is not implemented</li>
+
+##Software Limitations
+
+1. `LED_BUILTIN` constant only works when calling directly into embprpusr.dll functionality.
+2. `millis()` rolls roughly every 50 days the application is running.
+3. `INPUT_PULLUP` is not implemented.
+4. `strncmp()` functionality is available with <code>#include &lt;string.h&gt;</code>
+5. `int` represents different bit-lengths on different Arduino platforms. To guarantee a specific behavior with bitwise operations, you should cast the data to the explicit desired type using variable types from the inttypes.h header (i.e. `uint8_t`).
+6. `analogReference()` is not supported by the Galileo board.  Analog inputs are scaled on a range of 0-5 volts (resulting in analog readings of 0-4095) regardless of the setting of the IOREF jumper (5v or 3.3v). However, when the IOREF jumper is set to the 3.3v position, analog input signals are only safe from 0-3.3 volts.
+7. Unless the Galileo is rebooted, the GPIO pins start in the "last known" operational state when a sketch starts.
+8. The Wire API does not include <code>onReceive()</code> or <code>onRequest()</code>, because the Galileo does not support I2C slave functionality.
+9. There is no plan for a USB host library. While the Intel Galileo hardware does support this, the host USB stack is not planned for this version of Windows.
+10. There is no plan to implement the Arduino USB Keyboard and Mouse standard libraries.
+11. `SoftwareSerial` is currently not implemented.
+
+___
+
+##Hardware Limitations
+
+1. Intel Galileo Gen1: The fastest most GPIO pins can be changed is about once every 25 milliseconds. This is because of the speed of the Cypress I/O port expander used on the Galileo. Pins 2, 3 and 10 can be driven directly by the processor and can be changed roughly every 2 milliseconds.
+2. CPU architecture does not support the LOCK_ prefix on kernel instructions.
+3. No SSE registers, Windows functionality requiring this hardware cannot work.
+
+___
+
+##Processes running on Galileo
+
+* System Process
+   * System
+      * smss.exe
+
+* csrss.exe
+* wininit.exe
+   * services.exe
+      * C:\windows\system32\svchost.exe -k DcomLaunch
+      * C:\windows\system32\svchost.exe -k RPCSS
+      * C:\windows\system32\svchost.exe -k netsvcs
+      * C:\windows\System32\svchost.exe -k LocalServiceNetworkRestricted</li>
+      * C:\windows\system32\svchost.exe -k LocalService
+      * C:\windows\system32\svchost.exe -k NetworkService
+      * C:\windows\system32\svchost.exe -k Bootshsvc
+         * httpsrv.exe
+         * ftpd.exe
+         * telnetd.exe
+         * mwstartnet.exe
+
+      * C:\windows\system32\svchost.exe -k CoreUI
+   * lsass.exe
+* csrss.exe
+* winlogon.exe
+* C:\windows\system32\cmd.exe  /K C:\Windows\System32\Boot\synctime.cmd
+* C:\Tools\RemoteDebugger\msvsmon.exe  /silent /nostatus /nosecuritywarn /nofirewallwarn /noclrwarn
+   * C:\Tools\RemoteDebugger\msvsmon.exe /CHILDSERVER f8 "+:4018" {7CD1671D-D6E3-4455-8FE8-22C0AA188E15} 0x0 f4 ec e8 f0 /silent+ /servicemode-
+* Galileo_eboot.exe
+* cmd.exe

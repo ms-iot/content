@@ -4,8 +4,6 @@ title: Blinky WebServer Sample
 permalink: /win10/samples/BlinkyWebServer.htm
 ---
 
-<div class="container" markdown="1">
-
 ##Blinky WebServer
 
 We'll create a simple Blinky app controlled by another app's WebServer and connect a LED to your Windows IoT Core device.  Be aware that the GPIO APIs are
@@ -208,5 +206,3 @@ of the device the server has been deployed to). The webserver client can then be
 (see screenshot below).
 
 ![WebServer Client]({{site.baseurl}}/images/WebServer/webserver_client.png)
-
-</div>

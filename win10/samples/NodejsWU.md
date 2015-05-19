@@ -4,7 +4,6 @@ title: NodejsWU
 permalink: /win10/samples/NodejsWU.htm
 ---
 
-<div class="container" markdown="1">
 ##'Hello, World' Node.js (Windows Universal) Sample
 
 
@@ -76,5 +75,3 @@ uwp.close();
 The result from the code above should look like this:
 
 ![DateTime Result]({{site.baseurl}}/images/Nodejs/datetime-ie.PNG)
-
-</div>

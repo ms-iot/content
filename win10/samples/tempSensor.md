@@ -4,7 +4,6 @@ title: Potentiometer Sample
 permalink: /win10/samples/tempSensor.htm
 ---
 
-<div class="container" markdown="1">
 ## Temperature/Force Sensor Sample
 This sample uses SPI communication.
 A temperature/force sensor is connected to an ADC, the ADC is connected to the Raspberry Pi 2 through SPI Pins. The ADC converts the analog sensor output to a digital value that is then read by the Raspberry Pi 2 using SPI. The value read from the ADC is displayed on the screen attached to the Raspberry Pi 2.
@@ -195,5 +194,3 @@ If you are using Temp sensor, you can try to hold the sensor or apply some heat 
 how the output change on the screen. You can also switch the sensor to a light sensor to play around with it.
 
 <img src="{{site.baseurl}}/images/TempSensor/Deploy.png" height="400">
-
-</div>

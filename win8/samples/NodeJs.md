@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: Node.js
 permalink: /win8/samples/NodeJS.htm
 ---

@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: Forwarders and Stubs
 permalink: /win8/samples/Forwarders.htm
 ---

@@ -4,7 +4,6 @@ title: I2C Port Expander Sample
 permalink: /win10/samples/I2CPortExpander.htm
 ---
 
-<div class="container" markdown="1">
 ##I2C Port Expander Sample
 
 ![I2C Port Expander Image]({{site.baseurl}}/images/I2CPortExpander/PortExpanderProjectPicture_480.png)
@@ -645,5 +644,3 @@ namespace I2cPortExpanderLedSample
     }
 }
 {% endhighlight %}
-
-</div>

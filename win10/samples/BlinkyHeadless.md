@@ -4,7 +4,6 @@ title: Blinky Headless Sample
 permalink: /win10/samples/BlinkyHeadless.htm
 ---
 
-<div class="container" markdown="1">
 ##Blinky Headless Sample
 
 We'll create a simple Blinky app and connect a LED to your Windows IoT Core device (Raspberry Pi 2 or MinnowBoard Max).  Be aware that the GPIO APIs are
@@ -106,5 +105,3 @@ this.pin.Write(GpioPinValue.High);
 {% endhighlight %}
 
 Remember that we connected the other end of the LED to the 3.3 Volts power supply, so we need to drive the pin to low to have current flow into the LED.
-
-</div>

@@ -4,8 +4,6 @@ title: Glossary
 permalink: /win10/Glossary.htm
 ---
 
-<div class="container" markdown="1">
-
 ##Glossary
 
 **AllJoyn**<br/>
@@ -49,5 +47,3 @@ Software that acts as an interface between compiler binary code and the micropro
 
 **Windows Device Console (Devcon.exe)**<br/>
 DevCon (Devcon.exe), the Device Console, is a command-line tool that displays detailed information about devices on computers running Windows. You can use DevCon to enable, disable, install, configure, and remove devices.  This tool is mostly used for manually installing and removing drivers.
-
-</div>

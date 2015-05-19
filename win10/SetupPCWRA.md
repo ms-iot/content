@@ -4,33 +4,13 @@ title: SetupPCWRA
 permalink: /win10/SetupPCWRA.htm
 ---
 
-<div class="row">
-  <h1>Get Started</h1>
-  <div class="col-md-8">
-    <p>Learn how to get your PC ready for developing IoT applications using Windows Remote Arduino.</p>
-  </div>
-  <div class="row">
-    <ul class="nav nav-justified get-started-steps text-center">
-        <li>
-          <a href="{{site.baseurl}}/GetStarted.htm"><h3 class="inactive">1. Select Your Device</h3></a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}/win10/SetupWRA.htm"><h3 class="inactive">2. Set up your Device</h3></a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}/win10/SetupPCWRA.htm"><h3 class="active">3. Set up your PC</h3></a>
-          <span class="glyphicon glyphicon-time"></span> 30-45min
-        </li>
-        <li>
-          <a href="{{site.baseurl}}/win10/samples/BasicWRA.htm"><h3 class="inactive">4. Develop</h3></a>
-        </li>
-    </ul>
-  </div>
-</div>
+#Get Started
 
-<div class="col-md-12" markdown="1">
+Learn how to get your PC ready for developing IoT applications using Windows Remote Arduino.
 
-#Installation
+{% include steps.html device="WRA" %}
+
+##Installation
 
 There are three ways to add the Windows Remote Arduino library to your solution, in order from easiest to most difficult.
 
@@ -286,6 +266,3 @@ You will need to add one of the following XML blocks to your manifest file in or
   </m2:Device>
 </m2:DeviceCapability>
 {% endhighlight %}
-
-
- </div>

@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: Communicating with an XBee device
 permalink: /win8/samples/XBee.htm
 ---
