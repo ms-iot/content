@@ -45,6 +45,8 @@ http.createServer(function (req, res) {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end('LED value: ' + currentValue + '\n');
 }).listen(1337);
+
+uwp.close();
 {% endhighlight %}
 </UL>
 Here's what the code above is doing:
