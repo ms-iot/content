@@ -12,9 +12,9 @@ permalink: /win10/Windbg.htm
 
 * Configure your MBM, by changing the bcd settings like this:
 
-        bcdedit -store C:\EFIESP\efi\Microsoft\Boot\bcd -dbgsettings net hostip:<IP address of machine running WINDBG> port:<PORTNUM>
+        [192.168.0.243]: PS C:\> bcdedit -store C:\EFIESP\efi\Microsoft\Boot\bcd -dbgsettings net hostip:<IP address of machine running WINDBG> port:<PORTNUM>
 
-        bcdedit -store C:\EFIESP\efi\Microsoft\Boot\bcd -debug on
+        [192.168.0.243]: PS C:\> bcdedit -store C:\EFIESP\efi\Microsoft\Boot\bcd -debug on
 
 * From your development machine, start WINDBG with the <PORT> you provided and the key that was generated in the previous step:
 
@@ -30,9 +30,9 @@ permalink: /win10/Windbg.htm
 
 * Configure your RPi2, by changing the bcd settings like this:
 
-        bcdedit -store C:\EFIESP\efi\Microsoft\Boot\bcd -dbgsettings serial
+        [192.168.0.243]: PS C:\> bcdedit -store C:\EFIESP\efi\Microsoft\Boot\bcd -dbgsettings serial
 
-        bcdedit -store C:\EFIESP\efi\Microsoft\Boot\bcd -debug on
+        [192.168.0.243]: PS C:\> bcdedit -store C:\EFIESP\efi\Microsoft\Boot\bcd -debug on
 
 * From your development machine, open the device manager and find the COM port your converter is using.
 
