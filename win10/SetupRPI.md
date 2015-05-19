@@ -48,7 +48,7 @@ Follow these instructions to configure your SD card:
 
 9. Click on the "Safely Remove Hardware" icon in your task tray and select your USB SD card reader to safely remove it from the system.  Failing to do this can cause corruption of the image.
 
-**NOTE:** If you want to remove Windows 10 IoT Core from your SD card after you are done using it, see the [FAQ]({{site.baseurl}}/FAQs.htm) section titled **How do I remove Windows 10 IoT Core from my SD card?**
+**NOTE:** If you want to remove Windows 10 IoT Core from your SD card after you are done using it, see the [FAQ]({{site.baseurl}}/Faqs.htm) section titled **How do I remove Windows 10 IoT Core from my SD card?**
 
 
 ##Hook up your Board
@@ -70,4 +70,4 @@ Follow these instructions to configure your SD card:
 
 3. Follow the instructions [here]({{site.baseurl}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.
 4. It is **highly recommended** that you update the default password for the Administrator account. Please follow the instructions found in the [PowerShell]({{site.baseurl}}/win10/samples/PowerShell.htm) documentation.
-5. Remote Debugger will launch automatically when your Raspberry Pi 2 boots. 
+5. Remote Debugger will launch automatically when your Raspberry Pi 2 boots.
