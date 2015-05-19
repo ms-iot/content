@@ -70,4 +70,4 @@ Follow these instructions to configure your SD card:
 
 3. Follow the instructions [here]({{site.baseurl}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.
 4. It is **highly recommended** that you update the default password for the Administrator account. Please follow the instructions found in the [PowerShell]({{site.baseurl}}/win10/samples/PowerShell.htm) documentation.
-5. Remote Debugger will launch automatically when your Raspberry Pi 2 boots. 
+5. Remote Debugger will launch automatically when your Raspberry Pi 2 boots.
