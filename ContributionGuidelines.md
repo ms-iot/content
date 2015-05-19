@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: Contribution Guidelines
 permalink: /ContributionGuidelines.htm
 ---

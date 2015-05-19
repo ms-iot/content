@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: Servo
 permalink: /win8/samples/Servo.htm
 ---

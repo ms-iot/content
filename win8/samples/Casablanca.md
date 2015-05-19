@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: Casablanca
 permalink: /win8/samples/Casablanca.htm
 ---

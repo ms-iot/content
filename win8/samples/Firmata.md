@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: Standard Firmata
 permalink: /win8/samples/Firmata.htm
 ---

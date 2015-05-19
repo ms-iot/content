@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: RGBPixel
 permalink: /win8/samples/RGBPixel.htm
 ---

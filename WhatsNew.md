@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: What's new
 permalink: /WhatsNew.htm
 ---

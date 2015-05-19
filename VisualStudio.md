@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: New to Visual Studio
 permalink: /VisualStudio.htm
 ---
