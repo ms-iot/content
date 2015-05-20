@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: Shield Compatibility
 permalink: /ShieldCompat.htm
 ---

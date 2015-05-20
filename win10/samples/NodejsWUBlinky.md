@@ -4,14 +4,13 @@ title: NodejsWUBlinky
 permalink: /win10/samples/NodejsWUBlinky.htm
 ---
 
-<div class="container" markdown="1">
 ##Blinky Node.js Server Sample (Windows Universal)
 
 
 ###Set up your PC
 * Follow the instructions [here]({{site.baseurl}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
 * Install [Node.js Tools 1.1 Beta for Visual Studio 2015](http://aka.ms/ntvslatest).
-* Install [NTVS IoT Extension]({{site.downloadurl}})
+* Install [NTVS IoT Extension]({{site.downloadurl}}) (This step requires that you have signed up with our program on Microsoft Connect. Instructions on how to do that can be found [here]({{site.baseurl}}/Downloads.htm)).
 
 
 ###Set up your hardware
@@ -27,8 +26,8 @@ When the project has been created, open up server.js and replace the existing co
 {% highlight JavaScript %}
 var http = require('http');
 
-var winrt = require("winrt");
-winrt.projectNamespace("Windows");
+var uwp = require("uwp");
+uwp.projectNamespace("Windows");
 
 var gpioController = Windows.Devices.Gpio.GpioController.getDefault();
 var pin = gpioController.openPin(6);
@@ -46,6 +45,8 @@ http.createServer(function (req, res) {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end('LED value: ' + currentValue + '\n');
 }).listen(1337);
+
+uwp.close();
 {% endhighlight %}
 </UL>
 Here's what the code above is doing:
@@ -61,5 +62,3 @@ Here's what the code above is doing:
 * Now we're ready to deploy to the remote Windows IoT Core device. Simply press F5 (or select Debug \| Start Debugging) to start debugging the server.
 
 * When the server is running, open up a browser and enter the address http://&lt;IP address of your device&gt;:1337. Refreshing the page will turn toggle the on/off state of the LED.
-
-</div>

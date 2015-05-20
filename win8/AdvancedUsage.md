@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: Advanced Usage
 permalink: /win8/AdvancedUsage.htm
 ---

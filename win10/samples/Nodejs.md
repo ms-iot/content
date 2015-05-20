@@ -4,7 +4,6 @@ title: Nodejs
 permalink: /win10/samples/Nodejs.htm
 ---
 
-<div class="container" markdown="1">
 ##MemoryStatus Node.js (Console Application) Sample
 Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/win10/samples/ConsoleApp.htm)
 
@@ -15,7 +14,7 @@ Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/win10/sa
 * Install [Python 2.7](https://www.python.org/downloads/).
 
 ###Get the Node.js Source Code
-* Coming soon.
+* Clone the code from [Github](http://github.com/Microsoft/node).
 
 ###Create a staging location
 * md C:\NodeChakra
@@ -132,7 +131,7 @@ For more information on writing addons, go to [https://nodejs.org/api/addons.htm
 Open up an explorer window on your PC and enter **\\\\\<IP address of your device\>\\C$** to access files on your device. The credentials are:
 
     username: <IP address or device name, default is minwinpc>\Administrator
-    password: p@ssw0rd    
+    password: p@ssw0rd
 
 NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/win10/samples/PowerShell.htm).  
 
@@ -157,6 +156,4 @@ Allow Node.exe to communicate through the firewall with the following command:
 In PowerShell, run the command `C:\Node\Node.exe server.js` to start the server.
 Open up a browser and enter the address http://&lt;IP address of your device&gt;:1337. The result should look something like the picture below.
 
-![Memory Status Result]({{site.baseurl}}/images/Nodejs/memorystatus-ie.png)
-
-</div>
+![Memory Status Result]({{site.baseurl}}/images/Nodejs/memorystatus-ie.PNG)

@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: Help Us Improve
 permalink: /ExperienceImprovementEnable.htm
 ---

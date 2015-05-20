@@ -4,7 +4,6 @@ title: Console App Sample
 permalink: /win10/samples/ConsoleApp.htm
 ---
 
-<div class="container" markdown="1">
 ##MemoryStatus Console Application Sample
 
 We'll create a simple console application that can be used to query the memory usage on your Windows IoT Core device (Raspberry Pi 2 or MinnowBoard Max). Please note that you need to compile the project for ARM for Raspberry Pi 2 and x86 for MinnowBoard Max.
@@ -152,5 +151,3 @@ int main(int argc, char **argv)
 * You can now run the application as you would any other application.  Simply open a PowerShell connection (instructions can be found [here]({{site.baseurl}}/win10/samples/PowerShell.htm)) and enter the Remote Command you specified above.
 
     ![ConsoleOutput Target]({{site.baseurl}}/images/Console/console_output.png)
-
-</div>

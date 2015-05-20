@@ -3,7 +3,6 @@ layout: default
 title: RGB LED Sample
 permalink: /win10/samples/RGBLED.htm
 ---
-<div class="container" markdown="1">
 
 ##RGB LED Sample
 
@@ -188,5 +187,3 @@ private void FlipLED()
               }
         }
 {% endhighlight %}
-
-</div>

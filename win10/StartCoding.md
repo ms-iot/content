@@ -9,12 +9,12 @@ permalink: /win10/StartCoding.htm
     <div class="col-md-6">
         <h1>Docs and Samples</h1>
         <p>Download code samples to get started with Windows on Devices. Also, read docs to help you use tools and resources to help you develop.</p>
-		<br/>
-		<h4>Did you set up your environment?</h4>
-		<p>We assume you already <a href="{{site.baseurl}}/GetStarted.htm">set up your environment</a>, have a working Visual Studio and have a device running Windows IoT Core (MinnowBoard Max, Raspberry Pi 2, or VM).</p>
-		<br/>
-		<h4>Questions/Suggestions</h4>
-		<p>Remember, you can always send <a href="{{site.baseurl}}/Comunity.htm#contact">contact us</a> for help and suggestions!</p>
+        <br/>
+        <h4>Did you set up your environment?</h4>
+        <p>We assume you already <a href="{{site.baseurl}}/GetStarted.htm">set up your environment</a>, have a working Visual Studio and have a device running Windows IoT Core (MinnowBoard Max, Raspberry Pi 2, or VM).</p>
+        <br/>
+        <h4>Questions/Suggestions</h4>
+        <p>Remember, you can always send <a href="{{site.baseurl}}/Comunity.htm#contact">contact us</a> for help and suggestions!</p>
     </div>
     <div class="col-md-6">
         <div class="downloads-image"></div>
@@ -40,7 +40,7 @@ permalink: /win10/StartCoding.htm
                         <a href="{{site.baseurl}}/win10/tools/IoTAPIPortingTool.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <h4>Using powershell</h4>
+                        <h4>Using PowerShell</h4>
                         <p>Allows Remote Administration and Configuration so that you can remotely configure and manage any Windows IoT Core device</p>
                         <a href="{{site.baseurl}}/win10/samples/PowerShell.htm">Learn More</a>
                     </div>
@@ -61,7 +61,7 @@ permalink: /win10/StartCoding.htm
                         <p>Windows IoT Core is a work in progress.  Here are the UAP APIs that have not been implemented yet on our platform.</p>
                         <a href="{{site.baseurl}}/win10/UnavailableApis.htm">Learn More</a>
                     </div>
-					<div class="col-md-3">
+                    <div class="col-md-3">
                         <h4>Compatible Peripheral USB Devices</h4>
                         <p>Find a list of USB devices compatible with Window 10 IoT Core devices</p>
                         <a href="{{site.baseurl}}/win10/Peripherals.htm">Learn More</a>
@@ -70,6 +70,13 @@ permalink: /win10/StartCoding.htm
                         <h4>Using WINDBG</h4>
                         <p>Use WINDBG to debug</p>
                         <a href="{{site.baseurl}}/win10/Windbg.htm">Learn More</a>
+                    </div>
+                </div>
+                <div class="row section-heading">
+                    <div class="col-md-3">
+                        <h4>Glossary</h4>
+                        <p>A list of commonly used phrases and their meanings</p>
+                        <a href="{{site.baseurl}}/win10/Glossary.htm">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -117,7 +124,7 @@ permalink: /win10/StartCoding.htm
                         <p>Create an app using SPI on devices running Windows 10 IoT Core Insider Preview</p>
                         <a href="{{site.baseurl}}/win10/samples/SPIDisplay.htm">Learn More</a>
                     </div>
-				    <div class="col-md-3">
+                    <div class="col-md-3">
                         <h4>Driver Sample</h4>
                         <p>Create and interact with a universal driver on devices running Windows 10 IoT Core Insider Preview</p>
                         <a href="{{site.baseurl}}/win10/samples/DriverLab.htm">Learn More</a>
@@ -136,11 +143,11 @@ permalink: /win10/StartCoding.htm
                         <a href="{{site.baseurl}}/win10/samples/NodejsWUBlinky.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <h4>AllJoyn</h4>
-                        <p>Explore the capabilities of the AllJoyn Device System Bridge, turn Z-Wave devices and even GPIO pins into AllJoyn devices with Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/win10/samples/AllJoynSamples.htm">Learn More</a>
+                        <h4>MemoryStatus Node.js App (Console)</h4>
+                        <p>Build a Node.js server that provides memory status from your device running Windows 10 IoT Core Insider Preview</p>
+                        <a href="{{site.baseurl}}/win10/samples/Nodejs.htm">Learn More</a>
                     </div>
-				    <div class="col-md-3">
+                    <div class="col-md-3">
                         <h4>I2C Port Expander (RPi2 Basic Kit Lab)</h4>
                         <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 I2C bus to communicate with a port expander.</p>
                         <a href="{{site.baseurl}}/win10/samples/I2CPortExpander.htm">Learn More</a>
@@ -170,21 +177,26 @@ permalink: /win10/StartCoding.htm
                     </div>
                 </div>
 
-				<div class="row section-heading">
+                <div class="row section-heading">
                    <div class="col-md-3">
                         <h4>RGB LED (RPi2 Basic Kit Lab)</h4>
                         <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 to toggle an RGB LED.</p>
                         <a href="{{site.baseurl}}/win10/samples/RGBLED.htm">Learn More</a>
                     </div>
-					<div class="col-md-3">
+                    <div class="col-md-3">
                         <h4>Push Button(RPi2 Basic Kit Lab)</h4>
                         <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 to read the status of a Push Button and control an LED.</p>
                         <a href="{{site.baseurl}}/win10/samples/PushButton.htm">Learn More</a>
                     </div>
-					<div class="col-md-3">
+                    <div class="col-md-3">
                         <h4>Potentiometer Sensor Sample (RPi2 Basic Kit Lab)</h4>
                         <p>Raspberry Pi 2 Basic Kit Lab - A analog sensor is connected to RaspBerry Pi through ADC converter and digital output data is displayed through Monitor and LED </p>
                         <a href="{{site.baseurl}}/win10/samples/potentiometer.htm">Learn More</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>AllJoyn</h4>
+                        <p>Explore the capabilities of the AllJoyn Device System Bridge, turn Z-Wave devices and even GPIO pins into AllJoyn devices with Windows 10 IoT Core Insider Preview</p>
+                        <a href="{{site.baseurl}}/win10/samples/AllJoynSamples.htm">Learn More</a>
                     </div>
                 </div>
 

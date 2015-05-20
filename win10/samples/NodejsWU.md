@@ -4,14 +4,13 @@ title: NodejsWU
 permalink: /win10/samples/NodejsWU.htm
 ---
 
-<div class="container" markdown="1">
 ##'Hello, World' Node.js (Windows Universal) Sample
 
 
 ###Set up your PC
 * Follow the instructions [here]({{site.baseurl}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
 * Install [Node.js Tools 1.1 Beta for Visual Studio 2015](http://aka.ms/ntvslatest).
-* Install [NTVS IoT Extension]({{site.downloadurl}})
+* Install [NTVS IoT Extension]({{site.downloadurl}}) (This step requires that you have signed up with our program on Microsoft Connect. Instructions on how to do that can be found [here]({{site.baseurl}}/Downloads.htm)).
 
 
 ###Create a new Node.js (Windows Universal) project
@@ -54,13 +53,13 @@ http.createServer(function (req, res) {
     ![Debugging Screenshot]({{site.baseurl}}/images/Nodejs/debugging-vs.PNG)
 
 
-### WinRT namespaces
-WinRT namespaces are available for you to use in Node.js. The code below returns the date and time instead of 'Hello World' in the previous example.
+### Universal Windows Platform (UWP) namespaces
+UWP namespaces are available for you to use in Node.js. The code below returns the date and time instead of 'Hello World' in the previous example.
 <UL>
 {% highlight JavaScript %}
 var http = require('http');
-var winrt = require("winrt");
-winrt.projectNamespace("Windows");
+var uwp = require("uwp");
+uwp.projectNamespace("Windows");
 var calendar = new Windows.Globalization.Calendar();
 
 http.createServer(function (req, res) {
@@ -69,12 +68,10 @@ http.createServer(function (req, res) {
     res.end(String(date));
 }).listen(1337);
 
-winrt.close();
+uwp.close();
 {% endhighlight %}
 </UL>
 
 The result from the code above should look like this:
 
 ![DateTime Result]({{site.baseurl}}/images/Nodejs/datetime-ie.PNG)
-
-</div>

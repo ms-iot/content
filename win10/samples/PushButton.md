@@ -3,7 +3,6 @@ layout: default
 title: Push Button Sample
 permalink: /win10/samples/PushButton.htm
 ---
-<div class="container" markdown="1">
 
 ##Push Button Sample
 
@@ -88,37 +87,37 @@ To drive the GPIO pin, first we need to initialize it. Here is the C# code (noti
 {% highlight C# %}
 using Windows.Devices.Gpio;
 
- private void InitGPIO()
+    private void InitGPIO()
+    {
+        var gpio = GpioController.GetDefault();
+
+        // Show an error if there is no GPIO controller
+        if (gpio == null)
         {
-            var gpio = GpioController.GetDefault();
-
-            // Show an error if there is no GPIO controller
-            if (gpio == null)
-            {
-                pin = null;
-                GpioStatus.Text = "There is no GPIO controller on this device.";
-                return;
-            }
-            pushButton = gpio.OpenPin(PB_PIN);
-            pin = gpio.OpenPin(LED_PIN);
-
-            // Show an error if the pin wasn't initialized properly
-            if (pin == null)
-            {
-                GpioStatus.Text = "There were problems initializing the GPIO LED pin.";
-                return;
-            }
-            if (pushButton == null)
-            {
-                GpioStatus.Text = "There were problems initializing the GPIO Push Button pin.";
-                return;
-            }
-
-            pushButton.SetDriveMode(GpioPinDriveMode.Input);
-            pin.SetDriveMode(GpioPinDriveMode.Output);
-
-            GpioStatus.Text = "GPIO pin initialized correctly.";
+            pin = null;
+            GpioStatus.Text = "There is no GPIO controller on this device.";
+            return;
         }
+        pushButton = gpio.OpenPin(PB_PIN);
+        pin = gpio.OpenPin(LED_PIN);
+
+        // Show an error if the pin wasn't initialized properly
+        if (pin == null)
+        {
+            GpioStatus.Text = "There were problems initializing the GPIO LED pin.";
+            return;
+        }
+        if (pushButton == null)
+        {
+            GpioStatus.Text = "There were problems initializing the GPIO Push Button pin.";
+            return;
+        }
+
+        pushButton.SetDriveMode(GpioPinDriveMode.Input);
+        pin.SetDriveMode(GpioPinDriveMode.Output);
+
+        GpioStatus.Text = "GPIO pin initialized correctly.";
+    }
 
 {% endhighlight %}
 
@@ -140,22 +139,20 @@ Let's break this down a little:
 When Push Button is pressed, the input value is read and LED is turned ON.
 
 {% highlight C# %}
- private void FlipLED()
+    private void FlipLED()
+    {
+        pushButtonValue = pushButton.Read();
+        if (pushButtonValue == GpioPinValue.High)
         {
-            pushButtonValue = pushButton.Read();
-            if (pushButtonValue == GpioPinValue.High)
-            {
-                pin.Write(GpioPinValue.High);
-            }
-            else if (pushButtonValue == GpioPinValue.Low)
-            {
-                pin.Write(GpioPinValue.Low);
-            }
+            pin.Write(GpioPinValue.High);
         }
+        else if (pushButtonValue == GpioPinValue.Low)
+        {
+            pin.Write(GpioPinValue.Low);
+        }
+    }
 
 
 {% endhighlight %}
 
 Remember that we connected the other end of the LED to the 3.3 Volts power supply, so we need to drive the pin to low to have current flow into the LED.
-
-</div>

@@ -4,7 +4,6 @@ title: SPI Display Sample
 permalink: /win10/samples/SPIDisplay.htm
 ---
 
-<div class="container" markdown="1">
 ##SPI Display Sample
 
 In this sample, we interface a SPI based [OLED display](http://www.adafruit.com/product/938) to your Raspberry Pi 2/MinnowBoard Max. We then create an app that lets us write lines of text to the display. Step-by-step instructions are provided,
@@ -459,5 +458,3 @@ private void DisplaySendData(byte[] Data)
     SpiDisplay.Write(Data);
 }
 {% endhighlight %}
-
-</div>

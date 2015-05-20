@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: Phidgets Sensors
 permalink: /win8/samples/PhidgetsSensors.htm
 ---

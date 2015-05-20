@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: Smart Fan
 permalink: /win8/samples/SmartFan.htm
 ---

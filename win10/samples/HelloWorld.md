@@ -4,7 +4,6 @@ title: HelloWorld
 permalink: /win10/samples/HelloWorld.htm
 ---
 
-<div class="container" markdown="1">
 ##'Hello, World!' Sample
 
 ###Create a new C# project
@@ -28,25 +27,24 @@ If this is the first project you create, Visual Studio will likely prompt you to
 
 ###Add content to MainPage.xaml
 * Let's add some content to the MainPage. From Solution Explorer, select the 'MainPage.xaml' file. We want to add a TextBox and a Button, to show some interaction. So we will edit the XAML file to add these elements. Locate the `<Grid>` tag in the XAML section of the designer, and add the following markup:
-<UL>
+
 {% highlight XML %}
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-        <TextBox x:Name="HelloMessage" Text="Hello, World!" Margin="10" IsReadOnly="True"/>
-        <Button x:Name="ClickMe" Content="Click Me!"  Margin="10" HorizontalAlignment="Center"/>
+    <TextBox x:Name="HelloMessage" Text="Hello, World!" Margin="10" IsReadOnly="True"/>
+    <Button x:Name="ClickMe" Content="Click Me!"  Margin="10" HorizontalAlignment="Center"/>
     </StackPanel>
 </Grid>
 {% endhighlight %}
-</UL>
+
 
 * Now that we have a TextBox and a Button, let's add some code which will be executed when the Button is pressed. Double click on the Button in the design surface: Visual Studio will add a `Click` property to the Button XAML tag and generate the `ClickMe_Click` method in 'MainPage.xaml.cs'. Let's add a simple line of code in the method:
-<UL>
+
 MainPage.xaml:
 {% highlight XML %}
 <Button x:Name="ClickMe" Content="Click Me!"  Margin="10" HorizontalAlignment="Center" Click="ClickMe_Click"/>
 {% endhighlight %}
-</UL>
-<UL>
+
 MainPage.xaml.cs:
 {% highlight C++ %}
 private void ClickMe_Click(object sender, RoutedEventArgs e)
@@ -54,7 +52,7 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
     this.HelloMessage.Text = "Hello, Windows IoT Core!";
 }
 {% endhighlight %}
-</UL>
+
 
 
 ###Build and test the app locally
@@ -109,7 +107,7 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 
 * From the PS session, type:
 
-        iotstartup list HelloWorld
+        [192.168.0.243]: PS C:\> iotstartup list HelloWorld
 
     and you should see the full name of our HelloWorld UAP application, i.e. something like:
 
@@ -119,24 +117,22 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 
 * Now, it's easy to set this app as the 'Startup App'. Just type the command:
 
-        iotstartup add headed HelloWorld
-    
+        [192.168.0.243]: PS C:\> iotstartup add headed HelloWorld
+
     The utility will confirm that the new Startup headed app is now HelloWorld:
 
         AppId changed to HelloWorld_n2pe7ts0w7wey!App
 
 * Go ahead and restart your Windows IoT Core device. From the PS session, you can issue the shutdown command:
 
-        shutdown /r /t 0
+        [192.168.0.243]: PS C:\> shutdown /r /t 0
 
 * Once the device has restarted, you'll see HelloWorld start automatically.
 
 * At this point, you can revert back to using the DefaultApp as your 'Startup App'. Just type the command:
 
-        iotstartup add headed DefaultApp
+        [192.168.0.243]: PS C:\> iotstartup add headed DefaultApp
 
-    The utility will confirm that the new Startup headed app is now HelloWorld:
+    The utility will confirm that the new Startup headed app is now DefaultApp:
 
         AppId changed to DefaultApp_cw5n1h2txyewy!App
-
-</div>

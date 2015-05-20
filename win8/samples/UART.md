@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: Writing to UART
 permalink: /win8/samples/UART.htm
 ---

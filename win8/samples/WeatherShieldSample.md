@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: default
 title: Weather Shield Sensors
 permalink: /win8/samples/WeatherShieldSensors.htm
 ---

@@ -4,13 +4,9 @@ title: Troubleshooting
 permalink: /win8/TroubleShooting.htm
 ---
 
-<div class="jumbotron">
-  <div class="container">
-    <h1>Troubleshooting</h1>
-  </div>
-</div>
+<h1>Troubleshooting</h1>
 
-<div class="container">
+<div class="row">
   <h3>Hardware</h3>
   <div class="panel-group" id="accordion1">
     <div class="panel panel-default">
@@ -235,7 +231,4 @@ permalink: /win8/TroubleShooting.htm
       </div>
     </div>
   </div>
-  <hr/>
-
-  <a class="btn btn-default" href="{{site.baseurl}}/index.htm" role="button">Return to homepage</a>
 </div>

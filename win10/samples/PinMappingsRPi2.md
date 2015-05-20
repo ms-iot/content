@@ -4,7 +4,6 @@ title: RPi2 Pin Mappings
 permalink: /win10/samples/PinMappingsRPi2.htm
 ---
 
-<div class="container" markdown="1">
 ##Raspberry Pi 2 Pin Mappings
 
 ![RPi2 Pin Header]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
@@ -126,5 +125,3 @@ public async void SPI()
 	Device.Write(WriteBuf);
 }
 {% endhighlight %}
-
-</div>

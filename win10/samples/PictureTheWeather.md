@@ -3,7 +3,6 @@ layout: default
 title: Picture the Weather
 permalink: /win10/samples/PictureTheWeather.htm
 ---
-<div class="container" markdown="1">
 
 ##Picture The Weather sample, using Windows Virtual Shields for Arduino
 
@@ -96,5 +95,3 @@ Using the Windows Virtual Shields for Arduino, the Arduino sketch is:
 * setting the animation on the RGB LED strip.
 
 ![Phone image]({{site.baseurl}}/images/RGBSTRIP/Phone.JPG)
-
-</div>
