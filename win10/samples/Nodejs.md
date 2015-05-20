@@ -31,7 +31,7 @@ Build for Host (Needed to build the addon):
 Build for the device (assuming Rpi2):
 
 * Goto the cloned repo
-* `vcbuild chakra nosign arm`
+* `vcbuild chakra nosign arm openssl-no-asm`
 
 Update PATH variable (make sure the new Node.exe location is at the front of the path): SET path=C:\NodeChakra;%path%
 
