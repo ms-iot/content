@@ -20,7 +20,7 @@ In order for us to get product insights, you'll need to associate your developer
   * Make sure your Galileo board is connected to the same subnet as your developer PC, or to the PC directly.
   * Start GalileoWatcher.  It is the locator tool which was installed on your PC from the WindowsDeveloperProgramforIOT.MSI, and used to enumerate connected boards.
   * Select your board name that shows up in GalileoWatcher.  You can optionally right-click to perform one of the listed actions.
-  * If your firewall settings were missed, or you do not see your board listed, review the GalileoWatcher information at the [TroubleShooting]({{site.baseurl}}/win8/TroubleShooting.htm) page.
+  * If your firewall settings were missed, or you do not see your board listed, review the GalileoWatcher information at the [TroubleShooting]({{site.baseurl}}/{{page.lang}}/win8/TroubleShooting.htm) page.
 
   ![]({{site.baseurl}}/images/GalileoWatcherExample.png)
 

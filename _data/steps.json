@@ -1,0 +1,8 @@
+{
+    "RPI2":  [
+        "/GetStarted.htm",
+        "/win10/SetupRPI.htm",
+        "/win10/SetupPC.htm",
+        "/win10/samples/Blinky.htm"
+        ]
+}
