@@ -55,7 +55,7 @@ Make sure to follow these steps to correctly configure your VM or device running
         
     If you successfully connected to the device, you should see the IP address of your device before the prompt.
     
-    ![PowerShell console]({{site.baseurl}}/images/powershell/ps_device.PNG)
+    ![PowerShell console]({{site.baseurl}}/images/powershell/ps_device.png)
 
 * **Update account password:**
 
