@@ -20,3 +20,6 @@ permalink: pretty
 highlighter: pygments
 safe: true
 lsi: false
+
+desc:
+    en-US: "english"

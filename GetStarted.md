@@ -2,6 +2,7 @@
 layout: default
 title: Get Started
 permalink: /GetStarted.htm
+lang: en-US
 ---
 
 #Get Started
