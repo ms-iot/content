@@ -52,9 +52,9 @@ permalink: /win10/StartCoding.htm
                 </div>
                 <div class="row section-heading">
                     <div class="col-md-3">
-                        <h4>Use ICD to create an image</h4>
-                        <p>Image creation, process and tools</p>
-                        <a href="{{site.baseurl}}/win10/ImageCreation.htm">Learn More</a>
+                        <h4>AllJoyn</h4>
+                        <p>Learn more about AllJoyn and explore the capabilities of the AllJoyn Device System Bridge with Windows 10 IoT Core Insider Preview</p>
+                        <a href="{{site.baseurl}}/win10/AllJoyn.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Unavailable Universal APIs</h4>
@@ -74,6 +74,11 @@ permalink: /win10/StartCoding.htm
                 </div>
                 <div class="row section-heading">
                     <div class="col-md-3">
+                        <h4>Use ICD to create an image</h4>
+                        <p>Image creation, process and tools</p>
+                        <a href="{{site.baseurl}}/win10/ImageCreation.htm">Learn More</a>
+                    </div>
+					<div class="col-md-3">
                         <h4>Glossary</h4>
                         <p>A list of commonly used phrases and their meanings</p>
                         <a href="{{site.baseurl}}/win10/Glossary.htm">Learn More</a>
@@ -195,8 +200,8 @@ permalink: /win10/StartCoding.htm
                     </div>
                     <div class="col-md-3">
                         <h4>AllJoyn</h4>
-                        <p>Explore the capabilities of the AllJoyn Device System Bridge, turn Z-Wave devices and even GPIO pins into AllJoyn devices with Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/win10/samples/AllJoynSamples.htm">Learn More</a>
+                        <p>Learn more about AllJoyn, explore capabilities of the AllJoyn Device System Bridge, and turn Z-Wave devices & GPIO pins into AllJoyn devices with Windows 10 IoT Core Insider Preview</p>
+                        <a href="{{site.baseurl}}/win10/AllJoyn.htm">Learn More</a>
                     </div>
                 </div>
 
