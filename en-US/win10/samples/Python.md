@@ -1,14 +1,15 @@
 ---
 layout: default
 title: Python for IoT Sample
-permalink: /win10/samples/Python.htm
+permalink: /en-US/win10/samples/Python.htm
+lang: en-US
 ---
 
 ##Python Apps
 
 ###Set up your PC
 
-* Follow the instructions [here]({{site.baseurl}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
+* Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
 
 * Install Python for Windows (3.*) from [http://www.python.org/downloads](http://www.python.org/downloads){:target="_blank"}
 
@@ -34,7 +35,7 @@ print("Hello, World from IoT!")
 
 * Right-click the Project node and select Properties
 
-* Make sure you set the 'Remote Machine' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/win10/samples/HelloWorld.htm) if you need guidance.
+* Make sure you set the 'Remote Machine' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
 
 * When everything is set up, you should be able to press F5 from Visual Studio: The Python app will deploy and start on the device.
 
@@ -60,4 +61,4 @@ print("Hello, World from IoT!")
 
 ###Questions/Suggestions
 
-Please refer to the [FAQ]({{site.baseurl}}/Faqs.htm) for issues.
+Please refer to the [FAQ]({{site.baseurl}}/{{page.lang}}/Faqs.htm) for issues.

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Windows 10 IoT Core Command Line Utils
-permalink: /win10/tools/CommandLineUtils.htm
+permalink: /zh-CN/win10/tools/CommandLineUtils.htm
+lang: zh-CN
 ---
 
 #Windows 10 IoT Core Command Line Utils
@@ -74,7 +75,7 @@ Looking to configure some of the settings on your device? The below tools all co
 
 	Windows IoT Core devices can be set to headed (when display capabilities are required) or headless (when a display is not required or available) device mode. To change this setting, use `setbootoption.exe [headed | headless]`.
 
-		NOTE: Changing this setting will require a reboot in order to see the effect.
+		NOTE: Changing this setting will require a reboot in order for the change to take effect.
 
 * **Task scheduler:**
 

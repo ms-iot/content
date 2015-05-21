@@ -1,7 +1,8 @@
 ---
 layout: default
 title: How to Contribute
-permalink: /Contribute.htm
+permalink: /en-US/Contribute.htm
+lang: en-US
 ---
 
 # How to Contribute

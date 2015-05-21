@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Compatible USB Peripheral Devices
-permalink: /win10/Peripherals.htm
+permalink: /zh-CN/win10/Peripherals.htm
+lang: zh-CN
 ---
 
 ##Compatible USB Peripheral Devices

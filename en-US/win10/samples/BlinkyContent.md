@@ -2,7 +2,7 @@
 
 We'll create a simple LED blinking app and connect a LED to your Windows 10 IoT Core device.
 
-This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/win10/HeadlessMode.htm).
+This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
 
 Also, be aware that the GPIO APIs are only available on Windows 10 IoT Core, so this sample cannot run on your desktop.
 
@@ -10,7 +10,7 @@ Also, be aware that the GPIO APIs are only available on Windows 10 IoT Core, so 
 
 You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/Blinky).  Choose either the C++ version or C# version, but note that this sample only covers the C# version. Make a copy of the folder on your disk and open the project from Visual Studio.
 
-Make sure you set the 'Remote Debugging' setting to point to your Windows IoT device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/win10/samples/HelloWorld.htm) if you need guidance.
+Make sure you set the 'Remote Debugging' setting to point to your Windows IoT device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
 
 Note that the app will gracefully degrade if it cannot find any available GPIO ports, for example if you run the app on a VM running Windows 10 IoT Core.
 

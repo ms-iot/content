@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Home
-permalink: /Faqs.htm
+permalink: /zh-CN/Faqs.htm
+lang: zh-CN
 ---
 <div class="row col-md-12">
     <div class="col-md-2 col-xs-12 faq-nav section-heading">
@@ -46,7 +47,7 @@ permalink: /Faqs.htm
         <a name="uwp"></a>
         <h2 class="faq-h2">Universal Windows Platform (UWP) Apps</h2>
         <p class="bold"><em>I get "You need to enable Developer Mode" on my Vistual Studio machine.  What do I do?</em></p>
-        <p>In a later builds of windows there will be a settings page "For developers" that will allow you to control this.  Until then you can work around this using the Group Policy editor.  More details <a href='https://msdn.microsoft.com/en-us/library/windows/apps/dn706236.aspx'>here</a></br>
+        <p>In a later builds of windows there will be a settings page "For developers" that will allow you to control this.  Until then you can work around this using the Group Policy editor.  More details <a href='https://msdn.microsoft.com/zh-CN/library/windows/apps/dn706236.aspx'>here</a></br>
         <ol>
         <li>Run Gpedit.msc </li>
 	<li>Under [Local Computer Policy > Computer Configuration > Administrative Templates > Windows Components > App Package Deployment] enable the following policies:</li>

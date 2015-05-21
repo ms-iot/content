@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Start Coding
-permalink: /win10/StartCoding.htm
+permalink: /zh-CN/win10/StartCoding.htm
+lang: zh-CN
 ---
 
 

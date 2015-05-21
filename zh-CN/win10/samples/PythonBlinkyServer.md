@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Python Blinky Server Sample
-permalink: /win10/samples/PythonBlinkyServer.htm
+permalink: /zh-CN/win10/samples/PythonBlinkyServer.htm
+lang: zh-CN
 ---
 
 ##Python Blinky Server Sample

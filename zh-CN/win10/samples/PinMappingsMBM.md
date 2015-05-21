@@ -1,7 +1,8 @@
 ---
 layout: default
 title: MinnowBoard Max Pin Mappings
-permalink: /win10/samples/PinMappingsMBM.htm
+permalink: /zh-CN/win10/samples/PinMappingsMBM.htm
+lang: zh-CN
 ---
 ##MinnowBoard Max Pin Mappings
 

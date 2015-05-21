@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Servo
-permalink: /win8/samples/Servo.htm
+permalink: /en-US/win8/samples/Servo.htm
+lang: en-US
 ---
 
 # Servo

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: SetupPC
-permalink: /win8/SetupPC.htm
+permalink: /en-US/win8/SetupPC.htm
+lang: en-US
 ---
 
 <div class="row">

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Sample Applications
-permalink: /win8/samples/SampleApps.htm
+permalink: /zh-CN/win8/samples/SampleApps.htm
+lang: zh-CN
 ---
 
 <div class="row">
@@ -78,7 +79,7 @@ permalink: /win8/samples/SampleApps.htm
     <div class="col-md-4">
         <h2>Win32 Networking</h2>
         <p>This MSDN sample shows how to run a winsock client and server.</p>
-        <p><a class="btn btn-default" href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms737889(v=vs.85).aspx" role="button">View details &raquo;</a></p>
+        <p><a class="btn btn-default" href="http://msdn.microsoft.com/zh-CN/library/windows/desktop/ms737889(v=vs.85).aspx" role="button">View details &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h2>Forwarders and Stubs</h2>  <span class="label label-Info">New</span>

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Console App Sample
-permalink: /win10/samples/ConsoleApp.htm
+permalink: /zh-CN/win10/samples/ConsoleApp.htm
+lang: zh-CN
 ---
 
 ##MemoryStatus Console Application Sample

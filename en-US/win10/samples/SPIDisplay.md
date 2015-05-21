@@ -1,7 +1,8 @@
 ---
 layout: default
 title: SPI Display Sample
-permalink: /win10/samples/SPIDisplay.htm
+permalink: /en-US/win10/samples/SPIDisplay.htm
+lang: en-US
 ---
 
 ##SPI Display Sample
@@ -9,13 +10,13 @@ permalink: /win10/samples/SPIDisplay.htm
 In this sample, we interface a SPI based [OLED display](http://www.adafruit.com/product/938) to your Raspberry Pi 2/MinnowBoard Max. We then create an app that lets us write lines of text to the display. Step-by-step instructions are provided,
 so no background knowledge of SPI is needed. However, if you want to learn more, Sparkfun provides a great [tutorial on SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi).
 
-This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/win10/HeadlessMode.htm).
+This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
 
 ###Load the project in Visual Studio
 
 You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/SPIDisplay).  Make a copy of the folder on your disk and open the project from Visual Studio.
 
-Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/win10/samples/HelloWorld.htm) if you need guidance.
+Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
 
 Note that this app requires a device with a physical SPI port and will not work if running in an emulated environment.
 
@@ -32,7 +33,7 @@ Visit the **Raspberry Pi 2/MinnowBoard Max** sections below depending on which d
 ![Electrical Components]({{site.baseurl}}/images/SPIDisplay/components.png)
 
 ####Raspberry Pi 2
-For the Raspberry Pi 2, we need to hook up power, ground, SPI, and a few GPIO pins to the OLED display. For additional information on the Raspberry Pi 2 pins, visit the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/win10/samples/PinMappingsRPi2.htm)
+For the Raspberry Pi 2, we need to hook up power, ground, SPI, and a few GPIO pins to the OLED display. For additional information on the Raspberry Pi 2 pins, visit the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm)
 
 **Note: Make sure to power off the RPi2 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
 
@@ -58,7 +59,7 @@ Here are the schematics:
 ![SPI schematics]({{site.baseurl}}/images/SPIDisplay/schematics_rpi2.png)
 
 ####MinnowBoard Max
-For the MinnowBoard Max, we need to hook up power, ground, SPI, and a few GPIO pins to the OLED display. See the [MBM pin mapping page]({{site.baseurl}}/win10/samples/PinMappingsMBM.htm) for more details on the MBM IO pins.
+For the MinnowBoard Max, we need to hook up power, ground, SPI, and a few GPIO pins to the OLED display. See the [MBM pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm) for more details on the MBM IO pins.
 
 **Note: Make sure to power off the MBM when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
 

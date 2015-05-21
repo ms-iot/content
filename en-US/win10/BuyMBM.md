@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Buy MBM
-permalink: /win10/BuyMBM.htm
+permalink: /en-US/win10/BuyMBM.htm
+lang: en-US
 ---
 
 #How to Buy a MinnowBoard Max

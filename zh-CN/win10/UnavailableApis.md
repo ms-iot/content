@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Unavailable Universal APIs
-permalink: /win10/UnavailableApis.htm
+permalink: /zh-CN/win10/UnavailableApis.htm
+lang: zh-CN
 ---
 
 <div class="container" markdown= "1">

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Glossary
-permalink: /win10/Glossary.htm
+permalink: /en-US/win10/Glossary.htm
+lang: en-US
 ---
 
 ##Glossary

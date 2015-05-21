@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Communicating with an XBee device
-permalink: /win8/samples/XBee.htm
+permalink: /zh-CN/win8/samples/XBee.htm
+lang: zh-CN
 ---
 
 # Communicating with an XBee device
@@ -109,4 +110,3 @@ void loop()
 ---
 
 [&laquo; Return to Samples](SampleApps.htm){:role="button"}{:class="btn btn-default"}
-

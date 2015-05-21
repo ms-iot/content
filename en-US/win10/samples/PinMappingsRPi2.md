@@ -1,7 +1,8 @@
 ---
 layout: default
 title: RPi2 Pin Mappings
-permalink: /win10/samples/PinMappingsRPi2.htm
+permalink: /en-US/win10/samples/PinMappingsRPi2.htm
+lang: en-US
 ---
 
 ##Raspberry Pi 2 Pin Mappings

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Driver lab
-permalink: /win10/samples/DriverLab.htm
+permalink: /zh-CN/win10/samples/DriverLab.htm
+lang: zh-CN
 ---
 
 ##Write a driver with Windows IoT Core

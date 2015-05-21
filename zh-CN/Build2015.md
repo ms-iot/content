@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Home
-permalink: /Build2015.htm
+permalink: /zh-CN/Build2015.htm
+lang: zh-CN
 ---
 <div class="build-2015-background">
   <div class="col-md-12 text-center">
@@ -15,7 +16,7 @@ permalink: /Build2015.htm
   <div class="build-2015-windows"></div>
   <p>Here at Microsoft, we are constantly inspired by the enthusiasm and passion for technology represented by the Maker community. Today we are excited to share what’s next for Makers on Windows 10 with Arduino, Raspberry Pi, Intel’s Minnowboard Max, and Hackster.IO.</p>
 
-  <p>We touched on Windows 10 on small devices at <a href="https://msdn.microsoft.com/en-us/windows/hardware/dn913720(v=vs.85).aspx">WinHEC</a> in March and today you can <a href="https://dev.windows.com/en-US/iot">download</a> Windows 10 IoT Core Insider Preview with support for Raspberry Pi 2 and Intel’s Minnowboard Max. Windows 10 IoT Core is a new Windows 10 edition for low-cost, small-footprint devices that will be available ‘free’ for Makers and commercial device builders.</p>
+  <p>We touched on Windows 10 on small devices at <a href="https://msdn.microsoft.com/zh-CN/windows/hardware/dn913720(v=vs.85).aspx">WinHEC</a> in March and today you can <a href="https://dev.windows.com/zh-CN/iot">download</a> Windows 10 IoT Core Insider Preview with support for Raspberry Pi 2 and Intel’s Minnowboard Max. Windows 10 IoT Core is a new Windows 10 edition for low-cost, small-footprint devices that will be available ‘free’ for Makers and commercial device builders.</p>
 
   <p>Strong partnerships are part of Microsoft’s unique offering to developers. We’re excited to also announce our partnership with Arduino today, making Windows 10, the world’s first Arduino-certified operating system. As an initial step in this Arduino partnership, we’re announcing the availability of <a href="http://ms-iot.github.io/content/win10/SetupWRA.htm">‘Windows Remote Arduino’</a> and <a href="http://ms-iot.github.io/content/win10/SetupWVSA.htm">‘Windows Virtual Shield for Arduino’</a>, both released as open source libraries today.</p>
 

@@ -1,13 +1,14 @@
 ---
 layout: default
 title: Signing into Microsoft Connect
-permalink: /SigninMSConnect.htm
+permalink: /zh-CN/SigninMSConnect.htm
+lang: zh-CN
 ---
 
 <div class="container">
   <h1>Signing into Microsoft Connect</h1>
   <hr/>
-  Before downloading any software, you must sign up for the Windows Developer Program for IoT on Microsoft Connect. This is a necessary step in order to download the WindowsDeveloperProgramforIOT.msi and other program files. 
+  Before downloading any software, you must sign up for the Windows Developer Program for IoT on Microsoft Connect. This is a necessary step in order to download the WindowsDeveloperProgramforIOT.msi and other program files.
   <br/><br/>
   Microsoft Connect facilitates a unified hosting service for file downloads and provides users with an interface for reporting potential bugs and valuable feedback in our product. The flow of the Microsoft Connect sign-up process can vary based on a number of circumstances.
   <br/><br/>
@@ -19,7 +20,7 @@ permalink: /SigninMSConnect.htm
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-            I do not have a Microsoft Account email (@outlook, @live, @hotmail, etc.) 
+            I do not have a Microsoft Account email (@outlook, @live, @hotmail, etc.)
           </a>
         </h4>
       </div>
@@ -31,7 +32,7 @@ permalink: /SigninMSConnect.htm
           <br/><img src="{{site.baseurl}}/images/MSConnectRegistration.png"><br/><br/>
           Click the “Continue” button to move on to a social.microsoft.com web page – on this site, you will need to enter a Public Identity Display Name that can be used to post content on our Microsoft Connect site.  You will also need to agree to the Legal Terms of using a social.microsoft.com site.  The web site should appear as pictured here:
           <br/><img src="{{site.baseurl}}/images/MSConnectCreateProfile.png"><br/><br/>
-          After choosing a Display Name and agreeing to the terms of the site, click the “Continue” button to move on to a profile.microsoft.com web page. 
+          After choosing a Display Name and agreeing to the terms of the site, click the “Continue” button to move on to a profile.microsoft.com web page.
           <br/><img src="{{site.baseurl}}/images/MSConnectProfileRegister.png"><br/><br/>
           This is the actual sign-up page for the Microsoft Connect website.  Here, you can create your Microsoft Connect profile and choose to receive a variety of updates from Microsoft.  Fill out the information on the form and click the “Submit” button.  At this point, your Microsoft Connect profile has been created and you’ll be redirected to the site where we host our EULA agreement for the MSI.  This site looks like this:
           <br/><img src="{{site.baseurl}}/images/MSConnectSurvey.png"><br/><br/>
@@ -61,7 +62,7 @@ permalink: /SigninMSConnect.htm
 		  <br/><img src="{{site.baseurl}}/images/MSConnectRegistration.png"><br/><br/>
 		  Click the “Continue” button to move on to a social.microsoft.com web page – on this site, you will need to enter a Public Identity Display Name that can be used to post content on our Microsoft Connect site. You will also need to agree to the Legal Terms of using a social.microsoft.com site. The web site should appear as pictured here:
           <br/><img src="{{site.baseurl}}/images/MSConnectCreateProfile.png"><br/><br/>
-          After choosing a Display Name and agreeing to the terms of the site, click the “Continue” button to move on to a profile.microsoft.com web page. 
+          After choosing a Display Name and agreeing to the terms of the site, click the “Continue” button to move on to a profile.microsoft.com web page.
           <br/><img src="{{site.baseurl}}/images/MSConnectProfileRegister.png"><br/><br/>
           This is the actual sign-up page for the Microsoft Connect website.  Here, you can create your Microsoft Connect profile and choose to receive a variety of updates from Microsoft.  Fill out the information on the form and click the “Submit” button.  At this point, your Microsoft Connect profile has been created and you’ll be redirected to the site where we host our EULA agreement for the MSI.  This site looks like this:
           <br/><img src="{{site.baseurl}}/images/MSConnectSurvey.png"><br/><br/>

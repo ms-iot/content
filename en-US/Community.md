@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Home
-permalink: /Community.htm
+permalink: /en-US/Community.htm
+lang: en-US
 ---
 <div class="row section-heading">
     <h1>Community</h1>
@@ -102,7 +103,7 @@ permalink: /Community.htm
       We support the community via forums. Please post your questions on the forums and we will respond. Also, be sure to check out our FAQ.
     </p>
     <p>
-      <a href="{{site.baseurl}}/Faqs.htm">FAQ &raquo;</a>
+      <a href="{{site.baseurl}}/{{page.lang}}/Faqs.htm">FAQ &raquo;</a>
     </p>
   </div>
 </div>

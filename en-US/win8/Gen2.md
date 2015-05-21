@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Intel Galileo Gen 2 Alpha Support
-permalink: /win8/Gen2.htm
+permalink: /en-US/win8/Gen2.htm
+lang: en-US
 ---
 
 # Welcome!
@@ -19,4 +20,4 @@ The intent of this release is to announce and enable support for Gen 2, get the 
 Just follow the instructions for [Setting up your PC](SetupPC.htm){:target="_blank"}
 
 ---
-[&laquo; Return to Homepage]({{site.baseurl}}/index.htm){: .btn .btn-default}
+[&laquo; Return to Homepage]({{site.baseurl}}/{{page.lang}}/index.htm){: .btn .btn-default}

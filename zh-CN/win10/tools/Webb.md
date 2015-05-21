@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Web-based Device Management
-permalink: /en-US/win10/tools/Webb.htm
-lang: en-US
+permalink: /zh-CN/win10/tools/Webb.htm
+lang: zh-CN
 ---
 
 <div class="container" markdown="1">

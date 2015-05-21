@@ -1,7 +1,8 @@
 ---
 layout: default
 title: SPI Display Sample
-permalink: /win10/samples/SPIDisplay.htm
+permalink: /zh-CN/win10/samples/SPIDisplay.htm
+lang: zh-CN
 ---
 
 ##SPI Display Sample

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Python for IoT Sample
-permalink: /win10/samples/Python.htm
+permalink: /zh-CN/win10/samples/Python.htm
+lang: zh-CN
 ---
 
 ##Python Apps

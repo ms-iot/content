@@ -1,7 +1,8 @@
 ---
 layout: default
 title: I2C Port Expander Sample
-permalink: /win10/samples/I2CPortExpander.htm
+permalink: /zh-CN/win10/samples/I2CPortExpander.htm
+lang: zh-CN
 ---
 
 ##I2C Port Expander Sample

@@ -1,16 +1,17 @@
 ---
 layout: default
 title: Driver lab
-permalink: /win10/samples/DriverLab.htm
+permalink: /en-US/win10/samples/DriverLab.htm
+lang: en-US
 ---
 
 ##Write a driver with Windows IoT Core
 
 ###Did you set up your environment?
 
-We assume you already [set up your environment]({{site.baseurl}}/GetStarted.htm), have a working Visual Studio, and have a device running Windows IoT Core.
+We assume you already [set up your environment]({{site.baseurl}}/{{page.lang}}/GetStarted.htm), have a working Visual Studio, and have a device running Windows IoT Core.
 
-Remember, you can always [contact us]({{site.baseurl}}/Community.htm#contact) for help and suggestions!
+Remember, you can always [contact us]({{site.baseurl}}/{{page.lang}}/Community.htm#contact) for help and suggestions!
 
 ###Lab objective
 In this lab we will be walking through the process of creating and installing a simple peripheral device driver that will run on Windows IoT Core.  More specifically, we will be creating a Kernel Mode Device Framework driver (KMDF) using the Windows Driver Kit (WDK) and the Windows Driver Framework (WDF) APIs.
@@ -39,8 +40,8 @@ In these tutorials, you will be required to run various commands. Please use an 
 
 ###Tutorials
 
-1. [Open project for an existing driver]({{site.baseurl}}/win10/samples/DriverLab1.htm) --- In this exercise, you will open an existing driver to see the basic structure of a driver.
+1. [Open project for an existing driver]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab1.htm) --- In this exercise, you will open an existing driver to see the basic structure of a driver.
 
-2. [Use Visual Studio to build a driver]({{site.baseurl}}/win10/samples/DriverLab2.htm) --- In this exercise, you will use Visual Studio to compile a driver for a specific platform.
+2. [Use Visual Studio to build a driver]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab2.htm) --- In this exercise, you will use Visual Studio to compile a driver for a specific platform.
 
-3. [Deploy the driver and confirm the installation]({{site.baseurl}}/win10/samples/DriverLab3.htm) --- This exercise demonstrates how to manually copy and install the driver to a Windows IoT Core device.
+3. [Deploy the driver and confirm the installation]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab3.htm) --- This exercise demonstrates how to manually copy and install the driver to a Windows IoT Core device.

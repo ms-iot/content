@@ -1,7 +1,8 @@
 ---
 layout: default
 title: SetupPCWRA
-permalink: /win10/SetupPCWVSA.htm
+permalink: /en-US/win10/SetupPCWVSA.htm
+lang: en-US
 ---
 
 #Get Started

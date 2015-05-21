@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Picture the Weather
-permalink: /win10/samples/PictureTheWeather.htm
+permalink: /en-US/win10/samples/PictureTheWeather.htm
+lang: en-US
 ---
 
 ##Picture The Weather sample, using Windows Virtual Shields for Arduino

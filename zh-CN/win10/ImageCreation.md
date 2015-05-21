@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Image creation process and tools
-permalink: /win10/ImageCreation.htm
+permalink: /zh-CN/win10/ImageCreation.htm
+lang: zh-CN
 ---
 
 ##Image creation process and tools

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: I2C Accelerometer Sample
-permalink: /win10/samples/I2CAccelerometer.htm
+permalink: /zh-CN/win10/samples/I2CAccelerometer.htm
+lang: zh-CN
 ---
 
 ##I2C Accelerometer Sample

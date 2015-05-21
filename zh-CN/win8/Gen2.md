@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Intel Galileo Gen 2 Alpha Support
-permalink: /win8/Gen2.htm
+permalink: /zh-CN/win8/Gen2.htm
+lang: zh-CN
 ---
 
 # Welcome!

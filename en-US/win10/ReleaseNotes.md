@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Release Notes
-permalink: /win10/ReleaseNotes.htm
+permalink: /en-US/win10/ReleaseNotes.htm
+lang: en-US
 ---
 
 #Release Notes for Windows 10 IoT Core Insider Preview
@@ -15,11 +16,11 @@ Windows 10 IoT Core on the MinnowBoard Max based on Intel Atom E38xx series SoC 
 the ARM Cortex-A7 based SoC (also referred to as the RPI).
 
 ##Privacy Statement
-    
+
 The privacy statement for this pre-release version of the Windows operating system can be viewed here: [http://go.microsoft.com/fwlink/?LinkId=506737](http://go.microsoft.com/fwlink/?LinkId=506737){:target="_blank"}
 
 You can review linked terms by pasting the forward link into your browser window.
-    
+
 ##What's New
 * Windows 10 IoT Core Insider Preview 5/12 Release
 
@@ -43,7 +44,7 @@ Bluetooth connectivity is not fully implemented on either the MinnowBoard Max or
 Wireless networking is not fully implemented on the Raspberry PI2 for this release.
 
 ##Known Issues
-    
+
 * The keyboard input may be lost when switching between multiple apps that are running at the same time. (1304429)
 * Some USB keyboards and mice may not work on the Raspberry PI2. (2365290). WORKAROUND: Use a different keyboard or mouse. This issue has been seen with a few specific models and is suspected to be a power issue with the USB port. This may resolve by using a powered USB hub.
 * XAML WebView may not accept keyboard input (2477598). WORKAROUND: Use a different control to receive input.

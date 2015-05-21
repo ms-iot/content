@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Nodejs
-permalink: /win10/samples/Nodejs.htm
+permalink: /zh-CN/win10/samples/Nodejs.htm
+lang: zh-CN
 ---
 
 ##MemoryStatus Node.js (Console Application) Sample
@@ -36,7 +37,7 @@ Build for the device (assuming Rpi2):
 Update PATH variable (make sure the new Node.exe location is at the front of the path): SET path=C:\NodeChakra;%path%
 
 ###Create Addon
-Build a native addon for the Node.js server that will be deployed in this sample. This step is required because [GlobalMemoryStatusEx](https://msdn.microsoft.com/en-us/library/windows/desktop/aa366589(v=vs.85).aspx) is used to get the data we need.
+Build a native addon for the Node.js server that will be deployed in this sample. This step is required because [GlobalMemoryStatusEx](https://msdn.microsoft.com/zh-CN/library/windows/desktop/aa366589(v=vs.85).aspx) is used to get the data we need.
 
 * Create AddOn location C:\NodeAddon
 * Go to C:\NodeAddon

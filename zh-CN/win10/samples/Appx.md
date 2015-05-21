@@ -1,7 +1,8 @@
 ---
 layout: default
 title: AppX Creation and Deployment
-permalink: /win10/samples/Appx.htm
+permalink: /zh-CN/win10/samples/Appx.htm
+lang: zh-CN
 ---
 
 #Creating and Deploying Appx to Windows IoT Core
@@ -37,7 +38,7 @@ We'll walk through the steps required to create an Appx Package from your Visual
   <AppDesignerFolder>Properties</AppDesignerFolder>
   <RootNamespace>MyApp</RootNamespace>
   <AssemblyName>MyApp</AssemblyName>
-  <DefaultLanguage>en-US</DefaultLanguage>
+  <DefaultLanguage>zh-CN</DefaultLanguage>
   <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
   <TargetPlatformVersion>10.0.9910.0</TargetPlatformVersion>
   <TargetPlatformMinVersion>10.0.9910.0</TargetPlatformMinVersion>

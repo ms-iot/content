@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Troubleshooting
-permalink: /win8/TroubleShooting.htm
+permalink: /en-US/win8/TroubleShooting.htm
+lang: en-US
 ---
 
 <h1>Troubleshooting</h1>

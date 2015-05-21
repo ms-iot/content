@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Intel Galileo Gen 1 and Gen2 Lightning Support
-permalink: /win8/Lightning.htm
+permalink: /en-US/win8/Lightning.htm
+lang: en-US
 ---
 
 # New Lightning Functionality
@@ -22,4 +23,4 @@ Please follow the instructions for [Setting up your PC](SetupPC.htm){:target="_b
 * Supports **Lightning** for Intel Galileo Gen1 and Gen2.
 
 ---
-[&laquo; Return to Homepage]({{site.baseurl}}/index.htm){: .btn .btn-default}
+[&laquo; Return to Homepage]({{site.baseurl}}/{{page.lang}}/index.htm){: .btn .btn-default}

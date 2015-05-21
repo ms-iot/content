@@ -1,7 +1,8 @@
 ---
 layout: default
 title: 7-SegmentShield
-permalink: /win8/samples/7-SegmentShield.htm
+permalink: /en-US/win8/samples/7-SegmentShield.htm
+lang: en-US
 ---
 
 # Gravitech 7-Segment Shield

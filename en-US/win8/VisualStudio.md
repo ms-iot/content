@@ -1,7 +1,8 @@
 ---
 layout: default
 title: New to Visual Studio
-permalink: /VisualStudio.htm
+permalink: /en-US/VisualStudio.htm
+lang: en-US
 ---
 
 #Using #pragmas

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Phidgets Sensors
-permalink: /win8/samples/PhidgetsSensors.htm
+permalink: /zh-CN/win8/samples/PhidgetsSensors.htm
+lang: zh-CN
 ---
 
 # Phidgets Sensors

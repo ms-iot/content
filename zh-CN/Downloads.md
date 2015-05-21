@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Downloads
-permalink: /Downloads.htm
+permalink: /zh-CN/Downloads.htm
+lang: zh-CN
 ---
-
 
 <div class="row section-heading">
     <div class="col-md-6">
@@ -31,7 +31,7 @@ permalink: /Downloads.htm
                     <div class="col-md-12">
                         <h3>Downloads via Microsoft Connect</h3>
                         <p>Please sign up with our program on <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558">Microsoft Connect</a>,
-                            which is our software release management platform. You will need to have a <a href="http://www.microsoft.com/en-us/account/default.aspx">Microsoft Account</a>. If you are already signed up with our program on Microsoft Connect,
+                            which is our software release management platform. You will need to have a <a href="http://www.microsoft.com/zh-CN/account/default.aspx">Microsoft Account</a>. If you are already signed up with our program on Microsoft Connect,
                             (or are not sure if you signed up earlier) and try to sign up again, don’t worry, you will just see a blank page. If you have not signed up for our program on Connect before,
                             it will prompt you to create a social profile and accept license agreements. You can find step-by-step instructions for signing up for Microsoft Connect
                             <a href="http://ms-iot.github.io/content/SigninMSConnect.htm">here</a>.
@@ -71,7 +71,7 @@ permalink: /Downloads.htm
                     <div class="col-md-3">
                         <h4>Windows SDK</h4>
                         <p>Contains headers, libraries and tools you can use when you create apps that run on Windows</p>
-                        <a href="https://dev.windows.com/en-US/windows-10-developer-preview-tools">Learn More</a>
+                        <a href="https://dev.windows.com/zh-CN/windows-10-developer-preview-tools">Learn More</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Visual Studio 2015</h4>
@@ -81,12 +81,12 @@ permalink: /Downloads.htm
                     <div class="col-md-3">
                         <h4>Windows Driver Kit 2015</h4>
                         <p>Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 10</p>
-                        <a href="https://dev.windows.com/en-US/featured/hardware/windows-10-hardware-preview-tools">Learn More</a>
+                        <a href="https://dev.windows.com/zh-CN/featured/hardware/windows-10-hardware-preview-tools">Learn More</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Tools</h4>
                         <p>Tools for Windows 10 that are required for developing for the Universal Windows App Platform</p>
-                        <a href="https://dev.windows.com/en-us/develop/Building-universal-Windows-apps">Learn More</a>
+                        <a href="https://dev.windows.com/zh-CN/develop/Building-universal-Windows-apps">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -105,7 +105,7 @@ permalink: /Downloads.htm
                 <div class="col-md-3">
                     <h4>Visual Studio 2013</h4>
                     <p>State of the art IDE, tools and services that you can use to create great IoT apps</p>
-                    <a href="https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx">Learn More</a>
+                    <a href="https://www.visualstudio.com/zh-CN/downloads/download-visual-studio-vs.aspx">Learn More</a>
                 </div>
                 <div class="col-md-3">
                     <h4>Windows Driver Kit 2013</h4>

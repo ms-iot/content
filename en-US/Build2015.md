@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Home
-permalink: /Build2015.htm
+permalink: /en-US/Build2015.htm
+lang: en-US
 ---
 <div class="build-2015-background">
   <div class="col-md-12 text-center">

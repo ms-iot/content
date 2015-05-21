@@ -1,7 +1,8 @@
 ---
 layout: default
 title: TX/RX Sample
-permalink: /win8/samples/TXRX.htm
+permalink: /en-US/win8/samples/TXRX.htm
+lang: en-US
 ---
 
 # Communicating through TX/RX pins

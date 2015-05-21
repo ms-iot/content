@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Setup your Intel Galileo
-permalink: /win8/SetupGalileo.htm
-device: Galileo
+permalink: /en-US/win8/SetupGalileo.htm
+lang: en-US
 ---
 
 #Get Started
@@ -12,7 +12,7 @@ This guide will show you how to install and run the Windows Developer Program fo
 {% include steps.html device="Galileo" %}
 
 ## Step 1: Sign up for Microsoft Connect
-We release Windows for Galileo through the Microsoft Connect program.  Please go to the [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"} site to sign up.  You can find step-by-step instructions for signing up for Microsoft Connect [here]({{site.baseurl}}/SigninMSConnect.htm){:target="_blank"}.
+We release Windows for Galileo through the Microsoft Connect program.  Please go to the [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"} site to sign up.  You can find step-by-step instructions for signing up for Microsoft Connect [here]({{site.baseurl}}/{{page.lang}}/SigninMSConnect.htm){:target="_blank"}.
 
 ## Creating a Microsoft Windows bootable microSD card
 

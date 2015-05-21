@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Driver Lab - Use Visual Studio to build a driver
-permalink: /win10/samples/DriverLab2.htm
+permalink: /zh-CN/win10/samples/DriverLab2.htm
+lang: zh-CN
 ---
 
 ##Use Visual Studio to build a driver

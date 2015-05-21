@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Shift Register Sample
-permalink: /win10/samples/ShiftRegisterSample.htm
+permalink: /zh-CN/win10/samples/ShiftRegisterSample.htm
+lang: zh-CN
 ---
 
 ##Shift Register Sample

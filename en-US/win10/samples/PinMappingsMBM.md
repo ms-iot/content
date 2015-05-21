@@ -1,7 +1,8 @@
 ---
 layout: default
 title: MinnowBoard Max Pin Mappings
-permalink: /win10/samples/PinMappingsMBM.htm
+permalink: /en-US/win10/samples/PinMappingsMBM.htm
+lang: en-US
 ---
 ##MinnowBoard Max Pin Mappings
 
@@ -20,7 +21,7 @@ Hardware interfaces for the MinnowBoard Max are exposed through the 26-pin heade
 
 Note that the MinnowBoard Max uses 3.3V logic levels on all IO pins. In addition all the pins are buffered by [TXS0104E](http://www.ti.com/product/txs0104e) level shifters, with the exception of power and ground pins.
  These level shifters appear as open collector outputs with a **10K&#x2126; resistive pull-up, and the pull-up is present regardless of whether the IO is set to input or output.**
- The open-collector nature of the level shifters means is that the pins can output a '0' strongly, but only weakly output a '1'. This is important to keep in mind when attaching devices which draw current from the pins (such as an LED). See the [Blinky Sample]({{site.baseurl}}/win10/samples/Blinky.htm) for the correct way to interface an LED to the MinnowBoard Max.
+ The open-collector nature of the level shifters means is that the pins can output a '0' strongly, but only weakly output a '1'. This is important to keep in mind when attaching devices which draw current from the pins (such as an LED). See the [Blinky Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm) for the correct way to interface an LED to the MinnowBoard Max.
 
 
 ##GPIO Pins

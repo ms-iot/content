@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Intel Galileo Gen 1 and Gen2 Lightning Support
-permalink: /win8/Lightning.htm
+permalink: /zh-CN/win8/Lightning.htm
+lang: zh-CN
 ---
 
 # New Lightning Functionality

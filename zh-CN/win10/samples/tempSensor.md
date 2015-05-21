@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Potentiometer Sample
-permalink: /win10/samples/tempSensor.htm
+permalink: /zh-CN/win10/samples/tempSensor.htm
+lang: zh-CN
 ---
 
 ## Temperature/Force Sensor Sample
