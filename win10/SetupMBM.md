@@ -50,6 +50,12 @@ Learn how to set up the MinnowBoard Max hardware and connect it to your computer
 
 		<kbd>.\MinnowBoard.MAX.FirmwareUpdateIA32.efi _filename_.bin</kbd>
 
+		e.g.
+
+        Shell> fs0:
+
+        fs0:\> .\MinnowBoard.MAX.FirmwareUpdateIA32.efi MinnowBoard.MAX.I32.079.R01.bin
+
 * The system should shut down automatically after the firmware update is complete.
 
 Note: You might wonder why you need to invoke 'MinnowBoard.MAX.FirmwareUpdateX64.efi' even if we're only supporting a 32 bit version of Windows 10 IoT Core.
