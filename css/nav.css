@@ -1,4 +1,13 @@
-.l2-nav > ul > li > a {
+/* .l2-nav > ul > li > a {
+    color: #505050;
+    border-radius: 0;
+    height: 100%;
+    text-align: center;
+    font-size: 11px;
+    line-height: 16px;
+} */
+
+#bs-example-navbar-collapse-1 > ul > li > a {
     color: #505050;
     border-radius: 0;
     height: 100%;
