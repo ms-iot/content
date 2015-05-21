@@ -1,10 +1,10 @@
-﻿<head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ site.title }} - {{page.title}}</title>
+    <title>{{ site.data.settings[page.lang].title }} - {{page.title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{{ site.description }}">
-    <meta name="keywords" content="{{ site.keywords }}">
+    <meta name="description" content="{{ site.data.settings[page.lang].description }}">
+    <meta name="keywords" content="{{ site.data.settings[page.lang].keywords }}">
 
     <link id="linkBaseUrl" href="{{site.baseurl}}" />
 
