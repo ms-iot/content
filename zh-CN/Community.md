@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Home
-permalink: /Community.htm
+permalink: /zh-CN/Community.htm
+lang: zh-CN
 ---
 <div class="row section-heading">
     <h1>Community</h1>
@@ -48,7 +49,7 @@ permalink: /Community.htm
     <p>Forums are a great way to ask and answer technical questions and connect with fellow developers. We support the community through the following forums:</p>
     <p>MSDN are our primary forums where you can ask us questions on all topics.</p>
     <p>
-      <a href="https://social.msdn.microsoft.com/forums/en-US/home?forum=WindowsIoT">MSDN Forums &raquo;</a>
+      <a href="https://social.msdn.microsoft.com/forums/zh-CN/home?forum=WindowsIoT">MSDN Forums &raquo;</a>
     </p>
     <p>Raspberry Pi forums are the best place to direct Raspberry Pi 2 board-specific questions.</p>
     <p>

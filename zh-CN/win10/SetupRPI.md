@@ -1,7 +1,8 @@
 ---
 layout: default
 title: SetupBoard
-permalink: /win10/SetupRPI.htm
+permalink: /zh-CN/win10/SetupRPI.htm
+lang: zh-CN
 ---
 
 #Get Started
@@ -29,7 +30,7 @@ We have provided a utility to provision your SD card with the Windows 10 IoT Cor
 Follow these instructions to configure your SD card:
 
 1. NOTE: you will need to follow these instructions on a physical Windows machine (and not a VM) because you need access to the SD card reader.
-2. Please sign up with our program on [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558), which is our software release management platform. You will need to have a [Microsoft Account](http://www.microsoft.com/en-us/account/default.aspx). If you are already signed up with our program on Microsoft Connect, (or are not sure if you signed up earlier) and try to sign up again, don’t worry, you will just see a blank page. If you have not signed up for our program on Connect before, it will prompt you to create a social profile and accept license agreements. You can find step-by-step instructions for signing up for Microsoft Connect [here](http://ms-iot.github.io/content/SigninMSConnect.htm).
+2. Please sign up with our program on [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558), which is our software release management platform. You will need to have a [Microsoft Account](http://www.microsoft.com/zh-CN/account/default.aspx). If you are already signed up with our program on Microsoft Connect, (or are not sure if you signed up earlier) and try to sign up again, don’t worry, you will just see a blank page. If you have not signed up for our program on Connect before, it will prompt you to create a social profile and accept license agreements. You can find step-by-step instructions for signing up for Microsoft Connect [here](http://ms-iot.github.io/content/SigninMSConnect.htm).
 3. [Download](http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57782) the package "Windows 10 IoT Core Insider Preview Image for Raspberry Pi 2" from Microsoft Connect. If you see a blank page or no downloads listed, please make sure you are signed into Microsoft Connect by looking at your login information at top right part of the screen. Click sign in, if you are not signed in.
 4. Make a local copy of the flash.ffu contained in the downloaded package "Windows 10 IoT Core Insider Preview Image for Raspberry Pi 2".
 5. Insert an SD card into your SD card reader.
@@ -48,7 +49,7 @@ Follow these instructions to configure your SD card:
 
 9. Click on the "Safely Remove Hardware" icon in your task tray and select your USB SD card reader to safely remove it from the system.  Failing to do this can cause corruption of the image.
 
-**NOTE:** If you want to remove Windows 10 IoT Core from your SD card after you are done using it, see the [FAQ]({{site.baseurl}}/{{page.lang}}/FAQs.htm) section titled **How do I remove Windows 10 IoT Core from my SD card?**
+**NOTE:** If you want to remove Windows 10 IoT Core from your SD card after you are done using it, see the [FAQ]({{site.baseurl}}/{{page.lang}}/Faqs.htm) section titled **How do I remove Windows 10 IoT Core from my SD card?**
 
 
 ##Hook up your Board
@@ -70,4 +71,4 @@ Follow these instructions to configure your SD card:
 
 3. Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.
 4. It is **highly recommended** that you update the default password for the Administrator account. Please follow the instructions found in the [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) documentation.
-5. Remote Debugger will launch automatically when your Raspberry Pi 2 boots. 
+5. Remote Debugger will launch automatically when your Raspberry Pi 2 boots.

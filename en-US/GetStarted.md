@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Get Started
-permalink: /GetStarted.htm
+permalink: /en-US/GetStarted.htm
 lang: en-US
 ---
 
 #Get Started
 
-Select your device to get started. If you already have a device running Windows 10 IoT Core Insider Preview, then start building with [PowerShell]({{site.baseurl}}/win10/samples/PowerShell.htm) now.
+Select your device to get started. If you already have a device running Windows 10 IoT Core Insider Preview, then start building with [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) now.
 
 [Learn more about Windows IoT devices]({{site.hardwareurl}}){:target="_blank"}
 

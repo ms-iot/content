@@ -1,7 +1,8 @@
 ---
 layout: default
 title: How to Contribute
-permalink: /Contribute.htm
+permalink: /zh-CN/Contribute.htm
+lang: zh-CN
 ---
 
 # How to Contribute

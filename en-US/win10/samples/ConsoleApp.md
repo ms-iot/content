@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Console App Sample
-permalink: /win10/samples/ConsoleApp.htm
+permalink: /en-US/win10/samples/ConsoleApp.htm
+lang: en-US
 ---
 
 ##MemoryStatus Console Application Sample
@@ -122,9 +123,9 @@ int main(int argc, char **argv)
 </UL>
 * Make sure the app builds correctly invoking the Build \| Build Solution menu command.
 
-* This application can be run in either headed or headless mode.  To better understand what headed and headless mode are and how to configure your device, follow the instructions [here]{{site.baseurl}}/win10/HeadlessMode.htm).
+* This application can be run in either headed or headless mode.  To better understand what headed and headless mode are and how to configure your device, follow the instructions [here]{{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
 
-* It is easy to deploy this console application to our Windows IoT Core device. In the [PowerShell]({{site.baseurl}}/win10/samples/PowerShell.htm) documentation, you can find instructions to use `setcomputername` to configure a unique name for your Windows IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in VS.
+* It is easy to deploy this console application to our Windows IoT Core device. In the [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) documentation, you can find instructions to use `setcomputername` to configure a unique name for your Windows IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in VS.
 
     In Visual Studio, you can configure your target by editing your project's properties (be sure to make all of the highlighted changes as appropriate to your board's name or IP address):
 
@@ -148,6 +149,6 @@ int main(int argc, char **argv)
 
 * Congratulations! You just deployed your first console application to a device running Windows IoT Core!
 
-* You can now run the application as you would any other application.  Simply open a PowerShell connection (instructions can be found [here]({{site.baseurl}}/win10/samples/PowerShell.htm)) and enter the Remote Command you specified above.
+* You can now run the application as you would any other application.  Simply open a PowerShell connection (instructions can be found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)) and enter the Remote Command you specified above.
 
     ![ConsoleOutput Target]({{site.baseurl}}/images/Console/console_output.png)

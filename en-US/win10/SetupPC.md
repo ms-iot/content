@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Setup your PC for Raspberry Pi 2
-permalink: /win10/SetupPC.htm
+permalink: /en-US/win10/SetupPC.htm
+lang: en-US
 ---
 
 #Get Started

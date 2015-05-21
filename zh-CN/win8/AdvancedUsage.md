@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Advanced Usage
-permalink: /win8/AdvancedUsage.htm
+permalink: /zh-CN/win8/AdvancedUsage.htm
+lang: zh-CN
 ---
 
 # Advanced Usage
@@ -207,7 +208,7 @@ Image Index : 1
 Now you can apply Microsoft Windows to an microSD card as described in [Bought or updating your Intel Galileo?]({{site.baseurl}}/{{page.lang}}/win8/SetupGalileo.htm){:target="_blank"}.
 
 
-To see if your driver works through telnet use 'devcon' command. For devcon command help look [here](http://msdn.microsoft.com/en-us/library/windows/hardware/ff544746(v=vs.85).aspx){:target="_blank"}.
+To see if your driver works through telnet use 'devcon' command. For devcon command help look [here](http://msdn.microsoft.com/zh-CN/library/windows/hardware/ff544746(v=vs.85).aspx){:target="_blank"}.
 
 
 ---

@@ -1,20 +1,21 @@
 ---
 layout: default
 title: NodejsWUBlinky
-permalink: /win10/samples/NodejsWUBlinky.htm
+permalink: /en-US/win10/samples/NodejsWUBlinky.htm
+lang: en-US
 ---
 
 ##Blinky Node.js Server Sample (Windows Universal)
 
 
 ###Set up your PC
-* Follow the instructions [here]({{site.baseurl}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
+* Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
 * Install [Node.js Tools 1.1 Beta for Visual Studio 2015](http://aka.ms/ntvslatest).
-* Install [NTVS IoT Extension]({{site.downloadurl}}) (This step requires that you have signed up with our program on Microsoft Connect. Instructions on how to do that can be found [here]({{site.baseurl}}/Downloads.htm)).
+* Install [NTVS IoT Extension]({{site.downloadurl}}) (This step requires that you have signed up with our program on Microsoft Connect. Instructions on how to do that can be found [here]({{site.baseurl}}/{{page.lang}}/Downloads.htm)).
 
 
 ###Set up your hardware
-The setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/win10/samples/Blinky.htm).
+The setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm).
 
 
 ###Create a new Node.js (Windows Universal) project

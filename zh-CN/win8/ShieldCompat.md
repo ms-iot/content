@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Shield Compatibility
-permalink: /ShieldCompat.htm
+permalink: /zh-CN/ShieldCompat.htm
+lang: zh-CN
 ---
 
 # Compatible Shields

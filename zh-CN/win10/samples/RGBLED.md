@@ -1,7 +1,8 @@
 ---
 layout: default
 title: RGB LED Sample
-permalink: /win10/samples/RGBLED.htm
+permalink: /zh-CN/win10/samples/RGBLED.htm
+lang: zh-CN
 ---
 
 ##RGB LED Sample

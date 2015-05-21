@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Forwarders and Stubs
-permalink: /win8/samples/Forwarders.htm
+permalink: /en-US/win8/samples/Forwarders.htm
+lang: en-US
 ---
 
 ##Win32 API
@@ -15,7 +16,7 @@ If you want to run an application targeted for Desktop on a smaller device - lik
 
 To make them available, there are a few options:
 
-1. If you have access to the sources for the app you'd like to run, link against MinCore.lib instead of the default set of libraries for Desktop applications. 
+1. If you have access to the sources for the app you'd like to run, link against MinCore.lib instead of the default set of libraries for Desktop applications.
 1. If the API is in Windows, but has moved, implement a Forwarder from the traditional API exposure to the new one.
 1. If the API is missing, implement a stub which emulates the API as best as possible.
 
@@ -23,12 +24,12 @@ To make them available, there are a few options:
 Windows on Galileo is derived from Windows Phone 8.1. This mobile edition of Windows uses the [Windows 8.1 API Set](http://msdn.microsoft.com/en-us/library/windows/desktop/hh802935(v=vs.85).aspx){:target="_blank"}.
 
 ##Diagnosing a failing application
-When an application fails to load due to a missing API, you can diagnose it by turning on Windows Loader Snaps - a loader tool which shows which APIs are missing. 
+When an application fails to load due to a missing API, you can diagnose it by turning on Windows Loader Snaps - a loader tool which shows which APIs are missing.
 
 ####Enable Windows Loader Snaps:
 
 1. Telnet to your board
-1. Determine the executable name for the binary you'd like to diagnose. 
+1. Determine the executable name for the binary you'd like to diagnose.
 1. Enter the following command, replacing the executable name, `node.exe`:
 
 {% highlight bash %}
@@ -91,4 +92,4 @@ To help with porting, a [Forwarder and Stub repository](http://github.com/ms-iot
 1. Copy the binary to your deployment diretory - such as `User32.dll` to `\\mygalileo\c$\test`
 
 ---
-[&laquo; Return to Samples](SampleApps.htm){: .btn .btn-default} 
+[&laquo; Return to Samples](SampleApps.htm){: .btn .btn-default}

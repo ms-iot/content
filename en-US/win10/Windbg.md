@@ -1,14 +1,15 @@
 ---
 layout: default
 title: Using WINDBG to debug
-permalink: /win10/Windbg.htm
+permalink: /en-US/win10/Windbg.htm
+lang: en-US
 ---
 
 ###Connecting to a MinnowBoard Max (MBM)
 
 * Ensure that your ethernet cable is connected to your MBM
 
-* Start your MBM and connect to it using PowerShell (you can find PowerShell instructions [here]({{site.baseurl}}/win10/samples/PowerShell.htm))
+* Start your MBM and connect to it using PowerShell (you can find PowerShell instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm))
 
 * Configure your MBM, by changing the bcd settings like this:
 
@@ -26,7 +27,7 @@ permalink: /win10/Windbg.htm
 
 ![rpi2_kernel_debugger_cxn]({{site.baseurl}}/images/kd/rpi2_kd.png)
 
-* Start your RPi2 and connect to it using PowerShell (you can find PowerShell instructions [here]({{site.baseurl}}/win10/samples/PowerShell.htm))
+* Start your RPi2 and connect to it using PowerShell (you can find PowerShell instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm))
 
 * Configure your RPi2, by changing the bcd settings like this:
 

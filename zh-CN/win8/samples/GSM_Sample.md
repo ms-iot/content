@@ -1,7 +1,8 @@
 ---
 layout: default
 title: GSM Shield
-permalink: /win8/samples/GSM Shield.htm
+permalink: /zh-CN/win8/samples/GSM Shield.htm
+lang: zh-CN
 ---
 
 # SeedStudio GSM shield

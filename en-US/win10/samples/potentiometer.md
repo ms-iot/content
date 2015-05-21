@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Potentiometer Sample
-permalink: /win10/samples/potentiometer.htm
+permalink: /en-US/win10/samples/potentiometer.htm
+lang: en-US
 ---
 
 ## Potentiometer Sensor Sample

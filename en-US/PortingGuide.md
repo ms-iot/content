@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Porting Guide
-permalink: /PortingGuide.htm
+permalink: /en-US/PortingGuide.htm
+lang: en-US
 ---
 
 #Porting Guide

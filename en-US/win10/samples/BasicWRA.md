@@ -1,7 +1,8 @@
 ---
 layout: default
 title: SetupPCWRA
-permalink: /win10/samples/BasicWRA.htm
+permalink: /en-US/win10/samples/BasicWRA.htm
+lang: en-US
 ---
 
 #Get Started

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Image creation process and tools
-permalink: /win10/ImageCreation.htm
+permalink: /en-US/win10/ImageCreation.htm
+lang: en-US
 ---
 
 ##Image creation process and tools
@@ -55,4 +56,4 @@ NOTE: Remove any USB removable storage devices from your machine.  The imaging t
 
 * Wait for image creation to complete. Typically it takes around 10-15 minutes to complete. Note that it might take a bit more time to complete and display a few warnings.
 
-This will build a Flash.ffu file in your FFU folder.  You will find instructions [here]({{site.baseurl}}/GetStarted.htm) on how to deploy an FFU with the Windows IoT Core image to an SD card (look into the 'Put the Windows IoT Core image on your Micro SD Card' section).
+This will build a Flash.ffu file in your FFU folder.  You will find instructions [here]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) on how to deploy an FFU with the Windows IoT Core image to an SD card (look into the 'Put the Windows IoT Core image on your Micro SD Card' section).

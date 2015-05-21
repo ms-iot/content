@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Setup your Intel Galileo
-permalink: /win8/SetupGalileo.htm
-device: Galileo
+permalink: /zh-CN/win8/SetupGalileo.htm
+lang: zh-CN
 ---
 
 #Get Started
@@ -69,7 +69,7 @@ Please follow the [Intel's Getting Started Guide](https://communities.intel.com/
 <p><span class="label label-default"> Updated: 3/30/2015</span></p>
 The Intel Galileo Gen 2 requires Firmware version 1.0.4.
 
-Please follow the [Intel's Getting Started Guide](https://software.intel.com/en-us/articles/getting-started-with-the-intel-galileo-board-on-windows#terminal){:target="_blank"}. Once you've followed the firmware update instructions, you do not need to continue following the Getting Started guide as the instructions do not apply to Microsoft Windows running on the Intel Galileo board.
+Please follow the [Intel's Getting Started Guide](https://software.intel.com/zh-CN/articles/getting-started-with-the-intel-galileo-board-on-windows#terminal){:target="_blank"}. Once you've followed the firmware update instructions, you do not need to continue following the Getting Started guide as the instructions do not apply to Microsoft Windows running on the Intel Galileo board.
 
 ## Connecting and booting Windows
 Connecting the Galileo directly to your computer will allow you to communicate with just your Galileo. Your computer will still have internet connectivity, and your computer will be able to communicate with your Galileo.

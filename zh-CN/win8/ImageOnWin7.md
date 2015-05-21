@@ -1,13 +1,14 @@
 ---
 layout: default
 title: Imaging on Windows 7
-permalink: /win8/ImageOnWin7.htm
+permalink: /zh-CN/win8/ImageOnWin7.htm
+lang: zh-CN
 ---
 
 # Imaging on Windows 7
 The apply-bootmedia.cmd only works on Windows 8 and 8.1 development machines. To image on Windows 7 you need to update your apply-bootmedia.cmd by:
 
-* Download and install the [Windows Assessment and Deployment Kit (Windows ADK) for Windows 8.1 Update](http://www.microsoft.com/en-us/download/details.aspx?id=39982){:target="_blank"}
+* Download and install the [Windows Assessment and Deployment Kit (Windows ADK) for Windows 8.1 Update](http://www.microsoft.com/zh-CN/download/details.aspx?id=39982){:target="_blank"}
   * Select the “Deployment Tools” feature in the installer
 * Locate the full path to the Dism.exe tool installed with the Windows ADK
 * Using a text editor update each path reference of Dism.exe in apply-bootmedia.cmd to the full path reference of Dism.exe from the Windows ADK

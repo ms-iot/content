@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Driver Lab - Open project for an existing driver
-permalink: /win10/samples/DriverLab1.htm
+permalink: /zh-CN/win10/samples/DriverLab1.htm
+lang: zh-CN
 ---
 
 ##Open project for an existing driver

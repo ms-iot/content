@@ -1,7 +1,8 @@
 ---
 layout: default
 title: RGBPixel
-permalink: /win8/samples/RGBPixel.htm
+permalink: /zh-CN/win8/samples/RGBPixel.htm
+lang: zh-CN
 ---
 
 # Adafruit RGB Pixel Strip

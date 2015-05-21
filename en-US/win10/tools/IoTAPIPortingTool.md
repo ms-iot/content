@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Windows 10 IoT Core API Porting Tool
-permalink: /win10/tools/IoTAPIPortingTool.htm
+permalink: /en-US/win10/tools/IoTAPIPortingTool.htm
+lang: en-US
 ---
 
 #Windows 10 IoT Core API Porting Tool

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Release Notes
-permalink: /ReleaseNotes.htm
+permalink: /en-US/ReleaseNotes.htm
+lang: en-US
 ---
 
 #Release Notes

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Release Notes
-permalink: /ReleaseNotes.htm
+permalink: /zh-CN/ReleaseNotes.htm
+lang: zh-CN
 ---
 
 #Release Notes

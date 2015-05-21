@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Servo
-permalink: /win8/samples/Servo.htm
+permalink: /zh-CN/win8/samples/Servo.htm
+lang: zh-CN
 ---
 
 # Servo

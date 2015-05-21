@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Driver Lab - Deploy the driver and confirm the installation
-permalink: /win10/samples/DriverLab3.htm
+permalink: /en-US/win10/samples/DriverLab3.htm
+lang: en-US
 ---
 
 ##Deploy the driver and confirm the installation
@@ -24,7 +25,7 @@ This exercise demonstrates how to manually copy and install the driver to a Wind
         User Name: Administrator
         Password:  p@ssw0rd
 
-    NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/win10/samples/PowerShell.htm)
+    NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)
 
 * Navigate to the `\windows\system32\` folder in the FTP File Explorer window:
 
@@ -43,7 +44,7 @@ This exercise demonstrates how to manually copy and install the driver to a Wind
         gpiokmdfdemo.sys
         ACPITABL.dat
 
-* The next steps involve connecting to the target device using PowerShell as explained [here]({{site.baseurl}}/win10/samples/PowerShell.htm)
+* The next steps involve connecting to the target device using PowerShell as explained [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)
 
 ### Enable test-signing on the target device using BCDEDIT
 
@@ -58,7 +59,7 @@ From the PowerShell window, type the following command:
 
     [192.168.0.243]: PS C:\> shutdown /r /t 0
 
-The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/win10/samples/PowerShell.htm).
+The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
 
 ### Install demo driver
 
@@ -76,7 +77,7 @@ From the PowerShell window, type the following command:
 
     [192.168.0.243]: PS C:\> shutdown /r /t 0
 
-The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/win10/samples/PowerShell.htm).
+The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
 
 ### Remove synthetic node
 
@@ -92,7 +93,7 @@ From the PowerShell window, type the following command:
 
     [192.168.0.243]: PS C:\> shutdown /r /t 0
 
-The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/win10/samples/PowerShell.htm).
+The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
 
 ### Check the status of the driver
 
@@ -109,7 +110,7 @@ You should see the following output:
 
 ### Connect the provided resistor and LED to the target device
 
-Follow the instructions [here]({{site.baseurl}}/win10/samples/Blinky.htm) to connect the resistor and LED to your Windows IoT Core device.
+Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm) to connect the resistor and LED to your Windows IoT Core device.
 
 ### Use the application provided to communicate with the driver
 
@@ -164,7 +165,7 @@ If you are using GPIO #5 on the Raspberry Pi 2, type the following command to tu
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe low 2
 
 ###Note:
-Driving the GPIO low will make the LED light-up because of the way the LED is connected as described [here]({{site.baseurl}}/win10/samples/Blinky.htm).
+Driving the GPIO low will make the LED light-up because of the way the LED is connected as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm).
 
 To turn the LED off, simply type:
 

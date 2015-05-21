@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Tools
-permalink: /win10/Tools.htm
+permalink: /zh-CN/win10/Tools.htm
+lang: zh-CN
 ---
 
 #Power tools for Windows 10 IoT Core

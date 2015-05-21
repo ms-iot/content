@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Smart Fan
-permalink: /win8/samples/SmartFan.htm
+permalink: /zh-CN/win8/samples/SmartFan.htm
+lang: zh-CN
 ---
 
 # Smart Fan

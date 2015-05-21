@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Setup your PC for MinnowBoard Max
-permalink: /win10/SetupPCMBM.htm
+permalink: /zh-CN/win10/SetupPCMBM.htm
+lang: zh-CN
 ---
 
 #Get Started

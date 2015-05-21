@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Blinky WebServer Sample
-permalink: /win10/samples/BlinkyWebServer.htm
+permalink: /en-US/win10/samples/BlinkyWebServer.htm
+lang: en-US
 ---
 
 ##Blinky WebServer
@@ -16,9 +17,9 @@ You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/A
 project from Visual Studio.
 
 * Make sure you set the 'Remote Debugging' setting to point to your Windows IoT Core device. Go back to the basic 'Hello World'
-[sample]({{site.baseurl}}/win10/samples/HelloWorld.htm) if you need guidance.
+[sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
 
-* Make sure you connect the LED to your board. Go back to the basic 'Blinky' [sample]({{site.baseurl}}/win10/samples/Blinky.htm) if you need guidance.
+* Make sure you connect the LED to your board. Go back to the basic 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm) if you need guidance.
 
 Note that the app will gracefully degrade if it cannot find any available GPIO ports, for example if you run the app on a VM running
 Windows IoT Core.
@@ -157,7 +158,7 @@ public void Run(IBackgroundTaskInstance taskInstance)
 
 ###BlinkyApp
 
-The client app is very similar to the Blinky [sample]({{site.baseurl}}/win10/samples/HelloWorld.htm).  The major addition here is that we are allowing a WebServer to
+The client app is very similar to the Blinky [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm).  The major addition here is that we are allowing a WebServer to
 be used to configure the on/off state for our LED.  To establish a connection with the WebServer app via the app-to-app mechanism, we
 need to:
 

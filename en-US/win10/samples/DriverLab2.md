@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Driver Lab - Use Visual Studio to build a driver
-permalink: /win10/samples/DriverLab2.htm
+permalink: /en-US/win10/samples/DriverLab2.htm
+lang: en-US
 ---
 
 ##Use Visual Studio to build a driver
@@ -79,4 +80,4 @@ In the next section you will use these files (**ACPITABL.dat**, **gpiokmdfdemo.i
 
 ###Next Step
 
-[Deploy the driver and confirm the installation]({{site.baseurl}}/win10/samples/DriverLab3.htm)
+[Deploy the driver and confirm the installation]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab3.htm)

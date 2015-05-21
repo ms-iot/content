@@ -1,7 +1,8 @@
 ---
 layout: default
 title: I2C Port Expander Sample
-permalink: /win10/samples/I2CPortExpander.htm
+permalink: /en-US/win10/samples/I2CPortExpander.htm
+lang: en-US
 ---
 
 ##I2C Port Expander Sample
@@ -132,11 +133,11 @@ We need to hook up power, ground, and the I2C lines from on the Raspberry Pi 2 t
 * Pin 6 **GND** Connect to the ground rail on the side of the breadboard (blue stripe)
 
 The I2C bus requires pull-up resistors on the SDA and SCL lines. However, the Raspberry Pi 2 SDA and SCL pins we are using in this sample already have pull-up resistors connected on the RPi2, so we don't need to add any additional external pull-ups.
- See the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/win10/samples/PinMappingsRPi2.htm) for more details on the RPi2 IO pins.
+ See the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm) for more details on the RPi2 IO pins.
 
 ###Create the sample app
 
-When everything is set up, power your device back on. You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/I2cPortExpander), but as an excercise, this tutorial will take you through the complete steps to create this app from scratch.  Open up Visual Studio and create a new C# Windows Universal Blank App (see the 'Hello World' [sample]({{site.baseurl}}/win10/samples/HelloWorld.htm) if you need guidance on how to create a new app). For this sample, we named ours **I2cPortExpanderLedSample**.
+When everything is set up, power your device back on. You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/I2cPortExpander), but as an excercise, this tutorial will take you through the complete steps to create this app from scratch.  Open up Visual Studio and create a new C# Windows Universal Blank App (see the 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance on how to create a new app). For this sample, we named ours **I2cPortExpanderLedSample**.
 The code in this sample does several things:
 
 1. Initializes the I2C bus and the port expander
@@ -402,7 +403,7 @@ Let's build, deploy and run the app on our Raspberry Pi 2.
 
 * If not already open, open in Visual Studio the app you created with the code above.
 
-* Set the 'Remote Debugging' setting to point to your device. See the 'Hello World' [sample]({{site.baseurl}}/win10/samples/HelloWorld.htm) if you need guidance on how to do this.
+* Set the 'Remote Debugging' setting to point to your device. See the 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance on how to do this.
 
 * Press 'F5' or click on the 'Remote Machine' button in the Visual Studio toolbar.
 

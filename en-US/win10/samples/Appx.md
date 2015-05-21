@@ -1,7 +1,8 @@
 ---
 layout: default
 title: AppX Creation and Deployment
-permalink: /win10/samples/Appx.htm
+permalink: /en-US/win10/samples/Appx.htm
+lang: en-US
 ---
 
 #Creating and Deploying Appx to Windows IoT Core

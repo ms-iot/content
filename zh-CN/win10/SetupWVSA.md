@@ -1,7 +1,8 @@
 ---
 layout: default
 title: SetupWindowsVirualShieldsArduino
-permalink: /win10/SetupWVSA.htm
+permalink: /zh-CN/win10/SetupWVSA.htm
+lang: zh-CN
 ---
 
 #Get Started

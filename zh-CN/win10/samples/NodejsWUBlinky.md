@@ -1,7 +1,8 @@
 ---
 layout: default
 title: NodejsWUBlinky
-permalink: /win10/samples/NodejsWUBlinky.htm
+permalink: /zh-CN/win10/samples/NodejsWUBlinky.htm
+lang: zh-CN
 ---
 
 ##Blinky Node.js Server Sample (Windows Universal)
@@ -45,6 +46,8 @@ http.createServer(function (req, res) {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end('LED value: ' + currentValue + '\n');
 }).listen(1337);
+
+uwp.close();
 {% endhighlight %}
 </UL>
 Here's what the code above is doing:

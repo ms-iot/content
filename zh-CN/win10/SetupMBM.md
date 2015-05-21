@@ -1,7 +1,8 @@
 ---
 layout: default
 title: SetupBoard
-permalink: /win10/SetupMBM.htm
+permalink: /zh-CN/win10/SetupMBM.htm
+lang: zh-CN
 ---
 
 #Get Started
@@ -65,7 +66,7 @@ We have provided a utility to provision your SD card with the Windows 10 IoT Cor
 Follow these instructions to configure your SD card:
 
 * NOTE: you will need to follow these instructions on a physical Windows machine (and not a VM) because you need access to the SD card reader.
-* Please sign up with our program on [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558), which is our software release management platform. You will need to have a [Microsoft Account](http://www.microsoft.com/en-us/account/default.aspx). If you are already signed up with our program on Microsoft Connect, (or are not sure if you signed up earlier) and try to sign up again, don’t worry, you will just see a blank page. If you have not signed up for our program on Connect before, it will prompt you to create a social profile and accept license agreements. You can find step-by-step instructions for signing up for Microsoft Connect [here](https://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57783).
+* Please sign up with our program on [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558), which is our software release management platform. You will need to have a [Microsoft Account](http://www.microsoft.com/zh-CN/account/default.aspx). If you are already signed up with our program on Microsoft Connect, (or are not sure if you signed up earlier) and try to sign up again, don’t worry, you will just see a blank page. If you have not signed up for our program on Connect before, it will prompt you to create a social profile and accept license agreements. You can find step-by-step instructions for signing up for Microsoft Connect [here](https://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57783).
 * [Download](https://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57783) the package "Windows 10 IoT Core Insider Preview Image for MinnowBoard MAX" from Microsoft Connect. If you see a blank page or no downloads listed, please make sure you are signed into Microsoft Connect by looking at your login information at top right part of the screen. Click sign in, if you are not signed in.
 * Insert an SD card into your SD card reader.
 * Open an admininistrator command prompt and navigate to the folder containing your local flash.ffu.
@@ -82,7 +83,7 @@ Follow these instructions to configure your SD card:
 	<kbd>dism.exe /Apply-Image /ImageFile:<fullpath>flash.ffu /ApplyDrive:\\.\PhysicalDriveN /SkipPlatformCheck</fullpath></kbd>
 
 * Click on the "Safely Remove Hardware" icon in your task tray and select your USB SD card reader to safely remove it from the system.  Failing to do this can cause corruption of the image.
-**NOTE:** If you want to remove Windows 10 IoT Core from your SD card after you are done using it, see the [FAQ]({{site.baseurl}}/{{page.lang}}/FAQs.htm) section titled **How do I remove Windows 10 IoT Core from my SD card?**.
+**NOTE:** If you want to remove Windows 10 IoT Core from your SD card after you are done using it, see the [FAQ]({{site.baseurl}}/{{page.lang}}/Faqs.htm) section titled **How do I remove Windows 10 IoT Core from my SD card?**.
 
 
 ##Set Required BIOS Settings and boot Windows 10 IoT Core

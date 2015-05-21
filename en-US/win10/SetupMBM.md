@@ -1,7 +1,8 @@
 ---
 layout: default
 title: SetupBoard
-permalink: /win10/SetupMBM.htm
+permalink: /en-US/win10/SetupMBM.htm
+lang: en-US
 ---
 
 #Get Started
@@ -82,7 +83,7 @@ Follow these instructions to configure your SD card:
 	<kbd>dism.exe /Apply-Image /ImageFile:<fullpath>flash.ffu /ApplyDrive:\\.\PhysicalDriveN /SkipPlatformCheck</fullpath></kbd>
 
 * Click on the "Safely Remove Hardware" icon in your task tray and select your USB SD card reader to safely remove it from the system.  Failing to do this can cause corruption of the image.
-**NOTE:** If you want to remove Windows 10 IoT Core from your SD card after you are done using it, see the [FAQ]({{site.baseurl}}/Faqs.htm) section titled **How do I remove Windows 10 IoT Core from my SD card?**.
+**NOTE:** If you want to remove Windows 10 IoT Core from your SD card after you are done using it, see the [FAQ]({{site.baseurl}}/{{page.lang}}/Faqs.htm) section titled **How do I remove Windows 10 IoT Core from my SD card?**.
 
 
 ##Set Required BIOS Settings and boot Windows 10 IoT Core
@@ -108,6 +109,6 @@ Follow these instructions to configure your SD card:
 ![mbm]({{site.baseurl}}/images/DefaultAppMBM.png){:device-images}
 
 
-* Follow the instructions [here]({{site.baseurl}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.
-* It is **highly recommended** that you update the default password for the Administrator account. Please follow the instructions found in the [PowerShell]({{site.baseurl}}/win10/samples/PowerShell.htm) documentation.
+* Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.
+* It is **highly recommended** that you update the default password for the Administrator account. Please follow the instructions found in the [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) documentation.
 * Remote Debugger will launch automatically when your device boots.

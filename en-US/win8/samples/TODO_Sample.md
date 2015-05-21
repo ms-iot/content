@@ -1,7 +1,8 @@
 ---
 layout: default
 title: OneNote cloud services
-permalink: /win8/samples/TODO_Sample.htm
+permalink: /en-US/win8/samples/TODO_Sample.htm
+lang: en-US
 ---
 
 # OneNote cloud services

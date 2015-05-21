@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Standard Firmata
-permalink: /win8/samples/Firmata.htm
+permalink: /en-US/win8/samples/Firmata.htm
+lang: en-US
 ---
 
 # Firmata and Cylon

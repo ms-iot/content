@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Weather Shield Sensors
-permalink: /win8/samples/WeatherShieldSensors.htm
+permalink: /zh-CN/win8/samples/WeatherShieldSensors.htm
+lang: zh-CN
 ---
 
 # Weather Shield Sensors
@@ -73,7 +74,7 @@ void setup() {
     // Configure the sensor
     myPressure.setModeBarometer(); // Measure pressure in Pascals from 20 to 110 kPa
     myPressure.setOversampleRate(7); // Set Oversample to the recommended 128
-    myPressure.enableEventFlags(); // Enable all three pressure and temp event flags 
+    myPressure.enableEventFlags(); // Enable all three pressure and temp event flags
 }
 
 void loop()

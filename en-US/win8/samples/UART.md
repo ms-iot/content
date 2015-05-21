@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Writing to UART
-permalink: /win8/samples/UART.htm
+permalink: /en-US/win8/samples/UART.htm
+lang: en-US
 ---
 
 # Writing to UART

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Advanced Topics
-permalink: /win10/Advanced.htm
+permalink: /en-US/win10/Advanced.htm
+lang: en-US
 ---
 
 #Advanced Topics

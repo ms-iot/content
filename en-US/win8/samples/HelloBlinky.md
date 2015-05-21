@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Hello Blinky
-permalink: /win8/samples/HelloBlinky.htm
+permalink: /en-US/win8/samples/HelloBlinky.htm
+lang: en-US
 ---
 
 {% include steps.html device="Galileo" %}

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Signing into Microsoft Connect
-permalink: /SigninMSConnect.htm
+permalink: /en-US/SigninMSConnect.htm
+lang: en-US
 ---
 
 <div class="container">

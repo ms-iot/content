@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Downloads
-permalink: /Downloads.htm
+permalink: /en-US/Downloads.htm
+lang: en-US
 ---
 
 <div class="row section-heading">
@@ -113,7 +114,7 @@ permalink: /Downloads.htm
                 </div>
 
                 <div class="col-md-12">
-                    <h4>To make sure you download the necessary tools required for your purposes, please follow the step by step instructions in <a href="{{site.baseurl}}/GetStarted.htm">Get started</a></h4>
+                    <h4>To make sure you download the necessary tools required for your purposes, please follow the step by step instructions in <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get started</a></h4>
                 </div>
             </div>
         </div>

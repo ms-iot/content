@@ -1,11 +1,12 @@
 ---
 layout: default
 title: Nodejs
-permalink: /win10/samples/Nodejs.htm
+permalink: /en-US/win10/samples/Nodejs.htm
+lang: en-US
 ---
 
 ##MemoryStatus Node.js (Console Application) Sample
-Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/win10/samples/ConsoleApp.htm)
+Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/ConsoleApp.htm)
 
 
 ###Set up your PC
@@ -133,7 +134,7 @@ Open up an explorer window on your PC and enter **\\\\\<IP address of your devic
     username: <IP address or device name, default is minwinpc>\Administrator
     password: p@ssw0rd
 
-NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/win10/samples/PowerShell.htm).  
+NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).  
 
 Create folder for Node on the device, C:\Node, and copy files from the host to the device:
 
@@ -145,7 +146,7 @@ Here’s what the Node directory structure on the device should look like:
 
 ![Node Directory Structure]({{site.baseurl}}/images/Nodejs/memstatus-sample-file-structure.png)
 
-Connect to the device using PowerShell.  Please follow the instructions found [here]({{site.baseurl}}/win10/samples/PowerShell.htm)
+Connect to the device using PowerShell.  Please follow the instructions found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)
 
 Allow Node.exe to communicate through the firewall with the following command:
 

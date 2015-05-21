@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Shift Register Sample
-permalink: /win10/samples/ShiftRegisterSample.htm
+permalink: /en-US/win10/samples/ShiftRegisterSample.htm
+lang: en-US
 ---
 
 ##Shift Register Sample
@@ -130,7 +131,7 @@ We need to hook up power, ground, and the I2C lines from on the Raspberry Pi 2 t
 
 ###Create the Sample App
 
-When everything is set up, power your device back on. You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/ShiftRegister), but as an excercise, this tutorial will take you through the complete steps to create this app from scratch.  Open up Visual Studio and create a new C# Windows Universal Blank App (see the 'Hello World' [sample]({{site.baseurl}}/win10/samples/HelloWorld.htm) if you need guidance on how to create a new app). For this sample, we cleverly named ours **ShiftRegisterSample**.
+When everything is set up, power your device back on. You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/ShiftRegister), but as an excercise, this tutorial will take you through the complete steps to create this app from scratch.  Open up Visual Studio and create a new C# Windows Universal Blank App (see the 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance on how to create a new app). For this sample, we cleverly named ours **ShiftRegisterSample**.
 
 The code in this sample does three things:
 
@@ -391,7 +392,7 @@ Let's build, deploy and run the app on our Raspberry Pi 2.
 
 * If not already open, open in Visual Studio the app you created with the code above.
 
-* Set the 'Remote Debugging' setting to point to your device. See the 'Hello World' [sample]({{site.baseurl}}/win10/samples/HelloWorld.htm) if you need guidance on how to do this.
+* Set the 'Remote Debugging' setting to point to your device. See the 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance on how to do this.
 
 * Press 'F5' or click on the 'Remote Machine' button in the Visual Studio toolbar.
 

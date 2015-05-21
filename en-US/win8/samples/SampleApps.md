@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Sample Applications
-permalink: /win8/samples/SampleApps.htm
+permalink: /en-US/win8/samples/SampleApps.htm
+lang: en-US
 ---
 
 <div class="row">
@@ -108,4 +109,3 @@ permalink: /win8/samples/SampleApps.htm
         <p><a class="btn btn-default" href="TODO_Sample.htm" role="button">View details &raquo;</a></p>
     </div>
 </div>
-

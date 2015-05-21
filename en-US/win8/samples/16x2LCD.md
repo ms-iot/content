@@ -1,7 +1,8 @@
 ---
 layout: default
 title: 16x2 LCD
-permalink: /win8/samples/16x2LCD.htm
+permalink: /en-US/win8/samples/16x2LCD.htm
+lang: en-US
 ---
 
 # 16x2 LCD

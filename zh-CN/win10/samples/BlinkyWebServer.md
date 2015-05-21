@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Blinky WebServer Sample
-permalink: /win10/samples/BlinkyWebServer.htm
+permalink: /zh-CN/win10/samples/BlinkyWebServer.htm
+lang: zh-CN
 ---
 
 ##Blinky WebServer

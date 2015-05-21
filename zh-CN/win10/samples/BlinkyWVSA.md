@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Blinky WVSA
-permalink: /win10/samples/BlinkyWVSA.htm
+permalink: /zh-CN/win10/samples/BlinkyWVSA.htm
+lang: zh-CN
 ---
 
 #Get Started

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Casablanca
-permalink: /win8/samples/Casablanca.htm
+permalink: /en-US/win8/samples/Casablanca.htm
+lang: en-US
 ---
 
 # C++ REST SDK (codename "Casablanca")

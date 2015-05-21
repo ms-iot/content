@@ -1,7 +1,8 @@
 ---
 layout: default
 title: SetupBoard
-permalink: /win10/SetupWRA.htm
+permalink: /en-US/win10/SetupWRA.htm
+lang: en-US
 ---
 
 #Get Started

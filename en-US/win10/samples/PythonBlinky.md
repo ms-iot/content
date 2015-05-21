@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Python Blinky Sample
-permalink: /win10/samples/PythonBlinky.htm
+permalink: /en-US/win10/samples/PythonBlinky.htm
+lang: en-US
 ---
 
 ##Python Blinky Sample
@@ -10,7 +11,7 @@ We'll create a simple Python Blinky app and connect a LED to your Windows IoT Co
 only available on Windows IoT Core, so this sample cannot run on your desktop.
 
 ###Set up your PC
-* Follow the instructions [here]({{site.baseurl}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
+* Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
 
 * Install Python for Windows (3.*) from [http://www.python.org/downloads](http://www.python.org/downloads){:target="_blank"}
 
@@ -21,11 +22,11 @@ only available on Windows IoT Core, so this sample cannot run on your desktop.
 * Install Python UAP SDK: pyuapsdk.vsix
 
 ###Set up your hardware
-The setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/win10/samples/Blinky.htm).
+The setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm).
 
 ###Headless mode
 
-This application is designed for a headless device.  To better understand what Headless mode is and how to configure your device to be headless, follow the instructions [here]({{site.baseurl}}/win10/HeadlessMode.htm).
+This application is designed for a headless device.  To better understand what Headless mode is and how to configure your device to be headless, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
 
 ###Load the project in Visual Studio
 
@@ -33,7 +34,7 @@ You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/P
 
 If you're building for MinnowBoard Max, select `x86` in the architecture drop down.  If you're building for Raspberry Pi 2, select `ARM`.
 
-Make sure you connect the LED to your board. Go back to the basic 'Blinky' [sample]({{site.baseurl}}/win10/samples/Blinky.htm) if you need guidance.
+Make sure you connect the LED to your board. Go back to the basic 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm) if you need guidance.
 
 Note that the app will not run successfully if it cannot find any available GPIO ports, for example if you run the app on a VM running Windows IoT Core.
 
@@ -81,4 +82,4 @@ Remember that we connected the other end of the LED to the 3.3 Volts power suppl
 
 ###Questions/Suggestions
 
-Please refer to the [FAQ]({{site.baseurl}}/Faqs.htm) for issues.
+Please refer to the [FAQ]({{site.baseurl}}/{{page.lang}}/Faqs.htm) for issues.

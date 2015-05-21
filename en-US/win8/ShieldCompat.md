@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Shield Compatibility
-permalink: /ShieldCompat.htm
+permalink: /en-US/ShieldCompat.htm
+lang: en-US
 ---
 
 # Compatible Shields
@@ -30,4 +31,4 @@ This list is not a guarantee of full functionality, committment for support or a
 | [Universal 16-key Keypad](http://www.amazon.com/Universial-Switch-Keypad-Keyboard-Arduino/dp/B008A30NW4/ref=cm_cr_pr_product_top){:target="_blank"} | [Arduino Keypad Library](http://playground.arduino.cc/code/Keypad){:target="_blank"} | [Key Matricies Info](http://pcbheaven.com/wikipages/How_Key_Matrices_Works/){:target="_blank"} |
 
 ---
-[&laquo; Return to Homepage]({{site.baseurl}}/index.htm){: .btn .btn-default}
+[&laquo; Return to Homepage]({{site.baseurl}}/{{page.lang}}/index.htm){: .btn .btn-default}

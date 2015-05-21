@@ -1,7 +1,8 @@
 ---
 layout: default
 title: NodejsWU
-permalink: /win10/samples/NodejsWU.htm
+permalink: /zh-CN/win10/samples/NodejsWU.htm
+lang: zh-CN
 ---
 
 ##'Hello, World' Node.js (Windows Universal) Sample

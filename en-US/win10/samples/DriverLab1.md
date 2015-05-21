@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Driver Lab - Open project for an existing driver
-permalink: /win10/samples/DriverLab1.htm
+permalink: /en-US/win10/samples/DriverLab1.htm
+lang: en-US
 ---
 
 ##Open project for an existing driver
@@ -17,4 +18,4 @@ permalink: /win10/samples/DriverLab1.htm
 
 
 ###Next Step
-[Use Visual Studio to build the driver]({{site.baseurl}}/win10/samples/DriverLab2.htm)
+[Use Visual Studio to build the driver]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab2.htm)

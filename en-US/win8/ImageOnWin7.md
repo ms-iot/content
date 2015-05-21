@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Imaging on Windows 7
-permalink: /win8/ImageOnWin7.htm
+permalink: /en-US/win8/ImageOnWin7.htm
+lang: en-US
 ---
 
 # Imaging on Windows 7
@@ -21,4 +22,4 @@ Example:
 ~~~
 
 <br/>
-<a class="btn btn-default" href="{{site.baseurl}}/index.htm" role="button">Return to homepage</a>
+<a class="btn btn-default" href="{{site.baseurl}}/{{page.lang}}/index.htm" role="button">Return to homepage</a>

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Home
-permalink: /Faqs.htm
+permalink: /en-US/Faqs.htm
+lang: en-US
 ---
 <div class="row col-md-12">
     <div class="col-md-2 col-xs-12 faq-nav section-heading">

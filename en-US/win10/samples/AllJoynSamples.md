@@ -1,7 +1,8 @@
 ---
 layout: default
 title: AllJoyn System Bridge templates and samples
-permalink: /win10/samples/AllJoynSamples.htm
+permalink: /en-US/win10/samples/AllJoynSamples.htm
+lang: en-US
 ---
 
 ##AllJoyn Z-Wave demo (Device System Bridge)

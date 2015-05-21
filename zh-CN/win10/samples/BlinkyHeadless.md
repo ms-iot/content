@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Blinky Headless Sample
-permalink: /win10/samples/BlinkyHeadless.htm
+permalink: /zh-CN/win10/samples/BlinkyHeadless.htm
+lang: zh-CN
 ---
 
 ##Blinky Headless Sample
