@@ -1,5 +1,4 @@
 # Site settings
-title: "Windows IoT"
 baseurl: "/content"
 url: "http://ms-iot.github.io/content"
 repositoryurl: "https://github.com/ms-iot/content/blob/develop/"

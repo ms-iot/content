@@ -25,7 +25,11 @@ ___
 
 ___
 
-## <a href="ContributionGuidelines.htm">Guidelines</a>
+## Git Guidelines
+
+1. Must be auto-mergable.
+    * You should have done the work so that we can automatically merge your changes with the current state of the repository. Otherwise we will reject your pull-request and wait until you have fixed it.
+1. Never have duplicate commits
 ___
 
 ## Fork the repository
@@ -37,7 +41,7 @@ ___
     1. You can use command line <br/>
     <kbd>git clone [link to .git] [NameYourLocalFolder]</kbd>
     1. Or launch the GitHub app by clicking 'Clone in Desktop' on the right hand side of the repository  
-    ![Clone]({{site.baseurl}}/images/GitHubClone.png)   
+    ![Clone]({{site.baseurl}}/images/GitHubClone.png)
 
 ___
 
@@ -51,7 +55,7 @@ For clarification, what we mean when we say:<br/>
 **main repository:** the original repository that you forked from. This is the common ms-iot repository hosted on github's servers. (Also known as <b>"upstream"</b>)<br/>
 
 ###Setting up
-1. Set up your upstream 
+1. Set up your upstream
     * <kbd>git remote add upstream [link to .git]</kbd>
 
 ###Making changes
@@ -59,7 +63,7 @@ For clarification, what we mean when we say:<br/>
     * <kbd>git add [file]</kbd>
 1. Commit your changes to your local repository.
     * <kbd>git commit -m "[descriptive message]" </kbd>
-    
+
 ###Submitting a Pull Request
 1. After you submit your first pull request, if you have not already signed a Contribution License Agreement, then our Contribution License Agreement service will request you to sign a Contribution License Agreement. We request you to complete this electronic request. Without completing this step, we unfortunately cannot accept a pull request. You only need to do this once.
 1. Fetch upstream
@@ -78,7 +82,7 @@ For clarification, what we mean when we say:<br/>
 ###Making changes to a Pull Request
 1. Make your new changes, fetch upstream, rebase upstream, and force-push your changes.
     * If your pull request was never closed, you should not have to submit a new pull request. It should automatically update.
-    
+
 ___
 
 #Iterating on the Galileo SDK

@@ -76,4 +76,3 @@ This can be replaced by pushing a pack attribute on the data alignment stack [i.
 The same functionality exists on Windows, however the syntax is different <code>__asm nop</code>. The MSVC compiler does not optimize around assembly, so the `volatile` is not valid.
 
    For a deeper discussion please check [StackOverflow](http://stackoverflow.com/questions/25878898/is-asm-nop-the-windows-equivalent-of-asm-volatilenop-from-gcc-compile)
-   
