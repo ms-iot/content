@@ -4,7 +4,6 @@ title: Downloads
 permalink: /Downloads.htm
 ---
 
-
 <div class="row section-heading">
     <div class="col-md-6">
         <h1>Downloads and Tools</h1>

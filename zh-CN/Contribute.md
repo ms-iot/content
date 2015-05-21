@@ -25,7 +25,11 @@ ___
 
 ___
 
-## <a href="ContributionGuidelines.htm">Guidelines</a>
+## Git Guidelines
+
+1. Must be auto-mergable.
+    * You should have done the work so that we can automatically merge your changes with the current state of the repository. Otherwise we will reject your pull-request and wait until you have fixed it.
+1. Never have duplicate commits
 ___
 
 ## Fork the repository
