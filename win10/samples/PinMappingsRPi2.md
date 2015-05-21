@@ -12,7 +12,7 @@ permalink: /win10/samples/PinMappingsRPi2.htm
 
 Hardware interfaces for the Raspberry Pi 2 are exposed through the 40-pin header **J8** on the board. Functionality includes:
 
-* **14x** - GPIO pins
+* **13x** - GPIO pins
 * **2x** - SPI buses
 * **1x** - I2C bus
 * **2x** - 5V power pins
@@ -23,8 +23,7 @@ Hardware interfaces for the Raspberry Pi 2 are exposed through the 40-pin header
 
 The following GPIO pins are accessible through APIs:
 
-* **GPIO 0**
-* **GPIO 1**
+* **GPIO 4**
 * **GPIO 5**
 * **GPIO 6**
 * **GPIO 12**
