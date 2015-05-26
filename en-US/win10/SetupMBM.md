@@ -3,6 +3,7 @@ layout: default
 title: SetupBoard
 permalink: /en-US/win10/SetupMBM.htm
 lang: en-US
+redirect_from: /content/win10/SetupMBM.htm
 ---
 
 #Get Started
