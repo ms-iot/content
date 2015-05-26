@@ -8,12 +8,16 @@ We have created a versions file describing the supported versions of the require
 
 * Make sure you've **enabled developer mode** by following [these instructions](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx).
 
-	* Some customers report installation issues with the previous step. As a workaround, please go to the **Windows Developer Tools Preview page** [here](https://dev.windows.com/en-US/downloads/windows-10-developer-tools).
+	* Some customers report installation issues with the previous step. As a workaround, please go to the **Windows Developer Tools Preview page** [here](https://dev.windows.com/en-US/downloads/windows-10-developer-tools).<br/><br/>
 
 	<img class="screen-snippet" src="{{site.baseurl}}/images/SetupPC/download.PNG">
+
 	Scroll down to the bottom of the page to the "Other download options" section and install "Standalone Windows 10 SDK for Windows 10" and "Microsoft Windows 10 Emulator for Mobile".
 
-* **Install WindowsDeveloperProgramForIoT.msi**.  It can be found **inside any** of the Windows 10 IoT Core Insider Preview i**mage files** (for example, `Windows 10 IoT Core Insider Preview image for Raspberry Pi 2.zip`) [here]({{site.downloadurl}})
+
+* **Install WindowsDeveloperProgramForIoT.msi**.  It can be found **inside any** of the Windows 10 IoT Core Insider Preview **image files** (for example, `Windows 10 IoT Core Insider Preview image for Raspberry Pi 2.zip`) [here]({{site.downloadurl}}).  
+
+	* If you have followed the steps for configuring your Raspberry Pi 2 or MinnowBoard Max, you can find WindowsDeveloperProgramForIoT.msi inside the zip file you have already downloaded.
 
 
 * At this point, you are ready to develop apps.  Notice that the Windows IoT Core Watcher application automatically starts when you log on.  It can be used to find available Windows 10 IoT Core devices to deploy apps to.
