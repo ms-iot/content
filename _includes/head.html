@@ -1,17 +1,15 @@
-﻿<head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ site.title }} - {{page.title}}</title>
+    <title>{{ site.data.resources[page.lang].title }} - {{page.title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{{ site.description }}">
-    <meta name="keywords" content="{{ site.keywords }}">
+    <meta name="description" content="{{ site.data.resources[page.lang].description }}">
+    <meta name="keywords" content="{{ site.data.resources[page.lang].keywords }}">
 
     <link id="linkBaseUrl" href="{{site.baseurl}}" />
 
     <link rel="icon" type="image/png" href="{{site.url}}/favicon.png">
     <!--[if IE]><link rel="shortcut icon" href="{{site.url}}/favicon.ico"/><![endif]-->
-
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 
     <!-- Bootstrap core CSS -->
     <link href="{{site.baseurl}}/css/bootstrap.css" rel="stylesheet" />
