@@ -1,15 +1,15 @@
 
 {% if include.url %}
 
-{% capture url %}
-{{include.url}}
-{% endcapture %}
+    {% capture url %}
+    {{include.url}}
+    {% endcapture %}
 
 {% else %}
 
-{% capture url %}
-{{include.base}}/{{include.lang}}/{{include.page}}
-{% endcapture %}
+    {% capture url %}
+    {{site.baseurl}}/{{page.lang}}{{page.url}}
+    {% endcapture %}
 
 {% endif %}
 
