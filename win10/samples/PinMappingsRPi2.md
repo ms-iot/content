@@ -23,24 +23,24 @@ Hardware interfaces for the Raspberry Pi 2 are exposed through the 40-pin header
 
 The following GPIO pins are accessible through APIs:
 
-* **GPIO 4**
-* **GPIO 5**
-* **GPIO 6**
-* **GPIO 12**
-* **GPIO 13**
-* **GPIO 16**
-* **GPIO 18**
-* **GPIO 22**
-* **GPIO 23**
-* **GPIO 24**
-* **GPIO 25**
-* **GPIO 26**
-* **GPIO 27**
-
-In addition, 2 GPIOs are mapped to indicator LEDs on the board:
-
-* **GPIO 35** (red power LED)
-* **GPIO 47** (green activity LED)
+{:.table.table-bordered}
+| GPIO# | Power-on Pull | Header Pin         |
+|-------|---------------|--------------------|
+| 4     | PullUp        | 7                  |
+| 5     | PullUp        | 29                 |
+| 6     | PullUp        | 31                 |
+| 12    | PullDown      | 32                 |
+| 13    | PullDown      | 33                 |
+| 16    | PullDown      | 36                 |
+| 18    | PullDown      | 12                 |
+| 22    | PullDown      | 15                 |
+| 23    | PullDown      | 16                 |
+| 24    | PullDown      | 18                 |
+| 25    | PullDown      | 22                 |
+| 26    | PullDown      | 37                 |
+| 27    | PullDown      | 13                 |
+| 35    | PullUp        | Red Power LED      |
+| 47    | PullUp        | Green Activity LED |
 
 As an example, the following code opens **GPIO 5** as an output and writes a digital '**1**' out on the pin:
 
@@ -49,13 +49,29 @@ using Windows.Devices.Gpio;
 
 public void GPIO()
 {
-	GpioController Controller = GpioController.GetDefault(); /* Get the default GPIO controller on the system */
+    // Get the default GPIO controller on the system
+    GpioController gpio = GpioController.GetDefault();
+    if (gpio == null)
+        return; // GPIO not available on this sytem
 
-	GpioPin Pin = Controller.OpenPin(5);        /* Open GPIO 5                      */
-	Pin.SetDriveMode(GpioPinDriveMode.Output);  /* Set the IO direction as output   */
-	Pin.Write(GpioPinValue.High);               /* Output a digital '1'             */
+    // Open GPIO 5
+    using (GpioPin pin = gpio.OpenPin(5))
+    {
+        // Latch HIGH value
+        pin.Write(GpioPinValue.High);
+    
+        // Set the IO direction as output
+        pin.SetDriveMode(GpioPinDriveMode.Output);
+
+    } // Close pin - will revert to its power-on state 
 }
 {% endhighlight %}
+
+When you open a pin, it will be in its power-on state. To disconnect the pull resistors and get a high-impedance input, set the drive mode to GpioPinDriveMode.Input:
+
+    pin.SetDriveMode(GpioDriveMode.Input);
+
+When a pin is closed, it reverts to its power-on state.
 
 ##I2C Bus
 
@@ -72,16 +88,23 @@ using Windows.Devices.I2c;
 
 public async void I2C()
 {
-	var settings = new I2cConnectionSettings(0x40); /* 0x40 is the I2C device address   */
-	settings.BusSpeed = I2cBusSpeed.FastMode;       /* FastMode = 400KHz                */
-
-	string aqs = I2cDevice.GetDeviceSelector("I2C1");                       /* Find the selector string for the I2C bus controller                   */
-	var dis = await DeviceInformation.FindAllAsync(aqs);                    /* Find the I2C bus controller device with our selector string           */
-	I2cDevice Device = await I2cDevice.FromIdAsync(dis[0].Id, settings);    /* Create an I2cDevice with our selected bus controller and I2C settings */
-
-	byte[] WriteBuf = new byte[] { 0x01, 0x02, 0x03, 0x04}; /* Some data to write to the device */
-
-	Device.Write(WriteBuf);
+    // Get a selector string for bus "I2C1"
+    string aqs = I2cDevice.GetDeviceSelector("I2C1");
+    
+    // Find the I2C bus controller with our selector string
+    var dis = await DeviceInformation.FindAllAsync(aqs);
+    if (dis.Count == 0)
+        return; // bus not found
+    
+    // 0x40 is the I2C device address
+    var settings = new I2cConnectionSettings(0x40);
+    
+    // Create an I2cDevice with our selected bus controller and I2C settings
+    using (I2cDevice device = await I2cDevice.FromIdAsync(dis[0].Id, settings))
+    {
+        byte[] writeBuf = { 0x01, 0x02, 0x03, 0x04 };
+        device.Write(writeBuf);
+    }
 }
 {% endhighlight %}
 
@@ -112,15 +135,22 @@ using Windows.Devices.Spi;
 
 public async void SPI()
 {
-	var settings = new SpiConnectionSettings(0); /* Create SPI initialization settings using chip select line CS0 */
-	settings.ClockFrequency = 10000000;          /* Set clock to 10MHz                                            */
-
-	string spiAqs = SpiDevice.GetDeviceSelector("SPI0");                         /* Find the selector string for the SPI bus controller          */
-	var devicesInfo = await DeviceInformation.FindAllAsync(spiAqs);              /* Find the SPI bus controller device with our selector string  */
-	SpiDevice Device = await SpiDevice.FromIdAsync(devicesInfo[0].Id, settings); /* Create an SpiDevice with our bus controller and SPI settings */
-
-	byte[] WriteBuf = new byte[] { 0x01, 0x02, 0x03, 0x04 }; /* Some data to write to the device */
-
-	Device.Write(WriteBuf);
+    // Get a selector string for bus "SPI0"
+    string aqs = SpiDevice.GetDeviceSelector("SPI0");
+    
+    // Find the SPI bus controller device with our selector string
+    var dis = await DeviceInformation.FindAllAsync(aqs);
+    if (dis.Count == 0);
+        return; // "SPI0" not found on this system
+    
+    // Use chip select line CS0
+    var settings = new SpiConnectionSettings(0);
+    
+    // Create an SpiDevice with our bus controller and SPI settings
+    using (SpiDevice device = await SpiDevice.FromIdAsync(dis[0].Id, settings))
+    {
+        byte[] writeBuf = { 0x01, 0x02, 0x03, 0x04 };
+        device.Write(writeBuf);
+    }
 }
 {% endhighlight %}
