@@ -33,10 +33,12 @@ print("Hello, World from IoT!")
 * Right-click the Project node and select Properties
 
 * Make sure you set the 'Remote Machine' setting to point to your device by machine name. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/win10/samples/HelloWorld.htm) if you need guidance.
- <br />**NOTE: For now, use device name in lieu of IP address.  If the device name is not unique, use <code>setcomputername</code> tool on the device to reset the device name and reboot.  Documentation for this can be found [here]({{site.baseurl}}/win10/samples/Powershell.htm)**
+
+**NOTE: For now, use device name in lieu of IP address.  If the device name is not unique, use `setcomputername` tool on the device to reset the device name and reboot.  Documentation for this can be found [here]({{site.baseurl}}/win10/samples/PowerShell.htm)**
 
 * When everything is set up, you should be able to press F5 from Visual Studio: The Python app will deploy and start on the device.
- <br />**NOTE: Launching the debugger for Python can take a few minutes to connect and start debugging the remote Python.  If it takes more than a few minutes, there may be a problem with msvsmon on the remote device.  Please check the FAQ for any potential fixes/workarounds.**
+
+**NOTE: Launching the debugger for Python can take a few minutes to connect and start debugging the remote Python.  If it takes more than a few minutes, there may be a problem with msvsmon on the remote device.  Please check the FAQ for any potential fixes/workarounds.**
 
 ###Use Windows Devices from Python (e.g. GPIO, I2C, SPI)
 
