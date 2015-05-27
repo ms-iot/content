@@ -7,12 +7,15 @@ permalink: /win10/AllJoyn.htm
 ##AllJoyn 
 
 **What is AllJoyn?** 
+
 Driven by the AllSeen Alliance, AllJoyn is an open-source, proximity-based connectivity and services framework.  Specifically designed for the Internet of Things (IoT), it enables interoperability such that various devices can discover, connect, and communicate with each other directly, without the need for an intermediary server.  
 
 **Why AllJoyn?** 
+
 The AllJoyn framework provides a common language interface that enables IoT devices to communicate and interact with each other, regardless of brand, platform, operating system or underlying transport technology. For developers, this translates to reduced time to market and lower cost while offering consumers a simple connectivity solution for all their devices.  
 
 **AllJoyn Architecture** 
+
 The AllJoyn framework establishes a standard by which devices and apps can advertise and discover each other.  AllJoyn devices describe their capabilities via service interfaces on a virtual bus.  The AllJoyn Bus is composed of two types of nodes:
 
 * *Routing Notes (RN)* - Also referred to as "Routers", they can talk to any node.
@@ -38,6 +41,7 @@ The AllJoyn framework comes in 2 flavors:
 AllJoyn enables proximity based communication, allowing transport to occur over Ethernet, Wi-Fi, serial, and Power Line (PLC).  However, the AllJoyn framework is transport-agnostic, thus allowing for any future transport mechanisms to be added.  Additionally, bridge software can be created to link the AllJoyn framework to other systems like Zigbee, Z-wave, or the cloud.  See more details & samples below on the AllJoyn Device System Bridge contribution to the AllSeen Alliance from Microsoft.  
 
 **AllJoyn Device System Bridge** 
+
 Device System Bridges (DSBs) can help facilitate communication across existing incompatible networks.  DSBs offer a cost efficient and quick way to bring existing devices to AllJoyn as virtual devices on the AllJoyn network.  This is done through a pre-baked AllJoyn producer implementation (Bridge), and implementing calls to SDK hooks to support translation of AllJoyn concepts to target devices (Adapter).  Developers need not modify AllJoyn producers with a DSB, unless a change in the default behavior of the Bridge is desired.  For more information on the purpose of Device System Bridges and its structure, check out this 
 [whitepaper.](https://git.allseenalliance.org/cgit/dsb.git/plain/Docs/AllJoyn - Device System Bridge - Whitepaper v1.0.pdf){:target="_blank"}
 ![AllJoyn DSB Architecture]({{site.baseurl}}/images/AllJoyn/AllJoyn_DSBArch.png)
