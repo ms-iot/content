@@ -36,26 +36,26 @@ Follow these instructions to configure your SD card:
 
 2. Once signed in, navigate to **surveys**, and complete all of surveys. 
 
-	<img class="device-images" src="{{site.baseurl}}/images/SetupRPI/connect1.png">
+	<img class="device-images" src="{{site.baseurl}}/images/SetupRPI/connect1.PNG">
 
 3. [Download](http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57782) the **package** "Windows 10 IoT Core Insider Preview Image for Raspberry Pi 2" from Microsoft Connect.
 	* If you see a blank page or no downloads listed, please make sure you are signed into Microsoft Connect by looking at your login information at top right part of the screen. Click sign in, if you are not signed in.
 4. **Select your board type** from the downloads, and proceed to download the files 
 
-	<img src="{{site.baseurl}}/images/SetupRPI/connect3.png">
+	<img src="{{site.baseurl}}/images/SetupRPI/connect3.PNG">
 	
-	<img src="{{site.baseurl}}/images/SetupRPI/connect4.png">
+	<img src="{{site.baseurl}}/images/SetupRPI/connect4.PNG">
 
 5. A window will pop up on your desktop.Click **Browse**, select where you want to place the folder and click **Transfer**
 
-	<img src="{{site.baseurl}}/images/SetupRPI/download1.png">
+	<img src="{{site.baseurl}}/images/SetupRPI/download1.PNG">
 	
 	When it's done transferring, close the window.
 
-	<img src="{{site.baseurl}}/images/SetupRPI/download2.png">
+	<img src="{{site.baseurl}}/images/SetupRPI/download2.PNG">
 6. **Make a local copy** of the flash.ffu contained in <a href="{{site.downloadurl}}" target="_blank">Windows_IoT_Core_RPI2_BUILD.zip</a>
 	
-	<img src="{{site.baseurl}}/images/SetupRPI/flash2.png">
+	<img src="{{site.baseurl}}/images/SetupRPI/flash2.PNG">
 
 7. **Insert an SD card** into your SD card reader.
 8. Open an **admininistrator command prompt** and navigate to the folder containing your local flash.ffu.
@@ -70,7 +70,7 @@ Follow these instructions to configure your SD card:
 	
 	<kbd>exit</kbd>
 
-	<img  src="{{site.baseurl}}/images/SetupRPI/diskpart.png">
+	<img  src="{{site.baseurl}}/images/SetupRPI/diskpart.PNG">
 
 10. Using the administrator command prompt, apply the image to your SD card.
 	Run the following command:
@@ -81,7 +81,7 @@ Follow these instructions to configure your SD card:
 	
 	<kbd>/ApplyDrive:\\.\PhysicalDrive3</kbd>
 
-	<img  src="{{site.baseurl}}/images/SetupRPI/applyDrive.png">
+	<img  src="{{site.baseurl}}/images/SetupRPI/applyDrive.PNG">
 
 11. Click on the **Safely Remove Hardware** icon in your task tray and select your USB SD card reader to safely remove it from the system.  Failing to do this can cause corruption of the image.
 	
