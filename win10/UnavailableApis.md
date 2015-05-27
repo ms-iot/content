@@ -144,6 +144,7 @@ permalink: /win10/UnavailableApis.htm
     Windows.UI.Core.CoreWindowFlyout
     Windows.UI.Input.Inking.InkManager
     Windows.UI.Input.Inking.InkRecognizerContainer
+    Windows.UI.Popups.MessageDialog
     Windows.UI.Xaml.Controls.ListPickerFlyout
     Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter
     Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter
