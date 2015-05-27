@@ -10,17 +10,5 @@
         "hardware":"Start Now",
         "community":"Community",
         "makerfaire":"Maker Faire"
-    },
-    "zh-CN":
-    {
-        "home":"家",
-        "getstarted":"入門",
-        "projects":"工程",
-        "docssamples":"文件和樣品",
-        "faq":"常問問題",
-        "downloads":"下載",
-        "hardware":"硬件",
-        "community":"社區",
-        "makerfaire":"製造商交易會"
-    },
+    }
 }
