@@ -18,6 +18,3 @@ The intent of this release is to announce and enable support for Gen 2, get the 
 
 #Setup Instructions
 Just follow the instructions for [Setting up your PC](SetupPC.htm){:target="_blank"}
-
----
-[&laquo; Return to Homepage]({{site.baseurl}}/{{page.lang}}/index.htm){: .btn .btn-default}

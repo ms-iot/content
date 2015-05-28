@@ -29,6 +29,3 @@ This list is not a guarantee of full functionality, committment for support or a
 | [Sunfounder Relay Module](http://www.amazon.com/SunFounder-modules-Arduino-Mega2560-Mega328/dp/B00CBDUD60){:target="_blank"} | None | [Arduino Forum](http://forum.arduino.cc/index.php?topic=142207.0){:target="_blank"} |
 | [Tower Pro MG90S Microservo (with Adafruit PWM Driver)](http://www.valuehobby.com/mg90s-mini-servo.html){:target="_blank"} | [Adafruit Driver Library](https://learn.adafruit.com/16-channel-pwm-servo-driver/using-the-adafruit-library){:target="_blank"} | [Adafruit PWM driver tutorial](https://learn.adafruit.com/16-channel-pwm-servo-driver){:target="_blank"} |
 | [Universal 16-key Keypad](http://www.amazon.com/Universial-Switch-Keypad-Keyboard-Arduino/dp/B008A30NW4/ref=cm_cr_pr_product_top){:target="_blank"} | [Arduino Keypad Library](http://playground.arduino.cc/code/Keypad){:target="_blank"} | [Key Matricies Info](http://pcbheaven.com/wikipages/How_Key_Matrices_Works/){:target="_blank"} |
-
----
-[&laquo; Return to Homepage]({{site.baseurl}}/{{page.lang}}/index.htm){: .btn .btn-default}

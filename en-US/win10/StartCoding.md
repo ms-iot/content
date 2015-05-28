@@ -15,7 +15,7 @@ lang: en-US
         <p>We assume you already <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">set up your environment</a>, have a working Visual Studio and have a device running Windows IoT Core (MinnowBoard Max, Raspberry Pi 2, or VM).</p>
         <br/>
         <h4>Questions/Suggestions</h4>
-        <p>Remember, you can always send <a href="{{site.baseurl}}/{{page.lang}}/Comunity.htm#contact">contact us</a> for help and suggestions!</p>
+        <p>Remember, you can always send <a href="{{site.baseurl}}/{{page.lang}}/Community.htm#contact">contact us</a> for help and suggestions!</p>
     </div>
     <div class="col-md-6">
         <div class="downloads-image"></div>
