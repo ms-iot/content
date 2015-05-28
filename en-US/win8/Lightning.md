@@ -21,6 +21,3 @@ Please follow the instructions for [Setting up your PC](SetupPC.htm){:target="_b
 * Supports Digital I/O (GPIO, I2C, SPI, UART) for Intel Galileo Gen1 and Gen2.
 * Supports Analog I/O (PWM, ADC) for Intel Galileo Gen1 and Gen2.
 * Supports **Lightning** for Intel Galileo Gen1 and Gen2.
-
----
-[&laquo; Return to Homepage]({{site.baseurl}}/{{page.lang}}/index.htm){: .btn .btn-default}

@@ -20,6 +20,3 @@ Example:
 ~~~
 "%SystemRoot%\System32\Dism.exe" --> "C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Deployment Tools\amd64\DISM\Dism.exe"
 ~~~
-
-<br/>
-<a class="btn btn-default" href="{{site.baseurl}}/{{page.lang}}/index.htm" role="button">Return to homepage</a>

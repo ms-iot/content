@@ -209,7 +209,3 @@ Now you can apply Microsoft Windows to an microSD card as described in [Bought o
 
 
 To see if your driver works through telnet use 'devcon' command. For devcon command help look [here](http://msdn.microsoft.com/en-us/library/windows/hardware/ff544746(v=vs.85).aspx){:target="_blank"}.
-
-
----
-[&laquo; Return to homepage]({{site.baseurl}}/{{page.lang}}/index.htm){: .btn .btn-default}
