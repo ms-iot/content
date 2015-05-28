@@ -14,7 +14,7 @@ permalink: /win10/StartCoding.htm
         <p>We assume you already <a href="{{site.baseurl}}/GetStarted.htm">set up your environment</a>, have a working Visual Studio and have a device running Windows IoT Core (MinnowBoard Max, Raspberry Pi 2, or VM).</p>
         <br/>
         <h4>Questions/Suggestions</h4>
-        <p>Remember, you can always send <a href="{{site.baseurl}}/Comunity.htm#contact">contact us</a> for help and suggestions!</p>
+        <p>Remember, you can always send <a href="{{site.baseurl}}/Community.htm#contact">contact us</a> for help and suggestions!</p>
     </div>
     <div class="col-md-6">
         <div class="downloads-image"></div>
@@ -44,6 +44,7 @@ permalink: /win10/StartCoding.htm
                         <p>Allows Remote Administration and Configuration so that you can remotely configure and manage any Windows IoT Core device</p>
                         <a href="{{site.baseurl}}/win10/samples/PowerShell.htm">Learn More</a>
                     </div>
+
                     <div class="col-md-3">
                         <h4>Headless UAP Apps</h4>
                         <p>Windows IoT Core can either be in headed or headless mode. The difference is the presence or absence of any form of UI</p>
@@ -58,7 +59,7 @@ permalink: /win10/StartCoding.htm
 						<a href="{{site.baseurl}}/win10/samples/PinMappingsMBM.htm">MinnowBoard Max Pinout</a><br>
                     </div>
                     <div class="col-md-3">
-                        <h4>AllJoyn</h4>
+                        <h4>AllJoyn Connectivity</h4>
                         <p>Learn more about AllJoyn and explore the capabilities of the AllJoyn Device System Bridge with Windows 10 IoT Core Insider Preview</p>
                         <a href="{{site.baseurl}}/win10/AllJoyn.htm">Learn More</a>
                     </div>
@@ -89,7 +90,11 @@ permalink: /win10/StartCoding.htm
                         <p>A list of commonly used phrases and their meanings</p>
                         <a href="{{site.baseurl}}/win10/Glossary.htm">Learn More</a>
                     </div>
-
+					<div class="col-md-3">
+                        <h4>Web-based Device Management</h4>
+                        <p>Get advanced diagnostics about your machine from the web</p>
+                        <a href="{{site.baseurl}}/win10/tools/Webb.htm">Learn More</a>
+                    </div>
                 </div>
             </div>
 
@@ -136,10 +141,10 @@ permalink: /win10/StartCoding.htm
                         <p>Create an app using SPI on devices running Windows 10 IoT Core Insider Preview</p>
                         <a href="{{site.baseurl}}/win10/samples/SPIDisplay.htm">Learn More</a>
                     </div>
-                    <div class="col-md-3">
-                        <h4>Driver Sample</h4>
-                        <p>Create and interact with a universal driver on devices running Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/win10/samples/DriverLab.htm">Learn More</a>
+					<div class="col-md-3">
+                        <h4>AllJoyn Connectivity</h4>
+                        <p>Learn more about AllJoyn and explore capabilities of the AllJoyn Device System Bridge with Windows 10 IoT Core Insider Preview</p>
+                        <a href="{{site.baseurl}}/win10/AllJoyn.htm">Learn More</a>
                     </div>
                 </div>
 
@@ -206,9 +211,9 @@ permalink: /win10/StartCoding.htm
                         <a href="{{site.baseurl}}/win10/samples/potentiometer.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <h4>AllJoyn</h4>
-                        <p>Learn more about AllJoyn, explore capabilities of the AllJoyn Device System Bridge, and turn Z-Wave devices & GPIO pins into AllJoyn devices with Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/win10/AllJoyn.htm">Learn More</a>
+                        <h4>Driver Sample</h4>
+                        <p>Create and interact with a universal driver on devices running Windows 10 IoT Core Insider Preview</p>
+                        <a href="{{site.baseurl}}/win10/samples/DriverLab.htm">Learn More</a>
                     </div>
                 </div>
 

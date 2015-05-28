@@ -61,4 +61,6 @@ Here's what the code above is doing:
 
 * Now we're ready to deploy to the remote Windows IoT Core device. Simply press F5 (or select Debug \| Start Debugging) to start debugging the server.
 
+  **Note:** In the Output window, you may see the message "Error - Cannot load packages." This doesn't affect the build process and can be ignored. Using the npm feature in your project is not yet supported.
+
 * When the server is running, open up a browser and enter the address http://&lt;IP address of your device&gt;:1337. Refreshing the page will turn toggle the on/off state of the LED.
