@@ -13,6 +13,7 @@ lang: en-US
 Hardware interfaces for the MinnowBoard Max are exposed through the 26-pin header **JP1** on the board. Functionality includes:
 
 * **10x** - GPIO pins
+* **2x** - Serial UARTs
 * **1x** - SPI bus
 * **1x** - I2C bus
 * **1x** - 5V power pin
@@ -23,27 +24,29 @@ Note that the MinnowBoard Max uses 3.3V logic levels on all IO pins. In addition
  These level shifters appear as open collector outputs with a **10K&#x2126; resistive pull-up, and the pull-up is present regardless of whether the IO is set to input or output.**
  The open-collector nature of the level shifters means is that the pins can output a '0' strongly, but only weakly output a '1'. This is important to keep in mind when attaching devices which draw current from the pins (such as an LED). See the [Blinky Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm) for the correct way to interface an LED to the MinnowBoard Max.
 
-
 ##GPIO Pins
 
 The following GPIO pins are accessible through APIs:
 
-* **GPIO 0**
-* **GPIO 1**
-* **GPIO 2**
-* **GPIO 3**
-* **GPIO 4**
-* **GPIO 5**
-* **GPIO 6**
-* **GPIO 7**
-* **GPIO 8**
-* **GPIO 9**
-
+{:.table.table-bordered}
+| GPIO# | Header Pin         |
+|-------|--------------------|
+| 0     | 21                 |
+| 1     | 23                 |
+| 2     | 25                 |
+| 3     | 14                 |
+| 4     | 16                 |
+| 5     | 18                 |
+| 6     | 20                 |
+| 7     | 22                 |
+| 8     | 24                 |
+| 9     | 26                 |
+         
 As an example, the following code opens **GPIO 5** as an output and writes a digital '**1**' out on the pin:
-
+         
 {% highlight C# %}
 using Windows.Devices.Gpio;
-
+         
 public void GPIO()
 {
 	GpioController Controller = GpioController.GetDefault(); /* Get the default GPIO controller on the system */
@@ -52,6 +55,66 @@ public void GPIO()
 	Pin.SetDriveMode(GpioPinDriveMode.Output);  /* Set the IO direction as output   */
 	Pin.Write(GpioPinValue.High);               /* Output a digital '1'             */
 }
+{% endhighlight %}
+
+##Serial UART
+
+There are two Serial UARTS available on the MBM: **UART1** and **UART2**
+
+**UART1** has the standard **UART1 TX** and **UART1 RX** lines, along with flow control signals **UART1 CTS** and **UART1 RTS**.
+
+* Pin 6  - **UART1 TX**
+* Pin 8  - **UART1 RX**
+* Pin 10 - **UART1 CTS**
+* Pin 12 - **UART1 RTS**
+
+**UART2** includes just the **UART2 TX** and **UART2 RX** lines.
+
+* Pin 17  - **UART2 TX**
+* Pin 19  - **UART2 RX**
+
+The example below initializes **UART2** and performs a write followed by a read:
+
+
+{% highlight C# %}
+public async void Serial()
+{
+	string aqs = SerialDevice.GetDeviceSelector("UART2");                   /* Find the selector string for the serial device   */
+	var dis = await DeviceInformation.FindAllAsync(aqs);                    /* Find the serial device with our selector string  */
+	SerialDevice SerialPort = await SerialDevice.FromIdAsync(dis[0].Id);    /* Create an serial device with our selected device */
+
+	/* Configure serial settings */
+	SerialPort.WriteTimeout = TimeSpan.FromMilliseconds(1000);
+	SerialPort.ReadTimeout = TimeSpan.FromMilliseconds(1000);
+	SerialPort.BaudRate = 9600;
+	SerialPort.Parity = SerialParity.None;         
+	SerialPort.StopBits = SerialStopBitCount.One;
+	SerialPort.DataBits = 8;
+
+	/* Write a string out over serial */
+	string txBuffer = "Hello Serial";
+	DataWriter dataWriter = new DataWriter();
+	dataWriter.WriteString(txBuffer);
+	uint bytesWritten = await SerialPort.OutputStream.WriteAsync(dataWriter.DetachBuffer());
+
+	/* Read data in from the serial port */
+	const uint maxReadLength = 1024;
+	DataReader dataReader = new DataReader(SerialPort.InputStream);
+	uint bytesToRead = await dataReader.LoadAsync(maxReadLength);
+	string rxBuffer = dataReader.ReadString(bytesToRead);
+}
+{% endhighlight %}
+
+Note that you must add the following capability to the **Package.appxmanifest** file in your UWP project to run Serial UART code:
+
+{% highlight xml %}
+  <Capabilities>
+    <DeviceCapability Name="serialcommunication">
+      <Device Id="any">
+        <Function Type="name:serialPort" />
+      </Device>
+    </DeviceCapability>
+  </Capabilities>
 {% endhighlight %}
 
 ##I2C Bus
