@@ -18,10 +18,3 @@ Please refer to our [contribution page](http://ms-iot.github.io/content/Contribu
 * For README.md files, please use [Github Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/) to get nice formatting on the file browser.
 * Please do not use HTML
 * For samples, please append ```{:target="_blank"}```, so the link opens in a new page
-
-### Gulp Instructions
-#### If you are editing CSS or JS, you must run Gulp
-1. Make sure you have Node installed on your machine.
-2. To install Gulp, run 'npm install gulp' in the command line. This will install Gulp globally on your machine.
-3. After editing CSS or JS, run 'gulp run' in the command line, within the root of the project directory. This will combine and minify css and js, and inject it into the head and footer.
-4. Once this is complete, you can check in your changes, and open a pull request.
