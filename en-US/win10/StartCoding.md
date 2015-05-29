@@ -60,9 +60,9 @@ lang: en-US
 						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm">MinnowBoard Max Pinout</a><br>
                     </div>
                     <div class="col-md-3">
-                        <h4>Use ICD to create an image</h4>
-                        <p>Image creation, process and tools</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/ImageCreation.htm">Learn More</a>
+                        <h4>AllJoyn Connectivity</h4>
+                        <p>Learn more about AllJoyn and explore the capabilities of the AllJoyn Device System Bridge with Windows 10 IoT Core Insider Preview</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/AllJoyn.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Unavailable Universal APIs</h4>
@@ -142,10 +142,10 @@ lang: en-US
                         <p>Create an app using SPI on devices running Windows 10 IoT Core Insider Preview</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplay.htm">Learn More</a>
                     </div>
-                    <div class="col-md-3">
-                        <h4>Driver Sample</h4>
-                        <p>Create and interact with a universal driver on devices running Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab.htm">Learn More</a>
+					<div class="col-md-3">
+                        <h4>AllJoyn Connectivity</h4>
+                        <p>Learn more about AllJoyn and explore the capabilities of the AllJoyn Device System Bridge with Windows 10 IoT Core Insider Preview</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/AllJoyn.htm">Learn More</a>
                     </div>
                 </div>
 
