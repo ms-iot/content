@@ -1,16 +1,11 @@
 <div class="container iot-site-footer">
     <div class="row">
         <div class="col-md-12 text-center">
-            <h3>Questions/Suggestions</h3>
-            <p>As always, for questions or feedback, <a href="{{site.baseurl}}/Community.htm#contact">contact us</a></p>
+            <h3>{{site.data.resources[page.lang].footer-header}}</h3>
+            <p>{{site.data.resources[page.lang].footer-p-text}}<a href="{{site.baseurl}}/{{page.lang}}/Community.htm#contact">{{site.data.resources[page.lang].footer-a-text}}</a></p>
             <a href="{{site.repositoryurl}}{{ page.path }}">
-                <img src="{{site.baseurl}}/images/Octocat.png" class="nr" />Edit this page on GitHub
+                <img src="{{site.baseurl}}/images/Octocat.png" class="nr" />{{site.data.resources[page.lang].github-edit-text}}
             </a>
         </div>
     </div>
 </div>
-
-
-<script src="{{site.baseurl}}/js/jquery-1.11.2.min.js"></script>
-<script src="{{site.baseurl}}/js/bootstrap.min.js"></script>
-<script src="{{site.baseurl}}/js/app.js"></script>
