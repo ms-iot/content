@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SetupBoard
+title: Setup your Raspberry Pi 2
 permalink: /en-US/win10/SetupRPI.htm
 lang: en-US
 ---

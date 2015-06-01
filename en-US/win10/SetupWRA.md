@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SetupBoard
+title: Setup your Windows Remote Arduino
 permalink: /en-US/win10/SetupWRA.htm
 lang: en-US
 ---
