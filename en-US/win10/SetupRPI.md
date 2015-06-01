@@ -29,7 +29,7 @@ NOTE: you will need to follow these instructions on a **physical Windows machine
 
 Follow these instructions to configure your SD card:
 
-1. Please **sign up on [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558">Microsoft)**, which is our software release management platform.
+1. Please **sign up on [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558)**, which is our software release management platform.
 	* You will need to have an [MSA](https://login.live.com/)
 	* If you are already signed up with our program on [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558">Microsoft), (or are not sure if you signed up earlier), you will just see a blank page.
 	* If you have not signed up for our program on Connect before, it will prompt you to create a social profile and accept license agreements.
