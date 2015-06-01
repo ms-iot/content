@@ -39,7 +39,7 @@ We'll walk through the steps required to create an Appx Package from your Visual
   <RootNamespace>MyApp</RootNamespace>
   <AssemblyName>MyApp</AssemblyName>
   <DefaultLanguage>en-US</DefaultLanguage>
-  <TargetPlatformIdentifier>UWP</TargetPlatformIdentifier>
+  <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
   <TargetPlatformVersion>10.0.9910.0</TargetPlatformVersion>
   <TargetPlatformMinVersion>10.0.9910.0</TargetPlatformMinVersion>
   <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
