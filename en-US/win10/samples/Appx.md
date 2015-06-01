@@ -11,7 +11,7 @@ Learn how to create and deploy appx packages to Windows IoT Core.
 
 ### How to Create an Appx package for your VS Project
 
-We'll walk through the steps required to create an Appx Package from your Visual C# UAP Project. You can follow similar approach for Visual C++ projects as well.
+We'll walk through the steps required to create an Appx Package from your Visual C# UWP Project. You can follow similar approach for Visual C++ projects as well.
 
 * Open your project in Visual Studio. Then right click on the project and select Unload Project.
 
@@ -39,7 +39,7 @@ We'll walk through the steps required to create an Appx Package from your Visual
   <RootNamespace>MyApp</RootNamespace>
   <AssemblyName>MyApp</AssemblyName>
   <DefaultLanguage>en-US</DefaultLanguage>
-  <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+  <TargetPlatformIdentifier>UWP</TargetPlatformIdentifier>
   <TargetPlatformVersion>10.0.9910.0</TargetPlatformVersion>
   <TargetPlatformMinVersion>10.0.9910.0</TargetPlatformMinVersion>
   <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>

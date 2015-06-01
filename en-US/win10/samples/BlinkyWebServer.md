@@ -32,7 +32,7 @@ this, the sample contains:
 
 * WebServerApp - this project registers a BackgroundTask which provides a web server and hosts an app-to-app communication service.
 
-* BlinkyApp - this is a UAP app similar to the Blinky sample app except that the LED power state is controlled by the webserver.
+* BlinkyApp - this is a UWP app similar to the Blinky sample app except that the LED power state is controlled by the webserver.
 
 
 ###WebServerApp

@@ -87,7 +87,7 @@ Wireless networking is not fully implemented on the Raspberry PI2 for this relea
 * Opening the package.json file may cause Visual Studio to crash (2457310). WORKAROUND: None.
 * Windows.UI.Popups.MessageDialog does not work on this release of Windows 10 IoT Core (1214773). WORKAROUND: None.
 * GetNetworkUsageAsync may throw a System.UnauthorizedAccessException (1972129). WORKAROUND: None.
-* Windows.Devices.SerialCommunications may not enumerate devices from WinRT UAP App. (2266901). WORKAROUND: None.
+* Windows.Devices.SerialCommunications may not enumerate devices from WinRT UWP App. (2266901). WORKAROUND: None.
 * This release of Windows 10 IoT Core does not contain WinRT Windows.System.Profile.HardwareIdentification. (2311696). WORKAROUND: None.
 * When Telent is used to send the 'devcon status usb' command on a MinnowBoard Max, it may return error number 28. (1097931). WORKAROUND: None
 * The CS signal on SPI may be initially be low until the first data transfer occurs on a MinnowBoard MAx. (1682876). WORKAROUND: The signal should be normal after the first data transfer.
