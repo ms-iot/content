@@ -23,7 +23,7 @@ lang: en-US
 
 ###Connecting to a Raspberry Pi 2 (RPi2)
 
-* To use WINDBG with the RPi2, you will need a USB TTL UART cable.  [FTDI](http://www.ftdichip.com/Products/Cables/USBTTLSerial.htm) creates cables and drivers that work.  Note, when working, the cable will show up as a COM port on your desktop.  Make sure you ahve the correct drivers installed and can see the device in your Device Manager.  Connect the wires like this:
+* To use WINDBG with the RPi2, you will need a USB TTL UART cable.  [FTDI](http://www.ftdichip.com/Products/Cables/USBTTLSerial.htm){:target="_blank"} creates cables and drivers that work.  Note, when working, the cable will show up as a COM port on your desktop.  Make sure you ahve the correct drivers installed and can see the device in your Device Manager.  Connect the wires like this:
 
 ![rpi2_kernel_debugger_cxn]({{site.baseurl}}/images/kd/rpi2_kd.png)
 

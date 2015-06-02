@@ -8,7 +8,7 @@ Also, be aware that the GPIO APIs are only available on Windows 10 IoT Core, so 
 
 ###Load the project in Visual Studio
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/Blinky).  Choose either the C++ version or C# version, but note that this sample only covers the C# version. Make a copy of the folder on your disk and open the project from Visual Studio.
+You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/Blinky){:target="_blank"}.  Choose either the C++ version or C# version, but note that this sample only covers the C# version. Make a copy of the folder on your disk and open the project from Visual Studio.
 
 Make sure you set the 'Remote Debugging' setting to point to your Windows IoT device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
 
@@ -35,13 +35,13 @@ And here is the pinout of the RPi2:
 
 <img src="{{site.baseurl}}/images/PinMappings/RP2_Pinout.png" height="400">
 
-<sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
+<sub>*Image made with [Fritzing](http://fritzing.org/){:target="_blank"}*</sub>
 
 Here is an example of what your breadboard might look like with the circuit assembled:
 
 <img src="{{site.baseurl}}/images/Blinky/breadboard_assembled_rpi2.png" height="500">
 
-<sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
+<sub>*Image made with [Fritzing](http://fritzing.org/){:target="_blank"}*</sub>
 
 ###For MinnowBoard Max (MBM)
 
@@ -52,13 +52,13 @@ And here is the JP1 connector on the MBM:
 
 <img src="{{site.baseurl}}/images/PinMappings/MBM_Pinout.png" height="400">
 
-<sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
+<sub>*Image made with [Fritzing](http://fritzing.org/){:target="_blank"}*</sub>
 
 Here is an example of what your breadboard might look like with the circuit assembled:
 
 <img src="{{site.baseurl}}/images/Blinky/breadboard_assembled.png" height="500">
 
-<sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
+<sub>*Image made with [Fritzing](http://fritzing.org/){:target="_blank"}*</sub>
 
 ###Deploy your app
 

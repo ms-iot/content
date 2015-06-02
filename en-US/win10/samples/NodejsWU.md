@@ -10,7 +10,7 @@ lang: en-US
 
 ###Set up your PC
 * Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
-* Install [Node.js Tools 1.1 Beta for Visual Studio 2015](http://aka.ms/ntvslatest).
+* Install [Node.js Tools 1.1 Beta for Visual Studio 2015](http://aka.ms/ntvslatest){:target="_blank"}.
 * Install [NTVS IoT Extension]({{site.downloadurl}}) (This step requires that you have signed up with our program on Microsoft Connect. Instructions on how to do that can be found [here]({{site.baseurl}}/{{page.lang}}/Downloads.htm)).
 
 
@@ -23,7 +23,7 @@ Select the template `Basic Node.js Web Server (Windows Universal)`
 
 
 ### 'Hello World' code
-When the project is created, there will be a server.js file with the code below. It creates simple server that will respond with 'Hello World' when a request is made. Documentation on how to use the http module can be found [here](https://nodejs.org/api/http.html).
+When the project is created, there will be a server.js file with the code below. It creates simple server that will respond with 'Hello World' when a request is made. Documentation on how to use the http module can be found [here](https://nodejs.org/api/http.html){:target="_blank"}.
 <UL>
 {% highlight JavaScript %}
 var http = require('http');

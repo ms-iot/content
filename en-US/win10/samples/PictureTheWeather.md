@@ -17,9 +17,9 @@ You will need the following components :
 
 * an Arduino UNO or compatible
 
-* a [Digital RGB LED Weatherproof Strip - LPD8806 32 LED - (1m)](http://www.adafruit.com/products/306))
+* a [Digital RGB LED Weatherproof Strip - LPD8806 32 LED - (1m)](http://www.adafruit.com/products/306){:target="_blank"})
 
-* a [SparkFun Bluetooth Modem - BlueSMiRF Silver](https://www.sparkfun.com/products/12577)
+* a [SparkFun Bluetooth Modem - BlueSMiRF Silver](https://www.sparkfun.com/products/12577){:target="_blank"}
 
 * solder and a soldering iron
 
@@ -31,9 +31,9 @@ You will need the following components :
 
 ###Connect to your Device
 
-* Follow the instructions at this [Arduino repository](https://github.com/ms-iot/virtual-shields-arduino) to set up your Arduino.
+* Follow the instructions at this [Arduino repository](https://github.com/ms-iot/virtual-shields-arduino){:target="_blank"} to set up your Arduino.
 
-* Follow the instructions at this [Universal repository](https://github.com/ms-iot/virtual-shields-universal) to set up your Windows Phone.
+* Follow the instructions at this [Universal repository](https://github.com/ms-iot/virtual-shields-universal){:target="_blank"} to set up your Windows Phone.
 
 ###Modify the RGB strip
 

@@ -22,7 +22,7 @@ Learn how to use the SeedStudio GSM shield
 1. Create a new project from the template.
 2. Replace the existing code in main.cpp with the following code:
 3. Add to the project the files GSM.cpp, HWSerial.cpp, SIM900.cpp and sms.cpp
-   found in [GSM Library](https://github.com/dacolgit/GSM-GPRS-GPS-Shield)
+   found in [GSM Library](https://github.com/dacolgit/GSM-GPRS-GPS-Shield){:target="_blank"}
 
 # Code
 

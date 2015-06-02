@@ -81,7 +81,7 @@ To help with porting, a [Forwarder and Stub repository](http://github.com/ms-iot
 ## Building and Deploying the Forwarder and Stubs
 
 ####To use the existing forwarder and stubs library:
-1. Simply download the [forwarders project zip file](https://github.com/ms-iot/forwarders/archive/master.zip).
+1. Simply download the [forwarders project zip file](https://github.com/ms-iot/forwarders/archive/master.zip){:target="_blank"}.
 1. Extract all of the files from the downloaded zip file.
 1. Open the solution of the forwarder you require.
 
