@@ -2,13 +2,13 @@
 
 We have created a versions file describing the supported versions of the required tools.  Use this as a blueprint for installing the required tools on your PC:
 
-* **Install Windows 10** from [here](https://dev.windows.com/en-US/downloads/windows-10-developer-tools)
+* **Install Windows 10** from [here](https://dev.windows.com/en-US/downloads/windows-10-developer-tools){:target="_blank"}
 
-* **Install Visual Studio 2015 Preview** from [here](https://dev.windows.com/en-US/downloads/install-dev-tools-visual-studio-2015).  Choose the Custom option when you kick off the installer, and then select "Universal Windows App Development Tools".  On the next page confirm that "Tools and Windows SDK", and "Emulators for Windows Mobile" options are going to be installed.
+* **Install Visual Studio 2015 Preview** from [here](https://dev.windows.com/en-US/downloads/install-dev-tools-visual-studio-2015){:target="_blank"}.  Choose the Custom option when you kick off the installer, and then select "Universal Windows App Development Tools".  On the next page confirm that "Tools and Windows SDK", and "Emulators for Windows Mobile" options are going to be installed.
 
-* Make sure you've **enabled developer mode** by following [these instructions](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx).
+* Make sure you've **enabled developer mode** by following [these instructions](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx){:target="_blank"}.
 
-	* Some customers report installation issues with the previous step. As a workaround, please go to the **Windows Developer Tools Preview page** [here](https://dev.windows.com/en-US/downloads/windows-10-developer-tools).
+	* Some customers report installation issues with the previous step. As a workaround, please go to the **Windows Developer Tools Preview page** [here](https://dev.windows.com/en-US/downloads/windows-10-developer-tools){:target="_blank"}.
 
 	<img class="screen-snippet" src="{{site.baseurl}}/images/SetupPC/download.PNG">
 	Scroll down to the bottom of the page to the "Other download options" section and install "Standalone Windows 10 SDK for Windows 10" and "Microsoft Windows 10 Emulator for Mobile".

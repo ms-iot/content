@@ -69,7 +69,7 @@ But the pin connection with MCP3208 should be as below:
 
 ## Look at the code
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/PotentiometerSensor).
+You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/PotentiometerSensor){:target="_blank"}.
 
 Let's look through the code. We use a timer, and each time the 'Tick' event is called, we
 read the sensor output value through MCP3002 ADC, and if the value is high than a threshold

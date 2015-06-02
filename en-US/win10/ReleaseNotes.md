@@ -52,7 +52,7 @@ Wireless networking is not fully implemented on the Raspberry PI2 for this relea
 * On a Raspberry PI, a single keyboard keystroke may either not be recognized or may insert multiple characters. (2573557). WORKAROUND: None
 * Some Webcam drivers are missing. (2187095). WORKAROUND: None
 * Logitech USB speakers may not produce audio output on an MBM (2460925). WORKAROUND: Use an alternate audio output device.
-* A list of validated peripheral devices can be found on the documentation at [http://WindowsOnDevices.com](http://WindowsOnDevices.com) (2296724). WORKAROUND: Review the list of validated devices.
+* A list of validated peripheral devices can be found on the documentation at [http://WindowsOnDevices.com](http://WindowsOnDevices.com) (2296724){:target="_blank"}. WORKAROUND: Review the list of validated devices.
 * Common Raspberry PI WiFi adapters are not supported in the Windows 10 IoT Core Insider Preview image. (2310140). WORKAROUND: Use an ethernet connection for networking.
 * Wireless network may not reconnect after a power cycle on the Raspberry PI (2367736). WORKAROUND: Re-establish the WiFi connection.
 * WiFi/Bluetooth USB combo device may not work on the Raspberry PI or MinnowBoard Max (2293778). WORKAROUND: Use another hardware set.

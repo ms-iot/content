@@ -49,7 +49,7 @@ print("Hello, World from IoT!")
 
 * Click on Browse tab
 
-* Download pywindevices content from [here](https://github.com/ms-iot/samples/tree/master/PyWinDevices)
+* Download pywindevices content from [here](https://github.com/ms-iot/samples/tree/master/PyWinDevices){:target="_blank"}
 
 * Navigate to ARM for RPi2 or win32 for MBM
 
@@ -59,7 +59,7 @@ print("Hello, World from IoT!")
 
 * Start using gpio functions (similar steps for I2C or SPI)
 
-* WinDevices documentation can be found [here](https://github.com/ms-iot/samples/tree/master/PyWinDevices/docs)
+* WinDevices documentation can be found [here](https://github.com/ms-iot/samples/tree/master/PyWinDevices/docs){:target="_blank"}
 
 ###Questions/Suggestions
 
