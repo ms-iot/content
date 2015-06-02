@@ -33,7 +33,7 @@ Follow these instructions to configure your SD card:
 	* You will need to have a [Microsoft Account](http://www.microsoft.com/en-us/account/default.aspx)
 	* If you are already signed up with our program on [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558), (or are not sure if you signed up earlier), you will just see a blank page.
 	* If you have not signed up for our program on Connect before, it will prompt you to create a social profile and accept license agreements.
-	Follow the step-by-step instructions for [signing up for Microsoft Connect](http://ms-iot.github.io/content/SigninMSConnect.htm) to get going.
+	Follow the step-by-step instructions for [signing up for Microsoft Connect]({{site.baseurl}}/{{page.lang}}/SigninMSConnect.htm) to get going.
 
 2. Once signed in, navigate to **surveys**, and complete all of surveys.
 
@@ -101,6 +101,6 @@ Follow these instructions to configure your SD card:
 1. Windows 10 IoT Core Insider Preview will boot automatically after connecting power supply.
 2. On the very first boot Windows IoT Core will do some first boot configurations and it will display a default blue colored application while this is happening. **Wait for a few minutes** and the board will automatically restart. This will happen only once and then DefaultApp should come up, displaying the IP address of the Raspberry Pi 2.
 	<img class="device-images" src="{{site.baseurl}}/images/DefaultAppRpi2.png">
-3. Follow the [Powershell documentation]({{site.baseurl}}/win10/samples/PowerShell.htm) <a href="{{site.baseurl}}/win10/samples/PowerShell.htm">here</a> to use PowerShell to connect to your running device.
+3. Follow the [Powershell documentation here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.
 4. It is **highly recommended** that you update the default password for the Administrator account.
 5. Remote Debugger will launch automatically when your Raspberry Pi 2 boots.
