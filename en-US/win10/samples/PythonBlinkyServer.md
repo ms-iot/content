@@ -84,7 +84,7 @@ Remember that we connected the other end of the LED to the 3.3 Volts power suppl
 
 * Make sure you set the 'Remote Machine' setting to point to your device. Go back to the basic Python [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Python.htm) if you need guidance.
 
-**NOTE: For now, use device name in lieu of IP address.  If the device name is not unique, use `setcomputername` tool on the device to reset the device name and reboot.  Documentation for this can be found [here]({{site.baseurl}}/win10/samples/PowerShell.htm)**
+**NOTE: For now, use device name in lieu of IP address.  If the device name is not unique, use `setcomputername` tool on the device to reset the device name and reboot.  Documentation for this can be found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)**
 
 * When everything is set up, you should be able to press F5 from Visual Studio: The Python app will deploy and start on the device.
 

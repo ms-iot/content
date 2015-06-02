@@ -15,7 +15,7 @@ Learn how to set up the Raspberry Pi 2 and connect it to your computer. Note tha
 1. **Windows 10 Insider Preview** - must be a physical Windows machine (not a VM).
 2. **Raspberry Pi 2**.
 3. **5V micro USB power supply** - with at least 1.0A current.
-4. **8GB micro SD card** - class 10 or better. (We suggest this [one](http://www.amazon.com/gp/product/B00IVPU786) or this [one](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445))
+4. **8GB micro SD card** - class 10 or better. (We suggest this [one](http://www.amazon.com/gp/product/B00IVPU786){:target="_blank"} or this [one](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445){:target="_blank"})
 5. **HDMI cable** (if display is desired).
 6. **Ethernet cable**.
 
@@ -23,23 +23,23 @@ If you are using several USB peripherals or high-current devices, use a higher c
 
 
 ##Put the Windows 10 IoT Core Insider Preview image on your SD card
-We have provided a utility to provision your SD card with the Windows 10 IoT Core Insider Preview.  The following steps can only be executed on a system running [Windows 10](https://insider.windows.com) (build 10069 or higher).
+We have provided a utility to provision your SD card with the Windows 10 IoT Core Insider Preview.  The following steps can only be executed on a system running [Windows 10](https://insider.windows.com){:target="_blank"} (build 10069 or higher).
 
 NOTE: you will need to follow these instructions on a **physical Windows machine** (and not a VM) because you need access to the SD card reader.
 
 Follow these instructions to configure your SD card:
 
 1. Please **sign up on [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558)**, which is our software release management platform.
-	* You will need to have a [Microsoft Account](http://www.microsoft.com/en-us/account/default.aspx)
-	* If you are already signed up with our program on [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558), (or are not sure if you signed up earlier), you will just see a blank page.
+	* You will need to have a [Microsoft Account](http://www.microsoft.com/en-us/account/default.aspx){:target="_blank"}
+	* If you are already signed up with our program on [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"}, (or are not sure if you signed up earlier), you will just see a blank page.
 	* If you have not signed up for our program on Connect before, it will prompt you to create a social profile and accept license agreements.
-	Follow the step-by-step instructions for [signing up for Microsoft Connect](http://ms-iot.github.io/content/SigninMSConnect.htm) to get going.
+	Follow the step-by-step instructions for [signing up for Microsoft Connect]({{site.baseurl}}/{{page.lang}}/SigninMSConnect.htm) to get going.
 
 2. Once signed in, navigate to **surveys**, and complete all of surveys.
 
 	<img class="device-images" src="{{site.baseurl}}/images/SetupRPI/connect1.PNG">
 
-3. [Download](http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57782) the **package** "Windows 10 IoT Core Insider Preview Image for Raspberry Pi 2" from Microsoft Connect.
+3. [Download](http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57782){:target="_blank"} the **package** "Windows 10 IoT Core Insider Preview Image for Raspberry Pi 2" from Microsoft Connect.
 	* If you see a blank page or no downloads listed, please make sure you are signed into Microsoft Connect by looking at your login information at top right part of the screen. Click sign in, if you are not signed in.
 4. **Select your board type** from the downloads, and proceed to download the files
 
@@ -101,6 +101,6 @@ Follow these instructions to configure your SD card:
 1. Windows 10 IoT Core Insider Preview will boot automatically after connecting power supply.
 2. On the very first boot Windows IoT Core will do some first boot configurations and it will display a default blue colored application while this is happening. **Wait for a few minutes** and the board will automatically restart. This will happen only once and then DefaultApp should come up, displaying the IP address of the Raspberry Pi 2.
 	<img class="device-images" src="{{site.baseurl}}/images/DefaultAppRpi2.png">
-3. Follow the [Powershell documentation]({{site.baseurl}}/win10/samples/PowerShell.htm) <a href="{{site.baseurl}}/win10/samples/PowerShell.htm">here</a> to use PowerShell to connect to your running device.
+3. Follow the [Powershell documentation here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.
 4. It is **highly recommended** that you update the default password for the Administrator account.
 5. Remote Debugger will launch automatically when your Raspberry Pi 2 boots.

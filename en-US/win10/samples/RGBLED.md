@@ -19,9 +19,9 @@ Also, be aware that the GPIO APIs are only available on Windows IoT Core, so thi
 
 You will need the following components :
 
-* a [754-1615-ND Tri-color LED](http://www.digikey.com/product-detail/en/WP154A4SUREQBFZGC/754-1615-ND/3084119))
+* a [754-1615-ND Tri-color LED](http://www.digikey.com/product-detail/en/WP154A4SUREQBFZGC/754-1615-ND/3084119){:target="_blank"})
 
-* a [330 &#x2126; resistor](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636)
+* a [330 &#x2126; resistor](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
 
 * a breadboard and several male-to-female and male-to-male connector wires
 
@@ -56,7 +56,7 @@ Here is the pinout of the RPi2:
 
 ###Deploy your app
 
-You can find the entire code for this sample [here](https://github.com/ms-iot/samples/tree/develop/RGBLED/CS). This sample is written in C#. Make a copy of the folder on your disk and open the project from Visual Studio.
+You can find the entire code for this sample [here](https://github.com/ms-iot/samples/tree/develop/RGBLED/CS){:target="_blank"}. This sample is written in C#. Make a copy of the folder on your disk and open the project from Visual Studio.
 
 Make sure you set the 'Remote Debugging' setting to point to your Windows IoT device. Refer to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
 If you're building for Raspberry Pi 2, select `ARM`.

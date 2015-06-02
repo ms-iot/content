@@ -23,7 +23,7 @@ You can always use a USB connection to get started, but let's cover simple hook 
 
 - You will need the following parts:
 	* An Arduino (Uno pictured here)
-	* A Bluetooth device ([Sparkfun Mate Silver](https://www.sparkfun.com/products/12576) pictured here) **OR** a USB Cable
+	* A Bluetooth device ([Sparkfun Mate Silver](https://www.sparkfun.com/products/12576){:target="_blank"} pictured here) **OR** a USB Cable
 	* A breadboard
 	* A 330Ω resistor
 	* An LED

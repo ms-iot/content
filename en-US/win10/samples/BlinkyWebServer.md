@@ -13,7 +13,7 @@ only available on Windows IoT Core, so this sample cannot run on your desktop.
 
 ###Load the project in Visual Studio
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/App2App%20WebServer).  Make a copy of the folder on your disk and open the
+You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/App2App%20WebServer){:target="_blank"}.  Make a copy of the folder on your disk and open the
 project from Visual Studio.
 
 * Make sure you set the 'Remote Debugging' setting to point to your Windows IoT Core device. Go back to the basic 'Hello World'

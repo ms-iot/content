@@ -17,11 +17,11 @@ This section explains how to set up your Windows Virtual Shields for Arduino!
 
 ###What you need
  1. Arduino Uno or compatible device.
- 2. Bluetooth module: [SparkFun BlueSMiRF Silver](https://www.sparkfun.com/products/12577) and 4 wires to connect.
+ 2. Bluetooth module: [SparkFun BlueSMiRF Silver](https://www.sparkfun.com/products/12577){:target="_blank"} and 4 wires to connect.
 
 ###Set up your Arduino
  1. Prepare the Bluetooth module if necessary (the Bluetooth module may need to have headers soldered onto it).
- 2. Except for one difference below, connect the Bluetooth module to the Arduino per your wiring diagram ([BlueSMiRF wiring diagram](https://learn.sparkfun.com/tutorials/using-the-bluesmirf/hardware-hookup)).
+ 2. Except for one difference below, connect the Bluetooth module to the Arduino per your wiring diagram ([BlueSMiRF wiring diagram](https://learn.sparkfun.com/tutorials/using-the-bluesmirf/hardware-hookup){:target="_blank"}).
 
 		DIFFERENCE: Use pins 0 and 1 instead of 2 and 3:
 		The Bluetooth TX should connect to pin 0 (Arduino RX).
@@ -32,18 +32,18 @@ This section explains how to set up your Windows Virtual Shields for Arduino!
 ###What you need
  1. Arduino IDE 1.6 or better.
  2. ArduinoJson library.
- 3. This [repository](https://github.com/ms-iot/virtual-shields-arduino).
+ 3. This [repository](https://github.com/ms-iot/virtual-shields-arduino){:target="_blank"}.
 
 ###Set up your Arduino IDE
- 1. Download and install the [Arduino IDE](http://www.arduino.cc/en/Main/Software).
+ 1. Download and install the [Arduino IDE](http://www.arduino.cc/en/Main/Software){:target="_blank"}.
  2. Try downloading an empty sketch (setup and loop only) to make sure that your board and port settings are correct (found under the Tools menu).
 
 ###Set up ArduinoJson library
- 1. From the [ArduinoJson repository](https://github.com/bblanchon/ArduinoJson), clone the repository or download the zip.
+ 1. From the [ArduinoJson repository](https://github.com/bblanchon/ArduinoJson){:target="_blank"}, clone the repository or download the zip.
  2. Place the whole repository into your libraries folder (i.e. Documents\Arduino\libraries\ArduinoJson\).
 
 ###Set up this repository.
- 1. Clone this [repository](https://github.com/ms-iot/virtual-shields-arduino) or download the zip.
+ 1. Clone this [repository](https://github.com/ms-iot/virtual-shields-arduino){:target="_blank"} or download the zip.
  2.	Copy the Arduino/libraries/VirtualShield folder from your repository to your Arduino library (i.e. Documents\Arduino\libraries\VirtualShield\).
 
 ###Test your setup
