@@ -221,7 +221,7 @@ lang: en-US
                 <div class="row section-heading">
                    <div class="col-md-3">
                         <h4>GpioTestTool (Console)</h4>
-                        <p>This simple command line utility shows how to use the Gpio WinRT APIs from straight C++.</p>
+                        <p>This simple command line utility shows how to use the Gpio WinRT APIs from standard C++.</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/GpioTestTool.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
@@ -230,11 +230,9 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2cTestTool.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <!--
-                        <h4>SpiTestTool (SPI Command Line Utility)</h4>
-                        <p>This simple command line utility shows how to use C++/CX in command line executables.</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/potentiometer.htm">Learn More</a>
-                        -->
+                        <h4>SpiTestTool (Console)</h4>
+                        <p>Write and read from SPI devices on the command line.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SpiTestTool.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
                         <!-- Placeholder for alignment -->

@@ -9,7 +9,7 @@ lang: en-US
 
 [View the code on Github](https://github.com/ms-iot/samples/blob/develop/I2cTestTool/main.cpp)
 
-I2cTestTool is a utility for interacting with I2C devices from the command
+I2cTestTool is a utility for interacting with I2C devices on the command
 line. I2cTestTool is written in C++/CX and shows how to consume WinRT components
 from command line applications. The resulting tool is a useful debugging aid.
 
@@ -17,11 +17,12 @@ from command line applications. The resulting tool is a useful debugging aid.
 
     i2ctesttool.exe SlaveAddress [FriendlyName]
     
-      SlaveAddress   The slave address of the device you wish to
-                     communicate with. This is a required parameter.
-      FriendlyName   The friendly name of the I2C controller you
-                     wish to communicate over. If not specified, the
-                     first enumerated I2C controller will be used. 
+      SlaveAddress   The slave address of the device with which you
+                     wish to communicate. This is a required parameter.
+      FriendlyName   The friendly name of the I2C controller over
+                     which you wish to communicate. This parameter is
+                     optional and defaults to the first enumerated
+                     I2C controller. 
          
      Commands:
      > write { 00 11 22 .. FF }         Write bytes to the device
@@ -31,15 +32,21 @@ from command line applications. The resulting tool is a useful debugging aid.
      > help                             Display this help message
      > quit                             Quit            
                       
-Example session:
+Example session with an EEPROM attached:
 
-    i2ctesttool.exe 0x57
-    > info
-    > write {0 1 2 3 4}
-    > writeread {0} 4
-    > write {8}
-    > read 16
-    > q
+      i2ctesttool.exe 0x57
+        Type 'help' for a list of commands
+      > info
+             DeviceId: \\?\ACPI#MSFT8000#1#{a11ee3c6-8421-4202-a3e7-b91ff90188e4}\I2C5
+        Slave address: 0x57
+            Bus Speed: StandardMode (100Khz)
+      > write {0 1 2 3 4 5 6 7 8}
+      > writeread {4} 4
+       5 6 7 8
+      > write {0}
+      > read 8
+       1 2 3 4 5 6 7 8
+      > q
 
 ### Building and running the sample
 
