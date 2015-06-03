@@ -58,7 +58,7 @@ public void GPIO()
     // Open GPIO 5
     using (GpioPin pin = gpio.OpenPin(5))
     {
-        // Latch HIGH value
+        // Latch HIGH value first. This ensures a default value when the pin is set as output
         pin.Write(GpioPinValue.High);
     
         // Set the IO direction as output
