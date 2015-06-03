@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SetupBoard
+title: Setup your MinnowBoard Max
 permalink: /en-US/win10/SetupMBM.htm
 lang: en-US
 ---

@@ -5,6 +5,10 @@ permalink: /en-US/win10/Windbg.htm
 lang: en-US
 ---
 
+##Conect Windows 10 IoT Core to WINDBG
+
+Choose the appropriate section based on the board you are using.
+
 ###Connecting to a MinnowBoard Max (MBM)
 
 * Ensure that your ethernet cable is connected to your MBM
