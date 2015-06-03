@@ -217,7 +217,31 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab.htm">Learn More</a>
                     </div>
                 </div>
-
+                
+                <div class="row section-heading">
+                   <div class="col-md-3">
+                        <h4>GpioTestTool (Gpio via C++/WRL)</h4>
+                        <p>This simple command line utility shows how to use the Gpio WinRT APIs from straight C++.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/GpioTestTool.htm">Learn More</a>
+                    </div>
+                    <div class="col-md-3">
+                        <!--
+                        <h4>I2cTestTool (I2C Command Line Utility)</h4>
+                        <p>This simple command line utility shows how to use C++/CX in command line executables.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2cTestTool.htm">Learn More</a>
+                        -->
+                    </div>
+                    <div class="col-md-3">
+                        <!--
+                        <h4>SpiTestTool (SPI Command Line Utility)</h4>
+                        <p>This simple command line utility shows how to use C++/CX in command line executables.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/potentiometer.htm">Learn More</a>
+                        -->
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Placeholder for alignment -->
+                    </div>
+                </div>
 
                 <div class="row section-heading">
                     <h2>Previous Version of Windows</h2>
