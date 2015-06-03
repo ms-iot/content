@@ -47,7 +47,7 @@ lang: en-US
                     </div>
 
                     <div class="col-md-3">
-                        <h4>Headless UAP Apps</h4>
+                        <h4>Headless UWP Apps</h4>
                         <p>Windows IoT Core can either be in headed or headless mode. The difference is the presence or absence of any form of UI</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm">Learn More</a>
                     </div>
@@ -66,7 +66,7 @@ lang: en-US
                     </div>
                     <div class="col-md-3">
                         <h4>Unavailable Universal APIs</h4>
-                        <p>Windows IoT Core is a work in progress.  Here are the UAP APIs that have not been implemented yet on our platform.</p>
+                        <p>Windows IoT Core is a work in progress.  Here are the UWP APIs that have not been implemented yet on our platform.</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/UnavailableApis.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
@@ -106,7 +106,7 @@ lang: en-US
                 <div class="row section-heading">
                     <div class="col-md-3">
                         <h4>Hello, World!</h4>
-                        <p>Create your first UAP app that runs on devices like the Raspberry Pi 2 running Windows 10 IoT Core Insider Preview</p>
+                        <p>Create your first UWP app that runs on devices like the Raspberry Pi 2 running Windows 10 IoT Core Insider Preview</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">

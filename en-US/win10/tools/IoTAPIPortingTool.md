@@ -17,7 +17,7 @@ You can use the tool by running `C:\Program Files (x86)\Microsoft IoT\IoTAPIPort
 
 *  `<path>` should provide the path to the directory of where your exe and/or dll files are located.
 
-*  `-os` should be specified if you are not planning to use UAP.  By default, the tool validates your binaries against the Windows UAP platform.
+*  `-os` should be specified if you are not planning to use UWP.  By default, the tool validates your binaries against the Windows UWP platform.
 
         NOTE: IoTAPIPortingTool.exe must be run from a Visual Studio Developer Command Prompt.
 
