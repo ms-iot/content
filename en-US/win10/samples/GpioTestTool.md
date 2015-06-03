@@ -20,12 +20,15 @@ applications.
 ### Usage
 
     gpiotesttool.exe PinNumber
+    
+      PinNumber     The pin number with which you wish to interact. This
+                    parameter is required.
 
     Commands:
-     > write 0|1                        Write pin high or low
+     > write 0|1                        Write pin low (0) or high (1)
      > toggle                           Toggle the pin from its current state
      > read                             Read pin
-     > setdrivemode drive_mode          Set the pins's drive mode. Drive modes:
+     > setdrivemode drive_mode          Set the pins's drive mode
          where drive_mode = input|output|
                             inputPullUp|inputPullDown|
                             outputOpenDrain|outputOpenDrainPullDown|
@@ -37,7 +40,14 @@ applications.
 Example Session:
 
     gpiotesttool.exe 47
+      Type 'help' for a list of commands
+    > info
+            Pin Number: 47
+          Sharing Mode: Exclusive
+      Debounce Timeout: 0
+            Drive Mode: input
     > read
+    High
     > setdrivemode output
     > write 0
     > write 1
@@ -47,20 +57,21 @@ Example Session:
 
 ### Building and running the sample
 
- 1. Clone the [samples](https://github.com/ms-iot/samples)
+1. Clone the [samples](https://github.com/ms-iot/samples)
    repository to your local machine. 
- 1. Open `GpioTestTool\GpioTestTool.sln` in Visual Studio
- 1. Select the target architecture.
+1. Open `GpioTestTool\GpioTestTool.sln` in Visual Studio.
+1. Select the target architecture.
    - Select `ARM` for Raspberry Pi
    - Select `x86` for MinnowBoardMax
- 1. Go to `Build -> Build Solution`
- 1. Copy GpioTestTool.exe from the build output folder to your device.
- 1. SSH into your device and run `GpioTestTool.exe`
+1. Go to `Build -> Build Solution`
+1. Copy GpioTestTool.exe from the build output folder to your device.
+1. SSH into your device and run `GpioTestTool.exe` (with the appropriate
+   command line parameters, of course).
 
 ### The code
 
-The function MakePin() activates the WinRT class factory and opens the pin.
-It takes a pin number and returns an IGpioPin instance.
+The function MakePin() takes a pin number and returns an IGpioPin instance.
+It handles the WinRT boilerplate necessary to create an IGpioPin instance. 
 
     ComPtr<IGpioPin> MakePin (int PinNumber)
     {

@@ -112,10 +112,10 @@ consumes WinRT components with C++/CX.
 1. Click OK to exit the project properties dialog.
 1. Build your solution (Ctrl + Shift + B).
 
-This simple program will run on both a Windows 10 Desktop machine and your
-Athens device. If your desktop machine is 64-bit and you want to run the application
-locally, be sure to select the x64 platform.
+This boilerplate code will run on both your Windows Desktop machine and your
+Windows IoT Core device, although the full sample will run only on Windows IoT
+Core since I2C is supported only on Windows IoT Core.
 
-Congratulations, you have successfully created a command line project capable
+Congratulations, you have successfully created a command line program capable
 of consuming WinRT components!
 
