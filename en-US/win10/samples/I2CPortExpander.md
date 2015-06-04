@@ -10,7 +10,7 @@ lang: en-US
 ![I2C Port Expander Image]({{site.baseurl}}/images/I2CPortExpander/PortExpanderProjectPicture_480.png)
 
 In this sample, we'll connect an I2C port expander to your Raspberry Pi 2 and create a simple app that uses the port expander to read the status of a tactile switch and control an LED. No background knowledge of I2C or port expanders is needed.
-If you want to know more about I2C, Sparkfun provides a great [tutorial on I2C](https://learn.sparkfun.com/tutorials/i2c).
+If you want to know more about I2C, Sparkfun provides a great [tutorial on I2C](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}.
 
 This is a headed sample, so please ensure that your device is in headed
 mode by running this command: `setbootoption.exe headed` (changing the headed/headless state will require a reboot).
@@ -21,15 +21,15 @@ You'll need the following components which are included in the Basic Kit:
 
 * 1 Raspberry Pi 2
 
-* 1 [MCP23008 8-bit I/O Port Expander](http://www.digikey.com/product-detail/en/MCP23008-E%2FP/MCP23008-E%2FP-ND/735951) in PDIP package
+* 1 [MCP23008 8-bit I/O Port Expander](http://www.digikey.com/product-detail/en/MCP23008-E%2FP/MCP23008-E%2FP-ND/735951){:target="_blank"} in PDIP package
 
-* 1 [red LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832)
+* 1 [red LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832){:target="_blank"}
 
-* 1 [tactile switch](http://www.digikey.com/product-detail/en/320.02E11.08BLK/EG1311-ND/101397)
+* 1 [tactile switch](http://www.digikey.com/product-detail/en/320.02E11.08BLK/EG1311-ND/101397){:target="_blank"}
 
-* 1 [330 &#x2126; resistor](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636)
+* 1 [330 &#x2126; resistor](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
 
-* 1 [10k &#x2126; resistor](http://www.digikey.com/product-detail/en/CFR-25JB-52-10K/10KQBK-ND/338)
+* 1 [10k &#x2126; resistor](http://www.digikey.com/product-detail/en/CFR-25JB-52-10K/10KQBK-ND/338){:target="_blank"}
 
 * An HDMI monitor
 
@@ -66,7 +66,7 @@ Place the MCP23008 Port Expander on your breadboard such that it straddles the c
 
 *Image made with [Fritzing](http://fritzing.org/)*
 
-The pinout of the MCP23008 is shown below and can be found in the [datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/21919e.pdf).
+The pinout of the MCP23008 is shown below and can be found in the [datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/21919e.pdf){:target="_blank"}.
 
 ![MCP23008 Pinout]({{site.baseurl}}/images/I2CPortExpander/MCP23008_Pinout.PNG)
 
@@ -137,7 +137,7 @@ The I2C bus requires pull-up resistors on the SDA and SCL lines. However, the Ra
 
 ###Create the sample app
 
-When everything is set up, power your device back on. You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/I2cPortExpander), but as an excercise, this tutorial will take you through the complete steps to create this app from scratch.  Open up Visual Studio and create a new C# Windows Universal Blank App (see the 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance on how to create a new app). For this sample, we named ours **I2cPortExpanderLedSample**.
+When everything is set up, power your device back on. You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/I2cPortExpander){:target="_blank"}, but as an excercise, this tutorial will take you through the complete steps to create this app from scratch.  Open up Visual Studio and create a new C# Windows Universal Blank App (see the 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance on how to create a new app). For this sample, we named ours **I2cPortExpanderLedSample**.
 The code in this sample does several things:
 
 1. Initializes the I2C bus and the port expander
@@ -240,7 +240,7 @@ Here are what some of these constants and variables represent
 
  * `iodirRegister`, `gpioRegister` and `olatRegister` are our local copies of the values in the corresponding registers in the port expander.
 
-\* See the [MCP23008 datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/21919e.pdf) for details.
+\* See the [MCP23008 datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/21919e.pdf){:target="_blank"} for details.
 
 The method `InitializeSystem()`
 

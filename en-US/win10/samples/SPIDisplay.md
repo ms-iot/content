@@ -7,14 +7,14 @@ lang: en-US
 
 ##SPI Display Sample
 
-In this sample, we interface a SPI based [OLED display](http://www.adafruit.com/product/938) to your Raspberry Pi 2/MinnowBoard Max. We then create an app that lets us write lines of text to the display. Step-by-step instructions are provided,
-so no background knowledge of SPI is needed. However, if you want to learn more, Sparkfun provides a great [tutorial on SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi).
+In this sample, we interface a SPI based [OLED display](http://www.adafruit.com/product/938){:target="_blank"} to your Raspberry Pi 2/MinnowBoard Max. We then create an app that lets us write lines of text to the display. Step-by-step instructions are provided,
+so no background knowledge of SPI is needed. However, if you want to learn more, Sparkfun provides a great [tutorial on SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}.
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
 
 ###Load the project in Visual Studio
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/SPIDisplay).  Make a copy of the folder on your disk and open the project from Visual Studio.
+You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/SPIDisplay){:target="_blank"}.  Make a copy of the folder on your disk and open the project from Visual Studio.
 
 Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
 
@@ -24,7 +24,7 @@ Note that this app requires a device with a physical SPI port and will not work 
 
 First, we need to wire up the display to your device. You'll need a few components:
 
-* a [Monochrome 1.3" 128x64 OLED graphic display](http://www.adafruit.com/product/938) from Adafruit with pin headers soldered on
+* a [Monochrome 1.3" 128x64 OLED graphic display](http://www.adafruit.com/product/938){:target="_blank"} from Adafruit with pin headers soldered on
 
 * a breadboard and several male-to-female connector wires
 
@@ -41,8 +41,8 @@ The OLED display has 8 IO pins, connect them as follows:
 
 1. **DATA:**  Connect to MOSI on the RPi2 (Pin 19). This is the SPI master data out line.
 2. **CLK:**     Connect to SCLK on the RPi2 (Pin 23). This is the SPI clock line.
-3. **SA0/DC:**   Connect to GPIO 22 on the RPi2 (Pin 15). This is the Data/Command line for the display. (See the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf) for more information about the display pin functions)
-4. **RST:** Connect to GPIO 23 on the RPi2 (Pin 16). This is the hardware Reset line for the display. (See the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf) for more information about the display pin functions)
+3. **SA0/DC:**   Connect to GPIO 22 on the RPi2 (Pin 15). This is the Data/Command line for the display. (See the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf){:target="_blank"} for more information about the display pin functions)
+4. **RST:** Connect to GPIO 23 on the RPi2 (Pin 16). This is the hardware Reset line for the display. (See the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf){:target="_blank"} for more information about the display pin functions)
 5. **CS:** Connect to CE0 on the RPi2 (Pin 24). This is the SPI chip select line.
 6. **3V3:**  Leave unconnected. The display has its own on-board power regulator which provides it with 3.3V
 7. **VIN:**  Connect 5V the RPi2 (Pin 2).
@@ -67,8 +67,8 @@ The OLED display has 8 IO pins, connect them as follows:
 
 1. **DATA:**  Connect to MOSI on the MBM (Pin 9). This is the SPI master data out line.
 2. **CLK:**     Connect to SCLK on the MBM (Pin 11). This is the SPI clock line.
-3. **SA0/DC:**   Connect to GPIO 3 on the MBM (Pin 14). This is the Data/Command line for the display. (See the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf) for more information about the display pin functions)
-4. **RST:** Connect to GPIO 4 on the MBM (Pin 16). This is the hardware Reset line for the display. (See the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf) for more information about the display pin functions)
+3. **SA0/DC:**   Connect to GPIO 3 on the MBM (Pin 14). This is the Data/Command line for the display. (See the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf){:target="_blank"} for more information about the display pin functions)
+4. **RST:** Connect to GPIO 4 on the MBM (Pin 16). This is the hardware Reset line for the display. (See the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf){:target="_blank"} for more information about the display pin functions)
 5. **CS:** Connect to CS1 on the MBM (Pin 5). This is the SPI chip select line.
 6. **3V3:**  Leave unconnected. The display has its own on-board power regulator which provides it with 3.3V
 7. **VIN:**  Connect 5V the MBM (Pin ).
@@ -253,8 +253,8 @@ private async Task InitSpi()
 
 * We start by specifying some configuration settings for our SPI bus:
 1. We specify which chip select line we want to use. This line is connected to the **CS** pin on the display, and lets the display controller know when we're about to start a SPI bus transaction.
-2. The clock frequency is set to 10MHz. This is the rated speed for the display as documented in the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf).
-3. **settings.Mode** is set to **SpiMode.Mode3**. This configures clock polarity and phase for the bus as documented in the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf).
+2. The clock frequency is set to 10MHz. This is the rated speed for the display as documented in the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf){:target="_blank"}.
+3. **settings.Mode** is set to **SpiMode.Mode3**. This configures clock polarity and phase for the bus as documented in the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf){:target="_blank"}.
 
 * Next, we get the class selection string for our SPI controller. This controller controls the SPI lines on the exposed pin header. We then use the selection string to get the SPI bus controller matching our string name.
 

@@ -52,7 +52,7 @@ Wireless networking is not fully implemented on the Raspberry PI2 for this relea
 * On a Raspberry PI, a single keyboard keystroke may either not be recognized or may insert multiple characters. (2573557). WORKAROUND: None
 * Some Webcam drivers are missing. (2187095). WORKAROUND: None
 * Logitech USB speakers may not produce audio output on an MBM (2460925). WORKAROUND: Use an alternate audio output device.
-* A list of validated peripheral devices can be found on the documentation at [http://WindowsOnDevices.com](http://WindowsOnDevices.com) (2296724). WORKAROUND: Review the list of validated devices.
+* A list of validated peripheral devices can be found on the documentation at [http://WindowsOnDevices.com](http://WindowsOnDevices.com) (2296724){:target="_blank"}. WORKAROUND: Review the list of validated devices.
 * Common Raspberry PI WiFi adapters are not supported in the Windows 10 IoT Core Insider Preview image. (2310140). WORKAROUND: Use an ethernet connection for networking.
 * Wireless network may not reconnect after a power cycle on the Raspberry PI (2367736). WORKAROUND: Re-establish the WiFi connection.
 * WiFi/Bluetooth USB combo device may not work on the Raspberry PI or MinnowBoard Max (2293778). WORKAROUND: Use another hardware set.
@@ -87,7 +87,7 @@ Wireless networking is not fully implemented on the Raspberry PI2 for this relea
 * Opening the package.json file may cause Visual Studio to crash (2457310). WORKAROUND: None.
 * Windows.UI.Popups.MessageDialog does not work on this release of Windows 10 IoT Core (1214773). WORKAROUND: None.
 * GetNetworkUsageAsync may throw a System.UnauthorizedAccessException (1972129). WORKAROUND: None.
-* Windows.Devices.SerialCommunications may not enumerate devices from WinRT UAP App. (2266901). WORKAROUND: None.
+* Windows.Devices.SerialCommunications may not enumerate devices from WinRT UWP App. (2266901). WORKAROUND: None.
 * This release of Windows 10 IoT Core does not contain WinRT Windows.System.Profile.HardwareIdentification. (2311696). WORKAROUND: None.
 * When Telent is used to send the 'devcon status usb' command on a MinnowBoard Max, it may return error number 28. (1097931). WORKAROUND: None
 * The CS signal on SPI may be initially be low until the first data transfer occurs on a MinnowBoard MAx. (1682876). WORKAROUND: The signal should be normal after the first data transfer.

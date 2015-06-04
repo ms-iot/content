@@ -42,7 +42,7 @@ NuGet is a quick and easy way to automatically install the packages and setup de
 
 ###Step 2: Add Windows Remote Arduino projects to your solution
 
-- Clone the [Windows Remote Arduino GitHub repository](https://github.com/ms-iot/remote-wiring/).
+- Clone the [Windows Remote Arduino GitHub repository](https://github.com/ms-iot/remote-wiring/){:target="_blank"}.
 
 - Right-click on your solution in the Solution Explorer and select *Add -> Existing Project*
 

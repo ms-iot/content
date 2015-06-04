@@ -8,7 +8,7 @@ lang: en-US
 ##'Hello, World!' Sample
 
 ###Create a new C# project
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/HelloWorld), but as an excercise, this tutorial will take you through the complete steps to create this app from scratch.  
+You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/HelloWorld){:target="_blank"}, but as an excercise, this tutorial will take you through the complete steps to create this app from scratch.  
 
 Start Visual Studio 2015 RC.
 
@@ -24,7 +24,7 @@ Remember to give a good name to your first app! In this example, we called the p
 
 ###Developer Mode for Windows 10
 
-If this is the first project you create, Visual Studio will likely prompt you to enable Developer Mode for Windows 10.  To do this, you'll need to follow the steps found [here](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx)
+If this is the first project you create, Visual Studio will likely prompt you to enable Developer Mode for Windows 10.  To do this, you'll need to follow the steps found [here](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx){:target="_blank"}
 
 ###Add content to MainPage.xaml
 * Let's add some content to the MainPage. From Solution Explorer, select the 'MainPage.xaml' file. We want to add a TextBox and a Button, to show some interaction. So we will edit the XAML file to add these elements. Locate the `<Grid>` tag in the XAML section of the designer, and add the following markup:
@@ -93,9 +93,9 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 
 * You can set breakpoints, see variable values, etc. To stop the app, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
 
-* Having successfully deployed and debugged your first UAP application, create a Release version by simply changing the Visual Studio toolbar configuration dropdown from `Debug` to `Release`.  You can now build and deploy your app to your device by selecting Build \| Rebuild Solution and Build \| Deploy Solution.
+* Having successfully deployed and debugged your first UWP application, create a Release version by simply changing the Visual Studio toolbar configuration dropdown from `Debug` to `Release`.  You can now build and deploy your app to your device by selecting Build \| Rebuild Solution and Build \| Deploy Solution.
 
-* Congratulations! You just deployed your first UAP application to a device running Windows IoT Core!
+* Congratulations! You just deployed your first UWP application to a device running Windows IoT Core!
 
 
 ###Set HelloWorld as the Startup App
@@ -110,7 +110,7 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 
         [192.168.0.243]: PS C:\> iotstartup list HelloWorld
 
-    and you should see the full name of our HelloWorld UAP application, i.e. something like:
+    and you should see the full name of our HelloWorld UWP application, i.e. something like:
 
         Headed   : HelloWorld_n2pe7ts0w7wey!App
 
