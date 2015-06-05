@@ -1,0 +1,23 @@
+
+{% if include.url %}
+
+    {% capture url %}
+    {{include.url}}
+    {% endcapture %}
+
+{% else %}
+
+    {% capture url %}
+    {{site.baseurl}}/{{page.lang}}{{page.url}}
+    {% endcapture %}
+
+{% endif %}
+
+
+<meta http-equiv="refresh" content="0;URL={{url}}">
+
+<script>
+    window.location = '{{url}}';
+</script>
+
+<p>Redirecting you to WindowsOnDevices.com... Click <a href="{{url}}">here</a> if you are not automatically redirected.</p>
