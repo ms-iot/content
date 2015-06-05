@@ -31,7 +31,7 @@ var uwp = require("uwp");
 uwp.projectNamespace("Windows");
 
 var gpioController = Windows.Devices.Gpio.GpioController.getDefault();
-var pin = gpioController.openPin(6);
+var pin = gpioController.openPin(5);
 pin.setDriveMode(Windows.Devices.Gpio.GpioPinDriveMode.output)
 var currentValue = Windows.Devices.Gpio.GpioPinValue.high;
 pin.write(currentValue);
