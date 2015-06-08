@@ -48,22 +48,21 @@ import _wingpio as gpio
 import time
 
 led_pin = 5
-ledstatus = 0
+pinValue = gpio.HIGH
 
 gpio.setup(led_pin, gpio.OUT, gpio.PUD_OFF, gpio.HIGH)
 
 while True:
-    if ledstatus == 0:
-        ledstatus = 1
-        gpio.output(led_pin, gpio.HIGH)
+    if pinValue == gpio.HIGH:
+        pinValue = gpio.LOW
+        gpio.output(led_pin, pinValue)
     else:
-        ledstatus = 0
-        gpio.output(led_pin, gpio.LOW)
+        pinValue = gpio.HIGH
+        gpio.output(led_pin, pinValue)
 
     time.sleep(0.5)
 
 gpio.cleanup()
-
 {% endhighlight %}
 
 Remember that we connected the other end of the LED to the 3.3 Volts power supply, so we need to drive the pin to low to have current flow into the LED.
