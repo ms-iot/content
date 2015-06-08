@@ -35,7 +35,7 @@ Choose the appropriate section based on the board you are using.
 
 * Configure your RPi2, by changing the bcd settings like this:
 
-        [192.168.0.243]: PS C:\> bcdedit -store C:\EFIESP\efi\Microsoft\Boot\bcd -dbgsettings serial
+        [192.168.0.243]: PS C:\> bcdedit -store C:\EFIESP\efi\Microsoft\Boot\bcd -dbgsettings serial debugport:1 baudrate:115200
 
         [192.168.0.243]: PS C:\> bcdedit -store C:\EFIESP\efi\Microsoft\Boot\bcd -debug on
 
@@ -43,4 +43,4 @@ Choose the appropriate section based on the board you are using.
 
 * From your development machine, start WINDBG with the <PORT> you provided and the key that was generated in the previous step:
 
-        "C:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k com:port=<PORT>,baud=921600
+        "C:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k com:port=<PORT>,baud=912600
