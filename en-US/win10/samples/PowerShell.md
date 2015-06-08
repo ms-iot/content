@@ -65,11 +65,11 @@ Make sure to follow these steps to correctly configure your VM or device running
 
     Replace `[new password]` with a strong password:
 
-        [192.168.0.243]: net user Administrator [new password]
+        net user Administrator [new password]
 
     The following command only needs to be run once:
 
-        [192.168.0.243]: schtasks /Delete /TN Microsoft\Windows\IoT\Startup /F
+        schtasks /Delete /TN Microsoft\Windows\IoT\Startup /F
 
 ###Configure your Windows IoT Core device
 
@@ -79,11 +79,11 @@ Make sure to follow these steps to correctly configure your VM or device running
 
 * If you want, you can also rename your device. To change the 'computer name', use the `setcomputername` utility:
 
-        [192.168.0.243]: setcomputername <new-name>
+        setcomputername <new-name>
 
     You will need to reboot the device for the change to take effect. You can use the `shutdown` command as follows:
 
-        [192.168.0.243]: shutdown /r /t 0
+        shutdown /r /t 0
 
     After you reboot, you may need to rerun this command in order to connect to your device using the new name:
 
