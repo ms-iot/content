@@ -7,15 +7,20 @@ lang: en-US
 
 ##Push Button Sample
 
+[View the code on Github](https://github.com/ms-iot/samples/tree/develop/PushButton/CS){:target="_blank"}
+
+In this sample, we will connect a push button to Raspberry Pi 2 and use it
+to control the onboard LED. We will use GPIO interrupts to detect when the
+button is pressed and will toggle the LED each time the button is pressed.
+
 ![Push Button Image]({{site.baseurl}}/images/PushButton/PushbuttonSample.jpg)
 
-In this sample, we will connect a Push Button and LED to Raspberry Pi 2. We will be reading the status of the Push button and control an LED using GPIO.
-
 This is a headed sample, so please ensure that your device is in headed
-mode by running this command: `setbootoption.exe headed` (changing the headed/headless state will require a reboot).
+mode by running this command: `setbootoption.exe headed` (changing the
+headed/headless state will require a reboot).
 
-Also, be aware that the GPIO APIs are only available on Windows IoT Core, so this sample cannot run on your desktop.
-
+Also, be aware that the GPIO APIs are only available on Windows IoT Core,
+so this sample cannot run on your desktop.
 
 ###Components
 
@@ -23,137 +28,112 @@ You will need the following components :
 
 * a [EG1311-ND Tactile Button](http://www.digikey.com/product-detail/en/320.02E11.08BLK/EG1311-ND/101397){:target="_blank"}
 
-* a [red LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832){:target="_blank"}
-
-* a [330 &#x2126; resistor](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
-
-* a [10k &#x2126; resistor](http://www.digikey.com/product-detail/en/CFR-25JB-52-10K/10KQBK-ND/338){:target="_blank"}
-
-* a breadboard and several male-to-female and male-to-male connector wires
+* a breadboard and two male-to-female connector wires
 
 ###Connect to your Device
 
-Let's start by wiring up the components on the breadboard as shown in the diagram below.
+Let's start by wiring up the components on the breadboard as shown in the
+following schematic.
 
-![Breadboard connections]({{site.baseurl}}/images/PushButton/PushButton_bb.png)
+* Connect one pin of the tactile button to Pin 29 (GPIO 5) of
+  the Raspberry Pi 2 and one pin to GND.
 
-*Image made with [Fritzing](http://fritzing.org/)*
-
-
-Here are the schematics:
+![Breadboard layout]({{site.baseurl}}/images/PushButton/PushButton_bb.png)
 
 ![Circuit Schematic]({{site.baseurl}}/images/PushButton/PushButton_schem.png)
 
 *Image made with [Fritzing](http://fritzing.org/)*
 
-####Connecting the LED
+###Building and running the sample
 
-* Connect the cathode (the shorter leg) of the LED to Pin 13 (GPIO 27) of the Raspberry Pi 2
-
-* Connect the anode (the longer leg) of the LED to one lead of the 330 &#x2126; resistor
-
-* Connect the other end of the 330 &#x2126; resistor to Pin 1 (3.3V) on Raspberry Pi 2
-
-####Connecting the Tactile Button
-
-* Connect one pin of the tactile button to Pin 29 (GPIO 5) of the Raspberry Pi 2 and one lead of the 10k &#x2126; resistor
-
-* Connect the other end of the 10k &#x2126; resistor to Pin 2 (5V) on Raspberry Pi 2
-
-* Connect the other pin of the tactile button to the ground
-
-
-Here is the pinout of the RPi2:
-
-![Raspberry Pi 2 pinout]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
-
-<sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
-
-###Deploy your app
-
-You can find the entire code for this sample [here](https://github.com/ms-iot/samples/tree/develop/PushButton/CS){:target="_blank"}. This sample is written in C#. Make a copy of the folder on your disk and open the project from Visual Studio.
-
-Make sure you set the 'Remote Debugging' setting to point to your Windows IoT device. Refer to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
-If you're building for Raspberry Pi 2, select `ARM`.
-
-When everything is set up, you should be able to press F5 from Visual Studio. The PushButton app will deploy and start on the Windows IoT device, and you should see the LED blink in sync with the simulation on the screen as you press the button.
-
+1. Clone the [samples](https://github.com/ms-iot/samples)
+   repository to your local machine.
+1. Open `PushButton\CS\PushButton.csproj` in Visual Studio.
+1. Select `ARM` for the target architecture
+1. Go to `Build -> Build Solution`
+1. Select `Remote Machine` from the debug target
+1. Hit F5 to deploy and debug. Enter the IP address of your Raspberry Pi
+   and select `None` for the authentication type.
 
 ###Let's look at the code
-The code for this sample is pretty simple. Each time the push button is pressed, we flip the state of the LED.
 
-###Initialize the GPIO pin
-To drive the GPIO pin, first we need to initialize it. Here is the C# code (notice how we leverage the new WinRT classes in the Windows.Devices.Gpio namespace):
+First, we open the GpioPin resources we'll be using. The button is connected to
+GPIO5 in active LOW configuration, meaning the signal will be HIGH when the
+button is not pressed and the signal will go LOW when the button is pressed.
+We'll be using the onboard LED, connected to GPIO47, which is connected in
+active HIGH configuration, meaning driving the pin HIGH will turn on the LED
+and driving the pin LOW will turn off the LED.
 
-{% highlight C# %}
-using Windows.Devices.Gpio;
+            buttonPin = gpio.OpenPin(BUTTON_PIN);
+            ledPin = gpio.OpenPin(LED_PIN);
 
-    private void InitGPIO()
-    {
-        var gpio = GpioController.GetDefault();
+We initialize the LED in the OFF state by first latching a LOW value onto the
+pin. When we change the drive mode to Output, it will immediately drive the
+latched output value onto the pin. The latched output value is undefined when
+we initially open a pin, so we should always set the pin to a known state
+before changing it to an output.
 
-        // Show an error if there is no GPIO controller
-        if (gpio == null)
+            ledPin.Write(GpioPinValue.Low);
+            ledPin.SetDriveMode(GpioPinDriveMode.Output);
+
+Next, we set up the button pin. We're taking advantage of the fact that
+Raspberry Pi 2 has built-in pull up resistors that we can activate. We use the
+built-in pull up resistor so that we don't need to supply a resistor externally.
+Pull up resistors are not available on all hardware, so we insert a check to
+make sure this drive mode is supported before setting it. If you run this sample
+on hardware that does not support InputPullUp, be sure to connect an external
+pull up resistor.
+
+            if (buttonPin.IsDriveModeSupported(GpioPinDriveMode.InputPullUp))
+                buttonPin.SetDriveMode(GpioPinDriveMode.InputPullUp);
+            else
+                buttonPin.SetDriveMode(GpioPinDriveMode.Input);
+
+Next we connect the GPIO interrupt listener. This is an event that will get
+called each time the pin changes state. We also set the DebounceTimeout
+property to 50ms to filter out spurious events caused by electrical noise.
+Buttons are mechanical devices and can make and break contact many times on a
+single button press. We don't want to be overwhelmed with events so we filter
+these out.
+
+            buttonPin.DebounceTimeout = TimeSpan.FromMilliseconds(50);
+            buttonPin.ValueChanged += buttonPin_ValueChanged;
+
+In the button interrupt handler, we look at the edge of the GPIO signal to
+determine whether the button was pressed or released. If the button was
+pressed, we flip the state of the LED.
+
+        private void buttonPin_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs e)
         {
-            pin = null;
-            GpioStatus.Text = "There is no GPIO controller on this device.";
-            return;
+            // toggle the state of the onboard LED every time the button is pressed
+            if (e.Edge == GpioPinEdge.FallingEdge)
+            {
+                ledPin.Write(ledPinValue);
+                ledPinValue = (ledPinValue == GpioPinValue.Low) ?
+                    GpioPinValue.High : GpioPinValue.Low;
+            }
+
+We also want to update the user interface with the current state of the
+pin, so we invoke an update operation on the UI thread. Capturing the result
+of an async method in a local variable is necessary to suppress a compiler
+warning when we don't want to wait for an asynchronous operation to complete.
+
+            // need to invoke UI updates on the UI thread because this event
+            // handler gets invoked on a separate thread.
+            var task = Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => {
+                if (e.Edge == GpioPinEdge.FallingEdge)
+                {
+                    ledEllipse.Fill = redBrush;
+                    GpioStatus.Text = "Button Pressed";
+                }
+                else
+                {
+                    ledEllipse.Fill = grayBrush;
+                    GpioStatus.Text = "Button Released";
+                }
+            });
         }
-        pushButton = gpio.OpenPin(PB_PIN);
-        pin = gpio.OpenPin(LED_PIN);
 
-        // Show an error if the pin wasn't initialized properly
-        if (pin == null)
-        {
-            GpioStatus.Text = "There were problems initializing the GPIO LED pin.";
-            return;
-        }
-        if (pushButton == null)
-        {
-            GpioStatus.Text = "There were problems initializing the GPIO Push Button pin.";
-            return;
-        }
+That's it! Each time you press the button, you should see the onboard LED change
+state.
 
-        pushButton.SetDriveMode(GpioPinDriveMode.Input);
-        pin.SetDriveMode(GpioPinDriveMode.Output);
-
-        GpioStatus.Text = "GPIO pin initialized correctly.";
-    }
-
-{% endhighlight %}
-
-Let's break this down a little:
-
-* First, we use `GpioController.GetDefault()` to get the GPIO controller.
-
-* If the device does not have a GPIO controller, this function will return `null`.
-
-* Then we attempt to open the pin by calling `GpioController.OpenPin()` with the `PB_PIN` and `LED_PIN` value.
-
-* We set the `pin` to run in output mode and `pushButton` to run in input mode using the `GpioPin.SetDriveMode()` function.
-
-* Once we have the `pin`, we set it to be off (High) by default using the `GpioPin.Write()` function.
-
-
-###Modify the state of the GPIO pin
-
-When Push Button is pressed, the input value is read and LED is turned ON.
-
-{% highlight C# %}
-    private void FlipLED()
-    {
-        pushButtonValue = pushButton.Read();
-        if (pushButtonValue == GpioPinValue.High)
-        {
-            pin.Write(GpioPinValue.High);
-        }
-        else if (pushButtonValue == GpioPinValue.Low)
-        {
-            pin.Write(GpioPinValue.Low);
-        }
-    }
-
-
-{% endhighlight %}
-
-Remember that we connected the other end of the LED to the 3.3 Volts power supply, so we need to drive the pin to low to have current flow into the LED.
