@@ -1,0 +1,80 @@
+﻿<p><!--StartFragment-->你即将开始一场旅程，我们很高兴你能参与其中！ 准备使用 Windows 10 IoT Core 制作你的机器人并为其编程！<!--EndFragment-->&#160;&#160;</p><p>当你完成此项目时，你将获得以下体验：</p><p></p><ol>
+<li>了解 <a href="http://blogs.windows.com/buildingapps/2014/09/30/universal-windows-apps-get-better-with-windows-10/" style="line-height: 1.428571429; background-color: rgb(255, 255, 255);">Windows 10 通用 Windows 应用程序 (UWA)</a> 的工作原理<br>
+</li>
+<li>通过 Raspberry Pi 2 <strong style="line-height: 1.428571429;">和</strong> Windows 10 台式机上的 Windows 10 IoT Core 在机器人上运行，从而查看相同的应用程序可如何重获生机并更改行为。<br>
+</li>
+<li>从你的 <a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/" style="line-height: 1.428571429; background-color: rgb(255, 255, 255);">Raspberry Pi 2</a> 控制数字 <a href="https://www.youtube.com/watch?v=jwWxKACHWxs" style="line-height: 1.428571429; background-color: rgb(255, 255, 255);">GPIO</a><br>
+</li>
+<li>处理键盘、鼠标单击和触摸事件</li>
+</ol><div>
+<p>我们很高兴能与你一起开始这场旅程 - Microsoft IoT 团队感谢你！</p>
+<h1>用法</h1>
+<p>下载项目、将其加载到 Visual Studio、编译并部署应用程序。遵循此<a href="https://github.com/ms-iot/build2015-robot-kit/">链接</a>。</p>
+<p>该应用程序可以使用两种方式运行：</p>
+<ol> <li> <strong>Windows 10 桌面 UWA</strong> - 此处你可以使用鼠标或触摸来驱动机器人。你还可以插入 Xbox 360 控制器，并通过网络使用该控制器来驱动机器人。</li> <li> <strong>适用于 Raspberry pi 2 的 Windows 10 IoT Core UWA</strong> - 此处你可以直接使用 Xbox 360 控制器或通过 Windows 10 UWA 中的网络命令驱动机器人<!--EndFragment-->
+</li> </ol>
+<h2> <a id="user-content-directional-movement" href="https://github.com/ms-iot/build2015-robot-kit/#directional-movement" aria-hidden="true"></a>方向移动</h2>
+<p>机器人可以朝 8 个方向移动：</p>
+<ol> <li>前进</li> <li>后退</li> <li>向左急转</li> <li>向右急转</li> <li>向左前方慢转</li> <li>向右前方慢转</li> <li>向左后方慢转</li> <li>向右后方慢转</li> </ol>
+<p><strong>急</strong>转会将轮子朝相反方向旋转。<strong>慢</strong>转仅将一个轮子朝指定方向旋转。</p>
+<img src="https://hackster.imgix.net/uploads/image/file/44596/AppDirectionals.png?w=1280&h=960&fit=clip&s=a600eda04e3508e9737b40cee9652667">
+<h2>游戏杆输入</h2>
+<p>可通过左摇杆或数字方向板控制机器人。游戏杆可通过 Raspberry Pi 2 或 Windows 10 台式机上的 USB 端口直接插入机器人。</p>
+<h2> <a id="user-content-keyboard-input" href="https://github.com/ms-iot/build2015-robot-kit/#keyboard-input" aria-hidden="true"></a>键入输入</h2>
+<p>对于 Windows 10 台式机 <!--StartFragment-->UWA 应用，键盘控制为：</p>
+<ul> <li>前 - 向上键 / W</li> <li>后 - 向下键 / X</li> <li>左 - 向左键 / A</li> <li>右 - 向右键 / D</li> <li>左后 - Z</li> <li>右后 - C</li> <li>左前 - Q</li> <li>右前 - E</li> <li>停止 - Enter / 空格键</li> </ul>
+<h2> <a id="user-content-mousetouch" href="https://github.com/ms-iot/build2015-robot-kit/#mousetouch" aria-hidden="true"></a>鼠标/触摸</h2>
+<p>当在 Windows 10 台式机上运行时，有一个显示机器人的 8 个移动方向的输入屏幕。单击或触摸任一方向以移动机器人。</p>
+<img src="https://hackster.imgix.net/uploads/image/file/44597/RobotAppScreen.png?w=1280&h=960&fit=clip&s=3e1c7729c6e3b61e47e86c01f6475e62">
+<h1>材料清单</h1>
+<p>若要制作机器人，你将需要以下内容：</p>
+<ol> <li>分为 7 块的木质机器人框架 - 从 <a href="https://github.com/makenai/sumobot-jr/tree/master/cutting_plans">Sumo Robot Jr GitHub repo</a> 获取排版图，并将它们提交到 <a href="https://ponoko.com/">http://ponoko.com</a>。按照 <a href="http://www.ponoko.com/make-and-sell/show-material/84-veneer-core-birch">P3 5.2 mm Veneer Core Birch</a> 图纸，我们将它们切割为 4 份 </li> <li>2 个连续旋转伺服系统，如<a href="https://www.pololu.com/product/1248">这些</a> </li> <li>一个地球轮，如<a href="https://www.pololu.com/product/953">这个</a> </li> <li>一个 <a href="http://www.amazon.com/Microsoft-Xbox-360-Controller-Windows/dp/B004QRKWLA/ref=sr_1_1?ie=UTF8&amp;qid=1429227502&amp;sr=8-1&amp;keywords=usb+xbox+360+controller">USB Xbox 360 控制器</a> </li> <li>一个数字开关，如<a href="http://www.digikey.com/product-detail/en/D2F-L/SW152-ND/83251">这个</a> </li> <li>6 根 6 英寸插头到插孔电线（2 根红色、2 根白色和 2 根黑色）（如 <a href="https://www.pololu.com/product/1727/specs">这些</a> </li> <li>2 根 6 英寸插孔到插孔电线（ 1 根红色和 1 根黑色），如<a href="https://www.pololu.com/product/1742/specs">这些</a> </li> <li>螺丝、螺母、螺栓和支架，如<a href="http://www.amazon.com/Parts-Express-M2-5-Standoff-Screw/dp/B00CWEL8SK/ref=sr_1_3?ie=UTF8&amp;qid=1429227805&amp;sr=8-3&amp;keywords=M2.5+standoff">这个</a> </li> <li> <a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi 2</a>、一个 2 安培电源、SD 卡网络和以太网电缆</li> <li>微型螺丝刀</li> </ol>
+<h1> <a id="user-content-hardware-assembly" href="https://github.com/ms-iot/build2015-robot-kit/#hardware-assembly" aria-hidden="true"></a>硬件组装</h1>
+<p>一张图片胜过一千个字。</p>
+<img src="https://hackster.imgix.net/uploads/image/file/44598/RobotKit.png?w=1280&h=960&fit=clip&s=9899260e968c5957dc34f93b2c2d1936">
+<p>一段视频就是一千张图。&#160;</p>
+<iframe width="100%" height="100%" src="//www.youtube.com/embed/aKCieb-Gf2g?rel=0" frameborder="0" allowfullscreen=""></iframe>
+</div></div>
+<p>引脚分配</p>
+<img src="https://hackster.imgix.net/uploads/image/file/44599/RobotAppPins.png?w=1280&h=960&fit=clip&s=d2a69625edd9017df9db57bb74d9433b">
+<h2>组装说明</h2>
+<ul> <li> <strong>公差</strong> - 机器人框架的设计意图是贴靠在一起。我们已注意到木质框架的激光切割中存在一些微小公差差异。你可能希望将保护带保留在部件不可见的一侧上，作为组装机器人时的薄垫片。如果你打算将机器人框架用胶水粘在一起或如果组件贴合得非常紧，可以选择移除保护带。</li> <li> <strong>螺丝孔对齐</strong> - 螺丝孔专为 Raspberry pi 2 而设计，但是由于激光切割框架中的公差差异，支架可能无法完全对齐。如果支架顶部稍细一些，这完全无碍。</li> <li> <strong>不要拧得过紧！</strong> - 不要将进入支架的螺丝拧得过紧。拧得过紧可能导致 Raspberry pi 2 的基底碎裂。将螺丝拧到位甚至松一点也无妨。</li> </ul>
+<h1> <a id="user-content-software" href="https://github.com/ms-iot/build2015-robot-kit/#software" aria-hidden="true"></a>软件</h1>
+<p>机器人工具包软件是一个带有 6 个主要文件的 UWA<!--EndFragment--> 项目：</p>
+<ol> <li>
+<strong style="line-height: 1.428571429;">MainPage.xaml.cs</strong><span style="line-height: 1.428571429;"> - 主应用程序代码和入口点</span><br>
+</li> <li> <strong>XboxHidController.cs</strong> - Xbox 控制器的初始化和处理逻辑</li> <li> <strong>MotorControl.cs</strong> - 用于控制连续旋转舵机的主逻辑</li> <li> <strong>Controller.cs</strong> - 用于将游戏杆、按键、鼠标和触摸事件转换为机器人动作的逻辑</li> <li> <strong>NetworkCommands.cs</strong> - 用于设置客户端和服务器网络线程和创建/处理网络消息的逻辑</li> <li> <strong>package.appxmanifest</strong> - 用于定义此 UAP 应用程序的清单文件</li> </ol>
+<h2>MainPage.xaml.cs</h2>
+<p>MainPage 类是支持机器人类的入门类。这是 RobotApp 唯一的 UI 页面。屏幕按钮和键输入属性在 MainPage.xaml 中设置。</p>
+<p>MainPage.xaml.cs 也是 RobotApp 读取之前保存的模式的位置，并且会初始化自身以作为机器人或控制器运行。在使用远程控制器（可选）时，机器人需要知道控制应用正在运行的主机计算机的名称。它可以是你的笔记本电脑，甚至也可以是一台手机。以下字符串是可以到默认名称进行硬编码的位置。它还在应用程序数据文件夹的 config.txt 中设置。将其更改为你的便携式计算机的名称或 IP 地址，以便机器人可以连接到它来获取方向命令。</p>
+<pre>// 更改为你的笔记本电脑名称或 IP 地址
+专用静态字符串 defaultHostName = "tak-hp-laptop"; </pre>
+<h2><a id="user-content-xboxhidcontrollercs" href="https://github.com/ms-iot/build2015-robot-kit#xboxhidcontrollercs" aria-hidden="true"></a></h2>
+<h2> <a id="user-content-xboxhidcontrollercs" href="https://github.com/ms-iot/build2015-robot-kit/#xboxhidcontrollercs" aria-hidden="true"></a>XboxHidController.cs</h2>
+<p>XboxHidController 类包含用于从 Xbox 游戏控制器获取输入的接口逻辑。一旦 Controllers.cs 中的初始化方法找到连接的游戏 HID 设备，它将在 XboxHidController.cs 中设置委托来处理输入事件。最终，这些方法将返回一个方向和量值，用于确定如何驱动伺服电机。</p>
+<p>游戏控制器有两种类型的方向输入：方向板和游戏杆。方向板类型只返回八个方向中的一个，以便于使用。游戏杆类型需要将 X 和 Y 值转换为相应的方向，以及在游戏杆靠近其中心位置时过滤出细微动作。</p>
+<h2> <a id="user-content-motorcontrolcs" href="https://github.com/ms-iot/build2015-robot-kit/#motorcontrolcs" aria-hidden="true"></a>MotorControl.cs</h2>
+<p>此 MotorCtrl 类处理所有 I/O，以控制连续旋转伺服电机和块传感器。GPIO 库用于为此项目控制选定的 I/O 引脚。主计时循环生成相应的脉冲信号来针对八个选定方向中的任意一个方向驱动电机。在此循环中还会完成其他关键系统检查（即块传感器、设备通信中断等）。</p>
+<p>块传感器也在此处定义，并且进行设置，以演示基本运动安全功能。与其连接时，如果障碍物触发开关 ，机器人将停止，然后转身。</p>
+<h2> <a id="user-content-controllerscs" href="https://github.com/ms-iot/build2015-robot-kit/#controllerscs" aria-hidden="true"></a>Controllers.cs</h2>
+<p>此控制器类协调可用于驱动机器人的多种类型的输入。处理来自按键、鼠标或触摸输入以及 Xbox 游戏控制器输入（直接连接或从远程 RobotApp 发送）的方向输入。控制器类提供用于将其中每种输入转换为由 MotorControl 类使用的基本方向值的方法。</p>
+<h2> <a id="user-content-networkcommandscs" href="https://github.com/ms-iot/build2015-robot-kit/#networkcommandscs" aria-hidden="true"></a>NetworkCommands.cs</h2>
+<p>此 NetworkCmd 类设置客户端或服务器流套接字对象。如果 RobotApp 是基本机器人，将使用客户端对象。基本机器人将从联网应用读取命令，并且可以选择性地将这些命令与任何本地连接的输入设备一起使用。如果该应用设置为远程控制器，将使用侦听连接的服务器对象。当该应用处于服务器模式时，它会向连接的客户端机器人写入方向命令。RobotApp 的两种模式使用相同的控制器类。</p>
+<p class=""><!--StartFragment-->若要设置主机计算机，请参阅如何在上述 *MainPage.xaml.cs* 中设置 *defaultHostName* 字符串的说明。<!--EndFragment-->&#160;&#160;</p>
+<h2> <a id="user-content-packageappxmanifest" href="https://github.com/ms-iot/build2015-robot-kit/#packageappxmanifest" aria-hidden="true"></a>package.appxmanifest</h2>
+<p>清单文件中定义的功能支持联网和人体学接口设备权限。请确保将它们包含在你的已修改项目内。</p>
+<pre><code>&lt;Capabilities>
+  &lt;Capability Name="privateNetworkClientServer" />
+  &lt;DeviceCapability Name="humaninterfacedevice">
+    &lt;Device Id="any">
+      &lt;Function Type="usage:0001 0005"/>
+    &lt;/Device>
+  &lt;/DeviceCapability>
+&lt;/Capabilities> </code></pre>
+<h2> <a id="user-content-future-considerations" href="https://github.com/ms-iot/build2015-robot-kit/#future-considerations" aria-hidden="true"></a>将来注意事项</h2>
+<ul> <li> <strong>伺服系统电源</strong> - 机器人已使伺服系统关闭 Raspberry Pi 2 GPIO 端口的电源。作为用于演示 GPIO 的简单示例执行此操作。这可能会导致在 Raspberry Pi 2 上发生显著的电流消耗和潜在的电压骤降。只要你的电源分级为 2 安培便无大碍。对于长时间的使用情况，建议你将伺服系统的控件移动到 Raspberry Pi 2 中单独通电和控制的 PWM 跳线帽，如<a href="https://www.adafruit.com/products/2327">这个</a>。</li> <li> <strong>开关位置</strong> - 开关是机器人项目的一部分，用于演示 GPIO 输入。如果你希望构建机器人的自动控制，则开关目前不在最佳位置上。建议你将开关移到更优的位置。</li> </ul>
+<h1> <a id="user-content-make-invent-do" href="https://github.com/ms-iot/build2015-robot-kit/#make-invent-do" aria-hidden="true"></a>构建。构想。执行。</h1>
+<p>此机器人工具包（硬件和软件）作为<a href="https://github.com/ms-iot/build2015-robot-kit/blob/develop/LICENSE">开源项目</a>提供。</p>
+<p>该工具包是一个起点。在机械、电气和软件设计方面尽情发挥你的创造力。构建你自己的机器人工具包。对其进行装饰。改进排版图。添加电动机；添加传感器；提交改进和 Bug 修复！ 无论是什么，请告诉我们你用它执行了什么操作：#MakeInventDo</p>
+<p>Microsoft IoT 团队感谢你！</p>
+</div>&lt;

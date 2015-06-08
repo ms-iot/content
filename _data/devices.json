@@ -45,5 +45,52 @@
          "buy-text":"Buy an Arduino",
          "start-text":"Start Now"
       }
-   ]
+   ],
+   "zh-CN":[
+      {
+         "name":"Raspberry Pi 2",
+         "link":"win10/SetupRPI.htm",
+         "buy":"http://www.raspberrypi.org/products/raspberry-pi-2-model-b/",
+         "image":"RPi2_0.png",
+         "text":"è¯¥æ ‘èŽ“æ´¾2æ˜¯æ’å…¥è®¡ç®—æœºæ˜¾ç¤ºå™¨æˆ–ç”µè§†çš„æˆæœ¬ä½Žï¼Œä¿¡ç”¨å¡å¤§å°çš„è®¡ç®—æœºï¼Œå¹¶ä½¿ç”¨æ ‡å‡†é”®ç›˜å’Œé¼ æ ‡ã€‚è¯¥æ ‘èŽ“æ´¾2è¿è¡ŒWindows 10ç‰©è”ç½‘çš„æ ¸å¿ƒã€‚",
+         "buy-text":"è´­ä¹° Raspberry Pi 2",
+         "start-text":"çŽ°åœ¨å¼€å§‹"
+      },
+      {
+         "name":"MinnowBoard Max",
+         "link":"win10/SetupMBM.htm",
+         "buy-inter":"win10/BuyMBM.htm",
+         "image":"MBM_0.png",
+         "text":"MinnowBoard MAXæ˜¯ä¸€ä¸ªå¼€æ”¾çš„ç¡¬ä»¶åµŒå…¥å¼ä¸»æ¿é‡‡ç”¨è‹±ç‰¹å°”å‡ŒåŠ¨ç³»åˆ—E38XX SOCçš„æ ¸å¿ƒã€‚ MinnowBoardæœ€å¤§æ”¯æŒWindows 10ç‰©è”ç½‘çš„æ ¸å¿ƒå†…å¹•é¢„è§ˆã€‚",
+         "buy-text":"è´­ä¹° MinnowBoard Max",
+         "start-text":"çŽ°åœ¨å¼€å§‹"
+      },
+      {
+         "name":"Galileo",
+         "link":"win8/SetupGalileo.htm",
+         "buy":"http://www.intel.com/content/www/us/en/do-it-yourself/where-to-buy.html#galileo",
+         "image":"Galileo_0.png",
+         "text":"è‹±ç‰¹å°”ä¼½åˆ©ç•¥æ˜¯ç¬¬ä¸€ä¸ªè¡ŒåŸºäºŽIntel x86æž¶æž„çš„Arduinoè®¤è¯çš„å¼€å‘æ¿å’Œå¼€å‘æ˜¯ä¸“ä¸ºåˆ¶é€ å•†å’Œæ•™è‚²ç¤¾åŒºã€‚ä¼½åˆ©ç•¥æ”¯æŒWindows ï¼Œè€Œä¸æ˜¯Windows 10ç‰©è”ç½‘çš„æ ¸å¿ƒï¼Œåªæœ‰ä»¥å‰çš„ç‰ˆæœ¬",
+         "buy-text":"è´­ä¹° Galileo",
+         "start-text":"çŽ°åœ¨å¼€å§‹"
+      },
+      {
+         "name":"Windows Remote Arduino",
+         "link":"win10/SetupWRA.htm",
+         "buy":"http://store.arduino.cc",
+         "image":"WindowsPhone_0.png",
+         "text":"Windowsè¿œç¨‹Arduinoæ˜¯ä¸€ä¸ªå¼€æºçš„Windowsè¿è¡Œæ—¶ç»„ä»¶åº“ï¼Œè®©åº„å®¶é€šè¿‡è“ç‰™æˆ–USBè¿žæŽ¥åˆ°æŽ§åˆ¶ä¸€ä¸ªArduino ã€‚å…¶ç›®çš„æ˜¯ä¸ºè°æƒ³è¦é©¾é©­Arduinoç¡¬ä»¶ä½¿ç”¨Windowsè¿è¡Œæ—¶è¯­è¨€çš„åŠ›é‡Windowsè¿è¡Œæ—¶å¼€å‘äººå‘˜ã€‚å¼€å‘å•†è°åŒ…æ‹¬è¯¥ç»„ä»¶åœ¨ä»–ä»¬çš„é¡¹ç›®å°†è‡ªåŠ¨èŽ·å¾—å…¶åŠŸèƒ½åœ¨ä»»ä½•WinRTçš„è¯­è¨€ï¼ˆC ++ / CX ï¼ŒC ï¼ƒå’ŒJavaScript ï¼‰ ã€‚",
+         "buy-text":"è´­ä¹° Arduino",
+         "start-text":"çŽ°åœ¨å¼€å§‹"
+      },
+      {
+         "name":"Windows Virtual Shields for Arduino",
+         "link":"win10/SetupWVSA.htm",
+         "buy":"http://store.arduino.cc",
+         "image":"Arduino_1.png",
+         "text":"Windowsè™šæ‹Ÿç›¾çš„Arduinoæ˜¯ä¸€ä¸ªå¼€æºåº“ï¼Œä¸»è¦ä¸ºçš„Arduino UNOè¿™ä¸Žè¿è¡Œåœ¨æ‰€æœ‰çš„Windows 10çš„è®¾å¤‡ï¼ŒåŒ…æ‹¬Windowsçš„Lumiaæ‰‹æœºçš„å¼€æºé€šç”¨çš„Windowsåº”ç”¨ç¨‹åºè¿›è¡Œé€šä¿¡ã€‚è¯¥åº“å…¬å¼€çš„Lumiaæ‰‹æœºçš„ä¼ æ„Ÿå™¨å’Œèƒ½åŠ›æå‡åˆ°ä¸€ä¸ªArduinoæŽ¥çº¿ç¤ºæ„å›¾ã€‚",
+         "buy-text":"è´­ä¹° Arduino",
+         "start-text":"çŽ°åœ¨å¼€å§‹"
+      }
+	  ]
 }
