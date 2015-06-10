@@ -27,7 +27,7 @@ This application is designed for a headless device.  To better understand what H
 
 ###Load the project in Visual Studio
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/PythonBlinkyServer).  Make a copy of the folder on your disk and open the project from Visual Studio.
+You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/BlinkyServer/Python/PythonBlinkyServer).  Make a copy of the folder on your disk and open the project from Visual Studio.
 
 If you're building for MinnowBoard Max, select `x86` in the architecture drop down.  If you're building for Raspberry Pi 2, select `ARM`.
 
