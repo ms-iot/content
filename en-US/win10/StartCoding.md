@@ -133,9 +133,10 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/ConsoleApp.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <h4>I2C Accelerometer</h4>
-                        <p>Create an app leveraging I2C on devices running Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2CAccelerometer.htm">Learn More</a>
+                        <h4>I2C/SPI Accelerometer</h4>
+                        <p>Create an app leveraging I2C or SPI on devices running Windows 10 IoT Core Insider Preview</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2CAccelerometer.htm">I2C Accelerometer Tutorial</a><br>
+						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SPIAccelerometer.htm">SPI Accelerometer Tutorial</a><br>
                     </div>
                     <div class="col-md-3">
                         <h4>SPI Display</h4>
