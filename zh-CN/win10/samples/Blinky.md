@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Blinky 示例
-permalink: /zh-cn/win10/samples/Blinky.htm
-lang: zh-cn
+permalink: /zh-CN/win10/samples/Blinky.htm
+lang: zh-CN
 ---
 
 {% include steps.html device="RPI2" %}

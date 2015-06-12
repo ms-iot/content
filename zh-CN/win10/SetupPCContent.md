@@ -2,13 +2,13 @@
 
 我们已创建了一个版本文件，用于描述所需工具的受支持版本。将其用作在电脑上安装所需工具的范本：
 
-* 从[此处](https://dev.windows.com/zh-cn/downloads/windows-10-developer-tools)**安装 Windows 10**
+* 从[此处](https://dev.windows.com/zh-CN/downloads/windows-10-developer-tools)**安装 Windows 10**
 
-* 从[此处](https://dev.windows.com/zh-cn/downloads/install-dev-tools-visual-studio-2015)**安装 Visual Studio 2015 Preview**。在启动安装程序时选择自定义选项，然后选择“通用 Windows 应用开发工具”。在下一个页面上，确认将安装“工具和 Windows SDK”和“Windows Mobile 的仿真器”选项。
+* 从[此处](https://dev.windows.com/zh-CN/downloads/install-dev-tools-visual-studio-2015)**安装 Visual Studio 2015 Preview**。在启动安装程序时选择自定义选项，然后选择“通用 Windows 应用开发工具”。在下一个页面上，确认将安装“工具和 Windows SDK”和“Windows Mobile 的仿真器”选项。
 
 * 确保你已按照[这些说明](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx)**启用开发人员模式**。
 
-	* 一些客户报告上一步的安装问题。作为解决方法，请转到[此处](https://dev.windows.com/zh-cn/downloads/windows-10-developer-tools)的 **Windows 开发人员工具预览页**。
+	* 一些客户报告上一步的安装问题。作为解决方法，请转到[此处](https://dev.windows.com/zh-CN/downloads/windows-10-developer-tools)的 **Windows 开发人员工具预览页**。
 
 	<img class="screen-snippet" src="{{site.baseurl}}/images/SetupPC/download.PNG"> 向下滚动到页面底部的“其他下载选项”部分，并安装“适用于 Windows 10 的独立 Windows 10 SDK”和“移动版 Microsoft Windows 10 仿真器”。
 

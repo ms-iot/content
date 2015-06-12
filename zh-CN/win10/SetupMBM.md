@@ -1,8 +1,8 @@
 ---
 layout: default
 title: SetupBoard
-permalink: /zh-cn/win10/SetupMBM.htm
-lang: zh-cn
+permalink: /zh-CN/win10/SetupMBM.htm
+lang: zh-CN
 ---
 
 #入门
@@ -68,7 +68,7 @@ lang: zh-cn
 我们提供了一个实用工具，可让你使用 Windows 10 IoT Core Insider Preview 设置 SD 卡。如果你没有 SD 卡，建议使用此 [SD 卡](http://www.amazon.com/gp/product/B00IVPU786?tag=thewire06-20&linkCode=as2&creative=374929&camp=211189)或此 [SD 卡](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445/ref=sr_1_15?ie=UTF8&qid=1415926730&sr=8-15&keywords=micro+sd+xd)。以下步骤只能在运行 [Windows 10](https://insider.windows.com)（版本 10069 或更高版本）的系统上执行。遵循以下说明来配置 SD 卡：
 
 * 注意：你将需要在物理 Windows 计算机（而不是 VM）上遵循这些说明操作，因为你需要对 SD 卡读卡器的访问权限。
-* 请在 [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558) 上注册我们的计划，它是我们的软件发布管理平台。你将需要拥有 [Microsoft 帐户](http://www.microsoft.com/zh-cn/account/default.aspx)。如果已在 Microsoft Connect 上注册我们的计划（或不确定之前是否注册过）并尝试重新注册，请不必担心，你将只会看到一个空白页面。如果你之前尚未在 Connect 上注册我们的计划，它将提示你创建社交资料并接受许可协议。你可以在[此处](https://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57783)找到注册 Microsoft Connect 的分步说明。
+* 请在 [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558) 上注册我们的计划，它是我们的软件发布管理平台。你将需要拥有 [Microsoft 帐户](http://www.microsoft.com/zh-CN/account/default.aspx)。如果已在 Microsoft Connect 上注册我们的计划（或不确定之前是否注册过）并尝试重新注册，请不必担心，你将只会看到一个空白页面。如果你之前尚未在 Connect 上注册我们的计划，它将提示你创建社交资料并接受许可协议。你可以在[此处](https://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57783)找到注册 Microsoft Connect 的分步说明。
 * 从 Microsoft Connect [下载](https://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57783)包“适用于 MinnowBoard MAX 的Windows 10 IoT Core Insider Preview 映像”。如果你看到一个空白页面或页面上未列出任何下载内容，请通过查看屏幕右上方的登录信息确认已登录到 Microsoft Connect。如果你未登录，请通过单击登录。
 * 将 SD 卡插入 SD 读卡器。
 * 打开管理员命令提示符，并导航到包含本地 flash.ffu 的文件夹。

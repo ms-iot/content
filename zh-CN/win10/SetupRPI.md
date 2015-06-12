@@ -1,8 +1,8 @@
 ---
 layout: default
 title: SetupBoard
-permalink: /zh-cn/win10/SetupRPI.htm
-lang: zh-cn
+permalink: /zh-CN/win10/SetupRPI.htm
+lang: zh-CN
 ---
 
 #入门
@@ -30,7 +30,7 @@ lang: zh-cn
 遵循以下说明配置 SD 卡：
 
 1. 请在 **[Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558) 上注册**，它是我们的软件发布管理平台。
-	* 你将需要拥有 [Microsoft 帐户](http://www.microsoft.com/zh-cn/account/default.aspx)
+	* 你将需要拥有 [Microsoft 帐户](http://www.microsoft.com/zh-CN/account/default.aspx)
 	* 如果已在 [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558) 上注册加入了我们的计划（或不确定之前是否注册过），你将只会看到一个空白页面。
 	* 如果你之前尚未在 Connect 上注册加入我们的计划，它将提示你创建社交资料并接受许可协议。按照[注册 Microsoft Connect](http://ms-iot.github.io/content/SigninMSConnect.htm) 的分步说明进行操作。
 

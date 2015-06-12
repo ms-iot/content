@@ -1,8 +1,8 @@
 ---
 layout: default
 title: SetupPCWRA
-permalink: /zh-cn/win10/SetupPCWRA.htm
-lang: zh-cn
+permalink: /zh-CN/win10/SetupPCWRA.htm
+lang: zh-CN
 ---
 
 #入门

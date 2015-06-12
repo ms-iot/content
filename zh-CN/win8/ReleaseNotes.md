@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 发行说明
-permalink: /zh-cn/ReleaseNotes.htm
-lang: zh-cn
+permalink: /zh-CN/ReleaseNotes.htm
+lang: zh-CN
 ---
 
 #发行说明

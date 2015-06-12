@@ -1,8 +1,8 @@
 ---
 layout: default
 title: HelloWorld
-permalink: /zh-cn/win10/samples/HelloWorld.htm
-lang: zh-cn
+permalink: /zh-CN/win10/samples/HelloWorld.htm
+lang: zh-CN
 ---
 
 ##“Hello, World!” 示例

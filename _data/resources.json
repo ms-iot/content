@@ -10,11 +10,11 @@
    },
    "zh-CN":{
       "title":"Windows IoT",
-      "description":"èŽ·å–Windowså’Œå¼€å‘å·¥å…·ï¼Œèƒ½å¤Ÿè½»æ¾å»ºç«‹å’Œç®¡ç†å¤šä¸ªå¹³å°ä¸Šçš„ä¸‹ä¸€ä»£äº’è”ç½‘çš„ç‰©è”ç½‘è§£å†³æ–¹æ¡ˆã€‚",
+      "description":"Get Windows and development tools to easily build and manage the next generation of Internet of Things solutions on multiple platforms.",
       "keywords":"Internet of Things, Internet of Your Things, IoT, Windows IoT, Microsoft IoT, Connected Devices, Windows Universal Apps, Universal Apps, Windows 10, Windows 10 IoT Core, Development Board, Raspberry Pi, Raspberry Pi 2, Intel Galileo, Intel Galileo Gen 2, Galileo, MinnowBoard Max, MBM, Windows Developers, Windows Developer Program for IoT, Makers, Maker Faire, Internet Connected Devices, Connect the Dots, .NET Micro Framework, .NET MF, Windows Embedded, Arduino, Smart things, Smart devices, Smart connected devices, Home Automation, Robot, Maker Cloud, Windows Analytics, Windows Dashboard",
-      "footer-header":"é—®é¢˜/å»ºè®®",
-      "footer-p-text":"ä¸Žå¾€å¸¸ä¸€æ ·ï¼Œå¯¹äºŽé—®é¢˜æˆ–æ„è§ï¼Œ",
-      "footer-a-text":"è”ç³»æˆ‘ä»¬",
-      "github-edit-text":"ç¼–è¾‘æ­¤é¡µé¢åœ¨GitHubä¸Š"
-   }
+      "footer-header":"Questions/Suggestions",
+      "footer-p-text":"As always, for questions or feedback, ",
+      "footer-a-text":"contact us",
+      "github-edit-text":"Edit this page on GitHub"
+   }   
 }

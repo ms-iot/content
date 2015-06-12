@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 主页
-permalink: /zh-cn/Faqs.htm
-lang: zh-cn
+permalink: /zh-CN/Faqs.htm
+lang: zh-CN
 ---
 <div class="row col-md-12">
     <div class="col-md-2 col-xs-12 faq-nav section-heading">
@@ -39,7 +39,7 @@ lang: zh-cn
         <a name="uwp"></a>
         <h2 class="faq-h2">通用 Windows 平台 (UWP) 应用</h2>
         <p class="bold"><em>我在我的 Vistual Studio 计算机上收到“你需要启用开发人员模式”。我该怎么办？</em></p>
-        <p>在后续 Windows 版本中，将提供一个“面向开发人员”的设置页面，可以通过此页面进行控制。在此之前，可以使用组策略编辑器解决此问题。<a href='https://msdn.microsoft.com/zh-cn/library/windows/apps/dn706236.aspx'>此处</a>提供更多详细信息</br>
+        <p>在后续 Windows 版本中，将提供一个“面向开发人员”的设置页面，可以通过此页面进行控制。在此之前，可以使用组策略编辑器解决此问题。<a href='https://msdn.microsoft.com/zh-CN/library/windows/apps/dn706236.aspx'>此处</a>提供更多详细信息</br>
         <ol>
         <li>运行 Gpedit.msc </li>
 	<li>在 [“本地计算机策略”>“计算机配置”>“管理模板”>“Windows 组件”>“应用程序包部署”] 下，启用以下策略：</li>

@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 主页
-permalink: /zh-cn/Community.htm
-lang: zh-cn
+permalink: /zh-CN/Community.htm
+lang: zh-CN
 ---
 <div class="row section-heading">
     <h1>社区</h1>
@@ -49,7 +49,7 @@ lang: zh-cn
     <p>若要提问和回答技术问题以及与其他开发人员进行交流，论坛是一个不错的选择。我们通过以下论坛支持相关社区：</p>
     <p>MSDN 是我们的主要论坛，你可以在其中就各种主题向我们提问。</p>
     <p>
-      <a href="https://social.msdn.microsoft.com/forums/zh-cn/home?forum=WindowsIoT">MSDN 论坛 »</a>
+      <a href="https://social.msdn.microsoft.com/forums/zh-CN/home?forum=WindowsIoT">MSDN 论坛 »</a>
     </p>
     <p>Raspberry Pi 论坛是直接查找特定于 Raspberry Pi 2 板的问题的最佳位置。</p>
     <p>

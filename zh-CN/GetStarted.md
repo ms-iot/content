@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 入门
-permalink: /zh-cn/GetStarted.htm
-lang: zh-cn
+permalink: /zh-CN/GetStarted.htm
+lang: zh-CN
 ---
 
 #入门
