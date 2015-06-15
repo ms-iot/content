@@ -51,7 +51,7 @@ This exercise demonstrates how to manually copy and install the driver to a Wind
 We will use **bcdedit** to enable test-signing on the target, that is, the Windows IoT Core device.
 Run the following command from the elevated PowerShell command window opened in the previous step:
 
-    [192.168.0.243]: PS C:\> bcdedit /store C:\EFIESP\EFI\Microsoft\boot\BCD /set testsigning on
+    [192.168.0.243]: PS C:\> bcdedit /set testsigning on
 
 ### Reboot the target Windows IoT Core device
 
