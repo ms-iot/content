@@ -10,8 +10,7 @@ lang: en-US
 
 ###Set up your PC
 * Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
-* Install [Node.js Tools 1.1 Beta for Visual Studio 2015](http://aka.ms/ntvslatest){:target="_blank"}.
-* Install [NTVS IoT Extension]({{site.downloadurl}}) (This step requires that you have signed up with our program on Microsoft Connect. Instructions on how to do that can be found [here]({{site.baseurl}}/{{page.lang}}/Downloads.htm)).
+* Install NTVS (Node.js Tools for Visual Studio) IoT Extension Beta from [here]({{site.downloadurl}}). This step requires that you have signed up with our program on Microsoft Connect. Instructions on how to do that can be found [here]({{site.baseurl}}/{{page.lang}}/Downloads.htm).
 
 
 ###Create a new Node.js (Windows Universal) project
@@ -38,7 +37,9 @@ http.createServer(function (req, res) {
 
 ###Deploy the server to your Windows IoT Core device
 * Go to the Project menu and select '<Your project name> Properties.' You could also right-click on the project node in solution explorer to access Properties.
-* Enter the IP Address in the Remote Machine text box as shown below (--no-console and --debug arguments are required and added automatically).
+* Enter the IP Address in the Remote Machine text box as shown below (the `--debug` argument is required for debugging and is added automatically).
+* You can also add `--use-logger` as an argument to redirect console output to a file in the local storage folder of the UWP application
+  (C:\Users\DefaultAccount\AppData\Local\Packages\&lt;Your Project Name&gt;_&lt;Publisher Hash String&gt;\LocalState\nodeuwp.log).
 * If you're building for Minnowboard Max, select `x86` in the dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
 
     ![Node.js Windows Universal Project Properties]({{site.baseurl}}/images/Nodejs/nodejswu-properties.png)
