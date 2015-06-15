@@ -10,8 +10,7 @@ lang: en-US
 
 ###Set up your PC
 * Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
-* Install [Node.js Tools 1.1 Beta for Visual Studio 2015](http://aka.ms/ntvslatest){:target="_blank"}.
-* Install [NTVS IoT Extension]({{site.downloadurl}}) (This step requires that you have signed up with our program on Microsoft Connect. Instructions on how to do that can be found [here]({{site.baseurl}}/{{page.lang}}/Downloads.htm)).
+* Install NTVS (Node.js Tools for Visual Studio) IoT Extension Beta from [here]({{site.downloadurl}}). This step requires that you have signed up with our program on Microsoft Connect. Instructions on how to do that can be found [here]({{site.baseurl}}/{{page.lang}}/Downloads.htm).
 
 
 ###Set up your hardware
