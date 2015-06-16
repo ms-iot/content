@@ -76,9 +76,9 @@ lang: en-US
                 </div>
                 <div class="row section-heading">
                     <div class="col-md-3">
-                        <h4>Compatible Peripheral USB Devices</h4>
-                        <p>Find a list of USB devices compatible with Window 10 IoT Core devices</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/Peripherals.htm">Learn More</a>
+                        <h4>WiFi Connectivity</h4>
+                        <p>Setup and configure WiFi on your Windows IoT Core device</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/SetupWiFi.htm">Learn More</a>
                     </div>
 				    <div class="col-md-3">
                         <h4>Using WINDBG</h4>
@@ -101,6 +101,13 @@ lang: en-US
                         <h4>Web-based Device Management</h4>
                         <p>Get advanced diagnostics about your machine from the web</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm">Learn More</a>
+                    </div>
+                </div>
+				<div class="row section-heading">
+				    <div class="col-md-3">
+                        <h4>Compatible Peripheral USB Devices</h4>
+                        <p>Find a list of USB devices compatible with Window 10 IoT Core devices</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/Peripherals.htm">Learn More</a>
                     </div>
                 </div>
             </div>
