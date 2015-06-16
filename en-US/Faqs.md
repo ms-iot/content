@@ -101,5 +101,9 @@ lang: en-US
         <p>This occurs if you have put Pi2 into headless mode instead of headed mode. To put this back to headed mode issue the following command from powershell </p>
         <p>setbootoption.exe headed</p>
         <br />
+        <br />
+        <p class="bold"><em>I created a new Background Application (IoT) project and used '-' or '_' in the name.  When I build my project, I see a Validation error (C00CE169).  How do I resolve this?</em></p>
+        <p>This can be fixed by opening the Package.appxmanifest and removing all '_' characters from the Identity.Name attribute.</p>
+        <br />
     </div>
 </div>
