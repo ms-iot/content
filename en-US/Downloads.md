@@ -50,7 +50,7 @@ lang: en-US
                     <div class="col-md-3">
                         <h4>NTVS IoT Extension Beta 2015</h4>
                         <p>Extends NTVS (Node.js Tools for Visual Studio) to support running Node.js on Windows 10 IoT Core</p>
-                        <a href="http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57785" target="_blank">Download</a>
+                        <a href="TODO" target="_blank">Download</a>
                     </div>
                     <div class="col-md-3">
                         <h4>PTVS for IoT Preview 2015</h4>

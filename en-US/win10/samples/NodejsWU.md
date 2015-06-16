@@ -10,7 +10,8 @@ lang: en-US
 
 ###Set up your PC
 * Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
-* Install NTVS (Node.js Tools for Visual Studio) IoT Extension Beta from [here]({{site.downloadurl}}). This step requires that you have signed up with our program on Microsoft Connect. Instructions on how to do that can be found [here]({{site.baseurl}}/{{page.lang}}/Downloads.htm).
+* Install NTVS (Node.js Tools for Visual Studio) IoT Extension Beta from [here](TODO).
+* To use the npm feature in NTVS, install Node.js on your machine from [here](https://nodejs.org/download/). Ensure that you select 'npm package manager' as one of the features to be installed.
 
 
 ###Create a new Node.js (Windows Universal) project
@@ -46,8 +47,6 @@ http.createServer(function (req, res) {
 
 * Now we're ready to deploy to the remote Windows IoT Core device. Simply press F5 (or select Debug \| Start Debugging) to start debugging the server.
 
-  **Note:** In the Output window, you may see the message "Error - Cannot load packages." This doesn't affect the build process and can be ignored. Using the npm feature in your project is not yet supported.
-
 * When the server is running, open up a browser and enter the address http://&lt;IP address of your device&gt;:1337. The result should look like the picture below.
 
     ![Hello World Result]({{site.baseurl}}/images/Nodejs/helloworld-ie.PNG)
@@ -79,3 +78,7 @@ uwp.close();
 The result from the code above should look like this:
 
 ![DateTime Result]({{site.baseurl}}/images/Nodejs/datetime-ie.PNG)
+
+### GitHub
+* NTVS IoT Extension source code: [https://github.com/ms-iot/ntvsiot](https://github.com/ms-iot/ntvsiot)
+* Node.js UWP wrapper source code: [https://github.com/ms-iot/node-uwp](https://github.com/ms-iot/node-uwp)
