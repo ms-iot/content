@@ -29,20 +29,20 @@ lang: en-US
         <pre>hdmi_group=2                # forces DVI timing to be used</pre>
         <p class="bold"><em>Can I set up a Raspberry Pi 2 using Windows 8.1?</em></p>
         <p>You will need Windows 10 on your PC to be able to set up Raspberry Pi 2 running Windows 10 IoT Core.</p>
-		<p class="bold"><em>Why does my SD card have to be 8gb, do you really need all that space?</em></p>
+        <p class="bold"><em>Why does my SD card have to be 8gb, do you really need all that space?</em></p>
         <p>The IoT Core image is under 1gb, the 8gb is meant to give you space to install additional content on your device.</p>
-		<p class="bold"><em>How do I remove Windows 10 IoT Core from my SD card?</em></p>
+        <p class="bold"><em>How do I remove Windows 10 IoT Core from my SD card?</em></p>
         <p>After you've flashed the Windows 10 IoT Core image to your SD card, the reported size of the card will drop to 67.3MB. In order to restore the card back for general use, you'll need to run a series commands in an elevated command prompt (Simply reformatting the card alone won't work):
-		<ul>
-		<li><kbd>diskpart</kbd></li>
-		<li><kbd>list disk</kbd> (This command lists the drives you have connected to your computer. Take note of the disk number of your SD card)</li>
-		<li><kbd>select disk &lt;number&gt;</kbd> (Replace <kbd>&lt;number&gt;</kbd> with the disk number of your SD card from the previous step</li>
-		<li><kbd>clean</kbd></li>
-		<li><kbd>create partition primary</kbd></li>
-		<li><kbd>format fs=ntfs quick</kbd></li>
-		<li><kbd>exit</kbd></li>
-		</ul>
-		Your SD card is now ready for general purpose use again.
+        <ul>
+        <li><kbd>diskpart</kbd></li>
+        <li><kbd>list disk</kbd> (This command lists the drives you have connected to your computer. Take note of the disk number of your SD card)</li>
+        <li><kbd>select disk &lt;number&gt;</kbd> (Replace <kbd>&lt;number&gt;</kbd> with the disk number of your SD card from the previous step</li>
+        <li><kbd>clean</kbd></li>
+        <li><kbd>create partition primary</kbd></li>
+        <li><kbd>format fs=ntfs quick</kbd></li>
+        <li><kbd>exit</kbd></li>
+        </ul>
+        Your SD card is now ready for general purpose use again.
        </p>
         <a name="uwp"></a>
         <h2 class="faq-h2">Universal Windows Platform (UWP) Apps</h2>
@@ -50,10 +50,10 @@ lang: en-US
         <p>In a later builds of windows there will be a settings page "For developers" that will allow you to control this.  Until then you can work around this using the Group Policy editor.  More details <a href='https://msdn.microsoft.com/en-us/library/windows/apps/dn706236.aspx'>here</a></br>
         <ol>
         <li>Run Gpedit.msc </li>
-	<li>Under [Local Computer Policy > Computer Configuration > Administrative Templates > Windows Components > App Package Deployment] enable the following policies:</li>
-	<ul><li>Allow all trusted apps to install (will enable sideloading of trust signed apps such as for enterprise apps)</li>
-	<li>Allow development of Windows Store apps without installing a developer license (will enable developer F5 mode installs like the dev license would on win8.1)</li>
-	</ul></ol></p>
+    <li>Under [Local Computer Policy > Computer Configuration > Administrative Templates > Windows Components > App Package Deployment] enable the following policies:</li>
+    <ul><li>Allow all trusted apps to install (will enable sideloading of trust signed apps such as for enterprise apps)</li>
+    <li>Allow development of Windows Store apps without installing a developer license (will enable developer F5 mode installs like the dev license would on win8.1)</li>
+    </ul></ol></p>
         <p class="bold"><em>Are true console apps supported on Windows 10 IoT Core?</em></p>
         <p>True “console” apps aren’t really going to be supported for the IoT core OS, headless or not. You can still deploy and run a standard win32 console app here, it just won’t be connected to any on-device console. When running headless you should just get that black screen. When running headed the only supported UI is via the UWP UI stacks (XAML, HTML, DirectX).</p>
         <br />
@@ -104,6 +104,17 @@ lang: en-US
         <br />
         <p class="bold"><em>I created a new Background Application (IoT) project and used '-' or '_' in the name.  When I build my project, I see a Validation error (C00CE169).  How do I resolve this?</em></p>
         <p>This can be fixed by opening the Package.appxmanifest and removing all '_' characters from the Identity.Name attribute.</p>
+        <br />
+        <br />
+        <p class="bold"><em>My Node.js UWP project fails to load after installing the latest release (NTVS Bundle VS 2015.exe v1.0).  How do I resolve this?</em></p>
+        <p>If you installed the first version of NTVS IoT Extension Beta, and then install the latest release which is bundled in NTVS Bundle VS 2015, you will see 
+        a project load error. The error will be something like "The imported project "...\Microsoft.NodejsUap.targets" was not found". To resolve this problem, do 
+        the following:
+        <ul><li>Right click on the project and select Edit &lt;Your Project Name&gt;.</li>
+        <li>Look for "NodejsUap" in the project file, replace it with "NodejsUwp", and save.</li></ul>
+        If you attempt to deploy the app, it will crash immediately. To fix this:
+        <ul><li>Open Package.appxmanifest.</li>
+        <li>Replace all occurences of "winuniversalnode" with "nodeuwp" and save.</li></ul></p>
         <br />
     </div>
 </div>
