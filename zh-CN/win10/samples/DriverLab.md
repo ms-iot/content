@@ -1,47 +1,45 @@
 ---
 layout: default
-title: Driver lab
-permalink: /en-US/win10/samples/DriverLab.htm
-lang: en-US
+title: 驱动程序实验
+permalink: /zh-CN/win10/samples/DriverLab.htm
+lang: zh-CN
 ---
 
-##Write a driver with Windows IoT Core
+##为 Windows IoT Core 编写驱动程序
 
-###Did you set up your environment?
+###是否设置了环境？
 
-We assume you already [set up your environment]({{site.baseurl}}/{{page.lang}}/GetStarted.htm), have a working Visual Studio, and have a device running Windows IoT Core.
+假设你已经[设置了环境]({{site.baseurl}}/{{page.lang}}/GetStarted.htm)、有正常运行的 Visual Studio，并且有一台运行 Windows IoT Core 的设备。
 
-Remember, you can always [contact us]({{site.baseurl}}/{{page.lang}}/Community.htm#contact) for help and suggestions!
+请记住，如需帮助和建议，请尽管[联系我们]({{site.baseurl}}/{{page.lang}}/Community.htm#contact)！
 
-###Lab objective
-In this lab we will be walking through the process of creating and installing a simple peripheral device driver that will run on Windows IoT Core.  More specifically, we will be creating a Kernel Mode Device Framework driver (KMDF) using the Windows Driver Kit (WDK) and the Windows Driver Framework (WDF) APIs.
+###实验目标
+在此实验中，我们将逐步介绍创建和安装将在 Windows IoTCore 上运行的简单外围设备驱动程序的过程。具体而言，我们将使用 Windows 驱动程序工具包 \(WDK\) 和 Windows 驱动程序框架 \(WDF\) API 创建内核模式设备框架驱动程序 \(KMDF\)。
 
-###Lab description
-The name of the driver for this lab is `gpiokmdfdemo`, and it will receive different IOCTL commands from a simple user-mode Win32 console application called `BinkyApp.exe`.  These IOCTL commands will tell the driver what GPIO pins to set high or low.  The driver `gpiokmdfdemo` will in turn communicate with the GpioClx (GPIO Class Extension) in Windows IoT Core to accomplish these requests.  Take a look at the diagram below to familiarize yourself with the inner workings of this lab.
+###实验描述
+用于此实验的驱动程序的名称是 `gpiokmdfdemo`，而且它将从称为 `BinkyApp.exe` 的简单用户模式 Win32 控制台应用程序接收不同的 IOCTL 命令。这些 IOCTL 命令将告诉驱动程序要将哪些 GPIO 引脚设置为高或低。驱动程序 `gpiokmdfdemo` 将依次与 Windows IoT Core 中的 GpioClx（GPIO 类扩展）通信来完成这些请求。查看下图来熟悉此实验的内部工作原理。
 
-###Lab source code and binaries
-The source code for the driver can be found here: `<Samples-Folder>\DriverSamples\gpiokmdfdemo`.
-The source code for the console application can be found here: `<Samples-Folder>\DriverSamples\consoleapp\BlinkyApp`.
-Additionally, we have also provided the pre-built binaries of the console application for x86 and ARM architectures.  These binaries can be found here: `<Samples-Folder>\DriverSamples\BlinkyApp`.
+###实验源代码和二进制文件
+可以在此处获取驱动程序的源代码：`<Samples-Folder>\DriverSamples\gpiokmdfdemo`。可以在此处获取控制台应用程序的源代码：`<Samples-Folder>\DriverSamples\consoleapp\BlinkyApp`。此外，我们还提供了针对 x86 和 ARM 体系结构的控制台应用程序的预生成二进制文件。可以在此处获取这些二进制文件：`<Samples-Folder>\DriverSamples\BlinkyApp`。
 
 <br/>
 
-![Driver Lab Overview]({{site.baseurl}}/images/DriverLab/drivers-overview.png)
+![驱动程序实验概述]({{site.baseurl}}/images/DriverLab/drivers-overview.png)
 
-The tutorials for this lab will be presented as hands-on tasks that have been grouped into the following sections:
+本实验的教程将以动手实践式的任务形式提供，并已划分为以下部分：
 
-* Open project for an existing driver
-* Build a driver using Visual Studio
-* Deploy driver manually to Windows IoT Core device
+* 打开现有驱动程序的项目
+* 使用 Visual Studio 生成驱动程序
+* 将驱动程序手动部署到 Windows IoT Core 设备
 
-###Note
-In these tutorials, you will be required to run various commands. Please use an elevated Windows Command Prompt (cmd.exe) to run these commands.
+###注意
+在这些教程中，将需要你运行各种命令。请使用提升的 Windows 命令提示符 \(cmd.exe\) 运行这些命令。
 
 
-###Tutorials
+###教程
 
-1. [Open project for an existing driver]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab1.htm) --- In this exercise, you will open an existing driver to see the basic structure of a driver.
+1. [打开现有驱动程序的项目]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab1.htm) – 在此练习中，你将要打开一个现有的驱动程序，以查看驱动程序的基本结构。
 
-2. [Use Visual Studio to build a driver]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab2.htm) --- In this exercise, you will use Visual Studio to compile a driver for a specific platform.
+2. [使用 Visual Studio 生成驱动程序]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab2.htm) – 在此练习中，你将使用 Visual Studio 为特定的平台编译驱动程序。
 
-3. [Deploy the driver and confirm the installation]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab3.htm) --- This exercise demonstrates how to manually copy and install the driver to a Windows IoT Core device.
+3. [部署驱动程序并确认安装]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab3.htm) – 此练习将演示如何手动复制驱动程序并将其安装到 Windows IoT Core 设备。

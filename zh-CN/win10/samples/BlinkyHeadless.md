@@ -1,36 +1,36 @@
 ---
 layout: default
-title: Blinky Headless Sample
-permalink: /en-US/win10/samples/BlinkyHeadless.htm
-lang: en-US
+title: 无外设模式的 Blinky 示例
+permalink: /zh-CN/win10/samples/BlinkyHeadless.htm
+lang: zh-CN
 ---
 
-##Blinky Headless Sample
+##无外设模式的 Blinky 示例
 
-We'll create a simple Blinky app and connect a LED to your Windows IoT Core device (Raspberry Pi 2 or MinnowBoard Max).  Be aware that the GPIO APIs are
-only available on Windows IoT Core, so this sample cannot run on your desktop.
+我们将要创建一个简单的 Blinky 应用，并将 LED 连接到你的 Windows IoT Core 设备（Raspberry Pi 2 或 MinnowBoard Max）。请注意 GPIO API 仅在 Windows IoT Core 上可用，因此该示例无法在你的桌面上运行。
 
-###Headless mode
+###无外设模式
 
-This application is designed for a headless device.  To better understand what Headless mode is and how to configure your device to be headless, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
+此应用程序专为无外设的设备而设计。若要更好地了解什么是无外设模式以及如何将你的设备配置为无外设，请按照[此处]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm)的说明操作。
 
-###Load the project in Visual Studio
+###在 Visual Studio 中加载项目
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/BlinkyHeadless).  Choose either the C++ version or C# version, but note that this sample only covers the C# version. Make a copy of the folder on your disk and open the project from Visual Studio.
+可以在[此处](https://github.com/ms-iot/samples/tree/develop/BlinkyHeadless)找到此示例。选择 C++ 版本或 C\# 版本，但请注意此示例仅包含 C\# 版本。在磁盘上生成文件夹的副本，然后从 Visual Studio 打开项目。
 
-Make sure you set the 'Remote Debugging' setting to point to your Windows IoT Core device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
+确保将“远程调试”设置设为指向 Windows IoT Core 设备。如需指导，请返回基本的“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)。
 
-If you're building for Minnowboard Max, select `x86` in the architecture dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
+如果你正在面向 Minnowboard Max 构建，请选择体系结构下拉列表中的 `x86`。如果你正在面向 Raspberry Pi 2构建，请选择 `ARM`。
 
-Make sure you connect the LED to your board. Go back to the basic 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm) if you need guidance.
+确保将 LED 连接到电路板。如需指导，请返回基本的“Blinky”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)。
 
-Note that the app will not run successfully if it cannot find any available GPIO ports, for example if you run the app on a VM running Windows IoT Core.
+请注意，如果应用无法找到任何可用的 GPIO 端口（例如，你在运行 Windows IoT Core 的 VM 上运行该应用时），则该应用不会成功运行。
 
-###Let's look at the code
-The code for this sample is pretty simple. We use a timer, and each time the 'Tick' event is called, we flip the state of the LED.
+###我们来看看代码
+此示例的代码相当简单。我们使用了一个计时器，每当调用“Tick”事件时，都会切换 LED 的状态。
 
-###Timer code
-Here is how you set up the timer in C#:
+###计时器代码
+下面说明如何使用 C\# 语言设置计时器：
+
 {% highlight C# %}
 using Windows.System.Threading;
 
@@ -49,8 +49,8 @@ private void Timer_Tick(ThreadPoolTimer timer)
 }
 {% endhighlight %}
 
-###Initialize the GPIO pin
-To drive the GPIO pin, first we need to initialize it. Here is the C# code (notice how we leverage the new WinRT classes in the Windows.Devices.Gpio namespace):
+###初始化 GPIO 引脚
+为了驱动 GPIO 引脚，首先我们需要将它初始化。以下是 C\# 代码（请注意我们如何在 Windows.Devices.Gpio 命名空间中利用新 WinRT 类）：
 
 {% highlight C# %}
 using Windows.Devices.Gpio;
@@ -77,32 +77,32 @@ private async void InitGPIO()
 }
 {% endhighlight %}
 
-Let's break this down a little:
+让我们稍微剖析一下这段代码：
 
-* First, we use `GpioController.GetDefault()` to get the GPIO controller.
+* 首先，我们使用 `GpioController.GetDefault()` 获取 GPIO 控制器。
 
-* If the device does not have a GPIO controller, this function will return `null`.
+* 如果设备没有 GPIO 控制器，则此函数将返回 `null`。
 
-* Then we attempt to open the pin by calling `GpioController.OpenPin()` with the `LED_PIN` value.
+* 然后，我们尝试通过使用 `LED_PIN` 值调用 `GpioController.OpenPin()` 来打开引脚。
 
-* Once we have the `pin`, we set it to be off (High) by default using the `GpioPin.Write()` function.
+* 获取 `pin` 后，我们会使用 `GpioPin.Write()` 函数将它设置为默认的关闭状态（高）。
 
-* We also set the `pin` to run in output mode using the `GpioPin.SetDriveMode()` function.
+* 我们还使用了 `GpioPin.SetDriveMode()` 函数将 `pin` 设置为以输出模式运行。
 
 
-###Modify the state of the GPIO pin
-Once we have access to the `GpioOutputPin` instance, it's trivial to change the state of the pin to turn the LED on or off.  You can modify 'Timer_Tick' to do this.
+###修改 GPIO 引脚的状态
+在能够访问 `GpioOutputPin` 实例后，便没有必要更改引脚状态来打开或关闭 LED。你可以修改“Timer\_Tick”来执行此操作。
 
-To turn the LED on, simply write the value `GpioPinValue.Low` to the pin:
+若要打开 LED，只需将值 `GpioPinValue.Low` 写入引脚：
 
 {% highlight C# %}
 this.pin.Write(GpioPinValue.Low);
 {% endhighlight %}
 
-and of course, write `GpioPinValue.High` to turn the LED off:
+当然，写入 `GpioPinValue.High` 便会关闭 LED：
 
 {% highlight C# %}
 this.pin.Write(GpioPinValue.High);
 {% endhighlight %}
 
-Remember that we connected the other end of the LED to the 3.3 Volts power supply, so we need to drive the pin to low to have current flow into the LED.
+记得我们已将 LED 的另一端连接到了 3.3 伏电源，因此，我们需要将引脚驱动到低位，使电流通过 LED。

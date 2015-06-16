@@ -1,104 +1,98 @@
 ---
 layout: default
-title: Signing into Microsoft Connect
-permalink: /en-US/SigninMSConnect.htm
-lang: en-US
+title: 登录 Microsoft Connect
+permalink: /zh-CN/SigninMSConnect.htm
+lang: zh-CN
 ---
 
 <div class="container">
-  <h1>Signing into Microsoft Connect</h1>
+  <h1>登录 Microsoft Connect</h1>
   <hr/>
-  Before downloading any software, you must sign up for the Windows Developer Program for IoT on Microsoft Connect. This is a necessary step in order to download the WindowsDeveloperProgramforIOT.msi and other program files.
+  在下载任何软件之前，你必须在 Microsoft Connect 上注册面向 IoT 的 Windows 开发人员计划。必须完成此步骤才能下载 WindowsDeveloperProgramforIOT.msi 和其他程序文件。
   <br/><br/>
-  Microsoft Connect facilitates a unified hosting service for file downloads and provides users with an interface for reporting potential bugs and valuable feedback in our product. The flow of the Microsoft Connect sign-up process can vary based on a number of circumstances.
+  Microsoft Connect 提供便于文件下载的统一托管服务，并向用户提供了一个界面，用于报告产品中的潜在 Bug 以及有价值的反馈。Microsoft Connect 注册过程流根据不同的情况而所有不同。
   <br/><br/>
-  Choose the relevant drop-down option below to receive instructions on the process.
+  选择下方的相关下拉选项以接收有关该过程的说明。
   <br/><br/>
 
   <div class="panel-group" id="accordion">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-            I do not have a Microsoft Account email (@outlook, @live, @hotmail, etc.)
-          </a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">我没有 Microsoft 帐户电子邮件（@outlook、@live、@hotmail 等）</a>
         </h4>
       </div>
       <div id="collapseOne" class="panel-collapse collapse">
         <div class="panel-body">
-          If you do not already have a Microsoft Account email, you will need one to complete the Microsoft Connect sign-up. Below is an image of the page you will see upon clicking the Microsoft Connect link. The “Sign Up now” link is circled in red.
+          如果你还没有 Microsoft 帐户电子邮件，你需要注册一个才能完成 Microsoft Connect 注册。下图是你在单击 Microsoft Connect 链接后将看到的页面。“立即注册”链接用红色圆圈标记。
 	      <br/><img src="{{site.baseurl}}/images/MSConnectSignup.png"><br/><br/>
-          Upon completing the sign-up form for a Microsoft Account email, you will be directed to the original intended destination of the link – the Microsoft Connect Registration web site.  It will look like the image included here:
+          完成 Microsoft 帐户电子邮件的注册表单后，你将会定向到该链接的原始预期目标，即 Microsoft Connect 注册网站。这将类似于此处包含的图像：
           <br/><img src="{{site.baseurl}}/images/MSConnectRegistration.png"><br/><br/>
-          Click the “Continue” button to move on to a social.microsoft.com web page – on this site, you will need to enter a Public Identity Display Name that can be used to post content on our Microsoft Connect site.  You will also need to agree to the Legal Terms of using a social.microsoft.com site.  The web site should appear as pictured here:
+          单击“继续”按钮转到 social.microsoft.com 网页 – 在此站点上，你需要输入可用于在 Microsoft Connect 站点上发布内容的公共标识显示名称。你还需要同意使用 social.microsoft.com 站点的法律条款。网站应如下图所示：
           <br/><img src="{{site.baseurl}}/images/MSConnectCreateProfile.png"><br/><br/>
-          After choosing a Display Name and agreeing to the terms of the site, click the “Continue” button to move on to a profile.microsoft.com web page.
+          在选择显示名称并同意该站点的条款后，单击“继续”按钮转到 profile.microsoft.com 网页。
           <br/><img src="{{site.baseurl}}/images/MSConnectProfileRegister.png"><br/><br/>
-          This is the actual sign-up page for the Microsoft Connect website.  Here, you can create your Microsoft Connect profile and choose to receive a variety of updates from Microsoft.  Fill out the information on the form and click the “Submit” button.  At this point, your Microsoft Connect profile has been created and you’ll be redirected to the site where we host our EULA agreement for the MSI.  This site looks like this:
+          这是 Microsoft Connect 网站的实际注册页面。在这里，你可以创建 Microsoft Connect 配置文件并选择从 Microsoft 接收大量更新。在表单上填写相关信息，然后单击“提交”按钮。此时，你的 Microsoft Connect 配置文件已完成创建，并且你将会重定向到我们托管 MSI 的 EULA 协议的站点。此站点如下所示：
           <br/><img src="{{site.baseurl}}/images/MSConnectSurvey.png"><br/><br/>
-	      You should notice the public Display Name you chose earlier in the top-right corner of the web page – you’ve successfully created your Microsoft Connect profile.  Now, click on the Survey Title “MICROSOFT WINDOWS FOR WINDOWS DEVELOPER PROGRAM FOR IOT EULA” to read and accept the EULA.  Note the radio buttons at the very bottom of the EULA form, and choose either “I Accept” or “I Decline” accordingly.  Then, press “Submit” to submit the EULA.  This will take you to the Completed Registration page, pictured here:
+	      你应注意到之前所选择的公共显示名称显示在网页的右上角，表明你已成功创建 Microsoft Connect 配置文件。现在，单击调查标题“Microsoft Windows 面向 IoT 的 Windows 开发人员计划 EULA”以阅读并接受 EULA。请注意 EULA 表单最下方的单选按钮，然后相应地选择“我接受”或“我拒绝”。然后，按“提交”以提交 EULA。这会将你带入“已完成注册”页面，如下图所示：
           <br/><img src="{{site.baseurl}}/images/MSConnectEULAThankYou.png"><br/><br/>
-          If you want to download the MSI immediately, you can click the “Return to the connection home page” to visit the Windows Developer Program for IoT home page on Microsoft Connect.  The page will look this this:
+          如果想要立即下载 MSI，可以单击“返回连接主页”以访问 Microsoft Connect 上的“面向 IoT 的 Windows 开发人员计划”主页。该页面将如下所示：
           <br/><img src="{{site.baseurl}}/images/MSConnectWOD.png"><br/><br/>
-	      By clicking the “Downloads” link, you will be directed to the web site that hosts all of the available downloads associated with our program.  You’re free to download any of them, including a text version of the EULA you just signed to finish registration, but you’re looking to download the MSI.  To do so, click the link circled in red below.
+	      通过单击“下载”链接，你将会定向到托管与我们的计划相关联的所有可用下载的网站。你可以免费下载任何内容，包括刚才为完成注册而签署的文本版本的 EULA，但你希望下载 MSI。为此，请单击下面以红色圆圈标记的链接。
           <br/><img src="{{site.baseurl}}/images/MSConnectDownload.png"><br/><br/>
-	      Upon clicking the link, you will be directed to the actual download page for the MSI.  There will be information about the file itself, as well as a set of links.  Be sure to click the link circled in red in the picture below to download the MSI.
+	      单击该链接后，你将会定向到 MSI 的实际下载页面。该页面将显示有关文件本身的信息，以及一组链接。确保单击下图中以红色圆圈标记的链接以下载 MSI。
 	      <br/><img src="{{site.baseurl}}/images/ConnectDownloadClarification.png"><br/><br/>
-          Congratulations! You are now finished downloading the MSI and registering for Microsoft Connect!
+          恭喜！ 现在，你已完成下载 MSI 以及注册 Microsoft Connect！
         </div>
       </div>
     </div>
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-            I have a Microsoft Account email (@outlook, @live, @hotmail, etc.), but I do not have a Microsoft Connect account
-          </a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">我有 Microsoft 帐户电子邮件（@outlook、@live、@hotmail 等），但我没有 Microsoft Connect 帐户。</a>
         </h4>
       </div>
       <div id="collapseTwo" class="panel-collapse collapse">
         <div class="panel-body">
-	      Upon clicking the Microsoft Connect link, you will be directed to sign-in to your Microsoft Account email, if you are not already signed into your Microsoft Account email in another window or tab. Once you’ve signed in, you will be directed to the original intended destination of the link – the Microsoft Connect Registration web site. It will look like the image included here:
+	      单击 Microsoft Connect 链接后，如果你尚未在其他窗口或选项卡中登录 Microsoft 帐户电子邮件，系统将指示你登录 Microsoft 帐户电子邮件。登录后，你将会定向到该链接的原始预期目标，即 Microsoft Connect 注册网站。这将类似于此处包含的图像：
 		  <br/><img src="{{site.baseurl}}/images/MSConnectRegistration.png"><br/><br/>
-		  Click the “Continue” button to move on to a social.microsoft.com web page – on this site, you will need to enter a Public Identity Display Name that can be used to post content on our Microsoft Connect site. You will also need to agree to the Legal Terms of using a social.microsoft.com site. The web site should appear as pictured here:
+		  单击“继续”按钮转到 social.microsoft.com 网页 – 在此站点上，你需要输入可用于在 Microsoft Connect 站点上发布内容的公共标识显示名称。你还需要同意使用 social.microsoft.com 站点的法律条款。网站应如下图所示：
           <br/><img src="{{site.baseurl}}/images/MSConnectCreateProfile.png"><br/><br/>
-          After choosing a Display Name and agreeing to the terms of the site, click the “Continue” button to move on to a profile.microsoft.com web page.
+          在选择显示名称并同意该站点的条款后，单击“继续”按钮转到 profile.microsoft.com 网页。
           <br/><img src="{{site.baseurl}}/images/MSConnectProfileRegister.png"><br/><br/>
-          This is the actual sign-up page for the Microsoft Connect website.  Here, you can create your Microsoft Connect profile and choose to receive a variety of updates from Microsoft.  Fill out the information on the form and click the “Submit” button.  At this point, your Microsoft Connect profile has been created and you’ll be redirected to the site where we host our EULA agreement for the MSI.  This site looks like this:
+          这是 Microsoft Connect 网站的实际注册页面。在这里，你可以创建 Microsoft Connect 配置文件并选择从 Microsoft 接收大量更新。在表单上填写相关信息，然后单击“提交”按钮。此时，你的 Microsoft Connect 配置文件已完成创建，并且你将会重定向到我们托管 MSI 的 EULA 协议的站点。此站点如下所示：
           <br/><img src="{{site.baseurl}}/images/MSConnectSurvey.png"><br/><br/>
-	      You should notice the public Display Name you chose earlier in the top-right corner of the web page – you’ve successfully created your Microsoft Connect profile.  Now, click on the Survey Title “MICROSOFT WINDOWS FOR WINDOWS DEVELOPER PROGRAM FOR IOT EULA” to read and accept the EULA.  Note the radio buttons at the very bottom of the EULA form, and choose either “I Accept” or “I Decline” accordingly.  Then, press “Submit” to submit the EULA.  This will take you to the Completed Registration page, pictured here:
+	      你应注意到之前所选择的公共显示名称显示在网页的右上角，表明你已成功创建 Microsoft Connect 配置文件。现在，单击调查标题“Microsoft Windows 面向 IoT 的 Windows 开发人员计划 EULA”以阅读并接受 EULA。请注意 EULA 表单最下方的单选按钮，然后相应地选择“我接受”或“我拒绝”。然后，按“提交”以提交 EULA。这会将你带入“已完成注册”页面，如下图所示：
           <br/><img src="{{site.baseurl}}/images/MSConnectEULAThankYou.png"><br/><br/>
-          If you want to download the MSI immediately, you can click the “Return to the connection home page” to visit the Windows Developer Program for IoT home page on Microsoft Connect.  The page will look this this:
+          如果想要立即下载 MSI，可以单击“返回连接主页”以访问 Microsoft Connect 上的“面向 IoT 的 Windows 开发人员计划”主页。该页面将如下所示：
           <br/><img src="{{site.baseurl}}/images/MSConnectWOD.png"><br/><br/>
-	      By clicking the “Downloads” link, you will be directed to the web site that hosts all of the available downloads associated with our program.  You’re free to download any of them, including a text version of the EULA you just signed to finish registration, but you’re looking to download the MSI.  To do so, click the link circled in red below.
+	      通过单击“下载”链接，你将会定向到托管与我们的计划相关联的所有可用下载的网站。你可以免费下载任何内容，包括刚才为完成注册而签署的文本版本的 EULA，但你希望下载 MSI。为此，请单击下面以红色圆圈标记的链接。
           <br/><img src="{{site.baseurl}}/images/MSConnectDownload.png"><br/><br/>
-	      Upon clicking the link, you will be directed to the actual download page for the MSI.  There will be information about the file itself, as well as a set of links.  Be sure to click the link circled in red in the picture below to download the MSI.
+	      单击该链接后，你将会定向到 MSI 的实际下载页面。该页面将显示有关文件本身的信息，以及一组链接。确保单击下图中以红色圆圈标记的链接以下载 MSI。
 	      <br/><img src="{{site.baseurl}}/images/ConnectDownloadClarification.png"><br/><br/>
-          Congratulations! You are now finished downloading the MSI and registering for Microsoft Connect!
+          恭喜！ 现在，你已完成下载 MSI 以及注册 Microsoft Connect！
         </div>
       </div>
     </div>
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-            I already have a Microsoft Connect account
-          </a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">我已经拥有 Microsoft Connect 帐户</a>
         </h4>
       </div>
       <div id="collapseThree" class="panel-collapse collapse">
         <div class="panel-body">
-		  Upon clicking the Microsoft Connect link, you will be directed to sign-in to your Microsoft Account email, if you are not already signed into your Microsoft Account email in another window or tab. Once you’ve signed in, you will be directed to the original intended destination of the link – the Microsoft Connect Survey web site. It will look like the image included here:
+		  单击 Microsoft Connect 链接后，如果你尚未在其他窗口或选项卡中登录 Microsoft 帐户电子邮件，系统将指示你登录 Microsoft 帐户电子邮件。登录后，你将会定向到该链接的原始预期目标，即 Microsoft Connect 调查网站。这将类似于此处包含的图像：
 		  <br/><img src="{{site.baseurl}}/images/MSConnectSurvey.png"><br/><br/>
-	      Now, click on the Survey Title “MICROSOFT WINDOWS FOR WINDOWS DEVELOPER PROGRAM FOR IOT EULA” to read and accept the EULA. Note the radio buttons at the very bottom of the EULA form, and choose either “I Accept” or “I Decline” accordingly. Then, press “Submit” to submit the EULA. This will take you to the Completed Registration page, pictured here:
+	      现在，单击调查标题“Microsoft Windows 面向 IoT 的 Windows 开发人员计划 EULA”以阅读并接受 EULA。请注意 EULA 表单最下方的单选按钮，然后相应地选择“我接受”或“我拒绝”。然后，按“提交”以提交 EULA。这会将你带入“已完成注册”页面，如下图所示：
           <br/><img src="{{site.baseurl}}/images/MSConnectEULAThankYou.png"><br/><br/>
-          If you want to download the MSI immediately, you can click the “Return to the connection home page” to visit the Windows Developer Program for IoT home page on Microsoft Connect.  The page will look this this:
+          如果想要立即下载 MSI，可以单击“返回连接主页”以访问 Microsoft Connect 上的“面向 IoT 的 Windows 开发人员计划”主页。该页面将如下所示：
           <br/><img src="{{site.baseurl}}/images/MSConnectWOD.png"><br/><br/>
-	      By clicking the “Downloads” link, you will be directed to the web site that hosts all of the available downloads associated with our program.  You’re free to download any of them, including a text version of the EULA you just signed to finish registration, but you’re looking to download the MSI.  To do so, click the link circled in red below.
+	      通过单击“下载”链接，你将会定向到托管与我们的计划相关联的所有可用下载的网站。你可以免费下载任何内容，包括刚才为完成注册而签署的文本版本的 EULA，但你希望下载 MSI。为此，请单击下面以红色圆圈标记的链接。
           <br/><img src="{{site.baseurl}}/images/MSConnectDownload.png"><br/><br/>
-	      Upon clicking the link, you will be directed to the actual download page for the MSI.  There will be information about the file itself, as well as a set of links.  Be sure to click the link circled in red in the picture below to download the MSI.
+	      单击该链接后，你将会定向到 MSI 的实际下载页面。该页面将显示有关文件本身的信息，以及一组链接。确保单击下图中以红色圆圈标记的链接以下载 MSI。
 	      <br/><img src="{{site.baseurl}}/images/ConnectDownloadClarification.png"><br/><br/>
-          Congratulations! You are now finished downloading the MSI and registering for Microsoft Connect!
+          恭喜！ 现在，你已完成下载 MSI 以及注册 Microsoft Connect！
         </div>
       </div>
     </div>

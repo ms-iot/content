@@ -1,94 +1,94 @@
 ---
 layout: default
-title: Use PowerShell to connect to a Windows IoT Core device.
-permalink: /en-US/win10/samples/PowerShell.htm
-lang: en-US
+title: 使用 PowerShell 连接到 Windows IoT 核心版设备。
+permalink: /zh-CN/win10/samples/PowerShell.htm
+lang: zh-CN
 ---
 
-##Using PowerShell to connect and configure a device running Windows IoT Core
+##使用 PowerShell 连接并配置运行 Windows IoT 核心版的设备
 
-### Remote Administration and Configuration
-You can remotely configure and manage any Windows IoT Core device using Windows PowerShell. PowerShell is a task-based command-line shell and scripting language, designed especially for system administration.
+### 远程管理和配置
+你可以使用 Windows PowerShell 远程配置和管理任何 Windows IoT 核心版设备。PowerShell 是基于任务的命令行 Shell 和脚本语言，专为进行系统管理而设计。
 
-Make sure to follow these steps to correctly configure your VM or device running Windows IoT Core to work well with VisualStudio 2015.
+请务必遵循以下步骤正确配置你的 VM 或运行 Windows IoT 核心版的设备，以便正常使用 VisualStudio 2015。
 
-###Initiating a PowerShell (PS) Session
-* To start a PS session with your Windows IoT Core device, you'll first need to create a trust relationship between your host PC and your device. After booting your Windows IoT Core device, an IP address will be shown on the screen attached to the device:
+###启动 PowerShell \(PS\) 会话
+* 若要使用 Windows IoT 核心版设备启动 PS 会话，首先需要在主机与设备之间创建信任关系。在启动 Windows IoT 核心版设备后，与该设备相连的屏幕上将显示一个 IP 地址：
 
-    ![DefaultApp on Windows IoT Core]({{site.baseurl}}/images/DefaultApp.png)
+    ![Windows IoT 核心版上的 CoreDefaultApp]({{site.baseurl}}/images/DefaultApp.png)
 
-    You can find the same information on the Windows IoT Core Watcher utility.
+    可以在 Windows IoT 核心版观察程序实用工具中找到相同信息。
 
-* Launch an administrator PS console on your local PC. The easiest way to do this is to type 'powershell' in the "Search the web and Windows" textbox near the Windows Start Menu: Windows will find PowerShell on your machine:
+* 在本地电脑上启动管理员 PS 控制台。执行此操作的最简单方法是在 Windows“开始”菜单旁的“搜索 Web 和 Windows”文本框中键入“powershell”： Windows 将在你的计算机上查找 PowerShell：
 
-    ![Find PowerShell]({{site.baseurl}}/images/powershell/start-ps.png)
+    ![查找 PowerShell]({{site.baseurl}}/images/powershell/start-ps.png)
 
-    To start PS as an administrator, right click on the "Windows PowerShell" entry and select "Run as administrator":
+    若要以管理员身份启动 PS，请右键单击“Windows PowerShell”项并选择“以管理员身份运行”：
 
-    ![Run PowerShell as administrator]({{site.baseurl}}/images/powershell/start-ps2.png)
+    ![以管理员身份运行 PowerShell]({{site.baseurl}}/images/powershell/start-ps2.png)
 
-    Now you should see the PS console:
+    现在你应该看到 PS 控制台：
 
-    ![PowerShell console]({{site.baseurl}}/images/powershell/ps.PNG)
+    ![PowerShell 控制台]({{site.baseurl}}/images/powershell/ps.PNG)
 
-* Note: you may need to start the WinRM service on your desktop to enable remote connections. From the PS console type the following command:
+* 注意：你可能需要在桌面上启动 WinRM 服务以启用远程连接。在 PS 控制台中，键入以下命令：
 
-        net start WinRM
+        PS C:\> net start WinRM
 
-* From the PS console, type the following, substituting `<machine-name or IP Address>` with the appropriate value (using your **machine-name** is the easiest to use, but if your device is not uniquely named on your network, try the IP address):
+* 在 PS 控制台中，键入以下命令，从而使用相应的值替代 `<machine-name or IP Address>`（使用**计算机-名称**是最简单的方法，但如果设备在网络上的名称不唯一，则尝试使用 IP 地址）：
 
-        Set-Item WSMan:\localhost\Client\TrustedHosts -Value <machine-name or IP Address>
+        PS C:\> Set-Item WSMan:\localhost\Client\TrustedHosts -Value <machine-name or IP Address>
 
-    Do enter `Y` to confirm the change.
+    输入 `Y` 确认更改。
 
-* Note: there is a known issue with PS that can cause a StackOverflowException on the PS client machine.  To work around this type the following line before the Enter-PsSession:
+* 注意：PS 存在一个已知问题，该问题可能在 PS 客户端计算机上引起 StackOverflowException。若要解决此问题，请在 Enter-PsSession 之前键入以下行：
 
-        remove-module psreadline -force
+        PS C:\> remove-module psreadline -force
 
-* Now you can start a session with you Windows IoT Core device. From you administrator PS console, type:
+* 现在，你可以使用你的 Windows IoT 核心版设备启动会话。在管理员 PS 控制台中，键入：
 
-        Enter-PsSession -ComputerName <machine-name or IP Address> -Credential <machine-name or IP Address or localhost>\Administrator
+        PS C:\> Enter-PsSession -ComputerName <machine-name or IP Address> -Credential <machine-name or IP Address or localhost>\Administrator
 
-    In the credential dialog enter the following default password: `p@ssw0rd`
+    在凭据对话框中，输入以下默认密码：`p@ssw0rd`
 
         NOTE: The connection process is not immediate and can take up to 30 seconds.
 
-    If you successfully connected to the device, you should see the IP address of your device before the prompt.
+    如果你已成功连接到设备，你应该可以在提示符之前看到设备的 IP 地址。
 
-    ![PowerShell console]({{site.baseurl}}/images/powershell/ps_device.png)
+    ![PowerShell 控制台]({{site.baseurl}}/images/powershell/ps_device.PNG)
 
-* **Update account password:**
+* **更新帐户密码：**
 
-	It is **highly recommended** that you update the default password for the Administrator account.
+	**强烈建议**你更新管理员帐户的默认密码。
 
-    To do this, issue the following commands in your PowerShell connection:
+    若要执行此操作，请在 PowerShell 连接中发出以下命令：
 
-    Replace `[new password]` with a strong password:
+    使用强密码替换 `[new password]`：
 
-        [192.168.0.243]: net user Administrator [new password]
+        [192.168.0.243]: PS C:\> net user Administrator [new password]
 
-    The following command only needs to be run once:
+    只需运行一次以下命令：
 
-        [192.168.0.243]: schtasks /Delete /TN Microsoft\Windows\IoT\Startup /F
+        [192.168.0.243]: PS C:\> schtasks /Delete /TN Microsoft\Windows\IoT\Startup /F
 
-###Configure your Windows IoT Core device
+###配置 Windows IoT 核心版设备
 
-* To be able to deploy applications from Visual Studio 2015, you will need to make sure the Visual Studio Remote Debugger is running on your Windows IoT Core device. The remote debugger should launch automatically at machine boot time. To double check, use the `tlist` command to list all the running processes from powershell. There should be two instances of msvsmon.exe running on the device.
+* 为了能够从 Visual Studio 2015 部署应用程序，你需要确保 Visual Studio 远程调试器正在 Windows IoT 核心版设备上运行。远程调试器应在计算机启动时自动启动。若要再次检查，请使用 `tlist` 命令列出 powershell 中所有正在运行的进程。应有两个 msvsmon.exe 的实例正在设备上运行。
 
-* It is possible for the Visual Studio Remote Debugger to time out after long periods of inactivity.  If Visual Studio cannot connect to your Windows IoT Core device, try rebooting the device.
+* 在很长一段时间都处于非活动状态后，Visual Studio 远程调试器可能会超时。如果 Visual Studio 无法连接到 Windows IoT 核心版设备，请尝试重新启动设备。
 
-* If you want, you can also rename your device. To change the 'computer name', use the `setcomputername` utility:
+* 你还可以根据需要重命名你的设备。若要更改“计算机名”，请使用 `setcomputername` 实用工具：
 
-        [192.168.0.243]: setcomputername <new-name>
+        [192.168.0.243]: PS C:\> setcomputername <new-name>
 
-    You will need to reboot the device for the change to take effect. You can use the `shutdown` command as follows:
+    需要重新启动设备才能使更改生效。可以使用 `shutdown` 命令，如下所示：
 
-        [192.168.0.243]: shutdown /r /t 0
+        [192.168.0.243]: PS C:\> shutdown /r /t 0
 
-    After you reboot, you may need to rerun this command in order to connect to your device using the new name:
+    重新启动后，可能需要重新运行此命令，以便使用新名称连接到设备：
 
-        Set-Item WSMan:\localhost\Client\TrustedHosts -Value <new-name>
+        PS C:\> Set-Item WSMan:\localhost\Client\TrustedHosts -Value <new-name>
 
-###Commonly used utilities
+###常用的实用工具
 
-See the [Command Line Utils]({{site.baseurl}}/{{page.lang}}/win10/tools/CommandLineUtils.htm) page for a list of commands and utilities you can use with PowerShell.
+有关可以与 PowerShell 结合使用的命令和实用工具的列表，请参阅[命令行实用工具]({{site.baseurl}}/{{page.lang}}/win10/tools/CommandLineUtils.htm)页面。

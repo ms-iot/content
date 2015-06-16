@@ -1,110 +1,110 @@
 ---
 layout: default
-title: Windows 10 IoT Core Command Line Utils
-permalink: /en-US/win10/tools/CommandLineUtils.htm
-lang: en-US
+title: Windows 10 IoT Core 命令行实用程序
+permalink: /zh-CN/win10/tools/CommandLineUtils.htm
+lang: zh-CN
 ---
 
-#Windows 10 IoT Core Command Line Utils
+#Windows 10 IoT Core 命令行实用程序
 
-Looking to configure some of the settings on your device? The below tools all come pre-installed on your device to help you with that! Use PowerShell to run these commands after [connecting to your device]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
+正在寻找可用于配置设备上的某些设置的工具？ 下面的工具均可预安装在你的设备上，可帮助你实现这一目标！ 在[连接到你的设备]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)后，使用 PowerShell 运行这些命令。
 
-* **Update account password:**
+* **更新帐户密码：**
 
-	It is highly recommended that you update the default password for the Administrator account. To do this, you can issue the following command: `net user Administrator [new password]` where `[new password]` represents a strong password of your choice.
+	强烈建议你更新默认的管理员帐户密码。若要更新帐户密码，你可以发出以下命令：`net user Administrator [new password]`（其中 `[new password]` 表示你选择的强密码）。
 
-* **Create local user accounts:**
+* **创建本地用户帐户：**
 
-	If you wish to give others access to your Windows IoT Core device, you can create additional local user accounts using PS by typing in `net user [username] [password] /add`. If you wish to add this user to other groups, such as the Administrator group, use `net localgroup Administrators [username] /add`.
+	如果你想要授予其他人访问你的 Windows IoT Core 设备的权限，你可以通过在 `net user [username] [password] /add` 中键入，并使用 PS 创建其他本地用户帐户。如果你想要将此用户添加到其他组（例如管理员组），则使用 `net localgroup Administrators [username] /add`。
 
-* **Set password**
+* **设置密码**
 
-	To change the password on an account on your device, run `SetPassword [account-username] [new-password] [old-password]` to change the account password.
+	若要更改你的设备上的帐户密码，可通过运行 `SetPassword [account-username] [new-password] [old-password]` 来更改帐户密码。
 
-* **Query and set device name:**
+* **查询和设置设备名称：**
 
-	To identify your current device name, simply type `hostname`. To change the name of your Windows IoT Core device, type `SetComputerName [new machinename]`. You may need to restart your device for the name change to take effect.
+	若要确定当前设备名称，只需键入 `hostname`。若要更改你的 Windows IoT Core 设备的名称，应键入 `SetComputerName [new machinename]`。你可能需要重新启动你的设备才能使更改的名称生效。
 
-* **Basic network configuration:**
+* **基本网络配置：**
 
-	Many of the basic network configuration utilities you may already be familiar with are available in Windows IoT Core, including commands such as `ping.exe`, `netstat.exe`, `netsh.exe`, `ipconfig.exe`, `nslookup.exe`, `tracert.exe`, and `arp.exe`.
+	Windows IoT Core 中将提供多种基本的网络配置实用程序（包括诸如 `ping.exe`、`netstat.exe`、`netsh.exe`、`ipconfig.exe`、`nslookup.exe`、`tracert.exe` 和 `arp.exe` 等命令），你可能已经对这些实用程序很熟悉了。
 
-* **Copy utilities:**
+* **复制实用程序：**
 
-	Microsoft is providing familiar tools, including `sfpcopy.exe` as well as `xcopy.exe`.
+	Microsoft 将提供熟悉的工具，包括 `sfpcopy.exe` 以及 `xcopy.exe`。
 
-* **Process Management:**
+* **进程管理：**
 
-	To view currently running processes, you can try either `get-process` or alternatively `tlist.exe`. To stop a running process, type `kill.exe [pid or process name]`.
+	若要查看当前正在运行的进程，可以尝试 `get-process` 或 `tlist.exe`。若要停止正在运行的进程，请键入 `kill.exe [pid or process name]`。
 
-* **Setting startup app:**
+* **设置启动应用：**
 
-	Use the startup editor to configure startup apps on your Windows IoT Core device. Run `IotStartup` with any of the following options:
+	使用启动编辑器在你的 Windows 10 IoT Core 设备上配置启动应用。借助以下选项之一，运行 `IotStartup`：
 
-	* `IotStartup list` lists installed applications
+	* `IotStartup list`，用于列出已安装的应用程序
 
-    * `IotStartup list headed` lists installed headed applications
+    * `IotStartup list headed`，用于列出已安装的有外设应用程序
 
-    * `IotStartup list headless` lists installed headless applications
+    * `IotStartup list headless`，用于列出已安装的无外设应用程序
 
-    * `IotStartup list [MyApp]` list installed applications that match pattern `MyApp`
+    * `IotStartup list [MyApp]`，用于列出已安装的与模式 `MyApp` 匹配的应用程序
 
-    * `IotStartup add` adds headed and headless applications
+    * `IotStartup add`，用于添加有外设和无外设应用程序
 
-    * `IotStartup add headed [MyApp]` adds headed applications that match pattern `MyApp`.  Pattern must match only one application.
+    * `IotStartup add headed [MyApp]`，用于添加与模式 `MyApp` 匹配的有外设应用程序模式必须只匹配一个应用程序。
 
-    * `IotStartup add headless [Task1]` adds headless applications that match pattern `Task1`
+    * `IotStartup add headless [Task1]`，用于添加与模式 `Task1` 匹配的无外设应用程序
 
-    * `IotStartup remove` removes headed and headless applications
+    * `IotStartup remove`，用于删除有外设和无外设应用程序
 
-    * `IotStartup remove headed [MyApp]` removes headed applications that match pattern `MyApp`
+    * `IotStartup remove headed [MyApp]`，用于删除与模式 `MyApp` 匹配的有外设应用程序
 
-    * `IotStartup remove headless [Task1]` removes headless applications that match pattern `Task1`
+    * `IotStartup remove headless [Task1]`，用于删除与模式 `Task1` 匹配的无外设应用程序
 
-    * `IotStartup startup` lists headed and headless applications registered for startup
+    * `IotStartup startup`，用于列出针对启动所注册的有外设和无外设应用程序
 
-    * `IotStartup startup [MyApp]` lists headed and headless applications registered for startup that match pattern `MyApp`
+    * `IotStartup startup [MyApp]`，用于列出针对启动所注册的且与模式 `MyApp` 匹配的有外设和无外设应用程序
 
-    * `IotStartup startup headed [MyApp]` lists headed applications registered for startup that match `MyApp`
+    * `IotStartup startup headed [MyApp]`，用于列出针对启动所注册的且与 `MyApp` 匹配的有外设应用程序
 
-    * `IotStartup startup headless [Task1]` lists headless applications registered for startup that match `Task1`
+    * `IotStartup startup headless [Task1]`，用于列出针对启动所注册的且与 `Task1` 匹配的无外设应用程序
 
-	* For further help, try `IotStartup help`
+	* 若要获取进一步帮助，请尝试 `IotStartup help`
 
-* **Set Boot Option (Headless vs. headed boot):**
+* **设置启动选项（无外设与有外设启动）：**
 
-	Windows IoT Core devices can be set to headed (when display capabilities are required) or headless (when a display is not required or available) device mode. To change this setting, use `setbootoption.exe [headed | headless]`.
+	Windows IoT Core 设备可以设置为有外设设备模式（需要显示功能时）或无外设设备模式（显示功能不是必需项或不可用时）。若要更改此设置，请使用 `setbootoption.exe [headed | headless]`。
 
 		NOTE: Changing this setting will require a reboot in order for the change to take effect.
 
-* **Task scheduler:**
+* **任务计划程序：**
 
-	To view the current list of scheduled tasks, use the `schtasks.exe` command. You can create new tasks with the `/create` switch or run on-demand tasks with the `/run` switch. For a full list of supported parameters, use `schtasks.exe /?`
+	若要查看计划任务的当前列表，请使用 `schtasks.exe` 命令。你可以使用 `/create` 开关创建新任务，或使用 `/run` 开关运行按需任务。若要获取支持的参数的完整列表，请使用 `schtasks.exe /?`
 
-* **Device drivers:**
+* **设备驱动程序：**
 
-	The device console utility is useful in identifying and managing installed devices and drivers. For a full list of parameters, use `devcon.exe /?`
+	设备控制台实用程序在识别和管理已安装的设备和驱动程序方面十分有用。若要获取参数的完整列表，请使用 `devcon.exe /?`
 
-* **Registry Access:**
+* **注册表访问：**
 
-	If you need to access the registry to view or modify settings, use the `reg.exe /?` Command for the full list of supported parameters.
+	如果你需要通过访问注册表来查看或修改设置，请使用 `reg.exe /?` 命令获取有关支持的参数的完整列表。
 
-* **Services:**
+* **服务：**
 
-	Managing Windows services can be accomplished via the `net.exe` command. To see a list of running services, type `net start`. To start or stop a specific service, type `net [start | stop] [service name]`. Alternatively, you can also use the service control manager via `sc.exe` command.
+	管理 Windows 服务可以通过 `net.exe` 命令来完成。若要查看运行中的服务的列表，请键入 `net start`。若要启动或停止特定的服务，请键入 `net [start | stop] [service name]`。此外，还可以通过 `sc.exe` 命令使用服务控制管理器。
 
-* **Boot configuration:**
+* **启动配置：**
 
-	You can make changes to the boot configuration of your Windows IoT Core device using `bcdedit.exe`. For instance, you can enable testsigning with `bcdedit –set testsigning` on command.
+	你可以使用 `bcdedit.exe` 来更改 Windows IoT Core 设备的启动配置。例如，你可以使用 `bcdedit –set testsigning` 命令启用测试签名。
 
-* **Shutdown/restart device:**
+* **关闭/重新启动设备：**
 
-	To shut down your device, type `shutdown /s /t 0`. To restart the device, use the `/r` switch instead with the command `shutdown /r /t 0`.
+	若要关闭设备，请键入 `shutdown /s /t 0`。若要重新启动该设备，请使用{b\> \<b}`/r` 开关而不是 `shutdown /r /t 0` 命令。
 
-* **List Services**
+* **列表服务**
 
-	This utility lists all the NT Services running on your Windows 10 IoT Core device. From a PowerShell session on your device, run `ListServices` to run the utility.
+	此实用程序可列出 Windows 10 IoT Core 设备上运行的所有 NT 服务。从你的设备上的某一 PowerShell 会话，运行 `ListServices` 来运行该实用程序。
 
-* **Set display resolution**
+* **设置显示器分辨率**
 
-	To adjust the resolution of a display connected to your Windows 10 IoT Core device, run `SetDisplayResolution [width] [height]`. To query the resolution, exclude the `[width]` and `[height]` parameters.
+	若要调整连接到你的 Windows 10 IoT Core 设备的显示器的分辨率，请运行 `SetDisplayResolution [width] [height]`。若要查询分辨率，请排除 `[width]` 和 `[height]` 参数。

@@ -1,31 +1,30 @@
 ---
 layout: default
 title: Blinky WVSA
-permalink: /en-US/win10/samples/BlinkyWVSA.htm
-lang: en-US
+permalink: /zh-CN/win10/samples/BlinkyWVSA.htm
+lang: zh-CN
 ---
 
-#Get Started
+#入门
 
-Learn how to get your PC ready for developing IoT applications using Windows Remote Arduino.
+了解如何为使用 Windows Remote Arduino 开发 IoT 应用程序准备好你的电脑。
 
 {% include steps.html device="WVSA" %}
 
-##Hello World (Blinky) speech-enabled LED example
+##Hello World \(Blinky\) 支持语音的 LED 示例
 
-In your Arduino IDE (version 1.62 or better), go to the menu item File->Examples->VirtualShield->HelloWorld-Speech-Eventing.
+在你的 Arduino IDE（版本 1.62 或更高版本）中，转到菜单项“文件”-\>“示例”-\>“VirtualShield”-\>“HelloWorld-语音-事件”。
 
-Hook up an LED with a resister to pin 8 as per this diagram:
-(image)
+根据此关系图使用一个电阻器将 LED 连接到引脚 8：（图）
 
-Run the Windows Virtual Shields for Arduino app.
+运行适用于 Arduino 应用的 Windows 虚拟防火墙。
 
-Compile, and upload your Arduino sketch.
+编译并上载你的 Arduino 草图。
 
-Your phone should welcome you. You can say 'on' or 'off' to turn on or off your LED.
+你的手机应欢迎你。可以说“打开”或“关闭”来打开或关闭你的 LED。
 
 
-##Arduino Wiring Sketch : Hello World example
+##Arduino 接线示意图： Hello World 示例
 
 {% highlight C++ %}
 #include <ArduinoJson.h>

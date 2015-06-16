@@ -1,49 +1,49 @@
 ---
 layout: default
-title: RPi2 Pin Mappings
-permalink: /en-US/win10/samples/PinMappingsRPi2.htm
-lang: en-US
+title: RPi2 引脚映射
+permalink: /zh-CN/win10/samples/PinMappingsRPi2.htm
+lang: zh-CN
 ---
 
-##Raspberry Pi 2 Pin Mappings
+##Raspberry Pi 2 引脚映射
 
-![RPi2 Pin Header]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![RPi2 排针]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
 
-<sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
+<sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
-Hardware interfaces for the Raspberry Pi 2 are exposed through the 40-pin header **J8** on the board. Functionality includes:
+Raspberry Pi 2 的硬件接口通过开发板上的 40 排针 **J8** 公开。功能包括：
 
-* **13x** - GPIO pins
-* **2x** - SPI buses
-* **1x** - I2C bus
-* **2x** - 5V power pins
-* **2x** - 3.3V power pins
-* **8x** - Ground pins
+* **13x** - GPIO 引脚
+* **2x** - SPI 总线
+* **1x** - I2C 总线
+* **2x** - 5V 电源引脚
+* **2x** - 3.3V 电源引脚
+* **8x** - 接地引脚
 
-##GPIO Pins
+##GPIO 引脚
 
-The following GPIO pins are accessible through APIs:
+以下 GPIO 引脚可通过 API 访问：
 
 {:.table.table-bordered}
-| GPIO# | Power-on Pull | Header Pin         |
+| GPIO\# | 通电拉 | 排针 |
 |-------|---------------|--------------------|
-| 4     | PullUp        | 7                  |
-| 5     | PullUp        | 29                 |
-| 6     | PullUp        | 31                 |
-| 12    | PullDown      | 32                 |
-| 13    | PullDown      | 33                 |
-| 16    | PullDown      | 36                 |
-| 18    | PullDown      | 12                 |
-| 22    | PullDown      | 15                 |
-| 23    | PullDown      | 16                 |
-| 24    | PullDown      | 18                 |
-| 25    | PullDown      | 22                 |
-| 26    | PullDown      | 37                 |
-| 27    | PullDown      | 13                 |
-| 35    | PullUp        | Red Power LED      |
-| 47    | PullUp        | Green Activity LED |
+| 4 | 上拉 | 7 |
+| 5 | 上拉 | 29 |
+| 6 | 上拉 | 31 |
+| 12 | 下拉 | 32 |
+| 13 | 下拉 | 33 |
+| 16 | 下拉 | 36 |
+| 18 | 下拉 | 12 |
+| 22 | 下拉 | 15 |
+| 23 | 下拉 | 16 |
+| 24 | 下拉 | 18 |
+| 25 | 下拉 | 22 |
+| 26 | 下拉 | 37 |
+| 27 | 下拉 | 13 |
+| 35 | 上拉 | 红色电源 LED |
+| 47 | 上拉 | 绿色活动 LED |
 
-As an example, the following code opens **GPIO 5** as an output and writes a digital '**1**' out on the pin:
+例如，以下代码将 **GPIO 5** 作为输出打开，并在引脚上写出数字“\*\*1\*\*”：
 
 {% highlight C# %}
 using Windows.Devices.Gpio;
@@ -58,7 +58,7 @@ public void GPIO()
     // Open GPIO 5
     using (GpioPin pin = gpio.OpenPin(5))
     {
-        // Latch HIGH value first. This ensures a default value when the pin is set as output
+        // Latch HIGH value
         pin.Write(GpioPinValue.High);
     
         // Set the IO direction as output
@@ -68,20 +68,20 @@ public void GPIO()
 }
 {% endhighlight %}
 
-When you open a pin, it will be in its power-on state. To disconnect the pull resistors and get a high-impedance input, set the drive mode to GpioPinDriveMode.Input:
+当你打开引脚时，它将处于其通电状态。若要断开拉电阻的连接并获取高阻抗输入，请将驱动程序模式设置为 GpioPinDriveMode.Input：
 
     pin.SetDriveMode(GpioDriveMode.Input);
 
-When a pin is closed, it reverts to its power-on state.
+当关闭引脚时，它将还原到其通电状态。
 
-##I2C Bus
+##I2C 总线
 
-There is one I2C controller **I2C1** exposed on the pin header with two lines **SDA** and **SCL**. 1.8K&#x2126; internal pull-up resistors are already installed on the board for this bus.
+排针上公开了一个 I2C 控制器 **I2C1**，带有 **SDA** 和 **SCL** 两条线。用于此总线的 1.8K&\#x2126; 内部上拉电阻已安装在开发板上。
 
-* Pin 3 - **I2C1 SDA**
-* Pin 5 - **I2C1 SCL**
+* 引脚 3 - **I2C1 SDA**
+* 引脚 5 - **I2C1 SCL**
 
-The example below initializes **I2C1** and writes data to an I2C device with address **0x40**:
+下面的示例将初始化 **I2C1** 并将数据写入地址为 **0x40** 的 I2C 设备：
 
 {% highlight C# %}
 using Windows.Devices.Enumeration;
@@ -110,26 +110,27 @@ public async void I2C()
 {% endhighlight %}
 
 
-##SPI Bus
+##SPI 总线
 
-There are 2 SPI bus controllers available on the RPi2: **SPI0** and **SPI1**.
+RPi2 上有 2 个 SPI 总线控制器可用： **SPI0** 和 **SPI1**。
 
-**SPI0** has the standard **MOSI**, **MISO**, and **SCLK** lines, and can be configured to use one of two chip-select lines **SPI0 CS0** and **SPI0 CS1**.
+**SPI0** 具有标准的 **MOSI**、**MISO** 和 **SCLK** 线，并且可以配置为使用 **SPI0 CS0** 和 **SPI0 CS1** 两种芯片选择线之一。
 
-* Pin 19 - **SPI0 MOSI**
-* Pin 21 - **SPI0 MISO**
-* Pin 23 - **SPI0 SCLK**
-* Pin 24 - **SPI0 CS0**
-* Pin 26 - **SPI0 CS1**
+* 引脚 19 - **SPI0 MOSI**
+* 引脚 21 - **SPI0 MISO**
+* 引脚 23 - **SPI0 SCLK**
+* 引脚 24 - **SPI0 CS0**
+* 引脚 26 - **SPI0 CS1**
 
-**SPI1** includes **MOSI**, **MISO**, and **SCLK** lines, and only one chip-select line **SPI1 CS0**.
+**SPI1** 包括 **MOSI**、**MISO** 和 **SCLK** 线，并且只有 **SPI1 CS0** 一种芯片选择线。
 
-* Pin 38 - **SPI1 MOSI**
-* Pin 35 - **SPI1 MISO**
-* Pin 40 - **SPI1 SCLK**
-* Pin 11 - **SPI1 CS0**
+* 引脚 38 - **SPI1 MOSI**
+* 引脚 35 - **SPI1 MISO**
+* 引脚 40 - **SPI1 SCLK**
+* 引脚 11 - **SPI1 CS0**
 
-An example on how to perform a SPI write on bus **SPI0** is shown below:
+有关如何在总线 **SPI0** 上执行 SPI 写入的示例如下所示：
+
 {% highlight C# %}
 using Windows.Devices.Enumeration;
 using Windows.Devices.Spi;

@@ -1,83 +1,83 @@
 ---
 layout: default
-title: Driver Lab - Use Visual Studio to build a driver
-permalink: /en-US/win10/samples/DriverLab2.htm
-lang: en-US
+title: 驱动程序实验 - 使用 Visual Studio 生成驱动程序
+permalink: /zh-CN/win10/samples/DriverLab2.htm
+lang: zh-CN
 ---
 
-##Use Visual Studio to build a driver
+##使用 Visual Studio 生成驱动程序
 
-A Windows IoT Core driver is made up of one or more files.  Some of these files are simple text files to aid during installation, while others are binaries built during compilation of the source code.  For this lab, we are interested in files with the following extensions: **SYS** and **INF**. In this exercise, you will use Visual Studio to compile a driver for a specific platform.
+Windows IoT Core 驱动程序由一个或多个文件组成。其中的一些文件是在安装期间用于帮助的简单文本文件，而其他文件则是在编译源代码期间生成的二进制文件。对于此实验，我们感兴趣的是带有以下扩展名的文件： **SYS** 和 **INF**。在本练习中，你将使用 Visual Studio 为特定的平台编译驱动程序。
 
-###On the development computer
+###在开发计算机上
 
-* Right-click the Project node in the Solutions Explorer and select `Properties` to configure the driver properties
+* 在解决方案资源管理器中，右键单击项目节点，然后选择 `Properties` 来配置驱动程序属性
 
-    ![Driver solution properties]({{site.baseurl}}/images/DriverLab/sln-properties.png)
+    ![驱动程序解决方案属性]({{site.baseurl}}/images/DriverLab/sln-properties.png)
 
-* Expand the `Driver Signing` node and click on `General`
-* Click on `Test Certificate`
-* Click on the drop-down arrow to expand the options
-* Select `Select from Store` and choose the `Windows Phone OEM Test Cert 2013 (TEST ONLY)` certificate
+* 展开 `Driver Signing` 节点，然后单击 `General`
+* 单击 `Test Certificate`
+* 单击下拉箭头展开选项
+* 选择 `Select from Store`，然后选择 `Windows Phone OEM Test Cert 2013 (TEST ONLY)` 证书
 
-    ![Driver Settings properties]({{site.baseurl}}/images/DriverLab/driver-signing-properties.png)
+    ![驱动程序设置属性]({{site.baseurl}}/images/DriverLab/driver-signing-properties.png)
 
 
-	* If you do not see the `Windows Phone OEM Test Cert 2013 (TEST ONLY)` certificate as indicated above, you may not have the certificate installed on your development machine.  Please follow steps 1 through 6 as indicated below to install the certificate:
+	* 如果你看不到如上所示的 `Windows Phone OEM Test Cert 2013 (TEST ONLY)` 证书，则你的开发计算机上可能尚未安装该证书。请按照如下所示的步骤 1 到 6 安装证书：
 
-		1.  **Close** Visual Studio
+		1.  **关闭** Visual Studio
 
-		2.  Open up a command prompt as **Administrator** on your development machine
+		2.  在开发计算机上，以**管理员**身份打开命令提示符
 
-		3.  Navigate to the following directory
+		3.  导航到以下目录
 
 				cd "C:\Program Files (x86)\Windows Kits\10\Tools\bin\i386"
 
-		4.  Set the following environment variable:
+		4.  设置以下环境变量：
 
 				set WPDKCONTENTROOT=C:\Program Files (x86)\Windows Kits\10
 
-		5.  Run the following command:
+		5.  运行以下命令：
 
 				installoemcerts.cmd
 
-		6.  Open the Visual Studio solution as indicated in the previous section, and try adding the test certificate again.
+		6.  如上一部分所示，打开 Visual Studio 解决方案，然后尝试再次添加测试证书。
 
-* From the Build menu, click `Build Solution(Ctrl+Shift+B)`. Make sure that you are building for `x86` if you are using a MinnowBoard Max, or `ARM` if you are using a Raspberry Pi 2.
+* 从“生成”菜单中，单击 `Build Solution(Ctrl+Shift+B)`。如果你使用 MinnowBoard Max，请确保面向 `x86` 生成驱动程序，或者如果你使用 Raspberry Pi 2，请确保面向 `ARM` 生成驱动程序。
 
-    ![Driver Settings properties]({{site.baseurl}}/images/DriverLab/driver-build-option.png)
+    ![驱动程序设置属性]({{site.baseurl}}/images/DriverLab/driver-build-option.png)
 
-* You will now have a collection of files that make up the driver. Confirm you have both the **SYS** and **INF** files for your driver under the `<Samples-Folder>\DriverSamples\gpiokmdfdemo\Debug\gpiokmdfdemo\` folder.
+* 现在，你将会获得构成驱动程序的文件集合。请确认在 `<Samples-Folder>\DriverSamples\gpiokmdfdemo\Debug\gpiokmdfdemo\` 文件夹下有驱动程序的 **SYS** 和 **INF** 文件。
 
         gpiokmdfdemo.inf
         gpiokmdfdemo.sys
 
-* Next, generate the ACPI table that will be needed for the driver to work correctly on the Windows IoT Core device.
+* 接下来，将生成 ACPI 表，为了让驱动程序在 Windows IoT Core 设备上能够正常工作将需要此表。
 
-    We will use the Microsoft ACPI Source Language compiler (`asl.exe`) to build the ACPI table.  The ASL compiler is distributed with the WDK and can be found in `C:\Program Files (x86)\Windows Kits\10\Tools\x86\ACPIVerify\`
+    我们将使用 Microsoft ACPI 源语言编译器 \(`asl.exe`\) 来生成 ACPI 表。ASL 编译器随 WDK 分发，而且可以在 `C:\Program Files (x86)\Windows Kits\10\Tools\x86\ACPIVerify\` 中获取
 
-    The ASL compiler takes as input parameter a file with extension **ASL**.  You will find 2 **ASL** files in the asl directory under `<Samples-Folder>\DriverSamples\gpiokmdfdemo\asl\`
+    ASL 编译器将具有扩展名 **ASL** 的文件作为输入参数。你会在 `<Samples-Folder>\DriverSamples\gpiokmdfdemo\asl\` 下的 asl 目录中发现 2 个 **ASL** 文件
 
-    Use `gpiokmdfdemo.asl` if you are deploying to a MinnowBoard Max.  Use `rpi2.asl` if you are deploying to a Raspberry Pi 2.
+    如果要部署到 MinnowBoard Max，则使用 `gpiokmdfdemo.asl`。如果要部署到 Raspberry Pi 2，则使用 `rpi2.asl`。
 
-* Copy the **ASL** file to the `C:\Program Files (x86)\Windows Kits\10\Tools\x86\ACPIVerify\` directory
+* 将 **ASL** 文件复制到 `C:\Program Files (x86)\Windows Kits\10\Tools\x86\ACPIVerify\` 目录
 
-* Open up a command prompt as **Administrator** and navigate to the asl compiler directory:
+* 以**管理员**身份打开命令提示符，并导航到 asl 编译器目录：
 
         cd "C:\Program Files (x86)\Windows Kits\10\Tools\x86\ACPIVerify"
 
-* If you are using MinnowBoard Max, type:
+* 如果你使用 MinnowBoard Max，请键入：
 
         asl.exe gpiokmdfdemo.asl
 
-    If you are using Raspberry Pi 2, type:
+    如果你使用 Raspberry Pi 2，请键入：
 
         asl.exe rpi2.asl
 
-* An `ACPITABL.dat` file will be generated in the same directory(`C:\Program Files (x86)\Windows Kits\10\Tools\x86\ACPIVerify\`). Verify that this file has been generated.
+* 将在相同目录 \(`C:\Program Files (x86)\Windows Kits\10\Tools\x86\ACPIVerify\`\) 中生成 `ACPITABL.dat` 文件。验证是否已生成此文件。
 
-In the next section you will use these files (**ACPITABL.dat**, **gpiokmdfdemo.inf**, and **gpiokmdfdemo.sys**) to install the driver on the Windows IoT Core device.
+在下一部分中，你将使用这些文件（\*\*ACPITABL.dat\*\*、**gpiokmdfdemo.inf** 和 **gpiokmdfdemo.sys**）在 Windows IoT Core 设备上安装驱动程序。
 
-###Next Step
+###下一步
 
-[Deploy the driver and confirm the installation]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab3.htm)
+[部署驱动程序并确认安装]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab3.htm)

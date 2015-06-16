@@ -1,95 +1,95 @@
 ---
 layout: default
-title: Web-based Device Management
-permalink: /en-US/win10/tools/Webb.htm
-lang: en-US
+title: 基于 Web 的设备管理
+permalink: /zh-CN/win10/tools/Webb.htm
+lang: zh-CN
 ---
 
 <div class="container" markdown="1">
 
-##Web-based device management
+##基于 Web 的设备管理
 
-![Webb Home]({{site.baseurl}}/images/webb/webb.png)
+![Web 主页]({{site.baseurl}}/images/webb/webb.png)
 
-###Learn how to get advanced diagnostics about your machine from the web
+###了解如何从 Web 获取有关你的计算机的高级诊断信息
 
-Web-based device management provides basic configuration and device management capabilities, in addition to advanced diagnostic tools to help you troubleshoot and view the real time performance of your Windows IoT Device. Once connected to your local network, every Windows 10 IoT Core device will allow you to access these tools.
+除了高级诊断工具外，基于 Web 的设备管理还提供基本的配置和设备管理功能，从而帮助你排除 Windows IoT 设备的故障并查看其实时性能。连接到本地网络之后，每个 Windows 10 IoT 核心版设备都将允许你访问这些工具。
 
-###Connect your board to the internet
+###将你的开发板连接到 Internet
 
-To get Web-based device management up and running, you first need to connect your device to your network. To do so, connect an Ethernet cable from your board into to your local network.
+若要使基于 Web 的设备管理正常工作，首先需要将设备连接到网络。为此，请将以太网电缆从你的开发板连接到本地网络中。
 
 
-### Find your devices IP address
+### 查找你的设备 IP 地址
 
-You can find your IP address two ways:
+你可以使用以下两种方法查找 IP 地址：
 
-1.	If your device is connected to a monitor, your IP address is listed on the front page. If you do not see an IP address, your board is not properly connected to your network.  
+1.	如果你的设备已连接到监视器，IP 地址将在首页上列出。如果未看到 IP 地址，则开发板未正确连接到网络。  
 
     ![DefaultApp IP]({{site.baseurl}}/images/webb/defaultapp_ip.png)
 
-2.	If you have already [set up your PC]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm), you should have **Windows IoT Core Watcher** installed on your PC. Launch Windows IoT Core Watcher and find your machine name. Listed next to the machine name is your board's IP address. If you cannot find your machine, either your PC or your board is not properly connected to your network.
+2.	如果你已[设置电脑]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm)，应当已在电脑上安装了 **Windows IoT 核心版观察程序**。启动 Windows IoT 核心版观察程序，并找到你的计算机名。计算机名旁边列出的是开发板的 IP 地址。如果找不到你的计算机，则表明你的电脑或开发板未正确连接到网络。
 
     ![IotWatcher IP]({{site.baseurl}}/images/IoTCoreWatcher.PNG)
 
-###Connect to Web-based device management through your browser
+###通过浏览器连接到基于 Web 的设备管理
 
-1.	Using your favorite browser, enter the IP address into the address bar
+1.	使用你最喜欢的浏览器，在地址栏中输入 IP 地址
 
-	![Browser IP]({{site.baseurl}}/images/webb/browser_ip.png)
+	![浏览器 IP]({{site.baseurl}}/images/webb/browser_ip.png)
 
-2.	Web-based device management should launch and display the web management home screen:
+2.	基于 Web 的设备管理应启动并显示 Web 管理主屏幕：
 
-	![Webb Home]({{site.baseurl}}/images/webb/webb.png)
+	![Web 主页]({{site.baseurl}}/images/webb/webb.png)
 
-    You can also launch the Web-based device management tool from the Windows IoT Core Watcher by right clicking on your device, and clicking Launch in browser
+    还可以通过右键单击设备，然后单击“在浏览器中启动”，从 Windows IoT 核心版观察程序启动基于 Web 的设备管理工具
 
-###Top Toolbar
-The top toolbar allows you to shutdown, reboot and give feedback.
+###顶部工具栏
+顶部工具栏使你能够关机、重新启动并提供反馈。
 
-![Webb toolbar]({{site.baseurl}}/images/webb/toolbar.png)
+![Web 工具栏]({{site.baseurl}}/images/webb/toolbar.png)
 
-* Shutdown - Shuts down the device
-* Reboot - Reboots the device
-* Feedback - Opens up the Windows 10 Feedback tool where you can enter any valuable feedback
-* Help - The help button is currently in progress and will be updated soon
+* 关机 - 关闭设备
+* 重新启动 - 重新启动设备
+* 反馈 - 打开 Windows 10 反馈工具，你可以在其中输入任何有价值的反馈
+* 帮助 -“帮助”按钮当前正在开发，将很快更新
 
-    Note: For Rpi2 users, the Shutdown button is not working correctly, and reboots the device. A fix is coming soon
+    注意： 对于 Rpi2 用户，“关机”按钮无法正常工作，将会重新启动设备。修补程序即将推出
 
 
-###Description of Web-based device management functionalities
+###基于 Web 的设备管理功能的说明
 
     This tool is still in beta. Some of the features are untested or still being worked on.
 
-* ####**Home**
+* ####**主页**
 
-	This section is coming soon! Stay tuned
+	本部分即将推出！ 敬请关注
 
-* ####**Apps**
+* ####**应用**
 
-	Provides install/uninstall functionality for AppX packages and bundles on your device.
+	为设备上的 AppX 程序包和捆绑包提供安装/卸载功能。
 
 	    Windows 10 IoT Core only allows you to have one app running in the foreground at a time.
 
-* ####**Processes**
+* ####**进程**
 
-	Much like the Task Manager on your PC, the processes allows you to see which processes are currently running as well as the memory usage each are holding.  Clicking the X next to a process terminates it.
+	与电脑上的任务管理器非常相似，进程允许你查看当前正在运行的进程以及每个进程占用的内存使用情况。单击进程旁的 X 可将其终止。
 
-* ####**Performance**
+* ####**性能**
 
-	Displays real-time diagnostics of CPU and I/O usage, and memory stats.
+	显示 CPU 和 I/O 使用率以及内存统计数据的实时诊断。
 
-* ####**Debugging, ETW Realtime, Perf Tracing**
+* ####**调试、ETW 实时、性能跟踪**
 
-	These sections are currently a work in progress. More details are coming soon.
+	这些部分当前正在进行开发。更多详细信息即将发布。
 
-* ####**Device Manager**
+* ####**设备管理器**
 
-	Enumerates all peripherals attached to your device.
+	枚举连接到你的设备的所有外围设备。
 
-* ####**Networking**
+* ####**网络**
 
-	Once your board is connected to the internet, the IP configuration section will allow you to view advanced network diagnostic information, such as your IP address, and the description of the connection.
+	将开发板连接到 Internet 后，你可以通过 IP 配置部分查看高级网络诊断信息（例如 IP 地址）以及连接的说明。
 
 	    Wi-Fi adapters are not currently supported.  This will be coming soon.
 

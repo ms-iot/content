@@ -1,31 +1,30 @@
 ---
 layout: default
-title: Console App Sample
-permalink: /en-US/win10/samples/ConsoleApp.htm
-lang: en-US
+title: 控制台应用示例
+permalink: /zh-CN/win10/samples/ConsoleApp.htm
+lang: zh-CN
 ---
 
-##MemoryStatus Console Application Sample
+##MemoryStatus 控制台应用程序示例
 
-We'll create a simple console application that can be used to query the memory usage on your Windows IoT Core device (Raspberry Pi 2 or MinnowBoard Max). Please note that you need to compile the project for ARM for Raspberry Pi 2 and x86 for MinnowBoard Max.
+我们将要创建一个可用于在你的 Windows IoT Core 设备（Raspberry Pi 2 或 MinnowBoard Max）上查询内存使用情况的简单的控制台应用程序。请注意，你需要针对 Raspberry Pi 2 和 MinnowBoard Max \(x86\) 的 ARM 编译项目。
 
-###Load the project in Visual Studio
+###在 Visual Studio 中加载项目
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/MemoryStatus){:target="_blank"}.  Make a copy of the folder on your disk and open the project from Visual Studio.
+可以在[此处](https://github.com/ms-iot/samples/tree/develop/MemoryStatus)找到此示例。在磁盘上生成文件夹的副本，然后从 Visual Studio 打开项目。
 
-###To create your own project in Visual Studio
+###在 Visual Studio 中创建你自己的项目
 
-* Create a new project (File \| New Project...). In the 'New Project' dialog, navigate to 'Windows IoT Core' as shown below (in the left pane in the dialog: Templates \| Visual C++ \| Windows \| Windows IoT Core).<br/>
-Select the template 'Blank Windows IoT Core Console Application'<br/>
-Remember to give a good name to your first app! In this example, we called the project 'MemoryStatus'.
+* 创建新项目（“文件”\|“新建项目...”）。在“新建项目”对话框中，如下所示导航到“Windows IoT Core”（在该对话框的左窗格中： 模板 \| Visual C++ \| Windows \| Windows IoT Core）。<br/> 选择模板“空白 Windows IoT Core 控制台应用程序”<br/>请记得为你的第一个应用指定一个好记的名称！ 在本示例中，我们将项目命名为“MemoryStatus”。
 
-    ![Console Application Template Location]({{site.baseurl}}/images/Console/new_cpp_console_proj.png)
+    ![控制台应用程序模板位置]({{site.baseurl}}/images/Console/new_cpp_console_proj.png)
 
-* Let's add some content to the console application. From Solution Explorer, select the 'ConsoleApplication.cpp' file.
+* 让我们来向该控制台应用程序添加一些内容。从解决方案资源管理器中，选择“ConsoleApplication.cpp”文件。
 
-    ![ConsoleApplication File]({{site.baseurl}}/images/Console/console_application.png)
+    ![ConsoleApplication 文件]({{site.baseurl}}/images/Console/console_application.png)
 
-* To add some functionality to our console, add the following memory status query and display code:
+* 若要向我们的控制台添加一些功能，请添加以下内存状态查询和显示代码：
+
 <UL>
 {% highlight C++ %}
 #include "pch.h"
@@ -121,34 +120,35 @@ int main(int argc, char **argv)
 }
 {% endhighlight %}
 </UL>
-* Make sure the app builds correctly invoking the Build \| Build Solution menu command.
 
-* This application can be run in either headed or headless mode.  To better understand what headed and headless mode are and how to configure your device, follow the instructions [here]{{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
+* 确保通过调用“生成”\|“生成解决方案”菜单命令正确生成应用。
 
-* It is easy to deploy this console application to our Windows IoT Core device. In the [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) documentation, you can find instructions to use `setcomputername` to configure a unique name for your Windows IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in VS.
+* 此应用程序既能在有外设模式下运行，也能在无外设模式下运行。若要更好地了解什么是有外设和无外设模式以及如何配置你的设备，请按照[此处] \({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm\) 的说明操作。
 
-    In Visual Studio, you can configure your target by editing your project's properties (be sure to make all of the highlighted changes as appropriate to your board's name or IP address):
+* 将此控制台应用程序部署到 Windows IoT Core 设备非常容易。在 [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) 文档中，你可以找到关于使用 `setcomputername` 为你的 Windows IoT Core 设备配置唯一名称的说明。在本示例中，我们将在 VS 的“远程计算机调试”设置中使用该名称（尽管你也可以使用自己的 IP 地址）。
 
-    ![RemoteMachineProjectSettings Target]({{site.baseurl}}/images/Console/console_project_settings.png)
+    在 Visual Studio 中，你可以通过编辑你的项目的属性配置你的目标项目（请确保所有突出显示的更改均适用于板名称或 IP 地址）：
 
-        Note: You can use the IP address instead of the Windows IoT Core device name.
+    ![RemoteMachineProjectSettings 目标]({{site.baseurl}}/images/Console/console_project_settings.png)
 
-* The project configuration needs to be modified to enable deployment.  To do this, open the Configuration Manager by selecting the Configuration manger from the Solution Configuration drop-down menu on the toolbar.
+    注意： 你可以使用 IP 地址而不使用 Windows IoT Core 设备名称。
 
-    ![SolutionConfiguration Target]({{site.baseurl}}/images/Console/configuration_management.png)
+* 需要修改项目配置才能启用部署。为此，请从工具栏的“解决方案配置”下拉菜单中选择“配置管理器”，以打开配置管理器。
 
-    From the Configuration Manager, ensure that the Deploy checkbox is selected for your project configuration (if this options is disabled, it is likely that the deployment options have not been fully entered into the Debugging tab of the project properties)
+    ![SolutionConfiguration 目标]({{site.baseurl}}/images/Console/configuration_management.png)
 
-    ![RemoteMachineProjectSettings Target]({{site.baseurl}}/images/Console/deploy_checkbox.png)
+    在配置管理器中，确保已针对自己的项目配置选中了“部署”复选框（如果此选项处于禁用状态，则很可能是因为部署选项未全部输入到项目属性的“调试”选项卡中）
 
-* Now we're ready to deploy to the remote Windows IoT Core device. Simply press F5 (or select Debug \| Start Debugging) to start debugging our app. You can also use Build \| Deploy Solution to simply deploy your application without starting a debug session.
+    ![RemoteMachineProjectSettings 目标]({{site.baseurl}}/images/Console/deploy_checkbox.png)
 
-        NOTE: When run from Visual Studio, the output will not display anywhere, but you will be able to set breakpoints, see variable values, etc.
+* 现在，我们可以随时部署到远程 Windows IoT Core 设备。只需按 F5（或依次选择“调试”\|“启动调试”）即可开始调试应用。你也可以使用“生成”\|“部署解决方案”仅部署你的应用程序，而不启动调试会话。
 
-* To stop the app, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
+    注意： 当从 Visual Studio 运行时，输出将不会显示在任何位置，但是你可以设置断点、查看值等。
 
-* Congratulations! You just deployed your first console application to a device running Windows IoT Core!
+* 若要停止应用调试，请按“停止调试”按钮（或依次选择“调试”\|“停止调试”）。
 
-* You can now run the application as you would any other application.  Simply open a PowerShell connection (instructions can be found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)) and enter the Remote Command you specified above.
+* 恭喜你！ 你已将第一个控制台应用程序部署到运行 Windows IoT Core 的设备！
 
-    ![ConsoleOutput Target]({{site.baseurl}}/images/Console/console_output.png)
+* 现在，你可以运行该应用程序，就像运行其他任何应用程序那样。只需打开 PowerShell 连接（可在[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)获取相关说明），并输入上面指定的远程命令。
+
+    ![ConsoleOutput 目标]({{site.baseurl}}/images/Console/console_output.png)

@@ -1,131 +1,129 @@
 ---
 layout: default
-title: Driver Lab - Deploy the driver and confirm the installation
-permalink: /en-US/win10/samples/DriverLab3.htm
-lang: en-US
+title: 驱动程序实验 - 部署驱动程序并确认安装
+permalink: /zh-CN/win10/samples/DriverLab3.htm
+lang: zh-CN
 ---
 
-##Deploy the driver and confirm the installation
+##部署驱动程序并确认安装
 
-This exercise demonstrates how to manually copy and install the driver to a Windows IoT Core device. We will first use the File Transfer Protocol (FTP) to transfer files from the development machine to the target device (Windows IoT Core device). We will then use PowerShell to install the driver.
+本练习将演示如何手动复制驱动程序并将其安装到 Windows IoT Core 设备。首先，我们将使用文件传输协议 \(FTP\) 将文件从开发计算机传输到目标设备（Windows IoT Core 设备）。然后，我们将使用 PowerShell 安装驱动程序。
 
-### Use File Transfer Protocol (FTP) to transfer files from the development machine to the target device (Windows IoT Core device).
+### 使用文件传输协议 \(FTP\) 将文件从开发计算机传输到目标设备（Windows IoT Core 设备）。
 
-#### On the target device (this is your Raspberry Pi 2 or your Minnow Board Max)
-* Boot up your Windows IoT Core device and make a note of its name or IP Address as displayed on its attached screen when the device first boots up.
+#### 在目标设备上（这是你的 Raspberry Pi 2 或 MinnowBoard Max）
+* 启动你的 Windows IoT Core 设备，请记下当设备首次启动时在其附加屏幕上所显示的名称或 IP 地址。
 
-#### On the development computer
+#### 在开发计算机上
 
-* Open up a File Explorer window, and in the address bar type `ftp://<TARGET_DEVICE>`, where `<TARGET_DEVICE>` is either the name or the IP Address of your Windows IoT Core device:
+* 打开一个文件资源管理器窗口，并在地址栏中键入 `ftp://<TARGET_DEVICE>`，其中 `<TARGET_DEVICE>` 是名称或你的 Windows IoT Core 设备的 IP 地址：
 
-    ![FTP with File Explorer]({{site.baseurl}}/images/DriverLab/ftp1.png)
+    ![使用文件资源管理器的 FTP]({{site.baseurl}}/images/DriverLab/ftp1.png)
 
-    If you are prompted for a user name and password, use the following credentials:
+    如果系统提示你输入用户名和密码，请使用以下凭据：
 
         User Name: Administrator
         Password:  p@ssw0rd
 
-    NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)
+    注意： **强烈建议**你更新默认的管理员帐户密码。请按照在[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)获取的说明进行操作。
 
-* Navigate to the `\windows\system32\` folder in the FTP File Explorer window:
+* 导航到 FTP 文件资源管理器窗口中的 `\windows\system32\` 文件夹：
 
-    ![FTP with File Explorer]({{site.baseurl}}/images/DriverLab/ftp2.png)
+    ![使用文件资源管理器的 FTP]({{site.baseurl}}/images/DriverLab/ftp2.png)
 
-* Drag and drop (copy) the following two files (created in the previous exercise while building the driver in Visual Studio) from the development machine to the `\windows\system32\` folder on your IoT Core device:
+* 从开发计算机将以下两个文件（在上一练习中在 Visual Studio 中生成驱动程序时创建）拖放（复制）到 IoT Core 设备上的 `\windows\system32\` 文件夹：
 
         gpiokmdfdemo.inf
         gpiokmdfdemo.sys
 
-* Drag and drop (copy) the `ACPITABL.dat` file (created in the previous exercise while building the ACPI table) to the `\windows\system32\` folder.
+* 将 `ACPITABL.dat` 文件（在上一练习中在生成 ACPI 表时创建）拖放（复制）到 `\windows\system32\` 文件夹。
 
-* Verify that the following files have been successfully transferred to the `\windows\system32\` folder in your IoT Core device using FTP:
+* 验证以下文件是否已使用 FTP 成功传送到  IoT Core 设备中的 `\windows\system32\` 文件夹：
 
         gpiokmdfdemo.inf
         gpiokmdfdemo.sys
         ACPITABL.dat
 
-* The next steps involve connecting to the target device using PowerShell as explained [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)
+* 后续步骤涉及到使用 PowerShell 连接到目标设备，如[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)所述。
 
-### Enable test-signing on the target device using BCDEDIT
+### 在使用 BCDEDIT 的目标设备上启用测试签名
 
-We will use **bcdedit** to enable test-signing on the target, that is, the Windows IoT Core device.
-Run the following command from the elevated PowerShell command window opened in the previous step:
+我们将使用 **bcdedit** 在目标设备（即 Windows IoT Core 设备）上启用测试签名。从在上一步中打开的提升的 PowerShell 命令窗口中运行以下命令：
 
     [192.168.0.243]: PS C:\> bcdedit /store C:\EFIESP\EFI\Microsoft\boot\BCD /set testsigning on
 
-### Reboot the target Windows IoT Core device
+### 重新启动目标 Windows IoT Core 设备
 
-From the PowerShell window, type the following command:
+在 PowerShell 窗口中，键入以下命令：
 
     [192.168.0.243]: PS C:\> shutdown /r /t 0
 
-The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
+目标设备将重新启动。重新启动后，请确保 PowerShell 仍连接到它，否则，如[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)所述，使用 PowerShell `enter-pssession` 命令重新连接到目标设备。
 
-### Install demo driver
+### 安装演示驱动程序
 
-Using the PowerShell window, navigate to the `C:\Windows\System32` directory on the target device:
+使用 PowerShell 窗口，导航到目标设备上的 `C:\Windows\System32` 目录：
 
     [192.168.0.243]: PS C:\> cd C:\Windows\System32
 
-We will use the `devcon.exe` tool to install our demo driver.  Type the following command in the PowerShell window:
+我们将使用 `devcon.exe` 工具安装我们的演示驱动程序。在 PowerShell 窗口中，键入以下命令：
 
     [192.168.0.243]: PS C:\> devcon.exe install gpiokmdfdemo.inf ACPI\GPOT0001
 
-### Reboot the target Windows IoT Core device
+### 重新启动目标 Windows IoT Core 设备
 
-From the PowerShell window, type the following command:
+在 PowerShell 窗口中，键入以下命令：
 
     [192.168.0.243]: PS C:\> shutdown /r /t 0
 
-The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
+目标设备将重新启动。重新启动后，请确保 PowerShell 仍连接到它，否则，如[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)所述，使用 PowerShell `enter-pssession` 命令重新连接到目标设备。
 
-### Remove synthetic node
+### 删除综合节点
 
-We will use the `devcon.exe` tool to remove the synthetic node.  Type the following command in the PowerShell window:
+我们将使用 `devcon.exe` 工具删除综合节点。在 PowerShell 窗口中，键入以下命令：
 
     [192.168.0.243]: PS C:\> devcon.exe remove ACPI\GPOT0001
 
-Note:  The sample driver will only run once the synthetic node is removed.
+注意： 在删除综合节点后，该示例驱动程序才会运行。
 
-### Reboot the target device
+### 重新启动目标设备
 
-From the PowerShell window, type the following command:
+在 PowerShell 窗口中，键入以下命令：
 
     [192.168.0.243]: PS C:\> shutdown /r /t 0
 
-The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
+目标设备将重新启动。重新启动后，请确保 PowerShell 仍连接到它，否则，如[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)所述，使用 PowerShell `enter-pssession` 命令重新连接到目标设备。
 
-### Check the status of the driver
+### 检查驱动程序状态
 
-From the PowerShell window, type the following command:
+在 PowerShell 窗口中，键入以下命令：
 
     [192.168.0.243]: PS C:\> devcon status ACPI\GPOT0001
 
-You should see the following output:
+你应看到以下输出：
 
     ACPI\GPOT0001\1
         Name: GPIO KMDF Demo Device
         Driver is running.
     1 matching device(s) found.
 
-### Connect the provided resistor and LED to the target device
+### 将提供的电阻器和 LED 连接到目标设备
 
-Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm) to connect the resistor and LED to your Windows IoT Core device.
+按照[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)的说明将电阻器和 LED 连接到你的 Windows IoT Core 设备。
 
-### Use the application provided to communicate with the driver
+### 使用提供的应用程序与驱动程序通信
 
-We have provided a pre-built binary application called BlinkyApp.exe which communicates with the driver to turn on/off the LED.  The application can be found at `<Samples-Folder>\DriverSamples\BlinkyApp\BlinkyApp_<PLATFORM>.exe`.
+我们已提供一个称为 BlinkyApp.exe 的预生成二进制应用程序，它可与驱动程序通信来打开/关闭 LED。可以在 `<Samples-Folder>\DriverSamples\BlinkyApp\BlinkyApp_<PLATFORM>.exe` 找到应用程序。
 
-For MinnowBoard Max, `<PLATFORM>` will be `x86`.
-For Raspberry Pi 2, `<PLATFORM>` will be `ARM`.
+对于 MinnowBoard Max，`<PLATFORM>` 将会是 `x86`。对于 Raspberry Pi 2，`<PLATFORM>` 将会是 `ARM`。
 
-You will need to copy this file to the target device (Windows IoT Core device) using FTP, or some other means.
+你将需要使用 FTP 或某些其他方式，将此文件复制到目标设备（Windows IoT Core 设备）。
 
-In the PowerShell window, navigate to the folder you copied `BlinkyApp_<PLATFORM>.exe` to and type the following command:
+在 PowerShell 窗口中，导航到你将 `BlinkyApp_<PLATFORM>.exe` 复制到的文件夹，并键入以下命令：
 
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe help
 
-You should see a help menu similar to this:
+应当可以看到类似于以下内容的帮助菜单：
 
     BlinkyApp: Interactive GPIO app demo tool
     Commands:
@@ -160,19 +158,14 @@ You should see a help menu similar to this:
 		GPIO [ 35 ]    = 14        BlinkyApp.exe l 14   |  BlinkyApp.exe h 14
 		GPIO [ 47 ]    = 15        BlinkyApp.exe l 15   |  BlinkyApp.exe h 15
 
-If you are using GPIO #5 on the Raspberry Pi 2, type the following command to turn the LED on:
+如果你在 Raspberry Pi 2 上使用 GPIO \#5，则键入以下命令来打开 LED：
 
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe low 2
 
-###Note:
-Driving the GPIO low will make the LED light-up because of the way the LED is connected as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm).
+###注意：
+根据[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)所述的连接 LED 的方式，驱动 GPIO 走低会使 LED 点亮。
 
-To turn the LED off, simply type:
+若要关闭 LED，只需键入：
 
-<<<<<<< HEAD
-    .\BlinkyApp_<PLATFORM>.exe high 2
-=======
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe high 2
 
-</div>
->>>>>>> 1f6f71aec48de89717d3334442f5dd6815c3658c
