@@ -66,6 +66,8 @@ Make sure to follow these steps to correctly configure your VM or device running
     Replace `[new password]` with a strong password:
 
         net user Administrator [new password]
+        
+    Once this is done, you'll need to re-establish the current session using enable-psSession with the new credentials.
 
     The following command only needs to be run once:
 
@@ -85,7 +87,7 @@ Make sure to follow these steps to correctly configure your VM or device running
 
         shutdown /r /t 0
 
-    After you reboot, you may need to rerun this command in order to connect to your device using the new name:
+    After you reboot, since the computer name was changed, you will need to rerun this command in order to connect to your device using the new name:
 
         Set-Item WSMan:\localhost\Client\TrustedHosts -Value <new-name>
 
