@@ -1,92 +1,91 @@
 ---
 layout: default
-title: SPI Display Sample
-permalink: /en-US/win10/samples/SPIDisplay.htm
-lang: en-US
+title: SPI 显示器示例
+permalink: /zh-CN/win10/samples/SPIDisplay.htm
+lang: zh-CN
 ---
 
-##SPI Display Sample
+##SPI 显示器示例
 
-In this sample, we interface a SPI based [OLED display](http://www.adafruit.com/product/938){:target="_blank"} to your Raspberry Pi 2/MinnowBoard Max. We then create an app that lets us write lines of text to the display. Step-by-step instructions are provided,
-so no background knowledge of SPI is needed. However, if you want to learn more, Sparkfun provides a great [tutorial on SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}.
+在本示例中，我们会将一个基于 [OLED 显示器](http://www.adafruit.com/product/938)的 SPI 连接到 Raspberry Pi 2/MinnowBoard Max。然后，我们将创建一个应用，以便于将文本行写入到该显示器。因为已提供分步说明，所以无需具备任何 SPI 背景知识。但是，如果你想要了解详细信息，Sparkfun 提供了一个很棒的[与 SPI 相关的教程](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi)。
 
-This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
+这是一个有外设示例。若要更好地了解什么是有外设模式以及如何将你的设备配置为有外设，请按照[此处]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm)的说明操作。
 
-###Load the project in Visual Studio
+###在 Visual Studio 中加载项目
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/SPIDisplay){:target="_blank"}.  Make a copy of the folder on your disk and open the project from Visual Studio.
+可以在[此处](https://github.com/ms-iot/samples/tree/develop/SPIDisplay)找到此示例。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
-Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
+确保将“远程调试”设置设为指向你的设备。如需指导，请返回基本“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)。
 
-Note that this app requires a device with a physical SPI port and will not work if running in an emulated environment.
+请注意，此应用需要使用一台带有物理 SPI 端口的设备，并且在仿真环境中运行时将不起作用。
 
-###Connect the SPI Display to your device
+###将 SPI 显示器连接到你的设备
 
-First, we need to wire up the display to your device. You'll need a few components:
+首先，我们需要将显示器连接到你的设备。你将需要以下几个组件：
 
-* a [Monochrome 1.3" 128x64 OLED graphic display](http://www.adafruit.com/product/938){:target="_blank"} from Adafruit with pin headers soldered on
+* 一台 Adafruit 的[单色 1.3 英寸 128 x64 OLED 图形显示器](http://www.adafruit.com/product/938)，且其上已焊接排针
 
-* a breadboard and several male-to-female connector wires
+* 一块试验板以及多根公母头连接线
 
-Visit the **Raspberry Pi 2/MinnowBoard Max** sections below depending on which device you have:
+根据自己所拥有的设备，查看以下 **Raspberry Pi 2/MinnowBoard Max** 部分：
 
-![Electrical Components]({{site.baseurl}}/images/SPIDisplay/components.png)
+![电子元件]({{site.baseurl}}/images/SPIDisplay/components.png)
 
 ####Raspberry Pi 2
-For the Raspberry Pi 2, we need to hook up power, ground, SPI, and a few GPIO pins to the OLED display. For additional information on the Raspberry Pi 2 pins, visit the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm)
+对于 Raspberry Pi 2，我们需要将电源、地线、SPI 和多个 GPIO 引脚接入 OLED 显示器。有关 Raspberry Pi 2 引脚的其他信息，请访问 [Raspberry Pi 2 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm)
 
-**Note: Make sure to power off the RPi2 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
+**注意： 确保在连接电路时关闭 RPi2 电源。若要降低构建期间意外出现短路的几率，这是一个很好的做法。**
 
-The OLED display has 8 IO pins, connect them as follows:
+OLED 显示器上具有 8 个 IO 引脚，应按如下方式连接它们：
 
-1. **DATA:**  Connect to MOSI on the RPi2 (Pin 19). This is the SPI master data out line.
-2. **CLK:**     Connect to SCLK on the RPi2 (Pin 23). This is the SPI clock line.
-3. **SA0/DC:**   Connect to GPIO 22 on the RPi2 (Pin 15). This is the Data/Command line for the display. (See the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf){:target="_blank"} for more information about the display pin functions)
-4. **RST:** Connect to GPIO 23 on the RPi2 (Pin 16). This is the hardware Reset line for the display. (See the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf){:target="_blank"} for more information about the display pin functions)
-5. **CS:** Connect to CE0 on the RPi2 (Pin 24). This is the SPI chip select line.
-6. **3V3:**  Leave unconnected. The display has its own on-board power regulator which provides it with 3.3V
-7. **VIN:**  Connect 5V the RPi2 (Pin 2).
-8. **GND:**  Connect to ground on the RPi2 (Pin 6).
+1. **DATA：** 连接到 RPi2 上的 MOSI（引脚 19）。这是 SPI 主数据输出线。
+2. **CLK：** 连接到 RPi2 上的 SCLK（引脚 23）。这是 SPI 时钟线。
+3. **SA0/DC：** 连接到 RPi2 上的 GPIO 22（引脚 15）。这是显示器的数据/命令线。（有关显示器引脚功能的详细信息，请参阅[数据表](http://www.adafruit.com/datasheets/SSD1306.pdf)）
+4. **RST：** 连接到 RPi2 上的 GPIO 23（引脚 16）。这是显示器的硬件重置线。（有关显示器引脚功能的详细信息，请参阅[数据表](http://www.adafruit.com/datasheets/SSD1306.pdf)）
+5. **CS：** 连接到 RPi2 上的 CE0（引脚 24）。这是 SPI 芯片选择线。
+6. **3V3：** 保持不连接。显示器具有其自己的板载电源调节器，可提供 3.3V 电源
+7. **VIN：** 连接 RPi2 上的 5V（引脚 2）。
+8. **GND：** 连接到 RPi2 上的地线（引脚 6）。
 
-Here are the connections shown on a breadboard:
+下面是试验板上所示的连接：
 
-![Breadboard connections]({{site.baseurl}}/images/SPIDisplay/breadboard_assembled_rpi2.png)
+![试验板连接]({{site.baseurl}}/images/SPIDisplay/breadboard_assembled_rpi2.png)
 
-<sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
+<sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
-Here are the schematics:
+以下是电路原理图：
 
-![SPI schematics]({{site.baseurl}}/images/SPIDisplay/schematics_rpi2.png)
+![SPI 电路原理图]({{site.baseurl}}/images/SPIDisplay/schematics_rpi2.png)
 
-####MinnowBoard Max
-For the MinnowBoard Max, we need to hook up power, ground, SPI, and a few GPIO pins to the OLED display. See the [MBM pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm) for more details on the MBM IO pins.
+####MinnowBoard MAX
+对于 MinnowBoard Max，我们需要将电源、地线、SPI 和多个 GPIO 引脚接入 OLED 显示器。有关 MBM IO 引脚的更多详细信息，请参阅 [MBM 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm)。
 
-**Note: Make sure to power off the MBM when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
+**注意： 确保在连接电路时关闭 MBM 电源。若要降低构建期间意外出现短路的几率，这是一个很好的做法。**
 
-The OLED display has 8 IO pins, connect them as follows:
+OLED 显示器上具有 8 个 IO 引脚，应按如下方式连接它们：
 
-1. **DATA:**  Connect to MOSI on the MBM (Pin 9). This is the SPI master data out line.
-2. **CLK:**     Connect to SCLK on the MBM (Pin 11). This is the SPI clock line.
-3. **SA0/DC:**   Connect to GPIO 3 on the MBM (Pin 14). This is the Data/Command line for the display. (See the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf){:target="_blank"} for more information about the display pin functions)
-4. **RST:** Connect to GPIO 4 on the MBM (Pin 16). This is the hardware Reset line for the display. (See the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf){:target="_blank"} for more information about the display pin functions)
-5. **CS:** Connect to CS1 on the MBM (Pin 5). This is the SPI chip select line.
-6. **3V3:**  Leave unconnected. The display has its own on-board power regulator which provides it with 3.3V
-7. **VIN:**  Connect 5V the MBM (Pin ).
-8. **GND:**  Connect to ground on the MBM (Pin 2).
+1. **DATA：** 连接到 MBM 上的 MOSI（引脚 9）。这是 SPI 主数据输出线。
+2. **CLK：** 连接到 MBM 上的 SCLK（引脚 11）。这是 SPI 时钟线。
+3. **SA0/DC：** 连接到 MBM 上的 GPIO 3（引脚 14）。这是显示器的数据/命令线。（有关显示器引脚功能的详细信息，请参阅[数据表](http://www.adafruit.com/datasheets/SSD1306.pdf)）
+4. **RST：** 连接到 MBM 上的 GPIO 4（引脚 16）。这是显示器的硬件重置线。（有关显示器引脚功能的详细信息，请参阅[数据表](http://www.adafruit.com/datasheets/SSD1306.pdf)）
+5. **CS：** 连接到 MBM 上的 CS1（引脚 5）。这是 SPI 芯片选择线。
+6. **3V3：** 保持不连接。显示器具有其自己的板载电源调节器，可提供 3.3V 电源
+7. **VIN：** 连接 MBM 上的 5V（引脚）。
+8. **GND：** 连接到 MBM 上的地线（引脚 2）。
 
-Here are the connections shown on a breadboard:
+下面是试验板上所示的连接：
 
-![Breadboard connections]({{site.baseurl}}/images/SPIDisplay/breadboard_assembled_mbm.png)
+![试验板连接]({{site.baseurl}}/images/SPIDisplay/breadboard_assembled_mbm.png)
 
-<sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
+<sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
-Here are the schematics:
+以下是电路原理图：
 
-![SPI schematics]({{site.baseurl}}/images/SPIDisplay/schematics_mbm.png)
+![SPI 电路原理图]({{site.baseurl}}/images/SPIDisplay/schematics_mbm.png)
 
-###Deploy and run the app
+###部署和运行应用
 
-When everything is set up, power your device back on, and open up the sample app in Visual Studio. If you're building for Minnowboard Max, select `x86` in the architecture dropdown. If you're building for Raspberry Pi 2, select `ARM`. Next, configure the code depending on which device you are using.
+一切就绪后，重新打开你设备的电源，然后在 Visual Studio 中打开示例应用。如果你要针对 Minnowboard Max 进行生成，请选择体系结构下拉列表中的 `x86`。如果你要针对 Raspberry Pi 2 进行生成，请选择 `ARM`。接下来，根据所使用的设备配置相关代码。
 
 {% highlight C# %}
 public sealed partial class MainPage : Page
@@ -109,25 +108,23 @@ public sealed partial class MainPage : Page
 }
 {% endhighlight %}
 
-Next, right-click on the **SPIDisplay** project in **Solution Explorer** and select **"Set as StartUp Project"**.
-Now you should be able to press F5 from Visual Studio: The SPIDisplay app will deploy and start, and you should see text data show up on OLED display.
- You can now type into the app and have the text mirrored on the attached OLED display.
+紧接着，右键单击“解决方案资源管理器”中的“SPIDisplay”项目，然后选择“设置为启动项目”。现在，你应该能从 Visual Studio 按 F5： SPIDisplay 应用将部署并启动，随后你应该看到 OLED 显示器上显示的文本数据。现在，你可以在该应用中键入内容，并且可在已连接的 OLED 显示器上对文本进行镜像操作。
 
-![SPI running]({{site.baseurl}}/images/SPIDisplay/spidisplay_screenshot.png)
+![SPI 运行]({{site.baseurl}}/images/SPIDisplay/spidisplay_screenshot.png)
 
-Congratulations! You've connected a SPI graphics display.
+恭喜！ 你已连接 SPI 图形显示器。
 
-###Let's look at the code
-The code in this sample can be split up into two main sections:
+###我们来看看代码
+此示例中的代码可以拆分为以下两个主要部分：
 
-1. **Initialization Code:** This performs initializations for GPIO, SPI, and the OLED display. Setting up these prerequisites is necessary before we can send graphics data to the OLED display.
+1. **初始化代码：** 这会针对 GPIO、SPI 和 OLED 显示器执行初始化操作。需要先设置这些先决条件，然后才能将图形数据发送到 OLED 显示器。
 
-2. **Text Display Code:** This code monitors the textbox control in the UI, and waits for a user to enter text. When this happens the app converts the text into graphics data that gets sent to the display over SPI.
+2. **文本显示代码：** 此代码监视 UI 中的文本框控制，并等待用户输入文本。当发生这种情况时，应用会将文本转换为可通过 SPI 发送到显示器的图形数据。
 
-Let's start by digging into the initialization code first.
+让我们从深入了解初始化代码开始吧。
 
-###Initialization Code
-Here is the C# code for the top-level initialization function.
+###初始化代码
+下面是适用于顶级初始化函数的 C\# 代码。
 
 {% highlight C# %}
 using Windows.Devices.Enumeration;
@@ -168,25 +165,22 @@ private async void InitAll()
 }
 {% endhighlight %}
 
-* The SPI display requires the use of GPIO and SPI, so we initialize the following in sequence:
-1. Initialize GPIO controller and pins
-2. Initialize the SPI bus
-3. Initialize the OLED SPI display
+* SPI 显示器需要使用 GPIO 和 SPI，所以我们将依次初始化以下各项：
+1. 初始化 GPIO 控制器和引脚
+2. 初始化 SPI 总线
+3. 初始化 OLED SPI 显示器
 
-* If any of the initializations fail, we display an error and halt additional processing. This might occur if the display is wired incorrectly,
-or if the host device does not have a SPI bus (for example, if you try to run this on a desktop Windows machine)
+* 如果任意初始化操作失败，将显示一个错误并停止其他进程。如果显示器中的布线不正确，或者如果主机设备中没有 SPI 总线（例如，当你尝试在 Windows 台式机上运行时），则可能会发生这种情况
 
-* Once the initializations have all completed successfully, we register the **Display_TextBox_TextChanged()** function for the **TextChanged** event on the textboxes.
-This ensures that our function gets called to update the display any time the user edits text.
+* 在所有这些初始化均已成功完成后，我们将在相应文本框上针对 **TextChanged** 事件注册 **Display\_TextBox\_TextChanged\(\)** 函数。这将确保每次用户编辑文本时都会调用我们的函数，以更新显示内容。
 
-* Finally, we make a single call to **DisplayTextBoxContents()** to display some default sample text on the screen when we first start up.
+* 最后，我们对 **DisplayTextBoxContents\(\)** 进行了一次调用，从而在首次启动时会在屏幕上显示一些默认的示例文本。
 
-Next, let's take a closer look at what each of the initialization functions is doing in more detail.
+接下来，让我们从细微处出发更进一步地了解每一个初始化函数所执行的操作。
 
-####InitGPIO()
+####InitGPIO\(\)
 
-There are two pins on the SPI OLED display we need to control, the Data/Command pin and the Reset pin. To communicate with these,
-we need to initialize the GPIO controller and configure the pins as outputs.
+SPI OLED 显示器上有以下两个引脚需要控制：数据/命令引脚和重置引脚。若要与这两个引脚通信，我们需要初始化 GPIO 控制器并将这些引脚配置为输出引脚。
 
 {% highlight C# %}
 /* Initialize the GPIO */
@@ -214,17 +208,16 @@ private void InitGpio()
 }
 {% endhighlight %}
 
-* We start by retrieving the default GPIO controller on the device with the **GpioController.GetDefault()** function.
+* 我们从通过 **GpioController.GetDefault\(\)** 函数检索设备上的默认 GPIO 控制器开始。
 
-* Next we initialize the **DATA_COMMAND_PIN** as output. This pin is used by the display to determine if data on the SPI bus is to be interpreted as graphics data or as a command.
+* 接下来，我们将 **DATA\_COMMAND\_PIN** 初始化为输出引脚。此引脚可供显示器用于确定 SPI 总线上的数据是已解释为图形数据还是已解释为命令。
 
-* Finally we initialize the **RESET_PIN** as output. This pin is used to hardware-reset the display as part of the display initialization.
+* 最后，我们将 **RESET\_PIN** 初始化为输出引脚。此引脚用于对显示器进行硬件重置，以作为显示器初始化的一部分。
 
-* If at any point we get a failure, we throw an exception to the top-level **InitAll()** function.
+* 无论何时出现故障，都将引发顶级 **InitAll\(\)** 函数的异常。
 
-####InitSpi()
-Following the GPIO initialization, we initialize the SPI bus. The bus is used to send graphics data and commands to the OLED screen for display,
-and needs to be configured before we can talk to the display.
+####InitSpi\(\)
+按照 GPIO 初始化的步骤，初始化 SPI 总线。该总线用于将图形数据和命令发送到 OLED 屏幕以供显示，并且必须先进行配置，然后我们才能向显示器发送指令。
 
 {% highlight C# %}
 /* Initialize the SPI bus */
@@ -251,19 +244,19 @@ private async Task InitSpi()
 }
 {% endhighlight %}
 
-* We start by specifying some configuration settings for our SPI bus:
-1. We specify which chip select line we want to use. This line is connected to the **CS** pin on the display, and lets the display controller know when we're about to start a SPI bus transaction.
-2. The clock frequency is set to 10MHz. This is the rated speed for the display as documented in the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf){:target="_blank"}.
-3. **settings.Mode** is set to **SpiMode.Mode3**. This configures clock polarity and phase for the bus as documented in the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf){:target="_blank"}.
+* 首先，我们为 SPI 总线指定以下配置设置：
+1. 指定要使用的芯片选择线。将此线连接到显示器上的 **CS** 引脚，以通知显示控制器我们将启动 SPI 总线事务的时间。
+2. 时钟频率设置为 10MHz。这是显示器的额定速率，如[数据表](http://www.adafruit.com/datasheets/SSD1306.pdf)中所述。
+3. **settings.Mode** 设置为 **SpiMode.Mode3**。这将为总线配置时钟极性和时钟相位，如[数据表](http://www.adafruit.com/datasheets/SSD1306.pdf)中所述。
 
-* Next, we get the class selection string for our SPI controller. This controller controls the SPI lines on the exposed pin header. We then use the selection string to get the SPI bus controller matching our string name.
+* 接下来，我们为 SPI 控制器获取类选择字符串。此控制器可控制外露排针上的 SPI 线。然后，我们使用该选择字符串来获取与字符串名称匹配的 SPI 总线。
 
-* Finally, we create a new **SpiDevice** with the settings and bus controller obtained previously.
+* 最后，我们将通过之前获取的设置和总线控制器创建一个新的 **SpiDevice**。
 
-* If at any point we get a failure, we throw an exception to the top-level **InitAll()** function.
+* 无论何时出现故障，都将引发顶级 **InitAll\(\)** 函数的异常。
 
-####InitDisplay()
-Now that we have initialized GPIO and SPI, we can communicate with display. Before we can send graphics data however, we first need to configure some settings on the display controller.
+####InitDisplay\(\)
+在初始化 GPIO 和 SPI 后，即可与显示器通信。但是，我们必须先在显示控制器上配置一些设置，然后才可以发送图形数据。
 
 {% highlight C# %}
 /* Send SPI commands to power up and initialize the display */
@@ -287,17 +280,15 @@ private async Task InitDisplay()
 }
 {% endhighlight %}
 
-* We start by performing a hardware reset by calling **ResetDisplay()**. The function simply toggles the hardware Reset pin to reset the display.
+* 首先，通过调用 **ResetDisplay\(\)** 来执行硬件重置。该函数只能将硬件重置引脚切换为重置显示器。
 
-* Next, we send it a series of commands using the **DisplaySendCommand()** function. This function is a wrapper around the **SpiDevice.Write()** function which sends the actual command over SPI.
-These commands turn the display on and put it into a state where it's ready to accept graphics data.
+* 接下来，我们将使用 **DisplaySendCommand\(\)** 函数，向该显示器发送一组命令。此函数是 **SpiDevice.Write\(\)** 函数的包装，后者可通过 SPI 发送实际命令。利用这些命令，不仅能打开显示器，还能使其进入可随时接受图形数据的状态。
 
-* If at any point we get a failure, we throw an exception to the top-level **InitAll()** function.
+* 无论何时出现故障，都将引发顶级 **InitAll\(\)** 函数的异常。
 
-###Text Display Code
+###文本显示代码
 
-Now that the display is initialized, we can send text to the the screen. Previously in the initialization function, we registered **Display_TextBox_TextChanged()** to trigger any time the user changes the textbox.
-This function calls the **DisplayTextBoxContents()** function below which runs through the process of writing text out to the screen:
+初始化显示器之后，可将文本发送到屏幕。我们前面在该初始化函数中，已将 **Display\_TextBox\_TextChanged\(\)** 注册为用户一更改该文本框就执行触发操作。此函数将调用下面的 **DisplayTextBoxContents\(\)** 函数，这将贯穿于将文本写出屏幕这一过程：
 
 {% highlight C# %}
 /* Update the SPI display to mirror the textbox contents */
@@ -327,18 +318,17 @@ private void Display_TextBox_TextChanged(object sender, TextChangedEventArgs e)
 }
 {% endhighlight %}
 
-* **ClearDisplayBuf()** simply sets all bytes in our local display buffer to '0' so we start with a blank slate.
+* **ClearDisplayBuf\(\)** 仅将本地显示缓冲区中的所有字节设置为“0”，以便于我们可以从头开始操作。
 
-* Next we call **WriteLineDisplayBuf()** to write a line of text from the textbox to our local display buffer.
+* 接下来，我们将调用 **WriteLineDisplayBuf\(\)**，以将文本框中的某行文本写入到本地显示缓冲区。
 
-* In **DisplayUpdate()**, we write the contents of our local buffer out to the display over SPI.
+* 借助 **DisplayUpdate\(\)**，我们可以通过 SPI 将本地缓冲区中的内容写出显示器。
 
-In the following sections, we'll detail the **WriteCharDisplayBuf()** and **DisplayUpdate()** functions, which perform the bulk of the work in rendering character data and sending the data over SPI.
+在以下部分中，我们将详细介绍 **WriteCharDisplayBuf\(\)** 和 **DisplayUpdate\(\)** 函数，它们可执行与呈现字符数据和通过 SPI 发送数据相关的大量工作。
 
-####WriteCharDisplayBuf()
+####WriteCharDisplayBuf\(\)
 
-The **WriteCharDisplayBuf()** function performs the work to convert a single character into an array of bytes representing the character image data.
-This function is frequently called by **WriteLineDisplayBuf()** to render individual characters in a string. Lets take a look at how it works.
+**WriteCharDisplayBuf\(\)** 函数可执行将单个字符转换为表示该字符图像数据的字节数组的工作。此函数通常由 **WriteLineDisplayBuf\(\)** 调用，以便于以字符串的形式呈现单个字符。让我们来看看操作方法。
 
 {% highlight C# %}
 /*
@@ -406,20 +396,17 @@ private UInt32 WriteCharDisplayBuf(Char Chr, UInt32 Col, UInt32 Row)
 }
 {% endhighlight %}
 
-* We start by searching for a given character in our font table **DisplayFontTable[]**. This table contains pixel data for commonly used ASCII characters.
-Note that special characters such as the newline character are not supported in this sample, and are ignored by **WriteCharDisplayBuf()**.
+* 首先，在字体表 **DisplayFontTable[]** 中搜索给定的字符。此表包含常用的 ASCII 字符的像素数据。注意，诸如换行符等特殊字符在本示例中不受支持，并且会被 **WriteCharDisplayBuf\(\)** 忽略。
 
-* Once we have the pixel dimensions for the character, we perform some checks to make sure it can fit within the boundaries of the screen.
+* 一旦我们有了适用于字符的像素大小，便会执行一些检查，以确保它可以适合屏幕的边界。
 
-* We then copy the character pixel data into our local screen buffer array **DisplayBuffer[,]**. This buffer holds a local copy of the contents of the screen.
-We use this buffer since it's much quicker to perform pixel operations on a local buffer first, and then send the data to the screen over SPI when we've completed our pixel manipulation.
+* 然后，将字符像素数据复制到本地屏幕缓冲区数组 **DisplayBuffer[,]**。此缓冲区会保留屏幕内容的本地副本。我们先使用此缓冲区（因为借助它可更快速地在本地缓冲区上执行像素操作），然后在完成像素操作后通过 SPI 将相关数据发送到屏幕。
 
-* Afterwards we pad some space to the right of our character. That way characters printed adjacent to each other have a little bit of separation space.
-Again, all of this is happening in our local screen buffer. No data has been sent to the screen yet.
+* 随后，填充字符右侧区域的部分空间。这样一来，打印彼此相邻的字符时会出现一些分隔空间。同样，这些情况也会出现在本地屏幕缓冲区中。尚未向屏幕发送任何数据。
 
 
-####DisplayUpdate()
-After all of our data has been written to our local buffer. We're ready to write it out over SPI to the screen. For this, we call **DisplayUpdate()**:
+####DisplayUpdate\(\)
+在将所有数据写入到本地缓冲区之后。随时可以通过 SPI 将其写出屏幕。为此，我们将调用 **DisplayUpdate\(\)**：
 
 {% highlight C# %}
 /* Writes the Display Buffer out to the physical screen for display */
@@ -443,12 +430,11 @@ private void DisplayUpdate()
 }
 {% endhighlight %}
 
-* We start by iterating through our display buffer to convert our 2-dimensional buffer array into a single serialized array of data to be sent over SPI. Since we configured the display in "horizontal mode" previously,
-we take horizontal "slices" of our display buffer and store them sequentially in the serialized buffer.
+* 先通过循环访问我们的显示缓冲区，将二维缓冲区数组转换为单一的序列化数据数组，以便于通过 SPI 发送。由于我们之前在“横向模式”下配置了显示器，因此我们将显示器分成若干个水平“分片”，并按顺序将其存储在序列化的缓冲区中。
 
-* Once we've completed serialization of the data, we send commands to reset the column and page address pointers of the display back to '0'. This ensures we start writing in the upper left corner of the screen.
+* 完成数据的序列化之后，我们将发送相关命令，以将显示器的列和页面地址指针重新重置为“0”。这将确保我们可以从屏幕的左上角开始写入操作。
 
-* Finally, we call **DisplaySendData()** to send our buffer contents over SPI. This function is a wrapper around **SpiDevice.Write()**, which sends the entire buffer out over SPI.
+* 最后，我们将调用 **DisplaySendData\(\)**，以通过 SPI 发送缓冲区内容。此函数是 **SpiDevice.Write\(\)** 的包装，后者将通过 SPI 发送整个缓冲区。
 
 {% highlight C# %}
 /* Send graphics data to the screen */

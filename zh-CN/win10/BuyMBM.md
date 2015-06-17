@@ -1,23 +1,21 @@
 ---
 layout: default
-title: Buy MBM
-permalink: /en-US/win10/BuyMBM.htm
-lang: en-US
+title: 购买 MBM
+permalink: /zh-CN/win10/BuyMBM.htm
+lang: zh-CN
 ---
 
-#How to Buy a MinnowBoard Max
+#如何购买 MinnowBoard MAX
 
-You can buy a MinnowBoard Max by following the instructions below.
+可以按照以下说明购买 MinnowBoard Max。
 
 
-1. Go Avenet.com's [MinnowBoard Max product details page](http://avnetexpress.avnet.com/store/em/EMController?langId=-1&storeId=500201&catalogId=500201&term=msdev&searchType=&advAction=&N=0&Ne=100000&action=products&x=0&y=0){:target="_blank"}.
+1. 转到 Avenet.com 的 [MinnowBoard Max 产品详细信息页面](http://avnetexpress.avnet.com/store/em/EMController?langId=-1&storeId=500201&catalogId=500201&term=msdev&searchType=&advAction=&N=0&Ne=100000&action=products&x=0&y=0){:target="_blank"}。
 
-2. You will see an item called "Microsoft Dev Kit" - that is the MinnowBoard Max Dual-Core 2GB.
-       ![MinnowBoard Max Item]({{site.baseurl}}/images/buy-mbm/buy-mbm-1.png){:class="img-thumbnail"}
+2. 你将会看到称为“Microsoft 开发人员工具包”的项目 - 这是 MinnowBoard Max 双核 2 GB。![MinnowBoard MAX 项目]({{site.baseurl}}/images/buy-mbm/buy-mbm-1.png){:class="img-thumbnail"}
 
-3. Click the "Buy Now" button. Your shopping cart should look like this:
-       ![MinnowBoard Max Item]({{site.baseurl}}/images/buy-mbm/buy-mbm-2.png){:class="img-thumbnail"}
+3. 单击“立即购买”按钮。你的购物车应如下所示：![MinnowBoard MAX 项目]({{site.baseurl}}/images/buy-mbm/buy-mbm-2.png){:class="img-thumbnail"}
 
-4. Click the "Check Out" button and go through Avnet.com's checkout process.
+4. 单击“查看”按钮并完成 Avnet.com 的结账过程。
 
-5. After you get your board then come on back to [WindowsOnDevices.com]({{site.landingurl}}) to get your new MinnowBoard Max setup.
+5. 获取你的开发板后，快点返回到 [WindowsOnDevices.com]({{site.landingurl}}) 以获取新的 MinnowBoard Max 安装程序。

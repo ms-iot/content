@@ -1,167 +1,165 @@
 ---
 layout: default
-title: Shift Register Sample
-permalink: /en-US/win10/samples/ShiftRegisterSample.htm
-lang: en-US
+title: 移位寄存器示例
+permalink: /zh-CN/win10/samples/ShiftRegisterSample.htm
+lang: zh-CN
 ---
 
-##Shift Register Sample
+##移位寄存器示例
 
-![Shift Register Sample Image]({{site.baseurl}}/images/ShiftRegister/ShiftRegisterProjectPicture_480.png)
+![移位寄存器示例图像]({{site.baseurl}}/images/ShiftRegister/ShiftRegisterProjectPicture_480.png)
 
-In this sample, we'll connect an 8-bit serial-in, parallel-out shift register to your Raspberry Pi 2 and create a simple app that uses the shift register to control eight LEDs.
+在本示例中，我们将一个采用串行输入和并行输出的 8 位移位寄存器连接到你的 Raspberry Pi 2，并创建一个使用该移位寄存器控制 8 个 LED 的简单应用。
 
-This is a headed sample, so please ensure that your device is in headed
-mode by running this command: `setbootoption.exe headed` (changing the headed/headless state will require a reboot).
+这是一个有外设示例，所以请确保你的设备处于有外设模式下，方法是运行以下命令：`setbootoption.exe headed`（更改有外设/无外设状态需要重新启动）。
 
-###Connect the Shift Register to Your Device
+###将移位寄存器连接到你的设备
 
-You'll need the following components which are included in the Basic Kit:
+你将需要以下组件，这些组件包含在基本工具包中：
 
-* 1 Raspberry Pi 2
+* 一个 Raspberry Pi 2
 
-* 1 [74HC595N serial-in, parallel-out Shift Register](http://www.digikey.com/product-detail/en/SN74HC595N/296-1600-5-ND/277246)
+* 1 个 [74HC595N 串行输入、并行输出的移位寄存器](http://www.digikey.com/product-detail/en/SN74HC595N/296-1600-5-ND/277246)
 
-* 4 [blue LEDs](http://www.digikey.com/product-detail/en/C503B-BCS-CV0Z0461/C503B-BCS-CV0Z0461-ND/1922944)
+* 4 个[蓝色 LED](http://www.digikey.com/product-detail/en/C503B-BCS-CV0Z0461/C503B-BCS-CV0Z0461-ND/1922944)
 
-* 4 [green LEDs](http://www.digikey.com/product-detail/en/C503B-GCN-CY0C0791/C503B-GCN-CY0C0791-ND/1922940)
+* 4 个[绿色 LED](http://www.digikey.com/product-detail/en/C503B-GCN-CY0C0791/C503B-GCN-CY0C0791-ND/1922940)
 
-* 8 [330 &#x2126; resistors](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636)
+* 8 个 [330 &\#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636)
 
-* An HDMI monitor
+* 一台 HDMI 监视器
 
-* A breadboard and several male-to-female and male-to-male connector wires
+* 一块试验板以及多根公母头连接线和双公头连接线
 
-Let's start by wiring up the components on the breadboard as shown in the diagram below.
+我们先来为试验板上的组件布线，如下图所示。
 
-**Note: Make sure to power off the RPi2 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
+**注意： 确保在连接电路时关闭 RPi2 电源。若要降低构建期间意外出现短路的几率，这是一个很好的做法。**
 
-![Breadboard connections]({{site.baseurl}}/images/ShiftRegister/ShiftRegisterSampleDrawing_bb_50.png)
+![试验板连接]({{site.baseurl}}/images/ShiftRegister/ShiftRegisterSampleDrawing_bb_50.png)
 
-*Image made with [Fritzing](http://fritzing.org/)*
+*使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
 
-Here is the schematic:
+以下是电路原理图：
 
-![Circuit Schematic]({{site.baseurl}}/images/ShiftRegister/ShiftRegisterSampleDrawing_schem_75.png)
+![电路示意图]({{site.baseurl}}/images/ShiftRegister/ShiftRegisterSampleDrawing_schem_75.png)
 
-*Image made with [Fritzing](http://fritzing.org/)*
+*使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
 
-####Connecting the 74HC595N Shift Register
+####连接 74HC595N 移位寄存器
 
-Place the Shift Register on your breadboard such that it straddles the center gap of the breadboard.
+将移位寄存器置于你的试验板之上，以便它可以跨该试验板的中隙。
 
-![Breadboard IC Placement]({{site.baseurl}}/images/BreadBoardICPlacement.png)
+![试验板 IC 位置]({{site.baseurl}}/images/BreadBoardICPlacement.png)
 
-*Image made with [Fritzing](http://fritzing.org/)*
+*使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
 
-Locate pin 1 of the 74HC595N shift register by finding the notch on the IC. If you orient the IC so that the end with the notch is facing left, pin 1 will be the first pin in the lower left below the notch.
+通过在 IC 上查找槽口，找到 74HC595N 移位寄存器的引脚 1。如果你需要定向 IC 以便槽口尾部朝向左边，则引脚 1 将是该槽口下方的左下角区域中的第一个引脚。
 
-![74HC595N PinLocations]({{site.baseurl}}/images/ShiftRegister/FindNotchPin1.png)
+![74HC595N 引脚位置]({{site.baseurl}}/images/ShiftRegister/FindNotchPin1.png)
 
-*Image made with [Fritzing](http://fritzing.org/)*
+*使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
-The pinout of the 74HC595N is shown below and can be found in the [datasheet](http://www.ti.com/lit/ds/symlink/sn74hc595.pdf).
+74HC595N 的引脚输出如下所示，并且可以在[数据表](http://www.ti.com/lit/ds/symlink/sn74hc595.pdf)中找到。
 
-![74HC595N Pinout]({{site.baseurl}}/images/ShiftRegister/ShiftRegister74HC595_pinout.png)
+![74HC595N 引脚输出]({{site.baseurl}}/images/ShiftRegister/ShiftRegister74HC595_pinout.png)
 
-*Image made with [Fritzing](http://fritzing.org/)*
+*使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
-Make the following connections on the 74HC595N shift register:
+在 74HC595N 移位寄存器上建立以下连接：
 
-* Pins 1, 2, 3, 4, 5, 6, 7 and Pin 15  **Q0** thru **Q7**: Connect each of these pins to a 330 &#x2126; resistor - one 330 &#x2126; resistor for each pin
+* 引脚 1、2、3、4、5、6、7 和引脚 15（**Q0** 至 **Q7**）： 将上述每一个引脚都连接到 330 &\#x2126; 电阻器，其中一个 330 &\#x2126; 电阻器对应每个引脚
 
-* Pin 8  **GND**: Connect to the ground rail on the side of the breadboard (blue stripe)
+* 引脚 8 **GND**： 连接到试验板一侧的地轨（蓝色条带）
 
-* Pin 9  **Q7'**:  Leave unconnected
+* 引脚 9 **Q7'**： 保持不连接
 
-* Pin 10 **SRCLR**: Connect to **GPIO 12** (pin 32) on the RPi2 (pin mapping is below)
+* 引脚 10 **SRCLR**： 连接到 RPi2 上的 **GPIO 12**（引脚 32）（引脚映射如下所示）
 
-* Pin 11 **SRCLK**: Connect to **GPIO 0** (pin 27) on the RPi2
+* 引脚 11 **SRCLK**： 连接到 RPi2 上的 **GPIO 0**（引脚 27）
 
-* Pin 12 **RCLK**: Connect to **GPIO 5** (pin 29) on the RPi2
+* 引脚 12 **RCLK**： 连接到 RPi2 上的 **GPIO 5**（引脚 29）
 
-* Pin 13 **OE**: Connect to **GPIO 6** (pin 31) on the RPi2
+* 引脚 13 **OE**： 连接到 RPi2 上的 **GPIO 6**（引脚 31）
 
-* Pin 14 **SER**: Connect to **GPIO 1** (pin 28) on the RPi2
+* 引脚 14 **SER**： 连接到 RPi2 上的 **GPIO 1**（引脚 28）
 
-* Pin 15 **Q7**: See above.
+* 引脚 15 **Q7**： 请参阅上述内容。
 
-* Pin 16 **VCC**: Connect to the voltage supply rail on the side of the breadboard (red stripe)
+* 引脚 16 **VCC**： 连接到试验板一侧的电源轨道（红色条带）
 
-####Connecting the LEDs and Resistors
+####连接 LED 和电阻器
 
-Let's add the LEDs and resistors to the breadboard.
+让我们向试验板添加 LED 和电阻器。
 
-* If not already connected, place eight 330 &#x2126; resistors on the breadboard and connect each resistor to an output pin (Q0 thru Q7) on the shift register.
+* 如果 8 个 330 &\#x2126; 电阻器尚未进行连接，则将它们放置在试验板上，然后将每一个电阻器连接到移位寄存器上相应的输出引脚（Q0 至 Q7）。
 
-* Connect a cathode (the shorter leg) of the four green and four blue LEDs to the other end of a 330 &#x2126; resistor you placed on the breadboard in the previous step. Try to keep the LEDs lined up together in a row on the breadboard. The order of the green and blue LEDs is up to you. We chose to alternate LED colors.
+* 将 4 个绿色 LED 和 4 个蓝色 LED 的阴极（较短的阴极引线）连接到上一步中放在试验板上的 330 &\#x2126; 电阻器的另一端。尝试将这些 LED 排成一排放置在试验板上。你可以自行决定绿色 LED 和蓝色 LED 的先后顺序。我们选择了替换 LED 颜色。
 
-* Connect the anodes (the longer leg) of the LEDs to the voltage supply rail on the side of the breadboard (red stripe)
+* 将这些 LED 的阳极（较长的阳极引线）连接到试验板一侧的电源轨道（红色条带）
 
-When done, you should have a row (or as close to a row as possible) of blue and green LEDs on your breadboard.
+操作完成后，你的试验板上应该会有一行（或几乎接近于一行）蓝色和绿色 LED。
 
-* Each of the shift register outputs Q0 thru Q7 should be connected to a 330 &#x2126; resistor.
+* 移位寄存器的每个输出引脚（Q0 至 Q7）都应连接到 330 &\#x2126; 电阻器。
 
-* The other end of each of the 330 &#x2126; resistors should be connected to the cathode of an LED.
+* 这些 330 &\#x2126; 电阻器中的每一个电阻器的另一端都应该连接到某一 LED 的阴极。
 
-* Each LED should have its anode connected to the voltage supply rail.
+* 每个 LED 都应将其阳极连接至电源轨道。
 
-####Connecting the Raspberry Pi 2
+####连接 Raspberry Pi 2
 
-We need to hook up power, ground, and the I2C lines from on the Raspberry Pi 2 to the 74HC595N shift register and the breadboard.
+我们需要将 Raspberry Pi 2 上的电源、地线和 I2C 线接入 74HC595N 移位寄存器和试验板。
 
-![Raspberry Pi 2 pinout]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![Raspberry Pi 2 引脚输出]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
 
-* Pin 2 **5V PWR** Connect to the voltage supply rail on the side of the breadboard (red stripe)
+* 引脚 2 **5V PWR** 连接到试验板一侧的电源轨道（红色条带）
 
-* Pin 6 **GND** Connect to the ground rail on the side of the breadboard (blue stripe)
+* 引脚 6 **GND** 连接到试验板一侧的地轨（蓝色条带）
 
-* Pin 27 **GPIO0** If not already connected, connect to **SRCLK** (pin 11) on the shift register
+* 引脚 27 **GPIO0** 如果尚未连接，连接到移位寄存器上的 **SRCLK**（引脚 11）
 
-* Pin 28 **GPIO1** If not already connected, connect to **SER** (pin 14) on the shift register
+* 引脚 28 **GPIO1** 如果尚未连接，连接到移位寄存器上的 **SER**（引脚 14）
 
-* Pin 29 **GPIO5** If not already connected, connect to **RCLK** (pin 12) on the shift register
+* 引脚 29 **GPIO5** 如果尚未连接，连接到移位寄存器上的 **RCLK**（引脚 12）
 
-* Pin 31 **GPIO6** If not already connected, connect to **OE** (pin 13) on the shift register
+* 引脚 31 **GPIO6** 如果尚未连接，连接到移位寄存器上的 **OE**（引脚 13）
 
-* Pin 32 **GPIO12** If not already connected, connect to **SRCLR** (pint 10) on the shift register
+* 引脚 32 **GPIO12** 如果尚未连接，连接到移位寄存器上的 **SRCLR**（引脚 10）
 
-###Create the Sample App
+###创建示例应用
 
-When everything is set up, power your device back on. You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/ShiftRegister){:target="_blank"}, but as an excercise, this tutorial will take you through the complete steps to create this app from scratch.  Open up Visual Studio and create a new C# Windows Universal Blank App (see the 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance on how to create a new app). For this sample, we cleverly named ours **ShiftRegisterSample**.
+在完成一切设置后，重新打开你设备的电源。你可以在[此处](https://github.com/ms-iot/samples/tree/develop/ShiftRegister)找到此示例，但作为练习，本教程将指导你完成从头开始创建此应用的完整步骤。打开 Visual Studio 并创建新的 C\# Windows 通用空白应用（如果你需要有关如何创建新应用的指南，请参阅“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)）。在本示例中，我们巧妙命名我们的 **ShiftRegisterSample**。
 
-The code in this sample does three things:
+此示例中的代码将执行以下三项操作：
 
-1. Initializes the the RPi2 GPIO pins and the 74HC595N shift register
+1. 初始化 RPi2 GPIO 引脚和 74HC595N 移位寄存器
 
-2. At regular intervals, it clocks in one data bit on the shift register's serial input.
+2. 在常规时间间隔，它针对移位寄存器的串行输入上的一个数据位进行时钟输入操作。
 
-3. Responds to user input
+3. 响应用户输入
 
-    a. Changes the timer delay based on user input. This results in a change in the blinking rate of the LEDs
+    a.根据用户输入更改计时器延迟。这将导致 LED 的闪烁频率出现变化
 
-    b. Inverts the LED flashing pattern if the user clicks the Invert button on the display
+    b.如果用户单击显示器上的“反转”按钮，将反转 LED 的闪光模式
 
 
-####Add content to MainPage.xaml
+####向 MainPage.xaml 添加内容
 
-Let's add some content to the MainPage which will be displayed on a screen connected to the Raspberry Pi 2.
- We want to add a couple TextBoxes, a Slider, and a Button.
+让我们向 MainPage 添加一些内容，这些内容会显示在已连接到 Raspberry Pi 2 的屏幕上。我们想要添加两个文本框、一个滑块和一个按钮。
 
-* The Slider allows the user to control the rate at which the LEDs flash.
+* 滑块允许用户控制 LED 的闪光频率。
 
-* The button allows the user to invert the pattern which the LEDs use to flash.
+* 按钮允许用户反转 LED 所使用的闪烁模式。
 
-* The Textboxes will provide info about the slider.
+* 文本框将提供有关滑块的信息。
 
-Let's begin.
+让我们开始吧。
 
-* From Solution Explorer, select the MainPage.xaml file.
+* 从解决方案资源管理器中，选择 MainPage.xaml 文件。
 
-* Locate the `<Grid>` tag in the XAML section of the designer, and add the following markup:
+* 在设计器的 XAML 部分中找到 `<Grid>` 标记，并添加以下标记：
 
 <UL>
 {% highlight XML %}
@@ -176,27 +174,27 @@ Let's begin.
 {% endhighlight %}
 </UL>
 
-####Add code to MainPage.xaml.cs
+####将代码添加到 MainPage.xaml.cs
 
-Before we add any code to MainPage.xaml.cs, we need to add a reference to the Windows IoT Extension SDK.
+在向 MainPage.xaml.cs 添加任何代码之前，我们需要添加对 Windows IoT 扩展 SDK 的引用。
 
- * In Solution Explorer, right-click on **References** and select **Add Reference...**
+ * 在“解决方案资源管理器”中，右键单击“引用”，然后选择“添加引用...”
 
- * In the Reference Manager window, click the arrow next to **Windows Universal** then click on **Extensions**
+ * 在“引用管理器”窗口中，单击“Windows 通用”旁的箭头，然后单击“扩展”
 
- * Place a check mark in the box next to **Windows IoT Extension SDK** and click **OK**
+ * 在“Windows IoT 扩展 SDK”旁的框中放入一个复选标记，然后单击“确定”
 
- * Open MainPage.xaml.cs from Solution Explorer (you may need to click on the arrow next to MainPage.xaml first)
+ * 从解决方案资源管理器打开 MainPage.xaml.cs（可能需要先单击 MainPage.xaml 旁边的箭头）
 
- * Add the following line at the top of MainPage.xaml.cs
+ * 在 MainPage.xaml 的顶部添加以下行
 
 {% highlight C# %}
 using Windows.Devices.Gpio;
 {% endhighlight %}
 
-With the references add, lets start adding code. The complete code we implemented for MainPage.xaml.cs is located at end of this section. Below are some key parts of the code with explanations
+引用添加后，可以开始添加代码。我们针对 MainPage.xaml.cs 实现的完整代码位于本部分的末尾处。以下是该代码的一些关键部分，带有相关说明
 
-Variables and Constants
+变量和常量
 
 {% highlight C# %}
 // use these constants for controlling how the initial time interval for clocking in serial data to the shift register.
@@ -233,21 +231,21 @@ private SolidColorBrush redBrush = new SolidColorBrush(Windows.UI.Colors.Red);
 private SolidColorBrush grayBrush = new SolidColorBrush(Windows.UI.Colors.LightGray);
 {% endhighlight %}
 
-Here are what some of these constants and variables represent
+下面是其中一些常量和变量所表示的内容
 
- * `SRCLK_PIN`, `SER_PIN`, `RCLK_PIN`, `OE_PIN`, `SRCLR_PIN` represent the RPi2 GPIO numbers of the pins connected to the correspondingly named shift register control pins.
+ * `SRCLK_PIN`、`SER_PIN`、`RCLK_PIN`、`OE_PIN`、`SRCLR_PIN` 均代表已连接到对应的已命名移位寄存器控制引脚的 RPi2 GPIO 的编号。
 
- * `shiftRegisterClock`, `serial`, `registerClock`, `outputEnable`, `shiftRegisterClear` are the GPIO objects that are used to control the RPi2 GPIO pins that connect to the correspondingly named shift register pins.
+ * `shiftRegisterClock`、`serial`、`registerClock`、`outputEnable`、`shiftRegisterClear` 均为 GPIO 对象，用于控制连接到对应的已命名移位寄存器引脚的 RPi2 GPIO 引脚。
 
- * `pinMask` contains the data bits that we clock in to the shift register one bit at a time. The bits in pinMask represent the on/off pattern for the LEDs. A bit value of '1' represents an off LED and a bit value of '0' is an on LED.
+ * `pinMask` 包含我们以一次一个位的方式计时到移位寄存器的数据位。pinMask 中的位表示 LED 的打开/关闭模式。位值为“1”表示 LED 已关闭，位值为“0”表示 LED 已打开。
 
-The method `InitializeSystem()`
+方法 `InitializeSystem()`
 
-`InitializeSystem()` does the following:
+`InitializeSystem()` 将执行以下操作：
 
- * Sets up the RPi2 GPIO that are used to control and send data to the shift register
+ * 设置可用于控制数据并将其发送到移位寄存器的 RPi2 GPIO
 
- * Sets up the timer used control the frequency at which the RPi2 sends one bit of data to the shift register
+ * 设置可用于控制 RPi2 向移位寄存器发送一个数据位的频率的计时器
 
 {% highlight C# %}
 private void InitializeSystem()
@@ -320,12 +318,9 @@ private void InitializeSystem()
 }
 {% endhighlight %}
 
-The method `SendDataBit()`
+方法 `SendDataBit()`
 
-`SendDataBit()` is called by the timer when the designated time interval has pass.
- This method clocks out one bit of data representing the most significant bit (MSB) in the variable `pinMask`. The data bit is clocked into the first bit position
- in the shift register. The toggling of the serial clock pin by the RPi2 to clock in the data bit also causes the previous eight bits of data in the shift register to shift one bit position with the bit in the last position being lost.
- After clocking in the data bit, all bits in `pinMask` are left shifted one bit position. The value of `pinMask` is then checked and, depending on whether the LED lighting pattern is set as inverted, the least significant bit (LSB) of 'pinMask' is set to either a '1' or '0'.
+在指定的时间间隔过后，计时器将调用 `SendDataBit()`。此方法可针对表示变量 `pinMask` 中最高有效位 \(MSB\) 的一个数据位进行时钟输出操作。该数据位可将时钟输入到移位寄存器的第一个位位置中。如果将 RPi2 的串行时钟引脚切换为在数据位中输入时钟，还会导致移位寄存器中的前八个数据位将一个位位置移位到上一丢失的位位置。在数据位中输入时钟后，`pinMask` 中的所有位都会向左移动一个位位置。是否选中 `pinMask` 的值取决于以下两个因素：LED 照明模式是否已设置为反转，以及“pinMask”的最低有效位 \(LSB\) 已设置为“1”还是“0”。
 
 {% highlight C# %}
 private void SendDataBit()
@@ -366,8 +361,7 @@ private void SendDataBit()
 }
 {% endhighlight %}
 
-`ToggleButtonClicked()` is triggered when the app user clicks on the button on the display screen to invert the LEDs. This method inverts all the bits in `pinMask`, sets or clears the flag `areLedsInverted` depending on what the previous state was.
- Finally, it changes the color of the button - red when the LEDs are inverted and gray when they are not.
+当应用用户在显示屏幕上单击用于反转 LED 的按钮时，将触发 `ToggleButtonClicked()`。此方法可反转 `pinMask` 中的所有位，并且可根据之前的状态设置或清除标志 `areLedsInverted`。最后，它将更改该按钮的颜色（如果 LED 已反转，则为红色；如果 LED 未反转，则为灰色）。
 
 {% highlight C# %}
 private void ToggleButtonClicked(object sender, RoutedEventArgs e)
@@ -386,23 +380,23 @@ private void ToggleButtonClicked(object sender, RoutedEventArgs e)
 }
 {% endhighlight %}
 
-###Build, Deploy and Run the App
+###生成、部署并运行应用
 
-Let's build, deploy and run the app on our Raspberry Pi 2.
+让我们在自己的 Raspberry Pi 2 上生成、部署和运行应用。
 
-* If not already open, open in Visual Studio the app you created with the code above.
+* 如果通过上述代码创建的应用尚未打开，请在 Visual Studio 中打开它。
 
-* Set the 'Remote Debugging' setting to point to your device. See the 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance on how to do this.
+* 将“远程调试”设置设为指向你的设备。如果你需要有关如何执行此操作的指南，请参阅“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)。
 
-* Press 'F5' or click on the 'Remote Machine' button in the Visual Studio toolbar.
+* 按“F5”，或单击 Visual Studio 工具栏中的“远程计算机”按钮。
 
-After several moments, you will see the screen attached to the RPi2 change to show a slider, some text, and a button. The LEDs will light up and follow the pattern set in 'pinMask'.
+一段时间过后，你将看到已连接到 RPi2 的屏幕上出现变化，即，将显示一个滑块、一些文本和一个按钮。LED 将亮起，并将采用“pinMask”中设置的模式。
 
-![ShiftRegister Screenshot]({{site.baseurl}}/images/ShiftRegister/ScreenShotA.png)
+![ShiftRegister 屏幕截图]({{site.baseurl}}/images/ShiftRegister/ScreenShotA.png)
 
-Congratulations! You've successfully connected an 8-bit serial-in, parallel-out shift register to your Raspberry Pi 2.
+恭喜！ 你已成功将一个采用串行输入和并行输出的 8 位移位寄存器连接到你的 Raspberry Pi 2。
 
-###The complete MainPage.xaml.cs code
+###完整的 MainPage.xaml.cs 代码
 
 {% highlight C# %}
 using System;

@@ -1,139 +1,157 @@
 ---
 layout: default
-title: Push Button Sample
-permalink: /en-US/win10/samples/PushButton.htm
-lang: en-US
+title: “推送”按钮示例
+permalink: /zh-CN/win10/samples/PushButton.htm
+lang: zh-CN
 ---
 
-##Push Button Sample
+##“推送”按钮示例
 
-[View the code on Github](https://github.com/ms-iot/samples/tree/develop/PushButton/CS){:target="_blank"}
+![“推送”按钮图像]({{site.baseurl}}/images/PushButton/PushbuttonSample.jpg)
 
-In this sample, we will connect a push button to Raspberry Pi 2 and use it
-to control the onboard LED. We will use GPIO interrupts to detect when the
-button is pressed and will toggle the LED each time the button is pressed.
+在本示例中，我们会将“推送”按钮和 LED 连接到 Raspberry Pi 2。我们将使用 GPIO 读取“推送”按钮的状态并控制 LED。
 
-![Push Button Image]({{site.baseurl}}/images/PushButton/PushbuttonSample.jpg)
+这是一个有外设示例，所以请确保你的设备处于有外设模式下，方法是运行以下命令：`setbootoption.exe headed`（更改有外设/无外设状态需要重新启动）。
 
-This is a headed sample, so please ensure that your device is in headed
-mode by running this command: `setbootoption.exe headed` (changing the
-headed/headless state will require a reboot).
+另外，还请注意 GPIO API 仅在 Windows IoT 核心版上可用，因此该示例无法在你的桌面上运行。
 
-Also, be aware that the GPIO APIs are only available on Windows IoT Core,
-so this sample cannot run on your desktop.
 
-###Components
+###组件
 
-You will need the following components :
+你将需要以下组件：
 
-* a [EG1311-ND Tactile Button](http://www.digikey.com/product-detail/en/320.02E11.08BLK/EG1311-ND/101397){:target="_blank"}
+* 一个 [EG1311-ND 触摸按钮](http://www.digikey.com/product-detail/en/320.02E11.08BLK/EG1311-ND/101397)
 
-* a breadboard and two male-to-female connector wires
+* 一个[红色 LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832)
 
-###Connect to your Device
+* 一个 [330 &\#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636)
 
-Let's start by wiring up the components on the breadboard as shown in the
-following schematic.
+* 一个 [10k &\#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-10K/10KQBK-ND/338)
 
-* Connect one pin of the tactile button to Pin 29 (GPIO 5) of
-  the Raspberry Pi 2 and one pin to GND.
+* 一块试验板以及多根公母头连接线和双公头连接线
 
-![Breadboard layout]({{site.baseurl}}/images/PushButton/PushButton_bb.png)
+###连接到你的设备
 
-![Circuit Schematic]({{site.baseurl}}/images/PushButton/PushButton_schem.png)
+我们先来为试验板上的组件布线，如下图所示。
 
-*Image made with [Fritzing](http://fritzing.org/)*
+![试验板连接]({{site.baseurl}}/images/PushButton/PushButton_bb.png)
 
-###Building and running the sample
+*使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
-1. Clone the [samples](https://github.com/ms-iot/samples)
-   repository to your local machine.
-1. Open `PushButton\CS\PushButton.csproj` in Visual Studio.
-1. Select `ARM` for the target architecture
-1. Go to `Build -> Build Solution`
-1. Select `Remote Machine` from the debug target
-1. Hit F5 to deploy and debug. Enter the IP address of your Raspberry Pi
-   and select `None` for the authentication type.
 
-###Let's look at the code
+以下是电路原理图：
 
-First, we open the GpioPin resources we'll be using. The button is connected to
-GPIO5 in active LOW configuration, meaning the signal will be HIGH when the
-button is not pressed and the signal will go LOW when the button is pressed.
-We'll be using the onboard LED, connected to GPIO47, which is connected in
-active HIGH configuration, meaning driving the pin HIGH will turn on the LED
-and driving the pin LOW will turn off the LED.
+![电路示意图]({{site.baseurl}}/images/PushButton/PushButton_schem.png)
 
-            buttonPin = gpio.OpenPin(BUTTON_PIN);
-            ledPin = gpio.OpenPin(LED_PIN);
+*使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
-We initialize the LED in the OFF state by first latching a LOW value onto the
-pin. When we change the drive mode to Output, it will immediately drive the
-latched output value onto the pin. The latched output value is undefined when
-we initially open a pin, so we should always set the pin to a known state
-before changing it to an output.
+####连接 LED
 
-            ledPin.Write(GpioPinValue.Low);
-            ledPin.SetDriveMode(GpioPinDriveMode.Output);
+* 将 LED 阴极（较短的阴极引线）连接到 Raspberry Pi 2 的引脚 13 \(GPIO 27\)
 
-Next, we set up the button pin. We're taking advantage of the fact that
-Raspberry Pi 2 has built-in pull up resistors that we can activate. We use the
-built-in pull up resistor so that we don't need to supply a resistor externally.
-Pull up resistors are not available on all hardware, so we insert a check to
-make sure this drive mode is supported before setting it. If you run this sample
-on hardware that does not support InputPullUp, be sure to connect an external
-pull up resistor.
+* 将 LED 阳极（较长的阳极引线）连接到 330 &\#x2126; 电阻器中的一条引线
 
-            if (buttonPin.IsDriveModeSupported(GpioPinDriveMode.InputPullUp))
-                buttonPin.SetDriveMode(GpioPinDriveMode.InputPullUp);
-            else
-                buttonPin.SetDriveMode(GpioPinDriveMode.Input);
+* 将 330 &\#x2126; 电阻器的另一端连接到 Raspberry Pi 2 上的引脚 1 \(3.3V\)
 
-Next we connect the GPIO interrupt listener. This is an event that will get
-called each time the pin changes state. We also set the DebounceTimeout
-property to 50ms to filter out spurious events caused by electrical noise.
-Buttons are mechanical devices and can make and break contact many times on a
-single button press. We don't want to be overwhelmed with events so we filter
-these out.
+####连接触摸按钮
 
-            buttonPin.DebounceTimeout = TimeSpan.FromMilliseconds(50);
-            buttonPin.ValueChanged += buttonPin_ValueChanged;
+* 将触摸按钮中的一个引脚连接到 Raspberry Pi 2 的引脚 29 \(GPIO 5\) 以及 10k &\#x2126; 电阻器的一端
 
-In the button interrupt handler, we look at the edge of the GPIO signal to
-determine whether the button was pressed or released. If the button was
-pressed, we flip the state of the LED.
+* 将 10k &\#x2126; 电阻器的另一端连接到 Raspberry Pi 2 上的引脚 2 \(5V\)
 
-        private void buttonPin_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs e)
+* 将触摸按钮中的另一个引脚连接到地线
+
+
+下面是 RPi2 的引脚输出：
+
+![Raspberry Pi 2 引脚输出]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+
+<sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
+
+###部署你的应用
+
+你可以在[此处](https://github.com/ms-iot/samples/tree/develop/PushButton/CS)找到此示例的完整代码。本示例是采用 C\# 编写的。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
+
+确保将“远程调试”设置设为指向 Windows IoT 设备。如需指导，请参考基本“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)。如果你要针对 Raspberry Pi 2 进行生成，请选择 `ARM`。
+
+完成所有设置后，你应该可以在 Visual Studio 中按 F5。PushButton 应用将会在 Windows IoT 设备上部署并启动；在你按下该按钮后，你应该会看到 LED 与屏幕上的模拟图像同步闪烁。
+
+
+###我们来看看代码
+此示例的代码相当简单。每次按“推送”按钮时，我们都会查看 LED 的状态。
+
+###初始化 GPIO 引脚
+为了驱动 GPIO 引脚，首先我们需要对其进行初始化。以下是 C\# 代码（请注意我们如何在 Windows.Devices.Gpio 命名空间中利用新 WinRT 类）：
+
+{% highlight C# %}
+using Windows.Devices.Gpio;
+
+    private void InitGPIO()
+    {
+        var gpio = GpioController.GetDefault();
+
+        // Show an error if there is no GPIO controller
+        if (gpio == null)
         {
-            // toggle the state of the onboard LED every time the button is pressed
-            if (e.Edge == GpioPinEdge.FallingEdge)
-            {
-                ledPin.Write(ledPinValue);
-                ledPinValue = (ledPinValue == GpioPinValue.Low) ?
-                    GpioPinValue.High : GpioPinValue.Low;
-            }
+            pin = null;
+            GpioStatus.Text = "There is no GPIO controller on this device.";
+            return;
+        }
+        pushButton = gpio.OpenPin(PB_PIN);
+        pin = gpio.OpenPin(LED_PIN);
 
-We also want to update the user interface with the current state of the
-pin, so we invoke an update operation on the UI thread. Capturing the result
-of an async method in a local variable is necessary to suppress a compiler
-warning when we don't want to wait for an asynchronous operation to complete.
-
-            // need to invoke UI updates on the UI thread because this event
-            // handler gets invoked on a separate thread.
-            var task = Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => {
-                if (e.Edge == GpioPinEdge.FallingEdge)
-                {
-                    ledEllipse.Fill = redBrush;
-                    GpioStatus.Text = "Button Pressed";
-                }
-                else
-                {
-                    ledEllipse.Fill = grayBrush;
-                    GpioStatus.Text = "Button Released";
-                }
-            });
+        // Show an error if the pin wasn't initialized properly
+        if (pin == null)
+        {
+            GpioStatus.Text = "There were problems initializing the GPIO LED pin.";
+            return;
+        }
+        if (pushButton == null)
+        {
+            GpioStatus.Text = "There were problems initializing the GPIO Push Button pin.";
+            return;
         }
 
-That's it! Each time you press the button, you should see the onboard LED change
-state.
+        pushButton.SetDriveMode(GpioPinDriveMode.Input);
+        pin.SetDriveMode(GpioPinDriveMode.Output);
 
+        GpioStatus.Text = "GPIO pin initialized correctly.";
+    }
+
+{% endhighlight %}
+
+让让我们稍稍细分一下此过程：
+
+* 首先，我们使用 `GpioController.GetDefault()` 获取 GPIO 控制器。
+
+* 如果设备没有 GPIO 控制器，此函数将返回 `null`。
+
+* 然后，我们尝试通过使用 `PB_PIN` 和 `LED_PIN` 值调用 `GpioController.OpenPin()` 来打开引脚。
+
+* 通过使用 `GpioPin.SetDriveMode()` 函数，将 `pin` 设置为在输出模式下运行，并将 `pushButton` 设置为在输入模式下运行。
+
+* 获取 `pin` 之后，我们在默认情况下使用 `GpioPin.Write()` 函数将它设置为关闭状态（高）。
+
+
+###修改 GPIO 引脚的状态
+
+按下“推送”按钮时，将读取输入值并打开 LED。
+
+{% highlight C# %}
+    private void FlipLED()
+    {
+        pushButtonValue = pushButton.Read();
+        if (pushButtonValue == GpioPinValue.High)
+        {
+            pin.Write(GpioPinValue.High);
+        }
+        else if (pushButtonValue == GpioPinValue.Low)
+        {
+            pin.Write(GpioPinValue.Low);
+        }
+    }
+
+
+{% endhighlight %}
+
+记得我们已将 LED 的另一端连接到 3.3 伏电源，因此，我们需要将引脚驱动到低位，使电流通过 LED。

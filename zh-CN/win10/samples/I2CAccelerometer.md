@@ -1,119 +1,111 @@
 ---
 layout: default
-title: I2C Accelerometer Sample
-permalink: /en-US/win10/samples/I2CAccelerometer.htm
-lang: en-US
+title: I2C 加速计示例
+permalink: /zh-CN/win10/samples/I2CAccelerometer.htm
+lang: zh-CN
 ---
 
-##I2C Accelerometer Sample
+##I2C 加速计示例
 
-We'll connect an I2C accelerometer to your Raspberry Pi 2/MinnowBoard Max and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of I2C is needed.
-However, if you're curious, Sparkfun provides a great [tutorial on I2C](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}.
+我们会将 I2C 加速计连接到你的 Raspberry Pi 2/MinnowBoard Max，并创建一个简单应用，用于从其中读取数据。我们将指导你逐步完成相关步骤，所以你不需要具备任何 I2C 背景知识。不过，如果你感兴趣的话，Sparkfun 提供了一个很棒的[与 I2C 相关的教程](https://learn.sparkfun.com/tutorials/i2c)。
 
-This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
+这是一个有外设示例。若要更好地了解什么是有外设模式以及如何将你的设备配置为有外设，请按照[此处]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm)的说明操作。
 
-###Load the project in Visual Studio
+###在 Visual Studio 中加载项目
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/I2CAccelerometer).  Make a copy of the folder on your disk and open the project from Visual Studio.
+可以在[此处](https://github.com/ms-iot/samples/tree/develop/I2CAccelerometer)找到此示例。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
-Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
+确保将“远程调试”设置设为指向你的设备。如需指导，请返回基本“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)。
 
-If you're building for Minnowboard Max, select `x86` in the architecture dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
+如果你正在面向 Minnowboard Max 构建，请选择体系结构下拉列表中的 `x86`。如果你要针对 Raspberry Pi 2 进行生成，请选择 `ARM`。
 
-Note that this app requires physical I2C ports and will not work if running in an emulated environment.
+请注意，此应用需要使用物理 I2C 端口，并且在仿真环境中运行时将不起作用。
 
-###Connect the I2C Accelerometer to your device
+###将 I2C 加速计连接到你的设备
 
-You'll need a few components:
+你将需要以下几个组件：
 
-* an [ADXL345 accelerometer board from Sparkfun](https://www.sparkfun.com/products/9836){:target="_blank"} with pin headers soldered on
+* 一块[来自 Sparkfun 的 ADXL345 加速计板](https://www.sparkfun.com/products/9836)，该板上已焊接排针
 
-* a breadboard and a couple of male-to-female connector wires
+* 一块试验板和几根公母头连接线
 
-* If you are using a MinnowBoard Max, you'll need a 100 &#x2126; resistor (this is a workaround for a [known I2C hardware issue]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm))
+* 如果你使用的是 MinnowBoard Max，你将需要一个 100 &\#x2126; 电阻器（这是[已知的 I2C 硬件问题]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm)的解决方法）
 
-Visit the **Raspberry Pi 2/MinnowBoard Max** sections below depending on which device you have:
+根据自己所拥有的设备，查看以下 **Raspberry Pi 2/MinnowBoard Max** 部分：
 
-![Electrical Components]({{site.baseurl}}/images/I2CAccelerometer/components.png)
+![电子元件]({{site.baseurl}}/images/I2CAccelerometer/components.png)
 
 ####Raspberry Pi 2
-If you have a Raspberry Pi 2, we need to hook up power, ground, and the I2C lines to the accelerometer.
-Those familiar with I2C know that normally pull-up resistors need to be installed. However, the Raspberry Pi 2 already has pull-up resistors on its I2C pins, so we don't need to add any additional external pull-ups here.
- See the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm) for more details on the RPi2 IO pins.
+如果你有一个 Raspberry Pi 2，我们需要将电源、地线和 I2C 线接入加速计。那些熟悉 I2C 的用户会知道通常需安装上拉式电阻器。但是，Raspberry Pi 2 的 I2C 引脚上已经有上拉式电阻器，所以我们不需要在此处添加任何其他外部上拉式电阻器。有关 RPi2 IO 引脚的更多详细信息，请参阅 [Raspberry Pi 2 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm)。
 
-**Note: Make sure to power off the RPi2 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
+**注意： 确保在连接电路时关闭 RPi2 电源。若要降低构建期间意外出现短路的几率，这是一个很好的做法。**
 
-The ADXL345 breakout board has 8 IO pins, connect them as follows:
+ADXL345 试验板上有 8 个 IO 引脚，应按如下方式连接它们：
 
-1. **GND:**  Connect to ground on the RPi2 (Pin 6)
-2. **VCC:**  Connect to 3.3V on the RPi2 (Pin 1)
-3. **CS:**   Connect to 3.3V (The ADXL345 actually supports both SPI and I2C protocols. To select I2C, we keep this pin tied to 3.3V. The [datasheet](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf){:target="_blank"} contains much more information about the pin functions)
-4. **INT1:** Leave unconnected, we're not using this pin
-5. **INT2:** Leave unconnected, we're not using this pin
-6. **SDO:**  Connect to ground (In I2C mode, this pin is used to select the device address. You can attach two ADXL345 to the same I2C bus if you connect this pin to 3.3V on the second device. See the [datasheet](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf){:target="_blank"} for more details)
-7. **SDA:**  Connect to SDA on the RPi2 (Pin 3). This is the data line for the I2C bus.
-8. **SCL:**  Connect to SCL on the RPi2 (Pin 5). This is the clock line for the I2C bus.
+1. **GND：** 连接到 RPi2 上的地线（引脚 6）
+2. **VCC：** 连接到 RPi2 上的 3.3V（引脚 1）
+3. **CS：** 连接到 3.3V（实际上，ADXL345 既支持 SPI 协议，也支持 I2C 协议。若要选择 I2C，应将此引脚绑定到 3.3V。[数据表](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf)包含关于引脚功能的更多详细信息）
+4. **INT1：** 保持不连接，我们不会用到此引脚
+5. **INT2：** 保持不连接，我们不会用到此引脚
+6. **SDO：** 连接到地线（在 I2C 模式下，此引脚用于选择设备地址。如果你将此引脚连接到第二台设备上的 3.3V，则可以将两个 ADXL345 连接到相同的 I2C 总线。有关详细信息，请参阅[数据表](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf)）
+7. **SDA：** 连接到 RPi2 上的 SDA（引脚 3）。这是 I2C 总线中的数据线。
+8. **SCL：** 连接到 RPi2 上的 SCL（引脚 5）。这是 I2C 总线中的时钟线。
 
-Here are the connections shown on a breadboard:
+下面是试验板上所示的连接：
 
-![Breadboard connections]({{site.baseurl}}/images/I2CAccelerometer/breadboard_assembled_rpi2.png)
+![试验板连接]({{site.baseurl}}/images/I2CAccelerometer/breadboard_assembled_rpi2.png)
 
-<sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
+<sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
-Here are the schematics:
+以下是电路原理图：
 
-![Accelerometer schematics]({{site.baseurl}}/images/I2CAccelerometer/schematics_rpi2.png)
+![加速计示意图]({{site.baseurl}}/images/I2CAccelerometer/schematics_rpi2.png)
 
-####MinnowBoard Max
-If you have a MinnowBoard Max, we need to hook up power, ground, and the I2C lines to the accelerometer. Those familiar with I2C know that normally pull-up resistors need to be installed. However, the MBM already has 10K pull-up resistors on its IO pins, so we don't need to add any additional external pull-ups here.
- See the [MBM pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm) for more details on the MBM IO pins.
+####MinnowBoard MAX
+如果你有一个 MinnowBoard Max，我们需要将电源、地线和 I2C 线接入加速计。那些熟悉 I2C 的用户会知道通常需安装上拉式电阻器。但是，MBM 的 IO 引脚上已经有 10K 上拉式电阻器，所以我们不需要在此处添加任何其他外部上拉式电阻器。有关 MBM IO 引脚的更多详细信息，请参阅 [MBM 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm)。
 
-**Note: Make sure to power off the MBM when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
+**注意： 确保在连接电路时关闭 MBM 电源。若要降低构建期间意外出现短路的几率，这是一个很好的做法。**
 
-The ADXL345 breakout board has 8 IO pins, connect them as follows:
+ADXL345 试验板上有 8 个 IO 引脚，应按如下方式连接它们：
 
-1. **GND:**  Connect to ground on the MBM (Pin 2)
-2. **VCC:**  Connect to 3.3V on the MBM (Pin 4)
-3. **CS:**   Connect to 3.3V (The ADXL345 actually supports both SPI and I2C protocols. To select I2C, we keep this pin tied to 3.3V. The [datasheet](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf){:target="_blank"} contains much more information about the pin functions)
-4. **INT1:** Leave unconnected, we're not using this pin
-5. **INT2:** Leave unconnected, we're not using this pin
-6. **SDO:**  Connect to ground (In I2C mode, this pin is used to select the device address. You can attach two ADXL345 to the same I2C bus if you connect this pin to 3.3V on the second device. See the [datasheet](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf) for more details)
-7. **SDA:**  Connect to SDA on the MBM (Pin 15). This is the data line for the I2C bus.
-8. **SCL:**  Connect to SCL on the MBM (Pin 13) through the 100 &#x2126; resistor. This is the clock line for the I2C bus.
+1. **GND：** 连接到 MBM 上的地线（引脚 2）
+2. **VCC：** 连接到 MBM 上的 3.3V（引脚 4）
+3. **CS：** 连接到 3.3V（实际上，ADXL345 既支持 SPI 协议，也支持 I2C 协议。若要选择 I2C，应将此引脚绑定到 3.3V。[数据表](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf)包含关于引脚功能的更多详细信息）
+4. **INT1：** 保持不连接，我们不会用到此引脚
+5. **INT2：** 保持不连接，我们不会用到此引脚
+6. **SDO：** 连接到地线（在 I2C 模式下，此引脚用于选择设备地址。如果你将此引脚连接到第二台设备上的 3.3V，则可以将两个 ADXL345 连接到相同的 I2C 总线。有关详细信息，请参阅[数据表](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf)）
+7. **SDA：** 连接到 MBM 上的 SDA（引脚 15）。这是 I2C 总线中的数据线。
+8. **SCL：** 通过 100 &\#x2126; 电阻器连接到 MBM 上的 SCL（引脚 13）。这是 I2C 总线中的时钟线。
 
-Here are the connections shown on a breadboard:
+下面是试验板上所示的连接：
 
-![Breadboard connections]({{site.baseurl}}/images/I2CAccelerometer/breadboard_assembled_mbm.png)
+![试验板连接]({{site.baseurl}}/images/I2CAccelerometer/breadboard_assembled_mbm.png)
 
-<sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
+<sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
-Here are the schematics:
+以下是电路原理图：
 
-![Accelerometer schematics]({{site.baseurl}}/images/I2CAccelerometer/schematics_mbm.png)
+![加速计示意图]({{site.baseurl}}/images/I2CAccelerometer/schematics_mbm.png)
 
-###Deploy and run the app
+###部署和运行应用
 
-When everything is set up, power your device back on, and open up the sample app in Visual Studio.
- Now you should be able to press F5 from Visual Studio: The I2CAccelerometer app will deploy and start, and you should see accelerometer data show up on screen.
- If you have your accelerometer flat on a surface, the Z axis should read close to 1.000G, while X and Y are close to 0.000G. The values will fluctuate a little even if the device is standing still.
- This is normal and is due to minute vibrations and electrical noise. If you tilt or shake the sensor, you should see the values change in response. Note that this sample configures the device in 4G mode,
-so you wont be able to see G readings higher than 4Gs.
+一切就绪后，重新打开你设备的电源，然后在 Visual Studio 中打开示例应用。现在，你应该可以在 Visual Studio 中按 F5： I2CAccelerometer 应用将部署并启动，并且你应该会看到加速计数据显示在屏幕上。如果你将加速计平放在一个图面上，则 Z 轴所读取的值应接近 1.000G，而 X 和 Y 轴应接近 0.000G。这些值将会小幅度波动，即使设备静止不动也是如此。这是正常现象，这是因振动和电噪音而产生的。如果你倾斜或晃动传感器，你应该能看到响应中的值出现变化。注意，此示例在 4G 模式下配置设备，因此你不可能会看到高于 4G 的 G 读数。
 
-![I2C Accelerometer running]({{site.baseurl}}/images/I2CAccelerometer/i2caccelerometer_screenshot.png)
+![I2C 加速计运行]({{site.baseurl}}/images/I2CAccelerometer/i2caccelerometer_screenshot.png)
 
-Congratulations! You've connected an I2C accelerometer.
+恭喜！ 你已连接一个 I2C 加速计。
 
-###Let's look at the code
-The code in this sample performs two main tasks:
+###我们来看看代码
+此示例中的代码将执行两个主要任务：
 
-1. First the code initializes the I2C bus and the accelerometer
+1. 第一，此代码将初始化 I2C 总线和加速计
 
-2. Secondly, we read from the accelerometer at defined intervals and update the display
+2. 第二，我们会按照定义的时间间隔从加速计读取相关数据并更新显示
 
-Let's start by digging into the initializations.
+让我们从深入了解初始化开始吧。
 
-###Initialize the I2C bus
-To use the accelerometer, we need to initialize the I2C bus first. Here is the C# code.
+###初始化 I2C 总线
+若要使用加速计，我们需要先初始化 I2C 总线。下面是 C\# 代码。
 
 {% highlight C# %}
 using Windows.Devices.Enumeration;
@@ -128,8 +120,8 @@ private async void InitI2CAccel()
         Text_Status.Text = "No I2C controllers were found on the system";
         return;
     }
-
-    var settings = new I2cConnectionSettings(ACCEL_I2C_ADDR);
+    
+    var settings = new I2cConnectionSettings(ACCEL_I2C_ADDR); 
     settings.BusSpeed = I2cBusSpeed.FastMode;
     I2CAccel = await I2cDevice.FromIdAsync(dis[0].Id, settings);    /* Create an I2cDevice with our selected bus controller and I2C settings */
     if (I2CAccel == null)
@@ -146,37 +138,35 @@ private async void InitI2CAccel()
 }
 {% endhighlight %}
 
-Here's an overview of what's happening:
+下面概述了所发生的情况：
 
-* First, we get the selector strings for all I2C controllers on the device.
+* 首先，我们获取适用于设备上的所有 I2C 控制器的选择器字符串。
 
-* Next, we find all the I2C bus controllers on the system and check that at least one bus controller exists.
+* 接下来，我们在系统上查找所有 I2C 总线控制器，并检查是否存在至少一个总线控制器。
 
-* We then create an I2CConnectionSettings object with the accelerometer address "ACCEL_I2C_ADDR" (0x53) and bus speed set to "FastMode" (400KHz)
+* 然后，我们创建一个 I2CConnectionSettings 对象，其中加速计地址为“ACCEL\_I2C\_ADDR”\(0x53\)，总线速度设置为“FastMode”\(400KHz\)
 
-* Finally, we create a new I2cDevice and check that it's available for use.
+* 最后，我们创建一个新 I2cDevice，并检查它是否可供使用。
 
-###Initialize the accelerometer
+###初始化加速计
 
-Now that we have the I2cDevice accelerometer instance, we're done with the I2C bus initialization. We can now write data over I2C to start up the accelerometer. We do this with the Write() function.
-For this particular accelerometer, there are two internal registers we need to configure before we can start using the device: The data format register, and the power control register.
+现在，我们已经有了 I2cDevice 加速计实例，这表示我们已经完成了 I2C 总线的初始化。现在，我们可以通过 I2C 写入数据，从而启动加速计。我们使用 Write\(\) 函数执行此操作。对于这一特定加速计，存在两个内部寄存器，我们需要先进行配置，然后才能开始使用设备： 数据格式寄存器和电源控制寄存器。
 
-1. We first write a 0x01 to the data format register. This configures the device range into +-4G mode. If you consult the [datasheet](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf){:target="_blank"}, you'll see that the device can be configured in a variety of measurement modes ranging from 2G to 16G.
-Higher G settings provide you with greater range at the expense of reduced resolution. We choose 4G as a reasonable trade off between the two.
+1. 我们先将 0x01 写入数据格式寄存器。此操作可将设备范围配置为 +-4G 模式。当你查阅[数据表](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf)时，你将看到设备可在多种测量模式（范围从 2G 到 16G）下进行配置。较高的 G 设置可扩展测量模式的范围，但会导致分辨率降低。在这两个临界值之间，我们会选择 4G 作为合理的折衷数值。
 
-2. We write a 0x08 to the power control register, which wakes the device from standby and starts measuring acceleration. Again, the [datasheet](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf){:target="_blank"} contains additional information about the device settings and capabilities.
+2. 我们将 0x08 写入电源控制寄存器，这会将设备从待机状态中唤醒并开始测量加速度。同样，[数据表](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf)中包含有关设备设置和功能的其他信息。
 
 {% highlight C# %}
 private async void InitI2CAccel()
 {
     // ...
 
-    /*
+    /* 
      * Initialize the accelerometer:
      *
      * For this device, we create 2-byte write buffers:
      * The first byte is the register address we want to write to.
-     * The second byte is the contents that we want to write to the register.
+     * The second byte is the contents that we want to write to the register. 
      */
     byte[] WriteBuf_DataFormat = new byte[] { ACCEL_REG_DATA_FORMAT, 0x01 };        /* 0x01 sets range to +- 4Gs                         */
     byte[] WriteBuf_PowerControl = new byte[] { ACCEL_REG_POWER_CONTROL, 0x08 };    /* 0x08 puts the accelerometer into measurement mode */
@@ -198,8 +188,9 @@ private async void InitI2CAccel()
 }
 {% endhighlight %}
 
-###Timer code
-After all the initializations are complete, we start a timer to read from the accelerometer periodically. Here is how you set up the timer to trigger every 100mS.
+###计时器代码
+在所有初始化均完成后，我们将启动一个计时器，以定期从加速计读取相关数据。下面介绍如何将计时器设置为每 100 毫秒触发。
+
 {% highlight C# %}
 private async void InitI2CAccel()
 {
@@ -215,7 +206,7 @@ private void TimerCallback(object state)
 {
     string xText, yText, zText;
     string statusText;
-
+    
     /* Read and format accelerometer data */
     try
     {
@@ -225,14 +216,14 @@ private void TimerCallback(object state)
         zText = String.Format("Z Axis: {0:F3}G", accel.Z);
         statusText = "Status: Running";
     }
-
+    
     // ...
 }
 {% endhighlight %}
 
 
-###Read data from the accelerometer
-With the I2C bus and accelerometer initialized, we can start reading data from the accelerometer. Our ReadI2CAccel() function gets called every 100mS by the timer:
+###从加速计读取数据
+在 I2C 总线和加速计初始化后，我们可以开始从加速计读取数据。我们的 ReadI2CAccel\(\) 函数可由计时器每 100 毫秒调用一次：
 
 {% highlight C# %}
 private Acceleration ReadI2CAccel()
@@ -243,14 +234,14 @@ private Acceleration ReadI2CAccel()
 
     byte[] RegAddrBuf = new byte[] { ACCEL_REG_X }; /* Register address we want to read from                                         */
     byte[] ReadBuf = new byte[6];                   /* We read 6 bytes sequentially to get all 3 two-byte axes registers in one read */
-
-    /*
-     * Read from the accelerometer
+    
+    /* 
+     * Read from the accelerometer 
      * We call WriteRead() so we first write the address of the X-Axis I2C register, then read all 3 axes
      */
     I2CAccel.WriteRead(RegAddrBuf, ReadBuf);
 
-    /*
+    /* 
      * In order to get the raw 16-bit data values, we need to concatenate two 8-bit bytes from the I2C read for each axis.
      * We accomplish this by using the BitConverter class.
      */
@@ -267,20 +258,16 @@ private Acceleration ReadI2CAccel()
     return accel;
 }
 {% endhighlight %}
-Here's how this works:
+以下是具体操作方式：
 
-* We begin by reading data from the accelerometer with the WriteRead() function. As the name suggests, this function first performs a write, followed by a read.
+* 首先，我们通过 WriteRead\(\) 函数从加速计读取数据。顾名思义，此函数先执行一次写入操作，随后执行一次读取操作。
 
-* The initial write specifies the register address we want to read from (which in this case is the X-Axis data register). This write ensures that a subsequent read will start from this register address.
-We provide the function with a one-byte byte array representing the register address we want to write
+* 初始写入时可指定我们要从中读取的寄存器地址（在本例中为 X 轴数据寄存器）。此写入操作可确保后续的读取操作都从此寄存器地址开始。我们将通过用于表示要写入的寄存器地址的单字节式字节数组提供相关函数。
 
-* Next we provide the function with a read buffer of size 6 so we read 6 bytes over I2C. Since this device supports sequential reads,
-**and** the X, Y, and Z data registers are next to each other, reading 6 bytes give us all of our data in one go. This ensures acceleration values don't change between reads as well.
+* 接下来，我们将提供一个读取缓冲区大小为 6 的函数，以便我们能通过 I2C 读取 6 个字节。由于此设备支持连续的读取操作，**且** X、 Y 和 Z 数据寄存器紧挨在一起，因此读取 6 个字节能一次性为我们提供所有数据。这还能确保加速度值不会在执行不同的读取操作时出现更改。
 
-* We get back 6 bytes of data from our read. These represent the data in the X, Y, and Z data registers respectively.
-We separate out the data into their respective axes and concatenate the bytes using the BitConverter class.
+* 我们可从读取操作中获得 6 个字节数据。它们分别代表 X、Y 和 Z 数据寄存器中的相关数据。我们将分离出其各自的轴中所对应的数据，并使用 BitConverter 类连接字节。
 
-* The raw data is formatted as a 16-bit integer, which contains 10-bit data from the accelerometer. It can take on values ranging from -512 to 511. A reading of -512 corresponds to -4G while 511 is +4G.
- To convert this to G units, we divide by the ratio of full-scale range (8G) to the resolution (1024)
+* 原始数据采用的格式为 16 位整数，其中包含来自加速计的 10 位数据。它可以采用 -512 到 511 范围之内的值。读数 -512 对应于 -4G，而 511 则对应于 +4G。若要将此格式转换为以 G 为单位，我们需要用分辨率 \(1024\) 除以原尺寸范围的比例 \(8G\)
 
-* Now that we have the G unit values, we can display the data on screen. This process is repeated every 100mS so the information is constantly updated.
+* 现在，数值已采用 G 为单位，我们可以在屏幕上显示相关数据。每 100 毫秒重复一次此过程，以便信息可持续更新。

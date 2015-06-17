@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Unavailable Universal APIs
-permalink: /en-US/win10/UnavailableApis.htm
-lang: en-US
+title: 不可用的通用 API
+permalink: /zh-CN/win10/UnavailableApis.htm
+lang: zh-CN
 ---
 
 <div class="container" markdown= "1">
 
-## Universal APIs not functional in Windows 10 IoT Core at this time
+## 此时，通用 API 在 Windows 10 IoT 核心版中不起作用
 
     Windows.ApplicationModel.Appointments.Appointment
     Windows.ApplicationModel.Appointments.AppointmentInvitee
