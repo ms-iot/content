@@ -1,164 +1,160 @@
 ---
 layout: default
-title: I2C Port Expander Sample
-permalink: /en-US/win10/samples/I2CPortExpander.htm
-lang: en-US
+title: I2C 端口扩展器示例
+permalink: /zh-CN/win10/samples/I2CPortExpander.htm
+lang: zh-CN
 ---
 
-##I2C Port Expander Sample
+##I2C 端口扩展器示例
 
-![I2C Port Expander Image]({{site.baseurl}}/images/I2CPortExpander/PortExpanderProjectPicture_480.png)
+![I2C 端口扩展器图像]({{site.baseurl}}/images/I2CPortExpander/PortExpanderProjectPicture_480.png)
 
-In this sample, we'll connect an I2C port expander to your Raspberry Pi 2 and create a simple app that uses the port expander to read the status of a tactile switch and control an LED. No background knowledge of I2C or port expanders is needed.
-If you want to know more about I2C, Sparkfun provides a great [tutorial on I2C](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}.
+在本示例中，我们会将一个 I2C 端口扩展器连接到你的 Raspberry Pi 2，并创建一个简单的应用，以便将该端口扩展器用于读取触摸开关的状态并控制 LED。无需具备 I2C 或端口扩展器的相关背景知识。如果你想要进一步了解 I2C，Sparkfun 提供了一个很棒的[与 I2C 相关的教程](https://learn.sparkfun.com/tutorials/i2c)。
 
-This is a headed sample, so please ensure that your device is in headed
-mode by running this command: `setbootoption.exe headed` (changing the headed/headless state will require a reboot).
+这是一个有外设示例，所以请确保你的设备处于有外设模式下，方法是运行以下命令：`setbootoption.exe headed`（更改有外设/无外设状态需要重新启动）。
 
-###Connect the I2C Port Expander to your device
+###将 I2C 端口扩展器连接到你的设备
 
-You'll need the following components which are included in the Basic Kit:
+你将需要以下组件，这些组件包含在基本工具包中：
 
-* 1 Raspberry Pi 2
+* 一个 Raspberry Pi 2
 
-* 1 [MCP23008 8-bit I/O Port Expander](http://www.digikey.com/product-detail/en/MCP23008-E%2FP/MCP23008-E%2FP-ND/735951){:target="_blank"} in PDIP package
+* PDIP 程序包中的一个 [MCP23008 8 位 I/O 端口扩展器](http://www.digikey.com/product-detail/en/MCP23008-E%2FP/MCP23008-E%2FP-ND/735951)
 
-* 1 [red LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832){:target="_blank"}
+* 一个[红色 LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832)
 
-* 1 [tactile switch](http://www.digikey.com/product-detail/en/320.02E11.08BLK/EG1311-ND/101397){:target="_blank"}
+* 一个[触摸开关](http://www.digikey.com/product-detail/en/320.02E11.08BLK/EG1311-ND/101397)
 
-* 1 [330 &#x2126; resistor](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
+* 一个 [330 &\#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636)
 
-* 1 [10k &#x2126; resistor](http://www.digikey.com/product-detail/en/CFR-25JB-52-10K/10KQBK-ND/338){:target="_blank"}
+* 一个 [10k &\#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-10K/10KQBK-ND/338)
 
-* An HDMI monitor
+* 一台 HDMI 监视器
 
-* A breadboard and several male-to-female and male-to-male connector wires
+* 一块试验板以及多根公母头连接线和双公头连接线
 
-Let's start by wiring up the components on the breadboard as shown in the diagram below.
+我们先来为试验板上的组件布线，如下图所示。
 
-**Note: Make sure to power off the RPi2 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
+**注意： 确保在连接电路时关闭 RPi2 电源。若要降低构建期间意外出现短路的几率，这是一个很好的做法。**
 
-![Breadboard connections]({{site.baseurl}}/images/I2CPortExpander/I2cPortExpanderDrawing_bb_750.png)
+![试验板连接]({{site.baseurl}}/images/I2CPortExpander/I2cPortExpanderDrawing_bb_750.png)
 
-*Image made with [Fritzing](http://fritzing.org/)*
+*使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
 
-Here is the schematic:
+以下是电路原理图：
 
-![Circuit Schematic]({{site.baseurl}}/images/I2CPortExpander/I2cPortExpanderDrawing_schem.png)
+![电路示意图]({{site.baseurl}}/images/I2CPortExpander/I2cPortExpanderDrawing_schem.png)
 
-*Image made with [Fritzing](http://fritzing.org/)*
+*使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
 
-####Connecting the MCP23008 Port Expander
+####连接 MCP23008 端口扩展器
 
-Place the MCP23008 Port Expander on your breadboard such that it straddles the center gap of the breadboard.
+将 MCP23008 端口扩展器置于你的试验板之上，以便它可以跨该试验板的中隙。
 
-![Breadboard IC Placement]({{site.baseurl}}/images/BreadBoardICPlacement.png)
+![试验板 IC 位置]({{site.baseurl}}/images/BreadBoardICPlacement.png)
 
-*Image made with [Fritzing](http://fritzing.org/)*
+*使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
 
- Locate pin 1 of the port expander by finding the notch on the IC. If you orient the IC so that the end with the notch is facing left, pin 1 will be the first pin in the lower left below the notch.
+ 通过在 IC 上查找槽口，找到该端口扩展器的引脚 1。如果你需要定向 IC 以便槽口尾部朝向左边，则引脚 1 将是该槽口下方的左下角区域中的第一个引脚。
 
-![MCP23008 PinLocations]({{site.baseurl}}/images/I2CPortExpander/MCP23008_PortExpander_bb.png)
+![MCP23008 引脚位置]({{site.baseurl}}/images/I2CPortExpander/MCP23008_PortExpander_bb.png)
 
-*Image made with [Fritzing](http://fritzing.org/)*
+*使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
-The pinout of the MCP23008 is shown below and can be found in the [datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/21919e.pdf){:target="_blank"}.
+MCP23008 的引脚输出如下所示，并且可以在[数据表](http://ww1.microchip.com/downloads/en/DeviceDoc/21919e.pdf)中找到。
 
-![MCP23008 Pinout]({{site.baseurl}}/images/I2CPortExpander/MCP23008_Pinout.PNG)
+![MCP23008 引脚输出]({{site.baseurl}}/images/I2CPortExpander/MCP23008_Pinout.PNG)
 
-*Image made with [Fritzing](http://fritzing.org/)*
+*使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
 
-Make the following connections on the MCP23008 Port Expander:
+在 MCP23008 端口扩展器上建立以下连接：
 
-* Pin 1  **SCL**: Connect to **I2C1 SCL** (Pin 5) on the RPi2 (pin mapping is below)
+* 引脚 1 **SCL**： 连接到 RPi2 上的 **I2C1 SCL**（引脚 5）（引脚映射如下所示）
 
-* Pin 2  **SDA**: Connect to **I2C1 SDA** (Pin 3) on the RPi2
+* 引脚 2 **SDA**： 连接到 RPi2 上的 **I2C1 SDA**（引脚 3）
 
-* Pin 3  **A2**:  Connect to the ground rail on the side of the breadboard (blue stripe)
+* 引脚 3 **A2**： 连接到试验板一侧的地轨（蓝色条带）
 
-* Pin 4  **A1**:  Connect to the ground rail on the side of the breadboard
+* 引脚 4 **A1**： 连接到试验板一侧的地轨
 
-* Pin 5  **A0**:  Connect to the ground rail on the side of the breadboard
+* 引脚 5 **A0**： 连接到试验板一侧的地轨
 
-* Pin 6  **Reset**: Connect to the voltage supply rail on the side of the breadboard (red stripe)
+* 引脚 6 **重置**： 连接到试验板一侧的电源轨道（红色条带）
 
-* Pin 9  **VSS**: Connect to the ground rail on the side of the breadboard
+* 引脚 9 **VSS**： 连接到试验板一侧的地轨
 
-* Pin 10 **GP0**: Connect to the cathode (the shorter leg) of the LED
+* 引脚 10 **GP0**： 连接到 LED 的阴极（较短的阴极引线）
 
-* Pin 11 **GP1**: Connect to one lead of the 10k &#x2126; resistor and one pin of the tactile switch
+* 引脚 11 **GP1**： 连接到 10k &\#x2126; 电阻器中的一条引线和触摸开关的一个引脚
 
-* Pin 18 **VDD**: Connect to the voltage supply rail on the side of the breadboard
+* 引脚 18 **VDD**： 连接到试验板一侧的电源轨道
 
-Leave the remaining pins on the MCP23008 unconnected.
+让 MCP23008 上的剩余引脚保持不连接。
 
 
-####Connecting the LED
+####连接 LED
 
-* If not already connected, connect the cathode (the shorter leg) of the LED to Pin 10 of the MCP23008 Port Expander
+* 如果尚未连接，则将 LED 阴极（较短的阴极引线）连接到 MCP23008 端口扩展器的引脚 10
 
-* Connect the anode (the longer leg) of the LED to one lead of the 330 &#x2126; resistor
+* 将 LED 阳极（较长的阳极引线）连接到 330 &\#x2126; 电阻器中的一条引线
 
-* Connect the other end of the 330 &#x2126; resistor to the voltage supply rail on the side of the breadboard (red stripe)
+* 将 330 &\#x2126; 电阻器的另一端连接到试验板一侧的电源轨道（红色条带）
 
 
-####Connecting the Tactile Switch
+####连接触摸开关
 
-* If not already connected, connect one lead of the 10k &#x2126; resistor to Pin 11 of the MCP23008 Port Expander
+* 如果尚未连接，则将 10k &\#x2126; 电阻器中的一条引线连接到 MCP23008 端口扩展器的引脚 11
 
-* Connect the other end of the 10k &#x2126; resistor to the voltage supply rail on the side of the breadboard (red stripe)
+* 将 10k &\#x2126; 电阻器的另一端连接到试验板一侧的电源轨道（红色条带）
 
-* If not already connected, connect one pin of the tactile switch to Pin 11 of the MCP23008 Port Expander
+* 如果尚未连接，则将触摸开关中的一个引脚连接到 MCP23008 端口扩展器的引脚 11
 
-* Connect the other pin of the tactile switch to the ground rail on the side of the breadboard (blue stripe)
+* 将触摸开关中的另一个引脚连接到试验板一侧的地轨（蓝色条带）
 
 
-####Connecting the Raspberry Pi 2
+####连接 Raspberry Pi 2
 
-We need to hook up power, ground, and the I2C lines from on the Raspberry Pi 2 to the MCP23008 Port Expander and the breadboard.
+我们需要将 Raspberry Pi 2 上的电源、地线和 I2C 线接入 MCP23008 端口扩展器和试验板。
 
-![Raspberry Pi 2 pinout]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![Raspberry Pi 2 引脚输出]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
 
-* Pin 1 **3.3V PWR** Connect to the voltage supply rail on the side of the breadboard (red stripe)
+* 引脚 1 **3.3V PWR** 连接到试验板一侧的电源轨道（红色条带）
 
-* Pin 3 **I2C1 SDA** If not already connected, connect to Pin 2 of the MCP23008 Port Expander
+* 引脚 3 **I2C1 SDA** 如果尚未连接，连接到 MCP23008 端口扩展器的引脚 2
 
-* Pin 5 **I2C1 SCL** If not already connected, connect to pin 1 of the MCP23008 Port Expander
+* 引脚 5 **I2C1 SCL** 如果尚未连接，连接到 MCP23008 端口扩展器的引脚 1
 
-* Pin 6 **GND** Connect to the ground rail on the side of the breadboard (blue stripe)
+* 引脚 6 **GND** 连接到试验板一侧的地轨（蓝色条带）
 
-The I2C bus requires pull-up resistors on the SDA and SCL lines. However, the Raspberry Pi 2 SDA and SCL pins we are using in this sample already have pull-up resistors connected on the RPi2, so we don't need to add any additional external pull-ups.
- See the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm) for more details on the RPi2 IO pins.
+I2C 总线需要在 SDA 和 SCL 线上使用上拉式电阻器。但是，我们在本例中使用的 Raspberry Pi 2 SDA 和 SCL 引脚已经有上拉式电阻器（它们已连接到 RPi2），所以我们不需要添加任何其他外部上拉式电阻器。有关 RPi2 IO 引脚的更多详细信息，请参阅 [Raspberry Pi 2 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm)。
 
-###Create the sample app
+###创建示例应用
 
-When everything is set up, power your device back on. You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/I2cPortExpander){:target="_blank"}, but as an excercise, this tutorial will take you through the complete steps to create this app from scratch.  Open up Visual Studio and create a new C# Windows Universal Blank App (see the 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance on how to create a new app). For this sample, we named ours **I2cPortExpanderLedSample**.
-The code in this sample does several things:
+在完成一切设置后，重新打开你设备的电源。你可以在[此处](https://github.com/ms-iot/samples/tree/develop/I2cPortExpander)找到此示例，但作为练习，本教程将指导你完成从头开始创建此应用的完整步骤。打开 Visual Studio 并创建新的 C\# Windows 通用空白应用（如果你需要有关如何创建新应用的指南，请参阅“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)）。我们已将此示例命名为 **I2cPortExpanderLedSample**。此示例中的代码将执行以下几项操作：
 
-1. Initializes the I2C bus and the port expander
+1. 初始化 I2C 总线和端口扩展器
 
-2. Communicates over I2C with the port expander to turn the LED on and off at regular intervals
+2. 通过 I2C 与端口扩展器通信，以按照固定的时间间隔打开和关闭 LED
 
-3. Communicates over I2C with the port expander to check the status of the tactile switch (is it pressed or not) at regular intervals
+3. 通过 I2C 与端口扩展器通信，以按照固定的时间间隔检查触摸开关的状态（即，是否已被按下）
 
-4. Displays the LED on/off status and the tactile switch pressed/released status to the display attached to the Raspberry Pi 2
+4. 将在已连接到 Raspberry Pi 2 的显示器上显示 LED 的开/关状态和触摸开关的按下/释放状态
 
-5. Stops flashing the LED when the tactile switch is pressed and restarts flashing the LED when the tactile switch is released
+5. 当触摸开关已按下时，LED 将停止闪光；当触摸开关已释放时，LED 将重新开始闪光
 
-6. Checks if the user has changed the LED flash frequency and updates the LED flash frequency as needed
+6. 检查用户是否已更改 LED 的闪光频率，并按需更新 LED 的闪光频率
 
-####Add content to MainPage.xaml
+####向 MainPage.xaml 添加内容
 
-Let's add some content to the MainPage which will be displayed on a screen connected to the Raspberry Pi 2. We want to add a Circle, a couple TextBoxes and a Slider. The circle will emulate the on/off status of the LED. The Slider allows the user to control the frequency that the LED flashes. The Textboxes will provide info about the slider and report the tactile button status.
+让我们向 MainPage 添加一些内容，这些内容会显示在已连接到 Raspberry Pi 2 的屏幕上。我们想要添加一个圆圈、两个文本框和一个滑块。圆圈用于模拟 LED 的开/关状态。滑块允许用户控制 LED 的闪光频率。文本框将提供有关滑块的信息并报告触摸按钮的状态。
 
-* From Solution Explorer, select the MainPage.xaml file.
+* 从解决方案资源管理器中，选择 MainPage.xaml 文件。
 
-* Locate the `<Grid>` tag in the XAML section of the designer, and add the following markup:
+* 在设计器的 XAML 部分中找到 `<Grid>` 标记，并添加以下标记：
 
 <UL>
 {% highlight XML %}
@@ -173,19 +169,19 @@ Let's add some content to the MainPage which will be displayed on a screen conne
 {% endhighlight %}
 </UL>
 
-####Add code to MainPage.xaml.cs
+####将代码添加到 MainPage.xaml.cs
 
-Before we add any code to MainPage.xaml.cs, we need to add a reference to the Windows IoT Extension SDK.
+在向 MainPage.xaml.cs 添加任何代码之前，我们需要添加对 Windows IoT 扩展 SDK 的引用。
 
- * In Solution Explorer, right-click on **References** and select **Add Reference...**
+ * 在“解决方案资源管理器”中，右键单击“引用”，然后选择“添加引用...”
 
- * In the Reference Manager window, click the arrow next to **Windows Universal** then click on **Extensions**
+ * 在“引用管理器”窗口中，单击“Windows 通用”旁的箭头，然后单击“扩展”
 
- * Place a check mark in the box next to **Windows IoT Extension SDK** and click **OK**
+ * 在“Windows IoT 扩展 SDK”旁的框中放入一个复选标记，然后单击“确定”
 
- * Open MainPage.xaml.cs from Solution Explorer (you may need to click on the arrow next to MainPage.xaml first)
+ * 从解决方案资源管理器打开 MainPage.xaml.cs（可能需要先单击 MainPage.xaml 旁边的箭头）
 
- * Add the following lines at the top of MainPage.xaml.cs
+ * 在 MainPage.xaml 的顶部添加以下行
 
 {% highlight C# %}
 using Windows.Devices.Enumeration;
@@ -193,10 +189,10 @@ using Windows.Devices.I2c;
 {% endhighlight %}
 
 
-With the references add, lets start adding code. The complete code we implemented for MainPage.xaml.cs is located at end of this section. Below are some key parts of the code with explanations
+引用添加后，可以开始添加代码。我们针对 MainPage.xaml.cs 实现的完整代码位于本部分的末尾处。以下是该代码的一些关键部分，带有相关说明
 
 
-Variables and Constants
+变量和常量
 
 {% highlight C# %}
 // use these constants for controlling how the I2C bus is setup
@@ -226,35 +222,35 @@ private SolidColorBrush redBrush = new SolidColorBrush(Windows.UI.Colors.Red);
 private SolidColorBrush grayBrush = new SolidColorBrush(Windows.UI.Colors.LightGray);
 {% endhighlight %}
 
-Here are what some of these constants and variables represent
+下面是其中一些常量和变量所表示的内容
 
- * `I2C_CONTROLLER_NAME` holds the string constant `I2C1` which is the name of the I2C controller on the Raspberry Pi 2.
+ * `I2C_CONTROLLER_NAME` 包含字符串常量 `I2C1`，它是 Raspberry Pi 2 上 I2C 控制器的名称。
 
- * `PORT_EXPANDER_I2C_ADDRESS` is the I2C address of the port expander we are using. \*
+ * `PORT_EXPANDER_I2C_ADDRESS` 是我们使用的端口扩展器的 I2C 地址。\*
 
- * `PORT_EXPANDER_IODIR_REGISTER_ADDRESS`, `PORT_EXPANDER_GPIO_REGISTER_ADDRESS`, `PORT_EXPANDER_OLAT_REGISTER_ADDRESS` are the register addresses in the port expander that correspond to the IODIR register, GPIO register and OLAT register.\*
+ * `PORT_EXPANDER_IODIR_REGISTER_ADDRESS`、`PORT_EXPANDER_GPIO_REGISTER_ADDRESS`、`PORT_EXPANDER_OLAT_REGISTER_ADDRESS` 均为端口扩展器中的寄存器地址，它们分别对应于 IODIR 寄存器、GPIO 寄存器和 OLAT 寄存器。\*
 
- * `TIMER_INTERVAL` is the starting time interval in milliseconds between an LED on or off toggle.
+ * `TIMER_INTERVAL` 是 LED 在打开或关闭之间切换的启动时间间隔（以毫秒为单位）。
 
- * `BUTTON_STATUS_CHECK_TIMER_INTERVAL` is the time interval in milliseconds between each check of the tactile switch status
+ * `BUTTON_STATUS_CHECK_TIMER_INTERVAL` 是每次检查触摸开关状态的时间间隔（以毫秒为单位）
 
- * `iodirRegister`, `gpioRegister` and `olatRegister` are our local copies of the values in the corresponding registers in the port expander.
+ * `iodirRegister`、`gpioRegister` 和 `olatRegister` 是相关值的本地副本，它们分别对应于端口扩展器中的三种寄存器。
 
-\* See the [MCP23008 datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/21919e.pdf){:target="_blank"} for details.
+\* 有关详细信息，请参阅 [MCP23008 数据表](http://ww1.microchip.com/downloads/en/DeviceDoc/21919e.pdf)。
 
-The method `InitializeSystem()`
+方法 `InitializeSystem()`
 
-`InitializeSystem()` does the following:
+`InitializeSystem()` 将执行以下操作：
 
- * Sets up the I2C communications on the Raspberry Pi 2
+ * 在 Raspberry Pi 2 上设置 I2C 通信
 
- * Configures the port expander to be able to turn the LED on and off and to get the tactile switch status
+ * 将端口扩展器配置为能够打开和关闭 LED 并获取触摸开关状态
 
- * Initializes the local copies of the port expander registers IODIR, GPIO and OLAT
+ * 初始化端口扩展器寄存器 IODIR、GPIO 和 OLAT 的本地副本
 
- * Sets up two timers - One for controlling the LED and another for checking the tactile switch status
+ * 设置两个计时器 - 一个用于控制 LED，另一个用于检查触摸开关状态
 
-When complete, the variable `i2cPortExpander` will be our handle to the Raspberry Pi 2 I2C bus.
+操作完成后，变量 `i2cPortExpander` 将用于处理 Raspberry Pi 2 I2C 总线。
 
 {% highlight C# %}
 private async void InitializeSystem()
@@ -335,15 +331,15 @@ private async void InitializeSystem()
 }
 {% endhighlight %}
 
-The method `FlipLED()`
+方法 `FlipLED()`
 
-`FlipLED()` is called by the ledTimer whenever the LED timer has reached the end of its interval length. Initially, this is 500 milliseconds but can be changed by a user via the slider displayed on a monitor connected to the RPi2.
+只要 LED 计时器一接近其时间间隔长度的尾声，ledTimer 便会调用 `FlipLED()`。此时间间隔最初设定为 500 毫秒，但用户可以通过显示在已连接到 RPi2 的监视器上的滑块更改该时间间隔。
 
- This method determines if the LED is currently on or off.
+ 此方法可确定 LED 当前是处于打开状态还是关闭状态。
 
- * If the LED is currently off, it sends commands to the port expander to turn the LED on and sets the color of the circle on the display to red.
+ * 如果 LED 当前处于关闭状态，它会将相关命令发送给端口扩展器以打开 LED，并将显示器上圆圈的颜色设置为红色。
 
- * If the LED is currently on, it sends commands to the port expander to turn the LED off and sets the color of the circle on the display to gray.
+ * 如果 LED 当前处于打开状态，它会将相关命令发送给端口扩展器以关闭 LED，并将显示器上圆圈的颜色设置为灰色。
 
 {% highlight C# %}
 private void FlipLED()
@@ -369,13 +365,13 @@ private void FlipLED()
 }
 {% endhighlight %}
 
-`CheckButtonStatus()` communicates with the port expander to get the tactile switch status. It reads the GPIO register on the port expander and checks the value of the second bit which corresponds to the status of the switch.
+`CheckButtonStatus()` 可与端口扩展器通信，以获取触摸开关状态。它将读取端口扩展器上的 GPIO 寄存器，并检查第二个位的值，该值对应于开关的状态。
 
- * If the second bit of the GPIO register is '0' then the switch is currently pressed.
+ * 如果 GPIO 寄存器的第二个位为“0”，则表示该开关当前已按下。
 
- * If the second bit of the GPIO register is '1' then the switch is currently released.
+ * 如果 GPIO 寄存器的第二个位为“1”，则表示该开关当前已释放。
 
-This method updates the text in Textbox displayed to the screen to reflect the status of the switch.
+此方法可更新显示到屏幕的文本框中的文本，以便于反映该开关的状态。
 
 {% highlight C# %}
 private void CheckButtonStatus()
@@ -397,23 +393,23 @@ private void CheckButtonStatus()
 }
 {% endhighlight %}
 
-###Build, Deploy and Run the App
+###生成、部署并运行应用
 
-Let's build, deploy and run the app on our Raspberry Pi 2.
+让我们在自己的 Raspberry Pi 2 上生成、部署和运行应用。
 
-* If not already open, open in Visual Studio the app you created with the code above.
+* 如果通过上述代码创建的应用尚未打开，请在 Visual Studio 中打开它。
 
-* Set the 'Remote Debugging' setting to point to your device. See the 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance on how to do this.
+* 将“远程调试”设置设为指向你的设备。如果你需要有关如何执行此操作的指南，请参阅“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)。
 
-* Press 'F5' or click on the 'Remote Machine' button in the Visual Studio toolbar.
+* 按“F5”，或单击 Visual Studio 工具栏中的“远程计算机”按钮。
 
-After several moments, you will see the screen attached to the RPi2 change to show a circle, some text, and a slider. The LED on the breadboard will begin to turn on and off.
+一段时间过后，你将看到已连接到 RPi2 的屏幕上出现变化，即，将显示一个圆圈、一些文本和一个滑块。试验板上的 LED 将开始打开和关闭。
 
-![I2C Port Expander Screenshot]({{site.baseurl}}/images/I2CPortExpander/I2CPortExpanderScreenShot_300p.png)
+![I2C 端口扩展器屏幕截图]({{site.baseurl}}/images/I2CPortExpander/I2CPortExpanderScreenShot_300p.png)
 
-Congratulations! You've successfully connected an I2C port expander to your Raspberry Pi 2.
+恭喜！ 你已成功将一个 I2C 端口扩展器连接到你的 Raspberry Pi 2。
 
-###The complete MainPage.xaml.cs code
+###完整的 MainPage.xaml.cs 代码
 
 {% highlight C# %}
 using System;

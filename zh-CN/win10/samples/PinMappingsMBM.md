@@ -1,52 +1,47 @@
 ---
 layout: default
-title: MinnowBoard Max Pin Mappings
-permalink: /en-US/win10/samples/PinMappingsMBM.htm
-lang: en-US
+title: MinnowBoard Max 引脚映射
+permalink: /zh-CN/win10/samples/PinMappingsMBM.htm
+lang: zh-CN
 ---
-##MinnowBoard Max Pin Mappings
+##MinnowBoard Max 引脚映射
 
-![MinnowBoard Max Pin Header]({{site.baseurl}}/images/PinMappings/MBM_Pinout.png)
+![MinnowBoard Max 排针]({{site.baseurl}}/images/PinMappings/MBM_Pinout.png)
 
-<sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
+<sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
-Hardware interfaces for the MinnowBoard Max are exposed through the 26-pin header **JP1** on the board. Functionality includes:
+MinnowBoard Max 的硬件接口通过开发板上的 26 排针 **JP1** 公开。功能包括：
 
-* **10x** - GPIO pins
-* **2x** - Serial UARTs
-* **1x** - SPI bus
-* **1x** - I2C bus
-* **1x** - 5V power pin
-* **1x** - 3.3V power pin
-* **2x** - Ground pins
+* **10x** - GPIO 引脚
+* **1x** - SPI 总线
+* **1x** - I2C 总线
+* **1x** - 5V 电源引脚
+* **1x** - 3.3V 电源引脚
+* **2x** - 接地引脚
 
-Note that the MinnowBoard Max uses 3.3V logic levels on all IO pins. In addition all the pins are buffered by [TXS0104E](http://www.ti.com/product/txs0104e){:target="_blank"} level shifters, with the exception of power and ground pins.
- These level shifters appear as open collector outputs with a **10K&#x2126; resistive pull-up, and the pull-up is present regardless of whether the IO is set to input or output.**
- The open-collector nature of the level shifters means is that the pins can output a '0' strongly, but only weakly output a '1'. This is important to keep in mind when attaching devices which draw current from the pins (such as an LED). See the [Blinky Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm) for the correct way to interface an LED to the MinnowBoard Max.
+请注意，MinnowBoard Max 在所有 IO 引脚上使用 3.3V 逻辑级别。此外所有引脚由 [TXS0104E](http://www.ti.com/product/txs0104e) 电平转换器缓冲，电源和接地引脚除外。这些电平转换器显示为开放收集器输出，并带有 **10K&\#x2126; 电阻式上拉，无论 IO 设置为输入还是输出该上拉都存在。** 电平转换器的开放收集器性质意味着引脚可以强输出“０”，但只能弱输出“１”。在连接从引脚（例如 LED）消耗电流的设备时记住这一点很重要。有关将 LED 接合到 MinnowBoard Max 的正确方法，请参阅 [Blinky 示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)。
 
-##GPIO Pins
 
-The following GPIO pins are accessible through APIs:
+##GPIO 引脚
 
-{:.table.table-bordered}
-| GPIO# | Header Pin         |
-|-------|--------------------|
-| 0     | 21                 |
-| 1     | 23                 |
-| 2     | 25                 |
-| 3     | 14                 |
-| 4     | 16                 |
-| 5     | 18                 |
-| 6     | 20                 |
-| 7     | 22                 |
-| 8     | 24                 |
-| 9     | 26                 |
-         
-As an example, the following code opens **GPIO 5** as an output and writes a digital '**1**' out on the pin:
-         
+以下 GPIO 引脚可通过 API 访问：
+
+* **GPIO 0**
+* **GPIO 1**
+* **GPIO 2**
+* **GPIO 3**
+* **GPIO 4**
+* **GPIO 5**
+* **GPIO 6**
+* **GPIO 7**
+* **GPIO 8**
+* **GPIO 9**
+
+例如，以下代码将 **GPIO 5** 作为输出打开，并在引脚上写出数字“\*\*1\*\*”：
+
 {% highlight C# %}
 using Windows.Devices.Gpio;
-         
+
 public void GPIO()
 {
 	GpioController Controller = GpioController.GetDefault(); /* Get the default GPIO controller on the system */
@@ -57,74 +52,14 @@ public void GPIO()
 }
 {% endhighlight %}
 
-##Serial UART
+##I2C 总线
 
-There are two Serial UARTS available on the MBM: **UART1** and **UART2**
+有一个在排针上公开的 I2C 控制器 **I2C5**，以及两条线 **SDA** 和 **SCL**。10K&\#x2126; 内部上拉电阻已存在于这些线上。
 
-**UART1** has the standard **UART1 TX** and **UART1 RX** lines, along with flow control signals **UART1 CTS** and **UART1 RTS**.
+* 引脚 15 - **I2C5 SDA**
+* 引脚 13 - **I2C5 SCL**
 
-* Pin 6  - **UART1 TX**
-* Pin 8  - **UART1 RX**
-* Pin 10 - **UART1 CTS**
-* Pin 12 - **UART1 RTS**
-
-**UART2** includes just the **UART2 TX** and **UART2 RX** lines.
-
-* Pin 17  - **UART2 TX**
-* Pin 19  - **UART2 RX**
-
-The example below initializes **UART2** and performs a write followed by a read:
-
-
-{% highlight C# %}
-public async void Serial()
-{
-	string aqs = SerialDevice.GetDeviceSelector("UART2");                   /* Find the selector string for the serial device   */
-	var dis = await DeviceInformation.FindAllAsync(aqs);                    /* Find the serial device with our selector string  */
-	SerialDevice SerialPort = await SerialDevice.FromIdAsync(dis[0].Id);    /* Create an serial device with our selected device */
-
-	/* Configure serial settings */
-	SerialPort.WriteTimeout = TimeSpan.FromMilliseconds(1000);
-	SerialPort.ReadTimeout = TimeSpan.FromMilliseconds(1000);
-	SerialPort.BaudRate = 9600;
-	SerialPort.Parity = SerialParity.None;         
-	SerialPort.StopBits = SerialStopBitCount.One;
-	SerialPort.DataBits = 8;
-
-	/* Write a string out over serial */
-	string txBuffer = "Hello Serial";
-	DataWriter dataWriter = new DataWriter();
-	dataWriter.WriteString(txBuffer);
-	uint bytesWritten = await SerialPort.OutputStream.WriteAsync(dataWriter.DetachBuffer());
-
-	/* Read data in from the serial port */
-	const uint maxReadLength = 1024;
-	DataReader dataReader = new DataReader(SerialPort.InputStream);
-	uint bytesToRead = await dataReader.LoadAsync(maxReadLength);
-	string rxBuffer = dataReader.ReadString(bytesToRead);
-}
-{% endhighlight %}
-
-Note that you must add the following capability to the **Package.appxmanifest** file in your UWP project to run Serial UART code:
-
-{% highlight xml %}
-  <Capabilities>
-    <DeviceCapability Name="serialcommunication">
-      <Device Id="any">
-        <Function Type="name:serialPort" />
-      </Device>
-    </DeviceCapability>
-  </Capabilities>
-{% endhighlight %}
-
-##I2C Bus
-
-There is one I2C controller **I2C5** exposed on the pin header with two lines **SDA** and **SCL**. 10K&#x2126; internal pull-up resistors are already present on these lines.
-
-* Pin 15 - **I2C5 SDA**
-* Pin 13 - **I2C5 SCL**
-
-The example below initializes **I2C5** and writes data to an I2C device with address **0x40**:
+以下示例初始化 **I2C5** 并将数据写入带有地址 **0x40** 的 I2C 设备：
 
 {% highlight C# %}
 using Windows.Devices.Enumeration;
@@ -145,24 +80,21 @@ public async void I2C()
 }
 {% endhighlight %}
 
-###I2C Issues
+###I2C 问题
 
-The MinnowBoard Max has a known issue with the I2C bus which causes communication problems with certain I2C devices. Normally, an I2C device will acknowledge its address during a bus request.
-However, under certain conditions this acknowledge fails to propagate back through the level shifters to the MBM, and as a result the CPU thinks the device did not respond and cancels the bus transaction.
-The issue seems to be related to the [TXS0104E](http://www.ti.com/product/txs0104e){:target="_blank"} level shifters on the IO pins, which can trigger prematurely due to voltage spikes on the line.
-The current workaround is to insert a 100 ohm resistor in series with the I2C SCK line, which helps suppress spikes. Not all devices are affected, so this workaround is only required if you are having trouble
-getting a bus response.
+MinnowBoard Max 具有已知的 I2C 总线问题，可导致某些 I2C 设备发生通信问题。通常，I2C 设备将在总线请求期间确认其地址。但是，在某些条件下，此确认无法通过电平转换器传播回 MBM，因此 CPU 认为设备未响应并取消总线事务。该问题似乎与 IO 引脚上 [TXS0104E](http://www.ti.com/product/txs0104e) 水平转换器相关，这可能由于线上的电压尖脉冲而过早触发。当前的解决方案是插入一个与 I2C SCK 线串联的 100 欧姆电阻，这有助于消除尖脉冲。并非所有设备都会受影响，因此只在你无法顺利获取总线响应时需要此解决方法。
 
-##SPI Bus
+##SPI 总线
 
-There is one SPI controller **SPI0** available on the MBM:
+MBM 上提供一个 SPI 控制器 **SPI0**：
 
-* Pin 9 - **SPI0 MOSI**
-* Pin 7 - **SPI0 MISO**
-* Pin 11 - **SPI0 SCLK**
-* Pin 5 - **SPI0 CS0**
+* 引脚 9 - **SPI0 MOSI**
+* 引脚 7 - **SPI0 MISO**
+* 引脚 11 - **SPI0 SCLK**
+* 引脚 5 - **SPI0 CS0**
 
-An example on how to perform a SPI write on bus **SPI0** is shown below:
+有关如何在总线 **SPI0** 上执行 SPI 写入的示例如下所示：
+
 {% highlight C# %}
 using Windows.Devices.Enumeration;
 using Windows.Devices.Spi;

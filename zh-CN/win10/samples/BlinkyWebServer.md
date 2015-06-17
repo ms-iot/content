@@ -1,45 +1,38 @@
 ---
 layout: default
-title: Blinky WebServer Sample
-permalink: /en-US/win10/samples/BlinkyWebServer.htm
-lang: en-US
+title: Blinky WebServer 示例
+permalink: /zh-CN/win10/samples/BlinkyWebServer.htm
+lang: zh-CN
 ---
 
-##Blinky WebServer
+##Blinky Webserver
 
-We'll create a simple Blinky app controlled by another app's WebServer and connect a LED to your Windows IoT Core device.  Be aware that the GPIO APIs are
-only available on Windows IoT Core, so this sample cannot run on your desktop.
-
-
-###Load the project in Visual Studio
-
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/App2App%20WebServer){:target="_blank"}.  Make a copy of the folder on your disk and open the
-project from Visual Studio.
-
-* Make sure you set the 'Remote Debugging' setting to point to your Windows IoT Core device. Go back to the basic 'Hello World'
-[sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
-
-* Make sure you connect the LED to your board. Go back to the basic 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm) if you need guidance.
-
-Note that the app will gracefully degrade if it cannot find any available GPIO ports, for example if you run the app on a VM running
-Windows IoT Core.
+我们将要创建一个受其他应用的 WebServer 控制的简单 Blinky 应用，并将 LED 连接到你的 Windows IoT 核心版设备。请注意，GPIO API 仅在 Windows IoT 核心版上可用，因此该示例无法在你的桌面上运行。
 
 
-###Let's look at the code
+###在 Visual Studio 中加载项目
 
-We are demonstrating two ideas with this sample: how to implement a WebServer and how to enable app-to-app communication.  To demonstrate
-this, the sample contains:
+可以在[此处](https://github.com/ms-iot/samples/tree/develop/App2App%20WebServer)找到此示例。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
-* WebServerApp - this project registers a BackgroundTask which provides a web server and hosts an app-to-app communication service.
+* 确保将“远程调试”设置设为指向 Windows IoT 核心版设备。如需指导，请返回基本“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)。
 
-* BlinkyApp - this is a UWP app similar to the Blinky sample app except that the LED power state is controlled by the webserver.
+* 确保将 LED 连接到开发板。如需指导，请返回基本“Blinky”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)。
+
+请注意，如果应用无法找到任何可用的 GPIO 端口（例如，如果你在运行 Windows IoT 核心版的 VM 上运行该应用），则该应用会适当降级。
+
+
+###我们来看看代码
+
+我们将要借此示例演示两个观点：如何实现 WebServer，以及如何启用应用到应用的通信。为了演示此观点，本示例包含：
+
+* WebServerApp – 此项目将注册一个 BackgroundTask，用于提供 Web 服务器，并托管应用到应用的通信服务。
+
+* BlinkyApp – 此 UAP 应用类似于 Blinky 示例应用，不过，LED 电源状态由 webserver 控制。
 
 
 ###WebServerApp
 
-To create a WebServer that can communicate with our Blinky app, we need to do two things:  implement an actual
-server and enable app-to-app communication.  At the core of our server implementation is a 'StreamSocketListener'.
-Here is a simplified version of what we need to implement this:
+若要创建可与我们的 Blinky 应用通信的 WebServer，我们需要完成两项操作：实现实际服务器，并启用应用到应用的通信。实现服务器的核心要素是“StreamSocketListener”。以下是实现服务器所需内容的简化版本：
 
 {% highlight C# %}
 public sealed class HttpServer : IDisposable
@@ -78,7 +71,7 @@ public sealed class HttpServer : IDisposable
 }
 {% endhighlight %}
 
-To be allowed to function as a server, we need to add a new capability to the Package.appxmanifest:
+为了使它充当服务器，我们需要在 Package.appxmanifest 中添加新功能：
 
 {% highlight XML %}
 <Capabilities>
@@ -88,16 +81,12 @@ To be allowed to function as a server, we need to add a new capability to the Pa
 {% endhighlight %}
 
 
-To be allowed to communicate with other apps, we need to add some special configuration to Package.appxmanifest.  Specifically, we to
-add the extension: 'windows.appService'.  This extension requires two pieces of information:
+为了使它与其他应用通信，我们需要在 Package.appxmanifest 中添加一些特殊配置。具体而言，我们需要添加“windows.appService”扩展。此扩展需要两部分信息：
 
-1. The extension's EntryPoint attribute must specify the Namespace and Class of a BackgroundTask.  This BackgroundTask will provide
-the implementation of our app-to-app communication.
-2. The AppService's Name attribute must specify the name of our app-to-app communication service.  This service name can
-be thought of, in conjunction with this Application's PackageFullName, as the address of the connection which is used for all
-apps communicating.
+1. 该扩展的 EntryPoint 属性必须指定 BackgroundTask 的命名空间和类。此 BackgroundTask 将提供应用到应用的通信实现。
+2. AppService 的 Name 属性必须指定应用到应用的通信服务的名称。此服务名称（与此应用程序的 PackageFullName 相结合）可被视为所有应用在通信时使用的连接地址。
 
-These properties can be modified like this:
+可对这些属性进行如下所示的修改：
 
 {% highlight XML %}
 <Applications>
@@ -115,11 +104,9 @@ These properties can be modified like this:
 {% endhighlight %}
 
 
-At this point, all of the requisite building blocks have been established.  We can focus on putting them together.  First, our
-BackgroundTask must be implemented.  A BackgroundTask is a simple implementation of the IBackgroundTask interface which consists
-of a 'Run' method.  The implementation of our WebServer and app-to-app communication must begin in this method.
+此时，已建立所有必要的构造块。我们可以着重于将它们组合在一起。首先，必须实现 BackgroundTask。BackgroundTask 是由一个“Run”方法组成的 IBackgroundTask 接口的简单实现。必须在此方法中开始实现 WebServer 和应用到应用的通信。
 
-For our WebServer, our BackgroundTask must instantiate our WebServer and implement our app-to-app communication.
+对于 WebServer，BackgroundTask 必须实例化 WebServer 并实现应用到应用的通信。
 
 {% highlight C# %}
 BackgroundTaskDeferral _serviceDeferral;
@@ -158,19 +145,17 @@ public void Run(IBackgroundTaskInstance taskInstance)
 
 ###BlinkyApp
 
-The client app is very similar to the Blinky [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm).  The major addition here is that we are allowing a WebServer to
-be used to configure the on/off state for our LED.  To establish a connection with the WebServer app via the app-to-app mechanism, we
-need to:
+客户端应用与 Blinky [示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)十分相似。此处补充的主要内容是，我们允许使用 WebServer 来配置 LED 的开/关状态。若要通过应用到应用的机制建立与 WebServer 应用的连接，我们需要：
 
-1. Create an AppServiceConnection object
+1. 创建一个 AppServiceConnection 对象
 
-2. Configure the AppServiceConnection with information from the WebServer app:
+2. 使用来自 WebServer 应用的信息配置 AppServiceConnection：
 
-    * PackageFamilyName - this is specific to every app.  In our sample, the PackageFamilyName is `WebServer_hz258y3tkez3a`.  It is generated by Visual Studio, which combines the appxmanifest's Identity.Name property and a hash of the App's certificate.  An easy way to find it is to deploy your app and run `iotstartup list`.  This will list the PackageFamilyName for headed apps and PackageFullName (a versioned superset of the PackageFamilyName) for headless apps.
+    * PackageFamilyName - 这特定于每个应用。在我们的示例中，PackageFamilyName 是 `WebServer_hz258y3tkez3a`。它通过 Visual Studio 生成，合并了 appxmanifest 的 Identity.Name 属性和应用证书的哈希值。找到它的便捷方法是部署你的应用并运行 `iotstartup list`。这将针对有外设应用列出 PackageFamilyName，并针对无外设应用列出 PackageFullName（PackageFamilyName 的带有版本的超集）。
 
-    * AppServiceName - this is the value specified in the appxmanifest's AppService.Name property.
+    * AppServiceName - 这是在 appxmanifest 的 AppService.Name 属性中指定的值。
 
-3. Send/receive messages.  
+3. 发送/接收消息。
 
 {% highlight C# %}
 // Initialize the AppServiceConnection
@@ -195,15 +180,12 @@ if (res == AppServiceConnectionStatus.Success)
 }
 {% endhighlight %}
 
-###Deploy and Run Sample
-If you're building for Minnowboard Max, select `x86` in the architecture dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
+###部署并运行示例
+如果你要针对 Minnowboard Max 进行生成，请选择体系结构下拉列表中的 `x86`。如果你要针对 Raspberry Pi 2 进行生成，请选择 `ARM`。
 
-To get the Blinky WebServer running, first deploy the WebServer project.  This will register the app-to-app communication mechanism.  Then deploy and run the Blinky project.  This will start our headed Blinky app and initialize and start the app to app communication (which will also start the web server).  You can then test it all with the web client as detailed in the next step.
+若要使 Blinky WebServer 运行，请先部署 WebServer 项目。这将会注册应用到应用的通信机制。然后，部署并运行 Blinky 项目。这将会启动我们的有外设 Blinky 应用，然后初始化并启动应用到应用的通信（同时会启动 Web 服务器）。接下来，可以根据下一步骤的详细描述，使用 Web 客户端进行全面测试。
 
-###Web Client
-For our sample app, we have hosted a simple client in our WebServer on the Windows Windows IoT Core device. It can be accessed via the IP address
-of the board and the port (something like http://123.456.789.0:8000 where you replace 123.456.789.0 with the IP address
-of the device the server has been deployed to). The webserver client can then be used to toggle the LED on and off
-(see screenshot below).
+###Web 客户端
+对于我们的示例应用，我们已在 Windows IoT 核心版设备上的 WebServer 中托管了一个简单的客户端。可以通过开发板和端口的 IP 地址（类似于 http://123.456.789.0:8000，在其中你将 123.456.789.0 替换为服务器已部署到的设备的 IP 地址）访问它。然后，可以使用 WebServer 客户端打开和关闭 LED（请参阅以下屏幕截图）。
 
-![WebServer Client]({{site.baseurl}}/images/WebServer/webserver_client.png)
+![WebServer 客户端]({{site.baseurl}}/images/WebServer/webserver_client.png)

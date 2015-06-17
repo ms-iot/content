@@ -1,59 +1,59 @@
 ---
 layout: default
-title: Image creation process and tools
-permalink: /en-US/win10/ImageCreation.htm
-lang: en-US
+title: 映像创建过程和相关工具
+permalink: /zh-CN/win10/ImageCreation.htm
+lang: zh-CN
 ---
 
-##Image creation process and tools
+##映像创建过程和相关工具
 
-###System Setup
+###系统安装
 
-We will use the command line tool `imggen` to create a custom Windows IoT Core image. This tool is shipped as part of the Windows Assessment & Deployment (ADK) Kit.
+我们将使用命令行工具 `imggen` 创建自定义的 Windows IoT 核心版映像。此工具作为 Windows 评估和部署 \(ADK\) 工具包的一部分进行提供。
 
-Go to the download location from where you downloaded this documentation. We will refer to the root of that download location as `<root>` below.
+转到此文档的下载位置。我们将引用该下载位置所在的根目录，如以下 `<root>` 所示。
 
-###Copy Windows IoT Core packages
+###复制 Windows IoT 核心版程序包
 
-Run the below MSIs and they will copy content to folder `C:\Program Files (x86)\Windows Kits\10\MSPackages\`:
+运行下面的 MSI，它们会将内容复制到文件夹 `C:\Program Files (x86)\Windows Kits\10\MSPackages\`：
 
     x86fre: <root>\x86\AthensOS_MC-x86-fre.msi
     armfre: <root>\arm\AthensOS_MC-arm-fre.msi
 
-NOTE: Currently you will need to install both MSIs even if using only one of them.
+注意： 当前，你需要同时安装两个 MSI，即便是只使用它们中的其中一个也是如此。
 
-###Copy Sample BSP for MinnowBoard Max(MBM)
+###为 MinnowBoard Max \(MBM\) 复制示例 BSP
 
-Run the below MSI and it will copy the sample Windows IoT Core MBM BSP to folder `C:\Program Files (x86)\Windows Kits\10\OEMInputSamples\`:
+运行下面的 MSI，它会将示例 Windows IoT 核心版 MBM BSP 复制到文件夹 `C:\Program Files (x86)\Windows Kits\10\OEMInputSamples\`：
 
     <root>\x86\AthensMBMSample_MC-x86-fre.msi
 
-###Creating an MBM image using imggen
+###使用 imggen 创建 MBM 映像
 
-You can use `imggen` to customize your image. The tool supports the ability to customize it by adding drivers, executables, and binaries to your image through Spkgs. This is very similar to how package creation is done today for Windows Phone operating System. To get a quick taste of how this work, let's use the MBM sample we copied over earlier and try this out.
+你可以使用 `imggen` 自定义自己的映像。该工具支持以下功能：通过 Spkgs 向你的映像添加驱动程序、可执行文件和二进制文件来进行自定义。这非常类似于立即完成针对 Windows Phone 操作系统的程序包创建的相关步骤。若要抢先查看此工作原理，需使用我们之前复制的 MBM 示例，然后进行尝试。
 
-NOTE: Remove any USB removable storage devices from your machine.  The imaging tools will pause trying to dismount the file systems from any USB thumb-drives or SD card readers that you might have attached to your system. To avoid this, unplug these devices now. You can plug them back in later.
+注意： 从你的计算机中删除任何 USB 可移动存储设备。当可能有任何便携式 U 盘或 SD 卡读卡器连接到你的系统时，映像处理工具将暂停尝试卸载文件系统。若要避免此情况，请立即拔出这些设备。稍后，你可以将它们重新插入系统。
 
-* Open an elevated Deployment and Imaging Tools Environment command prompt and add the phone tools directory to your path.
+* 打开提升的部署和映像处理工具环境命令提示符，并向你的路径中添加手机工具目录。
 
         set path=%PATH%;%KITSROOT%\tools\bin\i386
 
-* Set the AKROOT variable used by the BSP file
+* 设置 BSP 文件使用的 AKROOT 变量
 
         set AKROOT=%KITSROOT%
 
-* Create an output directory for your FFU (and log files)
+* 为你的 FFU 创建一个输出目录（和日志文件）
 
         md C:\FFU
 
-* Navigate to your output directory
+* 导航到你的输出目录
 
         cd /d C:\FFU
 
-* Run imggen to create your FFU
+* 运行 imggen 以创建你的 FFU
 
         imggen.cmd flash.FFU "%KITSROOT%\OEMInputSamples\MBM\ProductionOEMInput.xml" "%KITSROOT%\MSPackages" x86
 
-* Wait for image creation to complete. Typically it takes around 10-15 minutes to complete. Note that it might take a bit more time to complete and display a few warnings.
+* 等待映像创建完成。通常，完成此过程大约需要花费 10-15 分钟的时间。注意，完成此过程可能会多花费一些时间，因为需显示一些警告。
 
-This will build a Flash.ffu file in your FFU folder.  You will find instructions [here]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) on how to deploy an FFU with the Windows IoT Core image to an SD card (look into the 'Put the Windows IoT Core image on your Micro SD Card' section).
+这将在你的 FFU 文件夹中生成一个 Flash.ffu 文件。你可以在[此处]({{site.baseurl}}/{{page.lang}}/GetStarted.htm)找到有关如何将一个带有 Windows IoT 核心版映像的 FFU 部署到 SD 卡的说明（请参阅“将 Windows IoT 核心版映像放在你的微型 SD 卡上”部分）。

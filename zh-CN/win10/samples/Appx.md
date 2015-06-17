@@ -1,33 +1,33 @@
 ---
 layout: default
-title: AppX Creation and Deployment
-permalink: /en-US/win10/samples/Appx.htm
-lang: en-US
+title: AppX 创建与部署
+permalink: /zh-CN/win10/samples/Appx.htm
+lang: zh-CN
 ---
 
-#Creating and Deploying Appx to Windows IoT Core
+#创建 Appx 并将其部署到 Windows IoT Core
 
-Learn how to create and deploy appx packages to Windows IoT Core.
+了解如何创建 appx 程序包并将其部署到 Windows IoT Core。
 
-### How to Create an Appx package for your VS Project
+### 如何为 VS 项目创建 Appx 程序包
 
-We'll walk through the steps required to create an Appx Package from your Visual C# UWP Project. You can follow similar approach for Visual C++ projects as well.
+我们将演练从 Visual C\# UAP 项目创建 Appx 程序包所需执行的步骤。你也可以遵循用于 Visual C++ 项目的类似步骤。
 
-* Open your project in Visual Studio. Then right click on the project and select Unload Project.
+* 在 Visual Studio 中打开你的项目。然后，右键单击该项目并选择“卸载项目”。
 
-  ![Unload Project Option]({{site.baseurl}}/images/appx/unload_project_menu.png)
+  ![“卸载项目”选项]({{site.baseurl}}/images/appx/unload_project_menu.png)
 
-* Now right click on the unloaded project and select Edit <Project>.csproj file.
+* 现在，请右键单击卸载的项目并选择“编辑 <Project>.csproj 文件”。
 
-  ![Edit Csproj Option]({{site.baseurl}}/images/appx/edit_projectproj.png)
+  ![“编辑 Csproj”选项]({{site.baseurl}}/images/appx/edit_projectproj.png)
 
-* This will open the <Project>.csproj file in Visual Studio. Now Add the following item to the "globals" property group of the .csproj file
+* 这将在 Visual Studio 中打开 <Project>.csproj 文件。现在，请将以下项添加到 .csproj 文件的“globals”属性组
 
 {% highlight XML %}
 <GenerateAppxPackageOnBuild>true</GenerateAppxPackageOnBuild>
 {% endhighlight %}
 
-* So that it looks something like the following
+* 使其类似于这样
 
 {% highlight XML %}
 <PropertyGroup>
@@ -38,7 +38,7 @@ We'll walk through the steps required to create an Appx Package from your Visual
   <AppDesignerFolder>Properties</AppDesignerFolder>
   <RootNamespace>MyApp</RootNamespace>
   <AssemblyName>MyApp</AssemblyName>
-  <DefaultLanguage>en-US</DefaultLanguage>
+  <DefaultLanguage>zh-CN</DefaultLanguage>
   <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
   <TargetPlatformVersion>10.0.9910.0</TargetPlatformVersion>
   <TargetPlatformMinVersion>10.0.9910.0</TargetPlatformMinVersion>
@@ -52,8 +52,8 @@ We'll walk through the steps required to create an Appx Package from your Visual
 </PropertyGroup>
 {% endhighlight %}
 
-* Now reload the project by doing right click on the project and selecting Reload Project Option.
-* Open the Package.appxmanifest file and in the "Identity" field, update the "publisher" field as shown below
+* 现在，请重新加载项目，方法是右键单击该项目并选择“重新加载项目”选项。
+* 打开 Package.appxmanifest 文件，然后在“Identity”字段中，按如下所示更新“publisher”字段
 
 {% highlight XML %}
 <Identity
@@ -62,23 +62,23 @@ We'll walk through the steps required to create an Appx Package from your Visual
   Version="1.0.0.0" />
 {% endhighlight %}
 
-* Rebuild the project (Build->Rebuild Solution)
-* Currently the only way to sign the appx package is to use the signtool utility from a razzle window.
+* 重新生成项目（“生成”-\>“重新生成解决方案”）
+* 目前，为 appx 程序包签名的唯一方法是使用 razzle 窗口中的 signtool 实用工具。
 
-  Launch a razzle window and run:
+  启动 razzle 窗口并运行以下命令：
 
   {% highlight sh %}
   signtool sign /a /u 1.3.6.1.5.5.7.3.3 /r "Microsoft Testing Root Certificate Authority 2010" /fd SHA256 /s my /n "Microsoft Corporation" /c "1.3.6.1.4.1.311.21.8.7587021.751874.11030412.6202749.3702260.207.195000.4717730" <AppxFilePath>
   {% endhighlight %}
 
 
-### How to Deploy an Appx package to your Windows IoT Core Machine
+### 如何将 Appx 程序包部署到 Windows IoT Core 计算机
 
-You can deploy/install an Appx package to your machine or VM running Windows Windows IoT Core by simply following the steps below
+只需执行以下步骤，就可以在运行 Windows IoT Core 的计算机或 VM 上部署/安装 Appx 程序包
 
-* Copy the signed package to the VM or machine running Windows IoT Core either by mounting the VHD/FFU or just doing FTP://hostname in any File Explorer window
-* Telnet to the Windows IoT Core machine by using Username:DefaultAccount and empty password.
-* Run the following command
+* 通过装入 VHD/FFU 或者在任一“文件资源管理器”窗口中执行 FTP://hostname，将签名的程序包复制到运行 Windows IoT Core 的 VM 或计算机
+* 使用 Username:DefaultAccount 和空密码对 Windows IoT Core 计算机执行 Telnet。
+* 运行以下命令
 
 
 {% highlight sh %}
@@ -86,7 +86,7 @@ MinDeployAppX /add /PackagePath:<AppxFilePath>
 {% endhighlight %}
 
 
-* After installing the Appx, run the following command to get the App's UserModelId
+* 安装 Appx 后，运行以下命令获取应用的 UserModelId
 
 
 {% highlight sh %}
@@ -94,7 +94,7 @@ MinDeployAppX /FetchAppUserModelId /PackagePath:<AppxFilePath>
 {% endhighlight %}
 
 
-* You can now launch the app by running the following command
+* 现在，可以通过运行以下命令来启动应用
 
 
 {% highlight sh %}

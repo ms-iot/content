@@ -1,74 +1,73 @@
 ---
 layout: default
-title: RGB LED Sample
-permalink: /en-US/win10/samples/RGBLED.htm
-lang: en-US
+title: RGB LED 示例
+permalink: /zh-CN/win10/samples/RGBLED.htm
+lang: zh-CN
 ---
 
-##RGB LED Sample
+##RGB LED 示例
 
-In this sample, we will connect a Tri-color LED to Raspberry Pi 2. The LED will blink changing colors from Red, Blue, Green.
+在此示例中，我们会将三色 LED 连接到 Raspberry Pi 2。LED 将闪烁，同时在红色、蓝色、绿色之间更改颜色。
 
-This is a headed sample, so please ensure that your device is in headed
-mode by running this command: `setbootoption.exe headed` (changing the headed/headless state will require a reboot).
+这是一个有外设示例，所以请确保你的设备处于有外设模式下，方法为运行以下命令：`setbootoption.exe headed`（更改有外设/无外设状态需要重新启动）。
 
-Also, be aware that the GPIO APIs are only available on Windows IoT Core, so this sample cannot run on your desktop.
-
-
-###Components
-
-You will need the following components :
-
-* a [754-1615-ND Tri-color LED](http://www.digikey.com/product-detail/en/WP154A4SUREQBFZGC/754-1615-ND/3084119){:target="_blank"})
-
-* a [330 &#x2126; resistor](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
-
-* a breadboard and several male-to-female and male-to-male connector wires
-
-###Connect to your Device
-
-Let's start by wiring up the components on the breadboard as shown in the diagram below.
-
-![Breadboard connections]({{site.baseurl}}/images/RGBLED/RGBLED_bb.png)
-
-*Image made with [Fritzing](http://fritzing.org/)*
+另外，还请注意 GPIO API 仅在 Windows IoT 核心版上可用，因此该示例无法在你的桌面上运行。
 
 
-Here are the schematics:
+###组件
 
-![Circuit Schematic]({{site.baseurl}}/images/RGBLED/RGBLED-schematic_schem.png)
+你将需要以下硬件：
 
-*Image made with [Fritzing](http://fritzing.org/)*
+* 一个 [754-1615-ND 三色 LED](http://www.digikey.com/product-detail/en/WP154A4SUREQBFZGC/754-1615-ND/3084119)）
 
-####Connecting the LED
+* 一个 [330 &\#x2126; 电阻](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636)
 
-* Connect the three legs of the LED to Pin 29,31,33 (GPIO 5,6,13) of the Raspberry Pi 2 respectively
+* 一块试验板以及多根公母头连接线和双公头连接线
 
-* Note that Red leg should be connected through a 330 &#x2126; resistor to Pin 29 of Raspberry Pi 2
+###连接到你的设备
 
-* Connect the anode (the longer leg) of the LED to Pin 6 (GND)
+我们先来为试验板上的组件布线，如下图所示。
 
-Here is the pinout of the RPi2:
+![试验板连接]({{site.baseurl}}/images/RGBLED/RGBLED_bb.png)
 
-![Raspberry Pi 2 pinout]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
-
-<sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
-
-###Deploy your app
-
-You can find the entire code for this sample [here](https://github.com/ms-iot/samples/tree/develop/RGBLED/CS){:target="_blank"}. This sample is written in C#. Make a copy of the folder on your disk and open the project from Visual Studio.
-
-Make sure you set the 'Remote Debugging' setting to point to your Windows IoT device. Refer to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
-If you're building for Raspberry Pi 2, select `ARM`.
-
-When everything is set up, you should be able to press F5 from Visual Studio. The RGBLED app will deploy and start on the Windows IoT device, and you should see the LED blink in sync with the simulation on the screen.
+*使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
 
-###Let's look at the code
-The code for this sample is pretty simple. We use a timer, and each time the 'Tick' event is called, we flip the state of the LED.
+以下是电路原理图：
 
-###Timer code
-Here is how you set up the timer in C#:
+![电路示意图]({{site.baseurl}}/images/RGBLED/RGBLED-schematic_schem.png)
+
+*使用 [Fritzing](http://fritzing.org/) 制作的图像*
+
+####连接 LED
+
+* 将 LED 的三个脚分别连接到 Raspberry Pi 2 的引脚 29、31、33（GPIO 5、6、13）
+
+* 请注意，红色脚应通过 330 &\#x2126; 电阻连接到 Raspberry Pi 2 的引脚 29。
+
+* 将 LED 的阳极（较长的脚）连接到引脚 6 \(GND\)
+
+下面是 RPi2 的引出线：
+
+![Raspberry Pi 2 引出线]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+
+<sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
+
+###部署你的应用
+
+你可以在[此处](https://github.com/ms-iot/samples/tree/develop/RGBLED/CS)找到此示例的完整代码。本示例是采用 C\# 编写的。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
+
+确保将“远程调试”设置设为指向 Windows IoT 设备。如需指导，请参考基本“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)。如果你要针对 Raspberry Pi 2 进行生成，请选择 `ARM`。
+
+完成所有设置后，你应可以在 Visual Studio 中按 F5。RGBLED 应用将进行部署并在 MBM 上启动，此时你应看到 LED 与屏幕上的模拟图像同步闪烁。
+
+
+###我们来看看代码
+此示例的代码相当简单。我们使用了一个计时器，每当调用“Tick”事件时，都会切换 LED 的状态。
+
+###计时器代码
+下面说明如何使用 C\# 语言设置计时器：
+
 {% highlight C# %}
 public MainPage()
 {
@@ -88,8 +87,8 @@ private void Timer_Tick(object sender, object e)
 }
 {% endhighlight %}
 
-###Initialize the GPIO pin
-To drive the GPIO pin, first we need to initialize it. Here is the C# code (notice how we leverage the new WinRT classes in the Windows.Devices.Gpio namespace):
+###初始化 GPIO 引脚
+为了驱动 GPIO 引脚，首先我们需要对其进行初始化。以下是 C\# 代码（请注意我们如何在 Windows.Devices.Gpio 命名空间中利用新 WinRT 类）：
 
 {% highlight C# %}
 using Windows.Devices.Gpio;
@@ -130,23 +129,23 @@ private void InitGPIO()
         }
 {% endhighlight %}
 
-Let's break this down a little:
+让让我们稍稍细分一下此过程：
 
-* First, we use `GpioController.GetDefault()` to get the GPIO controller.
+* 首先，我们使用 `GpioController.GetDefault()` 获取 GPIO 控制器。
 
-* If the device does not have a GPIO controller, this function will return `null`.
+* 如果设备没有 GPIO 控制器，则此函数将返回 `null`。
 
-* Then we attempt to open the pin by calling `GpioController.OpenPin()` with the `REDLED_PIN`,`BLUELED_PIN` and `GREENLED_PIN` value.
+* 然后，我们尝试通过使用 `REDLED_PIN`、`BLUELED_PIN` 和 `GREENLED_PIN` 值调用 `GpioController.OpenPin()` 来打开引脚。
 
-* Once we have the `redpin`, `bluepin` and `greenpin`, we set it to be High by default using the `GpioPin.Write()` function.
+* 获取 `redpin`、`bluepin` 和 `greenpin` 后，我们使用 `GpioPin.Write()` 函数将其设置为默认为“高”。
 
-* We also set the pins to run in output mode using the `GpioPin.SetDriveMode()` function.
+* 我们还使用 `GpioPin.SetDriveMode()` 函数将引脚设置为在输出模式下运行。
 
 
-###Modify the state of the GPIO pin
-Once we have access to the `GpioOutputPin` instance, it's trivial to change the state of the pin to turn the LED on or off.
+###修改 GPIO 引脚的状态
+在具有 `GpioOutputPin` 实例的访问权限后，没有必要再通过更改引脚状态来打开或关闭 LED。
 
-To turn the LED on, simply write the value `GpioPinValue.High` to the pin:
+若要打开 LED，只需将值 `GpioPinValue.High` 写入引脚：
 
 
 {% highlight C# %}

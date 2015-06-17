@@ -1,82 +1,76 @@
 ---
 layout: default
-title: Potentiometer Sample
-permalink: /en-US/win10/samples/potentiometer.htm
-lang: en-US
+title: 电位计示例
+permalink: /zh-CN/win10/samples/potentiometer.htm
+lang: zh-CN
 ---
 
-## Potentiometer Sensor Sample
-This sample uses two functionalities, SPI and GPIO.
-A potentiometer sensor is connected to a ADC, then ADC is connected to Raspberry Pi 2 through SPI pins. Raspberry Pi 2 reads the sensor analog input data and output it to the screen.
-We also have a LED which indicates the output status. This sample only has C# version.
+## 电位计传感器示例
+此示例使用以下两种功能：SPI 和 GPIO。将电位计传感器连接到 ADC，然后通过 SPI 引脚将 ADC 连接到 Raspberry Pi 2。Raspberry Pi 2 读取传感器模拟输入数据并将其输出到屏幕。我们也有一个 LED，用于指示输出状态。此示例只有 C\# 版本。
 
-## Parts needed
-- [1 LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832)
-- [1 330 &#x2126; resistor](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636)
-- [1 MCP3002 10-bit ADC](http://www.digikey.com/product-detail/en/MCP3002-I%2FP/MCP3002-I%2FP-ND/319412) or [1 MCP3208 12-bit ADC](http://www.digikey.com/product-search/en?KeyWords=mcp3208%20ci%2Fp&WT.z_header=search_go)
-- [1 10k &#x2126; Trimmer Potentiometer](http://www.digikey.com/product-detail/en/3362P-1-103TLF/3362P-103TLF-ND/1232540)
-- Raspberry Pi 2 board
-- 1 breadboard and a couple of wires
-- HDMI Monitor
+## 所需部件
+- [1 个 LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832)
+- [1 个 330 &\#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636)
+- [1 个 MCP3002 10 位 ADC](http://www.digikey.com/product-detail/en/MCP3002-I%2FP/MCP3002-I%2FP-ND/319412) 或 [1 个 MCP3208 12 位 ADC](http://www.digikey.com/product-search/en?KeyWords=mcp3208%20ci%2Fp&WT.z_header=search_go)
+- [1 个 10k &\#x2126; 裁边器电位计](http://www.digikey.com/product-detail/en/3362P-1-103TLF/3362P-103TLF-ND/1232540)
+- Raspberry Pi 2 板
+- 一块试验板和几根电线
+- HDMI 监视器
 
-## Parts Review
+## 部件查看
 
-* MCP3002 or MCP3208
+* MCP3002 或 MCP3208
 
-Below are the pinouts of the MCP3002 and MCP3208 analog-to-digital converters (ADC) used in this sample.
+下面是本例中使用的 MCP3002 和 MCP3208 模拟到数字转换器 \(ADC\) 的引脚输出。
 
-![Electrical Components]({{site.baseurl}}/images/Potentiometer/MCP3002.PNG)
-![Electrical Components]({{site.baseurl}}/images/Potentiometer/MCP3208.PNG)
+![电子元件]({{site.baseurl}}/images/Potentiometer/MCP3002.PNG) ![电子元件]({{site.baseurl}}/images/Potentiometer/MCP3208.PNG)
 
 * Raspberry Pi 2
 
   <img src="{{site.baseurl}}/images/PinMappings/RP2_Pinout.png" height="400">
 
-## Parts Connection
+## 部件连接
 
-1. Connect the potentiometer to the MCP3002; Wiper Pin (the middle pin on the 10k trimpot) should be connected to `CH0` on MCP3002
+1. 将电位计连接到 MCP3002；Wiper 引脚（10k 配平电位计上的中间引脚）应连接到 MCP3002 上的 `CH0`
 
-Detailed connection:
+连接详细信息如下：
 
-![Overall Schematics]({{site.baseurl}}/images/Potentiometer/OverallCon-3002.PNG);
+![整体电路图]({{site.baseurl}}/images/Potentiometer/OverallCon-3002.PNG)；
 
-With each model of Raspberry Pi 2, the pin layout might be a little different. But the pin connection with MCP3002 should be as below:
+在每个型号的 Raspberry Pi 2 上，引脚布局可能稍有不同。但与 MCP3002 连接的引脚应如下所示：
 
-- MCP3002: VDD/VREF - 5V on Raspberry Pi 2
-- MCP3002: CLK - "SPI0 SCLK" on Raspberry Pi 2
-- MCP3002: Dout - "SPI0 MISO" on Raspberry Pi 2
-- MCP3002: Din - "SPI0 MOSI" on Raspberry Pi 2
-- MCP3002: CS/SHDN - "SPI0 CS0" on Raspberry Pi 2
-- MCP3002: DGND - GND on Raspberry Pi 2
-- MCP3002: CH0- Potentiometer Output Pin
+- MCP3002： VDD/VREF - Raspberry Pi 2 上的 5V
+- MCP3002： CLK - Raspberry Pi 2 上的“SPI0 SCLK”
+- MCP3002： Dout - Raspberry Pi 2 上的“SPI0 MISO”
+- MCP3002： Din - Raspberry Pi 2 上的“SPI0 MOSI”
+- MCP3002： CS/SHDN - Raspberry Pi 2 上的“SPI0 CS0”
+- MCP3002： DGND - Raspberry Pi 2 上的 GND
+- MCP3002： CH0 - 电位计输出引脚
 
-2. **Alternative: If you are using MCP3208** Connect the potentiometer to MCP3208; Wiper Pin (the middle pin on the 10k trimpot) should be connected to `CH0` on MCP3208
+2. **替代项： 如果你使用的是 MCP3208**，将电位计连接到 MCP3208；Wiper 引脚（10k 配平电位计上的中间引脚）应连接到 MCP3208 上的 `CH0`
 
-Detailed connection:
+连接详细信息如下：
 
-![Overall Schematics]({{site.baseurl}}/images/Potentiometer/OverallCon-3208.PNG)
+![整体电路图]({{site.baseurl}}/images/Potentiometer/OverallCon-3208.PNG)
 
-With each model of Raspberry Pi 2, the pin layout might be a little different.
-But the pin connection with MCP3208 should be as below:
+在每个型号的 Raspberry Pi 2 上，引脚布局可能稍有不同。但与 MCP3208 连接的引脚应如下所示：
 
-- MCP3208: VDD - 5V on Raspberry Pi 2
-- MCP3208: VREF - 5V on Raspberry Pi 2
-- MCP3208: CLK - "SPI0 SCLK" on Raspberry Pi 2
-- MCP3208: Dout - "SPI0 MISO" on Raspberry Pi 2
-- MCP3208: Din - "SPI0 MOSI" on Raspberry Pi 2
-- MCP3208: CS/SHDN - "SPI0 CS0" on Raspberry Pi 2
-- MCP3208: DGND - GND on Raspberry Pi 2
+- MCP3208： VDD - Raspberry Pi 2 上的 5V
+- MCP3208： VREF - Raspberry Pi 2 上的 5V
+- MCP3208： CLK - Raspberry Pi 2 上的“SPI0 SCLK”
+- MCP3208： Dout - Raspberry Pi 2 上的“SPI0 MISO”
+- MCP3208： Din - Raspberry Pi 2 上的“SPI0 MOSI”
+- MCP3208： CS/SHDN - Raspberry Pi 2 上的“SPI0 CS0”
+- MCP3208： DGND - Raspberry Pi 2 上的 GND
 
-## Look at the code
+## 查看代码
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/PotentiometerSensor){:target="_blank"}.
+可以在[此处](https://github.com/ms-iot/samples/tree/develop/PotentiometerSensor)找到此示例。
 
-Let's look through the code. We use a timer, and each time the 'Tick' event is called, we
-read the sensor output value through MCP3002 ADC, and if the value is high than a threshold
-number we set in the code, it will light up LED.
+让我们来看看代码。我们使用了一个计时器，并且每次调用“Tick”事件时，我们都会通过 MCP3002 ADC 读取传感器输出值，如果该值高于我们在代码中设置的阈值数字，LED 便会亮起。
 
-* Timer Code
-Setup timer in C#:
+* 采用 C\# 的计时器代码设置计时器：
+
 {% highlight C# %}
 public MainPage()
 {
@@ -96,7 +90,7 @@ private void Timer_Tick(object sender, object e)
 }
 {% endhighlight %}
 
-* Initialize GPIO and SPI pin
+* 初始化 GPIO 和 SPI 引脚
 
 {% highlight C# %}
 private async void InitSPI()
@@ -146,7 +140,7 @@ private void InitGpio()
 }
 {% endhighlight %}
 
-* read the sensor data through SPI communication and light Up LED
+* 通过 SPI 通信读取传感器数据并使 LED 亮起
 
 {% highlight C# %}
 private int LEDStatus = 0;
@@ -202,7 +196,7 @@ private void LightLED()
 }
 {% endhighlight %}
 
-* Convert sensor bit data to a number
+* 将传感器位数据转换为数字形式
 
 {% highlight C# %}
 /* This is the conversion for MCP3208 which is a 12 bits output; Uncomment this if you are using MCP3208 */
@@ -225,13 +219,11 @@ public int convertToInt(byte[] data)
 }
 {% endhighlight %}
 
-## Deploy the sample
-Choose `Debug` and `ARM` configuration, choose `Remote Machine`, right click the project, under Property, click Debug tag,
-Put the Raspberry Pi 2 IP in the Remote machine field, and unclick `Use authentication`
+## 部署示例
+选择 `Debug` 和 `ARM` 配置、选择 `Remote Machine`、右键单击该项目、在“属性”下单击“调试标记”、将 Raspberry Pi 2 IP 放入“远程计算机”字段中，然后取消单击 `Use authentication`
 
-Press `F5`
+按 `F5`
 
-Turn the potentiometer button around, you will see the number changes on the screen.
-And also, when the number is larger than 2^10/2, the LED will be ON. Otherwise, It gets turned off.
+启用电位计按钮后，你将在屏幕上看到数字出现变化。此外，当该数字大于 2^10/2 时，LED 将会打开。否则，LED 处于关闭状态。
 
 <img src="{{site.baseurl}}/images/Potentiometer/Deploy.PNG" height="400">
