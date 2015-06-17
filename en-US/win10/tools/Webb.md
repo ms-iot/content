@@ -34,7 +34,7 @@ You can find your IP address two ways:
 
 ###Connect to Web-based device management through your browser
 
-1.	Using your favorite browser, enter the IP address into the address bar
+1.	Enter the IP address into the address bar. Add :/8080 onto the end.
 
 	![Browser IP]({{site.baseurl}}/images/webb/browser_ip.png)
 
@@ -52,7 +52,7 @@ The top toolbar allows you to shutdown, reboot and give feedback.
 * Shutdown - Shuts down the device
 * Reboot - Reboots the device
 * Feedback - Opens up the Windows 10 Feedback tool where you can enter any valuable feedback
-* Help - The help button is currently in progress and will be updated soon
+* Help - Provides a restfulThe help button is currently in progress and will be updated soon
 
     Note: For Rpi2 users, the Shutdown button is not working correctly, and reboots the device. A fix is coming soon
 
@@ -66,6 +66,21 @@ The top toolbar allows you to shutdown, reboot and give feedback.
 	This section is coming soon! Stay tuned
 
 * ####**Apps**
+	The apps section allows you to manage apps on your device. 
+	
+	* Installed Apps
+		If you remove, and the app is running, it will cause issues when trying to re-install the app. To stop, go to running apps and close it.
+
+	* How to Install an App
+	- When you build from VS, it generates (in an output folder). 
+	- Click browse, find the .appx. Click certificate browse, find the .cer file. 
+	- .cer file comes from visual studio (when you build the appx)
+	- Dependancies -> from the output folder (add each appx one by one)
+	Reset is important. Once you choose an appx, the input box goes away and it shows the last appx.
+	Reset is important to let you install a new app. 
+
+	
+
 
 	Provides install/uninstall functionality for AppX packages and bundles on your device.
 
