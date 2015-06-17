@@ -10,8 +10,8 @@ lang: en-US
 
 ###Set up your PC
 * Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
-* Install NTVS (Node.js Tools for Visual Studio) Bundle VS 2015 from [here](https://github.com/ms-iot/ntvsiot/releases).
-* To use the npm feature in NTVS, install Node.js on your machine from [here](https://nodejs.org/download/). Ensure that you select 'npm package manager' as one of the features to be installed.
+* Install [Node.js Tools 1.1 Beta for Visual Studio 2015](http://aka.ms/ntvslatest){:target="_blank"}.
+* Install [NTVS IoT Extension]({{site.downloadurl}}) (This step requires that you have signed up with our program on Microsoft Connect. Instructions on how to do that can be found [here]({{site.baseurl}}/{{page.lang}}/Downloads.htm)).
 
 
 ###Create a new Node.js (Windows Universal) project
@@ -38,14 +38,14 @@ http.createServer(function (req, res) {
 
 ###Deploy the server to your Windows IoT Core device
 * Go to the Project menu and select '<Your project name> Properties.' You could also right-click on the project node in solution explorer to access Properties.
-* Enter the IP Address in the Remote Machine text box as shown below (the `--debug` argument is required for debugging and is added automatically).
-* You can also add `--use-logger` as an argument to redirect console output to a file in the local storage folder of the UWP application
-  (C:\Users\DefaultAccount\AppData\Local\Packages\&lt;Your Project Name&gt;_&lt;Publisher Hash String&gt;\LocalState\nodeuwp.log).
+* Enter the IP Address in the Remote Machine text box as shown below (--no-console and --debug arguments are required and added automatically).
 * If you're building for Minnowboard Max, select `x86` in the dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
 
     ![Node.js Windows Universal Project Properties]({{site.baseurl}}/images/Nodejs/nodejswu-properties.png)
 
 * Now we're ready to deploy to the remote Windows IoT Core device. Simply press F5 (or select Debug \| Start Debugging) to start debugging the server.
+
+  **Note:** In the Output window, you may see the message "Error - Cannot load packages." This doesn't affect the build process and can be ignored. Using the npm feature in your project is not yet supported.
 
 * When the server is running, open up a browser and enter the address http://&lt;IP address of your device&gt;:1337. The result should look like the picture below.
 
@@ -78,7 +78,3 @@ uwp.close();
 The result from the code above should look like this:
 
 ![DateTime Result]({{site.baseurl}}/images/Nodejs/datetime-ie.PNG)
-
-### GitHub
-* NTVS IoT Extension source code: [https://github.com/ms-iot/ntvsiot](https://github.com/ms-iot/ntvsiot)
-* Node.js UWP wrapper source code: [https://github.com/ms-iot/node-uwp-wrapper](https://github.com/ms-iot/node-uwp-wrapper)
