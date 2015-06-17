@@ -65,4 +65,4 @@ Here's what the code above is doing:
 
 ### GitHub
 * NTVS IoT Extension source code: [https://github.com/ms-iot/ntvsiot](https://github.com/ms-iot/ntvsiot)
-* Node.js UWP wrapper source code: [https://github.com/ms-iot/node-uwp](https://github.com/ms-iot/node-uwp)
+* Node.js UWP wrapper source code: [https://github.com/ms-iot/node-uwp-app](https://github.com/ms-iot/node-uwp-app)
