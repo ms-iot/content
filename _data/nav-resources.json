@@ -4,12 +4,11 @@
         "home":"IoT Home",
         "getstarted":"Get Started",
         "projects":"Projects",
-        "docssamples":"Docs &amp; Samples",
+        "docssamples":"Docs and samples",
         "faq":"FAQs",
         "downloads":"Downloads",
-        "hardware":"Start Now",
-        "community":"Community",
-        "makerfaire":"Maker Faire"
+        "hardware":"Hardware",
+        "community":"Community"
     },
 	 "zh-CN":
     {
@@ -20,7 +19,6 @@
         "faq":"常問問題",
         "downloads":"下載",
         "hardware":"硬件",
-        "community":"社區",
-        "makerfaire":"製造商交易會"
+        "community":"社區"
     }
 }
