@@ -84,7 +84,7 @@ Follow these instructions to configure your SD card:
 
 	<img  src="{{site.baseurl}}/images/SetupRPI/applyDrive.PNG">
 
-11. Click on the **Safely Remove Hardware** icon in your task tray and select your USB SD card reader to safely remove it from the system.  Failing to do this can cause corruption of the image.
+11. Right-click on the SD card icon in explorer and select "eject" to safely eject the drive.  Failing to do this can cause corruption of the image.
 
 
 ##Hook up your board
