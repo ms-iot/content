@@ -48,4 +48,4 @@ After clicking yes, npm will run in the background and install the dependencies.
 
 ### GitHub
 * NTVS IoT Extension source code: [https://github.com/ms-iot/ntvsiot](https://github.com/ms-iot/ntvsiot)
-* Node.js UWP wrapper source code: [https://github.com/ms-iot/node-uwp-app](https://github.com/ms-iot/node-uwp-app)
+* Node.js UWP wrapper source code: [https://github.com/ms-iot/node-uwp-wrapper](https://github.com/ms-iot/node-uwp-wrapper)
