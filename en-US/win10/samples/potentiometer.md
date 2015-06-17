@@ -34,11 +34,11 @@ Below are the pinouts of the MCP3002 and MCP3208 analog-to-digital converters (A
 
 ## Parts Connection
 
-1. Connect the potentiometer to the MCP3002; Wiper Pin (the middle pin on the 10k trimpot) should be connected to `CH0` on MCP3002
+Connect the potentiometer to the MCP3002; Wiper Pin (the middle pin on the 10k trimpot) should be connected to `CH0` on MCP3002
 
 Detailed connection:
 
-![Overall Schematics]({{site.baseurl}}/images/Potentiometer/OverallCon-3002.PNG);
+![Overall Schematics]({{site.baseurl}}/images/Potentiometer/OverallCon-3002.PNG)
 
 With each model of Raspberry Pi 2, the pin layout might be a little different. But the pin connection with MCP3002 should be as below:
 
@@ -47,10 +47,10 @@ With each model of Raspberry Pi 2, the pin layout might be a little different. B
 - MCP3002: Dout - "SPI0 MISO" on Raspberry Pi 2
 - MCP3002: Din - "SPI0 MOSI" on Raspberry Pi 2
 - MCP3002: CS/SHDN - "SPI0 CS0" on Raspberry Pi 2
-- MCP3002: DGND - GND on Raspberry Pi 2
+- MCP3002: Vss - GND on Raspberry Pi 2
 - MCP3002: CH0- Potentiometer Output Pin
 
-2. **Alternative: If you are using MCP3208** Connect the potentiometer to MCP3208; Wiper Pin (the middle pin on the 10k trimpot) should be connected to `CH0` on MCP3208
+**Alternative: If you are using MCP3208** Connect the potentiometer to MCP3208; Wiper Pin (the middle pin on the 10k trimpot) should be connected to `CH0` on MCP3208
 
 Detailed connection:
 

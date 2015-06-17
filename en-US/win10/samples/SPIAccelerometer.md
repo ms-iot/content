@@ -1,14 +1,14 @@
 ---
 layout: default
-title: I2C Accelerometer Sample
-permalink: /en-US/win10/samples/I2CAccelerometer.htm
+title: SPI Accelerometer Sample
+permalink: /en-US/win10/samples/SPIAccelerometer.htm
 lang: en-US
 ---
 
-##I2C Accelerometer Sample
+##SPI Accelerometer Sample
 
-We'll connect an I2C accelerometer to your Raspberry Pi 2/MinnowBoard Max and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of I2C is needed.
-However, if you're curious, Sparkfun provides a great [tutorial on I2C](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}.
+We'll connect an SPI accelerometer to your Raspberry Pi 2/MinnowBoard Max and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of SPI is needed.
+However, if you're curious, Sparkfun provides a great [tutorial on SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}.
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
 
@@ -20,7 +20,7 @@ Make sure you set the 'Remote Debugging' setting to point to your device. Go bac
 
 If you're building for Minnowboard Max, select `x86` in the architecture dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
 
-###Connect the I2C Accelerometer to your device
+###Connect the SPI Accelerometer to your device
 
 You'll need a few components:
 
@@ -28,15 +28,12 @@ You'll need a few components:
 
 * a breadboard and a couple of male-to-female connector wires
 
-* If you are using a MinnowBoard Max, you'll need a 100 &#x2126; resistor (this is a workaround for a [known I2C hardware issue]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm))
-
 Visit the **Raspberry Pi 2/MinnowBoard Max** sections below depending on which device you have:
 
-![Electrical Components]({{site.baseurl}}/images/I2CAccelerometer/components.png)
+![Electrical Components]({{site.baseurl}}/images/SPIAccelerometer/components.png)
 
 ####Raspberry Pi 2
-If you have a Raspberry Pi 2, we need to hook up power, ground, and the I2C lines to the accelerometer.
-Those familiar with I2C know that normally pull-up resistors need to be installed. However, the Raspberry Pi 2 already has pull-up resistors on its I2C pins, so we don't need to add any additional external pull-ups here.
+If you have a Raspberry Pi 2, we need to hook up power, ground, and the SPI lines to the accelerometer.
  See the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm) for more details on the RPi2 IO pins.
 
 **Note: Make sure to power off the RPi2 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
@@ -45,25 +42,25 @@ The ADXL345 breakout board has 8 IO pins, connect them as follows:
 
 1. **GND:**  Connect to ground on the RPi2 (Pin 6)
 2. **VCC:**  Connect to 3.3V on the RPi2 (Pin 1)
-3. **CS:**   Connect to 3.3V (The ADXL345 actually supports both SPI and I2C protocols. To select I2C, we keep this pin tied to 3.3V. The [datasheet](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf){:target="_blank"} contains much more information about the pin functions)
+3. **CS:**   Connect to SPI0 CS0 on the RPi2 (Pin 24). This is the chip-select line for the SPI bus.
 4. **INT1:** Leave unconnected, we're not using this pin
 5. **INT2:** Leave unconnected, we're not using this pin
-6. **SDO:**  Connect to ground (In I2C mode, this pin is used to select the device address. You can attach two ADXL345 to the same I2C bus if you connect this pin to 3.3V on the second device. See the [datasheet](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf){:target="_blank"} for more details)
-7. **SDA:**  Connect to SDA on the RPi2 (Pin 3). This is the data line for the I2C bus.
-8. **SCL:**  Connect to SCL on the RPi2 (Pin 5). This is the clock line for the I2C bus.
+6. **SDO:**  Connect to SPI0 MISO on the RPi2 (Pin 21)
+7. **SDA:**  Connect to SPI0 MOSI on the RPi2 (Pin 19)
+8. **SCL:**  Connect to SPI0 SCLK on the RPi2 (Pin 23). This is the clock line for the SPI bus.
 
 Here are the connections shown on a breadboard:
 
-![Breadboard connections]({{site.baseurl}}/images/I2CAccelerometer/breadboard_assembled_rpi2.png)
+![Breadboard connections]({{site.baseurl}}/images/SPIAccelerometer/breadboard_assembled_rpi2.png)
 
 <sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
 
 Here are the schematics:
 
-![Accelerometer schematics]({{site.baseurl}}/images/I2CAccelerometer/schematics_rpi2.png)
+![Accelerometer schematics]({{site.baseurl}}/images/SPIAccelerometer/schematics_rpi2.png)
 
 ####MinnowBoard Max
-If you have a MinnowBoard Max, we need to hook up power, ground, and the I2C lines to the accelerometer. Those familiar with I2C know that normally pull-up resistors need to be installed. However, the MBM already has 10K pull-up resistors on its IO pins, so we don't need to add any additional external pull-ups here.
+If you have a MinnowBoard Max, we need to hook up power, ground, and the SPI lines to the accelerometer.
  See the [MBM pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm) for more details on the MBM IO pins.
 
 **Note: Make sure to power off the MBM when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
@@ -72,77 +69,79 @@ The ADXL345 breakout board has 8 IO pins, connect them as follows:
 
 1. **GND:**  Connect to ground on the MBM (Pin 2)
 2. **VCC:**  Connect to 3.3V on the MBM (Pin 4)
-3. **CS:**   Connect to 3.3V (The ADXL345 actually supports both SPI and I2C protocols. To select I2C, we keep this pin tied to 3.3V. The [datasheet](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf){:target="_blank"} contains much more information about the pin functions)
+3. **CS:**   Connect to SPI0 CS0 on the MBM (Pin 5)
 4. **INT1:** Leave unconnected, we're not using this pin
 5. **INT2:** Leave unconnected, we're not using this pin
-6. **SDO:**  Connect to ground (In I2C mode, this pin is used to select the device address. You can attach two ADXL345 to the same I2C bus if you connect this pin to 3.3V on the second device. See the [datasheet](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf) for more details)
-7. **SDA:**  Connect to SDA on the MBM (Pin 15). This is the data line for the I2C bus.
-8. **SCL:**  Connect to SCL on the MBM (Pin 13) through the 100 &#x2126; resistor. This is the clock line for the I2C bus.
+6. **SDO:**  Connect to SPI0 MISO on the RPi2 (Pin 7)
+7. **SDA:**  Connect to SPI0 MOSI on the RPi2 (Pin 9)
+8. **SCL:**  Connect to SPI0 SCLK on the RPi2 (Pin 11). This is the clock line for the SPI bus.
 
 Here are the connections shown on a breadboard:
 
-![Breadboard connections]({{site.baseurl}}/images/I2CAccelerometer/breadboard_assembled_mbm.png)
+![Breadboard connections]({{site.baseurl}}/images/SPIAccelerometer/breadboard_assembled_mbm.png)
 
 <sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
 
 Here are the schematics:
 
-![Accelerometer schematics]({{site.baseurl}}/images/I2CAccelerometer/schematics_mbm.png)
+![Accelerometer schematics]({{site.baseurl}}/images/SPIAccelerometer/schematics_mbm.png)
 
 ###Deploy and run the app
 
-When everything is set up, power your device back on, and open up the sample app in Visual Studio. Open the file **MainPage.xaml.cs** and change the following line from **Protocol.NONE** to **Protocol.I2C**:
+When everything is set up, power your device back on, and open up the sample app in Visual Studio. Open the file **MainPage.xaml.cs** and change the following line from **Protocol.NONE** to **Protocol.SPI**:
 
 {% highlight C# %}
 public sealed partial class MainPage : Page
 {
     /* Important! Change this to either Protocol.I2C or Protocol.SPI based on how your accelerometer is wired   */
-    private Protocol HW_PROTOCOL = Protocol.I2C; 
+    private Protocol HW_PROTOCOL = Protocol.SPI; 
     // ...
 }
 {% endhighlight %}  
- Now you should be able to press F5 from Visual Studio: The I2CAccelerometer app will deploy and start, and you should see accelerometer data show up on screen.
+
+ Now you should be able to press F5 from Visual Studio: The SPIAccelerometer app will deploy and start, and you should see accelerometer data show up on screen.
  If you have your accelerometer flat on a surface, the Z axis should read close to 1.000G, while X and Y are close to 0.000G. The values will fluctuate a little even if the device is standing still.
  This is normal and is due to minute vibrations and electrical noise. If you tilt or shake the sensor, you should see the values change in response. Note that this sample configures the device in 4G mode,
 so you wont be able to see G readings higher than 4Gs.
 
-![I2C Accelerometer running]({{site.baseurl}}/images/I2CAccelerometer/i2caccelerometer_screenshot.png)
+![SPI Accelerometer running]({{site.baseurl}}/images/SPIAccelerometer/spiaccelerometer_screenshot.png)
 
-Congratulations! You've connected an I2C accelerometer.
+Congratulations! You've connected an SPI accelerometer.
 
 ###Let's look at the code
 The code in this sample performs two main tasks:
 
-1. First the code initializes the I2C bus and the accelerometer
+1. First the code initializes the SPI bus and the accelerometer
 
 2. Secondly, we read from the accelerometer at defined intervals and update the display
 
 Let's start by digging into the initializations.
 
-###Initialize the I2C bus
-To use the accelerometer, we need to initialize the I2C bus first. Here is the C# code.
+###Initialize the SPI bus
+To use the accelerometer, we need to initialize the SPI bus first. Here is the C# code.
 
 {% highlight C# %}
 using Windows.Devices.Enumeration;
-using Windows.Devices.I2c;
+using Windows.Devices.Spi;
 
-/* Initialization for I2C accelerometer */
-private async void InitI2CAccel()
+/* Initialization for SPI accelerometer */
+private async void InitSPIAccel()
 {
-    try
-    {
-        var settings = new I2cConnectionSettings(ACCEL_I2C_ADDR);       
-        settings.BusSpeed = I2cBusSpeed.FastMode;                       /* 400KHz bus speed */
+    try {
+        var settings = new SpiConnectionSettings(SPI_CHIP_SELECT_LINE);
+        settings.ClockFrequency = 5000000;                              /* 5MHz is the rated speed of the ADXL345 accelerometer                     */
+        settings.Mode = SpiMode.Mode3;                                  /* The accelerometer expects an idle-high clock polarity, we use Mode3    
+                                                                         * to set the clock polarity and phase to: CPOL = 1, CPHA = 1         
+                                                                         */
 
-        string aqs = I2cDevice.GetDeviceSelector();                     /* Get a selector string that will return all I2C controllers on the system */
-        var dis = await DeviceInformation.FindAllAsync(aqs);            /* Find the I2C bus controller devices with our selector string             */
-        I2CAccel = await I2cDevice.FromIdAsync(dis[0].Id, settings);    /* Create an I2cDevice with our selected bus controller and I2C settings    */
-        if (I2CAccel == null)
+        string aqs = SpiDevice.GetDeviceSelector();                     /* Get a selector string that will return all SPI controllers on the system */
+        var dis = await DeviceInformation.FindAllAsync(aqs);            /* Find the SPI bus controller devices with our selector string             */
+        SPIAccel = await SpiDevice.FromIdAsync(dis[0].Id, settings);    /* Create an SpiDevice with our bus controller and SPI settings             */
+        if (SPIAccel == null)
         {
             Text_Status.Text = string.Format(
-                "Slave address {0} on I2C Controller {1} is currently in use by " +
-                "another application. Please ensure that no other applications are using I2C.",
-                settings.SlaveAddress,
+                "SPI Controller {0} is currently in use by " +
+                "another application. Please ensure that no other applications are using SPI.",
                 dis[0].Id);
             return;
         }
@@ -154,17 +153,15 @@ private async void InitI2CAccel()
 
 Here's an overview of what's happening:
 
-* First, we get the selector strings for all I2C controllers on the device.
+* First, we create an **SpiConnectionSettings** object and set the clock speed, clock polarity, and chip-select line.
 
-* Next, we find all the I2C bus controllers on the system and check that at least one bus controller exists.
+* Next, we get the selector strings for all SPI controllers on the device, and use that find all the SPI bus controllers on the system.
 
-* We then create an **I2CConnectionSettings** object with the accelerometer address "ACCEL_I2C_ADDR" (0x53) and bus speed set to "FastMode" (400KHz)
-
-* Finally, we create a new **I2cDevice** and check that it's available for use.
+* Finally, we create a new **SpiDevice** from the first SPI controller on the system (**dis[0]**) and check that it's available for use.
 
 ###Initialize the accelerometer
 
-Now that we have the **I2cDevice** accelerometer instance, we're done with the I2C bus initialization. We can now write data over I2C to start up the accelerometer. We do this with the **Write()** function.
+Now that we have the **SpiDevice** accelerometer instance, we're done with the SPI bus initialization. We can now write data over SPI to start up the accelerometer. We do this with the **Write()** function.
 For this particular accelerometer, there are two internal registers we need to configure before we can start using the device: The data format register, and the power control register.
 
 1. We first write a 0x01 to the data format register. This configures the device range into +-4G mode. If you consult the [datasheet](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf){:target="_blank"}, you'll see that the device can be configured in a variety of measurement modes ranging from 2G to 16G.
@@ -173,7 +170,7 @@ Higher G settings provide you with greater range at the expense of reduced resol
 2. We write a 0x08 to the power control register, which wakes the device from standby and starts measuring acceleration. Again, the [datasheet](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf){:target="_blank"} contains additional information about the device settings and capabilities.
 
 {% highlight C# %}
-private async void InitI2CAccel()
+private async void InitSPIAccel()
 {
     // ...
 
@@ -189,9 +186,9 @@ private async void InitI2CAccel()
 
     /* Write the register settings */
     try
-    {
-        I2CAccel.Write(WriteBuf_DataFormat);
-        I2CAccel.Write(WriteBuf_PowerControl);
+    {  
+        SPIAccel.Write(WriteBuf_DataFormat);
+        SPIAccel.Write(WriteBuf_PowerControl);
     }
     /* If the write fails display the error and stop running */
     catch (Exception ex)
@@ -207,7 +204,7 @@ private async void InitI2CAccel()
 ###Timer code
 After all the initializations are complete, we start a timer to read from the accelerometer periodically. Here is how you set up the timer to trigger every 100mS.
 {% highlight C# %}
-private async void InitI2CAccel()
+private async void InitSPIAccel()
 {
     // ...
 
@@ -221,7 +218,7 @@ private void TimerCallback(object state)
 {
     string xText, yText, zText;
     string statusText;
-
+    
     /* Read and format accelerometer data */
     try
     {
@@ -231,14 +228,13 @@ private void TimerCallback(object state)
         zText = String.Format("Z Axis: {0:F3}G", accel.Z);
         statusText = "Status: Running";
     }
-
+    
     // ...
 }
 {% endhighlight %}
 
-
 ###Read data from the accelerometer
-With the I2C bus and accelerometer initialized, we can start reading data from the accelerometer. Our **ReadAccel()** function gets called every 100mS by the timer:
+With the SPI bus and accelerometer initialized, we can start reading data from the accelerometer. Our **ReadAccel()** function gets called every 100mS by the timer:
 
 {% highlight C# %}
 private Acceleration ReadAccel()
@@ -257,12 +253,15 @@ private Acceleration ReadAccel()
     switch (HW_PROTOCOL)
     {
         case Protocol.SPI:
-            // ...
-        case Protocol.I2C:
-            ReadBuf = new byte[6];  /* We read 6 bytes sequentially to get all 3 two-byte axes                 */
-            RegAddrBuf = new byte[] { ACCEL_REG_X }; /* Register address we want to read from                  */
-            I2CAccel.WriteRead(RegAddrBuf, ReadBuf);
+            ReadBuf = new byte[6 + 1];      /* Read buffer of size 6 bytes (2 bytes * 3 axes) + 1 byte padding */
+            RegAddrBuf = new byte[1 + 6];   /* Register address buffer of size 1 byte + 6 bytes padding        */
+            /* Register address we want to read from with read and multi-byte bit set                          */
+            RegAddrBuf[0] =  ACCEL_REG_X | ACCEL_SPI_RW_BIT | ACCEL_SPI_MB_BIT ;
+            SPIAccel.TransferFullDuplex(RegAddrBuf, ReadBuf);
+            Array.Copy(ReadBuf, 1, ReadBuf, 0, 6);  /* Discard first dummy byte from read                      */
             break;
+        case Protocol.I2C:
+            // ...
         default:    /* Code should never get here */
             // ...
     }
@@ -285,12 +284,12 @@ private Acceleration ReadAccel()
 {% endhighlight %}
 Here's how this works:
 
-* We begin by reading data from the accelerometer with the WriteRead() function. As the name suggests, this function first performs a write, followed by a read.
+* We begin by reading data from the accelerometer with the **TransferFullDuplex()** function. This function performs a SPI write and SPI read simultaneously in the same transaction.
 
 * The initial write specifies the register address we want to read from (which in this case is the X-Axis data register). This write ensures that a subsequent read will start from this register address.
-We provide the function with a one-byte byte array representing the register address we want to write
+We provide the function with a one-byte byte array representing the register address we want to write (plus padding bytes). We also set the read and multi-byte bits so that the accelerometer knows we're reading multiple bytes.
 
-* Next we provide the function with a read buffer of size 6 so we read 6 bytes over I2C. Since this device supports sequential reads,
+* Next we provide the function with a read buffer of size 6 so we read 6 bytes over SPI (plus padding bytes). Since this device supports multi-byte reads,
 **and** the X, Y, and Z data registers are next to each other, reading 6 bytes give us all of our data in one go. This ensures acceleration values don't change between reads as well.
 
 * We get back 6 bytes of data from our read. These represent the data in the X, Y, and Z data registers respectively.

@@ -26,6 +26,12 @@ Remember to give a good name to your first app! In this example, we called the p
 
 If this is the first project you create, Visual Studio will likely prompt you to enable Developer Mode for Windows 10.  To do this, you'll need to follow the steps found [here](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx){:target="_blank"}
 
+###Add a reference to the Windows IoT extension SDK
+
+Since the IoT extension SDK is not added to projects by default, we'll need to add a reference so that namespaces like `Windows.Devices.Gpio` will be available in the project.  To do so, just right-click on the References entry under the project, Select "Add Reference" then navigate the resulting dialog to `Windows Universal->Extensions->Windows IoT Extension SDK`, check the box, and click OK.
+
+![Add Extension SDK]({{site.baseurl}}/images/HelloWorld/add-reference-ext-sdk-dialog.PNG)
+
 ###Add content to MainPage.xaml
 * Let's add some content to the MainPage. From Solution Explorer, select the 'MainPage.xaml' file. We want to add a TextBox and a Button, to show some interaction. So we will edit the XAML file to add these elements. Locate the `<Grid>` tag in the XAML section of the designer, and add the following markup:
 
