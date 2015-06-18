@@ -7,29 +7,31 @@ lang: en-US
 
 ##Deploy the driver and confirm the installation
 
-This exercise demonstrates how to manually copy and install the driver to a Windows IoT Core device. We will first use the File Transfer Protocol (FTP) to transfer files from the development machine to the target device (Windows IoT Core device). We will then use PowerShell to install the driver.
+This exercise demonstrates how to manually copy and install the driver to a Windows IoT Core device. We will first use the **Server Message Block (SMB)** protocol via a **File Explorer** window to transfer files from the development machine to the target device (Windows IoT Core device). We will then use PowerShell to install the driver.
 
-### Use File Transfer Protocol (FTP) to transfer files from the development machine to the target device (Windows IoT Core device).
+### Use the Server Message Block (SMB) protocol to transfer files from the development machine to the target device (Windows IoT Core device).
 
 #### On the target device (this is your Raspberry Pi 2 or your Minnow Board Max)
 * Boot up your Windows IoT Core device and make a note of its name or IP Address as displayed on its attached screen when the device first boots up.
 
 #### On the development computer
 
-* Open up a File Explorer window, and in the address bar type `ftp://<TARGET_DEVICE>`, where `<TARGET_DEVICE>` is either the name or the IP Address of your Windows IoT Core device:
+* Open up a **File Explorer** window, and in the address bar type `\\<TARGET_DEVICE>\C$\` and then hit enter.  In this particular case, `<TARGET_DEVICE>` is either the name or the IP Address of your Windows IoT Core device:
 
-    ![FTP with File Explorer]({{site.baseurl}}/images/DriverLab/ftp1.png)
+    ![FTP with File Explorer]({{site.baseurl}}/images/DriverLab/smb1.png)
 
     If you are prompted for a user name and password, use the following credentials:
 
-        User Name: Administrator
+        User Name: <TARGET_DEVICE>\Administrator
         Password:  p@ssw0rd
 
+    ![FTP with File Explorer]({{site.baseurl}}/images/DriverLab/cred1.png)
+	
     NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)
 
 * Navigate to the `\windows\system32\` folder in the FTP File Explorer window:
 
-    ![FTP with File Explorer]({{site.baseurl}}/images/DriverLab/ftp2.png)
+    ![FTP with File Explorer]({{site.baseurl}}/images/DriverLab/smb2.png)
 
 * Drag and drop (copy) the following two files (created in the previous exercise while building the driver in Visual Studio) from the development machine to the `\windows\system32\` folder on your IoT Core device:
 
@@ -38,7 +40,7 @@ This exercise demonstrates how to manually copy and install the driver to a Wind
 
 * Drag and drop (copy) the `ACPITABL.dat` file (created in the previous exercise while building the ACPI table) to the `\windows\system32\` folder.
 
-* Verify that the following files have been successfully transferred to the `\windows\system32\` folder in your IoT Core device using FTP:
+* Verify that the following files have been successfully transferred to the `\windows\system32\` folder in your IoT Core device using the **File Explorer** window and **SMB**:
 
         gpiokmdfdemo.inf
         gpiokmdfdemo.sys
@@ -69,7 +71,7 @@ Using the PowerShell window, navigate to the `C:\Windows\System32` directory on 
 
 We will use the `devcon.exe` tool to install our demo driver.  Type the following command in the PowerShell window:
 
-    [192.168.0.243]: PS C:\> devcon.exe install gpiokmdfdemo.inf ACPI\GPOT0001
+    [192.168.0.243]: PS C:\Windows\System32> devcon.exe install gpiokmdfdemo.inf ACPI\GPOT0001
 
 ### Reboot the target Windows IoT Core device
 
