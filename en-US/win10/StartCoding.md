@@ -12,7 +12,7 @@ lang: en-US
         <p>Download code samples to get started with Windows on Devices. Also, read docs to help you use tools and resources to help you develop.</p>
         <br/>
         <h4>Did you set up your environment?</h4>
-        <p>We assume you already <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">set up your environment</a>, have a working Visual Studio and have a device running Windows IoT Core (MinnowBoard Max or Raspberry Pi 2).</p>
+        <p>We assume you already <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">set up your environment</a>, have a working Visual Studio and have a device running Windows IoT Core (MinnowBoard Max, Raspberry Pi 2, or VM).</p>
         <br/>
         <h4>Questions/Suggestions</h4>
         <p>Remember, you can always send <a href="{{site.baseurl}}/{{page.lang}}/Community.htm#contact">contact us</a> for help and suggestions!</p>
@@ -45,23 +45,19 @@ lang: en-US
                         <p>Allows Remote Administration and Configuration so that you can remotely configure and manage any Windows IoT Core device</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm">Learn More</a>
                     </div>
-                    <div class="col-md-3">
-                        <h4>Using SSH</h4>
-                        <p>Allows Remote Administration and Configuration of your Windows IoT Core device over SSH</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm">Learn More</a>
-                    </div>
-                </div>
-                <div class="row section-heading">
+
                     <div class="col-md-3">
                         <h4>Headless UWP Apps</h4>
                         <p>Windows IoT Core can either be in headed or headless mode. The difference is the presence or absence of any form of UI</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm">Learn More</a>
                     </div>
-					<div class="col-md-3">
+                </div>
+                <div class="row section-heading">
+                    <div class="col-md-3">
                         <h4>Hardware Pin Mappings</h4>
                         <p>Pinout and interfacing information for GPIO, SPI, and I2C</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm">Raspberry Pi 2 Pinout</a><br>
-						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm">MinnowBoard Max Pinout</a><br>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm">MinnowBoard Max Pinout</a><br>
                     </div>
                     <div class="col-md-3">
                         <h4>AllJoyn Connectivity</h4>
@@ -73,14 +69,14 @@ lang: en-US
                         <p>Windows IoT Core is a work in progress.  Here are the UWP APIs that have not been implemented yet on our platform.</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/UnavailableApis.htm">Learn More</a>
                     </div>
+                    <div class="col-md-3">
+                        <h4>Compatible Peripheral USB Devices</h4>
+                        <p>Find a list of USB devices compatible with Window 10 IoT Core devices</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/Peripherals.htm">Learn More</a>
+                    </div>
                 </div>
                 <div class="row section-heading">
                     <div class="col-md-3">
-                        <h4>WiFi Connectivity</h4>
-                        <p>Setup and configure WiFi on your Windows IoT Core device</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/SetupWiFi.htm">Learn More</a>
-                    </div>
-				    <div class="col-md-3">
                         <h4>Using WINDBG</h4>
                         <p>Use WINDBG to debug</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/Windbg.htm">Learn More</a>
@@ -90,24 +86,15 @@ lang: en-US
                         <p>Image creation, process and tools</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/ImageCreation.htm">Learn More</a>
                     </div>
-					<div class="col-md-3">
+                    <div class="col-md-3">
                         <h4>Glossary</h4>
                         <p>A list of commonly used phrases and their meanings</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/Glossary.htm">Learn More</a>
                     </div>
-                </div>
-                <div class="row section-heading">
-					<div class="col-md-3">
+                    <div class="col-md-3">
                         <h4>Web-based Device Management</h4>
                         <p>Get advanced diagnostics about your machine from the web</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm">Learn More</a>
-                    </div>
-                </div>
-				<div class="row section-heading">
-				    <div class="col-md-3">
-                        <h4>Compatible Peripheral USB Devices</h4>
-                        <p>Find a list of USB devices compatible with Window 10 IoT Core devices</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/Peripherals.htm">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -155,7 +142,7 @@ lang: en-US
                         <p>Create an app using SPI on devices running Windows 10 IoT Core Insider Preview</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplay.htm">Learn More</a>
                     </div>
-					<div class="col-md-3">
+                    <div class="col-md-3">
                         <h4>AllJoyn Connectivity</h4>
                         <p>Learn more about AllJoyn and explore the capabilities of the AllJoyn Device System Bridge with Windows 10 IoT Core Insider Preview</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/AllJoyn.htm">Learn More</a>
@@ -248,7 +235,9 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SpiTestTool.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <!-- Placeholder for alignment -->
+                        <h4>I2C Port Expander (RPi2 Basic Kit Lab)</h4>
+                        <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 I2C bus to communicate with a port expander.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2CPortExpander.htm">Learn More</a>
                     </div>
                 </div>
 
@@ -298,13 +287,6 @@ lang: en-US
                         <h4>Phidget Sensors for Galileo</h4>
                         <p>Provides an integrated developemnt environment for creating efficient high quality drivers for devices running Windows 8.1</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win8/samples/PhidgetsSensors.htm">Learn More</a>
-                    </div>
-                </div>			
-                <div class="row section-heading">
-                    <div class="col-md-3">
-                        <h4>I2C Port Expander (RPi2 Basic Kit Lab)</h4>
-                        <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 I2C bus to communicate with a port expander.</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2CPortExpander.htm">Learn More</a>
                     </div>
                 </div>
             </div>
