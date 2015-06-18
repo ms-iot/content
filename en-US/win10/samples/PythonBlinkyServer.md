@@ -34,7 +34,7 @@ If you're building for MinnowBoard Max, select `x86` in the architecture drop do
 
 Make sure you connect the LED to your board. Go back to the basic 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm) if you need guidance.
 
-Note that the app will not run successfully if it cannot find any available GPIO ports, for example if you run the app on a VM running Windows IoT Core.
+Note that the app will not run successfully if it cannot find any available GPIO ports.
 
 ###Let's look at the code
 The code for this sample is pretty simple. We use _wingpio, http.server and socketserver modules.

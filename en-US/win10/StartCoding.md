@@ -12,7 +12,7 @@ lang: en-US
         <p>Download code samples to get started with Windows on Devices. Also, read docs to help you use tools and resources to help you develop.</p>
         <br/>
         <h4>Did you set up your environment?</h4>
-        <p>We assume you already <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">set up your environment</a>, have a working Visual Studio and have a device running Windows IoT Core (MinnowBoard Max, Raspberry Pi 2, or VM).</p>
+        <p>We assume you already <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">set up your environment</a>, have a working Visual Studio and have a device running Windows IoT Core (MinnowBoard Max or Raspberry Pi 2).</p>
         <br/>
         <h4>Questions/Suggestions</h4>
         <p>Remember, you can always send <a href="{{site.baseurl}}/{{page.lang}}/Community.htm#contact">contact us</a> for help and suggestions!</p>
@@ -162,14 +162,14 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWUBlinky.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
+                        <h4>Express Node.js App (Windows Universal)</h4>
+                        <p>Create an Express Node.js app that runs on devices running Windows 10 IoT Core Insider Preview</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWUExpress.htm">Learn More</a>
+                    </div>
+                    <div class="col-md-3">
                         <h4>MemoryStatus Node.js App (Console)</h4>
                         <p>Build a Node.js server that provides memory status from your device running Windows 10 IoT Core Insider Preview</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Nodejs.htm">Learn More</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>I2C Port Expander (RPi2 Basic Kit Lab)</h4>
-                        <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 I2C bus to communicate with a port expander.</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2CPortExpander.htm">Learn More</a>
                     </div>
                 </div>
 
@@ -286,6 +286,13 @@ lang: en-US
                         <h4>Phidget Sensors for Galileo</h4>
                         <p>Provides an integrated developemnt environment for creating efficient high quality drivers for devices running Windows 8.1</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win8/samples/PhidgetsSensors.htm">Learn More</a>
+                    </div>
+                </div>			
+                <div class="row section-heading">
+                    <div class="col-md-3">
+                        <h4>I2C Port Expander (RPi2 Basic Kit Lab)</h4>
+                        <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 I2C bus to communicate with a port expander.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2CPortExpander.htm">Learn More</a>
                     </div>
                 </div>
             </div>
