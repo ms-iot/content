@@ -53,11 +53,11 @@ lang: en-US
                     </div>
                 </div>
                 <div class="row section-heading">
-                    <div class="col-md-3">
+					<div class="col-md-3">
                         <h4>Hardware Pin Mappings</h4>
                         <p>Pinout and interfacing information for GPIO, SPI, and I2C</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm">Raspberry Pi 2 Pinout</a><br>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm">MinnowBoard Max Pinout</a><br>
+						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm">MinnowBoard Max Pinout</a><br>
                     </div>
                     <div class="col-md-3">
                         <h4>AllJoyn Connectivity</h4>
@@ -76,7 +76,7 @@ lang: en-US
                     </div>
                 </div>
                 <div class="row section-heading">
-                    <div class="col-md-3">
+				    <div class="col-md-3">
                         <h4>Using WINDBG</h4>
                         <p>Use WINDBG to debug</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/Windbg.htm">Learn More</a>
@@ -86,12 +86,12 @@ lang: en-US
                         <p>Image creation, process and tools</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/ImageCreation.htm">Learn More</a>
                     </div>
-                    <div class="col-md-3">
+					<div class="col-md-3">
                         <h4>Glossary</h4>
                         <p>A list of commonly used phrases and their meanings</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/Glossary.htm">Learn More</a>
                     </div>
-                    <div class="col-md-3">
+					<div class="col-md-3">
                         <h4>Web-based Device Management</h4>
                         <p>Get advanced diagnostics about your machine from the web</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm">Learn More</a>
@@ -142,7 +142,7 @@ lang: en-US
                         <p>Create an app using SPI on devices running Windows 10 IoT Core Insider Preview</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplay.htm">Learn More</a>
                     </div>
-                    <div class="col-md-3">
+					<div class="col-md-3">
                         <h4>AllJoyn Connectivity</h4>
                         <p>Learn more about AllJoyn and explore the capabilities of the AllJoyn Device System Bridge with Windows 10 IoT Core Insider Preview</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/AllJoyn.htm">Learn More</a>
