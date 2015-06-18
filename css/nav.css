@@ -8,11 +8,15 @@
 }
 
 #subNav {
-    margin-top: 20px;
+    padding-top: 20px;
+    background-color: white;
+}
+
+.shell-header.shell-bottomborder{
+    border-bottom: none !important;
 }
 
 .l2-nav {
-    border-bottom: 1px solid #efefef;
     max-width: 1206px;
     margin: 0 auto;
 }
