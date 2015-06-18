@@ -102,10 +102,6 @@ lang: en-US
         <p>setbootoption.exe headed</p>
         <br />
         <br />
-        <p class="bold"><em>I created a new Background Application (IoT) project and used '-' or '_' in the name.  When I build my project, I see a Validation error (C00CE169).  How do I resolve this?</em></p>
-        <p>This can be fixed by opening the Package.appxmanifest and removing all '_' characters from the Identity.Name attribute.</p>
-        <br />
-        <br />
         <p class="bold"><em>My Node.js UWP project fails to load after installing the latest release (NTVS Bundle VS 2015.exe v1.0).  How do I resolve this?</em></p>
         <p>If you installed the first version of NTVS IoT Extension Beta, and then install the latest release which is bundled in NTVS Bundle VS 2015, you will see 
         a project load error. The error will be something like "The imported project "...\Microsoft.NodejsUap.targets" was not found". To resolve this problem, do 
@@ -118,4 +114,3 @@ lang: en-US
         <br />
     </div>
 </div>
-
