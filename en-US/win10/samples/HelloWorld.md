@@ -8,7 +8,7 @@ lang: en-US
 ##'Hello, World!' Sample
 
 ###Create a new C# project
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/HelloWorld){:target="_blank"}, but as an excercise, this tutorial will take you through the complete steps to create this app from scratch.  
+You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/HelloWorld){:target="_blank"}, but as an exercise, this tutorial will take you through the complete steps to create this app from scratch.  
 
 Start Visual Studio 2015 RC.
 
