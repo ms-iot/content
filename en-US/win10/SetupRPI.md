@@ -7,7 +7,7 @@ lang: en-US
 
 #Get Started
 
-Learn how to set up the Raspberry Pi 2 and connect it to your computer. Note that this requires you to have a PC running Windows 10 Technical Preview.
+Learn how to set up the Raspberry Pi 2 and connect it to your computer.
 
 {% include steps.html device="RPI2" %}
 
