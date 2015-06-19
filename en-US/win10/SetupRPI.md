@@ -65,7 +65,7 @@ Follow these instructions to configure your SD card:
 	
 	Install "Windows_10_IoT_Core_RPi2.msi". When installation is complete, flash.ffu will be located at "C:\Program Files (x86)\Microsoft IoT\FFU\RaspberryPi2"
 	
-	<img src="{{site.baseurl}}/images/SetupRPI/installedfiles.png">
+	<img src="{{site.baseurl}}/images/installedfiles.png">
 	
 7. **Insert an SD card** into your SD card reader.
 
