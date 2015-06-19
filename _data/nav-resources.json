@@ -12,13 +12,13 @@
     },
 	 "zh-CN":
     {
-        "home":"家",
-        "getstarted":"入門",
-        "projects":"工程",
-        "docssamples":"文件和樣品",
-        "faq":"常問問題",
-        "downloads":"下載",
+        "home":"主页",
+        "getstarted":"入门",
+        "projects":"项目",
+        "docssamples":"文档和示例",
+        "faq":"常见问题",
+        "downloads":"下载",
         "hardware":"硬件",
-        "community":"社區"
+        "community":"社区"
     }
 }
