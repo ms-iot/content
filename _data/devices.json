@@ -42,7 +42,7 @@
          "buy":"http://store.arduino.cc",
          "image":"Arduino_1.png",
          "text":"Windows Virtual Shields for Arduino is an open-source library primarily for the Arduino UNO which communicates with an open-source Universal Windows application running on all Windows 10 devices, including Windows Lumia phones. The library exposes Lumia phones' sensors and capabilities to the an Arduino Wiring Sketch.",
-         "buy-text":"购买 Arduino",
+         "buy-text":"Buy an Arduino",
          "start-text":"Start Now"
       }
    ],   
@@ -52,7 +52,7 @@
          "link":"win10/SetupRPI.htm",
          "buy":"http://www.raspberrypi.org/products/raspberry-pi-2-model-b/",
          "image":"RPi2_0.png",
-         "text":"Raspberry Pi 2 是插入计算机显示器或电视的成本低，信用卡大小的计算机，并使用标准键盘和鼠标。该树莓派2运行Windows10物联网的核心。",
+         "text":"Raspberry Pi 2 是一个低成本、信用卡大小的计算机，支持外接显示器或电视，及标准键盘和鼠标。Raspberry Pi 2支持运行Windows 10 IoT Core。",
          "buy-text":"购买 Raspberry Pi 2",
          "start-text":"现在开始"
       },
@@ -61,7 +61,7 @@
          "link":"win10/SetupMBM.htm",
          "buy-inter":"win10/BuyMBM.htm",
          "image":"MBM_0.png",
-         "text":"MinnowBoard MAX 是一个开放的硬件嵌入式主板采用英特尔凌动系列E38XX SOC的核心。 MinnowBoard最大支持Windows10物联网的核心内幕预览。",
+         "text":"MinnowBoard Max 是一个硬件开放的嵌入式主板，采用英特尔凌动E38XX系列SOC核心。 MinnowBoard Max支持运行Windows 10 IoT Core Insider Preview。",
          "buy-text":"Buy a MinnowBoard Max",
          "start-text":"现在开始"
       },
@@ -70,7 +70,7 @@
          "link":"win8/SetupGalileo.htm",
          "buy":"http://www.intel.com/content/www/us/en/do-it-yourself/where-to-buy.html#galileo",
          "image":"Galileo_0.png",
-         "text":"Intel Galileo 是第一个行基于Intel x86架构的Arduino认证的开发板和开发是专为制造商和教育社区。伽利略支持Windows，而不是Windows10物联网的核心，只有以前的版本。",
+         "text":"Intel Galileo 是基于Intel x86架构并且兼容Arduino的开发板，主要为创客和教育社区设计。伽利略只支持上一代Windows，不支持Windows 10 IoT Core。",
          "buy-text":"购买 Galileo",
          "start-text":"现在开始"
       },
@@ -79,7 +79,7 @@
          "link":"win10/SetupWRA.htm",
          "buy":"http://store.arduino.cc",
          "image":"WindowsPhone_0.png",
-         "text":"Windows Remote Arduino 是一个开源的Windows运行时组件库，让庄家通过蓝牙或USB连接到控制一个Arduino。其目的是为谁想要驾驭Arduino硬件使用Windows运行时语言的力量Windows运行时开发人员。开发商谁包括该组件在他们的项目将自动获得其功能在任何WinRT的语言（C++/ CX，C＃和JavaScript）。",
+         "text":"Windows Remote Arduino 是一个开源的Windows Runtime组件库，使创客能够通过蓝牙或USB连接来控制Arduino设备。其目的是使开发者能够方便的使用Windows Runtime编写程序来发挥Arduino相关硬件的力量。开发者只需在项目中引用这个组件库，就可以应用其功能于任何WinRT语言中（C++/ CX，C#和JavaScript）。",
          "buy-text":"购买 Arduino",
          "start-text":"现在开始"
       },
@@ -88,7 +88,7 @@
          "link":"win10/SetupWVSA.htm",
          "buy":"http://store.arduino.cc",
          "image":"Arduino_1.png",
-         "text":"Windows Virtual Shields 对于Arduino是一个开源库，主要为的Arduino UNO这与运行在所有的Windows10的设备，包括Windows的Lumia手机的开源通用的Windows应用程序进行通信。该库公开的Lumia手机的传感器和能力提升到一个Arduino接线示意图。",
+         "text":"Windows Virtual Shields for Arduino是一个开源库，其目的是让Arduino UNO与一个开源的Universal Windows app进行通信，这个app可以运行在所有的Windows 10设备上，包括Windows Lumia手机。该库能够将Lumia手机的各种传感器和功能暴漏给Arduino Wiring Sketch使用。",
          "buy-text":"购买 Arduino",
          "start-text":"现在开始"
       }
