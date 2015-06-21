@@ -9,7 +9,7 @@ lang: en-US
 
 This is preinstalled in Windows 10 IoT Core Technical Preview.  You can find the source code for this [here](https://github.com/ms-iot/samples/tree/develop/AllJoyn/AllJoynZWaveDemo){:target="_blank"}:
 
-* [ZWaveAdapterUAP.zip](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynZWaveDemo/ZWaveAdapterUAP.zip?raw=true) - this zip contains the source code needed to create the AllJoyn Z-Wave demo
+* [ZWaveAdapter.zip](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynZWaveDemo/ZWaveAdapter.zip?raw=true) - this zip contains the source code needed to create the AllJoyn Z-Wave demo
 
 * [Build2015_AllJoyn_ZWave_Setup_Guide_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynZWaveDemo/Build2015_AllJoyn_ZWave_Setup_Guide_v1.0.pdf?raw=true){:target="_blank"} - this pdf contains the documentation for how to connect your Windows 10 IoT Core device to Z-Wave devices
 
@@ -27,6 +27,10 @@ This template can be installed in Visual Studio 2015 Preview to enable you to cr
 ##AllJoyn Explorer
 
 This is a tool we use in several points when working with AllJoyn samples.  You can find the AllJoyn Explorer [here](https://github.com/ms-iot/samples/tree/develop/AllJoyn/AllJoynExplorer){:target="_blank"}:
+
+* [AllJoynExplorer_1.0.0.2.zip](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.0.2.zip?raw=true){:target="_blank"} - this zip contains the AllJoyn Explorer appxbundle
+
+* [AllJoynExplorer_1.0.0.1.zip](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.0.1.zip?raw=true){:target="_blank"} - this zip contains the AllJoyn Explorer appxbundle
 
 * [AllJoynExplorer_1.0.0.0.zip](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.0.0.zip?raw=true){:target="_blank"} - this zip contains the AllJoyn Explorer appxbundle
 
