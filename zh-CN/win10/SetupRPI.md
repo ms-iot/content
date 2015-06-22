@@ -99,5 +99,5 @@ lang: zh-CN
 1. 连接电源后，Windows 10 IoT Core Insider Preview 将自动启动。
 2. 首次启动时，Windows IoT Core 将进行一些首次启动配置，并且同时将显示一个默认的蓝色应用程序。**等待几分钟**，开发板将自动重新启动。这只会发生一次，然后 DefaultApp 将出现，显示 Raspberry Pi 2 的 IP 地址。<img class="device-images" src="{{site.baseurl}}/images/DefaultAppRpi2.png">
 3. 遵循<a href="{{site.baseurl}}/win10/samples/PowerShell.htm">此处</a> [Powershell 文档]({{site.baseurl}}/win10/samples/PowerShell.htm)，使用 PowerShell 连接到正在运行的设备。
-4. **强烈建议**你更新管理员帐户的默认密码。
+4. **强烈建议**你更新管理员帐户的默认密码(默认用户名:``Administrtor``，默认密码: ``p@ssw0rd``)
 5. 当 Raspberry Pi 2 启动时，远程调试程序将自动启动。
