@@ -143,6 +143,14 @@ Follow these instructions to configure your SD card:
 ![mbm]({{site.baseurl}}/images/DefaultAppMBM.png){:device-images}
 
 
+* If you have loaded a pervious verion of IoT Core on your MBM you will need to go through the following steps for your first boot (make sure you have your SD card with IoT Core inserted:
+  1. Power on MBM device and press F2.
+  2. Go to Boot Manager tab and select EFI Internal shell.
+  3. Identify EFIESP partition (it might be FS1: hence assuming EFIESP partition as FS1: below)
+  4. Type FS1:\ 
+  5. Cd EFI
+  6. Run  DeleteSbcpVariableFW.efi (This will clear UEFI variables)
+  7. Now boot up the device.
 * Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.
 * It is **highly recommended** that you update the default password for the Administrator account. Please follow the instructions found in the [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) documentation.
 * Remote Debugger will launch automatically when your device boots.
