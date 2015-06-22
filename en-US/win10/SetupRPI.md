@@ -55,7 +55,7 @@ Follow these instructions to configure your SD card:
 
 	<img src="{{site.baseurl}}/images/SetupRPI/download2.PNG">
 
-6. **Extract the zip file** to a local folder
+6. **Download the ISO** to a local folder
 
 	<img src="{{site.baseurl}}/images/SetupRPI/iso.png">     
 	
@@ -65,22 +65,28 @@ Follow these instructions to configure your SD card:
 	
 	Install "Windows_10_IoT_Core_RPi2.msi". When installation is complete, flash.ffu will be located at "C:\Program Files (x86)\Microsoft IoT\FFU\RaspberryPi2"
 	
-	<img src="{{site.baseurl}}/images/installedfiles.png">
+	<img src="{{site.baseurl}}/images/SetupRPI/rpiffu.png">
+	
+	Eject the Virtual CD when done
 	
 7. **Insert an SD card** into your SD card reader.
 
-8. **Use IoTCoreImageHelper.exe** located in "C:\Program Files (x86)\Microsoft IoT" to flash the SD card. The tool will enumerate devices as shown. 
-	Select the SD card you want to flash and the provide the location of the ffu and flash the image. Skip to step 13.
+8. **Use WindowsIoTImageHelper.exe** to flash the SD card. Search for "WindowsIoT" from start menu and select the tool "WindowsIoTImageHelper"
+
+	<img src="{{site.baseurl}}/images/ImagerHelperSearch.png">
+
+9. The tool will enumerate devices as shown. 
+	Select the SD card you want to flash and the provide the location of the ffu and flash the image. Skip to step 14.
 
 	<img src="{{site.baseurl}}/images/SetupRPI/ImageHelper.png">
 	
-9. **An alternative method is to use DISM**. Follow steps 10-13 for this method.
+10. **An alternative method is to use DISM**. Follow the next 4 steps below for this method.
 
-10. Open an **admininistrator command prompt** and navigate to the folder containing your local flash.ffu.
+11. Open an **admininistrator command prompt** and navigate to the folder containing your local flash.ffu.
 
 	<img class="device-images" src="{{site.baseurl}}/images/SetupRPI/cmd.jpg">
 
-11. **Find the disk number** that your SD card is on your computer.  This will be used when the image is applied in the next step.  To do this, you can use the **diskpart** utility.  Run the following commands:
+12. **Find the disk number** that your SD card is on your computer.  This will be used when the image is applied in the next step.  To do this, you can use the **diskpart** utility.  Run the following commands:
 
 	<kbd>diskpart</kbd>
 
@@ -90,7 +96,7 @@ Follow these instructions to configure your SD card:
 
 	<img  src="{{site.baseurl}}/images/SetupRPI/diskpart.PNG">
 
-12. Using the administrator command prompt, apply the image to your SD card.
+13. Using the administrator command prompt, apply the image to your SD card.
 	Run the following commands:
 	
 	<kbd>cd "C:\Program Files (x86)\Microsoft IoT\Dism"</kbd>
@@ -103,7 +109,7 @@ Follow these instructions to configure your SD card:
 
 	<img  src="{{site.baseurl}}/images/SetupRPI/applyDrive.PNG">
 
-13. Click on the **Safely Remove Hardware** icon in your task tray and select your USB SD card reader to safely remove it from the system.  Failing to do this can cause corruption of the image.
+14. Click on the **Safely Remove Hardware** icon in your task tray and select your USB SD card reader to safely remove it from the system.  Failing to do this can cause corruption of the image.
 
 
 ##Hook up your board

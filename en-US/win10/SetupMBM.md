@@ -76,7 +76,7 @@ Follow these instructions to configure your SD card:
 * NOTE: you will need to follow these instructions on a physical Windows machine (and not a VM) because you need access to the SD card reader.
 * Please sign up with our program on [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"}, which is our software release management platform. You will need to have a [Microsoft Account](http://www.microsoft.com/en-us/account/default.aspx){:target="_blank"}. If you are already signed up with our program on Microsoft Connect, (or are not sure if you signed up earlier) and try to sign up again, don’t worry, you will just see a blank page. If you have not signed up for our program on Connect before, it will prompt you to create a social profile and accept license agreements. You can find step-by-step instructions for signing up for Microsoft Connect [here](https://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57783){:target="_blank"}.
 * [Download](https://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57783) the package "Windows 10 IoT Core Insider Preview Image for MinnowBoard MAX" from Microsoft Connect. If you see a blank page or no downloads listed, please make sure you are signed into Microsoft Connect by looking at your login information at top right part of the screen. Click sign in, if you are not signed in.
-* **Extract the zip file** to a local folder
+* **Download the ISO** to a local folder
 
 	<img src="{{site.baseurl}}/images/mbm_iso.png">     
 	
@@ -86,10 +86,16 @@ Follow these instructions to configure your SD card:
 	
 	Install "Windows_10_IoT_Core_Mbm.msi". When installation is complete, flash.ffu will be located at "C:\Program Files (x86)\Microsoft IoT\FFU\MinnowBoardMax"
 	
-	<img src="{{site.baseurl}}/images/installedfiles.png">
+	<img src="{{site.baseurl}}/images/mbmffu.png">
+	
+	Eject the Virtual CD when done
 	
 * Insert an SD card into your SD card reader.
-* **Use IoTCoreImageHelper.exe** located in "C:\Program Files (x86)\Microsoft IoT" to flash the SD card. The tool will enumerate devices as shown. 
+* **Use WindowsIoTImageHelper.exe** to flash the SD card. Search for "WindowsIoT" from start menu and select the tool "WindowsIoTImageHelper"
+
+	<img src="{{site.baseurl}}/images/ImagerHelperSearch.png">. 
+	
+* The tool will enumerate devices as shown. 
 	Select the SD card you want to flash and the provide the location of the ffu and flash the image.
 
 	<img src="{{site.baseurl}}/images/mbm_ImageHelper.png">
