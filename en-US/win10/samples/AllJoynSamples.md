@@ -22,7 +22,7 @@ This template can be installed in Visual Studio 2015 Preview to enable you to cr
 
 * [DeviceSystemBridgeTemplate.vsix](https://github.com/ms-iot/samples/tree/develop/AllJoyn/AllJoynDSBGuide){:target="_blank"} - this vsix contains the AllJoyn Device System Bridge template.  Note that this must be copied locally and cannot be installed remotely.
 
-* [AllJoyn_DSB_GPIODevice_Sample_Tutorial_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynDSBGuide/AllJoyn_DSB_GPIODevice_Sample_Tutorial_v1.0.pdf?raw=true){:target="_blank"} - this pdf contains a description of how to use the AllJoyn Device System Bridge template and a sample that excercises the device GPIO.
+* [AllJoyn_DSB_GPIODevice_Sample_Tutorial_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynDSBGuide/AllJoyn_DSB_GPIODevice_Sample_Tutorial_v1.0.pdf?raw=true){:target="_blank"} - this pdf contains a description of how to use the AllJoyn Device System Bridge template and a sample that exercises the device GPIO.
 
 ##AllJoyn Explorer
 

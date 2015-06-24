@@ -222,7 +222,7 @@ xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest"
 {% endhighlight %}
 
 ##Enabling Bluetooth Capabilities
-You will need to add one of the following XML blocks to your manifest file, inside the <Capabilities> tag, in order to invoke the Bluetooth/USB capabilities of a WinRT application, depending on which OS version you are targetting.
+You will need to add one of the following XML blocks to your manifest file, inside the <Capabilities> tag, in order to invoke the Bluetooth/USB capabilities of a WinRT application, depending on which OS version you are targeting.
 
 ###Windows 10
 
