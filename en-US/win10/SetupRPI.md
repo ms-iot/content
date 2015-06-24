@@ -98,6 +98,6 @@ Follow these instructions to configure your SD card:
 1. Windows 10 IoT Core Insider Preview will boot automatically after connecting power supply.
 2. On the very first boot Windows IoT Core will do some first boot configurations and it will display a default blue colored application while this is happening. **Wait for a few minutes** and the board will automatically restart. This will happen only once and then DefaultApp should come up, displaying the IP address of the Raspberry Pi 2.
 	<img class="device-images" src="{{site.baseurl}}/images/DefaultAppRpi2.png">
-3. Follow the [PowerShell documentation here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.
+3. Follow the [PowerShell documentation here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.  You can also follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to use SSH to connect to your device.
 4. It is **highly recommended** that you update the default password for the Administrator account.
 5. Remote Debugger will launch automatically when your Raspberry Pi 2 boots.
