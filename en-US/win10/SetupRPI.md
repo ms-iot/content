@@ -76,41 +76,13 @@ Follow these instructions to configure your SD card:
 	<img src="{{site.baseurl}}/images/ImagerHelperSearch.png">
 
 9. The tool will enumerate devices as shown. 
-	Select the SD card you want to flash and the provide the location of the ffu and flash the image. Skip to step 14.
+	Select the SD card you want to flash and the provide the location of the ffu and flash the image.
 
 	<img src="{{site.baseurl}}/images/SetupRPI/ImageHelper.png">
-	
-10. **An alternative method is to use DISM**. Follow the next 4 steps below for this method.
 
-11. Open an **admininistrator command prompt** and navigate to the folder containing your local flash.ffu.
+10. Click on the **Safely Remove Hardware** icon in your task tray and select your USB SD card reader to safely remove it from the system.  Failing to do this can cause corruption of the image.
 
-	<img class="device-images" src="{{site.baseurl}}/images/SetupRPI/cmd.jpg">
-
-12. **Find the disk number** that your SD card is on your computer.  This will be used when the image is applied in the next step.  To do this, you can use the **diskpart** utility.  Run the following commands:
-
-	<kbd>diskpart</kbd>
-
-	<kbd>list disk</kbd>
-
-	<kbd>exit</kbd>
-
-	<img  src="{{site.baseurl}}/images/SetupRPI/diskpart.PNG">
-
-13. Using the administrator command prompt, apply the image to your SD card.
-	Run the following commands:
-	
-	<kbd>cd "C:\Program Files (x86)\Microsoft IoT\Dism"</kbd>
-	
-	<kbd>dism.exe /Apply-Image /ImageFile:<fullpath>flash.ffu /ApplyDrive:\\.\PhysicalDriveN /SkipPlatformCheck</fullpath></kbd>
-
-	* Be sure to replace PhysicalDriveN with the value you found in the previous step, for example, if your SD card is disk number 3, use
-
-	<kbd>/ApplyDrive:\\.\PhysicalDrive3</kbd>
-
-	<img  src="{{site.baseurl}}/images/SetupRPI/applyDrive.PNG">
-
-14. Click on the **Safely Remove Hardware** icon in your task tray and select your USB SD card reader to safely remove it from the system.  Failing to do this can cause corruption of the image.
-
+**NOTE:** WindowsIoTImageHelper is the recommended tool to flash the SD card. However, instructions are available for using [DISM]({{site.baseurl}}/{{page.lang}}/win10/samples/dism.htm) directly
 
 ##Hook up your board
 
