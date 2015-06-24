@@ -32,14 +32,13 @@ Learn how to set up the MinnowBoard Max hardware and connect it to your computer
 * Unzip the downloaded file and copy the following files to a FAT formatted USB stick
 	* *.efi
     * *.bin
-* Power off your minnowboard
+* Power off your MinnowBoard
 * Remove any SD cards and external hard drives
-* Plug in the USB stick to the minnowboard
-* Connect an HDMI/DVI monitor and USB keyboard
-        * It is also possible to interact with UEFI and BIOS over a serial connection
-* Power on your minnowboard
+* Plug in the USB stick to the MinnowBoard
+* Connect an HDMI/DVI monitor and USB keyboard (It is also possible to interact with UEFI and BIOS over a serial connection)
+* Power on your MinnowBoard
 * You should see the UEFI prompt. Run the following commands at the UEFI prompt:
-	* If your current firmware is 64 bit (this is how the Minnowboard ships)
+	* If your current firmware is 64 bit (this is how the MinnowBoard ships)
 
 		<kbd>fs0:</kbd>
 
@@ -101,6 +100,7 @@ Follow these instructions to configure your SD card:
 	<img src="{{site.baseurl}}/images/mbm_ImageHelper.png">
 
 * Click on the "Safely Remove Hardware" icon in your task tray and select your USB SD card reader to safely remove it from the system.  Failing to do this can cause corruption of the image.
+
 **NOTE:** If you want to remove Windows 10 IoT Core from your SD card after you are done using it, see the [FAQ]({{site.baseurl}}/{{page.lang}}/Faqs.htm) section titled **How do I remove Windows 10 IoT Core from my SD card?**.
 
 **NOTE:** WindowsIoTImageHelper is the recommended tool to flash the SD card. However, instructions are available for using [DISM]({{site.baseurl}}/{{page.lang}}/win10/samples/dism.htm) directly
@@ -114,7 +114,7 @@ Follow these instructions to configure your SD card:
     * Set "LPSS & SCC Device Mode" to "ACPI Mode"
     * Set "DDR50 Capability Support for SDCard" to "Disable"
     * Set "ACPI Reporting MMC/SD As" to "Non-Removable"
-* Navigate back to top level and select Boot Mainenance Manager-> Boot Options > Change Boot Order
+* Navigate back to top level and select Boot Maintenance Manager-> Boot Options > Change Boot Order
 * Highlight the boot order list (when it is highlighted, you will see "Change the order" on the right side of the screen) and press enter
 * Highlight "EFI Misc Device" and press '+' to move it to the top of the list. If it does not move by '+', simply select "EFI Misc Device" and press enter to boot to it.
 * Commit these changes and exit.
@@ -128,7 +128,7 @@ Follow these instructions to configure your SD card:
 ![mbm]({{site.baseurl}}/images/DefaultAppMBM.png){:device-images}
 
 
-* If you have loaded a pervious verion of IoT Core on your MBM you will need to go through the following steps for your first boot (make sure you have your SD card with IoT Core inserted:
+* If you have loaded a previous version of IoT Core on your MBM you will need to go through the following steps for your first boot (make sure you have your SD card with IoT Core inserted:
   1. Power on MBM device and press F2.
   2. Go to Boot Manager tab and select EFI Internal shell.
   3. Identify EFIESP partition (it might be FS1: hence assuming EFIESP partition as FS1: below)

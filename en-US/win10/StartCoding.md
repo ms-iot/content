@@ -257,12 +257,12 @@ lang: en-US
                     </div>
                     <div class="col-md-3">
                         <h4>UART for Galileo</h4>
-                        <p>Provides an integrated developemnt environment for creating efficient high quality drivers for devices running Windows 8.1</p>
+                        <p>Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 8.1</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win8/samples/UART.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
                         <h4>RGB Pixel for Galileo</h4>
-                        <p>Provides an integrated developemnt environment for creating efficient high quality drivers for devices running Windows 8.1</p>
+                        <p>Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 8.1</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win8/samples/RGBPixel.htm">Learn More</a>
                     </div>
                 </div>
@@ -280,12 +280,12 @@ lang: en-US
                     </div>
                     <div class="col-md-3">
                         <h4>Servo for Galileo</h4>
-                        <p>Provides an integrated developemnt environment for creating efficient high quality drivers for devices running Windows 8.1</p>
+                        <p>Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 8.1</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win8/samples/Servo.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Phidget Sensors for Galileo</h4>
-                        <p>Provides an integrated developemnt environment for creating efficient high quality drivers for devices running Windows 8.1</p>
+                        <p>Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 8.1</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win8/samples/PhidgetsSensors.htm">Learn More</a>
                     </div>
                 </div>
