@@ -89,7 +89,8 @@ Follow these instructions to configure your SD card:
 * Eject the Virtual CD when done
 	
 * Insert an SD card into your SD card reader.
-* **Use WindowsIoTImageHelper.exe** to flash the SD card. Search for "WindowsIoT" from start menu and select the tool "WindowsIoTImageHelper"
+
+* **Use IoTCoreImageHelper.exe** to flash the SD card. Search for "WindowsIoT" from start menu and select the shortcut "WindowsIoTImageHelper"
 
 	<img src="{{site.baseurl}}/images/ImagerHelperSearch.png">. 
 	
@@ -102,7 +103,7 @@ Follow these instructions to configure your SD card:
 
 **NOTE:** If you want to remove Windows 10 IoT Core from your SD card after you are done using it, see the [FAQ]({{site.baseurl}}/{{page.lang}}/Faqs.htm) section titled **How do I remove Windows 10 IoT Core from my SD card?**.
 
-**NOTE:** WindowsIoTImageHelper is the recommended tool to flash the SD card. However, instructions are available for using [DISM]({{site.baseurl}}/{{page.lang}}/win10/samples/dism.htm) directly
+**NOTE:** IoTCoreImageHelper.exe is the recommended tool to flash the SD card. However, instructions are available for using [DISM]({{site.baseurl}}/{{page.lang}}/win10/samples/dism.htm) directly
 
 ##Set Required BIOS Settings and boot Windows 10 IoT Core
 
@@ -137,4 +138,4 @@ Follow these instructions to configure your SD card:
   7. Now boot up the device.
 * Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.  You can also follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to use SSH to connect to your device.
 * It is **highly recommended** that you update the default password for the Administrator account. Please follow the instructions found in the [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) documentation.
-* Remote Debugger will launch automatically when your device boots.
+* The Visual Studio Remote Debugger will silently start automatically on your Raspberry Pi 2 when it boots.
