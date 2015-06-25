@@ -34,7 +34,7 @@ You can find your IP address two ways:
 
 ###3. Connect to Web-based device management through your browser
 
-1.	Enter the IP address into the address bar. Add :/8080 onto the end.
+1.	Enter the IP address into the address bar. Add :8080 onto the end.
 
 	![Browser IP]({{site.baseurl}}/images/webb/browser_ip.png)
 
