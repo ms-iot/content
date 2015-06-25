@@ -19,7 +19,7 @@ Start Visual Studio 2015 RC and create a new project (File \| New Project...). I
 
 Select the template `Basic Node.js Express 4 Application (Windows Universal)`
 
-![Node.js Windows Universal New Express Project Dialog]({{site.baseurl}}/images/Nodejs/nodejswuexpress-newprojectdialog.png)
+![Node.js Windows Universal New Express Project Dialog]({{site.baseurl}}/images/Nodejs/nodejswuexpress-newprojectdialog.PNG)
 
 When the new project is created, you will see the dialog shown below asking if you want to use npm to install Express and its dependencies to the location of the project. Click Yes.
 
