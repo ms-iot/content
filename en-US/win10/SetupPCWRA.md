@@ -33,7 +33,7 @@ NuGet is a quick and easy way to automatically install the packages and setup de
 
  ![New Project]({{site.baseurl}}/images/remote-wiring/create_00.png)
 
-- Select your language of choice. Windows Remote Arduino is a WinRT component, meaning it is compatable with C++, C#, or JavaScript.
+- Select your language of choice. Windows Remote Arduino is a WinRT component, meaning it is compatible with C++, C#, or JavaScript.
 
 - You'll see I have chosen C# by expanding the "Visual C#" menu. Select the "Windows" option and choose "Blank App (Windows Universal)" or "Blank App (Windows 8.1 Universal)" if you are building for Windows 8.1.
 
@@ -114,7 +114,7 @@ Manually compiling a WinRT component library produces .winmd and .dll files whic
 
  ![Open the solution file]({{site.baseurl}}/images/remote-wiring/compile_01.png)
 
-- Select the correct build target. If you are planning to deploy your application to Raspberry Pi2 or Windows Phone, you'll want to select ARM. Otherwise if you are targeting a PC platform select either x86 or x64. If you are targeting MinnowBoardMax, select x86.
+- Select the correct build target. If you are planning to deploy your application to Raspberry Pi2 or Windows Phone, you'll want to select ARM. Otherwise if you are targeting a PC platform select either x86 or x64. If you are targeting MinnowBoard Max, select x86.
 
  ![Select build target]({{site.baseurl}}/images/remote-wiring/compile_02.png)
 

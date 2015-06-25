@@ -94,7 +94,7 @@ Follow these instructions to configure your SD card:
 	<img src="{{site.baseurl}}/images/ImagerHelperSearch.png">. 
 	
 * The tool will enumerate devices as shown. 
-	Select the SD card you want to flash and the provide the location of the ffu and flash the image.
+	Select the SD card you want to flash and then provide the location of the ffu and flash the image.
 
 	<img src="{{site.baseurl}}/images/mbm_ImageHelper.png">
 
@@ -129,7 +129,7 @@ Follow these instructions to configure your SD card:
 
 * If you have loaded a previous version of IoT Core on your MBM you will need to go through the following steps for your first boot (make sure you have your SD card with IoT Core inserted:
   1. Power on MBM device and press F2.
-  2. Go to Boot Manager tab and select EFI Internal shell.
+  2. Go to Boot Manager and select EFI Internal shell.
   3. Identify EFIESP partition (it might be FS1: hence assuming EFIESP partition as FS1: below)
   4. Type FS1:\ 
   5. Cd EFI

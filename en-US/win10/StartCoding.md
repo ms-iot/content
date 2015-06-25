@@ -45,12 +45,11 @@ lang: en-US
                         <p>Allows Remote Administration and Configuration so that you can remotely configure and manage any Windows IoT Core device</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm">Learn More</a>
                     </div>
-
-                    <div class="col-md-3">
-                        <h4>Headless UWP Apps</h4>
-                        <p>Windows IoT Core can either be in headed or headless mode. The difference is the presence or absence of any form of UI</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm">Learn More</a>
-                    </div>
+					<div class="col-md-3">  
+						<h4>Using SSH</h4>  
+						<p>Allows Remote Administration and Configuration of your Windows IoT Core device over SSH</p>  
+						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm">Learn More</a>  
+					</div>
                 </div>
                 <div class="row section-heading">
 					<div class="col-md-3">
@@ -95,6 +94,22 @@ lang: en-US
                         <h4>Web-based Device Management</h4>
                         <p>Get advanced diagnostics about your machine from the web</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm">Learn More</a>
+                    </div>
+                </div>
+                <div class="row section-heading">
+                    <div class="col-md-3">
+                        <h4>Headless UWP Apps</h4>
+                        <p>Windows IoT Core can either be in headed or headless mode. The difference is the presence or absence of any form of UI</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm">Learn More</a>
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Placeholder for alignment -->
+                    </div>
+					<div class="col-md-3">
+                        <!-- Placeholder for alignment -->
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Placeholder for alignment -->
                     </div>
                 </div>
             </div>
@@ -202,7 +217,7 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/RGBLED.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <h4>Push Button(RPi2 Basic Kit Lab)</h4>
+                        <h4>Push Button (RPi2 Basic Kit Lab)</h4>
                         <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 to read the status of a Push Button and control an LED.</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PushButton.htm">Learn More</a>
                     </div>
