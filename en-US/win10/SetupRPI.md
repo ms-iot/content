@@ -52,7 +52,7 @@ Follow these instructions to configure your SD card:
 	<img src="{{site.baseurl}}/images/ImagerHelperSearch.png">
 
 8. The tool will enumerate devices as shown. 
-	Select the SD card you want to flash and the provide the location of the ffu and flash the image.
+	Select the SD card you want to flash and then provide the location of the ffu and flash the image.
 
 	<img src="{{site.baseurl}}/images/SetupRPI/ImageHelper.png">
 

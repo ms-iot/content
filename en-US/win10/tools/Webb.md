@@ -108,7 +108,7 @@ The debugging section is great for identifying problems within your application.
 
 <img src="{{site.baseurl}}/images/webb/debug1.png">
 
-* Any system crashes will automatically be logged and available to view through the web management tool.  You can then download the kernel dump and try to figure out whats going on.
+* Any system crashes will automatically be logged and available to view through the web management tool.  You can then download the kernel dump and try to figure out what's going on.
 
 <img src="{{site.baseurl}}/images/webb/debug2.png">
 
@@ -117,7 +117,7 @@ The debugging section is great for identifying problems within your application.
 
 <img src="{{site.baseurl}}/images/webb/debug3.png">
 
-* When your IoT Core device crashes, your machine attempts to send a report up tto the Windows error reporting service. When this happens, a log of the report is stored and becomes available for viewing.
+* When your IoT Core device crashes, your machine attempts to send a report up to the Windows error reporting service. When this happens, a log of the report is stored and becomes available for viewing.
 * The error reports do not contain dump information and are more targeted towards apps and processes. 
 * It also gives a nice history of everything that happened on your device. 
 
