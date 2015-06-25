@@ -73,7 +73,7 @@ We have provided a utility to provision your SD card with the Windows 10 IoT Cor
 Follow these instructions to configure your SD card:
 
 * NOTE: you will need to follow these instructions on a physical Windows machine (and not a VM) because you need access to the SD card reader.
-* [Download](http://go.microsoft.com/fwlink/?LinkId=616847) the ISO for Raspberry Pi 2 from the Microsoft Download Center.
+* [Download](http://go.microsoft.com/fwlink/?LinkId=616848) the ISO for MinnowBoard MAX from the Microsoft Download Center.
 * **Save the ISO** to a local folder
 
 	<img src="{{site.baseurl}}/images/mbm_iso.png">     
