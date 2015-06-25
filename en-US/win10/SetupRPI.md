@@ -47,7 +47,7 @@ Follow these instructions to configure your SD card:
 	
 6. **Insert an SD card** into your SD card reader.
 
-7. **Use WindowsIoTImageHelper.exe** to flash the SD card. Search for "WindowsIoT" from start menu and select the tool "WindowsIoTImageHelper"
+7. **Use IoTCoreImageHelper.exe** to flash the SD card. Search for "WindowsIoT" from start menu and select the shortcut "WindowsIoTImageHelper"
 
 	<img src="{{site.baseurl}}/images/ImagerHelperSearch.png">
 
@@ -58,7 +58,7 @@ Follow these instructions to configure your SD card:
 
 9. Click on the **Safely Remove Hardware** icon in your task tray and select your USB SD card reader to safely remove it from the system.  Failing to do this can cause corruption of the image.
 
-**NOTE:** WindowsIoTImageHelper is the recommended tool to flash the SD card. However, instructions are available for using [DISM]({{site.baseurl}}/{{page.lang}}/win10/samples/dism.htm) directly
+**NOTE:** IoTCoreImageHelper.exe is the recommended tool to flash the SD card. However, instructions are available for using [DISM]({{site.baseurl}}/{{page.lang}}/win10/samples/dism.htm) directly
 
 ##Hook up your board
 
@@ -76,4 +76,4 @@ Follow these instructions to configure your SD card:
 	<img class="device-images" src="{{site.baseurl}}/images/DefaultAppRpi2.png">
 3. Follow the [PowerShell documentation here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.  You can also follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to use SSH to connect to your device.
 4. It is **highly recommended** that you update the default password for the Administrator account.
-5. Remote Debugger will launch automatically when your Raspberry Pi 2 boots.
+5. The Visual Studio Remote Debugger will silently start automatically on your Raspberry Pi 2 when it boots.
