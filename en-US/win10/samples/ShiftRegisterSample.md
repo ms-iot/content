@@ -131,11 +131,11 @@ We need to hook up power, ground, and the I2C lines from on the Raspberry Pi 2 t
 
 ###Create the Sample App
 
-When everything is set up, power your device back on. You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/ShiftRegister){:target="_blank"}, but as an excercise, this tutorial will take you through the complete steps to create this app from scratch.  Open up Visual Studio and create a new C# Windows Universal Blank App (see the 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance on how to create a new app). For this sample, we cleverly named ours **ShiftRegisterSample**.
+When everything is set up, power your device back on. You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/ShiftRegister){:target="_blank"}, but as an exercise, this tutorial will take you through the complete steps to create this app from scratch.  Open up Visual Studio and create a new C# Windows Universal Blank App (see the 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance on how to create a new app). For this sample, we cleverly named ours **ShiftRegisterSample**.
 
 The code in this sample does three things:
 
-1. Initializes the the RPi2 GPIO pins and the 74HC595N shift register
+1. Initializes the RPi2 GPIO pins and the 74HC595N shift register
 
 2. At regular intervals, it clocks in one data bit on the shift register's serial input.
 
@@ -194,7 +194,7 @@ Before we add any code to MainPage.xaml.cs, we need to add a reference to the Wi
 using Windows.Devices.Gpio;
 {% endhighlight %}
 
-With the references add, lets start adding code. The complete code we implemented for MainPage.xaml.cs is located at end of this section. Below are some key parts of the code with explanations
+With the references added, let's start adding code. The complete code we implemented for MainPage.xaml.cs is located at end of this section. Below are some key parts of the code with explanations
 
 Variables and Constants
 

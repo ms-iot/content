@@ -8,7 +8,7 @@ lang: en-US
 ##I2C Accelerometer Sample
 
 We'll connect an I2C accelerometer to your Raspberry Pi 2/MinnowBoard Max and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of I2C is needed.
-However, if you're curious, Sparkfun provides a great [tutorial on I2C](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}.
+However, if you're curious, SparkFun provides a great [tutorial on I2C](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}.
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
 
@@ -18,7 +18,7 @@ You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/A
 
 Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
 
-If you're building for Minnowboard Max, select `x86` in the architecture dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
+If you're building for MinnowBoard Max, select `x86` in the architecture dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
 
 ###Connect the I2C Accelerometer to your device
 

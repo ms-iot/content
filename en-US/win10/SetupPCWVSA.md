@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SetupPCWRA
+title: SetupPCWVSA
 permalink: /en-US/win10/SetupPCWVSA.htm
 lang: en-US
 ---
