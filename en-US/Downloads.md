@@ -27,7 +27,7 @@ lang: en-US
                     <h4>Download Windows 10 IoT Core Insider Preview, Visual Studio, Software Development Kits and other tools you will need to develop for Windows IoT devices like Raspberry Pi 2 and MinnowBoard MAX.</h4>
                     <br />
                 </div>
-				<div class="row downloads-background">
+				<div class="row">
                     <div class="col-md-12">
                         <h3>Downloads</h3>
                     </div>
@@ -35,11 +35,13 @@ lang: en-US
                         <h4>Windows 10 IoT Core for Raspberry Pi 2</h4>
                         <p>The Windows IoT platform that runs on Raspberry Pi 2</p>
                         <a href="http://go.microsoft.com/fwlink/?LinkId=616847" target="_blank">Download</a>
+						<p><a href="http://go.microsoft.com/fwlink/?LinkId=534601" target="_blank">Release Notes</a></p>
                     </div>
                     <div class="col-md-3">
                         <h4>Windows 10 IoT Core for MinnowBoard MAX</h4>
                         <p>The Windows 10 IoT platform that runs on MinnowBoard MAX</p>
                         <a href="http://go.microsoft.com/fwlink/?LinkId=616848" target="_blank">Download</a>
+						<p><a href="http://go.microsoft.com/fwlink/?LinkId=534601" target="_blank">Release Notes</a></p>
                     </div>
                     <div class="col-md-3">
                         <h4>Firmware Update</h4>
@@ -51,6 +53,8 @@ lang: en-US
                         <p>Contains headers, libraries and tools you can use when you create apps that run on Windows</p>
                         <a href="https://dev.windows.com/en-US/windows-10-developer-preview-tools" target="_blank">Learn More</a>
                     </div>
+				</div>
+				<div class="row">
                     <div class="col-md-3">
                         <h4>Visual Studio 2015</h4>
                         <p>State of the art IDE, tools and services that you can use to create great IoT apps</p>
