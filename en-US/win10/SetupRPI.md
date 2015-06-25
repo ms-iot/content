@@ -29,58 +29,34 @@ NOTE: you will need to follow these instructions on a **physical Windows machine
 
 Follow these instructions to configure your SD card:
 
-1. Please **sign up on [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558)**, which is our software release management platform.
-	* You will need to have a [Microsoft Account](http://www.microsoft.com/en-us/account/default.aspx){:target="_blank"}
-	* If you are already signed up with our program on [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"}, (or are not sure if you signed up earlier), you will just see a blank page.
-	* If you have not signed up for our program on Connect before, it will prompt you to create a social profile and accept license agreements.
-	Follow the step-by-step instructions for [signing up for Microsoft Connect]({{site.baseurl}}/{{page.lang}}/SigninMSConnect.htm) to get going.
+1. [Download](http://go.microsoft.com/fwlink/?LinkId=616847) the ISO for Raspberry Pi 2 from the Microsoft Download Center.
 
-2. Once signed in, navigate to **surveys**, and complete all of surveys.
-
-	<img class="device-images" src="{{site.baseurl}}/images/SetupRPI/connect1.PNG">
-
-3. [Download](http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57782){:target="_blank"} the **package** "Windows 10 IoT Core Insider Preview Image for Raspberry Pi 2" from Microsoft Connect.
-	* If you see a blank page or no downloads listed, please make sure you are signed into Microsoft Connect by looking at your login information at top right part of the screen. Click sign in, if you are not signed in.
-4. **Select your board type** from the downloads, and proceed to download the files
-
-	<img src="{{site.baseurl}}/images/SetupRPI/connect3.PNG">
-
-	<img src="{{site.baseurl}}/images/SetupRPI/connect4.PNG">
-
-5. A window will pop up on your desktop.Click **Browse**, select where you want to place the folder and click **Transfer**
-
-	<img src="{{site.baseurl}}/images/SetupRPI/download1.PNG">
-
-	When it's done transferring, close the window.
-
-	<img src="{{site.baseurl}}/images/SetupRPI/download2.PNG">
-
-6. **Download the ISO** to a local folder
+2. **Save the ISO** to a local folder
 
 	<img src="{{site.baseurl}}/images/SetupRPI/iso.png">     
 	
-	Double clicking on the ISO (IoT Core RPi.iso) will automatically mount it as a virtual CD drive so you can access the contents. 
+3. Double clicking on the ISO (IoT Core RPi.iso) will automatically mount it as a virtual CD drive so you can access the contents. 
 	
 	<img src="{{site.baseurl}}/images/SetupRPI/msi.png">  
 	
-	Install "Windows_10_IoT_Core_RPi2.msi". When installation is complete, flash.ffu will be located at "C:\Program Files (x86)\Microsoft IoT\FFU\RaspberryPi2"
+4. Install "Windows_10_IoT_Core_RPi2.msi". When installation is complete, flash.ffu will be located at "C:\Program Files (x86)\Microsoft IoT\FFU\RaspberryPi2"
 	
 	<img src="{{site.baseurl}}/images/SetupRPI/rpiffu.png">
 	
-	Eject the Virtual CD when done
+5. Eject the Virtual CD when done
 	
-7. **Insert an SD card** into your SD card reader.
+6. **Insert an SD card** into your SD card reader.
 
-8. **Use WindowsIoTImageHelper.exe** to flash the SD card. Search for "WindowsIoT" from start menu and select the tool "WindowsIoTImageHelper"
+7. **Use WindowsIoTImageHelper.exe** to flash the SD card. Search for "WindowsIoT" from start menu and select the tool "WindowsIoTImageHelper"
 
 	<img src="{{site.baseurl}}/images/ImagerHelperSearch.png">
 
-9. The tool will enumerate devices as shown. 
+8. The tool will enumerate devices as shown. 
 	Select the SD card you want to flash and the provide the location of the ffu and flash the image.
 
 	<img src="{{site.baseurl}}/images/SetupRPI/ImageHelper.png">
 
-10. Click on the **Safely Remove Hardware** icon in your task tray and select your USB SD card reader to safely remove it from the system.  Failing to do this can cause corruption of the image.
+9. Click on the **Safely Remove Hardware** icon in your task tray and select your USB SD card reader to safely remove it from the system.  Failing to do this can cause corruption of the image.
 
 **NOTE:** WindowsIoTImageHelper is the recommended tool to flash the SD card. However, instructions are available for using [DISM]({{site.baseurl}}/{{page.lang}}/win10/samples/dism.htm) directly
 

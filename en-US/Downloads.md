@@ -27,41 +27,19 @@ lang: en-US
                     <h4>Download Windows 10 IoT Core Insider Preview, Visual Studio, Software Development Kits and other tools you will need to develop for Windows IoT devices like Raspberry Pi 2 and MinnowBoard MAX.</h4>
                     <br />
                 </div>
-                <div class="row downloads-background">
+				<div class="row downloads-background">
                     <div class="col-md-12">
-                        <h3>Downloads via Microsoft Connect</h3>
-                        <p>Please sign up with our program on <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558" target="_blank">Microsoft Connect</a>,
-                            which is our software release management platform. You will need to have a <a href="http://www.microsoft.com/en-us/account/default.aspx" target="_blank">Microsoft Account</a>. If you are already signed up with our program on Microsoft Connect,
-                            (or are not sure if you signed up earlier) and try to sign up again, don’t worry, you will just see a blank page. If you have not signed up for our program on Connect before,
-                            it will prompt you to create a social profile and accept license agreements. You can find step-by-step instructions for signing up for Microsoft Connect
-                            <a href="http://ms-iot.github.io/content/SigninMSConnect.htm" target="_blank">here</a>.
-                        </p>
+                        <h3>Downloads</h3>
                     </div>
-                    <div class="col-md-3">
+					<div class="col-md-3">
                         <h4>Windows 10 IoT Core for Raspberry Pi 2</h4>
                         <p>The Windows IoT platform that runs on Raspberry Pi 2</p>
-                        <a href="http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57782" target="_blank">Download</a>
+                        <a href="http://go.microsoft.com/fwlink/?LinkId=616847" target="_blank">Download</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Windows 10 IoT Core for MinnowBoard MAX</h4>
                         <p>The Windows 10 IoT platform that runs on MinnowBoard MAX</p>
-                        <a href="http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57783" target="_blank">Download</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>NTVS Bundle VS 2015</h4>
-                        <p>Extends NTVS (Node.js Tools for Visual Studio) to support running Node.js on Windows 10 IoT Core</p>
-                        <a href="https://github.com/ms-iot/ntvsiot/releases" target="_blank">Download</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>PTVS for IoT Preview 2015</h4>
-                        <p>An IoT preview build of PTVS (Python Tools for Visual Studio) toolset extended to support running Python on Windows 10 IoT Core</p>
-                        <a href="http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57795" target="_blank">Download</a>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3>Other Downloads</h3>
+                        <a href="http://go.microsoft.com/fwlink/?LinkId=616848" target="_blank">Download</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Firmware Update</h4>
@@ -86,8 +64,30 @@ lang: en-US
                     <div class="col-md-3">
                         <h4>Tools</h4>
                         <p>Tools for Windows 10 that are required for developing for the Universal Windows App Platform</p>
-                        <a href="https://dev.windows.com/en-us/develop/Building-universal-Windows-apps" target="_blank">Learn More</a>
+                        <a href="https://dev.windows.com/en-us/downloads/windows-10-developer-tools" target="_blank">Learn More</a>
                     </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Downloads via Microsoft Connect</h3>
+                        <p>Please sign up with our program on <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558" target="_blank">Microsoft Connect</a>,
+                            which is our software release management platform. You will need to have a <a href="http://www.microsoft.com/en-us/account/default.aspx" target="_blank">Microsoft Account</a>. If you are already signed up with our program on Microsoft Connect,
+                            (or are not sure if you signed up earlier) and try to sign up again, don’t worry, you will just see a blank page. If you have not signed up for our program on Connect before,
+                            it will prompt you to create a social profile and accept license agreements. You can find step-by-step instructions for signing up for Microsoft Connect
+                            <a href="http://ms-iot.github.io/content/SigninMSConnect.htm" target="_blank">here</a>.
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>NTVS Bundle VS 2015</h4>
+                        <p>Extends NTVS (Node.js Tools for Visual Studio) to support running Node.js on Windows 10 IoT Core</p>
+                        <a href="https://github.com/ms-iot/ntvsiot/releases" target="_blank">Download</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>PTVS for IoT Preview 2015</h4>
+                        <p>An IoT preview build of PTVS (Python Tools for Visual Studio) toolset extended to support running Python on Windows 10 IoT Core</p>
+                        <a href="http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57795" target="_blank">Download</a>
+                    </div>
+
                 </div>
             </div>
 
