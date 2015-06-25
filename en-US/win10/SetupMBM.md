@@ -80,11 +80,11 @@ Follow these instructions to configure your SD card:
 	
 * Double clicking on the ISO (IoT Core MBM.iso) will automatically mount it as a virtual CD drive so you can access the contents. 
 	
-	<img src="{{site.baseurl}}/images/mbm_msi.png">  
+	<img src="{{site.baseurl}}/images/mbm_msi.PNG">  
 	
 * Install "Windows_10_IoT_Core_Mbm.msi". When installation is complete, flash.ffu will be located at "C:\Program Files (x86)\Microsoft IoT\FFU\MinnowBoardMax"
 	
-	<img src="{{site.baseurl}}/images/mbmffu.png">
+	<img src="{{site.baseurl}}/images/mbmffu.PNG">
 	
 * Eject the Virtual CD when done
 	
@@ -92,12 +92,12 @@ Follow these instructions to configure your SD card:
 
 * **Use IoTCoreImageHelper.exe** to flash the SD card. Search for "WindowsIoT" from start menu and select the shortcut "WindowsIoTImageHelper"
 
-	<img src="{{site.baseurl}}/images/ImagerHelperSearch.png">. 
+	<img src="{{site.baseurl}}/images/ImagerHelperSearch.PNG">. 
 	
 * The tool will enumerate devices as shown. 
 	Select the SD card you want to flash and then provide the location of the ffu and flash the image.
 
-	<img src="{{site.baseurl}}/images/mbm_ImageHelper.png">
+	<img src="{{site.baseurl}}/images/mbm_ImageHelper.PNG">
 
 * Click on the "Safely Remove Hardware" icon in your task tray and select your USB SD card reader to safely remove it from the system.  Failing to do this can cause corruption of the image.
 

@@ -33,15 +33,15 @@ Follow these instructions to configure your SD card:
 
 2. **Save the ISO** to a local folder
 
-	<img src="{{site.baseurl}}/images/SetupRPI/iso.png">     
+	<img src="{{site.baseurl}}/images/SetupRPI/Iso.PNG">     
 	
 3. Double clicking on the ISO (IoT Core RPi.iso) will automatically mount it as a virtual CD drive so you can access the contents. 
 	
-	<img src="{{site.baseurl}}/images/SetupRPI/msi.png">  
+	<img src="{{site.baseurl}}/images/SetupRPI/MSI.PNG">  
 	
 4. Install "Windows_10_IoT_Core_RPi2.msi". When installation is complete, flash.ffu will be located at "C:\Program Files (x86)\Microsoft IoT\FFU\RaspberryPi2"
 	
-	<img src="{{site.baseurl}}/images/SetupRPI/rpiffu.png">
+	<img src="{{site.baseurl}}/images/SetupRPI/rpiffu.PNG">
 	
 5. Eject the Virtual CD when done
 	
@@ -49,12 +49,12 @@ Follow these instructions to configure your SD card:
 
 7. **Use IoTCoreImageHelper.exe** to flash the SD card. Search for "WindowsIoT" from start menu and select the shortcut "WindowsIoTImageHelper"
 
-	<img src="{{site.baseurl}}/images/ImagerHelperSearch.png">
+	<img src="{{site.baseurl}}/images/ImagerHelperSearch.PNG">
 
 8. The tool will enumerate devices as shown. 
 	Select the SD card you want to flash and then provide the location of the ffu and flash the image.
 
-	<img src="{{site.baseurl}}/images/SetupRPI/ImageHelper.png">
+	<img src="{{site.baseurl}}/images/SetupRPI/ImageHelper.PNG">
 
 9. Click on the **Safely Remove Hardware** icon in your task tray and select your USB SD card reader to safely remove it from the system.  Failing to do this can cause corruption of the image.
 
