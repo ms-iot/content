@@ -48,22 +48,9 @@ This exercise demonstrates how to manually copy and install the driver to a Wind
 
 * The next steps involve connecting to the target device using PowerShell as explained [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)
 
-### Enable test-signing on the target device using BCDEDIT
-
-We will use **bcdedit** to enable test-signing on the target, that is, the Windows IoT Core device.
-Run the following command from the elevated PowerShell command window opened in the previous step:
-
-    [192.168.0.243]: PS C:\> bcdedit /set testsigning on
-
-### Reboot the target Windows IoT Core device
-
-From the PowerShell window, type the following command:
-
-    [192.168.0.243]: PS C:\> shutdown /r /t 0
-
-The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
-
 ### Install demo driver
+
+Connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
 
 Using the PowerShell window, navigate to the `C:\Windows\System32` directory on the target device:
 
@@ -171,9 +158,9 @@ Driving the GPIO low will make the LED light-up because of the way the LED is co
 
 To turn the LED off, simply type:
 
-<<<<<<< HEAD
+
     .\BlinkyApp_<PLATFORM>.exe high 2
-=======
+
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe high 2
 
 </div>
