@@ -21,7 +21,7 @@ You can review linked terms by pasting the forward link into your browser window
 ##What's New
 * Windows 10 IoT Core Insider Preview 6/24/2015 Release
 
-   * Updated base OS build
+   * Updated base OS build (10152.0.fbl_impressive.150618-2341)
    * New FFU Flashing Tool
    * Secure Shell (SSH) server support
    * Audio output on Raspberry Pi 2 (USB-audio and onboard analog output)
@@ -52,9 +52,6 @@ On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to usermode ap
 * The video output on the MinnowBoard Max may crash after unplugging the HDMI video cable and plugging it back in while the MBM is running. (2096834). WORKAROUND: Leave the HDMI cable plugged in while the MBM is running.
 * Setting the orientation to “Portrait” may not be honored in a Universal App (3039042) WORKAROUND: None
 * Some animated user elements may be slow to render and slow to respond to user input on the Raspberry Pi. (2735596). WORKAROUND: None.
-* GPIO pin 4 may behave unexpectedly under certain drive modes (2938068) WORKAROUND: None
-* Once the GPIO wake feature is enabled in the UEFI settings of Device Manager it may not be possible to toggle any GPIO outputs or read GPIO values using the GPIO WinRT APIs(1894235). WORKAROUND: Do not enable the GPIO wake feature in Device Manager.
-* The GPIO interrupt handler can drift out of sync with the actual state of the GPIO pins when a button is attached or when the interrupts occur at a faster rate than the system can process them. WORKAROUND: Reduce the frequency of the interrupts.
 * After plugging in a Zwave adaptor a bugcheck may occur, usually after several minutes of uptime. (3266675) WORKAROUND: None
 * The Default startup app may conflict with itself when deployed also deployed from Visual Studio (1244550). WORKAROUND: Change the default startup app to something else
 * Text To Speech APIs for some non-English languages do not work in Windows 10 IoT Core (3024511) WORKAROUND: None.
@@ -63,8 +60,10 @@ On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to usermode ap
 * GetNetworkUsageAsync may throw a System.UnauthorizedAccessException (1972129). WORKAROUND: None.
 * BackgroundService Tasks may be registered as both a headed and a headless tasks. (2455442). WORKAROUND: None.
 * System.Diagnostics.Debug.WriteLine may not send to the Output Pane in a Universal Windows Application. (2455800). WORKAROUND: None. .
-* The SPI driver may return a malformed buffer which includes two extra bytes at the beginning of the buffer for WriteRead sequence on the MinnowBoard Max (3076149) WORKAROUND: Compensate for the extra bytes in the code making the call by allocating a buffer that is X-2 bytes in size.
 * The WebB will allow the user to remove the default application which will lead to a bluescreen on boot due to there not being an application to run. (3252594) WORKAROUND: Reflash the SD card.
 * The SSH service may crash when issued a “?” parameter to a command (3296951) WORKAROUND: Do not use the “?” parameter.
 * The IoT Core Default Application may display two IP addresses for the same adapter. One will be an old/wrong address and the other will be correct. (3303771). WORKAROUND: None.
-* UART1 flow control/serial handshake on MBM may default to ON and cannot be turned off (2995473). WORKAROUND: Use UART2 instead for devices without flow control.
+* On Raspberry Pi, glitches can occur on GPIO pins when switching between certain drive modes with GpioPin.SetDriveMode(). A pin briefly reverts to its default state before taking on the new drive mode. (2938068) WORKAROUND: Call SetDriveMode() once at the beginning of your application.
+* On MinnowBoardMax, UART1 flow control/serial handshake defaults to ON and cannot be turned off (2995473). WORKAROUND: Use UART2 instead of UART1.
+* On MinnowBoardMax, the SPI driver may return a malformed buffer for SpiDevice.TransferSequential() which includes two extra bytes at the beginning of the buffer. (3076149) WORKAROUND: Use SpiDevice.TransferFullDuplex().
+* On MinnowBoardMax, enabling GPIO Wake Capability with the BIOS setting *Device Manager -> System Setup -> South Cluster Configuration -> Miscellaneous Configuration -> GPIO Wake Capability : Enabled* will cause all GPIO pins to stop working (1894235). WORKAROUND: Set GPIO Wake Capability to Disabled in the BIOS.
