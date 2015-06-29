@@ -132,7 +132,7 @@ Follow these instructions to configure your SD card:
   1. Power on MBM device and press F2.
   2. Go to Boot Manager and select EFI Internal shell.
   3. Identify EFIESP partition (it might be FS1: hence assuming EFIESP partition as FS1: below)
-  4. Type FS1:\ 
+  4. Type FS1: 
   5. Cd EFI
   6. Run  DeleteSbcpVariableFW.efi (This will clear UEFI variables)
   7. Now boot up the device.
