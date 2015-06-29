@@ -103,10 +103,14 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <!-- Placeholder for alignment -->
+                        <h4>Access your files using FTP</h4>
+                        <p>Access the files on your device using FTP</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/FTP.htm">Learn More</a>
                     </div>
 					<div class="col-md-3">
-                        <!-- Placeholder for alignment -->
+                        <h4>Access your files using Windows File Sharing</h4>
+                        <p>Access the files on your device using Windows file sharing</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SMB.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
                         <!-- Placeholder for alignment -->

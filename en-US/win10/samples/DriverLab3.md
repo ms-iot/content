@@ -158,10 +158,4 @@ Driving the GPIO low will make the LED light-up because of the way the LED is co
 
 To turn the LED off, simply type:
 
-
-    .\BlinkyApp_<PLATFORM>.exe high 2
-
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe high 2
-
-</div>
->>>>>>> 1f6f71aec48de89717d3334442f5dd6815c3658c
