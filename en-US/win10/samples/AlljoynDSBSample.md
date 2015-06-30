@@ -13,7 +13,7 @@ This tutorial shows how a GPIO Device can be exposed to the AllJoyn Bus using th
 
 1. Alljoyn Explorer
 
-* [AllJoynExplorer_1.0.0.0.zip](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.0.0.zip?raw=true){:target="_blank"} - This zip contains the AllJoyn Explorer AppX bundle.
+* [AllJoynExplorer_1.0.0.2.zip](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.0.2.zip?raw=true){:target="_blank"} - This zip contains the AllJoyn Explorer AppX bundle.
 * [AllJoyn_Explorer_Setup_Guide_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_Setup_Guide_v1.0.pdf?raw=true){:target="_blank"} - Manual for installing and launching the AllJoyn Explorer.
 * [AllJoyn_Explorer_User_Guide_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_User_Guide_v1.0.pdf?raw=true){:target="_blank"} - this pdf contains the documentation for how to use the AllJoyn Explorer
 
