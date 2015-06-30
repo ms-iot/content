@@ -33,9 +33,9 @@ The AllJoyn Device System Bridge Template is a Visual Studio extension that enab
 
 In the Visual Studio, choose File > New > Project which opens the New Project dialog box. In the opening dialog box, create a new AllJoyn Device System Bridge App project as given in the following: 
 
-![NewDSB_project]({{site.baseurl}}/images/AllJoyn/VS+newproj1.png)
+![NewDSB_project]({{site.baseurl}}/images/AllJoyn/VS_newproj1.png)
 
-![NewDSB_project2]({{site.baseurl}}/images/AllJoyn/VS+newproj2.png)
+![NewDSB_project2]({{site.baseurl}}/images/AllJoyn/VS_newproj2.png)
 
 You will need to add a reference to the AdapterLib project to use the Windows IoT Extension SDK, which is required to use the Windows::Devices::Gpio API. Follow the below steps to add a refernece to the project:
 
