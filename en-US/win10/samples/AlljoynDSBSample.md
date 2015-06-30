@@ -48,7 +48,7 @@ You will need to add a reference to the AdapterLib project to use the Windows Io
   4. Locate the latest version of the Windows IoT Extension SDK in the list and check the box its left to select this SDK.
   5. Click "OK".
   
-    ![add_reference2]({{site.baseurl}}/images/AllJoyn/add_reference2.png)
+  ![add_reference2]({{site.baseurl}}/images/AllJoyn/add_reference2.png)
 
 ### Step 4: Expose a GPIO Pin to the AllJoyn Bus  
 
