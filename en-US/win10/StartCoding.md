@@ -223,8 +223,8 @@ lang: en-US
                     </div>
                     <div class="col-md-3">
                         <h4>Potentiometer Sensor Sample (RPi2 Basic Kit Lab)</h4>
-                        <p>Raspberry Pi 2 Basic Kit Lab - A analog sensor is connected to RaspBerry Pi through ADC converter and digital output data is displayed through Monitor and LED </p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/potentiometer.htm">Learn More</a>
+                        <p>Raspberry Pi 2 Basic Kit Lab - Connect a potentiometer to the Raspberry Pi 2 and use it to control an LED.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Driver Sample</h4>
