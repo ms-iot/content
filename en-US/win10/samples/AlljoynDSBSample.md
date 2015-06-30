@@ -13,7 +13,7 @@ This tutorial shows how a GPIO Device can be exposed to the AllJoyn Bus using th
 
 1. Alljoyn Explorer
 
-* [AllJoynExplorer_1.0.0.0.zip](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.0.0.zip?raw=true){:target="_blank"} - This zip contains the AllJoyn Explorer AppX bundle.
+* [AllJoynExplorer_1.0.0.2.zip](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.0.2.zip?raw=true){:target="_blank"} - This zip contains the AllJoyn Explorer AppX bundle.
 * [AllJoyn_Explorer_Setup_Guide_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_Setup_Guide_v1.0.pdf?raw=true){:target="_blank"} - Manual for installing and launching the AllJoyn Explorer.
 * [AllJoyn_Explorer_User_Guide_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_User_Guide_v1.0.pdf?raw=true){:target="_blank"} - this pdf contains the documentation for how to use the AllJoyn Explorer
 
@@ -26,16 +26,16 @@ The sample uses a Raspberry Pi 2 that one of its GPIO pins is connected to a pho
 
 The AllJoyn Device System Bridge Template is a Visual Studio extension that enables developers to create an AllJoyn Device System Bridge App project.
 
-1. Go to [Products and Extensions for Visual Studio](https://visualstudiogallery.msdn.microsoft.com/) and search for “AllJoyn DSB” and download the template. 
+1. Dowload the Alljoyn DSB VSIX template from Visual Studio Online [here](https://visualstudiogallery.msdn.microsoft.com/aea0b437-ef07-42e3-bd88-8c7f906d5da8).
 2. After the download, double-click on the DeviceSystemBridgeTemplate.vsix file to install the extension. 
 
 ### Step 3: Create an AllJoyn Device System Bridge App Project 
 
 In the Visual Studio, choose File > New > Project which opens the New Project dialog box. In the opening dialog box, create a new AllJoyn Device System Bridge App project as given in the following: 
 
-![NewDSB_project]({{site.baseurl}}/images/AllJoyn/VS+newproj1.png)
+![NewDSB_project]({{site.baseurl}}/images/AllJoyn/VS_newproj1.png)
 
-![NewDSB_project2]({{site.baseurl}}/images/AllJoyn/VS+newproj2.png)
+![NewDSB_project2]({{site.baseurl}}/images/AllJoyn/VS_newproj2.png)
 
 You will need to add a reference to the AdapterLib project to use the Windows IoT Extension SDK, which is required to use the Windows::Devices::Gpio API. Follow the below steps to add a refernece to the project:
 
@@ -48,7 +48,7 @@ You will need to add a reference to the AdapterLib project to use the Windows Io
   4. Locate the latest version of the Windows IoT Extension SDK in the list and check the box its left to select this SDK.
   5. Click "OK".
   
-    ![add_reference2]({{site.baseurl}}/images/AllJoyn/add_reference2.png)
+  ![add_reference2]({{site.baseurl}}/images/AllJoyn/add_reference2.png)
 
 ### Step 4: Expose a GPIO Pin to the AllJoyn Bus  
 
