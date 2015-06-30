@@ -11,38 +11,6 @@ A Windows IoT Core driver is made up of one or more files.  Some of these files 
 
 ###On the development computer
 
-* Right-click the Project node in the Solutions Explorer and select `Properties` to configure the driver properties
-
-    ![Driver solution properties]({{site.baseurl}}/images/DriverLab/sln-properties.png)
-
-* Expand the `Driver Signing` node and click on `General`
-* Click on `Test Certificate`
-* Click on the drop-down arrow to expand the options
-* Select `Select from Store` and choose the `Windows Phone OEM Test Cert 2013 (TEST ONLY)` certificate
-
-    ![Driver Settings properties]({{site.baseurl}}/images/DriverLab/driver-signing-properties.png)
-
-
-	* If you do not see the `Windows Phone OEM Test Cert 2013 (TEST ONLY)` certificate as indicated above, you may not have the certificate installed on your development machine.  Please follow steps 1 through 6 as indicated below to install the certificate:
-
-		1.  **Close** Visual Studio
-
-		2.  Open up a command prompt as **Administrator** on your development machine
-
-		3.  Navigate to the following directory
-
-				cd "C:\Program Files (x86)\Windows Kits\10\Tools\bin\i386"
-
-		4.  Set the following environment variable:
-
-				set WPDKCONTENTROOT=C:\Program Files (x86)\Windows Kits\10
-
-		5.  Run the following command:
-
-				installoemcerts.cmd
-
-		6.  Open the Visual Studio solution as indicated in the previous section, and try adding the test certificate again.
-
 * From the Build menu, click `Build Solution(Ctrl+Shift+B)`. Make sure that you are building for `x86` if you are using a MinnowBoard Max, or `ARM` if you are using a Raspberry Pi 2.
 
     ![Driver Settings properties]({{site.baseurl}}/images/DriverLab/driver-build-option.png)

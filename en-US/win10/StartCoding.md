@@ -45,12 +45,11 @@ lang: en-US
                         <p>Allows Remote Administration and Configuration so that you can remotely configure and manage any Windows IoT Core device</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm">Learn More</a>
                     </div>
-
-                    <div class="col-md-3">
-                        <h4>Headless UWP Apps</h4>
-                        <p>Windows IoT Core can either be in headed or headless mode. The difference is the presence or absence of any form of UI</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm">Learn More</a>
-                    </div>
+					<div class="col-md-3">  
+						<h4>Using SSH</h4>  
+						<p>Allows Remote Administration and Configuration of your Windows IoT Core device over SSH</p>  
+						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm">Learn More</a>  
+					</div>
                 </div>
                 <div class="row section-heading">
 					<div class="col-md-3">
@@ -97,6 +96,26 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm">Learn More</a>
                     </div>
                 </div>
+                <div class="row section-heading">
+                    <div class="col-md-3">
+                        <h4>Headless UWP Apps</h4>
+                        <p>Windows IoT Core can either be in headed or headless mode. The difference is the presence or absence of any form of UI</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm">Learn More</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Access your files using FTP</h4>
+                        <p>Access the files on your device using FTP</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/FTP.htm">Learn More</a>
+                    </div>
+					<div class="col-md-3">
+                        <h4>Access your files using Windows File Sharing</h4>
+                        <p>Access the files on your device using Windows file sharing</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SMB.htm">Learn More</a>
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Placeholder for alignment -->
+                    </div>
+                </div>
             </div>
 
             <div role="tabpanel" class="tab-pane" id="second">
@@ -133,10 +152,9 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/ConsoleApp.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <h4>I2C/SPI Accelerometer</h4>
-                        <p>Create an app leveraging I2C or SPI on devices running Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2CAccelerometer.htm">I2C Accelerometer Tutorial</a><br>
-						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SPIAccelerometer.htm">SPI Accelerometer Tutorial</a><br>
+                        <h4>I2C Accelerometer</h4>
+                        <p>Create an app leveraging I2C on devices running Windows 10 IoT Core Insider Preview</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2CAccelerometer.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
                         <h4>SPI Display</h4>
@@ -162,14 +180,14 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWUBlinky.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
+                        <h4>Express Node.js App (Windows Universal)</h4>
+                        <p>Create an Express Node.js app that runs on devices running Windows 10 IoT Core Insider Preview</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWUExpress.htm">Learn More</a>
+                    </div>
+                    <div class="col-md-3">
                         <h4>MemoryStatus Node.js App (Console)</h4>
                         <p>Build a Node.js server that provides memory status from your device running Windows 10 IoT Core Insider Preview</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Nodejs.htm">Learn More</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>I2C Port Expander (RPi2 Basic Kit Lab)</h4>
-                        <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 I2C bus to communicate with a port expander.</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2CPortExpander.htm">Learn More</a>
                     </div>
                 </div>
 
@@ -203,14 +221,14 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/RGBLED.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <h4>Push Button(RPi2 Basic Kit Lab)</h4>
+                        <h4>Push Button (RPi2 Basic Kit Lab)</h4>
                         <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 to read the status of a Push Button and control an LED.</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PushButton.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Potentiometer Sensor Sample (RPi2 Basic Kit Lab)</h4>
-                        <p>Raspberry Pi 2 Basic Kit Lab - A analog sensor is connected to RaspBerry Pi through ADC converter and digital output data is displayed through Monitor and LED </p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/potentiometer.htm">Learn More</a>
+                        <p>Raspberry Pi 2 Basic Kit Lab - Connect a potentiometer to the Raspberry Pi 2 and use it to control an LED.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Driver Sample</h4>
@@ -236,7 +254,9 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SpiTestTool.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <!-- Placeholder for alignment -->
+                        <h4>I2C Port Expander (RPi2 Basic Kit Lab)</h4>
+                        <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 I2C bus to communicate with a port expander.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2CPortExpander.htm">Learn More</a>
                     </div>
                 </div>
 
@@ -256,12 +276,12 @@ lang: en-US
                     </div>
                     <div class="col-md-3">
                         <h4>UART for Galileo</h4>
-                        <p>Provides an integrated developemnt environment for creating efficient high quality drivers for devices running Windows 8.1</p>
+                        <p>Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 8.1</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win8/samples/UART.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
                         <h4>RGB Pixel for Galileo</h4>
-                        <p>Provides an integrated developemnt environment for creating efficient high quality drivers for devices running Windows 8.1</p>
+                        <p>Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 8.1</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win8/samples/RGBPixel.htm">Learn More</a>
                     </div>
                 </div>
@@ -279,12 +299,12 @@ lang: en-US
                     </div>
                     <div class="col-md-3">
                         <h4>Servo for Galileo</h4>
-                        <p>Provides an integrated developemnt environment for creating efficient high quality drivers for devices running Windows 8.1</p>
+                        <p>Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 8.1</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win8/samples/Servo.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Phidget Sensors for Galileo</h4>
-                        <p>Provides an integrated developemnt environment for creating efficient high quality drivers for devices running Windows 8.1</p>
+                        <p>Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 8.1</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win8/samples/PhidgetsSensors.htm">Learn More</a>
                     </div>
                 </div>
