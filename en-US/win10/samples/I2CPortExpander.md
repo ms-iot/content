@@ -10,7 +10,7 @@ lang: en-US
 ![I2C Port Expander Image]({{site.baseurl}}/images/I2CPortExpander/PortExpanderProjectPicture_480.png)
 
 In this sample, we'll connect an I2C port expander to your Raspberry Pi 2 and create a simple app that uses the port expander to read the status of a tactile switch and control an LED. No background knowledge of I2C or port expanders is needed.
-If you want to know more about I2C, Sparkfun provides a great [tutorial on I2C](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}.
+If you want to know more about I2C, SparkFun provides a great [tutorial on I2C](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}.
 
 This is a headed sample, so please ensure that your device is in headed
 mode by running this command: `setbootoption.exe headed` (changing the headed/headless state will require a reboot).
@@ -137,7 +137,7 @@ The I2C bus requires pull-up resistors on the SDA and SCL lines. However, the Ra
 
 ###Create the sample app
 
-When everything is set up, power your device back on. You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/I2cPortExpander){:target="_blank"}, but as an excercise, this tutorial will take you through the complete steps to create this app from scratch.  Open up Visual Studio and create a new C# Windows Universal Blank App (see the 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance on how to create a new app). For this sample, we named ours **I2cPortExpanderLedSample**.
+When everything is set up, power your device back on. You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/I2cPortExpander){:target="_blank"}, but as an exercise, this tutorial will take you through the complete steps to create this app from scratch.  Open up Visual Studio and create a new C# Windows Universal Blank App (see the 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance on how to create a new app). For this sample, we named ours **I2cPortExpanderLedSample**.
 The code in this sample does several things:
 
 1. Initializes the I2C bus and the port expander
@@ -193,7 +193,7 @@ using Windows.Devices.I2c;
 {% endhighlight %}
 
 
-With the references add, lets start adding code. The complete code we implemented for MainPage.xaml.cs is located at end of this section. Below are some key parts of the code with explanations
+With the references added, let's start adding code. The complete code we implemented for MainPage.xaml.cs is located at end of this section. Below are some key parts of the code with explanations
 
 
 Variables and Constants

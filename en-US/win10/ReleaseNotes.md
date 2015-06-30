@@ -10,10 +10,7 @@ lang: en-US
 
 This document provides late-breaking or other information that supplements the documentation included with the Windows 10 IoT Core Insider Preview.
 
-Thank you for downloading the Windows 10 IoT Core Insider Preview.  Windows 10 IoT Core is the version of Windows 10 intended for development of
-embedded or dedicated purpose devices and the choice for the Maker community. This package contains the bits and tools needed to install a pre-release of
-Windows 10 IoT Core on the MinnowBoard Max based on Intel Atom E38xx series SoC (also referred to as MBM board) and the Raspberry PI2 based on
-the ARM Cortex-A7 based SoC (also referred to as the RPI).
+Thank you for downloading the Windows 10 IoT Core Insider Preview. Windows 10 IoT Core is the version of Windows 10 intended for development of embedded or dedicated purpose devices and the choice for the Maker community. This package contains the bits and tools needed to install a pre-release of Windows 10 IoT Core on the MinnowBoard Max based on Intel Atom E38xx series SoC (also referred to as MBM board) and the Raspberry PI2 based on the ARM Cortex-A7 based SoC (also referred to as the RPI).
 
 ##Privacy Statement
 
@@ -22,84 +19,51 @@ The privacy statement for this pre-release version of the Windows operating syst
 You can review linked terms by pasting the forward link into your browser window.
 
 ##What's New
-* Windows 10 IoT Core Insider Preview 5/12 Release
+* Windows 10 IoT Core Insider Preview 6/24/2015 Release
 
-    * Updated base OS build
-    * Updated login-based web interface for device setup, startup application configuration, and feedback capabilities.
+   * Updated base OS build (10152.0.fbl_impressive.150618-2341)
+   * New FFU Flashing Tool
+   * Secure Shell (SSH) server support
+   * Audio output on Raspberry Pi 2 (USB-audio and onboard analog output)
+   * Web Server (WebB) moved to port 8080 (For Example – http://<device address>:8080)
+   * Bug Fixes
 
 ##Release Notes
 
-The default administrator user name and password are hard coded in the Windows 10 IoT Core Insider Preview image. This is a security risk for the
-device, and it should not be exposed to an open internet connection until the password has been changed.
+The default administrator user name and password are hard coded in the Windows 10 IoT Core Insider Preview image. This is a security risk for the device, and it should not be exposed to an open internet connection until the password has been changed.
 
-The Windows 10 IoT Core image included in this drop supports the peripherals that are exposed on the MinnowBoard MAX board. Subsequently, IntelÆ
-will provide support of the full feature set of the Baytrail processors including the IntelÆ CeleronÆ Processors J1900/N2930/N2807 and IntelÆ AtomÆ Processors E38XX.
+The Windows 10 IoT Core image included in this drop supports the peripherals that are exposed on the MinnowBoard MAX board. Subsequently, IntelÆ will provide support of the full feature set of the Baytrail processors including the IntelÆ CeleronÆ Processors J1900/N2930/N2807 and IntelÆ AtomÆ Processors E38XX.
 
-Windows 10 IoT Core is still being ported to the Raspberry PI. Support for audio input and output on the RPI is still under development and does
-not exist at all in this release. The video driver for the Raspberry PI is still under development, and it's performance has not yet been optimized.
-Animated user elements, such as XAML based drop down menus, in particular may display poorly.
+Windows 10 IoT Core is still being ported to the Raspberry PI. Support for audio input on the RPI is still under development . The video driver for the Raspberry PI is still under development, and it's performance has not yet been optimized. Animated user elements, such as XAML based drop down menus in particular, may display poorly. 
+
+With this release of Windows 10 IoT Core for the Raspberry Pi 2, support for camera peripheral devices is limited. The PiCam device directly connected to the onboard camera bus is not currently supported, as it requires GPU services that are not currently available on the Raspberry Pi because the DirectX driver has not implemented. Modern USB webcams produce data streams that are very demanding on the USB Host controller even when used in low resolution settings which requires fine tuning and specialized control logic. We are planning to support a number of USB cameras in the near future, and will publish specific information on supported devices as soon as possible.
+
+Hardware volume controls for USB microphones and speakers which depend on Windows system to change system volume are currently not supported on Windows 10 IoT Core.
 
 Bluetooth connectivity is not fully implemented on either the MinnowBoard Max or the Raspberry PI2 for this release.
 
-Wireless networking is not fully implemented on the Raspberry PI2 for this release.
+On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to usermode applications in the April release of Windows 10 IoT Core Insider Preveiw, but are no longer available. Attempting to open these pins with Windows::Devices::Gpio::GpioController::OpenPin() will return HRESULT_FROM_WIN32(ERROR_NOT_FOUND). GPIO pins 0 and 1 are reserved on the Raspberry Pi by the HAT specification (https://github.com/raspberrypi/hats) and are under control of VC firmware. For compliance with this specification, these pins should be left unconnected.
+
 
 ##Known Issues
 
-* The keyboard input may be lost when switching between multiple apps that are running at the same time. (1304429)
-* Some USB keyboards and mice may not work on the Raspberry PI2. (2365290). WORKAROUND: Use a different keyboard or mouse. This issue has been seen with a few specific models and is suspected to be a power issue with the USB port. This may resolve by using a powered USB hub.
-* XAML WebView may not accept keyboard input (2477598). WORKAROUND: Use a different control to receive input.
-* When using the tab key to navigate between TextBoxes, a tab character may incorrectly be inserted into the last TextBox (2504096). WORKAROUND: Manually delete the tab character.
-* On a Raspberry PI, a single keyboard keystroke may either not be recognized or may insert multiple characters. (2573557). WORKAROUND: None
-* Some Webcam drivers are missing. (2187095). WORKAROUND: None
-* Logitech USB speakers may not produce audio output on an MBM (2460925). WORKAROUND: Use an alternate audio output device.
-* A list of validated peripheral devices can be found on the documentation at [http://WindowsOnDevices.com](http://WindowsOnDevices.com) (2296724){:target="_blank"}. WORKAROUND: Review the list of validated devices.
-* Common Raspberry PI WiFi adapters are not supported in the Windows 10 IoT Core Insider Preview image. (2310140). WORKAROUND: Use an ethernet connection for networking.
-* Wireless network may not reconnect after a power cycle on the Raspberry PI (2367736). WORKAROUND: Re-establish the WiFi connection.
-* WiFi/Bluetooth USB combo device may not work on the Raspberry PI or MinnowBoard Max (2293778). WORKAROUND: Use another hardware set.
-* USB based ethernet adapters may intermittently stall on the Raspberry PI (2459108). WORKAROUND: Use the on-board ethernet adapter.
-* Adding enterprise EAP WiFi profile may fail with EAP_E_EAPHOST_METHOD_NOT_INSTALLED (0x80420011) error on the MinnowBoard Max (1416414).WORKAROUND: none.
-* The MinnowBoard Max does not support all monitors, particularly some square monitors. (2222035, 2062893). WORKAROUND: Use a different monitor.
-* The video output on the MinnowBoard Max may crash after unplugging the HDMI video cable and plugging it back in while the MBM is running. (2096834, 2368396). WORKAROUND: Leave the HDMI cable plugged in while the MBM is running.
-* Touch screen input may not work on the MinnowBoard Max when connected to a touch screen monitor. (2171550). WORKAROUND: Use another form of input.
-* Videos may freeze when disconnecting or connecting a USB audio adapter on the MinnowBoard Max (2534527). WORKAROUND: Do not play video when connecting or disconnecting a USB audio adapter.
-* Some animated user elements may be slow to render and slow to respond to user input. (2643284). WORKAROUND: None.
-* The IoT Core Default Application may not display properly on a 1280 x 1024 monitor (2536713). WORKAROUND: Use a monitor with a different resolution.
-* DebounceTimeout in the GPIO API surface may not function (1874956). WORKAROUND: None
-* Once the GPIO wake feature is enabled in the UEFI settings of Device Manager it may not be possible to toggle any GPIO outputs or read GPIO values using the GPIO WinRT APIs(1894235). WORKAROUND: Do not enable the GPIO wake feature in Device Manager.
-* The GPIO interrupt handler can drift out of sync with the actual state of the GPIO pins when a button is attached or when the interrupts occur at a faster rate than the system can process them.. WORKAROUND: Reduce the frequency of the interrupts.
-* The GPIO interrupts may become spurious when the drive mode of a GPIO pin is changed. (2116871). WORKAROUND: None
-* The system may lock up after feeding a 100KHz square wave to the GPIO input pin with interrupt handler attached (2148240). WORKAROUND: None
-* Visual Studio and the IoT ShellExt may conflict when a startup application is deployed. (1244550). WORKAROUND: None
-* Sihost may disappear when F5 is debug breakpoint is encountered before the deployed app finishes starting up. (1244514). WORKAROUND: Terminate DefaultApp.exe and restart sihost.
-* ICD may fail to generate a bootable Windows 10 IoT Core image for NUC. (1415629). WORKAROUND: None
-* A black screen may be seen during boot because the default app is failing on slow class 4 SD cards. (2462306). WORKAROUND: Do not use a class 4 SD card.
-* The bootup splash screen may be seen again when the device is shutdown. (2502991). WORKAROUND: None
-* The current build of the Windows 10 IoT Core Insider Preview boots twice before starting the IoT Core Default App. (2504963). WORKAROUND: This is expected behavior.
-* Windows 10 IoT Core may cause a network broadcast storm when it is initialized using the onboard NIC on the Raspberry PI. (2322325). WORKAROUND: Intialize the device while connected to a network where this will not cause interference.
-* Bluetooth Low Energy Gatt Interface Does Not Work On Windows 10 IoT Core Insider Preview (2382852). WORKAROUND:	None. Bluetooth is not fully implemented in this release.
-* Recognizers for Inking may not be available in this release of Windows 10 IoT Core (2552947). WORKAROUND: None.
-* Loading an Ink control may cause the application to crash (2221749). WORKAROUND: None
-* SPI Sample may not work the first time it is deployed to the MinnowBoard Max (2524399). WORKAROUND: Re-deploy the sample to the MBM.
-* SPI Sequential Transfer may be malformed at 100KHz on the MinnowBoard Max (1666855). WORKAROUND: Use full duplex with 100 KHz transfer.
-* Visual Studio may not debug two startup tasks concurrently (2202979). WORKAROUND: None
-* Stopping a background task in Visual Studio may cause a bug check (2366900). WORKAROUND: Do not stop a background task in Visual Studio.
+* The keyboard input may be lost when switching between multiple apps while debugging. (1304429)
+* Some USB keyboards and mice may not work on the Raspberry PI2. (2365290). WORKAROUND: Use a different keyboard or mouse.  A list of validated peripheral devices can be found on the documentation at http://WindowsOnDevices.com (2296724). WORKAROUND: Review the list of validated devices.
+* The video output on the MinnowBoard Max may crash after unplugging the HDMI video cable and plugging it back in while the MBM is running. (2096834). WORKAROUND: Leave the HDMI cable plugged in while the MBM is running.
+* Setting the orientation to “Portrait” may not be honored in a Universal App (3039042) WORKAROUND: None
+* Some animated user elements may be slow to render and slow to respond to user input on the Raspberry Pi. (2735596). WORKAROUND: None.
+* After plugging in a Zwave adaptor a bugcheck may occur, usually after several minutes of uptime. (3266675) WORKAROUND: None
+* The Default startup app may conflict with itself when deployed also deployed from Visual Studio (1244550). WORKAROUND: Change the default startup app to something else
+* Text To Speech APIs for some non-English languages do not work in Windows 10 IoT Core (3024511) WORKAROUND: None.
+* Time synchronizes from the network may not occur on the MinnowBoard Max. Raspberry Pi2 running Windows 10 IoT Core may be slow to synchronize the clock to network time after a power cycle. (3283455, 2942694) WORKAROUND: Force a time update with a “w32tm /resync” command.
 * When a headed application that uses the IoT Debug Broker is being debugged, an Assert may be triggered when the Debug>Stop menu item is selected. (2385747). WORKAROUND: None.
-* Opening the package.json file may cause Visual Studio to crash (2457310). WORKAROUND: None.
-* Windows.UI.Popups.MessageDialog does not work on this release of Windows 10 IoT Core (1214773). WORKAROUND: None.
 * GetNetworkUsageAsync may throw a System.UnauthorizedAccessException (1972129). WORKAROUND: None.
-* Windows.Devices.SerialCommunications may not enumerate devices from WinRT UWP App. (2266901). WORKAROUND: None.
-* This release of Windows 10 IoT Core does not contain WinRT Windows.System.Profile.HardwareIdentification. (2311696). WORKAROUND: None.
-* When Telent is used to send the 'devcon status usb' command on a MinnowBoard Max, it may return error number 28. (1097931). WORKAROUND: None
-* The CS signal on SPI may be initially be low until the first data transfer occurs on a MinnowBoard MAx. (1682876). WORKAROUND: The signal should be normal after the first data transfer.
-* The Web interface may fail to remove APPX package on the Raspberry PI2. (1910993). WORKAROUND: Use Powershell to remove the APPX package.
-* The clipboard may return a "class not recognized" exception. (2221417). WORKAROUND:	None
-* Audio task may fail to start in a Universal Windows Application. (2221634). WORKAROUND: None
-* Background Transfer may fail with an exception in a Universal Windows Application. (2221657). WORKAROUND: None.
-* The Windows 10 IoT Core Insider Preview image is missing the fileinfo.sys. (2230476). WORKAROUND: None.
-* After changing the name of a Windows 10 IoT Core device it may not connect using the name as a parameter. (2300166). WORKAROUND:	Connect using the device's IP address.
-* I2C restart may use the incorrect CLK level. (2392063). WORKAROUND: None.
 * BackgroundService Tasks may be registered as both a headed and a headless tasks. (2455442). WORKAROUND: None.
-* System.Diagnostics.Debug.WriteLine may not send to the Output Pane in a Universal Windows Application. (2455800). WORKAROUND: None.
-* A faulty CBT may cause a bugcheck in sihost.exe (2478779). WORKAROUND:	None.
-* A blank Background Task may throw an error when they are initially deployed. (2551584). WORKAROUND: None.
-* When the IoT Core Default Application is connected to a WiFi network, it may display <empty> for the IP address value even though the device has connected successfully. (2640478). WORKAROUND:	None.
+* System.Diagnostics.Debug.WriteLine may not send to the Output Pane in a Universal Windows Application. (2455800). WORKAROUND: None. .
+* The WebB will allow the user to remove the default application which will lead to a bluescreen on boot due to there not being an application to run. (3252594) WORKAROUND: Reflash the SD card.
+* The SSH service may crash when issued a “?” parameter to a command (3296951) WORKAROUND: Do not use the “?” parameter.
+* The IoT Core Default Application may display two IP addresses for the same adapter. One will be an old/wrong address and the other will be correct. (3303771). WORKAROUND: None.
+* On Raspberry Pi, glitches can occur on GPIO pins when switching between certain drive modes with GpioPin.SetDriveMode(). A pin briefly reverts to its default state before taking on the new drive mode. (2938068) WORKAROUND: Call SetDriveMode() once at the beginning of your application.
+* On MinnowBoardMax, UART1 flow control/serial handshake defaults to ON and cannot be turned off (2995473). WORKAROUND: Use UART2 instead of UART1.
+* On MinnowBoardMax, the SPI driver may return a malformed buffer for SpiDevice.TransferSequential() which includes two extra bytes at the beginning of the buffer. (3076149) WORKAROUND: Use SpiDevice.TransferFullDuplex().
+* On MinnowBoardMax, enabling GPIO Wake Capability with the BIOS setting *Device Manager -> System Setup -> South Cluster Configuration -> Miscellaneous Configuration -> GPIO Wake Capability : Enabled* will cause all GPIO pins to stop working (1894235). WORKAROUND: Set GPIO Wake Capability to Disabled in the BIOS.

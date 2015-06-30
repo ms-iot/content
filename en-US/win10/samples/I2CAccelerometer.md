@@ -8,19 +8,17 @@ lang: en-US
 ##I2C Accelerometer Sample
 
 We'll connect an I2C accelerometer to your Raspberry Pi 2/MinnowBoard Max and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of I2C is needed.
-However, if you're curious, Sparkfun provides a great [tutorial on I2C](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}.
+However, if you're curious, SparkFun provides a great [tutorial on I2C](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}.
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
 
 ###Load the project in Visual Studio
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/I2CAccelerometer).  Make a copy of the folder on your disk and open the project from Visual Studio.
+You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/Accelerometer).  Make a copy of the folder on your disk and open the project from Visual Studio.
 
 Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
 
-If you're building for Minnowboard Max, select `x86` in the architecture dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
-
-Note that this app requires physical I2C ports and will not work if running in an emulated environment.
+If you're building for MinnowBoard Max, select `x86` in the architecture dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
 
 ###Connect the I2C Accelerometer to your device
 
@@ -93,7 +91,16 @@ Here are the schematics:
 
 ###Deploy and run the app
 
-When everything is set up, power your device back on, and open up the sample app in Visual Studio.
+When everything is set up, power your device back on, and open up the sample app in Visual Studio. Open the file **MainPage.xaml.cs** and change the following line from **Protocol.NONE** to **Protocol.I2C**:
+
+{% highlight C# %}
+public sealed partial class MainPage : Page
+{
+    /* Important! Change this to either Protocol.I2C or Protocol.SPI based on how your accelerometer is wired   */
+    private Protocol HW_PROTOCOL = Protocol.I2C; 
+    // ...
+}
+{% endhighlight %}  
  Now you should be able to press F5 from Visual Studio: The I2CAccelerometer app will deploy and start, and you should see accelerometer data show up on screen.
  If you have your accelerometer flat on a surface, the Z axis should read close to 1.000G, while X and Y are close to 0.000G. The values will fluctuate a little even if the device is standing still.
  This is normal and is due to minute vibrations and electrical noise. If you tilt or shake the sensor, you should see the values change in response. Note that this sample configures the device in 4G mode,
@@ -119,27 +126,26 @@ To use the accelerometer, we need to initialize the I2C bus first. Here is the C
 using Windows.Devices.Enumeration;
 using Windows.Devices.I2c;
 
+/* Initialization for I2C accelerometer */
 private async void InitI2CAccel()
 {
-    string aqs = I2cDevice.GetDeviceSelector();                     /* Get a selector string that will return all I2C controllers on the system */
-    var dis = await DeviceInformation.FindAllAsync(aqs);            /* Find the I2C bus controller device with our selector string           */
-    if (dis.Count == 0)
+    try
     {
-        Text_Status.Text = "No I2C controllers were found on the system";
-        return;
-    }
+        var settings = new I2cConnectionSettings(ACCEL_I2C_ADDR);       
+        settings.BusSpeed = I2cBusSpeed.FastMode;                       /* 400KHz bus speed */
 
-    var settings = new I2cConnectionSettings(ACCEL_I2C_ADDR);
-    settings.BusSpeed = I2cBusSpeed.FastMode;
-    I2CAccel = await I2cDevice.FromIdAsync(dis[0].Id, settings);    /* Create an I2cDevice with our selected bus controller and I2C settings */
-    if (I2CAccel == null)
-    {
-        Text_Status.Text = string.Format(
-            "Slave address {0} on I2C Controller {1} is currently in use by " +
-            "another application. Please ensure that no other applications are using I2C.",
-            settings.SlaveAddress,
-            dis[0].Id);
-        return;
+        string aqs = I2cDevice.GetDeviceSelector();                     /* Get a selector string that will return all I2C controllers on the system */
+        var dis = await DeviceInformation.FindAllAsync(aqs);            /* Find the I2C bus controller devices with our selector string             */
+        I2CAccel = await I2cDevice.FromIdAsync(dis[0].Id, settings);    /* Create an I2cDevice with our selected bus controller and I2C settings    */
+        if (I2CAccel == null)
+        {
+            Text_Status.Text = string.Format(
+                "Slave address {0} on I2C Controller {1} is currently in use by " +
+                "another application. Please ensure that no other applications are using I2C.",
+                settings.SlaveAddress,
+                dis[0].Id);
+            return;
+        }
     }
 
     // ...
@@ -152,13 +158,13 @@ Here's an overview of what's happening:
 
 * Next, we find all the I2C bus controllers on the system and check that at least one bus controller exists.
 
-* We then create an I2CConnectionSettings object with the accelerometer address "ACCEL_I2C_ADDR" (0x53) and bus speed set to "FastMode" (400KHz)
+* We then create an **I2CConnectionSettings** object with the accelerometer address "ACCEL_I2C_ADDR" (0x53) and bus speed set to "FastMode" (400KHz)
 
-* Finally, we create a new I2cDevice and check that it's available for use.
+* Finally, we create a new **I2cDevice** and check that it's available for use.
 
 ###Initialize the accelerometer
 
-Now that we have the I2cDevice accelerometer instance, we're done with the I2C bus initialization. We can now write data over I2C to start up the accelerometer. We do this with the Write() function.
+Now that we have the **I2cDevice** accelerometer instance, we're done with the I2C bus initialization. We can now write data over I2C to start up the accelerometer. We do this with the **Write()** function.
 For this particular accelerometer, there are two internal registers we need to configure before we can start using the device: The data format register, and the power control register.
 
 1. We first write a 0x01 to the data format register. This configures the device range into +-4G mode. If you consult the [datasheet](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf){:target="_blank"}, you'll see that the device can be configured in a variety of measurement modes ranging from 2G to 16G.
@@ -171,12 +177,12 @@ private async void InitI2CAccel()
 {
     // ...
 
-    /*
+    /* 
      * Initialize the accelerometer:
      *
      * For this device, we create 2-byte write buffers:
      * The first byte is the register address we want to write to.
-     * The second byte is the contents that we want to write to the register.
+     * The second byte is the contents that we want to write to the register. 
      */
     byte[] WriteBuf_DataFormat = new byte[] { ACCEL_REG_DATA_FORMAT, 0x01 };        /* 0x01 sets range to +- 4Gs                         */
     byte[] WriteBuf_PowerControl = new byte[] { ACCEL_REG_POWER_CONTROL, 0x08 };    /* 0x08 puts the accelerometer into measurement mode */
@@ -219,7 +225,7 @@ private void TimerCallback(object state)
     /* Read and format accelerometer data */
     try
     {
-        Acceleration accel = ReadI2CAccel();
+        Acceleration accel = ReadAccel();
         xText = String.Format("X Axis: {0:F3}G", accel.X);
         yText = String.Format("Y Axis: {0:F3}G", accel.Y);
         zText = String.Format("Z Axis: {0:F3}G", accel.Z);
@@ -232,28 +238,38 @@ private void TimerCallback(object state)
 
 
 ###Read data from the accelerometer
-With the I2C bus and accelerometer initialized, we can start reading data from the accelerometer. Our ReadI2CAccel() function gets called every 100mS by the timer:
+With the I2C bus and accelerometer initialized, we can start reading data from the accelerometer. Our **ReadAccel()** function gets called every 100mS by the timer:
 
 {% highlight C# %}
-private Acceleration ReadI2CAccel()
+private Acceleration ReadAccel()
 {
     const int ACCEL_RES = 1024;         /* The ADXL345 has 10 bit resolution giving 1024 unique values                     */
     const int ACCEL_DYN_RANGE_G = 8;    /* The ADXL345 had a total dynamic range of 8G, since we're configuring it to +-4G */
     const int UNITS_PER_G = ACCEL_RES / ACCEL_DYN_RANGE_G;  /* Ratio of raw int values to G units                          */
 
-    byte[] RegAddrBuf = new byte[] { ACCEL_REG_X }; /* Register address we want to read from                                         */
-    byte[] ReadBuf = new byte[6];                   /* We read 6 bytes sequentially to get all 3 two-byte axes registers in one read */
+    byte[] ReadBuf;                 
+    byte[] RegAddrBuf;
 
-    /*
-     * Read from the accelerometer
-     * We call WriteRead() so we first write the address of the X-Axis I2C register, then read all 3 axes
+    /* 
+     * Read from the accelerometer 
+     * We first write the address of the X-Axis register, then read all 3 axes into ReadBuf
      */
-    I2CAccel.WriteRead(RegAddrBuf, ReadBuf);
-
-    /*
-     * In order to get the raw 16-bit data values, we need to concatenate two 8-bit bytes from the I2C read for each axis.
-     * We accomplish this by using the BitConverter class.
-     */
+    switch (HW_PROTOCOL)
+    {
+        case Protocol.SPI:
+            // ...
+        case Protocol.I2C:
+            ReadBuf = new byte[6];  /* We read 6 bytes sequentially to get all 3 two-byte axes                 */
+            RegAddrBuf = new byte[] { ACCEL_REG_X }; /* Register address we want to read from                  */
+            I2CAccel.WriteRead(RegAddrBuf, ReadBuf);
+            break;
+        default:    /* Code should never get here */
+            // ...
+    }
+    
+    // ...
+    
+    /* In order to get the raw 16-bit data values, we need to concatenate two 8-bit bytes for each axis */
     short AccelerationRawX = BitConverter.ToInt16(ReadBuf, 0);
     short AccelerationRawY = BitConverter.ToInt16(ReadBuf, 2);
     short AccelerationRawZ = BitConverter.ToInt16(ReadBuf, 4);
@@ -278,7 +294,7 @@ We provide the function with a one-byte byte array representing the register add
 **and** the X, Y, and Z data registers are next to each other, reading 6 bytes give us all of our data in one go. This ensures acceleration values don't change between reads as well.
 
 * We get back 6 bytes of data from our read. These represent the data in the X, Y, and Z data registers respectively.
-We separate out the data into their respective axes and concatenate the bytes using the BitConverter class.
+We separate out the data into their respective axes and concatenate the bytes using **BitConverter.ToInt16()**.
 
 * The raw data is formatted as a 16-bit integer, which contains 10-bit data from the accelerometer. It can take on values ranging from -512 to 511. A reading of -512 corresponds to -4G while 511 is +4G.
  To convert this to G units, we divide by the ratio of full-scale range (8G) to the resolution (1024)

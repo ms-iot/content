@@ -12,7 +12,7 @@ You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/B
 
 Make sure you set the 'Remote Debugging' setting to point to your Windows IoT device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
 
-Note that the app will gracefully degrade if it cannot find any available GPIO ports, for example if you run the app on a VM running Windows 10 IoT Core.
+Note that the app will gracefully degrade if it cannot find any available GPIO ports.
 
 ###Connect the LED to your Windows IoT device
 
