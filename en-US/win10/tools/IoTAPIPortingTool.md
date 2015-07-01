@@ -11,7 +11,7 @@ Are the APIs that your current Win32 application or library depend on available 
 
 ##Usage
 
-You can find in the [ms-iot/iot-utilities](https://github.com/ms-iot/iot-utilities) github repository.  Download the repository [zip](https://github.com/ms-iot/iot-utilities/archive/master.zip) the repository zip and copy the IoTAPIPortingTool folder to your local machine.  Open **IoTAPIPortingTool.sln** in Visual Studio 2015 and build the project.  This will generate `IotAPIPortingTool.exe`.
+The Windows 10 IoT Core API Porting Tool can be found in the [ms-iot/iot-utilities](https://github.com/ms-iot/iot-utilities) github repository.  Download the repository [zip](https://github.com/ms-iot/iot-utilities/archive/master.zip) the repository zip and copy the IoTAPIPortingTool folder to your local machine.  Open **IoTAPIPortingTool.sln** in Visual Studio 2015 and build the project.  This will generate `IotAPIPortingTool.exe`.
 
 You can use the tool by running `IoTAPIPortingTool.exe <path> [-os]`.
 
