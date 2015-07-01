@@ -121,31 +121,37 @@ lang: en-US
                 <div class="row section-heading">
                     <div class="col-md-3">
                         <h4>Hello, World!</h4>
-                        <p>Create your first UWP app that runs on devices like the Raspberry Pi 2 running Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm">Learn More</a>
+                        <p>Create a 'Hello World' application that runs on devices running Windows 10 IoT Core Insider Preview</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm">Hello World (C#)</a><br>
+						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Python.htm">Hello World (Python)</a><br>
+						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWU.htm">Hello World (Node.js)</a><br>
                     </div>
                     <div class="col-md-3">
-                        <h4>Hello, Blinky</h4>
-                        <p>Create an app that toggles an LED on devices running Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm">Learn More</a>
+                        <h4>Hello Blinky (Headless App)</h4>
+                        <p>Create an app with no UI that toggles an LED on devices running Windows 10 IoT Core Insider Preview</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyHeadless.htm">Blinky (C#)</a><br>
+						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PythonBlinky.htm">Blinky (Python)</a><br>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>UI Blinky App</h4>
+                        <p>Create a UI-based app that toggles an LED on devices running Windows 10 IoT Core Insider Preview</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm">UI Blinky (C#/C++)</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Blinky Webserver</h4>
-                        <p>Create a Webserver app that toggles an LED on devices running Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyWebServer.htm">Learn More</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Blinky Headless</h4>
-                        <p>Create an app with no UI that toggles an LED on devices running Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyHeadless.htm">Learn More</a>
+                        <p>Create a Webserver app that controls an LED on devices running Windows 10 IoT Core Insider Preview</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyWebServer.htm">Webserver Blinky (C#)</a><br>
+						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PythonBlinkyServer.htm">Webserver Blinky (Python)</a><br>
+						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWUBlinky.htm">Webserver Blinky (Node.js)</a><br>
                     </div>
                 </div>
 
                 <div class="row section-heading">
                     <div class="col-md-3">
                         <h4>Console App</h4>
-                        <p>Create a console application that monitors memory usage on devices running Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/ConsoleApp.htm">Learn More</a>
+                        <p>Create a console app that monitors memory usage on devices running Windows 10 IoT Core Insider Preview</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/ConsoleApp.htm">Console App (C++)</a><br>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Nodejs.htm">Console App (Node.js)</a><br>
                     </div>
                     <div class="col-md-3">
                         <h4>I2C/SPI Accelerometer</h4>
@@ -156,7 +162,7 @@ lang: en-US
                     <div class="col-md-3">
                         <h4>SPI Display</h4>
                         <p>Create an app using SPI on devices running Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplay.htm">Learn More</a>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplay.htm">SPI Display (C#)</a>
                     </div>
 					<div class="col-md-3">
                         <h4>AllJoyn Connectivity</h4>
@@ -166,94 +172,65 @@ lang: en-US
                 </div>
 
                 <div class="row section-heading">
-                    <div class="col-md-3">
-                        <h4>'Hello World' Node.js App (Windows Universal)</h4>
-                        <p>Create a 'Hello World' Node.js app that runs on devices running Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWU.htm">Learn More</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Blinky Node.js App (Windows Universal)</h4>
-                        <p>Build a Node.js server that can control an LED connected to your device running Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWUBlinky.htm">Learn More</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Express Node.js App (Windows Universal)</h4>
-                        <p>Create an Express Node.js app that runs on devices running Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWUExpress.htm">Learn More</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>MemoryStatus Node.js App (Console)</h4>
-                        <p>Build a Node.js server that provides memory status from your device running Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Nodejs.htm">Learn More</a>
-                    </div>
-                </div>
-
-                <div class="row section-heading">
-                    <div class="col-md-3">
-                        <h4>'Hello World' Python App</h4>
-                        <p>Create a python application on devices running Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Python.htm">Learn More</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Blinky Python App</h4>
-                        <p>Build a Python app with no UI that toggles an LED on devices running Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PythonBlinky.htm">Learn More</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Blinky Python Server</h4>
-                        <p>Build a Python web server with no UI that toggles an LED on devices running Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PythonBlinkyServer.htm">Learn More</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Serial-In, Parallel-Out Shift Register (RPi2 Basic Kit Lab)</h4>
-                        <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 to control LEDs using a serial-in, parallel-out shift register.</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/ShiftRegisterSample.htm">Learn More</a>
-                    </div>
-                </div>
-
-                <div class="row section-heading">
-                   <div class="col-md-3">
-                        <h4>RGB LED (RPi2 Basic Kit Lab)</h4>
-                        <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 to toggle an RGB LED.</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/RGBLED.htm">Learn More</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Push Button (RPi2 Basic Kit Lab)</h4>
-                        <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 to read the status of a Push Button and control an LED.</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PushButton.htm">Learn More</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Potentiometer Sensor Sample (RPi2 Basic Kit Lab)</h4>
-                        <p>Raspberry Pi 2 Basic Kit Lab - Connect a potentiometer to the Raspberry Pi 2 and use it to control an LED.</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm">Learn More</a>
-                    </div>
-                    <div class="col-md-3">
+					<div class="col-md-3">
                         <h4>Driver Sample</h4>
                         <p>Create and interact with a universal driver on devices running Windows 10 IoT Core Insider Preview</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab.htm">Learn More</a>
-                    </div>
-                </div>
-                
-                <div class="row section-heading">
-                   <div class="col-md-3">
-                        <h4>GpioTestTool (Console)</h4>
-                        <p>This simple command line utility shows how to use the Gpio WinRT APIs from standard C++.</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/GpioTestTool.htm">Learn More</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>I2cTestTool (Console)</h4>
-                        <p>This simple utility shows how to use C++/CX in command line programs.</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2cTestTool.htm">Learn More</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>SpiTestTool (Console)</h4>
-                        <p>Write and read from SPI devices on the command line.</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SpiTestTool.htm">Learn More</a>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab.htm">Driver Sample (C++)</a>
                     </div>
                     <div class="col-md-3">
                         <h4>I2C Port Expander (RPi2 Basic Kit Lab)</h4>
                         <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 I2C bus to communicate with a port expander.</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2CPortExpander.htm">Learn More</a>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2CPortExpander.htm">I2C Port Expander (C#)</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Serial-In, Parallel-Out Shift Register (RPi2 Basic Kit Lab)</h4>
+                        <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 to control LEDs using a serial-in, parallel-out shift register.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/ShiftRegisterSample.htm">Shift Register (C#)</a>
+                    </div>
+                   <div class="col-md-3">
+                        <h4>RGB LED (RPi2 Basic Kit Lab)</h4>
+                        <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 to toggle an RGB LED.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/RGBLED.htm">RGB LED (C#)</a>
+                    </div>
+                </div>
+
+                <div class="row section-heading">
+                    <div class="col-md-3">
+                        <h4>Push Button(RPi2 Basic Kit Lab)</h4>
+                        <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 to read the status of a Push Button and control an LED.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PushButton.htm">Push Button (C#)</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Potentiometer Sensor Sample (RPi2 Basic Kit Lab)</h4>
+                        <p>Raspberry Pi 2 Basic Kit Lab - A analog sensor is connected to RaspBerry Pi through ADC converter and digital output data is displayed through Monitor and LED </p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/potentiometer.htm">Potentiometer Sensor Sample (C#)</a>
+                    </div>
+                   <div class="col-md-3">
+                        <h4>GpioTestTool (Console)</h4>
+                        <p>This simple command line utility shows how to use the Gpio WinRT APIs from standard C++.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/GpioTestTool.htm">GpioTestTool (C++)</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>I2cTestTool (Console)</h4>
+                        <p>This simple utility shows how to use C++/CX in command line programs.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2cTestTool.htm">I2cTestTool (C++)</a>
+                    </div>
+                </div>
+                
+                <div class="row section-heading">
+                    <div class="col-md-3">
+                        <h4>SpiTestTool (Console)</h4>
+                        <p>Write and read from SPI devices on the command line.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SpiTestTool.htm">SpiTestTool (C++)</a>
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Placeholder for alignment -->
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Placeholder for alignment -->
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Placeholder for alignment -->
                     </div>
                 </div>
 
