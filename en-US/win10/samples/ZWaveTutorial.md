@@ -70,11 +70,11 @@ Launch AlljoynExplorer. The AJX should find the following three devices:
 • HomeID_xxx…  – Aeon Labs Smart Energy Switch: This is the Z-Wave power switch that is paired with the Z-Wave dongle  
 • HomeID_xxx…  – Aeon Labs Z-Stick S2: This is the Z-Wave USB dongle  Select the Aeon Labs Smart Energy Switch.  
 
-![AJx_ZWave1]({{site.baseurl}}/images/AllJoyn/Ajx_shot1.jpg)
+![AJx_ZWave1]({{site.baseurl}}/images/AllJoyn/Ajx_shot1.png)
   
 Select the Switch object.  
 
-![AJx_ZWave2]({{site.baseurl}}/images/AllJoyn/Ajx_shot2.png)
+![AJx_ZWave2]({{site.baseurl}}/images/AllJoyn/ajx_shot2.png)
 
   The interface view of the Switch object lists several interfaces. Most of them are default AllJoyn interfaces such as the Introspectable interface. Select the com.microsft.ZWaveAdapterHome… interface.  
 
@@ -92,6 +92,6 @@ Select the value property.
   
   The view will report the change of the value in the Current value field as well as the return status code of the operation:
 
-![AJx_ZWave6]({{site.baseurl}}/images/AllJoyn/Ajx_shot6.png)
+![AJx_ZWave6]({{site.baseurl}}/images/AllJoyn/Ajx_shot6.jpg)
   
 
