@@ -113,7 +113,9 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SMB.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <!-- Placeholder for alignment -->
+                        <h4>WiFi Connectivity</h4>
+                        <p>Setup and configure WiFi on your Windows IoT Core device</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/SetupWiFi.htm">Learn More</a>
                     </div>
                 </div>
             </div>
