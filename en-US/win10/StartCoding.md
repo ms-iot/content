@@ -69,9 +69,9 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/UnavailableApis.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <h4>Compatible Peripheral USB Devices</h4>
-                        <p>Find a list of USB devices compatible with Window 10 IoT Core devices</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/Peripherals.htm">Learn More</a>
+                        <h4>Supported Peripheral Interfaces and Protocols</h4>
+                        <p>Find a list of supported peripheral interfaces and protocols with Window 10 IoT Core devices</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm">Learn More</a>
                     </div>
                 </div>
                 <div class="row section-heading">
@@ -90,10 +90,10 @@ lang: en-US
                         <p>A list of commonly used phrases and their meanings</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/Glossary.htm">Learn More</a>
                     </div>
-					<div class="col-md-3">
-                        <h4>Web-based Device Management</h4>
-                        <p>Get advanced diagnostics about your machine from the web</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm">Learn More</a>
+                    <div class="col-md-3">
+                        <h4>Compatible Peripheral USB Devices</h4>
+                        <p>Find a list of USB devices compatible with Window 10 IoT Core devices</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/Peripherals.htm">Learn More</a>
                     </div>
                 </div>
                 <div class="row section-heading">
@@ -112,8 +112,10 @@ lang: en-US
                         <p>Access the files on your device using Windows file sharing</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SMB.htm">Learn More</a>
                     </div>
-                    <div class="col-md-3">
-                        <!-- Placeholder for alignment -->
+					<div class="col-md-3">
+                        <h4>Web-based Device Management</h4>
+                        <p>Get advanced diagnostics about your machine from the web</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm">Learn More</a>
                     </div>
                 </div>
             </div>
