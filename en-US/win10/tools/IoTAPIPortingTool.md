@@ -11,9 +11,9 @@ Are the APIs that your current Win32 application or library depend on available 
 
 ##Usage
 
-You can find `IoTAPIPortingTool.exe` under `C:\Program Files (x86)\Microsoft IoT`.  It is installed by running `WindowsDeveloperProgramforIoT.msi` (which can be found in the download location where you downloaded this documentation).
+The Windows 10 IoT Core API Porting Tool can be found in the [ms-iot/iot-utilities](https://github.com/ms-iot/iot-utilities) github repository.  Download the repository [zip](https://github.com/ms-iot/iot-utilities/archive/master.zip) the repository zip and copy the IoTAPIPortingTool folder to your local machine.  Open **IoTAPIPortingTool.sln** in Visual Studio 2015 and build the project.  This will generate `IotAPIPortingTool.exe`.
 
-You can use the tool by running `C:\Program Files (x86)\Microsoft IoT\IoTAPIPortingTool.exe <path> [-os]`.
+You can use the tool by running `IoTAPIPortingTool.exe <path> [-os]`.
 
 *  `<path>` should provide the path to the directory of where your exe and/or dll files are located.
 
