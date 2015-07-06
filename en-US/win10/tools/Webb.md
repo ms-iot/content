@@ -147,8 +147,8 @@ Wi-Fi adapters are not currently supported.  This will be coming soon.
 2. Set the port:
     ```Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\IoT\WebB /v HttpPort /t REG_DWORD /d <your port number>```
 3. If you want to set the https port
-	```Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\IoT\WebB /v UseHttps /t REG_DWROD /d 1 <your port number>```
-3. Restart the webb.exe process either by killing it and restarting it or rebooting the machine.
+	```Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\IoT\WebB /v UseHttps /t REG_DWORD /d 1 /f```, ```Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\IoT\WebB /v HttpsPort /t REG_DWORD /d <your port number> /f```
+3. Restart the webb.exe process by restarting service (```net stop bwebmanage & net start bwebmanage```) it or rebooting the device.
 
 
 
