@@ -8,7 +8,7 @@ lang: en-US
 ##Using SSH to connect and configure a device running Windows IoT Core
 
 ###Download a SSH client
-In order to connect to your device using SSH, you'll first need to download a SSH client, such as [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/).
+In order to connect to your device using SSH, you'll first need to download a SSH client, such as [PuTTY](http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe).
 
 ###Connect to your device
 * In order to connect to your device, you need to first get the IP address of the device.  After booting your Windows IoT Core device, an IP address will be shown on the screen attached to the device:
@@ -52,3 +52,7 @@ To do this, enter the following command in the PuTTY console, replacing `[new pa
     You will need to reboot the device for the change to take effect. You can use the `shutdown` command as follows:
 
         shutdown /r /t 0
+        
+###Commonly used utilities
+
+See the [Command Line Utils]({{site.baseurl}}/{{page.lang}}/win10/tools/CommandLineUtils.htm) page for a list of commands and utilities you can use with SSH.
