@@ -65,11 +65,13 @@ Make sure to follow these steps to correctly configure your device running Windo
         
     Once this is done, you'll need to re-establish the current session using enable-psSession with the new credentials.
 
-###Configure your Windows IoT Core device
+###Troubleshooting Visual Studio Remote Debugger
 
 * To be able to deploy applications from Visual Studio 2015, you will need to make sure the Visual Studio Remote Debugger is running on your Windows IoT Core device. The remote debugger should launch automatically at machine boot time. To double check, use the `tlist` command to list all the running processes from powershell. There should be two instances of msvsmon.exe running on the device.
 
 * It is possible for the Visual Studio Remote Debugger to time out after long periods of inactivity.  If Visual Studio cannot connect to your Windows IoT Core device, try rebooting the device.
+
+###Configure your Windows IoT Core device
 
 * If you want, you can also rename your device. To change the 'computer name', use the `setcomputername` utility:
 
