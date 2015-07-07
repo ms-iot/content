@@ -23,7 +23,7 @@ If you are using several USB peripherals or high-current devices, use a higher c
 
 
 ##Put the Windows 10 IoT Core Insider Preview image on your SD card
-We have provided a utility to provision your SD card with the Windows 10 IoT Core Insider Preview.  The following steps can only be executed on a system running [Windows 10](https://insider.windows.com){:target="_blank"} (build 10069 or higher).
+We have provided a utility to provision your SD card with the Windows 10 IoT Core Insider Preview.  The following steps can only be executed on a system running [Windows 10](https://insider.windows.com){:target="_blank"} (build 10142 or higher).
 
 NOTE: you will need to follow these instructions on a **physical Windows machine** (and not a VM) because you need access to the SD card reader.
 
@@ -76,4 +76,12 @@ Follow these instructions to configure your SD card:
 	<img class="device-images" src="{{site.baseurl}}/images/DefaultAppRpi2.png">
 3. Follow the [PowerShell documentation here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.  You can also follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to use SSH to connect to your device.
 4. It is **highly recommended** that you update the default password for the Administrator account.
+    To do this, issue the following commands in your PowerShell connection:
+
+    Replace `[new password]` with a strong password:
+
+        net user Administrator [new password]
+        
+    Once this is done, you'll need to re-establish the current session using enable-psSession with the new credentials.
+    
 5. The Visual Studio Remote Debugger will silently start automatically on your Raspberry Pi 2 when it boots.
