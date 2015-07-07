@@ -7,5 +7,5 @@ lang: en-US
 
 #Commercialization
 
-Commercialization details are `comming soon`.  Please revisit this page once the **Windows 10 IoT Core** product is launched.
+Commercialization details are `coming soon`.  Please revisit this page once the **Windows 10 IoT Core** product is launched.
 
