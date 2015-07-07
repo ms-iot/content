@@ -64,7 +64,16 @@ On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to usermode ap
 * The SSH service may crash when issued a “?” parameter to a command (3296951) WORKAROUND: Do not use the “?” parameter.
 * The IoT Core Default Application may display two IP addresses for the same adapter. One will be an old/wrong address and the other will be correct. (3303771). WORKAROUND: None.
 * On Raspberry Pi, glitches can occur on GPIO pins when switching between certain drive modes with GpioPin.SetDriveMode(). A pin briefly reverts to its default state before taking on the new drive mode. (2938068) WORKAROUND: Call SetDriveMode() once at the beginning of your application.
-* On MinnowBoardMax, UART1 flow control/serial handshake defaults to ON and cannot be turned off (2995473). WORKAROUND: Use UART2 instead of UART1.
-* On MinnowBoardMax, the SPI driver may return a malformed buffer for SpiDevice.TransferSequential() which includes two extra bytes at the beginning of the buffer. (3076149) WORKAROUND: Use SpiDevice.TransferFullDuplex().
-* On MinnowBoardMax, enabling GPIO Wake Capability with the BIOS setting *Device Manager -> System Setup -> South Cluster Configuration -> Miscellaneous Configuration -> GPIO Wake Capability : Enabled* will cause all GPIO pins to stop working (1894235). WORKAROUND: Set GPIO Wake Capability to Disabled in the BIOS.
-* On MinnowBoardMax, a USB-Serial device plugged into the top USB port cannot be opened with the Windows.Devices.SerialCommunication.SerialDevice WinRT API. (3305304). WORKAROUND: Plug the device into the bottom USB port.
+
+### MinnowBoardMax Issues
+* UART1 flow control/serial handshake defaults to ON and cannot be turned off (2995473). WORKAROUND: Use UART2 instead of UART1.
+* The following SerialDevice property values are not supported and will throw an exception if set on UART1 or UART2 (3439146). WORKAROUND: Do not set the following property values.
+  * BreakSignalState - True
+  * HandShake - XOnXOff, RequestToSendXOnXOff
+  * StopBits - OnePointFive
+  * IsDataTerminalReadyEnabled - True
+  * Parity - Mark
+* The SPI driver may return a malformed buffer for SpiDevice.TransferSequential() which includes two extra bytes at the beginning of the buffer. (3076149) WORKAROUND: Use SpiDevice.TransferFullDuplex().
+* Enabling GPIO Wake Capability with the BIOS setting *Device Manager -> System Setup -> South Cluster Configuration -> Miscellaneous Configuration -> GPIO Wake Capability : Enabled* will cause all GPIO pins to stop working (1894235). WORKAROUND: Set GPIO Wake Capability to Disabled in the BIOS.
+* A USB-Serial device plugged into the top USB port cannot be opened with the Windows.Devices.SerialCommunication.SerialDevice WinRT API. (3305304). WORKAROUND: Plug the device into the bottom USB port.
+* Some USB devices may not work correctly when plugged into the top USB port. (2175837). WORKAROUND: Plug the device into the bottom USB port or connect a USB hub.
