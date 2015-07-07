@@ -77,17 +77,18 @@ Open the Adapter.cpp file in the AdapterLib project. Modify Adapter.cpp by inser
     GpioPin^ pin;
 
 
-In order to expose the GPIO Device to the AllJoyn Bus, we need to create a corresponding Bridge Device (IAdapterDevice) instance. Modify the constructor of the AdapterLib’s Adapter.cpp as follows:
+In order to expose the GPIO Device to the AllJoyn Bus, we need to create a corresponding Bridge Device (IAdapterDevice) instance. Modify the constructor of the AdapterLib’s Adapter.cpp by adding the following:
     
     Adapter::Adapter()
     	{
+    	  -
+    	  
+    	  -
+    	  
+    	  -
     		controller = GpioController::GetDefault();
     		pin = controller->OpenPin(PIN_NUMBER);
     		pin->SetDriveMode(GpioPinDriveMode::Input);
-    
-    		this->vendor = L"Custom Vendor";
-    		this->adapterName = L"Custom Adapter";
-    		this->version = L"1.0.0.1";
     	} 
  
  
@@ -106,7 +107,7 @@ Now, modify the Initialize function as given in the following:
        gpioDeviceDesc.Description = description;  
        
        // Define GPIO Pin-5 as device property. Device contains properties 
-       AdapterProperty^ gpioPin_Property = ref new AdapterProperty(pinName);  
+       AdapterProperty^ gpioPin_Property = ref new AdapterProperty(pinName, interfaceHint);  
        // Define and set GPIO Pin-5 value. Device contains properties that have one or more values. 
        pinValueData = static_cast<int>(pin->Read()); 
        AdapterValue^ valueAttr_Value = ref new AdapterValue(pinValueName, pinValueData);        
@@ -131,8 +132,9 @@ To expose the GPIO Device, modify the EnumDevices() method as follows:
           ) 
       { 
           UNREFERENCED_PARAMETER(Options); 
-          UNREFERENCED_PARAMETER(RequestPtr);  
-          *DeviceListPtr = ref new BridgeRT:: AdapterDeviceVector(this->devices); 
+          UNREFERENCED_PARAMETER(RequestPtr); 
+          
+          *DeviceListPtr = ref new BridgeRT::AdapterDeviceVector(this->devices); 
    
           return ERROR_SUCCESS; 
     } 
@@ -296,3 +298,14 @@ Suppose the applications on the AllJoyn bus do not want to poll the value of the
             } 
         }     
       }
+
+###About Signals
+
+In the AllJoyn Device System Bridge, we have 3 predefined signals DEVICE ARRIVAL, DEVICE REMOVAL and CHANGE OF VALUE signals. 
+DEVICE ARRIVAL signal will be fired when a new device arrives to join to the AllJoyn network. To define the signal, you need to create an instance of IAdapterSignal with predefined constant signal name Constants::DEVICE_ARRIVAL_SIGNAL and a handle to the device (IAdapterDevice^) as signal parameter. Use predefined parameter name Constants::DEVICE_ARRIVAL__DEVICE_HANDLE. This signal is associated with the Adapter.
+
+DEVICE REMOVAL signal will be fired when a device leaves the network. To define the signal, you need to create an instance of IAdapterSignal with predefined constant signal name Constants::DEVICE_REMOVAL_SIGNAL and a handle to the device (IAdapterDevice^) as signal parameter. Use predefined parameter name Constants::DEVICE_REMOVAL__DEVICE_HANDLE. This signal is associated with the Adapter.
+
+CHANGE OF VALUE signal will be fired when a property attribute value of a device changes. To define the signal, you need to create an instance of IAdapterSignal with predefined constant signal name Constants::CHANGE_OF_VALUE_SIGNAL, a handle to the regarding property (IAdapterProperty^) as one of the signal parameters and a handle to the regarding property attribute (IAdapterValue^) as the other signal parameter. Use predefined parameter names Constants::COV__PROPERTY_HANDLE and Constants::COV__ATTRIBUTE_HANDLE. This signal is associated with the corresponding AdapterDevice.
+
+Aside from the predefined ones, signals with custom name and parameters could be defined. Whenever these signals are fired, they will be sent to the AllJoyn Bus.
