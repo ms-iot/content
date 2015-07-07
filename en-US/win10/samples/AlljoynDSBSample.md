@@ -77,14 +77,12 @@ Open the Adapter.cpp file in the AdapterLib project. Modify Adapter.cpp by inser
     GpioPin^ pin;
 
 
-In order to expose the GPIO Device to the AllJoyn Bus, we need to create a corresponding Bridge Device (IAdapterDevice) instance. Modify the constructor of the AdapterLib’s Adapter.cpp by adding the following:
+In order to expose the GPIO Device to the AllJoyn Bus, we need to create a corresponding Bridge Device (IAdapterDevice) instance. Add the following three lines to the Adapter() constructor in the AdapterLib project's Adapter.cpp file:
     
     Adapter::Adapter()
     	{
     	  -
-    	  
     	  -
-    	  
     	  -
     		controller = GpioController::GetDefault();
     		pin = controller->OpenPin(PIN_NUMBER);
