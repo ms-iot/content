@@ -71,91 +71,113 @@ The app's slideshow can be likened to a screensaver which displays while the app
 
 <img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_feedback.png" height="400">
 
+2. You may use this page to rate Windows, as well as leave any feedback comments
+
+<img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_feedbackpage.png" height="400">
+
+3. Clicking or tapping "Send" will take you back to the main page.
+
 ###Let's look at the code
-The code for this sample is pretty simple. We use a timer, and each time the 'Tick' event is called, we flip the state of the LED.
+
+Here we will walk though the code used to exercise the scenarios performed above.
+
+###Slideshow
+
+Navigate to Slideshow.xaml.cs.
+
+    public sealed partial class SlideshowPage : Page
+    {
+        // ...
+          List<string> imageExtensions = new List<string>(new string[] { ".bmp", ".gif", ".ico", ".jpg", ".png", ".wdp",".tiff" }); // MSDN
+        // ...
+
+A configuration file is used to specify which webpages, images and videos to show during the slideshow:
+
+          readonly string defaultConfigFilePath = @"http://iot-digisign01/ds/config.xml";
+          
+The config file used by this app is shown below
+
+        <?xml version="1.0" encoding="UTF-8"?>
+          -<DigitalSignageConfig>
+            <!--audio does not require duration attribute. It will be played back in a loop end to end-->
+            -<Audio>
+              <file path="http://iot-digisign01/ds/Fhol.wav"/>
+              <file path="http://iot-digisign01/ds/midnightvoyage_48k_320.mp3"/>
+            </Audio>
+            -<Display>
+              <!--Video does not require duration attribute. It will be played back in a loop end to end-->
+              <!--<file path="http://iot-digisign01/ds/grb.mpg"/>-->
+              <file path="http://iot-digisign01/ds/BlackBerry.mp4"/>
+              <file path="http://iot-digisign01/ds/IoTVision.wmv"/>
+              <!--image and webpage do require duration attribute so we know how long to show them-->
+              <file path="http://iot-digisign01/ds/mad_men_poster.jpg" duration="30"/>
+              <file path="http://iot-digisign01/ds/mandelbrot.png" duration="30"/>
+              <file path="http://iot-digisign01/ds/MARBLES.BMP" duration="30"/>
+              <!--Webpage requires a special attribute type and its value to be webpage-->
+              <!--webpage URLs have to be XML escaped, e.g. below URL, & is replaced to &amp;. Not including the dot.Otherwise it will be considered as malformatted XML-->
+              <!-- <file type="webpage" path="http://insights/Report?id=2b66e943-ed71-4a4d-a006-56da5008429b&amp;isPublished=true#_tab=0" duration="30"/> <file path="http://10.125.148.230/test/display/3.wmv"/> <file path="http://10.125.148.230/test/display/4.png"/> <file path="http://10.125.148.230/test/display/5.mp4"/> <file path="http://10.125.148.230/test/display/6.BMP"/> -->
+            </Display>
+        </DigitalSignageConfig>
 
 
-###Timer code
-Here is how you set up the timer in C#:
-{% highlight C# %}
-public MainPage()
-{
-    // ...
+          const string configValueName = "ConfigFilePath";        
+          static List<object> audioList;
+          static List<object> displayList;
+          int currentIndexOfAudio = 0;
+          int currentIndexOfDisplay = 0;
+          static DispatcherTimer AcceptUserInputTimer;
+      // ...
+    }
 
-    this.timer = new DispatcherTimer();
-    this.timer.Interval = TimeSpan.FromMilliseconds(500);
-    this.timer.Tick += Timer_Tick;
-    this.timer.Start();
+ public async void StartSlideShow()
+        {
+            await GetConfigAndParse();
+            DisplayNext();
+        }
+        
+        async void DisplayNext()
+        {
+           // ...
 
-    // ...
-}
-
-private void Timer_Tick(object sender, object e)
-{
-    FlipLED();
-}
-{% endhighlight %}
+            DisplayObject currentDO = (DisplayObject) displayList[currentIndexOfDisplay];
+            
+            if (currentDO.uri != null) // we're dealing with a WEB Page, show the WebView instance
+            {
+                videoInstance.Stop();
+                
+                // ...
+                
+                DisplayImageWEBTimer.Interval = new TimeSpan(0, 0, currentDO.duration);
+                DisplayImageWEBTimer.Start();
+                PlayAudio();
+            }
+            else // it must be StorageFile, i.e. image or video
+            {
+                if (imageExtensions.Contains(currentDO.file.FileType.ToLower()))
+                {
+                   // ...
+                   
+                    imageInstance.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                    imageSource = new BitmapImage(new Uri(currentDO.file.Path));
+                    imageInstance.Width = imageSource.DecodePixelHeight = (int)this.ActualWidth;
+                    imageInstance.Source = imageSource;
+                    DisplayImageWEBTimer.Interval = new TimeSpan(0, 0, currentDO.duration);
+                    DisplayImageWEBTimer.Start();
+                    PlayAudio();
+                }
+                else // video
+                {
+                    // ...
+                    
+                    videoInstance.Source = new Uri(currentDO.file.Path);
+                    videoInstance.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                    
+                    // ... 
+                    
+                    videoInstance.Play();
+                }
+            }
+            currentIndexOfDisplay = (++currentIndexOfDisplay) % displayList.Count; // make the index in a loop
+        }
 
 ###Initialize the GPIO pin
-To drive the GPIO pin, first we need to initialize it. Here is the C# code (notice how we leverage the new WinRT classes in the Windows.Devices.Gpio namespace):
-
-{% highlight C# %}
-using Windows.Devices.Gpio;
-
-private void InitGPIO()
-{
-    var gpio = GpioController.GetDefault();
-
-    // Show an error if there is no GPIO controller
-    if (gpio == null)
-    {
-        pin = null;
-        GpioStatus.Text = "There is no GPIO controller on this device.";
-        return;
-    }
-
-    pin = gpio.OpenPin(LED_PIN);
-
-    // Show an error if the pin wasn't initialized properly
-    if (pin == null)
-    {
-        GpioStatus.Text = "There were problems initializing the GPIO pin.";
-        return;
-    }
-
-    pin.Write(GpioPinValue.High);
-    pin.SetDriveMode(GpioPinDriveMode.Output);
-
-    GpioStatus.Text = "GPIO pin initialized correctly.";
-}
-{% endhighlight %}
-
-Let's break this down a little:
-
-* First, we use `GpioController.GetDefault()` to get the GPIO controller.
-
-* If the device does not have a GPIO controller, this function will return `null`.
-
-* Then we attempt to open the pin by calling `GpioController.OpenPin()` with the `LED_PIN` value.
-
-* Once we have the `pin`, we set it to be off (High) by default using the `GpioPin.Write()` function.
-
-* We also set the `pin` to run in output mode using the `GpioPin.SetDriveMode()` function.
-
-
-###Modify the state of the GPIO pin
-Once we have access to the `GpioOutputPin` instance, it's trivial to change the state of the pin to turn the LED on or off.
-
-To turn the LED on, simply write the value `GpioPinValue.Low` to the pin:
-
-{% highlight C# %}
-this.pin.Write(GpioPinValue.Low);
-{% endhighlight %}
-
-and of course, write `GpioPinValue.High` to turn the LED off:
-
-{% highlight C# %}
-this.pin.Write(GpioPinValue.High);
-{% endhighlight %}
-
-Remember that we connected the other end of the LED to the 3.3 Volts power supply, so we need to drive the pin to low to have current flow into the LED.
