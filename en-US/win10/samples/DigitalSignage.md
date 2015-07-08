@@ -90,6 +90,7 @@ Navigate to Slideshow.xaml.cs.
         // ...
           List<string> imageExtensions = new List<string>(new string[] { ".bmp", ".gif", ".ico", ".jpg", ".png", ".wdp",".tiff" }); // MSDN
         // ...
+     }
 
 A configuration file is used to specify which webpages, images and videos to show during the slideshow:
 
@@ -118,23 +119,17 @@ The config file used by this app is shown below
               <!-- <file type="webpage" path="http://insights/Report?id=2b66e943-ed71-4a4d-a006-56da5008429b&amp;isPublished=true#_tab=0" duration="30"/> <file path="http://10.125.148.230/test/display/3.wmv"/> <file path="http://10.125.148.230/test/display/4.png"/> <file path="http://10.125.148.230/test/display/5.mp4"/> <file path="http://10.125.148.230/test/display/6.BMP"/> -->
             </Display>
         </DigitalSignageConfig>
+        
+Start the slideshow
 
-
-          const string configValueName = "ConfigFilePath";        
-          static List<object> audioList;
-          static List<object> displayList;
-          int currentIndexOfAudio = 0;
-          int currentIndexOfDisplay = 0;
-          static DispatcherTimer AcceptUserInputTimer;
-      // ...
-    }
-
- public async void StartSlideShow()
+        public async void StartSlideShow()
         {
             await GetConfigAndParse();
             DisplayNext();
         }
-        
+
+Display next method
+
         async void DisplayNext()
         {
            // ...
