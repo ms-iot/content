@@ -84,6 +84,9 @@ lang: en-US
     <p>
       <a href="https://twitter.com/IoTDan" target="_blank">@IoTDan &raquo;</a>
     </p>
+    <p>
+      <a href="https://twitter.com/vkhandpur" target="_blank">@VKhandpur &raquo;</a>
+    </p>
   </div>
   <div class="col-md-3">
     <h3>Feedback</h3>
