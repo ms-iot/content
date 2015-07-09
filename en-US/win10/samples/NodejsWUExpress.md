@@ -10,7 +10,7 @@ lang: en-US
 
 ###Set up your PC
 * Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
-* Install NTVS (Node.js Tools for Visual Studio) Bundle VS 2015 from [here](https://github.com/ms-iot/ntvsiot/releases).
+* Install the latest NTVS (Node.js Tools for Visual Studio) Bundle VS 2015 from [here](https://github.com/ms-iot/ntvsiot/releases).
 * Install Node.js on your machine from [here](https://nodejs.org/download/). Ensure that you select 'npm package manager' as one of the features to be installed.
 
 
