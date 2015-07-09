@@ -67,7 +67,7 @@ The app's slideshow can be likened to a screensaver which displays while the app
 
 ##Exploring the Code
 
-Here we will walk though the code used to exercise the scenarios performed above.
+Here we will walk though the code used to exercise the slideshow scenario.
 
 ###Slideshow
 
@@ -191,10 +191,7 @@ In the DisplayNext() method, we traverse through our list of media files obtaine
 
 <img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_settings.png" height="400">
 
- 2. Using the physical keyboard or touch screen, you may specify a new config file to read from either from your machine or on an HTTP server.
+ 2. Using the physical keyboard or touch screen, you may specify a new config file to read from at the location you specify.
 
 <img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_settings2.png" height="400">
 
-###Browser
-
-In the BrowserPage.xaml.cs, Web Control APIs are used to handle the navigating to and rendering of Web pages.
