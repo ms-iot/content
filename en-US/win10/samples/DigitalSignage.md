@@ -65,13 +65,13 @@ The app's slideshow can be likened to a screensaver which displays while the app
  
  <img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_home.png" height="400">
 
-###Let's look at the code
+##Exploring the Code
 
 Here we will walk though the code used to exercise the scenarios performed above.
 
 ###Slideshow
 
-Navigate to Slideshow.xaml.cs. Observe that the imageExtensions variable maintains a list of supported image types
+Navigate to Slideshow.xaml.cs. Observe that the imageExtensions variable maintains a list of expected image types
 
     public sealed partial class SlideshowPage : Page
     {
@@ -195,4 +195,6 @@ In the DisplayNext() method, we traverse through our list of media files obtaine
 
 <img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_settings2.png" height="400">
 
-###Initialize the GPIO pin
+###Browser
+
+In the BrowserPage.xaml.cs, Web Control APIs are used to handle the navigating to and rendering of Web pages.
