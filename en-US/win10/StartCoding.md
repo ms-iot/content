@@ -228,6 +228,11 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SpiTestTool.htm">SpiTestTool (C++)</a>
                     </div>
                     <div class="col-md-3">
+                        <h4>Express Node.js App (UWP)</h4>
+                        <p>Create an Express Node.js app that runs on devices running Windows 10 IoT Core Insider Preview</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWUExpress.htm">Express (Node.js)</a>
+                    </div>
+                    <div class="col-md-3">
                         <!-- Placeholder for alignment -->
                     </div>
                     <div class="col-md-3">
