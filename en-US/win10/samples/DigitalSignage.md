@@ -1,6 +1,6 @@
 #Digital Signage App
 
-This sample showcases a Digital Sign UWP running on Athens. Here we will demonstrate how the app receives content in different multimedia forms - e.g. video, audio, image, slideshow - from a service and to display this content to the user. The digital sign in this sample is interactive and allows web browsing as well as allowing for touch input. 
+This sample showcases a Digital Sign UWP running on Athens. Here we will demonstrate how the app receives content in different multimedia forms - e.g. video, audio, image, slideshow - from an XML file stored online and displays this content to the user. The digital sign in this sample is interactive and allows web browsing as well as allowing for touch input. 
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
 
@@ -65,25 +65,13 @@ The app's slideshow can be likened to a screensaver which displays while the app
  
  <img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_home.png" height="400">
 
-###Feedback
-
-1. From the Main page, click (or tap, if your monitor is touch-enabled) "Give feedback". 
-
-<img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_feedback.png" height="400">
-
-2. You may use this page to rate Windows, as well as leave any feedback comments
-
-<img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_feedbackpage.png" height="400">
-
-3. Clicking or tapping "Send" will take you back to the main page.
-
 ###Let's look at the code
 
 Here we will walk though the code used to exercise the scenarios performed above.
 
 ###Slideshow
 
-Navigate to Slideshow.xaml.cs.
+Navigate to Slideshow.xaml.cs. Observe that the imageExtensions variable maintains a list of supported image types
 
     public sealed partial class SlideshowPage : Page
     {
@@ -92,11 +80,11 @@ Navigate to Slideshow.xaml.cs.
         // ...
      }
 
-A configuration file is used to specify which webpages, images and videos to show during the slideshow:
+An XML file is used to specify which webpages, images and videos that we view during the slideshow. The media elements found in this file will be stored in a "Slideshow" list which loops as long as the slideshow plays.
 
-          readonly string defaultConfigFilePath = @"http://iot-digisign01/ds/config.xml";
+    readonly string defaultConfigFilePath = @"Assets\config.xml";
           
-The config file used by this app is shown below
+The configuration file used by this sample, config.xml, can be found in the project's Assets directory. You may use this as a template to create your own personalized config file.
 
         <?xml version="1.0" encoding="UTF-8"?>
           -<DigitalSignageConfig>
@@ -120,7 +108,7 @@ The config file used by this app is shown below
             </Display>
         </DigitalSignageConfig>
         
-Start the slideshow
+Starting the slide show reads in the sample config file and begins displaying the slideshow. 
 
         public async void StartSlideShow()
         {
@@ -128,12 +116,34 @@ Start the slideshow
             DisplayNext();
         }
 
-Display next method
+In the GetConfigAndParse() method, the config file is parsed. Each media element is then represented as a file which is copied to your Athens device. These are used to create our slideshow playlist.
+
+    public async Task GetConfigAndParse()
+    {
+      // ....
+      
+      DisplayObject DO = new DisplayObject();
+      string filename = fileElement.Attribute("path").Value.Substring(fileElement.Attribute("path").Value.LastIndexOf('/') + 1);
+      StorageFile file = await tmp.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
+      byte[] bytes = File.ReadAllBytes(filename);
+      await FileIO.WriteBufferAsync(file, WindowsRuntimeBufferExtensions.AsBuffer(bytes));
+      
+      if (fileElement.Attribute("duration") != null) // this is an image
+        DO.duration = Convert.ToInt32(fileElement.Attribute("duration").Value);
+        
+      DO.file = file;
+      
+      tmpList.Add(DO);
+      
+      // ...
+                      
+      }
+In the DisplayNext() method, we traverse through our list of media files obtained from the config, handling the various file types accordingly (audio files, video, webpage).
 
         async void DisplayNext()
         {
            // ...
-
+           
             DisplayObject currentDO = (DisplayObject) displayList[currentIndexOfDisplay];
             
             if (currentDO.uri != null) // we're dealing with a WEB Page, show the WebView instance
@@ -174,5 +184,15 @@ Display next method
             }
             currentIndexOfDisplay = (++currentIndexOfDisplay) % displayList.Count; // make the index in a loop
         }
+        
+  NOTE: You may navigate to the Settings menu in the app to change the config file to another of your choosing.
+  
+  1. From the Main page, click (or tap, if your monitor is touch-enabled) "Settings". 
+
+<img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_settings.png" height="400">
+
+ 2. Using the physical keyboard or touch screen, you may specify a new config file to read from either from your machine or on an HTTP server.
+
+<img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_settings2.png" height="400">
 
 ###Initialize the GPIO pin
