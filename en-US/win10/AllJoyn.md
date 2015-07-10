@@ -63,11 +63,11 @@ This is a tool we use in several points when working with AllJoyn samples. You c
  
 **Samples**  
 
-* [AllJoyn Z-Wave Tutorial](http://ms-iot.github.io/content/en-US/win10/samples/ZWaveTutorial.htm){:target="_blank"}.
+* [AllJoyn Z-Wave Tutorial]({{site.baseurl}}/en-US/win10/samples/ZWaveTutorial.htm){:target="_blank"}.
 
  This tutorial, based on the demo at the Build 2015 conference, shows how to use the Device System Bridge app to connect your  IoT Core devices to Z-Wave devices.  
 
-* [AllJoyn_DSB_GPIODevice_Tutorial](http://ms-iot.github.io/content/en-US/win10/samples/AlljoynDSB_GpioTutorial.htm){:target="_blank"}
+* [AllJoyn_DSB_GPIODevice_Tutorial]({{site.baseurl}}/en-US/win10/samples/AlljoynDSB_GpioTutorial.htm){:target="_blank"}
 
  This tutorial demonstrates how to use the AllJoyn Device System Bridge template to create a sample app that exercises the    device GPIO.
 
