@@ -86,7 +86,6 @@ In order to expose the GPIO Device to the AllJoyn Bus, we need to create a corre
     		pin->SetDriveMode(GpioPinDriveMode::Input);
     	}
 
-
 Now, modify the Initialize function as given in the following:
 
     uint32
