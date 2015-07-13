@@ -25,7 +25,7 @@ Learn how to set up the MinnowBoard Max hardware and connect it to your computer
 1. **Connect a USB keyboard** to one of the USB ports on the board.
 2. **Connect an HDMI monitor** to the microHDMI port on the board.
 3. **Connect a network cable** to the Ethernet port on the board. Make sure your development PC is on the same network.
-	
+
 	**NOTE:** If you don't have a local wired network, see [here]({{site.baseurl}}/{{page.lang}}/win10/ConnectToDevice.htm) for additional connection options.
 
 ![mbm]({{site.baseurl}}/images/mbm.bmp){:device-images}
@@ -71,14 +71,14 @@ The second time and every other time you need to use 32-bit EFI and 32-bit BIN.
 The reason the bitness of the firmware has to match the bitness of the OS is that there is an EFI in the OS image that gets loaded to bootstrap the OS, and that EFI has to be the same bitness as the firmware as well.
 
 ##Put the Windows 10 IoT Core Insider Preview image on your SD card
-	
+
 1. **Insert a micro SD card** into your SD card reader.
 
 2. **Use IoTCoreImageHelper.exe** to flash the SD card. Search for "WindowsIoT" from start menu and select the shortcut "WindowsIoTImageHelper"
 
-	<img src="{{site.baseurl}}/images/ImagerHelperSearch.PNG">. 
-	
-3. The tool will enumerate devices as shown. 
+	<img src="{{site.baseurl}}/images/ImagerHelperSearch.PNG">.
+
+3. The tool will enumerate devices as shown.
 	Select the SD card you want to flash and then provide the location of the ffu and flash the image.
 
 	<img src="{{site.baseurl}}/images/mbm_imagehelper.PNG">
@@ -113,11 +113,11 @@ The reason the bitness of the firmware has to match the bitness of the OS is tha
   1. Power on MBM device and press F2.
   2. Go to Boot Manager and select EFI Internal shell.
   3. Identify EFIESP partition (it might be FS1: hence assuming EFIESP partition as FS1: below)
-  4. Type FS1: 
+  4. Type FS1:
   5. Cd EFI
   6. Run  DeleteSbcpVariableFW.efi (This will clear UEFI variables)
   7. Now boot up the device.
-  
+
 * Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.  You can also follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to use SSH to connect to your device.
 * It is **highly recommended** that you update the default password for the Administrator account.
     To do this, issue the following commands in your PowerShell connection:
@@ -125,5 +125,5 @@ The reason the bitness of the firmware has to match the bitness of the OS is tha
     Replace `[new password]` with a strong password:
 
         net user Administrator [new password]
-        
+
     Once this is done, you'll need to re-establish the current session using enable-psSession with the new credentials.

@@ -118,6 +118,22 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/SetupWiFi.htm">Learn More</a>
                     </div>
                 </div>
+                <div class="row section-heading">
+                    <div class="col-md-3">
+                        <h4>Supported Peripheral Interfaces and Protocols</h4>
+                        <p>Find a list of supported peripheral interfaces and protocols with Window 10 IoT Core devices</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm">Learn More</a>
+                    </div>
+                    <div class="col-md-3">
+                        <!--Empty placeholder -->
+                    </div>
+					<div class="col-md-3">
+                        <!--Empty placeholder -->
+                    </div>
+                    <div class="col-md-3">
+                        <!--Empty placeholder -->
+                    </div>
+                </div>
             </div>
 
             <div role="tabpanel" class="tab-pane" id="second">
