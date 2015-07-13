@@ -52,7 +52,7 @@ Be sure to check out samples and additional documentation below.  We hope you’
 
 **AllJoyn Device System Bridge template for Visual Studio**  
 This template can be installed in Visual Studio 2015 Preview to enable you to create AllJoyn Device System Bridge projects. 
-* [DeviceSystemBridgeTemplate.vsix](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynDSBGuide/DeviceSystemBridgeTemplate.vsix?raw=true){:target="_blank"} - This vsix contains the AllJoyn Device System Bridge template. Note that this must be copied locally and cannot be installed remotely.  
+* [DeviceSystemBridgeTemplate.vsix](https://github.com/ms-iot/samples-private/blob/rtm/AllJoyn/AllJoynDSBGuide/DeviceSystemBridgeTemplate.vsix?raw=true){:target="_blank"} - This vsix contains the AllJoyn Device System Bridge template. Note that this must be copied locally and cannot be installed remotely.  
 
 **AllJoyn Explorer**
 This is a tool we use in several points when working with AllJoyn samples. You can find the AllJoyn Explorer [here](https://github.com/ms-iot/samples/tree/develop/AllJoyn/AllJoynExplorer){:target="_blank"}:  
