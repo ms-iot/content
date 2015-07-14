@@ -1,3 +1,9 @@
+layout: default
+title: Digital Signage UWP Sample
+permalink: /en-US/win10/samples/DigitalSignage.htm
+lang: en-US
+---
+
 #Digital Signage App
 
 This sample showcases a Digital Sign UWP running on Athens. Here we will demonstrate how the app receives content in different multimedia forms - e.g. video, audio, image, slideshow - from an XML file stored online and displays this content to the user. The digital sign in this sample is interactive and allows web browsing as well as allowing for touch input. 
