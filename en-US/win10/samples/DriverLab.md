@@ -20,13 +20,13 @@ In this lab we will be walking through the process of creating and installing a 
 The name of the driver for this lab is `gpiokmdfdemo`, and it will receive different IOCTL commands from a simple user-mode Win32 console application called `BinkyApp.exe`.  These IOCTL commands will tell the driver what GPIO pins to set high or low.  The driver `gpiokmdfdemo` will in turn communicate with the GpioClx (GPIO Class Extension) in Windows IoT Core to accomplish these requests.  Take a look at the diagram below to familiarize yourself with the inner workings of this lab.
 
 ###Lab source code and binaries
-The source code for this sample can be found [here](https://github.com/ms-iot/samples/tree/develop/DriverSamples), where you will find 3 folders:
+The source code for this sample can be found [here](https://github.com/ms-iot/samples/tree/develop/DriverSamples){:target="_blank"}, where you will find 3 folders:
 
-1. [`DriverSamples\gpiokmdfdemo`](https://github.com/ms-iot/samples/tree/develop/DriverSamples/gpiokmdfdemo) containing the source code for the driver.
+1. [`DriverSamples\BlinkyApp`](https://github.com/ms-iot/samples/tree/develop/DriverSamples/BlinkyApp){:target="_blank"} containing pre-built binaries of the console application for x86 and ARM architectures.gpiokmdfdemo
 
-2. [`DriverSamples\consoleapp\BlinkyApp`](https://github.com/ms-iot/samples/tree/develop/DriverSamples/consoleapp/BlinkyApp) containing the source code for the console application.
+2. [`DriverSamples\consoleapp\BlinkyApp`](https://github.com/ms-iot/samples/tree/develop/DriverSamples/consoleapp/BlinkyApp){:target="_blank"} containing the source code for the console application.
 
-3. [`DriverSamples\BlinkyApp`](https://github.com/ms-iot/samples/tree/develop/DriverSamples/gpiokmdfdemo) containing pre-built binaries of the console application for x86 and ARM architectures.
+3. [`DriverSamples\gpiokmdfdemo`](https://github.com/ms-iot/samples/tree/develop/DriverSamples/gpiokmdfdemo){:target="_blank"} containing the source code for the driver.
 
 <br/>
 
