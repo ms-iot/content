@@ -80,11 +80,7 @@ lang: en-US
                         <p>Use WINDBG to debug</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/Windbg.htm">Learn More</a>
                     </div>
-                    <div class="col-md-3">
-                        <h4>Use ICD to create an image</h4>
-                        <p>Image creation, process and tools</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/ImageCreation.htm">Learn More</a>
-                    </div>
+    
 					<div class="col-md-3">
                         <h4>Glossary</h4>
                         <p>A list of commonly used phrases and their meanings</p>
