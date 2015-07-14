@@ -103,7 +103,7 @@ Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/Blin
 
 ### Use the application provided to communicate with the driver
 
-We have provided a pre-built binary application called BlinkyApp.exe which communicates with the driver to turn on/off the LED.  The application can be found at `<Samples-Folder>\DriverSamples\BlinkyApp\BlinkyApp_<PLATFORM>.exe`.
+We have provided a pre-built binary application called BlinkyApp.exe which communicates with the driver to turn on/off the LED.  The application can be found at `DriverSamples\BlinkyApp\BlinkyApp_<PLATFORM>.exe`.
 
 For MinnowBoard Max, `<PLATFORM>` will be `x86`.
 For Raspberry Pi 2, `<PLATFORM>` will be `ARM`.
@@ -116,46 +116,40 @@ In the PowerShell window, navigate to the folder you copied `BlinkyApp_<PLATFORM
 
 You should see a help menu similar to this:
 
-    BlinkyApp: Interactive GPIO app demo tool
+    BlinkyApp: GPIO app tool
+
     Commands:
 
-      help              Prints this help message.
-      (l)ow 2           Writes GPIO 5 LOW.
-      (h)igh 2          Writes GPIO 5 HIGH.
+      help      : Prints this help message.
+      (l)ow  5  : Sets GPIO #5 LOW.
+      (h)igh 5  : Sets GPIO #5 HIGH.
 
-    Example:
 
-      BlinkyApp.exe low 2
-      BlinkyApp.exe high 2
+    Raspberry Pi 2 (RPi2) [ARM]: GPIO Pin Mapping and Examples
 
-	 ------------------------------------------------------------
-	 Pin mapping for RPi2 from rpi2.asl
-
-		GPIO    #   | Parameter |  Example (GPIO low)   |  Example (GPIO high)
-		GPIO [  0 ]    =  0        BlinkyApp.exe l  0   |  BlinkyApp.exe h  0
-		GPIO [  1 ]    =  1        BlinkyApp.exe l  1   |  BlinkyApp.exe h  1
-		GPIO [  5 ]    =  2        BlinkyApp.exe l  2   |  BlinkyApp.exe h  2
-		GPIO [  6 ]    =  3        BlinkyApp.exe l  3   |  BlinkyApp.exe h  3
-		GPIO [ 12 ]    =  4        BlinkyApp.exe l  4   |  BlinkyApp.exe h  4
-		GPIO [ 13 ]    =  5        BlinkyApp.exe l  5   |  BlinkyApp.exe h  5
-		GPIO [ 16 ]    =  6        BlinkyApp.exe l  6   |  BlinkyApp.exe h  6
-		GPIO [ 18 ]    =  7        BlinkyApp.exe l  7   |  BlinkyApp.exe h  7
-		GPIO [ 22 ]    =  8        BlinkyApp.exe l  8   |  BlinkyApp.exe h  8
-		GPIO [ 23 ]    =  9        BlinkyApp.exe l  9   |  BlinkyApp.exe h  9
-		GPIO [ 24 ]    = 10        BlinkyApp.exe l 10   |  BlinkyApp.exe h 10
-		GPIO [ 25 ]    = 11        BlinkyApp.exe l 11   |  BlinkyApp.exe h 11
-		GPIO [ 26 ]    = 12        BlinkyApp.exe l 12   |  BlinkyApp.exe h 12
-		GPIO [ 27 ]    = 13        BlinkyApp.exe l 13   |  BlinkyApp.exe h 13
-		GPIO [ 35 ]    = 14        BlinkyApp.exe l 14   |  BlinkyApp.exe h 14
-		GPIO [ 47 ]    = 15        BlinkyApp.exe l 15   |  BlinkyApp.exe h 15
+      GPIO No. |      Example       |      Example       | Header
+               |     (GPIO low)     |     (GPIO high)    | Pin No.
+      GPIO  4  | BlinkyApp.exe l  4 | BlinkyApp.exe h  4 |    7
+      GPIO  5  | BlinkyApp.exe l  5 | BlinkyApp.exe h  5 |   29
+      GPIO  6  | BlinkyApp.exe l  6 | BlinkyApp.exe h  6 |   31
+      GPIO 12  | BlinkyApp.exe l 12 | BlinkyApp.exe h 12 |   32
+      GPIO 13  | BlinkyApp.exe l 13 | BlinkyApp.exe h 13 |   33
+      GPIO 16  | BlinkyApp.exe l 16 | BlinkyApp.exe h 16 |   36
+      GPIO 18  | BlinkyApp.exe l 18 | BlinkyApp.exe h 18 |   12
+      GPIO 22  | BlinkyApp.exe l 22 | BlinkyApp.exe h 22 |   15
+      GPIO 23  | BlinkyApp.exe l 23 | BlinkyApp.exe h 23 |   16
+      GPIO 24  | BlinkyApp.exe l 24 | BlinkyApp.exe h 24 |   18
+      GPIO 25  | BlinkyApp.exe l 25 | BlinkyApp.exe h 25 |   22
+      GPIO 26  | BlinkyApp.exe l 26 | BlinkyApp.exe h 26 |   37
+      GPIO 27  | BlinkyApp.exe l 27 | BlinkyApp.exe h 27 |   13
 
 If you are using GPIO #5 on the Raspberry Pi 2, type the following command to turn the LED on:
 
-    [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe low 2
+    [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe low 5
 
 ###Note:
 Driving the GPIO low will make the LED light-up because of the way the LED is connected as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm).
 
 To turn the LED off, simply type:
 
-    [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe high 2
+    [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe high 5

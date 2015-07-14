@@ -15,7 +15,7 @@ A Windows IoT Core driver is made up of one or more files.  Some of these files 
 
     ![Driver Settings properties]({{site.baseurl}}/images/DriverLab/driver-build-option.png)
 
-* You will now have a collection of files that make up the driver. Confirm you have both the **SYS** and **INF** files for your driver under the `<Samples-Folder>\DriverSamples\gpiokmdfdemo\Debug\gpiokmdfdemo\` folder.
+* You will now have a collection of files that make up the driver. Confirm you have both the **SYS** and **INF** files for your driver under the `DriverSamples\gpiokmdfdemo\Debug\gpiokmdfdemo\` folder.
 
         gpiokmdfdemo.inf
         gpiokmdfdemo.sys
@@ -24,7 +24,7 @@ A Windows IoT Core driver is made up of one or more files.  Some of these files 
 
     We will use the Microsoft ACPI Source Language compiler (`asl.exe`) to build the ACPI table.  The ASL compiler is distributed with the WDK and can be found in `C:\Program Files (x86)\Windows Kits\10\Tools\x86\ACPIVerify\`
 
-    The ASL compiler takes as input parameter a file with extension **ASL**.  You will find 2 **ASL** files in the asl directory under `<Samples-Folder>\DriverSamples\gpiokmdfdemo\asl\`
+    The ASL compiler takes as input parameter a file with extension **ASL**.  You will find 2 **ASL** files in the asl directory under `DriverSamples\gpiokmdfdemo\asl\`
 
     Use `gpiokmdfdemo.asl` if you are deploying to a MinnowBoard Max.  Use `rpi2.asl` if you are deploying to a Raspberry Pi 2.
 
