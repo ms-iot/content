@@ -7,10 +7,14 @@ lang: en-US
 
 ##Headed and Headless mode
 
-Windows IoT Core can either be in headed or headless mode.  The difference between these two modes is the presence or absence of any form of UI.  By default, Windows 10 IoT Core is in headed mode and displays system information like the computer name and IP address.  In the headed mode, the standard UWP UI stack is available for fully interactive apps.  In headless mode, there is no UI stack available and apps are not interactive.  Headless mode apps can be thought of as services.
+Windows IoT Core can be configured for either **headed** or **headless** mode. The difference between these two modes is the presence or absence of any form of UI.  
+By default, Windows 10 IoT Core is in **headed** mode and displays system information like the computer name and IP address. 
+Furthermore, in the headed mode, the standard UWP UI stack is available for fully interactive apps. 
+Devices that don't need UI functionality can be set to **headless** mode. The UI stack is disabled and apps are no longer interactive. Headless mode apps can be thought of as services.
 
-    NOTE: if you put your device into headless mode, the default app will not be available to display the IP address, so be sure to make a note of your device's name and IP address.
+    NOTE: if you put your device into headless mode, use the WindowsIoTCoreWatcher application described below to find its IP address
 
+##Changing the mode
 You can modify the headed/headless state of your device from a PowerShell session.  To review the PowerShell details, look [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
 
 * To display the current state of your device, use the `setbootoption` utility like this:
@@ -26,3 +30,11 @@ You can modify the headed/headless state of your device from a PowerShell sessio
 
         [192.168.0.243]: PS C:\> setbootoption.exe headed
         [192.168.0.243]: PS C:\> shutdown /r /t 0
+
+
+##Finding your headless device
+
+A Windows IoT Core device that is in headless mode can be discovered using the **WindowsIoTCoreWatcher** application that is installed with the Windows 10 IoT Core tools.
+When run, the application automatically finds all Windows IoT Core devices on the local network and displays device information such as the name, MAC, IP address, and more.
+
+![Windows IoT Core Watcher]({{site.baseurl}}/images/HeadlessMode/IoTCoreWatcher.png)
