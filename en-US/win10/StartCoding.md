@@ -45,10 +45,10 @@ lang: en-US
                         <p>Allows Remote Administration and Configuration so that you can remotely configure and manage any Windows IoT Core device</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm">Learn More</a>
                     </div>
-					<div class="col-md-3">  
-						<h4>Using SSH</h4>  
-						<p>Allows Remote Administration and Configuration of your Windows IoT Core device over SSH</p>  
-						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm">Learn More</a>  
+					<div class="col-md-3">
+						<h4>Using SSH</h4>
+						<p>Allows Remote Administration and Configuration of your Windows IoT Core device over SSH</p>
+						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm">Learn More</a>
 					</div>
                 </div>
                 <div class="row section-heading">
@@ -238,7 +238,7 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2cTestTool.htm">I2cTestTool (C++)</a>
                     </div>
                 </div>
-                
+
                 <div class="row section-heading">
                     <div class="col-md-3">
                         <h4>SpiTestTool (Console)</h4>
@@ -251,10 +251,9 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWUExpress.htm">Express (Node.js)</a>
                     </div>
                     <div class="col-md-3">
-                        <!-- Placeholder for alignment -->
-                    </div>
-                    <div class="col-md-3">
-                        <!-- Placeholder for alignment -->
+                         <h4>Digital Signage Sample</h4>
+                        <p>Showcases an App running on Windows 10 IoT Core .</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/DigitalSignage.htm">DigitalSignageUWP (C++)</a>
                     </div>
                     <div class="col-md-3">
                         <!-- Placeholder for alignment -->
