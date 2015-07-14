@@ -1,3 +1,4 @@
+---
 layout: default
 title: Digital Signage UWP Sample
 permalink: /en-US/win10/samples/DigitalSignage.htm
@@ -6,13 +7,13 @@ lang: en-US
 
 #Digital Signage App
 
-This sample showcases a Digital Sign UWP running on Athens. Here we will demonstrate how the app receives content in different multimedia forms - e.g. video, audio, image, slideshow - from an XML file stored online and displays this content to the user. The digital sign in this sample is interactive and allows web browsing as well as allowing for touch input. 
+This sample showcases a Digital Sign UWP running on Windows IoT Core. Here we will demonstrate how the app receives content in different multimedia forms - e.g. video, audio, image, slideshow - from an XML file stored online and displays this content to the user. The digital sign in this sample is interactive and allows web browsing as well as allowing for touch input. 
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
 
 ###Prerequisites
 
-* Athens device running build 10152 or greater. 
+* Device running Windows IoT Core build 10240 or greater. 
 * Mouse
 * Keyboard
 * Display monitor
