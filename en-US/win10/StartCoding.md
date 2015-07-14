@@ -253,7 +253,7 @@ lang: en-US
                     <div class="col-md-3">
                          <h4>Digital Signage Sample</h4>
                         <p>Showcases an App running on Windows 10 IoT Core .</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/DigitalSignage.htm">DigitalSignageUWP (C++)</a>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/DigitalSignage.htm">DigitalSignageUWP (C#)</a>
                     </div>
                     <div class="col-md-3">
                         <!-- Placeholder for alignment -->
