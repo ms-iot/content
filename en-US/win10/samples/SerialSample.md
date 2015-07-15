@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/SerialSample.htm
 lang: en-US
 ---
 
-#Serial Port Sample (In development)
+#Serial Port Sample
 
 We'll create a simple app that allows communication between a desktop and an IoT device over a serial interface.
 
@@ -49,6 +49,7 @@ You'll need:
 
 * 2 X USB-to-TTL cable (Silicon Labs only. Example: [CP2102](http://www.amazon.com/gp/product/B00LODGRV8?psc=1&redirect=true&ref_=oh_aui_search_detailpage{:target="_blank"})) for IoT Device
 * F-to-M and F-to-F Jumper Wires
+* If you need Silicon Labs drivers for your PC you can find them [here](http://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx{:target="_blank"})
 
 Only USB-to-TTL cables with Silicon Labs chipsets are natively supported on MinnowBoard Max and Raspberry Pi2.
 
@@ -89,7 +90,7 @@ Congratulations! You just communicated over the serial interface.
 
 * When connecting to the USB-to-TTL device for the first time from the IoT Device, you may see the error "Object was not instantiated" when you click on `Connect`. If you see this, un-plug the device, plug it back in and refresh the connection or redeploy the app.
 * If you have more than one Silicon Labs USB-to-TTL devices connected to your IoT device, only the device that was first connected will be recognized. In order to run this sample, connect only one device
-* When connecting USB-to-TTL device to MinnowBoard Max, use a powered USB hub or the bottom USB port 
+* When connecting USB-to-TTL device to MinnowBoard Max, use a powered USB hub or the bottom USB port
 
 
 ###Let's look at the code
