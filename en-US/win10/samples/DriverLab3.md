@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/DriverLab3.htm
 lang: en-US
 ---
 
-##Deploy the driver and confirm the installation
+##Deploy the driver and confirm the installation using VS
 
 This exercise demonstrates how to manually copy and install the driver to a Windows IoT Core device. We will first use the **Server Message Block (SMB)** protocol via a **File Explorer** window to transfer files from the development machine to the target device (Windows IoT Core device). We will then use PowerShell to install the driver.
 
