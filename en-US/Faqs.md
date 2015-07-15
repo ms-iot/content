@@ -16,6 +16,8 @@ lang: en-US
         <a href="#galileo"><h4>Intel Galileo</h4></a>
 
         <a href="#errors"><h4>Errors</h4></a>
+		
+		<a href="#mbm_usb_port"><h4>MinnowBoard Max</h4></a>
     </div>
 
     <div class="col-md-8 col-md-offset-4 col-xs-8 col-xs-offset-4 section-heading">
@@ -111,6 +113,11 @@ lang: en-US
         If you attempt to deploy the app, it will crash immediately. To fix this:
         <ul><li>Open Package.appxmanifest.</li>
         <li>Replace all occurences of "winuniversalnode" with "nodeuwp" and save.</li></ul></p>
+        <br />
+		<a name="mbm_usb_port"></a>
+        <h2 class="faq-h2">MinnowBoard Max</h2>
+        <p class="bold"><em>Known issues with the top USB port</em></p>
+        <p>You may experience degrading performance and lack of key functionality with USB devices plugged into the top port.  At this time we suggest using only the bottom port for USB peripherals.  We are currently investigating this issue.</p>
         <br />
     </div>
 </div>
