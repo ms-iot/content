@@ -21,7 +21,7 @@ This is a Universal Windows application
   
 You'll need:  
   
-* A USB web cam (Example: [Microsoft Life Cam](http://www.microsoft.com/hardware/en-us/p/lifecam-hd-3000 {:target="_blank"}))  
+* A USB web cam (Example: [Microsoft Life Cam](http://www.microsoft.com/hardware/en-us/p/lifecam-hd-3000){:target="_blank"})
   
 Connect the web cam to one of USB ports on MinnowBoard Max or Raspberry Pi2  
   
@@ -29,7 +29,7 @@ Connect the web cam to one of USB ports on MinnowBoard Max or Raspberry Pi2
   
 If you're building for Minnowboard Max, select `x86` as the architecture. If you're building for Raspberry Pi 2, select `ARM`.  
   
-Select **Remote Machine** to point to IoT device and hit F5 to deploy to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance   
+Select **Remote Machine** to point to IoT device and hit F5 to deploy to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm){:target="_blank"}. if you need guidance   
   
 ###Test your app   
   

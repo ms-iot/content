@@ -9,7 +9,7 @@ lang: en-US
 
 We'll create a simple app that allows communication between a desktop and an IoT device over a serial interface.
 
-This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
+This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm){:target="_blank"}.
 
 ###Load the project in Visual Studio
 
@@ -30,10 +30,10 @@ Visit the sections below depending on which interface you would like to use.
 
 You'll need:
 
-* 1 X USB-to-TTL cable (Silicon Labs, Example: [CP2102](http://www.amazon.com/gp/product/B00LODGRV8?psc=1&redirect=true&ref_=oh_aui_search_detailpage{:target="_blank"}))
+* 1 X USB-to-TTL cable (Silicon Labs, Example: [CP2102](http://www.amazon.com/gp/product/B00LODGRV8?psc=1&redirect=true&ref_=oh_aui_search_detailpage){:target="_blank"})
 * F-to-F Jumper Wires
 
-On-board UART is only supported on MinnowBoard Max. Refer to pin-out [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm).
+On-board UART is only supported on MinnowBoard Max. Refer to pin-out [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm){:target="_blank"}.
 
 In this sample, we will use UART2. Connect the USB end of the USB-to-TTL cable to the PC and the other end to the UART2 pins on the MBM. 
 
@@ -47,9 +47,9 @@ In the picture below the white wire (RX) goes to the UART TX pin and green (TX) 
 
 You'll need:
 
-* 2 X USB-to-TTL cable (Silicon Labs only. Example: [CP2102](http://www.amazon.com/gp/product/B00LODGRV8?psc=1&redirect=true&ref_=oh_aui_search_detailpage{:target="_blank"})) for IoT Device
+* 2 X USB-to-TTL cable (Silicon Labs only. Example: [CP2102](http://www.amazon.com/gp/product/B00LODGRV8?psc=1&redirect=true&ref_=oh_aui_search_detailpage){:target="_blank"}) for IoT Device
 * F-to-M and F-to-F Jumper Wires
-* If you need Silicon Labs drivers for your PC you can find them [here](http://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx{:target="_blank"})
+* If you need Silicon Labs drivers for your PC you can find them [here](http://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx){:target="_blank"}
 
 Only USB-to-TTL cables with Silicon Labs chipsets are natively supported on MinnowBoard Max and Raspberry Pi2.
 
@@ -65,7 +65,7 @@ In the picture below white wire (RX) from one USB-to-TTL goes to the TX pin of t
 
 * Create 2 instances of Visual Studio and with the same project. 
 * If you're building for MinnowBoard Max or PC, select `x86` as the architecture.  If you're building for Raspberry Pi 2, select `ARM`.
-* In the first Visual Studio instance select **Remote Machine** and hit F5 to deploy to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
+* In the first Visual Studio instance select **Remote Machine** and hit F5 to deploy to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm){:target="_blank"}. if you need guidance.
 * In the second Visual Studio instance select **Local Machine** and hit F5 to deploy to your local PC
 
 ###Run the app 
