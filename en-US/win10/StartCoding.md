@@ -256,7 +256,9 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/DigitalSignage.htm">DigitalSignageUWP (C#)</a>
                     </div>
                     <div class="col-md-3">
-                        <!-- Placeholder for alignment -->
+                        <h4>Serial UART Sample (Windows Universal)</h4>
+                        <p>Create an app to read and write to UART interfaces on Windows IoT core</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SerialSample.htm">Learn More</a>
                     </div>
                 </div>
 
