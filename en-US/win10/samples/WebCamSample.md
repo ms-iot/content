@@ -45,7 +45,7 @@ The sample app when deployed displays 2 buttons `Initialize Audio and Video` and
   
 * `Start Audio Record` when clicked will begin recording. When done press `Stop Audio Record` to save the video. Audio is automtically played back.  
   
-**NOTE:** In order to hear the audio, an audio device (ex: earphones) must be connected to the audio output on Raspberry Pi2. On MinnowBoard Max, audio output is available via HDMI  
+**NOTE:** In order to hear the audio, an audio device (ex: earphones) must be connected to the analog audio output on Raspberry Pi2. On MinnowBoard Max, audio output is available via HDMI  
   
 Congratulations! You created your first web cam app.  
  
@@ -55,7 +55,11 @@ The code for this sample uses the [Windows.Media.Capture](https://msdn.microsoft
  
 **MediaCapture** class will be used to enumerate, connect to, and perform actions using the web camera connected to the device.   
  
-or accessing the web cam, the microphone, and the default storage folders, you must add the following capabilities to the **Package.appxmanifest** file in your project:  
+For accessing the web cam, the microphone, and the default storage folders, you must add the following capabilities to the **Package.appxmanifest** file in your project:  
+
+<img src="{{site.baseurl}}/images/PMWebCamOptions.png">
+
+**NOTE:** You can also add capabilities directly by opening the **Package.appxmanifest** file in an XML editor (Right Click on the file -> Open with -> XML (Text) Editor) and adding the capabilities below:
  
 {% highlight xml %}  
  <Capabilities>      
@@ -165,7 +169,7 @@ When this button is clicked **recordVideo_Click** is called and we read the cont
   
 The code below shows how we accomplish this. Once the recording is stopped, we store the video in the default storage location and play it back in the XAML canvas element.  
   
-**NOTE:** In order to hear the audio, an audio device (ex: earphones) must be connected to the audio output on Raspberry Pi2. On MinnowBoard Max, audio output is available via HDMI  
+**NOTE:** In order to hear the audio, an audio device (ex: earphones) must be connected to the analog audio output on Raspberry Pi2. On MinnowBoard Max, audio output is available via HDMI  
   
 {% highlight C# %}  
 private async void recordVideo_Click(object sender, RoutedEventArgs e)  
@@ -219,7 +223,7 @@ When this button is clicked **recordAudio_Click** is called and we read the cont
   
 The code below shows how we accomplish this. Once the recording is stopped, we store the audio in the default storage location and play it back in the XAML canvas element.  
   
-**NOTE:** In order to hear the audio, an audio device (ex: earphones) must be connected to the audio output on Raspberry Pi2. On MinnowBoard Max, audio output is available via HDMI  
+**NOTE:** In order to hear the audio, an audio device (ex: earphones) must be connected to the analog audio output on Raspberry Pi2. On MinnowBoard Max, audio output is available via HDMI  
   
 {% highlight C# %}  
 private async void recordAudio_Click(object sender, RoutedEventArgs e)  

@@ -101,7 +101,9 @@ The SerialDevice class will be used to enumerate, connect, read, and write to th
 
 **NOTE:** The SerialDevice class can be used only for supported USB-to-TTL devices (on PC, Raspberry Pi 2, and MinnowBoard Max) and the on-board UART (on MinnowBoard Max).
 
-For accessing the serial port, you must add the following capability to the **Package.appxmanifest** file in your project:
+For accessing the serial port, you must add the **DeviceCapability** to the **Package.appxmanifest** file in your project. 
+
+You can add this by opening the **Package.appxmanifest** file in an XML editor (Right Click on the file -> Open with -> XML (Text) Editor) and adding the capabilities as shown below:
 
 {% highlight xml %}
   <Capabilities>

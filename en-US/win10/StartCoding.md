@@ -263,6 +263,23 @@ lang: en-US
                 </div>
 
                 <div class="row section-heading">
+                    <div class="col-md-3">
+                        <h4>USB Web camera Sample (Windows Universal)</h4>
+                        <p>Create an app to take photo, record video and audio using a USB Web Camera on Windows IoT core</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/WebCamSample.htm">Learn More</a>
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Placeholder for alignment -->
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Placeholder for alignment -->
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Placeholder for alignment -->
+                    </div>
+                </div>
+
+                <div class="row section-heading">
                     <h2>Previous Version of Windows</h2>
                 </div>
                 <div class="row section-heading">
