@@ -15,15 +15,20 @@ Choose the appropriate section based on the board you are using.
 
 * Start your MBM and connect to it using PowerShell (you can find PowerShell instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm))
 
-* Configure your MBM, by changing the bcd settings like this:
+* Configure your MBM by changing the following BCD settings:
 
-        [192.168.0.243]: PS C:\> bcdedit -store C:\EFIESP\efi\Microsoft\Boot\bcd -dbgsettings net hostip:<IP address of machine running WINDBG> port:<PORTNUM>
+        [192.168.0.243]: PS C:\> bcdedit -dbgsettings net hostip:<DEV_PC_IP_ADDRESS> port:<PORT_NUM> key:<KEY>
 
-        [192.168.0.243]: PS C:\> bcdedit -store C:\EFIESP\efi\Microsoft\Boot\bcd -debug on
+        [192.168.0.243]: PS C:\> bcdedit -debug on
 
-* From your development machine, start WINDBG with the <PORT> you provided and the key that was generated in the previous step:
+* Note that 'DEV_PC_IP_ADDRESS' is the IP address of your development PC where you will be running WinDbg.  It is not the IP address of your MBM. 
 
-        "c:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k net:port=<PORT>,key=<GENERATED KEY>
+* For 'PORT_NUM' and 'KEY', you can use the following values as examples: 50045 and 1.2.3.4 respectively. 
+
+* On your development machine, start WINDBG with the 'PORT_NUM' and the 'KEY' values you provided in the previous steps:
+
+        "c:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k net:port=<PORT_NUM>, key=<KEY>
+
 
 ###Connecting to a Raspberry Pi 2 (RPi2)
 
@@ -33,14 +38,16 @@ Choose the appropriate section based on the board you are using.
 
 * Start your RPi2 and connect to it using PowerShell (you can find PowerShell instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm))
 
-* Configure your RPi2, by changing the bcd settings like this:
+* Configure your RPi2 by changing the following BCD settings:
 
-        [192.168.0.243]: PS C:\> bcdedit -store C:\EFIESP\efi\Microsoft\Boot\bcd -dbgsettings serial debugport:1 baudrate:115200
+        [192.168.0.243]: PS C:\> bcdedit -dbgsettings serial baudrate:912600
 
-        [192.168.0.243]: PS C:\> bcdedit -store C:\EFIESP\efi\Microsoft\Boot\bcd -debug on
+        [192.168.0.243]: PS C:\> bcdedit -debug on
 
-* From your development machine, open the device manager and find the COM port your converter is using.
+* On your development machine, open the device manager and find the COM port number that your USB TTL UART cable was assigned. 
 
-* From your development machine, start WINDBG with the <PORT> you provided and the key that was generated in the previous step:
+* On your development machine, start WINDBG as follows:
 
-        "C:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k com:port=<PORT>,baud=912600
+        "C:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k com:port=<PORT>, baud=912600
+
+* Please note that 'PORT' refers to the COM port number your USB TTL UART cable was assigned by the system and displayed in the device manager. 
