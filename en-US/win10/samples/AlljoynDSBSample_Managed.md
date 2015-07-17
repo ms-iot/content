@@ -174,7 +174,11 @@ That is all for a basic GPIO pin device. At this point when this application run
 When you run the AllJoyn Explorer Application in the same subnet with the AllJoyn Device System Bridge, you should be able to see that the GPIO Device is discovered. 
 
 1. Launch AlljoynExplorer
-2. Locate the "Custom Adapter" and "Custom_GPIO_Device" in the list of exposed Devices and Services. Select the "Custom_GPIO_Device" from the list
+2. Locate the "Custom Adapter" and "Custom_GPIO_Device" in the list of exposed Devices and Services. 
+
+ NOTE: Your adapter name may be different than the one shown below. By default, the adapter name is the name of the project you've created. For example, if your project name is DsbAdapter, the name of the adapter node will be "DsbAdapter" instead of "Custom Adapter".
+
+Select the "Custom_GPIO_Device" from the list
 
 ![ajx_dsb1]({{site.baseurl}}/images/AllJoyn/ajx_dsb1.png)
 
