@@ -16,6 +16,9 @@ lang: en-US
         <br/>
         <h4>Questions/Suggestions</h4>
         <p>Remember, you can always send <a href="{{site.baseurl}}/{{page.lang}}/Community.htm#contact">contact us</a> for help and suggestions!</p>
+		<br/>
+		<h4>How To Download These Samples</h4>
+		<p>The easiest way to download these samples is to navigate to the GitHub repo ms-iot/samples by clicking <a href="https://github.com/ms-iot/samples">here</a>, and then click on the Download ZIP button on the right-hand menu.  Once you download and unzip the file locally, you will be able to see all the samples.</p>
     </div>
     <div class="col-md-6">
         <div class="downloads-image"></div>
