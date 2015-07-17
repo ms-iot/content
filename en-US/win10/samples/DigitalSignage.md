@@ -43,7 +43,6 @@ The app's slideshow can be likened to a screensaver which displays while the app
 
 2. Slideshow begins - various content is displayed, including ads and screensaver visuals with audio.
 
-<img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_blackberry.png" height="400">
 <img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_horses.png" height="400">
 
 3. End the slideshow by either a) moving your mouse, b) pressing any key or c) tap anywhere on the screen. The main page will return to the screen.
