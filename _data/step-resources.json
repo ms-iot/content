@@ -1,14 +1,14 @@
 ﻿{
   "en-US":[
-            "Select Your Device",
-            "Set up your Device",
+            "Select your Device",
             "Set up your PC",
+            "Set up your Device",
             "Develop"
     ],
   "zh-CN": [
             "选择您的设备",
-            "设置设备",
             "设置你的电脑",
+            "设置设备",
             "开发"
     ]
 }
