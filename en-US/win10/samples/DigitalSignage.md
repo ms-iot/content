@@ -122,7 +122,7 @@ Starting the slide show reads in the sample config file and begins displaying th
             DisplayNext();
         }
 
-In the GetConfigAndParse() method, the config file is parsed. Each media element is then represented as a file which is copied to your Athens device. These are used to create our slideshow playlist.
+In the GetConfigAndParse() method, the config file is parsed. Each media element is then represented as a file which is copied to your Windows 10 IoT Core device. These are used to create our slideshow playlist.
 
     public async Task GetConfigAndParse()
     {
