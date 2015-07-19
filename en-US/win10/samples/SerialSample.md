@@ -21,97 +21,133 @@ This app is a Universal Windows app and will run on both the PC and your IoT dev
 
 You have two options for wiring up your board:
 
-1. GPIO using the On-board UART controller (MinnowBoard Max only)
-2. USB using a USB-to-Serial serial adapter
+1. GPIO - using the On-board UART controller (MinnowBoard Max only)
+2. USB - using a USB-to-TTL adapter
 
-####Using GPIO (MinnowBoard Max Only)
+####Using GPIO **(MinnowBoard Max Only)**
 
 You will need:
 
-* 1 X USB-to-TTL cable board cable (for this sample we used a [Silicon Labs CP2102 based USB-to-TTL cable](http://www.amazon.com/gp/product/B00LODGRV8?psc=1&redirect=true&ref_=oh_aui_search_detailpage){:target="_blank"})
+* 1 X USB-to-TTL cable or module (for this sample we used a USB-to-TTL cable such as [this one](http://www.adafruit.com/products/954){:target="_blank"})
 
-The MinnowBoard Max has two on-board UARTs that can be configured to use GPIO pins. UART1 uses GPIO pins 6, 8, 10, and 12. UART2 uses GPIO pins 17 and 19. These GPIO pins are highlighted in green in the diagram below. In this sample we will use UART2.
+The MinnowBoard Max has two on-board UARTs that can be configured to use GPIO pins. 
+
+* UART1 uses GPIO pins 6, 8, 10, and 12. 
+* UART2 uses GPIO pins 17 and 19. 
+
+These GPIO pins are highlighted in green in the diagram below. In this sample we will use UART2. See the [MBM pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm) for more details on the MBM GPIO pins.
 
 <img src="{{site.baseurl}}/images/PinMappings/MBM_Pinout.png" height="400">
-
-See the [MBM pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm) for more details on the MBM GPIO pins.
 
 Make the following connections:
 
 * Insert the USB end of the USB-to-TTL cable into a USB port on the PC
 
-* Connect the GND pin of the USB-to-TTL cable to Pin 1 (GND) on the MBM board
+* Connect the GND wire of the USB-to-TTL cable to Pin 1 (GND) on the MBM board
 
-* Connect the RX pin of the USB-to-TTL cable to Pin 17 (TX) on the MBM board
+* Connect the RX wire of the USB-to-TTL cable to Pin 17 (TX) on the MBM board
 
-* Connect the TX pin of the USB-to-TTL cable to Pin 19  (RX) on the MBM board
+* Connect the TX wire of the USB-to-TTL cable to Pin 19 (RX) on the MBM board
 
-Note: Leave the power pin of the USB-to-TTL cable unconnected. It is not needed.
+*Note: Leave the power wire of the USB-to-TTL cable unconnected. It is not needed.*
 
 <img src="{{site.baseurl}}/images/SerialSample/SiLabs-UART.png">
 
-###Using USB-to-Serial Adapter
+###Using USB-to-TTL Adapter
+
+**Note: Only USB-to-TTL cables and modules with Silicon Labs chipsets are natively supported on MinnowBoard Max and Raspberry Pi2.**
 
 You will need:
 
-* 2 X USB-to-TTL modules with cable (Silicon Labs CP2102 based only such as [this one](http://www.amazon.com/gp/product/B00LODGRV8?psc=1&redirect=true&ref_=oh_aui_search_detailpage){:target="_blank"})
+* 1 X USB-to-TTL module (This is what we will connect to our RPI2 or MBM device. We used [this Silicon Labs CP2102 based USB-to-TTL module](http://www.amazon.com/gp/product/B00LODGRV8){:target="_blank"})
 
-Note: If you need Silicon Labs drivers for your PC you can find them [here](http://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx){:target="_blank"}
-
-Note: Only USB-to-TTL cables with Silicon Labs chipsets are natively supported on MinnowBoard Max and Raspberry Pi2.
+* 1 X USB-to-TTL cable (This will connect to our PC. We used [this one](http://www.adafruit.com/products/954){:target="_blank"})
 
 Make the following connections:
 
-* Insert the USB end of the first USB-to-TTL module into a USB port on the PC
+* Insert the USB end of the USB-to-TTL **cable** into a USB port on the PC
 
-* Insert the USB end of the second USB-to-TTL module into a USB port on the RPI2 or MBM device
+* Insert the USB end of the USB-to-TTL **module** into a USB port on the RPI2 or MBM device 
 
-* Connect the GND pin of the first USB-to-TTL module to the GND pin of the second USB-to-TTL module 
+* Connect the GND pin of the USB-to-TTL **module** to the GND wire of the USB-to-TTL cable 
 
-* Connect the RX pin of the first USB-to-TTL module to the TX pin of the second USB-to-TTL module
+* Connect the RX pin of the USB-to-TTL **module** to the TX wire of the USB-to-TTL cable
 
-* Connect the TX pin of the first USB-to-TTL module to the RX pin of the second USB-to-TTL module
+* Connect the TX pin of the USB-to-TTL **module** to the RX wire of the USB-to-TTL cable
 
-Note: Leave the power pin of the USB-to-TTL cable unconnected. It is not needed.
+Leave the power pin of the USB-to-TTL cable unconnected. It is not needed.
 
-In the picture below white wire (RX) from one USB-to-TTL goes to the TX pin of the other USB-to-TTL and similarly the green (TX)
+Below is an image of our USB-to-TTL module connected to a USB port in our RPi2. The GND, TX, and RX pins of the module are connected to the GND, RX, TX wires of the USB-to-TTL cable that is connected to our PC.
 
-<img src="{{site.baseurl}}/images/SerialSample/serial-connection.png">
+<img src="{{site.baseurl}}/images/SerialSample/CP2102_Connections_500.png">
 
-###Deploy the app
+###Deploy and Launch the SerialSample App
 
-Now that our PC and RPi2 or MBM are connected, let's setup the app.
+Now that our PC and RPi2 or MBM are connected, let's setup and deploy the app. If you are not familiar with how to set the target device and target architecture in Visual Studio see [this section]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm#deploy-the-app-to-your-windows-iot-core-device) for details.
 
-* Download the Visual Studio 2015 SerialSample app from [here](https://github.com/ms-iot/samples/tree/develop/SerialSample/){:target="_blank"}
-* Make two separate copies of the app. We'll refer to them as 'copy A' and 'copy B.'
-* Open two instances of Visual Studio 2015 on your PC. We'll refer to these as 'instance A' and 'instance B.'
-* Open copy A of the SerialSample app in VS instance B.
-* Open copy B of the SerialSample app in VS instance B.
-* In VS instance A, set the target architecture to 'x86' or 'x64'. This will be the instance of the sample we run on the PC.
-* In VS instance B, set the target architecture to 'ARM' if you are using a RPi2. If you are using MBM, set the architecture to 'x86'.
-* In VS instance A, select **Local Machine** and press F5 to deploy and run the app on your PC.
-* In VS instance B, select **Remote Machine**
-* If you're building for MinnowBoard Max or PC, select `x86` as the architecture.  If you're building for Raspberry Pi 2, select `ARM`.
-* In the first Visual Studio instance select **Remote Machine** and hit F5 to deploy to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm){:target="_blank"}. if you need guidance.
-* In the second Visual Studio instance select **Local Machine** and hit F5 to deploy to your local PC
+1. Download the Visual Studio 2015 [SerialSample source project](https://github.com/ms-iot/samples/tree/develop/SerialSample/){:target="_blank"}. 
 
-###Run the app 
+2. Make two separate copies of the app. We'll refer to them as the 'Device copy' and 'PC copy'.
 
-The following section describes the input selection you need to make if you wired your MinnowBoard Max on-board UART to your local PC. 
+3. Open two instances of Visual Studio 2015 on your PC. We'll refer to these as 'Instance A' and 'Instance B'.
 
-###On-board UART with MBM (UART2)
+4. Open the Device copy of the SerialSample app in VS Instance A.
 
-Once the app is deployed, you should see a `Select Device` ListBox with a selection of serial device IDs. 
+5. Open the PC copy of the SerialSample app in VS Instance B.
 
-On MinnowBoard Max instance of the app, select the device ID with UART2 in it and click on `Connect`. 
+6. In VS Instance A, [configure the app for deployment to your RPi2 or MBM device]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm#deploy-the-app-to-your-windows-iot-core-device))
+	
+	*For RPi2, set the target device to 'Remote Machine' and target architecture to 'ARM'
+	
+	*For MBM, set the target device to 'Remote Machine' and target architecture to 'x86'
 
-On the PC instance of the app, select the USB device ID corresponding to the connection and click on `Connect`.
+7. In VS Instance B, set the target architecture to 'x86'. This will be the instance of the sample we run on the PC.
 
-Now you can type in text and click on `WRITE` to send data to the `Read Data:` textbox on the other end.
+8. In VS Instance A, press F5 to deploy and launch the app on your RPi2 or MBM.
 
-Congratulations! You just communicated over the serial interface.
+9. In VS Instance B, press F5 to deploy and launch the app on your PC.
 
-**NOTE:** If you wired up USB-to-TTL, your device ID will start with the text `\\?\USB#`. Select this device ID and click on `Connect`. 
+###Using the SerialSample App 
+
+When the SerialSample app is launched on the PC, a window will open with the user interface similar to the screenshot shown below. When launched on the RPi2 and MBM, the SerialSample will display the user interface shown below on the entire screen.
+
+<img src="{{site.baseurl}}/images/SerialSample/SerialSampleRunningPC.PNG">
+
+####Selecting a Serial Device
+
+When the SerialSample app launches, it looks for all the serial devices that are connected to the device. The device ids of all the serial devices found connected to the device will be listed in the top ListBox of the SerialSample app window.
+
+Select and connect to a serial device on the PC and RPi2 or MBM by doing the following:
+
+1. Select the desired serial device by clicking on the device ID string in the top ListBox next to "Select Device:". 
+
+	* On the PC, the device ID for the USB-to-TTL cable connected in this example begins with '\\?\USB#VID_067B'.
+	
+	* On the MBM, if using the GPIO for serial communication, select the device ID with **UART2** in it.
+	
+	* On the MBM and RPi2, if using the USB-to-TTL adapter module, select the device ID that begins with **\\?\USB#**. For the USB-to-TTL module used in this example, the device ID should begin with '\\?\USB#VID_10C4'.
+
+2. Click 'Connect'.	
+
+The app will attempt to connect and configure the selected serial device. When the app has successfully connected to the attached serial device it will display the configuration of the serial device. By default, the app configures the serial device for 9600 Baud, eight data bits, no parity bits, no handshaking and one stop bit.
+
+<img src="{{site.baseurl}}/images/SerialSample/SerialSampleRunningPC_ConnectDevice.PNG">
+
+####Sending and Receiving Data
+
+After connecting the desired serial device in the SerialSample apps running on both the PC and the RPi2 or MBM we can begin sending and receiving data over the serial connection between the two devices.
+
+To send data from one device to the other connected device do the following:
+
+1. Choose a device to transmit from. On the transmit device, type the message to be sent in the "Write Data" text box. For our example, we typed "Hello Raspberry Pi2! From your friend, PC." in the "Write Data" text box of the SerialSample app running on our PC.
+
+2. Click the 'WRITE' button.
+
+The app on the transmitting device will display the sent message and "Bytes written successfully!" in the status text box in the bottom of the app display.
+
+<img src="{{site.baseurl}}/images/SerialSample/SendMessageB.PNG">
+
+The device that is receiving the message will automatically display the text in the 'Read Data:' window.
 
 **KNOWN ISSUES:**
 
