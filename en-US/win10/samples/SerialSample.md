@@ -13,7 +13,7 @@ This is a headed sample.  To better understand what headed mode is and how to co
 
 ###Load the project in Visual Studio
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/SerialSample/CS/){:target="_blank"}.  Make a copy of the folder on your disk and open the project from Visual Studio.
+You can find the C# and C++ versions of this sample [here](https://github.com/ms-iot/samples/tree/develop/SerialSample/){:target="_blank"}.  Make a copy of the folder on your disk and open the project from Visual Studio.
 
 This app is a Universal Windows app and will run on both the PC and your IoT device.
 
@@ -21,41 +21,58 @@ This app is a Universal Windows app and will run on both the PC and your IoT dev
 
 You have two options for wiring up your board:
 
-1. Using the On-board UART controller (MinnowBoard Max only)
-2. Using a USB-to-TTL serial adapter
+1. GPIO using the On-board UART controller (MinnowBoard Max only)
+2. USB using a USB-to-Serial serial adapter
 
-Visit the sections below depending on which interface you would like to use.
+####Using GPIO (MinnowBoard Max Only)
 
-###On-board UART
+You will need:
 
-You'll need:
+* 1 X USB-to-TTL cable board cable (for this sample we used a [Silicon Labs CP2102 based USB-to-TTL cable](http://www.amazon.com/gp/product/B00LODGRV8?psc=1&redirect=true&ref_=oh_aui_search_detailpage){:target="_blank"})
 
-* 1 X USB-to-TTL cable (Silicon Labs, Example: [CP2102](http://www.amazon.com/gp/product/B00LODGRV8?psc=1&redirect=true&ref_=oh_aui_search_detailpage){:target="_blank"})
-* F-to-F Jumper Wires
+The MinnowBoard Max has two on-board UARTs that can be configured to use GPIO pins. UART1 uses GPIO pins 6, 8, 10, and 12. UART2 uses GPIO pins 17 and 19. These GPIO pins are highlighted in green in the diagram below. In this sample we will use UART2.
 
-On-board UART is only supported on MinnowBoard Max. Refer to pin-out [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm){:target="_blank"}.
+<img src="{{site.baseurl}}/images/PinMappings/MBM_Pinout.png" height="400">
 
-In this sample, we will use UART2. Connect the USB end of the USB-to-TTL cable to the PC and the other end to the UART2 pins on the MBM. 
+See the [MBM pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm) for more details on the MBM GPIO pins.
 
-Remember to cross-connect the TX & RX from PC to MBM. 
+Make the following connections:
 
-In the picture below the white wire (RX) goes to the UART TX pin and green (TX) to the UART RX pin.
+* Insert the USB end of the USB-to-TTL cable into a USB port on the PC
+
+* Connect the GND pin of the USB-to-TTL cable to Pin 1 (GND) on the MBM board
+
+* Connect the RX pin of the USB-to-TTL cable to Pin 17 (TX) on the MBM board
+
+* Connect the TX pin of the USB-to-TTL cable to Pin 19  (RX) on the MBM board
+
+Note: Leave the power pin of the USB-to-TTL cable unconnected. It is not needed.
 
 <img src="{{site.baseurl}}/images/SerialSample/SiLabs-UART.png">
 
-###USB-to-TTL serial adapter
+###Using USB-to-Serial Adapter
 
-You'll need:
+You will need:
 
-* 2 X USB-to-TTL cable (Silicon Labs only. Example: [CP2102](http://www.amazon.com/gp/product/B00LODGRV8?psc=1&redirect=true&ref_=oh_aui_search_detailpage){:target="_blank"}) for IoT Device
-* F-to-M and F-to-F Jumper Wires
-* If you need Silicon Labs drivers for your PC you can find them [here](http://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx){:target="_blank"}
+* 2 X USB-to-TTL modules with cable (Silicon Labs CP2102 based only such as [this one](http://www.amazon.com/gp/product/B00LODGRV8?psc=1&redirect=true&ref_=oh_aui_search_detailpage){:target="_blank"})
 
-Only USB-to-TTL cables with Silicon Labs chipsets are natively supported on MinnowBoard Max and Raspberry Pi2.
+Note: If you need Silicon Labs drivers for your PC you can find them [here](http://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx){:target="_blank"}
 
-Insert the USB end of each Silicon Labs USB-to-TTL serial cable into the IoT device and PC respectively.
+Note: Only USB-to-TTL cables with Silicon Labs chipsets are natively supported on MinnowBoard Max and Raspberry Pi2.
 
-Remember to cross-connect the TX & RX from PC to your device. 
+Make the following connections:
+
+* Insert the USB end of the first USB-to-TTL module into a USB port on the PC
+
+* Insert the USB end of the second USB-to-TTL module into a USB port on the RPI2 or MBM device
+
+* Connect the GND pin of the first USB-to-TTL module to the GND pin of the second USB-to-TTL module 
+
+* Connect the RX pin of the first USB-to-TTL module to the TX pin of the second USB-to-TTL module
+
+* Connect the TX pin of the first USB-to-TTL module to the RX pin of the second USB-to-TTL module
+
+Note: Leave the power pin of the USB-to-TTL cable unconnected. It is not needed.
 
 In the picture below white wire (RX) from one USB-to-TTL goes to the TX pin of the other USB-to-TTL and similarly the green (TX)
 
@@ -63,7 +80,17 @@ In the picture below white wire (RX) from one USB-to-TTL goes to the TX pin of t
 
 ###Deploy the app
 
-* Create 2 instances of Visual Studio and with the same project. 
+Now that our PC and RPi2 or MBM are connected, let's setup the app.
+
+* Download the Visual Studio 2015 SerialSample app from [here](https://github.com/ms-iot/samples/tree/develop/SerialSample/){:target="_blank"}
+* Make two separate copies of the app. We'll refer to them as 'copy A' and 'copy B.'
+* Open two instances of Visual Studio 2015 on your PC. We'll refer to these as 'instance A' and 'instance B.'
+* Open copy A of the SerialSample app in VS instance B.
+* Open copy B of the SerialSample app in VS instance B.
+* In VS instance A, set the target architecture to 'x86' or 'x64'. This will be the instance of the sample we run on the PC.
+* In VS instance B, set the target architecture to 'ARM' if you are using a RPi2. If you are using MBM, set the architecture to 'x86'.
+* In VS instance A, select **Local Machine** and press F5 to deploy and run the app on your PC.
+* In VS instance B, select **Remote Machine**
 * If you're building for MinnowBoard Max or PC, select `x86` as the architecture.  If you're building for Raspberry Pi 2, select `ARM`.
 * In the first Visual Studio instance select **Remote Machine** and hit F5 to deploy to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm){:target="_blank"}. if you need guidance.
 * In the second Visual Studio instance select **Local Machine** and hit F5 to deploy to your local PC
