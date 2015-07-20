@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/DriverLab4.htm
 lang: en-US
 ---
 
-##Use Visual Studio to deploy a driver
+##Use Visual Studio to deploy a driver VS
 
 In this exercise, you will configure your Visual Studio driver project so that you can compile and deploy a driver for a specific platform during driver development phase.  Note that currently this procedure requires that your target device reboot after the driver is deploy and as a result it may take a couple of minutes for the entire deployment to complete.
 For this exercise you can use the gpiokmdfdemo sample driver found [here](https://github.com/ms-iot/samples/tree/develop/DriverSamples){:target="_blank"}.
