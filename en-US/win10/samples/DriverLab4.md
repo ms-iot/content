@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/DriverLab4.htm
 lang: en-US
 ---
 
-##Use Visual Studio to deploy a driver VS
+##Use Visual Studio to deploy a driver 
 
 In this exercise, you will configure your Visual Studio driver project so that you can compile and deploy a driver for a specific platform during driver development phase.  Note that currently this procedure requires that your target device reboot after the driver is deploy and as a result it may take a couple of minutes for the entire deployment to complete.
 For this exercise you can use the gpiokmdfdemo sample driver found [here](https://github.com/ms-iot/samples/tree/develop/DriverSamples){:target="_blank"}.
@@ -15,6 +15,7 @@ This section describes the steps required to configure your target device for dr
 
 * Make sure that your device has an IoTCore image installed by following the instructions [here]({{site.baseurl}}/{{page.lang}}/GetStarted.htm)
 * Connect to your target device via [PowerShell] ({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)
+* For current release there are a few provisioning steps you need to do.  These steps will be automated in the future.
 * Now configure your target device so that it can interact with Visual Studio.  Through the PowerShell window enter the commands listed below.
 		
 		cd c:\windows\system32
@@ -60,3 +61,4 @@ Build and install the demo driver using Visual Studio
 
 * Your driver will now be installed on your target device.
 * You can check the status of the driver by following the steps [here]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab3.htm).
+Please refer to the web site [here](https://msdn.microsoft.com/en-US/windows/hardware/dn913721(v=vs.8.5).aspx) for information on creating driver new driver and using Visual Studio to deploy the driver as discussed on this page.
