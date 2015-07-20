@@ -8,6 +8,7 @@ lang: en-US
 ##Deploy the driver and confirm the installation using VS
 
 This exercise demonstrates how to manually copy and install the driver to a Windows IoT Core device. We will first use the **Server Message Block (SMB)** protocol via a **File Explorer** window to transfer files from the development machine to the target device (Windows IoT Core device). We will then use PowerShell to install the driver.
+You can also deploy a driver using Visual Studio during driver development by following the instructions on [this page] ({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab4.htm)
 
 ### Use the Server Message Block (SMB) protocol to transfer files from the development machine to the target device (Windows IoT Core device).
 
@@ -153,3 +154,6 @@ Driving the GPIO low will make the LED light-up because of the way the LED is co
 To turn the LED off, simply type:
 
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe high 5
+
+Now that you know how to manually deploy a driver, you can also use Visual to deploy a driver by following the instructions on [this page] ({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab4.htm)	
+	
