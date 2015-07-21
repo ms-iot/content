@@ -94,9 +94,8 @@ The reason the bitness of the firmware has to match the bitness of the OS is tha
 * Insert your micro SD Card into your MBM.  At any point, if you turn on your MBM without an SD card inserted, you will be required to configure the boot order again.
 * When you boot, press F2 to get to the BIOS settings.
 * Navigate to Device Manager -> System Setup -> South Cluster Configuration -> LPSS & SCC Configuration
-    * Set "LPSS & SCC Device Mode" to "ACPI Mode"
-    * Set "DDR50 Capability Support for SDCard" to "Disable"
-    * Set "ACPI Reporting MMC/SD As" to "Non-Removable"
+    * Set "LPSS PWM #1 Support" to Disable
+    * Set "LPSS PWM #2 Support" to Disable
 * Navigate back to top level and select Boot Maintenance Manager-> Boot Options > Change Boot Order
 * Highlight the boot order list (when it is highlighted, you will see "Change the order" on the right side of the screen) and press enter
 * Highlight "EFI Misc Device" and press '+' to move it to the top of the list. If it does not move by '+', simply select "EFI Misc Device" and press enter to boot to it.
