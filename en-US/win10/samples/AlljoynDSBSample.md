@@ -54,7 +54,6 @@ You will need to add a reference to the AdapterLib project to use the Windows Io
 
 Open the Adapter.cpp file in the AdapterLib project. Modify Adapter.cpp by inserting the following block of text after the last "using" statement and before "namespace AdapterLib
 {" 
-
     using namespace Windows::Devices::Gpio;
     
     // GPIO Device 
@@ -77,7 +76,6 @@ Open the Adapter.cpp file in the AdapterLib project. Modify Adapter.cpp by inser
     GpioController^ controller;
     GpioPin^ pin;
 
-
 In order to expose the GPIO Device to the AllJoyn Bus, we need to create a corresponding Bridge Device (IAdapterDevice) instance. Add the following three lines to the Adapter() constructor in the AdapterLib project's Adapter.cpp file:
     
     Adapter::Adapter()
@@ -88,10 +86,8 @@ In order to expose the GPIO Device to the AllJoyn Bus, we need to create a corre
     		controller = GpioController::GetDefault();
     		pin = controller->OpenPin(PIN_NUMBER);
     		pin->SetDriveMode(GpioPinDriveMode::Input);
-    		
     		-
     	} 
- 
  
 Now, modify the Initialize function as given in the following:
 
@@ -240,7 +236,7 @@ Suppose the applications on the AllJoyn bus do not want to poll the value of the
  
         return ERROR_SUCCESS;     
       } 
- 
+      
     _Use_decl_annotations_ 
     uint32 
     Adapter::RegisterSignalListener( 
