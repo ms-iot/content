@@ -1,7 +1,7 @@
 ---
 layout: default
-title: DSBGpioTutorial
-permalink: /en-US/win10/samples/AlljoynDSB_GpioTutorial.htm
+title: AirHockeyAppDocumentation
+permalink: /en-US/win10/samples/AirHockeyApp_Documentation.htm
 lang: en-US
 ---
 
