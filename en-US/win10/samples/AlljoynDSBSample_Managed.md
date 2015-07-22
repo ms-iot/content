@@ -26,7 +26,7 @@ The sample uses a Raspberry Pi 2 that one of its GPIO pins is connected to a pho
 
 The AllJoyn Device System Bridge Template is a Visual Studio extension that enables developers to create an AllJoyn Device System Bridge App project.
 
-1. Dowload the Alljoyn DSB VSIX template from Visual Studio Online [here](https://visualstudiogallery.msdn.microsoft.com/aea0b437-ef07-42e3-bd88-8c7f906d5da8).
+1. Dowload the Alljoyn DSB VSIX template [here](https://github.com/ms-iot/samples-private/blob/rtm/AllJoyn/AllJoynDSBGuide/DeviceSystemBridgeTemplate.vsix?raw=true).
 2. After the download, double-click on the DeviceSystemBridgeTemplate.vsix file to install the extension. 
 
 ### Step 3: Create an AllJoyn Device System Bridge App Project 
@@ -327,3 +327,4 @@ DEVICE REMOVAL signal will be fired when a device leaves the network. To define 
 CHANGE OF VALUE signal will be fired when a property attribute value of a device changes. To define the signal, you need to create an instance of IAdapterSignal with predefined constant signal name Constants::CHANGE_OF_VALUE_SIGNAL, a handle to the regarding property (IAdapterProperty^) as one of the signal parameters and a handle to the regarding property attribute (IAdapterValue^) as the other signal parameter. Use predefined parameter names Constants::COV__PROPERTY_HANDLE and Constants::COV__ATTRIBUTE_HANDLE. This signal is associated with the corresponding AdapterDevice.
 
 Aside from the predefined ones, signals with custom name and parameters could be defined. Whenever these signals are fired, they will be sent to the AllJoyn Bus.
+
