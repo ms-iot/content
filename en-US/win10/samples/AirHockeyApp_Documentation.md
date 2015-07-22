@@ -1,6 +1,6 @@
 ---
 layout: default
-title: AirHockeyAppDocumentation
+title: Air Hockey App Documentation
 permalink: /en-US/win10/samples/AirHockeyApp_Documentation.htm
 lang: en-US
 ---
