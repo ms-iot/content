@@ -51,7 +51,7 @@ A full demo of the app requires the hardware setup outlined in the design diagra
 
 ###PixyCam.cs
 
-The PixyCam class, contained in the AirHockeyHelper2 project, has been adapted from C++ open source code. This class contains methods for interfacing with the PIXY Camera, a fast vision sensor. The SPI APIs are used by this class to interface with the hardware/camera. The PixyCam object is initialized as follows:
+The PixyCam class, contained in the AirHockeyHelper project, has been adapted from C++ open source code. This class contains methods for interfacing with the PIXY Camera, a fast vision sensor. The SPI APIs are used by this class to interface with the hardware/camera. The PixyCam object is initialized as follows:
 
           public async Task Initialize()
           {
@@ -302,7 +302,7 @@ Good calibration is required for the accuracy of our system. The setDefaultCalib
 
  ###AccelStepper.cs
 
-This class is contained in the AirHockeyHelper2 project. The robot arm used in the air hockey setup is controlled by motors. This class contains functions allowing the app to interface between the robot's stepper motors and control motor movement. Interfacing with the hardware motors is made possible by GPIO APIs. 
+This class is contained in the AirHockeyHelper project. The robot arm used in the air hockey setup is controlled by motors. This class contains functions allowing the app to interface between the robot's stepper motors and control motor movement. Interfacing with the hardware motors is made possible by GPIO APIs. 
 
 The methods in this class allow us to determine when and where to move the motors and by what degree (i.e. how many steps, what direction). AccelStepper supports and provides functions for the following features:
   ####Acceleration/decceleration of motors. 
@@ -333,7 +333,7 @@ The methods in this class allow us to determine when and where to move the motor
             
 ####Computing speeds 
 
-In this method we compute number fo steps required to read maximum speed as a function of both speed and acceleration
+In this method we compute number of steps required to read maximum speed as a function of both speed and acceleration
 
             public void SetMaxSpeed(float speedValue)
             {
@@ -350,7 +350,7 @@ In this method we compute number fo steps required to read maximum speed as a fu
                 }
             }
 
-Computing a new speed and decisions to accelerate or stop require knowledge of the robot's proximaty to the target.
+Computing a new speed and decisions to accelerate or stop require knowledge of the robot's proximity to the target.
 
             if (distanceTo > 0)
             {
@@ -435,7 +435,7 @@ Preassigned mallet offset values are used in coordinate calculations:
 
 ###Robot.cs
 
-The Robot class contains methods for interfacing with the main PLC and controlling the sensor input GPIO pins.
+The Robot class contains methods for interfacing with the sensors and coordinating the control of the motors.
 
 This class contains two Stepper motors, with one motor used to determine the robot's mallet movement in the X-axis and the other to govern movement in the Y-axis.
 
@@ -551,6 +551,8 @@ This class defines the home page for the app. 4 tiles are available on this page
 This class contains provides the user interface for the human player and governs the robot's actions based on the mode selected in the home page
 
 In addition to drawing the UI, this class contains the runDecisionThread() provides the decision-making logic of the game. AI Helper methods are used by the robot to determine the mallet's target.
+
+Importantly, the reading of the camera data, and decision-making routines are run in a high priority thread separate from the UI thread. This is done so that the UI isn't blocked while the robot is operational.
 
         private void runDecisionThread(Point puckPosition)
         {
