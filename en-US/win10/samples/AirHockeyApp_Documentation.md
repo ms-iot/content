@@ -53,7 +53,7 @@ A full demo of the app requires the hardware setup outlined in the design diagra
 
 The PixyCam class, contained in the AirHockeyHelper2 project, has been adapted from C++ open source code. This class contains methods for interfacing with the PIXY Camera, a fast vision sensor. The SPI APIs are used by this class to interface with the hardware/camera. The PixyCam object is initialized as follows:
 
-     public async Task Initialize()
+          public async Task Initialize()
           {
               var spiAqs = SpiDevice.GetDeviceSelector();
               var devicesInfo = await DeviceInformation.FindAllAsync(spiAqs);
@@ -63,7 +63,7 @@ The PixyCam class, contained in the AirHockeyHelper2 project, has been adapted f
               settings.SharingMode = SpiSharingMode.Shared;
               
               Device = await SpiDevice.FromIdAsync(devicesInfo[0].Id, settings);
-          }
+           }
 
 This class contains methods which support the reading in of blocks of data (e.g. bytes, DWORD, etc). The block-read rate is determined in the game class, which determines the robot's response time. Important information contained in the block data includes the (x, y) coordinates of the block read in by the Pixy cam.
 
@@ -90,8 +90,8 @@ The AIHelper class includes methods which determine the robot's game mode and mo
 
 Most importantly, this class contains utility functions for getting puck position, calculating the puck's trajectory and formulas for center of mass and line calculation, which are used to decide where the mallet should be moved to strike the puck.
 
-      private void calculateLine(Point[] points)
-     {
+               private void calculateLine(Point[] points)
+               {
                  // Recalculate line
                  double val1 = 0, val2 = 0, val3 = 0, val4 = 0;
                  double n = points.Length;
@@ -133,8 +133,8 @@ Most importantly, this class contains utility functions for getting puck positio
 
 The calculateMalletTargetV3() method is the key method that will be used to determine where the robot should move its mallet. Depending upon current mallet and puck position, acceleration and speed, the mallet should be moved to either hit the puck in an offensive mode or block the incoming puck in an offensive move.
 
-     public Point calculateMalletTargetV3(Point currentPuckPosition, long currentTime)
-      {
+          public Point calculateMalletTargetV3(Point currentPuckPosition, long currentTime)
+          {
             puckPosition = currentPuckPosition;
             .
             .
@@ -146,7 +146,6 @@ The calculateMalletTargetV3() method is the key method that will be used to dete
                 malletTargetOffset = defenseOffset;
                 // Don't interrupt this move until we get to the destination
                 DoNotInterrupt = true;
-                
             }
             
             // Puck is moving away
@@ -190,23 +189,23 @@ The calculateMalletTargetV3() method is the key method that will be used to dete
 
 This class defines the default (relative) values for mallet position, air hockey table mapping and motor speeds and acceleration. The values correspond to the setup of the hockey table as seen in the demo video.
 
-     public struct Config
-      {
-          public static float
+          public struct Config
+          {
+              public static float
               MOTOR_X_MAX_SPEED = 100000,
               MOTOR_Y_MAX_SPEED = 70000,
               MOTOR_X_ACCELERATION = 1000000,
               MOTOR_Y_ACCELERATION = 600000;
               
-          // Default values, not const because Calibration can adjust values
-          public static int MAX_MALLET_OFFSET_X = 2681;
-          public static int MAX_MALLET_OFFSET_Y = 2462;
-          
-          public const long TABLE_HEIGHT = 766;
-          public const long TABLE_MID_X_COORDINATE = 950;
-          public const long TABLE_GOAL_Y_TOP = TABLE_HEIGHT / 2 - 150;
-          public const long TABLE_GOAL_Y_BOTTOM = TABLE_HEIGHT / 2 + 150;
-      }
+               // Default values, not const because Calibration can adjust values
+               public static int MAX_MALLET_OFFSET_X = 2681;
+               public static int MAX_MALLET_OFFSET_Y = 2462;
+               
+               public const long TABLE_HEIGHT = 766;
+               public const long TABLE_MID_X_COORDINATE = 950;
+               public const long TABLE_GOAL_Y_TOP = TABLE_HEIGHT / 2 - 150;
+               public const long TABLE_GOAL_Y_BOTTOM = TABLE_HEIGHT / 2 + 150;
+          }
 
 ###Global.cs
 
@@ -353,7 +352,7 @@ In this method we compute number fo steps required to read maximum speed as a fu
 
 Computing a new speed and decisions to accelerate or stop require knowledge of the robot's proximaty to the target.
 
-        if (distanceTo > 0)
+            if (distanceTo > 0)
             {
                 // We are anticlockwise from the target
                 // Need to go clockwise from here, maybe decelerate now
@@ -553,7 +552,7 @@ This class contains provides the user interface for the human player and governs
 
 In addition to drawing the UI, this class contains the runDecisionThread() provides the decision-making logic of the game. AI Helper methods are used by the robot to determine the mallet's target.
 
-     private void runDecisionThread(Point puckPosition)
+        private void runDecisionThread(Point puckPosition)
         {
             ThreadPool.RunAsync((s) =>
             {
