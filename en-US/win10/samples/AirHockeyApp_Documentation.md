@@ -187,7 +187,7 @@ The calculateMalletTargetV3() method is the key method that will be used to dete
 
 ###Config.cs
 
-This class defines the default (relative) values for mallet position, air hockey table mapping and motor speeds and acceleration. The values correspond to the setup of the hockey table as seen in the demo video.
+This class defines the default values for mallet position, air hockey table mapping and motor speeds and acceleration. The values correspond to the setup of the hockey table as seen in the demo video. MAX_MALLET_OFFSET is defined as the number of steps required to get the mallet from one end of the table
 
           public struct Config
           {
