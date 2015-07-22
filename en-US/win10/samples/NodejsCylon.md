@@ -39,6 +39,7 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 ###Build serialport
 First we will copy serialport, a Cylon dependency, to the Raspberry Pi 2. Since [serialport](https://www.npmjs.com/package/serialport) is a native module, 
 we cannot run npm install on Windows IoT core to build  the code. We will do this on the PC and then copy the package to the device.
+
 * Clone [serialport](https://github.com/voodootikigod/node-serialport).
 * Clone [Node.js (Chakra)](http://github.com/Microsoft/node){:target="_blank"}.
 * Edit serialport_win.cpp with the change in https://github.com/voodootikigod/node-serialport/pull/550. This is temporary until the pull request is merged.
@@ -101,6 +102,7 @@ you should see the device getting recognized like in the image below:
 ![Arduino Start Screen]({{site.baseurl}}/images/Nodejs/arduino-startscreen.jpg)
 
 We also need to assign a port name to (e.g. 'COM5') to the Arduino. Follow these steps to do this:
+
 * In PowerShell, run `devcon status usb*`. When you do this you should see a device similar to the one below:
   USB\VID_2341&PID_8036\5&3753427A&0&4
   Name: USB Serial Device
