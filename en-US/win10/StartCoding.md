@@ -72,9 +72,9 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/UnavailableApis.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <h4>Compatible Peripheral USB Devices</h4>
-                        <p>Find a list of USB devices compatible with Window 10 IoT Core devices</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/Peripherals.htm">Learn More</a>
+                        <h4>Supported Peripheral Interfaces and Devices</h4>
+                        <p>Find a list of supported peripheral interfaces and protocols with Window 10 IoT Core devices</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm">Learn More</a>
                     </div>
                 </div>
                 <div class="row section-heading">
@@ -119,22 +119,6 @@ lang: en-US
                         <h4>WiFi Connectivity</h4>
                         <p>Setup and configure WiFi on your Windows IoT Core device</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/SetupWiFi.htm">Learn More</a>
-                    </div>
-                </div>
-                <div class="row section-heading">
-                    <div class="col-md-3">
-                        <h4>Supported Peripheral Interfaces and Protocols</h4>
-                        <p>Find a list of supported peripheral interfaces and protocols with Window 10 IoT Core devices</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm">Learn More</a>
-                    </div>
-                    <div class="col-md-3">
-                        <!--Empty placeholder -->
-                    </div>
-					<div class="col-md-3">
-                        <!--Empty placeholder -->
-                    </div>
-                    <div class="col-md-3">
-                        <!--Empty placeholder -->
                     </div>
                 </div>
             </div>
