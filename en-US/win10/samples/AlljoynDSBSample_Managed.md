@@ -13,9 +13,9 @@ This tutorial shows how a GPIO Device can be exposed to the AllJoyn Bus using th
 
 1. Alljoyn Explorer
 
-* [AllJoynExplorer_1.0.0.2.zip](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.0.2.zip?raw=true){:target="_blank"} - This zip contains the AllJoyn Explorer AppX bundle.
-* [AllJoyn_Explorer_Setup_Guide_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_Setup_Guide_v1.0.pdf?raw=true){:target="_blank"} - Manual for installing and launching the AllJoyn Explorer.
-* [AllJoyn_Explorer_User_Guide_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_User_Guide_v1.0.pdf?raw=true){:target="_blank"} - this pdf contains the documentation for how to use the AllJoyn Explorer
+* [AllJoyn Explorer](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.0.2.zip?raw=true){:target="_blank"} - This zip contains the AllJoyn Explorer AppX bundle.
+* [AllJoyn Explorer Setup Guide](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_Setup_Guide_v1.0.pdf?raw=true){:target="_blank"} - Manual for installing and launching the AllJoyn Explorer.
+* [AllJoyn Explorer User Guide](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_User_Guide_v1.0.pdf?raw=true){:target="_blank"} - this pdf contains the documentation for how to use the AllJoyn Explorer
 
 ### Step 1: Hardware Setup  
 The sample uses a Raspberry Pi 2 that one of its GPIO pins is connected to a photo resistor as shown in the schematic below. If another device is sues the pin number in the code has to be changed to match the HW setup.
@@ -71,7 +71,7 @@ Open the Adapter.cs file in the AdapterLib project. Modify Adapter.cs as follows
           // GPIO Device Pin-5 Property
           private const int PIN_NUMBER = 5;
           private const string PIN_NAME = "Pin-5";
-  	      private const string INTERFACE_HINT = "";
+          private const string INTERFACE_HINT = "";
   
           // Pin-5 Property Attribute
           private const string PIN_VALUE_NAME = "PinValue";
@@ -86,27 +86,27 @@ Open the Adapter.cs file in the AdapterLib project. Modify Adapter.cs as follows
 In order to expose the GPIO Device to the AllJoyn Bus, we need to create a corresponding Bridge Device (IAdapterDevice) instance. Add the following three lines to the Adapter() constructor in the AdapterLib project's Adapter.cs file:
     
     public Adapter()
-    	{
-    	  -
-    	  -
-    	  -
-    	  controller = GpioController.GetDefault();
-          pin = controller.OpenPin(PIN_NUMBER);           // Open GPIO 5
-          pin.SetDriveMode(GpioPinDriveMode.Input);       // Set the IO direction as input 
-    	} 
+    {
+        -
+        -
+        -
+        controller = GpioController.GetDefault();
+        pin = controller.OpenPin(PIN_NUMBER);           // Open GPIO 5
+        pin.SetDriveMode(GpioPinDriveMode.Input);       // Set the IO direction as input 
+    } 
  
  
 Now, modify the Initialize function as given in the following:
 
     public uint Initialize() 
     { 
-       AdapterDevice gpioDevice = new AdapterDevice(
-        DEVICE_NAME,
-        VENDOR,
-        MODEL,
-        VERSION,
-        SERIAL_NUMBER,
-        DESCRIPTION
+        AdapterDevice gpioDevice = new AdapterDevice(
+         DEVICE_NAME,
+         VENDOR,
+         MODEL,
+         VERSION,
+         SERIAL_NUMBER,
+         DESCRIPTION
         );
 
         // Define GPIO Pin-5 as device property. Device contains properties
@@ -122,49 +122,25 @@ Now, modify the Initialize function as given in the following:
     
         return ERROR_SUCCESS;
     }
-    
-To expose the GPIO Device, modify the EnumDevices() method as follows:
-    
-    public uint EnumDevices
-    (
-        ENUM_DEVICES_OPTIONS Options,
-        out IList<IAdapterDevice> DeviceListPtr,
-        out IAdapterIoRequest RequestPtr
-        )
-    {
-      RequestPtr = null;
-      
-      try
-      {
-          DeviceListPtr = new List<IAdapterDevice>(devices);
-      }
-      catch (OutOfMemoryException ex)
-      {
-          throw new OutOfMemoryException(ex.Message);
-      }
-      
-      return ERROR_SUCCESS;
-    }
-
 
 Next, modify the GetPropertyValue() function as follows:
 
-      public uint GetPropertyValue
-      (
+    public uint GetPropertyValue
+    (
       IAdapterProperty Property,
       string AttributeName,
       out IAdapterValue ValuePtr,
       out IAdapterIoRequest RequestPtr
     )
     {
-      RequestPtr = null;
-      pinValueData = (int)pin.Read();
+        RequestPtr = null;
+        pinValueData = (int)pin.Read();
   
-      IAdapterValue attribute = Property.Attributes.ElementAt<IAdapterValue>(0);
-      attribute.Data = pinValueData;
-      ValuePtr = attribute;
+        IAdapterValue attribute = Property.Attributes.ElementAt<IAdapterValue>(0);
+        attribute.Data = pinValueData;
+        ValuePtr = attribute;
       
-      return ERROR_SUCCESS;
+        return ERROR_SUCCESS;
     }
     
 That is all for a basic GPIO pin device. At this point when this application runs, the GPIO pin will be seen on the AllJoyn bus. Whenever any AllJoyn Client Application polls the value of the pin, our AllJoyn Device System Bridge Application will read the value from the physical GPIO pin on the Raspberry Pi. 
@@ -199,8 +175,8 @@ Suppose the applications on the AllJoyn bus do not want to poll the value of the
 
 ### Modify Adapter.cs as follows: 
 
-     public uint Initialize()
-     {
+    public uint Initialize()
+    {
       AdapterDevice gpioDevice = new AdapterDevice(
           DEVICE_NAME,
           VENDOR,
@@ -211,7 +187,7 @@ Suppose the applications on the AllJoyn bus do not want to poll the value of the
           );
           
       // Define GPIO Pin-5 as device property. Device contains properties
-      AdapterProperty gpioPin_Property = new AdapterProperty(PIN_NAME);
+      AdapterProperty gpioPin_Property = new AdapterProperty(PIN_NAME, INTERFACE_HINT);
       
       // Define and set GPIO Pin-5 value. Device contains properties that has one or more attributes.
       pinValueData = (int)pin.Read();
@@ -238,9 +214,9 @@ Suppose the applications on the AllJoyn bus do not want to poll the value of the
     
     public uint RegisterSignalListener
     (
-    IAdapterSignal Signal,
-    IAdapterSignalListener Listener,
-    object ListenerContext
+        IAdapterSignal Signal,
+        IAdapterSignalListener Listener,
+        object ListenerContext
     )
     {
       int signalHashCode = Signal.GetHashCode();
@@ -296,7 +272,7 @@ Suppose the applications on the AllJoyn bus do not want to poll the value of the
         GpioPin sender,
         GpioPinValueChangedEventArgs args
         )
-      {
+    {
       // Notify registered listeners only when pin value actually changes
       IAdapterSignal covSignal = devices.ElementAt(0).Signals.ElementAt(0);
       foreach (IAdapterValue param in covSignal.Params)
@@ -314,7 +290,8 @@ Suppose the applications on the AllJoyn bus do not want to poll the value of the
               }
           }
       }
-  }
+    }
+
 
   
 ###About Signals
@@ -327,4 +304,3 @@ DEVICE REMOVAL signal will be fired when a device leaves the network. To define 
 CHANGE OF VALUE signal will be fired when a property attribute value of a device changes. To define the signal, you need to create an instance of IAdapterSignal with predefined constant signal name Constants::CHANGE_OF_VALUE_SIGNAL, a handle to the regarding property (IAdapterProperty^) as one of the signal parameters and a handle to the regarding property attribute (IAdapterValue^) as the other signal parameter. Use predefined parameter names Constants::COV__PROPERTY_HANDLE and Constants::COV__ATTRIBUTE_HANDLE. This signal is associated with the corresponding AdapterDevice.
 
 Aside from the predefined ones, signals with custom name and parameters could be defined. Whenever these signals are fired, they will be sent to the AllJoyn Bus.
-

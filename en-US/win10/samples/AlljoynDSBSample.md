@@ -13,9 +13,9 @@ This tutorial shows how a GPIO Device can be exposed to the AllJoyn Bus using th
 
 1. Alljoyn Explorer
 
-* [AllJoynExplorer_1.0.0.2.zip](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.0.2.zip?raw=true){:target="_blank"} - This zip contains the AllJoyn Explorer AppX bundle.
-* [AllJoyn_Explorer_Setup_Guide_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_Setup_Guide_v1.0.pdf?raw=true){:target="_blank"} - Manual for installing and launching the AllJoyn Explorer.
-* [AllJoyn_Explorer_User_Guide_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_User_Guide_v1.0.pdf?raw=true){:target="_blank"} - this pdf contains the documentation for how to use the AllJoyn Explorer
+* [AllJoyn Explorer](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.0.2.zip?raw=true){:target="_blank"} - This zip contains the AllJoyn Explorer AppX bundle.
+* [AllJoyn Explorer Setup Guide](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_Setup_Guide_v1.0.pdf?raw=true){:target="_blank"} - Manual for installing and launching the AllJoyn Explorer.
+* [AllJoyn Explorer User Guide](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_User_Guide_v1.0.pdf?raw=true){:target="_blank"} - this pdf contains the documentation for how to use the AllJoyn Explorer
 
 ### Step 1: Hardware Setup
 The sample uses a Raspberry Pi 2 that one of its GPIO pins is connected to a photo resistor as shown in the schematic below. If another device is sues the pin number in the code has to be changed to match the HW setup.
@@ -80,11 +80,11 @@ Open the Adapter.cpp file in the AdapterLib project. Modify Adapter.cpp by inser
 In order to expose the GPIO Device to the AllJoyn Bus, we need to create a corresponding Bridge Device (IAdapterDevice) instance. Add the following three lines to the Adapter() constructor in the AdapterLib project's Adapter.cpp file:
 
     Adapter::Adapter()
-    	{
-    		controller = GpioController::GetDefault();
-    		pin = controller->OpenPin(PIN_NUMBER);
-    		pin->SetDriveMode(GpioPinDriveMode::Input);
-    	}
+    {
+       controller = GpioController::GetDefault();
+       pin = controller->OpenPin(PIN_NUMBER);
+       pin->SetDriveMode(GpioPinDriveMode::Input);
+    }
 Now, modify the Initialize function as given in the following:
 
     uint32
@@ -100,7 +100,7 @@ Now, modify the Initialize function as given in the following:
        gpioDeviceDesc.Description = description;
 
        // Define GPIO Pin-5 as device property. Device contains properties
-       AdapterProperty^ gpioPin_Property = ref new AdapterProperty(pinName, interfaceHint);
+       AdapterProperty^ gpioPin_Property = ref new AdapterProperty(pinName, "");
        // Define and set GPIO Pin-5 value. Device contains properties that have one or more values.
        pinValueData = static_cast<int>(pin->Read());
        AdapterValue^ valueAttr_Value = ref new AdapterValue(pinValueName, pinValueData);
@@ -112,24 +112,6 @@ Now, modify the Initialize function as given in the following:
        devices.push_back(std::move(gpioDevice));
 
        return ERROR_SUCCESS;
-    }
-
-To expose the GPIO Device, modify the EnumDevices() method as follows:
-
-       _Use_decl_annotations_
-      uint32
-      Adapter::EnumDevices(
-          ENUM_DEVICES_OPTIONS Options,
-          IAdapterDeviceVector^* DeviceListPtr,
-          IAdapterIoRequest^* RequestPtr
-          )
-      {
-          UNREFERENCED_PARAMETER(Options);
-          UNREFERENCED_PARAMETER(RequestPtr);
-
-          *DeviceListPtr = ref new BridgeRT::AdapterDeviceVector(this->devices);
-
-          return ERROR_SUCCESS;
     }
 
 Next, modify the GetPropertyValue() function as follows:
@@ -210,7 +192,7 @@ Suppose the applications on the AllJoyn bus do not want to poll the value of the
         gpioDeviceDesc.Description = description;
 
         // Define GPIO Pin-5 as device property. Device contains properties
-        AdapterProperty^ gpioPin_Property = ref new AdapterProperty(pinName);
+        AdapterProperty^ gpioPin_Property = ref new AdapterProperty(pinName, "");
         // Define the GPIO Pin-5 value. Device has properties with attributes.
         pinValueData = static_cast<int>(pin->Read());
         AdapterValue^ valueAttr_Value = ref new AdapterValue(pinValueName, pinValueData);
@@ -306,4 +288,3 @@ DEVICE REMOVAL signal will be fired when a device leaves the network. To define 
 CHANGE OF VALUE signal will be fired when a property attribute value of a device changes. To define the signal, you need to create an instance of IAdapterSignal with predefined constant signal name Constants::CHANGE_OF_VALUE_SIGNAL, a handle to the regarding property (IAdapterProperty^) as one of the signal parameters and a handle to the regarding property attribute (IAdapterValue^) as the other signal parameter. Use predefined parameter names Constants::COV__PROPERTY_HANDLE and Constants::COV__ATTRIBUTE_HANDLE. This signal is associated with the corresponding AdapterDevice.
 
 Aside from the predefined ones, signals with custom name and parameters could be defined. Whenever these signals are fired, they will be sent to the AllJoyn Bus.
-

@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: AllJoyn
 permalink: /en-US/win10/AllJoyn.htm
@@ -52,28 +52,28 @@ Be sure to check out samples and additional documentation below.  We hope you’
 
 **AllJoyn Device System Bridge template for Visual Studio**  
 This template can be installed in Visual Studio 2015 Preview to enable you to create AllJoyn Device System Bridge projects. 
-* [DeviceSystemBridgeTemplate.vsix](https://github.com/ms-iot/samples-private/blob/rtm/AllJoyn/AllJoynDSBGuide/DeviceSystemBridgeTemplate.vsix?raw=true){:target="_blank"} - This vsix contains the AllJoyn Device System Bridge template. Note that this must be copied locally and cannot be installed remotely.  
+* [DeviceSystemBridgeTemplate.vsix](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynDSBGuide/DeviceSystemBridgeTemplate.vsix?raw=true){:target="_blank"} - This vsix contains the AllJoyn Device System Bridge template. Note that this must be copied locally and cannot be installed remotely. You can also find it on [Visual Studio Online](https://visualstudiogallery.msdn.microsoft.com/aea0b437-ef07-42e3-bd88-8c7f906d5da8). 
 
 **AllJoyn Explorer**
 This is a tool we use in several points when working with AllJoyn samples. You can find the AllJoyn Explorer [here](https://github.com/ms-iot/samples/tree/develop/AllJoyn/AllJoynExplorer){:target="_blank"}:  
 
-* [AllJoynExplorer_1.0.0.2.zip](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.0.2.zip?raw=true){:target="_blank"} - This zip contains the AllJoyn Explorer AppX bundle. 
-* [AllJoyn_Explorer_Setup_Guide_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_Setup_Guide_v1.0.pdf?raw=true){:target="_blank"} - This pdf contains the documentation for how to deploy the AllJoyn Explorer.  
-* [AllJoyn_Explorer_User_Guide_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_User_Guide_v1.0.pdf?raw=true){:target="_blank"} - This pdf contains the documentation for how to use the AllJoyn Explorer.    
+* [AllJoyn Explorer 1.0.0.2](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.0.2.zip?raw=true){:target="_blank"} - This zip contains the AllJoyn Explorer AppX bundle. 
+* [AllJoyn Explorer Setup Guide v1.0](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_Setup_Guide_v1.0.pdf?raw=true){:target="_blank"} - This pdf contains the documentation for how to deploy the AllJoyn Explorer.  
+* [AllJoyn Explorer User Guide v1.0](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_User_Guide_v1.0.pdf?raw=true){:target="_blank"} - This pdf contains the documentation for how to use the AllJoyn Explorer.    
  
 **Samples**  
 
-* [AllJoyn Z-Wave Tutorial]({{site.baseurl}}/en-US/win10/samples/ZWaveTutorial.htm){:target="_blank"}.
+* [AllJoyn DSB Z-Wave Tutorial and Sample]({{site.baseurl}}/en-US/win10/samples/ZWaveTutorial.htm){:target="_blank"}.
 
  This tutorial, based on the demo at the Build 2015 conference, shows how to use the Device System Bridge app to connect your  IoT Core devices to Z-Wave devices.  
 
-* [AllJoyn_DSB_GPIODevice_Tutorial C++]({{site.baseurl}}/en-US/win10/samples/AlljoynDSB_GpioTutorial.htm){:target="_blank"}
+* [AllJoyn DSB GPIO Device Tutorial C++]({{site.baseurl}}/en-US/win10/samples/AlljoynDSB_GpioTutorial.htm){:target="_blank"}
 
  This tutorial demonstrates how to use the AllJoyn Device System Bridge template to create a sample C++ app that exercises the device GPIO.
  
- * [AllJoyn_DSB_GPIODevice_Tutorial C#]({{site.baseurl}}/en-US/win10/samples/AlljoynDSB_ManagedGpioTutorial.htm){:target="_blank"}
+* [AllJoyn DSB GPIO Device Tutorial C#]({{site.baseurl}}/en-US/win10/samples/AlljoynDSB_ManagedGpioTutorial.htm){:target="_blank"}
 
- This tutorial demonstrates how to use the AllJoyn Device System Bridge template to create a managed sample app that exercises the device GPIO.
+ This tutorial demonstrates how to use the AllJoyn Device System Bridge template to create a sample managed app that exercises the device GPIO.
 
 **Additional Resources**
 
