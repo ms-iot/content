@@ -27,7 +27,7 @@ This app, which has been tested on a MinnowBoard Max (x86 platform), demonstrate
 
 You can find this sample [here](https://github.com/ms-iot/samples-private/tree/rtm/AirHockeyApp){:target="_blank"}. Make a copy of the folder on your disk and open the project from Visual Studio.
 
-Make sure you set the 'Remote Debugging' setting to point to your Windows IoT device. Go back to the basic 'Hello World' [sample](http://ms-iot.github.io/content-private/en-US/win10/samples/HelloWorld.htm) if you need guidance.
+Make sure you set the 'Remote Debugging' setting to point to your Windows IoT device. Follow the instructions [here]({{site.baseurl}}/en-US/win10/AppDeployment.htm) for building and deploying the app.
 
 After selecting the appropriate platform for your device, deploy the app from Visual Studio by pressing F5. The app's home page is displayed below.
 
