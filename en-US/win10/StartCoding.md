@@ -101,7 +101,7 @@ lang: en-US
                 </div>
                 <div class="row section-heading">
                     <div class="col-md-3">
-                        <h4>Headless UWP Apps</h4>
+                        <h4>Headed and Headless devices</h4>
                         <p>Windows IoT Core can either be in headed or headless mode. The difference is the presence or absence of any form of UI</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm">Learn More</a>
                     </div>
