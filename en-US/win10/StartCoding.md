@@ -243,11 +243,6 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/DigitalSignage.htm">DigitalSignageUWP (C#)</a>
                     </div>
                     <div class="col-md-3">
-                         <h4>Air Hockey Sample</h4>
-                        <p>Here we demonstrate the utility of Windows 10 IoT Core in the field of Industrial Automation by automating a game of air hockey between a robot and human player</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/AirHockeyApp.htm">AirHockeyUWP (C#)</a>
-                    </div>
-                    <div class="col-md-3">
                         <h4>Serial UART Sample (Windows Universal)</h4>
                         <p>Create an app to read and write to UART interfaces on Windows IoT core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SerialSample.htm">Learn More</a>
