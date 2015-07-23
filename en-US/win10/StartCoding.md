@@ -256,7 +256,9 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/WebCamSample.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <!-- Placeholder for alignment -->
+                        <h4>Cylon Node.js App (Console)</h4>
+                        <p>Control an Arduino with a Cylon Node.js app running on a RaspBerry Pi 2 with Windows 10 IoT Core</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsCylon.htm">Cylon (Node.js)</a>
                     </div>
                     <div class="col-md-3">
                         <!-- Placeholder for alignment -->
