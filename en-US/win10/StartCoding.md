@@ -39,7 +39,7 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/CommandLineUtils.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <h4>Windows 10 IoT Core Insider Preview Porting Tool</h4>
+                        <h4>Windows 10 IoT Core Porting Tool</h4>
                         <p>A tool for helping you port your existing Win32 and Windows CE applications to Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/IoTAPIPortingTool.htm">Learn More</a>
                     </div>
@@ -63,7 +63,7 @@ lang: en-US
                     </div>
                     <div class="col-md-3">
                         <h4>AllJoyn Connectivity</h4>
-                        <p>Learn more about AllJoyn and explore the capabilities of the AllJoyn Device System Bridge with Windows 10 IoT Core Insider Preview</p>
+                        <p>Learn more about AllJoyn and explore the capabilities of the AllJoyn Device System Bridge with Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/AllJoyn.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
