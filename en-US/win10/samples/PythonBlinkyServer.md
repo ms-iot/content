@@ -80,15 +80,13 @@ Remember that we connected the other end of the LED to the 3.3 Volts power suppl
 
 ###Deploy Python app to your Windows 10 IoT Core device
 
-* Right-click the Project node and select Properties
+* Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#python).
 
-* Make sure you set the 'Remote Machine' setting to point to your device. Go back to the basic Python [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Python.htm) if you need guidance.
+	**NOTE: For now, use device name in lieu of IP address.  If the device name is not unique, use `setcomputername` tool on the device to reset the device name and reboot.  Documentation for this can be found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)**
 
-**NOTE: For now, use device name in lieu of IP address.  If the device name is not unique, use `setcomputername` tool on the device to reset the device name and reboot.  Documentation for this can be found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)**
+* The Python app will deploy and start on the device.
 
-* When everything is set up, you should be able to press F5 from Visual Studio: The Python app will deploy and start on the device.
-
-**NOTE: Launching the debugger for Python can take a few minutes to connect and start debugging the remote Python.  If it takes more than a few minutes, there may be a problem with msvsmon on the remote device.  Please check the FAQ for any potential fixes/workarounds.**
+	**NOTE: Launching the debugger for Python can take a few minutes to connect and start debugging the remote Python.  If it takes more than a few minutes, there may be a problem with msvsmon on the remote device.  Please check the FAQ for any potential fixes/workarounds.**
 
 * Once you see the message about the web server being started, you can hit the address in a browser to see the LED toggle (http://<yourdeviceip>:8000)
 

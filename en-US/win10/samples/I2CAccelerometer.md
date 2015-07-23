@@ -16,10 +16,6 @@ This is a headed sample.  To better understand what headed mode is and how to co
 
 You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/Accelerometer).  Make a copy of the folder on your disk and open the project from Visual Studio.
 
-Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
-
-If you're building for MinnowBoard Max, select `x86` in the architecture dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
-
 ###Connect the I2C Accelerometer to your device
 
 You'll need a few components:
@@ -101,7 +97,9 @@ public sealed partial class MainPage : Page
     // ...
 }
 {% endhighlight %}  
- Now you should be able to press F5 from Visual Studio: The I2CAccelerometer app will deploy and start, and you should see accelerometer data show up on screen.
+
+Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp).
+ The I2CAccelerometer app will deploy and start, and you should see accelerometer data show up on screen.
  If you have your accelerometer flat on a surface, the Z axis should read close to 1.000G, while X and Y are close to 0.000G. The values will fluctuate a little even if the device is standing still.
  This is normal and is due to minute vibrations and electrical noise. If you tilt or shake the sensor, you should see the values change in response. Note that this sample configures the device in 4G mode,
 so you wont be able to see G readings higher than 4Gs.

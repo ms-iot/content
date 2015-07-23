@@ -16,13 +16,9 @@ only available on Windows IoT Core, so this sample cannot run on your desktop.
 You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/App2App%20WebServer){:target="_blank"}.  Make a copy of the folder on your disk and open the
 project from Visual Studio.
 
-* Make sure you set the 'Remote Debugging' setting to point to your Windows IoT Core device. Go back to the basic 'Hello World'
-[sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
+Make sure you connect the LED to your board. Go back to the basic 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm) if you need guidance.
 
-* Make sure you connect the LED to your board. Go back to the basic 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm) if you need guidance.
-
-Note that the app will gracefully degrade if it cannot find any available GPIO ports.
-
+Note that the app will not run successfully if it cannot find any available GPIO ports.
 
 ###Let's look at the code
 
@@ -157,7 +153,7 @@ public void Run(IBackgroundTaskInstance taskInstance)
 
 ###BlinkyApp
 
-The client app is very similar to the Blinky [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm).  The major addition here is that we are allowing a WebServer to
+The client app is very similar to the Blinky [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm).  The major addition here is that we are allowing a WebServer to
 be used to configure the on/off state for our LED.  To establish a connection with the WebServer app via the app-to-app mechanism, we
 need to:
 
@@ -195,9 +191,9 @@ if (res == AppServiceConnectionStatus.Success)
 {% endhighlight %}
 
 ###Deploy and Run Sample
-If you're building for Minnowboard Max, select `x86` in the architecture dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
-
 To get the Blinky WebServer running, first deploy the WebServer project.  This will register the app-to-app communication mechanism.  Then deploy and run the Blinky project.  This will start our headed Blinky app and initialize and start the app to app communication (which will also start the web server).  You can then test it all with the web client as detailed in the next step.
+
+For instructions on how to deploy applications, see the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp).
 
 ###Web Client
 For our sample app, we have hosted a simple client in our WebServer on the Windows Windows IoT Core device. It can be accessed via the IP address

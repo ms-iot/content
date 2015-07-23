@@ -44,9 +44,7 @@ Z-Wave is a wireless communications protocol designed to allow devices in the ho
 4. Once the solution has been opened in Visual Studio, Navigate to the Solution explorer and right click the ZWaveBackgroundService project. Select "Set as Startup Project". ![set_startup]({{site.baseurl}}/images/AllJoyn/startup_proj.png)
 
 5. 	In the Main menu bar, select “Debug” -> ZWaveBackgroundService properties…”
-6.	Refer to the “Hello World” tutorial found [here](http://ms-iot.github.io/content/en-US/win10/samples/HelloWorld.htm) for instructions on how to set up remote debugging from Visual Studio
-7.	Set the Debug configuration to “ARM” and build the solution and build the solution.
-8.	Press F5 to deploy the ZWaveBackgroundService to device
+6.	Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#cpp)
 
 ## Pair the Z-Wave device  
 

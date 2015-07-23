@@ -14,10 +14,7 @@ This is a headed sample.  To better understand what headed mode is and how to co
 
 ###Load the project in Visual Studio
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/SPIDisplay){:target="_blank"}.  Make a copy of the folder on your disk and open the project from Visual Studio.
-
-Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
-
+You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/SPIDisplay){:target="_blank"}.  Make a copy of the folder on your disk and open the project from Visual Studio. 
 Note that this app requires a device with a physical SPI port and will not work if running in an emulated environment.
 
 ###Connect the SPI Display to your device
@@ -86,7 +83,7 @@ Here are the schematics:
 
 ###Deploy and run the app
 
-When everything is set up, power your device back on, and open up the sample app in Visual Studio. If you're building for MinnowBoard Max, select `x86` in the architecture dropdown. If you're building for Raspberry Pi 2, select `ARM`. Next, configure the code depending on which device you are using.
+When everything is set up, power your device back on, and open up the sample app in Visual Studio. Configure the code depending on which device you are using.
 
 {% highlight C# %}
 public sealed partial class MainPage : Page
@@ -110,7 +107,7 @@ public sealed partial class MainPage : Page
 {% endhighlight %}
 
 Next, right-click on the **SPIDisplay** project in **Solution Explorer** and select **"Set as StartUp Project"**.
-Now you should be able to press F5 from Visual Studio: The SPIDisplay app will deploy and start, and you should see text data show up on OLED display.
+Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp). The SPIDisplay app will deploy and start, and you should see text data show up on OLED display.
  You can now type into the app and have the text mirrored on the attached OLED display.
 
 ![SPI running]({{site.baseurl}}/images/SPIDisplay/spidisplay_screenshot.png)
