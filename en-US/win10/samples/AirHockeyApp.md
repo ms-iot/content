@@ -9,9 +9,9 @@ lang: en-US
 
 ##Goal
 
-To demonstrate the utility of Windows 10 IoT Core in the area of industrial automation, we automate a game of air hockey by building a robot arm which can compete against a human player.
+Create a UWP to automate a game of air hockey by building a robot arm which can compete against a human player. This app runs on Windows 10 IoT Core.
 
-To accomplish this, we modified an off-the-shelf air hockey table and install a custom designed robotic arm for the purpose. The robot itself acts as a special purpose system consisting of a camera which tracks the air hockey puck, a motor operated "arm" and a mallet device used to strike the puckk. The camera and actuators are connected to a MinnowBoard Max running Windows 10 IoT Core, which processes the data in near real time to compute actions for the robot during the game.
+To accomplish this, we modified an off-the-shelf air hockey table and install a custom designed robotic arm for the purpose. The robot itself acts as a special purpose system consisting of a camera which tracks the air hockey puck, a motor operated "arm" and a mallet device used to strike the puckk. The camera and actuators are connected to a MinnowBoard Max running Windows 10 IoT Core, which processes the data to compute actions for the robot during the game.
 
 ##App Requirements
 
