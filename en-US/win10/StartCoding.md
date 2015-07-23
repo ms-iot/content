@@ -245,7 +245,7 @@ lang: en-US
                     <div class="col-md-3">
                         <h4>Serial UART Sample (Windows Universal)</h4>
                         <p>Create an app to read and write to UART interfaces on Windows IoT core</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SerialSample.htm">Learn More</a>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SerialSample.htm">SerialSample (C#/C++)</a>
                     </div>
                 </div>
 
