@@ -137,7 +137,11 @@ The I2C bus requires pull-up resistors on the SDA and SCL lines. However, the Ra
 
 ###Create the sample app
 
-When everything is set up, power your device back on. You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/I2cPortExpander){:target="_blank"}, but as an exercise, this tutorial will take you through the complete steps to create this app from scratch.  Open up Visual Studio and create a new C# Windows Universal Blank App (see the 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance on how to create a new app). For this sample, we named ours **I2cPortExpanderLedSample**.
+When everything is set up, power your device back on. You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/I2cPortExpander){:target="_blank"}, 
+but as an exercise, this tutorial will take you through the complete steps to create this app from scratch. 
+Open up Visual Studio and create a new C# Windows Universal Blank App. Click **File -> New -> Project** then select **Templates -> Visual C# -> Windows -> Universal -> Blank App (Universal Windows)**. 
+For this sample, we named ours **I2cPortExpanderLedSample**.
+
 The code in this sample does several things:
 
 1. Initializes the I2C bus and the port expander
@@ -403,9 +407,7 @@ Let's build, deploy and run the app on our Raspberry Pi 2.
 
 * If not already open, open in Visual Studio the app you created with the code above.
 
-* Set the 'Remote Debugging' setting to point to your device. See the 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance on how to do this.
-
-* Press 'F5' or click on the 'Remote Machine' button in the Visual Studio toolbar.
+* Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp).
 
 After several moments, you will see the screen attached to the RPi2 change to show a circle, some text, and a slider. The LED on the breadboard will begin to turn on and off.
 

@@ -75,12 +75,16 @@ lang: en-US
                     </div>
                 </div>
                 <div class="row section-heading">
+					<div class="col-md-3">
+                        <h4>Visual Studio App Deployment</h4>
+                        <p>Use Visual Studio to deploy and debug applications on your Windows 10 IoT Core device</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm">Learn More</a>
+                    </div>
 				    <div class="col-md-3">
                         <h4>Using WINDBG</h4>
                         <p>Use WINDBG to debug</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/Windbg.htm">Learn More</a>
                     </div>
-    
 					<div class="col-md-3">
                         <h4>Glossary</h4>
                         <p>A list of commonly used phrases and their meanings</p>

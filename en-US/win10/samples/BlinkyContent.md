@@ -8,11 +8,7 @@ Also, be aware that the GPIO APIs are only available on Windows 10 IoT Core, so 
 
 ###Load the project in Visual Studio
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/Blinky){:target="_blank"}.  Choose either the C++ version or C# version, but note that this sample only covers the C# version. Make a copy of the folder on your disk and open the project from Visual Studio.
-
-Make sure you set the 'Remote Debugging' setting to point to your Windows IoT device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
-
-Note that the app will gracefully degrade if it cannot find any available GPIO ports.
+You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/Blinky){:target="_blank"}. The sample code is available in either C++ or C#, however the documentation here only details the C# variant. Make a copy of the folder on your disk and open the project from Visual Studio.
 
 ###Connect the LED to your Windows IoT device
 
@@ -62,7 +58,7 @@ Here is an example of what your breadboard might look like with the circuit asse
 
 ###Deploy your app
 
-If you're building for Minnowboard Max, select `x86` in the architecture dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
+{% include_relative AppDeploymentCS.md %}
 
 When everything is set up, you should be able to press F5 from Visual Studio.  The Blinky app will deploy and start on the Windows IoT device, and you should see the LED blink in sync with the simulation on the screen.
 
