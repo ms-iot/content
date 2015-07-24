@@ -88,7 +88,8 @@ NODE_MODULE(MemoryStatusAddon, Init)
 }
 {% endhighlight %}
 </UL>
-* Build the AddOn: `node.exe [local_repo]\deps\npm\node_modules\node-gyp\bin\node-gyp.js rebuild --nodedir=[local_repo] --msvs_version=2015 --target_arch=arm` (use appropriate --target_arch depending on the device you have)
+* Build the AddOn: `node "[Node.js (Chakra) installation path]\node_modules\npm\node_modules\node-gyp\bin\node-gyp.js" rebuild --target_arch=arm` (use appropriate --target_arch depending on the device you have).  
+  The default Node.js (Chakra) installation path is "c:\Program Files (x86)\Node.js (chakra)".
 
 
 ###Create the Node.js file

@@ -15,7 +15,7 @@ lang: en-US
 
 
 ###Create a new Node.js (Windows Universal) project
-Start Visual Studio 2015 RC and create a new project (File \| New Project...). In the `New Project` dialog, navigate to `Node.js` as shown below (in the left pane in the dialog: Templates \| JavaScript \| Node.js).
+Start Visual Studio 2015 and create a new project (File \| New Project...). In the `New Project` dialog, navigate to `Node.js` as shown below (in the left pane in the dialog: Templates \| JavaScript \| Node.js).
 
 Select the template `Basic Node.js Web Server (Windows Universal)`
 
