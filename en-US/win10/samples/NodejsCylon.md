@@ -73,7 +73,7 @@ we cannot run `npm install` on Windows IoT core to build the code. We will build
 * Clone [serialport](https://github.com/voodootikigod/node-serialport).
 * Edit serialport_win.cpp with the change in [https://github.com/voodootikigod/node-serialport/pull/550](https://github.com/voodootikigod/node-serialport/pull/550). **This step is temporary until the pull request is merged**.
 * Run `npm install nan`.
-* Run `node "[Node.js (Chakra) installation path]\node_modules\npm\node_modules\node-gyp\bin\node-gyp.js" rebuild --module_name=serialport --module_path=. --target_arch=arm` 
+* Run `"[Node.js (Chakra) installation path]\node_modules\npm\bin\node-gyp-bin\node-gyp.cmd" rebuild --module_name=serialport --module_path=. --target_arch=arm` 
   The default Node.js (Chakra) installation path is "c:\Program Files (x86)\Node.js (chakra)".
 * If the last step is successful, you will see **serialport.node** in [serialport clone path]\build\Release
 * Change "module_path" in [serialport clone path]\package.json to "./build/release/".
