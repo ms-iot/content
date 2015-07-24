@@ -39,7 +39,8 @@ Note that the app will not run successfully if it cannot find any available GPIO
 ###Let's look at the code
 The code for this sample is pretty simple. We use _wingpio, http.server and socketserver modules.
 
-*NOTE: _wingpio reference is already added to the project and is conditioned on the different configuration and platform combinations*
+*NOTE: _wingpio reference is already added to the project and is conditioned on the different configuration and platform combinations.*
+*For new projects, download pywindevices.zip from [CPython UWP SDK](https://github.com/ms-iot/python/releases) releases. This zip file contains pyd files to access GPIO, I2C, and SPI from your application.*
 
 ###Blinky code
 Here is how you set up the blinking led in Python when the web server is hit:
