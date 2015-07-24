@@ -57,7 +57,7 @@ Here is the pinout of the RPi2:
 
 ###Deploy your app
 
-You can find the entire code for this sample [here](https://github.com/ms-iot/samples/tree/develop/RGBLED/CS){:target="_blank"}. This sample is written in C#. Make a copy of the folder on your disk and open the project from Visual Studio.
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\RGBLED`.  This sample is written in C#. Make a copy of the folder on your disk and open the project from Visual Studio.
 
 Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp). The RGBLED app will deploy and start on the Windows IoT device, and you should see the LED blink in sync with the simulation on the screen.
 

@@ -25,7 +25,7 @@ This app, which has been tested on a MinnowBoard Max (x86 platform), demonstrate
 
 ##Building and running the app
 
-You can find this sample [here](https://github.com/ms-iot/samples-private/tree/rtm/AirHockeyApp){:target="_blank"}. Make a copy of the folder on your disk and open the project from Visual Studio.
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\AirHockeyApp`.  Make a copy of the folder on your disk and open the project from Visual Studio.
 
 Make sure you set the 'Remote Debugging' setting to point to your Windows IoT device. Follow the instructions [here]({{site.baseurl}}/en-US/win10/AppDeployment.htm) for building and deploying the app.
 

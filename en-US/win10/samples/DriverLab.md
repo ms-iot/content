@@ -20,7 +20,7 @@ In this lab we will be walking through the process of creating and installing a 
 The name of the driver for this lab is `gpiokmdfdemo`, and it will receive different IOCTL commands from a simple user-mode Win32 console application called `BinkyApp.exe`.  These IOCTL commands will tell the driver what GPIO pins to set high or low.  The driver `gpiokmdfdemo` will in turn communicate with the GpioClx (GPIO Class Extension) in Windows IoT Core to accomplish these requests.  Take a look at the diagram below to familiarize yourself with the inner workings of this lab.
 
 ###Lab source code and binaries
-The source code for this sample can be found [here](https://github.com/ms-iot/samples/tree/develop/DriverSamples){:target="_blank"}, where you will find 3 folders:
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\DriverSamples` where you will find 3 folders:
 
 1. [`DriverSamples\BlinkyApp`](https://github.com/ms-iot/samples/tree/develop/DriverSamples/BlinkyApp){:target="_blank"} containing pre-built binaries of the console application for x86 and ARM architectures.gpiokmdfdemo
 

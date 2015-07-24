@@ -94,9 +94,8 @@ Here is the pinout of the MBM:
 
 ###Building and running the sample
 
-1. Download the [samples](https://github.com/ms-iot/samples){:target="_blank"}
-   repository to your local machine
-1. Open `PushButton\CS\PushButton.csproj` in Visual Studio
+1. Download a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip).
+1. Open `samples-develop\PushButton\CS\PushButton.csproj` in Visual Studio.
 1. If you have **Raspberry Pi 2**, Select `ARM` for the target architecture. Otherwise, for **MinnowBoard Max** select `x86`
 1. Go to `Build -> Build Solution`
 1. Select `Remote Machine` from the debug target
