@@ -11,7 +11,7 @@ We'll create a simple Python Blinky Web Server app and connect a LED to your Win
 only available on Windows IoT Core, so this sample cannot run on your desktop.
 
 ###Set up your PC
-* Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
+* Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm) to install Visual Studio 2015.
 
 * Install Python for Windows (3.*) from [http://www.python.org/downloads](http://www.python.org/downloads){:target="_blank"}
 
