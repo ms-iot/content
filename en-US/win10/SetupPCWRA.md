@@ -135,6 +135,11 @@ You will need to add one of the following XML blocks to your `Package.appxmanife
 
 You must add these DeviceCapability tags *inside* the `<Capabilities>` tag.
 
+    Visual Studio 2015 has a known bug in the Manifest Designer (the visual editor for appxmanifest files) that affects the serialcommunication capability.  If 
+    your appxmanifest adds the serialcommunication capability, modifying your appxmanifest with the designer will corrupt your appxmanifest (the Device xml child 
+    will be lost).  You can workaround this problem by hand editting the appxmanifest by right-clicking your appxmanifest and selecting View Code from the 
+    context menu.
+
 ###Windows 10
 
 {% highlight XML %}
