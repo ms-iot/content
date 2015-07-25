@@ -6,12 +6,12 @@ lang: en-US
 ---
 
 ## Using and Dissecting the Code
-Lets start up the sample and then go through the important code bits! Remember all the required code is hosted on Github [here](https://github.com/ms-iot/samples/){:target="_blank"}, in the [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} folder.
+Lets start up the sample and then go through the important code bits! Remember all the required code is [here](https://github.com/ms-iot/samples/archive/develop.zip){:target="_blank"}, in the [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} folder.
 
 This is a headed sample. To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
 
 ### Load the project in Visual Studio
-Download the code from Github [here](https://github.com/ms-iot/samples/){:target="_blank"}. Make a copy of the [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} folder on your disk and open the project from Visual Studio.
+Download the code [here](https://github.com/ms-iot/samples/archive/develop.zip){:target="_blank"}. Make a copy of the [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} folder on your disk and open the project from Visual Studio.
 
 Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
 
