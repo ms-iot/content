@@ -6,12 +6,12 @@ lang: en-US
 ---
 
 ## Using and Dissecting the Code
-Lets start up the sample and go through important code bits! Remember all the required code is hosted on Github [here](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"}.
+Lets start up the sample and then go through the important code bits! Remember all the required code is hosted on Github [here](https://github.com/ms-iot/samples/){:target="_blank"}, in the [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} folder.
 
 This is a headed sample. To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
 
 ### Load the project in Visual Studio
-Download the code from Github [here](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"}. Make a copy of the folder on your disk and open the project from Visual Studio.
+Download the code from Github [here](https://github.com/ms-iot/samples/){:target="_blank"}. Make a copy of the [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} folder on your disk and open the project from Visual Studio.
 
 Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
 
@@ -23,14 +23,14 @@ Now you should be able to press F5 from Visual Studio: The BluetoothGATT app wil
 
 ![BluetoothGatt App]({{site.baseurl}}/images/BLEGatt/app.png)
 
-Click on the Start button at the top to connect to the SensorTag and display the sensor data. A popup may appear asking for permission to access the SensorTag service, click yes to continue. After a couple of seconds you should see all the data being updated like this:
+Click on the Start button at the top to connect to the SensorTag and display the sensor data. A popup may appear asking for permission to access the SensorTag service, click yes to continue. After a couple of seconds you should see the data being updated like this:
 
 ![BluetoothGatt App Running]({{site.baseurl}}/images/BLEGatt/appRunning.png)
 
 ### Let's look at the code
 
 #### Having the Correct References
-The sample adds these extra references on top of the defaults in order to work.
+These extra references at the top of `MainPage.xaml.cs` that are important in making the sample work.
 
 {% highlight C# %}
 // Required APIs to use Bluetooth GATT
@@ -40,20 +40,20 @@ using Windows.Devices.Bluetooth.GenericAttributeProfile;
 // Required APIs to use built in GUIDs
 using Windows.Devices.Enumeration;
 
-// Required APIs for data binding and buffer manipulation
+// Required APIs for buffer manipulation & async operations
 using Windows.Storage.Streams;
 using System.Threading.Tasks;
 {% endhighlight %}
 
 #### Retrieving a GATT Service
-There are 7 GATT services on the SensorTag that we are interested in, and we use a loop to retrieve and save references to each `GattDeviceService` object. The code for this is located in `init()` function, which is the first function that gets called after the start button gets pressed.
+There are 7 GATT services on the SensorTag that we are interested in, and for each of those services we will need to create a `GattDeviceService` object in order to interact with them. The code for this is located in `init()` function, which is the first function that gets called after the start button gets pressed.
 
-In each iteration of the loop the app:
+For each GATT service the sample:
 
 1. Retrieves a list of `DeviceInformation` objects with the desired service GUID.
 2. Retrieves a list of `GattDeviceService` objects using the id field of the desired `DeviceInformation` object.
 
-Note the use of `async` and `await` in the code, this is so that the app can still be responsive while waiting for the functions to finish. Learn more about these features [here](http://blogs.msdn.com/b/pfxteam/archive/2012/04/12/10293335.aspx){:target="_blank"}.
+Note the use of `async` and `await` in the code, this is so that the OS can still be responsive while waiting for the functions to finish. Learn more about these features [here](http://blogs.msdn.com/b/pfxteam/archive/2012/04/12/10293335.aspx){:target="_blank"}.
 
 {% highlight C# %}
 // Setup
@@ -69,8 +69,6 @@ private async Task<bool> init()
             BLE_GUID = new Guid("F000AA" + i + "0-0451-4000-B000-000000000000");
         else
             BLE_GUID = new Guid("0000FFE0-0000-1000-8000-00805F9B34FB");
-
-        
 
         // Retrieving and saving GATT services
         var services = await DeviceInformation.FindAllAsync(GattDeviceService.GetDeviceSelectorFromUuid(BLE_GUID), null);
@@ -122,15 +120,15 @@ private async Task<bool> init()
 {% endhighlight %}
 
 #### Working with a GATT Characteristic
-Once we have a `GattDeviceService` object we can then retrieve the GATT characteristics we are interested in. Then we can write, read, set up notifications using the `GattCharacteristic` object. The code that does this is located in the `enableSensor(int sensor)` function, which gets called for each GattDeviceService after `init()` gets called.
+Once we have a `GattDeviceService` object we can then obtain a `GattCharacteristic` object, which allows us to interact with GATT characteristics. The sample uses these objects to write, read, and set up notifications with the SensorTag GATT characteristics. The code that does this is located in the `enableSensor(int sensor)` function.
 
-For each GATT Service, the app:
+For each GATT Service, the sample:
 
 1. Retrieves a list of `GattCharacteristic` objects with the desired Characteristic Data GUID.
 
 2. Checks the GATT Characteristic properties, in this case we check whether we can enable notifications.
 
-3. Adds a handler to the GATT characteristic.
+3. Adds a notification handler to the GATT characteristic.
 
 4. Sets the notification enable flag.
 
@@ -140,7 +138,7 @@ For each GATT Service, the app:
 
 7. Writes a value to the GATT Characteristic to turn on the sensor.
 
-Note the extra steps required for the Barometer, Accelerometer, and Gyroscope.
+Note the extra hardware configuration steps required for the Barometer, Accelerometer, and Gyroscope.
 
 {% highlight C# %}
 // Enable and subscribe to specified GATT characteristic
@@ -230,9 +228,7 @@ private async void enableSensor(int sensor)
 {% endhighlight %}
 
 #### GATT Notification Handlers
-Earlier we added handlers to a bunch of GATT Characteristics, let's see how one of these function works.
-
-Each handler:
+To set up GATT notifications properly the sample needs to provide a notification handler. In the sample we have 7 different of these handlers, and each handler goes through the same high-level process:
 
 1. Reads the data from the GATT Characteristic.
 
@@ -266,7 +262,10 @@ async void accelChanged(GattCharacteristic sender, GattValueChangedEventArgs eve
 }
 {% endhighlight %}
 
-### Previous Pages
+### That's it!
+That is all you will need to know on how to interact with a BLE GATT device. See [Supporting Bluetooth Devices (XAML)](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn264587.aspx){:target="_blank"} for more examples on how to use the Bluetooth APIs. 
+
+#### Previous Pages
 [Sample Overview]({{site.baseurl}}/{{page.lang}}/win10/samples/BLEGatt.htm) --- Learn about BLE, GATT, and the TI CC2541 SensorTag.
 
 [Pairing a BLE Device and GATT Attribute Table Dump Tool]({{site.baseurl}}/{{page.lang}}/win10/samples/BLEGatt1.htm) --- Learn how to pair the SensorTag with a Windows IoT Core device, and how to retrieve a GATT Attribute Table in Windows.
