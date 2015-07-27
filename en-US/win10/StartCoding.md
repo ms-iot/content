@@ -12,7 +12,7 @@ lang: en-US
         <p>Download code samples to get started with Windows on Devices. Also, read docs to help you use tools and resources to help you develop.</p>
         <br/>
         <h4>Did you set up your environment?</h4>
-        <p>We assume you already <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">set up your environment</a>, have a working Visual Studio and have a device running Windows IoT Core (MinnowBoard Max, Raspberry Pi 2, or VM).</p>
+        <p>We assume you already <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">set up your environment</a>, have a working Visual Studio and have a device running Windows IoT Core (MinnowBoard Max or Raspberry Pi 2).</p>
         <br/>
         <h4>Questions/Suggestions</h4>
         <p>Remember, you can always send <a href="{{site.baseurl}}/{{page.lang}}/Community.htm#contact">contact us</a> for help and suggestions!</p>
@@ -125,30 +125,30 @@ lang: en-US
 
             <div role="tabpanel" class="tab-pane" id="second">
                 <div class="row section-heading">
-                    <h2>Windows 10 IoT Core Insider Preview</h2>
+                    <h2>Windows 10 IoT Core</h2>
                 </div>
                 <div class="row section-heading">
                     <div class="col-md-3">
                         <h4>Hello, World!</h4>
-                        <p>Create a 'Hello World' application that runs on devices running Windows 10 IoT Core Insider Preview</p>
+                        <p>Create a 'Hello World' application that runs on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm">Hello World (C#)</a><br>
 						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Python.htm">Hello World (Python)</a><br>
 						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWU.htm">Hello World (Node.js)</a><br>
                     </div>
                     <div class="col-md-3">
                         <h4>Hello Blinky (Headless App)</h4>
-                        <p>Create an app with no UI that toggles an LED on devices running Windows 10 IoT Core Insider Preview</p>
+                        <p>Create an app with no UI that toggles an LED on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyHeadless.htm">Blinky (C#)</a><br>
 						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PythonBlinky.htm">Blinky (Python)</a><br>
                     </div>
                     <div class="col-md-3">
                         <h4>UI Blinky App</h4>
-                        <p>Create a UI-based app that toggles an LED on devices running Windows 10 IoT Core Insider Preview</p>
+                        <p>Create a UI-based app that toggles an LED on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm">UI Blinky (C#/C++)</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Blinky Webserver</h4>
-                        <p>Create a Webserver app that controls an LED on devices running Windows 10 IoT Core Insider Preview</p>
+                        <p>Create a Webserver app that controls an LED on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyWebServer.htm">Webserver Blinky (C#)</a><br>
 						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PythonBlinkyServer.htm">Webserver Blinky (Python)</a><br>
 						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWUBlinky.htm">Webserver Blinky (Node.js)</a><br>
@@ -158,24 +158,24 @@ lang: en-US
                 <div class="row section-heading">
                     <div class="col-md-3">
                         <h4>Console App</h4>
-                        <p>Create a console app that monitors memory usage on devices running Windows 10 IoT Core Insider Preview</p>
+                        <p>Create a console app that monitors memory usage on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/ConsoleApp.htm">Console App (C++)</a><br>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Nodejs.htm">Console App (Node.js)</a><br>
                     </div>
                     <div class="col-md-3">
                         <h4>I2C/SPI Accelerometer</h4>
-                        <p>Create an app leveraging I2C or SPI on devices running Windows 10 IoT Core Insider Preview</p>
+                        <p>Create an app leveraging I2C or SPI on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2CAccelerometer.htm">I2C Accelerometer (C#)</a><br>
 						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SPIAccelerometer.htm">SPI Accelerometer (C#)</a><br>
                     </div>
                     <div class="col-md-3">
                         <h4>SPI Display</h4>
-                        <p>Create an app using SPI on devices running Windows 10 IoT Core Insider Preview</p>
+                        <p>Create an app using SPI on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplay.htm">SPI Display (C#)</a>
                     </div>
 					<div class="col-md-3">
                         <h4>AllJoyn Connectivity</h4>
-                        <p>Learn more about AllJoyn and explore the capabilities of the AllJoyn Device System Bridge with Windows 10 IoT Core Insider Preview</p>
+                        <p>Learn more about AllJoyn and explore the capabilities of the AllJoyn Device System Bridge with Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/AllJoyn.htm">Learn More</a>
                     </div>
                 </div>
@@ -183,7 +183,7 @@ lang: en-US
                 <div class="row section-heading">
 					<div class="col-md-3">
                         <h4>Driver Sample</h4>
-                        <p>Create and interact with a universal driver on devices running Windows 10 IoT Core Insider Preview</p>
+                        <p>Create and interact with a universal driver on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab.htm">Driver Sample (C++)</a>
                     </div>
                     <div class="col-md-3">
@@ -234,7 +234,7 @@ lang: en-US
                     </div>
                     <div class="col-md-3">
                         <h4>Express Node.js App (UWP)</h4>
-                        <p>Create an Express Node.js app that runs on devices running Windows 10 IoT Core Insider Preview</p>
+                        <p>Create an Express Node.js app that runs on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWUExpress.htm">Express (Node.js)</a>
                     </div>
                     <div class="col-md-3">
