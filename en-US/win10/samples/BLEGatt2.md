@@ -45,6 +45,19 @@ using Windows.Storage.Streams;
 using System.Threading.Tasks;
 {% endhighlight %}
 
+Also you must provide information about your device's capabilities in the declarations in the App Manifest (`Package.appxmanifest`). This allows an app to be associated with your device. Learn more about Bluetooth device capabilities [here](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn263090.aspx){:target="_blank"}
+
+{% highlight XML %}
+<Capabilities>
+    <Capability Name="internetClient" />
+    <DeviceCapability Name="bluetooth.genericAttributeProfile">
+        <Device Id="any">
+            <Function Type="name:genericAccess" />
+        </Device>
+    </DeviceCapability>
+</Capabilities>
+{% endhighlight %}
+
 #### Retrieving a GATT Service
 There are 7 GATT services on the SensorTag that we are interested in, and for each of those services we will need to create a `GattDeviceService` object in order to interact with them. The code for this is located in `init()` function, which is the first function that gets called after the start button gets pressed.
 
