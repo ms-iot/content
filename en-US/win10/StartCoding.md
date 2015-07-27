@@ -261,7 +261,9 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsCylon.htm">Cylon (Node.js)</a>
                     </div>
                     <div class="col-md-3">
-                        <!-- Placeholder for alignment -->
+                        <h4>Bluetooth Low Energy GATT Sample (Windows Universal)</h4>
+                        <p> Learn how to interact with Bluetooth Low Energy devices on Windows 10 IoT core.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BLEGatt.htm">Bluetooth GATT (C#)</a><br>
                     </div>
                     <div class="col-md-3">
                         <!-- Placeholder for alignment -->

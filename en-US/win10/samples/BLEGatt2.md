@@ -45,7 +45,7 @@ using Windows.Storage.Streams;
 using System.Threading.Tasks;
 {% endhighlight %}
 
-Also you must provide information about your device's capabilities in the declarations in the App Manifest (`Package.appxmanifest`). This allows an app to be associated with your device. Learn more about Bluetooth device capabilities [here](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn263090.aspx){:target="_blank"}
+Also you must provide information about your device's capabilities in the declarations in the App Manifest (`Package.appxmanifest`). This allows an app to be associated with your device. Learn more about Bluetooth device capabilities [here](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn263090.aspx){:target="_blank"}.
 
 {% highlight XML %}
 <Capabilities>
