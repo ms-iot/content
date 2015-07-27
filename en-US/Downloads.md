@@ -24,7 +24,7 @@ lang: en-US
             <div role="tabpanel" class="tab-pane active" id="Win10">
                 <div class="row">
                     <br />
-                    <h4>Download Windows 10 IoT Core Insider Preview, Visual Studio, Software Development Kits and other tools you will need to develop for Windows IoT devices like Raspberry Pi 2 and MinnowBoard MAX.</h4>
+                    <h4>Download Windows 10 IoT Core, Visual Studio, Software Development Kits and other tools you will need to develop for Windows IoT devices like Raspberry Pi 2 and MinnowBoard MAX.</h4>
                     <br />
                 </div>
 				<div class="row">
