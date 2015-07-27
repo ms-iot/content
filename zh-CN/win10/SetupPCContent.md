@@ -12,7 +12,7 @@
 
 	<img class="screen-snippet" src="{{site.baseurl}}/images/SetupPC/download.PNG"> 向下滚动到页面底部的“其他下载选项”部分，并安装“适用于 Windows 10 的独立 Windows 10 SDK”和“移动版 Microsoft Windows 10 仿真器”。
 
-* **安装 WindowsDeveloperProgramForIoT.msi**。[在此处]({{site.downloadurl}})的**任何**Windows 10 IoT Core Insider Preview **映像文件**（例如 `Windows 10 IoT Core Insider Preview image for Raspberry Pi 2.zip`）内都可以找到它。
+* **安装 WindowsDeveloperProgramForIoT.msi**。[在此处]({{site.downloadurl}})的**任何**Windows 10 IoT Core **映像文件**（例如 `Windows 10 IoT Core image for Raspberry Pi 2.zip`）内都可以找到它。
 
 	* 如果你遵循了配置 Raspberry Pi 2 或 MinnowBoard Max 的步骤，便可以在已下载的 zip 文件内找到 WindowsDeveloperProgramForIoT.msi。
 
