@@ -34,13 +34,13 @@ lang: en-US
 					<div class="col-md-3">
                         <h4>Windows 10 IoT Core for Raspberry Pi 2</h4>
                         <p>The Windows IoT platform that runs on Raspberry Pi 2</p>
-                        <a href="http://go.microsoft.com/fwlink/?LinkId=616847" target="_blank">Download</a>
+                        <a href="http://go.microsoft.com/fwlink/?LinkId=619755" target="_blank">Download</a>
 						<p><a href="http://go.microsoft.com/fwlink/?LinkId=534601" target="_blank">Release Notes</a></p>
                     </div>
                     <div class="col-md-3">
                         <h4>Windows 10 IoT Core for MinnowBoard MAX</h4>
                         <p>The Windows 10 IoT platform that runs on MinnowBoard MAX</p>
-                        <a href="http://go.microsoft.com/fwlink/?LinkId=616848" target="_blank">Download</a>
+                        <a href="http://go.microsoft.com/fwlink/?LinkId=619756" target="_blank">Download</a>
 						<p><a href="http://go.microsoft.com/fwlink/?LinkId=534601" target="_blank">Release Notes</a></p>
                     </div>
                     <div class="col-md-3">
