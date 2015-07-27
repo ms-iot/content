@@ -11,7 +11,7 @@ lang: en-US
 ###Set up your PC
 * Install Windows 10.
 * Install Visual Studio 2015.
-* Install the latest NTVS (Node.js Tools for Visual Studio) Bundle Installer from [here](https://github.com/ms-iot/ntvsiot/releases).
+* Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
 
 
 ###Create a new Node.js (Windows Universal) project

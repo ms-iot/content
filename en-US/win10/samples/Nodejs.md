@@ -12,7 +12,7 @@ Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/{{page.l
 ###Set up your PC
 * Install Windows 10.
 * Install Visual Studio 2015.
-* Install the latest NTVS (Node.js Tools for Visual Studio) Bundle Installer from [here](https://github.com/ms-iot/ntvsiot/releases).
+* Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 
 ###Copy Node.js to your Raspberry Pi 2

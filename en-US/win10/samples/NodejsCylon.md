@@ -16,7 +16,7 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 ###Set up your PC
 * Install Windows 10.
 * Install Visual Studio 2015.
-* Install the latest NTVS (Node.js Tools for Visual Studio) Bundle Installer from [here](https://github.com/ms-iot/ntvsiot/releases).
+* Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 * Install Arduino software from [here](https://www.arduino.cc/en/Main/Software).
 
