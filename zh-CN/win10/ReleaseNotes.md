@@ -5,12 +5,12 @@ permalink: /zh-CN/win10/ReleaseNotes.htm
 lang: zh-CN
 ---
 
-#Windows 10 IoT Core Insider Preview 的发行说明
+#Windows 10 IoT Core 的发行说明
 &copy; 2015 Microsoft Corporation。保留所有权利
 
-此文档提供最新进展或其他信息，用于补充 Windows 10 IoT Core Insider Preview 随附的文档。
+此文档提供最新进展或其他信息，用于补充 Windows 10 IoT Core 随附的文档。
 
-感谢你下载 Windows 10 IoT Core Insider Preview。Windows 10 IoT 核心版是用于开发嵌入式或专用设备的 Windows 10 版本，可供制造商社区选择使用。此程序包包含在基于 Intel Atom E38xx 系列 SoC 的 MinnowBoard Max（也称为 MBM 板）和基于 ARM Cortex-A7 SoC 的 Raspberry PI2（也称为 RPI）上安装 Windows 10 IoT 核心版的预发布版本所需的位和工具。
+感谢你下载 Windows 10 IoT Core。Windows 10 IoT 核心版是用于开发嵌入式或专用设备的 Windows 10 版本，可供制造商社区选择使用。此程序包包含在基于 Intel Atom E38xx 系列 SoC 的 MinnowBoard Max（也称为 MBM 板）和基于 ARM Cortex-A7 SoC 的 Raspberry PI2（也称为 RPI）上安装 Windows 10 IoT 核心版的预发布版本所需的位和工具。
 
 ##隐私声明
 
@@ -19,14 +19,14 @@ lang: zh-CN
 你可以通过将正向链接粘贴到你的浏览器窗口中，查看链接的条款。
 
 ##新增功能
-* Windows 10 IoT Core Insider Preview 5/12 版本
+* Windows 10 IoT Core 5/12 版本
 
     * 已更新基础操作系统版本
     * 针对设备设置、启动应用程序配置和反馈功能，已更新基于登录的 Web 界面。
 
 ##发行说明
 
-默认的管理员用户名和密码已硬编码在 Windows 10 IoT Core Insider Preview 映像中。这使设备具有安全风险，因此在更改密码之前，请不要向开放的 Internet 连接公开此信息。
+默认的管理员用户名和密码已硬编码在 Windows 10 IoT Core 映像中。这使设备具有安全风险，因此在更改密码之前，请不要向开放的 Internet 连接公开此信息。
 
 此发布中包含的 Windows 10 IoT 核心版映像支持在 MinnowBoard MAX 板上公开的外设。后续 IntelÆ 将提供对 Baytrail 处理器的完整功能集（包括 IntelÆ CeleronÆ 处理器 J1900/N2930/N2807 和 IntelÆ AtomÆ 处理器 E38XX）的支持。
 
@@ -46,7 +46,7 @@ Windows 10 IoT 核心版仍处于移植到 Raspberry PI 的过程中。RPI 上�
 * 某些摄像头驱动程序缺失。\(2187095\)。解决方法： 无
 * Logitech USB 扬声器可能不会在 MBM 上生成音频输出 \(2460925\)。解决方法： 使用备用音频输出设备。
 * 有关已验证的外设设备列表，请参阅 [http://WindowsOnDevices.com](http://WindowsOnDevices.com) 上的文档 \(2296724\)。解决方法： 查看已验证的设备的列表。
-* Windows 10 IoT Core Insider Preview 映像中不支持常用的 Raspberry PI WiFi 适配器。\(2310140\)。解决方法： 使用以太网连接进行网络连接。
+* Windows 10 IoT Core 映像中不支持常用的 Raspberry PI WiFi 适配器。\(2310140\)。解决方法： 使用以太网连接进行网络连接。
 * 重启 Raspberry PI 后，无线网络可能无法重新连接 \(2367736\)。解决方法： 重新建立 WiFi 连接。
 * WiFi/Bluetooth USB 组合设备可能不适用于 Raspberry PI 或 MinnowBoard Max \(2293778\)。解决方法： 使用另一组硬件。
 * 基于 USB 的以太网适配器可能会在 Raspberry PI 上出现间歇性停止 \(2459108\)。解决方法： 使用板载以太网适配器。
@@ -67,9 +67,9 @@ Windows 10 IoT 核心版仍处于移植到 Raspberry PI 的过程中。RPI 上�
 * ICD 可能无法为 NUC 生成可启动的 Windows 10 IoT 核心版映像。\(1415629\)。解决方法： 无
 * 由于默认应用在较慢的 4 速 SD 卡上失败，因此在启动期间可能会看到黑屏。\(2462306\)。解决方法： 不要使用 4 速 SD 卡。
 * 设备关闭后，可能会再次看到启动时的初始屏幕。\(2502991\)。解决方法： 无
-* 在启动 IoT Core Default App 之前，当前版本的 Windows 10 IoT Core Insider Preview 启动了两次。\(2504963\)。解决方法： 这是预期的行为。
+* 在启动 IoT Core Default App 之前，当前版本的 Windows 10 IoT Core 启动了两次。\(2504963\)。解决方法： 这是预期的行为。
 * 在 Raspberry PI 上使用板载网卡初始化 Windows 10 IoT 核心版时，可能会导致大量的网络广播。\(2322325\)。解决方法： 在连接到网络后初始化设备，不会造成干扰。
-* 蓝牙低能耗 Gatt 接口不适用于 Windows 10 IoT Core Insider Preview \(2382852\)。解决方法： 无。此版本未完全实现蓝牙。
+* 蓝牙低能耗 Gatt 接口不适用于 Windows 10 IoT Core \(2382852\)。解决方法： 无。此版本未完全实现蓝牙。
 * 墨迹书写识别器可能在此版本的  Windows 10 IoT 核心版中不可用 \(2552947\)。解决方法： 无。
 * 加载墨迹控件可能会导致应用程序崩溃 \(2221749\)。解决方法： 无
 * SPI 示例在首次部署到 MinnowBoard Max 时可能无法工作 \(2524399\)。解决方法： 将示例重新部署到 MBM。
@@ -88,7 +88,7 @@ Windows 10 IoT 核心版仍处于移植到 Raspberry PI 的过程中。RPI 上�
 * 剪贴板可能会返回“无法识别的类”异常。\(2221417\)。解决方法： 无
 * 音频任务可能在通用 Windows 应用程序中无法启动。\(2221634\)。解决方法： 无
 * 后台传输可能会失败，并在通用 Windows 应用程序中出现异常。\(2221657\)。解决方法： 无。
-* Windows 10 IoT Core Insider Preview 映像缺少 fileinfo.sys。\(2230476\)。解决方法： 无。
+* Windows 10 IoT Core 映像缺少 fileinfo.sys。\(2230476\)。解决方法： 无。
 * 更改 Windows 10 IoT 核心版设备的名称后，将该名称用作参数可能无法连接。\(2300166\)。解决方法： 使用设备的 IP 地址进行连接。
 * I2C 重新启动可能会使用不正确的 CLK 级别。\(2392063\)。解决方法： 无。
 * BackgroundService 任务可能会同时注册为有外设和无外设的任务。\(2455442\)。解决方法： 无。

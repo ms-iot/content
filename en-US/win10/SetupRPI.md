@@ -13,7 +13,7 @@ Learn how to set up the Raspberry Pi 2 and connect it to your computer.
 
 ##What you need
 
-1. **A PC running Windows 10 IoT Core** (Prepared in the previous step)
+1. **A PC running Windows 10** (Prepared in the previous step)
 2. **Raspberry Pi 2**
 3. **5V micro USB power supply** - with at least 1.0A current
 		If you plan on using several power-hungry USB peripherals, use a higher current power supply instead (>2.0A)

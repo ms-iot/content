@@ -13,7 +13,7 @@ lang: zh-CN
     <div class="col-md-8 col-md-offset-4 col-xs-8 col-xs-offset-4 section-heading">
         <a name="rpi2"></a>
         <h2 class="faq-h2">设置 Raspberry Pi</h2>
-        <p class="bold"><em>我无法下载适用于 Raspberry Pi 的 Windows 10 IoT Core Insider Preview 映像。我看到一个空白屏幕。</em></p>
+        <p class="bold"><em>我无法下载适用于 Raspberry Pi 的 Windows 10 IoT Core 映像。我看到一个空白屏幕。</em></p>
         <p>我们通过 Microsoft Connect 上的计划发布适用于 Raspberry Pi 2 的 Windows 10 IoT 核心版，同时提供一个用于 bug 报告和提供反馈的平台。若要能够下载该映像，你需要注册 Microsoft Connect 上的计划<u>并</u>已登录。如果你有没有注册 Microsoft Connect 上的计划，请<a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558" target="_blank">单击此处注册</a>。你可以在<a href="http://ms-iot.github.io/content/SigninMSConnect.htm" target="_blank">此处</a>找到注册或使用 Microsoft Connect 的分步说明。如果已注册 Microsoft Connect 上的此计划并尝试再次注册，请不必担心。你只会看到一个空白页面。</p>
         <p>在尝试下载映像之前，请确保已登录 Microsoft Connect。</p>
         <p class="bold"><em>为什么我的屏幕看上去遭到裁剪或拉伸？</em></p>

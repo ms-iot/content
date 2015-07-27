@@ -12,7 +12,7 @@ Learn how to set up the MinnowBoard Max hardware and connect it to your computer
 {% include steps.html device="MBM" %}
 
 ##What you need
-1. **A PC running Windows 10 Insider Preview** (Prepared in the previous step)
+1. **A PC running Windows 10** (Prepared in the previous step)
 2. **MinnowBoard Max**
 3. **Power supply**
 4. **8GB micro SD card** - class 10 or better. (We suggest this [one](http://www.amazon.com/gp/product/B00IVPU786){:target="_blank"} or this [one](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445){:target="_blank"})
@@ -70,7 +70,7 @@ So the first time you will likely need to use 64-bit EFI and 32-bit BIN.
 The second time and every other time you need to use 32-bit EFI and 32-bit BIN.
 The reason the bitness of the firmware has to match the bitness of the OS is that there is an EFI in the OS image that gets loaded to bootstrap the OS, and that EFI has to be the same bitness as the firmware as well.
 
-##Put the Windows 10 IoT Core Insider Preview image on your SD card
+##Put the Windows 10 IoT Core image on your SD card
 
 1. **Insert a micro SD card** into your SD card reader.
 
