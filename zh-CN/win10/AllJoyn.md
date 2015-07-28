@@ -70,6 +70,6 @@ AllJoyn 支持基于邻近感应的通信，从而允许通过以太网、Wi-Fi�
 
 * 在 Windows 10 上生成 AllJoyn 应用 - [https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview](https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview){:target="_blank"}
 * Windows 10 中的 AllJoyn 接口 - [https://msdn.microsoft.com/zh-cn/library/windows/apps/xaml/windows.devices.alljoyn.aspx](https://msdn.microsoft.com/zh-CN/library/windows/apps/xaml/windows.devices.alljoyn.aspx){:target="_blank"}
-* AllJoyn CodeGen 工具 - [https://msdn.microsoft.com/zh-cn/library/windows/apps/xaml/dn913809.aspx](https://msdn.microsoft.com/zh-CN/library/windows/apps/xaml/dn913809.aspx){:target="_blank"}
+* AllJoyn CodeGen 工具 - [AllJoynCodeGen.htm]({{site.baseurl}}/zh-CN/win10/AllJoynCodeGen.htm){:target="_blank"}
 * AllJoyn 体系结构详细信息 - [https://allseenalliance.org/developers/learn/](https://allseenalliance.org/developers/learn/){:target="_blank"}
 * AllJoyn 开发人员资源 - [https://allseenalliance.org/developers/develop/](https://allseenalliance.org/developers/develop/){:target="_blank"}
