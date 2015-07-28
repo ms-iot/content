@@ -68,7 +68,7 @@ lang: en-US
                     </div>
                     <div class="col-md-3">
                         <h4>Unavailable Universal APIs</h4>
-                        <p>Windows IoT Core is a work in progress.  Here are the UWP APIs that have not been implemented yet on our platform.</p>
+                        <p>Windows IoT Core is a work in progress.  Here are the UWP APIs that have not been implemented yet on our platform</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/UnavailableApis.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
@@ -119,6 +119,22 @@ lang: en-US
                         <h4>WiFi Connectivity</h4>
                         <p>Setup and configure WiFi on your Windows IoT Core device</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/SetupWiFi.htm">Learn More</a>
+                    </div>
+                </div>
+                <div class="row section-heading">
+                    <div class="col-md-3">
+                        <h4>Bluetooth Support</h4>
+                        <p>Windows IoT Core Bluetooth support information</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/Bluetooth.htm">Learn More</a>
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Placeholder for spacing -->
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Placeholder for spacing -->
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Placeholder for spacing -->
                     </div>
                 </div>
             </div>

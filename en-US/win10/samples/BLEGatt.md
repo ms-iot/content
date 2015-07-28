@@ -8,6 +8,8 @@ lang: en-US
 ## Bluetooth Low Energy (BLE) Generic Attribute Profile (GATT) Sample Overview
 In this sample we will discover how to work with Bluetooth Low Energy devices using the GATT profile and a TI CC2541 SensorTag. You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip){:target="_blank"}, and navigating to the [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} folder.
 
+Information on Bluetooth support for Windows IoT Core devices can be found [here]({{site.baseurl}}/{{page.lang}}/win10/Bluetooth.htm){:target="_blank"}.
+
 ### What is Bluetooth Low Energy & GATT?
 Bluetooth Low Energy (BLE), or Bluetooth Smart, is a wireless protocol that is part of the Bluetooth 4.0 core specification. The key feature of BLE is its low power consumption, leading to its widespread adoption by IoT and wearable devices. 
 
@@ -39,6 +41,7 @@ In this sample we will be connecting a Windows IoT Core device with the [Texas I
 For the sample, we are running firmware version 1.4.1 on the SensorTag. More detailed information about the SensorTag can be found [here](http://processors.wiki.ti.com/index.php/SensorTag_User_Guide){:target="_blank"}.
 
 ### Hardware Support
+
 We are currently supporting the [Orico Model A Bluetooth dongle](http://www.amazon.com/ORICO-BTA-403-Bluetooth-Adapter-Compatible/dp/B00ESBRTMO/ref=sr_1_7?ie=UTF8&qid=1436917745&sr=8-7&keywords=bluetooth+4.0+orico){:target="_blank"}.
 
 ### What's Next?
