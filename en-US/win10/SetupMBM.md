@@ -70,6 +70,24 @@ So the first time you will likely need to use 64-bit EFI and 32-bit BIN.
 The second time and every other time you need to use 32-bit EFI and 32-bit BIN.
 The reason the bitness of the firmware has to match the bitness of the OS is that there is an EFI in the OS image that gets loaded to bootstrap the OS, and that EFI has to be the same bitness as the firmware as well.
 
+## Install the Windows 10 IoT Core tools
+
+1. [Download](http://go.microsoft.com/fwlink/?LinkId=616848) the ISO for MinnowBoard MAX from the Microsoft Download Center.
+
+2. **Save the ISO** to a local folder
+
+	<img class="image-border" src="{{site.baseurl}}/images/mbm_iso.png">
+
+3. Double clicking on the ISO (IoT Core MBM.iso) will automatically mount it as a virtual CD drive so you can access the contents.
+
+	<img class="image-border" src="{{site.baseurl}}/images/mbm_msi.PNG">
+
+4. Install **Windows_10_IoT_Core_Mbm.msi**. When installation is complete, flash.ffu will be located at **C:\Program Files (x86)\Microsoft IoT\FFU\MinnowBoardMax**
+
+	<img class="image-border" src="{{site.baseurl}}/images/mbmffu.PNG">
+
+5. Eject the Virtual CD when done
+
 ##Put the Windows 10 IoT Core image on your SD card
 
 1. **Insert a micro SD card** into your SD card reader.
