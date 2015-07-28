@@ -84,7 +84,7 @@ UART0 will be used on the Raspberry Pi 2 for the kernel debugging connection.  T
 		FTDI Cable:
 			Black  : GND
 			Brown  : CTS (NOT USED)
-			Read   : PWR (5.0V NOT USED) <- DO NOT CONNECT!!
+			Red    : PWR (5.0V NOT USED) <- DO NOT CONNECT!!
 			Orange : TX  (3.3V)
 			Yellow : RX  (3.3V)
 			Green  : RTS (NOT USED)
@@ -123,6 +123,6 @@ As suggested earlier, use the Device Manager on your development PC to find out 
 
 On your development machine you can start WinDbg as follows:
 
-        "C:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k com:port=<PORT>, baud=912600
+        "C:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k com:port=<PORT> baud=912600
 
 * Please note that 'PORT' refers to the COM port number your USB-to-TTL cable was assigned in the system and displayed in the Device Manager under "Ports (COM & LPT)".
