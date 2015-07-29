@@ -4,7 +4,7 @@ To setup your Windows 10 IoT Core development PC, you first need to install the 
 
 1. **Install Windows 10**
 
-2. **Install Visual Studio Community 2015** [here](http://go.microsoft.com/fwlink/?LinkID=534599){:target="_blank"}.
+2. **Install Visual Studio Community 2015** [here](http://go.microsoft.com/fwlink/?LinkID=534599){:target="_blank"}.  Visual Studio `Professional` 2015 and Visual Studio `Enterprise` 2015 can be downloaded from [here](https://www.visualstudio.com/vs-2015-product-editions){:target="_blank"}.
 
 	**NOTE:** If you choose to install a different edition of VS 2015, make sure to do a **Custom** install and select the checkbox **Universal Windows App Development Tools** -> **Tools and Windows SDK**.
 
@@ -12,3 +12,4 @@ To setup your Windows 10 IoT Core development PC, you first need to install the 
 
 4. Make sure you've **enabled developer mode** by following [these instructions](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx){:target="_blank"}.
 
+5. Open Visual Studio 2015 and **create a Universal Windows Platform (UWP) App** by selecting `File > New > Project > Visual C# > Windows > Universal > Blank App (Universal Windows)`.  This is required to ensure that the framework dependencies are available for our samples to build.
