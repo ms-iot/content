@@ -79,6 +79,6 @@ This is a tool we use in several points when working with AllJoyn samples. You c
 
 * Building AllJoyn Apps on Windows 10 - [https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview](https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview){:target="_blank"}
 * AllJoyn Interfaces in Windows 10 - [https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.devices.alljoyn.aspx](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.devices.alljoyn.aspx){:target="_blank"}
-* AllJoyn CodeGen Tool - [https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn913809.aspx](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn913809.aspx){:target="_blank"}
+* AllJoyn CodeGen Tool - [AllJoynCodeGen.htm]({{site.baseurl}}/en-US/win10/AllJoynCodeGen.htm){:target="_blank"}
 * AllJoyn Architecture Details - [https://allseenalliance.org/developers/learn/](https://allseenalliance.org/developers/learn/){:target="_blank"}
 * AllJoyn Developer Resources - [https://allseenalliance.org/developers/develop/](https://allseenalliance.org/developers/develop/){:target="_blank"}
