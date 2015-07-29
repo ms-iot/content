@@ -97,7 +97,7 @@ consumes WinRT components with C++/CX.
    In the Configurations dropdown, select `All Configurations` and in the Platform
    dropdown, select `All Platforms`.
 1. Go to `C/C++ -> General` and set `Consume Windows Runtime Extensions` to `Yes`, and
-   `Additional #using Directories` to `$(VCInstallDir)vcpackages;$(WindowsSdkDir_UAP)UnionMetadata;%(AdditionalUsingDirectories)`
+   `Additional #using Directories` to `$(VCInstallDir)vcpackages;$(WindowsSdkDir)UnionMetadata;%(AdditionalUsingDirectories)`
 
    ![Consume Windows Runtime Extensions]({{site.baseurl}}/images/I2cTestTool/ConsumeWinRT.png)
     
