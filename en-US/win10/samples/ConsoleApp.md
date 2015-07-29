@@ -11,7 +11,7 @@ We'll create a simple console application that can be used to query the memory u
 
 ###Load the project in Visual Studio
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/MemoryStatus){:target="_blank"}.  Make a copy of the folder on your disk and open the project from Visual Studio.
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\MemoryStatus`.  Make a copy of the folder on your disk and open the project from Visual Studio.
 
 ###To create your own project in Visual Studio
 

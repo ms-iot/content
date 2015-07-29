@@ -20,9 +20,13 @@ In this lab we will be walking through the process of creating and installing a 
 The name of the driver for this lab is `gpiokmdfdemo`, and it will receive different IOCTL commands from a simple user-mode Win32 console application called `BinkyApp.exe`.  These IOCTL commands will tell the driver what GPIO pins to set high or low.  The driver `gpiokmdfdemo` will in turn communicate with the GpioClx (GPIO Class Extension) in Windows IoT Core to accomplish these requests.  Take a look at the diagram below to familiarize yourself with the inner workings of this lab.
 
 ###Lab source code and binaries
-The source code for the driver can be found here: `<Samples-Folder>\DriverSamples\gpiokmdfdemo`.
-The source code for the console application can be found here: `<Samples-Folder>\DriverSamples\consoleapp\BlinkyApp`.
-Additionally, we have also provided the pre-built binaries of the console application for x86 and ARM architectures.  These binaries can be found here: `<Samples-Folder>\DriverSamples\BlinkyApp`.
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\DriverSamples` where you will find 3 folders:
+
+1. [`DriverSamples\BlinkyApp`](https://github.com/ms-iot/samples/tree/develop/DriverSamples/BlinkyApp){:target="_blank"} containing pre-built binaries of the console application for x86 and ARM architectures.gpiokmdfdemo
+
+2. [`DriverSamples\consoleapp\BlinkyApp`](https://github.com/ms-iot/samples/tree/develop/DriverSamples/consoleapp/BlinkyApp){:target="_blank"} containing the source code for the console application.
+
+3. [`DriverSamples\gpiokmdfdemo`](https://github.com/ms-iot/samples/tree/develop/DriverSamples/gpiokmdfdemo){:target="_blank"} containing the source code for the driver.
 
 <br/>
 
@@ -36,7 +40,7 @@ The tutorials for this lab will be presented as hands-on tasks that have been gr
 
 ###Note
 In these tutorials you will be required to run various commands. Please use an elevated Windows Command Prompt (cmd.exe) to run these commands.
-You will need to install the Windows Driver Kit (WDK) for Windows 10.  You can download the WDK from here: https://msdn.microsoft.com/en-us/windows/hardware/dn913721(v=vs8.5).aspx
+You will need to install the Windows Driver Kit (WDK) for Windows 10.  You can download the WDK from [here](https://msdn.microsoft.com/en-us/windows/hardware/dn913721(v=vs8.5).aspx).
 
 
 ###Tutorials

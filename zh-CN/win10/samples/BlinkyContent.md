@@ -8,7 +8,7 @@ Also, be aware that the GPIO APIs are only available on Windows 10 IoT Core, so 
 
 ###Load the project in Visual Studio
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/Blinky){:target="_blank"}.  Choose either the C++ version or C# version, but note that this sample only covers the C# version. Make a copy of the folder on your disk and open the project from Visual Studio.
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\Blinky`.   Choose either the C++ version or C# version, but note that this sample only covers the C# version. Make a copy of the folder on your disk and open the project from Visual Studio.
 
 Make sure you set the 'Remote Debugging' setting to point to your Windows IoT device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
 

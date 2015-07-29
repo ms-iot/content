@@ -12,10 +12,13 @@ lang: en-US
         <p>Download code samples to get started with Windows on Devices. Also, read docs to help you use tools and resources to help you develop.</p>
         <br/>
         <h4>Did you set up your environment?</h4>
-        <p>We assume you already <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">set up your environment</a>, have a working Visual Studio and have a device running Windows IoT Core (MinnowBoard Max, Raspberry Pi 2, or VM).</p>
+        <p>We assume you already <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">set up your environment</a>, have a working Visual Studio and have a device running Windows IoT Core (MinnowBoard Max or Raspberry Pi 2).</p>
         <br/>
         <h4>Questions/Suggestions</h4>
         <p>Remember, you can always send <a href="{{site.baseurl}}/{{page.lang}}/Community.htm#contact">contact us</a> for help and suggestions!</p>
+		<br/>
+		<h4>How To Download These Samples</h4>
+		<p>The easiest way to download these samples is to navigate to the GitHub repo ms-iot/samples by clicking <a href="https://github.com/ms-iot/samples">here</a>, and then click on the Download ZIP button on the right-hand menu.  Once you download and unzip the file locally, you will be able to see all the samples.</p>
     </div>
     <div class="col-md-6">
         <div class="downloads-image"></div>
@@ -36,7 +39,7 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/CommandLineUtils.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <h4>Windows 10 IoT Core Insider Preview Porting Tool</h4>
+                        <h4>Windows 10 IoT Core Porting Tool</h4>
                         <p>A tool for helping you port your existing Win32 and Windows CE applications to Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/IoTAPIPortingTool.htm">Learn More</a>
                     </div>
@@ -45,10 +48,10 @@ lang: en-US
                         <p>Allows Remote Administration and Configuration so that you can remotely configure and manage any Windows IoT Core device</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm">Learn More</a>
                     </div>
-					<div class="col-md-3">  
-						<h4>Using SSH</h4>  
-						<p>Allows Remote Administration and Configuration of your Windows IoT Core device over SSH</p>  
-						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm">Learn More</a>  
+					<div class="col-md-3">
+						<h4>Using SSH</h4>
+						<p>Allows Remote Administration and Configuration of your Windows IoT Core device over SSH</p>
+						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm">Learn More</a>
 					</div>
                 </div>
                 <div class="row section-heading">
@@ -60,18 +63,18 @@ lang: en-US
                     </div>
                     <div class="col-md-3">
                         <h4>AllJoyn Connectivity</h4>
-                        <p>Learn more about AllJoyn and explore the capabilities of the AllJoyn Device System Bridge with Windows 10 IoT Core Insider Preview</p>
+                        <p>Learn more about AllJoyn and explore the capabilities of the AllJoyn Device System Bridge with Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/AllJoyn.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Unavailable Universal APIs</h4>
-                        <p>Windows IoT Core is a work in progress.  Here are the UWP APIs that have not been implemented yet on our platform.</p>
+                        <p>Windows IoT Core is a work in progress.  Here are the UWP APIs that have not been implemented yet on our platform</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/UnavailableApis.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <h4>Compatible Peripheral USB Devices</h4>
-                        <p>Find a list of USB devices compatible with Window 10 IoT Core devices</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/Peripherals.htm">Learn More</a>
+                        <h4>Supported Peripheral Interfaces and Devices</h4>
+                        <p>Find a list of supported peripheral interfaces and protocols with Window 10 IoT Core devices</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm">Learn More</a>
                     </div>
                 </div>
                 <div class="row section-heading">
@@ -98,7 +101,7 @@ lang: en-US
                 </div>
                 <div class="row section-heading">
                     <div class="col-md-3">
-                        <h4>Headless UWP Apps</h4>
+                        <h4>Headed and Headless devices</h4>
                         <p>Windows IoT Core can either be in headed or headless mode. The difference is the presence or absence of any form of UI</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm">Learn More</a>
                     </div>
@@ -113,37 +116,55 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SMB.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <!-- Placeholder for alignment -->
+                        <h4>WiFi Connectivity</h4>
+                        <p>Setup and configure WiFi on your Windows IoT Core device</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/SetupWiFi.htm">Learn More</a>
+                    </div>
+                </div>
+                <div class="row section-heading">
+                    <div class="col-md-3">
+                        <h4>Bluetooth Support</h4>
+                        <p>Windows IoT Core Bluetooth support information</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/Bluetooth.htm">Learn More</a>
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Placeholder for spacing -->
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Placeholder for spacing -->
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Placeholder for spacing -->
                     </div>
                 </div>
             </div>
 
             <div role="tabpanel" class="tab-pane" id="second">
                 <div class="row section-heading">
-                    <h2>Windows 10 IoT Core Insider Preview</h2>
+                    <h2>Windows 10 IoT Core</h2>
                 </div>
                 <div class="row section-heading">
                     <div class="col-md-3">
                         <h4>Hello, World!</h4>
-                        <p>Create a 'Hello World' application that runs on devices running Windows 10 IoT Core Insider Preview</p>
+                        <p>Create a 'Hello World' application that runs on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm">Hello World (C#)</a><br>
 						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Python.htm">Hello World (Python)</a><br>
 						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWU.htm">Hello World (Node.js)</a><br>
                     </div>
                     <div class="col-md-3">
                         <h4>Hello Blinky (Headless App)</h4>
-                        <p>Create an app with no UI that toggles an LED on devices running Windows 10 IoT Core Insider Preview</p>
+                        <p>Create an app with no UI that toggles an LED on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyHeadless.htm">Blinky (C#)</a><br>
 						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PythonBlinky.htm">Blinky (Python)</a><br>
                     </div>
                     <div class="col-md-3">
                         <h4>UI Blinky App</h4>
-                        <p>Create a UI-based app that toggles an LED on devices running Windows 10 IoT Core Insider Preview</p>
+                        <p>Create a UI-based app that toggles an LED on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm">UI Blinky (C#/C++)</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Blinky Webserver</h4>
-                        <p>Create a Webserver app that controls an LED on devices running Windows 10 IoT Core Insider Preview</p>
+                        <p>Create a Webserver app that controls an LED on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyWebServer.htm">Webserver Blinky (C#)</a><br>
 						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PythonBlinkyServer.htm">Webserver Blinky (Python)</a><br>
 						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWUBlinky.htm">Webserver Blinky (Node.js)</a><br>
@@ -153,24 +174,24 @@ lang: en-US
                 <div class="row section-heading">
                     <div class="col-md-3">
                         <h4>Console App</h4>
-                        <p>Create a console app that monitors memory usage on devices running Windows 10 IoT Core Insider Preview</p>
+                        <p>Create a console app that monitors memory usage on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/ConsoleApp.htm">Console App (C++)</a><br>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Nodejs.htm">Console App (Node.js)</a><br>
                     </div>
                     <div class="col-md-3">
                         <h4>I2C/SPI Accelerometer</h4>
-                        <p>Create an app leveraging I2C or SPI on devices running Windows 10 IoT Core Insider Preview</p>
+                        <p>Create an app leveraging I2C or SPI on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2CAccelerometer.htm">I2C Accelerometer (C#)</a><br>
 						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SPIAccelerometer.htm">SPI Accelerometer (C#)</a><br>
                     </div>
                     <div class="col-md-3">
                         <h4>SPI Display</h4>
-                        <p>Create an app using SPI on devices running Windows 10 IoT Core Insider Preview</p>
+                        <p>Create an app using SPI on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplay.htm">SPI Display (C#)</a>
                     </div>
 					<div class="col-md-3">
                         <h4>AllJoyn Connectivity</h4>
-                        <p>Learn more about AllJoyn and explore the capabilities of the AllJoyn Device System Bridge with Windows 10 IoT Core Insider Preview</p>
+                        <p>Learn more about AllJoyn and explore the capabilities of the AllJoyn Device System Bridge with Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/AllJoyn.htm">Learn More</a>
                     </div>
                 </div>
@@ -178,7 +199,7 @@ lang: en-US
                 <div class="row section-heading">
 					<div class="col-md-3">
                         <h4>Driver Sample</h4>
-                        <p>Create and interact with a universal driver on devices running Windows 10 IoT Core Insider Preview</p>
+                        <p>Create and interact with a universal driver on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab.htm">Driver Sample (C++)</a>
                     </div>
                     <div class="col-md-3">
@@ -220,7 +241,7 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2cTestTool.htm">I2cTestTool (C++)</a>
                     </div>
                 </div>
-                
+
                 <div class="row section-heading">
                     <div class="col-md-3">
                         <h4>SpiTestTool (Console)</h4>
@@ -229,14 +250,36 @@ lang: en-US
                     </div>
                     <div class="col-md-3">
                         <h4>Express Node.js App (UWP)</h4>
-                        <p>Create an Express Node.js app that runs on devices running Windows 10 IoT Core Insider Preview</p>
+                        <p>Create an Express Node.js app that runs on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWUExpress.htm">Express (Node.js)</a>
                     </div>
                     <div class="col-md-3">
-                        <!-- Placeholder for alignment -->
+                         <h4>Digital Signage Sample</h4>
+                        <p>Showcases a Digital Sign app running on Windows 10 IoT Core</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/DigitalSignage.htm">DigitalSignageUWP (C#)</a>
                     </div>
                     <div class="col-md-3">
-                        <!-- Placeholder for alignment -->
+                        <h4>Serial UART Sample (Windows Universal)</h4>
+                        <p>Create an app to read and write to UART interfaces on Windows IoT core</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SerialSample.htm">SerialSample (C#/C++)</a>
+                    </div>
+                </div>
+
+                <div class="row section-heading">
+                    <div class="col-md-3">
+                        <h4>USB Web camera Sample (Windows Universal)</h4>
+                        <p>Create an app to take photo, record video and audio using a USB Web Camera on Windows IoT core</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/WebCamSample.htm">Learn More</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Cylon Node.js App (Console)</h4>
+                        <p>Control an Arduino with a Cylon Node.js app running on a RaspBerry Pi 2 with Windows 10 IoT Core</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsCylon.htm">Cylon (Node.js)</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Bluetooth Low Energy GATT Sample (Windows Universal)</h4>
+                        <p> Learn how to interact with Bluetooth Low Energy devices on Windows 10 IoT core.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BLEGatt.htm">Bluetooth GATT (C#)</a><br>
                     </div>
                     <div class="col-md-3">
                         <!-- Placeholder for alignment -->

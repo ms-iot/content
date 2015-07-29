@@ -12,7 +12,7 @@ Learn how to set up the MinnowBoard Max hardware and connect it to your computer
 {% include steps.html device="MBM" %}
 
 ##What you need
-1. **A PC running Windows 10 Insider Preview** (Prepared in the previous step)
+1. **A PC running Windows 10** (Prepared in the previous step)
 2. **MinnowBoard Max**
 3. **Power supply**
 4. **8GB micro SD card** - class 10 or better. (We suggest this [one](http://www.amazon.com/gp/product/B00IVPU786){:target="_blank"} or this [one](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445){:target="_blank"})
@@ -25,7 +25,7 @@ Learn how to set up the MinnowBoard Max hardware and connect it to your computer
 1. **Connect a USB keyboard** to one of the USB ports on the board.
 2. **Connect an HDMI monitor** to the microHDMI port on the board.
 3. **Connect a network cable** to the Ethernet port on the board. Make sure your development PC is on the same network.
-	
+
 	**NOTE:** If you don't have a local wired network, see [here]({{site.baseurl}}/{{page.lang}}/win10/ConnectToDevice.htm) for additional connection options.
 
 ![mbm]({{site.baseurl}}/images/mbm.bmp){:device-images}
@@ -70,15 +70,33 @@ So the first time you will likely need to use 64-bit EFI and 32-bit BIN.
 The second time and every other time you need to use 32-bit EFI and 32-bit BIN.
 The reason the bitness of the firmware has to match the bitness of the OS is that there is an EFI in the OS image that gets loaded to bootstrap the OS, and that EFI has to be the same bitness as the firmware as well.
 
-##Put the Windows 10 IoT Core Insider Preview image on your SD card
-	
+## Install the Windows 10 IoT Core tools
+
+1. [Download](http://go.microsoft.com/fwlink/?LinkId=616848) the ISO for MinnowBoard MAX from the Microsoft Download Center.
+
+2. **Save the ISO** to a local folder
+
+	<img class="image-border" src="{{site.baseurl}}/images/mbm_iso.png">
+
+3. Double clicking on the ISO (IoT Core MBM.iso) will automatically mount it as a virtual CD drive so you can access the contents.
+
+	<img class="image-border" src="{{site.baseurl}}/images/mbm_msi.PNG">
+
+4. Install **Windows_10_IoT_Core_Mbm.msi**. When installation is complete, flash.ffu will be located at **C:\Program Files (x86)\Microsoft IoT\FFU\MinnowBoardMax**
+
+	<img class="image-border" src="{{site.baseurl}}/images/mbmffu.PNG">
+
+5. Eject the Virtual CD when done
+
+##Put the Windows 10 IoT Core image on your SD card
+
 1. **Insert a micro SD card** into your SD card reader.
 
 2. **Use IoTCoreImageHelper.exe** to flash the SD card. Search for "WindowsIoT" from start menu and select the shortcut "WindowsIoTImageHelper"
 
-	<img src="{{site.baseurl}}/images/ImagerHelperSearch.PNG">. 
-	
-3. The tool will enumerate devices as shown. 
+	<img src="{{site.baseurl}}/images/ImagerHelperSearch.PNG">.
+
+3. The tool will enumerate devices as shown.
 	Select the SD card you want to flash and then provide the location of the ffu and flash the image.
 
 	<img src="{{site.baseurl}}/images/mbm_imagehelper.PNG">
@@ -113,11 +131,11 @@ The reason the bitness of the firmware has to match the bitness of the OS is tha
   1. Power on MBM device and press F2.
   2. Go to Boot Manager and select EFI Internal shell.
   3. Identify EFIESP partition (it might be FS1: hence assuming EFIESP partition as FS1: below)
-  4. Type FS1: 
+  4. Type FS1:
   5. Cd EFI
   6. Run  DeleteSbcpVariableFW.efi (This will clear UEFI variables)
   7. Now boot up the device.
-  
+
 * Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.  You can also follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to use SSH to connect to your device.
 * It is **highly recommended** that you update the default password for the Administrator account.
     To do this, issue the following commands in your PowerShell connection:
@@ -125,5 +143,5 @@ The reason the bitness of the firmware has to match the bitness of the OS is tha
     Replace `[new password]` with a strong password:
 
         net user Administrator [new password]
-        
+
     Once this is done, you'll need to re-establish the current session using enable-psSession with the new credentials.

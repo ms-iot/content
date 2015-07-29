@@ -36,7 +36,7 @@ lang: zh-CN
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/CommandLineUtils.htm">了解详细信息</a>
                     </div>
                     <div class="col-md-3">
-                        <h4>Windows 10 IoT Core Insider Preview 移植工具</h4>
+                        <h4>Windows 10 IoT Core 移植工具</h4>
                         <p>用于帮助你将现有 Win32 和 Windows CE 应用程序移植到 Windows 10 IoT 核心版的工具</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/IoTAPIPortingTool.htm">了解详细信息</a>
                     </div>
@@ -61,7 +61,7 @@ lang: zh-CN
                     </div>
                     <div class="col-md-3">
                         <h4>AllJoyn 连接性</h4>
-                        <p>了解有关 AllJoyn 的详细信息并使用 Windows 10 IoT Core Insider Preview 探索 AllJoyn Device System Bridge 的功能</p>
+                        <p>了解有关 AllJoyn 的详细信息并使用 Windows 10 IoT Core 探索 AllJoyn Device System Bridge 的功能</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/AllJoyn.htm">了解详细信息</a>
                     </div>
                     <div class="col-md-3">
@@ -101,27 +101,27 @@ lang: zh-CN
 
             <div role="tabpanel" class="tab-pane" id="second">
                 <div class="row section-heading">
-                    <h2>Windows 10 IoT Core Insider Preview</h2>
+                    <h2>Windows 10 IoT Core</h2>
                 </div>
                 <div class="row section-heading">
                     <div class="col-md-3">
                         <h4>Hello, World!</h4>
-                        <p>创建你的第一个可在设备（例如运行 Windows 10 IoT Core Insider Preview 的 Raspberry Pi 2）上运行的 UAP 应用</p>
+                        <p>创建你的第一个可在设备（例如运行 Windows 10 IoT Core 的 Raspberry Pi 2）上运行的 UAP 应用</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm">了解详细信息</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Hello, Blinky</h4>
-                        <p>创建可在运行 Windows 10 IoT Core Insider Preview 的设备上切换 LED 灯的应用</p>
+                        <p>创建可在运行 Windows 10 IoT Core 的设备上切换 LED 灯的应用</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm">了解详细信息</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Blinky Webserver</h4>
-                        <p>创建可在运行 Windows 10 IoT Core Insider Preview 的设备上切换 LED 灯的 Webserver 应用</p>
+                        <p>创建可在运行 Windows 10 IoT Core 的设备上切换 LED 灯的 Webserver 应用</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyWebServer.htm">了解详细信息</a>
                     </div>
                     <div class="col-md-3">
                         <h4>无外设的 Blinky</h4>
-                        <p>创建可在运行 Windows 10 IoT Core Insider Preview 的设备上切换 LED 灯且不带 UI 的应用</p>
+                        <p>创建可在运行 Windows 10 IoT Core 的设备上切换 LED 灯且不带 UI 的应用</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyHeadless.htm">了解详细信息</a>
                     </div>
                 </div>
@@ -129,22 +129,22 @@ lang: zh-CN
                 <div class="row section-heading">
                     <div class="col-md-3">
                         <h4>控制台应用</h4>
-                        <p>创建可在运行 Windows 10 IoT Core Insider Preview 的设备上监视内存使用情况的控制台应用程序</p>
+                        <p>创建可在运行 Windows 10 IoT Core 的设备上监视内存使用情况的控制台应用程序</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/ConsoleApp.htm">了解详细信息</a>
                     </div>
                     <div class="col-md-3">
                         <h4>I2C 加速计</h4>
-                        <p>创建可在运行 Windows 10 IoT Core Insider Preview 的设备上利用 I2C 的应用</p>
+                        <p>创建可在运行 Windows 10 IoT Core 的设备上利用 I2C 的应用</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2CAccelerometer.htm">了解详细信息</a>
                     </div>
                     <div class="col-md-3">
                         <h4>SPI 显示器</h4>
-                        <p>创建可在运行 Windows 10 IoT Core Insider Preview 的设备上使用 SPI 的应用</p>
+                        <p>创建可在运行 Windows 10 IoT Core 的设备上使用 SPI 的应用</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplay.htm">了解详细信息</a>
                     </div>
 					<div class="col-md-3">
                         <h4>AllJoyn 连接性</h4>
-                        <p>了解有关 AllJoyn 的详细信息并使用 Windows 10 IoT Core Insider Preview 探索 AllJoyn Device System Bridge 的功能</p>
+                        <p>了解有关 AllJoyn 的详细信息并使用 Windows 10 IoT Core 探索 AllJoyn Device System Bridge 的功能</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/AllJoyn.htm">了解详细信息</a>
                     </div>
                 </div>
@@ -152,17 +152,17 @@ lang: zh-CN
                 <div class="row section-heading">
                     <div class="col-md-3">
                         <h4>“Hello World”Node.js 应用（Windows 通用）</h4>
-                        <p>创建可在运行 Windows 10 IoT Core Insider Preview 的设备上运行的“Hello World”Node.js 应用</p>
+                        <p>创建可在运行 Windows 10 IoT Core 的设备上运行的“Hello World”Node.js 应用</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWU.htm">了解详细信息</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Blinky Node.js 应用（Windows 通用）</h4>
-                        <p>生成 Node.js 服务器，该服务器可控制连接到运行 Windows 10 IoT Core Insider Preview 的设备的 LED 灯</p>
+                        <p>生成 Node.js 服务器，该服务器可控制连接到运行 Windows 10 IoT Core 的设备的 LED 灯</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWUBlinky.htm">了解详细信息</a>
                     </div>
                     <div class="col-md-3">
                         <h4>MemoryStatus Node.js 应用（控制台）</h4>
-                        <p>生成可从运行 Windows 10 IoT Core Insider Preview 的设备中提供内存状态的 Node.js 服务器</p>
+                        <p>生成可从运行 Windows 10 IoT Core 的设备中提供内存状态的 Node.js 服务器</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Nodejs.htm">了解详细信息</a>
                     </div>
                     <div class="col-md-3">
@@ -175,17 +175,17 @@ lang: zh-CN
                 <div class="row section-heading">
                     <div class="col-md-3">
                         <h4>“Hello World”Python 应用</h4>
-                        <p>在运行 Windows 10 IoT Core Insider Preview 的设备上创建 Python 应用程序</p>
+                        <p>在运行 Windows 10 IoT Core 的设备上创建 Python 应用程序</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Python.htm">了解详细信息</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Blinky Python 应用</h4>
-                        <p>生成可在运行 Windows 10 IoT Core Insider Preview 的设备上切换 LED 灯且不带 UI 的 Python 应用</p>
+                        <p>生成可在运行 Windows 10 IoT Core 的设备上切换 LED 灯且不带 UI 的 Python 应用</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PythonBlinky.htm">了解详细信息</a>
                     </div>
                     <div class="col-md-3">
                         <h4>Blinky Python 服务器</h4>
-                        <p>生成可在运行 Windows 10 IoT Core Insider Preview 的设备上切换 LED 灯且不带 UI 的 Python Web 服务器</p>
+                        <p>生成可在运行 Windows 10 IoT Core 的设备上切换 LED 灯且不带 UI 的 Python Web 服务器</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PythonBlinkyServer.htm">了解详细信息</a>
                     </div>
                     <div class="col-md-3">
@@ -213,7 +213,7 @@ lang: zh-CN
                     </div>
                     <div class="col-md-3">
                         <h4>驱动程序示例</h4>
-                        <p>在运行 Windows 10 IoT Core Insider Preview 的设备上创建通用驱动程序并与之交互</p>
+                        <p>在运行 Windows 10 IoT Core 的设备上创建通用驱动程序并与之交互</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab.htm">了解详细信息</a>
                     </div>
                 </div>

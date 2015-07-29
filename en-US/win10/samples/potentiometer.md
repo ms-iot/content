@@ -74,9 +74,8 @@ The MCP3002 should be connected as follows:
 
 ###Building and running the sample
 
-1. Download the [sample](https://github.com/ms-iot/samples/tree/develop/PotentiometerSensor){:target="_blank"}
-   to your local machine
-1. Open `PotentiometerSensor\CS\PotentiometerSensorCS.csproj` in Visual Studio
+1. Download a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip).
+1. Open `samples-develop\PotentiometerSensor\CS\PotentiometerSensor.csproj` in Visual Studio.
 1. Find the `ADC_DEVICE` variable in **MainPage.xaml.cs** and change it to either **AdcDevice.MCP3002** or **AdcDevice.MCP3208** depending on the ADC you wired up above
 1. Select `ARM` for the target architecture
 1. Go to `Build -> Build Solution`

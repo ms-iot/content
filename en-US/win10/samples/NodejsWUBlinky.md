@@ -9,16 +9,16 @@ lang: en-US
 
 
 ###Set up your PC
-* Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
-* Install the latest NTVS (Node.js Tools for Visual Studio) Bundle VS 2015 from [here](https://github.com/ms-iot/ntvsiot/releases).
-* To use the npm feature in NTVS, install Node.js on your machine from [here](https://nodejs.org/download/). Ensure that you select 'npm package manager' as one of the features to be installed.
+* Install Windows 10.
+* Install Visual Studio 2015.
+* Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
 
 ###Set up your hardware
 The setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm).
 
 
 ###Create a new Node.js (Windows Universal) project
-Start Visual Studio 2015 RC and create a new project (File \| New Project...). In the `New Project` dialog, navigate to `Node.js` as shown below (in the left pane in the dialog: Templates \| JavaScript \| Node.js).
+Start Visual Studio 2015 and create a new project (File \| New Project...). In the `New Project` dialog, navigate to `Node.js` as shown below (in the left pane in the dialog: Templates \| JavaScript \| Node.js).
 Use the `Basic Node.js Web Server (Windows Universal)` template.
 
 When the project has been created, open up server.js and replace the existing code with the code shown below:

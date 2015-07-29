@@ -8,13 +8,13 @@ lang: en-US
 ##'Hello, World!' Sample
 
 ###Create a new C# project
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/HelloWorld){:target="_blank"}, but as an exercise, this tutorial will take you through the complete steps to create this app from scratch.  
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\HelloWorld`, but as an exercise, this tutorial will take you through the complete steps to create this app from scratch.  
 
 Start Visual Studio 2015 RC.
 
 Create a new project (File \| New Project...).
 
-In the `New Project` dialog, navigate to `Windows Universal` as shown below (in the left pane in the dialog: Templates \| Visual C# \| Windows \| Windows Universal).
+In the `New Project` dialog, navigate to `Universal` as shown below (in the left pane in the dialog: Templates \| Visual C# \| Windows \| Universal).
 
 Select the template `Blank App (Windows Universal)`
 
@@ -28,7 +28,7 @@ If this is the first project you create, Visual Studio will likely prompt you to
 
 ###Add a reference to the Windows IoT extension SDK
 
-Since the IoT extension SDK is not added to projects by default, we'll need to add a reference so that namespaces like `Windows.Devices.Gpio` will be available in the project.  To do so, just right-click on the References entry under the project, Select "Add Reference" then navigate the resulting dialog to `Windows Universal->Extensions->Windows IoT Extension SDK`, check the box, and click OK.
+Since the IoT extension SDK is not added to projects by default, we'll need to add a reference so that namespaces like `Windows.Devices.Gpio` will be available in the project.  To do so, just right-click on the References entry under the project, Select "Add Reference" then navigate the resulting dialog to `Universal Windows->Extensions->Windows IoT Extensions for the UWP`, check the box, and click OK.
 
 ![Add Extension SDK]({{site.baseurl}}/images/HelloWorld/Add_IoT_Extension_Reference.PNG)
 

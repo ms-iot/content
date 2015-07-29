@@ -13,7 +13,7 @@ only available on Windows IoT Core, so this sample cannot run on your desktop.
 
 ###Load the project in Visual Studio
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/App2App%20WebServer){:target="_blank"}.  Make a copy of the folder on your disk and open the
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\App2App WebServer`.  Make a copy of the folder on your disk and open the
 project from Visual Studio.
 
 Make sure you connect the LED to your board. Go back to the basic 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm) if you need guidance.

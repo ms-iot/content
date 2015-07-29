@@ -68,10 +68,21 @@ There are two Serial UARTS available on the MBM: **UART1** and **UART2**
 * Pin 10 - **UART1 CTS**
 * Pin 12 - **UART1 RTS**
 
+UART1 is not working as of build 10240. Please use UART2 or a USB-Serial
+converter.
+
 **UART2** includes just the **UART2 TX** and **UART2 RX** lines.
 
 * Pin 17  - **UART2 TX**
 * Pin 19  - **UART2 RX**
+
+UART2 does not support flow control, so accessing the following properties of
+SerialDevice can result in an exception being thrown:
+
+ * BreakSignalState
+ * IsDataTerminalReadyEnabled
+ * IsRequestToSendEnabled
+ * Handshake - only SerialHandshake.None is supported
 
 The example below initializes **UART2** and performs a write followed by a read:
 
@@ -109,6 +120,11 @@ public async void Serial()
 {% endhighlight %}
 
 Note that you must add the following capability to the **Package.appxmanifest** file in your UWP project to run Serial UART code:
+
+    Visual Studio 2015 has a known bug in the Manifest Designer (the visual editor for appxmanifest files) that affects the serialcommunication capability.  If 
+    your appxmanifest adds the serialcommunication capability, modifying your appxmanifest with the designer will corrupt your appxmanifest (the Device xml child 
+    will be lost).  You can workaround this problem by hand editting the appxmanifest by right-clicking your appxmanifest and selecting View Code from the 
+    context menu.
 
 {% highlight xml %}
   <Capabilities>
@@ -154,7 +170,7 @@ The MinnowBoard Max has a known issue with the I2C bus which causes communicatio
 However, under certain conditions this acknowledge fails to propagate back through the level shifters to the MBM, and as a result the CPU thinks the device did not respond and cancels the bus transaction.
 The issue seems to be related to the [TXS0104E](http://www.ti.com/product/txs0104e){:target="_blank"} level shifters on the IO pins, which can trigger prematurely due to voltage spikes on the line.
 The current workaround is to insert a 100 ohm resistor in series with the I2C SCK line, which helps suppress spikes. Not all devices are affected, so this workaround is only required if you are having trouble
-getting a bus response.
+getting a bus response. One device that is known to require this workaround is the HTU21D.
 
 ##SPI Bus
 
