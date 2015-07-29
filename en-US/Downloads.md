@@ -31,6 +31,8 @@ lang: en-US
                     <div class="col-md-12">
                         <h3>Downloads</h3>
                     </div>
+                    </div>
+                   <div class="row">
 					<div class="col-md-3">
                         <h4>Windows 10 IoT Core for Raspberry Pi 2</h4>
                         <p>The Windows IoT platform that runs on Raspberry Pi 2</p>
@@ -54,7 +56,7 @@ lang: en-US
                         <a href="https://www.visualstudio.com/vs-2015-product-editions" target="_blank">Learn More</a>
                     </div>
 		</div>
-		div class="row">
+		<div class="row">
                     <div class="col-md-3">
                         <h4>Windows Driver Kit 2015</h4>
                         <p>Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 10</p>
