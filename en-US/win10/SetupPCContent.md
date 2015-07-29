@@ -12,4 +12,4 @@ To setup your Windows 10 IoT Core development PC, you first need to install the 
 
 4. Make sure you've **enabled developer mode** by following [these instructions](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx){:target="_blank"}.
 
-5. Create a Universal Windows Platform (UWP) App by selecting `File > New > Project > Visual C# > Windows > Universal > Blank App (Universal Windows)`.  This is required to ensure that the framework dependencies are available for our samples to build.
+5. Open Visual Studio 2015 and **create a Universal Windows Platform (UWP) App** by selecting `File > New > Project > Visual C# > Windows > Universal > Blank App (Universal Windows)`.  This is required to ensure that the framework dependencies are available for our samples to build.
