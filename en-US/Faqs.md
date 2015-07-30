@@ -112,7 +112,7 @@ lang: en-US
         <li>Replace all occurences of "winuniversalnode" with "nodeuwp" and save.</li></ul></p>
         <br />
         <p class="bold">When I try to build a project, I see this error: <em>"The package Microsoft.CSharp with version 4.0.0 could not be found in C:\Users\...\.nuget\packages. Run a NuGet package restore to download the package."</em>  How do I resolve this?</p>
-        <p>Be sure your project has a saved solution file (*.sln).  The Nuget pacakge manager requires a saved solution file to update the Nuget dependencies.  You can ensure that a solution file exists by selecting File > Save All.</p>
+        <p>Be sure your project has a saved solution file (*.sln).  The Nuget package manager requires a saved solution file to update the Nuget dependencies.  You can ensure that a solution file exists by selecting File > Save All.</p>
         <br />
 		<a name="mbm_usb_port"></a>
         <h2 class="faq-h2">MinnowBoard Max</h2>
