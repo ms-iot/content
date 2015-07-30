@@ -30,7 +30,7 @@ Learn how to set up the Raspberry Pi 2 and connect it to your computer.
 
 	<img class="image-border" src="{{site.baseurl}}/images/SetupRPI/Iso.PNG">
 
-3. Double clicking on the ISO (IoT Core RPi.iso) will automatically mount it as a virtual CD drive so you can access the contents.
+3. Double click on the ISO (IoT Core RPi.iso). It will automatically mount itself as a virtual drive so you can access the contents.
 
 	<img class="image-border" src="{{site.baseurl}}/images/SetupRPI/MSI.PNG">
 
