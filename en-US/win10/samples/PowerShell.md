@@ -43,7 +43,7 @@ Make sure to follow these steps to correctly configure your device running Windo
 
 * Now you can start a session with you Windows IoT Core device. From you administrator PS console, type:
 
-        Enter-PsSession -ComputerName <machine-name or IP Address> -Credential <machine-name or IP Address or localhost>\Administrator
+        Enter-PSSession -ComputerName <machine-name or IP Address> -Credential <machine-name or IP Address or localhost>\Administrator
 
     In the credential dialog enter the following default password: `p@ssw0rd`
 
@@ -63,7 +63,10 @@ Make sure to follow these steps to correctly configure your device running Windo
 
         net user Administrator [new password]
         
-    Once this is done, you'll need to re-establish the current session using enable-psSession with the new credentials.
+    Once this is done, you'll need to establish a new PowerShell session using Exit-PSSession and Enable-PSSession with the new credentials.
+    
+    	Exit-PSSession
+    	Enter-PSSession -ComputerName <machine-name or IP Address> -Credential <machine-name or IP Address or localhost>\Administrator
 
 ###Troubleshooting Visual Studio Remote Debugger
 
