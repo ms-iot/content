@@ -43,7 +43,7 @@ Make sure to follow these steps to correctly configure your device running Windo
 
 * Now you can start a session with you Windows IoT Core device. From you administrator PS console, type:
 
-        Enter-PsSession -ComputerName <machine-name or IP Address> -Credential <machine-name or IP Address or localhost>\Administrator
+        Enter-PSSession -ComputerName <machine-name or IP Address> -Credential <machine-name or IP Address or localhost>\Administrator
 
     In the credential dialog enter the following default password: `p@ssw0rd`
 
@@ -63,7 +63,10 @@ Make sure to follow these steps to correctly configure your device running Windo
 
         net user Administrator [new password]
         
-    Once this is done, you'll need to re-establish the current session using enable-psSession with the new credentials.
+    Once this is done, you'll need to establish a new PowerShell session using Exit-PSSession and Enable-PSSession with the new credentials.
+    
+    	Exit-PSSession
+    	Enter-PSSession -ComputerName <machine-name or IP Address> -Credential <machine-name or IP Address or localhost>\Administrator
 
 ###Troubleshooting Visual Studio Remote Debugger
 
@@ -88,3 +91,38 @@ Make sure to follow these steps to correctly configure your device running Windo
 ###Commonly used utilities
 
 See the [Command Line Utils]({{site.baseurl}}/{{page.lang}}/win10/tools/CommandLineUtils.htm) page for a list of commands and utilities you can use with PowerShell.
+
+###Known issues with workarounds
+
+**Issue:** A known bug in PowerShell security policies causes the following issues to manifest within the remote session:
+
+* Get-Help returns unexpected matches.
+
+* Get-Command on a specified module returns empty command list.
+
+* Running a cmdlet from any of these modules throws CommandNotFoundException: Appx, NetAdapter, NetSecurity, NetTCPIP, PnpDevice.
+
+* Import-Module on any of the above modules throws PSSecurityException exception with UnauthorizedAccess. Module auto loading does not seem to work either.
+
+**Workaround:** Modify the execution policy within the remote PowerShell session to "RemoteSigned". For more details on the different execution policies, please refer to [https://technet.microsoft.com/en-us/library/ee176961.aspx](https://technet.microsoft.com/en-us/library/ee176961.aspx){:target="_blank"}.
+
+**Issue:** Cmdlets from some modules like NetAdapter are sometimes not visible. For example, Get-Module NetAdapter returns an empty list. 
+
+**Workaround:** Use the ‘-Force’ parameter with Import-Module. For example, `Import-Module NetAdapter -Force`.
+
+**Issue:** Setting execution policy to "AllSigned" breaks PS Remoting. Subsequent attempts to create a remote session fail with a SecurityException loading Typesv3.ps1xml. 
+
+**Workaround:** Use winrs.exe to restore Powershell's execution policy:
+
+* Change console code page `Chcp 65001`
+* Logon to a remote cmd.exe shell `Winrs.exe -r:<target> -u:<username> -p:<password> cmd.exe`
+* Within remote cmd.exe, modify the appropriate registry key `reg add HKLM\Software\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell /v ExecutionPolicy /d RemoteSigned /f`
+* Exit remote cmd.exe session `exit`
+
+###Other known issues
+
+* In PS scripts, attributes  to PowerShell class or enumeration do not work. Adding attributed, results in the following exception thrown: 'Type must be a runtime Type object.'
+
+* Outbound CIM and PS Remoting is not supported. Relevant functionality in relying cmdlets will not work. These include: Enter-PSSession, Get-Job, Receive-Job, Import-Module, Invoke-Command, Copy-Item.
+
+* SecureString commands 'ConverFrom-SecureString' and 'ConverTo-SecureString' do not work unless the session is created using CredSSP authentication. Otherwise, the '-Key' parameter must be specified. Please see [http://blogs.msdn.com/b/clustering/archive/2009/06/25/9803001.aspx](http://blogs.msdn.com/b/clustering/archive/2009/06/25/9803001.aspx){:target="_blank"} for details on configuring CredSSP authentication.
