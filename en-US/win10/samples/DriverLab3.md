@@ -61,12 +61,12 @@ The next steps involve connecting to the target device using PowerShell as expla
 * Connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
 
 * Using the PowerShell window, navigate to the `C:\Windows\System32` directory on the target device:
-	
-		[192.168.0.243]: PS C:\> cd C:\Windows\System32
+    
+        [192.168.0.243]: PS C:\> cd C:\Windows\System32
 
 * We will use the `devcon.exe` tool to install the sample driver.  Type the following command in the PowerShell window:
 
-		[192.168.0.243]: PS C:\Windows\System32> devcon.exe dp_add gpiokmdfdemo.inf 
+        [192.168.0.243]: PS C:\Windows\System32> devcon.exe dp_add gpiokmdfdemo.inf 
 
 <br/>
 
@@ -74,7 +74,7 @@ The next steps involve connecting to the target device using PowerShell as expla
 
 From the PowerShell window, type the following command:
 
-		[192.168.0.243]: PS C:\> shutdown /r /t 0
+    [192.168.0.243]: PS C:\> shutdown /r /t 0
 
 The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
 
@@ -155,4 +155,4 @@ To turn the LED off, simply type:
 <br/>
 
 Now that you know how to manually deploy a driver, you can also use Visual to deploy a driver by following the instructions on [this page] ({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab4.htm)	
-	
+    

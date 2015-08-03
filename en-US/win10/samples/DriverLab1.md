@@ -17,7 +17,7 @@ This section will walk you through the process of downloading the source code fo
 * In the Open Project dialogue box, navigate to the folder where the sample driver is located and highlight the file with the SLN extension, and select Open.
     * In the DriverSamples folder, you will find the VS solution at `DriverSamples\gpiokmdfdemo\gpiokmdfdemo.sln`.
     * `gpiokmdfdemo` will build a GPIO Kernel Mode Peripheral Device Driver.
-	
+    
 * In Visual Studio, switch to the Solution Explorer. Expand the Header files and Source files nodes and examine the contents of the generated files. You should find a driver project that implements the skeleton code required by most drivers.
 
 ##Next Step
