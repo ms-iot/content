@@ -59,10 +59,10 @@ lang: en-US
         <a name="features"></a>
         <h2 class="faq-h2">Features</h2>
         <p class="bold"><em>Is WiFi supported on Windows 10 IoT Core?</em></p>
-        <p>We are in the process of getting WiFi ready, but it is not in the build that is currently publicly available.</p>
+        <p>WiFi support for some adapters is now available in the public release of Windows 10 IoT Core. Click <a href="http://ms-iot.github.io/content/en-US/win10/SetupWiFi.htm">here</a> to learn more.</p>
         <br />
         <p class="bold"><em>Is Bluetooth currently supported on Windows 10 IoT Core?</em></p>
-        <p>We are in the process of getting Bluetooth ready, but it is not in the build that is currently publicly available.</p>
+        <p>Bluetooth support for some dongles is now available in the public release of Windows 10 IoT Core. Click <a href="http://ms-iot.github.io/content/en-US/win10/Bluetooth.htm">here</a> to learn more</p>
         <br />
         <a name="galileo"></a>
         <h2 class="faq-h2">Intel Galileo</h2>
@@ -74,6 +74,9 @@ lang: en-US
         <br />
         <a name="errors"></a>
         <h2 class="faq-h2">Errors</h2>
+        <p class="bold"><em>When I try to build a project, I see this error: <br />“The package Microsoft.CSharp with version 4.0.0 could not be found in C:\Users\...\.nuget\packages. Run a NuGet package restore to download the package.” <br />How do I resolve this?</em></p>
+        <p>Be sure your project has a saved solution file (*.sln). The Nuget package manager requires a saved solution file to update the Nuget dependencies. You can ensure that a solution file exists by selecting File > Save All.</p>
+        <br />
         <p class="bold"><em>I’ve downloaded the RPi2.ffu image and tried to apply image from the administrator prompt using this command:<br />dism.exe /Apply-Image /ImageFile:Rpi2.ffu /ApplyDrive:\\.\PhysicalDrive1 /SkipPlatformCheck<br />I am getting the following error:<br />c:\Temp>dism.exe /Apply-Image /ImageFile:Rpi2.ffu /ApplyDrive:\\.\PhysicalDrive1  /SkipPlatformCheck<br /><br />
         Deployment Image Servicing and Management tool<br />
         Version: 6.3.9600.17031<br /><br />
