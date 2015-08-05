@@ -20,7 +20,7 @@ You can find the source code for this sample by downloading a zip of all of our 
 
 You'll need a few components:
 
-* an [ADXL345 accelerometer board from Sparkfun](https://www.sparkfun.com/products/9836){:target="_blank"} with pin headers soldered on
+* <a name="I2C_Accelerometer"></a>an [ADXL345 accelerometer board from Sparkfun](https://www.sparkfun.com/products/9836){:target="_blank"} with pin headers soldered on
 
 * a breadboard and a couple of male-to-female connector wires
 

@@ -21,7 +21,7 @@ This is a Universal Windows application
   
 You'll need:  
   
-* A USB web cam (Example: [Microsoft Life Cam](http://www.microsoft.com/hardware/en-us/p/lifecam-hd-3000){:target="_blank"})
+* <a name="USB_WebCam"></a>A USB web cam (Example: [Microsoft Life Cam](http://www.microsoft.com/hardware/en-us/p/lifecam-hd-3000){:target="_blank"})
   
 Connect the web cam to one of USB ports on MinnowBoard Max or Raspberry Pi2  
   

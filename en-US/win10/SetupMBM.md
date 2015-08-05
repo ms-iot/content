@@ -15,7 +15,7 @@ Learn how to set up the MinnowBoard Max hardware and connect it to your computer
 1. **A PC running Windows 10** (Prepared in the previous step)
 2. **MinnowBoard Max**
 3. **Power supply**
-4. **8GB micro SD card** - class 10 or better. (We suggest this [one](http://www.amazon.com/gp/product/B00IVPU786){:target="_blank"} or this [one](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445){:target="_blank"})
+4. <a name="MBM_SDcard"></a>**8GB micro SD card** - class 10 or better. (We suggest this [one](http://www.amazon.com/gp/product/B00IVPU786){:target="_blank"} or this [one](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445){:target="_blank"})
 5. **HDMI cable and monitor**
 6. **Ethernet cable**
 7. **Micro SD card reader**
@@ -145,3 +145,7 @@ The reason the bitness of the firmware has to match the bitness of the OS is tha
         net user Administrator [new password]
 
     Once this is done, you'll need to re-establish the current session using enable-psSession with the new credentials.
+
+##Additional Resources
+* [Supported Peripheral Interfaces and Devices]({{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm){:target="_blank"}
+
