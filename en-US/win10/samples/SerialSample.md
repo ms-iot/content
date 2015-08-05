@@ -24,7 +24,7 @@ You have two options for wiring up your board:
 1. GPIO - using the On-board UART controller (MinnowBoard Max only)
 2. USB - using a USB-to-TTL adapter
 
-####Using GPIO **(MinnowBoard Max Only)**
+####<a name="MBM_UART"></a>Using GPIO **(MinnowBoard Max Only)**
 
 You will need:
 
@@ -53,7 +53,7 @@ Make the following connections:
 
 <img src="{{site.baseurl}}/images/SerialSample/SiLabs-UART.png">
 
-###Using USB-to-TTL Adapter
+###<a name="USB_TTL_Adapter"></a>Using USB-to-TTL Adapter
 
 **Note: Only USB-to-TTL cables and modules with Silicon Labs chipsets are natively supported on MinnowBoard Max and Raspberry Pi2.**
 

@@ -18,7 +18,7 @@ Z-Wave is a wireless communications protocol designed to allow devices in the ho
 ## Prerequisites
 
 1. Raspberry Pi2 with //Build/2015 image. This image contains the driver for the Aeon Labs Z-Wave Stick and the Z-Wave DSB. 
-2. Z-Wave devices  Two Aeon Labs Z-Wave devices are needed for this demo: 
+2. <a name="AllJoyn_Z_Wave"></a>Z-Wave devices  Two Aeon Labs Z-Wave devices are needed for this demo: 
 
   • Aeon Labs DSA02203-ZWUS Z-Wave Z-Stick Series 2 USB Dongle  
   • Aeon Labs DSC24-ZWUS Smart Switch Z-Wave Appliance Module   

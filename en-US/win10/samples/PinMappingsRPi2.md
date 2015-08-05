@@ -20,7 +20,7 @@ Hardware interfaces for the Raspberry Pi 2 are exposed through the 40-pin header
 * **2x** - 3.3V power pins
 * **8x** - Ground pins
 
-##GPIO Pins
+##<a name="RPi2_GPIO">GPIO Pins
 
 The following GPIO pins are accessible through APIs:
 
@@ -74,7 +74,7 @@ When you open a pin, it will be in its power-on state. To disconnect the pull re
 
 When a pin is closed, it reverts to its power-on state.
 
-##I2C Bus
+##<a name="RPi2_I2C"></a>I2C Bus
 
 There is one I2C controller **I2C1** exposed on the pin header with two lines **SDA** and **SCL**. 1.8K&#x2126; internal pull-up resistors are already installed on the board for this bus.
 
@@ -110,7 +110,7 @@ public async void I2C()
 {% endhighlight %}
 
 
-##SPI Bus
+##<a name="RPi2_SPI"></a>SPI Bus
 
 There are 2 SPI bus controllers available on the RPi2: **SPI0** and **SPI1**.
 
