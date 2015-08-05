@@ -153,6 +153,6 @@ To turn the LED off, simply type:
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe high 5
 
 <br/>
-
-Now that you know how to manually deploy a driver, you can also use Visual to deploy a driver by following the instructions on [this page] ({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab4.htm)	
+###Use Visual Studio to deploy a driver
+Now that you know how to manually deploy a driver, you can also use Visual to deploy a driver by following the instructions on [this page]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab4.htm)	
     
