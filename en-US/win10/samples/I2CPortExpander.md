@@ -21,7 +21,7 @@ You'll need the following components which are included in the Basic Kit:
 
 * 1 Raspberry Pi 2
 
-* 1 [MCP23008 8-bit I/O Port Expander](http://www.digikey.com/product-detail/en/MCP23008-E%2FP/MCP23008-E%2FP-ND/735951){:target="_blank"} in PDIP package
+* <a name="I2C_PortExpander"></a>1 [MCP23008 8-bit I/O Port Expander](http://www.digikey.com/product-detail/en/MCP23008-E%2FP/MCP23008-E%2FP-ND/735951){:target="_blank"} in PDIP package
 
 * 1 [red LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832){:target="_blank"}
 

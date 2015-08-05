@@ -12,7 +12,7 @@ including [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm), [Powershe
 
 	Note: Plugging in a wired Ethernet cable will override WiFi as the default network interface
 
-### Supported Adapters
+### <a name="WiFi_Devices"></a>Supported Adapters
 The following WiFi adapters have been tested on Windows 10 IoT Core:
 
 | Raspberry Pi 2                                                     || MinnowBoard Max                                                    |
