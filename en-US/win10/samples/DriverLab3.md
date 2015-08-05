@@ -14,7 +14,7 @@ This section demonstrates how to manually copy and install the driver to a Windo
 
 <br/>
 
-You can also deploy a driver using Visual Studio during driver development by following the instructions on [this page] ({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab4.htm)
+You can also deploy a driver using Visual Studio during driver development by following the instructions on [this page]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab4.htm)
 
 <br/>
 
