@@ -101,10 +101,6 @@ Looking to configure some of the settings on your device? The below tools all co
 
 	To shut down your device, type `shutdown /s /t 0`. To restart the device, use the `/r` switch instead with the command `shutdown /r /t 0`.
 
-* **List Services**
-
-	This utility lists all the NT Services running on your Windows 10 IoT Core device. From a PowerShell session on your device, run `ListServices` to run the utility.
-
 * **Set display resolution**
 
 	To adjust the resolution of a display connected to your Windows 10 IoT Core device, run `SetDisplayResolution [width] [height]`. To query the resolution, exclude the `[width]` and `[height]` parameters.

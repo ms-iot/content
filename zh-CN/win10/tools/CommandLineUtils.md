@@ -101,10 +101,6 @@ lang: zh-CN
 
 	若要关闭设备，请键入 `shutdown /s /t 0`。若要重新启动该设备，请使用{b\> \<b}`/r` 开关而不是 `shutdown /r /t 0` 命令。
 
-* **列表服务**
-
-	此实用程序可列出 Windows 10 IoT Core 设备上运行的所有 NT 服务。从你的设备上的某一 PowerShell 会话，运行 `ListServices` 来运行该实用程序。
-
 * **设置显示器分辨率**
 
 	若要调整连接到你的 Windows 10 IoT Core 设备的显示器的分辨率，请运行 `SetDisplayResolution [width] [height]`。若要查询分辨率，请排除 `[width]` 和 `[height]` 参数。
