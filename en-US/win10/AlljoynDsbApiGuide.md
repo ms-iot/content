@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Mapping Bridge Interface Objects to Alljoyn
+title: Alljoyn Device System Bridge - API Guide
 permalink: /en-US/win10/BridgeToAlljoynMapping.htm
 lang: en-US
 ---
