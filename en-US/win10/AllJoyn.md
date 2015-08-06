@@ -53,7 +53,7 @@ Be sure to check out samples and additional documentation below.  We hope you’
 **Mapping DSB Objects to Alljoyn**
 This document describes the key interfaces and methods used to build the Alljoyn System Bridge
 
-[AllJoyn DSB API]({{site.baseurl}}en-US/win10/BridgeToAlljoynMapping.htm){:target="_blank"}
+[AllJoyn DSB API]({{site.baseurl}}en-US/win10/AlljoynDsbApiGuide.htm){:target="_blank"}
 
 **AllJoyn Device System Bridge template for Visual Studio**
 This template can be installed in Visual Studio 2015 Preview to enable you to create AllJoyn Device System Bridge projects.
