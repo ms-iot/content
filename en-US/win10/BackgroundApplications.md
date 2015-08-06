@@ -85,7 +85,7 @@ To invoke a Background Application, you can either:
 
     2. From the PS session, type:
 
-            [192.168.0.243]: PS C:\> iotstartup list `BackgroundApplication1`
+            [192.168.0.243]: PS C:\> iotstartup list BackgroundApplication1
 
     3. You should see the full name of your Background Application, i.e. something like:
 
@@ -96,7 +96,7 @@ To invoke a Background Application, you can either:
 
     5. Now, it's easy to set this app as a 'Startup App'. Just type the command:
 
-            [192.168.0.243]: PS C:\> iotstartup add headless `BackgroundApplication1`
+            [192.168.0.243]: PS C:\> iotstartup add headless BackgroundApplication1
 
     6. The utility will confirm that your Background Application has been added to the list of headless 'Startup Apps':
 
@@ -110,7 +110,7 @@ To invoke a Background Application, you can either:
 
     9. You can remove your Background Application from the list of headless Startup Apps by typing the command:
 
-            [192.168.0.243]: PS C:\> iotstartup remove headless `BackgroundApplication1`
+            [192.168.0.243]: PS C:\> iotstartup remove headless BackgroundApplication1
 
     10. The utility will confirm that your Background Application has been removed from the list of headless 'Startup Apps':
 
