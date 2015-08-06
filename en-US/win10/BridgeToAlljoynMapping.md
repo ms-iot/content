@@ -92,3 +92,13 @@ Each ISignal is announced to AllJoyn as a Hosted Session signal for a device wit
 The following properties must be implemented for an ISignal
 
 ![IAdapteSignal Table]({{site.baseurl}}/images/AllJoyn/IAdapterSignalTable.png)
+
+##VI. IAdapterValue
+
+Each IAdapterValue is exposed as a child of an AllJoyn property with the following bus object and interface name:
+
+	/{PropertyName}/{ValueName}
+	
+	{ExposedAdapterPrefix}.{AdapterName}.{PropertyName}.{ValueName}
+
+
