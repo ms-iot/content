@@ -1,41 +1,44 @@
-<link href="https://assets.onestore.ms/cdnfiles/onestorerolling-1508-05010/shell/v1/scss/shell.min.css" rel="stylesheet" type="text/css" />
+<link href="https://assets.onestore.ms/cdnfiles/onestorerolling-1508-05010/shell/v1_4/scss/shell.min.css" rel="stylesheet" type="text/css" />
 <!--[if lte IE 8]>    
     <link href="https://assets.onestore.ms/cdnfiles/onestorerolling-1508-05010/shell/common/respond-proxy.html" id="respond-proxy" rel="respond-proxy"/>
 <![endif]-->
-<div id="shell-header" class="shell-rwd shell-rwd shell-bottomborder shell-header ">
+<div id="shell-header" class="shell-rwd shell-rwd shell-bottomborder shell-header " lang="en">
+    <div class="shell-header-L1-bar"></div>
     <div class="shell-header-wrapper">
         <div class="shell-header-top" data-bi-area="HeaderL0" data-bi-view="L0V1">
+            <div class="shell-header-topfix">
+                <div class="shell-header-brand">
+                    <a id="srv_shellHeaderMicrosoftLogo" href="https://www.microsoft.com/en-us/default.aspx"
+                       title="Microsoft" data-bi-name="BrandLogo">
+                        <img src="https://assets.onestore.ms/cdnfiles/onestorerolling-1508-05010/shell/v1_4/images/logo/microsoft.png" alt="Microsoft"/>
+                    </a>
+                </div>
 
-            <div class="shell-header-brand">
-                <a id="srv_shellHeaderMicrosoftLogo" href="https://www.microsoft.com/en-us/default.aspx"
-                   title="Microsoft" data-bi-name="BrandLogo">
-                    <img src="https://assets.onestore.ms/cdnfiles/onestorerolling-1508-05010/shell/v1/images/logo/microsoft.png" alt="Microsoft" />
-                </a>
-            </div>
-                <h2 class="shell-header-subtitle">
-                    <span class="shell-header-vertical-bar"></span>
-                    <a href="https://dev.windows.com/en-us" data-bi-name="Segment Title">Windows Dev Center</a>
-                </h2>
-            <ul class="shell-header-toggle">
-                    <li>
-                        <button class="shell-header-toggle-search" type="button" data-bi-name="Toggle Search Icon">
-                            <i class="shell-icon-search"></i>
+                <ul class="shell-header-toggle">
+                        <li>
+                            <button class="shell-header-toggle-search" type="button" data-bi-name="Toggle Search Icon">
+                                <i class="shell-icon-search"></i>
+                            </button>
+                        </li>
+                                        <li>
+                        <button class="shell-header-toggle-menu" type="button" data-bi-name="Toggle Menu">
+                            <i class="shell-icon-menu"></i>
                         </button>
                     </li>
-                                <li>
-                    <button class="shell-header-toggle-menu" type="button" data-bi-name="Toggle Menu">
-                        <i class="shell-icon-menu"></i>
-                    </button>
-                </li>
-            </ul>
+                </ul>
 
+                    <h2 class="shell-header-subtitle shell-header-mtop">
+                        <span class="shell-header-vertical-bar"></span>
+                        <a href="https://dev.windows.com/en-us" data-bi-name="Segment Title">Windows Dev Center</a>
+                    </h2>
+            </div>
             <div class="shell-header-actions">
-                    <form id="srv_shellHeaderSearchForm" class="shell-header-search" action="https://social.msdn.microsoft.com/search/en-us/windows" method="GET" autocomplete="off" onsubmit="return window.msCommonShell.onSearch(this)">
+                    <form id="srv_shellHeaderSearchForm" class="shell-header-search" action="https://social.msdn.microsoft.com/search/en-us/windows" method="GET" autocomplete="off" onsubmit=" return window.msCommonShell.onSearch(this) ">
                         <label for="cli_shellHeaderSearchInput" class="sr-only">Search Microsoft</label>
-                        <input id="cli_shellHeaderSearchInput" type="search" name="query" data-bi-dnt="" placeholder="" maxlength="200" />
+                        <input id="cli_shellHeaderSearchInput" type="search" name="query" data-bi-dnt="" placeholder="" maxlength="200"/>
 
                             <input type="hidden" name="Refinement"
-                                   data-bi-dnt="" value="183" />
+                                   data-bi-dnt="" value="183"/>
 
                         <button type="submit" title="Search" data-bi-dnt="">
                             <i class="shell-icon-search"></i>
@@ -49,7 +52,7 @@
                             </div>
                         </div>
                     </form>
-
+                
 
                 <dl class="shell-header-user">
                     <dt>
@@ -57,10 +60,16 @@
                     </dt>
                 </dl>
             </div>
+
+                <h2 class="shell-header-subtitle shell-header-dtop">
+                    <span class="shell-header-vertical-bar"></span>
+                    <a href="https://dev.windows.com/en-us" data-bi-name="Segment Title">Windows Dev Center</a>
+                </h2>
+
         </div>
 
         <ul class="shell-header-nav" id="srv_shellHeaderNav" data-bi-area="L1" data-bi-view="Hovermenus">
-                            <li id="home" class="shell-header-dropdown-label ">
+                            <li id="home" class="shell-header-dropdown-label  ">
                                 <a class="top-level-link-text ctl_headerNavLink"
                                    href="https://dev.windows.com/en-us" role="menuitem"
                                    data-bi-name="Home" data-bi-slot="1">
@@ -82,7 +91,7 @@
 
 
 
-<div class="shell-header-dropdown-content " >
+<div class="shell-header-dropdown-content " role="menu">
     <dl class="shell-header-dropdown-tab   active ">
 
             <dt id="explore_apps" class="shell-header-dropdown-tab-label">
@@ -251,7 +260,7 @@
 
 
 
-<div class="shell-header-dropdown-content " >
+<div class="shell-header-dropdown-content " role="menu">
     <dl class="shell-header-dropdown-tab  shell-tab-mcol active ">
 
             <dt id="docs_apps" class="shell-header-dropdown-tab-label">
@@ -265,121 +274,133 @@
 
 
         <ul class="shell-header-dropdown-tab-list shell-l3-group">
-            <li><h3>Get started</h3></li>
-                <li id="docs_apps_whatsuniversal" >
-                    <a href="https://msdn.microsoft.com/library/windows/apps/dn726767.aspx" role="menuitem" data-bi-name="Docs_Apps_WhatsUniversal" >
+            <li>
+                <h3>
+Get started                </h3>
+            </li>
+                <li id="docs_apps_whatsuniversal" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/apps/dn726767.aspx" role="menuitem" data-bi-name="Docs_Apps_WhatsUniversal">
                         What&#39;s a Universal Windows app?
                     </a>
                 </li>
-                <li id="docs_apps_setup" >
-                    <a href="https://msdn.microsoft.com/library/windows/apps/dn726766.aspx " role="menuitem" data-bi-name="Docs_Apps_Setup" >
+                <li id="docs_apps_setup" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/apps/dn726766.aspx " role="menuitem" data-bi-name="Docs_Apps_Setup">
                         Get set up
                     </a>
                 </li>
-                <li id="docs_apps_signup" >
-                    <a href="https://msdn.microsoft.com/library/windows/apps/bg124287.aspx" role="menuitem" data-bi-name="Docs_Apps_SignUp" >
+                <li id="docs_apps_signup" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/apps/bg124287.aspx" role="menuitem" data-bi-name="Docs_Apps_SignUp">
                         Sign up
                     </a>
                 </li>
-                <li id="docs_apps_first" >
-                    <a href="https://msdn.microsoft.com/library/windows/apps/bg124288.aspx " role="menuitem" data-bi-name="Docs_Apps_First" >
+                <li id="docs_apps_first" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/apps/bg124288.aspx " role="menuitem" data-bi-name="Docs_Apps_First">
                         Your first app
                     </a>
                 </li>
-                <li id="docs_apps_new" >
-                    <a href="https://dev.windows.com/en-us/getstarted/whats-new-windows-10" role="menuitem" data-bi-name="Docs_Apps_New" >
+                <li id="docs_apps_new" data-mobile="0">
+                    <a href="https://dev.windows.com/en-us/getstarted/whats-new-windows-10" role="menuitem" data-bi-name="Docs_Apps_New">
                         New for Windows 10
                     </a>
                 </li>
-                <li id="docs_apps_all" data-mobile=1>
-                    <a href="https://dev.windows.com/en-us/getstarted" role="menuitem" data-bi-name="Docs_Apps_All" >
+                <li id="docs_apps_all" data-mobile="1">
+                    <a href="https://dev.windows.com/en-us/getstarted" role="menuitem" data-bi-name="Docs_Apps_All">
                         All Get started &gt;
                     </a>
                 </li>
 
         </ul>
         <ul class="shell-header-dropdown-tab-list shell-l3-group">
-            <li><h3>Design</h3></li>
-                <li id="docs_apps_basics" >
-                    <a href="https://dev.windows.com/en-us/design/design-basics" role="menuitem" data-bi-name="Docs_Apps_Basics" >
+            <li>
+                <h3>
+Design                </h3>
+            </li>
+                <li id="docs_apps_basics" data-mobile="0">
+                    <a href="https://dev.windows.com/en-us/design/design-basics" role="menuitem" data-bi-name="Docs_Apps_Basics">
                         Basics
                     </a>
                 </li>
-                <li id="docs_apps_guidelines" >
-                    <a href="https://msdn.microsoft.com/library/windows/apps/hh465424.aspx" role="menuitem" data-bi-name="Docs_Apps_Guidelines" >
+                <li id="docs_apps_guidelines" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/apps/hh465424.aspx" role="menuitem" data-bi-name="Docs_Apps_Guidelines">
                         Guidelines
                     </a>
                 </li>
-                <li id="docs_apps_downloads" >
-                    <a href="https://dev.windows.com/en-us/design/assets" role="menuitem" data-bi-name="Docs_Apps_Downloads" >
+                <li id="docs_apps_downloads" data-mobile="0">
+                    <a href="https://dev.windows.com/en-us/design/assets" role="menuitem" data-bi-name="Docs_Apps_Downloads">
                         Downloads
                     </a>
                 </li>
-                <li id="docs_apps_alldesign" data-mobile=1>
-                    <a href="https://dev.windows.com/en-us/design" role="menuitem" data-bi-name="Docs_Apps_Alldesign" >
+                <li id="docs_apps_alldesign" data-mobile="1">
+                    <a href="https://dev.windows.com/en-us/design" role="menuitem" data-bi-name="Docs_Apps_Alldesign">
                         All Design &gt;
                     </a>
                 </li>
 
         </ul>
         <ul class="shell-header-dropdown-tab-list shell-l3-group">
-            <li><h3>Develop</h3></li>
-                <li id="docs_apps_howguides" >
-                    <a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx" role="menuitem" data-bi-name="Docs_Apps_Howguides" >
+            <li>
+                <h3>
+Develop                </h3>
+            </li>
+                <li id="docs_apps_howguides" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx" role="menuitem" data-bi-name="Docs_Apps_Howguides">
                         How-to guides
                     </a>
                 </li>
-                <li id="docs_apps_apireference" >
-                    <a href="https://msdn.microsoft.com/library/windows/apps/bg124285.aspx" role="menuitem" data-bi-name="Docs_Apps_Apireference" >
+                <li id="docs_apps_apireference" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/apps/bg124285.aspx" role="menuitem" data-bi-name="Docs_Apps_Apireference">
                         API reference
                     </a>
                 </li>
-                <li id="docs_apps_services" >
-                    <a href="https://dev.windows.com/en-us/develop/microsoft-services" role="menuitem" data-bi-name="Docs_Apps_Services" >
+                <li id="docs_apps_services" data-mobile="0">
+                    <a href="https://dev.windows.com/en-us/develop/microsoft-services" role="menuitem" data-bi-name="Docs_Apps_Services">
                         Services
                     </a>
                 </li>
-                <li id="docs_apps_win8_guides" >
-                    <a href="https://msdn.microsoft.com/library/windows/apps/mt244353.aspx" role="menuitem" data-bi-name="Docs_Apps_Win8_Guides" >
+                <li id="docs_apps_win8_guides" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/apps/mt244353.aspx" role="menuitem" data-bi-name="Docs_Apps_Win8_Guides">
                         Windows 8.x guides
                     </a>
                 </li>
-                <li id="docs_apps_wp_sl8_guides" >
-                    <a href="https://msdn.microsoft.com/library/windows/apps/ff402535(v=vs.105).aspx" role="menuitem" data-bi-name="Docs_Apps_WP_SL8_Guides" >
+                <li id="docs_apps_wp_sl8_guides" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/apps/ff402535(v=vs.105).aspx" role="menuitem" data-bi-name="Docs_Apps_WP_SL8_Guides">
                         Windows Phone Silverlight 8.x guides
                     </a>
                 </li>
-                <li id="docs_apps_alldevelop" data-mobile=1>
-                    <a href="https://dev.windows.com/en-us/develop" role="menuitem" data-bi-name="Docs_Apps_Alldevelop" >
+                <li id="docs_apps_alldevelop" data-mobile="1">
+                    <a href="https://dev.windows.com/en-us/develop" role="menuitem" data-bi-name="Docs_Apps_Alldevelop">
                         All Develop &gt;
                     </a>
                 </li>
 
         </ul>
         <ul class="shell-header-dropdown-tab-list shell-l3-group">
-            <li><h3>Publish</h3></li>
-                <li id="docs_apps_submitapp" >
-                    <a href="https://msdn.microsoft.com/library/windows/apps/hh694062.aspx " role="menuitem" data-bi-name="Docs_Apps_Submitapp" >
+            <li>
+                <h3>
+Publish                </h3>
+            </li>
+                <li id="docs_apps_submitapp" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/apps/hh694062.aspx " role="menuitem" data-bi-name="Docs_Apps_Submitapp">
                         Submit your app
                     </a>
                 </li>
-                <li id="docs_apps_promoteandengage" >
-                    <a href="https://msdn.microsoft.com/library/windows/apps/mt148526.aspx " role="menuitem" data-bi-name="Docs_Apps_Promoteandengage" >
+                <li id="docs_apps_promoteandengage" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/apps/mt148526.aspx " role="menuitem" data-bi-name="Docs_Apps_Promoteandengage">
                         Promote and engage
                     </a>
                 </li>
-                <li id="docs_apps_viewanalytics" >
-                    <a href="https://msdn.microsoft.com/library/windows/apps/mt148522.aspx " role="menuitem" data-bi-name="Docs_Apps_Viewanalytics" >
+                <li id="docs_apps_viewanalytics" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/apps/mt148522.aspx " role="menuitem" data-bi-name="Docs_Apps_Viewanalytics">
                         View analytics
                     </a>
                 </li>
-                <li id="docs_apps_storepolicies" >
-                    <a href="https://msdn.microsoft.com/library/windows/apps/dn764944.aspx " role="menuitem" data-bi-name="Docs_Apps_Storepolicies" >
+                <li id="docs_apps_storepolicies" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/apps/dn764944.aspx " role="menuitem" data-bi-name="Docs_Apps_Storepolicies">
                         Store Policies
                     </a>
                 </li>
-                <li id="docs_apps_allpublish" data-mobile=1>
-                    <a href="https://dev.windows.com/en-us/publish" role="menuitem" data-bi-name="Docs_Apps_Allpublish" >
+                <li id="docs_apps_allpublish" data-mobile="1">
+                    <a href="https://dev.windows.com/en-us/publish" role="menuitem" data-bi-name="Docs_Apps_Allpublish">
                         All Publish &gt;
                     </a>
                 </li>
@@ -404,101 +425,113 @@
 
 
         <ul class="shell-header-dropdown-tab-list shell-l3-group">
-            <li><h3>Get started</h3></li>
-                <li id="docs_games_getsetup" >
-                    <a href="https://msdn.microsoft.com/library/windows/apps/dn726766.aspx" role="menuitem" data-bi-name="Docs_Games_GetSetUp" >
+            <li>
+                <h3>
+Get started                </h3>
+            </li>
+                <li id="docs_games_getsetup" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/apps/dn726766.aspx" role="menuitem" data-bi-name="Docs_Games_GetSetUp">
                         Get set up
                     </a>
                 </li>
-                <li id="docs_games_windowsuniversalappplatform" >
-                    <a href="https://dev.windows.com/en-us/develop" role="menuitem" data-bi-name="Docs_Games_WindowsUniversalAppPlatform" >
+                <li id="docs_games_windowsuniversalappplatform" data-mobile="0">
+                    <a href="https://dev.windows.com/en-us/develop" role="menuitem" data-bi-name="Docs_Games_WindowsUniversalAppPlatform">
                         Universal Windows Platform (UWP)
                     </a>
                 </li>
-                <li id="docs_games_choosetechnology" >
-                    <a href="https://dev.windows.com/en-us/games/technology" role="menuitem" data-bi-name="Docs_Games_ChooseTechnology" >
+                <li id="docs_games_choosetechnology" data-mobile="0">
+                    <a href="https://dev.windows.com/en-us/games/technology" role="menuitem" data-bi-name="Docs_Games_ChooseTechnology">
                         Choose a technology
                     </a>
                 </li>
-                <li id="docs_games_signup" >
-                    <a href="https://msdn.microsoft.com/library/windows/apps/bg124287.aspx" role="menuitem" data-bi-name="Docs_Games_SignUp" >
+                <li id="docs_games_signup" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/apps/bg124287.aspx" role="menuitem" data-bi-name="Docs_Games_SignUp">
                         Sign up
                     </a>
                 </li>
-                <li id="docs_games_all" data-mobile=1>
-                    <a href="https://dev.windows.com/en-us/games/getstarted" role="menuitem" data-bi-name="Docs_Games_All" >
+                <li id="docs_games_all" data-mobile="1">
+                    <a href="https://dev.windows.com/en-us/games/getstarted" role="menuitem" data-bi-name="Docs_Games_All">
                         All Get started &gt;
                     </a>
                 </li>
 
         </ul>
         <ul class="shell-header-dropdown-tab-list shell-l3-group">
-            <li><h3>Design</h3></li>
-                <li id="docs_games_appdesignbasics" >
-                    <a href="https://dev.windows.com/en-us/design/design-basics" role="menuitem" data-bi-name="Docs_Games_AppDesignBasics" >
+            <li>
+                <h3>
+Design                </h3>
+            </li>
+                <li id="docs_games_appdesignbasics" data-mobile="0">
+                    <a href="https://dev.windows.com/en-us/design/design-basics" role="menuitem" data-bi-name="Docs_Games_AppDesignBasics">
                         App design basics
                     </a>
                 </li>
-                <li id="docs_games_appdesignguidelines" >
-                    <a href="https://msdn.microsoft.com/library/windows/apps/hh465424.aspx" role="menuitem" data-bi-name="Docs_Games_AppDesignGuidelines" >
+                <li id="docs_games_appdesignguidelines" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/apps/hh465424.aspx" role="menuitem" data-bi-name="Docs_Games_AppDesignGuidelines">
                         App design guidelines
                     </a>
                 </li>
-                <li id="docs_games_all" data-mobile=1>
-                    <a href="https://dev.windows.com/en-us/games/design" role="menuitem" data-bi-name="Docs_Games_All" >
+                <li id="docs_games_all" data-mobile="1">
+                    <a href="https://dev.windows.com/en-us/games/design" role="menuitem" data-bi-name="Docs_Games_All">
                         All Design &gt;
                     </a>
                 </li>
 
         </ul>
         <ul class="shell-header-dropdown-tab-list shell-l3-group">
-            <li><h3>Develop</h3></li>
-                <li id="docs_games_developinggames" >
-                    <a href="https://msdn.microsoft.com/library/windows/apps/mt228375.aspx" role="menuitem" data-bi-name="Docs_Games_DevelopingGames" >
+            <li>
+                <h3>
+Develop                </h3>
+            </li>
+                <li id="docs_games_developinggames" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/apps/mt228375.aspx" role="menuitem" data-bi-name="Docs_Games_DevelopingGames">
                         Developing games
                     </a>
                 </li>
-                <li id="docs_games_graphicsandgaming" >
-                    <a href="https://msdn.microsoft.com/library/windows/desktop/ee663279" role="menuitem" data-bi-name="Docs_Games_GraphicsAndGaming" >
+                <li id="docs_games_graphicsandgaming" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/desktop/ee663279" role="menuitem" data-bi-name="Docs_Games_GraphicsAndGaming">
                         Graphics and gaming
                     </a>
                 </li>
-                <li id="docs_games_direct3d12graphics" >
-                    <a href="https://msdn.microsoft.com/library/windows/desktop/dn903821" role="menuitem" data-bi-name="Docs_Games_Direct3D12Graphics" >
+                <li id="docs_games_direct3d12graphics" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/desktop/dn903821" role="menuitem" data-bi-name="Docs_Games_Direct3D12Graphics">
                         Direct3D 12 graphics
                     </a>
                 </li>
-                <li id="docs_games_developwindowsapps" >
-                    <a href="https://dev.windows.com/en-us/develop" role="menuitem" data-bi-name="Docs_Games_DevelopWindowsApps" >
+                <li id="docs_games_developwindowsapps" data-mobile="0">
+                    <a href="https://dev.windows.com/en-us/develop" role="menuitem" data-bi-name="Docs_Games_DevelopWindowsApps">
                         Develop Windows apps
                     </a>
                 </li>
-                <li id="docs_games_windowsappreference" >
-                    <a href="https://msdn.microsoft.com/library/windows/apps/br211369" role="menuitem" data-bi-name="Docs_Games_WindowsAppReference" >
+                <li id="docs_games_windowsappreference" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/apps/br211369" role="menuitem" data-bi-name="Docs_Games_WindowsAppReference">
                         Windows app reference
                     </a>
                 </li>
-                <li id="docs_games_alldevelop" data-mobile=1>
-                    <a href="https://dev.windows.com/en-us/games/develop" role="menuitem" data-bi-name="Docs_Games_AllDevelop" >
+                <li id="docs_games_alldevelop" data-mobile="1">
+                    <a href="https://dev.windows.com/en-us/games/develop" role="menuitem" data-bi-name="Docs_Games_AllDevelop">
                         All Develop &gt;
                     </a>
                 </li>
 
         </ul>
         <ul class="shell-header-dropdown-tab-list shell-l3-group">
-            <li><h3>Publish</h3></li>
-                <li id="docs_games_publishwindowsapps" >
-                    <a href="https://dev.windows.com/en-us/publish" role="menuitem" data-bi-name="Docs_Games_PublishWindowsApps" >
+            <li>
+                <h3>
+Publish                </h3>
+            </li>
+                <li id="docs_games_publishwindowsapps" data-mobile="0">
+                    <a href="https://dev.windows.com/en-us/publish" role="menuitem" data-bi-name="Docs_Games_PublishWindowsApps">
                         Publish Windows apps
                     </a>
                 </li>
-                <li id="docs_games_id@xbox" >
-                    <a href="http://www.xbox.com/Developers/id" role="menuitem" data-bi-name="Docs_Games_ID@Xbox" >
+                <li id="docs_games_id@xbox" data-mobile="0">
+                    <a href="http://www.xbox.com/Developers/id" role="menuitem" data-bi-name="Docs_Games_ID@Xbox">
                         ID@Xbox
                     </a>
                 </li>
-                <li id="docs_games_all" data-mobile=1>
-                    <a href="https://dev.windows.com/en-us/games/publish" role="menuitem" data-bi-name="Docs_Games_All" >
+                <li id="docs_games_all" data-mobile="1">
+                    <a href="https://dev.windows.com/en-us/games/publish" role="menuitem" data-bi-name="Docs_Games_All">
                         All Publish &gt;
                     </a>
                 </li>
@@ -523,106 +556,118 @@
 
 
         <ul class="shell-header-dropdown-tab-list shell-l3-group">
-            <li><h3>Get started</h3></li>
-                <li id="docs_desktop_technology" >
-                    <a href="https://msdn.microsoft.com/library/windows/desktop/dn614993.aspx" role="menuitem" data-bi-name="Docs_Desktop_Technology" >
+            <li>
+                <h3>
+Get started                </h3>
+            </li>
+                <li id="docs_desktop_technology" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/desktop/dn614993.aspx" role="menuitem" data-bi-name="Docs_Desktop_Technology">
                         Choose your technology
                     </a>
                 </li>
-                <li id="docs_desktop_whatnew" >
-                    <a href="https://msdn.microsoft.com/library/windows/desktop/hh848361.aspx" role="menuitem" data-bi-name="Docs_Desktop_Whatnew" >
+                <li id="docs_desktop_whatnew" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/desktop/hh848361.aspx" role="menuitem" data-bi-name="Docs_Desktop_Whatnew">
                         What’s new 
                     </a>
                 </li>
-                <li id="docs_desktop_prog" >
-                    <a href="https://msdn.microsoft.com/windows/desktop/ee663266.aspx" role="menuitem" data-bi-name="Docs_Desktop_Prog" >
+                <li id="docs_desktop_prog" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/windows/desktop/ee663266.aspx" role="menuitem" data-bi-name="Docs_Desktop_Prog">
                         Desktop programming
                     </a>
                 </li>
-                <li id="docs_desktop_allgetstarted" data-mobile=1>
-                    <a href="https://dev.windows.com/en-us/desktop/getstarted" role="menuitem" data-bi-name="Docs_Desktop_Allgetstarted" >
+                <li id="docs_desktop_allgetstarted" data-mobile="1">
+                    <a href="https://dev.windows.com/en-us/desktop/getstarted" role="menuitem" data-bi-name="Docs_Desktop_Allgetstarted">
                         All Get started &gt;
                     </a>
                 </li>
 
         </ul>
         <ul class="shell-header-dropdown-tab-list shell-l3-group">
-            <li><h3>Design</h3></li>
-                <li id="docs_desktop_principles" >
-                    <a href="https://msdn.microsoft.com/library/windows/desktop/dn742446.aspx" role="menuitem" data-bi-name="Docs_Desktop_principles" >
+            <li>
+                <h3>
+Design                </h3>
+            </li>
+                <li id="docs_desktop_principles" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/desktop/dn742446.aspx" role="menuitem" data-bi-name="Docs_Desktop_principles">
                         Design principles
                     </a>
                 </li>
-                <li id="docs_desktop_guidelines" >
-                    <a href="https://msdn.microsoft.com/library/windows/desktop/dn688964.aspx" role="menuitem" data-bi-name="Docs_Desktop_Guidelines" >
+                <li id="docs_desktop_guidelines" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/desktop/dn688964.aspx" role="menuitem" data-bi-name="Docs_Desktop_Guidelines">
                         Guidelines
                     </a>
                 </li>
-                <li id="docs_desktop_visual" >
-                    <a href="https://msdn.microsoft.com/library/windows/desktop/dn688966.aspx" role="menuitem" data-bi-name="Docs_Desktop_Visual" >
+                <li id="docs_desktop_visual" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/desktop/dn688966.aspx" role="menuitem" data-bi-name="Docs_Desktop_Visual">
                         Visual index
                     </a>
                 </li>
-                <li id="docs_desktop_alldesign" data-mobile=1>
-                    <a href="https://dev.windows.com/en-us/desktop/design" role="menuitem" data-bi-name="Docs_Desktop_Alldesign" >
+                <li id="docs_desktop_alldesign" data-mobile="1">
+                    <a href="https://dev.windows.com/en-us/desktop/design" role="menuitem" data-bi-name="Docs_Desktop_Alldesign">
                         All Design &gt;
                     </a>
                 </li>
 
         </ul>
         <ul class="shell-header-dropdown-tab-list shell-l3-group">
-            <li><h3>Develop</h3></li>
-                <li id="docs_desktop_desktoptech" >
-                    <a href="https://msdn.microsoft.com/library/windows/desktop/bg126469.aspx" role="menuitem" data-bi-name="Docs_Desktop_Desktoptech" >
+            <li>
+                <h3>
+Develop                </h3>
+            </li>
+                <li id="docs_desktop_desktoptech" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/desktop/bg126469.aspx" role="menuitem" data-bi-name="Docs_Desktop_Desktoptech">
                         Desktop technologies
                     </a>
                 </li>
-                <li id="docs_desktop_serversystem" >
-                    <a href="https://msdn.microsoft.com/library/windows/desktop/bg125390.aspx" role="menuitem" data-bi-name="Docs_Desktop_Serversystem" >
+                <li id="docs_desktop_serversystem" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/desktop/bg125390.aspx" role="menuitem" data-bi-name="Docs_Desktop_Serversystem">
                         Server and system
                     </a>
                 </li>
-                <li id="docs_desktop_apireference" >
-                    <a href="https://msdn.microsoft.com/library/windows/desktop/hh920508.aspx" role="menuitem" data-bi-name="Docs_Desktop_Apireference" >
+                <li id="docs_desktop_apireference" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/library/windows/desktop/hh920508.aspx" role="menuitem" data-bi-name="Docs_Desktop_Apireference">
                         API reference
                     </a>
                 </li>
-                <li id="docs_desktop_certify" >
-                    <a href="https://msdn.microsoft.com/windows/desktop/jj134964.aspx" role="menuitem" data-bi-name="Docs_Desktop_Certify" >
+                <li id="docs_desktop_certify" data-mobile="0">
+                    <a href="https://msdn.microsoft.com/windows/desktop/jj134964.aspx" role="menuitem" data-bi-name="Docs_Desktop_Certify">
                         Certify
                     </a>
                 </li>
-                <li id="docs_desktop_alldevelop" data-mobile=1>
-                    <a href="https://dev.windows.com/en-us/desktop/develop" role="menuitem" data-bi-name="Docs_Desktop_Alldevelop" >
+                <li id="docs_desktop_alldevelop" data-mobile="1">
+                    <a href="https://dev.windows.com/en-us/desktop/develop" role="menuitem" data-bi-name="Docs_Desktop_Alldevelop">
                         All Develop &gt;
                     </a>
                 </li>
 
         </ul>
         <ul class="shell-header-dropdown-tab-list shell-l3-group">
-            <li><h3>Test and deploy</h3></li>
-                <li id="docs_desktop_deploy" >
-                    <a href="http://msdn.microsoft.com/windows/desktop/dn640662.aspx" role="menuitem" data-bi-name="Docs_Desktop_Deploy" >
+            <li>
+                <h3>
+Test and deploy                </h3>
+            </li>
+                <li id="docs_desktop_deploy" data-mobile="0">
+                    <a href="http://msdn.microsoft.com/windows/desktop/dn640662.aspx" role="menuitem" data-bi-name="Docs_Desktop_Deploy">
                         Deploy
                     </a>
                 </li>
-                <li id="docs_desktop_debug" >
-                    <a href="http://msdn.microsoft.com/windows/desktop/dn640617.aspx" role="menuitem" data-bi-name="Docs_Desktop_Debug" >
+                <li id="docs_desktop_debug" data-mobile="0">
+                    <a href="http://msdn.microsoft.com/windows/desktop/dn640617.aspx" role="menuitem" data-bi-name="Docs_Desktop_Debug">
                         Debug
                     </a>
                 </li>
-                <li id="docs_desktop_instrument" >
-                    <a href="http://msdn.microsoft.com/windows/desktop/dn640663.aspx" role="menuitem" data-bi-name="Docs_Desktop_Instrument" >
+                <li id="docs_desktop_instrument" data-mobile="0">
+                    <a href="http://msdn.microsoft.com/windows/desktop/dn640663.aspx" role="menuitem" data-bi-name="Docs_Desktop_Instrument">
                         Instrument
                     </a>
                 </li>
-                <li id="docs_desktop_tools" >
-                    <a href="http://msdn.microsoft.com/windows/desktop/dn640664.aspx" role="menuitem" data-bi-name="Docs_Desktop_Tools" >
+                <li id="docs_desktop_tools" data-mobile="0">
+                    <a href="http://msdn.microsoft.com/windows/desktop/dn640664.aspx" role="menuitem" data-bi-name="Docs_Desktop_Tools">
                         Tools
                     </a>
                 </li>
-                <li id="docs_desktop_alltest" data-mobile=1>
-                    <a href="https://dev.windows.com/en-us/desktop/test-deploy" role="menuitem" data-bi-name="Docs_Desktop_Alltest" >
+                <li id="docs_desktop_alltest" data-mobile="1">
+                    <a href="https://dev.windows.com/en-us/desktop/test-deploy" role="menuitem" data-bi-name="Docs_Desktop_Alltest">
                         All Test &gt;
                     </a>
                 </li>
@@ -647,86 +692,98 @@
 
 
         <ul class="shell-header-dropdown-tab-list shell-l3-group">
-            <li><h3>Get started</h3></li>
-                <li id="docs_iot_platformoverview" >
-                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532975" role="menuitem" data-bi-name="Docs_IoT_Platformoverview" >
+            <li>
+                <h3>
+Get started                </h3>
+            </li>
+                <li id="docs_iot_platformoverview" data-mobile="0">
+                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532975" role="menuitem" data-bi-name="Docs_IoT_Platformoverview">
                         Platform overview
                     </a>
                 </li>
-                <li id="docs_iot_register" >
-                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532947" role="menuitem" data-bi-name="Docs_IoT_Register" >
+                <li id="docs_iot_register" data-mobile="0">
+                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532947" role="menuitem" data-bi-name="Docs_IoT_Register">
                         Register
                     </a>
                 </li>
-                <li id="docs_iot_setup" >
-                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532974" role="menuitem" data-bi-name="Docs_IoT_Setup" >
+                <li id="docs_iot_setup" data-mobile="0">
+                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532974" role="menuitem" data-bi-name="Docs_IoT_Setup">
                         Set up your device
                     </a>
                 </li>
-                <li id="docs_iot_firstapp" >
-                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532945" role="menuitem" data-bi-name="Docs_IoT_FirstApp" >
+                <li id="docs_iot_firstapp" data-mobile="0">
+                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532945" role="menuitem" data-bi-name="Docs_IoT_FirstApp">
                         Write your first app
                     </a>
                 </li>
-                <li id="docs_iot_all" data-mobile=1>
-                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532957" role="menuitem" data-bi-name="Docs_IoT_All" >
+                <li id="docs_iot_all" data-mobile="1">
+                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532957" role="menuitem" data-bi-name="Docs_IoT_All">
                         All Get started &gt;
                     </a>
                 </li>
 
         </ul>
         <ul class="shell-header-dropdown-tab-list shell-l3-group">
-            <li><h3>Develop</h3></li>
-                <li id="docs_iot_atbuild" >
-                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532963" role="menuitem" data-bi-name="Docs_IoT_AtBuild" >
+            <li>
+                <h3>
+Develop                </h3>
+            </li>
+                <li id="docs_iot_atbuild" data-mobile="0">
+                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532963" role="menuitem" data-bi-name="Docs_IoT_AtBuild">
                         Windows IoT at Build 2015
                     </a>
                 </li>
-                <li id="docs_iot_codesamples" >
-                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532976" role="menuitem" data-bi-name="Docs_IoT_CodeSamples" >
+                <li id="docs_iot_codesamples" data-mobile="0">
+                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532976" role="menuitem" data-bi-name="Docs_IoT_CodeSamples">
                         Code samples
                     </a>
                 </li>
-                <li id="docs_iot_faq" >
-                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532965" role="menuitem" data-bi-name="Docs_IoT_Faq" >
+                <li id="docs_iot_faq" data-mobile="0">
+                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532965" role="menuitem" data-bi-name="Docs_IoT_Faq">
                         FAQ
                     </a>
                 </li>
-                <li id="docs_iot_all" data-mobile=1>
-                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532961" role="menuitem" data-bi-name="Docs_IoT_All" >
+                <li id="docs_iot_all" data-mobile="1">
+                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532961" role="menuitem" data-bi-name="Docs_IoT_All">
                         All Develop &gt;
                     </a>
                 </li>
 
         </ul>
         <ul class="shell-header-dropdown-tab-list shell-l3-group">
-            <li><h3>Learn more</h3></li>
-                <li id="docs_iot_projectgallery" >
-                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532977" role="menuitem" data-bi-name="Docs_IoT_ProjectGallery" >
+            <li>
+                <h3>
+Learn more                </h3>
+            </li>
+                <li id="docs_iot_projectgallery" data-mobile="0">
+                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532977" role="menuitem" data-bi-name="Docs_IoT_ProjectGallery">
                         IoT Project gallery
                     </a>
                 </li>
-                <li id="docs_iot_downloads" >
-                    <a href="http://go.microsoft.com/fwlink/p/?LinkID=532967" role="menuitem" data-bi-name="Docs_Iot_Downloads" >
+                <li id="docs_iot_downloads" data-mobile="0">
+                    <a href="http://go.microsoft.com/fwlink/p/?LinkID=532967" role="menuitem" data-bi-name="Docs_Iot_Downloads">
                         Downloads
                     </a>
                 </li>
-                <li id="docs_iot_community" data-mobile=1>
-                    <a href="http://go.microsoft.com/fwlink/p/?LinkID=532968" role="menuitem" data-bi-name="Docs_Iot_Community" >
+                <li id="docs_iot_community" data-mobile="1">
+                    <a href="http://go.microsoft.com/fwlink/p/?LinkID=532968" role="menuitem" data-bi-name="Docs_Iot_Community">
                         Community
                     </a>
                 </li>
 
         </ul>
         <ul class="shell-header-dropdown-tab-list shell-l3-group">
-            <li><h3>IoT Hardware</h3></li>
-                <li id="docs_iot_getstartedguide" >
-                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532966" role="menuitem" data-bi-name="Docs_IoT_GetStartedGuide" >
+            <li>
+                <h3>
+IoT Hardware                </h3>
+            </li>
+                <li id="docs_iot_getstartedguide" data-mobile="0">
+                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532966" role="menuitem" data-bi-name="Docs_IoT_GetStartedGuide">
                         IoT Getting started guide
                     </a>
                 </li>
-                <li id="docs_iot_hardware" data-mobile=1>
-                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532948" role="menuitem" data-bi-name="Docs_IoT_Hardware" >
+                <li id="docs_iot_hardware" data-mobile="1">
+                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532948" role="menuitem" data-bi-name="Docs_IoT_Hardware">
                         IoT Hardware &gt;
                     </a>
                 </li>
@@ -742,7 +799,7 @@
 </div>
 
                             </li>
-                            <li id="downloads" class="shell-header-dropdown-label ">
+                            <li id="downloads" class="shell-header-dropdown-label  ">
                                 <a class="top-level-link-text ctl_headerNavLink"
                                    href="https://dev.windows.com/en-us/downloads" role="menuitem"
                                    data-bi-name="Downloads" data-bi-slot="4">
@@ -750,7 +807,7 @@
                                     Downloads
                                 </a>
                             </li>
-                            <li id="samples" class="shell-header-dropdown-label ">
+                            <li id="samples" class="shell-header-dropdown-label  ">
                                 <a class="top-level-link-text ctl_headerNavLink"
                                    href="https://dev.windows.com/en-us/samples" role="menuitem"
                                    data-bi-name="Samples" data-bi-slot="5">
@@ -758,7 +815,7 @@
                                     Samples
                                 </a>
                             </li>
-                            <li id="community" class="shell-header-dropdown-label ">
+                            <li id="community" class="shell-header-dropdown-label  ">
                                 <a class="top-level-link-text ctl_headerNavLink"
                                    href="https://dev.windows.com/community" role="menuitem"
                                    data-bi-name="Community" data-bi-slot="6">
@@ -766,7 +823,7 @@
                                     Community
                                 </a>
                             </li>
-                            <li id="programs" class="shell-header-dropdown-label ">
+                            <li id="programs" class="shell-header-dropdown-label  ">
                                 <a class="top-level-link-text ctl_headerNavLink"
                                    href="https://dev.windows.com/en-us/programs" role="menuitem"
                                    data-bi-name="Programs" data-bi-slot="7">
@@ -774,7 +831,7 @@
                                     Programs
                                 </a>
                             </li>
-                            <li id="dashboard" class="shell-header-dropdown-label rightAlignedMenu">
+                            <li id="dashboard" class="shell-header-dropdown-label  rightAlignedMenu">
                                 <a class="top-level-link-text ctl_headerNavLink"
                                    href="https://dev.windows.com/overview?from=UHF" role="menuitem"
                                    data-bi-name="Dashboard" data-bi-slot="8">
@@ -794,18 +851,30 @@
 <script type="text/javascript">
 
     
-    var meControlOptions = {
+    var meControlInitOptions = {
         containerId: 'meControl',
-        mobileBreakpoint: 0,
-        market: 'en-US',
+        custom: {chevHtml:'<i class="msame_chev_uhf shell-icon-dropdown"></i>'},
 
-    rpData:
+        
+            
+        market: 'en-US',
+        
+
+            
+        mobileBreakpoints:
+    {
+        shortHeader: 1084,
+        mobile: 540
+        },
+        
+
+        lcaDisclaimerEnabled: false,
+
+        rpData:
         {
             msaInfo:
                 {
-                    
-                    signInText: 'Sign In',
-                    signOutText: 'Sign Out',
+                        
                     signInUrl: '/en-us/store/signin',
                     signOutUrl: '/en-us/store/signout',
                     accountSettingsUrl: 'https://account.microsoft.com/',
@@ -817,15 +886,9 @@
             aadInfo:
                 {
                 },
-            preferredIdp: 'msa'
+            preferredIdp: 'msa',
         },
+        signInText: 'Sign In',
+        signOutText: 'Sign Out'
     };
-
-    var shell = window.msCommonShell;
-    if (shell) {
-        shell.meControlOptions = meControlOptions;
-        shell.internalInitialize();
-    }
-
-
 </script>
