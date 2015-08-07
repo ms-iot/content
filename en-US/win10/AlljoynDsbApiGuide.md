@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Alljoyn Device System Bridge - API Guide
-permalink: /en-US/win10/BridgeToAlljoynMapping.htm
+permalink: /en-US/win10/AlljoynDsbApiGuide.htm
 lang: en-US
 ---
 
