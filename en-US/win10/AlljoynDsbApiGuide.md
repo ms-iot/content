@@ -76,7 +76,7 @@ Similar to an IAdapter, each IAdapterDevice is required to implement properties 
 | SerialNumber            | Serial Number of this device | AllJoyn About Data Serial Number |
 | Signals                 | This is the set of all signals that this device exposes to AllJoyn. | Exposed as AllJoyn Signals |
 | Vendor                  | Vendor name of this device | AllJoyn About Data Manufacturer |
-| Version                 | Software version of this device | AllJoyn About Data SW Version
+| Version                 | Software version of this device | AllJoyn About Data SW Version |
 
 
 ###III. IAdapterProperty
@@ -120,7 +120,10 @@ From the bridge’s perspective an ISignal represents an event that your device 
 Each ISignal is announced to AllJoyn as a Hosted Session signal for a device with the signals Name.  
 The following properties must be implemented for an ISignal
 
-![IAdapteSignal Table]({{site.baseurl}}/images/AllJoyn/IAdapterSignalTable.png)
+| ISignal Properties          | Description                        | Bridge Mapping                                |
+| :-------------------------- | :--------------------------------- | :-------------------------------------------- |
+| Name	                      |Name of Signal                      | AllJoyn Signal |
+| Params | A set of objects that changed and their new values, or null if this is a pure signal. | Maps to an array of alljoyn signal arguments passed to the signal. |
 
 ###VI. IAdapterValue
 
@@ -130,4 +133,8 @@ Each IAdapterValue is exposed as a child of an AllJoyn property with the followi
 	
 	{ExposedAdapterPrefix}.{AdapterName}.{PropertyName}.{ValueName}
 
+| IAdapterValue Properties    | Description                        | Bridge Mapping                                |
+| :-------------------------- | :--------------------------------- | :-------------------------------------------- |
+| Name                        | Name of value                      | |
+| Data	                      | The data associated with this value| |
 
