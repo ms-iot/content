@@ -282,7 +282,9 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BLEGatt.htm">Bluetooth GATT (C#)</a><br>
                     </div>
                     <div class="col-md-3">
-                        <!-- Placeholder for alignment -->
+                        <h4>IoT Browser Sample (Windows Universal)</h4>
+                        <p> Learn how to create a simple web browser for Windows 10 IoT core.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/IoTBrowser.htm">IoT Browser (C#)</a><br>
                     </div>
                 </div>
 
