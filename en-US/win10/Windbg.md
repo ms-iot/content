@@ -50,7 +50,7 @@ Here is the second command you need to run:
 
 On your development machine, you can start WinDbg with the PORT_NUM and the KEY values you provided in the previous steps as follows:
 
-        "c:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k net:port=<PORT_NUM>, key=<KEY>
+        "c:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k net:port=<PORT_NUM>,key=<KEY>
 
 ##Raspberry Pi 2 (RPi2) 
 
