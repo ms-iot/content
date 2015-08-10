@@ -97,23 +97,24 @@ Alternatively, the interface name can be overridden by the property to map to a 
 
 | IAdapterProperty Properties |	Description                        | Bridge Mapping |
 | :-------------------------- | :--------------------------------- | :-------------------------------------------- |
-| Attributes	              |Collection of IAdapterAttributes    | AllJoyn Property Value |
+| Attributes	              |Collection of IAdapterAttributes    | Set of AllJoyn Properties (See IAdapterValue) |
 | InterfaceHint | An override for this property that can be used to map this property to some other well known interface type.  Return null to use the default behavior | AllJoyn Interface name for this Property (if specified) |
 | Name | Name of Property | AllJoyn Property |
 
+###V. IAdapterValue
 
-###IV. IAdapterAttribute
+Each IAdapterValue is exposed as a child of an AllJoyn property with the following bus object and interface name:
 
-An IAdapterAttribute is a key-value pair of data.  This is the child of an Alljoyn property.  Each IAdapterAttribute is exposed as the child of an AllJoyn property with the following bus object and interface name:   
+	/{PropertyName}/{ValueName}
+	
+	{ExposedAdapterPrefix}.{AdapterName}.{PropertyName}.{ValueName}
 
-	/{PropertyName}/{ValueName} 
+| IAdapterValue Properties    | Description                        | Bridge Mapping                                |
+| :-------------------------- | :--------------------------------- | :-------------------------------------------- |
+| Data	                      | The actual data value of a property on a bridged device.| An AllJoyn Property|
+| Name                        | Name of value                      | Name of an AllJoyn Property|
 
-	{ExposedAdapterPrefix}.{AdapterName}.{PropertyName}.{AttributeName} 
-		
-
-
-
-###V. IAdapterSignal
+###IV. IAdapterSignal
 
 From the bridge’s perspective an ISignal represents an event that your device can raise when something changes.  All devices typically have a Change of Value signal.  This signal alerts AllJoyn clients that one or more properties have changed on a device. Additional signals may also be supported.
 
@@ -125,17 +126,5 @@ The following properties must be implemented for an ISignal
 | Name	                      |Name of Signal                      | AllJoyn Signal |
 | Params | A set of objects that changed and their new values, or null if this is a pure signal. | Maps to an array of alljoyn signal arguments passed to the signal. |
 
-###VI. IAdapterValue
-
-Each IAdapterValue is exposed as a child of an AllJoyn property with the following bus object and interface name:
-
-	/{PropertyName}/{ValueName}
-	
-	{ExposedAdapterPrefix}.{AdapterName}.{PropertyName}.{ValueName}
-
-| IAdapterValue Properties    | Description                        | Bridge Mapping                                |
-| :-------------------------- | :--------------------------------- | :-------------------------------------------- |
-| Data	                      | The data associated with this value| |
-| Name                        | Name of value                      | |
 
 
