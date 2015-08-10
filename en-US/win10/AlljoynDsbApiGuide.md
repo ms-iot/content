@@ -135,6 +135,7 @@ Each IAdapterValue is exposed as a child of an AllJoyn property with the followi
 
 | IAdapterValue Properties    | Description                        | Bridge Mapping                                |
 | :-------------------------- | :--------------------------------- | :-------------------------------------------- |
-| Name                        | Name of value                      | |
 | Data	                      | The data associated with this value| |
+| Name                        | Name of value                      | |
+
 
