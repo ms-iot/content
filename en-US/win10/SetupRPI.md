@@ -14,13 +14,13 @@ Learn how to set up the Raspberry Pi 2 and connect it to your computer.
 ##What you need
 
 1. **A PC running Windows 10** (Prepared in the previous step)
-2. **Raspberry Pi 2**
-3. **5V micro USB power supply** - with at least 1.0A current.
+1. **Raspberry Pi 2**
+1. **5V micro USB power supply** - with at least 1.0A current.
 		If you plan on using several power-hungry USB peripherals, use a higher current power supply instead (>2.0A)
-4. <a name="RPi2_SDcard"></a>**8GB micro SD card** - class 10 or better. (We suggest this [one](http://www.amazon.com/gp/product/B00IVPU786){:target="_blank"} or this [one](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445){:target="_blank"})
-5. **HDMI cable and monitor**
-6. **Ethernet cable**
-7. **Micro SD card reader**
+1. <a name="RPi2_SDcard"></a>**8GB micro SD card** - class 10 or better. (We suggest this [one](http://www.amazon.com/gp/product/B00IVPU786){:target="_blank"} or this [one](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445){:target="_blank"})
+1. **HDMI cable and monitor**
+1. **Ethernet cable**
+1. **Micro SD card reader** (Due to an issue with most internal SD card readers, we suggest an external USB card reader like this [one](http://www.amazon.com/dp/B009D79VH4){:target="_blank"} or this [one](http://www.amazon.com/dp/B0096FB5CW){:target="_blank"})
 
 ## Install the Windows 10 IoT Core tools
 
