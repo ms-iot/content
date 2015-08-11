@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Alljoyn Device System Bridge - API Guide
-permalink: /en-US/win10/BridgeToAlljoynMapping.htm
+permalink: /en-US/win10/AlljoynDsbApiGuide.htm
 lang: en-US
 ---
 
@@ -25,7 +25,14 @@ Each adapter exposes two com.microsoft.alljoynmanagement.config interfaces that 
 
 The IAdapter interface declares certain properties that must be implemented.  The following table describes those properties and how they map to AllJoyn:
 
-![IAdapter Table]({{site.baseurl}}/images/AllJoyn/IAdapterTable.png)
+| IAdapter Property | Description | Bridge Mapping |
+| :---------------- | :---------- | :------------- |
+| AdapterName       | Model of this adapter.  Also the suffix used for this adapter’s advertised name. (See ExposedAdapterPrefix.) | AllJoyn About Data Model Number |
+| ExposedAdapterPrefix |Prefix used when creating the advertised name of this bridge on the AllJoyn bus.  The adapter will be exposed with the following name: {ExposedAdapterPrefix}.DeviceSystemBridge.{AdapterName}. | AllJoyn Bus Attachment’s Advertised Name |
+| ExposedApplciationGUID | A GUID, provided by your adapter, that uniquely identifies this adapter.  This GUID also applies to the about data for all devices managed by this adapter.|AllJoyn About Data Application ID for this adapter and all devices that are exposed by this adapter. |
+| ExposedApplicationName | A friendly application name that is exposed by this adapter.  This name also applies to all devices managed by this adapter. | AllJoyn About Data Application Name for this adapter and all devices that are exposed by this adapter. |
+| Vendor | Vendor name of this adapter | AllJoyn About Data Manufacturer |
+| Version | Software version of this adapter | AllJoyn About Data SW Version |
 
 ####IAdapter::Initialize
 
@@ -56,7 +63,21 @@ Each device exposes a single alljoyn interface for exposing all properties, meth
 
 Similar to an IAdapter, each IAdapterDevice is required to implement properties that the bridge uses to expose your device to AllJoyn.  The following table describes each property and how the bridge maps it to AllJoyn. 
 
-![IAdapterDevice Table]({{site.baseurl}}/images/AllJoyn/IAdapterDeviceTable.png)
+| IAdapterDevice Property | Description | Bridge Mapping |
+| :---------------------- | :---------- | :------------- |
+| ControlPanelHandler     | A control panel that can operate this device. | Exposed as an org.alljoyn.ControlPanel.ControlPanel under a /ControlPanel bus object |
+| Description             | A description of this device. | AllJoyn About Data Description |
+| FirmwareVersion         | Software version of this device | AllJoyn About Data Firmware Version |
+| Icon                    | A graphical icon that this device exposes to alljoyn. This can be null if there is no icon. |  	Exposed as a standard AllJoyn About Icon |
+| Methods                 | This is the set all Methods that your device exposes to AllJoyn. | This can be empty if there are no methods. Exposed as methods under the MainInterface with each method’s name. Non-unique names are appended with a unique ID. |
+| Model                   | Model of this device | AllJoyn Bus Data Model Number |
+| Name	                  | Name of this device	AllJoyn About Data Device Name. | This is also used for the suffix for this device’s advertised name: {ExposedAdapterPrefix}.{AdapterName}.{Name} |
+| Properties              | This is the set of all properties that your device exposes to AllJoyn. This can be empty if there are no properties, but if this is not empty, then at least one signal, the Change of Value signal must also be supported. | See IProperty |
+| SerialNumber            | Serial Number of this device | AllJoyn About Data Serial Number |
+| Signals                 | This is the set of all signals that this device exposes to AllJoyn. | Exposed as AllJoyn Signals |
+| Vendor                  | Vendor name of this device | AllJoyn About Data Manufacturer |
+| Version                 | Software version of this device | AllJoyn About Data SW Version |
+
 
 ###III. IAdapterProperty
 
@@ -74,33 +95,36 @@ Alternatively, the interface name can be overridden by the property to map to a 
 
 	{InterfaceHint} 
 
-![IAdapterProperty Table]({{site.baseurl}}/images/AllJoyn/IAdapterPropertyTable.png)
+| IAdapterProperty Properties |	Description                        | Bridge Mapping |
+| :-------------------------- | :--------------------------------- | :-------------------------------------------- |
+| Attributes	              |Collection of IAdapterAttributes    | Set of AllJoyn Properties (See IAdapterValue) |
+| InterfaceHint | An override for this property that can be used to map this property to some other well known interface type.  Return null to use the default behavior | AllJoyn Interface name for this Property (if specified) |
+| Name | Name of Property | AllJoyn Property |
 
-###IV. IAdapterAttribute
-
-An IAdapterAttribute is a key-value pair of data.  This is the child of an Alljoyn property.  Each IAdapterAttribute is exposed as the child of an AllJoyn property with the following bus object and interface name:   
-
-	/{PropertyName}/{ValueName} 
-
-	{ExposedAdapterPrefix}.{AdapterName}.{PropertyName}.{AttributeName} 
-		
-![IAdapterAttribute Table]({{site.baseurl}}/images/AllJoyn/IAdapterAttributeTable.png)
-
-###V. IAdapterSignal
-
-From the bridge’s perspective an ISignal represents an event that your device can raise when something changes.  All devices typically have a Change of Value signal.  This signal alerts AllJoyn clients that one or more properties have changed on a device. Additional signals may also be supported.
-
-Each ISignal is announced to AllJoyn as a Hosted Session signal for a device with the signals Name.  
-The following properties must be implemented for an ISignal
-
-![IAdapteSignal Table]({{site.baseurl}}/images/AllJoyn/IAdapterSignalTable.png)
-
-###VI. IAdapterValue
+###V. IAdapterValue
 
 Each IAdapterValue is exposed as a child of an AllJoyn property with the following bus object and interface name:
 
 	/{PropertyName}/{ValueName}
 	
 	{ExposedAdapterPrefix}.{AdapterName}.{PropertyName}.{ValueName}
+
+| IAdapterValue Properties    | Description                        | Bridge Mapping                                |
+| :-------------------------- | :--------------------------------- | :-------------------------------------------- |
+| Data	                      | The actual data value of a property on a bridged device.| An AllJoyn Property|
+| Name                        | Name of value                      | Name of an AllJoyn Property|
+
+###IV. IAdapterSignal
+
+From the bridge’s perspective an ISignal represents an event that your device can raise when something changes.  All devices typically have a Change of Value signal.  This signal alerts AllJoyn clients that one or more properties have changed on a device. Additional signals may also be supported.
+
+Each ISignal is announced to AllJoyn as a Hosted Session signal for a device with the signals Name.  
+The following properties must be implemented for an ISignal
+
+| ISignal Properties          | Description                        | Bridge Mapping                                |
+| :-------------------------- | :--------------------------------- | :-------------------------------------------- |
+| Name	                      |Name of Signal                      | AllJoyn Signal |
+| Params | A set of objects that changed and their new values, or null if this is a pure signal. | Maps to an array of alljoyn signal arguments passed to the signal. |
+
 
 

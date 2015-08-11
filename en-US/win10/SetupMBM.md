@@ -13,13 +13,13 @@ Learn how to set up the MinnowBoard Max hardware and connect it to your computer
 
 ##What you need
 1. **A PC running Windows 10** (Prepared in the previous step)
-2. **MinnowBoard Max**
-3. **Power supply**
-4. <a name="MBM_SDcard"></a>**8GB micro SD card** - class 10 or better. (We suggest this [one](http://www.amazon.com/gp/product/B00IVPU786){:target="_blank"} or this [one](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445){:target="_blank"})
-5. **HDMI cable and monitor**
-6. **Ethernet cable**
-7. **Micro SD card reader**
-7. **USB keyboard**
+1. **MinnowBoard Max**
+1. **Power supply**
+1. <a name="MBM_SDcard"></a>**8GB micro SD card** - class 10 or better. (We suggest this [one](http://www.amazon.com/gp/product/B00IVPU786){:target="_blank"} or this [one](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445){:target="_blank"})
+1. **HDMI cable and monitor**
+1. **Ethernet cable**
+1. **Micro SD card reader** (Due to an issue with most internal SD card readers, we suggest an external USB card reader like this [one](http://www.amazon.com/dp/B009D79VH4){:target="_blank"} or this [one](http://www.amazon.com/dp/B0096FB5CW){:target="_blank"})
+1. **USB keyboard**
 
 ##Hook Up Your Board
 1. **Connect a USB keyboard** to one of the USB ports on the board.

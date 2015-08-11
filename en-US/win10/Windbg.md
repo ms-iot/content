@@ -50,7 +50,7 @@ Here is the second command you need to run:
 
 On your development machine, you can start WinDbg with the PORT_NUM and the KEY values you provided in the previous steps as follows:
 
-        "c:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k net:port=<PORT_NUM>, key=<KEY>
+        "c:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k net:port=<PORT_NUM>,key=<KEY>
 
 ##Raspberry Pi 2 (RPi2) 
 
@@ -123,6 +123,6 @@ As suggested earlier, use the Device Manager on your development PC to find out 
 
 On your development machine you can start WinDbg as follows:
 
-        "C:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k com:port=<PORT> baud=912600
+        "C:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k com:port=<PORT>,baud=912600
 
 * Please note that 'PORT' refers to the COM port number your USB-to-TTL cable was assigned in the system and displayed in the Device Manager under "Ports (COM & LPT)".

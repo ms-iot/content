@@ -13,7 +13,7 @@ Learn how to get your PC ready for developing IoT applications using Windows Rem
 
 ##Installation
 
-There are three ways to add the Windows Remote Arduino library to your solution, in order from easiest to most difficult.
+There are two ways to add the Windows Remote Arduino library to your solution, in order from easiest to most difficult.
 
 1. [Install the NuGet package](#option-1-install-the-nuget-package)
 2. [Manually add the Windows Remote Arduino project files to your solution](#option-2-add-the-windows-remote-arduino-projects-to-your-solution)
