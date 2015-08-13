@@ -10,7 +10,9 @@ To setup your Windows 10 IoT Core development PC, you first need to install the 
 
 3. **Validate your Visual Studio installation** by selecting *Help > About Microsoft Visual Studio*.  The required version of **Visual Studio** is `14.0.23107.0 D14Rel`.  The required version of **Visual Studio Tools for Universal Windows Apps** is `14.0.23121.00 D14OOB`.
 
-4. Make sure you've **enabled developer mode** by following [these instructions](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx){:target="_blank"}.
+4. **Install Windows IoT Core Project Templates** from [here](https://visualstudiogallery.msdn.microsoft.com/06507e74-41cf-47b2-b7fe-8a2624202d36).  Alternatively, the templates can be found by searching for `Windows IoT Core Project Templates` in the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/) or directly from Visual Studio in the Extension and Updates dialog (Tools > Extensions and Updates > Online). 
+
+5. Make sure you've **enabled developer mode** by following [these instructions](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx){:target="_blank"}.
 
 
 
