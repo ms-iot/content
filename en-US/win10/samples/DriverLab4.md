@@ -13,8 +13,8 @@ For this exercise you can use the gpiokmdfdemo sample driver found [here](https:
 ###On the target device
 This section describes the steps required to configure your target device for driver development.
 
-* Make sure that your device has an IoTCore image installed by following the instructions [here]({{site.baseurl}}/{{page.lang}}/GetStarted.htm)
-* Connect to your target device via Powershell as described in the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)
+* Make sure that your device has an IoTCore image installed by following the instructions [here]({{site.baseurl}}/{{page.lang}}/GetStarted.htm).
+* Connect to your target device via Powershell as described in the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
 * For current release there are a few provisioning steps you need to do.  These steps will be automated in the future.
 * Now configure your target device so that it can interact with Visual Studio.  Through the PowerShell window enter the commands listed below.
 		
