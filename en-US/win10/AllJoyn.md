@@ -19,7 +19,7 @@ The AllJoyn framework provides a common language interface that enables IoT devi
 
 The AllJoyn framework establishes a standard by which devices and apps can advertise and discover each other.  AllJoyn devices describe their capabilities via service interfaces on a virtual bus.  The AllJoyn Bus is composed of two types of nodes:
 
-* *Routing Notes (RN)* - Also referred to as "Routers", they can talk to any node.
+* *Routing Nodes (RN)* - Also referred to as "Routers", they can talk to any node.
 * *Leaf Nodes (LN)* - Also referred to as "Applications", they can talk to routing nodes or other leaf nodes via routing nodes.
 
 ![AllJoyn Routers & Apps]({{site.baseurl}}/images/AllJoyn/AllJoyn_Routers_Apps.png)
