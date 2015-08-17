@@ -63,7 +63,7 @@ Make sure to follow these steps to correctly configure your device running Windo
 
         net user Administrator [new password]
         
-    Once this is done, you'll need to establish a new PowerShell session using Exit-PSSession and Enable-PSSession with the new credentials.
+    Once this is done, you'll need to establish a new PowerShell session using Exit-PSSession and Enter-PSSession with the new credentials.
     
     	Exit-PSSession
     	Enter-PSSession -ComputerName <machine-name or IP Address> -Credential <machine-name or IP Address or localhost>\Administrator
