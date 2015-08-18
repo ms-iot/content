@@ -15,7 +15,7 @@ lang: zh-CN
 1. **Windows 10** - 必须是 Windows 计算机（不是虚拟机）。
 2. **Raspberry Pi 2**。
 3. **5V 微型 USB 电源** - 使用至少 1.0A 电流。
-4. **8GB 微型 SD 开** - 类 10 或更高。（我们建议使用[这个](http://www.amazon.com/gp/product/B00IVPU786)或[这个](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445)）
+4. **8GB 微型 SD 卡** - 类 10 或更高。（我们建议使用[这个](http://www.amazon.com/gp/product/B00IVPU786)或[这个](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445)）
 5. **HDMI 电缆**（如果需要显示）。
 6. **以太网电缆**。
 
