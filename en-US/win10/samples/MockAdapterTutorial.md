@@ -35,7 +35,7 @@ This tutorial demonstrates the function of the AllJoyn Device System Bridge (DSB
 3. Navigate to the extracted folder and open the MockAdapter.sln solution file in Visual Studio.
 4. Once the solution has been opened in Visual Studio, Navigate to the Solution explorer and right click the HeadlessAdapterApp project. Select "Set as Startup Project".
 
-![set_startup]({{site.baseurl}}/images/AllJoyn/mockadapter_vs.png)
+![set_startup]({{site.baseurl}}/images/MockAdapter/mockadapter_vs.png)
 
 5. 	In the Main menu bar, select “Debug” -> HeadlessAdapterApp properties…”
 6.	Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#cpp)

@@ -72,8 +72,8 @@ Learn how to set up the Raspberry Pi 2 and connect it to your computer.
 <img class="device-images" src="{{site.baseurl}}/images/rpi2.png">
 
 ##Boot Windows 10 IoT Core
-1. Windows 10 IoT Core will boot automatically after connecting power the supply. This will take a few minutes.
-2. Once the device has booted, the DefaultApp will launch and display the IP address of RPi2.
+1. Windows 10 IoT Core will boot automatically after connecting the power supply. This process will take a few minutes.
+2. Once the device has booted, the DefaultApp will launch and display the IP address of your RPi2.
 
 	<img class="device-images" src="{{site.baseurl}}/images/DefaultAppRpi2.png">
 
