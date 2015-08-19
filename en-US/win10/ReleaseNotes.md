@@ -68,7 +68,7 @@ On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to user mode a
 *	Data breakpoints have been disabled on the Raspberry Pi2 (3370713). WORKAROUND: None at this time
 *	The Azure Active Directory Authentication Library may not work on Windows 10 IoT Core (3379181). WORKAROUND: Do not use the Azure Active Directory Authentication Library.
 *	The MinnowBoard Max and Raspberry Pi2 may be extremely slow to boot up on the first boot when using some 8GB class 10 SD cards. Slow boot times may be over 15 minutes. Subsequent boots will be much quicker on the affected cards (3416260). WORKAROUND: Do not use the affected cards.
-*	The SSH Service my crash when an SSH client does not gracefully close a session.  (3581710, 3602012). WORKAROUND: The SSH Service will restart in this case. 
+*	The SSH Service may crash when an SSH client does not gracefully close a session.  (3581710, 3602012). WORKAROUND: The SSH Service will restart in this case. 
 *	When the device name is longer than 16 characters it may bluescreen while booting with a “CRITICAL_PROCESS_DIED” message (3622767). WORKAROUND: Use less than 16 characters in the device name.
 *	USB speakers may not play audio on the Raspberry Pi2 (3627304). WORKAROUND: Disable the analog audio to enable USB audio.
 *	MediaEncodingProfile.CreateWma(Windows.Media.MediaProperties.AudioEncodingQuality.Auto) may fail on the Raspberry Pi2 with the error message "No suitable transform was found to encode or decode the content. (Exception from HRESULT: 0xC00D5212)". (3634750) WORKAROUND: None.
