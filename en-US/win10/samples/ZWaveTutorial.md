@@ -19,12 +19,11 @@ Z-Wave is a wireless communications protocol designed to allow devices in the ho
 
 1. Raspberry Pi2 with //Build/2015 image. This image contains the driver for the Aeon Labs Z-Wave Stick and the Z-Wave DSB. 
 2. <a name="AllJoyn_Z_Wave"></a>Z-Wave devices  Two Aeon Labs Z-Wave devices are needed for this demo: 
-
-  • Aeon Labs DSA02203-ZWUS Z-Wave Z-Stick Series 2 USB Dongle  
-  • Aeon Labs DSC24-ZWUS Smart Switch Z-Wave Appliance Module   
-3. PC or Laptop with Windows 10   
-  • Windows 10 preview – build 10069 or later  
-  • AllJoyn Explorer (AJX) 
+  * Aeon Labs DSA02203-ZWUS Z-Wave Z-Stick Series 2 USB Dongle  
+  * Aeon Labs DSC24-ZWUS Smart Switch Z-Wave Appliance Module 
+3. PC or Laptop with Windows 10    
+  * Public release of Windows 10 – build 10240 or later  
+  * AllJoyn Explorer (AJX) 
   
   * [AllJoynExplorer_1.0.0.2.zip](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.0.2.zip?raw=true){:target="_blank"} - This zip contains the AllJoyn Explorer AppX bundle.
   * [AllJoyn_Explorer_Setup_Guide_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_Setup_Guide_v1.0.pdf?raw=true){:target="_blank"} - Manual for installing and launching the AllJoyn Explorer.
