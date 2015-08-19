@@ -14,8 +14,7 @@ This tutorial demonstrates the function of the AllJoyn Device System Bridge (DSB
 ## Prerequisites
 
 1. Raspberry Pi2 running Windows 10 IoT Core build 10240+
-2. PC or Laptop with Windows 10
-  • Windows 10 preview – build 10240+
+2. PC or Laptop with Windows 10 build 10240+
 3. AllJoyn Explorer (AJX)
 
   * [AllJoynExplorer_1.0.0.2.zip](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.0.2.zip?raw=true){:target="_blank"} - This zip contains the AllJoyn Explorer AppX bundle.
