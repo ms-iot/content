@@ -71,7 +71,7 @@ Windows 10 IoT Core supports a variety of peripheral interfaces and protocols. H
 [29]: {{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplay.htm#SPI_Display "Monochrome 1.3” 128x64 OLED graphic display"
 [30]: {{site.baseurl}}/{{page.lang}}/win10/samples/WebCamSample.htm#USB_WebCam "Microsoft LifeCam HD-3000"
 [31]: {{site.baseurl}}/{{page.lang}}/win10/Bluetooth.htm "Bluetooth Support"
-[32]: {{site.baseurl}}/{{page.lang}}/win10/BLEGatt.htm "Generic Attribute Profile Sample "
+[32]: {{site.baseurl}}/{{page.lang}}/win10/samples/BLEGatt.htm "Generic Attribute Profile Sample "
 [33]: {{site.baseurl}}/{{page.lang}}/win10/samples/NodejsCylon.htm "Arduino Leonardo"
 [34]: http://www.raspberrypi-spy.co.uk/2014/07/raspberry-pi-model-b-3-5mm-audiovideo-jack/ "Rpi2 3.5 mm Audio/Video Jack"
 
