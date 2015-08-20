@@ -227,7 +227,7 @@ lang: en-US
                     </div>
                     <div class="col-md-3">
                         <h4>Potentiometer Sensor Sample (RPi2 Basic Kit Lab)</h4>
-                        <p>Raspberry Pi 2 Basic Kit Lab - A analog sensor is connected to RaspBerry Pi through ADC converter and digital output data is displayed through Monitor and LED </p>
+                        <p>Raspberry Pi 2 Basic Kit Lab - A analog sensor is connected to Raspberry Pi through ADC converter and digital output data is displayed through Monitor and LED </p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm">Potentiometer Sensor Sample (C#)</a>
                     </div>
                    <div class="col-md-3">
@@ -273,7 +273,7 @@ lang: en-US
                     </div>
                     <div class="col-md-3">
                         <h4>Cylon Node.js App (Console)</h4>
-                        <p>Control an Arduino with a Cylon Node.js app running on a RaspBerry Pi 2 with Windows 10 IoT Core</p>
+                        <p>Control an Arduino with a Cylon Node.js app running on a Raspberry Pi 2 with Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsCylon.htm">Cylon (Node.js)</a>
                     </div>
                     <div class="col-md-3">
