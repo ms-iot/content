@@ -17,7 +17,7 @@ Windows 10 IoT Core supports a variety of peripheral interfaces and protocols. H
 | Audio (analog)  | Yes (onboard 3.5 mm stereo phone jack)           | No                                               | [Rpi2 3.5 mm TRRS Audio/Video Jack][34] |
 | Audio (digital) | No                                               | Yes (via HDMI)                                   |  |
 | Audio (USB)     | Yes (via USB adapter)                            | Yes (via USB adapter)                            | [Sabrent USB External Stereo Sound Adapter, Model AU-EMAC][12][^1] |
-| Bluetooth v4.0  | [Yes][31] ([LE/GATT][32], RFCOMM, HID) via USB adapter | [Yes][31] ([LE/GATT][32], RFCOMM, HID) via USB adapter | * [Mini USB Bluetooth CSR V4.0 Adapter][13] <br> * [Mini Bluetooth Keyboard with Built-in Touchpad, Model: IS11-BT05][14] <br> * [Orico Model A Bluetooth dongle][2]|
+| Bluetooth v4.0  | [Yes][31] ([LE/GATT][32], RFCOMM, HID) via USB adapter | [Yes][31] ([LE/GATT][32], RFCOMM, HID) via USB adapter | * [Mini Bluetooth Keyboard with Built-in Touchpad, Model: IS11-BT05][14] <br> * [List of upported USB dongles][31] |
 | Ethernet        | Yes (10/100 Mbps)                                | Yes (10/100/1000 Mbps)                           |  |
 | GPIO            | [13x GPIOs][3]                                   | [10x GPIOs][4]                                   |  |
 | HDMI            | Yes                                              | Yes (micro HDMI)                                 |  |
