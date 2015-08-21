@@ -10,25 +10,25 @@ lang: en-US
 Windows 10 IoT Core supports a variety of peripheral interfaces and protocols. Here is a list of what's been validated on the **Raspberry Pi 2** and **MinnowBoard Max**:
 
 {:.table.table-bordered}
-|-----------------|--------------------------------------------------|--------------------------------------------------|--------------------------------------------------------------------|
-| Interface       | Raspberry Pi 2                                   | MinnowBoard Max                                  | Reference Peripheral                                               |
-|-----------------|--------------------------------------------------|--------------------------------------------------|--------------------------------------------------------------------|
-| AllJoyn         | [Yes][1]                                         | [Yes][1]                                         | * [Aeon Labs DSA02203-ZWUS Z-Wave Z-Stick Series 2 USB Dongle][20] <br> * [Aeon Labs DSC24-ZWUS Smart Switch Z-Wave Appliance Module][20] |
-| Audio (analog)  | Yes (onboard 3.5 mm stereo phone jack)           | No                                               | [Rpi2 3.5 mm TRRS Audio/Video Jack][34] |
-| Audio (digital) | No                                               | Yes (via HDMI)                                   |  |
-| Audio (USB)     | Yes (via USB adapter)                            | Yes (via USB adapter)                            | [Sabrent USB External Stereo Sound Adapter, Model AU-EMAC][12][^1] |
-| Bluetooth v4.0  | [Yes][31] ([LE/GATT][32], RFCOMM, HID) via USB adapter | [Yes][31] ([LE/GATT][32], RFCOMM, HID) via USB adapter | * [Mini USB Bluetooth CSR V4.0 Adapter][13] <br> * [Mini Bluetooth Keyboard with Built-in Touchpad, Model: IS11-BT05][14] <br> * [Orico Model A Bluetooth dongle][2]|
-| Ethernet        | Yes (10/100 Mbps)                                | Yes (10/100/1000 Mbps)                           |  |
-| GPIO            | [13x GPIOs][3]                                   | [10x GPIOs][4]                                   |  |
-| HDMI            | Yes                                              | Yes (micro HDMI)                                 |  |
-| I<sup>2</sup>C  | [Yes][5]                                         | [Yes][6]                                         | * [Sparkfun ADXL345 accelerometer board][26] <br> * [MCP23008 8-bit I/O Port Expander][27] |
-| Micro SD (SDIO) | [Yes][7]                                         | [Yes][8]                                         | [Universal Media Reader F4U003][23] |
-| SPI             | [2x SPI][9]                                      | [Yes][10]                                        | * [Sparkfun ADXL345 accelerometer board][28] <br> * [Monochrome 1.3” 128x64 OLED graphic display][29] |
-| UART (onboard)  | No                                               | [2x UART][11]                                    | [USB-to-TTL Adapter][25] |
-| UART (USB)      | Yes (via USB adapter)                            | Yes (via USB adapter)                            | * [USB-to-TTL Adapter][24] <br> * [Arduino Leonardo][33] |
-| USB             | 4x USB 2.0 (host)                                | 1x USB 2.0 (host), 1x USB 3.0 (host)             | * [Sabrent USB 2.0 Floppy Disk Drive][19] <br> * [Perixx Peripad-201 Plus Slim USB Keyboard][21] <br> * [Perixx Peripad-501 Professional Touchpad][22] <br> * [Microsoft LifeCam HD-3000][30] |
-| WiFi            | Yes (via USB adapter)                            | Yes (via USB adapter)                            | [External USB WiFi Adapters][18] |
-| HID             |                                                  |                                                  | * [Rii Mini Wireless Keyboard, Model: RT-MWK01][15] <br> * [Xbox-360 controller (wired)][16][^2] <br> * [Xbox-360 controller (wireless)][17][^2] |
+|-----------------|--------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------------------------|
+| Interface       | Raspberry Pi 2                                         | MinnowBoard Max                                        | Reference Peripheral                                               |
+|-----------------|--------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------------------------|
+| AllJoyn         | [Yes][1]                                               | [Yes][1]                                               | * [Aeon Labs DSA02203-ZWUS Z-Wave Z-Stick Series 2 USB Dongle][20] <br> * [Aeon Labs DSC24-ZWUS Smart Switch Z-Wave Appliance Module][20] |
+| Audio (analog)  | Yes (onboard 3.5 mm stereo phone jack)                 | No                                                     | [Rpi2 3.5 mm TRRS Audio/Video Jack][34] |
+| Audio (digital) | No                                                     | Yes (via HDMI)                                         |  |
+| Audio (USB)     | Yes (via USB adapter)                                  | Yes (via USB adapter)                                  | [Sabrent USB External Stereo Sound Adapter, Model AU-EMAC][12][^1] |
+| Bluetooth v4.0  | [Yes][31] ([LE/GATT][32], RFCOMM, HID) via USB adapter | [Yes][31] ([LE/GATT][32], RFCOMM, HID) via USB adapter | * [Mini USB Bluetooth CSR V4.0 Adapter][13] <br> * [ORICO BTA-403 Mini Bluetooth 4.0 USB Dongle][2] <br> * [Mini Bluetooth Keyboard with Built-in Touchpad, Model: IS11-BT05][14] |
+| Ethernet        | Yes (10/100 Mbps)                                      | Yes (10/100/1000 Mbps)                                 |  |
+| GPIO            | [13x GPIOs][3]                                         | [10x GPIOs][4]                                         |  |
+| HDMI            | Yes                                                    | Yes (micro HDMI)                                       |  |
+| I<sup>2</sup>C  | [Yes][5]                                               | [Yes][6]                                               | * [Sparkfun ADXL345 accelerometer board][26] <br> * [MCP23008 8-bit I/O Port Expander][27] |
+| Micro SD (SDIO) | [Yes][7]                                               | [Yes][8]                                               | [Universal Media Reader F4U003][23] |
+| SPI             | [2x SPI][9]                                            | [Yes][10]                                              | * [Sparkfun ADXL345 accelerometer board][28] <br> * [Monochrome 1.3” 128x64 OLED graphic display][29] |
+| UART (onboard)  | No                                                     | [2x UART][11]                                          | [USB-to-TTL Adapter][25] |
+| UART (USB)      | Yes (via USB adapter)                                  | Yes (via USB adapter)                                  | * [USB-to-TTL Adapter][24] <br> * [Arduino Leonardo][33] |
+| USB             | 4x USB 2.0 (host)                                      | 1x USB 2.0 (host), 1x USB 3.0 (host)                   | * [Sabrent USB 2.0 Floppy Disk Drive][19] <br> * [Perixx Peripad-201 Plus Slim USB Keyboard][21] <br> * [Perixx Peripad-501 Professional Touchpad][22] <br> * [Microsoft LifeCam HD-3000][30] |
+| WiFi            | Yes (via USB adapter)                                  | Yes (via USB adapter)                                  | [External USB WiFi Adapters][18] |
+| HID             |                                                        |                                                        | * [Rii Mini Wireless Keyboard, Model: RT-MWK01][15] <br> * [Xbox-360 controller (wired)][16][^2] <br> * [Xbox-360 controller (wireless)][17][^2] |
 
 *[GPIO]: General-Purpose Input/Output
 *[RFCOMM]: Radio Frequency Communication
@@ -41,7 +41,7 @@ Windows 10 IoT Core supports a variety of peripheral interfaces and protocols. H
 *[HID]: Human Interface Device
 
 [1]: {{site.baseurl}}/{{page.lang}}/win10/AllJoyn.htm "AllJoyn Connectivity"
-[2]: {{site.baseurl}}/{{page.lang}}/win10/Bluetooth.htm#Bluetooth_Dongle "Orico Model A Bluetooth dongle"
+[2]: http://www.oricothailand.com/2011/index.php?module=main&pages=Product%20info&tp=1&product=560 "ORICO BTA-403 Mini Bluetooth 4.0 USB Dongle"
 [3]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm#RPi2_GPIO "Raspberry Pi 2 GPIOs"
 [4]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm#MBM_GPIO "MinnowBoard Max GPIOs"
 [5]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm#RPi2_I2C "Raspberry Pi 2 I2C bus"
