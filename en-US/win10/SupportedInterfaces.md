@@ -41,7 +41,7 @@ Windows 10 IoT Core supports a variety of peripheral interfaces and protocols. H
 *[HID]: Human Interface Device
 
 [1]: {{site.baseurl}}/{{page.lang}}/win10/AllJoyn.htm "AllJoyn Connectivity"
-[2]: http://www.amazon.com/ORICO-BTA-403-Bluetooth-Adapter-Compatible/dp/B00ESBRTMO/ref=sr_1_7?ie=UTF8&qid=1436917745&sr=8-7&keywords=bluetooth+4.0+orico "ORICO BTA-403 Low Energy Bluetooth 4.0 Adapter"
+[2]: http://amzn.com/B00ESBCT56 "ORICO BTA-403 Low Energy Bluetooth 4.0 Adapter"
 [3]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm#RPi2_GPIO "Raspberry Pi 2 GPIOs"
 [4]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm#MBM_GPIO "MinnowBoard Max GPIOs"
 [5]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm#RPi2_I2C "Raspberry Pi 2 I2C bus"
