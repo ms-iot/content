@@ -41,9 +41,12 @@ Select the template `Basic Node.js Cylon Application (Universal Windows)`
 
 ![Node.js Cylon Project Dialog]({{site.baseurl}}/images/Nodejs/nodejswucylon-newprojectdialog.png)
 
-You may get a prompt (shown below) to run npm dedupe. If you do, make sure to run it. To avoid getting this prompt, create the project as close to your drive root as possible. e.g. c:\projects\cylonsample.
+You may get a prompt (shown below) to run npm dedupe. If you do, make sure to run it.
 
 ![npm dedupe dialog]({{site.baseurl}}/images/Nodejs/npm-dedupe-dialog.PNG)
+
+If you don't get the prompt, you still need to run npm dedupe to avoid node module paths that are too long for deployment on the Raspberry Pi 2.
+To do this, open a cmd window, go to [Cylon project root]\node_modules, and run `npm dedupe`. 
 
 
 ###Build Serialport
@@ -66,7 +69,6 @@ Steps to build serialport:
 * Copy [serialport clone root]\build\release\serialport.node to [Cylon project root]\node_modules\serialport\build\serialport\v1.7.4\Release\node-v14-win32-arm\serialport.node. 
   "Cylon project root" is the the folder created by your new project in the previous section.
 * Copy [serialport clone root]\serialport.js to [Cylon project root]\node_modules\serialport.js.
-
 
 
 ###Set up the connection between your Arduino and Raspberry Pi 2
