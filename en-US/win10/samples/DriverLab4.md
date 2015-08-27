@@ -38,20 +38,20 @@ Your target device is now configured for driver development using Visual Studio.
 		InstallOEMCerts.cmd
 
  Add your target device to Visual Studio
-* 	Open Visual Studio and select Driver > Test > Configure Devices > Add New Device
-*   Enter a user friendly Display Name for your target device
-*	Select Device Type = Mobile
-*	For Choose Device find and highlight your device.  You can find your device by matching the IP address of your device the one listed in the Choose Device window.
-*	Click Next to move to the next step.
-*	Assure that Host IP matches the IP address of your development machine.
-*	Click Next to move to the next step.
-*	Click Finish to complete the configuration.
+* Open Visual Studio and select Driver > Test > Configure Devices > Add New Device
+* Enter a user friendly Display Name for your target device
+* Select Device Type = Mobile
+* For Choose Device find and highlight your device.  You can find your device by matching the IP address of your device the one listed in the Choose Device window.
+* Click Next to move to the next step.
+* Assure that Host IP matches the IP address of your development machine.
+* Click Next to move to the next step.
+* Click Finish to complete the configuration.
 	
  Configure your Visual Studio project 
-*    Make sure the Target Platform Version matches the SDK installed on your development machine. Select Project Properties from the Solution Explorer window.  Under General Configuration Properties assure that the Target Platform Version matches the SDK installed on your development computer.  You can check the version of the SDK from the Control Panel > Programs > Programs and Features. 
-*	Under Project Properties > Driver Signing > Test Certificate select test certificate
-*	Always update the package version each and every time a new compiled driver is to be deployed to the target device.  Any number is fine, just keep incrementing the number.  The package version is found under Project Properties > PackageGen > Version
-*	Your Visual Studio project is now ready to build and deploy a driver to your target device.
+* Make sure the Target Platform Version matches the SDK installed on your development machine. Select Project Properties from the Solution Explorer window.  Under General Configuration Properties assure that the Target Platform Version matches the SDK installed on your development computer.  You can check the version of the SDK from the Control Panel > Programs > Programs and Features. 
+* Under Project Properties > Driver Signing > Test Certificate select test certificate
+* Always update the package version each and every time a new compiled driver is to be deployed to the target device.  Any number is fine, just keep incrementing the number.  The package version is found under Project Properties > PackageGen > Version
+* Your Visual Studio project is now ready to build and deploy a driver to your target device.
 	
 
 * Next, if you are using the sample gpiokmdfdemo driver you need to generate ACPI table and copy to your target device.  Follow the steps [here]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab2.htm).
