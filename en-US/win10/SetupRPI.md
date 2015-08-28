@@ -40,7 +40,7 @@ Learn how to set up the Raspberry Pi 2 and connect it to your computer.
 
 5. Eject the Virtual CD when done
 
-##Put the Windows 10 IoT Core Insider Preview image on your SD card
+##Put the Windows 10 IoT Core image on your SD card
 
 1. **Insert a micro SD card** into your SD card reader.
 
