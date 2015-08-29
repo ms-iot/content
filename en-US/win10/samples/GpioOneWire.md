@@ -134,7 +134,7 @@ is a 0 or 1.
 
     // capture every falling edge until all bits are received or
     // timeout occurs
-    for (unsigned int i = 0; i < Reading.bits.size();) {
+    for (unsigned int i = 0; i < (Reading.bits.size() + 1);) {
         if (GetTickCount64() > endTickCount) {
             return HRESULT_FROM_WIN32(ERROR_TIMEOUT);
         }
