@@ -1,0 +1,9 @@
+{% assign localurl = page.url | remove_first:page.lang %}
+{% assign localurl = localurl | remove_first:'//'      %}
+{% for stepurl in site.data.steps[include.device]      %}
+{% if stepurl == localurl                              %}
+
+<h3><a href="{{site.baseurl}}/{{page.lang}}/{{site.data.steps[include.device].[forloop.index]}}">Next: {{site.data.step-resources[page.lang][forloop.index]}}</a></h3>
+
+{% endif                                              %}
+{% endfor                                             %}

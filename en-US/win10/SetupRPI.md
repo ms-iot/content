@@ -3,13 +3,14 @@ layout: default
 title: Setup your Raspberry Pi 2
 permalink: /en-US/win10/SetupRPI.htm
 lang: en-US
+deviceName: RPI2
 ---
 
 #Get Started
 
 Learn how to set up the Raspberry Pi 2 and connect it to your computer.
 
-{% include steps.html device="RPI2" %}
+{% include steps.html device=page.deviceName %}
 
 ##What you need
 
@@ -90,3 +91,4 @@ Learn how to set up the Raspberry Pi 2 and connect it to your computer.
 ##Additional Resources
 * [Supported Peripheral Interfaces and Devices]({{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm){:target="_blank"}
 
+{% include nextsteps.html device=page.deviceName %}
