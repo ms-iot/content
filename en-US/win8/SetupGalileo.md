@@ -3,13 +3,14 @@ layout: default
 title: Setup your Intel Galileo
 permalink: /en-US/win8/SetupGalileo.htm
 lang: en-US
+deviceName: Galileo
 ---
 
 #Get Started
 
 This guide will show you how to install and run the Windows Developer Program for IoT on an Intel Galileo Gen1 or Gen2.
 
-{% include steps.html device="Galileo" %}
+{% include steps.html device=page.deviceName %}
 
 ## Step 1: Sign up for Microsoft Connect
 We release Windows for Galileo through the Microsoft Connect program.  Please go to the [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"} site to sign up.  You can find step-by-step instructions for signing up for Microsoft Connect [here]({{site.baseurl}}/{{page.lang}}/SigninMSConnect.htm){:target="_blank"}.
@@ -116,3 +117,5 @@ After the microSD activity LED stops blinking, you may unplug the Galileo.
 
 NOTE
 : If you do not shut the Galileo down, the next boot will take much longer. During this time, Windows will run a check disk on the SD card to verify the integrity of the file system. Please allow this to finish.
+
+{% include nextsteps.html device=page.deviceName %}
