@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Blinky Sample
-permalink: /zh-CN/win10/samples/BlinkyMBM.htm
-lang: zh-CN
+permalink: /en-US/win10/samples/BlinkyMBM.htm
+lang: en-US
 ---
 
 {% include steps.html device="MBM" %}

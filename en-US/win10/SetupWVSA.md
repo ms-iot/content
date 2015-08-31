@@ -3,14 +3,13 @@ layout: default
 title: SetupWindowsVirualShieldsArduino
 permalink: /en-US/win10/SetupWVSA.htm
 lang: en-US
-deviceName: WVSA
 ---
 
 #Get Started
 
 This section explains how to set up your Windows Virtual Shields for Arduino!
 
-{% include steps.html device=page.deviceName %}
+{% include steps.html device="WVSA" %}
 
 #Setup for Windows Virtual Shields for Arduino (Arduino and PC)
 
@@ -57,4 +56,3 @@ This section explains how to set up your Windows Virtual Shields for Arduino!
  7. Press the Reset button on your Arduino.
  5. You should see a hello message on the Virtual Shields for Arduino phone app.
 
- {% include nextsteps.html device=page.deviceName %}
