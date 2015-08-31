@@ -41,9 +41,9 @@ Make sure to follow these steps to correctly configure your device running Windo
 
     Do enter `Y` to confirm the change.
 
-        NOTE: If you want to connect multiple devices, you can use comma and quotation marks to separate each devices.
+* Note: If you want to connect multiple devices, you can use comma and quotation marks to separate each devices.
         
-	Set-Item WSMan:\localhost\Client\TrustedHosts -Value "<machine1-name or IP Address>,<machine2-name or IP Address>"
+        Set-Item WSMan:\localhost\Client\TrustedHosts -Value "<machine1-name or IP Address>,<machine2-name or IP Address>"
 	
 * Now you can start a session with you Windows IoT Core device. From you administrator PS console, type:
 
