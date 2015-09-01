@@ -19,7 +19,7 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 * Install Visual Studio 2015.
 * Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
 * Install npm v3 (to take advantage of the flat node module dependency structure npm v3 introduced):
-  * Open a command window and run `npm install -g npm-windows-upgrade`
+  * Open a command window (as Administrator) and run `npm install -g npm-windows-upgrade`
   * Then run `npm-windows-upgrade --version:3.2.2`
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 * Install Arduino software from [here](https://www.arduino.cc/en/Main/Software).
@@ -61,14 +61,12 @@ Steps to build serialport:
 * Go to the node.js clone root using a command window.
 * Run `git checkout ch0.12-uwp`
 * Run `vcbuild.bat arm chakra uwp-dll openssl-no-asm` and wait node to build.
-* Clone [this](https://github.com/munyirik/node-serialport) temporary fork of serialport.
-* Go to the serialport clone root using a command window.
-* Run `git checkout uwp`
-* Run `node.exe [node.js clone root]\deps\npm\node_modules\node-gyp\bin\node-gyp.js rebuild --nodedir=[node.js clone root] --node_win_onecore --winplat=uwp --target_arch=arm --module_name=serialport --module_path=.`
+* Clone [this](https://github.com/munyirik/node-serialport) temporary fork of serialport and checkout the 'uwp' branch.
+* In a cmd window, go to the serialport clone root and run `node.exe [node.js clone root]\deps\npm\node_modules\node-gyp\bin\node-gyp.js rebuild --nodedir=[node.js clone root] --node_win_onecore --winplat=uwp --target_arch=arm --module_name=serialport --module_path=.`
 * If the last step is successful, you will see **serialport.node** in [serialport clone path]\build\release.
 * Copy [serialport clone root]\build\release\serialport.node to [Cylon project root]\node_modules\serialport\build\serialport\v1.7.4\Release\node-v14-win32-arm\serialport.node. 
   "Cylon project root" is the the folder created by your new project in the previous section.
-* Copy [serialport clone root]\serialport.js to [Cylon project root]\node_modules\serialport.js.
+* Copy [serialport clone root]\serialport.js to [Cylon project root]\node_modules\serialport\serialport.js.
 
 
 ###Set up the connection between your Arduino and Raspberry Pi 2
