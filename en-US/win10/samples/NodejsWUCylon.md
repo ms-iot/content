@@ -46,7 +46,8 @@ You may get a prompt (shown below) to run npm dedupe. If you do, make sure to ru
 ![npm dedupe dialog]({{site.baseurl}}/images/Nodejs/npm-dedupe-dialog.PNG)
 
 If you don't get the prompt, you still need to run npm dedupe to avoid node module paths that are too long for deployment on the Raspberry Pi 2.
-To do this, open a cmd window, go to [Cylon project root]\node_modules, and run `npm dedupe`. 
+To do this, right click on the node_modules folder in the Solution Explorer window. Then click on "Open Command Prompt Here...". 
+When the command window opens, run `npm dedupe`.
 
 
 ###Build Serialport
