@@ -287,6 +287,17 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/IoTBrowser.htm">IoT Browser (C#)</a><br>
                     </div>
                 </div>
+                
+                <div class="row section-heading">
+                    <div class="col-md-3">
+                        <h4>GPIO OneWire (C++)</h4>
+                        <p>Create an app that uses GPIO to read from the DHT11, a temperature and humidity sensor that uses a single-wire protocol.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/GpioOneWire.htm">GPIO OneWire (C++)</a>
+                    </div>
+                    <div class="col-md-3"><!-- column placeholder --></div>
+                    <div class="col-md-3"><!-- column placeholder --></div>
+                    <div class="col-md-3"><!-- column placeholder --></div>
+                </div>
 
                 <div class="row section-heading">
                     <h2>Previous Version of Windows</h2>
