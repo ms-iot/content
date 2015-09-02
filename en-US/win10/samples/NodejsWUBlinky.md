@@ -11,7 +11,6 @@ lang: en-US
 ###Set up your PC
 * Install Windows 10.
 * Install Visual Studio 2015.
-* Install Windows 10 SDK (only if it wasn't included in the Visual Studio 2015 installation).
 * Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
 
 ###Set up your hardware
