@@ -17,6 +17,7 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 ###Set up your PC
 * Install Windows 10.
 * Install Visual Studio 2015.
+* Install Windows 10 SDK (only if it wasn't included in the Visual Studio 2015 installation).
 * Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
 * Install npm v3 (to take advantage of the flat node module dependency structure npm v3 introduced):
   * Open a command window (as Administrator) and run `npm install -g npm-windows-upgrade`
