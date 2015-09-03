@@ -70,9 +70,8 @@ Create folder for Node on the device using an explorer window called C:\CylonSam
 Build [serialport](https://www.npmjs.com/package/serialport), a Cylon dependency, that you will copy to the Raspberry Pi 2. Since serialport is a native module, 
 we cannot run `npm install` on Windows IoT core to build the code. We will build on the PC and then copy the package to the device.
 
-* Clone [serialport](https://github.com/voodootikigod/node-serialport).
-* Edit serialport_win.cpp with the change in [https://github.com/voodootikigod/node-serialport/pull/550](https://github.com/voodootikigod/node-serialport/pull/550). **This step is temporary until the pull request is merged**.
-* Run `npm install nan`.
+* Clone [this](https://github.com/ms-iot/node-serialport) temporary fork of serialport and checkout the 'master' branch.
+* In the node-serialport root, run `npm install nan` from a command window.
 * Run `"[Node.js (Chakra) installation path]\node_modules\npm\bin\node-gyp-bin\node-gyp.cmd" rebuild --module_name=serialport --module_path=. --target_arch=arm` 
   The default Node.js (Chakra) installation path is "c:\Program Files (x86)\Node.js (chakra)".
 * If the last step is successful, you will see **serialport.node** in [serialport clone path]\build\Release
