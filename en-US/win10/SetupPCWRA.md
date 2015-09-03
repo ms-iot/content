@@ -3,13 +3,14 @@ layout: default
 title: SetupPCWRA
 permalink: /en-US/win10/SetupPCWRA.htm
 lang: en-US
+deviceName: WRA
 ---
 
 #Get Started
 
 Learn how to get your PC ready for developing IoT applications using Windows Remote Arduino.
 
-{% include steps.html device="WRA" %}
+{% include steps.html device=page.deviceName %}
 
 ##Installation
 
@@ -153,3 +154,5 @@ You must add these DeviceCapability tags *inside* the `<Capabilities>` tag.
 ###Windows 8.1
 
 Unfortunately, this library does not support USB on Windows 8.1.
+
+{% include nextsteps.html device=page.deviceName %}
