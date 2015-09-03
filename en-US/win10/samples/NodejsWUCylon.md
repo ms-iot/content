@@ -62,7 +62,7 @@ Steps to build serialport:
 * Go to the node.js clone root using a command window.
 * Run `git checkout ch0.12-uwp`
 * Run `vcbuild.bat arm chakra uwp-dll openssl-no-asm` and wait node to build.
-* Clone [this](https://github.com/munyirik/node-serialport) temporary fork of serialport and checkout the 'uwp' branch.
+* Clone [this](https://github.com/ms-iot/node-serialport) temporary fork of serialport and checkout the 'uwp' branch.
 * In a cmd window, go to the serialport clone root and run `node.exe [node.js clone root]\deps\npm\node_modules\node-gyp\bin\node-gyp.js rebuild --nodedir=[node.js clone root] --node_win_onecore --winplat=uwp --target_arch=arm --module_name=serialport --module_path=.`
 * If the last step is successful, you will see **serialport.node** in [serialport clone path]\build\release.
 * Copy [serialport clone root]\build\release\serialport.node to [Cylon project root]\node_modules\serialport\build\serialport\v1.7.4\Release\node-v14-win32-arm\serialport.node. 
