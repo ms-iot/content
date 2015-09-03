@@ -3,13 +3,14 @@ layout: default
 title: SetupPCWVSA
 permalink: /en-US/win10/SetupPCWVSA.htm
 lang: en-US
+deviceName: WVSA
 ---
 
 #Get Started
 
 Learn how to get your PC ready for developing IoT applications using Windows Remote Arduino.
 
-{% include steps.html device="WVSA" %}
+{% include steps.html device=page.deviceName %}
 
 ##Setup for Windows Virtual Shields for Arduino (Phone and PC)
 
@@ -34,3 +35,5 @@ Learn how to get your PC ready for developing IoT applications using Windows Rem
  3. Ensure your phone is developer-unlocked. [This page](https://msdn.microsoft.com/en-us/library/windows/apps/dn614128.aspx){:target="_blank"} refers to Windows Phone 8.1, 8, and 7.1. However, the Registration steps are the same for Windows 10 phones.
  4. Deploy to your device.
  5. Run the Virtual Shields for Arduino application.
+
+ {% include nextsteps.html device=page.deviceName %}
