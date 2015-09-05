@@ -7,7 +7,7 @@ lang: en-US
 
 ##RGB LED Sample
 
-In this sample, we will connect a Tri-color LED to Raspberry Pi 2. The LED will blink changing colors from Red, Blue, and Green.
+In this sample, we will connect a Tri-color LED to Raspberry Pi 2. The LED will blink changing colors from Red, Blue, Green.
 
 This is a headed sample, so please ensure that your device is in headed
 mode by running this command: `setbootoption.exe headed` (changing the headed/headless state will require a reboot).
@@ -19,11 +19,9 @@ Also, be aware that the GPIO APIs are only available on Windows IoT Core, so thi
 
 You will need the following components :
 
-* a [754-1615-ND Tri-color LED](http://www.digikey.com/product-detail/en/WP154A4SUREQBFZGC/754-1615-ND/3084119){:target="_blank"}
+* a [754-1615-ND Tri-color LED](http://www.digikey.com/product-detail/en/WP154A4SUREQBFZGC/754-1615-ND/3084119){:target="_blank"})
 
 * a [330 &#x2126; resistor](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
-
-* 2x [100 &#x2126; resistors](http://www.digikey.com/product-detail/en/CFR-25JB-52-100R/100QBK-ND/246){:target="_blank"}
 
 * a breadboard and several male-to-female and male-to-male connector wires
 
@@ -33,19 +31,20 @@ Let's start by wiring up the components on the breadboard as shown in the diagra
 
 ![Breadboard connections]({{site.baseurl}}/images/RGBLED/RGBLED_bb.png)
 
-<sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
+*Image made with [Fritzing](http://fritzing.org/)*
+
 
 Here are the schematics:
 
 ![Circuit Schematic]({{site.baseurl}}/images/RGBLED/RGBLED-schematic_schem.png)
 
+*Image made with [Fritzing](http://fritzing.org/)*
+
 ####Connecting the LED
 
-* Connect the three legs of the LED to Pins 29,31,33 (GPIO 5,6,13) of the Raspberry Pi 2 respectively
+* Connect the three legs of the LED to Pin 29,31,33 (GPIO 5,6,13) of the Raspberry Pi 2 respectively
 
 * Note that Red leg should be connected through a 330 &#x2126; resistor to Pin 29 of Raspberry Pi 2
-
-* The Blue and Green legs should be connected through a 100 &#x2126; resistor each to pins 31 and 33 of the Raspberry Pi 2
 
 * Connect the anode (the longer leg) of the LED to Pin 6 (GND)
 

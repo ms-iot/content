@@ -1,24 +1,14 @@
-﻿{
+{
     "en-US":
     {
         "home":"IoT Home",
         "getstarted":"Get Started",
         "projects":"Projects",
-        "docssamples":"Docs and samples",
+        "docssamples":"Docs &amp; Samples",
         "faq":"FAQs",
         "downloads":"Downloads",
-        "hardware":"Hardware",
-        "community":"Community"
-    },
-	 "zh-CN":
-    {
-        "home":"主页",
-        "getstarted":"入门",
-        "projects":"项目",
-        "docssamples":"文档和示例",
-        "faq":"常见问题",
-        "downloads":"下载",
-        "hardware":"硬件",
-        "community":"社区"
+        "hardware":"Start Now",
+        "community":"Community",
+        "makerfaire":"Maker Faire"
     }
 }

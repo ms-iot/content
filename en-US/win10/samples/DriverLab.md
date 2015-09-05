@@ -35,8 +35,7 @@ The tutorials for this lab will be presented as hands-on tasks that have been gr
 * Deploy driver manually to Windows IoT Core device
 
 ###Note
-In these tutorials you will be required to run various commands. Please use an elevated Windows Command Prompt (cmd.exe) to run these commands.
-You will need to install the Windows Driver Kit (WDK) for Windows 10.  You can download the WDK from here: https://msdn.microsoft.com/en-us/windows/hardware/dn913721(v=vs8.5).aspx
+In these tutorials, you will be required to run various commands. Please use an elevated Windows Command Prompt (cmd.exe) to run these commands.
 
 
 ###Tutorials

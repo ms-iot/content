@@ -28,13 +28,13 @@ This application is designed for a headless device.  To better understand what H
 
 ###Load the project in Visual Studio
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/BlinkyServer/Python/PythonBlinkyServer).  Make a copy of the folder on your disk and open the project from Visual Studio.
+You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/PythonBlinkyServer).  Make a copy of the folder on your disk and open the project from Visual Studio.
 
 If you're building for MinnowBoard Max, select `x86` in the architecture drop down.  If you're building for Raspberry Pi 2, select `ARM`.
 
 Make sure you connect the LED to your board. Go back to the basic 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm) if you need guidance.
 
-Note that the app will not run successfully if it cannot find any available GPIO ports.
+Note that the app will not run successfully if it cannot find any available GPIO ports, for example if you run the app on a VM running Windows IoT Core.
 
 ###Let's look at the code
 The code for this sample is pretty simple. We use _wingpio, http.server and socketserver modules.
