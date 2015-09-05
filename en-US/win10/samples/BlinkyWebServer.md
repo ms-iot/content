@@ -21,7 +21,8 @@ project from Visual Studio.
 
 * Make sure you connect the LED to your board. Go back to the basic 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm) if you need guidance.
 
-Note that the app will gracefully degrade if it cannot find any available GPIO ports.
+Note that the app will gracefully degrade if it cannot find any available GPIO ports, for example if you run the app on a VM running
+Windows IoT Core.
 
 
 ###Let's look at the code

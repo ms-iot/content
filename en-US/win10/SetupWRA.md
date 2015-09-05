@@ -26,7 +26,7 @@ Windows Remote Arduino uses the [Firmata protocol](https://github.com/firmata/pr
 Your Arduino will now run the StandardFirmata sketch forever unless reprogrammed with a different sketch. You can now optionally disconnect your Arduino from the computer and power it in any way you choose. If you wish to use the recommended Bluetooth pairing between your devices, you will need to [hook up a Bluetooth device to the Arduino](https://github.com/ms-iot/remote-wiring/blob/master/bluetooth.md){:target="_blank"}. We recommend the [SparkFun Bluetooth Mate Silver](https://www.sparkfun.com/products/12576){:target="_blank"}.
 
 
-####Notes on Serial Communication
+####Notes on Serial Commuinication
 
 Some hardware setups may require additional considerations when it comes to setting up your Bluetooth device over the serial pins 0 and 1.
 
