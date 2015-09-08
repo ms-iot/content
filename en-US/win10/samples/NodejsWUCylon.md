@@ -58,18 +58,20 @@ When the command window opens, run `npm dedupe`.
 
 Steps to build serialport:
 
-* From your Git shell, clone [this](https://github.com/Microsoft/node) temporary fork of node.js.
-* Run `git checkout ch0.12-uwp`
-* Run `.\vcbuild.bat arm chakra uwp-dll openssl-no-asm` and wait for node to build.
-* Clone [this](https://github.com/ms-iot/node-serialport) temporary fork of serialport and checkout the 'uwp' branch.
-* In a cmd window, go to the serialport clone root.
-* Run `npm install nan`
-* Run `node.exe [node.js clone root]\deps\npm\node_modules\node-gyp\bin\node-gyp.js rebuild --nodedir=[node.js clone root] --node_win_onecore --winplat=uwp --target_arch=arm --module_name=serialport --module_path=.`
-* If the last step is successful, you will see **serialport.node** in [serialport clone path]\build\release.
-* Copy [serialport clone root]\build\release\serialport.node to [Cylon project root]\node_modules\serialport\build\serialport\v1.7.4\Release\node-v14-win32-arm\serialport.node
+(**You can skip steps 1-8 by copying the zip file [here](https://github.com/ms-iot/ntvsiot/releases/download/1.7.4-uwp/serialport_uwp.zip) which contains prebuilt serialport.node binaries and serialport.js with a UWP patch**)
+
+1. From your Git shell, clone [this](https://github.com/Microsoft/node) temporary fork of node.js.
+2. Run `git checkout ch0.12-uwp`
+3. Run `.\vcbuild.bat arm chakra uwp-dll openssl-no-asm` and wait for node to build.
+4. Clone [this](https://github.com/ms-iot/node-serialport) temporary fork of serialport and checkout the 'uwp' branch.
+5. In a cmd window, go to the serialport clone root.
+6. Run `npm install nan`
+7. Run `node.exe [node.js clone root]\deps\npm\node_modules\node-gyp\bin\node-gyp.js rebuild --nodedir=[node.js clone root] --node_win_onecore --winplat=uwp --target_arch=arm --module_name=serialport --module_path=.`
+8. If the last step is successful, you will see **serialport.node** in [serialport clone path]\build\release.
+9. Copy [serialport clone root]\build\release\serialport.node to [Cylon project root]\node_modules\serialport\build\serialport\v1.7.4\Release\node-v14-win32-arm\serialport.node
   (**Note:** node-v14-win32-arm is a new folder you will create).
   "Cylon project root" is the the folder created by your new project in the previous section.
-* Copy [serialport clone root]\serialport.js to [Cylon project root]\node_modules\serialport\serialport.js.
+10. Copy [serialport clone root]\serialport.js to [Cylon project root]\node_modules\serialport\serialport.js.
 
 
 ###Set up the connection between your Arduino and Raspberry Pi 2
