@@ -294,7 +294,11 @@ lang: en-US
                         <p>Create an app that uses GPIO to read from the DHT11, a temperature and humidity sensor that uses a single-wire protocol.</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/GpioOneWire.htm">GPIO OneWire (C++)</a>
                     </div>
-                    <div class="col-md-3"><!-- column placeholder --></div>
+                    <div class="col-md-3">
+                        <h4>Cylon Node.js App (UWP)</h4>
+                        <p>Control a servo connected to an Arduino with a Cylon Node.js UWP app running on a Raspberry Pi 2 with Windows 10 IoT Core</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWUCylon.htm">Cylon (Node.js)</a>
+                    </div>
                     <div class="col-md-3"><!-- column placeholder --></div>
                     <div class="col-md-3"><!-- column placeholder --></div>
                 </div>
