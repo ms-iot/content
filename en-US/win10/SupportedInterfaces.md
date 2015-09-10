@@ -20,7 +20,7 @@ Windows 10 IoT Core supports a variety of peripheral interfaces and protocols. H
 | Bluetooth v4.0  | [Yes][31] ([LE/GATT][32], RFCOMM, HID) via USB adapter | [Yes][31] ([LE/GATT][32], RFCOMM, HID) via USB adapter | * [Mini USB Bluetooth CSR V4.0 Adapter][13] <br> * [ORICO BTA-403 Mini Bluetooth 4.0 USB Dongle][2] <br> * [Mini Bluetooth Keyboard with Built-in Touchpad, Model: IS11-BT05][14] |
 | Ethernet        | Yes (10/100 Mbps)                                      | Yes (10/100/1000 Mbps)                                 |  |
 | GPIO            | [13x GPIOs][3]                                         | [10x GPIOs][4]                                         |  |
-| HDMI            | Yes                                                    | Yes (micro HDMI)                                       | [Chalkboard Electronics 7\" touchscreen LCD][35][^3] |
+| HDMI            | Yes                                                    | Yes (micro HDMI)                                       | [Chalkboard Electronics 7\" LCD multi-touch display][35][^3] |
 | I<sup>2</sup>C  | [Yes][5]                                               | [Yes][6]                                               | * [Sparkfun ADXL345 accelerometer board][26] <br> * [MCP23008 8-bit I/O Port Expander][27] |
 | Micro SD (SDIO) | [Yes][7]                                               | [Yes][8]                                               | [Universal Media Reader F4U003][23] |
 | SPI             | [2x SPI][9]                                            | [Yes][10]                                              | * [Sparkfun ADXL345 accelerometer board][28] <br> * [Monochrome 1.3” 128x64 OLED graphic display][29] |
@@ -74,7 +74,7 @@ Windows 10 IoT Core supports a variety of peripheral interfaces and protocols. H
 [32]: {{site.baseurl}}/{{page.lang}}/win10/samples/BLEGatt.htm "Generic Attribute Profile Sample "
 [33]: {{site.baseurl}}/{{page.lang}}/win10/samples/NodejsCylon.htm "Arduino Leonardo"
 [34]: http://www.raspberrypi-spy.co.uk/2014/07/raspberry-pi-model-b-3-5mm-audiovideo-jack/ "Rpi2 3.5 mm Audio/Video Jack"
-[35]: http://www.chalk-elec.com/?page_id=1280#!/7-black-frame-universal-HDMI-LCD-with-capacitive-multi-touch/p/21750201/category=3094861 "Chalkboard Electronics 7\" touchscreen LCD"
+[35]: http://www.chalk-elec.com/?page_id=1280#!/7-black-frame-universal-HDMI-LCD-with-capacitive-multi-touch/p/21750201/category=3094861 "Chalkboard Electronics 7\" LCD multi-touch display"
 
 [^1]: Attaching an external USB sound card to RPi2 will add an extra audio endpoint (playback device) to the already existing onboard PWM headphone jack. Since the default order of the audio devices cannot be guaranteed at reboot, it is recommended that applications enumerate the audio endpoints and ensure the correct one is used.
 [^2]: Currently due to a bug in the OS the Xbox-360 controller does not work.
