@@ -27,6 +27,7 @@ lang: en-US
 
 3. **Connect to Web-based device management through your browser**
     * Enter the IP address into the address bar. Add :8080 onto the end.![Browser IP]({{site.baseurl}}/images/webb/browser_ip.png)
+    * In the credentials dialog, use the default username and password: `Administrator`, `p@ssw0rd`
     * Web-based device management should launch and display the web management home screen!
 
  You can also launch the Web-based device management tool from the Windows IoT Core Watcher by right clicking on your device, and clicking Launch in browser

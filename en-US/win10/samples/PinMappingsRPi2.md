@@ -27,7 +27,6 @@ The following GPIO pins are accessible through APIs:
 {:.table.table-bordered}
 | GPIO# | Power-on Pull | Header Pin         |
 |-------|---------------|--------------------|
-| 4     | PullUp        | 7                  |
 | 5     | PullUp        | 29                 |
 | 6     | PullUp        | 31                 |
 | 12    | PullDown      | 32                 |

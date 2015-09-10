@@ -42,7 +42,7 @@ For the sample, we are running firmware version 1.4.1 on the SensorTag. More det
 
 ### Hardware Support
 
-We are currently supporting the [Orico Model A Bluetooth dongle](http://www.amazon.com/ORICO-BTA-403-Bluetooth-Adapter-Compatible/dp/B00ESBRTMO/ref=sr_1_7?ie=UTF8&qid=1436917745&sr=8-7&keywords=bluetooth+4.0+orico){:target="_blank"}.
+Please find a list of supported Bluetooth dongles [here]({{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm).
 
 ### What's Next?
 1. [Pairing a BLE Device and GATT Attribute Table Dump Tool]({{site.baseurl}}/{{page.lang}}/win10/samples/BLEGatt1.htm) --- Learn how to pair the SensorTag with a Windows IoT Core device, and how to retrieve a GATT Attribute Table in Windows.

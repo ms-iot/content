@@ -3,13 +3,14 @@ layout: default
 title: Setup your Windows Remote Arduino
 permalink: /en-US/win10/SetupWRA.htm
 lang: en-US
+deviceName: WRA
 ---
 
 #Get Started
 
 This section explains how to set up your Arduino and how to add the Windows Remote Arduino library to your Windows projects!
 
-{% include steps.html device="WRA" %}
+{% include steps.html device=page.deviceName %}
 
 ##Arduino Setup
 
@@ -44,3 +45,5 @@ Serial1.begin( 57600 );	//or your baud rate here, it will be 115200 if using the
 while( !Serial1 );
 Firmata.begin( Serial1 );
 {% endhighlight %}
+
+{% include nextsteps.html device=page.deviceName %}
