@@ -1,6 +1,6 @@
 ﻿---
 layout: default
-title: Blinky Sample
+title: Bluetooth RFCOMM Sample
 permalink: /en-US/win10/samples/BTSerial.htm
 lang: en-US
 ---
