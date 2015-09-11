@@ -24,7 +24,8 @@ You can review the privacy statement by pasting the forward link into your brows
 * Windows 10 IoT Core Insider Preview September 25 Release
    * Web Server (WebB) additional features (Change computer name, change password, start processess)
    * Secure boot has been enabled
-   * Third party pure python libraries can be run
+   * An improved Node.Js expereince including: a unified installer for all required components, support for Serial library, and support for Cylon library with a new Cylon project template.
+   * Expanded compatibility with pure python libraries
    * Support for popular PWM and ADC external chips through the easy to use in-box APIs via ADC and PWM providers on Github: [https://github.com/ms-iot/BusProviders](https://github.com/ms-iot/BusProviders)
    * Updated base OS build
    * Bug Fixes
