@@ -215,3 +215,50 @@ ul.get-started-steps > li > a:hover {
     margin-bottom: 50px;
     padding: 20px;
 }
+
+.standardTH {
+  width: 40%;
+}
+.largeTH {
+  width: 85% !important;
+}
+.table-striped > tbody > tr > th {
+  border-color: transparent;
+}
+.table-striped > tbody > tr > td {
+  border-color: transparent;
+}
+h1.maker-kit {
+  font-weight: 100;
+  font-size:46px;
+  margin-bottom: 20px;
+}
+h2.maker-kit {
+  font-weight: lighter;
+  font-size:36px;
+}
+h3.maker-kit {
+  font-weight: lighter;
+  border-bottom: 1px solid rgb(230,230,230);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  font-size:32px;
+}
+table.maker-kit {
+  margin-top:35px;
+}
+table.maker-kit > tbody > tr:nth-of-type(odd) {
+  background-color: rgb(241,241,242);
+}
+table.maker-kit > tbody > tr > th {
+  font-weight:200;
+  color: rgb(165,165,165);
+}
+
+ul.maker-kit > li > a > h3{
+  text-align: left;
+}
+
+ul.maker-kit > li > a {
+  padding-left: 0;
+}
