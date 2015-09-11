@@ -7,6 +7,7 @@ lang: en-US
 
 #Release Notes for Windows 10 IoT Core
 Insider Preview Build Number 10531.0
+
 &copy; 2015 Microsoft Corporation. All rights reserved
 
 This document provides late-breaking or other information that supplements the documentation included with the Windows 10 IoT Core Insider Preview.
@@ -20,7 +21,7 @@ The privacy statement for this version of the Windows operating system can be vi
 You can review the privacy statement by pasting the forward link into your browser window.
 
 ##What's New
-* Windows 10 IoT Core Insider Preview Sept 25 Release
+* Windows 10 IoT Core Insider Preview September 25 Release
    * Web Server (WebB) additional features (Change computer name, change password, start processess)
    * Secure boot has been enabled
    * Third party pure python libraries can be run
