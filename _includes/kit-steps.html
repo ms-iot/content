@@ -1,0 +1,9 @@
+<div class="row">
+   <ul class="nav nav-justified maker-kit get-started-steps">
+       {% for step in site.data.kit-steps[include.device] %}
+         <li>
+           <a href="{{site.baseurl}}/{{page.lang}}/{{step}}"><h3 class="steps inactive">{{forloop.index}}. {{site.data.kit-step-resources[page.lang][forloop.index0]}}</h3></a>
+         </li>
+       {% endfor %}
+   </ul>
+</div>
