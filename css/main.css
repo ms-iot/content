@@ -235,7 +235,7 @@ h1.maker-kit {
 }
 h2.maker-kit {
   font-weight: lighter;
-  font-size:36px;
+  font-size:32px;
 }
 h3.maker-kit {
   font-weight: lighter;
@@ -243,6 +243,16 @@ h3.maker-kit {
   padding-bottom: 20px;
   margin-bottom: 20px;
   font-size:32px;
+}
+h4.maker-kit {
+  font-weight: lighter;
+  font-size:32px;
+  border-top: 1px solid rgb(230,230,230);
+  padding-top: 20px;
+  margin-top:20px;
+}
+p.maker-kit {
+  font-size: 18px;
 }
 table.maker-kit {
   margin-top:35px;
