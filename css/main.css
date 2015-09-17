@@ -272,3 +272,7 @@ ul.maker-kit > li > a > h3{
 ul.maker-kit > li > a {
   padding-left: 0;
 }
+
+img.maker-kit {
+  margin-bottom: 20px;
+}
