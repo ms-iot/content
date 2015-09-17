@@ -19,4 +19,4 @@ kit: Adafruit Essential Maker Kit
 {% include_relative BlinkyContent.md %}
 
 
-<h4 class="maker-kit"><a href="{{site.baseurl}}/{{page.lang}}/win10/KitSetupPCRPI.htm">Next: Lesson 2</a></h4>
+<h4 class="maker-kit"><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm#lessonTwo">Next: Lesson 2</a></h4>

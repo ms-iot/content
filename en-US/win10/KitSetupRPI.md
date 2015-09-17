@@ -98,11 +98,10 @@ When run, the application automatically finds all Windows IoT Core devices on th
 
 <!-- End of Replicated Content -->
 
-####Finally, you'll need to configure your Raspberry Pi 2 for WiFi connection.  There are a couple of different ways to do this:
+####Finally, you'll need to configure your Raspberry Pi 2 for WiFi connection.
 
 <!-- This content is replicated at en-US/win10/SetupWiFi.md  -->
 
-**Prerequisite:** Your device will already need to be connected to your local network through Ethernet and should have a USB WiFi Adapter plugged in. You also need a Windows PC with WiFi capability.
 
 Setting up WiFi using wireless profiles is supported in Windows 10 IoT Core. See [MSDN](https://msdn.microsoft.com/en-us/library/windows/desktop/aa369853) for details and examples.
 
