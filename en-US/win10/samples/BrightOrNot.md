@@ -17,7 +17,7 @@ kit: Adafruit Essential Maker Kit
 <div class="row">
   <div class="col-sm-12">
     <div class="container text-center">
-      <img class="maker-kit" src="{{site.baseurl}}/images/AdafruitMakerKitContents.jpeg">
+      <img class="maker-kit" src="{{site.baseurl}}/images/BrightOrNot.jpg">
     </div>
   </div>
 </div>
