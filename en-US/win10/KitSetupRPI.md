@@ -146,8 +146,4 @@ Setting up WiFi using wireless profiles is supported in Windows 10 IoT Core. See
 
 <!-- End of Replicated Content -->
 
-##Additional Resources
-* [Supported Peripheral Interfaces and Devices]({{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm){:target="_blank"}
-
-
 {% include kit-nextsteps.html device=page.deviceName %}

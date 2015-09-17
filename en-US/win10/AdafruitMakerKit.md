@@ -7,7 +7,7 @@ kit: Adafruit Essential Maker Kit
 ---
 <h1 class="maker-kit section-heading">{{page.kit}}</h1>
 
-<p>Lorem ipsum about the kit and this page. Welcome to the Windows 10 IoT Essentials Maker kit. This page links you to all the lessons you need to get started with your kit.</p>
+<p>The <a target="_blank" href="http://adafruit.com/windows10iotpi2">Adafruit Essential Maker Kit</a> has everything you need to start Making and Developing with Raspberry Pi 2 and Windows 10 IoT Core. Follow the lessons below to get started! </p>
 
 <div>
   <h2 class="maker-kit">Lesson 1: </h2>
@@ -19,7 +19,7 @@ kit: Adafruit Essential Maker Kit
       <th>Duration</th>
     </tr>
     <tr>
-      <td><a href="{{site.baseurl}}/{{page.lang}}/AdafruitKitContents.htm">Welcome to Windows 10 IoT Core</a></td>
+      <td><a href="{{site.baseurl}}/{{page.lang}}/win10/AdafruitWelcome.htm">Welcome to Windows 10 IoT Core</a></td>
       <td>Find out what makes IoT Core so perfect for makers.</td>
       <td>15 Minutes</td>
     </tr>
