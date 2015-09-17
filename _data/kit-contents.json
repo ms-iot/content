@@ -7,7 +7,7 @@
      {name: "Full sized breadboard",
      link: "https://www.adafruit.com/products/239",
      quantity: "1"},
-     {name: "San Disk 8gb class 10 MicroSD card",
+     {name: "San Disk 8gb Class 10 MicroSD Card",
      link: "https://www.adafruit.com/products/2258",
      quantity: "1"},
      {name: "5V 2A Switching Power Supply w/ 20AWG 6' MicroUSB Cable",
@@ -46,7 +46,7 @@
      link: "https://www.adafruit.com/products/356",
      quantity: "2"}],
   "Sensors": [
-    {name: "CdS photocell",
+    {name: "CdS Photocell",
      link: "https://www.adafruit.com/products/161",
      quantity: "1"}],
   "Miscellaneous": [

@@ -54,15 +54,18 @@ An alternative way to configure WiFi is to use the default app. You can use this
 
 If you have device a with no UI, display, or input devices, you can still configure it through [web-based management]({{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm).
 
+<!-- This content is replicated at en-US/win10/KitSetupRPI.md -->
+
 1. Using a web browser, navigate to `http://[device_ip]:8080/`, where **[device_ip]** is the IP address of the Windows 10 IoT Core device (ex: **192.168.1.4**). Enter **Administrator** for the username, and supply your password
 2. Click on **Networking** in the left-hand pane
 3. Under **Available networks**, select network you would like to connect to and supply the connection credentials. Click **Connect** to initiate the connection
 
 ![Web Based WiFi Configuration]({{site.baseurl}}/images/SetupWiFi/WebBWiFiConfig.png)
 
-###Option 2: Connect using WiFi Profiles
+<!-- End of Replicated Content -->
 
-<!-- This content is replicated at en-US/win10/KitSetupRPI.md -->
+
+###Option 2: Connect using WiFi Profiles
 
 **Prerequisite:** Your device will already need to be connected to your local network through Ethernet and should have a USB WiFi Adapter plugged in. You also need a Windows PC with WiFi capability.
 
@@ -107,8 +110,6 @@ Setting up WiFi using wireless profiles is supported in Windows 10 IoT Core. See
 
     * `ping /S <your WiFi adapter ip address> bing.com`
 
-<!-- End of Replicated Content -->
-
 
 #### Connecting to WPA2-PSK Personal networks
 
@@ -123,7 +124,6 @@ Profile XML exported from Windows PC:
         <protected>true</protected>
         <keyMaterial><Your Encrypted password></keyMaterial>
     </sharedKey>
-
 
 
 Changes needed to work on Windows 10 IoT Core:

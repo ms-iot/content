@@ -36,7 +36,7 @@ kit: Adafruit Essential Maker Kit
     <tr>
       <td><a href="{{site.baseurl}}/{{page.lang}}/win10/KitSetupRPI.htm">Setting up your Raspberry Pi 2 Board</a></td>
       <td>Get your board up and running.</td>
-      <td>15 Minutes</td>
+      <td>40 Minutes</td>
     </tr>
      <tr>
       <td><a href="{{site.baseurl}}/{{page.lang}}/win10/samples/KitBlinky.htm">Make your first Project</a></td>
@@ -57,23 +57,23 @@ kit: Adafruit Essential Maker Kit
       <th>Duration</th>
     </tr>
     <tr>
-      <td><a targt="_blank" href="https://www.hackster.io/windowsiot/internet-connected-led">Internet Connected LED</a></td>
+      <td><a target="_blank" href="https://www.hackster.io/windowsiot/internet-connected-led">Internet Connected LED</a></td>
       <td>Kit user is able to learn about creating a simple Internet connected application to query the status of a web API of WiFi and use that information to turn on a notification light. While doing so, the user is familiarized wit the IoT Core development environment and flow.</td>
       <td>15 Minutes</td>
     </tr>
     <tr>
-      <td><a targt="_blank" href="https://www.hackster.io/windowsiot/weather-patterns-of-makers">Weather Patterns of Makers</a></td>
-      <td>Kit user will be able to measure temp/weather/pressure in the room using a sensor connected over I2C bus, then send that up to the cloud over WiFi.  The measurements will be displayed on a MS sec page posted on our GitHub site.  It will also show a map f weather reports from other makers around the world and help makers get a sense of other makers around the world who are working on the same kit.</td>
+      <td><a target="_blank" href="https://www.hackster.io/windowsiot/weather-patterns-of-makers">Weather Patterns of Makers</a></td>
+      <td>Kit user will be able to measure temperature, pressure and altitude in the room using a sensor connected over I2C bus, then send that up to the cloud over WiFi.  The measurements will be displayed on a page posted on our GitHub site.  It will also show a map of weather reports from other makers around the world and help makers get a sense of other makers around the world who are working with the same kit.</td>
       <td>60 Minutes</td>
     </tr>
     <tr>
-      <td><a targt="_blank" href="https://www.hackster.io/windowsiot/bright-or-not">Bright or Not?</a></td>
-      <td>Kit user will be able to measure the light intensity in the room using an analog photocell and an ADC. Once the data is measured it will be mapped to strings and output on the console on the PC For example, if it is too bright , the console would show “It’s too bright in here !” or vice versa “So dark in here” User will be able to set the threshold via the potentiometer </td>
+      <td><a target="_blank" href="https://www.hackster.io/windowsiot/bright-or-not">Bright or Not?</a></td>
+      <td>Kit user will be able to measure the light intensity in the room using an analog photocell and an ADC. Once the data is measured it will be mapped to strings and output on the console on the PC. If it is too bright, for example, the console would show “It’s too bright in here!” or visa versa. User will be able to set the threshold via the included potentiometer. </td>
       <td>60 Minutes</td>
     </tr>
     <tr>
-      <td><a targt="_blank" href="https://www.hackster.io/windowsiot/what-color-is-it">What color is it?</a></td>
-      <td>Kit user will be able to measure the color of an object using a color sensor over I2C , the output is displayed on the console For example, if the sensor is pointed at blue color , the console would show “It looks like the color is blue” </td>
+      <td><a target="_blank" href="https://www.hackster.io/windowsiot/what-color-is-it">What Color Is It?</a></td>
+      <td>Kit user will be able to measure the color of an object using a color sensor over I2C, the output is displayed on the console For example, if the sensor is pointed at blue color, the console would show “It looks like the color is blue”. </td>
       <td>60 Minutes</td>
     </tr>
   </table>
