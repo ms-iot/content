@@ -35,7 +35,7 @@ kit: Adafruit Essential Maker Kit
     </tr>
     <tr>
       <td><a href="{{site.baseurl}}/{{page.lang}}/win10/KitSetupRPI.htm">Setting up your Raspberry Pi 2 Board</a></td>
-      <td>Get your board up and running.</td>
+      <td>Windows, meet Raspberry Pi 2.</td>
       <td>40 Minutes</td>
     </tr>
      <tr>
