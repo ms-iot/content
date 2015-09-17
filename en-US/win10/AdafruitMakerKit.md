@@ -79,3 +79,5 @@ kit: Adafruit Essential Maker Kit
   </table>
 </div>
 
+<iframe width="100%" src="http://adafruitsample.azurewebsites.net"></iframe>
+

@@ -48,7 +48,16 @@
   "Sensors": [
     {name: "CdS Photocell",
      link: "https://www.adafruit.com/products/161",
-     quantity: "1"}],
+     quantity: "1"},
+      {name: "BMP280",
+     link: "https://www.adafruit.com/products/2651",
+     quantity: "1"},
+      {name: "Color Sensor",
+     link: "https://www.adafruit.com/products/1334",
+     quantity: "1"},
+      {name: "Tactile Switches",
+     link: "https://www.adafruit.com/products/1119",
+     quantity: "3"}],
   "Miscellaneous": [
     {name: "Black Adafruit box",
      link: "https://www.adafruit.com/products/2651",
