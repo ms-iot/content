@@ -23,7 +23,7 @@ kit: Adafruit Essential Maker Kit
       <iframe src="http://adafruitsample.azurewebsites.net" width="100%" height="442px"></iframe>
   </div>
   <div class="col-md-6 col-sm-12">
-      <p><img class="maker-kit" src="{{site.baseurl}}/images/AdafruitMakerKitContents.jpeg"></p>
+      <img class="maker-kit" src="{{site.baseurl}}/images/AdafruitMakerKitContents.jpeg">
   </div>
 </div>
 
