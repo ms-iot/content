@@ -17,7 +17,6 @@ kit: Adafruit Essential Maker Kit
 <h2 class="maker-kit">The Adafruit Essential Maker Kit comes with everything you need to start making and developing with Windows 10 IoT Core.  Here's what's inside:</h2>
 
 
-
 {% include kit-contents.html kit=page.kit %}
 
 
