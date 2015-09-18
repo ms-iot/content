@@ -141,10 +141,11 @@ a:hover {
 
 .downloads-image {
     background-image: url('../images/DevelopmentBoards.PNG');
-    background-size: cover;
+    background-size: contain;
+	background-repeat: no-repeat;
     background-position: center;
     width: 75%;
-    height: 300px;
+    height: 200px;
     margin-top: 30px;
 }
 
@@ -275,4 +276,45 @@ ul.maker-kit > li > a {
 
 img.maker-kit {
   margin-bottom: 20px;
+}
+
+.button-flat {
+	border-radius: 0;
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 400;
+	line-height: normal;
+	padding: .5em 1.5em;
+	margin-right: 0.8em;
+	min-width: 100%;
+	margin-bottom: 0.8em;
+	text-align: center;
+}
+
+.button-blue {
+	background-color: #0078d7;
+	color:  #fff !important;
+}
+
+.button-flat:hover{
+	border-color: #004E8C;
+	border-style: solid;
+	border-width: 2px;
+	cursor: pointer;
+}
+
+.button-flat:active{
+	background-color:gray !important;
+	border-color: gray !important;
+}
+
+.subtext {
+	font-size: 0.8em;
+	color: gray;
+}
+
+.divider {
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: #0078d7;
 }
