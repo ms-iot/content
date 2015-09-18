@@ -28,9 +28,6 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
          Measure the color of an object using a color sensor over I2C, the output is displayed on the console. Learn how about the nifty text to speech features of Windows 10 IoT Core!
       </li>
       <li class="list-group-item maker-kit">
-        Duration: ~60 minutes
-      </li>
-      <li class="list-group-item maker-kit">
         Parts Needed: Raspberry Pi 2, Breadboard, Jumper Wires, TCS34725 RGB Sensor, Pushbutotn, 10k &#8486; Resistor.
       </li>
     </ul>

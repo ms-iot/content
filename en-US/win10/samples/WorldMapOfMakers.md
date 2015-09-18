@@ -31,9 +31,6 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
         Upon completing this lesson, you would have left a mark on the world map above and will make your city proud of you!
       </li>
       <li class="list-group-item maker-kit">
-        Duration: ~60 minutes
-      </li>
-      <li class="list-group-item maker-kit">
         Parts Needed: Raspberry Pi 2, 1 LED, 560 Ohm resistor, 1 Female/Male Jumper Wire, 1 Breadboard.
       </li>
     </ul>
@@ -44,6 +41,6 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
     <h2 class="maker-kit">Click <a target="_blank" href="http://www.hackster.io/projects/12721?auth_token=b26be92d375bc16823077bd874693e9c">here</a> for full instructions.</h2>
   </div>
   <div class="col-md-6 col-sm-12 text-right">
-    <h2 class="maker-kit">...or <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/WeatherStation.htm"> continue to the next project.</a></h2>
+    <h2 class="maker-kit">...or <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BrightOrNot.htm"> continue to the next project.</a></h2>
   </div>
 </div>

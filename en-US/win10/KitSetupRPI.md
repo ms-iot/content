@@ -34,15 +34,6 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 1. Windows 10 IoT Core will boot automatically after connecting the power supply. Allow the Pi about five minutes for the first boot.
 2. Find your device on the IoTCoreWatcher application. When run, the application automatically finds all Windows IoT Core devices on the local network and displays device information such as the name, MAC, IP address, and more.
         ![Windows IoT Core Watcher]({{site.baseurl}}/images/HeadlessMode/IoTCoreWatcher.png)
-2. Follow the [PowerShell documentation here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.  You can also follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to use SSH to connect to your device.
-3. It is **highly recommended** that you update the default password for the Administrator account.
-    To do this, issue the following commands in your PowerShell connection:
-
-    Replace `[new password]` with a strong password:
-
-        net user Administrator [new password]
-
-    Once this is done, you'll need to re-establish the current session using enable-psSession with the new credentials.
 
 ##Configure your Raspberry Pi 2
 

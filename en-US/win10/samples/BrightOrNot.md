@@ -12,7 +12,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
   <li class="active">Bright or Not?</li>
 </ol>
 <h1 class="maker-kit"> Lesson 2: Four awesome projects to make with the Adafruit Essentials Maker Kit</h1>
-<h3 class="maker-kit"> Part three: Bright or Not?</h3>
+<h3 class="maker-kit"> Part two: Bright or Not?</h3>
 
 <iframe class="maker-kit" src="http://adafruitsample.azurewebsites.net/cardViewer?lesson=202" width="100%" height="370px"></iframe>
 
@@ -26,9 +26,6 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
          Learn how to get data from analog sensors using ADC with Raspberry Pi2 and Windows 10 IoT Core. Upon executing the sample, you’ll be able to measure the light intensity in the room using an analog photocell.
       </li>
       <li class="list-group-item maker-kit">
-        Duration: ~60 minutes
-      </li>
-      <li class="list-group-item maker-kit">
         Parts Needed: Raspberry Pi 2, Breadboard, 1 Female/Male Jumper Wire, Breadboard trim potentiometer - 10k, Photo cell (CdS Photoresistor), 560 &#8486; resistor, optional: Headphone/speaker.
       </li>
     </ul>
@@ -40,6 +37,6 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
     <h2 class="maker-kit">Click <a target="_blank" href="http://www.hackster.io/projects/12723?auth_token=1ea83680196dbebca4f47216650521ed">here</a> for full instructions.</h2>
   </div>
   <div class="col-md-6 col-sm-12 text-right">
-    <h2 class="maker-kit">...or <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/WhatColor.htm"> continue to the next project.</a></h2>
+    <h2 class="maker-kit">...or <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/WeatherStation.htm"> continue to the next project.</a></h2>
   </div>
 </div>
