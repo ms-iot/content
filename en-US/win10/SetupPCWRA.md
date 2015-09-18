@@ -33,7 +33,7 @@ NuGet is a quick and easy way to automatically install the packages and setup de
 
  ![New Project]({{site.baseurl}}/images/remote-wiring/create_00.png)
 
-- Select your language of choice. Windows Remote Arduino is a WinRT component, meaning it is compatable with C++, C#, or JavaScript.
+- Select your language of choice. Windows Remote Arduino is a WinRT component, meaning it is compatible with C++, C#, or JavaScript.
 
 - You'll see I have chosen C# by expanding the "Visual C#" menu. Select the "Windows" option and choose "Blank App (Windows Universal)" or "Blank App (Windows 8.1 Universal)" if you are building for Windows 8.1.
 
@@ -94,7 +94,7 @@ NuGet is a quick and easy way to automatically install the packages and setup de
 
 ###Step 3: Have fun!
 
-You can now use the three projects directly in your source code. You will notice I have constructed a BluetoothSerial object and attached it to my RemoteDevice object, so I have included the two appropriate namespaces at the top of my .cs file.
+You can now use the three projects directly in your source code. You will notice I have constructed a BluetoothSerial object and attached it to my RemoteDevice object, so I have included the two appropriate namespaces at the top of my `MainPage.xaml.cs` file.
 
  ![Have Fun!]({{site.baseurl}}/images/remote-wiring/utilize_00.png)
 
@@ -114,7 +114,7 @@ Manually compiling a WinRT component library produces .winmd and .dll files whic
 
  ![Open the solution file]({{site.baseurl}}/images/remote-wiring/compile_01.png)
 
-- Select the correct build target. If you are planning to deploy your application to Raspberry Pi2 or Windows Phone, you'll want to select ARM. Otherwise if you are targeting a PC platform select either x86 or x64. If you are targeting MinnowBoardMax, select x86.
+- Select the correct build target. If you are planning to deploy your application to Raspberry Pi2 or Windows Phone, you'll want to select ARM. Otherwise if you are targeting a PC platform select either x86 or x64. If you are targeting MinnowBoard Max, select x86.
 
  ![Select build target]({{site.baseurl}}/images/remote-wiring/compile_02.png)
 
@@ -222,7 +222,9 @@ xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest"
 {% endhighlight %}
 
 ##Enabling Bluetooth Capabilities
-You will need to add one of the following XML blocks to your manifest file, inside the <Capabilities> tag, in order to invoke the Bluetooth/USB capabilities of a WinRT application, depending on which OS version you are targetting.
+You will need to add one of the following XML blocks to your `Package.appxmanifest` file in order to invoke the Bluetooth capabilities of a WinRT application. Right click on this file and select "view code". The exact syntax depends on which OS version you are targeting.
+
+You must add these DeviceCapability tags *inside* the `<Capabilities>` tag.
 
 ###Windows 10
 
@@ -246,7 +248,9 @@ You will need to add one of the following XML blocks to your manifest file, insi
 
 
 ##Enabling USB Capabilities
-You will need to add one of the following XML blocks to your manifest file in order to invoke the USB capabilities of a WinRT application, depending on which OS version you are targetting.
+You will need to add one of the following XML blocks to your `Package.appxmanifest` file in order to invoke the USB capabilities of a WinRT application. Right click on this file and select "view code". The exact syntax depends on which OS version you are targeting.
+
+You must add these DeviceCapability tags *inside* the `<Capabilities>` tag.
 
 ###Windows 10
 
@@ -260,10 +264,4 @@ You will need to add one of the following XML blocks to your manifest file in or
 
 ###Windows 8.1
 
-{% highlight XML %}
-<m2:DeviceCapability Name="serialcommunication">
-  <m2:Device Id="any">
-    <m2:Function Type="name:serialPort"/>
-  </m2:Device>
-</m2:DeviceCapability>
-{% endhighlight %}
+Unfortunately, this library does not support USB on Windows 8.1.

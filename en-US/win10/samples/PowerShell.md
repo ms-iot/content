@@ -10,7 +10,7 @@ lang: en-US
 ### Remote Administration and Configuration
 You can remotely configure and manage any Windows IoT Core device using Windows PowerShell. PowerShell is a task-based command-line shell and scripting language, designed especially for system administration.
 
-Make sure to follow these steps to correctly configure your VM or device running Windows IoT Core to work well with VisualStudio 2015.
+Make sure to follow these steps to correctly configure your VM or device running Windows IoT Core to work well with Visual Studio 2015.
 
 ###Initiating a PowerShell (PS) Session
 * To start a PS session with your Windows IoT Core device, you'll first need to create a trust relationship between your host PC and your device. After booting your Windows IoT Core device, an IP address will be shown on the screen attached to the device:
@@ -66,10 +66,8 @@ Make sure to follow these steps to correctly configure your VM or device running
     Replace `[new password]` with a strong password:
 
         net user Administrator [new password]
-
-    The following command only needs to be run once:
-
-        schtasks /Delete /TN Microsoft\Windows\IoT\Startup /F
+        
+    Once this is done, you'll need to re-establish the current session using enable-psSession with the new credentials.
 
 ###Configure your Windows IoT Core device
 
@@ -85,7 +83,7 @@ Make sure to follow these steps to correctly configure your VM or device running
 
         shutdown /r /t 0
 
-    After you reboot, you may need to rerun this command in order to connect to your device using the new name:
+    After you reboot, since the computer name was changed, you will need to rerun this command in order to connect to your device using the new name:
 
         Set-Item WSMan:\localhost\Client\TrustedHosts -Value <new-name>
 
