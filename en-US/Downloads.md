@@ -17,12 +17,14 @@ lang: en-US
 <div class="col-md-12">
 	<div class="col-md-6 ">
 		<h3 class="divider">Download Windows 10</h3>
-		<p> 
-			Download the most recent RTM version of Windows 10 IoT Core. Built for devices, Windows 10 IoT Core enables you to create cool connected projects, amazing applications, and much more, all using the Windows environment you know -- pared down to run on embedded devices like the Raspberry Pi 2. 
-		</p>
-		<p> 
-			The RTM version is the latest release available for the public.
-		</p>
+		<div class="preview">
+			<p> 
+				Download the most recent RTM version of Windows 10 IoT Core. Built for devices, Windows 10 IoT Core enables you to create cool connected projects, amazing applications, and much more, all using the Windows environment you know -- pared down to run on embedded devices like the Raspberry Pi 2. 
+			</p>
+			<p> 
+				The RTM version is the latest release available for the public.
+			</p>
+		</div>
 		<div>		
 			<a href="http://go.microsoft.com/fwlink/?LinkId=619755" class="button-blue button-flat"> Download RTM Release for Raspberry Pi 2 </a>
 			<a href="http://go.microsoft.com/fwlink/?LinkId=619756" class="button-blue button-flat"> Download RTM Release for MinnowBoard Max </a>
@@ -33,12 +35,15 @@ lang: en-US
 	</div>
 	<div class="col-md-6">
 		<h3 class="divider">Download the Windows 10 Insider Preview</h3>
-		<p> 
-			Ready to try the newest version of Windows 10 IoT Core available? Build creative projects, Internet connected applications, and so much more -- all while getting the latest fixes and features by using the Insider build, available for all Windows Insiders.
-		</p>
-		<p> 
-			Learn more about the Insider program and enroll now at <a href="http://insider.windows.com">insider.windows.com</a>.
-		</p>
+		<div class="preview">
+			<p> 
+				The Windows 10 IoT Core Insider Preview has everything from the regular release but also includes the latest bug fixes, features, and more. Become an Insider to get access to the Insider Preview and start building projects right away!
+			</p>
+			<p> 
+				Learn more about the Insider program and enroll now at <a href="http://insider.windows.com">insider.windows.com</a>.
+			</p>
+		</div>
+		
 		<div>		
 			<a href="http://go.microsoft.com/fwlink/?LinkID=625104" class="button-blue button-flat"> Download Insider Preview for Raspberry Pi 2 </a>
 			<a href="http://go.microsoft.com/fwlink/?LinkID=625103" class="button-blue button-flat"> Download Insider Preview for MinnowBoard Max </a>

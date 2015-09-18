@@ -323,3 +323,7 @@ img.maker-kit {
 	border-bottom-width: 2px;
 	border-bottom-color: #0078d7;
 }
+
+div.preview {
+	height: 150px;
+}
