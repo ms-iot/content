@@ -70,7 +70,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
     </tr>
     <tr>
       <td><a target="_blank" href="{{site.baseurl}}/{{page.lang}}/win10/samples/WhatColor.htm">What Color Is It?</a></td>
-      <td>Learn how about the nifty text to speech features of Windows 10 IoT Core. </td>
+      <td>Learn how about the useful text to speech features of Windows 10 IoT Core. </td>
     </tr>
   </table>
 </div>

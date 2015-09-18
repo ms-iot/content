@@ -20,7 +20,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 
 You'll need a few components:
 
-* a LED (whichever color you like)
+* a LED (any color you like)
 
 * a 560 &#x2126; resistor
 
