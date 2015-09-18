@@ -2,7 +2,7 @@
 baseurl: "/content"
 url: "http://ms-iot.github.io/content"
 repositoryurl: "https://github.com/ms-iot/content/blob/develop/"
-landingurl: "http://dev.windows.com/iot"
+landingurl: "http://go.microsoft.com/fwlink/p/?LinkID=534186"
 hacksterurl: "http://microsoft.hackster.io"
 hardwareurl: "http://go.microsoft.com/fwlink/p/?linkID=532948"
 signupurl: "https://www.windowsondevices.com/signup.aspx"

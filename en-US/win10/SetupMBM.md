@@ -32,14 +32,13 @@ Learn how to set up the MinnowBoard Max hardware and connect it to your computer
 * Unzip the downloaded file and copy the following files to a FAT formatted USB stick
 	* *.efi
     * *.bin
-* Power off your minnowboard
+* Power off your MinnowBoard
 * Remove any SD cards and external hard drives
-* Plug in the USB stick to the minnowboard
-* Connect an HDMI/DVI monitor and USB keyboard
-        * It is also possible to interact with UEFI and BIOS over a serial connection
-* Power on your minnowboard
+* Plug in the USB stick to the MinnowBoard
+* Connect an HDMI/DVI monitor and USB keyboard (It is also possible to interact with UEFI and BIOS over a serial connection)
+* Power on your MinnowBoard
 * You should see the UEFI prompt. Run the following commands at the UEFI prompt:
-	* If your current firmware is 64 bit (this is how the Minnowboard ships)
+	* If your current firmware is 64 bit (this is how the MinnowBoard ships)
 
 		<kbd>fs0:</kbd>
 
@@ -74,25 +73,37 @@ We have provided a utility to provision your SD card with the Windows 10 IoT Cor
 Follow these instructions to configure your SD card:
 
 * NOTE: you will need to follow these instructions on a physical Windows machine (and not a VM) because you need access to the SD card reader.
-* Please sign up with our program on [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"}, which is our software release management platform. You will need to have a [Microsoft Account](http://www.microsoft.com/en-us/account/default.aspx){:target="_blank"}. If you are already signed up with our program on Microsoft Connect, (or are not sure if you signed up earlier) and try to sign up again, don’t worry, you will just see a blank page. If you have not signed up for our program on Connect before, it will prompt you to create a social profile and accept license agreements. You can find step-by-step instructions for signing up for Microsoft Connect [here](https://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57783){:target="_blank"}.
-* [Download](https://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57783) the package "Windows 10 IoT Core Insider Preview Image for MinnowBoard MAX" from Microsoft Connect. If you see a blank page or no downloads listed, please make sure you are signed into Microsoft Connect by looking at your login information at top right part of the screen. Click sign in, if you are not signed in.
+* [Download](http://go.microsoft.com/fwlink/?LinkId=616848) the ISO for MinnowBoard MAX from the Microsoft Download Center.
+* **Save the ISO** to a local folder
+
+	<img src="{{site.baseurl}}/images/mbm_iso.png">     
+	
+* Double clicking on the ISO (IoT Core MBM.iso) will automatically mount it as a virtual CD drive so you can access the contents. 
+	
+	<img src="{{site.baseurl}}/images/mbm_msi.PNG">  
+	
+* Install "Windows_10_IoT_Core_Mbm.msi". When installation is complete, flash.ffu will be located at "C:\Program Files (x86)\Microsoft IoT\FFU\MinnowBoardMax"
+	
+	<img src="{{site.baseurl}}/images/mbmffu.PNG">
+	
+* Eject the Virtual CD when done
+	
 * Insert an SD card into your SD card reader.
-* Open an admininistrator command prompt and navigate to the folder containing your local flash.ffu.
-* Find the disk number that your SD card is on your computer.  This will be used when the image is applied in the next step.  To do this, you can use the diskpart utility.  Run the following commands:<br />
 
-	<kbd>diskpart</kbd>
+* **Use IoTCoreImageHelper.exe** to flash the SD card. Search for "WindowsIoT" from start menu and select the shortcut "WindowsIoTImageHelper"
 
-    <kbd>list disk</kbd>
+	<img src="{{site.baseurl}}/images/ImagerHelperSearch.PNG">. 
+	
+* The tool will enumerate devices as shown. 
+	Select the SD card you want to flash and then provide the location of the ffu and flash the image.
 
-    <kbd>exit</kbd>
-
-* Using the admininistrator command prompt, apply the image to your SD card by running the following command (be sure to replace PhysicalDriveN with the value you found in the previous step, for example, if your SD card is disk number 3, use <kbd>/ApplyDrive:\\.\PhysicalDrive3</kbd> below):
-
-	<kbd>dism.exe /Apply-Image /ImageFile:<fullpath>flash.ffu /ApplyDrive:\\.\PhysicalDriveN /SkipPlatformCheck</fullpath></kbd>
+	<img src="{{site.baseurl}}/images/mbm_imagehelper.PNG">
 
 * Click on the "Safely Remove Hardware" icon in your task tray and select your USB SD card reader to safely remove it from the system.  Failing to do this can cause corruption of the image.
+
 **NOTE:** If you want to remove Windows 10 IoT Core from your SD card after you are done using it, see the [FAQ]({{site.baseurl}}/{{page.lang}}/Faqs.htm) section titled **How do I remove Windows 10 IoT Core from my SD card?**.
 
+**NOTE:** IoTCoreImageHelper.exe is the recommended tool to flash the SD card. However, instructions are available for using [DISM]({{site.baseurl}}/{{page.lang}}/win10/samples/DISM.htm) directly
 
 ##Set Required BIOS Settings and boot Windows 10 IoT Core
 
@@ -103,7 +114,7 @@ Follow these instructions to configure your SD card:
     * Set "LPSS & SCC Device Mode" to "ACPI Mode"
     * Set "DDR50 Capability Support for SDCard" to "Disable"
     * Set "ACPI Reporting MMC/SD As" to "Non-Removable"
-* Navigate back to top level and select Boot Mainenance Manager-> Boot Options > Change Boot Order
+* Navigate back to top level and select Boot Maintenance Manager-> Boot Options > Change Boot Order
 * Highlight the boot order list (when it is highlighted, you will see "Change the order" on the right side of the screen) and press enter
 * Highlight "EFI Misc Device" and press '+' to move it to the top of the list. If it does not move by '+', simply select "EFI Misc Device" and press enter to boot to it.
 * Commit these changes and exit.
@@ -117,6 +128,14 @@ Follow these instructions to configure your SD card:
 ![mbm]({{site.baseurl}}/images/DefaultAppMBM.png){:device-images}
 
 
-* Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.
+* If you have loaded a previous version of IoT Core on your MBM you will need to go through the following steps for your first boot (make sure you have your SD card with IoT Core inserted:
+  1. Power on MBM device and press F2.
+  2. Go to Boot Manager and select EFI Internal shell.
+  3. Identify EFIESP partition (it might be FS1: hence assuming EFIESP partition as FS1: below)
+  4. Type FS1: 
+  5. Cd EFI
+  6. Run  DeleteSbcpVariableFW.efi (This will clear UEFI variables)
+  7. Now boot up the device.
+* Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.  You can also follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to use SSH to connect to your device.
 * It is **highly recommended** that you update the default password for the Administrator account. Please follow the instructions found in the [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) documentation.
-* Remote Debugger will launch automatically when your device boots.
+* The Visual Studio Remote Debugger will silently start automatically on your Raspberry Pi 2 when it boots.
