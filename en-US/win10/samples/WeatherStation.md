@@ -19,9 +19,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 <p class="maker-kit">The data you collect from this project will contribute to the map below! Show the world what the weather's like in your location and put your city on the map! </p>
 
 
-<iframe class="maker-kit" src="adafruitsample.azurewebsites.net/cardViewer?lesson=203" width="100%" height="442px"></iframe>
-
-
+<iframe class="maker-kit" src="https://adafruitsample.azurewebsites.net/cardViewer?lesson=203" width="100%" height="442px"></iframe>
 
 
 <div class="row">
