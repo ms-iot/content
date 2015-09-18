@@ -44,7 +44,7 @@ lang: en-US
 			<a href="http://go.microsoft.com/fwlink/?LinkID=625103" class="button-blue button-flat"> Download Insider Preview for MinnowBoard Max </a>
 		</div>
 		<p class="subtext">
-			This download requires sign-in with a Microsoft Account. <a href="http://www.microsoft.com/en-us/account/default.aspx"> What's this? </a> 
+			This download requires sign-in with a Microsoft Account. <a href="http://www.microsoft.com/en-us/account/default.aspx" target="_blank"> What's this? </a> 
 		</p>
 		<p class="subtext">
 			<a href="http://go.microsoft.com/fwlink/?LinkId=534601"> Release notes. </a>
