@@ -73,7 +73,7 @@ The reason the bitness of the firmware has to match the bitness of the OS is tha
 
 ## Install the Windows 10 IoT Core tools
 
-1. [Download](http://go.microsoft.com/fwlink/?LinkId=616848) the ISO for MinnowBoard MAX from the Microsoft Download Center.
+1. Download a Windows 10 IoT Core image from our [downloads page](http://ms-iot.github.io/content/en-US/Downloads.htm).
 
 2. **Save the ISO** to a local folder
 
