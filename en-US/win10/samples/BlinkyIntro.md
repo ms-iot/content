@@ -12,12 +12,3 @@ You can find the source code for this sample by downloading a zip of all of our 
 
 ###Connect the LED to your Windows IoT device
 
-You'll need a few components:
-
-* a LED (whichever color you like)
-
-* a 220 &#x2126; resistor
-
-* a breadboard and a couple of connector wires
-
-![Electrical Components]({{site.baseurl}}/images/Blinky/components.png)

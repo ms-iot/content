@@ -1,80 +1,76 @@
 ---
 layout: default
-title: Windows 10 IoT Core Essentials Maker Kit
+title: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 permalink: /en-US/AdafruitMakerKit.htm
 lang: en-US
-kit: Adafruit Essential Maker Kit
+kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 ---
 <h1 class="maker-kit section-heading">{{page.kit}}</h1>
 
-<p>The <a target="_blank" href="http://adafruit.com/windows10iotpi2">Adafruit Essential Maker Kit</a> has everything you need to start Making and Developing with Raspberry Pi 2 and Windows 10 IoT Core. Follow the lessons below to get started! </p>
+<p>Thank you for purchasing your Adafruit Starter Pack! If you have not purchased it already you can order one <a target="_blank" href="http://adafruit.com/windows10iotpi2"> here.</a></p>
 
-<div>
-  <h2 class="maker-kit">Lesson 1: </h2>
-  <h3 class="maker-kit">Introduction and setup</h3>
-  <table class="table table-striped maker-kit">
-    <tr>
-      <th class="standardTH">Topic</th>
-      <th class="standardTH">Description</th>
-      <th>Duration</th>
-    </tr>
-    <tr>
-      <td><a href="{{site.baseurl}}/{{page.lang}}/win10/AdafruitWelcome.htm">Welcome to Windows 10 IoT Core</a></td>
-      <td>Find out what makes IoT Core so perfect for makers.</td>
-      <td>15 Minutes</td>
-    </tr>
-    <tr>
-      <td><a href="{{site.baseurl}}/{{page.lang}}/AdafruitKitContents.htm">Parts in the Kit</a></td>
-      <td>What's in the box?</td>
-      <td>15 Minutes</td>
-    </tr>
-    <tr>
-      <td><a href="{{site.baseurl}}/{{page.lang}}/win10/KitSetupPCRPI.htm"> Setting up your PC and Programming Environment</a></td>
-      <td>Ready, Set, Develop.</td>
-      <td>120 Minutes</td>
-    </tr>
-    <tr>
-      <td><a href="{{site.baseurl}}/{{page.lang}}/win10/KitSetupRPI.htm">Setting up your Raspberry Pi 2 Board</a></td>
-      <td>Windows, meet Raspberry Pi 2.</td>
-      <td>40 Minutes</td>
-    </tr>
-     <tr>
-      <td><a href="{{site.baseurl}}/{{page.lang}}/win10/samples/KitBlinky.htm">Make your first Project</a></td>
-      <td>Create a simple app to toggle an LED using your Raspberry Pi 2 and Windows 10 IoT Core.</td>
-      <td>15 Minutes</td>
-    </tr>
-  </table>
+<div class="row">
+  <h3 class="maker-kit">Lesson 1: Introduction to Starter Pack for Windows 10 IoT Core on Raspberry Pi2</h3>
+    <div class="col-md-6 col-sm-12">
+      <table class="table table-striped maker-kit">
+        <tr>
+          <th class="standardTH">Topic</th>
+          <th class="standardTH">Description</th>
+        </tr>
+        <tr>
+          <td><a href="{{site.baseurl}}/{{page.lang}}/win10/AdafruitWelcome.htm">Welcome to Windows 10 IoT Core</a></td>
+          <td>Learn how you can rapidly create maker projects with Windows 10 IoT Core OS.</td>
+        </tr>
+        <tr>
+          <td><a href="{{site.baseurl}}/{{page.lang}}/AdafruitKitContents.htm">Parts in the Kit</a></td>
+          <td>List of all parts and capabilities in the kit.</td>
+        </tr>
+        <tr>
+          <td><a href="{{site.baseurl}}/{{page.lang}}/win10/KitSetupPCRPI.htm"> Setting up your PC and Programming Environment</a></td>
+          <td>Instructions for downloading Windows 10 and Visual Studio.</td>
+        </tr>
+        <tr>
+          <td><a href="{{site.baseurl}}/{{page.lang}}/win10/KitSetupRPI.htm">Setting up your Raspberry Pi 2 Board</a></td>
+          <td>Instructions to connect and program your Raspberry Pi2 board.</td>
+        </tr>
+         <tr>
+          <td><a href="{{site.baseurl}}/{{page.lang}}/win10/samples/KitBlinky.htm">Make your first project - Hello Blinky &#x263A; </a></td>
+          <td>Let’s make sure your set-up is ready.</td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <img class="maker-kit" src="{{site.baseurl}}/images/AdafruitMakerKitClosed.jpg">
+    </div>
 </div>
 
 <div>
-  <h2 id="lessonTwo" class="maker-kit">Lesson 2: </h2>
-  <h3 class="maker-kit">Four awesome projects to make with the Adafruit Essentials Maker Kit</h3>
+  <h3 id="lessonTwo" class="maker-kit">Lesson 2: Awesome projects to make with parts included in the Starter Pack for Windows 10 IoT Core on Raspberry Pi2</h3>
 
   <table class="table table-striped maker-kit">
     <tr>
       <th class="standardTH">Project</th>
       <th class="standardTH">Description</th>
-      <th>Duration</th>
     </tr>
     <tr>
-      <td><a target="_blank" href="{{site.baseurl}}/{{page.lang}}/win10/samples/InternetLED.htm">Internet Connected LED</a></td>
-      <td>Learn about creating a simple Internet connected application to query the status of a web API of WiFi and use that information to turn on a notification light.</td>
-      <td>15 Minutes</td>
-    </tr>
-    <tr>
-      <td><a target="_blank" href="{{site.baseurl}}/{{page.lang}}/win10/samples/WeatherStation.htm">Weather Patterns of Makers</a></td>
-      <td>Measure temperature, pressure and altitude in the room using a sensor connected over I2C bus, then send that up to the cloud over WiFi. The data will contribute to a map of weather reports from other makers around the world and help you get a sense of other makers working with the same kit.</td>
-      <td>60 Minutes</td>
+      <td><a target="_blank" href="{{site.baseurl}}/{{page.lang}}/win10/samples/WorldMapOfMakers.htm">World Map of Makers</a></td>
+      <td>
+        Check out IoT of connected LEDs! You will learn about creating a simple Internet connected application to query the status of a web API and use that information to turn on a notification light.
+        <br>
+        Upon completing this lesson, you will have left a mark on the world map and will make your city proud of you! &#x263A;
+      </td>
     </tr>
     <tr>
       <td><a target="_blank" href="{{site.baseurl}}/{{page.lang}}/win10/samples/BrightOrNot.htm">Bright or Not?</a></td>
-      <td>Measure the light intensity in the room using an analog photocell and an ADC. Once the data is measured it will be mapped to strings and output on the console on the PC. If it is too bright, for example, the console would show “It’s too bright in here!” or vice versa. User will be able to set the threshold via the included potentiometer. </td>
-      <td>60 Minutes</td>
+      <td>Learn how to get data from analog sensors using ADC with Raspberry Pi2 and Windows 10 IoT Core. Upon executing the sample, you’ll be able to measure the light intensity in the room using an analog photocell. </td>
+    </tr>
+    <tr>
+      <td><a target="_blank" href="{{site.baseurl}}/{{page.lang}}/win10/samples/WeatherStation.htm">Weather Patterns of Makers</a></td>
+      <td>Learn how to communicate with I2C/SPI based sensor using a simple single API call in Windows 10 IoT Core. Upon completing this lesson you will be able to share the temperature and barometric data at your location with rest of the maker community.</td>
     </tr>
     <tr>
       <td><a target="_blank" href="{{site.baseurl}}/{{page.lang}}/win10/samples/WhatColor.htm">What Color Is It?</a></td>
-      <td>Measure the color of an object using a color sensor over I2C, the output is displayed on the console For example, if the sensor is pointed at blue color, the console would show: “It looks like the color is blue”. </td>
-      <td>60 Minutes</td>
+      <td>Learn how about the nifty text to speech features of Windows 10 IoT Core. </td>
     </tr>
   </table>
 </div>

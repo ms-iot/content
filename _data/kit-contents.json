@@ -1,5 +1,5 @@
 {
-  "Adafruit Essential Maker Kit" : {
+  "Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2" : {
     "Basics": [
     {name: "Adafruit Raspberry Pi B+ / Pi 2 Case - Smoke Base w/ Clear Top",
      link: "https://www.adafruit.com/products/2258",
@@ -46,13 +46,13 @@
      link: "https://www.adafruit.com/products/356",
      quantity: "2"}],
   "Sensors": [
-    {name: "CdS Photocell",
+    {name: "Photo cell (CdS photoresistor)",
      link: "https://www.adafruit.com/products/161",
      quantity: "1"},
-      {name: "BMP280",
+      {name: "BMP280 Barometric Pressure & Altitude Sensor",
      link: "https://www.adafruit.com/products/2651",
      quantity: "1"},
-      {name: "Color Sensor",
+      {name: "RGB Color Sensor with IR filter and White LED",
      link: "https://www.adafruit.com/products/1334",
      quantity: "1"},
       {name: "Tactile Switches",

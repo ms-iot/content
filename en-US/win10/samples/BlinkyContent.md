@@ -1,5 +1,15 @@
 {% include_relative BlinkyIntro.md %}
 
+You'll need a few components:
+
+* a LED (whichever color you like)
+
+* a 220 &#x2126; resistor
+
+* a breadboard and a couple of connector wires
+
+![Electrical Components]({{site.baseurl}}/images/Blinky/components.png)
+
 {% include_relative BlinkyRPIGpio.md %}
 
 {% include_relative BlinkyMBMGpio.md %}

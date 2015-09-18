@@ -5,26 +5,34 @@ permalink: /en-US/win10/samples/KitBlinky.htm
 step: win10/samples/KitBlinky.htm
 lang: en-US
 deviceName: RPI2
-kit: Adafruit Essential Maker Kit
+kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 ---
 <ol class="breadcrumb">
-  <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Adafruit Essential Maker Kit</a></li>
+  <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2</a></li>
   <li class="active">Blinky Sample</li>
 </ol>
 
-<h1 class="maker-kit">Lesson 1: Get ready to make</h1>
+<h1 class="maker-kit">Lesson 1: Introduction to Starter Pack for Windows 10 IoT Core on Raspberry Pi2</h1>
 {% include kit-steps.html device=page.deviceName %}
 <h3 class="maker-kit">Deploy your first app.</h3>
 
 {% include_relative BlinkyIntro.md %}
 
+You'll need a few components:
+
+* a LED (whichever color you like)
+
+* a 560 &#x2126; resistor
+
+* a breadboard and a couple of connector wires
+
+![Electrical Components]({{site.baseurl}}/images/Blinky/components.png)
+
 {% include_relative BlinkyRPIGpio.md %}
 
 {% include_relative AppDeploymentCS.md %}
 
-When everything is set up, you should be able to press F5 from Visual Studio.  The Blinky app will deploy and start on the Windows IoT device, and you should see the LED blink in sync with the simulation on the screen.
-
-<img src="{{site.baseurl}}/images/Blinky/blinky-screenshot.png" height="400">
+When everything is set up, you should be able to press F5 from Visual Studio to deploy the code.
 
 Congratulations! You controlled one of the GPIO pins on your Windows IoT device.
 

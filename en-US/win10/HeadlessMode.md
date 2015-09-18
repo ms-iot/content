@@ -18,8 +18,6 @@ When configured to run in headed mode, a single UI app will launch at boot and t
 ##Changing the mode
 You can modify the headed/headless state of your device from a PowerShell session.  To review the PowerShell details, look [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
 
-<!-- This content is replicated at en-US/win10/KitSetupRPI.md -->
-
 * To display the current state of your device, use the `setbootoption` utility like this:
 
         [192.168.0.243]: PS C:\> setbootoption.exe
@@ -29,18 +27,14 @@ You can modify the headed/headless state of your device from a PowerShell sessio
         [192.168.0.243]: PS C:\> setbootoption.exe headless
         [192.168.0.243]: PS C:\> shutdown /r /t 0
 
-<!-- End of Replicated Content -->
-
 * To modify the state of your device to enable headed mode, use the `setbootoption` utility with the `headed` arg:
 
         [192.168.0.243]: PS C:\> setbootoption.exe headed
         [192.168.0.243]: PS C:\> shutdown /r /t 0
 
-<!-- This content is replicated at en-US/win10/KitSetupRPI.md -->
 ##Finding your headless device
 
 A Windows IoT Core device that is in headless mode can be discovered using the **WindowsIoTCoreWatcher** application that is installed with the Windows 10 IoT Core tools.
 When run, the application automatically finds all Windows IoT Core devices on the local network and displays device information such as the name, MAC, IP address, and more.
 
 ![Windows IoT Core Watcher]({{site.baseurl}}/images/HeadlessMode/IoTCoreWatcher.png)
-<!-- End of Replicated Content -->
