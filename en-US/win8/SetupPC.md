@@ -23,7 +23,7 @@ deviceName: Galileo
       Note:
     </div>
     <div class="panel-body">
-      Please ensure that Visual studio is not running at this time.
+      Please ensure that Visual Studio is not running at this time.
     </div>
   </div>
   <div class="panel-group" id="accordion">
