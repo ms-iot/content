@@ -11,6 +11,3 @@ And here is the pinout of the RPi2:
 
 Here is an example of what your breadboard might look like with the circuit assembled:
 
-<img src="{{site.baseurl}}/images/Blinky/breadboard_assembled_rpi2.png" height="500">
-
-<sub>*Image made with [Fritzing](http://fritzing.org/){:target="_blank"}*</sub>

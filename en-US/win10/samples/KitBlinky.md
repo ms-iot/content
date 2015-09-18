@@ -30,6 +30,10 @@ You'll need a few components:
 
 {% include_relative BlinkyRPIGpio.md %}
 
+<img class="device-images" src="{{site.baseurl}}/images/Blinky/breadboard_assembled_rpi2_kit.jpg" height="400">
+
+<sub>*Image made with [Fritzing](http://fritzing.org/){:target="_blank"}*</sub>
+
 {% include_relative AppDeploymentCS.md %}
 
 When everything is set up, you should be able to press F5 from Visual Studio to deploy the code.
