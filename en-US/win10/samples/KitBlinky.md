@@ -8,11 +8,11 @@ deviceName: RPI2
 kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 ---
 <ol class="breadcrumb">
-  <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2</a></li>
+  <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Adafruit Starter Pack</a></li>
   <li class="active">Blinky Sample</li>
 </ol>
 
-<h1 class="maker-kit">Lesson 1: Introduction to Starter Pack for Windows 10 IoT Core on Raspberry Pi2</h1>
+<h1 class="maker-kit">Lesson 1: Introduction and Setup</h1>
 {% include kit-steps.html device=page.deviceName %}
 <h3 class="maker-kit">Deploy your first app.</h3>
 
@@ -42,5 +42,8 @@ Congratulations! You controlled one of the GPIO pins on your Windows IoT device.
 
 {% include_relative BlinkyCodeCS.md%}
 
-
-<h4 class="maker-kit"><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm#lessonTwo">Next: Lesson 2 - Four awesome projects to make with the Adafruit Essentials Maker Kit</a></h4>
+<div class="row lineTop">
+  <div class="text-right col-sm-12">
+    <h2 class="maker-kit"><a href="{{site.baseurl}}/{{page.lang}}/win10/samples/WorldMapOfMakers.htm">Next: Lesson 2 - Four awesome projects to make with the Adafruit Starter Pack</a></h2>
+  </div>
+</div>

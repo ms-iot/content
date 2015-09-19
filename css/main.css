@@ -235,7 +235,7 @@ h3.steps:hover{
 }
 h1.maker-kit {
   font-weight: 100;
-  font-size:46px;
+  font-size:40px;
   margin-bottom: 20px;
 }
 h2.maker-kit {
@@ -246,6 +246,7 @@ h3.maker-kit {
   font-weight: lighter;
   border-bottom: 1px solid rgb(230,230,230);
   padding-bottom: 20px;
+  margin-top:10px;
   margin-bottom: 20px;
   font-size:32px;
 }
@@ -258,6 +259,7 @@ h4.maker-kit {
 }
 p.maker-kit {
   font-size: 18px;
+  margin-bottom: 20px;
 }
 
 table.maker-kit > tbody > tr:nth-of-type(odd) {
@@ -292,6 +294,14 @@ iframe.maker-kit {
   border: none;
 }
 
+.projectRow {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.projectRow > div > h2 {
+  margin-top:30%;
+}
 .button-flat {
 	border-radius: 0;
 	display: inline-block;
