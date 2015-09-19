@@ -19,7 +19,7 @@ lang: en-US
 		<h3 class="divider">Download Windows 10</h3>
 		<div class="preview">
 			<p> 
-				Download the most recent RTM version of Windows 10 IoT Core. Built for devices, Windows 10 IoT Core enables you to create cool connected projects, amazing applications, and much more, all using the Windows environment you know -- pared down to run on embedded devices like the Raspberry Pi 2. 
+				Download the most recent RTM version of Windows 10 IoT Core. Built for devices, Windows 10 IoT Core enables you to create cool connected projects, amazing applications, and much more. It leverages the Windows development environment you know -- adapted to run on embedded devices like the Raspberry Pi 2. 
 			</p>
 			<p> 
 				The RTM version is the latest release available for the public.
@@ -37,10 +37,10 @@ lang: en-US
 		<h3 class="divider">Download the Windows 10 Insider Preview</h3>
 		<div class="preview">
 			<p> 
-				The Windows 10 IoT Core Insider Preview has everything from the regular release but also includes the latest bug fixes, features, and more. Become an Insider to get access to the Insider Preview and start building projects right away!
+				The Windows 10 IoT Core Insider Preview has everything from the regular release but also includes the latest bug fixes, features, and more. Become an Insider to get access to the Insider Preview and help build the features you want to see in Windows!
 			</p>
 			<p> 
-				Learn more about the Insider program and enroll now at <a href="http://insider.windows.com">insider.windows.com</a>.
+				Not an Insider yet? Learn more about the Insider program and enroll now at <a href="http://insider.windows.com">insider.windows.com</a>.
 			</p>
 		</div>
 		
