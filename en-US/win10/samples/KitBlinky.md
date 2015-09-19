@@ -26,7 +26,7 @@ You'll need a few components:
 
 * a breadboard and a couple of connector wires
 
-![Electrical Components]({{site.baseurl}}/images/Blinky/components.png)
+![Electrical Components]({{site.baseurl}}/images/AdafruitStarterPack/KitBlinkyMaterials.jpg){:.device-images}
 
 {% include_relative BlinkyRPIGpio.md %}
 

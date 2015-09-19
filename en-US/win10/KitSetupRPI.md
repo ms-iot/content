@@ -21,10 +21,11 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 
 ##Hook up your board
 
-1. **Insert the micro SD card** included in your kit (the slot is on the opposite side of the board shown below).
-2. **Insert the Ethernet Cable** and connect it to your local network.
-3. **Connect the power supply** to the micro USB port on the board.
-4. **Insert the WiFi Dongle** included in your kit into one of the USB ports on your RPI2.
+1. Insert the micro SD card included in your kit (the slot is on the opposite side of the board shown below).
+2. Insert the WiFi Dongle included in your kit into one of the USB ports on your Raspberry Pi 2.
+3. Insert the Ethernet Cable and connect it to your local network.
+4. Connect the power supply to the micro USB port on the board.
+
 
 
     <img class="device-images" src="{{site.baseurl}}/images/rpi2Headless.png">

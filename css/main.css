@@ -274,6 +274,10 @@ ul.maker-kit > li > a > h3{
   text-align: left;
 }
 
+.floatTop {
+  margin-top: 16%;
+}
+
 ul.maker-kit > li > a {
   padding-left: 0;
 }
@@ -346,4 +350,13 @@ iframe.maker-kit {
 
 div.preview {
 	height: 150px;
+}
+
+@media (max-width: 700px) {
+  h2.maker-kit {
+    font-size:24px;
+  }
+  h3.maker-kit {
+    font-size:24px;
+  }
 }

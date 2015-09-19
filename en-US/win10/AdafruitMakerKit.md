@@ -7,11 +7,11 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 ---
 <h1 class="maker-kit section-heading">{{page.kit}}</h1>
 <div class="row">
-  <div class="col-md-4 col-sm-12">
-    <p>Thank you for purchasing your Adafruit Starter Pack! If you have not purchased it already you can order one <a target="_blank" href="http://adafruit.com/windows10iotpi2"> here.</a></p>
+  <div class="col-md-6 col-sm-12">
+    <h2 class="maker-kit floatTop">Thank you for purchasing your Adafruit Starter Pack! You'll be developing with the power of Windows 10 IoT Core and Raspberry Pi 2 in no time! If you have not purchased it already you can order one <a target="_blank" href="http://adafruit.com/windows10iotpi2"> here.</a></h2>
   </div>
-  <div class="col-md-8 col-sm-12">
-   <img class="maker-kit" src="{{site.baseurl}}/images/AdafruitMakerKitClosed.jpg">
+  <div class="col-md-6 col-sm-12">
+   <img class="maker-kit" src="{{site.baseurl}}/images/AdafruitStarterPack/AdafruitDisplay.png">
   </div>
 </div>
 

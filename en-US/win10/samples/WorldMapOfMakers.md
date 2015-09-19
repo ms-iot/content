@@ -20,14 +20,14 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 
 <div class="row">
     <h3 class="maker-kit">
-      Check out IoT of connected LEDs! You will learn about creating a simple Internet connected application to query the status of a web API and use that information to turn on a notification.
+      Check out the Internet of Connected LEDs! You will learn about creating a simple Internet connected application to query the status of a web API and use that information to turn on a notification.
 
       Upon completing this lesson, you'll have left a mark on the world map above and will make your city proud of you!
     </h3>
 </div>
 <div class="row projectRow">
   <div class="col-md-6 col-sm-12">
-    <img src="{{site.baseurl}}/images/AdafruitMakerKitContents.jpeg">
+    <img src="{{site.baseurl}}/images/AdafruitStarterPack/WebBlinkyMakerMap.JPG">
   </div>
   <div class="col-md-6 col-sm-12">
     <h2 class="text-center maker-kit">Ready to get started?  Click <a target="_blank" href="http://www.hackster.io/projects/12721?auth_token=b26be92d375bc16823077bd874693e9c">here</a> to put your city on the map!</h2>
