@@ -4,7 +4,7 @@ title: World Map Of Makers
 permalink: /en-US/win10/samples/WorldMapOfMakers.htm
 lang: en-US
 deviceName: RPI2
-kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
+kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 ---
 
 <ol class="breadcrumb">

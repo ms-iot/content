@@ -5,7 +5,7 @@ permalink: /en-US/AdafruitMakerKit.htm
 lang: en-US
 kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 ---
-<h1 class="maker-kit section-heading">{{page.kit}}</h1>
+<h3 class="maker-kit section-heading">{{page.kit}}</h3>
 <div class="row">
   <div class="col-md-6 col-sm-12">
     <h2 class="maker-kit floatTop">Thank you for purchasing your Adafruit Starter Pack! You'll be developing with the power of Windows 10 IoT Core and Raspberry Pi 2 in no time! If you have not purchased it already you can order one <a target="_blank" href="http://adafruit.com/windows10iotpi2"> here.</a></h2>
@@ -36,7 +36,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
         </tr>
         <tr>
           <td><a href="{{site.baseurl}}/{{page.lang}}/win10/KitSetupRPI.htm">Setting up your Raspberry Pi 2 Board</a></td>
-          <td>Instructions to connect and program your Raspberry Pi2 board.</td>
+          <td>Instructions to connect and program your Raspberry Pi 2 board.</td>
         </tr>
          <tr>
           <td><a href="{{site.baseurl}}/{{page.lang}}/win10/samples/KitBlinky.htm">Make your first project - Hello Blinky</a></td>
@@ -63,7 +63,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
     </tr>
     <tr>
       <td><a target="_blank" href="{{site.baseurl}}/{{page.lang}}/win10/samples/BrightOrNot.htm">Bright or Not?</a></td>
-      <td>Learn how to get data from analog sensors using ADC with Raspberry Pi2 and Windows 10 IoT Core. Upon executing the sample, you’ll be able to measure the light intensity in the room using an analog photocell. </td>
+      <td>Learn how to get data from analog sensors using ADC with Raspberry Pi 2 and Windows 10 IoT Core. Upon executing the sample, you’ll be able to measure the light intensity in the room using an analog photocell. </td>
     </tr>
     <tr>
       <td><a target="_blank" href="{{site.baseurl}}/{{page.lang}}/win10/samples/WeatherStation.htm">Weather Patterns of Makers</a></td>

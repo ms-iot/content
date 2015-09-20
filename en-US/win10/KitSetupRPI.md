@@ -17,7 +17,9 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 
 <h3 class="maker-kit">Learn how to set up the Raspberry Pi 2 and connect it to your computer.</h3>
 
-###First, [Download](http://go.microsoft.com/fwlink/?LinkId=616847) and install the ISO for the Raspberry Pi 2 from the Microsoft Download Center.
+##Download and Install the IoTCoreWatcher tool
+
+The IoTCoreWatcher tool displays all the Windows 10 IoT Core devices on your network.  Click [here](http://go.microsoft.com/fwlink/?LinkId=616847) to download it, and follow the instructions to install it.  It should launch once it's finished installing.
 
 ##Hook up your board
 
