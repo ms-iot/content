@@ -8,7 +8,7 @@ lang: en-US
 ##'Hello, World!' Sample
 
 ###Create a new C# project
-You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\HelloWorld`, but as an exercise, this tutorial will take you through the complete steps to create this app from scratch.  
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\HelloWorld`, but as an exercise, this tutorial will take you through the complete steps to create this app from scratch. You need to make sure you have installed the Windows IoT Core Project Templates from [here](https://visualstudiogallery.msdn.microsoft.com/06507e74-41cf-47b2-b7fe-8a2624202d36). 
 
 1. Start Visual Studio 2015.
 
