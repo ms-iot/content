@@ -18,7 +18,7 @@ This tutorial shows how a GPIO Device can be exposed to the AllJoyn Bus using th
 * [AllJoyn Explorer User Guide](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_User_Guide_v1.0.pdf?raw=true){:target="_blank"} - this pdf contains the documentation for how to use the AllJoyn Explorer
 
 ### Step 1: Hardware Setup
-The sample uses a Raspberry Pi 2 that one of its GPIO pins is connected to a photo resistor as shown in the schematic below. If another device is sues the pin number in the code has to be changed to match the HW setup.
+The sample uses a Raspberry Pi 2 that one of its GPIO pins is connected to a photo resistor as shown in the schematic below. If another device issues the pin number in the code has to be changed to match the HW setup.
 
 ![Rpi_schematic]({{site.baseurl}}/images/AllJoyn/rpi_schematic.png)
 
@@ -37,7 +37,7 @@ In the Visual Studio, choose File > New > Project which opens the New Project di
 
 ![NewDSB_project2]({{site.baseurl}}/images/AllJoyn/VS_newproj2.png)
 
-You will need to add a reference to the AdapterLib project to use the Windows IoT Extension SDK, which is required to use the Windows::Devices::Gpio API. Follow the below steps to add a refernece to the project:
+You will need to add a reference to the AdapterLib project to use the Windows IoT Extension SDK, which is required to use the Windows::Devices::Gpio API. Follow the below steps to add a reference to the project:
 
   1. In the VS Solution explorer, locate the Adapter Lib project. Expand this project
   2. Right click "References" and select "Add Reference..."
