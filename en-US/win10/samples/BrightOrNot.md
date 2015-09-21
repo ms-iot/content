@@ -13,7 +13,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 </ol>
 <h3 class="maker-kit"> Part two: Bright or Not?</h3>
 
-<iframe class="maker-kit" src="http://adafruitsample.azurewebsites.net/cardViewer?lesson=202" width="100%" height="370px"></iframe>
+<iframe class="maker-kit" src="https://adafruitsample.azurewebsites.net/cardViewer?lesson=202" width="100%" height="370px"></iframe>
 
 <div class="row">
   <h3 class="maker-kit">

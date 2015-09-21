@@ -15,7 +15,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 <h3 class="maker-kit"> Part one: World Map of Makers</h3>
 
 
-<iframe class="maker-kit" src="http://adafruitsample.azurewebsites.net/cardViewer?lesson=201" width="100%" height="370px"></iframe>
+<iframe class="maker-kit" src="https://adafruitsample.azurewebsites.net/cardViewer?lesson=201" width="100%" height="370px"></iframe>
 
 
 <div class="row">
