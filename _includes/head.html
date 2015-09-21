@@ -26,7 +26,10 @@
         });
 
         window.appInsights = appInsights;
-        appInsights.trackPageView();
+        <!-- appInsights.trackPageView(); -->
+		
+		appInsights.trackPageView(null, null, {urlReferrer: document.referrer});
+		
     </script>
 
 
