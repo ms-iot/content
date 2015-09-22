@@ -24,7 +24,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
     <h2 class="text-center maker-kit">Click <a target="_blank" href="http://www.hackster.io/projects/12721?auth_token=b26be92d375bc16823077bd874693e9c">here</a> to get started!</h2>
   </div>
   <div class="col-md-6 col-sm-12">
-    <img src="{{site.baseurl}}/images/AdafruitStarterPack/WebBlinkyMakerMap.JPG">
+    <img src="{{site.baseurl}}/images/AdafruitStarterPack/WebBlinkyNoMap.jpg">
   </div>
 </div>
 <div class="row lineTop">
