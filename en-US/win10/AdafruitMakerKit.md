@@ -64,15 +64,15 @@ kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
       </td>
     </tr>
     <tr>
-      <td><a target="_blank" href="{{site.baseurl}}/{{page.lang}}/win10/samples/BrightOrNot.htm">Bright or Not?</a></td>
+      <td><a target="_blank" href="http://www.hackster.io/projects/12723?auth_token=1ea83680196dbebca4f47216650521ed">Bright or Not?</a></td>
       <td>Communicate with an analog photocell sensor using ADC to measure light intensity</td>
     </tr>
     <tr>
-      <td><a target="_blank" href="{{site.baseurl}}/{{page.lang}}/win10/samples/WeatherStation.htm">Weather Station</a></td>
+      <td><a target="_blank" href="http://www.hackster.io/projects/12722?auth_token=40dfe505df48f152d8a0c574872251aa">Weather Station</a></td>
       <td>Communicate with an I2C/SPI based temperature and pressure sensor</td>
     </tr>
     <tr>
-      <td><a target="_blank" href="{{site.baseurl}}/{{page.lang}}/win10/samples/WhatColor.htm">What Color Is It?</a></td>
+      <td><a target="_blank" href="http://www.hackster.io/projects/12724?auth_token=8e636fbd9b5bd3c70e5bacdfbf9714e1">What Color Is It?</a></td>
       <td>Use GPIO as input, talk to an I2C sensor, and use the text to speech features of Windows 10 IoT Core</td>
     </tr>
   </table>
