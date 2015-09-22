@@ -5,18 +5,27 @@ permalink: /en-US/win10/samples/KitBlinky.htm
 step: win10/samples/KitBlinky.htm
 lang: en-US
 deviceName: RPI2
-kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
+kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 ---
 <ol class="breadcrumb">
-  <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Adafruit Starter Pack</a></li>
+  <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
   <li class="active">Blinky Sample</li>
 </ol>
 
 <h1 class="maker-kit">Lesson 1: Introduction and Setup</h1>
 {% include kit-steps.html device=page.deviceName %}
-<h3 class="maker-kit">Deploy your first app.</h3>
 
-{% include_relative BlinkyIntro.md %}
+<hr/>
+
+#Blinky Sample
+
+Let's create a simple Blinky app using an LED to test your setup.
+
+###Load the project in Visual Studio
+
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\Blinky`.  The sample code is available in either C++ or C#, however the documentation here only details the C# variant. Make a copy of the folder on your disk and open the project from Visual Studio.
+
+###Connect the LED to your Windows IoT device
 
 You'll need a few components:
 
@@ -44,6 +53,6 @@ Congratulations! You controlled one of the GPIO pins on your Windows IoT device.
 
 <div class="row lineTop">
   <div class="text-right col-sm-12">
-    <h2 class="maker-kit"><a href="{{site.baseurl}}/{{page.lang}}/win10/samples/WorldMapOfMakers.htm">Next: Lesson 2 - Four awesome projects to make with the Adafruit Starter Pack</a></h2>
+    <h2 class="maker-kit"><a href="{{site.baseurl}}/{{page.lang}}/win10/samples/WorldMapOfMakers.htm">Next: Lesson 2 - Starter Projects</a></h2>
   </div>
 </div>

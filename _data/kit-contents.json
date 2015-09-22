@@ -1,6 +1,6 @@
 {
   "Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2" : {
-    "Basics": [
+    "Essentials": [
      {name: "Raspberry Pi 2 Board (optional)",
      link: "https://www.adafruit.com/products/2258",
      quantity: "1"},
@@ -23,7 +23,7 @@
      link: "https://www.adafruit.com/products/239",
      quantity: "1"}
   ],
-  "Add-ons and Components": [
+  "Components": [
     {name: "Premium Male/Male Jumper Wires",
      link: "https://www.adafruit.com/products/1957",
      quantity: "1"},
@@ -35,22 +35,22 @@
      quantity: "1"},
     {name: "Assorted LEDs",
      link: "https://www.adafruit.com/products/2258",
-     quantity: "2"},
+     quantity: "6"},
      {name: "Potentiometer",
      link: "https://www.adafruit.com/products/356",
-     quantity: "2"},
+     quantity: "1"},
      {name: "Tactile Switches",
      link: "https://www.adafruit.com/products/1119",
-     quantity: "2"},
+     quantity: "3"},
      {name: "Resistors",
      link: "",
-     quantity: "2"},
+     quantity: "10"},
      {name: "Capacitor",
      link: "",
-     quantity: "2"},
+     quantity: "1"},
   ],
   "Sensors": [
-    {name: "Photo cell",
+    {name: "Photocell",
      link: "https://www.adafruit.com/products/161",
      quantity: "1"},
       {name: "Adafruit BMP280 Temperature + Barometric Sensor",

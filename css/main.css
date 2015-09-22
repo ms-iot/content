@@ -267,7 +267,7 @@ table.maker-kit > tbody > tr:nth-of-type(odd) {
 }
 table.maker-kit > tbody > tr > th {
   font-weight:200;
-  color: rgb(165,165,165);
+  color: rgb(000,000,000);
 }
 
 ul.maker-kit > li > a > h3{
@@ -296,6 +296,7 @@ iframe.maker-kit {
   padding-left: 15px;
   padding-right: 15px;
   border: none;
+  overflow:hidden;
 }
 
 .projectRow {

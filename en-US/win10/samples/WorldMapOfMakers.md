@@ -8,29 +8,23 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 ---
 
 <ol class="breadcrumb">
-  <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Adafruit Starter Pack</a></li>
+  <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
   <li class="active">World Map of Makers</li>
 </ol>
-
-<h3 class="maker-kit"> Part one: World Map of Makers</h3>
-
-
-<iframe class="maker-kit" src="https://adafruitsample.azurewebsites.net/cardViewer?lesson=201" width="100%" height="370px"></iframe>
+<hr/>
+<iframe class="maker-kit" scrolling="no" src="https://adafruitsample.azurewebsites.net/cardViewer?lesson=201" width="100%" height="550px"></iframe>
 
 
 <div class="row">
-    <h3 class="maker-kit">
-      Check out the Internet of Connected LEDs! You will learn about creating a simple Internet connected application to query the status of a web API and use that information to turn on a notification.
-
-      Upon completing this lesson, you'll have left a mark on the world map above and will make your city proud of you!
-    </h3>
+      Create a simple internet connected application to query the status of a web API and use that information to toggle an LED.
+      Upon executing this lesson, you'll have left a mark on the world map above and will make your city proud of you!
 </div>
 <div class="row projectRow">
   <div class="col-md-6 col-sm-12">
-    <img src="{{site.baseurl}}/images/AdafruitStarterPack/WebBlinkyMakerMap.JPG">
+    <h2 class="text-center maker-kit">Click <a target="_blank" href="http://www.hackster.io/projects/12721?auth_token=b26be92d375bc16823077bd874693e9c">here</a> to get started!</h2>
   </div>
   <div class="col-md-6 col-sm-12">
-    <h2 class="text-center maker-kit">Ready to get started?  Click <a target="_blank" href="http://www.hackster.io/projects/12721?auth_token=b26be92d375bc16823077bd874693e9c">here</a> to put your city on the map!</h2>
+    <img src="{{site.baseurl}}/images/AdafruitStarterPack/WebBlinkyMakerMap.JPG">
   </div>
 </div>
 <div class="row lineTop">
