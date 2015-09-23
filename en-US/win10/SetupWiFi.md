@@ -53,10 +53,11 @@ An alternative way to configure WiFi is to use the default app. You can use this
 **Prerequisite:** Your device will already need to be connected to your local network through Ethernet and should have a USB WiFi Adapter plugged in
 
 If you have device a with no UI, display, or input devices, you can still configure it through [web-based management]({{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm).
+In **Windows IoT Core Watcher**, *Right Click* on your Raspberry Pi, then select **Web Browser Here**.
 
 <!-- This content is replicated at en-US/win10/KitSetupRPI.md -->
 
-1. Using a web browser, navigate to `http://[device_ip]:8080/`, where **[device_ip]** is the IP address of the Windows 10 IoT Core device (ex: **192.168.1.4**). Enter **Administrator** for the username, and supply your password
+1. Enter **Administrator** for the username, and supply your password (p@ssw0rd by default)
 2. Click on **Networking** in the left-hand pane
 3. Under **Available networks**, select network you would like to connect to and supply the connection credentials. Click **Connect** to initiate the connection
 

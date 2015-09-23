@@ -7,8 +7,6 @@ And here is the JP1 connector on the MBM:
 
 <img src="{{site.baseurl}}/images/PinMappings/MBM_Pinout.png" height="400">
 
-<sub>*Image made with [Fritzing](http://fritzing.org/){:target="_blank"}*</sub>
-
 Here is an example of what your breadboard might look like with the circuit assembled:
 
 <img src="{{site.baseurl}}/images/Blinky/breadboard_assembled.png" height="500">

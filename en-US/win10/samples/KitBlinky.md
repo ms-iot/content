@@ -31,9 +31,10 @@ You'll need a few components:
 
 * a LED (any color you like)
 
-* a 560 &#x2126; resistor
+* a 560 &#x2126; resistor ([Resistor Color Code](https://en.wikipedia.org/wiki/Electronic_color_code) Green, Blue, Brown, Gold)
 
-* a breadboard and a couple of connector wires
+* a breadboard
+* 2 Male to Female connector wires
 
 ![Electrical Components]({{site.baseurl}}/images/AdafruitStarterPack/KitBlinkyMaterials.jpg){:.device-images}
 
