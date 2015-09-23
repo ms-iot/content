@@ -1,7 +1,7 @@
 {
   "Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2" : {
     "Essentials": [
-     {name: "Raspberry Pi 2 Board (optional)",
+     {name: "Raspberry Pi 2 Board (Included in some versions of the Adafruit Starter Kits)",
      link: "https://www.adafruit.com/products/2258",
      quantity: "1"},
      {name: "Adafruit Raspberry Pi Case",
