@@ -17,6 +17,9 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 * Install Windows 10.
 * Install Visual Studio 2015.
 * Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
+* Install npm v3 (to take advantage of the flat node module dependency structure npm v3 introduced):
+  * Open a command window (as Administrator) and run `npm install -g npm-windows-upgrade`
+  * Then run `npm-windows-upgrade --version:3.3.3`
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 * Install Arduino software from [here](https://www.arduino.cc/en/Main/Software).
 
@@ -42,8 +45,8 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
   After completing this step, Node.js will be in `c:\Node.js (Chakra)` on your device. **Note:** If you haven't entered the credentials through the explorer window you will get an "Access Denied" error.
 
 
-###Create the Cylon Node.js file
-Create a new file called cylonsample.js and place the contents below to it.
+###Create a file with the code to control the Arduino LED
+Create new folder called "CylonSample" on your PC. Open the folder and create a new file called cylonsample.js and place the contents below to it.
 <UL>
 {% highlight JavaScript %}
 var Cylon = require('cylon');
@@ -63,30 +66,35 @@ Cylon.robot({
 }).start();
 {% endhighlight %}
 </UL>
-Create folder for Node on the device using an explorer window called C:\CylonSample. Then copy cylonsample.js to this folder.
+
+###Get Cylon
+* Open a command window.
+* Navigate to the CylonSample folder (created in the previous section).
+* Run `npm install cylon cylon-firmata cylon-gpio cylon-i2c`
 
 
 ###Build Serialport
-Build [serialport](https://www.npmjs.com/package/serialport), a Cylon dependency, that you will copy to the Raspberry Pi 2. Since serialport is a native module, 
-we cannot run `npm install` on Windows IoT core to build the code. We will build on the PC and then copy the package to the device.
+**Note:** Even though serialport is installed when Cylon is installed, you still need to build the native serialport.node addon that:
 
-* Clone [this](https://github.com/ms-iot/node-serialport) temporary fork of serialport and checkout the 'master' branch.
-* In the node-serialport root, run `npm install nan` from a command window.
-* Run `"[Node.js (Chakra) installation path]\node_modules\npm\bin\node-gyp-bin\node-gyp.cmd" rebuild --module_name=serialport --module_path=. --target_arch=arm` 
-  The default Node.js (Chakra) installation path is "c:\Program Files (x86)\Node.js (chakra)".
-* If the last step is successful, you will see **serialport.node** in [serialport clone path]\build\Release
-* Change "module_path" in [serialport clone path]\package.json to "./build/release/".
+* Corresponds with the processor architecture of the device you are targeting (in this case ARM for Raspberry Pi 2).
+* Includes an [update](https://github.com/voodootikigod/node-serialport/pull/550) for serialport to work on Windows 10 IoT Core.
+
+Steps to build serialport:
+
+1. From your Git shell (get GitHub Desktop for Windows [here](https://desktop.github.com/)),  clone [this](https://github.com/Microsoft/node) temporary fork of node.js.
+2. Run `git checkout ch0.12`
+3. Run `.\vcbuild.bat arm chakra openssl-no-asm` and wait for node to build.
+4. Clone [this](https://github.com/ms-iot/node-serialport) temporary fork of serialport and checkout the 'master' branch.
+5. In a command window, go to the serialport clone root.
+6. Run `npm install nan`
+7. Run `node.exe [node.js clone root]\deps\npm\node_modules\node-gyp\bin\node-gyp.js rebuild --nodedir=[node.js clone root] --target_arch=arm --module_name=serialport --module_path=.`
+8. If the last step is successful, you will see **serialport.node** in [serialport clone path]\build\release.
+9. Copy [serialport clone root]\build\release\serialport.node to [CylonSample folder path]\node_modules\serialport\build\serialport\v1.7.4\Release\node-v14-win32-arm\serialport.node
+  (**Note:** node-v14-win32-arm is a new folder you will create).
 
 
-###Install Cylon and copy Serialport to your Raspberry Pi 2
-* Connect to the device using PowerShell. Instructions to do this can be found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
-* cd to C:\CylonSample.
-* Create a folder called node_modules (you can run `mkdir node_modules`).
-* cd to C:\CylonSample\node_modules and create a folder called serialport (you can run `mkdir serialport`). The final path should be C:\CylonSample\node_modules\serialport
-* Copy the folders and files in the serialport clone on your PC to the serialport folder on the device.
-* cd back to C:\CylonSample.
-* Run `& 'C:\Node.js (Chakra)\npm.cmd' install cylon cylon-firmata cylon-gpio cylon-i2c`. You may see some warnings about version mismatches which you can ignore. Make sure to run this command **after** serialport is copied.
-
+###Copy the sample to your Raspberry Pi 2
+* Copy the CylonSample folder on your PC to C:\CylonSample on the Raspberry Pi 2.
 
 
 ###Set up the connection between your Arduino and Raspberry Pi 2
