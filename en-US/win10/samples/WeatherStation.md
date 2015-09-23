@@ -9,19 +9,16 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 ---
 
 <ol class="breadcrumb">
-  <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Adafruit Starter Pack</a></li>
-  <li class="active">Weather Patterns of Makers</li>
+  <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
+  <li class="active">Weather Station</li>
 </ol>
 
-<h3 class="maker-kit"> Part three: Weather Patterns of Makers</h3>
-
-
-<iframe class="maker-kit" src="https://adafruitsample.azurewebsites.net/cardViewer?lesson=203" width="100%" height="370px"></iframe>
+<hr/>
 
 <div class="row">
-  <h3 class="maker-kit">
-    The data you collect from this project will contribute to the map above! Show the world what the weather's like in your location and put your city on the map!
-  </h3>
+    Communicate with an I2C/SPI based temperature and pressure sensor.
+    <br/>
+    Upon executing this sample, you'll have learned how to measure temperature and pressure using I2C/SPI and be able to place a pin on the map below!
 </div>
 
 <div class="row projectRow">
@@ -29,9 +26,11 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
     <img src="{{site.baseurl}}/images/AdafruitStarterPack/WeatherStation.JPG">
   </div>
   <div class="col-md-6 col-sm-12">
-    <h2 class="text-center maker-kit">Ready to get started?  Click <a target="_blank" href="http://www.hackster.io/projects/12721?auth_token=b26be92d375bc16823077bd874693e9c">here</a> to show the world what the weather's like in your city!</h2>
+    <h2 class="text-center maker-kit">Click <a target="_blank" href="http://www.hackster.io/projects/12722?auth_token=40dfe505df48f152d8a0c574872251aa">here</a> to get started!</h2>
   </div>
 </div>
+
+<iframe class="maker-kit" src="https://adafruitsample.azurewebsites.net/cardViewer?lesson=203" width="100%" height="550px" scrolling="no"></iframe>
 
 <div class="row lineTop">
   <div class="col-md-6 col-md-offset-6 col-sm-12 text-right">

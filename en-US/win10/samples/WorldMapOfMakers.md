@@ -12,12 +12,12 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
   <li class="active">World Map of Makers</li>
 </ol>
 <hr/>
-<iframe class="maker-kit" scrolling="no" src="https://adafruitsample.azurewebsites.net/cardViewer?lesson=201" width="100%" height="550px"></iframe>
-
+<iframe class="maker-kit" src="https://adafruitsample.azurewebsites.net/cardViewer?lesson=201" width="100%" height="550px" scrolling="no"></iframe>
 
 <div class="row">
       Create a simple internet connected application to query the status of a web API and use that information to toggle an LED.
-      Upon executing this lesson, you'll have left a mark on the world map above and will make your city proud of you!
+      <br/>
+      Upon executing this sample, you'll have left a mark on the world map above and will make your city proud of you!
 </div>
 <div class="row projectRow">
   <div class="col-md-6 col-sm-12">

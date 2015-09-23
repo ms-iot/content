@@ -8,17 +8,16 @@ deviceName: RPI2
 kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 ---
 <ol class="breadcrumb">
-  <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Adafruit Starter Pack</a></li>
+  <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
   <li class="active">Bright or Not?</li>
 </ol>
-<h3 class="maker-kit"> Part two: Bright or Not?</h3>
 
-<iframe class="maker-kit" src="https://adafruitsample.azurewebsites.net/cardViewer?lesson=202" width="100%" height="370px"></iframe>
+<hr/>
 
 <div class="row">
-  <h3 class="maker-kit">
-    Learn how to get data from analog sensors using ADC with Raspberry Pi 2 and Windows 10 IoT Core. Upon executing the sample, you’ll be able to measure the light intensity in the room using an analog photocell.
-  </h3>
+    Learn how to get data from analog sensors using ADC with Raspberry Pi 2 and Windows 10 IoT Core.
+    <br/>
+    Upon executing the sample, you’ll have learned how to measure the light intensity in the room using an analog photocell and be able to place a pin on the map below!
 </div>
 
 <div class="row projectRow">
@@ -26,9 +25,11 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
     <img src="{{site.baseurl}}/images/AdafruitStarterPack/BrightOrNot.jpg">
   </div>
   <div class="col-md-6 col-sm-12">
-    <h2 class="text-center maker-kit">Click <a target="_blank" href="http://www.hackster.io/projects/12721?auth_token=b26be92d375bc16823077bd874693e9c">here</a> to get started!</h2>
+    <h2 class="text-center maker-kit">Click <a target="_blank" href="http://www.hackster.io/projects/12723?auth_token=1ea83680196dbebca4f47216650521ed">here</a> to get started!</h2>
   </div>
 </div>
+
+<iframe class="maker-kit" src="https://adafruitsample.azurewebsites.net/cardViewer?lesson=202" width="100%" height="550px" scrolling="no"></iframe>
 
 <div class="row lineTop">
   <div class="col-md-6 col-md-offset-6 col-sm-12 text-right">
