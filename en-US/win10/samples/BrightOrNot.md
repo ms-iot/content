@@ -29,7 +29,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
   </div>
 </div>
 
-<iframe class="maker-kit" src="https://adafruitsample.azurewebsites.net/cardViewer?lesson=202" width="100%" height="550px" scrolling="no"></iframe>
+<iframe class="maker-kit" src="https://adafruitsample.azurewebsites.net/cardViewer?lesson=204" width="100%" height="550px" scrolling="no"></iframe>
 
 <div class="row lineTop">
   <div class="col-md-6 col-md-offset-6 col-sm-12 text-right">
