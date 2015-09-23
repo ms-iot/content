@@ -12,7 +12,7 @@ You'll need a few components:
 
 {% include_relative BlinkyRPIGpio.md %}
 
-<img src="{{site.baseurl}}/images/Blinky/breadboard_assembled_rpi2.png" height="500">
+<img src="{{site.baseurl}}/images/Blinky/breadboard_assembled_rpi2_kit.jpg" height="500">
 
 <sub>*Image made with [Fritzing](http://fritzing.org/){:target="_blank"}*</sub>
 

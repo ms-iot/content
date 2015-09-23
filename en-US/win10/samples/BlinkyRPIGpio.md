@@ -1,13 +1,13 @@
 ###For Raspberry Pi 2 (RPi2)
 
-We will connect the one end of the LED to GPIO 5 (pin 29 on the expansion header) on the RPi2, the other end to the resistor, and the resistor to the 3.3 volt power supply from the RPi2.
-Note that the polarity of the LED is important. Make sure the shorter leg (-) is connected to GPIO 5 and the longer leg (+) to the resistor or it won't light up.
+1. Connect the longer leg of the LED to GPIO 5 (pin 29 on the expansion header) on the RPi2.
+2. Connect the shorter leg of the LED to the resistor.
+3. Connect the other end of the resistor to one of the Ground (GND) pins on the RPi2.
+4. Note that the polarity of the LED is important.
 
 And here is the pinout of the RPi2:
 
 <img src="{{site.baseurl}}/images/PinMappings/RP2_Pinout.png" height="400">
-
-<sub>*Image made with [Fritzing](http://fritzing.org/){:target="_blank"}*</sub>
 
 Here is an example of what your breadboard might look like with the circuit assembled:
 
