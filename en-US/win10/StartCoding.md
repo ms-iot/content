@@ -72,8 +72,8 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/UnavailableApis.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <h4>Supported Peripheral Interfaces and Devices</h4>
-                        <p>Find a list of supported peripheral interfaces and protocols with Window 10 IoT Core devices</p>
+                        <h4>Ecosystem Compatibility List</h4>
+                        <p>Find a list of supported peripherals, interfaces, and protocols on Window 10 IoT Core devices</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm">Learn More</a>
                     </div>
                 </div>

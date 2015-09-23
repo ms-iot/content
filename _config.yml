@@ -2,6 +2,7 @@
 baseurl: "/content"
 url: "http://ms-iot.github.io/content"
 repositoryurl: "https://github.com/ms-iot/content/blob/develop/"
+msiotorgurl: "https://github.com/ms-iot"
 landingurl: "http://go.microsoft.com/fwlink/p/?LinkID=534186"
 hacksterurl: "http://microsoft.hackster.io"
 hardwareurl: "http://go.microsoft.com/fwlink/p/?linkID=532948"
