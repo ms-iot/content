@@ -29,6 +29,6 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 </div>
 <div class="row lineTop">
   <div class="col-md-6 col-md-offset-6 col-sm-12 text-right">
-    <h2 class="maker-kit">...or <a href="http://www.hackster.io/projects/12723?auth_token=1ea83680196dbebca4f47216650521ed"> continue to the next project.</a></h2>
+    <h2 class="maker-kit">...or <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BrightOrNot.htm"> continue to the next project.</a></h2>
   </div>
 </div>
