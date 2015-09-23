@@ -15,10 +15,15 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 <hr/>
 
 <div class="row">
-    Learn how to get data from analog sensors using ADC with Raspberry Pi 2 and Windows 10 IoT Core.
-    <br/>
-    Upon executing the sample, you’ll have learned how to measure the light intensity in the room using an analog photocell and be able to place a pin on the map below!
+  <center>
+    <h3>Learn how to get data from analog sensors using ADC with Raspberry Pi 2 and Windows 10 IoT Core.</h3>
+    Upon executing the sample, you’ll have learned how to measure the light intensity in the room using an analog photocell!
+    <hr/>
+    Each pin on the map below is another maker that has run this sample. Zoom around to see where they are and deploy the sample to put your pin on the map!
+  </center>
 </div>
+
+<iframe class="maker-kit" src="https://adafruitsample.azurewebsites.net/cardViewer?lesson=204" width="100%" height="550px" scrolling="no"></iframe>
 
 <div class="row projectRow">
   <div class="col-md-6 col-sm-12">
@@ -28,8 +33,6 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
     <h2 class="text-center maker-kit">Click <a target="_blank" href="http://www.hackster.io/projects/12723?auth_token=1ea83680196dbebca4f47216650521ed">here</a> to get started!</h2>
   </div>
 </div>
-
-<iframe class="maker-kit" src="https://adafruitsample.azurewebsites.net/cardViewer?lesson=204" width="100%" height="550px" scrolling="no"></iframe>
 
 <div class="row lineTop">
   <div class="col-md-6 col-md-offset-6 col-sm-12 text-right">

@@ -11,14 +11,19 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
   <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
   <li class="active">World Map of Makers</li>
 </ol>
+
 <hr/>
-<iframe class="maker-kit" src="https://adafruitsample.azurewebsites.net/cardViewer?lesson=201" width="100%" height="550px" scrolling="no"></iframe>
 
 <div class="row">
-      Create a simple internet connected application to query the status of a web API and use that information to toggle an LED.
-      <br/>
-      Upon executing this sample, you'll have left a mark on the world map above and will make your city proud of you!
+  <center>
+    <h3>Create a simple internet connected application to query the status of a web API and use that information to toggle an LED.</h3>
+    <hr/>
+    Each pin on the map below is another maker that has run this sample. Zoom around to see where they are and deploy the sample to put your pin on the map!
+  </center>
 </div>
+
+<iframe class="maker-kit" src="https://adafruitsample.azurewebsites.net/cardViewer?lesson=201" width="100%" height="550px" scrolling="no"></iframe>
+
 <div class="row projectRow">
   <div class="col-md-6 col-sm-12">
     <h2 class="text-center maker-kit">Click <a target="_blank" href="http://www.hackster.io/projects/12721?auth_token=b26be92d375bc16823077bd874693e9c">here</a> to get started!</h2>
