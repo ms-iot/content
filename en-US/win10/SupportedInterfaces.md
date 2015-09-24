@@ -131,7 +131,7 @@ Sabrent USB External Stereo Sound Adapter, Model AU-EMAC1 | RP2, MBM | Converts 
 {:.table.table-bordered .devices}
 Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
-Aeon Labs Z-Wave Z-Stick Series 2 USB Dongle DSA02203-ZWUS | RP2 | Series 2 Z-Wave USB Z-Stick Controller | Easy network creation with push button pairing | [ZWave Sample]({{site.repositoryurl}}/{{page.lang}}/win10/samples/ZWaveTutorial.htm) 
+Aeon Labs Z-Wave Z-Stick Series 2 USB Dongle DSA02203-ZWUS | RP2 | Series 2 Z-Wave USB Z-Stick Controller | Easy network creation with push button pairing | [ZWave Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/ZWaveTutorial.htm) 
 
 </div>
 
@@ -194,8 +194,8 @@ PCA9685 | RP2, MBM | 16-channel, 12-bit PWM Fm+ I2C-bus LED controller | PWM bus
 {:.table.table-bordered .devices}
 Library Name | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
-ZWaveAdapter    | RP2, MBM | Zwave solution to enable developer to add a Zwave Adapter and connect it to the AllJoyn network | Demonstrates the function of Z-Wave device on Device System Bridge (DSB), Used as part of the ZWave demo in //Build/2015 | [ZWave Sample]({{site.repositoryurl}}/{{page.lang}}/win10/samples/ZWaveTutorial.htm) 
-AllJoyn Device System Bridge App Project | RP2, MBM | Use to expose a GPIO Device to the AllJoyn Bus using the AllJoyn Device System Bridge | | [Alljoyn DSB Gpio C# Sample]({{site.repositoryurl}}/{{page.lang}}/win10/samples/AlljoynDSB_ManagedGpioTutorial.htm)
+ZWaveAdapter    | RP2, MBM | Zwave solution to enable developer to add a Zwave Adapter and connect it to the AllJoyn network | Demonstrates the function of Z-Wave device on Device System Bridge (DSB), Used as part of the ZWave demo in //Build/2015 | [ZWave Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/ZWaveTutorial.htm) 
+AllJoyn Device System Bridge App Project | RP2, MBM | Use to expose a GPIO Device to the AllJoyn Bus using the AllJoyn Device System Bridge | | [Alljoyn DSB Gpio C# Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/AlljoynDSB_ManagedGpioTutorial.htm)
 
 ### Bus Providers <a name="BusProviders"></a>
 
@@ -216,7 +216,7 @@ PWM | RP2, MBM | provides support for PWM capable devices such as PCA9685 (in De
 Bus Type | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
 GPIO    | RP2, MBM | 13x GPIO on RPI2, 10x on MBM | General Purpose I/O | 
-I2C | RP2, MBM | Generic I2C bus | | [RPI2 Pin Mapping]({{site.repositoryurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm#RPi2_I2C) [RPI2 Pin Mapping]({{site.repositoryurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm#MBM_I2C)
+I2C | RP2, MBM | Generic I2C bus | | [RPI2 Pin Mapping]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm#RPi2_I2C) [MBM Pin Mapping]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm#MBM_I2C)
 UART | RP2, MBM | Generic UART Bus | RPI2 Requires USB to UART converter, MBM has onboard UART |
 
 </div>
