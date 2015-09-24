@@ -80,7 +80,7 @@ Filter lists by board type:
 
 
 
-## <a name="USBDevices" class="USBDevices" onClick="toggleSection('USBDevices');return false;">+ USB Devices</a>
+## <a name="USBDevices" class="USBDevices" onClick="toggleSection('USBDevices');return false;">- USB Devices</a>
 <div class="USBDevices" markdown="1">
 - [WiFi Dongles](#WiFi-Dongles)
 - [Bluetooth Dongles](#Bluetooth-Dongles)
@@ -135,7 +135,7 @@ Aeon Labs Z-Wave Z-Stick Series 2 USB Dongle DSA02203-ZWUS | RP2 | Series 2 Z-Wa
 
 </div>
 
-## <a name="OtherDevices" class="OtherDevices" onClick="toggleSection('OtherDevices');return false;">+ Other Hardware Peripherals (e.g., Sensors, ICs)</a>
+## <a name="OtherDevices" class="OtherDevices" onClick="toggleSection('OtherDevices');return false;">- Other Hardware Peripherals (e.g., Sensors, ICs)</a>
 <div class="OtherDevices" markdown="1">
 
 - [Pi Hats](#Pi-Hats)
@@ -184,7 +184,7 @@ PCA9685 | RP2, MBM | 16-channel, 12-bit PWM Fm+ I2C-bus LED controller | PWM bus
 
 </div>
 
-## <a name="Libraries" class="Libraries" onClick="toggleSection('Libraries');return false;">+ Third Party Software Libraries</a>
+## <a name="Libraries" class="Libraries" onClick="toggleSection('Libraries');return false;">- Third Party Software Libraries</a>
 <div class="Libraries" markdown="1">
 
 ### Libraries <a name="Libraries"></a>
@@ -205,7 +205,7 @@ PWM | RP2, MBM | provides support for PWM capable devices such as PCA9685 (in De
 
 </div>
 
-## <a name="SupportedBusses" class="SupportedBusses" onClick="toggleSection('SupportedBusses');return false;">+ Supported Busses</a>
+## <a name="SupportedBusses" class="SupportedBusses" onClick="toggleSection('SupportedBusses');return false;">- Supported Busses</a>
 <div class="SupportedBusses" markdown="1">
 
 ### Supported Busses <a name="SupportedBusses"></a>
@@ -275,25 +275,17 @@ UART | RP2, MBM | Generic UART Bus | RPI2 Requires USB to UART converter, MBM ha
 				return true;
 			}
 			
-			$("div[class="+section+"]").toggle('slow');
-			if (title.charAt(0) == '+')
-			{
-				titleObj.text = '-'+title.substr(1);
-			}
-			else
-			{
-				titleObj.text = '+'+title.substr(1);
-			}			
+			toggleSection(section);			
 		}
 		
-		function expandAll() {
+		function collapseAll() {
 			changeSectionState('OtherDevices', '+');
 			changeSectionState('USBDevices', '+');
 			changeSectionState('Libraries', '+');
 			changeSectionState('SupportedBusses', '+');
 		}
 		
-		function collapseAll() {
+		function expandAll() {
 			changeSectionState('OtherDevices', '-');
 			changeSectionState('USBDevices', '-');
 			changeSectionState('Libraries', '-');
