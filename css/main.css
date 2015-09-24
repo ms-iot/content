@@ -141,10 +141,11 @@ a:hover {
 
 .downloads-image {
     background-image: url('../images/DevelopmentBoards.PNG');
-    background-size: cover;
+    background-size: contain;
+	background-repeat: no-repeat;
     background-position: center;
     width: 75%;
-    height: 300px;
+    height: 200px;
     margin-top: 30px;
 }
 
@@ -207,6 +208,10 @@ ul.get-started-steps > li > a:hover {
     background-color: #fff;
 }
 
+h3.steps:hover{
+	color: #000;
+}
+
 .downloads-background {
     background-color: #f1f1f1;
     width: 100%;
@@ -214,4 +219,145 @@ ul.get-started-steps > li > a:hover {
     margin-right: 0;
     margin-bottom: 50px;
     padding: 20px;
+}
+
+.standardTH {
+  width: 40%;
+}
+.largeTH {
+  width: 85% !important;
+}
+.table-striped > tbody > tr > th {
+  border-color: transparent;
+}
+.table-striped > tbody > tr > td {
+  border-color: transparent;
+}
+h1.maker-kit {
+  font-weight: 100;
+  font-size:40px;
+  margin-bottom: 20px;
+}
+h2.maker-kit {
+  font-weight: lighter;
+  font-size:32px;
+}
+h3.maker-kit {
+  font-weight: lighter;
+  border-bottom: 1px solid rgb(230,230,230);
+  padding-bottom: 20px;
+  margin-top:10px;
+  margin-bottom: 20px;
+  font-size:32px;
+}
+h4.maker-kit {
+  font-weight: lighter;
+  font-size:32px;
+  border-top: 1px solid rgb(230,230,230);
+  padding-top: 20px;
+  margin-top:20px;
+}
+p.maker-kit {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+table.maker-kit > tbody > tr:nth-of-type(odd) {
+  background-color: rgb(241,241,242);
+}
+table.maker-kit > tbody > tr > th {
+  font-weight:200;
+  color: rgb(000,000,000);
+}
+
+ul.maker-kit > li > a > h3{
+  text-align: left;
+}
+
+.floatTop {
+  margin-top: 16%;
+}
+
+ul.maker-kit > li > a {
+  padding-left: 0;
+}
+
+img.maker-kit {
+  margin-bottom: 20px;
+  max-width:100%;
+  max-height:100%;
+}
+
+.lineTop {
+  border-top: 1px solid rgb(230,230,230);
+}
+
+iframe.maker-kit {
+  padding-left: 15px;
+  padding-right: 15px;
+  border: none;
+  overflow:hidden;
+}
+
+.projectRow {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.projectRow > div > h2 {
+  margin-top:30%;
+}
+.button-flat {
+	border-radius: 0;
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 400;
+	line-height: normal;
+	padding: .5em 1.5em;
+	margin-right: 0.8em;
+	min-width: 100%;
+	margin-bottom: 0.8em;
+	text-align: center;
+}
+
+.button-blue {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #0078d7;
+	background-color: #0078d7;
+	color:  #fff !important;
+}
+
+.button-flat:hover{
+	border-color: #004E8C;
+	cursor: pointer;
+}
+
+.button-flat:active{
+	background-color:gray !important;
+	border-color: gray !important;
+}
+
+.subtext {
+	font-size: 0.8em;
+	color: gray;
+}
+
+.divider {
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: #0078d7;
+}
+
+div.preview {
+	height: 150px;
+}
+
+@media (max-width: 700px) {
+  h2.maker-kit {
+    font-size:24px;
+  }
+  h3.maker-kit {
+    font-size:24px;
+  }
 }

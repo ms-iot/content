@@ -6,13 +6,11 @@ This is a headed sample.  To better understand what headed mode is and how to co
 
 As this sample uses just standard windows UWP features it can also run on your desktop.
 
-The sample is based around the windows 
+The sample is based around the windows
 
 ###Load the project in Visual Studio
 
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\IoTBrowser`.  The sample code is C#. Make a copy of the folder on your disk and open the project from Visual Studio.
-
-###Deploy your app
 
 {% include_relative AppDeploymentCS.md %}
 
@@ -36,16 +34,16 @@ When the go button is pressed we call a web navigation helper method to do the a
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="65"></RowDefinition>
         </Grid.RowDefinitions>
-        
+
         <!--Address bar-->
         <StackPanel Grid.Row="0" Orientation="Horizontal">
             <TextBox x:Name="Web_Address" FontSize="24" TextWrapping="Wrap" Text="http://www.bing.com" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="54" Width="958" KeyUp="Web_Address_KeyUp"/>
             <Button x:Name="Go_Web" Content="Go!" HorizontalAlignment="Right" VerticalAlignment="Center" Height="60" Width="107" Click="Go_Web_Click"/>
         </StackPanel>
-        
+
         <!--Web view control-->
         <WebView x:Name="webView" Grid.Row="1"/>
-        
+
         <!--Favorites buttons-->
         <StackPanel Grid.Row="2" Orientation="Horizontal" >
             <Button x:Name="Go_WOD" VerticalAlignment="Center" HorizontalAlignment="Center" Height="60" Width="120" Margin="0,0,15,0" Click="Go_WOD_Click">

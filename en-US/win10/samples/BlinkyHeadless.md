@@ -22,8 +22,6 @@ Make sure you connect the LED to your board. Go back to the basic 'Blinky' [samp
 
 Note that the app will not run successfully if it cannot find any available GPIO ports.
 
-###Deploy your app
-
 {% include_relative AppDeploymentCS.md %}
 
 When everything is set up, you should be able to press F5 from Visual Studio.  The Blinky app will deploy and start on the Windows IoT device, and you should see the attached LED blink.

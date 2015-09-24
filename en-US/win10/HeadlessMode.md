@@ -7,12 +7,12 @@ lang: en-US
 
 ##Headed and Headless mode
 
-Windows IoT Core can be configured for either **headed** or **headless** mode. The difference between these two modes is the presence or absence of any form of UI.  
-By default, Windows 10 IoT Core is in **headed** mode and run the default startup app which displays system information like the computer name and IP address. 
-Furthermore, in the headed mode, the standard UWP UI stack is available for fully interactive apps. 
+Windows IoT Core can be configured for either **headed** or **headless** mode. The difference between these two modes is the presence or absence of any form of UI.
+By default, Windows 10 IoT Core is in **headed** mode and run the default startup app which displays system information like the computer name and IP address.
+Furthermore, in the headed mode, the standard UWP UI stack is available for fully interactive apps.
 Devices that don't need UI functionality can be set to **headless** mode. The UI stack is disabled and apps are no longer interactive and there reduce the amount of system resources used. Headless mode apps can be thought of as services.
 
-When configured to run in headed mode, a single UI app will launch at boot and there is no mechanism to switch to other applications (other than in development scenarios when Visual Studio deploys and app for debugging). In headless mode no UI app will be launched. "Background Apps" (StartupTasks) are apps that do not have UI and launch at startup. Any number of these apps can be installed for both headed and headless devices. 
+When configured to run in headed mode, a single UI app will launch at boot and there is no mechanism to switch to other applications (other than in development scenarios when Visual Studio deploys and app for debugging). In headless mode no UI app will be launched. "Background Apps" (StartupTasks) are apps that do not have UI and launch at startup. Any number of these apps can be installed for both headed and headless devices.
     NOTE: if you put your device into headless mode, use the WindowsIoTCoreWatcher application described below to find its IP address
 
 ##Changing the mode
@@ -31,7 +31,6 @@ You can modify the headed/headless state of your device from a PowerShell sessio
 
         [192.168.0.243]: PS C:\> setbootoption.exe headed
         [192.168.0.243]: PS C:\> shutdown /r /t 0
-
 
 ##Finding your headless device
 
