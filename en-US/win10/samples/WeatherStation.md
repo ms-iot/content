@@ -31,7 +31,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
     <img src="{{site.baseurl}}/images/AdafruitStarterPack/WeatherStation.JPG">
   </div>
   <div class="col-md-6 col-sm-12">
-    <h2 class="text-center maker-kit">Click <a target="_blank" href="http://www.hackster.io/projects/12722?auth_token=40dfe505df48f152d8a0c574872251aa">here</a> to get started!</h2>
+    <h2 class="text-center maker-kit">Click <a target="_blank" href="https://www.hackster.io/windows-iot/weather-station">here</a> to get started!</h2>
   </div>
 </div>
 
