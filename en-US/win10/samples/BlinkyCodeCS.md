@@ -9,17 +9,32 @@ public MainPage()
 {
     // ...
 
-    this.timer = new DispatcherTimer();
-    this.timer.Interval = TimeSpan.FromMilliseconds(500);
-    this.timer.Tick += Timer_Tick;
-    this.timer.Start();
+    timer = new DispatcherTimer();
+    timer.Interval = TimeSpan.FromMilliseconds(500);
+    timer.Tick += Timer_Tick;
+    InitGPIO();
+    if (pin != null)
+    {
+        timer.Start();
+    }
 
     // ...
 }
 
 private void Timer_Tick(object sender, object e)
 {
-    FlipLED();
+    if (pinValue == GpioPinValue.High)
+    {
+        pinValue = GpioPinValue.Low;
+        pin.Write(pinValue);
+        LED.Fill = redBrush;
+    }
+    else
+    {
+        pinValue = GpioPinValue.High;
+        pin.Write(pinValue);
+        LED.Fill = grayBrush;
+    }
 }
 {% endhighlight %}
 
@@ -42,18 +57,12 @@ private void InitGPIO()
     }
 
     pin = gpio.OpenPin(LED_PIN);
-
-    // Show an error if the pin wasn't initialized properly
-    if (pin == null)
-    {
-        GpioStatus.Text = "There were problems initializing the GPIO pin.";
-        return;
-    }
-
-    pin.Write(GpioPinValue.High);
+    pinValue = GpioPinValue.High;
+    pin.Write(pinValue);
     pin.SetDriveMode(GpioPinDriveMode.Output);
 
     GpioStatus.Text = "GPIO pin initialized correctly.";
+
 }
 {% endhighlight %}
 
@@ -76,13 +85,13 @@ Once we have access to the `GpioOutputPin` instance, it's trivial to change the 
 To turn the LED on, simply write the value `GpioPinValue.Low` to the pin:
 
 {% highlight C# %}
-this.pin.Write(GpioPinValue.Low);
+pin.Write(GpioPinValue.Low);
 {% endhighlight %}
 
 and of course, write `GpioPinValue.High` to turn the LED off:
 
 {% highlight C# %}
-this.pin.Write(GpioPinValue.High);
+pin.Write(GpioPinValue.High);
 {% endhighlight %}
 
 Remember that we connected the other end of the LED to the 3.3 Volts power supply, so we need to drive the pin to low to have current flow into the LED.
