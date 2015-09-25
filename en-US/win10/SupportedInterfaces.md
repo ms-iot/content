@@ -69,8 +69,9 @@ Filter lists by board type:
 	</select>
 </div>
 <div>
-	Filter <b> all </b> lists by Part Name/Model: 
+	Search <b> all </b> lists by Part Name/Model: 
 	<input id="filterInput" oninput="filterDeviceRows();"/>
+	<button onClick="$('#filterInput')[0].value='';filterDeviceRows();">Clear</button>
 </div>
 <div>
 	<a onClick="collapseAll(); return false;"> - Collapse all Sections	</a>
@@ -78,6 +79,16 @@ Filter lists by board type:
 </div>
 </div>
 
+<div class="SearchResultsSection" markdown="1" style="display:none">
+## <a name="SearchResults" class="SearchResults" onClick="toggleSection('SearchResults');return false;">- Search Results</a>
+<div class="SearchResults" markdown="1">
+
+{:.table.table-bordered .SearchResults}
+Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
+----------------|-------------------|-------------|-------|------------------------------
+result | result | result | result | result 
+
+</div></div>
 
 
 ## <a name="USBDevices" class="USBDevices" onClick="toggleSection('USBDevices');return false;">- USB Devices</a>
@@ -233,6 +244,7 @@ UART | RP2, MBM | Generic UART Bus | RPI2 Requires USB to UART converter, MBM ha
 				var regEx = new RegExp(searchString,"i");
 	
 				var rows = $(".devices tr");
+				var searchResults = [];
 				for (var rowNbr = 0; rowNbr < rows.length; rowNbr++){
 					if (rows[rowNbr].rowIndex > 0)
 					{
@@ -240,12 +252,9 @@ UART | RP2, MBM | Generic UART Bus | RPI2 Requires USB to UART converter, MBM ha
 						{
 							if ( rows[rowNbr].cells[searchColumn].innerHTML.match(regEx))
 							{
-								rows[rowNbr].style.display = "";  
+								searchResults.push(rows[rowNbr]);
 					    }
-					    else
-					    {
-								rows[rowNbr].style.display = "none";  
-							}
+							rows[rowNbr].style.display = "";  
 				    }
 				    else
 				    {
@@ -254,7 +263,31 @@ UART | RP2, MBM | Generic UART Bus | RPI2 Requires USB to UART converter, MBM ha
 						
 					}
 				}
+				
+				//Update search results
+				if (searchString > '.' )
+				{
+					var searchTable = $('table.SearchResults')[0];
+				
+					// remove existing rows
+					$('table.SearchResults tr').has('td').remove(); 
+					
+					// Add all found rows
+					for (var rowNbr = 0; rowNbr < searchResults.length; rowNbr++){
+							var row = searchTable.insertRow(searchTable.rows.length);
+							for (cellNbr = 0; cellNbr < searchTable.rows[0].cells.length; cellNbr++) {
+	        			var cell = row.insertCell(cellNbr);
+	        			cell.innerHTML = searchResults[rowNbr].cells[cellNbr].innerHTML;
+	       			}
+					}			
+					$("div.SearchResultsSection").show();
+				}
+				else
+				{
+					$("div.SearchResultsSection").hide();
+				}
 		}
+		
 		function toggleSection(section) {
 			$("div[class="+section+"]").toggle('slow');
 			var titleObj = $("a[class="+section+"]")[0];
