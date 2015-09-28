@@ -11,39 +11,29 @@ lang: zh-CN
 
 ###设置电脑
 * 安装 Windows 10。
-* 安装 VS 2015 Preview。使用自定义安装并选择“Windows 通用应用开发工具”选项。
-* 安装 [Python 2.7](https://www.python.org/downloads/)。
+* 安装 Visual Studio 2015。
+* 从[此处](https://github.com/ms-iot/ntvsiot/releases)安装适用于 Windows IoT 的最新 Node.js 工具。
+* 安装 [Python 2.7](https://www.python.org/downloads/){:target="_blank"}。
 
-###获取 Node.js 源代码
-* 克隆 [Github](http://github.com/Microsoft/node) 中的代码。
+###将 Node.js 复制到 Raspberry Pi 2
+* 在电脑上打开资源管理器窗口并输入 **\\\\\<你的设备的 IP 地址\>\\C$** 以访问设备上的文件。凭据是：
 
-###创建临时位置
-* md C:\\NodeChakra
+   用户名：\<IP 地址或设备名称，默认值为 minwinpc\>\\管理员密码：p@ssw0rd
 
-###构建 Node.exe
-为主机计算机（用于构建二进制文件并将其部署到设备的计算机）体系结构和目标计算机体系结构进行构建。
+  注意： **强烈推荐**你更新管理员帐户的默认密码。请按照在[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)找到的说明进行操作。
 
-为主机（构建加载项所需）进行构建
+* 运行 `& 'C:\Program Files (x86)\Node.js (chakra)\CopyNodeChakra.ps1' -arch <ARM | x86 | x64 > -ip <Device IP Address>`。如果你有 Raspberry Pi 2，请使用 `ARM`。如果你有 MinnowBoard Max，请使用 `x86`。完成此步骤后，Node.js 将位于你的设备上的 `c:\Node.js (Chakra)` 中。**注意：** 如果你尚未通过资源管理器窗口输入凭据，你将收到“拒绝访问”错误。
 
-* 转到已克隆的 repo
-* 运行 `vcbuild chakra nosign x64`（假设主机体系结构 x64）
-* 将 Node.exe 从 &lt;local\_repo&gt;\\release 复制到 C:\\NodeChakra
 
-为设备（假设 Rpi2）进行构建：
+###创建 MemoryStatus 加载项
+为 Node.js 服务器生成将在此示例中部署的本机加载项。此步骤是必需的，因为 \[GlobalMemoryStatusEx\]\(https://msdn.microsoft.com/zh-CN/library/windows/desktop/aa366589(v=vs.85).aspx){:target="_blank"} 用于获取我们需要的数据。
 
-* 转到已克隆的 repo
-* `vcbuild chakra nosign arm openssl-no-asm`
-
-更新 PATH 变量（确保新的 Node.exe 位置在路径的前面）： SET path=C:\\NodeChakra;%path%
-
-###创建加载项
-为 Node.js 服务器构建将在此示例中部署的本机加载项。此步骤是必需的，因为 [GlobalMemoryStatusEx]\(https://msdn.microsoft.com/zh-CN/library/windows/desktop/aa366589(v=vs.85).aspx\) 用于获取我们需要的数据。
-
-* 创建加载项位置 C:\\NodeAddon
+* 在 Windows 10 电脑上，在 C:\\NodeAddon 中创建 AddOn 位置
 * 转到 C:\\NodeAddon
 * 创建新文件 MemoryStatusAddon.cc，复制以下内容并保存：
 
 <UL>
+
 {% highlight C++ %}
 // MemoryStatusAddon.cc
 #include <node.h>
@@ -88,6 +78,7 @@ NODE_MODULE(MemoryStatusAddon, Init)
 * 创建称为 binding.gyp 的文件（在 MemoryStatusAddon.cc 所在的同一个文件中），然后在其中放入以下内容：
 
 <UL>
+
 {% highlight Json %}
 {
   "targets": [
@@ -100,13 +91,14 @@ NODE_MODULE(MemoryStatusAddon, Init)
 {% endhighlight %}
 </UL>
 
-*  构建加载项： `node.exe [local_repo]\deps\npm\node_modules\node-gyp\bin\node-gyp.js rebuild --nodedir=[local_repo] --msvs_version=2015 --target_arch=arm`
+* 生成加载项：`"[Node.js (Chakra) installation path]\node_modules\npm\bin\node-gyp-bin\node-gyp.cmd" rebuild --target_arch=arm`（根据你所拥有的设备使用相应的 --target\_arch）。默认的 Node.js \(Chakra\) 安装路径为“c:\\Program Files \(x86\)\\Node.js \(chakra\)”。
 
 
 ###创建 Node.js 文件
-创建名为 server.js 的新文件并将下面到它的内容。
+创建名为 server.js 的新文件并在其中放入以下内容。
 
 <UL>
+
 {% highlight JavaScript %}
 var addon = require("./MemoryStatusAddon");
 var http = require('http');
@@ -128,35 +120,28 @@ http.createServer(function (req, res) {
 {% endhighlight %}
 </UL>
 
-在第一行中，我们将加载我们创建了 prevously 加载项。我们还加载 http 模块并创建服务器。当向服务器进行请求时，调用我们的加载项中的 GlobalMemoryStatusEx 方法以检索内存状态。有关编写加载项的详细信息，请转到 [https://nodejs.org/api/addons.html](https://nodejs.org/api/addons.html)。
+在第一行中，我们将加载之前创建的加载项。我们还加载 http 模块并创建服务器。当向服务器进行请求时，调用我们的加载项中的 GlobalMemoryStatusEx 方法以检索内存状态。有关编写加载项的详细信息，请转到 [https://nodejs.org/api/addons.html](https://nodejs.org/api/addons.html)。
 
 
-###将文件复制到 Windows IoT Core 设备
-在电脑上打开资源管理器窗口并输入 **\\\\\<你的设备的 IP 地址\>\\C$** 以访问设备上的文件。凭据是：
+###将文件复制到 Windows IoT 核心版设备
+使用资源管理器窗口，在设备上创建名为 C:\\MemoryStatusSample 的文件夹。然后，将以下文件从电脑复制到此文件夹：
 
-    username: <IP address or device name, default is minwinpc>\Administrator
-    password: p@ssw0rd
-
-注意： **强烈推荐**你更新管理员帐户的默认密码。请按照在[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)找到的说明进行操作。
-
-在设备上为节点创建文件夹 C:\\Node，将文件从主机复制到设备：
-
-* &lt;local\_repo&gt;\\release 中的 Node.exe 的 ARM 版本
 * MemoryStatusAddon.node
 * server.js
-
-设备上的节点目录结构的外观应如下所示：
-
-![节点目录结构]({{site.baseurl}}/images/Nodejs/memstatus-sample-file-structure.png)
 
 使用 PowerShell 连接到设备。请按照在[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)找到的说明进行操作
 
 允许 Node.exe 使用以下命令通过防火墙进行通信：
 
-* netsh advfirewall firewall add rule name="Node.js" dir=in action=allow program="C:\\Node\\Node.exe" enable=yes
+* netsh advfirewall firewall add rule name="Node.js" dir=in action=allow program="C:\\Node.js \(Chakra\)\\Node.exe" enable=yes
 
 
 ###运行服务器！
-在 PowerShell 中，运行命令 `C:\Node\Node.exe server.js` 来启动服务器。打开浏览器并输入你的设备的 http://&lt;IP 地址 \>:1337。结果的外观应类似于以下图片。
+在 PowerShell 中，运行命令 `& 'C:\Node.js (Chakra)\Node.exe' C:\MemoryStatusSample\server.js` 来启动服务器。打开浏览器并输入你的设备的 http://&lt;IP 地址 \>:1337。结果的外观应类似于以下图片。
 
 ![内存状态结果]({{site.baseurl}}/images/Nodejs/memorystatus-ie.PNG)
+
+
+### GitHub
+* Node.js \(Chakra\) 源代码：[https://github.com/Microsoft/node](https://github.com/Microsoft/node)
+* NTVS IoT 扩展源代码：[https://github.com/ms-iot/ntvsiot](https://github.com/ms-iot/ntvsiot)

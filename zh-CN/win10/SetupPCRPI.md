@@ -1,19 +1,15 @@
 ---
 layout: default
-title: Setup your PC for Raspberry Pi 2
+title: 针对 Raspberry Pi 2 设置你的电脑
 permalink: /zh-CN/win10/SetupPCRPI.htm
 lang: zh-CN
-deviceName: RPI2
 ---
 
-#Get Started
+#入门
 
-Learn how to get your computer ready for Windows Developer Program for IoT.
+了解如何针对适用于 IoT 的 Windows 开发人员计划准备好你的计算机。
 
-{% include steps.html device=page.deviceName %}
+{% include steps.html device="RPI2" %}
 
 {% include_relative SetupPCContent.md %}
-
-{% include nextsteps.html device=page.deviceName %}
-
 

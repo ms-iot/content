@@ -15,15 +15,17 @@ lang: zh-CN
 
 ###在 Visual Studio 中加载项目
 
-可以在[此处](https://github.com/ms-iot/samples/tree/develop/BlinkyHeadless)找到此示例。选择 C++ 版本或 C\# 版本，但请注意此示例仅包含 C\# 版本。在磁盘上生成文件夹的副本，然后从 Visual Studio 打开项目。
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\BlinkyHeadless`，查找此示例的源代码。示例代码可采用 C++ 或 C\# 提供，但此处的文档仅详细介绍了 C\# 变体。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
-确保将“远程调试”设置设为指向 Windows IoT Core 设备。如需指导，请返回基本的“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)。
+确保将 LED 连接到开发板。如需指导，请返回基本“Blinky”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)。
 
-如果你正在面向 Minnowboard Max 构建，请选择体系结构下拉列表中的 `x86`。如果你正在面向 Raspberry Pi 2构建，请选择 `ARM`。
+请注意，如果应用找不到任何可用 GPIO 端口，则该应用将无法成功运行。
 
-确保将 LED 连接到电路板。如需指导，请返回基本的“Blinky”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)。
+###部署你的应用
 
-请注意，如果应用无法找到任何可用的 GPIO 端口（例如，你在运行 Windows IoT Core 的 VM 上运行该应用时），则该应用不会成功运行。
+{% include_relative AppDeploymentCS.md %}
+
+完成所有设置后，你应可以在 Visual Studio 中按 F5。Blinky 应用将部署并在 Windows IoT 设备上启动，并且你应会看到通电的 IED 出现闪烁。
 
 ###我们来看看代码
 此示例的代码相当简单。我们使用了一个计时器，每当调用“Tick”事件时，都会切换 LED 的状态。
@@ -50,7 +52,7 @@ private void Timer_Tick(ThreadPoolTimer timer)
 {% endhighlight %}
 
 ###初始化 GPIO 引脚
-为了驱动 GPIO 引脚，首先我们需要将它初始化。以下是 C\# 代码（请注意我们如何在 Windows.Devices.Gpio 命名空间中利用新 WinRT 类）：
+为了驱动 GPIO 引脚，首先我们需要对其进行初始化。以下是 C\# 代码（请注意我们如何在 Windows.Devices.Gpio 命名空间中利用新 WinRT 类）：
 
 {% highlight C# %}
 using Windows.Devices.Gpio;
@@ -77,7 +79,7 @@ private async void InitGPIO()
 }
 {% endhighlight %}
 
-让我们稍微剖析一下这段代码：
+让让我们稍稍细分一下此过程：
 
 * 首先，我们使用 `GpioController.GetDefault()` 获取 GPIO 控制器。
 

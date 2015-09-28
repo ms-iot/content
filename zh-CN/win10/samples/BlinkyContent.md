@@ -1,81 +1,76 @@
-#Blinky Sample
+#Blinky 示例
 
-We'll create a simple LED blinking app and connect a LED to your Windows 10 IoT Core device.
+我们将创建一个简单的 LED 闪烁应用并将 LED 连接到你的 Windows 10 IoT Core 设备。
 
-This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
+这是一个有外设的示例。若要更好地了解什么是有外设的模式以及如何将你的设备配置为有外设，请按照[此处]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm)的说明操作。
 
-Also, be aware that the GPIO APIs are only available on Windows 10 IoT Core, so this sample cannot run on your desktop.
+另外，还请注意 GPIO API 仅在 Windows 10 IoT Core 上可用，因此该示例无法在你的桌面上运行。
 
-###Load the project in Visual Studio
+###在 Visual Studio 中加载项目
 
-You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\Blinky`.   Choose either the C++ version or C# version, but note that this sample only covers the C# version. Make a copy of the folder on your disk and open the project from Visual Studio.
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\Blinky`，查找此示例的源代码。示例代码可采用 C++ 或 C\# 提供，但此处的文档仅详细介绍了 C\# 变体。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
-Make sure you set the 'Remote Debugging' setting to point to your Windows IoT device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
+###将 LED 连接到你的 Windows IoT 设备
 
-Note that the app will gracefully degrade if it cannot find any available GPIO ports, for example if you run the app on a VM running Windows 10 IoT Core.
+你将会需要一些组件：
 
-###Connect the LED to your Windows IoT device
+* 一个 LED（你喜欢的任意一种颜色）
 
-You'll need a few components:
+* 一个 220 &\#x2126；电阻器
 
-* a LED (whichever color you like)
+* 一块试验板和几根连接线
 
-* a 220 &#x2126; resistor
+![电子元件]({{site.baseurl}}/images/Blinky/components.png)
 
-* a breadboard and a couple of connector wires
+###适用于 Raspberry Pi 2 \(RPi2\)
 
-![Electrical Components]({{site.baseurl}}/images/Blinky/components.png)
+我们要将 LED 的一端连接到 RPi2 上的 GPIO 5（JP3 扩展头上的引脚 29），将另一端连接到电阻器，并将电阻器连接到 RPi2 上的 3.3 伏电源。请注意 LED 的正负极非常重要。请确保将较短的腿 \(-\) 连接到 GPIO 5 并将较长的腿 \(+\) 连接到电阻器，否则它不会点亮。
 
-###For Raspberry Pi 2 (RPi2)
-
-We will connect the one end of the LED to GPIO 5 (pin 29 on the expansion header) on the RPi2, the other end to the resistor, and the resistor to the 3.3 volt power supply from the RPi2.
-Note that the polarity of the LED is important. Make sure the shorter leg (-) is connected to GPIO 5 and the longer leg (+) to the resistor or it won't light up.
-
-And here is the pinout of the RPi2:
+下面是 RPi2 的引出线：
 
 <img src="{{site.baseurl}}/images/PinMappings/RP2_Pinout.png" height="400">
 
-<sub>*Image made with [Fritzing](http://fritzing.org/){:target="_blank"}*</sub>
+<sub>\*使用 [Fritzing](http://fritzing.org/){:target="_blank"} 制作的图像\*</sub>
 
-Here is an example of what your breadboard might look like with the circuit assembled:
+下面是使用电路组装的试验板可能样子的一个示例：
 
 <img src="{{site.baseurl}}/images/Blinky/breadboard_assembled_rpi2.png" height="500">
 
-<sub>*Image made with [Fritzing](http://fritzing.org/){:target="_blank"}*</sub>
+<sub>\*使用 [Fritzing](http://fritzing.org/){:target="_blank"} 制作的图像\*</sub>
 
-###For MinnowBoard Max (MBM)
+###适用于 MinnowBoard Max \(MBM\)
 
-We will connect the one end of the LED to GPIO 5 (pin 18 on the JP1 expansion header) on the MBM, the other end to the resistor, and the resistor to the 3.3 volt power supply from the MBM.
-Note that the polarity of the LED is important. Make sure the shorter leg (-) is connected to GPIO 5 and the longer leg (+) to the resistor or it wont light up.
+我们要将 LED 的一端连接到 MBM 上的 GPIO 5（JP1 扩展头上的引脚 18），将另一端连接到电阻器，并将电阻器连接到 MBM 上的 3.3 伏电源。请注意 LED 的正负极非常重要。请确保将较短的腿 \(-\) 连接到 GPIO 5 并将较长的腿 \(+\) 连接到电阻器，否则它不会点亮。
 
-And here is the JP1 connector on the MBM:
+以下是 MBM 上的 JP1 连接器：
 
 <img src="{{site.baseurl}}/images/PinMappings/MBM_Pinout.png" height="400">
 
-<sub>*Image made with [Fritzing](http://fritzing.org/){:target="_blank"}*</sub>
+<sub>\*使用 [Fritzing](http://fritzing.org/){:target="_blank"} 制作的图像\*</sub>
 
-Here is an example of what your breadboard might look like with the circuit assembled:
+下面是使用电路组装的试验板可能样子的一个示例：
 
 <img src="{{site.baseurl}}/images/Blinky/breadboard_assembled.png" height="500">
 
-<sub>*Image made with [Fritzing](http://fritzing.org/){:target="_blank"}*</sub>
+<sub>\*使用 [Fritzing](http://fritzing.org/){:target="_blank"} 制作的图像\*</sub>
 
-###Deploy your app
+###部署你的应用
 
-If you're building for Minnowboard Max, select `x86` in the architecture dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
+{% include_relative AppDeploymentCS.md %}
 
-When everything is set up, you should be able to press F5 from Visual Studio.  The Blinky app will deploy and start on the Windows IoT device, and you should see the LED blink in sync with the simulation on the screen.
+完成所有设置后，你应可以在 Visual Studio 中按 F5。Blinky 应用将会部署并在 Windows IoT 设备上启动，此时你应会看到 LED 与屏幕上的模拟图像同步闪烁。
 
 <img src="{{site.baseurl}}/images/Blinky/blinky-screenshot.png" height="400">
 
-Congratulations! You controlled one of the GPIO pins on your Windows IoT device.
+恭喜你！ 你已控制了 Windows IoT 设备上的一个 GPIO 引脚！
 
-###Let's look at the code
-The code for this sample is pretty simple. We use a timer, and each time the 'Tick' event is called, we flip the state of the LED.
+###我们来看看代码
+此示例的代码相当简单。我们使用了一个计时器，每当调用“Tick”事件时，都会切换 LED 的状态。
 
 
-###Timer code
-Here is how you set up the timer in C#:
+###计时器代码
+下面说明如何使用 C\# 语言设置计时器：
+
 {% highlight C# %}
 public MainPage()
 {
@@ -95,8 +90,8 @@ private void Timer_Tick(object sender, object e)
 }
 {% endhighlight %}
 
-###Initialize the GPIO pin
-To drive the GPIO pin, first we need to initialize it. Here is the C# code (notice how we leverage the new WinRT classes in the Windows.Devices.Gpio namespace):
+###初始化 GPIO 引脚
+为了驱动 GPIO 引脚，首先我们需要对其进行初始化。以下是 C\# 代码（请注意我们如何在 Windows.Devices.Gpio 命名空间中利用新 WinRT 类）：
 
 {% highlight C# %}
 using Windows.Devices.Gpio;
@@ -129,32 +124,32 @@ private void InitGPIO()
 }
 {% endhighlight %}
 
-Let's break this down a little:
+让让我们稍稍细分一下此过程：
 
-* First, we use `GpioController.GetDefault()` to get the GPIO controller.
+* 首先，我们使用 `GpioController.GetDefault()` 获取 GPIO 控制器。
 
-* If the device does not have a GPIO controller, this function will return `null`.
+* 如果设备没有 GPIO 控制器，则此函数将返回 `null`。
 
-* Then we attempt to open the pin by calling `GpioController.OpenPin()` with the `LED_PIN` value.
+* 然后，我们尝试通过使用 `LED_PIN` 值调用 `GpioController.OpenPin()` 来打开引脚。
 
-* Once we have the `pin`, we set it to be off (High) by default using the `GpioPin.Write()` function.
+* 获取 `pin` 后，我们会使用 `GpioPin.Write()` 函数将它设置为默认的关闭状态（高）。
 
-* We also set the `pin` to run in output mode using the `GpioPin.SetDriveMode()` function.
+* 我们还使用了 `GpioPin.SetDriveMode()` 函数将 `pin` 设置为以输出模式运行。
 
 
-###Modify the state of the GPIO pin
-Once we have access to the `GpioOutputPin` instance, it's trivial to change the state of the pin to turn the LED on or off.
+###修改 GPIO 引脚的状态
+在具有 `GpioOutputPin` 实例的访问权限后，没有必要再通过更改引脚状态来打开或关闭 LED。
 
-To turn the LED on, simply write the value `GpioPinValue.Low` to the pin:
+若要打开 LED，只需将值 `GpioPinValue.Low` 写入引脚：
 
 {% highlight C# %}
 this.pin.Write(GpioPinValue.Low);
 {% endhighlight %}
 
-and of course, write `GpioPinValue.High` to turn the LED off:
+当然，写入 `GpioPinValue.High` 便会关闭 LED：
 
 {% highlight C# %}
 this.pin.Write(GpioPinValue.High);
 {% endhighlight %}
 
-Remember that we connected the other end of the LED to the 3.3 Volts power supply, so we need to drive the pin to low to have current flow into the LED.
+记得我们已将 LED 的另一端连接到了 3.3 伏电源，因此，我们需要将引脚驱动到低位，使电流通过 LED。
