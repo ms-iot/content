@@ -1,19 +1,17 @@
 ---
 layout: default
 title: SpiTestTool
-permalink: /en-US/win10/samples/SpiTestTool.htm
-lang: en-US
+permalink: /zh-CN/win10/samples/SpiTestTool.htm
+lang: zh-CN
 ---
 
-## SpiTestTool Sample
+## SpiTestTool 示例
 
-[View the code on Github](https://github.com/ms-iot/samples/blob/develop/SpiTestTool/main.cpp)
+[在 Github 上查看代码](https://github.com/ms-iot/samples/blob/develop/SpiTestTool/main.cpp)
 
-SpiTestTool is a utility for interacting with SPI devices on the command
-line. SpiTestTool is written in C++/CX and shows how to consume WinRT components
-from command line applications. The resulting tool is a useful debugging aid.
+SpiTestTool 是用于在命令行上与 SPI 设备交互的实用工具。SpiTestTool 是采用 C++/CX 编写的，演示了如何从命令行应用程序使用 WinRT 组件。生成的工具是非常有用的调试辅助工具。
 
-### Usage
+### 用法
 
     spitesttool.exe [-n FriendlyName] [-c ChipSelectLine] [-m Mode]
                     [-d DataBitLength] [-f ClockFrequency]
@@ -40,7 +38,7 @@ from command line applications. The resulting tool is a useful debugging aid.
     > help                             Display this help message
     > quit                             Quit
                       
-Example session:
+示例会话：
 
       spitesttool.exe
       > info
@@ -58,18 +56,15 @@ Example session:
        0 aa b7 99
       > q
 
-### Building and running the sample
+### 生成和运行示例
 
-1. Clone the [samples](https://github.com/ms-iot/samples)
-   repository to your local machine. 
-1. Open `SpiTestTool\SpiTestTool.sln` in Visual Studio
-1. Select the target architecture.
-   - Select `ARM` for Raspberry Pi
-   - Select `x86` for MinnowBoardMax
-1. Go to `Build -> Build Solution`
-1. Copy `SpiTestTool.exe` from the build output folder to your device.
-1. SSH into your device and run `SpiTestTool.exe` (with appropriate command
-   line parameters, of course)
+1. 将[示例](https://github.com/ms-iot/samples)存储库克隆到本地计算机。 
+1. 在 Visual Studio 中打开 `SpiTestTool\SpiTestTool.sln`
+1. 选择目标体系结构。
+   - 为 Raspberry Pi 选择 `ARM`
+   - 为 MinnowBoardMax 选择 `x86`
+1. 转到 `Build -> Build Solution`
+1. 将 `SpiTestTool.exe` 从生成输出文件夹复制到你的设备。
+1. （当然，需使用相应的命令行参数）通过 SSH 复制到你的设备并运行 `SpiTestTool.exe`
 
-Creating a C++/CX command line program is documented in the
-[I2cTestTool sample](I2cTestTool.htm).
+创建 C++/CX 命令行程序记录在 [I2cTestTool 示例](I2cTestTool.htm)中。
