@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default
 title: 支持的外围接口和设备
 permalink: /zh-CN/win10/SupportedInterfaces.htm
@@ -75,4 +75,4 @@ null*[GPIO]: 通用输入/输出
 [33]: {{site.baseurl}}/{{page.lang}}/win10/samples/NodejsCylon.htm "Arduino Leonardo"
 [34]: http://www.raspberrypi-spy.co.uk/2014/07/raspberry-pi-model-b-3-5mm-audiovideo-jack/ "Rpi2 3.5 毫米音频/视频插孔"
 
-\[^1\]: 将外部 USB 声卡附加到 RPi2 会将外部音频端点（播放设备）添加到现有板载 PWM 耳机插孔。因为在重新启动时无法保证音频设备的默认顺序，所以建议应用程序枚举音频端点并确保使用正确的端点。\[^2\]： 当前由于操作系统中出现错误，所以 Xbox-360 控制器无法运行。
+\[^1\]: 将外部 USB 声卡附加到 RPi2 会将外部音频端点（播放设备）添加到现有板载 PWM 耳机插孔。因为在重新启动时无法保证音频设备的默认顺序, 所以建议应用程序枚举音频端点并确保使用正确的端点。\[^2\]: 当前由于操作系统中出现错误, 所以 Xbox-360 控制器无法运行。
