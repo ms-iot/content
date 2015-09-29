@@ -20,7 +20,7 @@ You'll need a few components:
 
 {% include_relative AppDeploymentCS.md %}
 
-When everything is set up, you should be able to press F5 from Visual Studio.  The Blinky app will deploy and start on the Windows IoT device, and you should see the LED blink in sync with the simulation on the screen.
+When everything is set up, you should be able to press F5 from Visual Studio.  If there are any missing packages that you did not install during setup, Visual Studio may prompt you to acquire those now.  The Blinky app will deploy and start on the Windows IoT device, and you should see the LED blink in sync with the simulation on the screen.
 
 <img src="{{site.baseurl}}/images/Blinky/blinky-screenshot.png" height="400">
 
