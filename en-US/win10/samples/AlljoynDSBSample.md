@@ -64,26 +64,28 @@ Open the Adapter.cpp file in the AdapterLib project. Modify Adapter.cpp by inser
     String^ version = "1.0.0.0";
     String^ serialNumber = "1111111111111";
     String^ description = "A Custom GPIO Device";
-
+    
     // GPIO Device Pin-5 Property
     const int PIN_NUMBER = 5;
     String^ pinName = "Pin-5";
-
+    
     // Pin-5 Property Attribute
     String^ pinValueName = "PinValue";
-    int  pinValueData = -1;
-
+    int  pinValue = -1;
+    
     GpioController^ controller;
     GpioPin^ pin;
-
 
 In order to expose the GPIO Device to the AllJoyn Bus, we need to create a corresponding Bridge Device (IAdapterDevice) instance. Add the following three lines to the Adapter() constructor in the AdapterLib project's Adapter.cpp file:
 
     Adapter::Adapter()
     {
-       controller = GpioController::GetDefault();
-       pin = controller->OpenPin(PIN_NUMBER);
-       pin->SetDriveMode(GpioPinDriveMode::Input);
+        .
+        .
+        .
+        controller = GpioController::GetDefault();
+        pin = controller->OpenPin(PIN_NUMBER);
+        pin->SetDriveMode(GpioPinDriveMode::Input);
     }
     
 Now, modify the Initialize function as given in the following:
@@ -91,54 +93,81 @@ Now, modify the Initialize function as given in the following:
     uint32
     Adapter::Initialize()
     {
-       // GPIO Device Descriptor: Static data for our device
-       DEVICE_DESCRIPTOR gpioDeviceDesc;
-       gpioDeviceDesc.Name  = deviceName;
-       gpioDeviceDesc.VendorName = vendorName;
-       gpioDeviceDesc.Model  = modelName;
-       gpioDeviceDesc.Version = version;
-       gpioDeviceDesc.SerialNumer = serialNumber;
-       gpioDeviceDesc.Description = description;
+        // GPIO Device Descriptor: Static data for our device
+        DEVICE_DESCRIPTOR gpioDeviceDesc;
+        gpioDeviceDesc.Name = deviceName;
+        gpioDeviceDesc.VendorName = vendorName;
+        gpioDeviceDesc.Model = modelName;
+        gpioDeviceDesc.Version = version;
+        gpioDeviceDesc.SerialNumer = serialNumber;
+        gpioDeviceDesc.Description = description;
+  
+        // Define GPIO Pin-5 as device property.
+        AdapterProperty^ gpioPin_Property = ref new AdapterProperty(pinName, "");
 
-       // Define GPIO Pin-5 as device property. Device contains properties
-       AdapterProperty^ gpioPin_Property = ref new AdapterProperty(pinName, "");
-       // Define and set GPIO Pin-5 value. Device contains properties that have one or more values.
-       pinValueData = static_cast<int>(pin->Read());
-       AdapterValue^ valueAttr_Value = ref new AdapterValue(pinValueName, pinValueData);
-       gpioPin_Property += valueAttr_Value;
+        // Define and set GPIO Pin-5 value attribute.
+        pinValue = static_cast<int>(pin->Read());
+        Platform::Object^ pinValueData = Windows::Foundation::PropertyValue::CreateInt32(pinValue);
+          
+        AdapterAttribute^ gpioPin_valueAttr = ref new AdapterAttribute(
+            pinValueName, 
+            BridgeRT::E_ACCESS_TYPE::ACCESS_READ, 
+            pinValueData
+            );
+        gpioPin_valueAttr->COVBehavior = BridgeRT::SignalBehavior::Always;
+        gpioPin_Property += gpioPin_valueAttr;
 
-       // Finally, put it all into a new device
-       AdapterDevice^ gpioDevice = ref new AdapterDevice(&gpioDeviceDesc);
-       gpioDevice->AddProperty(gpioPin_Property);
-       devices.push_back(std::move(gpioDevice));
+        // Finally, put it all into a new device
+        AdapterDevice^ gpioDevice = ref new AdapterDevice(&gpioDeviceDesc);
+        gpioDevice->AddProperty(gpioPin_Property);
+        devices.push_back(std::move(gpioDevice));
 
-       return ERROR_SUCCESS;
+        return ERROR_SUCCESS;
     }
 
 Next, modify the GetPropertyValue() function as follows:
 
-      _Use_decl_annotations_
-      		uint32
-      		Adapter::GetPropertyValue(
-      			IAdapterProperty^ Property,
-      			String^ AttributeName,
-      			IAdapterValue^* ValuePtr,
-      			IAdapterIoRequest^* RequestPtr
-      			)
-      	{
-      		UNREFERENCED_PARAMETER(RequestPtr);
-      		UNREFERENCED_PARAMETER(AttributeName);
+    _Use_decl_annotations_
+    uint32
+    Adapter::GetPropertyValue(
+        IAdapterProperty^ Property,
+        String^ AttributeName,
+        IAdapterValue^* ValuePtr,
+        IAdapterIoRequest^* RequestPtr
+        )
+    {
+        if (RequestPtr != nullptr)
+        {
+            *RequestPtr = nullptr;
+        }
 
-      		pinValueData = static_cast<int>(pin->Read());
+        // sanity check
+        AdapterProperty^ tempProperty = dynamic_cast<AdapterProperty^>(Property);
+        if (ValuePtr == nullptr ||
+            tempProperty == nullptr ||
+            tempProperty->Attributes == nullptr)
+        {
+            return ERROR_INVALID_PARAMETER;
+        }
 
-      		AdapterProperty^ adapterProperty = dynamic_cast<AdapterProperty^>(Property);
-      		AdapterValue^ attribute = dynamic_cast<AdapterValue^>(adapterProperty -> Attributes->GetAt(0));
-      		attribute->Data = pinValueData;
+        // find corresponding attribute
+        *ValuePtr = nullptr;
+        for (auto attribute : tempProperty->Attributes)
+        {
+            if (attribute->Value != nullptr &&
+                attribute->Value->Name == AttributeName)
+            {
+                // Read Pin Value
+                pinValue = static_cast<int>(pin->Read());
+                attribute->Value->Data = Windows::Foundation::PropertyValue::CreateInt32(pinValue);
+            
+                *ValuePtr = attribute->Value;
+                return ERROR_SUCCESS;
+            }
+        }
 
-      		*ValuePtr = attribute;
-
-      		return ERROR_SUCCESS;
-      	}
+        return ERROR_INVALID_HANDLE;
+    }
 
 That is all for a basic GPIO pin device. At this point when this application runs, the GPIO pin will be seen on the AllJoyn bus. Whenever any AllJoyn Client Application polls the value of the pin, our AllJoyn Device System Bridge Application will read the value from the physical GPIO pin on the Raspberry Pi.
 
@@ -175,8 +204,8 @@ Suppose the applications on the AllJoyn bus do not want to poll the value of the
     private:
         // GPIO pin value change event handler
         void pinValueChangedEventHandler(
-        _In_ Windows::Devices::Gpio::GpioPin^ gpioPin,
-        _In_ Windows::Devices::Gpio::GpioPinValueChangedEventArgs^ eventArgs);
+            _In_ Windows::Devices::Gpio::GpioPin^ gpioPin,
+            _In_ Windows::Devices::Gpio::GpioPinValueChangedEventArgs^ eventArgs);
 
 ### Additions to Adapter.cpp:
 
@@ -185,7 +214,7 @@ Suppose the applications on the AllJoyn bus do not want to poll the value of the
     {
         // GPIO Device Descriptor: Static data for our device
         DEVICE_DESCRIPTOR gpioDeviceDesc;
-        gpioDeviceDesc.Name  = deviceName;
+        gpioDeviceDesc.Name = deviceName;
         gpioDeviceDesc.VendorName = vendorName;
         gpioDeviceDesc.Model = modelName;
         gpioDeviceDesc.Version = version;
@@ -194,15 +223,23 @@ Suppose the applications on the AllJoyn bus do not want to poll the value of the
 
         // Define GPIO Pin-5 as device property. Device contains properties
         AdapterProperty^ gpioPin_Property = ref new AdapterProperty(pinName, "");
-        // Define the GPIO Pin-5 value. Device has properties with attributes.
-        pinValueData = static_cast<int>(pin->Read());
-        AdapterValue^ valueAttr_Value = ref new AdapterValue(pinValueName, pinValueData);
-        gpioPin_Property += valueAttr_Value;
+
+        // Define and set GPIO Pin-5 value attribute. Device contains properties that have one or more attributes.
+        pinValue = static_cast<int>(pin->Read());
+        Platform::Object^ pinValueData = Windows::Foundation::PropertyValue::CreateInt32(pinValue);
+          
+        AdapterAttribute^ gpioPin_valueAttr = ref new AdapterAttribute(
+            pinValueName, 
+            BridgeRT::E_ACCESS_TYPE::ACCESS_READ, 
+            pinValueData
+            );
+        gpioPin_valueAttr->COVBehavior = BridgeRT::SignalBehavior::Always;
+        gpioPin_Property += gpioPin_valueAttr;
 
         // Create Change_Of_Value signal for the Value Attribute
-        AdapterSignal^ signal = ref new AdapterSignal(CHANGE_OF_VALUE_SIGNAL);
-        signal += ref new AdapterValue(COV__PROPERTY_HANDLE, gpioPin_Property);
-        signal += ref new AdapterValue(COV__ATTRIBUTE_HANDLE, valueAttr_Value);
+        AdapterSignal^ signal = ref new AdapterSignal(Constants::CHANGE_OF_VALUE_SIGNAL);
+        signal += ref new AdapterValue(Constants::COV__PROPERTY_HANDLE, gpioPin_Property);
+        signal += ref new AdapterValue(Constants::COV__ATTRIBUTE_HANDLE, gpioPin_valueAttr->Value);
 
         // Finally, put it all into a new device
         AdapterDevice^ gpioDevice = ref new AdapterDevice(&gpioDeviceDesc);
@@ -214,70 +251,34 @@ Suppose the applications on the AllJoyn bus do not want to poll the value of the
         pin->ValueChanged += ref new Windows::Foundation::TypedEventHandler<GpioPin ^, GpioPinValueChangedEventArgs ^>(this, &Adapter::pinValueChangedEventHandler);
 
         return ERROR_SUCCESS;
-      }
-
-    _Use_decl_annotations_
-    uint32
-    Adapter::RegisterSignalListener(
-        IAdapterSignal^ Signal,
-        IAdapterSignalListener^ Listener,
-        Object^ ListenerContext
-        )
-    {
-        AutoLock sync(&lock, true);
-
-        signalListeners.insert({ Signal->GetHashCode(), SIGNAL_LISTENER_ENTRY(Signal, Listener, ListenerContext) });
-
-        return ERROR_SUCCESS;
-    }
-
-     _Use_decl_annotations_
-    uint32
-    Adapter::NotifySignalListener(
-        IAdapterSignal^ Signal
-        )
-    {
-        AutoLock sync(&lock, true);
-        auto handlerRange = signalListeners.equal_range(Signal->GetHashCode());
-        std::vector<std::pair<int, SIGNAL_LISTENER_ENTRY>> handlers(handlerRange.first, handlerRange.second);
-
-        for (auto iter = handlers.begin(); iter != handlers.end(); ++iter)
-        {
-            IAdapterSignalListener^ listener = iter->second.Listener;
-            Object^ listenerContext = iter->second.Context;
-            listener->AdapterSignalHandler(Signal, listenerContext);
-        }
-
-        return ERROR_SUCCESS;
     }
 
     _Use_decl_annotations_
-    void Adapter::pinValueChangedEventHandler
-    (
+    void Adapter::pinValueChangedEventHandler(
         GpioPin^ gpioPin,
         GpioPinValueChangedEventArgs^ eventArgs
         )
     {
         AutoLock sync(&lock, true);
-
-        // Notify registered listeners only when pin value actually changes.
         IAdapterSignal^ covSignal = devices.at(0)->Signals->GetAt(0);
 
         for (auto param : covSignal->Params)
         {
-            if (param->Name == COV__ATTRIBUTE_HANDLE)
+            if (param->Name == Constants::COV__ATTRIBUTE_HANDLE)
             {
-                pinValueData = static_cast<int>(pin->Read());
+                pinValue = static_cast<int>(pin->Read());
                 IAdapterValue^ valueAttr_Value = (AdapterValue^)param->Data;
-                int previousPinValue = (int) valueAttr_Value->Data;
-                if (previousPinValue != pinValueData)
+                int previousPinValue = (int)valueAttr_Value->Data;
+
+                // Notify registered listeners only when pin value actually changes.
+                if (previousPinValue != pinValue)
                 {
-                    valueAttr_Value->Data = pinValueData;
+                    valueAttr_Value->Data = pinValue;
                     NotifySignalListener(covSignal);
                 }
             }
         }
-      }
+    }
 
 ###About Signals
 
