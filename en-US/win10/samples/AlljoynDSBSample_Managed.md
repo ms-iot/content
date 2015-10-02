@@ -52,96 +52,119 @@ You will need to add a reference to the AdapterLib project to use the Windows Io
 
 Open the Adapter.cs file in the AdapterLib project. Modify Adapter.cs as follows:
    
-    using Windows.Devices.Gpio;
-   
-    namespace AdapterLib
-    {
-      public sealed class Adapter : IAdapter
-      {
-          private const uint ERROR_SUCCESS = 0;
-  
-          // GPIO Device
-          private const string DEVICE_NAME = "Custom_GPIO_Device";
-          private const string VENDOR = "Custom_Vendor";
-          private const string MODEL = "Custom_Model";
-          private const string VERSION = "1.0.0.0";
-          private const string SERIAL_NUMBER = "1111111111111";
-          private const string DESCRIPTION = "A Custom GPIO Device";
-  
-          // GPIO Device Pin-5 Property
-          private const int PIN_NUMBER = 5;
-          private const string PIN_NAME = "Pin-5";
-          private const string INTERFACE_HINT = "";
-  
-          // Pin-5 Property Attribute
-          private const string PIN_VALUE_NAME = "PinValue";
-          private int pinValueData = -1;
-  
-          private GpioController controller;
-          private GpioPin pin;
-  
-          public string Vendor { get; }
+using Windows.Devices.Gpio;
 
+namespace AdapterLib
+{
+    public sealed class Adapter : IAdapter
+    {
+        private const uint ERROR_SUCCESS = 0;
+        private const uint ERROR_INVALID_HANDLE = 6;
+
+        // Device Arrival and Device Removal Signal Indices
+        private const int DEVICE_ARRIVAL_SIGNAL_INDEX = 0;
+        private const int DEVICE_ARRIVAL_SIGNAL_PARAM_INDEX = 0;
+        private const int DEVICE_REMOVAL_SIGNAL_INDEX = 1;
+        private const int DEVICE_REMOVAL_SIGNAL_PARAM_INDEX = 0;
+
+        // GPIO Device
+        private const string DEVICE_NAME = "Custom_GPIO_Device";
+        private const string VENDOR = "Custom_Vendor";
+        private const string MODEL = "Custom_Model";
+        private const string VERSION = "1.0.0.0";
+        private const string SERIAL_NUMBER = "1111111111111";
+        private const string DESCRIPTION = "A Custom GPIO Device";
+
+        // GPIO Device Pin-5 Property
+        private const int PIN_NUMBER = 5;
+        private const string PIN_NAME = "Pin-5";
+        private const string INTERFACE_HINT = "";
+
+        // Pin-5 Property Attribute
+        private const string PIN_VALUE_NAME = "PinValue";
+        private int pinValue = -1;
+
+        private GpioController controller;
+        private GpioPin pin;
+  
+        public string Vendor { get; }
 
 In order to expose the GPIO Device to the AllJoyn Bus, we need to create a corresponding Bridge Device (IAdapterDevice) instance. Add the following three lines to the Adapter() constructor in the AdapterLib project's Adapter.cs file:
     
-    public Adapter()
-    {
-        -
-        -
-        -
-        controller = GpioController.GetDefault();
-        pin = controller.OpenPin(PIN_NUMBER);           // Open GPIO 5
-        pin.SetDriveMode(GpioPinDriveMode.Input);       // Set the IO direction as input 
-    } 
- 
+public Adapter()
+{
+    .
+    .
+    .
+    controller = GpioController.GetDefault();
+    pin = controller.OpenPin(PIN_NUMBER);           // Open GPIO 5
+    pin.SetDriveMode(GpioPinDriveMode.Input);       // Set the IO direction as input 
+} 
  
 Now, modify the Initialize function as given in the following:
 
-    public uint Initialize() 
-    { 
-        AdapterDevice gpioDevice = new AdapterDevice(
-         DEVICE_NAME,
-         VENDOR,
-         MODEL,
-         VERSION,
-         SERIAL_NUMBER,
-         DESCRIPTION
+public uint Initialize()
+{
+    AdapterDevice gpioDevice = new AdapterDevice(
+        DEVICE_NAME,
+        VENDOR,
+        MODEL,
+        VERSION,
+        SERIAL_NUMBER,
+        DESCRIPTION
         );
 
-        // Define GPIO Pin-5 as device property. Device contains properties
-        AdapterProperty gpioPin_Property = new AdapterProperty(PIN_NAME, INTERFACE_HINT);
-        // Define and set GPIO Pin-5 value. Device contains properties that have one or more attributes.
-        pinValueData = (int)pin.Read();
-        AdapterValue pinValueAttr = new AdapterValue(PIN_VALUE_NAME, pinValueData);
-        gpioPin_Property.Attributes.Add(pinValueAttr);
-    
-        // Finally, put it all into a new device
-        gpioDevice.Properties.Add(gpioPin_Property);
-        devices.Add(gpioDevice);
-    
-        return ERROR_SUCCESS;
-    }
+    // Define GPIO Pin-5 as device property.
+    AdapterProperty gpioPin_Property = new AdapterProperty(PIN_NAME, INTERFACE_HINT);
+            
+    // Define and set GPIO Pin-5 value.
+    pinValue = (int) pin.Read();
+    object pinValueData = Windows.Foundation.PropertyValue.CreateInt32(pinValue);
+
+    AdapterAttribute gpioPin_valueAttr = new AdapterAttribute(
+        PIN_VALUE_NAME,
+        pinValueData,
+        E_ACCESS_TYPE.ACCESS_READ
+        );
+    gpioPin_valueAttr.COVBehavior = SignalBehavior.Always;
+    gpioPin_Property.Attributes.Add(gpioPin_valueAttr);
+
+    // Finally, put it all into a new device
+    gpioDevice.Properties.Add(gpioPin_Property);
+    devices.Add(gpioDevice);
+
+    return ERROR_SUCCESS;
+}
 
 Next, modify the GetPropertyValue() function as follows:
 
-    public uint GetPropertyValue
-    (
-      IAdapterProperty Property,
-      string AttributeName,
-      out IAdapterValue ValuePtr,
-      out IAdapterIoRequest RequestPtr
+public uint GetPropertyValue(
+    IAdapterProperty Property,
+    string AttributeName,
+    out IAdapterValue ValuePtr,
+    out IAdapterIoRequest RequestPtr
     )
+{
+    ValuePtr = null;
+    RequestPtr = null;
+
+    // find corresponding attribute
+    foreach (var attribute in ((AdapterProperty)Property).Attributes)
     {
-        RequestPtr = null;
-        pinValueData = (int)pin.Read();
-  
-        IAdapterValue attribute = Property.Attributes.ElementAt<IAdapterValue>(0);
-        attribute.Data = pinValueData;
-        ValuePtr = attribute;
-      
-        return ERROR_SUCCESS;
+        if (attribute.Value.Name == AttributeName)
+        {
+            // Read Pin Value
+            pinValue = (int)pin.Read();
+            object pinValueData = Windows.Foundation.PropertyValue.CreateInt32(pinValue);
+
+            attribute.Value.Data = pinValueData;
+            ValuePtr = attribute.Value;
+            return ERROR_SUCCESS;
+        }
     }
+
+    return ERROR_INVALID_HANDLE;
+}
     
 That is all for a basic GPIO pin device. At this point when this application runs, the GPIO pin will be seen on the AllJoyn bus. Whenever any AllJoyn Client Application polls the value of the pin, our AllJoyn Device System Bridge Application will read the value from the physical GPIO pin on the Raspberry Pi. 
 
@@ -175,125 +198,75 @@ Suppose the applications on the AllJoyn bus do not want to poll the value of the
 
 ### Modify Adapter.cs as follows: 
 
-    public uint Initialize()
-    {
-      AdapterDevice gpioDevice = new AdapterDevice(
-          DEVICE_NAME,
-          VENDOR,
-          MODEL,
-          VERSION,
-          SERIAL_NUMBER,
-          DESCRIPTION
-          );
-          
-      // Define GPIO Pin-5 as device property. Device contains properties
-      AdapterProperty gpioPin_Property = new AdapterProperty(PIN_NAME, INTERFACE_HINT);
-      
-      // Define and set GPIO Pin-5 value. Device contains properties that has one or more attributes.
-      pinValueData = (int)pin.Read();
-      AdapterValue pinValueAttr = new AdapterValue(PIN_VALUE_NAME, pinValueData);
-      gpioPin_Property.Attributes.Add(pinValueAttr);
-      
-      // Create Change of Value Signal for the Pin Value Attribute
-      AdapterSignal covSignal = new AdapterSignal(Constants.CHANGE_OF_VALUE_SIGNAL);
-      AdapterValue propertyHandle = new AdapterValue(Constants.COV__PROPERTY_HANDLE, gpioPin_Property);
-      AdapterValue attrHandle = new AdapterValue(Constants.COV__ATTRIBUTE_HANDLE, pinValueAttr);
-      covSignal.Params.Add(propertyHandle);
-      covSignal.Params.Add(attrHandle);
-      
-      // Finally, put it all into a new device
-      gpioDevice.Properties.Add(gpioPin_Property);
-      gpioDevice.Signals.Add(covSignal);
-      devices.Add(gpioDevice);
-      
-      // Pin value change event handler
-      pin.ValueChanged += pinValueChangedEventHandler;
-      
-      return ERROR_SUCCESS;
-    }
+public uint Initialize()
+{
+    AdapterDevice gpioDevice = new AdapterDevice(
+        DEVICE_NAME,
+        VENDOR,
+        MODEL,
+        VERSION,
+        SERIAL_NUMBER,
+        DESCRIPTION
+        );
+
+    // Define GPIO Pin-5 as device property.
+    AdapterProperty gpioPin_Property = new AdapterProperty(PIN_NAME, INTERFACE_HINT);
+            
+    // Define and set GPIO Pin-5 value.
+    pinValue = (int) pin.Read();
+    object pinValueData = Windows.Foundation.PropertyValue.CreateInt32(pinValue);
+
+    AdapterAttribute gpioPin_valueAttr = new AdapterAttribute(
+        PIN_VALUE_NAME,
+        pinValueData,
+        E_ACCESS_TYPE.ACCESS_READ
+        );
+    gpioPin_valueAttr.COVBehavior = SignalBehavior.Always;
+    gpioPin_Property.Attributes.Add(gpioPin_valueAttr);
+
+    // Create Change of Value Signal for the Pin Value Attribute
+    AdapterSignal covSignal = new AdapterSignal(Constants.CHANGE_OF_VALUE_SIGNAL);
+    AdapterValue propertyHandle = new AdapterValue(Constants.COV__PROPERTY_HANDLE, gpioPin_Property);
+    AdapterValue attrHandle = new AdapterValue(Constants.COV__ATTRIBUTE_HANDLE, gpioPin_valueAttr.Value);
+    covSignal.Params.Add(propertyHandle);
+    covSignal.Params.Add(attrHandle);
+
+    // Finally, put it all into a new device
+    gpioDevice.Properties.Add(gpioPin_Property);
+    gpioDevice.Signals.Add(covSignal);
+    devices.Add(gpioDevice);
+
+    // Pin value change event handler
+    pin.ValueChanged += pinValueChangedEventHandler;
+
+    return ERROR_SUCCESS;
+}
     
-    public uint RegisterSignalListener
-    (
-        IAdapterSignal Signal,
-        IAdapterSignalListener Listener,
-        object ListenerContext
+private void pinValueChangedEventHandler(
+    GpioPin sender,
+    GpioPinValueChangedEventArgs args
     )
+{
+    IAdapterSignal covSignal = devices.ElementAt(0).Signals.ElementAt(0);
+
+    foreach (IAdapterValue param in covSignal.Params)
     {
-      int signalHashCode = Signal.GetHashCode();
-      
-      SIGNAL_LISTENER_ENTRY newEntry;
-      newEntry.Signal = Signal;
-      newEntry.Listener = Listener;
-      newEntry.Context = ListenerContext;
-      
-      lock (signalListeners)
-      {
-          if (signalListeners.ContainsKey(signalHashCode))
-          {
-              signalListeners[signalHashCode].Add(newEntry);
-          }
-          else
-          {
-              IList<SIGNAL_LISTENER_ENTRY> newEntryList;
-              
-              try
-              {
-                  newEntryList = new List<SIGNAL_LISTENER_ENTRY>();
-              }
-              catch (OutOfMemoryException ex)
-              {
-                  throw new OutOfMemoryException(ex.Message);
-              }
-              
-              newEntryList.Add(newEntry);
-              signalListeners.Add(signalHashCode, newEntryList);
-          }
-      }
-      
-      return ERROR_SUCCESS;
+        if (param.Name == Constants.COV__ATTRIBUTE_HANDLE)
+        {
+            pinValue = (int) pin.Read();
+            IAdapterValue valueAttr_Value = (IAdapterValue) param.Data;
+            int previousPinValue = (int) valueAttr_Value.Data;
+
+            // Notify registered listeners only when pin value actually changes
+            if (previousPinValue != pinValue)
+            {
+                valueAttr_Value.Data = pinValue;
+                NotifySignalListener(covSignal);
+            }
+        }
     }
+}
     
-    private void notifySignalListener(IAdapterSignal signal)
-    {
-      int signalHashCode = signal.GetHashCode();
-      
-      lock (signalListeners)
-      {
-          IList<SIGNAL_LISTENER_ENTRY> listenerList = signalListeners[signalHashCode];
-          foreach (SIGNAL_LISTENER_ENTRY entry in listenerList)
-          {
-              IAdapterSignalListener listener = entry.Listener;
-              object listenerContext = entry.Context;
-              listener.AdapterSignalHandler(signal, listenerContext);
-          }
-      }
-    }
-    private void pinValueChangedEventHandler(
-        GpioPin sender,
-        GpioPinValueChangedEventArgs args
-        )
-    {
-      // Notify registered listeners only when pin value actually changes
-      IAdapterSignal covSignal = devices.ElementAt(0).Signals.ElementAt(0);
-      foreach (IAdapterValue param in covSignal.Params)
-      {
-          if (param.Name == Constants.COV__ATTRIBUTE_HANDLE)
-          {
-              pinValueData = (int)pin.Read();
-              IAdapterValue valueAttr = (IAdapterValue)param.Data;
-              int previousPinValue = (int)valueAttr.Data;
-              
-              if (previousPinValue != pinValueData)
-              {
-                  valueAttr.Data = pinValueData;
-                  notifySignalListener(covSignal);
-              }
-          }
-      }
-    }
-
-
-  
 ###About Signals
 
 In the AllJoyn Device System Bridge, we have 3 predefined signals DEVICE ARRIVAL, DEVICE REMOVAL and CHANGE OF VALUE signals. 
