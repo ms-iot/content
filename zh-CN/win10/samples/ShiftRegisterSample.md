@@ -78,13 +78,13 @@ lang: zh-CN
 
 * 引脚 10 **SRCLR**： 连接到 RPi2 上的 **GPIO 12**（引脚 32）（引脚映射如下所示）
 
-* 引脚 11 **SRCLK**： 连接到 RPi2 上的 **GPIO 0**（引脚 27）
+* 引脚 11 **SRCLK**： 连接到 RPi2 上的 **GPIO 18**（引脚 12）
 
 * 引脚 12 **RCLK**： 连接到 RPi2 上的 **GPIO 5**（引脚 29）
 
 * 引脚 13 **OE**： 连接到 RPi2 上的 **GPIO 6**（引脚 31）
 
-* 引脚 14 **SER**： 连接到 RPi2 上的 **GPIO 1**（引脚 28）
+* 引脚 14 **SER**： 连接到 RPi2 上的 **GPIO 4**（引脚 7）
 
 * 引脚 15 **Q7**： 请参阅上述内容。
 
@@ -118,9 +118,9 @@ lang: zh-CN
 
 * 引脚 6 **GND** 连接到试验板一侧的地轨（蓝色条带）
 
-* 引脚 27 **GPIO0** 如果尚未连接，连接到移位寄存器上的 **SRCLK**（引脚 11）
+* 引脚 12 **GPIO18** 如果尚未连接，连接到移位寄存器上的 **SRCLK**（引脚 11）
 
-* 引脚 28 **GPIO1** 如果尚未连接，连接到移位寄存器上的 **SER**（引脚 14）
+* 引脚 7 **GPIO4** 如果尚未连接，连接到移位寄存器上的 **SER**（引脚 14）
 
 * 引脚 29 **GPIO5** 如果尚未连接，连接到移位寄存器上的 **RCLK**（引脚 12）
 
@@ -130,7 +130,7 @@ lang: zh-CN
 
 ###创建示例应用
 
-在完成一切设置后，重新打开你设备的电源。你可以在[此处](https://github.com/ms-iot/samples/tree/develop/ShiftRegister)找到此示例，但作为练习，本教程将指导你完成从头开始创建此应用的完整步骤。打开 Visual Studio 并创建新的 C\# Windows 通用空白应用（如果你需要有关如何创建新应用的指南，请参阅“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)）。在本示例中，我们巧妙命名我们的 **ShiftRegisterSample**。
+在完成一切设置后，重新打开你的设备的电源。你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\ShiftRegister` 来查找此示例的源代码，但作为练习，本教程将指导你完成从头开始创建此应用的完整步骤。打开 Visual Studio 并创建新的 C\# Windows 通用空白应用。依次单击“文件”-\>“新建”-\>“项目”，然后依次选择“模板”-\>“Visual C\#”-\>“Windows”-\>“通用”-\>“空白应用\(通用 Windows\)”。在本示例中，我们巧妙命名我们的 **ShiftRegisterSample**。
 
 此示例中的代码将执行以下三项操作：
 
@@ -162,6 +162,7 @@ lang: zh-CN
 * 在设计器的 XAML 部分中找到 `<Grid>` 标记，并添加以下标记：
 
 <UL>
+
 {% highlight XML %}
 <Grid Background="Black">
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -192,7 +193,7 @@ lang: zh-CN
 using Windows.Devices.Gpio;
 {% endhighlight %}
 
-引用添加后，可以开始添加代码。我们针对 MainPage.xaml.cs 实现的完整代码位于本部分的末尾处。以下是该代码的一些关键部分，带有相关说明
+添加引用后，让我们开始添加代码。我们针对 MainPage.xaml.cs 实现的完整代码位于本部分的末尾处。以下是该代码的一些关键部分，带有相关说明
 
 变量和常量
 
@@ -204,11 +205,11 @@ private const double TIME_DELAY = 1;
 // The 74HC595N has five input pins that are used to control the device.
 // See the datasheet http://www.ti.com/lit/ds/symlink/sn74hc595.pdf for details
 // Shift Register Clock (SRCLK): the clock for the serial input to the shift register
-private const int SRCLK_PIN = 0; // GPIO 0 is pin 27 on RPI2 header
+private const int SRCLK_PIN = 18; // GPIO 18 is pin 12 on RPI2 header
 private GpioPin shiftRegisterClock;
 
 // Serial input (SER): the serial data input to the shift register. Use in conjunction with SRCLK.
-private const int SER_PIN = 1; // GPIO 1 is pin 28 on RPI2 header
+private const int SER_PIN = 4; // GPIO 4 is pin 7 on RPI2 header
 private GpioPin serial;
 
 // Storage Register Clock (RCLK): the clock for clocking data from the serial input to the parallel output in the shift register
@@ -386,11 +387,9 @@ private void ToggleButtonClicked(object sender, RoutedEventArgs e)
 
 * 如果通过上述代码创建的应用尚未打开，请在 Visual Studio 中打开它。
 
-* 将“远程调试”设置设为指向你的设备。如果你需要有关如何执行此操作的指南，请参阅“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)。
+* 按照[设置远程调试和部署应用]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp)的说明进行操作。
 
-* 按“F5”，或单击 Visual Studio 工具栏中的“远程计算机”按钮。
-
-一段时间过后，你将看到已连接到 RPi2 的屏幕上出现变化，即，将显示一个滑块、一些文本和一个按钮。LED 将亮起，并将采用“pinMask”中设置的模式。
+一段时间过后，你将看到已连接到 RPi2 的屏幕出现变化，即，将显示一个滑块、一些文本和一个按钮。LED 将亮起，并将采用“pinMask”中设置的模式。
 
 ![ShiftRegister 屏幕截图]({{site.baseurl}}/images/ShiftRegister/ScreenShotA.png)
 
@@ -430,11 +429,11 @@ namespace ShiftRegisterSample
         // The 74HC595N has five input pins that are used to control the device.
         // See the datasheet http://www.ti.com/lit/ds/symlink/sn74hc595.pdf for details
         // Shift Register Clock (SRCLK): the clock for the serial input to the shift register
-        private const int SRCLK_PIN = 0; // GPIO 0 is pin 27 on RPI2 header
+        private const int SRCLK_PIN = 18; // GPIO 18 is pin 12 on RPI2 header
         private GpioPin shiftRegisterClock;
 
         // Serial input (SER): the serial data input to the shift register. Use in conjunction with SRCLK.
-        private const int SER_PIN = 1; // GPIO 1 is pin 28 on RPI2 header
+        private const int SER_PIN = 4; // GPIO 4 is pin 7 on RPI2 header
         private GpioPin serial;
 
         // Storage Register Clock (RCLK): the clock for clocking data from the serial input to the parallel output in the shift register

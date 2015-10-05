@@ -3,23 +3,24 @@ layout: default
 title: Setup your MinnowBoard Max
 permalink: /en-US/win10/SetupMBM.htm
 lang: en-US
+deviceName: MBM
 ---
 
 #Get Started
 
 Learn how to set up the MinnowBoard Max hardware and connect it to your computer.
 
-{% include steps.html device="MBM" %}
+{% include steps.html device=page.deviceName %}
 
 ##What you need
 1. **A PC running Windows 10** (Prepared in the previous step)
-2. **MinnowBoard Max**
-3. **Power supply**
-4. **8GB micro SD card** - class 10 or better. (We suggest this [one](http://www.amazon.com/gp/product/B00IVPU786){:target="_blank"} or this [one](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445){:target="_blank"})
-5. **HDMI cable and monitor**
-6. **Ethernet cable**
-7. **Micro SD card reader**
-7. **USB keyboard**
+1. **MinnowBoard Max**
+1. **Power supply**
+1. <a name="MBM_SDcard"></a>**8GB micro SD card** - class 10 or better. (We suggest this [one](http://www.amazon.com/gp/product/B00IVPU786){:target="_blank"} or this [one](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445){:target="_blank"})
+1. **HDMI cable and monitor**
+1. **Ethernet cable**
+1. **Micro SD card reader** (Due to an issue with most internal SD card readers, we suggest an external USB card reader like this [one](http://www.amazon.com/dp/B009D79VH4){:target="_blank"} or this [one](http://www.amazon.com/dp/B0096FB5CW){:target="_blank"})
+1. **USB keyboard**
 
 ##Hook Up Your Board
 1. **Connect a USB keyboard** to one of the USB ports on the board.
@@ -72,7 +73,7 @@ The reason the bitness of the firmware has to match the bitness of the OS is tha
 
 ## Install the Windows 10 IoT Core tools
 
-1. [Download](http://go.microsoft.com/fwlink/?LinkId=616848) the ISO for MinnowBoard MAX from the Microsoft Download Center.
+1. Download a Windows 10 IoT Core image from our [downloads page](http://ms-iot.github.io/content/en-US/Downloads.htm){:target="_blank"}.
 
 2. **Save the ISO** to a local folder
 
@@ -145,3 +146,9 @@ The reason the bitness of the firmware has to match the bitness of the OS is tha
         net user Administrator [new password]
 
     Once this is done, you'll need to re-establish the current session using enable-psSession with the new credentials.
+
+##Additional Resources
+* [Supported Peripheral Interfaces and Devices]({{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm){:target="_blank"}
+
+{% include nextsteps.html device=page.deviceName %}
+

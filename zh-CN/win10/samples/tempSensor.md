@@ -1,94 +1,85 @@
 ---
 layout: default
-title: Potentiometer Sample
-permalink: /en-US/win10/samples/tempSensor.htm
-lang: en-US
+title: 电位计示例
+permalink: /zh-CN/win10/samples/tempSensor.htm
+lang: zh-CN
 ---
 
-## Temperature/Force Sensor Sample
-This sample uses SPI communication.
-A temperature/force sensor is connected to an ADC, the ADC is connected to the Raspberry Pi 2 through SPI Pins. The ADC converts the analog sensor output to a digital value that is then read by the Raspberry Pi 2 using SPI. The value read from the ADC is displayed on the screen attached to the Raspberry Pi 2.
-This is basically a simplified version of Potentiometer sensor sample, which has an LED light as an extra output.
-You can also use a Force sensor in this sample. Try to press the Force sensor gentle or hard to see the data output difference.
-This sample only has C# version.
+## 温度/力传感器示例
+此示例使用 SPI 通信。温度/力传感器已连接到 ADC，ADC 已通过 SPI 引脚连接到 Raspberry Pi 2。ADC 将模拟传感器输出转换为数字值，然后由 Raspberry Pi 2 使用 SPI 读取。从 ADC 读取的值显示在连接到 Raspberry Pi 2 的屏幕上。这基本上是一个简化版本的电位计传感器示例，其中包含 LED 光作为额外输出。你还可以在此示例中使用力传感器。尝试轻轻或用力按力传感器以查看数据输出差异。此示例只有 C\# 版本。
 
-## Read before start
-This sample assumes that Raspberry Pi 2 has been pre-setted up with below:
+## 在开始之前阅读
+此示例假设已按照以下方式预设置 Raspberry Pi 2：
 
-- Raspberry Pi 2 has been connected to HDMI monitor
-- A SD image card has been plugged to Pi 2
-- An Ethernet cable has been plugged to Pi 2
-- Raspberry Pi 2 has been powered on
+- Raspberry Pi 2 已连接到 HDMI 监视器
+- SD 图像卡已连接到 Pi 2
+- 以太网电缆已连接到 Pi 2
+- Raspberry Pi 2 已通电
 
-## Parts needed
+## 所需部件
 
-- [1 MCP3002 10-bit ADC](http://www.digikey.com/product-detail/en/MCP3002-I%2FP/MCP3002-I%2FP-ND/319412) or [1 MCP3208 12-bit ADC](http://www.digikey.com/product-search/en?KeyWords=mcp3208%20ci%2Fp&WT.z_header=search_go)
-- [1 TMP36 Temperature sensor](http://www.digikey.com/product-detail/en/TMP36GT9Z/TMP36GT9Z-ND/820404) or [1 FSR 402 Force sensor](http://www.digikey.com/product-detail/en/30-81794/1027-1001-ND/2476468)
-- Raspberry Pi 2 board
-- 1 breadboard and a couple of wires
-- HDMI Monitor
+- [1 个 MCP3002 10 位 ADC](http://www.digikey.com/product-detail/en/MCP3002-I%2FP/MCP3002-I%2FP-ND/319412) 或 [1 个 MCP3208 12 位 ADC](http://www.digikey.com/product-search/en?KeyWords=mcp3208%20ci%2Fp&WT.z_header=search_go)
+- [1 个 TMP36 温度传感器](http://www.digikey.com/product-detail/en/TMP36GT9Z/TMP36GT9Z-ND/820404)或 [1 个 FSR 402 力传感器](http://www.digikey.com/product-detail/en/30-81794/1027-1001-ND/2476468)
+- Raspberry Pi 2 板
+- 一块试验板和几根电线
+- HDMI 监视器
 
-## Parts Review
+## 部件查看
 
-* MCP3002 or MCP3208
+* MCP3002 或 MCP3208
 
-Below are the pinouts of the MCP3002 and MCP3208 analog-to-digital converters (ADC) used in this sample.
+下面是本例中使用的 MCP3002 和 MCP3208 模拟到数字转换器 \(ADC\) 的引脚输出。
 
-![Electrical Components]({{site.baseurl}}/images/TempSensor/MCP3002.png)
-![Electrical Components]({{site.baseurl}}/images/TempSensor/MCP3208.png)
+![电子元件]({{site.baseurl}}/images/TempSensor/MCP3002.png) ![电子元件]({{site.baseurl}}/images/TempSensor/MCP3208.png)
 
 * Raspberry Pi 2
 
   <img src="{{site.baseurl}}/images/PinMappings/RP2_Pinout.png" height="400">
 
-## Parts Connection
+## 部件连接
 
-1. Connect the TMP36 temperature Sensor to the MCP3002; `Sensor output pin` (the middle pin) should be connected to `CH0` on the MCP3002;
+1. 将 TMP36 温度传感器连接到 MCP3002；`Sensor output pin`（中间引脚）应连接到 MCP3002 上的 `CH0`；
 
-If you are using a [Force sensor](http://www.digikey.com/product-detail/en/30-81794/1027-1001-ND/2476468) which only has two legs, set the left leg to 5V,
-and connect the other Leg to `CH0` on MCP3002
+如果你使用的是只有两条引线的[力传感器](http://www.digikey.com/product-detail/en/30-81794/1027-1001-ND/2476468)，请将左引线设置为 5V，然后将另一条引线连接到 MCP3002 上的 `CH0`。
 
-Detailed connection:
+连接详细信息如下：
 
-![Overall Schematics]({{site.baseurl}}/images/TempSensor/temp_mcp3002.png);
-![Overall Schematics]({{site.baseurl}}/images/TempSensor/force_mcp3002.png);
+![整体电路图]({{site.baseurl}}/images/TempSensor/temp_mcp3002.png); ![整体电路图]({{site.baseurl}}/images/TempSensor/force_mcp3002.png);
 
-With each model of Raspberry Pi 2, the pin layout might be a little different. But the pin connection with MCP3002 should be as below:
+在每个型号的 Raspberry Pi 2 上，引脚布局可能稍有不同。但与 MCP3002 连接的引脚应如下所示：
 
-- MCP3002: VDD/VREF - 5V on Raspberry Pi 2
-- MCP3002: CLK - "SPI0 SCLK" on Raspberry Pi 2
-- MCP3002: Dout - "SPI0 MISO" on Raspberry Pi 2
-- MCP3002: Din - "SPI0 MOSI" on Raspberry Pi 2
-- MCP3002: CS/SHDN - "SPI0 CS0" on Raspberry Pi 2
-- MCP3002: DGND - GND on Raspberry Pi 2
-- MCP3002: CH0- Sensor Output Pin
+- MCP3002： VDD/VREF - Raspberry Pi 2 上的 5V
+- MCP3002： CLK - Raspberry Pi 2 上的“SPI0 SCLK”
+- MCP3002： Dout - Raspberry Pi 2 上的“SPI0 MISO”
+- MCP3002： Din - Raspberry Pi 2 上的“SPI0 MOSI”
+- MCP3002： CS/SHDN - Raspberry Pi 2 上的“SPI0 CS0”
+- MCP3002： DGND - Raspberry Pi 2 上的 GND
+- MCP3002： CH0- 传感器输出引脚
 
-2. **Alternative: If you are using MCP3208** Connect the temperature Sensor to MCP3208; `Sensor output pin` (the mid pin) should be connected to `CH0` on MCP3208.
+2. **替代项： 如果你使用的是 MCP3208**，请将温度传感器连接到 MCP3208；`Sensor output pin`（中间引脚）应连接到 MCP3208 上的 `CH0`。
 
-Detailed connection:
+连接详细信息如下：
 
-![Overall Schematics]({{site.baseurl}}/images/TempSensor/OverallCon_mcp3208.PNG )
+![整体电路图]({{site.baseurl}}/images/TempSensor/OverallCon_mcp3208.PNG)
 
-With each model of Raspberry Pi 2, the pin layout might be a little different.
-But the pin connection with MCP3208 should be as below:
+在每个型号的 Raspberry Pi 2 上，引脚布局可能稍有不同。但与 MCP3208 连接的引脚应如下所示：
 
-- MCP3208: VDD - 5V on Raspberry Pi 2
-- MCP3208: VREF - 5V on Raspberry Pi 2
-- MCP3208: CLK - "SPI0 SCLK" on Raspberry Pi 2
-- MCP3208: Dout - "SPI0 MISO" on Raspberry Pi 2
-- MCP3208: Din - "SPI0 MOSI" on Raspberry Pi 2
-- MCP3208: CS/SHDN - "SPIO CS0 on Raspberry Pi 2
-- MCP3208: DGND - GND on Raspberry Pi 2
+- MCP3208： VDD - Raspberry Pi 2 上的 5V
+- MCP3208： VREF - Raspberry Pi 2 上的 5V
+- MCP3208： CLK - Raspberry Pi 2 上的“SPI0 SCLK”
+- MCP3208： Dout - Raspberry Pi 2 上的“SPI0 MISO”
+- MCP3208： Din - Raspberry Pi 2 上的“SPI0 MOSI”
+- MCP3208： CS/SHDN - Raspberry Pi 2 上的“SPIO CS0”
+- MCP3208： DGND - Raspberry Pi 2 上的 GND
 
-## Look at the code
+## 查看代码
 
-You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\TempSensor`.
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\TempSensor`，查找此示例的源代码。
 
-Let's go through the code. We use a timer in the sample, and each time the 'Tick' event is called,
-we read the sensor data through ADC, and the value will be displayed on the screen.
+让我们来看看代码。我们在示例中使用计时器，每次调用“滴答”事件时，会通过 ADC 读取传感器数据，并且该值将显示在屏幕上。
 
-* Timer Code
-Setup timer in C#:
+* 采用 C\# 的计时器代码设置计时器：
+
 {% highlight C# %}
 public MainPage()
 {
@@ -107,7 +98,8 @@ private void Timer_Tick(object sender, object e)
 }
 {% endhighlight %}
 
-* Initialize SPI pin
+* 初始化 SPI 引脚
+
 {% highlight C# %}
 private async void InitSPI()
 {
@@ -130,7 +122,7 @@ private async void InitSPI()
 }
 {% endhighlight %}
 
-* read the sensor data through SPI communication
+* 通过 SPI 通信读取传感器数据
 
 {% highlight C# %}
 
@@ -162,7 +154,7 @@ public void DisplayTextBoxContents()
 }
 {% endhighlight %}
 
-* Convert sensor bit data to a number
+* 将传感器位数据转换为数字形式
 
 {% highlight C# %}
 /* This is the conversion for MCP3208 which is a 12 bits output; Uncomment this if you are using MCP3208 */
@@ -185,13 +177,11 @@ public int convertToInt(byte[] data)
 }
 {% endhighlight %}
 
-## Deploy the sample
-Choose `Debug` and `ARM` configuration, choose `Remote Machine`, right click the project, under Property, click Debug tag,
-Put the Raspberry Pi 2 IP in the Remote machine field, and unclick `Use authentication`
+## 部署示例
+选择 `Debug` 和 `ARM` 配置、选择 `Remote Machine`、右键单击该项目、在“属性”下单击“调试标记”、将 Raspberry Pi 2 IP 放入“远程计算机”字段中，然后取消单击 `Use authentication`
 
-Press `F5`
+按 `F5`
 
-If you are using Temp sensor, you can try to hold the sensor or apply some heat on it to see how the output change. If you are using Force sensor, you can hold it hard or gentle to see
-how the output change on the screen. You can also switch the sensor to a light sensor to play around with it.
+如果你使用的是温度传感器，你可以尝试握住传感器或对其施加一些热量，以查看输出会如何变化。如果你使用的是力传感器，你可以用力或轻轻地握住它，以查看输出在屏幕上如何变化。你还可以将传感器切换到光传感器来使用它。
 
 <img src="{{site.baseurl}}/images/TempSensor/Deploy.png" height="400">

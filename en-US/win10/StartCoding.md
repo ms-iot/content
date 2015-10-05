@@ -72,8 +72,8 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/UnavailableApis.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <h4>Supported Peripheral Interfaces and Devices</h4>
-                        <p>Find a list of supported peripheral interfaces and protocols with Window 10 IoT Core devices</p>
+                        <h4>Ecosystem Compatibility List</h4>
+                        <p>Find a list of supported peripherals, interfaces, and protocols on Window 10 IoT Core devices</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm">Learn More</a>
                     </div>
                 </div>
@@ -203,31 +203,31 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab.htm">Driver Sample (C++)</a>
                     </div>
                     <div class="col-md-3">
-                        <h4>I2C Port Expander (RPi2 Basic Kit Lab)</h4>
-                        <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 I2C bus to communicate with a port expander.</p>
+                        <h4>I2C Port Expander</h4>
+                        <p>Create an app that uses the Raspberry Pi 2 I2C bus to communicate with a port expander.</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/I2CPortExpander.htm">I2C Port Expander (C#)</a>
                     </div>
                     <div class="col-md-3">
-                        <h4>Serial-In, Parallel-Out Shift Register (RPi2 Basic Kit Lab)</h4>
-                        <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 to control LEDs using a serial-in, parallel-out shift register.</p>
+                        <h4>Serial-In, Parallel-Out Shift Register</h4>
+                        <p>Create an app that uses the Raspberry Pi 2 to control LEDs using a serial-in, parallel-out shift register.</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/ShiftRegisterSample.htm">Shift Register (C#)</a>
                     </div>
                    <div class="col-md-3">
-                        <h4>RGB LED (RPi2 Basic Kit Lab)</h4>
-                        <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 to toggle an RGB LED.</p>
+                        <h4>RGB LED</h4>
+                        <p>Create an app that uses the Raspberry Pi 2 to toggle an RGB LED.</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/RGBLED.htm">RGB LED (C#)</a>
                     </div>
                 </div>
 
                 <div class="row section-heading">
                     <div class="col-md-3">
-                        <h4>Push Button(RPi2 Basic Kit Lab)</h4>
-                        <p>Raspberry Pi 2 Basic Kit Lab - Create an app that uses the Raspberry Pi 2 to read the status of a Push Button and control an LED.</p>
+                        <h4>Push Button</h4>
+                        <p>Create an app that uses the Raspberry Pi 2 to read the status of a Push Button and control an LED.</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PushButton.htm">Push Button (C#)</a>
                     </div>
                     <div class="col-md-3">
-                        <h4>Potentiometer Sensor Sample (RPi2 Basic Kit Lab)</h4>
-                        <p>Raspberry Pi 2 Basic Kit Lab - A analog sensor is connected to RaspBerry Pi through ADC converter and digital output data is displayed through Monitor and LED </p>
+                        <h4>Potentiometer Sensor Sample</h4>
+                        <p>A analog sensor is connected to Raspberry Pi through ADC converter and digital output data is displayed through Monitor and LED </p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm">Potentiometer Sensor Sample (C#)</a>
                     </div>
                    <div class="col-md-3">
@@ -273,7 +273,7 @@ lang: en-US
                     </div>
                     <div class="col-md-3">
                         <h4>Cylon Node.js App (Console)</h4>
-                        <p>Control an Arduino with a Cylon Node.js app running on a RaspBerry Pi 2 with Windows 10 IoT Core</p>
+                        <p>Control an Arduino with a Cylon Node.js app running on a Raspberry Pi 2 with Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsCylon.htm">Cylon (Node.js)</a>
                     </div>
                     <div class="col-md-3">
@@ -282,8 +282,25 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BLEGatt.htm">Bluetooth GATT (C#)</a><br>
                     </div>
                     <div class="col-md-3">
-                        <!-- Placeholder for alignment -->
+                        <h4>IoT Browser Sample (Windows Universal)</h4>
+                        <p> Learn how to create a simple web browser for Windows 10 IoT core.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/IoTBrowser.htm">IoT Browser (C#)</a><br>
                     </div>
+                </div>
+                
+                <div class="row section-heading">
+                    <div class="col-md-3">
+                        <h4>GPIO OneWire (C++)</h4>
+                        <p>Create an app that uses GPIO to read from the DHT11, a temperature and humidity sensor that uses a single-wire protocol.</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/GpioOneWire.htm">GPIO OneWire (C++)</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Cylon Node.js App (UWP)</h4>
+                        <p>Control a servo connected to an Arduino with a Cylon Node.js UWP app running on a Raspberry Pi 2 with Windows 10 IoT Core</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWUCylon.htm">Cylon (Node.js)</a>
+                    </div>
+                    <div class="col-md-3"><!-- column placeholder --></div>
+                    <div class="col-md-3"><!-- column placeholder --></div>
                 </div>
 
                 <div class="row section-heading">

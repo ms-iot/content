@@ -20,7 +20,7 @@ Raspberry Pi 2 的硬件接口通过开发板上的 40 排针 **J8** 公开。�
 * **2x** - 3.3V 电源引脚
 * **8x** - 接地引脚
 
-##GPIO 引脚
+##<a name="RPi2_GPIO">GPIO 引脚
 
 以下 GPIO 引脚可通过 API 访问：
 
@@ -43,7 +43,7 @@ Raspberry Pi 2 的硬件接口通过开发板上的 40 排针 **J8** 公开。�
 | 35 | 上拉 | 红色电源 LED |
 | 47 | 上拉 | 绿色活动 LED |
 
-例如，以下代码将 **GPIO 5** 作为输出打开，并在引脚上写出数字“\*\*1\*\*”：
+例如，以下代码将 **GPIO 5** 作为输出打开，并在该引脚上写出数字“**1**”：
 
 {% highlight C# %}
 using Windows.Devices.Gpio;
@@ -53,12 +53,12 @@ public void GPIO()
     // Get the default GPIO controller on the system
     GpioController gpio = GpioController.GetDefault();
     if (gpio == null)
-        return; // GPIO not available on this sytem
+        return; // GPIO not available on this system
 
     // Open GPIO 5
     using (GpioPin pin = gpio.OpenPin(5))
     {
-        // Latch HIGH value
+        // Latch HIGH value first. This ensures a default value when the pin is set as output
         pin.Write(GpioPinValue.High);
     
         // Set the IO direction as output
@@ -74,7 +74,7 @@ public void GPIO()
 
 当关闭引脚时，它将还原到其通电状态。
 
-##I2C 总线
+##<a name="RPi2_I2C"></a>I2C 总线
 
 排针上公开了一个 I2C 控制器 **I2C1**，带有 **SDA** 和 **SCL** 两条线。用于此总线的 1.8K&\#x2126; 内部上拉电阻已安装在开发板上。
 
@@ -110,7 +110,7 @@ public async void I2C()
 {% endhighlight %}
 
 
-##SPI 总线
+##<a name="RPi2_SPI"></a>SPI 总线
 
 RPi2 上有 2 个 SPI 总线控制器可用： **SPI0** 和 **SPI1**。
 

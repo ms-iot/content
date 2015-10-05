@@ -17,10 +17,19 @@ lang: en-US
   <h3>New on the Window IoT Blog</h3>
   <div class="col-md-4">
     <div class="col-md-9">
-      <a href="http://blogs.windows.com/buildingapps/2015/05/12/bringing-node-js-to-windows-10-iot-core/" target="_blank">
-        <h4>Bringing Node.js to Windows 10 IoT Core</h4>
+      <a href="http://blogs.windows.com/buildingapps/2015/09/24/whats-next-for-windows-10-iot-core/" target="_blank">
+        <h4>What's next for Windows 10 IoT Core</h4>
       </a>
-      <h4><em>Windows Apps Team, May 12 2015</em></h4>
+      <h4><em>Steve Teixeira, Sep 24 2015</em></h4>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="col-md-9">
+      <a href="http://blogs.windows.com/buildingapps/2015/08/10/hello-windows-10-iot-core/" target="_blank">
+        <h4>Hello, Windows 10 IoT Core</h4>
+      </a>
+      <br>
+      <h4><em>Steve Teixeira, Aug 10 2015</em></h4>
     </div>
   </div>
   <div class="col-md-4">
@@ -29,14 +38,6 @@ lang: en-US
         <h4>Microsoft brings Windows 10 to Makers</h4>
       </a>
       <h4><em>Steve Teixeira, Apr 29 2015</em></h4>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="col-md-9">
-      <a href="http://blogs.windows.com/bloggingwindows/2015/03/18/windows-10-iot-powering-the-internet-of-things/" target="_blank">
-        <h4>Windows 10 IoT Core:<br />Powering the Internet of Things</h4>
-      </a>
-      <h4><em>Kevin Dallas, Mar 18 2015</em></h4>
     </div>
   </div>
 </div>

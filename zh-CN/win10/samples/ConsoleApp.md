@@ -11,7 +11,7 @@ lang: zh-CN
 
 ###在 Visual Studio 中加载项目
 
-可以在[此处](https://github.com/ms-iot/samples/tree/develop/MemoryStatus)找到此示例。在磁盘上生成文件夹的副本，然后从 Visual Studio 打开项目。
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\MemoryStatus`，查找此示例的源代码。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
 ###在 Visual Studio 中创建你自己的项目
 
@@ -26,6 +26,7 @@ lang: zh-CN
 * 若要向我们的控制台添加一些功能，请添加以下内存状态查询和显示代码：
 
 <UL>
+
 {% highlight C++ %}
 #include "pch.h"
 
@@ -123,17 +124,17 @@ int main(int argc, char **argv)
 
 * 确保通过调用“生成”\|“生成解决方案”菜单命令正确生成应用。
 
-* 此应用程序既能在有外设模式下运行，也能在无外设模式下运行。若要更好地了解什么是有外设和无外设模式以及如何配置你的设备，请按照[此处] \({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm\) 的说明操作。
+* 此应用程序既能在有外设模式下运行，也能在无外设模式下运行。若要更好地理解什么是有外设和无外设模式以及如何配置你的设备，请按照 \[此处\] \({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm\) 的说明操作。
 
-* 将此控制台应用程序部署到 Windows IoT Core 设备非常容易。在 [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) 文档中，你可以找到关于使用 `setcomputername` 为你的 Windows IoT Core 设备配置唯一名称的说明。在本示例中，我们将在 VS 的“远程计算机调试”设置中使用该名称（尽管你也可以使用自己的 IP 地址）。
+* 可轻松将此控制台应用程序部署到 Windows IoT 核心版设备。在 [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) 文档中，你可以找到关于使用 `setcomputername` 为你的 Windows IoT Core 设备配置唯一名称的说明。在本示例中，我们将在 VS 的“远程计算机调试”设置中使用该名称（尽管你也可以使用自己的 IP 地址）。
 
     在 Visual Studio 中，你可以通过编辑你的项目的属性配置你的目标项目（请确保所有突出显示的更改均适用于板名称或 IP 地址）：
 
     ![RemoteMachineProjectSettings 目标]({{site.baseurl}}/images/Console/console_project_settings.png)
 
-    注意： 你可以使用 IP 地址而不使用 Windows IoT Core 设备名称。
+        Note: You can use the IP address instead of the Windows IoT Core device name.
 
-* 需要修改项目配置才能启用部署。为此，请从工具栏的“解决方案配置”下拉菜单中选择“配置管理器”，以打开配置管理器。
+* 项目配置需修改为启用部署。为此，请从工具栏的“解决方案配置”下拉菜单中选择“配置管理器”，以打开配置管理器。
 
     ![SolutionConfiguration 目标]({{site.baseurl}}/images/Console/configuration_management.png)
 
@@ -141,9 +142,9 @@ int main(int argc, char **argv)
 
     ![RemoteMachineProjectSettings 目标]({{site.baseurl}}/images/Console/deploy_checkbox.png)
 
-* 现在，我们可以随时部署到远程 Windows IoT Core 设备。只需按 F5（或依次选择“调试”\|“启动调试”）即可开始调试应用。你也可以使用“生成”\|“部署解决方案”仅部署你的应用程序，而不启动调试会话。
+* 现在，我们可以随时部署到远程 Windows IoT Core 设备。只需按 F5（或依次选择“调试”\|“启动调试”）即可开始调试应用。你也可以通过使用“生成”\|“部署解决方案”，仅部署你的应用程序，而无需启动调试会话。
 
-    注意： 当从 Visual Studio 运行时，输出将不会显示在任何位置，但是你可以设置断点、查看值等。
+        NOTE: When run from Visual Studio, the output will not display anywhere, but you will be able to set breakpoints, see variable values, etc.
 
 * 若要停止应用调试，请按“停止调试”按钮（或依次选择“调试”\|“停止调试”）。
 

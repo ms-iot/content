@@ -23,7 +23,7 @@ lang: zh-CN
 
 - 你需要以下组成部分：
 	* Arduino（Uno 如下图所示）
-	* 蓝牙设备（[Sparkfun Mate Silver](https://www.sparkfun.com/products/12576) 如图所示）**或者** USB 电缆
+	* 蓝牙设备（[Sparkfun Mate Silver](https://www.sparkfun.com/products/12576){:target="_blank"} 如图所示）**或者** USB 电缆
 	* 一块试验板
 	* 一个 330Ω 电阻器
 	* 一个 LED
@@ -84,7 +84,19 @@ lang: zh-CN
 ###针对 USB 的注意事项：
  `USBSerial` 有许多选项可用于指定你的设备。在构造函数中，你可以提供你设备的 VID 和 PID、仅限 VID 或 `DeviceInformation` 对象（从上述 `listAvailableDevicesAsync` 函数中获取）。同样，`BluetoothSerial` 可以提供一个设备 ID（作为字符串）、设备名称（也是字符串），或 `DeviceInformation` 对象。
 
-可以通过执行以下步骤获取你的 USB 设备的 VID 和 PID 组合： <ul> <li>通过控制面板或通过按 <i>Windows + Pause</i> 键打开设备管理器，然后选择左侧的<i>设备管理器</i>链接。</li> <li>展开<i>端口（COM 和 LPT）</i>菜单</li> <li>右键单击你的 Arduino 设备，然后选择<i>详细信息</i>选项卡上的“属性”</li> <li>，并从下拉菜单中选择“硬件ID”<i></i>。</li> <li>你可以在<i>值</i>框中看到多个项，而任何项将具有匹配的 PID 和 VID。</li> <li>这些项将具有格式“USB\\VID\_\*\*\*\*&PID\_\*\*\*\*”，其中“ \*\*\* ”是数字 ID 值。</li> <li>你可以*只*放入数字，或者还包含"VID\_"来保证你将正确地将识别设备。例如：保证<br/></li> </ul> `USBSerial usb = new USBSerial( "VID_2341", "PID_0043" );`<br/>**仅**为以下硬件设备工作：
+可以通过执行以下步骤获取你的 USB 设备的 VID 和 PID 组合：
+
+<ul>
+<li>通过控制面板，或者按 <i>Windows + Pause</i> 键，然后选择左侧的“设备管理器”<i></i>链接来打开设备管理器。</li>
+<li>展开“端口(COM 和 LPT)”<i></i>菜单</li>
+<li>右键单击“Arduino 设备”并选择“属性”</li>
+<li>在“详细信息”<i></i>选项卡上，从下拉菜单中选择“硬件 ID”<i></i>。</li>
+<li>你可以在“值”<i></i>框中看到多个项，但任何项都有匹配的 PID 和 VID。</li>
+<li>这些项将具有格式“USB\VID_****&amp;PID_****”，其中“ *** ”是数字 ID 值。</li>
+<li>你可以*只*放入数字，或者还包含“VID_”来保证你将正确地标识设备。例如：<br/></li>
+</ul>
+
+保证 `USBSerial usb = new USBSerial( "VID_2341", "PID_0043" );`<br/> **仅**适用于以下硬件设备：
 
 ![USB 设备]({{site.baseurl}}/images/remote-wiring/samples/basic/vidpid.png)
 

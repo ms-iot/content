@@ -9,25 +9,25 @@ lang: zh-CN
 
 ![I2C 端口扩展器图像]({{site.baseurl}}/images/I2CPortExpander/PortExpanderProjectPicture_480.png)
 
-在本示例中，我们会将一个 I2C 端口扩展器连接到你的 Raspberry Pi 2，并创建一个简单的应用，以便将该端口扩展器用于读取触摸开关的状态并控制 LED。无需具备 I2C 或端口扩展器的相关背景知识。如果你想要进一步了解 I2C，Sparkfun 提供了一个很棒的[与 I2C 相关的教程](https://learn.sparkfun.com/tutorials/i2c)。
+在本示例中，我们会将一个 I2C 端口扩展器连接到你的 Raspberry Pi 2，并创建一个简单的应用，以便将该端口扩展器用于读取触摸开关的状态并控制 LED。无需具备 I2C 或端口扩展器的相关背景知识。如果你希望了解有关 I2C 的详细信息，Sparkfun 提供了一个出色的[与 I2C 相关的教程](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}。
 
-这是一个有外设示例，所以请确保你的设备处于有外设模式下，方法是运行以下命令：`setbootoption.exe headed`（更改有外设/无外设状态需要重新启动）。
+这是一个有外设示例，所以请确保你的设备处于有外设模式下，方法为运行以下命令：`setbootoption.exe headed`（更改有外设/无外设状态将需要重新启动）。
 
 ###将 I2C 端口扩展器连接到你的设备
 
 你将需要以下组件，这些组件包含在基本工具包中：
 
-* 一个 Raspberry Pi 2
+* 1 个 Raspberry Pi 2
 
-* PDIP 程序包中的一个 [MCP23008 8 位 I/O 端口扩展器](http://www.digikey.com/product-detail/en/MCP23008-E%2FP/MCP23008-E%2FP-ND/735951)
+* PDIP 程序包中的<a name="I2C_PortExpander"></a> 1 个 [MCP23008 8 位 I/O 端口扩展器](http://www.digikey.com/product-detail/en/MCP23008-E%2FP/MCP23008-E%2FP-ND/735951){:target="_blank"}
 
-* 一个[红色 LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832)
+* 1 个[红色 LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832){:target="_blank"}
 
-* 一个[触摸开关](http://www.digikey.com/product-detail/en/320.02E11.08BLK/EG1311-ND/101397)
+* 一个[触摸开关](http://www.digikey.com/product-detail/en/320.02E11.08BLK/EG1311-ND/101397){:target="_blank"}
 
-* 一个 [330 &\#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636)
+* 一个 [330 &\#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
 
-* 一个 [10k &\#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-10K/10KQBK-ND/338)
+* 一个 [10k &\#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-10K/10KQBK-ND/338){:target="_blank"}
 
 * 一台 HDMI 监视器
 
@@ -64,7 +64,7 @@ lang: zh-CN
 
 *使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
-MCP23008 的引脚输出如下所示，并且可以在[数据表](http://ww1.microchip.com/downloads/en/DeviceDoc/21919e.pdf)中找到。
+MCP23008 的引脚输出如下所示，并且可以在[数据表](http://ww1.microchip.com/downloads/en/DeviceDoc/21919e.pdf){:target="_blank"}中找到。
 
 ![MCP23008 引脚输出]({{site.baseurl}}/images/I2CPortExpander/MCP23008_Pinout.PNG)
 
@@ -134,7 +134,9 @@ I2C 总线需要在 SDA 和 SCL 线上使用上拉式电阻器。但是，我们
 
 ###创建示例应用
 
-在完成一切设置后，重新打开你设备的电源。你可以在[此处](https://github.com/ms-iot/samples/tree/develop/I2cPortExpander)找到此示例，但作为练习，本教程将指导你完成从头开始创建此应用的完整步骤。打开 Visual Studio 并创建新的 C\# Windows 通用空白应用（如果你需要有关如何创建新应用的指南，请参阅“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)）。我们已将此示例命名为 **I2cPortExpanderLedSample**。此示例中的代码将执行以下几项操作：
+在完成一切设置后，重新打开你的设备的电源。你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\I2CPortExpander` 来查找此示例的源代码，但作为练习，本教程将指导你完成从头开始创建此应用的完整步骤。打开 Visual Studio 并创建新的 C\# Windows 通用空白应用。依次单击“文件”-\>“新建”-\>“项目”，然后依次选择“模板”-\>“Visual C\#”-\>“Windows”-\>“通用”-\>“空白应用\(通用 Windows\)”。我们已将此示例命名为 **I2cPortExpanderLedSample**。
+
+此示例中的代码将执行以下几项操作：
 
 1. 初始化 I2C 总线和端口扩展器
 
@@ -157,6 +159,7 @@ I2C 总线需要在 SDA 和 SCL 线上使用上拉式电阻器。但是，我们
 * 在设计器的 XAML 部分中找到 `<Grid>` 标记，并添加以下标记：
 
 <UL>
+
 {% highlight XML %}
 <Grid Background="Black">
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -189,7 +192,7 @@ using Windows.Devices.I2c;
 {% endhighlight %}
 
 
-引用添加后，可以开始添加代码。我们针对 MainPage.xaml.cs 实现的完整代码位于本部分的末尾处。以下是该代码的一些关键部分，带有相关说明
+添加引用后，让我们开始添加代码。我们针对 MainPage.xaml.cs 实现的完整代码位于本部分的末尾处。以下是该代码的一些关键部分，带有相关说明
 
 
 变量和常量
@@ -236,7 +239,7 @@ private SolidColorBrush grayBrush = new SolidColorBrush(Windows.UI.Colors.LightG
 
  * `iodirRegister`、`gpioRegister` 和 `olatRegister` 是相关值的本地副本，它们分别对应于端口扩展器中的三种寄存器。
 
-\* 有关详细信息，请参阅 [MCP23008 数据表](http://ww1.microchip.com/downloads/en/DeviceDoc/21919e.pdf)。
+\* 有关详细信息，请参阅 [MCP23008 数据表](http://ww1.microchip.com/downloads/en/DeviceDoc/21919e.pdf){:target="_blank"}。
 
 方法 `InitializeSystem()`
 
@@ -399,9 +402,7 @@ private void CheckButtonStatus()
 
 * 如果通过上述代码创建的应用尚未打开，请在 Visual Studio 中打开它。
 
-* 将“远程调试”设置设为指向你的设备。如果你需要有关如何执行此操作的指南，请参阅“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)。
-
-* 按“F5”，或单击 Visual Studio 工具栏中的“远程计算机”按钮。
+* 按照[设置远程调试并部署应用]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp)的说明进行操作。
 
 一段时间过后，你将看到已连接到 RPi2 的屏幕上出现变化，即，将显示一个圆圈、一些文本和一个滑块。试验板上的 LED 将开始打开和关闭。
 

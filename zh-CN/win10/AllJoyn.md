@@ -27,8 +27,8 @@ AllJoyn 框架建立了一个标准化的体系结构，在其中设备和应用
 下图显示了 AllJoyn 框架的高级软件体系结构：![AllJoyn 体系结构]({{site.baseurl}}/images/AllJoyn/AllJoyn_Architecture.png)
 
 * *AllJoyn 应用层* - 用于定义用户体验
-* *AllJoyn 服务框架* - 可互操作的跨平台模块，用于定义设备之间的公共接口  
-* *AllJoyn 核心库* - 核心库，用于与 AllJoyn 路由器交互，并提供查找和安全连接到设备的功能  
+* *AllJoyn 服务框架* - 可互操作的跨平台模块，用于定义设备之间的公共接口
+* *AllJoyn 核心库* - 核心库，用于与 AllJoyn 路由器交互，并提供查找和安全连接到设备的功能
 * *AllJoyn 路由器* - 用于管理设备与应用之间的通信
 
 
@@ -45,31 +45,40 @@ AllJoyn 支持基于邻近感应的通信，从而允许通过以太网、Wi-Fi�
 
 借助 Microsoft 中的 [AllJoyn 设备系统网桥贡献](https://wiki.allseenalliance.org/gateway/dsb){:target="_blank"}，你可以将使用 BACnet 或 Z-Wave 的现有设备连接到 AllJoyn 网络，以便这些设备既可以与新的 AllJoyn 设备交互，又可以通过该网络跨所有设备进行云连接。还推出了一款实用型[工具](https://github.com/MS-brock/AllJoynToasterDemo/tree/master/getajxml){:target="_blank"}，该工具可通过现有的 AllJoyn 设备生成 AllJoyn 自省 XML，[channel9](https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview){:target="_blank"} 上的一篇文章详细介绍了其用法。 请务必查看下面的示例和其他文档。我们希望你能帮助生成更多的 IoT 网桥，从而使其为 AllSeen Alliance 做出贡献。
 
+**将 DSB 对象映射到 Alljoyn** 本文档将介绍用于生成 Alljoyn 系统网桥的关键接口和方法。
+
+[AllJoyn DSB API]({{site.baseurl}}/zh-CN/win10/AlljoynDsbApiGuide.htm){:target="_blank"}
+
+**适用于 Visual Studio 的 AllJoyn 设备系统网桥模板** 此模板可安装在 Visual Studio 2015 Preview 中，从而让你可以创建 AllJoyn 设备系统网桥项目。\* [DeviceSystemBridgeTemplate.vsix](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynDSBGuide/DeviceSystemBridgeTemplate.vsix?raw=true){:target="_blank"} - 此 vsix 包含 AllJoyn 设备系统网桥模板。请注意，它必须在本地复制，不得远程安装。你也可以在 [Visual Studio Online](https://visualstudiogallery.msdn.microsoft.com/aea0b437-ef07-42e3-bd88-8c7f906d5da8) 上找到它。
+
+**AllJoyn 资源管理器** 这是我们使用 AllJoyn 示例时在多个点中使用的工具。可在[此处](https://github.com/ms-iot/samples/tree/develop/AllJoyn/AllJoynExplorer){:target="_blank"}找到 AllJoyn 资源管理器：
+
+* [AllJoyn 资源管理器](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.0.2.zip?raw=true){:target="_blank"} - 此 zip 包含 AllJoyn 资源管理器 AppX 捆绑包。
+* [AllJoyn 资源管理器安装指南](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_Setup_Guide_v1.0.pdf?raw=true){:target="_blank"} - 此 pdf 包含有关如何部署 AllJoyn 资源管理器的文档。
+* [AllJoyn 资源管理器用户指南](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_User_Guide_v1.0.pdf?raw=true){:target="_blank"} - 此 pdf 包含有关如何使用 AllJoyn 资源管理器的文档。
 
 **示例**
 
-*AllJoyn Z-Wave 演示（设备系统网桥）*这将预安装在 Windows 10 IoT Core Technical Preview 中。可以在[此处](https://github.com/ms-iot/samples/tree/develop/AllJoyn/AllJoynZWaveDemo){:target="_blank"}找到它的源代码。
+* [AllJoyn DSB 模拟适配器教程和示例]({{site.baseurl}}/zh-CN/win10/samples/MockAdapterTutorial.htm){:target="_blank"}。
 
-* [ZWaveAdapterUAP.zip](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynZWaveDemo/ZWaveAdapterUAP.zip?raw=true){:target="_blank"} - 此 zip 包含创建 AllJoyn Z-Wave 演示所需的源代码。
-* [Build2015\_AllJoyn\_ZWave\_Setup\_Guide\_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynZWaveDemo/Build2015_AllJoyn_ZWave_Setup_Guide_v1.0.pdf?raw=true){:target="_blank"} - 此 pdf 包含有关如何将 Windows 10 IoT 核心版设备连接到 Z-Wave 设备的文档。
-* [Build2015\_ZWave\_DSB\_Sample\_Guide\_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynZWaveDemo/Build2015_ZWave_DSB_Sample_Guide_v1.0.pdf?raw=true){:target="_blank"} - 此 pdf 包含有关如何使用“设备系统网桥”应用的文档。
+ 此教程介绍如何使用设备系统网桥应用将 IoT 核心版设备连接到模拟 BACnet 设备。
+ 
+* [AllJoyn DSB Z-Wave 教程和示例]({{site.baseurl}}/zh-CN/win10/samples/ZWaveTutorial.htm){:target="_blank"}。
 
-*适用于 Visual Studio 的 AllJoyn 设备系统网桥模板* 此模板可以安装在 Visual Studio 2015 预览版中，从而让你可以创建 AllJoyn 设备系统网桥项目。可以在[此处](https://github.com/ms-iot/samples/tree/develop/AllJoyn/AllJoynDSBGuide){:target="_blank"}找到 vsix：
+ 基于 Build 2015 大会的演示，此教程介绍如何使用设备系统网桥应用将 IoT 核心版设备连接到 Z-Wave 设备。
 
-* [DeviceSystemBridgeTemplate.vsix](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynDSBGuide/DeviceSystemBridgeTemplate.vsix){:target="_blank"} - 该 vsix 包含 AllJoyn 设备系统网桥模板。请注意，必须在本地复制它，不得远程安装它。
-* [AllJoyn\_DSB\_GPIODevice\_Sample\_Tutorial\_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynDSBGuide/AllJoyn_DSB_GPIODevice_Sample_Tutorial_v1.0.pdf?raw=true){:target="_blank"} - 此 pdf 包含如何使用 AllJoyn 设备系统网桥模板的说明和练习设备 GPIO 的示例。  
+* [AllJoyn DSB GPIO 设备教程 C++]({{site.baseurl}}/zh-CN/win10/samples/AlljoynDSB_GpioTutorial.htm){:target="_blank"}
 
-*AllJoyn 资源管理器* 这是我们使用 AllJoyn 示例时在多个点中使用的工具。可以在[此处](https://github.com/ms-iot/samples/tree/develop/AllJoyn/AllJoynExplorer){:target="_blank"}找到 AllJoyn 资源管理器：
+ 此教程演示如何使用 AllJoyn 设备系统网桥模板创建操作设备 GPIO 的示例 C++ 应用。
 
-* [AllJoynExplorer\_1.0.0.0.zip](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.0.0.zip?raw=true){:target="_blank"} - 此 zip 包含 AllJoyn 资源管理器 AppX 捆绑包。
-* [AllJoyn\_Explorer\_Setup\_Guide\_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_Setup_Guide_v1.0.pdf?raw=true){:target="_blank"} - 此 pdf 包含有关如何部署 AllJoyn 资源管理器的文档。
-* [AllJoyn\_Explorer\_User\_Guide\_v1.0.pdf](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_User_Guide_v1.0.pdf?raw=true){:target="_blank"} - 此 pdf 包含有关如何使用 AllJoyn 资源管理器的文档。  
+* [AllJoyn DSB GPIO 设备教程 C\#]({{site.baseurl}}/zh-CN/win10/samples/AlljoynDSB_ManagedGpioTutorial.htm){:target="_blank"}
 
+ 此教程演示如何使用 AllJoyn 设备系统网桥模板创建操作设备 GPIO 的示例托管应用。
 
 **其他资源**
 
 * 在 Windows 10 上生成 AllJoyn 应用 - [https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview](https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview){:target="_blank"}
 * Windows 10 中的 AllJoyn 接口 - [https://msdn.microsoft.com/zh-cn/library/windows/apps/xaml/windows.devices.alljoyn.aspx](https://msdn.microsoft.com/zh-CN/library/windows/apps/xaml/windows.devices.alljoyn.aspx){:target="_blank"}
-* AllJoyn CodeGen 工具 - [https://msdn.microsoft.com/zh-cn/library/windows/apps/xaml/dn913809.aspx](https://msdn.microsoft.com/zh-CN/library/windows/apps/xaml/dn913809.aspx){:target="_blank"}
+* AllJoyn CodeGen 工具 - [AllJoynCodeGen.htm]({{site.baseurl}}/zh-CN/win10/AllJoynCodeGen.htm){:target="_blank"}
 * AllJoyn 体系结构详细信息 - [https://allseenalliance.org/developers/learn/](https://allseenalliance.org/developers/learn/){:target="_blank"}
 * AllJoyn 开发人员资源 - [https://allseenalliance.org/developers/develop/](https://allseenalliance.org/developers/develop/){:target="_blank"}
