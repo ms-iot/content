@@ -22,16 +22,16 @@ void setup()
 {
     // put your setup code here, to run once:
 
-    pinMode(GPIO_05, OUTPUT); // Configure the pin for OUTPUT so you can turn on the LED.
+    pinMode(GPIO_5, OUTPUT); // Configure the pin for OUTPUT so you can turn on the LED.
 }
 
 void loop()
 {
     // put your main code here, to run repeatedly:
 
-    digitalWrite(GPIO_05, LOW);    // turn the LED off by making the voltage LOW
+    digitalWrite(GPIO_5, LOW);    // turn the LED off by making the voltage LOW
     delay(500);                    // wait for a half second
-    digitalWrite(GPIO_05, HIGH);   // turn the LED on by making the voltage HIGH
+    digitalWrite(GPIO_5, HIGH);   // turn the LED on by making the voltage HIGH
     delay(500);                    // wait for a half second
 }
 

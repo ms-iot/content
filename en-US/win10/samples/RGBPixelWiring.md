@@ -31,8 +31,8 @@ Replace the existing code in your main .ino file with the following code:
 {% highlight C++ %}
 
 //verify these variables correspond with the pins you've attached your LED strip to and the number of LEDs on your strip.
-const int stripClock = GPIO_06;	//Raspberry Pi2 Pin 31
-const int stripData = GPIO_05;	//Raspberry Pi2 Pin 29
+const int stripClock = GPIO_6;	//Raspberry Pi2 Pin 31
+const int stripData = GPIO_5;	//Raspberry Pi2 Pin 29
 const int stripLen = 48;
 
 typedef struct _PIXEL_VALUES {
