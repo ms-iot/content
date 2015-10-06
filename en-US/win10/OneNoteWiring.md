@@ -13,7 +13,7 @@ Learn how to use http messages to Get and Post OneNote pages
 1. Create a new project from the template.
 2. Replace the existing code in main.cpp with the following code. Make modifications for multiple action buttons as needed.
 3. Add the following files to the project, MinHttpGP.cpp/.h, and OneNoteHelper.cpp/.h,
-   found in [LINK TO REPO](https://github.com/ms-iot/sample-todo) <!-- TODO UPDATE LINK -->
+   found [on GitHub]](https://github.com/ms-iot/sample-todo).
 
 # Code
 
