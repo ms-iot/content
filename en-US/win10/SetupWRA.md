@@ -40,7 +40,7 @@ Your Arduino will now run the StandardFirmata sketch forever unless reprogrammed
 
 At this point, you can use the USB connection with no additional work - if you choose this option, move on to the next page.  Otherwise, follow one of the instruction sets below to setup a Bluetooth or Wi-Fi device.
 
-If you wish to use the recommended Bluetooth pairing between your devices, you will need to [hook up a Bluetooth device to the Arduino](https://github.com/ms-iot/remote-wiring/blob/master/bluetooth.md){:target="_blank"}. We recommend the [SparkFun Bluetooth Mate Silver](https://www.sparkfun.com/products/12576){:target="_blank"}.  Follow the steps on our GitHub to setup the Bluetooth module before moving on to the next step.
+If you wish to use the recommended Bluetooth pairing between your devices, you will need to [hook up a Bluetooth device to the Arduino](https://github.com/ms-iot/remote-wiring/blob/master/bluetooth.md){:target="_blank"}.  Follow the steps on our GitHub to setup the Bluetooth module before moving on to the next step.
 
 If you wish to use the Wi-Fi pairing between your devices, you will need to [hook up a Wi-Fi device to the Arduino](https://github.com/ms-iot/remote-wiring#notes-on-wifi-and-ethernet){:target="_blank"}.  Follow the steps on our GitHub to setup the Bluetooth module before moving on to the next step.
 
