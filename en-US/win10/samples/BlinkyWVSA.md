@@ -11,7 +11,7 @@ Learn how to get your PC ready for developing IoT applications using Virtual Shi
 
 {% include steps.html device="WVSA" %}
 
-##Hello World (Blinky) speech-enabled LED example
+##Hello World speech-enabled LED example
 
 With your Windows Phone (or potentially any Windows 10 device!) and your Arduino prepared as detailed in the previous steps of this tutorial, you're now ready to try our sample.
 
