@@ -23,8 +23,8 @@ This application establishes a connection between your Arduino and your Windows 
  2. Connecting wires.
  3. A PC - used to upload your Arduino sketches.
  4. Standard A to Standard B USB - needed to upload sketches to your Arduino device.
- 5. OPTIONAL Bluetooth module - only needed if you choose to connect by Bluetooth, we recommend the [SparkFun Bluetooth Mate Silver](https://www.sparkfun.com/products/12576){:target="_blank"}.
- 6. OPTIONAL Wi-Fi module - only needed if you choose to connect by Wi-Fi, we recommend this [Arduino Wi-Fi Shield](https://www.arduino.cc/en/Main/ArduinoWiFiShield){:target="_blank"}.
+ 5. OPTIONAL Bluetooth module - only needed if you choose to connect by Bluetooth.  We recommend the [SparkFun Bluetooth Mate Silver](https://www.sparkfun.com/products/12576){:target="_blank"}.
+ 6. OPTIONAL Wi-Fi module - only needed if you choose to connect by Wi-Fi.  We recommend this [Arduino Wi-Fi Shield](https://www.arduino.cc/en/Main/ArduinoWiFiShield){:target="_blank"}.
 
 ###Set up your Arduino
  1. Prepare the Bluetooth module if necessary (the Bluetooth module may need to have headers soldered onto it).
