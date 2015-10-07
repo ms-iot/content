@@ -72,8 +72,12 @@ This section will cover how to hook up a Bluetooth device and an LED in order to
 
  ![Finished]({{site.baseurl}}/images/remote-wiring/samples/basic/final.JPG)
 
+##Software
+With your hardware assembled, it's time to remotely control your Arduino!  If you chose Option 1 on the "Set up your PC" section of this tutorial (meaning you downloaded our app from the Store), you can now open the app on your prepared Windows 10 device.  Follow the prompts on the Connections page to find your Arduino, and begin controlling your pins remotely!
 
-##Code
+If you chose Option 2 or Option 3 on the "Set up your PC" page, you need to make a few more alterations to the code solution you started building earlier.  Proceed to the next section to make the appropriate changes.
+
+###Code
 
 -   Now that we're all set up, let's get into some code!  I've set up a project called RemoteBlinky by following the steps       in the setup guide - you can start coding directly on top of the solution you set up earlier. In the screenshot below,       you will see the code-behind file MainPage.xaml.cs which simply creates a Bluetooth connection object and passes it to       the RemoteDevice class in the constructor. You'll see that I've specified my device name in this example. You may also       enumerate the available devices by invoking the static `.listAvailableDevicesAsync()` function on BluetoothSerial (and       USBSerial) class before constructing your object.  Take a look at the code below and begin manually transferring the         needed additions.
 
