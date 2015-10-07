@@ -22,7 +22,7 @@ You'll need:
 2. **An Arduino board** - our sample is tested to work with the Arduino Uno.
 3. **Standard A to Standard B USB cord** - needed no matter what to upload the Arduino sketch, regardless of connection choice.
 4. **OPTIONAL Bluetooth device for Arduino** - only needed if you choose to connect by Bluetooth, we recommend the [SparkFun Bluetooth Mate Silver](https://www.sparkfun.com/products/12576){:target="_blank"}.
-5. **OPTIONAL Wi-Fi device for Arduino** - only needed if you choose to connect by Wi-Fi.
+5. **OPTIONAL Wi-Fi device for Arduino** - only needed if you choose to connect by Wi-Fi, we recommend this [Arduino Wi-Fi Shield](https://www.arduino.cc/en/Main/ArduinoWiFiShield){:target="_blank"}.
 
 ##Arduino Setup
 
@@ -38,6 +38,8 @@ Windows Remote Arduino uses the [Firmata protocol](https://github.com/firmata/pr
 
 Your Arduino will now run the StandardFirmata sketch forever unless reprogrammed with a different sketch. You can now optionally disconnect your Arduino from the computer and power it in any way you choose. 
 
-If you wish to use the recommended Bluetooth pairing between your devices, you will need to [hook up a Bluetooth device to the Arduino](https://github.com/ms-iot/remote-wiring/blob/master/bluetooth.md){:target="_blank"}. We recommend the [SparkFun Bluetooth Mate Silver](https://www.sparkfun.com/products/12576){:target="_blank"}.  Follow the steps on our GitHub to setup the Bluetooth module before moving on to the next step; otherwise, you can use USB connection with no further setup.
+If you wish to use the recommended Bluetooth pairing between your devices, you will need to [hook up a Bluetooth device to the Arduino](https://github.com/ms-iot/remote-wiring/blob/master/bluetooth.md){:target="_blank"}.  Follow the steps on our GitHub to setup the Bluetooth module before moving on to the next step; otherwise, you can use USB connection with no further setup.
+
+If you wish to use the Wi-Fi pairing between your devices, you will need to [hook up a Wi-Fi device to the Arduino](https://github.com/ms-iot/remote-wiring#notes-on-wifi-and-ethernet){:target="_blank"}.  Follow the steps on our GitHub to setup the Bluetooth module before moving on to the next step; otherwise, you can use USB connection with no further setup.
 
 {% include nextsteps.html device=page.deviceName %}
