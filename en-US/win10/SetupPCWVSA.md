@@ -21,25 +21,27 @@ In this section of the tutorial, you'll prepare a Windows 10 device of your choi
 The Virtual Shields for Arduino application can run on any Windows 10 device, but our particular sample will make use of the Windows Phone.
 
 ###What you need
- 1. Windows Phone running some version of Windows 10 - we recommend the [Lumia 520](http://www.microsoft.com/en-us/mobile/phone/lumia520/){:target="_blank"} or [Lumia 635](http://www.microsoft.com/en-us/mobile/phone/lumia635/){:target="_blank"}.
+ 1. Windows Phone running Windows 10 - we recommend the [Lumia 520](http://www.microsoft.com/en-us/mobile/phone/lumia520/){:target="_blank"} or [Lumia 635](http://www.microsoft.com/en-us/mobile/phone/lumia635/){:target="_blank"}.
 
 ###Set up your Windows Phone
- 1. If your phone is not already running some version of Windows 10, there are options to install preview versions of the software.  Windows Phone 8 users can go to the Microsoft Store app to download the "Windows Insider" application - this app allows the user to opt into receiving Windows 10 Technical Previews as updates.  Follow the prompts and instructions upon opening the app, and continue once your phone is successfully running Windows 10.
+ 1. If your phone is not already running Windows 10, there are options to install preview versions of the software.  Windows Phone 8 users can go to the Microsoft Store app to download the "Windows Insider" application - this app allows the user to opt into receiving Windows 10 Technical Previews as updates.  Follow the prompts and instructions upon opening the app, and continue once your phone is successfully running Windows 10.
 
 ##Software
 
 There are two options for installing the Virtual Shields for Arduino on your Windows Phone.
 
-1. [Download the app from the Microsoft Store](#download-the-app-from-the-microsoft-store).
-2. [Sideload the app using a PC and Visual Studio](#sideload-the-app-using-a-pc-and-visual-studio).
+1. [Download the app from the Microsoft Store](#option-1-download-the-app-from-the-microsoft-store).
+2. [Sideload the app using a PC and Visual Studio](#option-2-sideload-the-app-using-a-pc-and-visual-studio).
 
 Downloading the app is a much easier, quicker choice.
 
-###Download the app from the Microsoft Store
+###Option 1: Download the app from the Microsoft Store
 
-Open the Microsoft Store application on your Windows Phone and search for "Virtual Shields for Arduino".  Choose the app and install it.  Your device is now setup to be used as a virtual shield for an Arduino!
+Follow this [link](https://www.microsoft.com/store/apps/9nblgggz0mld){:target="_blank"} to the Microsoft Store page for the app, download the file, and then install. You can then open the application to ensure it runs properly. 
 
-###Sideload the app using a PC and Visual Studio
+Your device is now setup to be used as a virtual shield for an Arduino!  You can proceed to the next page.
+
+###Option 2: Sideload the app using a PC and Visual Studio
 
 ####What you need
  1. Visual Studio 2015 to sideload the Virtual Shields for Arduino app onto a developer-unlocked phone.
