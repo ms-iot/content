@@ -47,6 +47,7 @@ lang: en-US
 		<div>		
 			<a href="http://go.microsoft.com/fwlink/?LinkID=625104" class="button-blue button-flat"> Download Insider Preview for Raspberry Pi 2 </a>
 			<a href="http://go.microsoft.com/fwlink/?LinkID=625103" class="button-blue button-flat"> Download Insider Preview for MinnowBoard Max </a>
+      <a href="http://go.microsoft.com/fwlink/?LinkId=657684" class="button-blue button-flat"> Download Insider Preview for DragonBoard 410c</a>
 		</div>
 		<p class="subtext">
 			This download requires sign-in with a Microsoft Account. <a href="http://www.microsoft.com/en-us/account/default.aspx" target="_blank"> What's this? </a> 
