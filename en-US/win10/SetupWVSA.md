@@ -47,11 +47,11 @@ This section explains how to set up your Arduino to run with Virtual Shields for
  2. Place the whole repository into your libraries folder (i.e. Documents\Arduino\libraries\ArduinoJson\).
 
 ###Set up this repository
- 1. Clone this [repository](https://github.com/ms-iot/virtual-shields-arduino){:target="_blank"} or download the ZIP.  If you're not familiar with git and want to do a proper clone, follow the instructions [here] (https://help.github.com/articles/cloning-a-repository/){:target="_blank"}.
+ 1. Clone this [repository](https://github.com/ms-iot/virtual-shields-arduino){:target="_blank"} or download the ZIP.  If you're not familiar with git and want to do a proper clone, follow the instructions [here](https://help.github.com/articles/cloning-a-repository/){:target="_blank"}.
  2. Copy the "VirtualShield" folder, found in the "Arduino\Libraries" folder of the repository you just downloaded, to your Arduino library folder (i.e. Documents\Arduino\libraries\VirtualShield\).
 
 ###Test your setup
- 1. From the Arduino IDE, go to the menu item File->Examples->Virtual Shields->HelloWorld-Speech-Eventing. This should load the speech-recognition based Hello Blinky example we're using for this tutorial.
+ 1. From the Arduino IDE, go to the menu item File->Examples->Virtual Shields->HelloWorld-Speech-Eventing. This should load the speech-recognition based Hello World example we're using for this tutorial.
  2. Before uploading the sketch to your Arduino, temporarily remove the Bluetooth TX and RX wires from the Arduino (there is only one serial port shared between the USB and Bluetooth - the Bluetooth interferes with the upload).
  3. Upload the sketch by pressing the "Upload" button in the IDE.
  4. Replace the Bluetooth TX and RX wires into the Arduino pins (Bluetooth TX to Arduino RX (or RX0) and Bluetooth RX to Arduino TX or (TX0)).
