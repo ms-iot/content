@@ -149,12 +149,19 @@ Aeon Labs Z-Wave Z-Stick Series 2 USB Dongle DSA02203-ZWUS | RP2 | Series 2 Z-Wa
 ## <a name="OtherDevices" class="OtherDevices" onClick="toggleSection('OtherDevices');return false;">- Other Hardware Peripherals (e.g., Sensors, ICs)</a>
 <div class="OtherDevices" markdown="1">
 
+- [Storage](#Storage)
 - [Pi Hats](#Pi-Hats)
 - [Sensors](#Sensors)
 - [Port Expanders](#Port-Expanders)
 - [Miscellaneous](#OtherDevicesMisc)
 
+### Storage Media <a name="Storage"></a>
 
+{:.table.table-bordered .devices}
+Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
+----------------|-------------------|-------------|-------|------------------------------
+Samsung 32GB EVO Class 10 Micro SDHC | RP2, MBM | An SD card that's known to support running Windows 10 IoT Core on both the Raspberry Pi 2 and MBM. |  | [Amazon.com Product Page](http://www.amazon.com/gp/product/B00IVPU786) 
+SanDisk Ultra Micro SDHC 16GB | RP2, MBM | An SD card that's known to support running Windows 10 IoT Core on both the Raspberry Pi 2 and MBM. |  | [Amazon.com Product Page](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445) 
 
 ### Pi Hats <a name="Pi-Hats"></a>
 
