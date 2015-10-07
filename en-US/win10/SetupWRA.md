@@ -21,8 +21,8 @@ You'll need:
 1. **A Windows device** - not necessarily the one prepared in the previous step, but any device you can use to upload sketches to your Arduino.
 2. **An Arduino board** - our sample is tested to work with the Arduino Uno.
 3. **Standard A to Standard B USB cord** - needed no matter what to upload the Arduino sketch, regardless of connection choice.
-4. **OPTIONAL Bluetooth device for Arduino** - only needed if you choose to connect by Bluetooth, we recommend the [SparkFun Bluetooth Mate Silver](https://www.sparkfun.com/products/12576){:target="_blank"}.
-5. **OPTIONAL Wi-Fi device for Arduino** - only needed if you choose to connect by Wi-Fi, we recommend this [Arduino Wi-Fi Shield](https://www.arduino.cc/en/Main/ArduinoWiFiShield){:target="_blank"}.
+4. **OPTIONAL Bluetooth device for Arduino** - only needed if you choose to connect by Bluetooth. We recommend the [SparkFun Bluetooth Mate Silver](https://www.sparkfun.com/products/12576){:target="_blank"}.
+5. **OPTIONAL Wi-Fi device for Arduino** - only needed if you choose to connect by Wi-Fi. We recommend this [Arduino Wi-Fi Shield](https://www.arduino.cc/en/Main/ArduinoWiFiShield){:target="_blank"}.
 
 ##Arduino Setup
 
