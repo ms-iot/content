@@ -64,7 +64,7 @@ Looking for information about supported hardware platforms? Click [here](http://
 Filter lists by board type:
 	<select id="boardSelect" onchange="filterDeviceRows();">
 	  <option value=".">All</option>
-	  <option value="RP2">RP2</option>
+	  <option value="RPI2">RPI2</option>
 	  <option value="MBM">MBM</option>
 	</select>
 </div>
@@ -104,7 +104,7 @@ result | result | result | result | result
 {:.table.table-bordered .devices}
 Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
-Official Raspberry Pi WiFi dongle | RP2 | "Official Raspberry Pi WiFi dongle offering the best possible WiFi performance for its diminutive size." |  |
+Official Raspberry Pi WiFi dongle | RPI2 | "Official Raspberry Pi WiFi dongle offering the best possible WiFi performance for its diminutive size." |  |
 Airlink Wireless N 150 Mini USB Adapter Adapter | MBM | Airlink101 AWL5077 Golden 150Mbps Wireless Mini USB Adapter with WPA2, WPA, and WEP enhanced wireless security |  |
 Panda PAU06 | MBM | Panda 300Mbps Wireless N USB Adapter with High Gain Antenna |  |
 TP-LINK TL_WN725N | MBM | TP-LINK TL-WN725N Wireless N Nano USB Adapter 150Mbps |  |
@@ -117,8 +117,8 @@ Realtek 8192 USB Wireless WIFI | MBM | Realtek Single-Chip IEEE 802.11b/g/n 2T2R
 {:.table.table-bordered .devices}
 Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
-CSR Mini USB Bluetooth V4.0 Adapter | RP2, MBM | Class 2 Bluetooth 4.0 Smart Ready Adapter, low energy, dual power |  |
-ORICO BTA-403 Mini Bluetooth 4.0 USB Dongle | RP2, MBM | Low Energy Bluetooth 4.0 Adapter USB Micro Adapter Dongle |  |
+CSR Mini USB Bluetooth V4.0 Adapter | RPI2, MBM | Class 2 Bluetooth 4.0 Smart Ready Adapter, low energy, dual power |  |
+ORICO BTA-403 Mini Bluetooth 4.0 USB Dongle | RPI2, MBM | Low Energy Bluetooth 4.0 Adapter USB Micro Adapter Dongle |  |
 CSR Mini USB Bluetooth V4.0 Adapter | MBM | Class 2 Bluetooth 4.0 Smart Ready Adapter, low energy, dual power |  |
 
 ### Cameras {#Cameras}
@@ -126,23 +126,23 @@ CSR Mini USB Bluetooth V4.0 Adapter | MBM | Class 2 Bluetooth 4.0 Smart Ready Ad
 {:.table.table-bordered .devices}
 Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
-Microsoft Lifecam 3000 USB Camera | RP2, MBM | USB Webcam | Limited to less than 5 frames per second, no known performance workarounds | [Home Security Camera Project]({{site.baseurl}}/{{page.lang}}/win10/samples/WebCamSample.htm)
-Microsoft Lifecam HD-5000 | RP2, MBM | Microsoft LifeCam HD-5000 720p HD Webcam | USB 2.0 |
-Logitech Webcam C210 | RP2, MBM | USB Webcam, 1.3mp photo | |
+Microsoft Lifecam 3000 USB Camera | RPI2, MBM | USB Webcam | Limited to less than 5 frames per second, no known performance workarounds | [Home Security Camera Project]({{site.baseurl}}/{{page.lang}}/win10/samples/WebCamSample.htm)
+Microsoft Lifecam HD-5000 | RPI2, MBM | Microsoft LifeCam HD-5000 720p HD Webcam | USB 2.0 |
+Logitech Webcam C210 | RPI2, MBM | USB Webcam, 1.3mp photo | |
 
 ### Audio {#Audio}
 
 {:.table.table-bordered .devices}
 Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
-Sabrent USB External Stereo Sound Adapter, Model AU-EMAC1 | RP2, MBM | Converts USB to 3.5mm audio and microphone signals. | Attaching an external USB sound card to RPi2 will add an extra audio endpoint (playback device) to the already existing onboard PWM headphone jack. Since the default order of the audio devices cannot be guaranteed at reboot, it is recommended that applications enumerate the audio endpoints and ensure the correct one is used. |
+Sabrent USB External Stereo Sound Adapter, Model AU-EMAC1 | RPI2, MBM | Converts USB to 3.5mm audio and microphone signals. | Attaching an external USB sound card to RPi2 will add an extra audio endpoint (playback device) to the already existing onboard PWM headphone jack. Since the default order of the audio devices cannot be guaranteed at reboot, it is recommended that applications enumerate the audio endpoints and ensure the correct one is used. |
 
 ### Miscellaneous {#Miscellaneous}
 
 {:.table.table-bordered .devices}
 Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
-Aeon Labs Z-Wave Z-Stick Series 2 USB Dongle DSA02203-ZWUS | RP2 | Series 2 Z-Wave USB Z-Stick Controller | Easy network creation with push button pairing | [ZWave Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/ZWaveTutorial.htm)
+Aeon Labs Z-Wave Z-Stick Series 2 USB Dongle DSA02203-ZWUS | RPI2 | Series 2 Z-Wave USB Z-Stick Controller | Easy network creation with push button pairing | [ZWave Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/ZWaveTutorial.htm)
 
 </div>
 
@@ -160,15 +160,15 @@ Aeon Labs Z-Wave Z-Stick Series 2 USB Dongle DSA02203-ZWUS | RP2 | Series 2 Z-Wa
 {:.table.table-bordered .devices}
 Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
-Samsung 32GB EVO Class 10 Micro SDHC | RP2, MBM | An SD card that's known to support running Windows 10 IoT Core on both the Raspberry Pi 2 and MBM. |  | [Amazon.com Product Page](http://www.amazon.com/gp/product/B00IVPU786) 
-SanDisk Ultra Micro SDHC 16GB | RP2, MBM | An SD card that's known to support running Windows 10 IoT Core on both the Raspberry Pi 2 and MBM. |  | [Amazon.com Product Page](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445) 
+Samsung 32GB EVO Class 10 Micro SDHC | RPI2, MBM | An SD card that's known to support running Windows 10 IoT Core on both the Raspberry Pi 2 and MBM. |  | [Amazon.com Product Page](http://www.amazon.com/gp/product/B00IVPU786) 
+SanDisk Ultra Micro SDHC 16GB | RPI2, MBM | An SD card that's known to support running Windows 10 IoT Core on both the Raspberry Pi 2 and MBM. |  | [Amazon.com Product Page](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445) 
 
 ### Pi Hats <a name="Pi-Hats"></a>
 
 {:.table.table-bordered .devices}
 Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
-Adafruit 16-Channel PWM | RP2 | Adds the capability to control up to 16 servos with no additional Raspberry Pi processing overhead. Capable of doing PWM up to 1.6KHz with 12 bit precision. | Fairly easy to use. It can also drive LEDs. | [Adafruit Product Page] (http://www.adafruit.com/products/2327#description-anchor)  [Adafruit Tutorial] (https://learn.adafruit.com/adafruit-16-channel-pwm-servo-hat-for-raspberry-pi/overview)  [C# IoT Sample] (https://github.com/golaat/Adafruit.Pwm)
+Adafruit 16-Channel PWM | RPI2 | Adds the capability to control up to 16 servos with no additional Raspberry Pi processing overhead. Capable of doing PWM up to 1.6KHz with 12 bit precision. | Fairly easy to use. It can also drive LEDs. | [Adafruit Product Page] (http://www.adafruit.com/products/2327#description-anchor)  [Adafruit Tutorial] (https://learn.adafruit.com/adafruit-16-channel-pwm-servo-hat-for-raspberry-pi/overview)  [C# IoT Sample] (https://github.com/golaat/Adafruit.Pwm)
 TBD||[Add a confirmed Pi Hat! Contibute to this list on GitHub.]({{site.repositoryurl}}{{ page.path }}) ||
 
 ### Sensors <a name="Sensors"></a>
@@ -176,32 +176,32 @@ TBD||[Add a confirmed Pi Hat! Contibute to this list on GitHub.]({{site.reposito
 {:.table.table-bordered .devices}
 Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
-DHT11 basic temperature-humidity sensor | RP2, MBM | A basic, ultra low-cost digital temperature and humidity sensor. It uses a capacities humidity sensor and a thermistor to measure the surrounding air, and spits out a digital signal on the data pin (no analog input pins needed). (Desc and Notes via Adafruit) | Its fairly simple to use, but requires careful timing to grab data. The only real downside of this sensor is you can only get new data from it once every 2 seconds, so when using our library, sensor readings can be up to 2 seconds old. | [GpioOneWire Sample (DHT11)]({{site.baseurl}}/{{page.lang}}/win10/samples/GpioOneWire.htm)
-DHT22 temperature-humidity sensor | RP2, MBM | A basic, ultra low-cost digital temperature and humidity sensor. It uses a capacities humidity sensor and a thermistor to measure the surrounding air, and spits out a digital signal on the data pin (no analog input pins needed). (Desc and Notes via Adafruit) | Its fairly simple to use, but requires careful timing to grab data. The only real downside of this sensor is you can only get new data from it once every 2 seconds, so when using our library, sensor readings can be up to 2 seconds old. | [GpioOneWire Sample (DHT11)]({{site.baseurl}}/{{page.lang}}/win10/samples/GpioOneWire.htm)
-SparkFun Triple Axis Accelerometer Breakout - ADXL345 | RP2, MBM | Small, thin, low power, 3-axis MEMS accelerometer with high resolution (13-bit) measurement at up to &plusmn;16 g. Digital output data is formatted as 16-bit twos complement and is accessible through either a SPI (3- or 4-wire) or I2C digital interface. |  | [I2C Accelerometer Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/I2CAccelerometer.htm#I2C_Accelerometer)
-Adafruit BMP280 Temperature and Barometric Sensor | RP2 | Bosch environmental sensor with temperature, barometric pressure | barometric pressure with &plusmn;1 hPa absolute accuraccy, and temperature with 1.0&deg;C accuracy. | [Adafruit Starter Pack]({{site.baseurl}}/{{page.lang}}/AdafruitKitContents.htm)
-Adafruit TCS34725 Color Sensor | RP2 | RGB Color Sensor with IR filter and White LED - TCS34725 | [Link to product on Adafruit](http://www.adafruit.com/products/1334) | [Adafruit Starter Pack]({{site.baseurl}}/{{page.lang}}/AdafruitKitContents.htm)
+DHT11 basic temperature-humidity sensor | RPI2, MBM | A basic, ultra low-cost digital temperature and humidity sensor. It uses a capacities humidity sensor and a thermistor to measure the surrounding air, and spits out a digital signal on the data pin (no analog input pins needed). (Desc and Notes via Adafruit) | Its fairly simple to use, but requires careful timing to grab data. The only real downside of this sensor is you can only get new data from it once every 2 seconds, so when using our library, sensor readings can be up to 2 seconds old. | [GpioOneWire Sample (DHT11)]({{site.baseurl}}/{{page.lang}}/win10/samples/GpioOneWire.htm)
+DHT22 temperature-humidity sensor | RPI2, MBM | A basic, ultra low-cost digital temperature and humidity sensor. It uses a capacities humidity sensor and a thermistor to measure the surrounding air, and spits out a digital signal on the data pin (no analog input pins needed). (Desc and Notes via Adafruit) | Its fairly simple to use, but requires careful timing to grab data. The only real downside of this sensor is you can only get new data from it once every 2 seconds, so when using our library, sensor readings can be up to 2 seconds old. | [GpioOneWire Sample (DHT11)]({{site.baseurl}}/{{page.lang}}/win10/samples/GpioOneWire.htm)
+SparkFun Triple Axis Accelerometer Breakout - ADXL345 | RPI2, MBM | Small, thin, low power, 3-axis MEMS accelerometer with high resolution (13-bit) measurement at up to &plusmn;16 g. Digital output data is formatted as 16-bit twos complement and is accessible through either a SPI (3- or 4-wire) or I2C digital interface. |  | [I2C Accelerometer Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/I2CAccelerometer.htm#I2C_Accelerometer)
+Adafruit BMP280 Temperature and Barometric Sensor | RPI2 | Bosch environmental sensor with temperature, barometric pressure | barometric pressure with &plusmn;1 hPa absolute accuraccy, and temperature with 1.0&deg;C accuracy. | [Adafruit Starter Pack]({{site.baseurl}}/{{page.lang}}/AdafruitKitContents.htm)
+Adafruit TCS34725 Color Sensor | RPI2 | RGB Color Sensor with IR filter and White LED - TCS34725 | [Link to product on Adafruit](http://www.adafruit.com/products/1334) | [Adafruit Starter Pack]({{site.baseurl}}/{{page.lang}}/AdafruitKitContents.htm)
 
 ### Port Expanders <a name="Port-Expanders"></a>
 
 {:.table.table-bordered .devices}
 Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
-MCP23008 8-bit I/O Port Expander | RP2, MBM | I<sup>2</sup>C Interface Chip, GPIO Port Expander.  8 ports, 18-PDIP package | Used in multiple MS-IoT sample projects | [I2C Port Explander Sample](https://www.hackster.io/4803/i2c-port-expander-sample)
-MCP23S17 16-bit I/O Port Expander | RP2, MBM | I<sup>2</sup>C Interface Chip, GPIO Port Expander.  16 ports, 28-SPDIP package | Used in multiple MS-IoT sample projects | [//build 2014 - Piano](https://www.hackster.io/windowsiot/build-2014-piano)
+MCP23008 8-bit I/O Port Expander | RPI2, MBM | I<sup>2</sup>C Interface Chip, GPIO Port Expander.  8 ports, 18-PDIP package | Used in multiple MS-IoT sample projects | [I2C Port Explander Sample](https://www.hackster.io/4803/i2c-port-expander-sample)
+MCP23S17 16-bit I/O Port Expander | RPI2, MBM | I<sup>2</sup>C Interface Chip, GPIO Port Expander.  16 ports, 28-SPDIP package | Used in multiple MS-IoT sample projects | [//build 2014 - Piano](https://www.hackster.io/windowsiot/build-2014-piano)
 
 ### Miscellaneous <a name="OtherDevicesMisc"></a>
 
 {:.table.table-bordered .devices}
 Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
-Monochrome 1.3" 128x64 OLED graphic display | RP2, MBM | 1.3" diagonal, high contrast B/W OLED display. 128x64 individual white OLED pixels, each one is turned on or off by the controller chip. |  | [SPI Display Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplay.htm)
-SN74HC595N Shift Register IC | RP2, MBM | IC 8-BIT SHIFT REGISTER 16-DIP |  | [Shift Register Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/ShiftRegisterSample.htm)
-Microchip Technology ADC MCP3002-I/P | RP2, MBM | MCP3002 10bit Analog to Digital converter |  | [Potentiometer Sensor Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm)
-Microchip Technology ADC MCP3208-CI/P | RP2, MBM | MCP3208 12bit Analog to Digital converter |  | [Potentiometer Sensor Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm)
-ADS1115 | RP2, MBM | Ultra-Small, Low-power, 16bit ADC | ADC bus provider library provided in library section | [ADC Bus Providers]({{site.msiotorgurl}}/BusProviders/tree/develop/ADC)
-CP2102 USB 2.0 to TTL Module Serial Converter | RP2, MBM | USB 2.0 to TTL UART 6PIN CP2102 Module Serial Converter |  | [Serial Port Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/SerialSample.htm)
-PCA9685 | RP2, MBM | 16-channel, 12-bit PWM Fm+ I2C-bus LED controller | PWM bus provider library provided in library section | [PWM Bus Providers]({{site.msiotorgurl}}/BusProviders/tree/develop/PWM)
+Monochrome 1.3" 128x64 OLED graphic display | RPI2, MBM | 1.3" diagonal, high contrast B/W OLED display. 128x64 individual white OLED pixels, each one is turned on or off by the controller chip. |  | [SPI Display Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplay.htm)
+SN74HC595N Shift Register IC | RPI2, MBM | IC 8-BIT SHIFT REGISTER 16-DIP |  | [Shift Register Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/ShiftRegisterSample.htm)
+Microchip Technology ADC MCP3002-I/P | RPI2, MBM | MCP3002 10bit Analog to Digital converter |  | [Potentiometer Sensor Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm)
+Microchip Technology ADC MCP3208-CI/P | RPI2, MBM | MCP3208 12bit Analog to Digital converter |  | [Potentiometer Sensor Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm)
+ADS1115 | RPI2, MBM | Ultra-Small, Low-power, 16bit ADC | ADC bus provider library provided in library section | [ADC Bus Providers]({{site.msiotorgurl}}/BusProviders/tree/develop/ADC)
+CP2102 USB 2.0 to TTL Module Serial Converter | RPI2, MBM | USB 2.0 to TTL UART 6PIN CP2102 Module Serial Converter |  | [Serial Port Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/SerialSample.htm)
+PCA9685 | RPI2, MBM | 16-channel, 12-bit PWM Fm+ I2C-bus LED controller | PWM bus provider library provided in library section | [PWM Bus Providers]({{site.msiotorgurl}}/BusProviders/tree/develop/PWM)
 
 </div>
 
@@ -213,16 +213,16 @@ PCA9685 | RP2, MBM | 16-channel, 12-bit PWM Fm+ I2C-bus LED controller | PWM bus
 {:.table.table-bordered .devices}
 Library Name | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
-ZWaveAdapter    | RP2, MBM | Zwave solution to enable developer to add a Zwave Adapter and connect it to the AllJoyn network | Demonstrates the function of Z-Wave device on Device System Bridge (DSB), Used as part of the ZWave demo in //Build/2015 | [ZWave Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/ZWaveTutorial.htm)
-AllJoyn Device System Bridge App Project | RP2, MBM | Use to expose a GPIO Device to the AllJoyn Bus using the AllJoyn Device System Bridge | | [Alljoyn DSB Gpio C# Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/AlljoynDSB_ManagedGpioTutorial.htm)
+ZWaveAdapter    | RPI2, MBM | Zwave solution to enable developer to add a Zwave Adapter and connect it to the AllJoyn network | Demonstrates the function of Z-Wave device on Device System Bridge (DSB), Used as part of the ZWave demo in //Build/2015 | [ZWave Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/ZWaveTutorial.htm)
+AllJoyn Device System Bridge App Project | RPI2, MBM | Use to expose a GPIO Device to the AllJoyn Bus using the AllJoyn Device System Bridge | | [Alljoyn DSB Gpio C# Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/AlljoynDSB_ManagedGpioTutorial.htm)
 
 ### Bus Providers <a name="BusProviders"></a>
 
 {:.table.table-bordered .devices}
 Bus Provider | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
-ADC | RP2, MBM | provides support for ADC IC such as ADS1115 | bus provider library provided in MSIOT GitHub | [ADC Bus Providers]({{site.msiotorgurl}}/BusProviders/tree/develop/ADC)
-PWM | RP2, MBM | provides support for PWM capable devices such as PCA9685 (in Devices above) | PWM bus provider library provided in MSIOT GitHub | [PWM Bus Providers]({{site.msiotorgurl}}/BusProviders/tree/develop/PWM)
+ADC | RPI2, MBM | provides support for ADC IC such as ADS1115 | bus provider library provided in MSIOT GitHub | [ADC Bus Providers]({{site.msiotorgurl}}/BusProviders/tree/develop/ADC)
+PWM | RPI2, MBM | provides support for PWM capable devices such as PCA9685 (in Devices above) | PWM bus provider library provided in MSIOT GitHub | [PWM Bus Providers]({{site.msiotorgurl}}/BusProviders/tree/develop/PWM)
 
 </div>
 
@@ -234,9 +234,9 @@ PWM | RP2, MBM | provides support for PWM capable devices such as PCA9685 (in De
 {:.table.table-bordered .devices}
 Bus Type | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
-GPIO    | RP2, MBM | 13x GPIO on RPI2, 10x on MBM | General Purpose I/O |
-I2C | RP2, MBM | Generic I2C bus | | [RPI2 Pin Mapping]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm#RPi2_I2C) [MBM Pin Mapping]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm#MBM_I2C)
-UART | RP2, MBM | Generic UART Bus | RPI2 Requires USB to UART converter, MBM has onboard UART |
+GPIO    | RPI2, MBM | 13x GPIO on RPI2, 10x on MBM | General Purpose I/O |
+I2C | RPI2, MBM | Generic I2C bus | | [RPI2 Pin Mapping]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm#RPi2_I2C) [MBM Pin Mapping]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm#MBM_I2C)
+UART | RPI2, MBM | Generic UART Bus | RPI2 Requires USB to UART converter, MBM has onboard UART |
 
 </div>
 
