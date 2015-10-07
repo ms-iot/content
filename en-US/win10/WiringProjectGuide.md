@@ -7,8 +7,25 @@ lang: en-US
 
 
 ##Create a new Project
-Open Visual Studio. Select File -> New Project and Select Templates -> Visual C++ -> Windows for IoT -> Galileo Wiring app
+Open Visual Studio. Select File -> New Project -> Visual C++ -> Windows -> Windows IoT Core -> Arduino Wiring Application for Windows IoT Core
 ![AppCreate]({{site.baseurl}}/images/rpi2_wiring/appcreate.png)
+
+##Device configuration
+
+We will want to open the Windows Device Portal
+
+------webb instructions here------------
+
+You may be prompted for credentials. Enter:
+
+~~~
+  Username: minwinpc\Administrator
+  Password: p@ssw0rd
+~~~
+
+
+------go to device page, change drop down from "Inbox Driver" to "DMAP"-----
+
 
 
 ##Develop
@@ -32,10 +49,3 @@ Complete one of the many samples on the 'Develop' section of this section, or bu
 
 
 - Press F5 to build and deploy your project.
-
-You may be prompted for credentials. Enter:
-
-~~~
-  Username: minwinpc\Administrator
-  Password: p@ssw0rd
-~~~
