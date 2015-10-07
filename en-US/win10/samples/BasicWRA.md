@@ -11,7 +11,7 @@ Learn how to get your PC ready for developing IoT applications using Windows Rem
 
 {% include steps.html device="WRA" %}
 
-##Basic Windows Remote Arduino
+#Basic Windows Remote Arduino
 
 In this project, we will use Windows Remote Arduino to turn an LED on and off. It is a simple example, but will reveal the power that the library can give you to create many more advanced projects. Let's get started!
 
@@ -75,51 +75,49 @@ This section will cover how to hook up a Bluetooth device and an LED in order to
 
 ##Code
 
-- Now that we're all set up, let's get into some code!  I've set up a project called RemoteBlinky by following the steps in the setup guide - you can start coding directly on top of the solution you set up earlier. In the screenshot below, you will see the code-behind file MainPage.xaml.cs which simply creates a Bluetooth connection object and passes it to the RemoteDevice class in the constructor. You'll see that I've specified my device name in this example. You may also enumerate the available devices by invoking the static `.listAvailableDevicesAsync()` function on BluetoothSerial (and USBSerial) class before constructing your object.  Take a look at the code below and begin manually transferring the needed additions.
+-   Now that we're all set up, let's get into some code!  I've set up a project called RemoteBlinky by following the steps       in the setup guide - you can start coding directly on top of the solution you set up earlier. In the screenshot below,       you will see the code-behind file MainPage.xaml.cs which simply creates a Bluetooth connection object and passes it to       the RemoteDevice class in the constructor. You'll see that I've specified my device name in this example. You may also       enumerate the available devices by invoking the static `.listAvailableDevicesAsync()` function on BluetoothSerial (and       USBSerial) class before constructing your object.  Take a look at the code below and begin manually transferring the         needed additions.
 
- ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project00.png)
+    ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project00.png)
 
-    - **Note for USB:**
-`USBSerial` has many options available to specify your device. In the constructor, you can provide the VID and PID of your device, the VID only, or a `DeviceInformation` object (obtained from the above mentioned `listAvailableDevicesAsync` function). Similarly, `BluetoothSerial` allows you to provide a device id (as a string), device name (also a string), or the `DeviceInformation` object.
-
+    -   **Note for USB:**
+        `USBSerial` has many options available to specify your device. In the constructor, you can provide the VID and PID of         your device, the VID only, or a `DeviceInformation` object (obtained from the above mentioned                                `listAvailableDevicesAsync` function). Similarly, `BluetoothSerial` allows you to provide a device id (as a string),         device name (also a string), or the `DeviceInformation` object.
+  
         You can obtain the VID & PID combination of your USB device by following these steps:
         <ul>
-        <li>Open Device Manager through the Control Panel or by pressing both <i>Windows + Pause</i> keys and choosing the <i>Device Manager</i> link on the left.</li>
+        <li>Open Device Manager through the Control Panel or by pressing both <i>Windows + Pause</i> keys and choosing the           <i>Device Manager</i> link on the left.</li>
         <li>Expand the <i>Ports (COM & LPT)</i> menu</li>
         <li>Right-click your Arduino Device and select Properties</li>
         <li>On the <i>Details</i> tab, select <i>Hardware Ids</i> from the drop-down menu.</li>
         <li>You may see multiple entries in the <i>Value</i> box, but any entries will have matching PID and VID.</li>
         <li>The entries will have the format "USB\VID_****&PID_****" where **** are the numeric ID values.</li>
-        <li>You can put in *just* the numbers, or also include "VID_" to guarantee you will correctly identify the device. For example:<br/></li>
+        <li>You can put in *just* the numbers, or also include "VID_" to guarantee you will correctly identify the device.           For example:<br/></li>
         </ul>
         `USBSerial usb = new USBSerial( "VID_2341", "PID_0043" );`<br/>
         is guaranteed to work **only** for the following hardware device:
 
 ![USB Device]({{site.baseurl}}/images/remote-wiring/samples/basic/vidpid.png)
 
-- Next, I'm going to add a callback function to the ConnectionEstablished event on the BluetoothSerial object. This function will automatically be called when the Bluetooth device is connected. You'll notice that I haven't implemented anything in that function at this time. Last, call `.begin()` on the connection object to tell it to connect.
+-   Next, I'm going to add a callback function to the ConnectionEstablished event on the BluetoothSerial object. This            function will automatically be called when the Bluetooth device is connected. You'll notice that I haven't implemented       anything in that function at this time. Last, call `.begin()` on the connection object to tell it to connect.
 
- ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project01.png)
+    ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project01.png)
  
-    - **Notes on baud rate for USB/Bluetooth:** Some hardware setups may require additional considerations when it comes to setting up your Bluetooth device over the serial pins 0 and 1.
+    -   **Notes on baud rate for USB/Bluetooth:** Some hardware setups may require additional considerations when it comes to         setting up your Bluetooth device over the serial pins 0 and 1.
 
-        StandardFirmata uses the Serial lines to talk to a Bluetooth device or over USB. By default, it uses a baud rate of 57,600 bps. Depending on the configuration of your Bluetooth device, you may need to modify that rate. It can be found in the `setup` method and looks like this:
+        StandardFirmata uses the Serial lines to talk to a Bluetooth device or over USB. By default, it uses a baud rate of          57,600 bps. Depending on the configuration of your Bluetooth device, you may need to modify that rate. It can be             found in the `setup` method and looks like this:
 
         `Firmata.begin(57600);`
 
-        Simply change the `begin` parameter to match the configuration of your Bluetooth device. The most common configurations are 115200, 57600, and 9600. The recommended SparkFun Bluetooth Mate devices use 115200 by default. If you are not sure of the default baud rate of your Bluetooth device, check the device documentation.
+        Simply change the `begin` parameter to match the configuration of your Bluetooth device. The most common                     configurations are 115200, 57600, and 9600. The recommended SparkFun Bluetooth Mate devices use 115200 by default. If         you are not sure of the default baud rate of your Bluetooth device, check the device documentation.
 
-        Many Arduino devices, such as the Leonardo and the Yun, use `Serial1` (Rather than just `Serial`) for serial communications over pins 0 and 1. If you are using one of these devices, you will need to change the serial initialization procedure. You will want to remove the line `Firmata.begin(57600);` and replace it with the code below:
+        Many Arduino devices, such as the Leonardo and the Yun, use `Serial1` (Rather than just `Serial`) for serial                 communications over pins 0 and 1. If you are using one of these devices, you will need to change the serial                  initialization procedure. You will want to remove the line `Firmata.begin(57600);` and replace it with the code              below:
 
+            Serial1.begin( 57600 );	//or your baud rate here, it will be 115200 if using the Bluetooth Mate Silver or Gold
+            while( !Serial1 );
+            Firmata.begin( Serial1 );
 
-        {% highlight C++ %}
-Serial1.begin( 57600 );	//or your baud rate here, it will be 115200 if using the Bluetooth Mate Silver or Gold
-while( !Serial1 );
-Firmata.begin( Serial1 );
-{% endhighlight %}
  
-    - **Note for USB:** The USBSerial class still has a ConnectionEstablished event that you can subscribe to. It will always be invoked at the proper time in both classes, so you are able to reuse your code in either scenario!
-However, be aware that the `.begin()` function must be called before any connection attempt will be made. The parameters to the `.begin()` function *do not matter* for Bluetooth, but you must use `SerialConfig.SERIAL_8N1` as the 2nd parameter if you are connecting to an Arduino device! The rest of the example will work exactly the same regardless of which connection type you are using.
+    -   **Note for USB:** The USBSerial class still has a ConnectionEstablished event that you can subscribe to. It will             always be invoked at the proper time in both classes, so you are able to reuse your code in either scenario!
+        However, be aware that the `.begin()` function must be called before any connection attempt will be made. The                parameters to the `.begin()` function *do not matter* for Bluetooth, but you must use `SerialConfig.SERIAL_8N1` as           the 2nd parameter if you are connecting to an Arduino device! The rest of the example will work exactly the same             regardless of which connection type you are using.
 
 - Jump over to the MainPage.xaml file and create a couple buttons that will turn an LED on and off. You'll notice I've added button callbacks to the `Click` event & set the `IsEnabled` property to false, and you'll see why in the next step!
 
