@@ -17,7 +17,7 @@ This section explains how to set up your Arduino to run with Virtual Shields for
 ##Hardware
 
 ###What you need
-This application establishes a connection between your Arduino and your Windows 10 virtual shield using either USB, Bluetooth, or Wi-Fi.  This particular tutorial will explain how to complete setup using a Bluetooth connection, but feel free to experiment with the other options.
+This application establishes a connection between your Arduino and your Windows 10 virtual shield using USB, Bluetooth, or Wi-Fi.  This particular tutorial will explain how to complete setup using a Bluetooth connection, but feel free to experiment with the other options.
 
  1. Arduino Uno or compatible device.
  2. Connecting wires.
