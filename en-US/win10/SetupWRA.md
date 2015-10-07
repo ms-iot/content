@@ -14,10 +14,15 @@ This section explains how to set up your Arduino and how to add the Windows Remo
 
 ##What you need
 
-1. **A PC running Windows** - as prepared in the previous step.
-1. **An Arduino board** - our sample is tested to work with the Arduino Uno.
-1. **Standard A to Standard B USB cord**
-1. **OPTIONAL Bluetooth device for Arduino** - we recommend the [SparkFun Bluetooth Mate Silver](https://www.sparkfun.com/products/12576){:target="_blank"}.
+In this section, we prepare an Arduino device to be controlled remotely by the Windows 10 device prepared previously.  The Arduino needs to be running a version of Firmata, which will allow the board to communicate with our app via USB, Bluetooth, or Wi-Fi.  You can decide which of these communication connections you want - be sure to choose your parts below accordingly.
+
+You'll need:
+
+1. **A Windows device** - not necessarily the one prepared in the previous step, but any device you can use to upload sketches to your Arduino.
+2. **An Arduino board** - our sample is tested to work with the Arduino Uno.
+3. **Standard A to Standard B USB cord** - needed no matter what to upload the Arduino sketch, regardless of connection choice.
+4. **OPTIONAL Bluetooth device for Arduino** - only needed if you choose to connect by Bluetooth, we recommend the [SparkFun Bluetooth Mate Silver](https://www.sparkfun.com/products/12576){:target="_blank"}.
+5. **OPTIONAL Wi-Fi device for Arduino** - only needed if you choose to connect by Wi-Fi.
 
 ##Arduino Setup
 
