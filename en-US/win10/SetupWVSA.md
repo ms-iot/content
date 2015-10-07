@@ -17,10 +17,14 @@ This section explains how to set up your Arduino to run with Virtual Shields for
 ##Hardware
 
 ###What you need
+This application establishes a connection between your Arduino and your Windows 10 virtual shield using either USB, Bluetooth, or Wi-Fi.  This particular tutorial will explain how to complete setup using a Bluetooth connection, but feel free to experiment with the other options.
+
  1. Arduino Uno or compatible device.
- 2. Bluetooth module - we recommend the [SparkFun BlueSMiRF Silver](https://www.sparkfun.com/products/12577){:target="_blank"}.
- 3. Connecting wires.
- 4. A computer to upload your Arduino sketches.
+ 2. Connecting wires.
+ 3. A PC - used to upload your Arduino sketches.
+ 4. Standard A to Standard B USB - needed to upload sketches to your Arduino device.
+ 5. OPTIONAL Bluetooth module - only needed if you choose to connect by Bluetooth, we recommend the [SparkFun Bluetooth Mate Silver](https://www.sparkfun.com/products/12576){:target="_blank"}.
+ 6. OPTIONAL Wi-Fi module - only needed if you choose to connect by Wi-Fi, we recommend this [Arduino Wi-Fi Shield](https://www.arduino.cc/en/Main/ArduinoWiFiShield){:target="_blank"}.
 
 ###Set up your Arduino
  1. Prepare the Bluetooth module if necessary (the Bluetooth module may need to have headers soldered onto it).
@@ -55,9 +59,8 @@ This section explains how to set up your Arduino to run with Virtual Shields for
  2. Before uploading the sketch to your Arduino, temporarily remove the Bluetooth TX and RX wires from the Arduino (there is only one serial port shared between the USB and Bluetooth - the Bluetooth interferes with the upload).
  3. Upload the sketch by pressing the "Upload" button in the IDE.
  4. Replace the Bluetooth TX and RX wires into the Arduino pins (Bluetooth TX to Arduino RX (or RX0) and Bluetooth RX to Arduino TX or (TX0)).
- 5. On the phone, pair to the Bluetooth device on your Arduino in the Bluetooth settings. If you're using the BlueSMiRF, the default pin code is 1234. NOTE: The red blinking light on the BlueSMiRF continues to blink red after a successful pairing. This is expected. It only turns green after a connecting with the application.
- 6. Open the Virtual Shields for Arduino app on your Windows Phone (or other Windows 10 device) and view the main screen. 
- 7. Press the Reset button on your Arduino.
- 5. You should see or hear a hello message on the Virtual Shields for Arduino application running on your Windows Phone.
+ 5. On the phone (or other Windows device) you prepared on the previous page, pair to the Bluetooth device on your Arduino in the Bluetooth settings. If you're using the BlueSMiRF, the default pin code is 1234. NOTE: The red blinking light on the BlueSMiRF continues to blink red after a successful pairing. This is expected. It only turns green after a connecting with the application.
+
+You should now be ready to run our sample on the next page!
 
  {% include nextsteps.html device=page.deviceName %}
