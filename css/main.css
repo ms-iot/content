@@ -212,6 +212,10 @@ h3.steps:hover{
 	color: #000;
 }
 
+h2.steps:hover{
+  color: #000;
+}
+
 .downloads-background {
     background-color: #f1f1f1;
     width: 100%;
