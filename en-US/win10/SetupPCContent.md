@@ -1,3 +1,4 @@
+{: .thin-header}
 ###Download Windows 10 and Install Visual Studio 2015
 
 To setup your Windows 10 IoT Core development PC, you first need to install the following:

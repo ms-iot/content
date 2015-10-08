@@ -12,7 +12,8 @@ Learn how to set up the Raspberry Pi 2 and connect it to your computer.
 
 {% include steps.html device=page.deviceName %}
 
-##What you need
+{: .thin-header}
+###What you need
 
 1. **A PC running Windows 10** - as prepared in the previous step.
 1. **Raspberry Pi 2**
@@ -23,7 +24,8 @@ Learn how to set up the Raspberry Pi 2 and connect it to your computer.
 1. **Ethernet cable**
 1. **Micro SD card reader** - due to an issue with most internal SD card readers, we suggest an external USB card reader like this [one](http://www.amazon.com/dp/B009D79VH4){:target="_blank"} or this [one](http://www.amazon.com/dp/B0096FB5CW){:target="_blank"}.
 
-## Install the Windows 10 IoT Core tools
+{: .thin-header}
+###Install the Windows 10 IoT Core tools
 
 1. **Download a Windows 10 IoT Core image** from our [downloads page](http://ms-iot.github.io/content/en-US/Downloads.htm){:target="_blank"}. Save the ISO to a local folder.
 
@@ -39,7 +41,8 @@ Learn how to set up the Raspberry Pi 2 and connect it to your computer.
 
 4. Eject the Virtual CD when installation is complete - this can be done by navigating to the top folder of File Explorer, right clicking on the virtual drive, and selecting "Eject".
 
-##Put the Windows 10 IoT Core image on your SD card
+{: .thin-header}
+###Put the Windows 10 IoT Core image on your SD card
 
 1. **Insert a micro SD card** into your SD card reader.
 
@@ -51,14 +54,15 @@ Learn how to set up the Raspberry Pi 2 and connect it to your computer.
 	Select the SD card you want to flash, and then provide the location of the ffu to flash the image.
 
 	<img src="{{site.baseurl}}/images/SetupRPI/ImageHelper.PNG">
-	
+
 	**NOTE:** IoTCoreImageHelper.exe is the recommended tool to flash the SD card. However, instructions are available for using [DISM command line tool]({{site.baseurl}}/{{page.lang}}/win10/samples/DISM.htm) directly.
 
 4. **Safely remove your USB SD card reader** by clicking on "Safely Remove Hardware" in your task tray, or by finding the USB device in File Explorer, right clicking, and choosing "Eject".  Failing to do this can cause corruption of the image.
 
 	**NOTE:** If you want to remove Windows 10 IoT Core from your SD card after you are done using it, see the [FAQ]({{site.baseurl}}/{{page.lang}}/Faqs.htm) section titled **How do I remove Windows 10 IoT Core from my SD card?**.
 
-##Hook up your board
+{: .thin-header}
+###Hook up your board
 
 1. **Insert the micro SD card** you prepared into your Raspberry Pi 2 (the slot is indicated by arrow **#1** in the image below).
 2. **Connect a network cable** from your local network to the Ethernet port on the board. Make sure your development PC is on the same network.
@@ -70,7 +74,8 @@ Learn how to set up the Raspberry Pi 2 and connect it to your computer.
 
 <img class="device-images" src="{{site.baseurl}}/images/rpi2.png">
 
-##Boot Windows 10 IoT Core
+{: .thin-header}
+###Boot Windows 10 IoT Core
 1. Windows 10 IoT Core will boot automatically after connecting the power supply. This process will take a few minutes.  After seeing the Windows logo, your screen may go black for about a minute - don't worry, this is normal for boot up.  You may also see a screen prompting you to choose a language for your Windows 10 IoT Core device - either connect a mouse and choose your option, or wait about a 1-2 minutes for the screen to disappear.
 2. Once the device has booted, the DefaultApp will launch and display the IP address of your RPi2.
 
@@ -86,7 +91,9 @@ Learn how to set up the Raspberry Pi 2 and connect it to your computer.
 
     Once this is done, you'll need to re-establish the current session using enable-psSession with the new credentials.
 
-##Additional Resources
-* [Supported Peripheral Interfaces and Devices]({{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm){:target="_blank"}
+{: .thin-header}
+###Additional Resources
+
+[Supported Peripheral Interfaces and Devices]({{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm){:target="_blank"}
 
 {% include nextsteps.html device=page.deviceName %}

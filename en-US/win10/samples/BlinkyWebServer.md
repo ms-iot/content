@@ -165,7 +165,7 @@ need to:
 
     * AppServiceName - this is the value specified in the appxmanifest's AppService.Name property.
 
-3. Send/receive messages.  
+3. Send/receive messages.
 
 {% highlight C# %}
 // Initialize the AppServiceConnection
