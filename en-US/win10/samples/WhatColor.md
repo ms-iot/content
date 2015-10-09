@@ -31,7 +31,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
     <img src="{{site.baseurl}}/images/AdafruitStarterPack/WhatColor.jpg">
   </div>
   <div class="col-md-6 col-sm-12">
-    <h2 class="text-center maker-kit">Click <a target="_blank" href="https://www.hackster.io/windows-iot/what-color-is-it">here</a> to get started!</h2>
+    <h2 class="text-center thin-header">Click <a target="_blank" href="https://www.hackster.io/windows-iot/what-color-is-it">here</a> to get started!</h2>
   </div>
 </div>
 

@@ -1,4 +1,3 @@
-
 ###Deploy your app
 
 1. With the application open in Visual Studio, set the architecture in the toolbar dropdown. If you're building for MinnowBoard Max, select `x86`.  If you're building for Raspberry Pi 2, select `ARM`.

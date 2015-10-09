@@ -8,27 +8,27 @@ deviceName: WRA
 
 #Get Started
 
-Learn how to get your PC ready for developing IoT applications using Windows Remote Arduino.
+Learn how to get your Windows 10 device ready for developing IoT applications using Windows Remote Arduino Experience.
 
 {% include steps.html device=page.deviceName %}
 
-##Installation
+#Installation
 
-There are three ways to add the Windows Remote Arduino library to your solution, in order from easiest to most difficult.
+This section of the tutorial explains how to setup your Windows 10 device - be it a PC, Surface, or Windows Phone - to remotely control an Arduino using the Windows Remote Arduino Experience app.  This application will allow you to operate all of the most basic abilities of your Arduino device without ever writing a single line of code! You can use digital read & write, analog read (ADC), and PWM by using the buttons provided on the user interface.  
 
-1. [Download the Windows Remote Arduino Experience app from the Microsoft Store](#option-1-download-the-windows-remote-arduino-experience-app-from-the-microsoft-store).
-2. [Install the NuGet package](#option-2-install-the-nuget-package).
-3. [Manually add the Windows Remote Arduino project files to a new Visual Studio solution](#option-3-add-the-windows-remote-arduino-projects-to-a-visual-studio-solution).
+Setup is as simple as installing the application on your chosen device.  There are three ways to get the Windows Remote Arduino Experience application running, in order from easiest to most difficult.
+
+1. [Download the Windows Remote Arduino Experience app from the Microsoft Store](#option-1-download-the-windows-remote-arduino-experience-app-from-the-microsoft-store)
+2. [Install the NuGet package](#option-2-install-the-nuget-package)
+3. [Manually add the Windows Remote Arduino project files to a new Visual Studio solution](#option-3-add-the-windows-remote-arduino-projects-to-a-visual-studio-solution)
 
 Of these options, downloading the application directly from the Microsoft Store is by far the easiest.
 
 ##Option 1: Download the Windows Remote Arduino Experience app from the Microsoft Store
 
-To get your Windows device ready for this sample, start by opening the Microsoft Store application.  From there, search for "Windows Remote Arduino Experience".  Select the application, download the file, and then install.  You can then open the application to ensure it runs properly.
+Follow [this link](https://www.microsoft.com/store/apps/9nblggh2041m){:target="_blank"} to the Microsoft Store page for the app, download the file, and then install.  You can then open the application to ensure it runs properly.
 
-This application will allow you to operate all of the most basic abilities of your Arduino device without ever writing a single line of code! You can use digital read & write, analog read (ADC), and PWM by using the buttons provided on the user interface.
-
-You have now finished setting up your Windows device!
+You have now finished setting up your Windows device and can progress to the next section.
 
 ##Option 2: Install the NuGet package
 
@@ -39,9 +39,9 @@ NuGet is a quick and easy way to automatically install the packages and setup de
 3. In Visual Studio, navigate to the following menu item: Tools > NuGet Package Manager > Package Manager Console
 4. Enter the following command into the console window: `Install-Package Windows-Remote-Arduino`
 
-You can also select **Manage NuGet packages for Solution** under the **NuGet Package Manager** context menu and manually search for and install **Windows Remote Arduino**.
+As an alternative to step 4 above, you can also select **Manage NuGet packages for Solution** under the **NuGet Package Manager** context menu and manually search for and install **Windows Remote Arduino**.  Visit [https://www.nuget.org/packages/Windows-Remote-Arduino](https://www.nuget.org/packages/Windows-Remote-Arduino) for more information on this package.
 
-Visit [https://www.nuget.org/packages/Windows-Remote-Arduino](https://www.nuget.org/packages/Windows-Remote-Arduino) for more information on this package.
+Once you're done with this section, skip to the Device Capabilities section to finish setting up the application.
 
 ##Option 3: Add the Windows Remote Arduino projects to a Visual Studio solution
 
@@ -64,7 +64,7 @@ Visit [https://www.nuget.org/packages/Windows-Remote-Arduino](https://www.nuget.
 
 ###Step 3: Add Windows Remote Arduino projects to your solution
 
-- Clone the [Windows Remote Arduino GitHub repository](https://github.com/ms-iot/remote-wiring/){:target="_blank"}.  If you're not familiar with git and want to do a proper clone, follow the instructions [here] (https://help.github.com/articles/cloning-a-repository/){:target="_blank"}.
+- Clone the [Windows Remote Arduino GitHub repository](https://github.com/ms-iot/remote-wiring/){:target="_blank"}.  If you're not familiar with git and want to do a proper clone, follow the instructions [here](https://help.github.com/articles/cloning-a-repository/){:target="_blank"}.
 
 - Right-click on your solution in the Solution Explorer and select *Add -> Existing Project*.
 

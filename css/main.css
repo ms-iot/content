@@ -30,7 +30,6 @@ body {
     }
 
         .content-container > h1#get-started {
-            margin-top: 64px;
             margin-bottom: 6px;
             font-size: 46px;
             font-weight: lighter;
@@ -208,8 +207,16 @@ ul.get-started-steps > li > a:hover {
     background-color: #fff;
 }
 
+.steps {
+  font-weight: lighter;
+  font-size: 30px;
+}
 h3.steps:hover{
 	color: #000;
+}
+
+h2.steps:hover{
+  color: #000;
 }
 
 .downloads-background {
@@ -233,16 +240,16 @@ h3.steps:hover{
 .table-striped > tbody > tr > td {
   border-color: transparent;
 }
-h1.maker-kit {
+h1.thin-header {
   font-weight: 100;
   font-size:40px;
   margin-bottom: 20px;
 }
-h2.maker-kit {
+h2.thin-header {
   font-weight: lighter;
   font-size:32px;
 }
-h3.maker-kit {
+h3.thin-header {
   font-weight: lighter;
   border-bottom: 1px solid rgb(230,230,230);
   padding-bottom: 20px;
@@ -250,14 +257,14 @@ h3.maker-kit {
   margin-bottom: 20px;
   font-size:32px;
 }
-h4.maker-kit {
+h4.thin-header {
   font-weight: lighter;
   font-size:32px;
   border-top: 1px solid rgb(230,230,230);
   padding-top: 20px;
   margin-top:20px;
 }
-p.maker-kit {
+p.thin-header {
   font-size: 18px;
   margin-bottom: 20px;
 }
@@ -354,6 +361,9 @@ div.preview {
 }
 
 @media (max-width: 700px) {
+  .steps {
+    font-size:24px;
+  }
   h2.maker-kit {
     font-size:24px;
   }
