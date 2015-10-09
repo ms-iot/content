@@ -1,7 +1,7 @@
 ---
 layout: default
 title: RGBPixel
-permalink: /en-US/win10/samples/RGBPixelWiring.htm
+permalink: /en-US/win10/samples/RGBPixelLightning.htm
 lang: en-US
 ---
 
@@ -22,7 +22,7 @@ Learn how to use a RGB Pixel Strip.
 
 # Setup
 
-Follow the [Wiring Project Guide]({{site.baseurl}}/en-US/win10/WiringProjectSetup.htm) to create a new wiring project!
+Follow the [Lightning Project Guide]({{site.baseurl}}/en-US/win10/LightningProjectGuide.htm) to create a new Lightning project!
 
 # Code
 
@@ -202,6 +202,11 @@ void loop()
     delay( 1000 );
 }
 {% endhighlight %}
+
+##Build and deploy
+Press F5 to build and deploy your project.
+
+Refer to the [Lightning Project Guide]({{site.baseurl}}/en-US/win10/LightningProjectGuide.htm) for more instructions on how to deploy your app!
 
 ##Result
 You should see the LED pixel strip rotate through a series of colors, spending about 1 second on each arrangement.

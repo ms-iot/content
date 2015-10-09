@@ -1,7 +1,7 @@
 ---
 layout: default
 title: OneNote cloud services
-permalink: /en-US/win10/samples/OneNoteWiring.htm
+permalink: /en-US/win10/samples/OneNoteLightning.htm
 lang: en-US
 ---
 
@@ -10,7 +10,7 @@ Learn how to use http messages to Get and Post OneNote pages
 
 # Create a new project
 
-1. Create a new project from the template.
+1. Create a new project from the template. More information can be found in the [Lightning Project Guide]({{site.baseurl}}/en-US/win10/LightningProjectGuide.htm).
 2. Replace the existing code in main.cpp with the following code. Make modifications for multiple action buttons as needed.
 3. Add the following files to the project, MinHttpGP.cpp/.h, and OneNoteHelper.cpp/.h,
    found [on GitHub]](https://github.com/ms-iot/sample-todo).
@@ -124,6 +124,12 @@ There are a few ways to do this, and the Windows Live APIs can give you more inf
 5. Examine the web address in the address bar of your browser, it may be easier to copy the entire address to a text file or other document before completing step 6.
 6. The token is included in the web address. You will see `#access_token=` near the beginning of the address. Copy everything beginning after the `=` up to but not including `&token_type=`. This token will be very long, on the order of 900 characters.
 7. Paste the token value into the `const std::wstring oauth_token` string at the top of the .ino sketch (copied from above). (Replace the entire current contents: `<PASTE YOUR TOKEN HERE>`)
+
+
+##Build and deploy
+Press F5 to build and deploy your project.
+
+Refer to the [Lightning Project Guide]({{site.baseurl}}/en-US/win10/LightningProjectGuide.htm) for more instructions on how to deploy your app!
 
 
 #Result

@@ -1,10 +1,13 @@
 ---
 layout: default
 title: Project Setup
-permalink: /en-US/win10/WiringProjectGuide.htm
+permalink: /en-US/win10/LightningProjectGuide.htm
 lang: en-US
 ---
 
+##Lightning Project Guide
+
+This guide will walk through project creation, setup, and deployment of a Lightning project using Windows IoT Core!
 
 ##Create a new Project
 Open Visual Studio. Select File -> New Project -> Visual C++ -> Windows -> Windows IoT Core -> Arduino Wiring Application for Windows IoT Core

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Hello Blinky
-permalink: /en-US/win10/samples/HelloBlinkyWiring.htm
+permalink: /en-US/win10/samples/HelloBlinkyLightning.htm
 lang: en-US
 ---
 
@@ -10,7 +10,7 @@ Learn to Deploy and Debug an Arduino Wiring sketch to blink an LED!
 
 #Setup
 
-Follow the [Wiring Project Guide]({{site.baseurl}}/en-US/win10/WiringProjectSetup.htm) to create a new wiring project!
+Follow the [Wiring Project Guide]({{site.baseurl}}/en-US/win10/LightningProjectGuide.htm) to create a new wiring project!
 
 ##Code
 
@@ -45,7 +45,7 @@ LEDs are diodes which will emit light when powered. They are polarized - meaning
 ##Build and deploy
 Press F5 to build and deploy your project.
 
-Refer to the [Wiring Project Guide]({{site.baseurl}}/en-US/win10/WiringProjectSetup.htm) for more instructions on how to deploy your app!
+Refer to the [Lightning Project Guide]({{site.baseurl}}/en-US/win10/LightningProjectGuide.htm) for more instructions on how to deploy your app!
 
 ##Result
 You should see the LED blinking on and off, spending about a half second in each state. If it isn't blinking, try reversing the LED leads.
