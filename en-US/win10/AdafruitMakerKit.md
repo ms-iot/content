@@ -5,11 +5,11 @@ permalink: /en-US/AdafruitMakerKit.htm
 lang: en-US
 kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 ---
-<h3 class="maker-kit section-heading">{{page.kit}}</h3>
+<h3 class="thin-header section-heading">{{page.kit}}</h3>
 <div class="row">
   <div class="col-md-6 col-sm-12">
     <center>
-      <h2 class="maker-kit floatTop">Welcome! Let's get started.</h2>
+      <h2 class="thin-header floatTop">Welcome! Let's get started.</h2>
       <br/>
       If you don't have one, you can order one <a target="_blank" href="http://adafruit.com/windows10iotpi2"> here.</a>
     </center>
@@ -20,7 +20,7 @@ kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 </div>
 
 <div class="row">
-  <h3 class="maker-kit">Lesson 1: Introduction and Setup</h3>
+  <h3 class="thin-header">Lesson 1: Introduction and Setup</h3>
       <table class="table table-striped maker-kit">
         <tr>
           <th class="standardTH">Topic</th>
@@ -50,7 +50,7 @@ kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 </div>
 
 <div>
-  <h3 id="lessonTwo" class="maker-kit">Lesson 2: Starter Projects</h3>
+  <h3 id="lessonTwo" class="thin-header">Lesson 2: Starter Projects</h3>
 
   <table class="table table-striped maker-kit">
     <tr>

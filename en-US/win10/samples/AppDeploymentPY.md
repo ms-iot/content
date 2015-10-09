@@ -4,13 +4,13 @@
 
     ![RemoteMachine Target]({{site.baseurl}}/images/AppDeployment/py-remote-machine-debugging.png)
 
-3. Next, right click on your project in the **Solution Explorer** pane. Select **Properties**. 
+3. Next, right click on your project in the **Solution Explorer** pane. Select **Properties**.
 
     ![Remote Machine Debugging]({{site.baseurl}}/images/AppDeployment/py-project-properties.PNG)
 
 4. Under **UWP Project Settings**, modify the following fields:
 
-	* **Machine Name**: If you previously used [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to set a unique name for your device, you can enter it here (in this example, we're using **my-device**). 
+	* **Machine Name**: If you previously used [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to set a unique name for your device, you can enter it here (in this example, we're using **my-device**).
 	Otherwise, use the IP address of your Windows IoT Core device.
 	* **Remote Port**: Set to **5678**
 

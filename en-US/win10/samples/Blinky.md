@@ -5,6 +5,8 @@ permalink: /en-US/win10/samples/Blinky.htm
 lang: en-US
 deviceName: RPI2
 ---
+
+{: .thin-header}
 #Get Started
 
 Build your first IoT Core Application.
