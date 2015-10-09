@@ -240,6 +240,11 @@ h2.steps:hover{
 .table-striped > tbody > tr > td {
   border-color: transparent;
 }
+.bottom-border{
+border-bottom: 1px solid rgb(230,230,230);
+padding-bottom:10px;
+}
+
 h1.thin-header {
   font-weight: 100;
   font-size:40px;
@@ -252,7 +257,7 @@ h2.thin-header {
 h3.thin-header {
   font-weight: lighter;
   border-bottom: 1px solid rgb(230,230,230);
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   margin-top:10px;
   margin-bottom: 20px;
   font-size:32px;
