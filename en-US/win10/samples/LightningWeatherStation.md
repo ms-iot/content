@@ -97,7 +97,7 @@ There are two ways to go about seting up the software.
 
 <strong>Option 1: Clone the Entire Solution</strong>
 
-<p>The easiest way to get your Weather Station up and running is to clone the entire solution from the "Lightning" folder of <a href="#"> this GitHub Repo </a> onto your local machine.</p>
+<p>The easiest way to get your Weather Station up and running is to clone the entire solution from the "Lightning" folder of <a href="https://github.com/turkycat/Weather_Shield/tree/master/lightning/WeatherShield"> this GitHub Repo </a> onto your local machine.</p>
 
 <strong>Option 2: Set Up Your Solution Manually</strong>
 
