@@ -130,7 +130,7 @@ Connect to the device using PowerShell.  Please follow the instructions found [h
 
 Allow Node.exe to communicate through the firewall with the following command:
 
-* netsh advfirewall firewall add rule name="Node.js" dir=in action=allow program="C:\Node.js (Chakra)\Node.exe" enable=yes
+* `netsh advfirewall firewall add rule name="Node.js" dir=in action=allow program="C:\Node.js (Chakra)\Node.exe" enable=yes`
 
 
 ###Run the server!
