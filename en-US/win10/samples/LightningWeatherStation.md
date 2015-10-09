@@ -8,12 +8,7 @@ lang: en-US
 {:.thin-header}
 #Weather Station + Lightning
 
-The new Windows.Devices namespace from the Universal Windows Platform (UWP) APIs in Windows 10, enable developers to leverage the power of Windows while interacting with the real world via sensors and actuators.
-
-This project uses the I2C bus and general purpose input/output (GPIO) ports available on the Raspberry Pi 2, to create an internet connected weather station using the SparkFun weather shield.
-
-The instructions provided will give a developer first-hand experience setting up the required hardware along with writing and debugging the newly available Windows 10, UWP Windows.Devices API's. This lab will also demonstrate how to aggregate your data in cloud using the Azure Event Hub, via the easy-to-use ConnectTheDots API.
-
+The following lesson will help you set up your own Weather Station using the power of Lightning.  Gathering weather data from your surroundings is as easy as connecting a Sparkfun Weather Shield to your Raspberry Pi 2 and deploying a UWP app.  Read on to get started!
 
 <h2 class="thin-header bottom-border">Hardware Set Up</h2>
 
