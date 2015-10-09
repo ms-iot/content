@@ -14,6 +14,13 @@ deviceName: Galileo
   </div>
   {% include steps.html device=page.deviceName %}
 </div>
+
+<div style="background-color:Silver; color:black; padding:20px;">
+	<h4><u>Support for Windows on Intel Galileo Gen 1 and Gen 2 will end on November 30, 2015</u></h4>
+		<p><h5>Thank you for your interest in developing with Windows on Intel Galileo Gen 1 and Gen 2. As we continue to focus on Windows 10, we will discontinue our support for Windows on the Galileo platform due to incompatibilities with the underlying hardware.</h5></p>
+		<p><h5>We are committed to making Windows 10 IoT Core powerful and friendly to Makers. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn how to migrate to platforms that support Windows 10 IoT Core.</h5></p>
+</div>
+
 <div class="row">
   <h2>Windows Developer Program for IoT Developer Tools</h2>
   <span class="label label-default">Visual Studio extension updated: 12/2/2014</span>
