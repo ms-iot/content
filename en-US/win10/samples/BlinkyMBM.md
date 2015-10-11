@@ -10,4 +10,4 @@ deviceName: MBM
 
 {% include_relative BlinkyContent.md %}
 
-<h3><a href="{{site.baseurl}}/{{page.lang}}/win10/StartCoding.htm">Next: Additional tutorials and samples</a></h3>
+<h4 class="thin-header"><a href="{{site.baseurl}}/{{page.lang}}/win10/StartCoding.htm">Next: Additional tutorials and samples</a></h4>

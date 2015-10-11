@@ -1,3 +1,4 @@
+{: .thin-header}
 #Blinky Sample
 
 We'll create a simple LED blinking app and connect a LED to your Windows 10 IoT Core device.
