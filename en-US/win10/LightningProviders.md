@@ -112,7 +112,7 @@ The following samples demonstrate using the Lightning providers with supported b
 
 ###Windows SDK Update
 
-Windows SDK required for building and using the library is 10.0.10563.0 or higher which can be downloaded from [here](http://WinSDK_Installation_Folder).
+Windows SDK required for building and using the library is 10.0.10563.0 or higher which can be downloaded from [here](https://dev.windows.com/en-us/downloads/windows-10-developer-preview).
 
 For more information on obtaining and setting up the required Windows SDK and other tools, refer to [Setting up your PC Guide]({{site.baseurl}}/{{page.lang}}/win10/SetupPCRPI.htm).
 
