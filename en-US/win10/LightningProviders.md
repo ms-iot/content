@@ -127,7 +127,7 @@ Currently, Microsoft.IoT.Lightning Nuget is still pre-release, so should be upda
 In order to install prerelease (current) version of Microsoft.IoT.Lightning Nuget package as well as receive prerelease updates to the Lightning package, make sure to set the "Include prerelease" option in the Nuget Package Manager.
 
 1. Right click References in your project
-1. Click "Manager Nuget Packages..."
+1. Click "Manage Nuget Packages..."
 1. Select package sources for Lightning nuget
 1. Click "Include prerelease".
 1. Click "Install" to install the nuget package to your project

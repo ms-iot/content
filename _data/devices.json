@@ -49,7 +49,7 @@
          "name":"Arduino Wiring and UWP Lightning providers",
          "link":"win10/Lightning.htm",
          "image":"Lighning_0.png",
-         "text":"To enable the use of existing Arduino Wiring sketches on IoT Core devices, a project template for Arduino Wiring can now be used in Visual Studio. These projects make use of a direct memory mapped driver that offer high performance. Additionally, based on the same driver, a set of controller providers can be used in UWP apps to access GPIO, I2C and SPI controllers with high performance.",
+         "text":"To enable the use of existing Arduino Wiring sketches on IoT Core devices, a project template for Arduino Wiring can now be used in Visual Studio. These projects make use of a direct memory mapped driver that offers high performance. Additionally, based on the same driver, a set of controller providers can be used in UWP apps to access GPIO, I2C and SPI controllers that offers high performance.",
          "start-text":"Start Now"
       }
    ],
@@ -103,7 +103,7 @@
          "name":"Arduino Wiring and UWP Lightning providers",
          "link":"win10/Lightning.htm",
          "image":"Lighning_0.png",
-         "text":"To enable the use of existing Arduino Wiring sketches on IoT Core devices, a project template for Arduino Wiring can now be used in Visual Studio. These projects make use of a direct memory mapped driver that offer high performance. Additionally, based on the same driver, a set of controller providers can be used in UWP apps to access GPIO, I2C and SPI controllers with high performance.",
+         "text":"To enable the use of existing Arduino Wiring sketches on IoT Core devices, a project template for Arduino Wiring can now be used in Visual Studio. These projects make use of a direct memory mapped driver that offers high performance. Additionally, based on the same driver, a set of controller providers can be used in UWP apps to access GPIO, I2C and SPI controllers that offers high performance.",
          "start-text":"立即开始"
       }
    ]
