@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default
 title: AllJoyn
 permalink: /en-US/win10/AllJoyn.htm
