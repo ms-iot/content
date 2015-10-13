@@ -22,7 +22,7 @@ Learn how to use a RGB Pixel Strip.
 
 # Setup
 
-Follow the [Arduino Wiring Project Guide]({{site.baseurl}}/en-US/win10/ArduinoWiringProjectGuide.htm) to create a new Arduino Wiring project!
+Follow the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm) to create a new Arduino Wiring project!
 
 # Code
 
@@ -206,7 +206,7 @@ void loop()
 ##Build and deploy
 Press F5 to build and deploy your project.
 
-Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/en-US/win10/ArduinoWiringProjectGuide.htm) for more instructions on how to deploy your app!
+Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm) for more instructions on how to deploy your app!
 
 ##Result
 You should see the LED pixel strip rotate through a series of colors, spending about 1 second on each arrangement.

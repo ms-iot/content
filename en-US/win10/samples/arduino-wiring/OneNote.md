@@ -10,7 +10,7 @@ Learn how to use http messages to Get and Post OneNote pages
 
 # Create a new project
 
-1. Create a new project from the template. More information can be found in the [Arduino Wiring Project Guide]({{site.baseurl}}/en-US/win10/ArduinoWiringProjectGuide.htm).
+1. Create a new project from the template. More information can be found in the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm).
 2. Replace the existing code in main.cpp with the following code. Make modifications for multiple action buttons as needed.
 3. Add the following files to the project, MinHttpGP.cpp/.h, and OneNoteHelper.cpp/.h,
    found [on GitHub]](https://github.com/ms-iot/sample-todo).
@@ -129,7 +129,7 @@ There are a few ways to do this, and the Windows Live APIs can give you more inf
 ##Build and deploy
 Press F5 to build and deploy your project.
 
-Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/en-US/win10/ArduinoWiringProjectGuide.htm) for more instructions on how to deploy your app!
+Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm) for more instructions on how to deploy your app!
 
 
 #Result
