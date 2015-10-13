@@ -56,7 +56,7 @@ Browse, search, and filter, peripherals that are known to be supported on the **
 
 This page makes use of JavaScript. If you have JavaScript disabled, search tools will be disabled.
 
-Looking for information about supported hardware platforms? Click [here](http://go.microsoft.com/fwlink/p/?linkID=532948) to be taken to a list of development boards compatible with Windows.
+Looking for information about supported hardware platforms? Click [here](https://msdn.microsoft.com/library/windows/hardware/dn914597(v=vs.85).aspx) to be taken to a list of development boards compatible with Windows.
 
 <div class="searchbox">
 <div>
