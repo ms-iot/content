@@ -5,11 +5,15 @@ permalink: /en-US/win10/ArduinoWiringProjectGuide.htm
 lang: en-US
 ---
 
-##Lightning Project Guide
+##Arduino Wiring Project Guide
 
 This guide will walk through project creation, setup, and deployment of an Arduino Wiring project using Windows IoT Core!
 
 Arduino Wiring projects utilize the familiar and easy to use Arduino Wiring API with Windows IoT Lightning functionality; a driver using direct memory mapping to provide insane performance speeds. You can copy & paste Arduino sketches and libraries into your IoT Core Arduino Wiring projects to run on any of your IoT Core devices!
+
+#Install the Microsoft IoT Templates!
+
+We've provided a Visual Studio extension which will automatically install a template to Visual Studio for the Arduino Wiring projects as well as other Microsoft IoT project types. Head over to [this link](https://visualstudiogallery.msdn.microsoft.com/06507e74-41cf-47b2-b7fe-8a2624202d36 ) to download the extension from the Microsoft Gallery!
 
 ##Create a new Project
 Open Visual Studio. Select File -> New Project -> Visual C++ -> Windows -> Windows IoT Core -> Arduino Wiring Application for Windows IoT Core
@@ -17,23 +21,7 @@ Open Visual Studio. Select File -> New Project -> Visual C++ -> Windows -> Windo
 
 ##Change the Default Controller Driver
 
-We will want to open the Windows Device Portal
-
-1. Locate the IP address of your device, either by using the Windows IoT Core Watcher application or hook up your board to a monitor.
-2. From your local machine, open the Windows Devices Portal web page by entering this address http://{BoardIPAddress}:8080/ in your web browser.
-  ![]({{site.baseurl}}/images/Wiring/dmap1.png)
-3. The Windows Devices Portal Page should ask you for your credentials. The default username is `Administrator` and password is `p@ssw0rd`
-  <img src="{{site.baseurl}}/images/Wiring/dmap2.png" width="50%" />
-  Note, after entering the username and password, the Portal will ask you if you need to change the password. It’s always a good practice to change it.
-4. Click on Devices in the navigation menu to open the Devices page
-  <img src="{{site.baseurl}}/images/Wiring/dmap3.png" width="50%" />
-5. The Devices page list the available Controller drivers. By default, the Inbox Driver is set to current.
-6. Switch to the DMAP driver by choosing the Direct Memory Mapped Driver from the drop down menu and click the Update Driver Button
-  <img src="{{site.baseurl}}/images/Wiring/dmap4.png" width="50%" />
-7. Please wait until the page will lets you know then the driver installation is complete.
-  <img src="{{site.baseurl}}/images/Wiring/dmap5.png" width="50%" />
-8. If a reboot is needed, the page will let you know as well. You can reboot by using the Reboot button at the top of the page.
-9. Now you’re ready to create and use applications that make use of the DMAP driver.
+You will need to be running the Direct Memory Mapped Driver to write Arduino Wiring solutions! Refer to the [Lightning Setup Guide]({{site.baseurl}}\{{page.lang}}\win10\LightningSetup.htm) for instructions!
 
 ##Develop
 Complete one of the many samples on the 'Develop' section of this section, or build your own project!
