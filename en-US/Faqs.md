@@ -66,11 +66,11 @@ lang: en-US
         <br />
         <a name="galileo"></a>
         <h2 class="faq-h2">Intel Galileo</h2>
-        <p class="bold"><em>Can I run Windows 10 IoT Core on the Intel Galileo Gen 1 or Gen 2 board?</em></p>
-        <p>We have no plans to bring Windows 10 to the Intel Galileo board at this time. </p>
-        <br />
         <p class="bold"><em>Will you continue to support the Windows Developer Program for IoT for Galileo?</em></p>
-        <p>We’ve been overwhelmed by the interest in our Windows 8.1 based program and appreciate all the incredible feedback the community has provided. While there will be no new feature development for the Galileo release we will continue to support this release for as long as significant community activity exists.</p>
+        <p>No. While we are thankful for the Maker community's interest in developing with Windows on Intel Galileo Gen 1 and Gen 2, as we continue to focus on Windows 10, we will discontinue our support for Windows on the Galileo platform due to incompatibilities with the underlying hardware. We are committed to making Windows 10 IoT Core powerful and friendly to Makers. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn how to migrate to platforms that support Windows 10 IoT Core.</p>
+        <br />
+		<p class="bold"><em>When will the support for Windows on Galileo end?</em></p>
+        <p>The support for Windows on Galileo will end on November 30, 2015.</p>
         <br />
         <a name="errors"></a>
         <h2 class="faq-h2">Errors</h2>

@@ -13,8 +13,8 @@ lang: en-US
 
 Hardware interfaces for the Raspberry Pi 2 are exposed through the 40-pin header **J8** on the board. Functionality includes:
 
-* **13x** - GPIO pins
-* **2x** - SPI buses
+* **17x** - GPIO pins
+* **1x** - SPI bus
 * **1x** - I2C bus
 * **2x** - 5V power pins
 * **2x** - 3.3V power pins
@@ -27,12 +27,17 @@ The following GPIO pins are accessible through APIs:
 {:.table.table-bordered}
 | GPIO# | Power-on Pull | Header Pin         |
 |-------|---------------|--------------------|
+| 4     | PullUp        | 7                  |
 | 5     | PullUp        | 29                 |
 | 6     | PullUp        | 31                 |
 | 12    | PullDown      | 32                 |
 | 13    | PullDown      | 33                 |
 | 16    | PullDown      | 36                 |
+| 17    | PullDown      | 11                 |
 | 18    | PullDown      | 12                 |
+| 19    | PullDown      | 35                 |
+| 20    | PullDown      | 38                 |
+| 21    | PullDown      | 40                 |
 | 22    | PullDown      | 15                 |
 | 23    | PullDown      | 16                 |
 | 24    | PullDown      | 18                 |
@@ -111,22 +116,13 @@ public async void I2C()
 
 ##<a name="RPi2_SPI"></a>SPI Bus
 
-There are 2 SPI bus controllers available on the RPi2: **SPI0** and **SPI1**.
-
-**SPI0** has the standard **MOSI**, **MISO**, and **SCLK** lines, and can be configured to use one of two chip-select lines **SPI0 CS0** and **SPI0 CS1**.
+There is one SPI bus controller available on the RPi2. **SPI0** has the standard **MOSI**, **MISO**, and **SCLK** lines, and can be configured to use one of two chip-select lines **SPI0 CS0** and **SPI0 CS1**.
 
 * Pin 19 - **SPI0 MOSI**
 * Pin 21 - **SPI0 MISO**
 * Pin 23 - **SPI0 SCLK**
 * Pin 24 - **SPI0 CS0**
 * Pin 26 - **SPI0 CS1**
-
-**SPI1** includes **MOSI**, **MISO**, and **SCLK** lines, and only one chip-select line **SPI1 CS0**.
-
-* Pin 38 - **SPI1 MOSI**
-* Pin 35 - **SPI1 MISO**
-* Pin 40 - **SPI1 SCLK**
-* Pin 11 - **SPI1 CS0**
 
 An example on how to perform a SPI write on bus **SPI0** is shown below:
 {% highlight C# %}

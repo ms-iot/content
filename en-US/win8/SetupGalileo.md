@@ -12,6 +12,12 @@ This guide will show you how to install and run the Windows Developer Program fo
 
 {% include steps.html device=page.deviceName %}
 
+<div style="background-color:Silver; color:black; padding:20px;">
+	<h4><u>Support for Windows on Intel Galileo Gen 1 and Gen 2 will end on November 30, 2015</u></h4>
+		<p><h5>Thank you for your interest in developing with Windows on Intel Galileo Gen 1 and Gen 2. As we continue to focus on Windows 10, we will discontinue our support for Windows on the Galileo platform due to incompatibilities with the underlying hardware.</h5></p>
+		<p><h5>We are committed to making Windows 10 IoT Core powerful and friendly to Makers. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn how to migrate to platforms that support Windows 10 IoT Core.</h5></p>
+</div>
+
 ## Step 1: Sign up for Microsoft Connect
 We release Windows for Galileo through the Microsoft Connect program.  Please go to the [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"} site to sign up.  You can find step-by-step instructions for signing up for Microsoft Connect [here]({{site.baseurl}}/{{page.lang}}/SigninMSConnect.htm){:target="_blank"}.
 

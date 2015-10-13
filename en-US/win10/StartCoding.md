@@ -314,7 +314,14 @@ lang: en-US
                 </div>
                 
                 <div class="row section-heading">
-                  <div class="col-md-3"><!-- column placeholder --></div>
+                  <div class="col-md-3">
+                    <h4>Lightning Providers samples (UWP)</h4>
+                    <p>Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps</p>
+                    <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyUILightning.htm">Blinky UI (C#/C++)</a><br>
+                    <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyHeadlessLightning.htm">Blinky Headless (C#/C++)</a><br>
+                    <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/WeatherStationLightning.htm">Weather Station (C#/C++)</a><br>
+                    <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplayLightning.htm">SPI Display (C#/C++)</a>
+                  </div>
                   <div class="col-md-3"><!-- column placeholder --></div>
                   <div class="col-md-3"><!-- column placeholder --></div>
                   <div class="col-md-3"><!-- column placeholder --></div>
@@ -323,6 +330,11 @@ lang: en-US
                 <div class="row section-heading">
                     <h2>Previous Version of Windows</h2>
                 </div>
+				<div style="background-color:Silver; color:black; padding:20px;">
+					<h4><u>Support for Windows on Intel Galileo Gen 1 and Gen 2 will end on November 30, 2015</u></h4>
+						<p><h5>Thank you for your interest in developing with Windows on Intel Galileo Gen 1 and Gen 2. As we continue to focus on Windows 10, we will discontinue our support for Windows on the Galileo platform due to incompatibilities with the underlying hardware.</h5></p>
+						<p><h5>We are committed to making Windows 10 IoT Core powerful and friendly to Makers. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn how to migrate to platforms that support Windows 10 IoT Core.</h5></p>
+				</div>
                 <div class="row section-heading">
                     <div class="col-md-3">
                         <h4>Hello Blinky for Galileo</h4>
