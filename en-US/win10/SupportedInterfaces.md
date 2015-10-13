@@ -169,8 +169,8 @@ SanDisk Ultra Micro SDHC 16GB | RPI2, MBM | An SD card that's known to support r
 {:.table.table-bordered .devices}
 Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
-Adafruit 16-Channel PWM | RPI2 | Adds the capability to control up to 16 servos with no additional Raspberry Pi processing overhead. Capable of doing PWM up to 1.6KHz with 12 bit precision. | Fairly easy to use. It can also drive LEDs. | [Adafruit Product Page] (http://www.adafruit.com/products/2327#description-anchor)  [Adafruit Tutorial] (https://learn.adafruit.com/adafruit-16-channel-pwm-servo-hat-for-raspberry-pi/overview)  [C# IoT Sample] (https://github.com/golaat/Adafruit.Pwm)
-TBD||[Add a confirmed Pi Hat! Contibute to this list on GitHub.]({{site.repositoryurl}}{{ page.path }}) ||
+Adafruit 16-Channel PWM | RPI2 | Adds the capability to control up to 16 servos with no additional Raspberry Pi processing overhead. Capable of doing PWM up to 1.6KHz with 12 bit precision. | Fairly easy to use. It can also drive LEDs. | [Adafruit Product Page](http://www.adafruit.com/products/2327#description-anchor)<br/>[Adafruit Tutorial](https://learn.adafruit.com/adafruit-16-channel-pwm-servo-hat-for-raspberry-pi/overview)<br/>[C# IoT Sample](https://github.com/golaat/Adafruit.Pwm)
+[Add a confirmed Pi Hat! Contibute to this list on GitHub.]({{site.repositoryurl}}{{ page.path }})||||
 
 ### Sensors <a name="Sensors"></a>
 
