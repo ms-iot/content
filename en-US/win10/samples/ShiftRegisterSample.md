@@ -85,7 +85,7 @@ Make the following connections on the 74HC595N shift register:
 
 * Pin 13 **OE**: Connect to **GPIO 6** (pin 31) on the RPi2
 
-* Pin 14 **SER**: Connect to **GPIO 4** (pin 7) on the RPi2
+* Pin 14 **SER**: Connect to **GPIO 27** (pin 13) on the RPi2
 
 * Pin 15 **Q7**: See above.
 
@@ -121,7 +121,7 @@ We need to hook up power, ground, and the I2C lines from on the Raspberry Pi 2 t
 
 * Pin 12 **GPIO18** If not already connected, connect to **SRCLK** (pin 11) on the shift register
 
-* Pin 7 **GPIO4** If not already connected, connect to **SER** (pin 14) on the shift register
+* Pin 13 **GPIO27** If not already connected, connect to **SER** (pin 14) on the shift register
 
 * Pin 29 **GPIO5** If not already connected, connect to **RCLK** (pin 12) on the shift register
 
@@ -213,7 +213,7 @@ private const int SRCLK_PIN = 18; // GPIO 18 is pin 12 on RPI2 header
 private GpioPin shiftRegisterClock;
 
 // Serial input (SER): the serial data input to the shift register. Use in conjunction with SRCLK.
-private const int SER_PIN = 4; // GPIO 4 is pin 7 on RPI2 header
+private const int SER_PIN = 27; // GPIO 27 is pin 13 on RPI2 header
 private GpioPin serial;
 
 // Storage Register Clock (RCLK): the clock for clocking data from the serial input to the parallel output in the shift register
@@ -272,26 +272,15 @@ private void InitializeSystem()
     outputEnable = gpio.OpenPin(OE_PIN);
     shiftRegisterClear = gpio.OpenPin(SRCLR_PIN);
 
-    // Show an error if the pin wasn't initialized properly
-    if (shiftRegisterClock == null || serial == null || registerClock == null || outputEnable == null || shiftRegisterClear == null)
-    {
-        GpioStatus.Text = "There were problems initializing the GPIO pin.";
-        return;
-    }
-
     // reset the pins to a known state
     shiftRegisterClock.Write(GpioPinValue.Low);
     shiftRegisterClock.SetDriveMode(GpioPinDriveMode.Output);
-
     serial.Write(GpioPinValue.Low);
     serial.SetDriveMode(GpioPinDriveMode.Output);
-
     registerClock.Write(GpioPinValue.Low);
     registerClock.SetDriveMode(GpioPinDriveMode.Output);
-
     outputEnable.Write(GpioPinValue.Low);
     outputEnable.SetDriveMode(GpioPinDriveMode.Output);
-
     shiftRegisterClear.Write(GpioPinValue.Low);
     shiftRegisterClear.SetDriveMode(GpioPinDriveMode.Output);
 
@@ -441,7 +430,7 @@ namespace ShiftRegisterSample
         private GpioPin shiftRegisterClock;
 
         // Serial input (SER): the serial data input to the shift register. Use in conjunction with SRCLK.
-        private const int SER_PIN = 4; // GPIO 4 is pin 7 on RPI2 header
+        private const int SER_PIN = 27; // GPIO 27 is pin 13 on RPI2 header
         private GpioPin serial;
 
         // Storage Register Clock (RCLK): the clock for clocking data from the serial input to the parallel output in the shift register
@@ -492,26 +481,15 @@ namespace ShiftRegisterSample
             outputEnable = gpio.OpenPin(OE_PIN);
             shiftRegisterClear = gpio.OpenPin(SRCLR_PIN);
 
-            // Show an error if the pin wasn't initialized properly
-            if (shiftRegisterClock == null || serial == null || registerClock == null || outputEnable == null || shiftRegisterClear == null)
-            {
-                GpioStatus.Text = "There were problems initializing the GPIO pin.";
-                return;
-            }
-
             // reset the pins to a known state
             shiftRegisterClock.Write(GpioPinValue.Low);
             shiftRegisterClock.SetDriveMode(GpioPinDriveMode.Output);
-
             serial.Write(GpioPinValue.Low);
             serial.SetDriveMode(GpioPinDriveMode.Output);
-
             registerClock.Write(GpioPinValue.Low);
             registerClock.SetDriveMode(GpioPinDriveMode.Output);
-
             outputEnable.Write(GpioPinValue.Low);
             outputEnable.SetDriveMode(GpioPinDriveMode.Output);
-
             shiftRegisterClear.Write(GpioPinValue.Low);
             shiftRegisterClear.SetDriveMode(GpioPinDriveMode.Output);
 
