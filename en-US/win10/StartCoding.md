@@ -148,14 +148,15 @@ lang: en-US
                         <h4>Hello, World!</h4>
                         <p>Create a 'Hello World' application that runs on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm">Hello World (C#)</a><br>
-						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Python.htm">Hello World (Python)</a><br>
-						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWU.htm">Hello World (Node.js)</a><br>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Python.htm">Hello World (Python)</a><br>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWU.htm">Hello World (Node.js)</a><br>
                     </div>
                     <div class="col-md-3">
                         <h4>Hello Blinky (Headless App)</h4>
                         <p>Create an app with no UI that toggles an LED on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyHeadless.htm">Blinky (C#)</a><br>
-						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PythonBlinky.htm">Blinky (Python)</a><br>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PythonBlinky.htm">Blinky (Python)</a><br>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/HelloBlinkyWiring.htm">Blinky (Wiring)</a><br>
                     </div>
                     <div class="col-md-3">
                         <h4>UI Blinky App</h4>
@@ -299,8 +300,24 @@ lang: en-US
                         <p>Control a servo connected to an Arduino with a Cylon Node.js UWP app running on a Raspberry Pi 2 with Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWUCylon.htm">Cylon (Node.js)</a>
                     </div>
-                    <div class="col-md-3"><!-- column placeholder --></div>
-                    <div class="col-md-3"><!-- column placeholder --></div>
+                    <div class="col-md-3">
+                      <h4>OneNote API</h4>
+                      <p>Learn how to use http messages to GET and POST OneNote pages in Wiring.</p>
+                      <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/OneNoteWiring.htm">OneNote API (Wiring)</a>
+                    </div>
+                    <div class="col-md-3">
+                      <h4>RGB Pixel</h4>
+                      <p>Learn how to use an RGB Pixel Strip in Wiring.</p>
+                      <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/RGBPixelWiring.htm">RGB Pixel (Wiring)</a>
+                    </div>
+                    
+                </div>
+                
+                <div class="row section-heading">
+                  <div class="col-md-3"><!-- column placeholder --></div>
+                  <div class="col-md-3"><!-- column placeholder --></div>
+                  <div class="col-md-3"><!-- column placeholder --></div>
+                  <div class="col-md-3"><!-- column placeholder --></div>
                 </div>
 
                 <div class="row section-heading">
