@@ -71,6 +71,3 @@ Select the DeviceReset Method.
  In the method input arguments section, type "reset" and press "Invoke". Status OK should be displayed.
 
 ![AJx_Mock6]({{site.baseurl}}/images/MockAdapter/mock_ajx6.png)
-
-
-
