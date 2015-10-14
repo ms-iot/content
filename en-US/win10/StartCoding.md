@@ -148,14 +148,15 @@ lang: en-US
                         <h4>Hello, World!</h4>
                         <p>Create a 'Hello World' application that runs on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm">Hello World (C#)</a><br>
-						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Python.htm">Hello World (Python)</a><br>
-						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWU.htm">Hello World (Node.js)</a><br>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Python.htm">Hello World (Python)</a><br>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWU.htm">Hello World (Node.js)</a><br>
                     </div>
                     <div class="col-md-3">
                         <h4>Hello Blinky (Headless App)</h4>
                         <p>Create an app with no UI that toggles an LED on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyHeadless.htm">Blinky (C#)</a><br>
-						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PythonBlinky.htm">Blinky (Python)</a><br>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PythonBlinky.htm">Blinky (Python)</a><br>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/HelloBlinkyWiring.htm">Blinky (Wiring)</a><br>
                     </div>
                     <div class="col-md-3">
                         <h4>UI Blinky App</h4>
@@ -299,13 +300,40 @@ lang: en-US
                         <p>Control a servo connected to an Arduino with a Cylon Node.js UWP app running on a Raspberry Pi 2 with Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWUCylon.htm">Cylon (Node.js)</a>
                     </div>
-                    <div class="col-md-3"><!-- column placeholder --></div>
-                    <div class="col-md-3"><!-- column placeholder --></div>
+                    <div class="col-md-3">
+                      <h4>OneNote API</h4>
+                      <p>Learn how to use http messages to GET and POST OneNote pages in Wiring.</p>
+                      <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/OneNoteWiring.htm">OneNote API (Wiring)</a>
+                    </div>
+                    <div class="col-md-3">
+                      <h4>RGB Pixel</h4>
+                      <p>Learn how to use an RGB Pixel Strip in Wiring.</p>
+                      <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/RGBPixelWiring.htm">RGB Pixel (Wiring)</a>
+                    </div>
+                    
+                </div>
+                
+                <div class="row section-heading">
+                  <div class="col-md-3">
+                    <h4>Lightning Providers samples (UWP)</h4>
+                    <p>Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps</p>
+                    <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyUILightning.htm">Blinky UI (C#/C++)</a><br>
+                    <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyHeadlessLightning.htm">Blinky Headless (C#/C++)</a><br>
+                    <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/WeatherStationLightning.htm">Weather Station (C#/C++)</a><br>
+                    <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplayLightning.htm">SPI Display (C#/C++)</a>
+                  </div>
+                  <div class="col-md-3"><!-- column placeholder --></div>
+                  <div class="col-md-3"><!-- column placeholder --></div>
+                  <div class="col-md-3"><!-- column placeholder --></div>
                 </div>
 
                 <div class="row section-heading">
                     <h2>Previous Version of Windows</h2>
                 </div>
+				<div style="background-color:Silver; color:black; padding:20px;">
+					<h4><u>Support for Windows on Intel Galileo Gen 1 and Gen 2 will end on November 30, 2015</u></h4>
+					<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we’ve made the difficult decision to discontinue Windows support on the Galileo platform. We’ve seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>	
+				</div>
                 <div class="row section-heading">
                     <div class="col-md-3">
                         <h4>Hello Blinky for Galileo</h4>
