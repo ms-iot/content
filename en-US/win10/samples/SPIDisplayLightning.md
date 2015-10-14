@@ -129,7 +129,7 @@ private async Task InitGpio()
 
 1. Enable Lightning on your Raspberry Pi2 or MBM device using the the steps outlined in the [Lightning Setup Guide]({{site.baseurl}}/{{page.lang}}/win10/LightningSetup.htm).
 
-1. Ensure the correct version of the Windows SDK is installed on your development machine. The required Windows SDK can be installed from [here](http://WIndowsSDK_install_path)
+1. Ensure the correct version of the Windows SDK is installed on your development machine. The required Windows SDK can be installed from [here](https://dev.windows.com/en-us/downloads/windows-10-developer-preview).
 
 1. Clone the source for the SPI Display sample for Lightning from [Github](https://github.com/ms-iot/BusProviders/tree/develop/Microsoft.IoT.Lightning.Providers) to a local folder.
 

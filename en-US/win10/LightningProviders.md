@@ -8,7 +8,7 @@ lang: en-US
 #Microsoft.IoT.Lightning.Providers library and sample code
 Microsoft.IoT.Lightning.Providers library contains a set of providers to interface with the GPIO, SPI and I2C buses through the Lightning direct memory access driver.
 
-The library as well as sample code can be obtained in source format from [GitHub](https://github.com/ms-iot/BusProviders/Microsoft.IoT.Lightning.Providers){:target="_blank"}.
+The library as well as sample code can be obtained in source format from [GitHub](https://github.com/ms-iot/BusProviders/tree/develop/Microsoft.IoT.Lightning.Providers){:target="_blank"}.
 
 ##Using the library
 
@@ -112,7 +112,7 @@ The following samples demonstrate using the Lightning providers with supported b
 
 ###Windows SDK Update
 
-Windows SDK required for building and using the library is 10.0.10563.0 or higher which can be downloaded from [here](http://WinSDK_Installation_Folder).
+Windows SDK required for building and using the library is 10.0.10563.0 or higher which can be downloaded from [here](https://dev.windows.com/en-us/downloads/windows-10-developer-preview).
 
 For more information on obtaining and setting up the required Windows SDK and other tools, refer to [Setting up your PC Guide]({{site.baseurl}}/{{page.lang}}/win10/SetupPCRPI.htm).
 
