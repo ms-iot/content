@@ -19,6 +19,15 @@
          "start-text":"Start Now"
       },
       {
+         "name":"DragonBoard410c",
+         "link":"win10/SetupPCDB410c.htm",
+         "buy":"http://www.arrow.com/dragonboard410c",
+         "image":"DB410c.png",
+         "text":"The DragonBoard™ 410c based on Linaro 96Boards™ specification features the Qualcomm® Snapdragon™ 410 processor, a Quad-core ARM® Cortex™ A53 at up to 1.2GHz clock speed per core, capable of 32-bit and 64-bit operation. WLAN, Bluetooth, and GPS, all packed into a board the size of a credit card.",
+         "buy-text":"Buy a DragonBoard410c",
+         "start-text":"Start Now"
+      },
+      {
          "name":"Arduino Wiring and UWP Lightning providers",
          "link":"win10/Lightning.htm",
          "image":"Lighning_0.png",

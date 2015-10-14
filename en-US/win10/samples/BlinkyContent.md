@@ -4,7 +4,7 @@ You'll need a few components:
 
 * a LED (any color you like)
 
-* a 220 &#x2126; resistor
+* a 220 &#x2126; resistor for the Raspberry Pi 2 and the MinnowBoard Max or a 330 &#x2126; resistor for the DragonBoard
 
 * a breadboard and a couple of connector wires
 
@@ -17,6 +17,8 @@ You'll need a few components:
 <sub>*Image made with [Fritzing](http://fritzing.org/){:target="_blank"}*</sub>
 
 {% include_relative BlinkyMBMGpio.md %}
+
+{% include_relative BlinkyDBGpio.md %}
 
 {% include_relative AppDeploymentCS.md %}
 
