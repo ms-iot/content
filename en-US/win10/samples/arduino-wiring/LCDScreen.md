@@ -20,17 +20,19 @@ You'll also need several wires, a potentiometer, and a 220 ohm resistor.
 
 ##Hardware Setup
 
-*Fritzing diagram coming soon!*
+There is a really great guide over at Adafruit's website on [hooking up a 16-pin LCD screen](https://learn.adafruit.com/character-lcds). We've described the exact pinouts we used in our code directly below, as well as provided a fritzing diagram. For reference, we've also included a pinout diagram of the RPi2 GPIO header and the LCD screen. If you need additional help with your LCD screen, there is a really great 
 
-There is a really great guide over at Adafruit's website on [hooking up a 16-pin LCD screen](https://learn.adafruit.com/character-lcds). However, until we've got our Fritzing diagram ready for you, we've described the exact pinouts we used in our code directly below. For reference, we've also included a pinout diagram of the RPi2 GPIO header and the LCD screen.
+###Fritzing Diagram
+
+![LCD Fritzing Diagram]({{site.baseurl}}/images/arduino_wiring/pi2_lcd_fritz.png)
 
 ####Notes:
 
-* VEE is a contrast pin. If you want maximum contrast, you can wire it to 5V. If you want to be able to control the contrast, hook this pin up to the output of a potentiometer!
+* VEE is a contrast pin. If you want maximum contrast, you can wire it to 5V. If you want to be able to control the contrast, hook this pin up to the output of a potentiometer (as shown in the fritzing diagram)!
 * R/W is the read/write pin. In this demo, you can hook it up to ground (for write). If you want to customize your sketch to be able to read or write, hook it up to another GPIO pin and set that pin HIGH when you want to read and LOW to write.
 * D0 - D3 are not used in this demo.
 
-![LCD Display]({{site.baseurl}}/images/arduino_wiring/lcd_16pins.jpg)
+###Pin Mapping Table
 
 {:.table.table-bordered .devices}
 | LCD Pin | Raspberry Pi2 Pin |
@@ -40,7 +42,7 @@ There is a really great guide over at Adafruit's website on [hooking up a 16-pin
 | VEE | 5v DC or POT output * |
 | RS  | GPIO_20 |
 | R/W | Ground or any other GPIO pin * |
-| E   | GPIO_26 |
+| E   | GPIO_16 |
 | D0  | *none* * |
 | D1  | *none* * |
 | D2  | *none* * |
@@ -48,11 +50,15 @@ There is a really great guide over at Adafruit's website on [hooking up a 16-pin
 | D4  | GPIO_2 |
 | D5  | GPIO_3 |
 | D6  | GPIO_4 |
-| D7  | GPIO_5 |
+| D7  | GPIO_17 |
 | BL+ | 5v DC **with 220 ohm resistor** |
 | BL- | Ground |
 
-![RPI Pinouts]({{site.baseurl}}/images/arduino_wiring/pi2_pinouts.png)
+###Reference Diagrams
+
+| LCD Pinouts | Raspberry Pi 2 Pinouts |
+|:-----------:|:----------------------:|
+| ![LCD Display]({{site.baseurl}}/images/arduino_wiring/lcd_16pins.jpg) | ![RPI Pinouts]({{site.baseurl}}/images/arduino_wiring/pi2_pinouts.png) |
 
 ##Required Library
 
@@ -67,12 +73,12 @@ Replace the existing code in your main .ino file with the following code:
 
 #include <LiquidCrystal.h>
 
-int enablePin = GPIO_26;
+int enablePin = GPIO_16;
 int registerSelectPin = GPIO_20;
 int dataPin11 = GPIO_2;
 int dataPin12 = GPIO_3;
 int dataPin13 = GPIO_4;
-int dataPin14 = GPIO_5;
+int dataPin14 = GPIO_17;
 
 //create a pointer to an instance of LiquidCrystal, yet to be created
 LiquidCrystal *lcd;
@@ -108,3 +114,5 @@ Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10
 
 ##Result
 You should see the LCD screen print "hello, world!" across the top line, with the current number of seconds the app has been running constantly being printed on the 2nd row!
+
+![Hello World]({{site.baseurl}}/images/arduino_wiring/lcd_helloworld.jpg)
