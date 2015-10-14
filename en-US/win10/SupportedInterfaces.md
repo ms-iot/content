@@ -56,7 +56,7 @@ Browse, search, and filter, peripherals that are known to be supported on the **
 
 This page makes use of JavaScript. If you have JavaScript disabled, search tools will be disabled.
 
-Looking for information about supported hardware platforms? Click [here](https://msdn.microsoft.com/library/windows/hardware/dn914597(v=vs.85).aspx) to be taken to a list of development boards compatible with Windows.
+Looking for information about supported hardware platforms? Click [here](http://go.microsoft.com/fwlink/p/?linkID=532948) to be taken to a list of development boards compatible with Windows.
 
 <div class="searchbox">
 <div>
@@ -165,7 +165,7 @@ SunFounder Passive Buzzer | RPI2 | [SunFounder Buzzer](http://www.sunfounder.com
 DC Motor (any) | RPI2 | Any DC motor | Requires Adafruit 16-Channel PWM (this is the thing the guy added to the list over the weekend or whatever) or the breakout version (also see port expanders, PWM breakout version) | 
 Stepper Motors | RPI2 | Any stepper motor; [Example from SparkFun](https://www.sparkfun.com/products/10846) | requires SparkFun Big Easy Driver | Samples coming soon!
 Adafruit TCS34725 Color Sensor | RPI2 | Adafruit desc "The best color sensor on the market, ...RGB and Clear light sensing elements. An IR blocking filter, integrated on-chip and localized to the color sensing photodiodes, minimizes the IR spectral component of the incoming light and allows color measurements to be made accurately. " | [Adafruit Product sheet](https://www.adafruit.com/products/1334) | [Adafruit color sensor library](https://github.com/adafruit/Adafruit_TCS34725)
-SparkFun Big Easy Driver | RPI2 | Drives stepper motors, is a driver board for bi-polar stepper motors up to a max 2A phase. It is based on the Allegro A4988 stepper driver chip. It's the next version of the popular Easy Driver board | [Sparkfun product sheet](https://www.sparkfun.com/products/12859) | [Sparkfun Driver Library](https://github.com/sparkfun/Big_Easy_Driver/tree/Hw-v1.6_Fw-v1.0) </br> Samples coming soon!
+SparkFun Big Easy Driver | RPI2 | Drives stepper motors, is a driver board for bi-polar stepper motors up to a max 2A phase. It is based on the Allegro A4988 stepper driver chip. It's the next version of the popular Easy Driver board | [Sparkfun product sheet](https://www.sparkfun.com/products/12859) | [Sparkfun Driver Library](https://github.com/sparkfun/Big_Easy_Driver/tree/Hw-v1.6_Fw-v1.0) <br> Samples coming soon!
 
 </div>
 
@@ -183,8 +183,8 @@ SparkFun Big Easy Driver | RPI2 | Drives stepper motors, is a driver board for b
 {:.table.table-bordered .devices}
 Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
-Samsung 32GB EVO Class 10 Micro SDHC | RPI2, MBM | An SD card that's known to support running Windows 10 IoT Core on both the Raspberry Pi 2 and MBM. |  | [Amazon.com Product Page](http://www.amazon.com/gp/product/B00IVPU786)
-SanDisk Ultra Micro SDHC 16GB | RPI2, MBM | An SD card that's known to support running Windows 10 IoT Core on both the Raspberry Pi 2 and MBM. |  | [Amazon.com Product Page](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445)
+Samsung 32GB EVO Class 10 Micro SDHC | RPI2, MBM | An SD card that's known to support running Windows 10 IoT Core on both the Raspberry Pi 2 and MBM. |  | [Amazon.com Product Page](http://www.amazon.com/gp/product/B00IVPU786) 
+SanDisk Ultra Micro SDHC 16GB | RPI2, MBM | An SD card that's known to support running Windows 10 IoT Core on both the Raspberry Pi 2 and MBM. |  | [Amazon.com Product Page](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445) 
 
 ### Pi Hats <a name="Pi-Hats"></a>
 
