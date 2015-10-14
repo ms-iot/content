@@ -66,11 +66,14 @@ lang: en-US
         <br />
         <a name="galileo"></a>
         <h2 class="faq-h2">Intel Galileo</h2>
-        <p class="bold"><em>Will you continue to support the Windows Developer Program for IoT for Galileo?</em></p>
-        <p>No. While we are thankful for the Maker community's interest in developing with Windows on Intel Galileo Gen 1 and Gen 2, as we continue to focus on Windows 10, we will discontinue our support for Windows on the Galileo platform due to incompatibilities with the underlying hardware. We are committed to making Windows 10 IoT Core powerful and friendly to Makers. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn how to migrate to platforms that support Windows 10 IoT Core.</p>
+        <p class="bold"><em>Will you continue to support the Windows Developer Program for IoT for Intel Galileo?</em></p>
+        <p>No. We continue to focus on providing a great experience for Makers with Windows 10 IoT Core. While we’ve seen some fantastic innovation with the platform, unfortunately it does not meet the minimum hardware requirements for Windows 10 IoT Core.</p>
         <br />
 		<p class="bold"><em>When will the support for Windows on Galileo end?</em></p>
         <p>The support for Windows on Galileo will end on November 30, 2015.</p>
+        <br />
+		<p class="bold"><em>What can I do with my existing projects on Galileo?</em></p>
+        <p>Wiring support is now available on Windows 10 IoT Core running on Raspberry Pi 2. This allows you to migrate your existing Galileo projects to Windows 10 IoT Core.</p>
         <br />
         <a name="errors"></a>
         <h2 class="faq-h2">Errors</h2>

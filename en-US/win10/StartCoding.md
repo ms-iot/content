@@ -148,14 +148,15 @@ lang: en-US
                         <h4>Hello, World!</h4>
                         <p>Create a 'Hello World' application that runs on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm">Hello World (C#)</a><br>
-						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Python.htm">Hello World (Python)</a><br>
-						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWU.htm">Hello World (Node.js)</a><br>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Python.htm">Hello World (Python)</a><br>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWU.htm">Hello World (Node.js)</a><br>
                     </div>
                     <div class="col-md-3">
                         <h4>Hello Blinky (Headless App)</h4>
                         <p>Create an app with no UI that toggles an LED on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyHeadless.htm">Blinky (C#)</a><br>
-						<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PythonBlinky.htm">Blinky (Python)</a><br>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PythonBlinky.htm">Blinky (Python)</a><br>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/HelloBlinky.htm">Blinky (Wiring)</a><br>
                     </div>
                     <div class="col-md-3">
                         <h4>UI Blinky App</h4>
@@ -299,8 +300,42 @@ lang: en-US
                         <p>Control a servo connected to an Arduino with a Cylon Node.js UWP app running on a Raspberry Pi 2 with Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/NodejsWUCylon.htm">Cylon (Node.js)</a>
                     </div>
-                    <div class="col-md-3"><!-- column placeholder --></div>
-                    <div class="col-md-3"><!-- column placeholder --></div>
+                    <div class="col-md-3">
+                      <h4>OneNote API</h4>
+                      <p>Learn how to use http messages to GET and POST OneNote pages in Wiring.</p>
+                      <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/OneNote.htm">OneNote API (Wiring)</a>
+                    </div>
+                    <div class="col-md-3">
+                      <h4>RGB Pixel</h4>
+                      <p>Learn how to use an RGB Pixel Strip in Wiring.</p>
+                      <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/RGBPixel.htm">RGB Pixel (Wiring)</a>
+                    </div>
+                </div>
+                
+                <div class="row section-heading">
+				  <div class="col-md-3">
+				    <h4>LCD Screen</h4>
+                    <p>Learn how to use an LCD Screen in Wiring.</p>
+                    <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/LCDScreen.htm">LCD Screen (Wiring)</a>
+				  </div>
+                  <div class="col-md-3">
+				    <h4>Stepper Motor</h4>
+                    <p>Learn how to use a Stepper Motor in Wiring.</p>
+                    <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/StepperMotor.htm">Stepper Motor (Wiring)</a>
+				  </div>
+                  <div class="col-md-3">
+				    <h4>Weather Station</h4>
+                    <p>Learn how to create a Weather Station in Wiring.</p>
+                    <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/WeatherStation.htm">Weather Station (Wiring)</a>
+				  </div>
+                  <div class="col-md-3">
+                    <h4>Lightning Providers samples (UWP)</h4>
+                    <p>Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps</p>
+                    <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyUILightning.htm">Blinky UI (C#/C++)</a><br>
+                    <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyHeadlessLightning.htm">Blinky Headless (C#/C++)</a><br>
+                    <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/WeatherStationLightning.htm">Weather Station (C#/C++)</a><br>
+                    <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplayLightning.htm">SPI Display (C#/C++)</a>
+                  </div>
                 </div>
 
                 <div class="row section-heading">
@@ -308,8 +343,7 @@ lang: en-US
                 </div>
 				<div style="background-color:Silver; color:black; padding:20px;">
 					<h4><u>Support for Windows on Intel Galileo Gen 1 and Gen 2 will end on November 30, 2015</u></h4>
-						<p><h5>Thank you for your interest in developing with Windows on Intel Galileo Gen 1 and Gen 2. As we continue to focus on Windows 10, we will discontinue our support for Windows on the Galileo platform due to incompatibilities with the underlying hardware.</h5></p>
-						<p><h5>We are committed to making Windows 10 IoT Core powerful and friendly to Makers. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn how to migrate to platforms that support Windows 10 IoT Core.</h5></p>
+					<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we’ve made the difficult decision to discontinue Windows support on the Galileo platform. We’ve seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>	
 				</div>
                 <div class="row section-heading">
                     <div class="col-md-3">

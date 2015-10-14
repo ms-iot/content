@@ -15,7 +15,7 @@ lang: zh-CN
 
 ##后台应用程序可从何处安装？ 
 
-可在[此处](https://visualstudiogallery.msdn.microsoft.com/06507e74-41cf-47b2-b7fe-8a2624202d36)从 Visual Studio 库中下载并安装 IoT 模板以启用后台应用程序。或者，可通过在 [Visual Studio 库](https://visualstudiogallery.msdn.microsoft.com/)中或直接从“扩展和更新”对话框（“工具”\>“扩展和更新”\>“联机”）中的 Visual Studio 搜索 `Windows IoT Core Project Templates` 来找到模板。
+可在[此处](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec)从 Visual Studio 库中下载并安装 IoT 模板以启用后台应用程序。或者，可通过在 [Visual Studio 库](https://visualstudiogallery.msdn.microsoft.com/)中或直接从“扩展和更新”对话框（“工具”\>“扩展和更新”\>“联机”）中的 Visual Studio 搜索 `Windows IoT Core Project Templates` 来找到模板。
 
 ##哪些语言可用？
 

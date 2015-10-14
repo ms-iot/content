@@ -143,6 +143,7 @@ Sabrent USB External Stereo Sound Adapter, Model AU-EMAC1 | RPI2, MBM | Converts
 Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
 Aeon Labs Z-Wave Z-Stick Series 2 USB Dongle DSA02203-ZWUS | RPI2 | Series 2 Z-Wave USB Z-Stick Controller | Easy network creation with push button pairing | [ZWave Sample]
+Chalkboard Electronics 7" LCD Capacitive Touchscreen Display | RPI2 | For product information see [the product website](http://www.chalk-elec.com/?page_id=1280#!/7-black-frame-universal-HDMI-LCD-with-capacitive-multi-touch/p/21750201/category=3094861) | To get this working with Windows 10 IoT Core, do the following: <br /> 1. Follow the [Firmware Update instructions]('http://www.chalk-elec.com/?p=1826') on chalk-elec.com <br /> 2. Flash firmware version 7-bf-mt-v2-2.hex onto the touchscreen <br /> 3. Hookup the HDMI and USB cables to the RPI2 <br /> 4. Power on the touchscreen first, then power on your RPI2 | [Product Webpage](http://www.chalk-elec.com/?page_id=1280#!/7-black-frame-universal-HDMI-LCD-with-capacitive-multi-touch/p/21750201/category=3094861) <br /> [Firmware Flashing Instructions](http://www.chalk-elec.com/?p=1826)
 
 </div>
 

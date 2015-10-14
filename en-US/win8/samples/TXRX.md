@@ -7,8 +7,7 @@ lang: en-US
 
 <div style="background-color:Silver; color:black; padding:20px;">
 	<h4><u>Support for Windows on Intel Galileo Gen 1 and Gen 2 will end on November 30, 2015</u></h4>
-		<p><h5>Thank you for your interest in developing with Windows on Intel Galileo Gen 1 and Gen 2. As we continue to focus on Windows 10, we will discontinue our support for Windows on the Galileo platform due to incompatibilities with the underlying hardware.</h5></p>
-		<p><h5>We are committed to making Windows 10 IoT Core powerful and friendly to Makers. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn how to migrate to platforms that support Windows 10 IoT Core.</h5></p>
+	<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we’ve made the difficult decision to discontinue Windows support on the Galileo platform. We’ve seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>
 </div>
 
 # Communicating through TX/RX pins

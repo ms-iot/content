@@ -8,7 +8,7 @@
 
   **注意：** 如果选择安装不同版本的 VS 2015，请确保执行“自定义”安装，并依次选中“通用 Windows 应用开发工具”-\>“工具和 Windows SDK”复选框。
 
-3. 可[在此处](https://visualstudiogallery.msdn.microsoft.com/06507e74-41cf-47b2-b7fe-8a2624202d36)**安装 Windows IoT 核心版项目模板**。或者，可通过在 [Visual Studio 库](https://visualstudiogallery.msdn.microsoft.com/)中或直接从“扩展和更新”对话框（“工具”\>“扩展和更新”\>“联机”）中的 Visual Studio 搜索 `Windows IoT Core Project Templates` 来找到模板。
+3. 可[在此处](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec)**安装 Windows IoT 核心版项目模板**。或者，可通过在 [Visual Studio 库](https://visualstudiogallery.msdn.microsoft.com/)中或直接从“扩展和更新”对话框（“工具”\>“扩展和更新”\>“联机”）中的 Visual Studio 搜索 `Windows IoT Core Project Templates` 来找到模板。
 
 4. 确保已按照[这些说明](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx){:target="_blank"}**启用了开发人员模式**。
 
