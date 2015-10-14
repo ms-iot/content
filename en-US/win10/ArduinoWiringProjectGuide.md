@@ -9,7 +9,7 @@ lang: en-US
 
 This guide will walk through project creation, setup, and deployment of an Arduino Wiring project using Windows IoT Core!
 
-Arduino Wiring projects utilize the familiar and easy to use Arduino Wiring API with Windows IoT Lightning functionality; a driver using direct memory mapping to provide insane performance speeds. You can copy & paste Arduino sketches and libraries into your IoT Core Arduino Wiring projects to run on any of your IoT Core devices!
+Arduino Wiring projects utilize the familiar and easy to use Arduino Wiring API with Windows IoT Lightning functionality; a driver using direct memory mapping to provide insane [performance speeds]({{site.baseurl}}\{{page.lang}}\win10\LightningPerformance.htm). You can copy & paste Arduino sketches and libraries into your IoT Core Arduino Wiring projects to run on any of your IoT Core devices!
 
 #Install the Microsoft IoT Templates!
 
@@ -25,6 +25,25 @@ You will need to be running the Direct Memory Mapped Driver to write Arduino Wir
 
 ##Develop
 Complete one of the many samples on the 'Develop' section of this section, or build your own project!
+
+##Remove references to "Serial"
+
+Many Arduino sketches use "Serial" to print data to the serial console (if opened) or to write to the serial lines (USB or tx/rx). We've provided a "Log" function which will print a WCHAR* type (this can be ascii strings or wide character strings). If you are copying a sketch built for an Arduino, you'll need to replace any of these Serial references in the Windows IoT version of the sketch.
+
+In the table below, replace the Arduino API Serial reference with the syntax in the Windows IoT column. If an API should be removed entirely, you'll see *remove* in the Windows IoT column.
+
+{:.table.table-bordered .devices}
+| Arduino API syntax      | Windows IoT syntax   |
+| -------------| ------------- | 
+| Serial.begin( int )  | *remove* | 
+| Serial.write( char* str )     | *remove* *see below     |
+| Serial.print( char* str ) | Log( str )     |
+| Serial.print( int num ) | Log( num.ToString()->Begin() )      |
+| Serial.print( int num, format fmt ) | Log( num.ToString()->Begin() )      |
+
+###Why remove Serial.write()?
+
+Serial.write() is typically used to send raw data over the serial lines. Windows IoT Core does not currently have UART functionality (don't worry, it's coming soon!) so these types of calls should be avoided.
 
 ##Build and deploy
 

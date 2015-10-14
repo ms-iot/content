@@ -8,7 +8,7 @@ lang: en-US
 #Hello Blinky
 Learn to Deploy and Debug an Arduino Wiring sketch to blink an LED!
 
-#Setup
+##Setup
 
 Follow the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm) to create a new wiring project!
 
