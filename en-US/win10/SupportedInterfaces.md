@@ -143,6 +143,7 @@ Sabrent USB External Stereo Sound Adapter, Model AU-EMAC1 | RPI2, MBM | Converts
 Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
 Aeon Labs Z-Wave Z-Stick Series 2 USB Dongle DSA02203-ZWUS | RPI2 | Series 2 Z-Wave USB Z-Stick Controller | Easy network creation with push button pairing | [ZWave Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/ZWaveTutorial.htm)
+Chalkboard Electronics 7" LCD Capacitive Touchscreen Display | RPI2 | For product information see [the product website](http://www.chalk-elec.com/?page_id=1280#!/7-black-frame-universal-HDMI-LCD-with-capacitive-multi-touch/p/21750201/category=3094861) | To get this working with Windows 10 IoT Core, do the following: <br /> 1. Follow the [Firmware Update instructions]('http://www.chalk-elec.com/?p=1826') on chalk-elec.com <br /> 2. Flash firmware version 7-bf-mt-v2-2.hex onto the touchscreen <br /> 3. Hookup the HDMI and USB cables to the RPI2 <br /> 4. Power on the touchscreen first, then power on your RPI2 | [Product Webpage](http://www.chalk-elec.com/?page_id=1280#!/7-black-frame-universal-HDMI-LCD-with-capacitive-multi-touch/p/21750201/category=3094861) <br /> [Firmware Flashing Instructions](http://www.chalk-elec.com/?p=1826)
 
 </div>
 
@@ -160,16 +161,16 @@ Aeon Labs Z-Wave Z-Stick Series 2 USB Dongle DSA02203-ZWUS | RPI2 | Series 2 Z-W
 {:.table.table-bordered .devices}
 Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
-Samsung 32GB EVO Class 10 Micro SDHC | RPI2, MBM | An SD card that's known to support running Windows 10 IoT Core on both the Raspberry Pi 2 and MBM. |  | [Amazon.com Product Page](http://www.amazon.com/gp/product/B00IVPU786) 
-SanDisk Ultra Micro SDHC 16GB | RPI2, MBM | An SD card that's known to support running Windows 10 IoT Core on both the Raspberry Pi 2 and MBM. |  | [Amazon.com Product Page](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445) 
+Samsung 32GB EVO Class 10 Micro SDHC | RPI2, MBM | An SD card that's known to support running Windows 10 IoT Core on both the Raspberry Pi 2 and MBM. |  | [Amazon.com Product Page](http://www.amazon.com/gp/product/B00IVPU786)
+SanDisk Ultra Micro SDHC 16GB | RPI2, MBM | An SD card that's known to support running Windows 10 IoT Core on both the Raspberry Pi 2 and MBM. |  | [Amazon.com Product Page](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445)
 
 ### Pi Hats <a name="Pi-Hats"></a>
 
 {:.table.table-bordered .devices}
 Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
-Adafruit 16-Channel PWM | RPI2 | Adds the capability to control up to 16 servos with no additional Raspberry Pi processing overhead. Capable of doing PWM up to 1.6KHz with 12 bit precision. | Fairly easy to use. It can also drive LEDs. | [Adafruit Product Page] (http://www.adafruit.com/products/2327#description-anchor)  [Adafruit Tutorial] (https://learn.adafruit.com/adafruit-16-channel-pwm-servo-hat-for-raspberry-pi/overview)  [C# IoT Sample] (https://github.com/golaat/Adafruit.Pwm)
-TBD||[Add a confirmed Pi Hat! Contibute to this list on GitHub.]({{site.repositoryurl}}{{ page.path }}) ||
+Adafruit 16-Channel PWM | RPI2 | Adds the capability to control up to 16 servos with no additional Raspberry Pi processing overhead. Capable of doing PWM up to 1.6KHz with 12 bit precision. | Fairly easy to use. It can also drive LEDs. | [Adafruit Product Page](http://www.adafruit.com/products/2327#description-anchor)<br/>[Adafruit Tutorial](https://learn.adafruit.com/adafruit-16-channel-pwm-servo-hat-for-raspberry-pi/overview)<br/>[C# IoT Sample](https://github.com/golaat/Adafruit.Pwm)
+[Add a confirmed Pi Hat! Contibute to this list on GitHub.]({{site.repositoryurl}}{{ page.path }})||||
 
 ### Sensors <a name="Sensors"></a>
 
