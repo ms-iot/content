@@ -19,7 +19,8 @@ Follow the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/A
 
 ## Hooking up Components
 
-*Fritzing diagram coming soon!*
+Connect the circuit based on the Fritzing diagram below.
+![Stepper Fritzing]({{site.baseurl}}/images/arduino_wiring/StepperMotor.PNG)
 
 1. Start by hooking up the Raspberry Pi 2 to the Big Easy Driver.
    1. Connect the ENABLE pin on the driver to pin 12 (GPIO 18) on the Pi.
