@@ -19,12 +19,10 @@
          "start-text":"Start Now"
       },
       {
-         "name":"Galileo",
-         "link":"win8/SetupPC.htm",
-         "buy":"http://www.intel.com/content/www/us/en/do-it-yourself/where-to-buy.html#galileo",
-         "image":"Galileo_0.png",
-         "text":"Intel Galileo is the first in a line of Arduino-certified development boards based on Intel x86 architecture and is designed for the maker and education communities. Galileo supports only the previous versions of Windows, not Windows 10 IoT Core.",
-         "buy-text":"Buy a Galileo",
+         "name":"Arduino Wiring and UWP Lightning providers",
+         "link":"win10/Lightning.htm",
+         "image":"Lighning_0.png",
+         "text":"To enable the use of existing Arduino Wiring sketches on IoT Core devices, a project template for Arduino Wiring can now be used in Visual Studio. These projects make use of a direct memory mapped driver that offers high performance. Additionally, based on the same driver, a set of controller providers can be used in UWP apps to access GPIO, I2C and SPI controllers that offers high performance.",
          "start-text":"Start Now"
       },
       {
@@ -43,13 +41,6 @@
          "image":"Arduino_1.png",
          "text":"Windows Virtual Shields for Arduino is an open-source library primarily for the Arduino UNO which communicates with an open-source Universal Windows application running on all Windows 10 devices, including Windows Lumia phones. The library exposes Lumia phones' sensors and capabilities to the an Arduino Wiring Sketch.",
          "buy-text":"Buy an Arduino",
-         "start-text":"Start Now"
-      },
-      {
-         "name":"Arduino Wiring and UWP Lightning providers",
-         "link":"win10/Lightning.htm",
-         "image":"Lighning_0.png",
-         "text":"To enable the use of existing Arduino Wiring sketches on IoT Core devices, a project template for Arduino Wiring can now be used in Visual Studio. These projects make use of a direct memory mapped driver that offers high performance. Additionally, based on the same driver, a set of controller providers can be used in UWP apps to access GPIO, I2C and SPI controllers that offers high performance.",
          "start-text":"Start Now"
       }
    ],
