@@ -59,24 +59,29 @@ This page makes use of JavaScript. If you have JavaScript disabled, search tools
 Looking for information about supported hardware platforms? Click [here](http://go.microsoft.com/fwlink/p/?linkID=532948) to be taken to a list of development boards compatible with Windows.
 
 <div class="searchbox">
-<div>
-<h3> Search Tools </h3>
-Filter lists by board type:
-	<select id="boardSelect" onchange="filterDeviceRows();">
-	  <option value=".">All</option>
-	  <option value="RPI2">RPI2</option>
-	  <option value="MBM">MBM</option>
-	</select>
-</div>
-<div>
-	Search <b> all </b> lists by Part Name/Model:
-	<input id="filterInput" oninput="filterDeviceRows();"/>
-	<button onClick="$('#filterInput')[0].value='';filterDeviceRows();">Clear</button>
-</div>
-<div>
-	<a onClick="showHideAll(false); return false;"> - Collapse all Sections	</a>
-	<a onClick="showHideAll(true); return false;"> + Expand all Sections </a>
-</div>
+	<div id='javascriptWarn' class='javascriptWarn'>
+		Enable Javascript for this page to function properly.
+	</div>
+	<div class="searchTools" style="display:none">
+		<div>
+			<h3> Search Tools </h3>
+			Filter lists by board type:
+			<select id="boardSelect" onchange="filterDeviceRows();">
+			  <option value=".">All</option>
+			  <option value="RPI2">RPI2</option>
+			  <option value="MBM">MBM</option>
+			</select>
+		</div>
+		<div>
+			Search <b> all </b> lists by Part Name/Model:
+			<input id="filterInput" oninput="filterDeviceRows();"/>
+			<button onClick="$('#filterInput')[0].value='';filterDeviceRows();">Clear</button>
+		</div>
+		<div>
+			<a onClick="showHideAll(false); return false;"> - Collapse all Sections	</a>
+			<a onClick="showHideAll(true); return false;"> + Expand all Sections </a>
+		</div>
+	</div>
 </div>
 
 <div class="SearchResultsSection" markdown="1" style="display:none">
@@ -358,6 +363,8 @@ UART | RPI2, MBM | Generic UART Bus | RPI2 Requires USB to UART converter, MBM h
 
 		window.onload = function() {
       showHideAll(false);
+      $(".javascriptWarn").hide();
+      $(".searchTools").show();
     }
 </script>
 
