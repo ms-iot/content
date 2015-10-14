@@ -11,7 +11,7 @@ To enable the use of existing Arduino Wiring sketches on IoT Core devices, a pro
 
 To start building Arduino Wiring projects for MinnowboardMax and Raspberry Pi2, refer to the [Arduino Wiring project guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm)<br/>
 
-##UWP Lightning provdier
+##UWP Lightning provider
 
 A set of UWP providers for GPIO, SPI and I2C busses can be used to leverage the performance improvements of the direct memory mapped driver on Windows IoT Core devices.
 
