@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Hello Blinky
+title: LCD Text Display
 permalink: /en-US/win10/samples/arduino-wiring/LCDScreen.htm
 lang: en-US
 ---
