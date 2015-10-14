@@ -74,8 +74,8 @@ Filter lists by board type:
 	<button onClick="$('#filterInput')[0].value='';filterDeviceRows();">Clear</button>
 </div>
 <div>
-	<a onClick="collapseAll(); return false;"> - Collapse all Sections	</a>
-	<a onClick="expandAll(); return false;"> + Expand all Sections </a>
+	<a onClick="showHideAll(false); return false;"> - Collapse all Sections	</a>
+	<a onClick="showHideAll(true); return false;"> + Expand all Sections </a>
 </div>
 </div>
 
@@ -91,8 +91,8 @@ result | result | result | result | result
 </div></div>
 
 
-## <a name="USBDevices" class="USBDevices" onClick="toggleSection('USBDevices');return false;">- USB Devices</a>
-<div class="USBDevices" markdown="1">
+## <a name="USBDevices" class="USBDevices sectionTitle" onClick="toggleSection('USBDevices');return false;">- USB Devices</a>
+<div class="USBDevices section" markdown="1">
 - [WiFi Dongles](#WiFi-Dongles)
 - [Bluetooth Dongles](#Bluetooth-Dongles)
 - [Cameras](#Cameras)
@@ -147,12 +147,33 @@ Chalkboard Electronics 7" LCD Capacitive Touchscreen Display | RPI2 | For produc
 
 </div>
 
-## <a name="OtherDevices" class="OtherDevices" onClick="toggleSection('OtherDevices');return false;">- Other Hardware Peripherals (e.g., Sensors, ICs)</a>
-<div class="OtherDevices" markdown="1">
+## <a name="ArduinoPeripherals" class="ArduinoPeripherals sectionTitle" onClick="toggleSection('ArduinoPeripherals');return false;">- Arduino Peripherals</a>
+<div class="ArduinoPeripherals section" markdown="1">
+
+### Arduino Peripherals <a name="Arduino"></a>
+These devices are supported on Windows 10 IoT Core through the Arduino Wiring API.  Use these third party Arduino shields and peripherals with Windows 10 IoT Core, read more about the [Wiring API].
+
+{:.table.table-bordered .devices}
+Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
+----------------|-------------------|-------------|-------|------------------------------
+Adafruit 3-axis Accelerometer | RPI2 | [Adafruit ADXL345](https://www.adafruit.com/products/1231)  - Triple-Axis Accelerometer. The sensor has three axes of measurements, X Y Z, and pins that can be used either as I2C or SPI digital interfacing. The chip can be set to four levels of sensitivity (+-2g/4g/8g/16g).  | There is also a [SparkFun version](https://www.sparkfun.com/products/9836) which is the exact same chip, but has not been tested yet. | [Adafruit ADXL345 Accelerometer Driver](https://github.com/adafruit/Adafruit_ADXL345) and [Adafruit Unified Sensor Driver](https://github.com/adafruit/Adafruit_Sensor)
+WeatherShield | RPI2 | [SparkFun Weather Shield](https://www.sparkfun.com/products/12081) - easy to use Arduino shield that grants you access to barometric pressure, relative humidity, luminosity and temperature. There are also connections on this shield to optional sensors such as wind speed, direction, rain gauge and GPS for location and super accurate timing. | [Weather Station Sample] | [Sparkfun MPL3115A2 Breakout](https://github.com/sparkfun/MPL3115A2_Breakout) and [Sparkfun HTU21D Breakout](https://github.com/sparkfun/HTU21D_Breakout)
+Adafruit LPD8806 32 LED Strip | RPI2 | [Adafruit Digital RGB LED Weatherproof Strip - LPD8806 32 LED](https://www.adafruit.com/products/306) | Ada:"You can set the color of each LED's red, green and blue component with 7-bit PWM precision (so 21-bit color per pixel). Only 2 digital output pins are required to send data down... PWM is built into each chip.." | [RGB Pixel Sample]
+LCM1602C LCD Screen | RPI2 | LCD Screen: 16characters *2lines display | | [LiquidCrystal Arduino module](https://www.arduino.cc/en/Reference/LiquidCrystal)
+SunFounder Joystick | RPI2 | [SunFounder Joystick](http://www.sunfounder.com/index.php?c=show&id=132&model=Joystick%20PS2%20Module) PS2 module two lines of analog output (X, Y) and one of digital output (Z). | Requires MCP3008 or similar ADC chip (MCP3002-I/P and MCP3208-CI/P) | [Adafruit Starter Pack] contains [MCP3008](https://www.adafruit.com/datasheets/MCP3008.pdf)
+SunFounder Passive Buzzer | RPI2 | [SunFounder Buzzer](http://www.sunfounder.com/index.php?c=show&id=128&model=Passive%20Buzzer%20Module) A passive buzzer that needs square signals of 2k-5k to drive, for it has no built-in oscillating source, and then makes sounds when energized ||
+DC Motor (any) | RPI2 | Any DC motor | Requires Adafruit 16-Channel PWM (this is the thing the guy added to the list over the weekend or whatever) or the breakout version (also see port expanders, PWM breakout version) | 
+Stepper Motors | RPI2 | Any stepper motor; [Example from SparkFun](https://www.sparkfun.com/products/10846) | requires SparkFun Big Easy Driver | Samples coming soon!
+Adafruit TCS34725 Color Sensor | RPI2 | Adafruit desc "The best color sensor on the market, ...RGB and Clear light sensing elements. An IR blocking filter, integrated on-chip and localized to the color sensing photodiodes, minimizes the IR spectral component of the incoming light and allows color measurements to be made accurately. " | [Adafruit Product sheet](https://www.adafruit.com/products/1334) | [Adafruit color sensor library](https://github.com/adafruit/Adafruit_TCS34725)
+SparkFun Big Easy Driver | RPI2 | Drives stepper motors, is a driver board for bi-polar stepper motors up to a max 2A phase. It is based on the Allegro A4988 stepper driver chip. It's the next version of the popular Easy Driver board | [Sparkfun product sheet](https://www.sparkfun.com/products/12859) | [Sparkfun Driver Library](https://github.com/sparkfun/Big_Easy_Driver/tree/Hw-v1.6_Fw-v1.0) </br> Samples coming soon!
+
+</div>
+
+## <a name="OtherDevices" class="OtherDevices sectionTitle" onClick="toggleSection('OtherDevices');return false;">- Other Hardware Peripherals (e.g., Sensors, ICs)</a>
+<div class="OtherDevices section" markdown="1">
 
 - [Storage](#Storage)
 - [Pi Hats](#Pi-Hats)
-- [Arduino Peripherals](#Arduino)
 - [Sensors](#Sensors)
 - [Port Expanders](#Port-Expanders)
 - [Miscellaneous](#OtherDevicesMisc)
@@ -172,20 +193,6 @@ Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, L
 ----------------|-------------------|-------------|-------|------------------------------
 Adafruit 16-Channel PWM | RPI2 | Adds the capability to control up to 16 servos with no additional Raspberry Pi processing overhead. Capable of doing PWM up to 1.6KHz with 12 bit precision. | Fairly easy to use. It can also drive LEDs. | [Adafruit Product Page](http://www.adafruit.com/products/2327#description-anchor) <br> [Adafruit Tutorial](https://learn.adafruit.com/adafruit-16-channel-pwm-servo-hat-for-raspberry-pi/overview) <br> [C# IoT Sample](https://github.com/golaat/Adafruit.Pwm)
 TBD|| Add a confirmed Pi Hat! [Contribute to this list on GitHub.] ||
-
-### Arduino Peripherals <a name="Arduino"></a>
-These devices are supported on Windows 10 IoT Core through the Arduino Wiring API.  Use these third party Arduino shields and peripherals with Windows 10 IoT Core, read more about the [Wiring API].
-
-{:.table.table-bordered .devices}
-Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
-----------------|-------------------|-------------|-------|------------------------------
-Adafruit 3-axis Accelerometer | RPI2 | [Adafruit ADXL345](https://www.adafruit.com/products/1231)  - Triple-Axis Accelerometer. The sensor has three axes of measurements, X Y Z, and pins that can be used either as I2C or SPI digital interfacing. The chip can be set to four levels of sensitivity (+-2g/4g/8g/16g).  | There is also a [SparkFun version](https://www.sparkfun.com/products/9836) which is the exact same chip, but has not been tested yet. | [Adafruit ADXL345 Accelerometer Driver](https://github.com/adafruit/Adafruit_ADXL345) and [Adafruit Unified Sensor Driver](https://github.com/adafruit/Adafruit_Sensor)
-WeatherShield | RPI2 | [SparkFun Weather Shield](https://www.sparkfun.com/products/12081) - easy to use Arduino shield that grants you access to barometric pressure, relative humidity, luminosity and temperature. There are also connections on this shield to optional sensors such as wind speed, direction, rain gauge and GPS for location and super accurate timing. | [Weather Station Sample] | [Sparkfun MPL3115A2 Breakout](https://github.com/sparkfun/MPL3115A2_Breakout) and [Sparkfun HTU21D Breakout](https://github.com/sparkfun/HTU21D_Breakout)
-Adafruit LPD8806 32 LED Strip | RPI2 | [Adafruit Digital RGB LED Weatherproof Strip - LPD8806 32 LED](https://www.adafruit.com/products/306) | Ada:"You can set the color of each LED's red, green and blue component with 7-bit PWM precision (so 21-bit color per pixel). Only 2 digital output pins are required to send data down... PWM is built into each chip.." | [RGB Pixel Sample]
-LCM1602C LCD Screen | RPI2 | LCD Screen: 16characters *2lines display | | [LiquidCrystal Arduino module](https://www.arduino.cc/en/Reference/LiquidCrystal)
-SunFounder Joystick | RPI2 | [SunFounder Joystick](http://www.sunfounder.com/index.php?c=show&id=132&model=Joystick%20PS2%20Module) PS2 module two lines of analog output (X, Y) and one of digital output (Z). | Requires MCP3008 or similar ADC chip (MCP3002-I/P and MCP3208-CI/P) | [Adafruit Starter Pack] contains [MCP3008](https://www.adafruit.com/datasheets/MCP3008.pdf)
-SunFounder Passive Buzzer | RPI2 | [SunFounder Buzzer](http://www.sunfounder.com/index.php?c=show&id=128&model=Passive%20Buzzer%20Module) A passive buzzer that needs square signals of 2k-5k to drive, for it has no built-in oscillating source, and then makes sounds when energized ||
-DC Motor (any) | RPI2 | Any DC motor | Requires Adafruit 16-Channel PWM (this is the thing the guy added to the list over the weekend or whatever) or the breakout version (also see port expanders, PWM breakout version) | 
 
 ### Sensors <a name="Sensors"></a>
 
@@ -221,8 +228,8 @@ PCA9685 | RPI2, MBM | 16-channel, 12-bit PWM Fm+ I2C-bus LED controller | PWM bu
 
 </div>
 
-## <a name="Libraries" class="Libraries" onClick="toggleSection('Libraries');return false;">- Third Party Software Libraries</a>
-<div class="Libraries" markdown="1">
+## <a name="Libraries" class="Libraries sectionTitle" onClick="toggleSection('Libraries');return false;">- Third Party Software Libraries</a>
+<div class="Libraries section" markdown="1">
 
 ### Libraries <a name="Libraries"></a>
 
@@ -242,8 +249,8 @@ PWM | RPI2, MBM | provides support for PWM capable devices such as PCA9685 (in D
 
 </div>
 
-## <a name="SupportedBusses" class="SupportedBusses" onClick="toggleSection('SupportedBusses');return false;">- Supported Busses</a>
-<div class="SupportedBusses" markdown="1">
+## <a name="SupportedBusses" class="SupportedBusses sectionTitle" onClick="toggleSection('SupportedBusses');return false;">- Supported Busses</a>
+<div class="SupportedBusses section" markdown="1">
 
 ### Supported Busses <a name="SupportedBusses"></a>
 
@@ -313,8 +320,8 @@ UART | RPI2, MBM | Generic UART Bus | RPI2 Requires USB to UART converter, MBM h
 		}
 
 		function toggleSection(section) {
-			$("div[class="+section+"]").toggle('slow');
-			var titleObj = $("a[class="+section+"]")[0];
+			$("."+section+".section").toggle('slow');
+			var titleObj = $("."+section+".sectionTitle")[0];
 			var title = titleObj.text;
 			if (title.charAt(0) == '+')
 			{
@@ -326,33 +333,31 @@ UART | RPI2, MBM | Generic UART Bus | RPI2 Requires USB to UART converter, MBM h
 			}
 		}
 
-		function changeSectionState(section, undesiredState) {
-			var titleObj = $("a[class="+section+"]")[0];
-			var title = titleObj.text;
-			if (title.charAt(0) == undesiredState)
+		function changeSectionState(section, shouldShow) {
+			var desiredState = "+";
+			if (shouldShow)
 			{
-				return true;
+				desiredState = "-";
 			}
-
-			toggleSection(section);
+			var titleObj = $("."+section+".sectionTitle")[0];
+			var title = titleObj.text;
+			if (title.charAt(0) != desiredState)
+			{
+				toggleSection(section);
+			}
 		}
 
-		function collapseAll() {
-			changeSectionState('OtherDevices', '+');
-			changeSectionState('USBDevices', '+');
-			changeSectionState('Libraries', '+');
-			changeSectionState('SupportedBusses', '+');
-		}
-
-		function expandAll() {
-			changeSectionState('OtherDevices', '-');
-			changeSectionState('USBDevices', '-');
-			changeSectionState('Libraries', '-');
-			changeSectionState('SupportedBusses', '-');
+		function showHideAll(shouldShow) {			
+			var sections = $(".sectionTitle");
+			for (var i = 0; i < sections.length; i++) 
+			{
+				var section = sections[i].className.split(/\s+/)[0]
+				changeSectionState(section, shouldShow);
+			}			
 		}
 
 		window.onload = function() {
-      collapseAll();
+      showHideAll(false);
     }
 </script>
 
