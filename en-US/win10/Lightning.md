@@ -9,7 +9,7 @@ lang: en-US
 
 To enable the use of existing Arduino Wiring sketches on IoT Core devices, a project template for Arduino Wiring can now be used in Visual Studio. These projects make use of a direct memory mapped driver that offers high performance.
 
-To start building Arduin Wiring projects for MinnowboardMax and Raspberry Pi2, refer to the [Arduino Wiring project guide]({{site.baseurl}}/{{page.lang}}/win10/WiringProjectGuide.htm)<br/>
+To start building Arduin Wiring projects for MinnowboardMax and Raspberry Pi2, refer to the [Arduino Wiring project guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm)<br/>
 
 ##UWP Lightning provdier
 
