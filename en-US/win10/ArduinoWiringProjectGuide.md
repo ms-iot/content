@@ -32,6 +32,7 @@ Many Arduino sketches use "Serial" to print data to the serial console (if opene
 
 In the table below, replace the Arduino API Serial reference with the syntax in the Windows IoT column. If an API should be removed entirely, you'll see *remove* in the Windows IoT column.
 
+{:.table.table-bordered .devices}
 | Arduino API syntax      | Windows IoT syntax   |
 | -------------| ------------- | 
 | Serial.begin( int )  | *remove* | 
