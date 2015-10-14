@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Lightning Weather Station
-permalink: /en-US/win10/samples/LightningWeatherStation.htm
+title: Arduino Wiring Weather Station
+permalink: /en-US/win10/samples/arduino-wiring/WeatherStation.htm
 lang: en-US
 ---
 
@@ -99,7 +99,7 @@ There are two ways to go about seting up the software.
 <p>If you'd prefer to set up your solution manually, follow these steps:</p>
 
 <ol>
-    <li>Create a new project by following the <a href="{{site.baseurl}}/en-US/win10/LightningProjectGuide.htm" target="_blank">wiring project setup guide</a>.</li>
+    <li>Create a new project by following the <a href="{{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm" target="_blank">wiring project setup guide</a>.</li>
     <li>Clone the following libraries from GitHub into the WeatherShield folder(at the same level as your .vcxproj file): <a target="_blank" href="https://github.com/sparkfun/MPL3115A2_Breakout/">MPL3115A2 Breakout</a> and <a target="_blank" href="https://github.com/sparkfun/HTU21D_Breakout">HTU21D Breakout</a>.</li>
     <li>Replace the existing code in your main .ino file ({yourProject}.ino, where {yourProject} is whatever you named the project when you created it) with the following code:
       {% highlight C++ %}
@@ -253,7 +253,7 @@ There are two ways to go about seting up the software.
 <h2 class="thin-header bottom-border">Build and Deploy Your App</h2>
 
 <p>Press F5 to build and deploy your project.
-Refer to the <a href="{{site.baseurl}}/en-US/win10/LightningProjectGuide.htm">Lightning Project Guide</a> for more instructions on how to deploy your app!
+Refer to the <a href="{{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm">Arduino Wiring Project Guide</a> for more instructions on how to deploy your app!
 </p>
 <p>
 Once your project is deployed, you will see data appear in the output console while the program is running.
