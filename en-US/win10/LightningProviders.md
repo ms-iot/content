@@ -136,6 +136,12 @@ In order to install prerelease (current) version of Microsoft.IoT.Lightning Nuge
 
 ##Runtime Requirements
 
+###Windows IoT Core Insider Preview required
+Lightning providers support is currently included only in the Insider Preview builds for Windows IoT Core.
+You can download a Windows 10 IoT Core image from our [downloads page]({{site.baseurl}}/{{page.lang}}/Downloads.htm ). Click on "Download Insider Preview" for your device type.
+
+### Direct Memory Mapped driver enabled
+ 
 The APIs in the Lightning Provider library require the Lightning Direct Memory Mapped driver to be enabled on the target device. Both Raspberry Pi2 and MinnowBoard Max have the driver available, but not enabled by default.
 
 The driver can be enabled using the Windows Devices Web Portal. Refer to the [Lightning Setup Guide]({{site.baseurl}}/{{page.lang}}/win10/LightningSetup.htm) for detailed information on how to enable the Lightning driver.

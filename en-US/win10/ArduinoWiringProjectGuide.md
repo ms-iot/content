@@ -13,7 +13,7 @@ Arduino Wiring projects utilize the familiar, easy to use Arduino Wiring API wit
 
 ##Install the Microsoft IoT Templates!
 
-We've provided a Visual Studio extension which will automatically install a VS template for Arduino Wiring projects and other Microsoft IoT project types. Head [here](https://visualstudiogallery.msdn.microsoft.com/06507e74-41cf-47b2-b7fe-8a2624202d36) to download the extension from the Microsoft Gallery!
+We've provided a Visual Studio extension which will automatically install a VS template for the Arduino Wiring projects as well as other Microsoft IoT project types. Head over to [Windows IoT Core Project Templates extension page](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec) to download the extension from the Visual Studio Gallery!
 
 ##Create a new Project
 Open Visual Studio. Select File -> New Project -> Visual C++ -> Windows -> Windows IoT Core -> Arduino Wiring Application for Windows IoT Core
@@ -22,6 +22,10 @@ Open Visual Studio. Select File -> New Project -> Visual C++ -> Windows -> Windo
 ##Change the Default Controller Driver
 
 You will need to be running the Direct Memory Mapped Driver to write Arduino Wiring solutions! Refer to the [Lightning Setup Guide]({{site.baseurl}}\{{page.lang}}\win10\LightningSetup.htm) for instructions!
+
+##Windows IoT Core Insider Preview required
+Arduino Wiring app support is currently included only in the Insider Preview builds for Windows IoT Core.
+You can download a Windows 10 IoT Core image from our [downloads page]({{site.baseurl}}/{{page.lang}}/Downloads.htm ). Click on "Download Insider Preview" for your device type.
 
 ##Develop
 Complete one of the many samples on the 'Develop' section of this section, or build your own project!
@@ -48,7 +52,7 @@ Serial.write() is typically used to send raw data over the serial lines. Windows
 
 ##Build and Deploy
 
-- **Optional** Use the Windows IoT Core Watcher application (or hook up your RPi to a monitor) to locate the IP address of your Raspberry Pi.
+- **Optional** Use the Windows IoT Core Watcher application (or hook up your device to a monitor) to locate the IP address of your device.
 - In Visual Studio, make sure "Remote Machine" is selected as your deployment target.
 
 ![Remote Machine]({{site.baseurl}}/images/arduino_wiring/wiringapp_remotemachine.png)
@@ -57,7 +61,7 @@ Serial.write() is typically used to send raw data over the serial lines. Windows
 
 ![Solution Properties]({{site.baseurl}}/images/arduino_wiring/wiringapp_properties.png)
 
-- Type the machine name (minwinpc by default) or the IP address of the remote machine into the 'machine name' field. If you have renamed your Raspberry Pi to something besides 'minwinpc' use that name in the login box instead.
+- Type the machine name (minwinpc by default) or the IP address of the remote machine into the 'machine name' field. If you have renamed your device to something besides 'minwinpc' use that name in the login box instead.
 - Change the 'Require authentication' field to 'No'
 
 ![Solution Properties]({{site.baseurl}}/images/arduino_wiring/wiringapp_properties2.png)
