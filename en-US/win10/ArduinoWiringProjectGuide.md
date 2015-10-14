@@ -26,6 +26,24 @@ You will need to be running the Direct Memory Mapped Driver to write Arduino Wir
 ##Develop
 Complete one of the many samples on the 'Develop' section of this section, or build your own project!
 
+##Remove references to "Serial"
+
+Many Arduino sketches use "Serial" to print data to the serial console (if opened) or to write to the serial lines (USB or tx/rx). We've provided a "Log" function which will print a WCHAR* type (this can be ascii strings or wide character strings). If you are copying a sketch built for an Arduino, you'll need to replace any of these Serial references in the Windows IoT version of the sketch.
+
+In the table below, replace the Arduino API Serial reference with the syntax in the Windows IoT column. If an API should be removed entirely, you'll see *remove* in the Windows IoT column.
+
+| Arduino API syntax      | Windows IoT syntax   |
+| -------------| ------------- | 
+| Serial.begin( int )  | *remove* | 
+| Serial.write( char* str )     | *remove* *     |
+| Serial.print( char* str ) | Log( str )     |
+| Serial.print( int num ) | Log( num.ToString()->Begin() )      |
+| Serial.print( int num, format fmt ) | Log( num.ToString()->Begin() )      |
+
+*why remove Serial.write()?
+Serial.write() is usually used when you want to write data directly to the Serial lines. There is currently no support for UART in Arduino Wiring for Windows IoT, and this call should not be used. Don't worry though, it's coming soon!
+
+
 ##Build and deploy
 
 - **Optional** Use the Windows IoT Core Watcher application (or hook up your RPi to a monitor) to locate the IP address of your Raspberry Pi.
