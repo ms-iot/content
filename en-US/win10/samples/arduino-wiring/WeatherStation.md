@@ -5,7 +5,6 @@ permalink: /en-US/win10/samples/arduino-wiring/WeatherStation.htm
 lang: en-US
 ---
 
-{:.thin-header}
 #Weather Station + Lightning
 
 The following lesson will help you set up your own Weather Station using the power of Lightning.  Gathering weather data from your surroundings is as easy as connecting a Sparkfun Weather Shield to your Raspberry Pi 2 and deploying a UWP app.  Read on to get started!

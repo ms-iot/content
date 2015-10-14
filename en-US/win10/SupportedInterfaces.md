@@ -161,8 +161,8 @@ Chalkboard Electronics 7" LCD Capacitive Touchscreen Display | RPI2 | For produc
 {:.table.table-bordered .devices}
 Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
 ----------------|-------------------|-------------|-------|------------------------------
-Samsung 32GB EVO Class 10 Micro SDHC | RPI2, MBM | An SD card that's known to support running Windows 10 IoT Core on both the Raspberry Pi 2 and MBM. |  | [Amazon.com Product Page](http://www.amazon.com/gp/product/B00IVPU786) 
-SanDisk Ultra Micro SDHC 16GB | RPI2, MBM | An SD card that's known to support running Windows 10 IoT Core on both the Raspberry Pi 2 and MBM. |  | [Amazon.com Product Page](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445) 
+Samsung 32GB EVO Class 10 Micro SDHC | RPI2, MBM | An SD card that's known to support running Windows 10 IoT Core on both the Raspberry Pi 2 and MBM. |  | [Amazon.com Product Page](http://www.amazon.com/gp/product/B00IVPU786)
+SanDisk Ultra Micro SDHC 16GB | RPI2, MBM | An SD card that's known to support running Windows 10 IoT Core on both the Raspberry Pi 2 and MBM. |  | [Amazon.com Product Page](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445)
 
 ### Pi Hats <a name="Pi-Hats"></a>
 
