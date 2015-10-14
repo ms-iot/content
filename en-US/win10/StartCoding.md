@@ -156,7 +156,7 @@ lang: en-US
                         <p>Create an app with no UI that toggles an LED on devices running Windows 10 IoT Core</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyHeadless.htm">Blinky (C#)</a><br>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PythonBlinky.htm">Blinky (Python)</a><br>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/HelloBlinkyWiring.htm">Blinky (Wiring)</a><br>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/HelloBlinky.htm">Blinky (Wiring)</a><br>
                     </div>
                     <div class="col-md-3">
                         <h4>UI Blinky App</h4>
@@ -303,17 +303,31 @@ lang: en-US
                     <div class="col-md-3">
                       <h4>OneNote API</h4>
                       <p>Learn how to use http messages to GET and POST OneNote pages in Wiring.</p>
-                      <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/OneNoteWiring.htm">OneNote API (Wiring)</a>
+                      <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/OneNote.htm">OneNote API (Wiring)</a>
                     </div>
                     <div class="col-md-3">
                       <h4>RGB Pixel</h4>
                       <p>Learn how to use an RGB Pixel Strip in Wiring.</p>
-                      <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/RGBPixelWiring.htm">RGB Pixel (Wiring)</a>
+                      <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/RGBPixel.htm">RGB Pixel (Wiring)</a>
                     </div>
-                    
                 </div>
                 
                 <div class="row section-heading">
+				  <div class="col-md-3">
+				    <h4>LCD Screen</h4>
+                    <p>Learn how to use an LCD Screen in Wiring.</p>
+                    <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/LCDScreen.htm">LCD Screen (Wiring)</a>
+				  </div>
+                  <div class="col-md-3">
+				    <h4>Stepper Motor</h4>
+                    <p>Learn how to use a Stepper Motor in Wiring.</p>
+                    <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/StepperMotor.htm">Stepper Motor (Wiring)</a>
+				  </div>
+                  <div class="col-md-3">
+				    <h4>Weather Station</h4>
+                    <p>Learn how to create a Weather Station in Wiring.</p>
+                    <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/WeatherStation.htm">Weather Station (Wiring)</a>
+				  </div>
                   <div class="col-md-3">
                     <h4>Lightning Providers samples (UWP)</h4>
                     <p>Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps</p>
@@ -322,9 +336,6 @@ lang: en-US
                     <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/WeatherStationLightning.htm">Weather Station (C#/C++)</a><br>
                     <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplayLightning.htm">SPI Display (C#/C++)</a>
                   </div>
-                  <div class="col-md-3"><!-- column placeholder --></div>
-                  <div class="col-md-3"><!-- column placeholder --></div>
-                  <div class="col-md-3"><!-- column placeholder --></div>
                 </div>
 
                 <div class="row section-heading">
