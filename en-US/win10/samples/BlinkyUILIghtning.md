@@ -86,7 +86,6 @@ private async void InitGPIO()
 
 1. Build the app.
 
-1. Deploy and run the app on your device.<br/>
-   You can use the [Deploying an App with Visual Studio]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm) for guidance.
+1. Deploy and run the app on your device.  You can use the [Deploying an App with Visual Studio]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm) for guidance.
 
 ![Blinky Output]({{site.baseurl}}/images/Lightning/BlinkyUI.png)
