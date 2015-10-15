@@ -9,7 +9,7 @@ lang: en-US
 
 This guide will walk through the creation, setup, and deployment of an Arduino Wiring project using Windows IoT Core!
 
-Arduino Wiring projects utilize the familiar, easy to use Arduino Wiring API with Windows IoT Lightning functionality: a driver using direct memory mapping to provide insane [performance speeds]({{site.baseurl}}\{{page.lang}}\win10\LightningPerformance.htm). You can copy & paste Arduino sketches and libraries into your IoT Core Arduino Wiring projects and run them on any of your IoT Core devices!
+Arduino Wiring projects utilize the familiar, easy to use Arduino Wiring API with Windows IoT Lightning functionality: a driver using direct memory mapping to provide significant [performance speeds]({{site.baseurl}}\{{page.lang}}\win10\LightningPerformance.htm). You can copy & paste Arduino sketches and libraries into your IoT Core Arduino Wiring projects and run them on any of your IoT Core devices!
 
 ##Install the Microsoft IoT Templates!
 
