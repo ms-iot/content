@@ -7,7 +7,7 @@ lang: en-US
 
 ##MemoryStatus Console Application Sample
 
-We'll create a simple console application that can be used to query the memory usage on your Windows IoT Core device (Raspberry Pi 2 or MinnowBoard Max). Please note that you need to compile the project for ARM for Raspberry Pi 2 and x86 for MinnowBoard Max.
+We'll create a simple console application that can be used to query the memory usage on your Windows IoT Core device (Raspberry Pi 2, MinnowBoard Max, or a DragonBoard). Please note that you need to compile the project for ARM for Raspberry Pi 2 or DragonBoard and x86 for MinnowBoard Max.
 
 ###Load the project in Visual Studio
 
