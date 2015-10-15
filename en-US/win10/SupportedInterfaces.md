@@ -54,8 +54,6 @@ Windows 10 IoT Core supports a variety of peripheral interfaces and protocols, i
 
 Browse, search, and filter, peripherals that are known to be supported on the **Raspberry Pi 2** and **MinnowBoard Max**. [Contribute to this list on GitHub.]
 
-This page makes use of JavaScript. If you have JavaScript disabled, search tools will be disabled.
-
 Looking for information about supported hardware platforms? Click [here](https://msdn.microsoft.com/library/windows/hardware/dn914597(v=vs.85).aspx) to be taken to a list of development boards compatible with Windows.
 
 <div class="searchbox">
@@ -156,7 +154,7 @@ Chalkboard Electronics 7" LCD Capacitive Touchscreen Display | RPI2 | For produc
 <div class="ArduinoPeripherals section" markdown="1">
 
 ### Arduino Peripherals <a name="Arduino"></a>
-These devices are supported on Windows 10 IoT Core through the Arduino Wiring API.  Use these third party Arduino shields and peripherals with Windows 10 IoT Core. Read more about the [Wiring API] which lets you use Arduino code on Windows 10 IoT Core.
+These devices are supported on Windows 10 IoT Core through the Arduino Wiring API.  Use these third party Arduino shields and peripherals with Windows 10 IoT Core. Read more about the [Wiring API] which enables you to use Arduino code on Windows 10 IoT Core devices.
 
 {:.table.table-bordered .devices}
 Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
