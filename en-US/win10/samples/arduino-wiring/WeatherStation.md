@@ -7,13 +7,15 @@ lang: en-US
 
 #Weather Station + Lightning
 
-The following lesson will help you set up your own Weather Station using the power of Lightning.  Gathering weather data from your surroundings is as easy as connecting a Sparkfun Weather Shield to your Raspberry Pi 2 and deploying a UWP app.  Read on to get started!
+The following lesson will help you set up your own Weather Station using the power of Lightning.  Gathering weather data from your surroundings is as easy as connecting a [Sparkfun Weather Shield](https://www.sparkfun.com/products/12081) to your Raspberry Pi 2 and deploying a UWP app. This shield mainly utilizes two sensors, the [HTU21D Humidity and Temperature Sensor](https://www.sparkfun.com/products/12064) and the [MPL3115A2 Altitude/Pressure Sensor](https://www.sparkfun.com/products/11084), but is also expandable to read wind and rain levels. You can replicate this entire project with the shield itself or with the individual sensors.
 
-<h2 class="thin-header bottom-border">Hardware Set Up</h2>
+Read on to get started!
+
+##Hardware Set Up
 
 <div class="row">
   <p>
-    The first step is to hook your Raspberry Pi 2 up to the Sparkfun Weather Shield.  Use the wiring diagram and photos in the carousel below for reference. <i> Note: This feature requires JavaScript.  If you are experiencing problems with the carousel, make sure that JavaScript is enabled on your browser. </i>
+    The first step is to hook your Raspberry Pi 2 up to the Sparkfun Weather Shield.  Use the wiring diagram and photos in the carousel below for reference. <i> Note: This feature requires JavaScript.  If you are experiencing problems with the carousel, make sure that JavaScript is enabled on your browser. </i> You can also refer to the fritzing diagram below the reference images.
   </p>
   <div class="col-md-6 col-sm-12">
     <div class="floatTop">
@@ -85,20 +87,24 @@ The following lesson will help you set up your own Weather Station using the pow
   </div>
 </div>
 
-<h2 class="thin-header bottom-border">Software Set Up</h2>
+###Fritzing Diagram
+
+![RPI Pinouts]({{site.baseurl}}/images/arduino_wiring/pi2_weathershield.png)
+
+##Software Set Up
 
 There are two ways to go about seting up the software.
 
 <strong>Option 1: Clone the Entire Solution</strong>
 
-<p>The easiest way to get your Weather Station up and running is to clone the entire solution from the "Lightning" folder of <a href="https://github.com/turkycat/Weather_Shield/tree/master/lightning/WeatherShield"> this GitHub Repo </a> onto your local machine.</p>
+<p>The easiest way to get your Weather Station up and running is to clone the entire solution from the "Lightning" folder of <a href="https://github.com/turkycat/Weather_Shield"> this GitHub Repo </a> onto your local machine.</p>
 
 <strong>Option 2: Set Up Your Solution Manually</strong>
 
 <p>If you'd prefer to set up your solution manually, follow these steps:</p>
 
 <ol>
-    <li>Create a new project by following the <a href="{{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm" target="_blank">wiring project setup guide</a>.</li>
+    <li>Create a new project by following the <a href="{{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm" target="_blank">Arduino Wiring Project Setup Guide</a>.</li>
     <li>Clone the following libraries from GitHub into the WeatherShield folder(at the same level as your .vcxproj file): <a target="_blank" href="https://github.com/sparkfun/MPL3115A2_Breakout/">MPL3115A2 Breakout</a> and <a target="_blank" href="https://github.com/sparkfun/HTU21D_Breakout">HTU21D Breakout</a>.</li>
     <li>Replace the existing code in your main .ino file ({yourProject}.ino, where {yourProject} is whatever you named the project when you created it) with the following code:
       {% highlight C++ %}
@@ -249,7 +255,10 @@ There are two ways to go about seting up the software.
     </li>
 </ol>
 
-<h2 class="thin-header bottom-border">Build and Deploy Your App</h2>
+####Note:
+Pay special attention to this line near the top of the sketch file: `bool barometerMode = true;`. The MPL3115A2 sensor has two modes, and can operate differently under each mode. You can change this variable to `false` to disable barometer mode and enable altimeter mode instead! The result of the sketch will automatically change under the new mode!
+
+##Build and Deploy Your App
 
 <p>Press F5 to build and deploy your project.
 Refer to the <a href="{{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm">Arduino Wiring Project Guide</a> for more instructions on how to deploy your app!
@@ -258,6 +267,9 @@ Refer to the <a href="{{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectG
 Once your project is deployed, you will see data appear in the output console while the program is running.
 </p>
 
+##Result
+
+Watch your Output window in Visual Studio. The sketch will start reporting the data it gathers from the Weather Shield!
 
 
 
