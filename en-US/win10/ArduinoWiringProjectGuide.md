@@ -28,7 +28,7 @@ Arduino Wiring app support is currently included only in the Insider Preview bui
 You can download a Windows 10 IoT Core image from our [downloads page]({{site.baseurl}}/{{page.lang}}/Downloads.htm ). Click on "Download Insider Preview" for your device type.
 
 ##Develop
-Complete one of the many samples on the 'Develop' section of this section, or build your own project!
+Complete one of the many "Wiring" samples on the [Samples Page]({{site.baseurl}}\{{page.lang}}\win10\StartCoding.htm), or build your own project! Any of the samples we've created that are written using Arduino Wiring will be listed like so: [Blinky (Wiring)]({{site.baseurl}}\{{page.lang}}\win10\samples\arduino-wiring\HelloBlinky.htm). Blinky, the cononical "Hello World" project for IoT projects, is a great place to start for your first project!
 
 ##Remove references to "Serial"
 

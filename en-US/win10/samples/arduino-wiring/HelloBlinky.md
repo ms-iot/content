@@ -14,7 +14,7 @@ Follow the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/A
 
 ##Code
 
-This code is included in the default template, and is included here (with additional comments) for reference.
+This code is included in the default template of an Arduino Wiring project, and is included here (with additional comments) for reference.
 
 {% highlight C++ %}
 
@@ -39,7 +39,16 @@ void loop()
 
 
 ##Wire your RPi2 with an LED
-LEDs are diodes which will emit light when powered. They are polarized - meaning they work only when plugged in correctly.
+
+LEDs are diodes which will emit light when powered. They are polarized - meaning they work only when plugged in correctly. Typically, the longer leg is positive, while the shorter leg is negative. Additionally, you should never connect an LED directly to power and ground without a resistor in the circuit. Without a resistor to slow the flow of current, you'll burn out the LED (at best) and could do damage to your other hardware! For an LED, it is fairly typical to use a 220 or 330 ohm resistor, but anything in the range of 220 - 1000 (1Kohm) ohms is acceptable.
+
+Notice that we're using `GPIO_5` in the sketch above. This is a special value that maps to a specific pin on a Raspberry Pi 2. If we connect the positive leg of the LED to the same pin, this sketch will provide power to the circuit when we toggle that pin HIGH, turning the LED on. The fritzing diagram below shows this connection. If you wish to use another GPIO pin, you'll need to change both the `GPIO_x` value (where `x` is the GPIO pin number) in the sketch, as well as the physical wiring of the LED.
+
+Here is a pinout diagram of the Raspberry Pi 2:
+![RPI Pinouts]({{site.baseurl}}/images/arduino_wiring/pi2_pinouts.png)
+
+###Fritzing Diagram
+
 ![LED Wiring]({{site.baseurl}}/images/arduino_wiring/led_fritz.png)
 
 ##Build and deploy
