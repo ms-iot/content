@@ -15,5 +15,5 @@ Don't have a board yet, and don't know where to begin?  The [Adafruit Starter Pa
 
 {% include devices.html %}
 
-<h4 class="thin-header"> Have questions about what devices work with each of these boards?  Take a look on our <a target="_blank" href="site.hardwareurl">Supported Peripherals page</a></h4>
+<h4 class="thin-header"> Have questions about what devices work with each of these boards?  Take a look on our <a target="_blank" href="{{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm">Supported Peripherals page</a></h4>
 
