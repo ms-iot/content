@@ -30,7 +30,7 @@ lang: en-US
 			<a href="http://go.microsoft.com/fwlink/?LinkId=619756" class="button-blue button-flat"> Download RTM Release for MinnowBoard Max </a>
 		</div>
 		<p class="subtext">
-			<a href="http://go.microsoft.com/fwlink/?LinkId=534601"> Release notes. </a>
+			<a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesRTM.htm"> Release notes. </a>
 		</p>
 	</div>
 	<div class="col-md-6">
