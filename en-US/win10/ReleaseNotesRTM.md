@@ -1,11 +1,13 @@
 ---
 layout: default
 title: Release Notes
-permalink: /en-US/win10/ReleaseNotes.htm
+permalink: /en-US/win10/ReleaseNotesRTM.htm
 lang: en-US
 ---
 
 #Release Notes for Windows 10 IoT Core
+RTM Build Number 10240.0
+
 &copy; 2015 Microsoft Corporation. All rights reserved
 
 This document provides late-breaking or other information that supplements the documentation included with the Windows 10 IoT Core.
