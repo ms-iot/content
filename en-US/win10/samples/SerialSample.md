@@ -61,6 +61,22 @@ Make the following connections:
 
 <img src="{{site.baseurl}}/images/SerialSample/RPi2_UART.png">
 
+####On-Board UART (DragonBoard 410c)
+
+The DragonBoard has two on-board UARTs.
+
+* UART0 uses GPIO pins 3, 5, 7, and 9.
+* UART1 uses GPIO pins 11 and 13.
+
+In this sample, UART1 will be used.  Make the following connections:
+
+* Insert the USB end of the USB-to-TTL cable into a USB port on the PC
+* Connect the GND wire of the USB-to-TTL cable to pin 1 (GND)
+* Connect the RX wire of the USB-to-TTL cable to pin 11 (UART1 TX)
+* Connect the TX wire of the USB-to-TTL cable to pin 13 (UART1 RX)
+
+_NOTE: Leave the power wire of the USB-to-TTL cable unconnected._
+
 ###<a name="USB_TTL_Adapter"></a>Using USB-to-TTL Adapter
 
 **Note: Only USB-to-TTL cables and modules with Silicon Labs chipsets are natively supported on MinnowBoard Max and Raspberry Pi2.**
