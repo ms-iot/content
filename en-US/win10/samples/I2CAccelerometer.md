@@ -7,7 +7,7 @@ lang: en-US
 
 ##I2C Accelerometer Sample
 
-We'll connect an I2C accelerometer to your Raspberry Pi 2/MinnowBoard Max and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of I2C is needed.
+We'll connect an I2C accelerometer to your Raspberry Pi 2/MinnowBoard Max/DragonBoard and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of I2C is needed.
 However, if you're curious, SparkFun provides a great [tutorial on I2C](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}.
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
@@ -84,6 +84,31 @@ Here are the connections shown on a breadboard:
 Here are the schematics:
 
 ![Accelerometer schematics]({{site.baseurl}}/images/I2CAccelerometer/schematics_mbm.png)
+
+#### DragonBoard 410c
+
+For the DragonBoard 410c, connections need to be made from the single board computer to the power, ground, and I2C lines of the accelerometer.  Those familiar with I2C know that normally pull-up resistors need to be installed.  However, the DragonBoard already has 2k&#x2126; resistors for its I2C capabilities.
+
+**Note: Make sure to power off the DragonBoard when connecting your circuit.  This is good practice to reduce the change of an accidental short circuit during construction.**
+
+The ADXL345 breakout board has 8 IO pins which are connected to the DragonBoard as follows:
+
+1.  **GND:**  Connect the ground to pin 1
+2.  **VCC:**  Connect the power to pin 35
+3.  **CS:**   The chip select pin is _unused_
+4.  **INT1:** The interrupt output 1 is _unused_
+5.  **INT2:** The interrupt output 2 is _unused_
+6.  **SDO:**  The serial data output (alternate I2C address select) is _unused_
+7.  **SDA:**  Connect the serial data input to pin 17
+8.  **SCL:**  Connect the serial communications clock to pin 15
+
+Here is a diagram showing what your breadboard might look like with the circuit assembled:
+
+![DragonBoard I2C Accelerometer Breadboard](../../../images/I2CAccelerometer/breadboard_assembled_db410c.png)
+
+A schematic for the circuit is:
+
+![DragonBoard I2C Accelerometer Schematic](../../../images/I2CAccelerometer/schematics_db410c.png)
 
 ###Deploy and run the app
 
