@@ -9,8 +9,7 @@ lang: en-US
 
 [View the code on GitHub](https://github.com/ms-iot/samples/tree/develop/PushButton/CS){:target="_blank"}
 
-In this sample, we connect a push button to your Raspberry Pi 2/MinnowBoard Max and use it
-to control an LED. We use GPIO interrupts to detect when the button is pressed and toggle the LED in response.
+In this sample, we connect a push button to your Raspberry Pi 2, MinnowBoard Max, or the DragonBoard 410c and use it to control an LED. We use GPIO interrupts to detect when the button is pressed and toggle the LED in response.
 
 ![Push Button Image]({{site.baseurl}}/images/PushButton/PushButtonSample.png)
 
@@ -30,11 +29,11 @@ You will need the following components :
 
 * a [330 &#x2126; resistor](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
 
-* a breadboard and several male-to-female wires
+* a breadboard and several male-to-female for the Raspberry Pi 2 or MinnowBoard Max or male-to-male wires for the DragonBoard
 
 ###Connect the circuit to your device
 
-Let's start by wiring up the components on a breadboard. Visit the corresponding **Raspberry Pi 2/MinnowBoard Max** sections below depending on your device.
+Let's start by wiring up the components on a breadboard. Visit the corresponding **Raspberry Pi 2, MinnowBoard Max, or DragonBoard 410c** sections below depending on your device.
 
 #### Raspberry Pi 2
 
@@ -92,11 +91,44 @@ Here is the pinout of the MBM:
 
 <sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
 
+#### DragonBoard 410c
+
+For reference, the functionality of the low-speed expansion connector is outlined in the following diagram
+
+![DragonBoard Low-Speed Expansion Connector](../../../images/PinMappings/DB_pinout.png)
+
+Perform the following steps to connect the LED:
+
+* Connect the cathode (the shorter leg) of the LED to pin 25 (GPIO 13)
+* Connect the annode (the longer leg) of the LED to one lead of the 330 &#x2126; resistor
+* Connect the other end of the 330 &#x2126; resistor to pin 35 (1.8V PWR)
+
+Perform the following steps to connect the push button:
+
+* Connect one pin of the push button to pin 23 (GPIO 36)
+* Connect the other pin of the push button to pin 1 (GND)
+
+The breadboard might look similar to the following with the circuit assembled:
+
+![DragonBoard Push Button Breadboard](../../../images/PushButton/DB_PushButton_bb.png)
+
+A schematic for the circuit is shown in the diagram below:
+
+![DragonBoard Push Button Schematic](../../../images/PushButton/DB_PushButton_schem.png)
+
+Finally, the LED_PIN and BUTTON_PIN variables of the **MainPage.xml.cs** file of the sample code will need the following modification:
+
+~~~
+private const int LED_PIN = 13;
+private const int BUTTON_PIN = 36;
+~~~
+{: .language-c#}
+
 ###Building and running the sample
 
 1. Download a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip).
 1. Open `samples-develop\PushButton\CS\PushButton.csproj` in Visual Studio.
-1. If you have **Raspberry Pi 2**, Select `ARM` for the target architecture. Otherwise, for **MinnowBoard Max** select `x86`
+1. If you have **Raspberry Pi 2** or **DragonBoard 410c**, Select `ARM` for the target architecture. Otherwise, for **MinnowBoard Max** select `x86`
 1. Go to `Build -> Build Solution`
 1. Select `Remote Machine` from the debug target
 1. Hit F5 to deploy and debug. Enter the IP address of your device
@@ -130,7 +162,7 @@ ledPin.Write(GpioPinValue.High);
 ledPin.SetDriveMode(GpioPinDriveMode.Output);
 {% endhighlight %}
 
-Next, we set up the button pin. For the Raspberry Pi 2, we take advantage of the fact that it has 
+Next, we set up the button pin. For the Raspberry Pi 2 or the DragonBoard 410c, we take advantage of the fact that it has 
 built-in pull up resistors that we can activate. We use the
 built-in pull up resistor so that we don't need to supply a resistor externally.
 Configurable pull up resistors are not available on the MinnowBoard Max, so we insert a check to
