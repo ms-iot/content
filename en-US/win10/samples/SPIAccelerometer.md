@@ -7,7 +7,7 @@ lang: en-US
 
 ##SPI Accelerometer Sample
 
-We'll connect an SPI accelerometer to your Raspberry Pi 2/MinnowBoard Max and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of SPI is needed.
+We'll connect an SPI accelerometer to your Raspberry Pi 2, MinnowBoard Max, or DragonBoard 410c and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of SPI is needed.
 However, if you're curious, SparkFun provides a great [tutorial on SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}.
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
@@ -81,6 +81,31 @@ Here are the connections shown on a breadboard:
 Here are the schematics:
 
 ![Accelerometer schematics]({{site.baseurl}}/images/SPIAccelerometer/schematics_mbm.png)
+
+####DragonBoard 410c
+
+For the DragonBoard 410c, connections need to be made from the single board computer to the power, ground, and SPI lines of the accelerometer.
+
+**NOTE:  Make sure to power off the DragonBoard when connecting your circuit.  This is good practice to reduce the chance of an accidental short circuit during construction.**
+
+The ADXL345 breakout board has 8 IO pins that are connected to the DragonBoard as follows:
+
+1.  **GND:**  Connect the ground to pin 1
+2.  **VCC:**  Connect the power to pin 35
+3.  **CS:**   Connect the chip select to pin 12
+4.  **INT1:** The interrupt output 1 is _unused_
+5.  **INT2:** The interrupt output 2 is _unused_
+6.  **SDO:**  Connect the serial data output (alternate I2C address select to pin 10
+7.  **SDA:**  Connect the serial data input to pin 14
+8.  **SCL:**  Connect the serial communications clock to pin 8
+
+The following diagram shows what your breadboard might resemble with the circuit assembled:
+
+![DragonBoard SPI Accelerometer Breadboard](../../../images/SPIAccelerometer/breadboard_assembled_db410c.png)
+
+A schematic for the circuit is:
+
+![DragonBoard API Accelerometer Schematic](../../../images/SPIAccelerometer/schematics_db410c.png)
 
 ###Deploy and run the app
 
