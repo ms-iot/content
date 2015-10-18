@@ -7,7 +7,7 @@ lang: en-US
 
 ##SPI Display Sample
 
-In this sample, we interface a SPI based [OLED display](http://www.adafruit.com/product/938){:target="_blank"} to your Raspberry Pi 2/MinnowBoard Max. We then create an app that lets us write lines of text to the display. Step-by-step instructions are provided,
+In this sample, we interface a SPI based [OLED display](http://www.adafruit.com/product/938){:target="_blank"} to your Raspberry Pi 2, MinnowBoard Max, or DragonBoard 410c. We then create an app that lets us write lines of text to the display. Step-by-step instructions are provided,
 so no background knowledge of SPI is needed. However, if you want to learn more, SparkFun provides a great [tutorial on SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}.
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
@@ -23,9 +23,9 @@ First, we need to wire up the display to your device. You'll need a few componen
 
 * <a name="SPI_Display"></a>a [Monochrome 1.3" 128x64 OLED graphic display](http://www.adafruit.com/product/938){:target="_blank"} from Adafruit with pin headers soldered on
 
-* a breadboard and several male-to-female connector wires
+* a breadboard and several male-to-female connector wires (Raspberry Pi 2 or MinnowBoard Max) or male-to-male connector wires (DragonBoard 410c)
 
-Visit the **Raspberry Pi 2/MinnowBoard Max** sections below depending on which device you have:
+Visit the **Raspberry Pi 2, MinnowBoard Max, or DragonBoard 410c** sections below depending on which device you have:
 
 ![Electrical Components]({{site.baseurl}}/images/SPIDisplay/components.png)
 
@@ -80,6 +80,39 @@ Here are the connections shown on a breadboard:
 Here are the schematics:
 
 ![SPI schematics]({{site.baseurl}}/images/SPIDisplay/schematics_mbm.png)
+
+####DragonBoard 410c
+
+For the DragonBoard 410c, connections need to be made from the power, ground, SPI, and a couple of GPIO connections of the single board computer to the OLED display.
+
+**Note:  Make sure to power off the DragonBoard 410c when connecting your circuit.  This is good practice to reduce the change of an accidental short circuit during contruction.**
+
+The OLED display has 8 IO pins that are connected to the DragonBoard as follows:
+
+1.  **DATA:**    Connect to pin 14 (SPI0 MOSI).  This is the SPI master data out line.
+2.  **CLK:**     Connect to pin 8 (SPI0 CLK).  This is the SPI clock line.
+3.  **SA0/DC:**  Connect to pin 24 (GPIO 12).  This is the data / command line for the display.
+4.  **RST:**     Connect to pin 26 (GPIO 69).  This is the hardware reset line for the display.
+5.  **CS:**      Connect to pin 12 (SPI0 CS N).  This is the SPI chip select line.
+6.  **3V3:**     This connection is _unused_.
+7.  **VIN:**     Connect to pin 37 (5V PWR).
+8.  **GND:**     Connect to pin 1 (GND).
+
+The following diagram shows what your breadboard might resemble with the circuit assembled:
+
+![DragonBoard SPI Display Breadboard](../../../images/SPIDisplay/breadboard_assembled_db410c.png)
+
+A schematic for the circuit is:
+
+![DragonBoard SPI Display Schematic](../../../images/SPIDisplay/schematics_db410c.png)
+
+Finally, the variables of the **MainPage.xaml.cs** file of the sample code will need the following modification:
+
+~~~
+private const Int32 DATA_COMMAND_PIN = 12;
+private const Int32 RESET_PIN = 23;
+~~~
+{: .language-c#}
 
 ###Deploy and run the app
 
