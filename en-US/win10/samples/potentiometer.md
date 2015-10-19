@@ -6,37 +6,43 @@ lang: en-US
 ---
 
 ## Potentiometer Sensor Sample
-This sample shows how to connect a rotary potentiometer and LED to the Raspberry Pi 2. We use a SPI-based ADC (Analog to Digital Converter) to read values from the potentiometer 
+This sample shows how to connect a rotary potentiometer and LED to a Raspberry Pi 2 or a DragonBoard 410c. We use a SPI-based ADC (Analog to Digital Converter) to read values from the potentiometer 
 and control an LED based on the knob position.
 
 ## Parts needed
 - [1 LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832)
 - [1 330 &#x2126; resistor](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636)
-- [1 MCP3002 10-bit ADC](http://www.digikey.com/product-detail/en/MCP3002-I%2FP/MCP3002-I%2FP-ND/319412) or [1 MCP3208 12-bit ADC](http://www.digikey.com/product-search/en?KeyWords=mcp3208%20ci%2Fp&WT.z_header=search_go)
+- ADC
+    - Raspberry Pi 2
+        - [1 MCP3002 10-bit ADC](http://www.digikey.com/product-detail/en/MCP3002-I%2FP/MCP3002-I%2FP-ND/319412) or [1 MCP3208 12-bit ADC](http://www.digikey.com/product-search/en?KeyWords=mcp3208%20ci%2Fp&WT.z_header=search_go)
+    - DragonBoard 410c
+        - [1 MCP3008 10-bit ADC](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en010530)
 - [1 10k &#x2126; Trimmer Potentiometer](http://www.digikey.com/product-detail/en/3362P-1-103TLF/3362P-103TLF-ND/1232540)
-- Raspberry Pi 2 board
+- Raspberry Pi 2 or DragonBoard 410c single board computer
 - 1 breadboard and a couple of wires
 - HDMI Monitor and HDMI cable
 
 ## Parts Review
 
-In this sample, you have the option of using either the MCP3002 or the MCP3208 ADC (Analog to Digital Converter). 
-The main difference between these two is that the MCP3208 is a larger chip with more input channels and greater resolution. 
+In this sample, you have the option of using either the MCP3002, MCP3008, or MCP3208 ADC (Analog to Digital Converter). 
+The main difference between these two is that the MCP3008 and MCP3208 is a larger chip with more input channels and greater resolution. 
 Both however will work fine for this sample. 
 
 Below are the pinouts of the MCP3002 and MCP3208 ADCs. 
 
-| MCP3002                                                              | MCP3208                                                              |
+| MCP3002                                                              | MCP3008 or MCP3208                                                              |
 | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | ![MCP3002 Pinout]({{site.baseurl}}/images/Potentiometer/MCP3002.PNG) | ![MCP3208 Pinout]({{site.baseurl}}/images/Potentiometer/MCP3208.PNG) |
 
-Raspberry Pi pinout
+###Raspberry Pi
+
+####Raspbery Pi Pinout
 
 ![Raspberry Pi 2 pinout]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
 
-## Wiring & Connections
+####Wiring & Connections
 
-### MCP3002
+#####MCP3002
 If you chose to use the **MCP3002**, assemble the circuit as follows. Note that the wiper pin (the middle pin on the 10k potentiometer) should be connected to `CH0` on MCP3002.
 
 Detailed connection:
@@ -53,7 +59,7 @@ The MCP3002 should be connected as follows:
 - MCP3002: Vss - GND on Raspberry Pi 2
 - MCP3002: CH0 - Potentiometer wiper pin
 
-### MCP3208
+#####MCP3208
 If you chose to use the **MCP3208**, assemble the circuit as follows. Note that the wiper pin (the middle pin on the 10k potentiometer) should be connected to `CH0` on MCP3208.
 
 Detailed connection:
@@ -72,6 +78,44 @@ The MCP3002 should be connected as follows:
 - MCP3208: DGND - GND on Raspberry Pi 2
 - MCP3002: CH0 - Potentiometer wiper pin
 
+###DragonBoard 410c
+
+####DragonBoard Pinout
+
+![DragonBoard Pinout](../../../images/PinMappings/DB_pinout.png)
+
+####Wiring & Connections
+
+#####MCP3008
+
+For the DragonBoard 410c, assemble the circuit as follows:
+
+* Connect Vdd to pin 35 (1.8V PWR)
+* Connect Vdd to Vref
+* Connect AGND to pin 2 (GND)
+* Connect CLK to pin 8 (SPI0 SCLK)
+* Connect DOUT to pin 10 (SPI0 MISO)
+* Connect DIN to pin 14 (SPI0 MOSI)
+* Connect CS to pin 12 (SPI CS N)
+* Connect DGND to pin 2 (GND)
+* Connect channel 0 to the potentiometer wiper pin
+* Connect leg 1 of the potentiometer to pin 2 (GND)
+* Connect leg 2 of the potentiometer to pin 35 (1.8V PWR)
+* Connect leg 2 of the potentiometer to a 330 &#x2126; resistor
+* Connect the 330 &#x2126; resitor to the cathode of the LED
+* Connect the anode of the LED to pin 24 (GPIO 12)
+
+Here is an illustration of what your breadboard might look like with the circuit assembled:
+
+![DragonBoard Potentiometer Breadboard](../../../images/Potentiometer/breadboard_db410c.png)
+
+Finally, the LED_PIN variable of the **MainPage.xaml.cs** file of the sample code will need the following modification:
+
+~~~
+private const int LED_PIN = 12;
+~~~
+{: .language-c#}
+
 ###Building and running the sample
 
 1. Download a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip).
@@ -84,7 +128,7 @@ The MCP3002 should be connected as follows:
    and select `None` for the authentication type
  
 When you turn the potentiometer knob, you will see the number change on the screen indicating the potentiometer knob position. 
-When the number is larger than half the ADC resolution (For **MCP3002**, this number is **512**. For **MCP3208**, it's **2048**) the LED will turn ON. Otherwise, it turns OFF.
+When the number is larger than half the ADC resolution (For **MCP3002**, this number is **512**. For **MCP3008** or **MCP3208**, it's **2048**) the LED will turn ON. Otherwise, it turns OFF.
 
 | ----------------------------------------------------------------------------------------- |-| ---------------------------------------------------------------------------------- |
 | ![App Running LED Off]({{site.baseurl}}/images/Potentiometer/AppRunning-LEDOff.png)       | | ![App Running LED On]({{site.baseurl}}/images/Potentiometer/AppRunning-LEDOn.png)  |
