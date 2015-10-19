@@ -1,0 +1,180 @@
+# ZigBee sample
+Get the [code](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynZigBeeAdapter/ZigBeeAdapter.zip?raw=true) on Github
+
+This document describes the setup of the ZigBee adapter for Device System Bridge (DSB) on Windows 10 desktop. When using it you will be able to expose ZigBee devices to AllJoyn. 
+
+## What is ZigBee?
+
+ZigBee is a low cost, low power, wireless communications standard designed to allow devices to communicate with another. In addition to the communication protocol, ZigBee standard also defines profiles, such as ZigBee Light Link or Home Automation, which themselves define device. For example, ZigBee Light Link will define what a light is, what a dimmable light is, and so on. Each device uses clusters defined in the ZigBee Cluster Library (ZCL) to specify what they can do, what they expose…
+
+See [ZigBee standard](http://www.zigbee.org) for more information about ZigBee, ZigBee profiles, ZCL clusters...
+
+Acronyms:
+- ZDO: ZigBee Device Object
+- ZCL: ZigBee Cluster Library
+
+## Prerequisites
+1. XBee ZigBee module from [Digi](www.digi.com), e.g.: XB24 Z7PIT-004
+2. XBee Explorer USB dongle from [SparkFun](https://www.sparkfun.com)  
+3. [XCTU](http://www.digi.com/products/xbee-rf-solutions/xctu-software/xctu) tool from Digi
+4. Windows 10 desktop with Visual Studio 2015 and [AllJoyn Explorer (AJX)]
+(http://ms-iot.github.io/content/en-US/win10/AllJoyn.htm)
+5. [FTDI driver](http://www.ftdichip.com/Drivers/D2XX.htm) for Windows 10 which is required by the XBee Explorer USB dongle
+6. Some ZigBee devices like
+ - [Philips Hue](http://www2.meethue.com/en-US) light bulb
+ - [Dresden Elektronik](https://www.dresden-elektronik.de) ballast FLS-PP-IP that control a colored LED band 
+
+<span style="text-decoration:underline">Note that it is very important that the ZigBee devices you will use __are not__ already part of a ZigBee network</span> otherwise they will not join your ZigBee network. 
+Consequently, it is safer to buy single Philips Hue light bulb instead of a set of bulbs bundled with Philips Hue gateway because in that case bulbs will be part of the ZigBee network controlled by the gateway. 
+  
+AllJoyn Explorer and its documentation (how to install, to use…) can be find [here](http://ms-iot.github.io/content/en-US/win10/AllJoyn.htm).
+
+![ZigBeeHardware]({{site.baseurl}}/images/ZigBee/ZigBeeHardware.png)
+
+## Set up steps
+1. Install the required tools and driver listed in the prerequisites on your Windows 10 desktop 
+(see their respective documentations to figure out how to proceed).
+2. [Configure the XBee module](#XBeeConfig)
+3. [Let your device join your ZigBee network](#JoinZigBeeNetwork)
+4. [Deploy ZigBee adapter](#DeployZigBeeAdapter)
+
+Note that in Windows 10, when a machine has multiple AllJoyn modern applications that need to interact on the same machine, the user must add a loopback exemption for these modern applications. Consequently, if you run both the ZigBee adapter and AllJoyn Explorer on the same machine you will need to add a loopback exemption for these 2 applications (this isn’t needed for application you only run from Visual Studio 2015).
+
+Set up loopback exception: 
+ 1. Find the installation folder of the modern application for which you want to enable the loopback exemption. It is located at "C:\Users\\*username*\AppData\Local\Packages" ![LoopBackException]({{site.baseurl}}/images/ZigBee/LoopBackException.png)
+ 2. Copy the installation folder name which is also the application ID.
+ 3. Run the following command from an elevated command prompt:  
+"CheckNetIsolation LoopbackExempt -a -n=*installation-folder-name*"  
+ 4. You may need to reboot.
+
+## Configure your XBee ZigBee module using XCTU tool {#XBeeConfig}
+Please look at the tool help to get more details about the tool (https://docs.digi.com/display/XCTU/XCTU+Overview).
+
+![XBeeConfig1]({{site.baseurl}}/images/ZigBee/XBeeConfig1.png)
+
+![XBeeConfig2]({{site.baseurl}}/images/ZigBee/XBeeConfig2.png)
+
+## Let ZigBee devices join your ZigBee network {#JoinZigBeeNetwork}
+Once the XBee ZigBee module has been configured you can build your ZigBee network and let your ZigBee devices join. In order to do that you just need to power up your ZigBee devices. ZigBee Light Link (aka ZLL) and Home Automation devices will, by default and if not already part of a ZigBee network, try to join a ZigBee network which permit join is enabled. Since the XBee ZigBee module has been configured to always enable permit join, the ZigBee devices will join your network. 
+
+You can verify that devices have by using “network discovery” feature of XCTU tool.
+
+![ZigBeeJoinNetVerif]({{site.baseurl}}/images/ZigBee/ZigBeeJoinNetVerif.png)
+
+## Deploy the ZigBee Adapter on your Windows 10 machine {#DeployZigBeeAdapter}
+1. Download the ZigBeeAdapter.zip file [here](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynZigBeeAdapter/ZigBeeAdapter.zip?raw=true)
+2. Navigate to the folder where you downloaded the zip file. Right click the file and “Extract All…” to the folder of your choice.
+3. Navigate to the extracted folder and open the ZigBeeAdapter.sln solution file in Visual Studio.
+4. Select the relevant target (x86, x64 or ARM) and build the solution in Visual Studio.
+Your now ready to launch it, so launch or debug HeadedAdapterApp project on desktop or if the targeted Windows 10 device has a display or launch or debug HeadlessAdapterApp if it doesn’t. 
+If needed, see instruction [here](http://ms-iot.github.io/content/en-US/win10/AppDeployment.htm) for remote debugging.
+ 
+### Known limitations of the current version of the ZigBee adapter
+- ZigBee adapter only discovers devices that are directly connected to the XBee module. 
+- ZigBee adapter only support some devices defined in ZigBee Light Link or Home Automation profiles. This means that it only implements the necessary ZCL clusters and ZDO commands to handle them. That said support for new devices and new ZCL clusters can easily be added to ZigBee adapter code.
+- ZigBee adapter doesn’t expose any method to commission ZigBee devices.
+
+## ZigBee adapter in detail 
+ZigBee adapter is written in C# and exposes ZigBee devices on AllJoyn through BridgeRT interface. ZigBee device is exposed in AllJoyn as follow:
+- Each ZigBee end point of a ZigBee device is exposed as an AllJoyn Service (bus attachment)
+- Each cluster of an end point is exposed as an AllJoyn Bus object
+- Each Attribute of a cluster is exposed as an AllJoyn Property
+- All ZigBee commands of all clusters of an end point are grouped under the main AllJoyn bus object of the AllJoyn Service and exposed as AllJoyn method
+
+![ZigBee2AllJoynMapping]({{site.baseurl}}/images/ZigBee/ZigBee2AllJoynMapping.png)
+
+### AllJoyn Explorer view of Philips Hue light bulb
+Philips Hue light bulb has 1 endpoint which has several clusters: Identify, Scene, Group, OnOff and LevelControl. ZigBee adapter only handles the OnOff and LevelControl clusters hence will only expose them to AllJoyn. Below is AllJoyn explorer view of what is exposed on AllJoyn. Path to “On” command is highlighted in green, path to “OnOff” status is highlighted in red.
+
+![AJXPhilipsHue1]({{site.baseurl}}/images/ZigBee/AJXPhilipsHue1.png)
+
+![AJXPhilipsHue2]({{site.baseurl}}/images/ZigBee/AJXPhilipsHue2.png)
+
+![AJXPhilipsHue3]({{site.baseurl}}/images/ZigBee/AJXPhilipsHue3.png)
+
+![AJXPhilipsHue4]({{site.baseurl}}/images/ZigBee/AJXPhilipsHue4.png)
+
+![AJXPhilipsHue5]({{site.baseurl}}/images/ZigBee/AJXPhilipsHue5.png)
+
+### Class overview
+
+![ClassMap]({{site.baseurl}}/images/ZigBee/ClassMap.png)
+
+The __Adapter__ class is the main class of ZigBee adapter. This class derives from __IAdapter__ (BridgeRT interface) and contains a collection of __ZigBeeDevice__ instances and an instance of the __XBeeModule__ class.
+
+The __XBeeModule__ class handles the interactions with XBee module, this class has method to build and parse XBee frames. See XBee ZigBee module documentation (http://www.digi.com) for more detail about its API and its frame layout. XBeeModule class uses the __SerialController__ class that handles communication over a serial port. 
+
+The __ZigBeeDevice__ class represent a ZigBee device. This class has no interface with BridgeRT since only EndPoints of a ZigBee device are expose to AllJoyn. __ZigBeeDevice__ class contains a collection of __ZigBeeEndPoint__ instances.
+
+The __ZigBeeEndPoint__ class represent an EndPoint of a ZigBee device. This class derives from __IAdapterDevice__ (BridgeRT interface) and contains an instance of the __BasicCluster__ and a collection __ZclCluster__ instance. To be more accurate it contains a collection of cluster classes, e.g.: __OnOffCluster__, which derive from the abstract __ZclCluster__ class.
+
+The cluster classes, e.g.: __BasicCluster__, __OnOffCluster__, represent a ZCL cluster. Each cluster class is a “specific” implementation of the __ZclCluster__ abstract class.
+ 
+The __ZclCluster__ class is an abstract class that derives from __IAdapterProperty__ (BridgeRT interface) and contains a collection of __ZclAttribute__ instances and a collection of __ZclCommand__ instances. A specific implementation of ZclCluster simply consists in defining the list of ZclAttribute and ZclCommand that should be supported for that specific cluster.
+
+The __ZclAttribute__ class represent an attribute as defined in ZCL standard. This class derives from __IAdapterAttribute__ (BridgeRT interface) and from __ZigBeeCommand__ class. This class contains an instance of __IAdapterValue__ class which is a BridgeRT interface. For information, reading or writing an attribute consist in sending a specific ZCL command.
+
+The __ZclCommand__ class represent a command as defined in ZCL standard. This class derives from __IAdapterMethod__ (BridgeRT interface) and from __ZigBeeCommand__ class. This class contains list of input and output parameters. These parameters are actually __IAdapterValue__ class which is a BridgeRT interface.
+
+The __ZigBeeCommand__ class is an Abstract class that is used to send and receive ZDO or ZCL command. Preparing (or parsing) the ZCL or ZDO payload that XBeeModule will send to XBee module (or receive from XBeeModule) is a shared task between ZigBeeCommand class for its “generic” part and the derived class of ZigBeeCommand for the specific part. 
+
+ZDO command classes such as __ManagementLQI__ class, __ActiveEndPoints__ class… are used to discover the ZigBee network and the ZigBee devices and end points. These classes derive from __ZigBeeCommand__ class.
+
+The __ZclClusterFactory__ class is used to create instances of a specific cluster class. This class is used by the adapter class to create the relevant clusters when it discovers a new ZigBee device. Note that Adapter class create a ZigBeeDevice instance only if that device has at least 1 end point that has a ZCL cluster listed in the supported cluster list of the ZclClusterFactory.
+
+AT command classes such as __AO_Command__,  __HV_Command__…  are used by XBeeModule upon its initialization to get information about the XBee module it uses. These classes derive from the __XBeeATCommand__ abstract class. See XBee ZigBee module documentation (http://www.digi.com) for more detail about AT commands.
+
+### Sending ZDO or ZCL command and receiving response
+
+![SendZdoZcl]({{site.baseurl}}/images/ZigBee/SendZdoZcl.png)
+
+1. When ZclAttribute class reads the value of the attribute, it will build the read attribute payload following the ZCL standard and then call SendCommand method of the ZigBeeCommand class.
+2. SendCommand will then call SendZigBeeCommand method of XBeeModule.
+3. SendZigBeeCommand will build the frame following the format defined by Digi for its XBee module. Once done it will store a reference to the ZigBeeCommand that has been sent in a dictionary and call WriteAsync to send the bytes. After that it will return and SendCommand will wait until it gets a response or time-out.
+4. Upon reception a complete frame from the XBee module, the reception thread of the SerialController will call GetBytesFromModule callback of XBeeModule.
+5. GetBytesFromModule will parse the XBee part of the frame and check if the response received has a matching command. If so if will call the ParseResponse callback of the relevant command and then signal the reception of the response to that command. 
+
+### Receiving ZDO or ZCL command 
+ZigBee device can send ZDO or ZCL command to the XBee module, e.g.: device announce ZDO command which is sent when a device wakes up or join the network, report attribute ZCL command when an attribute of a ZCL cluster is reportable… This kind of command are not sent in response to another command and can be seen as “notification” by ZigBee adapter.  
+
+![ReceiveZdoZcl]({{site.baseurl}}/images/ZigBee/ReceiveZdoZcl.png)
+
+1. Adapter class will build a list of notification it can receive upon initialization. This list contains instance of specific ZigBeeCommand such as DeviceAnnce, ZclReportAttribute.
+2. Upon reception a complete frame from the XBee module, the reception thread of the SerialController will call GetBytesFromModule callback of XBeeModule.
+3. GetBytesFromModule will parse the XBee part of the frame and check if it’s a response to a command that has been sent (see previous section). If not, it will go through the notification list and call the ParseResponse method of each element until 1 accept the frame or none have accepted. In that later case the frame will be thrown away. 
+4. What ParseResponse does is specific to each implementation of the ZigBeeCommand class. For example, the ParseResponse method of the DeviceAnnce class will get the 64 bit address (aka MAC address) and 16 bit address and may be more information about the signaled device and then send “device arrival” signal to BridgeRT (note that several classes are used to achieve that, see code for more). 
+
+### Creating a new ZCL cluster class
+ZigBee adapter doesn’t implement all clusters defined by ZCL. There will be cases where the ZigBee device you want to interact with won’t be supported by ZigBee adapter. In such a case you will need to add support for the missing clusters. 
+
+How to:
+
+1. You need to found out which the ZigBee Profile and ZigBee Device Category each end point of the new device supports. This can be documented by the device manufacturer or discovered by sending some ZDO command to the end points. ZigBee adapter can give you this information if you enable device discovery tracing in Logger class.
+2. Implements the missing clusters (if necessary) 
+  - Create a new class that derives from ZclCluster
+  - In constructor add attributes and commands
+3. Update ZigBeeProfileLibrary and ZclClusterFactory accordingly
+4. Don’t forget to update ZclHelper if the cluster you added has either attributes or command that use a not yet supported ZigBee type
+
+Example of a new cluster class
+
+![NewClusterClass]({{site.baseurl}}/images/ZigBee/NewClusterClass.png)
+
+What needs to be done in ZclClusterFactory class
+
+![ZclFactoryChange]({{site.baseurl}}/images/ZigBee/ZclFactoryChange.png)
+
+### Quick overview of frame used by XBee API
+Digi provide API that can be used to interact with its XBee ZigBee module. This API is used to send or receive AT command or ZDO and ZCL command. AT command are specific to XBee module and can only be interpreted by XBee module whereas ZDO or ZCL command can be interpreted by any ZigBee devices. Frame used to send AT command are a bit different than frames used to send ZDO or ZCL command (see XBee ZigBee module documentation for more detail).
+
+General frame layout:
+
+![XBeeFrame1]({{site.baseurl}}/images/ZigBee/XBeeFrame1.png)
+
+Explicit addressing ZigBee Command 
+
+![XBeeFrame2]({{site.baseurl}}/images/ZigBee/XBeeFrame2.png)
+
+Explicit Rx Indicator
+
+![XBeeFrame3]({{site.baseurl}}/images/ZigBee/XBeeFrame3.png)

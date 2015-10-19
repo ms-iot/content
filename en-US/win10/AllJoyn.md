@@ -84,6 +84,10 @@ This is a tool we use in several points when working with AllJoyn samples. You c
 
  This tutorial demonstrates how to use the AllJoyn Device System Bridge template to create a sample managed app that exercises the device GPIO.
 
+* [AllJoyn DSB ZigBee Adapter Tutorial and Sample]({{site.baseurl}}/en-US/win10/samples/ZigBeeAdapterTutorial.htm){:target="_blank"}
+
+ This tutorial shows how to use the Device System Bridge app to connect your IoT Core devices to ZigBee devices.
+
 **Additional Resources**
 
 * Building AllJoyn Apps on Windows 10 - [https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview](https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview){:target="_blank"}
