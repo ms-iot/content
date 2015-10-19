@@ -17,7 +17,7 @@ You will need:
 * 1 [PCA9685 16-channel 12-bit PWM controller from Adafruit](http://www.adafruit.com/product/815).
 * 1 330 Ω resistor.
 * 1 1N1407 diode.
-* 1 NPN 222A transistor
+* 1 P2N2 222A transistor (NPN)
 * Assorted wires
 
 ##Hardware Set Up
@@ -26,9 +26,11 @@ The pins on the Raspberry Pi 2 do not provide enough power on their own to run m
 
 We are also using a diode to protect the PCA9685 board and the Raspberry Pi from backflow current that can damage the hardware. Diodes enable power flow in one direction only.
 
-We highly recommend you use the PCA9685 PWM controller. You can use either the hat or the breakout board, but this board is directly supported by Microsoft and will offer the best experience. Additionally, the controller should not have any I2C hardware address pins set. 
+We highly recommend you use the PCA9685 PWM controller. You can use either the hat or the breakout board, but this board is directly supported by Microsoft and will offer the best experience.
 
+Additionally, the controller should not have any I2C hardware address pins set. Below is an image of the I2C pins on the PCA9685 PWM controller, where none of the pins are set (and therefore hardware I2C address is the default 0x40).
 
+![PCA9685 I2c]({{site.baseurl}}/images/arduino_wiring/pca9685_i2c.jpg)
 
 Refer to the fritzing diagram below to hook up your motor and PWM controller.
 
