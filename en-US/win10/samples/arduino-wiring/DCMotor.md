@@ -7,7 +7,7 @@ lang: en-US
 
 #Arduino Wiring DC Motor Sample
 
-DC motors are some of the basic elements of a maker's toolbox. Whether you're driving autonomous robots or spinning a cooling fan, a DC motor is a relatively simple way to accomplish your task! In this sample, we'll use pulse-width modulation (PWM) to vary the speed of a motor.
+A DC motor is one of the basic elements of a maker's toolbox. Whether you're driving autonomous robots or spinning a cooling fan, a DC motor is a relatively simple way to accomplish your task! In this sample, we'll use pulse-width modulation (PWM) to vary the speed of a motor.
 
 ##Components
 
@@ -22,7 +22,7 @@ You will need:
 
 ##Hardware Set Up
 
-The pins on the Raspberry Pi 2 do not provide enough power on their own to run motors and other power-hungry parts. Because the motor needs more current, we'll use a transistor to connect the motor to an external power source. Transistors are like switches; when we give it a small amount of current, it can enable the flow of a much larger current. For our motor, we used a 5v DC adapter that supplies at least 1A of current. It is OK to use an adapter with more current capacity than your motor needs; as the adapter should only supply what is needed by the motor.
+Motors draw more current than the pins on the Raspberry Pi 2 can safely provide. Therefore, we'll use a transistor to connect the motor to an external power source. Transistors are like switches; when we give it a small amount of current, it can enable the flow of a much larger current. For our motor, we used a 5v DC adapter that supplies at least 1A of current. It is OK to use an adapter with more current capacity than your motor needs; as the adapter should only supply what is needed by the motor.
 
 We are also using a diode to protect the PCA9685 board and the Raspberry Pi from backflow current that can damage the hardware. Diodes enable power flow in one direction only.
 
@@ -59,7 +59,7 @@ const int PWM_MIN_SPEED = 0;
 
 void setup()
 {
-    //analog write commands do not require pinModes to be set. They will be inferred by the function type!
+    //analog write commands do not require pinModes to be set. They will be inferred by the function type
 }
 
 
