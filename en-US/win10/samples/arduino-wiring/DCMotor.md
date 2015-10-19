@@ -14,10 +14,10 @@ DC motors are some of the basic elements of a maker's toolbox. Whether you're dr
 You will need:
 
 * 1 Windows 10 IoT Core enabled device, such as Raspberry Pi 2 or Minnowboard Max.
-* 1 PWM controller breakout board or hat. We're using the [PCA9685 16-channel 12-bit PWM controller from Adafruit](http://www.adafruit.com/product/815).
+* 1 [PCA9685 16-channel 12-bit PWM controller from Adafruit](http://www.adafruit.com/product/815).
 * 1 330 Ω resistor.
 * 1 1N1407 diode.
-* 1 PNP transistor
+* 1 NPN 222A transistor
 * Assorted wires
 
 ##Hardware Set Up
@@ -26,7 +26,9 @@ The pins on the Raspberry Pi 2 do not provide enough power on their own to run m
 
 We are also using a diode to protect the PCA9685 board and the Raspberry Pi from backflow current that can damage the hardware. Diodes enable power flow in one direction only.
 
-If you are using a different PWM controller, you'll want to refer to the documentation for that specific part before you proceed. There is no guarantee that the pins are laid out the same. We have a Pi Hat version of the same controller that sits directly on top of the entire pin header on the Raspberry Pi and therefore has no I2C pinouts!
+We highly recommend you use the PCA9685 PWM controller. You can use either the hat or the breakout board, but this board is directly supported by Microsoft and will offer the best experience. Additionally, the controller should not have any I2C hardware address pins set. 
+
+
 
 Refer to the fritzing diagram below to hook up your motor and PWM controller.
 
