@@ -42,7 +42,7 @@ Learn how to get your computer ready for Windows Developer Program for IoT.
     The installer creates a new directory: C:\Program Files (x86)\Microsoft IoT\FFU\QCDB410C\ which contains the DragonBoard410c image file “flash.ffu”.
     <img class="image-border" src="{{site.baseurl}}/images/SetupDB410c/DB410c_FlashFile_FFU.JPG">
 
-    We will use this flash file in the next step.
+    We will use this flash file on the next page.
 
 4. Eject the virtual CD-drive when done.
 

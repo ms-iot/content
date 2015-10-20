@@ -14,7 +14,7 @@ Learn how to set up the DragonBoard410c and connect it to your computer.
 
 
 ##What you need
-1. **A PC running Windows 10** (Prepared in the previous step)
+1. **A PC running Windows 10** (Prepared on the previous page)
 
 2. **DragonBoard410c**
 
