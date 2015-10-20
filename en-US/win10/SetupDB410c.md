@@ -60,9 +60,27 @@ Learn how to set up the DragonBoard410c and connect it to your computer.
 2. After a few seconds you should see the Win10 IoT boot-logo and shortly after you should see the Win10 IoT Core default application:
 <img class="image-border" src="{{site.baseurl}}/images/SetupDB410c/DB410c_DefaultApp.jpg" height="200">
 
-3. Follow the [PowerShell documentation here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.  You can also follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to use SSH to connect to your device.
+## Connecting to a Network
 
-4. It is **highly recommended** that you update the default password for the Administrator account.
+The DragonBoard410c has onboard WiFi, but you may also choose to use a USB Ethernet Adapter to connect to a local network with an Ethernet cable.
+
+#### Connecting to a Wireless Network
+- Click the Settings button next to the clock on the Win10 IoT Core default application.
+- On the Settings page, select "Network & Wi-Fi" via the menu on the left.
+- Your DragonBoard will automatically begin scanning for wireless networks.
+- Once your network appears in the list, select it and click the "Connect" button to connect.
+
+#### Using a USB Ethernet Adapter
+
+DragonBoard supports the [TRENDnet TU2-ET100](http://www.trendnet.com/products/proddetail.asp?status=view&prod=280_TU2-ET100) USB ethernet adapter. You need only to connect the adapter via USB and connect it to your local network using a standard ethernet cable. 
+
+Other network adapters may also be compatable with DragonBoard, although they may not have been tested.
+
+## Connect to your DragonBoard
+
+1. Follow the [PowerShell documentation here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to use PowerShell to connect to your running device.  You can also follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to use SSH to connect to your device.
+
+2. It is **highly recommended** that you update the default password for the Administrator account.
     To do this, issue the following commands in your PowerShell connection:
 
     Replace `[new password]` with a strong password:
