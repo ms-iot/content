@@ -148,6 +148,8 @@ Select and connect to a serial device on the PC and RPi2 or MBM by doing the fol
 	* On the PC, the device ID for the USB-to-TTL cable connected in this example begins with '\\?\USB#VID_067B'.
 	
 	* On the MBM, if using the GPIO for serial communication, select the device ID with **UART2** in it. **UART1** may require using CTS/RTS signals.
+    
+    * On the DragonBoard, select the device with **QCOM24D4** and **UART1** in it. This will likely be the last device in the listbox (you may need to scroll down).    
 	
 	* On the MBM and RPi2, if using the USB-to-TTL adapter module, select the device ID that begins with **\\?\USB#**. For the USB-to-TTL module used in this example, the device ID should begin with '\\?\USB#VID_10C4'.
 
