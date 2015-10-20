@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-md-10 col-sm-12 col-md-offset-2">
+    <h1 class="thin-header text-center">List of Tools</h1>
+    <p class="hth-major-text text-center">We're continuously working to expand and improve on this list.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2 col-sm-12">
+    <ul class="list-group">
+      <li class="list-group-item">Yeah ok.</li>
+      <li class="list-group-item">Yeah ok.</li>
+      <li class="list-group-item">Yeah ok.</li>
+      <li class="list-group-item">Yeah ok.</li>
+      <li class="list-group-item">Yeah ok.</li>
+      <li class="list-group-item">Yeah ok.</li>
+      <li class="list-group-item">Yeah ok.</li>
+    </ul>
+  </div>
+  <div class="col-md-10 col-sm-12">
+    {% for block in site.data.hth-tiles[page.lang]  %}
+    {% assign value = forloop.index0 | modulo:2 %}
+      {% if value == 0 %}
+        <div class="row">
+      {% endif %}
+          <div class="col-md-6 col-sm-12">
+            <div class="card">
+              <img src="{{block.images}}">
+              <div class="card-body">
+              <h3 class="text-center thin-header">{{block.title}}</h3>
+              <p>{{block.flavorText}}</p>
+              </div>
+            </div>
+          </div>
+      {% if value == 1 %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
