@@ -336,6 +336,15 @@ lang: en-US
                     <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/WeatherStationLightning.htm">Weather Station (C#/C++)</a><br>
                     <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplayLightning.htm">SPI Display (C#/C++)</a>
                   </div>
+				  
+                </div>
+
+                <div class="row section-heading">
+                    <div class="col-md-3">
+                        <h4>Controlling DC Motors</h4>
+                        <p>Learn to control DC motors using a Windows IoT Core enabled device!</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/DCMotor.htm">DC Motors (Wiring)</a>
+                    </div>
                 </div>
 
                 <div class="row section-heading">
