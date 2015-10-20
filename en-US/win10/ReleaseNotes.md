@@ -25,7 +25,6 @@ You can review the privacy statement by pasting the forward link into your brows
    * Serial support on Raspberry Pi for TX and RX pins
    * High performance GPIO driver option with > 100x improvement
    * Arduino Wiring Project System for Visual Studio
-   * Support for the TPLink WiFi dongle on Raspberry Pi2
    * Updated base OS build
    * Bug Fixes
 
