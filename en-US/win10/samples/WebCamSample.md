@@ -23,11 +23,19 @@ You'll need:
   
 * <a name="USB_WebCam"></a>A USB web cam (Example: [Microsoft Life Cam](http://www.microsoft.com/hardware/en-us/p/lifecam-hd-3000){:target="_blank"})
   
-Connect the web cam to one of USB ports on MinnowBoard Max or Raspberry Pi2  
+Connect the web cam to one of USB ports on the IoT Device  
   
 ###Deploy your app  
   
-If you're building for Minnowboard Max, select `x86` as the architecture. If you're building for Raspberry Pi 2, select `ARM`.  
+If you're building for Minnowboard Max, select `x86` as the architecture. If you're building for Raspberry Pi 2 or DragonBoard , select `ARM`.  
+
+**DragonBoard only:** Before deploying this app, disable the on-board mic and audio drivers. This is required on every reboot when running this app
+{% highlight xml %} 
+DragonBoard - Commands to disable audio and mic drivers:
+
+devcon remove AUDD\QCOM2451
+devcon remove ADCM\QCOM242E 
+{% endhighlight %}  
   
 Select **Remote Machine** to point to IoT device and hit F5 to deploy to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm){:target="_blank"}. if you need guidance   
   
