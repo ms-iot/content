@@ -17,7 +17,9 @@ lang: en-US
 
         <a href="#errors"><h4>Errors</h4></a>
 
-		<a href="#mbm_usb_port"><h4>MinnowBoard Max</h4></a>
+        <a href="#mbm_usb_port"><h4>MinnowBoard Max</h4></a>
+        
+        <a href="#dragonboard"><h4>DragonBoard</h4></a>
     </div>
 
     <div class="col-md-8 col-md-offset-4 col-xs-8 col-xs-offset-4 section-heading">
@@ -121,6 +123,12 @@ lang: en-US
         <h2 class="faq-h2">MinnowBoard Max</h2>
         <p class="bold"><em>Known issues with the top USB port</em></p>
         <p>You may experience degrading performance and lack of key functionality with USB devices plugged into the top port.  At this time we suggest using only the bottom port for USB peripherals.  We are currently investigating this issue.</p>
+        <br />
+        
+    <a name="dragonboard"></a>
+        <h2 class="faq-h2">DragonBoard</h2>
+        <p class="bold"><em>USB Issues</em></p>
+        <p>The Dragonboard is not capable of powering more than one USB device and needs a powered USB hub when connecting multiple devices to the same USB port.</p>
         <br />
     </div>
 </div>

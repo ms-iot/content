@@ -23,7 +23,7 @@ Learn how to set up the DragonBoard410c and connect it to your computer.
 		
 4. **HDMI cable and monitor**
 
-5. **USB- Keyboard and Mouse**
+5. **USB - Keyboard and Mouse** - [Seeing issues with USB?]({{site.baseurl}}/{{page.lang}}/Faqs.htm#dragonboard)
 
 
 ## Connect the DragonBoard to the Host PC
