@@ -42,6 +42,57 @@ lang: en-US
   </div>
 </div>
 <div id="hth-list-block">
+<h1 class="thin-header text-center">List of Tools</h1>
 {% include hth-tiles.html %}
 
 </div>
+<script>
+var allBlocks = {{site.data.hth-tiles[page.lang] | jsonify}};
+var tags = [];
+function buildCards(filteredBlocks)
+{
+  var blocks = filteredBlocks ? filteredBlocks : allBlocks,
+      cards = [],
+      card,
+      firstInRow = true;
+  $(".tile-display").empty();
+  for (var i = 0; i < blocks.length; i++) {
+    tags.push(blocks[i].tags)
+    if(firstInRow) cards.push("<div class='row'>")
+    card = "<div class='col-md-6 col-sm-12 block' id='card" + i + "'>" +
+           "<div devices='" + blocks[i].compatibleDevices + "' class='card'>" +
+           "<img src='" + blocks[i].images + "'>" +
+           "<div class='card-body'>" +
+           "<h3 class='text-center thin-header'>" + blocks[i].title + "</h3>" +
+           "<p>" + blocks[i].flavorText + "</p>" +
+           "</div>" +
+           "</div>" +
+           "</div>";
+    cards.push(card)
+    if(!firstInRow) {
+      cards.push("</div>")
+    }
+    firstInRow = !firstInRow
+}
+
+  for (var i = 0; i < cards.length; i++) {
+    $(".tile-display").append(cards[i])
+  }
+};
+
+function search() {
+  var searchString = $("#searchBox")[0].value.toLowerCase(),
+  count = 0,
+  blocks = []
+  for(var i = 0; i < tags.length; i++) {
+      if(tags[i].indexOf(searchString) === -1) {
+        cardBlock = "#card" + i;
+        $(cardBlock).hide();
+    }
+  }
+}
+
+window.onload = function() {
+  buildCards();
+}
+</script>

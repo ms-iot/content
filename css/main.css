@@ -438,16 +438,27 @@ div.preview {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-/*.card > img {
+.card > img {
   width:100% !important;
   height:250px;
+}
 
-}*/
 .card-body{
   padding:5px;
 }
 
-
+.tile-display {
+  max-height: 150vh;
+  overflow: scroll;
+  border:1px solid rgb(230,230,230);
+  padding:10px;
+  padding-left:10px;
+  padding-right: 10px;
+}
+.tile-display > .row{
+  margin-left: 0;
+  margin-right: 0;
+}
 @media (max-width: 700px) {
   .steps {
     font-size:24px;
