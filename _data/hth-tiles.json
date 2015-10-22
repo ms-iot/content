@@ -8,19 +8,23 @@
             "other": null
             },
          "images": "http://ms-iot.github.io/content/images/devices/RPi2_0.png",
-         "compatibleDevices": ["RPI2", "MBM"],
+         "compatibleDevices": {"rpi2": true,
+                               "mbm": true,
+                               "410c": false},
          "flavorText": "This voice recognition thing is super easy to use, and boy is it fast!",
          "tags": ["voice", "recognition", "C++", "C#"]
       },
       {
          "title": "Weather Detector",
          "documentation": {
-            "sample": null,
-            "hackster": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
+            "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
+            "hackster": null,
             "other": null
             },
          "images": "http://ms-iot.github.io/content/images/arduino_wiring/pi2_weathershield.png",
-         "compatibleDevices": ["RPI2"],
+         "compatibleDevices": {"rpi2": true,
+                               "mbm": true,
+                               "410c": false},
          "flavorText": "Foggy? Humid? Raining? Who knows? Check the console!",
          "tags": ["weather", "detection", "C++"]
       },
@@ -32,67 +36,25 @@
             "other": null
             },
          "images": "https://karaokecloud.files.wordpress.com/2013/11/lightning-bolt.jpg?w=819",
-         "compatibleDevices": ["RPI2", "MBM"],
+         "compatibleDevices":{"rpi2": true,
+                               "mbm": true,
+                               "410c": false},
          "flavorText": "Wire hella fast for sure.",
          "tags": ["speed", "GPIO", "Arduino", "Lightning", "Wiring", "C++", "C#"]
       },
       {
          "title": "LCD Display Library",
          "documentation": {
-            "sample": null,
-            "hackster": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
+            "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
+            "hackster": null,
             "other": null
             },
          "images": "https://hackster.imgix.net/uploads/image/file/58158/NowPlaying.JPG?w=580&h=435&fit=max&s=67ff6693ebc0c906cbbd27a0d2bb96ac",
-         "compatibleDevices": ["RPI2"],
+         "compatibleDevices": {"rpi2": false,
+                               "mbm": false,
+                               "410c": true},
          "flavorText": "You'll be reading little letters from a screen in no time",
          "tags": ["Windows", "LCD", "Screen", "Library", "C", "Sharp", "C#"]
-      },
-      {"title": "Voice Recognition",
-         "documentation": {
-            "sample": null,
-            "hackster": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
-            "other": null
-            },
-         "images": "http://ms-iot.github.io/content/images/devices/RPi2_0.png",
-         "compatibleDevices": ["RPI2", "MBM"],
-         "flavorText": "This voice recognition thing is super easy to use, and boy is it fast!",
-         "tags": ["voice", "recognition", "C++", "C#"]
-      },
-      {
-         "title": "Weather Detector",
-         "documentation": {
-            "sample": null,
-            "hackster": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
-            "other": null
-            },
-         "images": "http://ms-iot.github.io/content/images/arduino_wiring/pi2_weathershield.png",
-         "compatibleDevices": ["RPI2"],
-         "flavorText": "Foggy? Humid? Raining? Who knows? Check the console!",
-         "tags": ["weather", "detection", "C++"]
-      },
-       {"title": "Voice Recognition",
-         "documentation": {
-            "sample": null,
-            "hackster": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
-            "other": null
-            },
-         "images": "http://ms-iot.github.io/content/images/devices/RPi2_0.png",
-         "compatibleDevices": ["RPI2", "MBM"],
-         "flavorText": "This voice recognition thing is super easy to use, and boy is it fast!",
-         "tags": ["voice", "recognition", "C++", "C#"]
-      },
-      {
-         "title": "Weather Detector",
-         "documentation": {
-            "sample": null,
-            "hackster": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
-            "other": null
-            },
-         "images": "http://ms-iot.github.io/content/images/arduino_wiring/pi2_weathershield.png",
-         "compatibleDevices": ["RPI2"],
-         "flavorText": "Foggy? Humid? Raining? Who knows? Check the console!",
-         "tags": ["weather", "detection", "C++"]
       }
    ],
    "zh-CN":[

@@ -42,54 +42,111 @@ lang: en-US
   </div>
 </div>
 <div id="hth-list-block">
-<h1 class="thin-header text-center">List of Tools</h1>
-{% include hth-tiles.html %}
+  <h1 class="thin-header text-center">List of Tools</h1>
 
+  {% include hth-tiles.html %}
 </div>
 <script>
 var allBlocks = {{site.data.hth-tiles[page.lang] | jsonify}};
+console.log("outerAllBlocks:", allBlocks)
 var tags = [];
+var filters = {compatibleDevices: {"rpi2": true,
+                                   "mbm": true,
+                                   "410c": true},
+               documentation: {"hackster": true,
+                               "sample": true}
+              };
 function buildCards(filteredBlocks)
 {
-  var blocks = filteredBlocks ? filteredBlocks : allBlocks,
+  var blocks = filteredBlocks ? filteredBlocks : {{site.data.hth-tiles[page.lang] | jsonify}},
       cards = [],
       card,
+      allBlocks,
+      searchString,
       firstInRow = true;
-  $(".tile-display").empty();
-  for (var i = 0; i < blocks.length; i++) {
-    tags.push(blocks[i].tags)
-    if(firstInRow) cards.push("<div class='row'>")
-    card = "<div class='col-md-6 col-sm-12 block' id='card" + i + "'>" +
-           "<div devices='" + blocks[i].compatibleDevices + "' class='card'>" +
-           "<img src='" + blocks[i].images + "'>" +
-           "<div class='card-body'>" +
-           "<h3 class='text-center thin-header'>" + blocks[i].title + "</h3>" +
-           "<p>" + blocks[i].flavorText + "</p>" +
-           "</div>" +
-           "</div>" +
-           "</div>";
-    cards.push(card)
-    if(!firstInRow) {
-      cards.push("</div>")
-    }
-    firstInRow = !firstInRow
-}
 
-  for (var i = 0; i < cards.length; i++) {
-    $(".tile-display").append(cards[i])
+
+  $(".tile-display").empty();
+
+  if(blocks.length !== 0) {
+    console.log(filters)
+    console.log(blocks[0].compatibleDevices["rpi2"])
+    console.log(blocks[0].compatibleDevices["mbm"])
+    console.log(hasValue(blocks[0].documentation["sample"]))
+    for (var i = 0; i < blocks.length; i++) {
+      // if(filters["rpi2"] === blocks[i].compatibleDevices["rpi2"] ||
+      //    filters["mbm"] === blocks[i].compatibleDevices["mbm"] ||
+      //    filters["410c"] === blocks[i].compatibleDevices["410c"]) {
+
+      //   if(filters["hackster"] === hasValue(blocks[i].documentation["hackster"])  ||
+      //      filters["sample"] === hasValue(blocks[i].documentation["sample"])) {
+
+            tags.push(blocks[i].tags);
+            if(firstInRow) cards.push("<div class='row'>");
+
+            card = "<div class='col-md-6 col-sm-12 block' id='card" + i + "'>" +
+                   "<div devices='" + blocks[i].compatibleDevices + "' class='card'>" +
+                   "<img src='" + blocks[i].images + "'>" +
+                   "<div class='card-body'>" +
+                   "<h3 class='text-center thin-header'>" + blocks[i].title + "</h3>" +
+                   "<p>" + blocks[i].flavorText + "</p>" +
+                   "</div>" +
+                   "</div>" +
+                   "</div>";
+
+            cards.push(card);
+            if(!firstInRow) cards.push("</div>");
+
+            firstInRow = !firstInRow;
+      //   }
+      // }
+    }
+    allBlocks = allBlocks ? allBlocks : cards;
+    for (var i = 0; i < cards.length; i++) {
+      $(".tile-display").append(cards[i]);
+    }
+}else{
+      $(".tile-display").append("<h2 class='thin-header text-center'>We can't seem to find any results that match all the criteria you selected.</h2>")
   }
 };
 
+function hasValue(value) {
+  return value === null ? false : true;
+}
+
 function search() {
-  var searchString = $("#searchBox")[0].value.toLowerCase(),
+  searchString = $("#searchBox")[0].value.toLowerCase(),
   count = 0,
-  blocks = []
-  for(var i = 0; i < tags.length; i++) {
-      if(tags[i].indexOf(searchString) === -1) {
-        cardBlock = "#card" + i;
-        $(cardBlock).hide();
+  blocks = [];
+
+  for(var i = 0; i < allBlocks.length; i++) {
+    if(allBlocks[i].tags.indexOf(searchString) !== -1) {
+      blocks.push(allBlocks[i]);
     }
   }
+  buildCards(blocks);
+}
+
+function clearSearch() {
+  searchString = null;
+  buildCards();
+}
+
+function filter(optionSelected) {
+  var element = "#" + optionSelected,
+      filteredBlocks = allBlocks;
+
+  filters[optionSelected] = $(element)[0].checked;
+  for(filterType in filter) {
+    for(parameter in filter[filterType]) {
+      for(var i = 0; i < allBlocks.length; i++) {
+        if(allBlocks[i][filterType][parameter] === filter[filterType]){
+          filteredBlocks.push(allBlocks[i]);
+        }
+      }
+    }
+  }
+  buildCards(filteredBlocks);
 }
 
 window.onload = function() {

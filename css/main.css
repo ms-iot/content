@@ -449,6 +449,7 @@ div.preview {
 
 .tile-display {
   max-height: 150vh;
+  min-height: 150vh;
   overflow: scroll;
   border:1px solid rgb(230,230,230);
   padding:10px;
