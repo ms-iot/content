@@ -9,12 +9,18 @@ lang: zh-CN
 
 在使用 USB WiFi 适配器的过程中，WiFi 在 Windows 10 IoT 核心版设备上受支持。使用 WiFi 可提供有线连接的所有功能，包括 [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm)、[Powershell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)、[Web 设备管理]({{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm)以及应用程序调试和部署。
 
-	Note: Plugging in a wired Ethernet cable will override WiFi as the default network interface
+	注意: 插入一个有线的网络将会覆盖无线设置而成为缺省网络接口
 
 ### <a name="WiFi_Devices"></a>受支持的适配器
 以下 WiFi 适配器已在 Windows 10 IoT 核心版上进行测试：
 
-\| Raspberry Pi 2 \|\| MinnowBoard Max \| \|--------------------------------------------------------------------\|\|--------------------------------------------------------------------\| \|[Raspberry Pi WiFi 硬件保护装置](http://swag.raspberrypi.org/collections/frontpage/products/official-raspberry-pi-Wifi-dongle){:target="_blank"}\|\|[Airlink 无线 N 150 微型 USB 适配器](http://www.amazon.com/Airlink101-AWLL5077-150Mbps-Wireless-Adapter/dp/B002VFWY9M){:target="_blank"}\| \|\|\|[Panda PAU06](http://www.amazon.com/Panda-300Mbps-Wireless-N-Adapter-button/dp/B00JDVRCI0){:target="_blank"}\| \|\|\|[TP-LINK TL\_WN725N](http://www.amazon.com/TP-LINK-TL-WN725N-Wireless-Adapter-150Mbps/dp/B008IFXQFU){:target="_blank"}\| \|\|\|[NET-DYN USB 适配器](http://www.amazon.com/Adapter-NET-DYN%C2%AE-Perfect-Desktop-Laptop/dp/B00LWE14TO){:target="_blank"}\| \|\|\|[Realtek 8191](http://www.amazon.com/Realtek-300Mbps-802-11n-Wireless-Network/dp/B00AVSRLTO){:target="_blank"}\|
+| Raspberry Pi 2                                                     || MinnowBoard Max                                                    | 
+|--------------------------------------------------------------------||--------------------------------------------------------------------| 
+|[Raspberry Pi 无线适配器](http://swag.raspberrypi.org/collections/frontpage/products/official-raspberry-pi-Wifi-dongle){:target="_blank"}||[Airlink Wireless N 150 微型 USB 适配器](http://www.amazon.com/Airlink101-AWLL5077-150Mbps-Wireless-Adapter/dp/B002VFWY9M){:target="_blank"}| 
+|||[Panda PAU06](http://www.amazon.com/Panda-300Mbps-Wireless-N-Adapter-button/dp/B00JDVRCI0){:target="_blank"}| 
+|||[TP-LINK TL\_WN725N](http://www.amazon.com/TP-LINK-TL-WN725N-Wireless-Adapter-150Mbps/dp/B008IFXQFU){:target="_blank"}| 
+|||[NET-DYN USB 适配器](http://www.amazon.com/Adapter-NET-DYN%C2%AE-Perfect-Desktop-Laptop/dp/B00LWE14TO){:target="_blank"}| 
+|||[Realtek 8191](http://www.amazon.com/Realtek-300Mbps-802-11n-Wireless-Network/dp/B00AVSRLTO){:target="_blank"}|
 
 ### 配置 WiFi
 若要使用 WiFi，将需要向 Windows 10 IoT 核心版提供 WiFi 网络凭据。可通过以下几种不同选项执行此操作：
