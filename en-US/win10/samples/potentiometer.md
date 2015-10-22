@@ -67,7 +67,7 @@ Detailed connection:
 
 ![Overall Schematics]({{site.baseurl}}/images/Potentiometer/OverallCon-3208.PNG)
 
-The MCP3002 should be connected as follows:
+The MCP3208 should be connected as follows:
 
 - MCP3208: VDD - 3.3V on Raspberry Pi 2
 - MCP3208: VREF - 3.3V on Raspberry Pi 2
@@ -77,7 +77,7 @@ The MCP3002 should be connected as follows:
 - MCP3208: Din - "SPI0 MOSI" on Raspberry Pi 2
 - MCP3208: CS/SHDN - "SPI0 CS0" on Raspberry Pi 2
 - MCP3208: DGND - GND on Raspberry Pi 2
-- MCP3002: CH0 - Potentiometer wiper pin
+- MCP3208: CH0 - Potentiometer wiper pin
 
 ###DragonBoard 410c
 
