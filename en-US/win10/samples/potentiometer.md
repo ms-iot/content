@@ -80,30 +80,38 @@ The MCP3002 should be connected as follows:
 
 ###DragonBoard 410c
 
+For the DragonBoard 410c, you will require a [Voltage-Level Translator Breakout](https://www.sparkfun.com/products/11771).
+
 ####DragonBoard Pinout
 
 ![DragonBoard Pinout](../../../images/PinMappings/DB_pinout.png)
 
 ####Wiring & Connections
 
-#####MCP3008
+#####MCP3208
 
-For the DragonBoard 410c, assemble the circuit as follows:
+Connect the MCP3208 to the Voltage-Level Translator breakout as follows:
 
-* Connect Vdd to pin 35 (1.8V PWR)
-* Connect Vdd to Vref
-* Connect AGND to pin 2 (GND)
-* Connect CLK to pin 8 (SPI0 SCLK)
-* Connect DOUT to pin 10 (SPI0 MISO)
-* Connect DIN to pin 14 (SPI0 MOSI)
-* Connect CS to pin 12 (SPI CS N)
-* Connect DGND to pin 2 (GND)
-* Connect channel 0 to the potentiometer wiper pin
-* Connect leg 1 of the potentiometer to pin 2 (GND)
-* Connect leg 2 of the potentiometer to pin 35 (1.8V PWR)
-* Connect leg 2 of the potentiometer to a 330 &#x2126; resistor
-* Connect the 330 &#x2126; resitor to the cathode of the LED
-* Connect the anode of the LED to pin 24 (GPIO 12)
+* Connect Vdd to VccB on the Translator breakout(5 V)
+* Connect Vref to VccB on the Translator breakout(5 V)
+* Connect AGND to GND on the Translator breakout
+* Connect CLK to B1 on the Translator breakout
+* Connect DOUT to B3 on the Translator breakout
+* Connect DIN to B2 on the Translator breakout
+* Connect CS to B4 on the Translator breakout
+* Connect DGND to GND 
+* Connect channel 0 to the potentiometer wiper pin (leg 2)
+* Connect leg 1 of the potentiometer to GND 
+* Connect leg 3 of the potentiometer to VccB (5 V) 
+* Connect leg 3 of the potentiometer to a 330 &#x2126; resistor
+* Connect the 330 &#x2126; resistor to the cathode of the LED
+* Connect the anode of the LED to pin 24 (GPIO 12) on the DragonBoard
+* Connect A1 on the Translator breakout to pin 8 (SPI0 SCLK)
+* Connect A3 on the Translator breakout to pin 10 (SPI0 MISO)
+* Connect A2 on the Translator breakout to pin 14 (SPI0 MOSI)
+* Connect A4 on the Translator breakout to pin 12 (SPI CS N)
+* Connect VccA on the Translator breakout to pin 35 (1.8 V) on the DragonBoard
+* Connect VccB on the Translator breakout to pin 37 (5 V) on the DragonBoard
 
 Here is an illustration of what your breadboard might look like with the circuit assembled:
 
@@ -115,6 +123,9 @@ Finally, the LED_PIN variable of the **MainPage.xaml.cs** file of the sample cod
 private const int LED_PIN = 12;
 ~~~
 {: .language-c#}
+
+#####MCP3008
+If you chose to use the **MCP3008**, you can switch the MCP3208 for the MCP3008 in the above diagram.
 
 ###Building and running the sample
 
