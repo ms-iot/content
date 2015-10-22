@@ -32,13 +32,13 @@ Unlike the Raspberry Pi 2 and Minnowboard Max, you *do not* need an SD card to l
 
 
 ## Connect the DragonBoard to the Host PC
-1. Put the board in download mode by setting the first boot switch on the back of the board to: ”USB Boot”.
-(First switch set to ON other 3 switches set to OFF).
+1. First, we must enable download mode by setting the first boot switch on the back of the board to: ”USB Boot”. Refer to the image below for a demonstration of the proper configuration.
+<img class="image-border" src="{{site.baseurl}}/images/SetupDB410c/dragonboard_usbboot.png">
+The first of the four switches are set to ON, and the other 3 switches are set to OFF.
 
 2. Connect a USB cable to the Dragonboard’s microUSB port and connect the other end to an empty USB port on the Host PC
  
 3. Connect the Dragonboard to the Power supply 
-
 
 
 ## Download the Win10 IoT Core Image to the DragonBoard
