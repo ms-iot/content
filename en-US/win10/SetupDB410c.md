@@ -26,6 +26,11 @@ Learn how to set up the DragonBoard410c and connect it to your computer.
 5. **USB - Keyboard and Mouse** - [Seeing issues with USB?]({{site.baseurl}}/{{page.lang}}/Faqs.htm#dragonboard)
 
 
+####Note:
+
+Unlike the Raspberry Pi 2 and Minnowboard Max, you *do not* need an SD card to load the Windows IoT Core image to your DragonBoard. The image will be directly uploaded to the board!
+
+
 ## Connect the DragonBoard to the Host PC
 1. Put the board in download mode by setting the first boot switch on the back of the board to: ”USB Boot”.
 (First switch set to ON other 3 switches set to OFF).
