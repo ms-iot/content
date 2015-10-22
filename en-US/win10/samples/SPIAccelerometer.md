@@ -100,6 +100,7 @@ The ADXL345 breakout board has 8 IO pins that are connected to the Voltage-Level
 8.  **SCL:**  Connect the serial communications clock to B1
 
 The Voltage-Level Translator breakout board pins are connected to the DragonBoard as follows:
+
 1.  **GND:**  Connect the ground to pin 40
 2.  **VccA:**  Connect the lower power to pin 35 (1.8V)
 3.  **VccB:**  Connect the higher power to pin 37 (5V)
