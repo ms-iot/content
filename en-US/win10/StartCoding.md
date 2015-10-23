@@ -306,7 +306,7 @@ lang: en-US
                       <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/OneNote.htm">OneNote API (Wiring)</a>
                     </div>
                     <div class="col-md-3">
-                      <h3>RGB Pixel</h3>
+                      <h3>RGB Pixel Strip</h3>
                       <p>Learn how to use an RGB Pixel Strip in Wiring.</p>
                       <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/RGBPixel.htm">RGB Pixel (Wiring)</a>
                     </div>
