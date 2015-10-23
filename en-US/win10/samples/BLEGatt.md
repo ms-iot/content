@@ -10,6 +10,8 @@ In this sample we will discover how to work with Bluetooth Low Energy devices us
 
 Information on Bluetooth support for Windows IoT Core devices can be found [here]({{site.baseurl}}/{{page.lang}}/win10/Bluetooth.htm){:target="_blank"}.
 
+This sample is supported on all Windows IoT Core devices. DragonBoard 410c has the added advantage of onboard Bluetooth, meaning you will not need an additional Bluetooth USB dongle to complete this or other Bluetooth samples.
+
 ### What is Bluetooth Low Energy & GATT?
 Bluetooth Low Energy (BLE), or Bluetooth Smart, is a wireless protocol that is part of the Bluetooth 4.0 core specification. The key feature of BLE is its low power consumption, leading to its widespread adoption by IoT and wearable devices. 
 
@@ -39,6 +41,8 @@ In this sample we will be connecting a Windows IoT Core device with the [Texas I
 6. Barometric pressure sensor (Epcos T5400)
 
 For the sample, we are running firmware version 1.4.1 on the SensorTag. More detailed information about the SensorTag can be found [here](http://processors.wiki.ti.com/index.php/SensorTag_User_Guide){:target="_blank"}.
+
+[Click here to order a SensorTag from Texas Instruments.](http://www.ti.com/tool/cc2650stk#buy){:target="__blank"}
 
 ### Hardware Support
 
