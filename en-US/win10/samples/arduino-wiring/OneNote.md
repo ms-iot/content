@@ -6,7 +6,7 @@ lang: en-US
 ---
 
 # OneNote cloud services
-Learn how to use http messages to Get and Post OneNote pages
+Learn how to deploy an Arduino Wiring sketch on Raspberry Pi 2 or Minnowboard Max and use http messages to Get and Post OneNote pages.
 
 # Create a new project
 

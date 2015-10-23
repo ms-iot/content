@@ -6,7 +6,7 @@ lang: en-US
 ---
 
 #LCD Text Display
-Learn to Deploy and Debug an Arduino Wiring sketch to control text on an LCD screen!
+Learn to Deploy and Debug an Arduino Wiring sketch on Raspberry Pi 2 or Minnowboard Max to control text on an LCD screen!
 
 ##Setup
 

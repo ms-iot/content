@@ -11,6 +11,8 @@ To enable the use of existing Arduino Wiring sketches on Windows 10 IoT Core dev
 
 To start building Arduino Wiring projects for Raspberry Pi2 and Minnowboard Max, please refer to the [Arduino Wiring project guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm)<br/>
 
+#### Note: Arduino Wiring is not supported on DragonBoard 410c.
+
 ##Windows 10 IoT Core UWP Lightning Provider
 
 A set of Windows 10 IoT Core UWP providers for GPIO, SPI and I2C busses can be used to leverage the performance improvements of the direct memory mapped driver on Windows 10 IoT Core devices.

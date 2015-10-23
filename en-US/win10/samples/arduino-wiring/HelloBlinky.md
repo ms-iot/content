@@ -6,7 +6,7 @@ lang: en-US
 ---
 
 #Hello Blinky
-Learn to Deploy and Debug an Arduino Wiring sketch to blink an LED!
+Learn to Deploy and Debug an Arduino Wiring sketch on Raspberry Pi 2 or Minnowboard Max to blink an LED!
 
 ##Setup
 
