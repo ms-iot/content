@@ -17,6 +17,8 @@ You can find the C# and C++ versions of this sample [here](https://github.com/ms
 
 This app is a Universal Windows app and will run on both the PC and your IoT device.
 
+#### Note: The C++ version of this sample is not compatible with DragonBoard 410c due to an issue with UART. It is recommended that the C# version be used for DragonBoard.
+
 ###Wiring the serial connection 
 
 You have two options for wiring up your board:
