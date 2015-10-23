@@ -9,10 +9,12 @@ lang: en-US
 
 ![Shift Register Sample Image]({{site.baseurl}}/images/ShiftRegister/ShiftRegisterProjectPicture_480.png)
 
-In this sample, we'll connect an 8-bit serial-in, parallel-out shift register to your Raspberry Pi 2 and create a simple app that uses the shift register to control eight LEDs.
+In this sample, we'll connect an 8-bit serial-in, parallel-out shift register to your Raspberry Pi 2* and create a simple app that uses the shift register to control eight LEDs.
 
 This is a headed sample, so please ensure that your device is in headed
 mode by running this command: `setbootoption.exe headed` (changing the headed/headless state will require a reboot).
+
+*This sample only works with Raspberry Pi 2 and is not supported on Minnowboard Max or DragonBoard 410c.
 
 ###Connect the Shift Register to Your Device
 
