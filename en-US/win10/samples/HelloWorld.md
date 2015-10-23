@@ -7,6 +7,8 @@ lang: en-US
 
 ##'Hello, World!' Sample
 
+In this sample, we will create and deploy the proverbial 1st app, "Hello World" to any device running Windows IoT Core!
+
 ###Create a new C# project
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\HelloWorld`, but as an exercise, this tutorial will take you through the complete steps to create this app from scratch. You need to make sure you have installed the Windows IoT Core Project Templates from [here](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec). 
 
