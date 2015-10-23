@@ -18,10 +18,10 @@ Learn how to set up the DragonBoard410c and connect it to your computer.
 
 2. **DragonBoard410c**
 
-3. **12V power supply** - with at least 1.0A current
+3. **12V power supply** - with at least 1.0A current.
 		If you plan on using several power-hungry USB peripherals, use a higher current power supply instead (>2.0A)
 		
-4. **HDMI cable and monitor**
+4. **HDMI cable and monitor** - DragonBoard only supports monitors that use native HDMI interfaces, support a 16x9 aspect ratio, and output 1280x720p60. Other monitors may not function properly.
 
 5. **USB - Keyboard and Mouse** - [Seeing issues with USB?]({{site.baseurl}}/{{page.lang}}/Faqs.htm#dragonboard)
 
