@@ -403,7 +403,9 @@ div.preview {
 }
 
 .hth-project-image {
-  margin-left: 25px;
+  margin-left: auto;
+  margin-right:auto;
+  width:100%;
 }
 
 #hth-list-block > .row > .col-sm-4 > p {
@@ -438,9 +440,15 @@ div.preview {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-.card > img {
-  width:100% !important;
-  height:250px;
+.block-image {
+  width:inherit;
+}
+.card > .block-image > img {
+  margin-left:auto;
+  margin-right:auto;
+  max-height:250px;
+  max-width: 100%;
+  display: block;
 }
 
 .card-body{
@@ -469,5 +477,14 @@ div.preview {
   }
   h3.maker-kit {
     font-size:24px;
+  }
+}
+@media (min-width: 1200px) {
+  .card {
+    margin-left:25px;
+    margin-right:25px ;
+  }
+  .hth-project-image {
+    max-height:200px;
   }
 }
