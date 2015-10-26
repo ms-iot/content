@@ -16,7 +16,7 @@ Learn how to get your computer ready for Windows Developer Program for IoT.
 
 ## Install the DragonBoard update Tool
 
-1. Download the DragonBoard Update Tool from the following [website](https://developer.qualcomm.com/db410c-tools)
+1. Download the DragonBoard Update Tool by selecting the download link appropriate for your PC: [x86](https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x86.zip) or [x64](https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x64.zip)
 
 2. Right click on the downloaded zip file and select extract all. This will create a new folder with the same name as the downloaded zip file.
 
