@@ -95,6 +95,12 @@ Those familiar with I2C know that normally pull-up resistors need to be installe
 You'll also need a LM317 voltage regulator along with 2x 120 &#x2126; resistors to provide power to the accelerometer. 
 The regulator will output 2.5V when configured as shown in the breadboard diagram, which allows the ADXL345 board to interface with the 1.8V DragonBoard 410c.
 
+The LM317 has 3 pins that need to be wired:
+
+1. **Adj:**    Connect to ground through a 120 &#x2126; resistor
+2. **Output:** Connect to **Adj** through a 120 &#x2126; resistor. This pin will output 2.5V once the LM317 is wired up.
+3. **Input:**  Connect to 5V on the DragonBoard (Pin 37)
+
 The ADXL345 breakout board has 8 IO pins which are connected to the DragonBoard as follows:
 
 1. **GND:**  Connect to ground on the DragonBoard (Pin 2)
