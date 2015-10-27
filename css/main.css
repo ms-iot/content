@@ -366,54 +366,13 @@ div.preview {
 	height: 150px;
 }
 
-#hth-welcome {
-  color:black;
-  background: -webkit-linear-gradient(white,white,rgb(230,230,230)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(white,white,rgb(230,230,230)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(white,white,rgb(230,230,230)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(white,white,rgb(230,230,230)); /* Standard syntax */
-
-}
-#hth-welcome > .row > h1 {
-  color: rgb(0,120,215);
-  font-size:75px;
-  margin-top:40px;
-  text-align:left;
-}
-#hth-welcome > .row > h4 {
-  text-align:left;
-}
-.hth-major-text {
-  font-weight: lighter;
-  font-size:22px;
-}
-#hth-feature-block{
-  background: -webkit-linear-gradient(rgb(230,230,230),white); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgb(230,230,230),white); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgb(230,230,230),white); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgb(230,230,230),white); /* Standard syntax */
-  margin-top: -20px;
-  padding-bottom:30px;
-}
-
-#hth-feature-block > h1{
-  color: rgb(0,120,215);
-  font-size:60px;
-  padding-top:20px;
-}
-
-.hth-project-image {
-  margin-left: auto;
-  margin-right:auto;
-  width:100%;
-}
-
 #hth-list-block > .row > .col-sm-4 > p {
   display: block;
 }
 #hth-list-block > h1{
   color: rgb(0,120,215);
   font-size:60px;
+  font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
 #card-holder > .row {
@@ -449,17 +408,29 @@ div.preview {
   max-height:250px;
   max-width: 100%;
   display: block;
+  width:100%;
 }
 
 .card-body{
   padding:5px;
 }
+  .card-body > .row > .col-xs-4 {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
+.center {
+  margin-left:auto;
+  margin-right:auto;
+  display: block;
+}
 .tile-display {
-  max-height: 150vh;
-  min-height: 150vh;
+  max-height: 102vh;
+  min-height: 102vh;
   overflow: scroll;
-  border:1px solid rgb(230,230,230);
+  border:1px solid rgb(210,210,210);
+  background-color: rgb(230,230,230);
+  border-radius: 3px;
   padding:10px;
   padding-left:10px;
   padding-right: 10px;
@@ -467,6 +438,12 @@ div.preview {
 .tile-display > .row{
   margin-left: 0;
   margin-right: 0;
+}
+.authors {
+  color: rgb(165,165,165);
+}
+.devices-row {
+  margin-bottom: 20px;
 }
 @media (max-width: 700px) {
   .steps {
@@ -477,14 +454,5 @@ div.preview {
   }
   h3.maker-kit {
     font-size:24px;
-  }
-}
-@media (min-width: 1200px) {
-  .card {
-    margin-left:25px;
-    margin-right:25px ;
-  }
-  .hth-project-image {
-    max-height:200px;
   }
 }

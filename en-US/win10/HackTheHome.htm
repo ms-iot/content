@@ -5,45 +5,21 @@ permalink: /en-US/win10/HackTheHome.htm
 lang: en-US
 ---
 
-<div id="hth-welcome" class="text-center">
+<div id="hth-welcome">
   <div class="row">
-    <h1 class="thin-header">Hack the Home</h1>
-    <h4 class="thin-header">A suite of open-source tools designed to help you make your home start <i>working for you</i>.</h4>
-  </div>
-  <div class="row">
+    <h1>Hack the Home</h1>
+    <hr>
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/images/HackTheHomeLogo.png">
+      <h4>A suite of open-source tools designed to help you make your home start <i>working for you</i>.</h4>
+      <p class="text-justify"> A growing community of makers is determined to change the way that they interact with their homes.  From automating every day tasks like watering plants and feeding pets to improving security by monitoring home cameras and door locks from anywhere in the world, the possibilities are nearly endless.  Below is a host of open-source libraries and APIs that, combined with the power of Windows 10 IoT Core, will allow you to quickly and easily hack your home to start working for you. </p>
     </div>
+
     <div class="col-md-6 col-sm-12">
-      <p class="hth-major-text floatTop"> A growing community of makers is determined to change the way that they interact with their homes.  From automating every day tasks like watering plants and feeding pets to improving security by monitoring home cameras and door locks from anywhere in the world, the possibilities are nearly endless.  With this in mind, the Microsoft Internet of Things Maker Team has released <a href="#hth-list-block">a host of open-source libraries and APIs</a> that, combined with the power of Windows 10 IoT Core, will allow you to quickly and easily hack your home to start working for you. </p>
+      <img style="max-width: 250px; margin-left: auto; margin-right: auto; display: block;" src="{{site.baseurl}}/images/HackTheHomeLogo.png">
     </div>
-  </div>
-</div>
-<div id="hth-feature-block">
-  <h1 class="thin-header text-center">Featured Projects</h1>
-  <div class="row text-center">
-    <div class="col-md-8 col-sm-12">
-      <h2 class="thin-header"> Smart Door Lock </h2>
-      <img src="{{site.baseurl}}/images/AdafruitStarterPack/WeatherStation.jpg">
-      <p>Description is like a thing that describes. It's description and you konw that its true that this uses things and stuff like other htings. uses <a href="#"> this library</a> and <a href="#">this one</a></p>
-    </div>
-    <div class="col-md-4 col-sm-12">
-        <div class="col-md-12 col-sm-6 col-xs-12">
-          <h2 class="thin-header"> Security System </h2>
-          <img class="hth-project-image" src="{{site.baseurl}}/images/AdafruitStarterPack/BrightOrNot.jpg">
-          <p>Description is like a thing that describes. It's description and you konw that its true that this uses things and stuff like other htings.</p>
-        </div>
-        <div class="col-md-12 col-sm-6 col-xs-12">
-          <h2 class="thin-header"> Pet Feeder </h2>
-          <img class="hth-project-image" src="{{site.baseurl}}/images/AdafruitStarterPack/WhatColor.jpg">
-          <p>Description is like a thing that describes. It's description and you konw that its true that this uses things and stuff like other htings.</p>
-        </div>
-      </div>
   </div>
 </div>
 <div id="hth-list-block">
-  <h1 class="thin-header text-center">List of Tools</h1>
-  <p class="hth-major-text text-center">We're continuously working to expand and improve on this list.</p>
   {% include hth-tiles.html %}
 </div>
 <script>
@@ -58,33 +34,47 @@ function buildCards(filteredBlocks)
       card,
       allBlocks,
       searchString,
-      firstInRow = true;
+      count = 0;
 
 
   $(".tile-display").empty();
 
   if(blocks.length !== 0) {
     for (var i = 0; i < blocks.length; i++) {
-            tags.push(blocks[i].tags);
-            if(firstInRow) cards.push("<div class='row'>");
+      for(device in blocks[i].compatibleDevices){
+        if(blocks[i].compatibleDevices[device] === true) {
+          blocks[i].compatibleDevices[device] = "style='color:green'"
+        } else {
+          blocks[i].compatibleDevices[device] = "style='color:rgb(167,49,58)'"
+        }
+      }
+      tags.push(blocks[i].tags);
+      if(count === 0) cards.push("<div class='row'>");
 
-            card = "<div class='col-sm-6 col-xs-12 block' id='card" + i + "'>" +
-                   "<div devices='" + blocks[i].compatibleDevices + "' class='card'>" +
-                   "<h2 class='thin-header text-center'>" + blocks[i].title + "</h2>" +
-                   "<div class='block-image'>" +
-                   "<img src='" + blocks[i].images + "'>" +
-                   "<hr>" +
-                   "</div>" +
-                   "<div class='card-body'>" +
-                   "<p>" + blocks[i].flavorText + "</p>" +
-                   "</div>" +
-                   "</div>" +
-                   "</div>";
+      card = "<div class='col-sm-4 col-xs-12 block' id='card" + i + "'>" +
+             "<div devices='" + blocks[i].compatibleDevices + "' class='card'>" +
+             "<h2 class='thin-header text-center'><a href='" + blocks[i].documentation.sample +"'>" + blocks[i].title + "</a></h2>" +
+             "<div class='card-body'>" +
+             "<p class='authors text-center'>" + blocks[i].authors + "</p>" +
+             "<hr>" +
+             "<p class='text-center hth-major-text'>" + blocks[i].flavorText + "</p>" +
+             "<div class='row devices-row'>" +
+             "<div class='col-xs-4 text-left'" + blocks[i].compatibleDevices["rpi2"] + "'> RPi2 </div>" +
+             "<div class='col-xs-4 text-center'" + blocks[i].compatibleDevices["mbm"] + "'> MBM </div>" +
+             "<div class='col-xs-4 text-right'" + blocks[i].compatibleDevices["410c"] + "'> 410c </div>" +
+             "</div>" +
+             "<button href='https://github.com' class='button-blue button-flat'>Download from GitHub </button>" +
+             "</div>" +
+             "</div>" +
+             "</div>";
 
-            cards.push(card);
-            if(!firstInRow) cards.push("</div>");
-
-            firstInRow = !firstInRow;
+      cards.push(card);
+      if(count === 2) {
+        cards.push("</div>")
+        count = 0;
+        continue;
+      };
+      count++
     }
     allBlocks = allBlocks ? allBlocks : cards;
     for (var i = 0; i < cards.length; i++) {

@@ -2,12 +2,13 @@
    "en-US":[
       {
          "title": "Voice Recognition",
+         "authors": "Daniel Kuo",
+         "githubLink": "",
          "documentation": {
             "sample": null,
             "hackster": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
             "other": null
             },
-         "images": "http://ms-iot.github.io/content/images/devices/RPi2_0.png",
          "compatibleDevices": {"rpi2": true,
                                "mbm": true,
                                "410c": false},
@@ -16,12 +17,13 @@
       },
       {
          "title": "Weather Detector",
+         "authors": "Zak Fields and Jim Gale",
+         "githubLink": "",
          "documentation": {
             "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
             "hackster": null,
             "other": null
             },
-         "images": "http://ms-iot.github.io/content/images/arduino_wiring/pi2_weathershield.png",
          "compatibleDevices": {"rpi2": true,
                                "mbm": true,
                                "410c": false},
@@ -30,30 +32,32 @@
       },
       {
          "title": "Arduino Wiring",
+         "authors": "Jesse Frush and Bert Kleinshmidt",
+         "githubLink": "",
          "documentation": {
             "sample": null,
             "hackster": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
             "other": null
             },
-         "images": "https://karaokecloud.files.wordpress.com/2013/11/lightning-bolt.jpg?w=819",
          "compatibleDevices":{"rpi2": true,
                                "mbm": true,
                                "410c": false},
-         "flavorText": "Wire hella fast for sure.",
+         "flavorText": "Wire lightning fast. Easy to use namespace.",
          "tags": ["speed", "GPIO", "Arduino", "Lightning", "Wiring", "C++", "C#"]
       },
       {
          "title": "LCD Display Library",
+         "authors": "Ben Thomas, Aparajitta Dutta, and Matt McKee",
+         "githubLink": "",
          "documentation": {
             "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
             "hackster": null,
             "other": null
             },
-         "images": "https://hackster.imgix.net/uploads/image/file/58158/NowPlaying.JPG?w=580&h=435&fit=max&s=67ff6693ebc0c906cbbd27a0d2bb96ac",
          "compatibleDevices": {"rpi2": false,
                                "mbm": false,
                                "410c": true},
-         "flavorText": "You'll be reading little letters from a screen in no time",
+         "flavorText": "You'll be reading little letters from a screen in no time.",
          "tags": ["Windows", "LCD", "Screen", "Library", "C", "Sharp", "C#"]
       }
    ],
