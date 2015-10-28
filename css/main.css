@@ -417,9 +417,6 @@ div.preview {
   display: block;
 }
 .tile-display {
-  max-height: 102vh;
-  min-height: 102vh;
-  overflow: scroll;
   border:1px solid rgb(210,210,210);
   background-color: rgb(230,230,230);
   border-radius: 3px;
