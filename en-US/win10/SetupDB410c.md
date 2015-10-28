@@ -25,7 +25,8 @@ Learn how to set up the DragonBoard410c and connect it to your computer.
 
 5. **USB - Keyboard and Mouse** - [Seeing issues with USB?]({{site.baseurl}}/{{page.lang}}/Faqs.htm#dragonboard)
 
-6. **Logic-level shifter** - *recommended* - Many peripheral devices require 3.3v or 5v logic level voltages. The DragonBoard 410c supplies 1.8v logic and therefore may require a shifter device when connecting your DragonBoard to these types of peripheral devices. Some example devices include: [Adafruit 8-channel Logic Level Converter](https://www.adafruit.com/products/395) and [SparkFun 4-channel Voltage-Level Translator](https://www.sparkfun.com/products/11771). You will not require this device in order to get started with the DragonBoard.
+6. **Logic-level shifter** - *recommended* - Many peripheral devices require 3.3v or 5v logic level voltages. The DragonBoard 410c supplies 1.8v logic and therefore may require a logic level shifter when connecting your DragonBoard to these types of peripheral devices. Some example shifters include: [Adafruit 8-channel Logic Level Converter](https://www.adafruit.com/products/395) and [SparkFun 4-channel Voltage-Level Translator](https://www.sparkfun.com/products/11771).
+We will show you how to use these shifters in any of our samples that require them for DragonBoard. To see an example of one such sample, refer to the DragonBoard section of the [SPI Accelerometer Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/SPIAccelerometer.htm).  You may also refer to [SparkFun's Hookup Guide](https://learn.sparkfun.com/tutorials/txb0104-level-shifter-hookup-guide?_ga=1.63563695.1225669924.1446058808). You will not require this device in order to get started with the DragonBoard.
 
 
 ####Note:
