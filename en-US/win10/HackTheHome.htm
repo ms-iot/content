@@ -18,23 +18,6 @@ lang: en-US
       <img style="max-width: 250px; margin-left: auto; margin-right: auto; display: block;" src="{{site.baseurl}}/images/HackTheHomeLogo.png">
     </div>
   </div>
-  <div class="row">
-    <span class="pull-right">
-      Filter is <span id="filterStatus"> off </span>
-      <div class="btn-group filter-button">
-       <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Filter <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li onclick="filterCards('rpi2')">Raspberry Pi 2 <i id="rpi2" class="glyphicon glyphicon-ok pull-right"></i></li>
-          <li onclick="filterCards('mbm')">MinnowBoard MAX <i id="mbm" class="glyphicon glyphicon-ok pull-right"></i></li>
-          <li onclick="filterCards('410c')">DragonBoard 410c <i id="410c" class="glyphicon glyphicon-ok pull-right"></i></li>
-          <li role="separator" class="divider"></li>
-          <li onclick="filterCards()">Clear Filter</li>
-        </ul>
-      </div>
-    </span>
-  </div>
 </div>
 <div id="hth-list-block">
   {% include hth-tiles.html %}
@@ -78,7 +61,7 @@ function buildCards(filteredBlocks)
       card = "<div class='col-sm-4 col-xs-12 block' id='card" + i + "'>" +
              "<div class='card'>" +
              "<div class='card-header'>" +
-             "<h2 class='thin-header text-center'><a href='" + blocks[i].githubLink.repository +"'>" + blocks[i].title + "</a></h2>" +
+             "<h2 class='thin-header text-center'><a href='" + blocks[i].githubLink.repository +"' target='_blank'>" + blocks[i].title + "</a></h2>" +
              "<p class='authors text-center'>" + blocks[i].authors + "</p>" +
              "<hr>" +
              "<p class='text-center hth-major-text'>" + blocks[i].flavorText + "</p>" +
@@ -89,7 +72,8 @@ function buildCards(filteredBlocks)
              "<div class='col-xs-4 text-center'" + blocks[i].color["mbm"] + "'> MBM </div>" +
              "<div class='col-xs-4 text-right'" + blocks[i].color["410c"] + "'> 410c </div>" +
              "</div>" +
-             "<a href='" + blocks[i].githubLink.zip + "' class='button-blue button-flat'>Download from GitHub </a>" +
+             "<a href='" + blocks[i].githubLink.repository + "' target='_blank' class='button-blue button-flat'> View on GitHub </a>" +
+             "<a href='" + blocks[i].githubLink.zip + "' class='button-blue button-flat'>Download .zip </a>"
              "</div>" +
              "</div>" +
              "</div>";
@@ -128,43 +112,6 @@ function buildCards(filteredBlocks)
       $(".tile-display").append("<h2 class='thin-header text-center'>We can't seem to find any results that match all the criteria you selected.</h2>")
   }
 };
-
-function filterCards(board) {
-   var filteredCards = [];
-
-   if(board) {
-    var id = "#" + board;
-
-    $(id).toggle();
-    filter[board] = !filter[board];
-
-    filterOn = filter["rpi2"] === false &&
-               filter["mbm"] === false &&
-               filter["410c"] === false ? false : true;
-    if(filterOn === true) {
-      for(device in filter) {
-        for(var i = 0; i < allBlocks.length; i++) {
-          if(filter[device] === true && allBlocks[i].compatibleDevices[device] === true) {
-            if(filteredCards.indexOf(allBlocks[i]) === -1) {
-              filteredCards.push(allBlocks[i])
-            }
-          }
-        }
-      }
-    buildCards(filteredCards)
-    }else{
-      buildCards();
-    }
-  } else {
-    filterOn = false;
-    for(device in filter) {
-      var id = "#" + device;
-      $(id).hide();
-      filter[device] = false;
-    }
-    buildCards();
-  }
-}
 
 window.onload = function() {
   for(device in filter) {

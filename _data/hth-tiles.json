@@ -4,7 +4,7 @@
          "title": "SparkFun Weather Shield",
          "authors": "Zak Fields",
          "githubLink": {"repository": "https://github.com/ms-iot/sparkfun-weather-shield",
-                        "zip": "" },
+                        "zip": "https://github.com/ms-iot/sparkfun-weather-shield/archive/develop.zip" },
          "documentation": {
             "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
             "hackster": null,
@@ -20,7 +20,7 @@
          "title": "HTU21D",
          "authors": "Zak Fields",
          "githubLink": {"repository": "https://github.com/ms-iot/htu21d",
-                        "zip": "" },
+                        "zip": "https://github.com/ms-iot/htu21d/archive/develop.zip" },
          "documentation": {
             "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
             "hackster": null,
@@ -36,7 +36,7 @@
          "title": "MPL3115A2",
          "authors": "Zak Fields",
          "githubLink": {"repository": "https://github.com/ms-iot/mpl3115a2",
-                        "zip": "" },
+                        "zip": "https://github.com/ms-iot/mpl3115a2/archive/develop.zip" },
          "documentation": {
             "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
             "hackster": null,
@@ -62,6 +62,37 @@
                                "mbm": true,
                                "410c": false},
          "flavorText": "Wire lightning fast. Easy to use namespace.",
+         "tags": []
+      },
+      {
+         "title": "LCD Display Library",
+         "authors": "Ben Thomas, Aparajitta Dutta, and Matt McKee",
+         "githubLink": {"repository": ,
+                        "zip": "" },
+         "documentation": {
+            "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
+            "hackster": null,
+            "other": null
+            },
+         "compatibleDevices": {"rpi2": false,
+                               "mbm": false,
+                               "410c": true},
+         "flavorText": "You'll be reading little letters from a screen in no time.",
+         "tags": []
+      },
+      {"title": "Voice Recognition",
+         "authors": "Daniel Kuo",
+         "githubLink": {"repository": ,
+                        "zip": "" },
+         "documentation": {
+            "sample": null,
+            "hackster": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
+            "other": null
+            },
+         "compatibleDevices": {"rpi2": true,
+                               "mbm": true,
+                               "410c": false},
+         "flavorText": "This voice recognition thing is super easy to use, and boy is it fast!",
          "tags": []
       },
       {
