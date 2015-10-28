@@ -31,7 +31,7 @@ Learn how to get your computer ready for Windows Developer Program for IoT.
 
 ## Download the DragonBoard Win10 IoT Core Image
 
-1. Download the Win10 IoT Core Image- ISO from the following [website](http://go.microsoft.com/fwlink/?LinkId=657684)
+1. Download a Windows 10 IoT Core image from our [downloads page](http://ms-iot.github.io/content/en-US/Downloads.htm){:target="_blank"}.
  
 2. Double click the downloaded ISO file. This will automatically mount the ISO as a new virtual CD-drive. 
 (Look for a new CD-ROM drive)
