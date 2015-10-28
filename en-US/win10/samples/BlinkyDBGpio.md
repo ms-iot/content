@@ -2,7 +2,7 @@
 
 For reference, the functionality of the low-speed expansion connector is outlined in the following diagram
 
-![DragonBoard Low-Speed Expansion Connector](../../../images/PinMappings/DB_pinout.png)
+![DragonBoard Low-Speed Expansion Connector](../../../images/PinMappings/DB_Pinout.png)
 
 Perform the following steps to create the circuit:
 
