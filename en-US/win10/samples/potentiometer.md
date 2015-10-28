@@ -85,7 +85,7 @@ For the DragonBoard 410c, you will require a [Voltage-Level Translator Breakout]
 
 ####DragonBoard Pinout
 
-![DragonBoard Pinout](../../../images/PinMappings/DB_pinout.png)
+![DragonBoard Pinout](../../../images/PinMappings/DB_Pinout.png)
 
 ####Wiring & Connections
 
