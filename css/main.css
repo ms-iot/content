@@ -366,23 +366,16 @@ div.preview {
 	height: 150px;
 }
 
-#hth-list-block > .row > .col-sm-4 > p {
-  display: block;
-}
-#hth-list-block > h1{
-  color: rgb(0,120,215);
-  font-size:60px;
-  font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
-}
 
-#card-holder > .row {
-  display: table;
-}
-#card-holder > .row > .col-md-6 {
-  display: table-cell;
-  height:100%;
-}
+  #hth-list-block > h1{
+    color: rgb(0,120,215);
+    font-size:60px;
+    font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+  }
 
+    #hth-list-block > .row > .col-sm-4 > p {
+      display: block;
+    }
 
 .row-inline {
   white-space:nowrap;
@@ -394,7 +387,6 @@ div.preview {
   background-color:rgb(245,245,245);
   margin-bottom: 12px;
   box-shadow: 1px 2px 1px .5px rgba(0, 0, 0, 0.2);
-  height: 100% !important;
   border: 1px solid rgb(190,190,190);
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
@@ -445,6 +437,28 @@ div.preview {
 .devices-row {
   margin-bottom: 20px;
 }
+.btn-group-justified {
+  margin-left:auto;
+  margin-right:auto;
+  display: block;
+}
+.btn-group-justified > .btn {
+  width:30%;
+  margin:2px;
+}
+
+.filter-button {
+  margin: 10px;
+}
+  .filter-button > .dropdown-menu {
+    padding: 5px;
+  }
+    .filter-button > .dropdown-menu > li {
+      cursor: pointer;
+    }
+
+
+
 @media (max-width: 700px) {
   .steps {
     font-size:24px;

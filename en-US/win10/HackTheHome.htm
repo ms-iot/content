@@ -18,14 +18,38 @@ lang: en-US
       <img style="max-width: 250px; margin-left: auto; margin-right: auto; display: block;" src="{{site.baseurl}}/images/HackTheHomeLogo.png">
     </div>
   </div>
+  <div class="row">
+    <span class="pull-right">
+      Filter is <span id="filterStatus"> off </span>
+      <div class="btn-group filter-button">
+       <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Filter <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li onclick="filterCards('rpi2')">Raspberry Pi 2 <i id="rpi2" class="glyphicon glyphicon-ok pull-right"></i></li>
+          <li onclick="filterCards('mbm')">MinnowBoard MAX <i id="mbm" class="glyphicon glyphicon-ok pull-right"></i></li>
+          <li onclick="filterCards('410c')">DragonBoard 410c <i id="410c" class="glyphicon glyphicon-ok pull-right"></i></li>
+          <li role="separator" class="divider"></li>
+          <li onclick="filterCards()">Clear Filter</li>
+        </ul>
+      </div>
+    </span>
+  </div>
 </div>
 <div id="hth-list-block">
   {% include hth-tiles.html %}
 </div>
+<div class="row">
+  <p class="text-right"> Legend: RPi2 = Raspberry Pi 2, MBM = MinnowBoard MAX, 410c = DragonBoard 410c </p>
+</div>
 <script>
-var allBlocks = {{site.data.hth-tiles[page.lang] | jsonify}};
-console.log("outerAllBlocks:", allBlocks)
-var tags = [];
+var allBlocks = {{site.data.hth-tiles[page.lang] | jsonify}},
+    filterOn = false,
+    filter = {"rpi2": false,
+              "mbm": false,
+              "410c": false
+    },
+    tags = [];
 
 function buildCards(filteredBlocks)
 {
@@ -33,7 +57,6 @@ function buildCards(filteredBlocks)
       cards = [],
       card,
       allBlocks,
-      searchString,
       count = 0;
 
 
@@ -41,29 +64,32 @@ function buildCards(filteredBlocks)
 
   if(blocks.length !== 0) {
     for (var i = 0; i < blocks.length; i++) {
+      blocks[i].color = {};
       for(device in blocks[i].compatibleDevices){
         if(blocks[i].compatibleDevices[device] === true) {
-          blocks[i].compatibleDevices[device] = "style='color:green'"
+          blocks[i].color[device] = "style='color:rgb(50,175,71)'"
         } else {
-          blocks[i].compatibleDevices[device] = "style='color:rgb(167,49,58)'"
+          blocks[i].color[device] = "style='color:rgb(167,49,58)'"
         }
       }
       tags.push(blocks[i].tags);
       if(count === 0) cards.push("<div class='row'>");
 
       card = "<div class='col-sm-4 col-xs-12 block' id='card" + i + "'>" +
-             "<div devices='" + blocks[i].compatibleDevices + "' class='card'>" +
-             "<h2 class='thin-header text-center'><a href='" + blocks[i].documentation.sample +"'>" + blocks[i].title + "</a></h2>" +
-             "<div class='card-body'>" +
+             "<div class='card'>" +
+             "<div class='card-header'>" +
+             "<h2 class='thin-header text-center'><a href='" + blocks[i].githubLink.repository +"'>" + blocks[i].title + "</a></h2>" +
              "<p class='authors text-center'>" + blocks[i].authors + "</p>" +
              "<hr>" +
              "<p class='text-center hth-major-text'>" + blocks[i].flavorText + "</p>" +
-             "<div class='row devices-row'>" +
-             "<div class='col-xs-4 text-left'" + blocks[i].compatibleDevices["rpi2"] + "'> RPi2 </div>" +
-             "<div class='col-xs-4 text-center'" + blocks[i].compatibleDevices["mbm"] + "'> MBM </div>" +
-             "<div class='col-xs-4 text-right'" + blocks[i].compatibleDevices["410c"] + "'> 410c </div>" +
              "</div>" +
-             "<button href='https://github.com' class='button-blue button-flat'>Download from GitHub </button>" +
+             "<div class='card-body'>" +
+             "<div class='row devices-row'>" +
+             "<div class='col-xs-4 text-left'" + blocks[i].color["rpi2"] + "'> RPi2 </div>" +
+             "<div class='col-xs-4 text-center'" + blocks[i].color["mbm"] + "'> MBM </div>" +
+             "<div class='col-xs-4 text-right'" + blocks[i].color["410c"] + "'> 410c </div>" +
+             "</div>" +
+             "<a href='" + blocks[i].githubLink.zip + "' class='button-blue button-flat'>Download from GitHub </a>" +
              "</div>" +
              "</div>" +
              "</div>";
@@ -77,19 +103,75 @@ function buildCards(filteredBlocks)
       count++
     }
     allBlocks = allBlocks ? allBlocks : cards;
+    var parentHeight = 0;
     for (var i = 0; i < cards.length; i++) {
       $(".tile-display").append(cards[i]);
     }
+
+    $(".card").each(function() {
+     if($(this).height() >= parentHeight) parentHeight = $(this).height();
+    })
+
+    $(".card").css('min-height', parentHeight)
+    $(".card").css('height', parentHeight)
+    $(".card").each(function() {
+      var totalHeight = $(this).height();
+      var bodyHeight = $(this).children('.card-header').height() + $(this).children('.card-body').height() + 30;
+
+      if(totalHeight !== bodyHeight){
+        $(this).children('.card-body').css('margin-top', function(){
+          return totalHeight - bodyHeight + 2
+        })
+      }
+    });
 }else{
       $(".tile-display").append("<h2 class='thin-header text-center'>We can't seem to find any results that match all the criteria you selected.</h2>")
   }
 };
 
-function hasValue(value) {
-  return value === null ? false : true;
+function filterCards(board) {
+   var filteredCards = [];
+
+   if(board) {
+    var id = "#" + board;
+
+    $(id).toggle();
+    filter[board] = !filter[board];
+
+    filterOn = filter["rpi2"] === false &&
+               filter["mbm"] === false &&
+               filter["410c"] === false ? false : true;
+    if(filterOn === true) {
+      for(device in filter) {
+        for(var i = 0; i < allBlocks.length; i++) {
+          if(filter[device] === true && allBlocks[i].compatibleDevices[device] === true) {
+            if(filteredCards.indexOf(allBlocks[i]) === -1) {
+              filteredCards.push(allBlocks[i])
+            }
+          }
+        }
+      }
+    buildCards(filteredCards)
+    }else{
+      buildCards();
+    }
+  } else {
+    filterOn = false;
+    for(device in filter) {
+      var id = "#" + device;
+      $(id).hide();
+      filter[device] = false;
+    }
+    buildCards();
+  }
 }
 
 window.onload = function() {
+  for(device in filter) {
+    var id = "#" + device;
+    $(id).hide();
+  }
   buildCards();
+
 }
 </script>
