@@ -368,6 +368,7 @@ div.preview {
 
 #hth-welcome {
   color:black;
+  font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
   background: -webkit-linear-gradient(white,white,rgb(230,230,230)); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(white,white,rgb(230,230,230)); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(white,white,rgb(230,230,230)); /* For Firefox 3.6 to 15 */
@@ -388,13 +389,19 @@ div.preview {
   font-size:22px;
 }
 #hth-feature-block{
+  font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
   background: -webkit-linear-gradient(rgb(230,230,230),white); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(rgb(230,230,230),white); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(rgb(230,230,230),white); /* For Firefox 3.6 to 15 */
   background: linear-gradient(rgb(230,230,230),white); /* Standard syntax */
   margin-top: -20px;
+  text-align: justify;
   padding-bottom:30px;
 }
+
+  #hth-feature-block > .row > .col-md-8 > .hth-major-text{
+    font-family: "Segoe UI Light","Segoe UI Web Light","Segoe UI Web Regular","Segoe UI","Segoe UI Symbol","HelveticaNeue-Light","Helvetica Neue",Arial,sans-serif;
+  }
 
 #hth-feature-block > h1{
   color: rgb(0,120,215);
@@ -402,16 +409,26 @@ div.preview {
   padding-top:20px;
 }
 
+.featured-project {
+  font-size: 72px;
+}
+
+.featured-image {
+  margin-top:20px;
+  margin-bottom:30px;
+}
 .hth-project-image {
   margin-left: 25px;
+  max-height:220px;
 }
 
   #hth-list-block > h1{
+    text-align: center;
+    font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
     color: rgb(0,120,215);
     font-size:60px;
-    /*font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;*/
-  }
 
+  }
     #hth-list-block > .row > .col-sm-4 > p {
       display: block;
     }
@@ -499,7 +516,13 @@ div.preview {
 
 
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
+  .hth-project-image {
+  max-height:100%;
+  }
+  .featured-project {
+    font-size:60px;
+  }
   .steps {
     font-size:24px;
   }

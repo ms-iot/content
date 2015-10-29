@@ -11,7 +11,7 @@ lang: en-US
   </div>
   <div class="row">
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/images/HackTheHomeLogo.png">
+      <img class="center" src="{{site.baseurl}}/images/HackTheHomeLogo.png">
     </div>
     <div class="col-md-6 col-sm-12">
       <p class="hth-major-text floatTop"> A growing community of makers is determined to change the way that they interact with their homes.  From automating every day tasks like watering plants and feeding pets to improving security by monitoring home cameras and door locks from anywhere in the world, the possibilities are nearly endless.  With this in mind, the Microsoft Internet of Things Maker Team has released <a href="#hth-list-block">a host of open-source libraries and APIs</a> that, combined with the power of Windows 10 IoT Core, will allow you to quickly and easily hack your home to start working for you. </p>
@@ -22,24 +22,25 @@ lang: en-US
   <h1 class="thin-header text-center">Featured Projects</h1>
   <div class="row text-center">
     <div class="col-md-8">
-      <h2 class="thin-header"> Smart Door Lock </h2>
-      <img src="{{site.baseurl}}/images/AdafruitStarterPack/WeatherStation.jpg">
-      <p>Description is like a thing that describes. It's description and you konw that its true that this uses things and stuff like other htings. uses <a href="#"> this library</a> and <a href="#">this one</a></p>
+      <h1 class="thin-header featured-project"> Security Camera</h1>
+      <a href="#"><img class="center featured-image" src="{{site.baseurl}}/images/SecurityCamera.jpeg">  </a>
+      <p class="hth-major-text">Security camera project using Windows 10 IoT Core.  A PiR Motion Sensor detects movement, and triggers the camera accordingly, automatically uploading the photos to OneDrive. Utilizes the <a href="#"> USB Camera</a> and <a href="#">OneDrive</a> components.</p>
     </div>
     <div class="col-md-4">
-      <div class="row">
-        <h2 class="thin-header"> Security System </h2>
-        <img class="hth-project-image" style="max-height: 200px" src="{{site.baseurl}}/images/AdafruitStarterPack/BrightOrNot.jpg">
-        <p>Description is like a thing that describes. It's description and you konw that its true that this uses things and stuff like other htings.</p>
+      <div class="col-md-12 col-sm-6 col-xs-12">
+        <h2 class="thin-header"> Connected Radio </h2>
+        <a href="#"><img class="hth-project-image center" src="{{site.baseurl}}/images/InternetRadio.jpeg"></a>
+        <p>An internet connected clock radio device with a Pi-powered LCD screen to display what's currently playing. Makes use of the <a href="">TextDisplay</a> component.</p>
       </div>
-      <div class="row">
-        <h2 class="thin-header"> Pet Feeder </h2>
-        <img class="hth-project-image" style="max-height: 200px" src="{{site.baseurl}}/images/AdafruitStarterPack/WhatColor.jpg">
-        <p>Description is like a thing that describes. It's description and you konw that its true that this uses things and stuff like other htings.</p>
+      <div class="col-md-12 col-sm-6 col-xs-12">
+        <h2 class="thin-header">IoT Weather Station</h2>
+        <a href="#"><img class="hth-project-image center" src="{{site.baseurl}}/images/WeatherShield.jpg"></a>
+        <p>This project demonstrates how to leverage the power of Windows 10 IoT Core, and create a weather station using the Sparkfun weather shield. Makes use of the <a href="#">SparkFun Weather Shield</a> component.</p>
       </div>
     </div>
   </div>
 </div>
 <div id="hth-list-block">
+  <h1 class="thin-header">Plug-and-Play Components</h1>
   {% include hth-tiles.html %}
 </div>

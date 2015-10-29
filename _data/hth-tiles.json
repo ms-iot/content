@@ -46,8 +46,8 @@
          "tags": []
       },
       {
-         "title": "Arduino Wiring",
-         "categories": "Communications",
+         "title": "PIR Motion Sensor",
+         "categories": "Devices",
          "githubLink": "" ,
          "documentation": {
             "sample": null,
@@ -57,26 +57,26 @@
          "compatibleDevices":{"rpi2": true,
                                "mbm": true,
                                "410c": false},
-         "flavorText": "Wire lightning fast. Easy to use namespace.",
+         "flavorText": "Allows for easy use of a simple, three-wire motion detection sensor.",
          "tags": []
       },
       {
-         "title": "LCD Display Library",
-         "categories": "Devices, Media",
+         "title": "USB Camera",
+         "categories": "Devices",
          "githubLink": "",
          "documentation": {
             "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
             "hackster": null,
             "other": null
             },
-         "compatibleDevices": {"rpi2": false,
-                               "mbm": false,
-                               "410c": true},
-         "flavorText": "You'll be reading little letters from a screen in no time.",
+         "compatibleDevices": {"rpi2": true,
+                               "mbm": true,
+                               "410c": false},
+         "flavorText": "USB connected camera for capturing pictures.",
          "tags": []
       },
-      {"title": "Voice Recognition",
-         "categories": "Communications, Media",
+      {"title": "OneDrive Connector",
+         "categories": "Storage",
          "githubLink": "",
          "documentation": {
             "sample": null,
@@ -86,27 +86,27 @@
          "compatibleDevices": {"rpi2": true,
                                "mbm": true,
                                "410c": false},
-         "flavorText": "This voice recognition thing is super easy to use, and boy is it fast!",
+         "flavorText": "Simple commands for file upload and management on OneDrive.",
          "tags": []
       },
       {
-         "title": "LCD Display Library",
-         "categories": "Devices, Media",
-         "githubLink": "",
+         "title": "Text Display",
+         "categories": "Devices",
+         "githubLink": "https://github.com/ms-iot/TextDisplay",
          "documentation": {
             "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
             "hackster": null,
             "other": null
             },
-         "compatibleDevices": {"rpi2": false,
-                               "mbm": false,
+         "compatibleDevices": {"rpi2": true,
+                               "mbm": true,
                                "410c": true},
-         "flavorText": "You'll be reading little letters from a screen in no time.",
+         "flavorText": "Provides the ability to write strings to text-based displays",
          "tags": []
       },
-      {"title": "Voice Recognition",
-         "categories": "Communications, Media",
-         "githubLink": "",
+      {"title": "Universal Media Engine",
+         "categories": "Media",
+         "githubLink": "https://github.com/ms-iot/UniversalMediaEngine",
          "documentation": {
             "sample": null,
             "hackster": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
@@ -114,8 +114,8 @@
             },
          "compatibleDevices": {"rpi2": true,
                                "mbm": true,
-                               "410c": false},
-         "flavorText": "This voice recognition thing is super easy to use, and boy is it fast!",
+                               "410c": true},
+         "flavorText": "Allows playback of Audio in headless Windows 10 IoT core apps",
          "tags": []
       }
    ],
