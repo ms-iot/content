@@ -48,7 +48,7 @@
       {
          "title": "PIR Motion Sensor",
          "categories": "Devices",
-         "githubLink": "" ,
+         "githubLink": "https://github.com/ms-iot/motion-sensor" ,
          "documentation": {
             "sample": null,
             "hackster": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
@@ -63,7 +63,7 @@
       {
          "title": "USB Camera",
          "categories": "Devices",
-         "githubLink": "",
+         "githubLink": "https://github.com/ms-iot/usb-camera",
          "documentation": {
             "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
             "hackster": null,
@@ -77,7 +77,7 @@
       },
       {"title": "OneDrive Connector",
          "categories": "Storage",
-         "githubLink": "",
+         "githubLink": "https://github.com/ms-iot/onedrive-connector",
          "documentation": {
             "sample": null,
             "hackster": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
@@ -101,7 +101,7 @@
          "compatibleDevices": {"rpi2": true,
                                "mbm": true,
                                "410c": true},
-         "flavorText": "Provides the ability to write strings to text-based displays",
+         "flavorText": "Provides the ability to write strings to text-based displays.",
          "tags": []
       },
       {"title": "Universal Media Engine",
@@ -115,7 +115,7 @@
          "compatibleDevices": {"rpi2": true,
                                "mbm": true,
                                "410c": true},
-         "flavorText": "Allows playback of Audio in headless Windows 10 IoT core apps",
+         "flavorText": "Allows playback of Audio in headless Windows 10 IoT core applications.",
          "tags": []
       }
    ],

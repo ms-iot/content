@@ -532,4 +532,8 @@ div.preview {
   h3.maker-kit {
     font-size:24px;
   }
+  .tile-display {
+    border: none;
+    background-color: transparent;
+  }
 }

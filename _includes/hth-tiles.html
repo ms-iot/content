@@ -11,8 +11,7 @@ function buildCards(filteredBlocks)
   var blocks = filteredBlocks ? filteredBlocks : {{site.data.hth-tiles[page.lang] | jsonify}},
       cards = [],
       card,
-      allBlocks,
-      count = 0;
+      allBlocks;
 
 
   $(".tile-display").empty();
@@ -29,7 +28,6 @@ function buildCards(filteredBlocks)
       }
       var columnWidth = (12 / boardCount);
       console.log(columnWidth)
-      // if(count === 0) cards.push("<div class='row'>");
 
       card = "<div class='col-sm-4 col-xs-12 block' id='card" + i + "'>" +
              "<div class='card'>" +
@@ -52,12 +50,6 @@ function buildCards(filteredBlocks)
              "</div>";
 
       cards.push(card);
-      if(count === 2) {
-        // cards.push("</div>")
-        count = 0;
-        continue;
-      };
-      count++
     }
     allBlocks = allBlocks ? allBlocks : cards;
     var parentHeight = 0;
