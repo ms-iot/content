@@ -418,6 +418,7 @@ div.preview {
   display: block;
 }
 .tile-display {
+  margin-top:15px;
   border:1px solid rgb(210,210,210);
   background-color: rgb(230,230,230);
   border-radius: 3px;
@@ -435,6 +436,7 @@ div.preview {
 }
 .devices-row {
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 .btn-group-justified {
   margin-left:auto;

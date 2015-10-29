@@ -2,9 +2,8 @@
    "en-US":[
       {
          "title": "SparkFun Weather Shield",
-         "authors": "Zak Fields",
-         "githubLink": {"repository": "https://github.com/ms-iot/sparkfun-weather-shield",
-                        "zip": "https://github.com/ms-iot/sparkfun-weather-shield/archive/develop.zip" },
+         "categories": "Devices",
+         "githubLink": "https://github.com/ms-iot/sparkfun-weather-shield",
          "documentation": {
             "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
             "hackster": null,
@@ -13,14 +12,13 @@
          "compatibleDevices": {"rpi2": true,
                                "mbm": true,
                                "410c": true},
-         "flavorText": "Universal Windows Runtime Component for the Sparkfun Weather Shield.",
+         "flavorText": "Universal Windows Runtime Component for the Sparkfun Weather Shield, which incorporates the components for the HTU21D and MPL3115A2.",
          "tags": []
       },
       {
          "title": "HTU21D",
-         "authors": "Zak Fields",
-         "githubLink": {"repository": "https://github.com/ms-iot/htu21d",
-                        "zip": "https://github.com/ms-iot/htu21d/archive/develop.zip" },
+         "categories": "Devices",
+         "githubLink": "https://github.com/ms-iot/htu21d",
          "documentation": {
             "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
             "hackster": null,
@@ -29,14 +27,13 @@
          "compatibleDevices": {"rpi2": true,
                                "mbm": true,
                                "410c": true},
-         "flavorText": "Universal Windows Runtime Component for the HTU21D integrated circuit.",
+         "flavorText": "Universal Windows Runtime Component for the HTU21D integrated circuit, which is used to sense and measure and humidity and temperature.",
          "tags": []
       },
       {
          "title": "MPL3115A2",
-         "authors": "Zak Fields",
-         "githubLink": {"repository": "https://github.com/ms-iot/mpl3115a2",
-                        "zip": "https://github.com/ms-iot/mpl3115a2/archive/develop.zip" },
+         "categories": "Devices",
+         "githubLink": "https://github.com/ms-iot/mpl3115a2",
          "documentation": {
             "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
             "hackster": null,
@@ -45,14 +42,13 @@
          "compatibleDevices": {"rpi2": true,
                                "mbm": true,
                                "410c": true},
-         "flavorText": "Universal Windows Runtime Component for the MPL3115A2 integrated circuit.",
+         "flavorText": "Universal Windows Runtime Component for the MPL3115A2 integrated circuit, which is used to sense and measure barometric pressure.",
          "tags": []
       },
       {
          "title": "Arduino Wiring",
-         "authors": "Jesse Frush and Bert Kleinshmidt",
-         "githubLink": {"repository": ,
-                        "zip": "" },
+         "categories": "Communications",
+         "githubLink": "" ,
          "documentation": {
             "sample": null,
             "hackster": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
@@ -66,9 +62,8 @@
       },
       {
          "title": "LCD Display Library",
-         "authors": "Ben Thomas, Aparajitta Dutta, and Matt McKee",
-         "githubLink": {"repository": ,
-                        "zip": "" },
+         "categories": "Devices, Media",
+         "githubLink": "",
          "documentation": {
             "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
             "hackster": null,
@@ -81,9 +76,8 @@
          "tags": []
       },
       {"title": "Voice Recognition",
-         "authors": "Daniel Kuo",
-         "githubLink": {"repository": ,
-                        "zip": "" },
+         "categories": "Communications, Media",
+         "githubLink": "",
          "documentation": {
             "sample": null,
             "hackster": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
@@ -97,9 +91,8 @@
       },
       {
          "title": "LCD Display Library",
-         "authors": "Ben Thomas, Aparajitta Dutta, and Matt McKee",
-         "githubLink": {"repository": ,
-                        "zip": "" },
+         "categories": "Devices, Media",
+         "githubLink": "",
          "documentation": {
             "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
             "hackster": null,
@@ -112,9 +105,8 @@
          "tags": []
       },
       {"title": "Voice Recognition",
-         "authors": "Daniel Kuo",
-         "githubLink": {"repository": ,
-                        "zip": "" },
+         "categories": "Communications, Media",
+         "githubLink": "",
          "documentation": {
             "sample": null,
             "hackster": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
