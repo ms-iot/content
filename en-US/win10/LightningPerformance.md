@@ -10,7 +10,7 @@ lang: en-US
 The GPIO performance was tested for Windows IoT Lightning functionality using a simple GPIO toggle app. 
 The tests were performed by toggling GPIO 5 between 0 and 1 at the fastest possible speed. The toggle frequency for each case was measured using a Tektronix TDS 2012C Oscilloscope. The following results were obtained from the analysis:
 
-{:.table.table-bordered .devices}
+{:.table.table-bordered}
 | Platform Tested                         | Language                          | Frequency  | Tested on      | 
 | -------------------------------------   | --------------------------------- | ---------- | -------------- |
 | Arduino Uno                             | Arduino Sketch                    | 75.06 kHz  | 10/08/2015     |
