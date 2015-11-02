@@ -29,7 +29,7 @@ This tutorial demonstrates the function of the AllJoyn Device System Bridge (DSB
 
 ## Run the Mock BACnet Adapter in Visual Studio
 
-1. Download the MockAdapter.zip file [here](https://github.com/ms-iot/samples-private/blob/rtm/AllJoyn/AllJoynMockAdapter/MockAdapter.zip?raw=true) to a locaiton on your local machine
+1. Download the MockAdapter.zip file [here](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AlljoynMockAdapter/MockAdapter.zip?raw=true) to a location on your local machine
 2. Navigate to the folder where you downloaded the zip file. Right click the file and "Extract All..." to the folder of your choosing.
 3. Navigate to the extracted folder and open the MockAdapter.sln solution file in Visual Studio.
 4. Once the solution has been opened in Visual Studio, Navigate to the Solution explorer and right click the HeadlessAdapterApp project. Select "Set as Startup Project".
