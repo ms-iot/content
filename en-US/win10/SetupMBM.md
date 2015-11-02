@@ -5,36 +5,45 @@ permalink: /en-US/win10/SetupMBM.htm
 lang: en-US
 deviceName: MBM
 ---
+<h1> Set up your MinnowBoard MAX</h1>
 
-#Get Started
-
-Learn how to set up the MinnowBoard Max hardware and connect it to your computer.
+<h3>Get your computer ready for Windows Developer Program for IoT, set up your MinnowBoard MAX, and build your first Windows IoT Core app.</h3>
+<hr>
 
 {% include steps.html device=page.deviceName %}
 
-{: .thin-header}
-##What you need
-1. **A PC running Windows 10** - as prepared in the previous step.
-1. **MinnowBoard Max**
-1. **Power supply**
-1. <a name="MBM_SDcard"></a>**8GB micro SD card** - class 10 or better. (We suggest this [one](http://www.amazon.com/gp/product/B00IVPU786){:target="_blank"} or this [one](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445){:target="_blank"})
-1. **HDMI cable and monitor**
-1. **Ethernet cable**
-1. **Micro SD card reader** (Due to an issue with most internal SD card readers, we suggest an external USB card reader like this [one](http://www.amazon.com/dp/B009D79VH4){:target="_blank"} or this [one](http://www.amazon.com/dp/B0096FB5CW){:target="_blank"})
-1. **USB keyboard**
+<h3> What you need </h3>
+<ol>
+  <li><b>A PC running Windows 10</b> - as prepared in the previous step.</li>
+  <li><b>MinnowBoard Max</b></li>
+  <li><b>Power supply</b></li>
+  <li><b>8GB micro SD card</b> - class 10 or better. (We suggest this <a href="http://www.amazon.com/gp/product/B00IVPU786" target="_blank" name="MBM_SDcard">one</a> or this <a href="http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445" target="_blank">one</a></li>
+  <li><b>HDMI cable and monitor</b></li>
+  <li><b>Ethernet cable</b></li>
+  <li><b>Micro SD card reader</b> (Due to an issue with most internal SD card readers, we suggest an external USB card reader like this <a href="http://www.amazon.com/dp/B009D79VH4" target="_blank">one</a> or this <a href="http://www.amazon.com/dp/B0096FB5CW" target="_blank">one</a>)</li>
+  <li><b>USB keyboard</b></li>
+</ol>
 
-{: .thin-header}
-##Hook Up Your Board
-1. **Connect a USB keyboard** to one of the USB ports on the board.
-2. **Connect an HDMI monitor** to the microHDMI port on the board.
-3. **Connect a network cable** to the Ethernet port on the board. Make sure your development PC is on the same network.
+<h3> Hook Up Your Board</h3>
+<div class="row">
+  <div class="col-md-5 col-sm-12">
+    <ol>
+      <li><b>Connect a USB keyboard</b> to one of the USB ports on the board.</li>
+      <li><b>Connect an HDMI monitor</b> to the microHDMI port on the board.</li>
+      <li>
+        <b>Connect a network cable</b> to the Ethernet port on the board. Make sure your development PC is on the same network.
+        <ul>
+          <li><b>NOTE:</b> If you don't have a local wired network, see [here]({{site.baseurl}}/{{page.lang}}/win10/ConnectToDevice.htm) for additional connection options.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+  <div class="col-md-7 col-sm-12">
+    <img src="{{site.baseurl}}/images/mbm.bmp" class="device-images">
+  </div>
+</div>
 
-	**NOTE:** If you don't have a local wired network, see [here]({{site.baseurl}}/{{page.lang}}/win10/ConnectToDevice.htm) for additional connection options.
-
-![mbm]({{site.baseurl}}/images/mbm.bmp){:device-images}
-
-{: .thin-header}
-##Update your device Firmware
+<h3>Update your device Firmware</h3>
 
 * For the current release, only 32 bit Windows 10 IoT Core is supported.  Download the latest 32-Bit Release pre-built BIOS firmware from [firmware.intel.com/projects/minnowboard-max](http://firmware.intel.com/projects/minnowboard-max){:target="_blank"}
 * Unzip the downloaded file and copy the following files to a FAT formatted USB stick

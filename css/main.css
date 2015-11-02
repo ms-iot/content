@@ -1,5 +1,5 @@
 body {
-    font-family: "Segoe UI Light","Segoe UI Web Light","Segoe UI Web Regular","Segoe UI","Segoe UI Symbol","HelveticaNeue-Light","Helvetica Neue",Arial,sans-serif;
+    font-family: "Segoe UI Light","Segoe UI Web Light","Segoe UI Web Regular","Segoe UI","Segoe UI Symbol","HelveticaNeue-Light","Helvetica Neue",Arial,sans-serif !important;
     font-size: 12pt;
     margin: 0;
     padding: 0;
@@ -275,13 +275,14 @@ p.thin-header {
   margin-bottom: 20px;
 }
 
-table.maker-kit > tbody > tr:nth-of-type(odd) {
-  background-color: rgb(241,241,242);
-}
-table.maker-kit > tbody > tr > th {
-  font-weight:200;
-  color: rgb(000,000,000);
-}
+  table.maker-kit > tbody > tr:nth-of-type(odd) {
+    background-color: rgb(241,241,242);
+  }
+
+  table.maker-kit > tbody > tr > th {
+    font-weight:200;
+    color: rgb(000,000,000);
+  }
 
 ul.maker-kit > li > a > h3{
   text-align: left;
