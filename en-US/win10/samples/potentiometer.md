@@ -85,7 +85,7 @@ For the DragonBoard 410c, you will require a [Voltage-Level Translator Breakout]
 
 ####DragonBoard Pinout
 
-![DragonBoard Pinout](../../../images/PinMappings/DB_Pinout.png)
+![DragonBoard Pinout]({{site.baseurl}}/images/PinMappings/DB_Pinout.png)
 
 ####Wiring & Connections
 
@@ -116,7 +116,7 @@ Connect the MCP3208 to the Voltage-Level Translator breakout as follows:
 
 Here is an illustration of what your breadboard might look like with the circuit assembled:
 
-![DragonBoard Potentiometer Breadboard](../../../images/Potentiometer/breadboard_db410c.png)
+![DragonBoard Potentiometer Breadboard]({{site.baseurl}}/images/Potentiometer/breadboard_db410c.png)
 
 Finally, the LED_PIN variable of the **MainPage.xaml.cs** file of the sample code will need the following modification:
 
