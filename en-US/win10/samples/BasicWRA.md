@@ -133,7 +133,7 @@ If you chose Option 2 or Option 3 on the "Set up your PC" page, you need to make
 
  ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project04.png)
 
-- Build! Your buttons will be enabled when the connection is established, and you can freely toggle your LED on and off at will! You can also deploy the code to another Windows 10 device and utilize the same functionality there. Here is a screenshot of this basic example running on Windows Phone 10.
+- Build! Your buttons will be enabled when the connection is established, and you can freely toggle your LED on and off at will! You can also deploy the same code to another Windows 10 device and utilize the same functionality there.  In order to get the code running on a Windows Phone, set the deploy destination to "Device" and the architecture to "ARM" in Visual Studio.  When you build and deploy, you should see the app below running on your phone.
 
  ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/screenshot.png)
 
