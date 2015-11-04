@@ -8,7 +8,7 @@ lang: en-US
 # Arduino Wiring Potentiometer Sample
 This sample shows how to connect a rotary potentiometer and LED to a Raspberry Pi 2 or a MinnowBoard Max using Arduino Wiring. We use a SPI-based ADC (Analog to Digital Converter) to read values from the potentiometer and control an LED based on the knob position.
 
-This sample is similar to the [C# Potentiometer Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm), but uses Arduino Wiring instead of C#. The wiring and hardware configuration will be nearly identical. However, DragonBoard 410c does not support Arduino Wiring.
+This sample is similar to the [C# Potentiometer Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm), but uses Arduino Wiring instead of C#. The wiring and hardware configuration will be nearly identical. However, DragonBoard 410c does not currently support Arduino Wiring.
 
 ## Hardware
 - Board - one of the following only
