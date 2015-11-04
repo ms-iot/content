@@ -180,6 +180,7 @@ MCP23S17 16x port expander | RPI2 | 16-Bit I/O Expander with Serial Interface | 
 - [Pi Hats](#Pi-Hats)
 - [Sensors](#Sensors)
 - [Port Expanders](#Port-Expanders)
+- [NFC/RFID/Proximity](#NFC)
 - [Miscellaneous](#OtherDevicesMisc)
 
 ### Storage Media <a name="Storage"></a>
@@ -216,6 +217,14 @@ Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, L
 ----------------|-------------------|-------------|-------|------------------------------
 MCP23008 8-bit I/O Port Expander | RPI2, MBM | I<sup>2</sup>C Interface Chip, GPIO Port Expander.  8 ports, 18-PDIP package | Used in multiple MS-IoT sample projects | [I2C Port Explander Sample]
 MCP23S17 16-bit I/O Port Expander | RPI2, MBM | I<sup>2</sup>C Interface Chip, GPIO Port Expander.  16 ports, 28-SPDIP package | See [Arduino Periperals](#Arduino) for DC Motors | [//build 2014 - Piano]
+
+### NFC/RFID/Proximity {#NFC}
+
+{:.table.table-bordered .devices}
+Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
+----------------|-------------------|-------------|-------|------------------------------
+NXP OM5577 demo board | RPI2 | Demo board for the NXP PN7120 NFC chip. | This demo board plugs into a Raspberry Pi 2 and the NXP website has [an install guide (AN11767)](http://www.nxp.com/documents/application_note/AN11767.pdf) and [a download package](http://www.nxp.com/documents/software/SW349710.zip) for instructions on installing the driver INF and ACPI mod to enable it in Windows 10 IoT. You can write a universal app with the same Windows.Networking.Proximity APIs you're accustomed to on phone and desktop, and the NXP website download has an example AppX you can deploy (source code is in the application note instructions). | [ProximityDevice WinRT documentation](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.proximity.proximitydevice.aspx), [NFC device driver interface documentation](https://msdn.microsoft.com/en-us/library/windows/hardware/dn905575(v=vs.85).aspx)
+NXP PN547/PN548/PN7120 | RPI2, MBM | Supported NXP NFC chips | The NXP PN547, PN548, and PN7120 NFC chips are supported in Windows 10 IoT and the best way to get started is with the OM5577 demo board above (containing the PN7120 chip). |
 
 ### Miscellaneous <a name="OtherDevicesMisc"></a>
 
