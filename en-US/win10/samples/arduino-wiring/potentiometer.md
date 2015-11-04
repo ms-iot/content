@@ -5,12 +5,12 @@ permalink: /en-US/win10/samples/arduino-wiring/Potentiometer.htm
 lang: en-US
 ---
 
-## Arduino Wiring Potentiometer Sample
+# Arduino Wiring Potentiometer Sample
 This sample shows how to connect a rotary potentiometer and LED to a Raspberry Pi 2 or a MinnowBoard Max using Arduino Wiring. We use a SPI-based ADC (Analog to Digital Converter) to read values from the potentiometer and control an LED based on the knob position.
 
 This sample is similar to the [C# Potentiometer Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm), but uses Arduino Wiring instead of C#. The wiring and hardware configuration will be nearly identical. However, DragonBoard 410c does not support Arduino Wiring.
 
-## Parts needed
+## Hardware
 - Board - one of the following only
 	- Raspberry Pi 2
 	- MinnowBoard Max
@@ -23,7 +23,7 @@ This sample is similar to the [C# Potentiometer Sample]({{site.baseurl}}/{{page.
 - [1 10k &#x2126; Trimmer Potentiometer](http://www.digikey.com/product-detail/en/3362P-1-103TLF/3362P-103TLF-ND/1232540){:target="_blank"} or similar
 - 1 breadboard and an assortment of wires
 
-## Parts Review
+## Hardware Setup
 
 In this sample, you have the option of using either the MCP3002, MCP3008, or MCP3208 ADC (Analog to Digital Converter). 
 The differences between the chips are the number of input channels and resolution. 12-bit resolution is more accurate than the 10-bit options, and the number of channels determines how many different inputs you can read. Any of these options will work fine for this sample. 
@@ -120,3 +120,39 @@ Detailed connection:
 - CS/SHDN - "SPI0 CS0" MBM (Pin 5)
 - DGND - GND on MBM (Pin 1)
 - CH0 - Potentiometer wiper pin
+
+##Code
+
+Replace the existing code in your main .ino file with the following code:
+
+{% highlight C++ %}
+
+int pin = 0;
+
+void setup()
+{
+    /*
+     * it is not necessary to set the pin to input,
+     * as the analogRead command must assume this pin is attached to an ADC chip
+     */
+}
+
+void loop()
+{
+    int value = analogRead( pin );
+    Log( L"Analog value: " );
+    Log( value.ToString()->Begin() );
+    Log( "\n" );
+    delay( 500 );
+}
+
+{% endhighlight %}
+
+
+##Build and deploy
+Press F5 to build and deploy your project.
+
+Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm) for more instructions on how to deploy your app!
+
+##Result
+You will see the LED lit to indicate that power is flowing, and the current value of the potentiometer's wiper pin will be read and displayed in the output console twice per second!
