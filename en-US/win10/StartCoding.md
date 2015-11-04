@@ -230,6 +230,7 @@ lang: en-US
                         <h3>Potentiometer Sensor Sample</h3>
                         <p>A analog sensor is connected to Raspberry Pi through ADC converter and digital output data is displayed through Monitor and LED </p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm">Potentiometer Sensor Sample (C#)</a>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/Potentiometer.htm">Potentiometer Sensor Sample (Wiring)</a>
                     </div>
                    <div class="col-md-3">
                         <h3>GpioTestTool (Console)</h3>
