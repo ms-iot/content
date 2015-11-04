@@ -10,15 +10,15 @@ This sample shows how to connect a rotary potentiometer and LED to a Raspberry P
 and control an LED based on the knob position.
 
 ## Parts needed
-- [1 LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832)
-- [1 330 &#x2126; resistor](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636)
+- [1 LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832){:target="_blank"}
+- [1 330 &#x2126; resistor](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
 - ADC
     - Raspberry Pi 2
-        - [1 MCP3002 10-bit ADC](http://www.digikey.com/product-detail/en/MCP3002-I%2FP/MCP3002-I%2FP-ND/319412) or [1 MCP3208 12-bit ADC](http://www.digikey.com/product-search/en?KeyWords=mcp3208%20ci%2Fp&WT.z_header=search_go)
+        - [1 MCP3002 10-bit ADC](http://www.digikey.com/product-detail/en/MCP3002-I%2FP/MCP3002-I%2FP-ND/319412){:target="_blank"} or [1 MCP3208 12-bit ADC](http://www.digikey.com/product-search/en?KeyWords=mcp3208%20ci%2Fp&WT.z_header=search_go){:target="_blank"}
     - DragonBoard 410c
-        - [1 MCP3008 10-bit ADC](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en010530) or [1 MCP3208 12-bit ADC](http://www.digikey.com/product-search/en?KeyWords=mcp3208%20ci%2Fp&WT.z_header=search_go)
-        - [1 Voltage-Level Translator Breakout](https://www.sparkfun.com/products/11771)
-- [1 10k &#x2126; Trimmer Potentiometer](http://www.digikey.com/product-detail/en/3362P-1-103TLF/3362P-103TLF-ND/1232540)
+        - [1 MCP3008 10-bit ADC](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en010530){:target="_blank"} or [1 MCP3208 12-bit ADC](http://www.digikey.com/product-search/en?KeyWords=mcp3208%20ci%2Fp&WT.z_header=search_go){:target="_blank"}
+        - [1 Voltage-Level Translator Breakout](https://www.sparkfun.com/products/11771){:target="_blank"}
+- [1 10k &#x2126; Trimmer Potentiometer](http://www.digikey.com/product-detail/en/3362P-1-103TLF/3362P-103TLF-ND/1232540){:target="_blank"}
 - Raspberry Pi 2 or DragonBoard 410c single board computer
 - 1 breadboard and a couple of wires
 - HDMI Monitor and HDMI cable
@@ -26,8 +26,7 @@ and control an LED based on the knob position.
 ## Parts Review
 
 In this sample, you have the option of using either the MCP3002, MCP3008, or MCP3208 ADC (Analog to Digital Converter). 
-The main difference between these two is that the MCP3008 and MCP3208 is a larger chip with more input channels and greater resolution. 
-Both however will work fine for this sample. 
+The differences between the chips are the number of input channels and resolution. 12-bit resolution is more accurate than the 10-bit options, and the number of channels determines how many different inputs you can read. Any of these options will work fine for this sample.
 
 Below are the pinouts of the MCP3002 and MCP3208 ADCs. 
 
@@ -44,7 +43,7 @@ Below are the pinouts of the MCP3002 and MCP3208 ADCs.
 ####Wiring & Connections
 
 #####MCP3002
-If you chose to use the **MCP3002**, assemble the circuit as follows. Note that the wiper pin (the middle pin on the 10k potentiometer) should be connected to `CH0` on MCP3002.
+If you chose to use the **MCP3002**, assemble the circuit as follows. Note that the wiper pin (the middle pin on the 10k potentiometer) should be connected to `CH0` on MCP3002. You can also refer to the [datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/21294E.pdf){:target="_blank"} for more information.
 
 Detailed connection:
 
@@ -60,8 +59,9 @@ The MCP3002 should be connected as follows:
 - MCP3002: Vss - GND on Raspberry Pi 2
 - MCP3002: CH0 - Potentiometer wiper pin
 
-#####MCP3208
-If you chose to use the **MCP3208**, assemble the circuit as follows. Note that the wiper pin (the middle pin on the 10k potentiometer) should be connected to `CH0` on MCP3208.
+
+#####MCP3208 or MCP3008
+If you chose to use the **MCP3208** or **MCP3008**, assemble the circuit as follows. Note that the wiper pin (the middle pin on the 10k potentiometer) should be connected to `CH0` on MCP3208. You can also refer to the [MCP3208 datasheet](http://pdf.datasheetcatalog.com/datasheets2/43/435228_1.pdf){:target="_blank"} or the [MCP3008 datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/21295C.pdf){:target="_blank"} for more information.
 
 Detailed connection:
 
@@ -85,7 +85,7 @@ For the DragonBoard 410c, you will require a [Voltage-Level Translator Breakout]
 
 ####DragonBoard Pinout
 
-![DragonBoard Pinout](../../../images/PinMappings/DB_Pinout.png)
+![DragonBoard Pinout]({{site.baseurl}}/images/PinMappings/DB_Pinout.png)
 
 ####Wiring & Connections
 
@@ -116,7 +116,7 @@ Connect the MCP3208 to the Voltage-Level Translator breakout as follows:
 
 Here is an illustration of what your breadboard might look like with the circuit assembled:
 
-![DragonBoard Potentiometer Breadboard](../../../images/Potentiometer/breadboard_db410c.png)
+![DragonBoard Potentiometer Breadboard]({{site.baseurl}}/images/Potentiometer/breadboard_db410c.png)
 
 Finally, the LED_PIN variable of the **MainPage.xaml.cs** file of the sample code will need the following modification:
 
