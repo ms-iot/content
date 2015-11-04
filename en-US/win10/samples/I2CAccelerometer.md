@@ -7,7 +7,7 @@ lang: en-US
 
 ##I2C Accelerometer Sample
 
-We'll connect an I2C accelerometer to your Raspberry Pi 2/MinnowBoard Max and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of I2C is needed.
+We'll connect an I2C accelerometer to your Raspberry Pi 2/MinnowBoard Max/DragonBoard and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of I2C is needed.
 However, if you're curious, SparkFun provides a great [tutorial on I2C](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}.
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
@@ -84,6 +84,37 @@ Here are the connections shown on a breadboard:
 Here are the schematics:
 
 ![Accelerometer schematics]({{site.baseurl}}/images/I2CAccelerometer/schematics_mbm.png)
+
+#### DragonBoard 410c
+
+For the DragonBoard 410c, connections need to be made from the single board computer to the power, ground, and I2C lines of the accelerometer. 
+Those familiar with I2C know that normally pull-up resistors need to be installed.  However, the DragonBoard already has 2k&#x2126; resistors for its I2C capabilities.
+
+**Note: Make sure to power off the DragonBoard when connecting your circuit.  This is good practice to reduce the change of an accidental short circuit during construction.**
+
+You'll also need a LM317 voltage regulator along with 2x 120 &#x2126; resistors to provide power to the accelerometer. 
+The regulator will output 2.5V when configured as shown in the breadboard diagram, which allows the ADXL345 board to interface with the 1.8V DragonBoard 410c.
+
+The LM317 has 3 pins that need to be wired:
+
+1. **Adj:**    Connect to ground through a 120 &#x2126; resistor
+2. **Output:** Connect to **Adj** through a 120 &#x2126; resistor. This pin will output 2.5V once the LM317 is wired up.
+3. **Input:**  Connect to 5V on the DragonBoard (Pin 37)
+
+The ADXL345 breakout board has 8 IO pins which are connected to the DragonBoard as follows:
+
+1. **GND:**  Connect to ground on the DragonBoard (Pin 2)
+2. **VCC:**  Connect to the LM317 2.5v output rail
+3. **CS:**   Connect to 2.5V (The ADXL345 actually supports both SPI and I2C protocols. To select I2C, we keep this pin tied to 2.5V. The [datasheet](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf){:target="_blank"} contains much more information about the pin functions)
+4. **INT1:** Leave unconnected, we're not using this pin
+5. **INT2:** Leave unconnected, we're not using this pin
+6. **SDO:**  Connect to ground (In I2C mode, this pin is used to select the device address. You can attach two ADXL345 to the same I2C bus if you connect this pin to 3.3V on the second device. See the [datasheet](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf) for more details)
+7. **SDA:**  Connect to SDA on the DragonBoard (Pin 17). This is the data line for the I2C bus.
+8. **SCL:**  Connect to SCL on the DragonBoard (Pin 15). This is the clock line for the I2C bus.
+
+Here is a diagram showing what your breadboard might look like with the circuit assembled:
+
+![DragonBoard I2C Accelerometer Breadboard](../../../images/I2CAccelerometer/breadboard_assembled_db410c.png)
 
 ###Deploy and run the app
 

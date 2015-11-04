@@ -7,8 +7,10 @@ lang: en-US
 
 ##'Hello, World!' Sample
 
+In this sample, we will create and deploy the proverbial 1st app, "Hello World" to any device running Windows IoT Core!
+
 ###Create a new C# project
-You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\HelloWorld`, but as an exercise, this tutorial will take you through the complete steps to create this app from scratch.  
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\HelloWorld`, but as an exercise, this tutorial will take you through the complete steps to create this app from scratch. You need to make sure you have installed the Windows IoT Core Project Templates from [here](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec). 
 
 1. Start Visual Studio 2015.
 
@@ -72,7 +74,7 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 ###Deploy the app to your Windows IoT Core device
 1. Of course, we want to deploy our first app to our Windows IoT Core device. It's easy. In the [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) documentation, you can find instructions to chose a unique name for your Windows IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in Visual Studio.
 
-    If you're building for Minnowboard Max, select `x86` in the Visual Studio toolbar architecture dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
+    If you're building for Minnowboard Max, select `x86` in the Visual Studio toolbar architecture dropdown.  If you're building for Raspberry Pi 2 or the DragonBoard, select `ARM`.
 
     Next, in the Visual Studio toolbar, click on the `Local Machine` dropdown and select `Remote Machine`<br/>
 

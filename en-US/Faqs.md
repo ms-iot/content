@@ -17,7 +17,9 @@ lang: en-US
 
         <a href="#errors"><h4>Errors</h4></a>
 
-		<a href="#mbm_usb_port"><h4>MinnowBoard Max</h4></a>
+        <a href="#mbm_usb_port"><h4>MinnowBoard Max</h4></a>
+        
+        <a href="#dragonboard"><h4>DragonBoard</h4></a>
     </div>
 
     <div class="col-md-8 col-md-offset-4 col-xs-8 col-xs-offset-4 section-heading">
@@ -66,11 +68,14 @@ lang: en-US
         <br />
         <a name="galileo"></a>
         <h2 class="faq-h2">Intel Galileo</h2>
-        <p class="bold"><em>Can I run Windows 10 IoT Core on the Intel Galileo Gen 1 or Gen 2 board?</em></p>
-        <p>We have no plans to bring Windows 10 to the Intel Galileo board at this time. </p>
+        <p class="bold"><em>Will you continue to support the Windows Developer Program for IoT for Intel Galileo?</em></p>
+        <p>No. We continue to focus on providing a great experience for Makers with Windows 10 IoT Core. While we’ve seen some fantastic innovation with the platform, unfortunately it does not meet the minimum hardware requirements for Windows 10 IoT Core.</p>
         <br />
-        <p class="bold"><em>Will you continue to support the Windows Developer Program for IoT for Galileo?</em></p>
-        <p>We’ve been overwhelmed by the interest in our Windows 8.1 based program and appreciate all the incredible feedback the community has provided. While there will be no new feature development for the Galileo release we will continue to support this release for as long as significant community activity exists.</p>
+		<p class="bold"><em>When will the support for Windows on Galileo end?</em></p>
+        <p>The support for Windows on Galileo will end on November 30, 2015.</p>
+        <br />
+		<p class="bold"><em>What can I do with my existing projects on Galileo?</em></p>
+        <p>Wiring support is now available on Windows 10 IoT Core running on Raspberry Pi 2. This allows you to migrate your existing Galileo projects to Windows 10 IoT Core.</p>
         <br />
         <a name="errors"></a>
         <h2 class="faq-h2">Errors</h2>
@@ -118,6 +123,12 @@ lang: en-US
         <h2 class="faq-h2">MinnowBoard Max</h2>
         <p class="bold"><em>Known issues with the top USB port</em></p>
         <p>You may experience degrading performance and lack of key functionality with USB devices plugged into the top port.  At this time we suggest using only the bottom port for USB peripherals.  We are currently investigating this issue.</p>
+        <br />
+        
+    <a name="dragonboard"></a>
+        <h2 class="faq-h2">DragonBoard</h2>
+        <p class="bold"><em>USB Issues</em></p>
+        <p>The Dragonboard is not capable of powering more than one USB device and needs a powered USB hub when connecting multiple devices to the same USB port.</p>
         <br />
     </div>
 </div>

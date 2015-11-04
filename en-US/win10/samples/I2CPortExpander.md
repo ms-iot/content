@@ -17,7 +17,7 @@ mode by running this command: `setbootoption.exe headed` (changing the headed/he
 
 ###Connect the I2C Port Expander to your device
 
-You'll need the following components which are included in the Basic Kit:
+You will need the following components:
 
 * 1 Raspberry Pi 2
 

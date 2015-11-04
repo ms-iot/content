@@ -5,24 +5,21 @@ permalink: /en-US/win10/samples/BlinkyWVSA.htm
 lang: en-US
 ---
 
+{: .thin-header}
 #Get Started
 
-Learn how to get your PC ready for developing IoT applications using Windows Remote Arduino.
+Learn how to get your PC ready for developing IoT applications using Virtual Shields for Arduino.
 
 {% include steps.html device="WVSA" %}
 
-##Hello World (Blinky) speech-enabled LED example
+##Hello World speech-enabled LED example
 
-In your Arduino IDE (version 1.62 or better), go to the menu item File->Examples->VirtualShield->HelloWorld-Speech-Eventing.
+With your Windows Phone (or potentially any Windows 10 device!) and your Arduino prepared as detailed in the previous steps of this tutorial, you're now ready to try our sample.
 
-Hook up an LED with a resister to pin 8 as per this diagram:
-(image)
-
-Run the Windows Virtual Shields for Arduino app.
-
-Compile, and upload your Arduino sketch.
-
-Your phone should welcome you. You can say 'on' or 'off' to turn on or off your LED.
+1. Prepare your Arduino board by hooking up an LED with a resistor to pin 8.
+2. Make sure that your Arduino is still uploaded with the HelloWorld-Speech-Eventing sample, and then plug the Arduino into a power supply.
+3. Run the Virtual Shields for Arduino app on the Windows Phone you prepared previously.
+4. If everything has been setup properly, your phone should welcome you with an audio cue. You can now say 'on' or 'off' to switch the LED on your Arduino between on and off!
 
 
 ##Arduino Wiring Sketch : Hello World example

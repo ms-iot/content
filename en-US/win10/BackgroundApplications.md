@@ -16,7 +16,7 @@ There is one critical point to note: by default, the application will shut down 
 
 ##Where can Background Applications be installed from? 
 
-You can download and install IoT templates to enable Background Applications from the Visual Studio Gallery [here](https://visualstudiogallery.msdn.microsoft.com/06507e74-41cf-47b2-b7fe-8a2624202d36).  Alternatively, the templates can be found by searching for `Windows IoT Core Project Templates` in the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/) or directly from Visual Studio in the Extension and Updates dialog (Tools > Extensions and Updates > Online).
+You can download and install IoT templates to enable Background Applications from the Visual Studio Gallery [here](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec).  Alternatively, the templates can be found by searching for `Windows IoT Core Project Templates` in the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/) or directly from Visual Studio in the Extension and Updates dialog (Tools > Extensions and Updates > Online).
 
 ##What languages are available?
 

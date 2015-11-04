@@ -12,3 +12,4 @@ lang: zh-CN
 {% include steps.html device="MBM" %}
 
 {% include_relative SetupPCContent.md %}
+

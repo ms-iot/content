@@ -11,6 +11,12 @@
       "win10/SetupMBM.htm",
       "win10/samples/BlinkyMBM.htm"
    ],
+   "DB410c":[
+      "GetStarted.htm",
+	  "win10/SetupPCDB410c.htm",
+      "win10/SetupDB410c.htm",
+      "win10/samples/Blinky.htm"
+   ],
    "Galileo":[
       "GetStarted.htm",
       "win8/SetupPC.htm",

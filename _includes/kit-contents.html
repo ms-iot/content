@@ -1,0 +1,17 @@
+<div class="row">
+  {% for type in site.data.kit-contents[include.kit] %}
+   <h3 class="thin-header">{{type[0]}}</h3>
+   <table class="table table-striped maker-kit">
+    <tr>
+      <th class="largeTH">Item</th>
+      <th>Quantity</th>
+    </tr>
+    {% for item in type[1] %}
+    <tr>
+      <td class="largeTH">{{item.name}}</td>
+      <td>{{item.quantity}}</td>
+    </tr>
+    {% endfor %}
+   </table>
+  {% endfor %}
+</div>

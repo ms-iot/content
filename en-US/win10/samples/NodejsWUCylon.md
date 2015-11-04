@@ -20,7 +20,7 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 * Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
 * Install npm v3 (to take advantage of the flat node module dependency structure npm v3 introduced):
   * Open a command window (as Administrator) and run `npm install -g npm-windows-upgrade`
-  * Then run `npm-windows-upgrade --version:3.2.2`
+  * Then run `npm-windows-upgrade --version:3.3.3 --npm-path:"C:\Program Files (x86)\Node.js (Chakra)"` (Note: Change npm-path if you picked a different installation path for Node.js (Chakra)).
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 * Install Arduino software from [here](https://www.arduino.cc/en/Main/Software).
 
@@ -60,11 +60,11 @@ Steps to build serialport:
 
 (**You can skip steps 1-8 by copying the zip file [here](https://github.com/ms-iot/ntvsiot/releases/download/1.7.4-uwp/serialport_uwp.zip) which contains prebuilt serialport.node binaries and serialport.js with a UWP patch**)
 
-1. From your Git shell, clone [this](https://github.com/Microsoft/node) temporary fork of node.js.
+1. From your Git shell (If you don't have it, get GitHub Desktop for Windows [here](https://desktop.github.com/)), clone [this](https://github.com/Microsoft/node) temporary fork of node.js.
 2. Run `git checkout ch0.12-uwp`
 3. Run `.\vcbuild.bat arm chakra uwp-dll openssl-no-asm` and wait for node to build.
 4. Clone [this](https://github.com/ms-iot/node-serialport) temporary fork of serialport and checkout the 'uwp' branch.
-5. In a cmd window, go to the serialport clone root.
+5. In a command window, go to the serialport clone root.
 6. Run `npm install nan`
 7. Run `node.exe [node.js clone root]\deps\npm\node_modules\node-gyp\bin\node-gyp.js rebuild --nodedir=[node.js clone root] --node_win_onecore --winplat=uwp --target_arch=arm --module_name=serialport --module_path=.`
 8. If the last step is successful, you will see **serialport.node** in [serialport clone path]\build\release.

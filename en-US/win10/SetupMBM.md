@@ -12,8 +12,9 @@ Learn how to set up the MinnowBoard Max hardware and connect it to your computer
 
 {% include steps.html device=page.deviceName %}
 
+{: .thin-header}
 ##What you need
-1. **A PC running Windows 10** (Prepared in the previous step)
+1. **A PC running Windows 10** - as prepared in the previous step.
 1. **MinnowBoard Max**
 1. **Power supply**
 1. <a name="MBM_SDcard"></a>**8GB micro SD card** - class 10 or better. (We suggest this [one](http://www.amazon.com/gp/product/B00IVPU786){:target="_blank"} or this [one](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445){:target="_blank"})
@@ -22,6 +23,7 @@ Learn how to set up the MinnowBoard Max hardware and connect it to your computer
 1. **Micro SD card reader** (Due to an issue with most internal SD card readers, we suggest an external USB card reader like this [one](http://www.amazon.com/dp/B009D79VH4){:target="_blank"} or this [one](http://www.amazon.com/dp/B0096FB5CW){:target="_blank"})
 1. **USB keyboard**
 
+{: .thin-header}
 ##Hook Up Your Board
 1. **Connect a USB keyboard** to one of the USB ports on the board.
 2. **Connect an HDMI monitor** to the microHDMI port on the board.
@@ -31,6 +33,7 @@ Learn how to set up the MinnowBoard Max hardware and connect it to your computer
 
 ![mbm]({{site.baseurl}}/images/mbm.bmp){:device-images}
 
+{: .thin-header}
 ##Update your device Firmware
 
 * For the current release, only 32 bit Windows 10 IoT Core is supported.  Download the latest 32-Bit Release pre-built BIOS firmware from [firmware.intel.com/projects/minnowboard-max](http://firmware.intel.com/projects/minnowboard-max){:target="_blank"}
@@ -71,9 +74,10 @@ So the first time you will likely need to use 64-bit EFI and 32-bit BIN.
 The second time and every other time you need to use 32-bit EFI and 32-bit BIN.
 The reason the bitness of the firmware has to match the bitness of the OS is that there is an EFI in the OS image that gets loaded to bootstrap the OS, and that EFI has to be the same bitness as the firmware as well.
 
+{: .thin-header}
 ## Install the Windows 10 IoT Core tools
 
-1. [Download](http://go.microsoft.com/fwlink/?LinkId=616848) the ISO for MinnowBoard MAX from the Microsoft Download Center.
+1. Download a Windows 10 IoT Core image from our [downloads page](http://ms-iot.github.io/content/en-US/Downloads.htm){:target="_blank"}.
 
 2. **Save the ISO** to a local folder
 
@@ -89,6 +93,7 @@ The reason the bitness of the firmware has to match the bitness of the OS is tha
 
 5. Eject the Virtual CD when done
 
+{: .thin-header}
 ##Put the Windows 10 IoT Core image on your SD card
 
 1. **Insert a micro SD card** into your SD card reader.
@@ -108,6 +113,7 @@ The reason the bitness of the firmware has to match the bitness of the OS is tha
 
 **NOTE:** IoTCoreImageHelper.exe is the recommended tool to flash the SD card. However, instructions are available for using the [DISM command line tool]({{site.baseurl}}/{{page.lang}}/win10/samples/DISM.htm) directly
 
+{: .thin-header}
 ##Set Required BIOS Settings and boot Windows 10 IoT Core
 
 * Insert your micro SD Card into your MBM.  At any point, if you turn on your MBM without an SD card inserted, you will be required to configure the boot order again.
@@ -147,6 +153,7 @@ The reason the bitness of the firmware has to match the bitness of the OS is tha
 
     Once this is done, you'll need to re-establish the current session using enable-psSession with the new credentials.
 
+{: .thin-header}
 ##Additional Resources
 * [Supported Peripheral Interfaces and Devices]({{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm){:target="_blank"}
 

@@ -29,7 +29,7 @@ We will now be walking you through the process of creating and installing a simp
 <br/>
 
 ##Description
-The name of the driver in this sample is `gpiokmdfdemo`.  This driver will receive different IOCTL commands/messages from a simple user-mode Win32 console application called `BinkyApp.exe`.  These IOCTL commands will tell the driver what specific GPIO pins to set high or low.  The sample driver (`gpiokmdfdemo`) will in turn communicate with the GpioClx (GPIO Class Extension) in Windows 10 IoT Core to accomplish these requests.  Take a look at the diagram below to familiarize yourself with the inner workings of this driver sample.
+The name of the driver in this sample is `gpiokmdfdemo`.  This driver will receive different IOCTL commands/messages from a simple user-mode Win32 console application called `BlinkyApp.exe`.  These IOCTL commands will tell the driver what specific GPIO pins to set high or low.  The sample driver (`gpiokmdfdemo`) will in turn communicate with the GpioClx (GPIO Class Extension) in Windows 10 IoT Core to accomplish these requests.  Take a look at the diagram below to familiarize yourself with the inner workings of this driver sample.
 
 <br/>
 

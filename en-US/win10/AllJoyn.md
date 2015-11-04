@@ -62,7 +62,7 @@ This template can be installed in Visual Studio 2015 Preview to enable you to cr
 **AllJoyn Explorer**
 This is a tool we use in several points when working with AllJoyn samples. You can find the AllJoyn Explorer [here](https://github.com/ms-iot/samples/tree/develop/AllJoyn/AllJoynExplorer){:target="_blank"}:
 
-* [AllJoyn Explorer](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.1.5.zip?raw=true){:target="_blank"} - This zip contains the AllJoyn Explorer AppX bundle.
+* [AllJoyn Explorer](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.1.9.zip?raw=true){:target="_blank"} - This zip contains the AllJoyn Explorer AppX bundle.
 * [AllJoyn Explorer Setup Guide](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_Setup_Guide_v1.0.pdf?raw=true){:target="_blank"} - This pdf contains the documentation for how to deploy the AllJoyn Explorer.
 * [AllJoyn Explorer User Guide](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_User_Guide_v1.0.pdf?raw=true){:target="_blank"} - This pdf contains the documentation for how to use the AllJoyn Explorer.
 
@@ -83,6 +83,10 @@ This is a tool we use in several points when working with AllJoyn samples. You c
 * [AllJoyn DSB GPIO Device Tutorial C#]({{site.baseurl}}/en-US/win10/samples/AlljoynDSB_ManagedGpioTutorial.htm){:target="_blank"}
 
  This tutorial demonstrates how to use the AllJoyn Device System Bridge template to create a sample managed app that exercises the device GPIO.
+
+* [AllJoyn DSB ZigBee Adapter Tutorial and Sample]({{site.baseurl}}/en-US/win10/samples/ZigBeeAdapterTutorial.htm){:target="_blank"}
+
+ This tutorial shows how to use the Device System Bridge app to connect your IoT Core devices to ZigBee devices.
 
 **Additional Resources**
 

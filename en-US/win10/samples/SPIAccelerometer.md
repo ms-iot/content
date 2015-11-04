@@ -7,7 +7,7 @@ lang: en-US
 
 ##SPI Accelerometer Sample
 
-We'll connect an SPI accelerometer to your Raspberry Pi 2/MinnowBoard Max and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of SPI is needed.
+We'll connect an SPI accelerometer to your Raspberry Pi 2, MinnowBoard Max, or DragonBoard 410c and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of SPI is needed.
 However, if you're curious, SparkFun provides a great [tutorial on SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}.
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
@@ -81,6 +81,41 @@ Here are the connections shown on a breadboard:
 Here are the schematics:
 
 ![Accelerometer schematics]({{site.baseurl}}/images/SPIAccelerometer/schematics_mbm.png)
+
+####DragonBoard 410c
+
+For the DragonBoard 410c, you will require a [Voltage-Level Translator Breakout](https://www.sparkfun.com/products/11771). The connections need to be made from the single board computer to the power, ground, and SPI lines of the accelerometer via the Voltage-Level Translator.
+
+**NOTE:  Make sure to power off the DragonBoard when connecting your circuit.  This is good practice to reduce the chance of an accidental short circuit during construction.**
+
+The ADXL345 breakout board has 8 IO pins that are connected to the Voltage-Level Translator as follows:
+
+1.  **GND:**  Connect the ground to GND
+2.  **VCC:**  Connect the power to VccB
+3.  **CS:**   Connect the chip select to B4
+4.  **INT1:** The interrupt output 1 is _unused_
+5.  **INT2:** The interrupt output 2 is _unused_
+6.  **SDO:**  Connect the serial data output to B3
+7.  **SDA:**  Connect the serial data input to B2
+8.  **SCL:**  Connect the serial communications clock to B1
+
+The Voltage-Level Translator breakout board pins are connected to the DragonBoard as follows:
+
+1.  **GND:**  Connect the ground to pin 40
+2.  **VccA:**  Connect the lower power to pin 35 (1.8V)
+3.  **VccB:**  Connect the higher power to pin 37 (5V)
+4.  **A1**  Connect to pin 8 (SPI0_CLK)
+5.  **A2**  Connect to pin 14(SPI0_MOSI)
+6.  **A3**  Connect to pin 10(SPI0_MISO)
+7.  **A4**  Connect to pin 12(SPI0_CS)
+
+The following diagram shows what your breadboard might resemble with the circuit assembled:
+
+![DragonBoard SPI Accelerometer Breadboard](../../../images/SPIAccelerometer/breadboard_assembled_db410c.png)
+
+A schematic for the circuit is:
+
+![DragonBoard API Accelerometer Schematic](../../../images/SPIAccelerometer/schematics_db410c.png)
 
 ###Deploy and run the app
 

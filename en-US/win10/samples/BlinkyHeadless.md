@@ -5,9 +5,10 @@ permalink: /en-US/win10/samples/BlinkyHeadless.htm
 lang: en-US
 ---
 
+{: .thin-header}
 ##Blinky Headless Sample
 
-We'll create a simple Blinky app and connect a LED to your Windows IoT Core device (Raspberry Pi 2 or MinnowBoard Max).  Be aware that the GPIO APIs are
+We'll create a simple Blinky app and connect a LED to your Windows IoT Core device (Raspberry Pi 2, MinnowBoard Max or DragonBoard).  Be aware that the GPIO APIs are
 only available on Windows IoT Core, so this sample cannot run on your desktop.
 
 ###Headless mode
@@ -22,8 +23,6 @@ Make sure you connect the LED to your board. Go back to the basic 'Blinky' [samp
 
 Note that the app will not run successfully if it cannot find any available GPIO ports.
 
-###Deploy your app
-
 {% include_relative AppDeploymentCS.md %}
 
 When everything is set up, you should be able to press F5 from Visual Studio.  The Blinky app will deploy and start on the Windows IoT device, and you should see the attached LED blink.
@@ -31,6 +30,7 @@ When everything is set up, you should be able to press F5 from Visual Studio.  T
 ###Let's look at the code
 The code for this sample is pretty simple. We use a timer, and each time the 'Tick' event is called, we flip the state of the LED.
 
+{: .thin-header}
 ###Timer code
 Here is how you set up the timer in C#:
 {% highlight C# %}
@@ -50,6 +50,7 @@ private void Timer_Tick(ThreadPoolTimer timer)
     . . .
 }
 {% endhighlight %}
+
 
 ###Initialize the GPIO pin
 To drive the GPIO pin, first we need to initialize it. Here is the C# code (notice how we leverage the new WinRT classes in the Windows.Devices.Gpio namespace):

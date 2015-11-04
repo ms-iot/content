@@ -15,6 +15,22 @@ lang: en-US
 </div>
 <div class="row section-heading">
   <h3>New on the Window IoT Blog</h3>
+    <div class="col-md-4">
+    <div class="col-md-9">
+      <a href="http://blogs.windows.com/buildingapps/2015/10/28/announcing-dragonboard-410c-support-in-windows-10-iot-core-arduino-partnership-updates/" target="_blank">
+        <h4>Announcing DragonBoard 410c support in Windows 10 IoT Core, Arduino partnership updates</h4>
+      </a>
+      <h4><em>Steve Teixeira, Oct 28 2015</em></h4>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="col-md-9">
+      <a href="http://blogs.windows.com/buildingapps/2015/09/24/whats-next-for-windows-10-iot-core/" target="_blank">
+        <h4>What's next for Windows 10 IoT Core</h4>
+      </a>
+      <h4><em>Steve Teixeira, Sep 24 2015</em></h4>
+    </div>
+  </div>
   <div class="col-md-4">
     <div class="col-md-9">
       <a href="http://blogs.windows.com/buildingapps/2015/08/10/hello-windows-10-iot-core/" target="_blank">
@@ -22,22 +38,6 @@ lang: en-US
       </a>
       <br>
       <h4><em>Steve Teixeira, Aug 10 2015</em></h4>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="col-md-9">
-      <a href="http://blogs.windows.com/buildingapps/2015/05/12/bringing-node-js-to-windows-10-iot-core/" target="_blank">
-        <h4>Bringing Node.js to Windows 10 IoT Core</h4>
-      </a>
-      <h4><em>Windows Apps Team, May 12 2015</em></h4>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="col-md-9">
-      <a href="http://blogs.windows.com/buildingapps/2015/04/29/microsoft-brings-windows-10-to-makers/" target="_blank">
-        <h4>Microsoft brings Windows 10 to Makers</h4>
-      </a>
-      <h4><em>Steve Teixeira, Apr 29 2015</em></h4>
     </div>
   </div>
 </div>

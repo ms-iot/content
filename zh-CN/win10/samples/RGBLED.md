@@ -7,20 +7,22 @@ lang: zh-CN
 
 ##RGB LED 示例
 
-在此示例中，我们会将三色 LED 连接到 Raspberry Pi 2。LED 将闪烁，同时在红色、蓝色、绿色之间更改颜色。
+在此示例中，我们会将三色 LED 连接到 Raspberry Pi 2。LED 将闪烁，同时在红色、蓝色与绿色之间更改颜色。
 
-这是一个有外设示例，所以请确保你的设备处于有外设模式下，方法为运行以下命令：`setbootoption.exe headed`（更改有外设/无外设状态需要重新启动）。
+这是一个有外设示例，所以请确保你的设备处于有外设模式下，方法为运行以下命令：`setbootoption.exe headed`（更改有外设/无外设状态将需要重新启动）。
 
 另外，还请注意 GPIO API 仅在 Windows IoT 核心版上可用，因此该示例无法在你的桌面上运行。
 
 
 ###组件
 
-你将需要以下硬件：
+你将需要以下组件：
 
-* 一个 [754-1615-ND 三色 LED](http://www.digikey.com/product-detail/en/WP154A4SUREQBFZGC/754-1615-ND/3084119)）
+* 一个 [754-1615-ND 三色 LED](http://www.digikey.com/product-detail/en/WP154A4SUREQBFZGC/754-1615-ND/3084119){:target="_blank"}
 
-* 一个 [330 &\#x2126; 电阻](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636)
+* 一个 [330 &\#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
+
+* 2x [100 &\#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-100R/100QBK-ND/246){:target="_blank"}
 
 * 一块试验板以及多根公母头连接线和双公头连接线
 
@@ -30,22 +32,21 @@ lang: zh-CN
 
 ![试验板连接]({{site.baseurl}}/images/RGBLED/RGBLED_bb.png)
 
-*使用 [Fritzing](http://fritzing.org/) 制作的图像*
-
+<sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
 以下是电路原理图：
 
 ![电路示意图]({{site.baseurl}}/images/RGBLED/RGBLED-schematic_schem.png)
 
-*使用 [Fritzing](http://fritzing.org/) 制作的图像*
-
 ####连接 LED
 
-* 将 LED 的三个脚分别连接到 Raspberry Pi 2 的引脚 29、31、33（GPIO 5、6、13）
+* 将 LED 的三个引线分别连接到 Raspberry Pi 2 的引脚 29、31、33（GPIO 5、6、13）
 
-* 请注意，红色脚应通过 330 &\#x2126; 电阻连接到 Raspberry Pi 2 的引脚 29。
+* 请注意，红色引线应通过 330 &\#x2126; 电阻器连接到 Raspberry Pi 2 的引脚 29。
 
-* 将 LED 的阳极（较长的脚）连接到引脚 6 \(GND\)
+* 蓝色和绿色引线应通过 100 &\#x2126; 电阻器分别连接到 Raspberry Pi 2 的引脚 31 和 33。
+
+* 将 LED 的阳极（较长的阳极引线）连接到引脚 6 \(GND\)
 
 下面是 RPi2 的引出线：
 
@@ -55,12 +56,9 @@ lang: zh-CN
 
 ###部署你的应用
 
-你可以在[此处](https://github.com/ms-iot/samples/tree/develop/RGBLED/CS)找到此示例的完整代码。本示例是采用 C\# 编写的。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\RGBLED`，查找此示例的源代码。本示例是采用 C\# 编写的。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
-确保将“远程调试”设置设为指向 Windows IoT 设备。如需指导，请参考基本“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)。如果你要针对 Raspberry Pi 2 进行生成，请选择 `ARM`。
-
-完成所有设置后，你应可以在 Visual Studio 中按 F5。RGBLED 应用将进行部署并在 MBM 上启动，此时你应看到 LED 与屏幕上的模拟图像同步闪烁。
-
+按照[设置远程调试和部署应用]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp)的说明进行操作。RGBLED 应用将在 MBM 上部署并启动，此时你应看到 LED 与屏幕上的模拟图像同步闪烁。
 
 ###我们来看看代码
 此示例的代码相当简单。我们使用了一个计时器，每当调用“Tick”事件时，都会切换 LED 的状态。
