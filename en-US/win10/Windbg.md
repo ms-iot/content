@@ -5,42 +5,124 @@ permalink: /en-US/win10/Windbg.htm
 lang: en-US
 ---
 
-##Connect Windows 10 IoT Core to WINDBG
+#Debugging Windows 10 IoT Core Devices Using WinDbg
 
-Choose the appropriate section based on the board you are using.
+The following sections describe how to successfully connect with WinDbg to a Windows 10 IoT Core device for debugging purposes.  This includes a description of the necessary software settings on the device as well as the physical hardware connections.  
 
-###Connecting to a MinnowBoard Max (MBM)
+WinDbg is a very powerful debugger that most Windows developers are familiar with.  However, if you are just getting started and would like to learn more about WinDbg, please visit the following links:
 
-* Ensure that your Ethernet cable is connected to your MBM
+* [Debugging Tools for Windows](https://msdn.microsoft.com/library/windows/hardware/ff551063(v=vs.85).aspx) 
 
-* Start your MBM and connect to it using PowerShell (you can find PowerShell instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm))
+* [Getting Started with Windows Debugging](https://msdn.microsoft.com/en-us/library/windows/hardware/mt219729(v=vs.85).aspx) 
 
-* Configure your MBM, by changing the bcd settings like this:
+* [Crash Dump Analysis Using WinDbg](https://msdn.microsoft.com/en-us/library/windows/hardware/ff539316(v=vs.85).aspx) 
 
-        [192.168.0.243]: PS C:\> bcdedit -store C:\EFIESP\efi\Microsoft\Boot\bcd -dbgsettings net hostip:<IP address of machine running WINDBG> port:<PORTNUM>
 
-        [192.168.0.243]: PS C:\> bcdedit -store C:\EFIESP\efi\Microsoft\Boot\bcd -debug on
+##MinnowBoard Max (MBM) 
 
-* From your development machine, start WINDBG with the <PORT> you provided and the key that was generated in the previous step:
+You can connect WinDbg to the MinnowBoard Max using a network connection.
 
-        "c:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k net:port=<PORT>,key=<GENERATED KEY>
+###MinnowBoard Max (MBM) & WinDbg via a Network Connection
 
-###Connecting to a Raspberry Pi 2 (RPi2)
+In order to enable kernel debugging with WinDbg over a network, please make sure that:
 
-* To use WINDBG with the RPi2, you will need a USB TTL UART cable.  [FTDI](http://www.ftdichip.com/Products/Cables/USBTTLSerial.htm){:target="_blank"} creates cables and drivers that work.  Note, when working, the cable will show up as a COM port on your desktop.  Make sure you have the correct drivers installed and can see the device in your Device Manager.  Connect the wires like this:
+* An Ethernet cable is connecting your MinnowBoard Max to your network 
 
-![rpi2_kernel_debugger_cxn]({{site.baseurl}}/images/kd/rpi2_kd.png)
+* Your MinnowBoard Max has a valid IP address in your network
 
-* Start your RPi2 and connect to it using PowerShell (you can find PowerShell instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm))
+* You have an active connection to the MinnowBoard Max via [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) 
 
-* Configure your RPi2, by changing the bcd settings like this:
+Using the active PowerShell connection you will modify two BCD settings on the MinnowBoard Max to enable debugging over the network.  
 
-        [192.168.0.243]: PS C:\> bcdedit -store C:\EFIESP\efi\Microsoft\Boot\bcd -dbgsettings serial debugport:1 baudrate:115200
+Here is the first command you need to run:   
+	
+        bcdedit -dbgsettings net hostip:<DEV_PC_IP_ADDRESS> port:<PORT_NUM> key:<KEY> 
 
-        [192.168.0.243]: PS C:\> bcdedit -store C:\EFIESP\efi\Microsoft\Boot\bcd -debug on
+* This command enables debugging over the network.  Additionally, it specifies the IP address of the PC where WinDbg will be running (DEV_PC_IP_ADDRESS), the network port number to use for the connection (PORT_NUM), and a unique key to be used to differentiate multiple connections (KEY) 
 
-* From your development machine, open the device manager and find the COM port your converter is using.
+* For PORT_NUM and KEY, you can use the following values as examples: 50045 and 1.2.3.4 respectively, although you are free to change them as you see fit
 
-* From your development machine, start WINDBG with the <PORT> you provided and the key that was generated in the previous step:
+Here is the second command you need to run:
+
+        bcdedit -debug on
+
+* This command turns on debugging on the device 
+
+On your development machine, you can start WinDbg with the PORT_NUM and the KEY values you provided in the previous steps as follows:
+
+        "c:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k net:port=<PORT_NUM>,key=<KEY>
+
+##Raspberry Pi 2 (RPi2) 
+
+You can connect WinDbg to the Raspberry Pi 2 using a serial connection.
+
+###Raspberry Pi 2 (RPi2) & Windbg via a Serial Connection
+
+In order to enable kernel debugging with WinDbg over a serial connection, please make sure that:
+
+* You have a debug cable such as the USB-to-TTL Serial Cable from [Adafruit](https://www.adafruit.com/product/954) or [FTDI](http://shop.clickandbuild.com/cnb/shop/ftdichip?productID=53&op=catalogue-product_info-null&prodCategoryID=105). 
+
+* An Ethernet cable is connecting your Raspberry Pi 2 to your network 
+
+* Your Raspberry Pi 2 has a valid IP address in your network
+
+* You have an active connection to the Raspberry Pi 2 via [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) 
+
+UART0 will be used on the Raspberry Pi 2 for the kernel debugging connection.  The following shows the pin mappings for the Raspberry Pi 2 as well as the serial cables: 
+
+		Raspberry Pi 2 pins:
+			Pin #6 : GND
+			Pin #8 : UART0 TX (3.3V)
+			pin #10: UART0 RX (3.3V)
+
+		Adafruit Cable:
+			Black  : GND
+			White  : RX  (3.3V)
+			Green  : TX  (3.3V)
+			Red    : PWR (5.0V NOT USED) <- DO NOT CONNECT!!
+		
+		FTDI Cable:
+			Black  : GND
+			Brown  : CTS (NOT USED)
+			Red    : PWR (5.0V NOT USED) <- DO NOT CONNECT!!
+			Orange : TX  (3.3V)
+			Yellow : RX  (3.3V)
+			Green  : RTS (NOT USED)
+
+The basic idea for making the correct serial connections is to remember that while one device uses its TX to transmit data, the other device uses its RX to receive the data.  Therefore, the following is how you should connect your RPi2:
+
+		If using Adafruit's serial cable:
+			[RPi2] Pin #6  (GND) <-> [Adafruti] Black (GND)
+			[RPi2] Pin #8  (TX)  <-> [Adafruit] White (RX) 
+			[RPi2] Pin #10 (RX)  <-> [Adafruit] Green (TX)
+		
+		If using FTDI's serial cable:
+			[RPi2] Pin #6  (GND) <-> [FTDI] Black  (GND)
+			[RPi2] Pin #8  (TX)  <-> [FTDI] Yellow (RX) 
+			[RPi2] Pin #10 (RX)  <-> [FTDI] ORange (TX)
+
+When you connect the USB end of the serial cable to your development PC (where WinDbg will be running), you will need to know what COM port number Windows assigned to it.  The easiest way is to use the Device Manager in Windows and check under the "Ports (COM & LPT)" section to know what COM number your cable was assigned in the system.  You will need to know this information for one of the later steps! 
+
+Using the active PowerShell connection to your Raspberry Pi 2, you will modify two BCD settings to enable debugging over the serial connection.  
+
+Here is the first command you need to run:   
+	
+        bcdedit -dbgsettings serial 
+
+* The above command enables the serial connection for debugging
+
+* The baud-rate for the Raspberry Pi 2 is hard-coded to 912600, so you don't have to specify it
+
+Here is the second command you need to run:
+
+        bcdedit -debug on
+
+* This command turns on debugging on the device 
+
+As suggested earlier, use the Device Manager on your development PC to find out what COM port number the USB-to-TTL cable was assigned in the system. You will need to know the COM port number for the following step. 
+
+On your development machine you can start WinDbg as follows:
 
         "C:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k com:port=<PORT>,baud=912600
+
+* Please note that 'PORT' refers to the COM port number your USB-to-TTL cable was assigned in the system and displayed in the Device Manager under "Ports (COM & LPT)".

@@ -21,7 +21,7 @@ You'll need the following components which are included in the Basic Kit:
 
 * 1 Raspberry Pi 2
 
-* 1 [MCP23008 8-bit I/O Port Expander](http://www.digikey.com/product-detail/en/MCP23008-E%2FP/MCP23008-E%2FP-ND/735951){:target="_blank"} in PDIP package
+* <a name="I2C_PortExpander"></a>1 [MCP23008 8-bit I/O Port Expander](http://www.digikey.com/product-detail/en/MCP23008-E%2FP/MCP23008-E%2FP-ND/735951){:target="_blank"} in PDIP package
 
 * 1 [red LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832){:target="_blank"}
 
@@ -137,7 +137,7 @@ The I2C bus requires pull-up resistors on the SDA and SCL lines. However, the Ra
 
 ###Create the sample app
 
-When everything is set up, power your device back on. You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/I2cPortExpander){:target="_blank"}, 
+When everything is set up, power your device back on. You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\I2CPortExpander`, 
 but as an exercise, this tutorial will take you through the complete steps to create this app from scratch. 
 Open up Visual Studio and create a new C# Windows Universal Blank App. Click **File -> New -> Project** then select **Templates -> Visual C# -> Windows -> Universal -> Blank App (Universal Windows)**. 
 For this sample, we named ours **I2cPortExpanderLedSample**.

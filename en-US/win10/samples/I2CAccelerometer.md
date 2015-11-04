@@ -14,13 +14,13 @@ This is a headed sample.  To better understand what headed mode is and how to co
 
 ###Load the project in Visual Studio
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/Accelerometer).  Make a copy of the folder on your disk and open the project from Visual Studio.
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\I2CAccelerometer`.  Make a copy of the folder on your disk and open the project from Visual Studio.
 
 ###Connect the I2C Accelerometer to your device
 
 You'll need a few components:
 
-* an [ADXL345 accelerometer board from Sparkfun](https://www.sparkfun.com/products/9836){:target="_blank"} with pin headers soldered on
+* <a name="I2C_Accelerometer"></a>an [ADXL345 accelerometer board from Sparkfun](https://www.sparkfun.com/products/9836){:target="_blank"} with pin headers soldered on
 
 * a breadboard and a couple of male-to-female connector wires
 

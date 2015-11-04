@@ -9,13 +9,13 @@ lang: en-US
 
 ###Set up your PC
 
-* Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
+* Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm) to install Visual Studio 2015.
 
 * Install Python for Windows (3.*) from [http://www.python.org/downloads](http://www.python.org/downloads){:target="_blank"}
 
-* Download and install PTVS (Python Tools for Visual Studio) **VS 2015** latest dev release from [here](https://github.com/microsoft/ptvs/releases){:target="_blank"}.
+* Download and install PTVS (Python Tools for Visual Studio) **VS 2015** latest release from [here](https://github.com/microsoft/ptvs/releases){:target="_blank"}.
 
-* Download and install Python UWP SDK (pyuwpsdk.vsix) from [here](https://github.com/ms-iot/python/releases/v1.0Alpha){:target="_blank"}.
+* Download and install the latest Python UWP SDK (pyuwpsdk.vsix) release from [here](https://github.com/ms-iot/python/releases){:target="_blank"}.
 
 ###Create new Python project
 

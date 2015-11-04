@@ -8,32 +8,31 @@ lang: en-US
 ##'Hello, World!' Sample
 
 ###Create a new C# project
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/HelloWorld){:target="_blank"}, but as an exercise, this tutorial will take you through the complete steps to create this app from scratch.  
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\HelloWorld`, but as an exercise, this tutorial will take you through the complete steps to create this app from scratch.  
 
-Start Visual Studio 2015 RC.
+1. Start Visual Studio 2015.
 
-Create a new project (File \| New Project...).
+1. Create a new project `(File \| New Project...)`.
+       
+    * In the `New Project` dialog, navigate to `Universal` as shown below (in the left pane in the dialog: Templates \| Visual C# \| Windows \| Universal).
+    
+1. Select the template `Blank App (Windows Universal)`.
 
-In the `New Project` dialog, navigate to `Windows Universal` as shown below (in the left pane in the dialog: Templates \| Visual C# \| Windows \| Windows Universal).
+    * Remember to give a good name to your first app! In this example, we called the project 'HelloWorld'.
 
-Select the template `Blank App (Windows Universal)`
+    ![App Template Location]({{site.baseurl}}/images/HelloWorld/new-cs-project-dialog.PNG)
 
-Remember to give a good name to your first app! In this example, we called the project 'HelloWorld'.
-
-![App Template Location]({{site.baseurl}}/images/HelloWorld/new-cs-project-dialog.PNG)
-
-###Developer Mode for Windows 10
-
-If this is the first project you create, Visual Studio will likely prompt you to enable Developer Mode for Windows 10.  To do this, you'll need to follow the steps found [here](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx){:target="_blank"}
+> ####A note on Developer Mode for Windows 10
+> If this is the first project you create, Visual Studio will likely prompt you to enable Developer Mode for Windows 10.  To do this, you'll need to follow the steps found [here](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx){:target="_blank"}
 
 ###Add a reference to the Windows IoT extension SDK
 
-Since the IoT extension SDK is not added to projects by default, we'll need to add a reference so that namespaces like `Windows.Devices.Gpio` will be available in the project.  To do so, just right-click on the References entry under the project, Select "Add Reference" then navigate the resulting dialog to `Windows Universal->Extensions->Windows IoT Extension SDK`, check the box, and click OK.
+Since the IoT extension SDK is not added to projects by default, we'll need to add a reference so that namespaces like `Windows.Devices.Gpio` will be available in the project.  To do so, just right-click on the References entry under the project, Select "Add Reference" then navigate the resulting dialog to `Universal Windows->Extensions->Windows IoT Extensions for the UWP`, check the box, and click OK.
 
 ![Add Extension SDK]({{site.baseurl}}/images/HelloWorld/Add_IoT_Extension_Reference.PNG)
 
 ###Add content to MainPage.xaml
-* Let's add some content to the MainPage. From Solution Explorer, select the 'MainPage.xaml' file. We want to add a TextBox and a Button, to show some interaction. So we will edit the XAML file to add these elements. Locate the `<Grid>` tag in the XAML section of the designer, and add the following markup:
+Let's add some content to the MainPage. From Solution Explorer, select the 'MainPage.xaml' file. We want to add a TextBox and a Button, to show some interaction. So we will edit the XAML file to add these elements. Locate the `<Grid>` tag in the XAML section of the designer, and add the following markup.  
 
 {% highlight XML %}
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -44,36 +43,34 @@ Since the IoT extension SDK is not added to projects by default, we'll need to a
 </Grid>
 {% endhighlight %}
 
+Now that we have a TextBox and a Button, we can add some code which will be executed when the Button is pressed. Double click on the Button in the design surface: Visual Studio will add a `Click` property to the Button XAML tag and generate the `ClickMe_Click` method in 'MainPage.xaml.cs'. Let's add a simple line of code in this method.
 
-* Now that we have a TextBox and a Button, let's add some code which will be executed when the Button is pressed. Double click on the Button in the design surface: Visual Studio will add a `Click` property to the Button XAML tag and generate the `ClickMe_Click` method in 'MainPage.xaml.cs'. Let's add a simple line of code in the method:
-
-MainPage.xaml:
+*MainPage.xaml:*
 {% highlight XML %}
 <Button x:Name="ClickMe" Content="Click Me!"  Margin="10" HorizontalAlignment="Center" Click="ClickMe_Click"/>
 {% endhighlight %}
-
-MainPage.xaml.cs:
-{% highlight C++ %}
+  
+*MainPage.xaml.cs:*
+{% highlight C# %}
 private void ClickMe_Click(object sender, RoutedEventArgs e)
 {
     this.HelloMessage.Text = "Hello, Windows IoT Core!";
 }
 {% endhighlight %}
 
-
-
 ###Build and test the app locally
-* Make sure the app builds correctly invoking the Build \| Build Solution menu command.
+1. Make sure the app builds correctly by invoking the Build \| Build Solution menu command.
 
-* Since this is a Windows Universal App, you can test this on your Visual Studio machine as well: Just press F5, and the app will run inside your machine. You should see something like this:
+1. Since this is a Universal Windows Platform (UWP) application, you can test the app on your Visual Studio machine as well: Just press F5, and the app will run inside your machine. You should see something like this:
 
     ![HelloWorld Running]({{site.baseurl}}/images/HelloWorld/HelloWorldAppLocal.PNG)
 
     Close the app after you're done validating it.
-
+    
+    > If you would like to learn more about Universal Windows Platform applications, click [here](https://msdn.microsoft.com/library/windows/apps/dn894631.aspx){:target="_blank"}.
 
 ###Deploy the app to your Windows IoT Core device
-* Of course, we want to deploy our first app to our Windows IoT Core device. It's easy. In the [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) documentation, you can find instructions to chose a unique name for your Windows IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in VS.
+1. Of course, we want to deploy our first app to our Windows IoT Core device. It's easy. In the [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) documentation, you can find instructions to chose a unique name for your Windows IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in Visual Studio.
 
     If you're building for Minnowboard Max, select `x86` in the Visual Studio toolbar architecture dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
 
@@ -81,38 +78,38 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 
     ![RemoteMachine Target]({{site.baseurl}}/images/HelloWorld/cs-remote-machine-debugging.png)
 
-* At this point, Visual Studio will present the 'Remote Connections' dialog. Put the IP address or name of your Windows IoT Core device (in this example, we're using 'my-device') and select `None` for Windows Authentication. Then click 'Select'.
+1. At this point, Visual Studio will present the 'Remote Connections' dialog. Put the IP address or name of your Windows IoT Core device (in this example, we're using 'my-device') and select `None` for Windows Authentication. Then click 'Select'.
 
     ![Remote Machine Debugging]({{site.baseurl}}/images/HelloWorld/cs-remote-connections.PNG)
 
-    Couple of notes:
+    > Couple of notes:
+    >
+    > 1. You can use the IP address instead of the Windows IoT Core device name.
+    >
+    > 2. You can verify and/or modify these values navigating to the project properties (select 'Properties' in the Solution Explorer) and choose the 'Debug' tab on the left:
+    >
+    > ![Project Properties Debug Tab]({{site.baseurl}}/images/HelloWorld/cs-debug-project-properties.PNG)
 
-    1. You can use the IP address instead of the Windows IoT Core device name.
+1. Now we're ready to deploy to the remote Windows IoT Core device. Simply press F5 (or select `Debug \| Start Debugging`) to start debugging our app. You should see the app come up in Windows IoT Core device screen, and you should be able to click on the button.
 
-    2. You can verify and/or modify these values navigating to the project properties (select 'Properties' in the Solution Explorer) and choose the 'Debug' tab on the left:
+1. If you see an error message in Visual Studio when deploying that says "Unable to connect to the Microsoft Visual Studio Remote Debugger named 'XXXX'.  The Visual Studio 2015 Remote Debugger (MSVSMON.EXE) does not appear to be running on the remote computer.", the Remote Debugger may have timed out.  Connect to your device using [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) and query the active processes by running `tlist`.  If at least one msvsmon.exe is not present in that list, you'll need to run this command to restart the Remote Debugger (or you can reboot your device): `schtasks /run /tn StartMsvsmon`.
 
-    ![Project Properties Debug Tab]({{site.baseurl}}/images/HelloWorld/cs-debug-project-properties.PNG)
+1. You can set breakpoints, see variable values, etc. To stop the app, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
 
-* Now we're ready to deploy to the remote Windows IoT Core device. Simply press F5 (or select Debug \| Start Debugging) to start debugging our app. You should see the app come up in Windows IoT Core device screen, and you should be able to click on the button.
+1. Having successfully deployed and debugged your first UWP application, create a Release version by simply changing the Visual Studio toolbar configuration dropdown from `Debug` to `Release`.  You can now build and deploy your app to your device by selecting Build \| Rebuild Solution and Build \| Deploy Solution.
 
-* If you see an error message in Visual Studio when deploying that says "Unable to connect to the Microsoft Visual Studio Remote Debugger named 'XXXX'.  The Visual Studio 2015 Remote Debugger (MSVSMON.EXE) does not appear to be running on the remote computer.", the Remote Debugger may have timed out.  Connect to your device using [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) and query the active processes by running `tlist`.  If at least one msvsmon.exe is not present in that list, you'll need to run this command to restart the Remote Debugger (or you can reboot your device): `schtasks /run /tn StartMsvsmon`.
-
-* You can set breakpoints, see variable values, etc. To stop the app, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
-
-* Having successfully deployed and debugged your first UWP application, create a Release version by simply changing the Visual Studio toolbar configuration dropdown from `Debug` to `Release`.  You can now build and deploy your app to your device by selecting Build \| Rebuild Solution and Build \| Deploy Solution.
-
-* Congratulations! You just deployed your first UWP application to a device running Windows IoT Core!
+1. Congratulations! You just deployed your first UWP application to a device running Windows IoT Core!
 
 
 ###Set HelloWorld as the Startup App
 
-* You can also set this HelloWorld app to be the 'Startup App' for your Windows IoT Core device, so that when the device reboot, it will start HelloWorld automatically. To do so, you'll need to run a command line utility called iotstartup on the Windows IoT Core device. We will do this using PowerShell.
+1. You can also set this HelloWorld app to be the 'Startup App' for your Windows IoT Core device, so that when the device reboot, it will start HelloWorld automatically. To do so, you'll need to run a command line utility called iotstartup on the Windows IoT Core device. We will do this using PowerShell.
 
-        NOTE: We are working on a bug that currently affects C#/VB Debug projects.  Please only use iotstartup to configure Release projects.
+    > NOTE: We are working on a bug that currently affects C#/VB Debug projects.  Please only use iotstartup to configure Release projects.
 
-* Start a PowerShell (PS) session with your Windows IoT Core device as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
+1. Start a PowerShell (PS) session with your Windows IoT Core device as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
 
-* From the PS session, type:
+1. From the PS session, type:
 
         [192.168.0.243]: PS C:\> iotstartup list HelloWorld
 
@@ -122,7 +119,7 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 
     the utility is confirming that HelloWorld is an 'headed' application, and is installed correctly.
 
-* Now, it's easy to set this app as the 'Startup App'. Just type the command:
+1. Now, it's easy to set this app as the 'Startup App'. Just type the command:
 
         [192.168.0.243]: PS C:\> iotstartup add headed HelloWorld
 
@@ -130,13 +127,13 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 
         AppId changed to HelloWorld_n2pe7ts0w7wey!App
 
-* Go ahead and restart your Windows IoT Core device. From the PS session, you can issue the shutdown command:
+1. Go ahead and restart your Windows IoT Core device. From the PS session, you can issue the shutdown command:
 
         [192.168.0.243]: PS C:\> shutdown /r /t 0
 
-* Once the device has restarted, you'll see HelloWorld start automatically.
+1. Once the device has restarted, you'll see HelloWorld start automatically.
 
-* At this point, you can revert back to using the DefaultApp as your 'Startup App'. Just type the command:
+1. At this point, you can revert back to using the DefaultApp as your 'Startup App'. Just type the command:
 
         [192.168.0.243]: PS C:\> iotstartup add headed DefaultApp
 

@@ -3,17 +3,18 @@ layout: default
 title: SetupPCWRA
 permalink: /en-US/win10/SetupPCWRA.htm
 lang: en-US
+deviceName: WRA
 ---
 
 #Get Started
 
 Learn how to get your PC ready for developing IoT applications using Windows Remote Arduino.
 
-{% include steps.html device="WRA" %}
+{% include steps.html device=page.deviceName %}
 
 ##Installation
 
-There are three ways to add the Windows Remote Arduino library to your solution, in order from easiest to most difficult.
+There are two ways to add the Windows Remote Arduino library to your solution, in order from easiest to most difficult.
 
 1. [Install the NuGet package](#option-1-install-the-nuget-package)
 2. [Manually add the Windows Remote Arduino project files to your solution](#option-2-add-the-windows-remote-arduino-projects-to-your-solution)
@@ -135,6 +136,11 @@ You will need to add one of the following XML blocks to your `Package.appxmanife
 
 You must add these DeviceCapability tags *inside* the `<Capabilities>` tag.
 
+    Visual Studio 2015 has a known bug in the Manifest Designer (the visual editor for appxmanifest files) that affects the serialcommunication capability.  If 
+    your appxmanifest adds the serialcommunication capability, modifying your appxmanifest with the designer will corrupt your appxmanifest (the Device xml child 
+    will be lost).  You can workaround this problem by hand editting the appxmanifest by right-clicking your appxmanifest and selecting View Code from the 
+    context menu.
+
 ###Windows 10
 
 {% highlight XML %}
@@ -148,3 +154,5 @@ You must add these DeviceCapability tags *inside* the `<Capabilities>` tag.
 ###Windows 8.1
 
 Unfortunately, this library does not support USB on Windows 8.1.
+
+{% include nextsteps.html device=page.deviceName %}

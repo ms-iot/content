@@ -11,13 +11,13 @@ We'll create a simple Python Blinky Web Server app and connect a LED to your Win
 only available on Windows IoT Core, so this sample cannot run on your desktop.
 
 ###Set up your PC
-* Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm) to install Visual Studio 2015 Preview.
+* Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm) to install Visual Studio 2015.
 
 * Install Python for Windows (3.*) from [http://www.python.org/downloads](http://www.python.org/downloads){:target="_blank"}
 
-* Download and install PTVS (Python Tools for Visual Studio) **VS 2015** latest dev release from [here](https://github.com/microsoft/ptvs/releases){:target="_blank"}.
+* Download and install PTVS (Python Tools for Visual Studio) **VS 2015** latest release from [here](https://github.com/microsoft/ptvs/releases){:target="_blank"}.
 
-* Download and install Python UWP SDK (pyuwpsdk.vsix) from [here](https://github.com/ms-iot/python/releases/v1.0Alpha){:target="_blank"}.
+* Download and install the latest Python UWP SDK (pyuwpsdk.vsix) release from [here](https://github.com/ms-iot/python/releases){:target="_blank"}.
 
 ###Set up your hardware
 The setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm).
@@ -28,7 +28,7 @@ This application is designed for a headless device.  To better understand what H
 
 ###Load the project in Visual Studio
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/BlinkyServer/Python/PythonBlinkyServer).  Make a copy of the folder on your disk and open the project from Visual Studio.
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\BlinkyServer\Python`.  Make a copy of the folder on your disk and open the project from Visual Studio.
 
 If you're building for MinnowBoard Max, select `x86` in the architecture drop down.  If you're building for Raspberry Pi 2, select `ARM`.
 
@@ -39,7 +39,8 @@ Note that the app will not run successfully if it cannot find any available GPIO
 ###Let's look at the code
 The code for this sample is pretty simple. We use _wingpio, http.server and socketserver modules.
 
-*NOTE: _wingpio reference is already added to the project and is conditioned on the different configuration and platform combinations*
+*NOTE: _wingpio reference is already added to the project and is conditioned on the different configuration and platform combinations.*
+*For new projects, download pywindevices.zip from [CPython UWP SDK](https://github.com/ms-iot/python/releases) releases and add the appropriate reference to your project.*
 
 ###Blinky code
 Here is how you set up the blinking led in Python when the web server is hit:

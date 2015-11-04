@@ -16,14 +16,13 @@ lang: en-US
         <a href="#galileo"><h4>Intel Galileo</h4></a>
 
         <a href="#errors"><h4>Errors</h4></a>
+
+		<a href="#mbm_usb_port"><h4>MinnowBoard Max</h4></a>
     </div>
 
     <div class="col-md-8 col-md-offset-4 col-xs-8 col-xs-offset-4 section-heading">
         <a name="rpi2"></a>
         <h2 class="faq-h2">Setting up Raspberry Pi</h2>
-        <p class="bold"><em>I can't download the Windows 10 IoT Core Insider Preview image for Raspberry Pi. I see a blank screen.</em></p>
-        <p>We release the Windows 10 IoT Core for Raspberry Pi 2 through our program on Microsoft Connect, which also provides a platform for bug reporting and providing feedback. To be able to download the image, you need to be signed up for our program on Microsoft Connect <u>and</u> signed in. If you have not signed up for our program on Microsoft Connect yet, please <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558" target="_blank">click here to sign up</a>. You can find step-by-step instructions for signing up or using Microsoft Connect <a href="http://ms-iot.github.io/content/SigninMSConnect.htm" target="_blank">here</a>. If you have already signed up for this program on Microsoft Connect, and try to sign up again, don't worry. You will just see a blank page.</p>
-        <p>Please make sure you are signed in to Microsoft Connect before trying to download the image.</p>
         <p class="bold"><em>Why does my screen appear cropped or stretched?</em></p>
         <p>This can happen on some monitors. To work around this force the board into DVI mode (vs. HDMI mode).  You can read more about this <a href='https://www.raspberrypi.org/forums/viewtopic.php?t=5851'>here</a>. Mount the SD card to a local PC and proceed to edit the file in the EFIESP partition. For example if the partition is marked as H drive, edit H:\config.txt by adding the following line.<br/><br/>
         <pre>hdmi_group=2                # forces DVI timing to be used</pre>
@@ -60,10 +59,10 @@ lang: en-US
         <a name="features"></a>
         <h2 class="faq-h2">Features</h2>
         <p class="bold"><em>Is WiFi supported on Windows 10 IoT Core?</em></p>
-        <p>We are in the process of getting WiFi ready, but it is not in the build that is currently publicly available.</p>
+        <p>WiFi support for some adapters is now available in the public release of Windows 10 IoT Core. Click <a href="http://ms-iot.github.io/content/en-US/win10/SetupWiFi.htm">here</a> to learn more.</p>
         <br />
         <p class="bold"><em>Is Bluetooth currently supported on Windows 10 IoT Core?</em></p>
-        <p>We are in the process of getting Bluetooth ready, but it is not in the build that is currently publicly available.</p>
+        <p>Bluetooth support for some dongles is now available in the public release of Windows 10 IoT Core. Click <a href="http://ms-iot.github.io/content/en-US/win10/Bluetooth.htm">here</a> to learn more</p>
         <br />
         <a name="galileo"></a>
         <h2 class="faq-h2">Intel Galileo</h2>
@@ -75,6 +74,9 @@ lang: en-US
         <br />
         <a name="errors"></a>
         <h2 class="faq-h2">Errors</h2>
+        <p class="bold"><em>When I try to build a project, I see this error: <br />“The package Microsoft.CSharp with version 4.0.0 could not be found in C:\Users\...\.nuget\packages. Run a NuGet package restore to download the package.” <br />How do I resolve this?</em></p>
+        <p>Be sure your project has a saved solution file (*.sln). The Nuget package manager requires a saved solution file to update the Nuget dependencies. You can ensure that a solution file exists by selecting File > Save All.</p>
+        <br />
         <p class="bold"><em>I’ve downloaded the RPi2.ffu image and tried to apply image from the administrator prompt using this command:<br />dism.exe /Apply-Image /ImageFile:Rpi2.ffu /ApplyDrive:\\.\PhysicalDrive1 /SkipPlatformCheck<br />I am getting the following error:<br />c:\Temp>dism.exe /Apply-Image /ImageFile:Rpi2.ffu /ApplyDrive:\\.\PhysicalDrive1  /SkipPlatformCheck<br /><br />
         Deployment Image Servicing and Management tool<br />
         Version: 6.3.9600.17031<br /><br />
@@ -103,14 +105,19 @@ lang: en-US
         <br />
         <br />
         <p class="bold"><em>My Node.js UWP project fails to load after installing the latest release (NTVS Bundle VS 2015.exe v1.0).  How do I resolve this?</em></p>
-        <p>If you installed the first version of NTVS IoT Extension Beta, and then install the latest release which is bundled in NTVS Bundle VS 2015, you will see 
-        a project load error. The error will be something like "The imported project "...\Microsoft.NodejsUap.targets" was not found". To resolve this problem, do 
+        <p>If you installed the first version of NTVS IoT Extension Beta, and then install the latest release which is bundled in NTVS Bundle VS 2015, you will see
+        a project load error. The error will be something like "The imported project "...\Microsoft.NodejsUap.targets" was not found". To resolve this problem, do
         the following:
         <ul><li>Right click on the project and select Edit &lt;Your Project Name&gt;.</li>
         <li>Look for "NodejsUap" in the project file, replace it with "NodejsUwp", and save.</li></ul>
         If you attempt to deploy the app, it will crash immediately. To fix this:
         <ul><li>Open Package.appxmanifest.</li>
         <li>Replace all occurences of "winuniversalnode" with "nodeuwp" and save.</li></ul></p>
+        <br />
+		<a name="mbm_usb_port"></a>
+        <h2 class="faq-h2">MinnowBoard Max</h2>
+        <p class="bold"><em>Known issues with the top USB port</em></p>
+        <p>You may experience degrading performance and lack of key functionality with USB devices plugged into the top port.  At this time we suggest using only the bottom port for USB peripherals.  We are currently investigating this issue.</p>
         <br />
     </div>
 </div>

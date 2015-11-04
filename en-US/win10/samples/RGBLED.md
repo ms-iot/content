@@ -35,19 +35,33 @@ Let's start by wiring up the components on the breadboard as shown in the diagra
 
 <sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
 
-Here are the schematics:
+Here is the schematic:
 
 ![Circuit Schematic]({{site.baseurl}}/images/RGBLED/RGBLED-schematic_schem.png)
 
-####Connecting the LED
+<sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
 
-* Connect the three legs of the LED to Pins 29,31,33 (GPIO 5,6,13) of the Raspberry Pi 2 respectively
+The pinout of the Tri-color LED is shown below and can be found in the [datasheet](http://www.kingbrightusa.com/images/catalog/SPEC/WP154A4SUREQBFZGC.pdf){:target="_blank"}.
 
-* Note that Red leg should be connected through a 330 &#x2126; resistor to Pin 29 of Raspberry Pi 2
+![Tri-color LED Pinout]({{site.baseurl}}/images/RGBLED/RGBLED_Pinout.png)
 
-* The Blue and Green legs should be connected through a 100 &#x2126; resistor each to pins 31 and 33 of the Raspberry Pi 2
+####Connecting the Tri-color LED
 
-* Connect the anode (the longer leg) of the LED to Pin 6 (GND)
+* Insert the Tri-color LED into the breadboard as shown in the breadboard diagram at the top of the page.
+
+* Connect one end of the 330 &#x2126; resistor to the red lead of the Tri-color LED.
+
+* Connect the other end of the 330 &#x2126; resistor to Pin 29 GPIO5 of the Raspberry Pi 2.
+
+* Connect one end of a 100 &#x2126; resistor to the blue lead of the Tri-color LED.
+
+* Connect the other end of the 100 &#x2126; resistor to Pin 31 GPIO6 of the Raspberry Pi 2.
+
+* Connect one end of a 100 &#x2126; resistor to the green lead of the Tri-color LED.
+
+* Connect the other end of the 100 &#x2126; resistor to Pin 33 GPIO13 of the Raspberry Pi 2.
+
+* Connect the cathode (the longest leg) of the Tri-color LED to Pin 6 GND.
 
 Here is the pinout of the RPi2:
 
@@ -57,7 +71,7 @@ Here is the pinout of the RPi2:
 
 ###Deploy your app
 
-You can find the entire code for this sample [here](https://github.com/ms-iot/samples/tree/develop/RGBLED/CS){:target="_blank"}. This sample is written in C#. Make a copy of the folder on your disk and open the project from Visual Studio.
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\RGBLED`.  This sample is written in C#. Make a copy of the folder on your disk and open the project from Visual Studio.
 
 Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp). The RGBLED app will deploy and start on the Windows IoT device, and you should see the LED blink in sync with the simulation on the screen.
 

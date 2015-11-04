@@ -10,7 +10,7 @@ lang: zh-CN
 
 
 ###设置电脑
-* 安装 Windows 10 Insider Preview。
+* 安装 Windows 10。
 * 安装 VS 2015 Preview。使用自定义安装并选择“Windows 通用应用开发工具”选项。
 * 安装 [Python 2.7](https://www.python.org/downloads/)。
 

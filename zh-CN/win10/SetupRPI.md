@@ -12,18 +12,18 @@ lang: zh-CN
 {% include steps.html device="RPI2" %}
 
 ##需要具备的条件
-1. **Windows 10 Insider Preview** - 必须是 Windows 计算机（不是虚拟机）。
+1. **Windows 10** - 必须是 Windows 计算机（不是虚拟机）。
 2. **Raspberry Pi 2**。
 3. **5V 微型 USB 电源** - 使用至少 1.0A 电流。
-4. **8GB 微型 SD 开** - 类 10 或更高。（我们建议使用[这个](http://www.amazon.com/gp/product/B00IVPU786)或[这个](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445)）
+4. **8GB 微型 SD 卡** - 类 10 或更高。（我们建议使用[这个](http://www.amazon.cn/%E4%B8%89%E6%98%9F-32G-Class10-48MB-S-TF-%E5%AD%98%E5%82%A8%E5%8D%A1-%E5%8D%87%E7%BA%A7%E7%89%88-%E6%96%B0%E8%80%81%E5%8C%85%E8%A3%85%E9%9A%8F%E6%9C%BA%E5%8F%91%E8%B4%A7/dp/B00A6MCGU4/ref=sr_1_fkmr0_1?ie=UTF8&qid=1439922632&sr=8-1-fkmr0&keywords=Samsung+32GB+EVO+Class+10+Micro+SDHC+up+to+48MB%2Fs+with+Adapter+%28MB-MP32DA%2FAM%29)或[这个](http://www.amazon.cn/SanDisk-%E9%97%AA%E8%BF%AA%E8%87%B3%E5%B0%8A%E9%AB%98%E9%80%9F%E7%A7%BB%E5%8A%A8-microSDHC%E5%AD%98%E5%82%A8%E5%8D%A1-SDSDQUAN-016G-Z4A-Class10-16G/dp/B007XZL7PC/ref=sr_1_1?ie=UTF8&qid=1439922522&sr=8-1&keywords=SanDisk+Ultra+Micro+SDHC%2C+16GB+Card)）
 5. **HDMI 电缆**（如果需要显示）。
 6. **以太网电缆**。
 
 如果要使用多个 USB 外设或高电流设备，请使用电流较高的电源 \(\>2.0A\)。
 
 
-##将 Windows 10 IoT Core Insider Preview 映像放在 SD 卡上
-我们提供了一个实用工具，用于使用 Windows 10 IoT Core Insider Preview 设置你的 SD 卡。以下步骤只能在运行 [Windows 10](https://insider.windows.com)（版本 10069 或更高版本）的系统上执行。
+##将 Windows 10 IoT Core 映像放在 SD 卡上
+我们提供了一个实用工具，用于使用 Windows 10 IoT Core 设置你的 SD 卡。以下步骤只能在运行 [Windows 10](https://insider.windows.com)（版本 10069 或更高版本）的系统上执行。
 
 注意：你将需要在**物理 Windows 计算机**（而不是 VM）上遵循这些说明操作，因为你需要对 SD 卡读卡器的访问权限。
 
@@ -38,7 +38,7 @@ lang: zh-CN
 
 	<img class="device-images" src="{{site.baseurl}}/images/SetupRPI/connect1.PNG">
 
-3. 从 Microsoft Connect [下载](http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57782)**程序包**“适用于 Raspberry Pi 2 的 Windows 10 IoT Core Insider Preview 映像”。
+3. 从 Microsoft Connect [下载](http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57782)**程序包**“适用于 Raspberry Pi 2 的 Windows 10 IoT Core 映像”。
 	* 如果你看到空白页面或未列出下载，请通过查看屏幕右上方的登录信息，确保你已登录到 Microsoft Connect。如果你未登录，请通过单击登录。
 4. 从下载选择**板类型**，然后继续下载这些文件
 
@@ -95,8 +95,8 @@ lang: zh-CN
 	<img class="device-images" src="{{site.baseurl}}/images/rpi2.png">
 
 
-##启动 Windows 10 IoT Core Insider Preview
-1. 连接电源后，Windows 10 IoT Core Insider Preview 将自动启动。
+##启动 Windows 10 IoT Core
+1. 连接电源后，Windows 10 IoT Core 将自动启动。
 2. 首次启动时，Windows IoT Core 将进行一些首次启动配置，并且同时将显示一个默认的蓝色应用程序。**等待几分钟**，开发板将自动重新启动。这只会发生一次，然后 DefaultApp 将出现，显示 Raspberry Pi 2 的 IP 地址。<img class="device-images" src="{{site.baseurl}}/images/DefaultAppRpi2.png">
 3. 遵循<a href="{{site.baseurl}}/win10/samples/PowerShell.htm">此处</a> [Powershell 文档]({{site.baseurl}}/win10/samples/PowerShell.htm)，使用 PowerShell 连接到正在运行的设备。
 4. **强烈建议**你更新管理员帐户的默认密码(默认用户名:``Administrtor``，默认密码: ``p@ssw0rd``)

@@ -14,14 +14,14 @@ This is a headed sample.  To better understand what headed mode is and how to co
 
 ###Load the project in Visual Studio
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/SPIDisplay){:target="_blank"}.  Make a copy of the folder on your disk and open the project from Visual Studio. 
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\SPIDisplay`.  Make a copy of the folder on your disk and open the project from Visual Studio. 
 Note that this app requires a device with a physical SPI port and will not work if running in an emulated environment.
 
 ###Connect the SPI Display to your device
 
 First, we need to wire up the display to your device. You'll need a few components:
 
-* a [Monochrome 1.3" 128x64 OLED graphic display](http://www.adafruit.com/product/938){:target="_blank"} from Adafruit with pin headers soldered on
+* <a name="SPI_Display"></a>a [Monochrome 1.3" 128x64 OLED graphic display](http://www.adafruit.com/product/938){:target="_blank"} from Adafruit with pin headers soldered on
 
 * a breadboard and several male-to-female connector wires
 

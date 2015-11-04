@@ -24,7 +24,7 @@ lang: zh-CN
             <div role="tabpanel" class="tab-pane active" id="Win10">
                 <div class="row">
                     <br />
-                    <h4>下载将需要用于开发 Windows IoT 设备（例如 Raspberry Pi 2 和 MinnowBoard MAX）的 Windows 10 IoT Core Insider Preview、Visual Studio、软件开发工具包和其他工具。</h4>
+                    <h4>下载将需要用于开发 Windows IoT 设备（例如 Raspberry Pi 2 和 MinnowBoard MAX）的 Windows 10 IoT Core、Visual Studio、软件开发工具包和其他工具。</h4>
                     <br />
                 </div>
                 <div class="row downloads-background">
