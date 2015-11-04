@@ -8,21 +8,32 @@ lang: en-US
 ##Cylon Node.js (Universal Windows) Sample
 In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) running on a Raspberry Pi 2 to control a servo connected to an Arduino (with [Firmata](https://www.npmjs.com/package/firmata) installed).
 
+
 ###Hardware required
 * Raspberry Pi 2.
 * [Arduino Board](https://www.arduino.cc/en/main/products) (Uno is used in this sample).
 * USB to USB B cable.
 * Servo.
 
+
 ###Set up your PC
 * Install Windows 10.
 * Install Visual Studio 2015.
-* Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
+* TODO: [Replace private link] Install the latest Node.js Tools for Windows IoT from \\cpvsbuild\Drops\Windows_IoT\NodejsTools\20151103.1\Installers\Release
+* Install Node.js console app (needed for npm v3) from [here](https://nodejs.org/en/download/stable/).
 * Install npm v3 (to take advantage of the flat node module dependency structure npm v3 introduced):
   * Open a command window (as Administrator) and run `npm install -g npm-windows-upgrade`
   * Then run `npm-windows-upgrade --version:3.3.3 --npm-path:"C:\Program Files (x86)\Node.js (Chakra)"` (Note: Change npm-path if you picked a different installation path for Node.js (Chakra)).
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 * Install Arduino software from [here](https://www.arduino.cc/en/Main/Software).
+
+
+###Set up your Windows IoT Core device
+Connect to your device with PowerShell using the instructions found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
+
+Run the command below to enable Node.js (Universal Windows) apps to be deployed successfully:
+
+* `reg.exe ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\EmbeddedMode\ProcessLauncher" /v AllowedExecutableFilesList /t REG_MULTI_SZ /d "c:\windows\system32\xcopy.exe\0`
 
 
 ###Upload Firmata to your Arduino

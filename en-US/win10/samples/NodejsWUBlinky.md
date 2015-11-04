@@ -11,7 +11,17 @@ lang: en-US
 ###Set up your PC
 * Install Windows 10.
 * Install Visual Studio 2015.
-* Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
+* TODO: [Replace private link] Install the latest Node.js Tools for Windows IoT from \\cpvsbuild\Drops\Windows_IoT\NodejsTools\20151103.1\Installers\Release
+* Install Node.js console app (needed for npm v3) from [here](https://nodejs.org/en/download/stable/).
+
+
+###Set up your Windows IoT Core device
+Connect to your device with PowerShell using the instructions found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
+
+Run the command below to enable Node.js (Universal Windows) apps to be deployed successfully:
+
+* `reg.exe ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\EmbeddedMode\ProcessLauncher" /v AllowedExecutableFilesList /t REG_MULTI_SZ /d "c:\windows\system32\xcopy.exe\0`
+
 
 ###Set up your hardware
 The setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm).
