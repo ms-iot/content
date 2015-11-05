@@ -1,11 +1,17 @@
 ---
 layout: default
-title: Ecosystem Compatibility List
+title: Hardware Compatibility List
 permalink: /en-US/win10/SupportedInterfaces.htm
 lang: en-US
 ---
 <style>
 a {cursor:pointer}
+h2 {
+	border-bottom: 1px solid #AAAAAA;
+	padding-bottom: 10px;
+}
+tr:nth-child(even) {background: #f2f2f2;}
+th {background: #f2f2f2;}
 td:nth-child(1)
 {
     width: 200px;
@@ -50,11 +56,8 @@ td:nth-child(5)
 </style>
 
 # {{page.title}}
-Windows 10 IoT Core supports a variety of peripheral interfaces and protocols, including support for common busses like I2C, UART, USB, and more. Use this page to browse devices that are known to be compatible with Windows 10 IoT Core. This list is **not** exhaustive. There are many other peripherals not listed on this page that are compatible with Windows 10 IoT Core. We encourage you to contribute to this list to improve this resource!
-
-Browse, search, and filter, peripherals that are known to be supported on the **Raspberry Pi 2** and **MinnowBoard Max**. [Contribute to this list on GitHub.]
-
-Looking for information about supported hardware platforms? Click [here](https://msdn.microsoft.com/library/windows/hardware/dn914597(v=vs.85).aspx) to be taken to a list of development boards compatible with Windows.
+Check out our list of peripherals confirmed to work with Windows 10 IoT Core.  
+This list is not exhaustive. [Contribute to this list on GitHub.]
 
 <div class="searchbox">
 	<div id='javascriptWarn' class='javascriptWarn'>
@@ -62,7 +65,7 @@ Looking for information about supported hardware platforms? Click [here](https:/
 	</div>
 	<div class="searchTools" style="display:none">
 		<div>
-			<h3> Search Tools </h3>
+			<h3> Search and Filter </h3>
 			Filter lists by board type:
 			<select id="boardSelect" onchange="filterDeviceRows();">
 			  <option value=".">All</option>
@@ -76,8 +79,8 @@ Looking for information about supported hardware platforms? Click [here](https:/
 			<button onClick="$('#filterInput')[0].value='';filterDeviceRows();">Clear</button>
 		</div>
 		<div>
-			<a onClick="showHideAll(false); return false;"> - Collapse all Sections	</a>
-			<a onClick="showHideAll(true); return false;"> + Expand all Sections </a>
+			<a onClick="showHideAll(false); return false;"> Hide all Sections	</a>
+			<a onClick="showHideAll(true); return false;"> Show all Sections </a>
 		</div>
 	</div>
 </div>
