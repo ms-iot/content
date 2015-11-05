@@ -176,11 +176,20 @@ MCP23S17 16x port expander | RPI2 | 16-Bit I/O Expander with Serial Interface | 
 ## <a name="OtherDevices" class="OtherDevices sectionTitle" onClick="toggleSection('OtherDevices');return false;">- Other Hardware Peripherals (e.g., Sensors, ICs)</a>
 <div class="OtherDevices section" markdown="1">
 
+- [NFC/RFID/Proximity](#NFC)
 - [Storage](#Storage)
 - [Pi Hats](#Pi-Hats)
 - [Sensors](#Sensors)
 - [Port Expanders](#Port-Expanders)
 - [Miscellaneous](#OtherDevicesMisc)
+
+### NFC/RFID/Proximity {#NFC}
+
+{:.table.table-bordered .devices}
+Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, Libraries
+----------------|-------------------|-------------|-------|------------------------------
+NXP OM5577 NFC demo board | RPI2 | Demo board for the NXP PN7120 NFC chip. | This demo board plugs into a Raspberry Pi 2 and the NXP website has [an install guide (AN11767)](http://www.nxp.com/documents/application_note/AN11767.pdf) and [a download package](http://www.nxp.com/documents/software/SW349710.zip) for instructions on installing the driver INF and ACPI mod to enable it in Windows 10 IoT. You can write a universal app with the same Windows.Networking.Proximity APIs you're accustomed to on phone and desktop, and the NXP website download has an example AppX you can deploy (source code is in the application note instructions). Available for purchase from [Mouser](http://www.mouser.com/search/ProductDetail.aspx?R=0virtualkey0virtualkeyOM5577-PN7120S699) and [DigiKey](http://www.digikey.com/product-search/en?mpart=OM5577&vendor=568) | [ProximityDevice WinRT documentation](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.proximity.proximitydevice.aspx), [NFC device driver interface documentation](https://msdn.microsoft.com/en-us/library/windows/hardware/dn905575(v=vs.85).aspx)
+NXP PN547/PN548/PN7120 NFC controllers | RPI2, MBM | Supported NXP NFC chips | The NXP PN547, PN548, and PN7120 NFC chips are supported in Windows 10 IoT and the best way to get started is with the OM5577 demo board above (containing the PN7120 chip). |
 
 ### Storage Media <a name="Storage"></a>
 
