@@ -1,0 +1,31 @@
+---
+layout: default
+title: Project Setup
+permalink: /en-US/win10/ArduinoWiringPorting.htm
+lang: en-US
+---
+
+#Arduino Wiring Porting Guide
+
+
+
+##Remove references to "Serial"
+
+Many Arduino sketches use "Serial" to print data to the serial console (if opened) or to write to the serial lines (USB or tx/rx). We've provided a "Log" function which will print a WCHAR* type (ascii strings or wide character strings) to the output console in Visual Studio. If you are copying a sketch built for an Arduino, you'll need to replace any of these Serial references in the Windows IoT version of the sketch.
+
+In the table below, replace the Arduino API Serial reference with the syntax in the Windows IoT column. If an API should be removed entirely, you'll see *remove* in the Windows IoT column.
+
+{:.table.table-bordered .devices}
+| Arduino API syntax      | Windows IoT syntax   |
+| -------------| ------------- |
+| Serial.begin( int )  | *remove* |
+| Serial.write( char* str )     | *remove* *see below     |
+| Serial.print( char* str ) | Log( str )     |
+| Serial.print( int num ) | Log( num.ToString()->Begin() )      |
+| Serial.print( int num, format fmt ) | Log( num.ToString()->Begin() )      |
+
+
+####Why remove Serial.write()?
+
+Serial.write() is typically used to send raw data over the serial lines. Windows IoT Core does not currently have UART functionality (don't worry, it's coming soon!) so these types of calls should be avoided.
+
