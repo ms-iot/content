@@ -18,6 +18,7 @@ Need more information on [Setting up Arduino Wiring in Visual Studio]({{site.bas
 - <a href="#port_serial">Remove References to "Serial"</a>
 	
 ### Common Problems
+- <a href="#prob_missingiot">Can't find "Arduino Wiring Application" Visual C++ project template in Visual Studio</a>
 - ERROR: <a href="prob_hardwareserial">unresolved external symbol "class HardwareSerial Serial"</a>
 
 
@@ -49,8 +50,15 @@ Serial.write() is typically used to send raw data over the serial lines. Windows
 
 
 ## Common Problems
+
+<a name="prob_missingiot"></a>
+
+### Can't find "Arduino Wiring Application" Visual C++ project template in Visual Studio
+
+You must install the Visual Studio Extension for Windows IoT Project Templates before you can create Arduino Wiring projects in Visual Studio. Head over to [Windows IoT Core Project Templates extension page](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec) to download the extension from the Visual Studio Gallery!
+
 <a name="prob_hardwareserial"></a>
 
 ### ERROR: 'unresolved external symbol "class HardwareSerial Serial"'
 
-This issue occurs when there are `Serial` references are left in your Arduino Wiring sketches or libraries. You can use the "File" and "Line" fields on this error to locate the reference, and then use the <a href="#port_serial">Removing References to `Serial`</a> section of this page to resolve the issue.
+This issue occurs when there are `Serial` references are left in your Arduino Wiring sketches or libraries. You can use the "File" and "Line" fields on this error to locate the reference, and then use the <a href="#port_serial">Removing References to "Serial"</a> section of this page to resolve the issue.
