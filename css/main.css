@@ -1,10 +1,25 @@
 body {
     font-family: "Segoe UI Light","Segoe UI Web Light","Segoe UI Web Regular","Segoe UI","Segoe UI Symbol","HelveticaNeue-Light","Helvetica Neue",Arial,sans-serif !important;
-    font-size: 12pt;
+    font-size: 11pt;
     margin: 0;
     padding: 0;
+    font-weight: 400;
 }
 
+h1 {
+  font-size: 2em;
+  font-weight: 100;
+}
+h2 {
+  font-size: 1.5em;
+  font-weight: 100;
+}
+h3 {
+  font-size: 1.17em;
+}
+h4 {
+
+}
 .default-body {
     background-color: #fff;
 }
@@ -15,7 +30,7 @@ body {
 }
 
 .default-max-width {
-    max-width: 1206px;
+    max-width: 1296px;
     margin: 0 auto;
 }
 
@@ -111,6 +126,7 @@ a:hover {
 .section-heading {
     margin-bottom: 50px;
 }
+
 
 .build2015-iframe,
 .sanmateo-iframe {
@@ -209,7 +225,10 @@ ul.get-started-steps > li > a:hover {
 
 .steps {
   font-weight: lighter;
-  font-size: 30px;
+}
+
+h4.steps:hover{
+  color: #000;
 }
 
 h3.steps:hover{
@@ -515,8 +534,49 @@ div.preview {
       cursor: pointer;
     }
 
+#device-center-link {
+  width: 26%;
+  min-width:26%;
+  margin-top:24px;
+  margin-bottom:24px;
+}
+
+.col-no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+.breadcrumb {
+  background-color: transparent;
+}
+.breadcrumb > .active {
+  color: inherit;
+}
+
+.breadcrumb > li + li:before {
+  content: ">\00a0";
+  color: inherit;
+}
+
+.setup-content-list {
+  padding-left: 0;
+}
+
+    .setup-content-list > .row {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+        .setup-content-list > .row > .col-md-6 {
+          padding-left: 0;
+        }
+
+#app-content > .row {
+  margin-left: 0;
+  margin-right: 0;
+}
 
 
+@font-face{font-family:'Segoe UI';src:url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.eot);src:local("Segoe UI Light"),url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.eot?#iefix) format("embedded-opentype"),url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.woff) format("woff"),url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.ttf) format("truetype"),url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.svg#web) format("svg");font-weight:200;font-style:normal}@font-face{font-family:'Segoe UI';src:url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/semilight/latest.eot);src:local("Segoe UI Semilight"),url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/semilight/latest.eot?#iefix) format("embedded-opentype"),url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/semilight/latest.woff) format("woff"),url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/semilight/latest.ttf) format("truetype"),url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/semilight/latest.svg#web) format("svg");font-weight:300;font-style:normal}@font-face{font-family:'Segoe UI';src:url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.eot);src:local("Segoe UI"),url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.eot?#iefix) format("embedded-opentype"),url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.woff) format("woff"),url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.ttf) format("truetype"),url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.svg#web) format("svg");font-weight:400;font-style:normal}@font-face{font-family:'Segoe UI';src:url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/semibold/latest.eot);src:local("Segoe UI Semibold"),url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/semibold/latest.eot?#iefix) format("embedded-opentype"),url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/semibold/latest.woff) format("woff"),url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/semibold/latest.ttf) format("truetype"),url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/semibold/latest.svg#web) format("svg");font-weight:600;font-style:normal}@font-face{font-family:'Segoe UI';src:url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/bold/latest.eot);src:local("Segoe UI Bold"),url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/bold/latest.eot?#iefix) format("embedded-opentype"),url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/bold/latest.woff) format("woff"),url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/bold/latest.ttf) format("truetype"),url(https://i.s-microsoft.com/fonts/segoe-ui/west-european/bold/latest.svg#web) format("svg");font-weight:700;font-style:normal}@font-face{font-family:"Segoe UI Web";src:local("Segoe UI Web Light");font-weight:200;font-style:normal}@font-face{font-family:"Segoe UI Web";src:local("Segoe UI Web Semilight");font-weight:300;font-style:normal}@font-face{font-family:"Segoe UI Web";src:local("Segoe UI Web Regular");font-weight:400;font-style:normal}@font-face{font-family:"Segoe UI Web";src:local("Segoe UI Web Semibold");font-weight:600;font-style:normal}@font-face{font-family:"Segoe UI Web";src:local("Segoe UI Web Bold");font-weight:700;font-style:normal}@font-face{font-family:"Helvetica Neue";src:local("HelveticaNeue-Light");font-weight:200;font-style:normal}@font-face{font-family:"Helvetica Neue";src:local("HelveticaNeue-Semilight");font-weight:300;font-style:normal}@font-face{font-family:"Helvetica Neue";src:local("Helvetica Neue");font-weight:400;font-style:normal}@font-face{font-family:"Helvetica Neue";src:local("HelveticaNeue-Medium");font-weight:600;font-style:normal}@font-face{font-family:"Helvetica Neue";src:local("HelveticaNeue-Bold");font-weight:700;font-style:normal}
 @media (max-width: 800px) {
   .hth-project-image {
   max-height:100%;
