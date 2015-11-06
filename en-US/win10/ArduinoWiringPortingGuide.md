@@ -15,6 +15,7 @@ Need more information on [Setting up Arduino Wiring in Visual Studio]({{site.bas
 ## Index
 
 ### Porting
+- <a href="#port_pins">Updating Pin Numbers</a>
 - <a href="#port_serial">Remove References to "Serial"</a>
 	
 ### Common Problems
@@ -24,6 +25,77 @@ Need more information on [Setting up Arduino Wiring in Visual Studio]({{site.bas
 
 
 ## Porting
+
+<a name="port_pins"></a>
+
+### Updating Pin Numbers
+
+It might go without saying, but many sketches and libraries (especially those for arduino shields) may contain references to specific pins for Arduino devices. You'll want to customize your sketches to use pin numbers that are appropriate for the device you are working on.
+
+We've provided some values which correspond to pins on specific boards. You can always use the pin numbers directly, but you may also choose to use the pre-defined values.
+
+For example, you may provide power to GPIO pin 5 on a Raspberry Pi 2 by using either of the following commands
+
+{% highlight C++ %}
+
+pinMode( 29, OUTPUT );
+digitalWrite( 29, HIGH );
+
+{% endhighlight %}
+
+or
+
+{% highlight C++ %}
+
+pinMode( GPIO_5, OUTPUT );
+digitalWrite( GPIO_5, HIGH );
+
+{% endhighlight %}
+
+The pre-defined pins can be found in `PinNumbers.h` inside any Arduino Wiring project, but since there will be different pins available depending on the hardware setup you are building for, we've also included a table here to describe which pin defines are available for each device.
+
+#### Raspberry Pi 2
+
+[Pinout Diagram]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+
+{:.table.table-bordered}
+| Pin Define      | Corresponding Pin Number   |
+| -------------| ------------- |
+| LED_ONBOARD | *onboard LED* |
+| GPIO_* _where * refers to [0, 27]_  | *refer to pinout diagram* |
+| GPIO_GCLK | 7 |
+| GPIO_GEN* _where * refers to [0, 5]_ | *refer to pinout diagram* |
+| I2C_SCL1 | 5 |
+| I2C_SDA1 | 3 |
+| SPI_CS0 | 24 |
+| SPI_CS1 | 26 |
+| SPI_CLK | 23 |
+| SPI_MISO | 21 |
+| SPI_MOSI | 19 |
+| RXD0 | 10 |
+| TXD0 | 8 |
+
+#### Minnowboard Max
+
+[Pinout Diagram]({{site.baseurl}}/images/PinMappings/MBM_Pinout.png)
+
+{:.table.table-bordered}
+| Pin Define      | Corresponding Pin Number   |
+| -------------| ------------- |
+| LED_ONBOARD | *onboard LED* |
+| GPIO_* _where * refers to [0, 9]_  | *refer to pinout diagram* |
+| I2C_SCL | 13 |
+| I2C_SDA | 15 |
+| SPI_CS0 | 5 |
+| SPI_SCLK | 11 |
+| SPI_MISO |7 |
+| SPI_MOSI | 9 |
+| UARAT1_CTS | 10 |
+| UARAT1_RTS | 12 |
+| UARAT1_RX | 8 |
+| UARAT1_TX | 6 |
+| UARAT2_RX | 19 |
+| UARAT2_TX | 17 |
 
 <a name="port_serial"></a>
 
