@@ -79,7 +79,7 @@ If you chose Option 2 or Option 3 on the "Set up your PC" page, you need to make
 
 ###Code
 
--   Now that we're all set up, let's get into some code!  I've set up a project called RemoteBlinky by following the steps       in the setup guide - you can start coding directly on top of the solution you set up earlier. In the screenshot below,       you will see the code-behind file MainPage.xaml.cs which simply creates a Bluetooth connection object and passes it to       the RemoteDevice class in the constructor. You'll see that I've specified my device name in this example. You may also       enumerate the available devices by invoking the static `.listAvailableDevicesAsync()` function on BluetoothSerial (and       USBSerial) class before constructing your object.  Take a look at the code below and begin manually transferring the         needed additions.
+-   Now that we're all set up, let's get into some code!  I've set up a project called RemoteBlinky by following the steps       in the "Set up your PC" section of this setup guide - you can start coding directly on top of the solution you set up        earlier. In the screenshot below, you will see the code-behind file MainPage.xaml.cs which simply creates a Bluetooth        connection object and passes it to the RemoteDevice class in the constructor. You'll see that I've specified my device       name in this example. You may also enumerate the available devices by invoking the static `.listAvailableDevicesAsync()`     function on BluetoothSerial (and USBSerial) class before constructing your object.  Take a look at the code below and        begin manually transferring the needed additions.
 
     ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project00.png)
 
@@ -89,17 +89,17 @@ If you chose Option 2 or Option 3 on the "Set up your PC" page, you need to make
         You can obtain the VID & PID combination of your USB device by following these steps:
         <ul>
         <li>Open Device Manager through the Control Panel or by pressing both <i>Windows + Pause</i> keys and choosing the           <i>Device Manager</i> link on the left.</li>
-        <li>Expand the <i>Ports (COM & LPT)</i> menu</li>
-        <li>Right-click your Arduino Device and select Properties</li>
+        <li>Expand the <i>Ports (COM & LPT)</i> menu.</li>
+        <li>Right-click your Arduino Device and select Properties.</li>
         <li>On the <i>Details</i> tab, select <i>Hardware Ids</i> from the drop-down menu.</li>
         <li>You may see multiple entries in the <i>Value</i> box, but any entries will have matching PID and VID.</li>
         <li>The entries will have the format "USB\VID_****&PID_****" where **** are the numeric ID values.</li>
-        <li>You can put in *just* the numbers, or also include "VID_" to guarantee you will correctly identify the device.           For example:<br/></li>
+        <li>You can put in just the numbers, or also include "VID_" to guarantee you will correctly identify the device.             For example:<br/></li>
         </ul>
         `USBSerial usb = new USBSerial( "VID_2341", "PID_0043" );`<br/>
         is guaranteed to work **only** for the following hardware device:
 
-![USB Device]({{site.baseurl}}/images/remote-wiring/samples/basic/vidpid.png)
+    ![USB Device]({{site.baseurl}}/images/remote-wiring/samples/basic/vidpid.png)
 
 -   Next, I'm going to add a callback function to the ConnectionEstablished event on the BluetoothSerial object. This            function will automatically be called when the Bluetooth device is connected. You'll notice that I haven't implemented       anything in that function at this time. Last, call `.begin()` on the connection object to tell it to connect.
 
@@ -107,7 +107,7 @@ If you chose Option 2 or Option 3 on the "Set up your PC" page, you need to make
  
     -   **Notes on baud rate for USB/Bluetooth:** Some hardware setups may require additional considerations when it comes to         setting up your Bluetooth device over the serial pins 0 and 1.
 
-        StandardFirmata uses the Serial lines to talk to a Bluetooth device or over USB. By default, it uses a baud rate of          57,600 bps. Depending on the configuration of your Bluetooth device, you may need to modify that rate. It can be             found in the `setup` method and looks like this:
+        StandardFirmata uses the Serial lines to talk to a Bluetooth device or over USB. By default, it uses a baud rate of          57600 bps. Depending on the configuration of your Bluetooth device, you may need to modify that rate. It can be             found in the `setup` method and looks like this:
 
         `Firmata.begin(57600);`
 
@@ -123,7 +123,7 @@ If you chose Option 2 or Option 3 on the "Set up your PC" page, you need to make
     -   **Note for USB:** The USBSerial class still has a ConnectionEstablished event that you can subscribe to. It will             always be invoked at the proper time in both classes, so you are able to reuse your code in either scenario!
         However, be aware that the `.begin()` function must be called before any connection attempt will be made. The                parameters to the `.begin()` function *do not matter* for Bluetooth, but you must use `SerialConfig.SERIAL_8N1` as           the 2nd parameter if you are connecting to an Arduino device! The rest of the example will work exactly the same             regardless of which connection type you are using.
 
-- Jump over to the MainPage.xaml file and create a couple buttons that will turn an LED on and off. You'll notice I've added button callbacks to the `Click` event & set the `IsEnabled` property to false, and you'll see why in the next step!
+- Jump over to the MainPage.xaml file by right-clicking MainPage.xaml in your Solution Explorer and choosing "View Designer" - the XAML code will appear alongside the Designer view.  We're now going to create buttons that will turn an LED on and off. You'll notice I've added button callbacks to the `Click` event & set the `IsEnabled` property to false, and you'll see why in the next step!
 
  ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project02.png)
 
@@ -133,7 +133,20 @@ If you chose Option 2 or Option 3 on the "Set up your PC" page, you need to make
 
  ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project04.png)
 
-- Build! Your buttons will be enabled when the connection is established, and you can freely toggle your LED on and off at will! You can also deploy the same code to another Windows 10 device and utilize the same functionality there.  In order to get the code running on a Windows Phone, set the deploy destination to "Device" and the architecture to "ARM" in Visual Studio.  When you build and deploy, you should see the app below running on your phone.
+- Build! Use the settings shown in the image below to run the app you've written on your Windows device.
+
+    ![Regular Deploy]({{site.baseurl}}/images/remote-wiring/samples/basic/regulardeploy.png)
+    
+- Your buttons will be enabled when the connection is established, and you can freely toggle your LED on and off at will! The app will look like the following picture when running on a Windows 10 PC.
+
+    ![Regular Start]({{site.baseurl}}/images/remote-wiring/samples/basic/regularstart.png)
+
+###Deploying to a Windows Phone
+- You can also deploy your code to another Windows 10 device and utilize the same functionality there.  In order to get the code running on a Windows Phone, plug your phone into your development PC (the PC on which you've been writing the code above) using a microUSB cord.  Set the deploy destination to "Device" and the architecture to "ARM" in Visual Studio.  The proper settings for this deploy can be seen in the image below.
+
+ ![Device Deploy]({{site.baseurl}}/images/remote-wiring/samples/basic/devicedeploy.png) 
+
+- When you build and deploy, you should see the app below running on your phone.
 
  ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/screenshot.png)
 
