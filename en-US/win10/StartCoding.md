@@ -128,7 +128,9 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/Bluetooth.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <!-- Placeholder for spacing -->
+                        <h3>Embedded Mode</h3>
+                        <p>Enable embedded mode on desktop and mobile</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/EmbeddedMode.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
                         <!-- Placeholder for spacing -->
