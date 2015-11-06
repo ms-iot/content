@@ -58,6 +58,9 @@ lang: en-US
         <p class="bold"><em>Are true console apps supported on Windows 10 IoT Core?</em></p>
         <p>True “console” apps aren’t really going to be supported for the IoT core OS, headless or not. You can still deploy and run a standard win32 console app here, it just won’t be connected to any on-device console. When running headless you should just get that black screen. When running headed the only supported UI is via the UWP UI stacks (XAML, HTML, DirectX).</p>
         <br />
+        <p class="bold"><em>Which languages can be used to create UWP apps that can run on Windows 10 IoT Core?</em></p>
+        <p>You can develop your UWP apps in C#, C++, JavaScript, VB, Node.js, Python and Arduino Wiring.</p>
+        <br />
         <a name="features"></a>
         <h2 class="faq-h2">Features</h2>
         <p class="bold"><em>Is WiFi supported on Windows 10 IoT Core?</em></p>
@@ -98,10 +101,6 @@ lang: en-US
         <p class="bold"><em>My C++ or Python Background Application is building and deploying successfully, but hangs indefinitely after launching.  How do I resolve this?</em></p>
         <p>There is a known issue being actively investigated that sporadically occurs on some SD cards.  This can be worked around using the following command via a PowerShell session with the device:
         <div>reg add "hklm\software\microsoft\visualstudio\debugger" /v EmulateExclusiveBreakpoints /t REG_DWORD /d 0</div>        </p>
-        <br />
-        <p class="bold"><em>My C#/VB UWP App successfully builds, deploys and launches using Visual Studio, but when I use iotstartup.exe to make my App the 'Startup App' all I see is the splash screen.  How do I resolve this?</em></p>
-        <p>There is a known issue being actively investigated that occurs with C#/VB Apps as the 'Startup App'.  This can be worked around by changing your App's configuration to Release (rather than Debug) and redeploying
-        to your device.  Note that another workaround is to use C++ rather than C#/VB.</p>
         <br />
         <br />
         <p class="bold"><em>My C#/VB UWP App successfully builds, deploys but fails to start with the error "Unable to activate Windows Store App [appX]. The activation request failed with error 'The wait operation timed out'.  How do I resolve this?</em></p>
