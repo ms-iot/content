@@ -30,7 +30,7 @@ You can always use a USB connection to get started, but let's cover simple hook 
 	* A few male-to-male connector wires
 	<br/>
 
-	![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/parts.JPG)
+ ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/parts.JPG)
 
 
 ###Set up
@@ -125,30 +125,30 @@ If you chose Option 2 or Option 3 on the "Set up your PC" page, you need to make
 
 - Jump over to the MainPage.xaml file by right-clicking MainPage.xaml in your Solution Explorer and choosing "View Designer" - the XAML code will appear alongside the Designer view.  We're now going to create buttons that will turn an LED on and off. You'll notice I've added button callbacks to the `Click` event & set the `IsEnabled` property to false, and you'll see why in the next step!
 
- ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project02.png)
+    ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project02.png)
 
 - I've implemented three functions in this step. First, the `OnConnectionEstablished` function now enables the buttons on the UI thread! This guarantees that the buttons will be enabled only when the Bluetooth connection is ready, as it typically takes a few seconds for this to happen.
 
 - I've also set up the `.digitalWrite()` calls in the button callbacks `OnButton_Click` and `OffButton_Click`
 
- ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project04.png)
+    ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project04.png)
 
 - Build! Use the settings shown in the image below to run the app you've written on your Windows device.
 
- ![Regular Deploy]({{site.baseurl}}/images/remote-wiring/samples/basic/regulardeploy.png)
+    ![Regular Deploy]({{site.baseurl}}/images/remote-wiring/samples/basic/regulardeploy.png)
     
 - Your buttons will be enabled when the connection is established, and you can freely toggle your LED on and off at will! The app will look like the following picture when running on a Windows 10 PC.
 
- ![Regular Start]({{site.baseurl}}/images/remote-wiring/samples/basic/regularstart.png)
+    ![Regular Start]({{site.baseurl}}/images/remote-wiring/samples/basic/regularstart.png)
 
 ###Deploying to a Windows Phone
 - You can also deploy your code to another Windows 10 device and utilize the same functionality there.  In order to get the code running on a Windows Phone, plug your phone into your development PC (the PC on which you've been writing the code above) using a microUSB cord.  Set the deploy destination to "Device" and the architecture to "ARM" in Visual Studio.  The proper settings for this deploy can be seen in the image below.
 
- ![Device Deploy]({{site.baseurl}}/images/remote-wiring/samples/basic/devicedeploy.png) 
+    ![Device Deploy]({{site.baseurl}}/images/remote-wiring/samples/basic/devicedeploy.png) 
 
 - When you build and deploy, you should see the app below running on your phone.
 
- ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/screenshot.png)
+    ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/screenshot.png)
 
 
 I really hope you enjoy replicating this project and using it as a baseline for an incredible new set of Maker projects!
