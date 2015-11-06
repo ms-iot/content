@@ -34,7 +34,7 @@ It might go without saying, but many sketches and libraries (especially those fo
 
 We've provided some values which correspond to pins on specific boards. You can always use the pin numbers directly, but you may also choose to use the pre-defined values.
 
-For example, you may provide power to GPIO pin 5 on a Raspberry Pi 2 by using either of the following commands
+For example, you may provide power to GPIO pin 5 (hardware pin 29) on a Raspberry Pi 2 by using either of the following commands
 
 {% highlight C++ %}
 
