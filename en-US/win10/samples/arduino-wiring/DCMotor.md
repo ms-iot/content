@@ -38,6 +38,26 @@ Refer to the fritzing diagram below to hook up your motor and PWM controller.
 
 ![RPI Pinouts]({{site.baseurl}}/images/arduino_wiring/dcmotor.png)
 
+###Pinout Description
+
+The PCA9685 PWM Controller should be connected as follows:
+
+####Raspberry Pi 2
+
+- VCC - 5V on Raspberry Pi 2 (Pin 2 or 4)
+- SDA - SDA1 pin on Raspberry Pi 2 (Pin 3)
+- SCL - SCL1 pin on Raspberry Pi 2 (Pin 5)
+- OE - *leave disconnected*
+- GND - GND on Raspberry Pi 2 (Pin 14 as shown or any other GND pin)
+
+####External Power
+
+- V+ - positive terminal of external power
+- GND - negative (ground) terminal of external power
+
+Refer to the fritzing diagram above for the remaining circuit connections.
+
+
 ##Code
 
 Replace the existing code in your main .ino file with the following code:
