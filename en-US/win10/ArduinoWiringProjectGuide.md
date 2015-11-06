@@ -34,7 +34,7 @@ Complete one of the many "Wiring" samples on the [Samples Page]({{site.baseurl}}
 
 ###Porting
 
-The Arduino Wiring API has been carefully implemented to make it possible to copy/paste your libraries and sketches into an Arduino Wiring project. Nevertheless there are, in some circumstances, slight modifications you may have to make to your sketches or libraries. We've created an easy to follow [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPorting.htm) to cover these potential issues.
+The Arduino Wiring API has been carefully implemented to make it possible to copy/paste your libraries and sketches into an Arduino Wiring project. Nevertheless there are, in some circumstances, slight modifications you may have to make to your sketches or libraries. We've created an easy to follow [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPortingGuide.htm) to cover these potential issues.
 
 ##Build and Deploy
 

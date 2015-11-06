@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Project Setup
-permalink: /en-US/win10/ArduinoWiringPorting.htm
+permalink: /en-US/win10/ArduinoWiringPortingGuide.htm
 lang: en-US
 ---
 
