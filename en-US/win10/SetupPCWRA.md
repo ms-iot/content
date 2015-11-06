@@ -51,7 +51,7 @@ Once you're done with this section, skip to the Device Capabilities section to f
 
 ###Step 2: Create a new project
 
-- Open Visual Studio.  Select *File -> New Project*.
+- Open Visual Studio.  Select *File -> New -> Project*.
 
  ![New Project]({{site.baseurl}}/images/remote-wiring/create_00.png)
 
