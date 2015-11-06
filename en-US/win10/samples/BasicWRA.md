@@ -135,11 +135,11 @@ If you chose Option 2 or Option 3 on the "Set up your PC" page, you need to make
 
 - Build! Use the settings shown in the image below to run the app you've written on your Windows device.
 
-    ![Regular Deploy]({{site.baseurl}}/images/remote-wiring/samples/basic/regulardeploy.png)
+ ![Regular Deploy]({{site.baseurl}}/images/remote-wiring/samples/basic/regulardeploy.png)
     
 - Your buttons will be enabled when the connection is established, and you can freely toggle your LED on and off at will! The app will look like the following picture when running on a Windows 10 PC.
 
-    ![Regular Start]({{site.baseurl}}/images/remote-wiring/samples/basic/regularstart.png)
+ ![Regular Start]({{site.baseurl}}/images/remote-wiring/samples/basic/regularstart.png)
 
 ###Deploying to a Windows Phone
 - You can also deploy your code to another Windows 10 device and utilize the same functionality there.  In order to get the code running on a Windows Phone, plug your phone into your development PC (the PC on which you've been writing the code above) using a microUSB cord.  Set the deploy destination to "Device" and the architecture to "ARM" in Visual Studio.  The proper settings for this deploy can be seen in the image below.
