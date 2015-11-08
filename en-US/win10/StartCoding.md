@@ -345,6 +345,19 @@ lang: en-US
                         <p>Learn to control DC motors using a Windows IoT Core enabled device!</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/DCMotor.htm">DC Motors (Wiring)</a>
                     </div>
+                    <div class="col-md-3">
+                        <h3>Launching an external program</h3>
+                        <p>Learn how to use <code>Windows.System.ProcessLauncher</code> API to launch external executable programs from your UWP app</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/ProcessLauncherSample.htm">ProcessLauncher API Sample (C#)</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>Connecting to a WiFi Network</h3>
+                        <p>Learn how to discover and connect to a WiFi network from a UWP app using <code>Windows.Devices.WiFi.WiFiAdapter</code> API</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/WifiConnectSample.htm">WiFi Connect Sample (C#)</a>
+                    </div>
+                  <div class="col-md-3">
+					<!-- col placeholder -->
+				  </div>
                 </div>
 
                 <div class="row">
