@@ -16,13 +16,15 @@ The Microsoft.IoT.Lightning.Providers library includes a set of Windows.Devices.
 
 The current version of library includes this set of providers:
 
-* <code>Microsoft.IoT.Lightning.Providers.Lightning<b>Gpio</b>Provider</code>
-* <code>Microsoft.IoT.Lightning.Providers.Lightning<b>I2c</b>Provider</code>
-* <code>Microsoft.IoT.Lightning.Providers.Lightning<b>Spi</b>Provider</code>
+* `Microsoft.IoT.Lightning.Providers.Lightning.Adc.Provider`
+* `Microsoft.IoT.Lightning.Providers.Lightning.Gpio.Provider`
+* `Microsoft.IoT.Lightning.Providers.Lightning.I2c.Provider`
+* `Microsoft.IoT.Lightning.Providers.Lightning.Pwm.Provider`
+* `Microsoft.IoT.Lightning.Providers.Lightning.Spi.Provider`
 
 ###Checking for the Lightning (DMAP) driver
 
-To check if Lightning is enabled, the <code>LightningProvider.IsLightningEnabled</code> property could be used. In general, it is always a good practice to verify if the required Lightning is enabled before calling any of the provider APIs. 
+To check if Lightning is enabled, the `LightningProvider.IsLightningEnabled` property should be used. In general, it is always a good practice to verify if the Lightning driver is enabled before using the Lightning provider APIs. 
 {% highlight C# %}
 if (Microsoft.IoT.Lightning.Providers.LightningProvider.IsLightningEnabled)
 {
@@ -110,9 +112,25 @@ The following samples demonstrate using the Lightning providers with supported b
 
 ##Build Requirements
 
+###Update Application Package manifest
+
+Also, you need to manually update the Application Package manifest manually to reference the Lightning device interface:
+
+{% highlight XML %}
+<iot:Capability Name="lowLevelDevices" />
+<DeviceCapability Name="109b86ad-f53d-4b76-aa5f-821e2ddf2141"/>
+{% endhighlight %}
+
+* The first is a capability that will enable the application to access custom devices.
+* The second is the device guid id for the Lightning interface
+
+Both capabilities must be added to the AppX manifest of your project under the `<Capabilities>` node.
+
+![AppX Manifest Capabailities]({{site.baseurl}}/images/Lightning/update_manifest.png)
+
 ###Windows SDK Update
 
-Windows SDK required for building and using the library is 10.0.10563.0 or higher which can be downloaded from [here](https://dev.windows.com/en-us/downloads/windows-10-developer-preview).
+Windows SDK required for building and using the library is 10.0.10586.0 or higher which can be downloaded from [here](https://dev.windows.com/en-US/downloads/windows-10-sdk).
 
 For more information on obtaining and setting up the required Windows SDK and other tools, refer to [Setting up your PC Guide]({{site.baseurl}}/{{page.lang}}/win10/SetupPCRPI.htm).
 
@@ -136,11 +154,11 @@ In order to install prerelease (current) version of Microsoft.IoT.Lightning Nuge
 
 ##Runtime Requirements
 
-###Windows IoT Core Insider Preview required
-Lightning providers support is currently included only in the Insider Preview builds for Windows IoT Core.
+###Windows IoT Core Fall Update required
+Lightning providers support is currently included in the Fall Update builds for Windows IoT Core.
 You can download a Windows 10 IoT Core image from our [downloads page]({{site.baseurl}}/{{page.lang}}/Downloads.htm ). Click on "Download Insider Preview" for your device type.
 
-### Direct Memory Mapped driver enabled
+### Direct Memory Mapped driver must be enabled
  
 The APIs in the Lightning Provider library require the Lightning Direct Memory Mapped driver to be enabled on the target device. Both Raspberry Pi2 and MinnowBoard Max have the driver available, but not enabled by default.
 
