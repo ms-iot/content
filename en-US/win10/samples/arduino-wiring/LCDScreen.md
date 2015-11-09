@@ -116,3 +116,7 @@ Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10
 You should see the LCD screen print "hello, world!" across the top line, with the current number of seconds the app has been running constantly being printed on the 2nd row!
 
 ![Hello World]({{site.baseurl}}/images/arduino_wiring/lcd_helloworld.jpg)
+
+##Having trouble?
+
+Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.

@@ -130,3 +130,7 @@ Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10
 ##Result
 
 The motor should run at max speed for 3 seconds, off for 3 seconds, and then perform an acceleration from a stopped state to maximum speed and back again. The motor will then stop for one second before starting all over again!
+
+##Having trouble?
+
+Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.

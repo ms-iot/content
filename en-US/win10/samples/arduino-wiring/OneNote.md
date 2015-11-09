@@ -138,6 +138,10 @@ After deploying, you will be able to log in to OneNote live at [http://onenote.c
 
 If you also hook up a button to pin 29 (GPIO pin 5) and a simple POS printer, you can press the button to print your TODOs from your printer!
 
+##Having trouble?
+
+Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.
+
 ---
 
 [&laquo; Return to Samples](SampleApps.htm){:role="button"}{:class="btn btn-default"}

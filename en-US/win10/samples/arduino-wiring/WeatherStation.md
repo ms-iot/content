@@ -271,5 +271,7 @@ Once your project is deployed, you will see data appear in the output console wh
 
 Watch your Output window in Visual Studio. The sketch will start reporting the data it gathers from the Weather Shield!
 
+##Having trouble?
 
+Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.
 
