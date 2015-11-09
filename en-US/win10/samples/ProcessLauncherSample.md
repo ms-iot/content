@@ -200,3 +200,18 @@ Go ahead, run the command above on your device, using [SSH]({{site.baseurl}}/{{p
 
 ![App Started]({{site.baseurl}}/images/ProcessLauncherSample/ProcessLauncher2.png)
 
+### Using the Process Launcher Whitelist Configuration Tool
+
+Additionally, to overcome the limitations of using reg commands, the Process Launcher Whitelist Configuration tool can be used to very easily add or remove executables to the ProcessLauncher **allow list**.
+
+The tool is available as part of the *Windows 10 IoT Utilities* on [GitHub](https://github.com/ms-iot/iot-utilities){:target="_blank"}.
+
+To use the tool:
+
+* Clone or download a zip of the *Windows 10 IoT Utilities* from [GitHub](https://github.com/ms-iot/iot-utilities){:target="_blank"}
+* Open and build the solution under *ProcessLauncherWhitelist* 
+* Copy the executable to your device using [FTP]({{site.baseurl}}/{{page.lang}}/win10/samples/FTP.htm){:target="_blank"}
+* Run it on the device using [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm){:target="_blank"} or [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm){:target="_blank"}
+
+![Proess Launcher Configuration ]({{site.baseurl}}/images/ProcessLauncherSample/ProcessLauncherWhiteListConfigTool.png)
+
