@@ -128,13 +128,17 @@ Serial.write() is typically used to send raw data over the serial lines. Windows
 
 ### Can't find "Arduino Wiring Application" Visual C++ project template in Visual Studio
 
-You must install the Visual Studio Extension for Windows IoT Project Templates before you can create Arduino Wiring projects in Visual Studio. Head over to [Windows IoT Core Project Templates extension page](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec) to download the extension from the Visual Studio Gallery!
+**Cause**: The Windows IoT Project Templates extension for Visual Studio is not installed.
+
+**Solution**: You must install the Visual Studio Extension for Windows IoT Project Templates before you can create Arduino Wiring projects in Visual Studio. Head over to [Windows IoT Core Project Templates extension page](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec) to download the extension from the Visual Studio Gallery!
 
 <a name="prob_hardwareserial"></a>
 
 ### ERROR: 'unresolved external symbol "class HardwareSerial Serial"'
 
-This issue occurs when there are `Serial` references are left in your Arduino Wiring sketches or libraries. You can use the "File" and "Line" fields on this error to locate the reference, and then use the <a href="#port_serial">Removing References to "Serial"</a> section of this page to resolve the issue.
+**Cause**: This issue occurs when there are `Serial` references are left in your Arduino Wiring sketches or libraries.
+
+**Solution**: Use the "File" and "Line" fields on this error to locate the reference(s) causing the issue, and then use the <a href="#port_serial">Removing References to "Serial"</a> section of this page to resolve the issue.
 
 <a name="prob_identifier"></a>
 
