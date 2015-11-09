@@ -21,6 +21,7 @@ Need more information on [Setting up Arduino Wiring in Visual Studio]({{site.bas
 ### Common Problems
 - <a href="#prob_missingiot">Can't find "Arduino Wiring Application" Visual C++ project template in Visual Studio</a>
 - ERROR: <a href="prob_hardwareserial">unresolved external symbol "class HardwareSerial Serial"</a>
+- <a href="#prob_hanging">My solution hangs infinitely when being initialized</a>
 
 
 
@@ -133,3 +134,83 @@ You must install the Visual Studio Extension for Windows IoT Project Templates b
 ### ERROR: 'unresolved external symbol "class HardwareSerial Serial"'
 
 This issue occurs when there are `Serial` references are left in your Arduino Wiring sketches or libraries. You can use the "File" and "Line" fields on this error to locate the reference, and then use the <a href="#port_serial">Removing References to "Serial"</a> section of this page to resolve the issue.
+
+<a name="prob_hanging"></a>
+
+### My solution hangs infinitely when being initialized
+
+There is a known issue which can cause a C++ solution to hang infinitely (deadlock) when being initialized. If you find that your solution appears to have this behavior and you are unable to use the debugger to 'break in' to any statement in the setup() or loop() sections of your Arduino Wiring application, you may be experiencing this type of hanging issue.
+
+**Cause**: An object is being created or a function is being called which leads to an asyncronous action before the solution has finished initializing. It is likely caused from an object's constructor calling an API function like `pinMode`.
+
+**Solution**: Move any object constructors and function calls away from the initialization section of code and into the `setup()` block.
+
+**Example 1**:
+
+The execution of this sketch calls a function called `setPinModes()` before the solution itself has been initialized. The solution will appear to execute but will hang infinitely.
+
+{% highlight C++ %}
+
+bool setPinModes();
+
+int pin = GPIO_5;
+bool initialized = setPinModes();
+
+setup()
+{
+
+}
+
+loop()
+{
+	if( initialized )
+	{
+		digitalWrite( pin, HIGH );
+		delay( 500 );
+		digitalWrite( pin, LOW );
+		delay( 500 );
+	}
+}
+
+bool setPinModes()
+{
+	if( pin < 0 ) return false;
+	pinMode( pin, OUTPUT );
+	return true;
+}
+
+{% endhighlight %}
+
+The solution is below, we've simply moved the execution of `setPinModes()` to the `setup()` function:
+
+{% highlight C++ %}
+
+bool setPinModes();
+
+int pin = GPIO_5;
+bool initialized;
+
+setup()
+{
+	initialized = setPinModes();
+}
+
+loop()
+{
+	if( initialized )
+	{
+		digitalWrite( pin, HIGH );
+		delay( 500 );
+		digitalWrite( pin, LOW );
+		delay( 500 );
+	}
+}
+
+bool setPinModes()
+{
+	if( pin < 0 ) return false;
+	pinMode( pin, OUTPUT );
+	return true;
+}
+
+{% endhighlight %}
