@@ -21,6 +21,7 @@ Need more information on [Setting up Arduino Wiring in Visual Studio]({{site.bas
 ### Common Problems
 - <a href="#prob_missingiot">Can't find "Arduino Wiring Application" Visual C++ project template in Visual Studio</a>
 - ERROR: <a href="prob_hardwareserial">unresolved external symbol "class HardwareSerial Serial"</a>
+- ERROR: <a href="#prob_identifier">"identifier not found" when calling a function</a>
 - <a href="#prob_hanging">My solution hangs infinitely when being initialized</a>
 
 
@@ -135,6 +136,81 @@ You must install the Visual Studio Extension for Windows IoT Project Templates b
 
 This issue occurs when there are `Serial` references are left in your Arduino Wiring sketches or libraries. You can use the "File" and "Line" fields on this error to locate the reference, and then use the <a href="#port_serial">Removing References to "Serial"</a> section of this page to resolve the issue.
 
+<a name="prob_identifier"></a>
+
+### ERROR: "identifier not found" when calling a function
+
+**Cause**: This error occurs during the linker process when a function is invoked that has not yet been declared in the document.
+
+**Solution**: In C++, all functions must be declared before they are invoked. If you have defined a new function in your sketch file, either the declaration or the entire implementation of the function must either be above any attempts to invoke it (typically at the top of the document).
+
+**Example**:
+
+The following block of code will raise the error "'myFunction': identifier not found"
+
+{% highlight C++ %}
+
+void setup()
+{
+
+}
+
+void loop()
+{
+    myFunction();
+}
+
+void myFunction()
+{
+    //do something
+}
+
+{% endhighlight %}
+
+There are two solutions. First, you may declare the function above any invocations. Typically, this declaration is done at the top of the file.
+
+{% highlight C++ %}
+
+void myFunction();
+
+void setup()
+{
+
+}
+
+void loop()
+{
+    myFunction();
+}
+
+void myFunction()
+{
+    //do something
+}
+
+{% endhighlight %}
+
+The other option is to move the entire implementation of the function above any invocations. This has the effect of both declaring and defining the function at the same time.
+
+{% highlight C++ %}
+
+void setup()
+{
+
+}
+
+void myFunction()
+{
+    //do something
+}
+
+void loop()
+{
+    myFunction();
+}
+
+{% endhighlight %}
+
 <a name="prob_hanging"></a>
 
 ### My solution hangs infinitely when being initialized
@@ -165,10 +241,7 @@ void loop()
 {
 	if( initialized )
 	{
-		digitalWrite( pin, HIGH );
-		delay( 500 );
-		digitalWrite( pin, LOW );
-		delay( 500 );
+		//do something
 	}
 }
 
@@ -199,10 +272,7 @@ void loop()
 {
 	if( initialized )
 	{
-		digitalWrite( pin, HIGH );
-		delay( 500 );
-		digitalWrite( pin, LOW );
-		delay( 500 );
+		//do something
 	}
 }
 
