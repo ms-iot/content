@@ -6,7 +6,7 @@
 - [NFC/RFID/Proximity](#NFC)
 - [Miscellaneous](#OtherDevicesMisc)
 
-### Storage Media <a name="Storage"></a>
+### Storage Media {#Storage}
 
 {:.table.table-bordered .devices}
 Part Name / No.                      | Compatible Boards | Description                                                                                        | Notes | Projects, Samples, Libraries                                                                 |
@@ -14,7 +14,7 @@ Part Name / No.                      | Compatible Boards | Description          
 Samsung 32GB EVO Class 10 Micro SDHC | RPI2, MBM         | An SD card that's known to support running Windows 10 IoT Core on both the Raspberry Pi 2 and MBM. |       | [Amazon.com Product Page](http://www.amazon.com/gp/product/B00IVPU786)                       |
 SanDisk Ultra Micro SDHC 16GB        | RPI2, MBM         | An SD card that's known to support running Windows 10 IoT Core on both the Raspberry Pi 2 and MBM. |       | [Amazon.com Product Page](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445) |
 
-### Pi Hats <a name="Pi-Hats"></a>
+### Pi Hats {#Pi-Hats}
 
 {:.table.table-bordered .devices}
 Part Name / No.         | Compatible Boards | Description                                                                                                                                                  | Notes                                       | Projects, Samples, Libraries                                                                                                                                                                                                                                   |
@@ -22,7 +22,7 @@ Part Name / No.         | Compatible Boards | Description                       
 Adafruit 16-Channel PWM | RPI2              | Adds the capability to control up to 16 servos with no additional Raspberry Pi processing overhead. Capable of doing PWM up to 1.6KHz with 12 bit precision. | Fairly easy to use. It can also drive LEDs. | [Adafruit Product Page](http://www.adafruit.com/products/2327#description-anchor) <br> [Adafruit Tutorial](https://learn.adafruit.com/adafruit-16-channel-pwm-servo-hat-for-raspberry-pi/overview) <br> [C# IoT Sample](https://github.com/golaat/Adafruit.Pwm)|
 TBD                     |                   | Add a confirmed Pi Hat! [Contribute to this list on GitHub.]                                                                                                 |
 
-### Sensors <a name="Sensors"></a>
+### Sensors {#Sensors}
 
 {:.table.table-bordered .devices}
 Part Name / No.                                       | Compatible Boards | Description                                                                                                                                                                                                                                                        | Notes                                                                                                                                                                                                                                        | Projects, Samples, Libraries |
@@ -33,7 +33,7 @@ SparkFun Triple Axis Accelerometer Breakout - ADXL345 | RPI2, MBM         | Smal
 Adafruit BMP280 Temperature and Barometric Sensor     | RPI2              | Bosch environmental sensor with temperature, barometric pressure                                                                                                                                                                                                   | barometric pressure with &plusmn;1 hPa absolute accuraccy, and temperature with 1.0&deg;C accuracy.                                                                                                                                          | [Adafruit Starter Pack]      |
 Adafruit TCS34725 Color Sensor                        | RPI2              | RGB Color Sensor with IR filter and White LED - TCS34725                                                                                                                                                                                                           | [Link to product on Adafruit](http://www.adafruit.com/products/1334)                                                                                                                                                                         | [Adafruit Starter Pack]      |
 
-### Port Expanders <a name="Port-Expanders"></a>
+### Port Expanders {#Port-Expanders}
 
 {:.table.table-bordered .devices}
 Part Name / No.                   | Compatible Boards | Description                                                                    | Notes                                            | Projects, Samples, Libraries |
@@ -49,7 +49,7 @@ Part Name / No.        | Compatible Boards | Description                        
 NXP OM5577 demo board  | RPI2              | Demo board for the NXP PN7120 NFC chip. | This demo board plugs into a Raspberry Pi 2 and the NXP website has [an install guide (AN11767)](http://www.nxp.com/documents/application_note/AN11767.pdf) and [a download package](http://www.nxp.com/documents/software/SW349710.zip) for instructions on installing the driver INF and ACPI mod to enable it in Windows 10 IoT. You can write a universal app with the same Windows.Networking.Proximity APIs you're accustomed to on phone and desktop, and the NXP website download has an example AppX you can deploy (source code is in the application note instructions). | [ProximityDevice WinRT documentation](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.proximity.proximitydevice.aspx), [NFC device driver interface documentation](https://msdn.microsoft.com/en-us/library/windows/hardware/dn905575(v=vs.85).aspx)|
 NXP PN547/PN548/PN7120 | RPI2, MBM         | Supported NXP NFC chips                 | The NXP PN547, PN548, and PN7120 NFC chips are supported in Windows 10 IoT and the best way to get started is with the OM5577 demo board above (containing the PN7120 chip).                                                                                                                                                                                                                                                                                                                                                                                                        |
 
-### Miscellaneous <a name="OtherDevicesMisc"></a>
+### Miscellaneous {#OtherDevicesMisc}
 
 {:.table.table-bordered .devices}
 Part Name / No.                               | Compatible Boards | Description                                                                                                                              | Notes                                                  | Projects, Samples, Libraries |

@@ -1,4 +1,4 @@
-### Libraries <a name="Libraries"></a>
+### Libraries {#Libraries}
 
 {:.table.table-bordered .devices}
 Library Name                             | Compatible Boards | Description                                                                                     | Notes                                                                                                                    | Projects, Samples, Libraries |
@@ -6,7 +6,7 @@ Library Name                             | Compatible Boards | Description      
 ZWaveAdapter                             | RPI2, MBM         | Zwave solution to enable developer to add a Zwave Adapter and connect it to the AllJoyn network | Demonstrates the function of Z-Wave device on Device System Bridge (DSB). Used as part of the ZWave demo in //Build/2015 | [ZWave Sample]               |
 AllJoyn Device System Bridge App Project | RPI2, MBM         | Use to expose a GPIO Device to the AllJoyn Bus using the AllJoyn Device System Bridge           |                                                                                                                          | [Alljoyn DSB Gpio C# Sample] |
 
-### Bus Providers <a name="BusProviders"></a>
+### Bus Providers {#BusProviders}
 
 {:.table.table-bordered .devices}
 Bus Provider    | Compatible Boards | Description                                                                 | Notes                                             | Projects, Samples, Libraries |

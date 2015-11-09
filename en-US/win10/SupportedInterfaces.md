@@ -261,6 +261,10 @@ result          | result            | result      | result | result             
       $(".section").hide();
       $(".javascriptWarn").hide();
       $(".searchTools").show();
+      if(window.location.hash) {
+			  $(location.hash).parent().show();
+			  window.scrollTo(0, $(location.hash).offset().top);
+			} 
     }
 </script>
 

@@ -1,4 +1,4 @@
-### Arduino Peripherals <a name="Arduino"></a>
+### Arduino Peripherals {#Arduino}
 These devices are supported on Windows 10 IoT Core through the Arduino Wiring API.  Use these third party Arduino shields and peripherals with Windows 10 IoT Core. Read more about the [Wiring API] which enables you to use Arduino code on Windows 10 IoT Core devices.
 
 {:.table.table-bordered .devices}

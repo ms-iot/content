@@ -1,4 +1,4 @@
-### Supported Busses <a name="SupportedBusses"></a>
+### Supported Busses {#SupportedBusses}
 
 {:.table.table-bordered .devices}
 Bus Type        | Compatible Boards | Description                  | Notes                                                     | Projects, Samples, Libraries           |
