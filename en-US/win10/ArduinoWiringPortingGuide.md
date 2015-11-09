@@ -136,7 +136,7 @@ Serial.write() is typically used to send raw data over the serial lines. Windows
 
 ### ERROR: 'unresolved external symbol "class HardwareSerial Serial"'
 
-**Cause**: This issue occurs when there are `Serial` references are left in your Arduino Wiring sketches or libraries.
+**Cause**: This issue occurs when there are `Serial` references in your Arduino Wiring sketches or libraries.
 
 **Solution**: Use the "File" and "Line" fields on this error to locate the reference(s) causing the issue, and then use the <a href="#port_serial">Removing References to "Serial"</a> section of this page to resolve the issue.
 
@@ -146,7 +146,7 @@ Serial.write() is typically used to send raw data over the serial lines. Windows
 
 **Cause**: This error occurs during the linker process when a function is invoked that has not yet been declared in the document.
 
-**Solution**: In C++, all functions must be declared before they are invoked. If you have defined a new function in your sketch file, either the declaration or the entire implementation of the function must either be above any attempts to invoke it (typically at the top of the document).
+**Solution**: In C++, all functions must be declared before they are invoked. If you have defined a new function in your sketch file, either the declaration or the entire implementation of the function must be above any attempts to invoke it (typically at the top of the document).
 
 **Example**:
 
