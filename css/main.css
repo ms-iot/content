@@ -535,3 +535,8 @@ div.preview {
     background-color: transparent;
   }
 }
+
+#iot_iot_home{
+  background-color: #0060AC;
+  font-weight: semi-bold;
+}
