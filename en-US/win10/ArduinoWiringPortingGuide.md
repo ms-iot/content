@@ -15,7 +15,7 @@ Need more information on [Setting up Arduino Wiring in Visual Studio]({{site.bas
 ## Index
 
 ### Porting
-- <a href="#port_pins">Updating Pin Numbers</a>
+- <a href="#port_pins">Updating Pins</a>
 - <a href="#port_serial">Remove References to "Serial"</a>
 	
 ### Common Problems
@@ -28,13 +28,13 @@ Need more information on [Setting up Arduino Wiring in Visual Studio]({{site.bas
 
 <a name="port_pins"></a>
 
-### Updating Pin Numbers
+### Updating Pins
 
-It might go without saying, but many sketches and libraries (especially those for arduino shields) may contain references to specific pins for Arduino devices. You'll want to customize your sketches to use pin numbers that are appropriate for the device you are working on.
+It might go without saying, but many sketches and libraries (especially those for arduino shields) may contain references to specific pins for Arduino devices. You'll want to customize your sketches to use pins that are appropriate for the device you are working on and the configuration you are using.
 
-We've provided some values which correspond to pins on specific boards. You can always use the pin numbers directly, but you may also choose to use the pre-defined values.
+Arduino Wiring ultimately requires a physical connector pin number for any functions that refer to pins. You can use these numbers directly, but we've also provided some pre-defined pin names which correspond to connector pins on specific boards.
 
-For example, you may provide power to GPIO pin 5 (hardware pin 29) on a Raspberry Pi 2 by using either of the following commands
+For example, the physical connector pin 29 on a Raspberry Pi 2 is also known as `GPIO_5`. You may set GPIO pin 5 to a HIGH state on a Raspberry Pi 2 by using either of the following commands:
 
 {% highlight C++ %}
 
@@ -52,7 +52,7 @@ digitalWrite( GPIO_5, HIGH );
 
 {% endhighlight %}
 
-The pre-defined pins can be found in `PinNumbers.h` inside any Arduino Wiring project, but since there will be different pins available depending on the hardware setup you are building for, we've also included a table here to describe which pin defines are available for each device.
+The pre-defined pin names can be found in `PinNumbers.h` inside any Arduino Wiring project, but since there will be different physical connector pins available depending on the hardware setup you are building for, we've also included a table here to describe which pin names are available for each device.
 
 #### Raspberry Pi 2
 
@@ -61,7 +61,7 @@ The pre-defined pins can be found in `PinNumbers.h` inside any Arduino Wiring pr
 {:.table.table-bordered}
 | Pin Define      | Corresponding Pin Number   |
 | -------------| ------------- |
-| LED_ONBOARD | *onboard LED* |
+| LED_BUILTIN | *onboard LED* |
 | GPIO_* _where * refers to [0, 27]_  | *refer to pinout diagram* |
 | GPIO_GCLK | 7 |
 | GPIO_GEN* _where * refers to [0, 5]_ | *refer to pinout diagram* |
@@ -82,7 +82,6 @@ The pre-defined pins can be found in `PinNumbers.h` inside any Arduino Wiring pr
 {:.table.table-bordered}
 | Pin Define      | Corresponding Pin Number   |
 | -------------| ------------- |
-| LED_ONBOARD | *onboard LED* |
 | GPIO_* _where * refers to [0, 9]_  | *refer to pinout diagram* |
 | I2C_SCL | 13 |
 | I2C_SDA | 15 |
