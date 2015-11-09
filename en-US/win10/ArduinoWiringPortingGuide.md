@@ -156,12 +156,12 @@ bool setPinModes();
 int pin = GPIO_5;
 bool initialized = setPinModes();
 
-setup()
+void setup()
 {
 
 }
 
-loop()
+void loop()
 {
 	if( initialized )
 	{
@@ -190,12 +190,12 @@ bool setPinModes();
 int pin = GPIO_5;
 bool initialized;
 
-setup()
+void setup()
 {
 	initialized = setPinModes();
 }
 
-loop()
+void loop()
 {
 	if( initialized )
 	{
