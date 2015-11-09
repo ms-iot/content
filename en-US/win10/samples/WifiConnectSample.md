@@ -65,11 +65,12 @@ The **WiFiAdapter** class can be used to scan, find and connect to both open and
 
 Accessing the WiFi adapter from your code requires a device capability for WiFi devices added to the manifest. The `wifiControl` DeviceCapability is the one we need. So, we should add it to the AppX manifest, **Package.appxmanifest** file:
 
-**NOTE:** While you can add other capabilities directly by double clicking and opening the **Package.appxmanifest** file in the UI editor, the wifiControl can only be added via the XML editor (Right Click on the file -> Open with -> XML (Text) Editor) and adding the capabilities below:
+**NOTE:** While you can add other capabilities directly by double clicking and opening the **Package.appxmanifest** file in the UI editor, the wifiControl can only be added via the XML editor (Right Click on the file -> Open with -> XML (Text) Editor) and adding the device capability below:
  
 {% highlight xml %}  
   <Capabilities>
-    // <Capability Name="internetClient" />
+    <Capability Name="internetClient" />
+	<!-- Add the capability here -->
     <DeviceCapability Name="wifiControl" />
   </Capabilities>
 {% endhighlight %}  
