@@ -144,4 +144,4 @@ Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/win10
 
 ---
 
-[&laquo; Return to Samples](SampleApps.htm){:role="button"}{:class="btn btn-default"}
+[&laquo; Return to Samples]({{site.baseurl}}/{{page.lang}}/win10/StartCoding.htm){:role="button"}{:class="btn btn-default"}
