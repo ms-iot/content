@@ -32,9 +32,9 @@ Need more information on [Setting up Arduino Wiring in Visual Studio]({{site.bas
 
 ### Updating Pins
 
-It might go without saying, but many sketches and libraries (especially those for arduino shields) may contain references to specific pins for Arduino devices. You'll want to customize your sketches to use pins that are appropriate for the device you are working on and the configuration you are using.
+It might go without saying, but many sketches and libraries (especially those for arduino shields) may contain references to specific connector pins for Arduino devices. You'll want to customize your sketches to use the appropriate connector pins for the device you are working on and the configuration you are using.
 
-Arduino Wiring ultimately requires a physical connector pin number for any functions that refer to pins. You can use these numbers directly, but we've also provided some pre-defined pin names which correspond to connector pins on specific boards.
+Arduino Wiring ultimately requires a physical connector pin number for any functions that refer to 'pins'. You can use these numbers directly, but we've also provided some pre-defined pin names which correspond to connector pins on specific boards.
 
 For example, the physical connector pin 29 on a Raspberry Pi 2 is also known as `GPIO_5`. You may set GPIO pin 5 to a HIGH state on a Raspberry Pi 2 by using either of the following commands:
 
