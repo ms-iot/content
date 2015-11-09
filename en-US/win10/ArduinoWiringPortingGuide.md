@@ -7,7 +7,7 @@ lang: en-US
 
 # Arduino Wiring Porting Guide
 
-Arduino Wiring sketches and libraries can be copy/pasted into an Arduino Wiring project inside Visual Studio and ran on Raspberry Pi 2 or Minnowboard Max. Sometimes there are slight modifications that need to be made to these files in order to make them more compatable with the Windows environment, or the board you are working with. This guide will cover those modifications as well as common issues that you may run into when deploying Arduino Wiring projects!
+Arduino Wiring sketches and libraries can be copy/pasted into an Arduino Wiring project inside Visual Studio and run on Raspberry Pi 2 or Minnowboard Max. Sometimes there are slight modifications that need to be made to these files in order to make them more compatible with the Windows environment, or the board you are working with. This guide will cover those modifications as well as common issues that you may run into when deploying Arduino Wiring projects!
 
 ### Missing Something?
 Need more information on [Setting up Arduino Wiring in Visual Studio]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm)?
