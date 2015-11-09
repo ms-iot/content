@@ -82,7 +82,6 @@ a:link {
     background-color: #fff !important;
     border: 0 !important;
     top: 0 !important;
-    position: absolute !important;
     width: 100% !important;
     z-index: 9999;
 }
