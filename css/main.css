@@ -10,7 +10,6 @@ body {
 }
 
 .default-main {
-    padding-top: 100px;
     width: 100%;
 }
 
@@ -44,7 +43,7 @@ body {
             color: #6d6d6d;
         }
 
-.chrome-header-wrapper .shell-header-wrapper, .chrome-footer-wrapper .shell-footer-wrapper {
+.chrome-header-wrapper .shell-header-wrapper, .chrome-footer-wrapper .shell-footer-wrapper , .shell-category-nav{
     max-width: 1206px !important;
 }
 
