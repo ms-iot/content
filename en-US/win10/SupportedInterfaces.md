@@ -6,9 +6,21 @@ lang: en-US
 ---
 <style>
 a {cursor:pointer}
-h2 {
+h2 
+{
 	border-bottom: 1px solid #AAAAAA;
 	padding-bottom: 10px;
+}
+.sectionControls
+{
+	font-size:15px;
+	float:right;
+	position:relative;
+	top:20px;
+}
+.sectionControls a
+{
+	padding-left: 10px;
 }
 tr:nth-child(even) {background: #f2f2f2;}
 th {background: #f2f2f2;}
@@ -100,27 +112,52 @@ result          | result            | result      | result | result             
 </div></div>
 
 
-## <a name="USBDevices" class="USBDevices sectionTitle" onClick="toggleSection('USBDevices');return false;">USB Devices</a>
+<h2> <a onClick="toggleSection('USBDevices');return false;">USB Devices </a>
+	<div class="sectionControls">
+		<a class="sectionToggle" onClick="toggleSection('USBDevices');return false;">Show/Hide</a>
+		<a class="sectionContribute" onClick="contribute('USBDevices');return false;">Contribute</a>
+	</div>
+</h2>
 <div class="USBDevices section" markdown="1">
 {% include_relative SupportedInterfaces/USBDevices.md %}
 </div>
 
-## <a name="ArduinoPeripherals" class="ArduinoPeripherals sectionTitle" onClick="toggleSection('ArduinoPeripherals');return false;">Arduino Peripherals</a>
+<h2> <a onClick="toggleSection('ArduinoPeripherals');return false;"> Arduino Peripherals </a>
+	<div class="sectionControls">
+		<a class="sectionToggle" onClick="toggleSection('ArduinoPeripherals');return false;">Show/Hide</a>
+		<a class="sectionContribute" onClick="contribute('ArduinoPeripherals');return false;">Contribute</a>
+	</div>
+</h2>
 <div class="ArduinoPeripherals section" markdown="1">
 {% include_relative SupportedInterfaces/ArduinoPeripherals.md %}
 </div>
 
-## <a name="OtherDevices" class="OtherDevices sectionTitle" onClick="toggleSection('OtherDevices');return false;">Other Hardware Peripherals (e.g., Sensors, ICs)</a>
+<h2> <a onClick="toggleSection('OtherDevices');return false;"> Other Hardware Peripherals (e.g., Sensors, ICs)</a>
+	<div class="sectionControls">
+		<a class="sectionToggle" onClick="toggleSection('OtherDevices');return false;">Show/Hide</a>
+		<a class="sectionContribute" onClick="contribute('OtherDevices');return false;">Contribute</a>
+	</div>
+</h2>
 <div class="OtherDevices section" markdown="1">
 {% include_relative SupportedInterfaces/OtherDevices.md %}
 </div>
 
-## <a name="Libraries" class="Libraries sectionTitle" onClick="toggleSection('Libraries');return false;">Third Party Software Libraries</a>
+<h2> <a onClick="toggleSection('Libraries');return false;"> Third Party Software Libraries</a>
+	<div class="sectionControls">
+		<a class="sectionToggle" onClick="toggleSection('Libraries');return false;">Show/Hide</a>
+		<a class="sectionContribute" onClick="contribute('Libraries');return false;">Contribute</a>
+	</div>
+</h2>
 <div class="Libraries section" markdown="1">
 {% include_relative SupportedInterfaces/Libraries.md %}
 </div>
 
-## <a name="SupportedBusses" class="SupportedBusses sectionTitle" onClick="toggleSection('SupportedBusses');return false;">Supported Busses</a>
+<h2> <a onClick="toggleSection('SupportedBusses');return false;"> Supported Busses</a>
+	<div class="sectionControls">
+		<a class="sectionToggle" onClick="toggleSection('SupportedBusses');return false;">Show/Hide</a>
+		<a class="sectionContribute" onClick="contribute('SupportedBusses');return false;">Contribute</a>
+	</div>
+</h2>
 <div class="SupportedBusses section" markdown="1">
 {% include_relative SupportedInterfaces/SupportedBusses.md %}
 </div>
@@ -204,6 +241,15 @@ result          | result            | result      | result | result             
 			} else {
 				$(".section").hide('slow');
 			}
+		}
+		
+		function contribute(section) {			
+			var pagePath="{{site.repositoryurl}}{{page.path}}";
+			
+			var url = pagePath.replace("SupportedInterfaces", "SupportedInterfaces/" + section); 
+			
+	  	var win = window.open(url, '_blank');
+  		win.focus();
 		}
 
 		window.onload = function() {
