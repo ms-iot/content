@@ -214,3 +214,69 @@ bool setPinModes()
 }
 
 {% endhighlight %}
+
+**Example 2**:
+
+The execution of this sketch creates an object on the stack before `setup()` has been called. Since the object calls `pinMode` in its constructor, this will also cause a deadlock. This is an uncommon issue, but may occur with objects from certain libraries (like the Arduino `LiquidCrystal` library).
+
+{% highlight C++ %}
+
+class MyObject
+{
+public:
+    MyObject()
+    {
+        pinMode( GPIO_5, OUTPUT );
+    }
+
+    void doSomething()
+    {
+        //... 
+    }
+};
+
+MyObject myObject;
+
+void setup()
+{
+
+}
+
+void loop()
+{
+    myObject.doSomething();
+}
+
+{% endhighlight %}
+
+The solution is below. We've changed the object to an object pointer and moved the initialization of the object to `setup()`.
+
+{% highlight C++ %}
+
+class MyObject
+{
+public:
+    MyObject()
+    {
+        pinMode( GPIO_5, OUTPUT );
+    }
+
+    void doSomething()
+    {
+        //... 
+    }
+};
+
+MyObject *myObject;
+
+void setup()
+{
+    myObject = new MyObject();
+}
+
+void loop()
+{
+    myObject->doSomething();
+}
+
+{% endhighlight %}
