@@ -118,7 +118,7 @@ In the table below, replace the Arduino API Serial reference with the syntax in 
 
 ####Why remove Serial.write()?
 
-Serial.write() is typically used to send raw data over the serial lines. Windows IoT Core does not currently have UART functionality (don't worry, it's coming soon!) so these types of calls should be avoided.
+Serial.write() is typically used to send raw data over the serial lines. Windows IoT Core does not currently have UART functionality so these types of calls should be avoided.
 
 
 
@@ -219,7 +219,7 @@ void loop()
 
 ### My solution hangs infinitely when being initialized
 
-There is a known issue which can cause a C++ solution to hang infinitely (deadlock) when being initialized. If you find that your solution appears to have this behavior and you are unable to use the debugger to 'break in' to any statement in the setup() or loop() sections of your Arduino Wiring application, you may be experiencing this type of hanging issue.
+There is a known issue which can cause a C++ solution to hang infinitely (deadlock) when being initialized. You may be experiencing this type of issue if you find that your solution appears to hang forever and you are unable to use the debugger to 'break in' to any statement in the setup() or loop() sections of your Arduino Wiring application.
 
 **Cause**: An object is being created or a function is being called which leads to an asyncronous action before the solution has finished initializing. It is likely caused from an object's constructor calling an API function like `pinMode`.
 
