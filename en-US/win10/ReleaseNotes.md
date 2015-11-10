@@ -64,4 +64,35 @@ On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to user mode a
 *	More.com!PAGER::DisplayString may return INVALID_POINTER_READ exception. (1552523) WORKAROUND: None.
 *	The time may not sync on devices running IoT Core. (4444681) Manually update the time or programmatically force a time sync.
 *   On MinnowBoardMax, Silicon Labs based USB-Serial converters (USB\VID_10C4&PID_EA60) will fail to load with error 31. (5307602) WORKAROUND: Ensure the device is unplugged, then run: `reg add "HKEY_LOCAL_MACHINE\system\controlset001\enum\usb\VID_10C4&PID_EA60\0001\Device Parameters" /v PortName /t REG_SZ /d COM3`
+*   On MinnowBoardMax, FTDI USB-Serial adapters will ignore the requested baud rate and will use 3.8Mhz. (5348073) WORKAROUND: [Workaround for FTDI devices on x86](#ftdiworkaround)
+
+### <a name="ftdiworkaround"></a>Workaround for FTDI devices on x86
+
+ 1. Plug in the FTDI device to your MBM.
+ 2. Run `devcon status FTDIBUS\*` and note the *device instance path* of your device.
+
+    <pre>
+        C:\Data>devcon status ftdibus\*
+        <i>FTDIBUS\VID_0403+PID_6001+A700EXHLA\0000</i>
+            Name: USB Serial Port
+            Driver is running.
+        1 matching device(s) found.
+    </pre>
+
+ 3. Create a file named ftdi-fix.reg with the following contents, where `<device instance path>` is replaced with the device instance path determined in the previous step.
+
+{% highlight registry %}
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\system\controlset001\enum\<device instance path>\Device Parameters]
+"ConfigData"=hex:11,00,3f,3f,10,27,00,00,88,13,00,00,c4,09,00,00,e2,04,00,00,\
+  71,02,00,00,38,41,00,00,9c,80,00,00,4e,c0,00,00,34,00,00,00,1a,00,00,00,0d,\
+  00,00,00,06,40,00,00,03,80,00,00,00,00,00,00,d0,80,00,00
+"LatencyTimer"=dword:00000010
+"MinReadTimeout"=dword:00000000
+"MinWriteTimeout"=dword:00000000
+{% endhighlight %}
+
+ 4. Copy ftdi-fix.reg to your device and run `reg import ftdi-fix.reg` to apply the registry keys.
+ 5. Unplug and replug the FTDI device.
 
