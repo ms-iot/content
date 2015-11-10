@@ -9,6 +9,7 @@ body {
 h1 {
   font-size: 2em;
   font-weight: 100;
+  margin-bottom: 32px;
 }
 h2 {
   font-size: 1.5em;
@@ -370,8 +371,9 @@ iframe.maker-kit {
 }
 
 .subtext {
-	font-size: 0.8em;
 	color: gray;
+  margin-bottom: 84px;
+  margin-top: 0;
 }
 
 .divider {
