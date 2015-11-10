@@ -370,6 +370,10 @@ iframe.maker-kit {
 	border-color: gray !important;
 }
 
+.page-title {
+  margin-top: 84px;
+}
+
 .subtext {
 	color: gray;
   margin-bottom: 84px;
