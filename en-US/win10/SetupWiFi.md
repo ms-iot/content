@@ -13,15 +13,7 @@ including [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm), [Powershe
 	Note: Plugging in a wired Ethernet cable will override WiFi as the default network interface
 
 ### <a name="WiFi_Devices"></a>Supported Adapters
-The following WiFi adapters have been tested on Windows 10 IoT Core:
-
-| Raspberry Pi 2                                                     || MinnowBoard Max                                                    |
-|--------------------------------------------------------------------||--------------------------------------------------------------------|
-|[Raspberry Pi WiFi Dongle](http://swag.raspberrypi.org/collections/frontpage/products/official-raspberry-pi-Wifi-dongle){:target="_blank"}||[Airlink Wireless N 150 Mini USB Adapter](http://www.amazon.com/Airlink101-AWLL5077-150Mbps-Wireless-Adapter/dp/B002VFWY9M){:target="_blank"}|
-|||[Panda PAU06](http://www.amazon.com/Panda-300Mbps-Wireless-N-Adapter-button/dp/B00JDVRCI0){:target="_blank"}|
-|||[TP-LINK TL_WN725N](http://www.amazon.com/TP-LINK-TL-WN725N-Wireless-Adapter-150Mbps/dp/B008IFXQFU){:target="_blank"}|
-|||[NET-DYN USB Adapter](http://www.amazon.com/Adapter-NET-DYN%C2%AE-Perfect-Desktop-Laptop/dp/B00LWE14TO){:target="_blank"}|
-|||[Realtek 8191](http://www.amazon.com/Realtek-300Mbps-802-11n-Wireless-Network/dp/B00AVSRLTO){:target="_blank"}|
+A list of WiFi adapters that have been tested on Windows 10 IoT Core can be found on our [Supported Hardware]({{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm#WiFi-Dongles){:target="_blank"} page
 
 ### Configuring WiFi
 To use WiFi, you'll need to provide Windows 10 IoT core with the WiFi network credentials. There are a few different options for doing so:
