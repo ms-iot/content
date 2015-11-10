@@ -110,7 +110,7 @@ Part Name / No. | Compatible Boards | Description | Notes | Projects, Samples, L
 Official Raspberry Pi WiFi dongle | RPI2 | "Official Raspberry Pi WiFi dongle offering the best possible WiFi performance for its diminutive size." |  |
 Airlink Wireless N 150 Mini USB Adapter Adapter | MBM | Airlink101 AWL5077 Golden 150Mbps Wireless Mini USB Adapter with WPA2, WPA, and WEP enhanced wireless security |  |
 Panda PAU06 | MBM | Panda 300Mbps Wireless N USB Adapter with High Gain Antenna |  |
-TP-LINK TL_WN725N | RPI2, MBM | TP-LINK TL-WN725N Wireless N Nano USB Adapter 150Mbps |  |
+TP-LINK TL_WN725N | MBM | TP-LINK TL-WN725N Wireless N Nano USB Adapter 150Mbps |  |
 NET-DYN USB Wifi Adapter | MBM | Wifi USB Adapter NET-DYN |  |
 Realtek 8191 USB Wireless WIFI | MBM | Realtek 8191 300Mbps 802.11n/g/b USB Wireless WIFI LAN Network Card Adapter |  |
 Realtek 8192 USB Wireless WIFI | MBM | Realtek Single-Chip IEEE 802.11b/g/n 2T2R WLAN Controller with USB 2.0 Interface |  |

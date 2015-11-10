@@ -53,14 +53,15 @@ On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to user mode a
 ##Known Issues
 
 *	Setting the orientation to “Portrait” may not be honored in a Universal App (3039042) WORKAROUND: None
-*	GPIO pin 4 may behave unexpectedly when switching between drive modes (3890679) WORKAROUND: If you need to switch drive modes, use a pin other than GPIO 4
+*	On Raspberry Pi and Dragonboard, switching from a non-default drive mode to a different non-default drive mode may produce a glitch on the GPIO pin. (3890679) WORKAROUND: Set drive mode once at the beginning of the application.
 *	The Default startup app may conflict with itself when it is also deployed from Visual Studio (4266059). WORKAROUND: Change the default startup app to an application other than that you wish to deploy.
 *	GetNetworkUsageAsync may throw a System.UnauthorizedAccessException (1972129). WORKAROUND: None.
-*	The SPI driver may return a malformed buffer which includes two extra bytes at the beginning of the buffer for WriteRead sequence on the MinnowBoard Max (3076149) WORKAROUND: Compensate for the extra bytes in the code making the call by allocating a buffer that is x-2 bytes in size.
+*	On MinnowBoardMax, the SPI driver will generate malformed bus traffic for FullDuplex and TransferSequential transfers at clock speeds less than 250kHz. (3076149) WORKAROUND: Use clock speeds of 250kHz or greater.
 *	The IoT Core Default Application may display two different IP addresses for the same adapter where one is a stale address. (3303771). WORKAROUND: None.
-*	UART1 flow control/serial handshake on MBM may default to ON and cannot be turned off (2995473). WORKAROUND: Use UART2 instead for devices without flow control.
-*	A NULL value may be returned by SerialDevice::FromIdAsync() when devices are connected to the top USB port on MinnowBoardMax (2175837) WORKAROUND: Use the bottom USB port.
+*	A NULL value may be returned by SerialDevice::FromIdAsync() when devices are connected to the top USB port on MinnowBoardMax (2175837) WORKAROUND: Update to firmware version 0.83 or later from Intel's website: [http://firmware.intel.com/projects/minnowboard-max](http://firmware.intel.com/projects/minnowboard-max){:target="_blank"}.
 *	Data breakpoints have been disabled on the Raspberry Pi2 (4266252). WORKAROUND: Data breakpoints will be enabled in a future release.
 *	The Azure Active Directory Authentication Library may not work on Windows 10 IoT Core (4266261). WORKAROUND: Do not use the Azure Active Directory Authentication Library.
 *	More.com!PAGER::DisplayString may return INVALID_POINTER_READ exception. (1552523) WORKAROUND: None.
 *	The time may not sync on devices running IoT Core. (4444681) Manually update the time or programmatically force a time sync.
+*   On MinnowBoardMax, Silicon Labs based USB-Serial converters (USB\VID_10C4&PID_EA60) will fail to load with error 31. (5307602) WORKAROUND: Ensure the device is unplugged, then run: `reg add "HKEY_LOCAL_MACHINE\system\controlset001\enum\usb\VID_10C4&PID_EA60\0001\Device Parameters" /v PortName /t REG_SZ /d COM3`
+
