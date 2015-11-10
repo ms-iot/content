@@ -20,7 +20,7 @@ Need more information on [Setting up Arduino Wiring in Visual Studio]({{site.bas
 	
 ### Common Problems
 - <a href="#prob_missingiot">Can't find "Arduino Wiring Application" Visual C++ project template in Visual Studio</a>
-- ERROR: <a href="prob_hardwareserial">unresolved external symbol "class HardwareSerial Serial"</a>
+- ERROR: <a href="#prob_hardwareserial">unresolved external symbol "class HardwareSerial Serial"</a>
 - ERROR: <a href="#prob_identifier">"identifier not found" when calling a function</a>
 - <a href="#prob_hanging">My solution hangs infinitely when being initialized</a>
 
