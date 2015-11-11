@@ -5,37 +5,61 @@ permalink: /en-US/win10/WVSA.htm
 lang: en-US
 deviceName: WVSA
 ---
+<ol class="breadcrumb">
+  <li>
+    <a href="https://dev.windows.com/en-us/iot">IoT Home</a>
+  </li>
+  <li>
+    <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
+  </li>
+  <li class="active">Windows Virtual Shields for Arduino</li>
+</ol>
+<h1 class="page-title"> Set Up Windows Virtual Shields for Arduino  </h1>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <h2 class="subtext">Get your computer ready for the Windows Developer Proram for IoT, set up your Raspberry Pi 2 and Build your first Windows IoT Core app.</h2>
+  </div>
+</div>
 
-<h1> Set Up Windows Virtual Shields for Arduino  </h1>
-<h2 class="subtext">Get your computer ready for the Windows Developer Proram for IoT, set up your Raspberry Pi 2 and Build your first Windows IoT Core app.</h2>
-
-
-<h2>1. Get your PC ready for developing IoT applications using Virtual Shields for Arduino. <span class="pull-right"><a id="pc-content-toggle" onClick="hideDiv('pc-content')">Hide</a></span></h2>
+<h2>1. Get your PC ready for developing IoT applications using Virtual Shields for Arduino. <span class="pull-right"><a id="pc-content-toggle" class="toggle-button" onClick="hideDiv('pc-content')">Hide</a></span></h2>
 
 <hr>
-<div id="pc-content">
+<div id="pc-content" class="toggle-section">
 {% include_relative SetupPCWVSA.htm %}
 </div>
 
-<h2>2. Set up your Arduino to run with Virtual Shields for Arduino <span class="pull-right"><a id="setup-content-toggle" onClick="hideDiv('setup-content')">Hide</a></span></h2>
+<h2>2. Set up your Arduino to run with Virtual Shields for Arduino <span class="pull-right"><a id="setup-content-toggle" class="toggle-button" onClick="hideDiv('setup-content')">Show</a></span></h2>
 <hr>
-<div id="setup-content">
+<div id="setup-content" class="toggle-section hidden">
   {% include_relative SetupWVSA.htm %}
 </div>
 
-<h2>3. Write your first app: Hello, Blinky!   <span class="pull-right"><a id="app-content-toggle" onClick="hideDiv('app-content')">Hide</a></span>  </h2>
+<h2>3. Write your first app: Hello, Blinky!   <span class="pull-right"><a id="app-content-toggle" class="toggle-button" onClick="hideDiv('app-content')">Show</a></span>  </h2>
 <hr>
-  <div id="app-content" class="setup-content-list">
-
+  <div id="app-content" class="toggle-section hidden setup-content-list">
+    {% include_relative samples/BlinkyWVSA.md %}
   </div>
 
 
 <script>
   function hideDiv(div) {
-    var div = "#" + div;
-    var button = div + "-toggle"
-    $(div).toggle('slow');
-    var currentState = $(button)[0].innerHTML;
-    $(button)[0].innerHTML = currentState === "Hide" ? "Show" : "Hide"
+    var div = "#" + div,
+        button = div + "-toggle",
+        currentState = $(button)[0].innerHTML;
+
+    for(var i = 0; i < 3 ; i ++){
+        $(".toggle-button")[i].innerHTML = "Show";
+      }
+
+    if(currentState === "Hide") {
+      $(div).toggle('slow');
+    }
+    else
+    {
+      $(".hidden").removeClass("hidden");
+      $(".toggle-section").hide();
+      $(div).toggle('slow');
+      $(button)[0].innerHTML = "Hide";
+    }
   }
 </script>

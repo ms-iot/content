@@ -5,38 +5,61 @@ permalink: /en-US/win10/WRA.htm
 lang: en-US
 deviceName: WRA
 ---
+<ol class="breadcrumb">
+  <li>
+    <a href="https://dev.windows.com/en-us/iot">IoT Home</a>
+  </li>
+  <li>
+    <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
+  </li>
+  <li class="active">Windows Remote Arduino</li>
+</ol>
+<h1 class="page-title"> Windows Remote Arduino </h1>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <h2 class="subtext">Get your computer ready to develop for Windows Remote Arduino and Windows 10 IoT Core and Build your first Windows IoT Core app.</h2>
+  </div>
+</div>
 
-<h1> Windows Remote Arduino </h1>
-
-<h2>Get your computer ready to develop for Windows Remote Arduino and Windows 10 IoT Core and Build your first Windows IoT Core app.</h2>
-
-
-<h2>1. Set up your PC <span class="pull-right"><a id="pc-content-toggle" onClick="hideDiv('pc-content')">Hide</a></span></h2>
+<h2>1. Set up your PC <span class="pull-right"><a id="pc-content-toggle" class="toggle-button" onClick="hideDiv('pc-content')">Hide</a></span></h2>
 
 <hr>
-<div id="pc-content">
+<div id="pc-content" class="toggle-section">
   {% include_relative SetupPCWRA.md %}
 </div>
 
-<h2>2. Set up your Arduino and how to add the Windows Remote Arduino library to your Windows projects <span class="pull-right"><a id="setup-content-toggle" onClick="hideDiv('setup-content')">Hide</a></span></h2>
+<h2>2. Set up your Arduino and how to add the Windows Remote Arduino library to your Windows projects <span class="pull-right"><a id="setup-content-toggle" class="toggle-button" onClick="hideDiv('setup-content')">Show</a></span></h2>
 <hr>
-<div id="setup-content">
+<div id="setup-content" class="toggle-section hidden">
   {% include_relative SetupWRA.htm %}
 </div>
 
-<h2>3. Develop   <span class="pull-right"><a id="app-content-toggle" onClick="hideDiv('app-content')">Hide</a></span>  </h2>
+<h2>3. Develop   <span class="pull-right"><a id="app-content-toggle" class="toggle-button" onClick="hideDiv('app-content')">Show</a></span>  </h2>
 <hr>
-  <div id="app-content" class="setup-content-list">
+  <div id="app-content" class="setup-content-list toggle-section hidden">
     {% include_relative samples/BasicWRA.md %}
   </div>
 
 
 <script>
   function hideDiv(div) {
-    var div = "#" + div;
-    var button = div + "-toggle"
-    $(div).toggle('slow');
-    var currentState = $(button)[0].innerHTML;
-    $(button)[0].innerHTML = currentState === "Hide" ? "Show" : "Hide"
+    var div = "#" + div,
+        button = div + "-toggle",
+        currentState = $(button)[0].innerHTML;
+
+    for(var i = 0; i < 3 ; i ++){
+        $(".toggle-button")[i].innerHTML = "Show";
+      }
+
+    if(currentState === "Hide") {
+      $(div).toggle('slow');
+    }
+    else
+    {
+      $(".hidden").removeClass("hidden");
+      $(".toggle-section").hide();
+      $(div).toggle('slow');
+      $(button)[0].innerHTML = "Hide";
+    }
   }
 </script>

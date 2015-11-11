@@ -7,6 +7,9 @@ deviceName: RPI2
 ---
 <ol class="breadcrumb">
   <li>
+    <a href="https://dev.windows.com/en-us/iot">IoT Home</a>
+  </li>
+  <li>
     <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
   </li>
   <li class="active">Set up a Raspberry Pi 2</li>
@@ -18,25 +21,25 @@ deviceName: RPI2
   </div>
 </div>
 
-<h2>1. Set up your PC <span class="pull-right"><a id="pc-content-toggle" onClick="hideDiv('pc-content')">Hide</a></span></h2>
+<h2>1. Set up your PC <span class="pull-right"><a id="pc-content-toggle" class="toggle-button" onClick="hideDiv('pc-content')">Hide</a></span></h2>
 
 <hr>
-<div id="pc-content">
+<div id="pc-content" class="toggle-section">
 {% include_relative SetupPCContent.md %}
 </div>
 
-<h2>2. Set up your Raspberry Pi 2 <span class="pull-right"><a id="setup-content-toggle" onClick="hideDiv('setup-content')">Hide</a></span></h2>
+<h2>2. Set up your Raspberry Pi 2 <span class="pull-right"><a id="setup-content-toggle" class="toggle-button"  onClick="hideDiv('setup-content')">Show</a></span></h2>
 <hr>
-<div id="setup-content">
+<div id="setup-content" class="toggle-section hidden">
   {% include_relative SetupRPI.htm %}
   <h3> Additional Resources </h3>
   <p><a href="{{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm" target="_blank">Supported Peripheral Interfaces and Devices</a></p>
   </div>
 </div>
 
-<h2>3. Write your first app: Hello, Blinky!   <span class="pull-right"><a id="app-content-toggle" onClick="hideDiv('app-content')">Hide</a></span>  </h2>
+<h2>3. Write your first app: Hello, Blinky!   <span class="pull-right"><a id="app-content-toggle" class="toggle-button" onClick="hideDiv('app-content')">Show</a></span>  </h2>
 <hr>
-  <div id="app-content" class="setup-content-list">
+  <div id="app-content" class="toggle-section hidden">
   <div class="row">
     <div class="col-md-6 col-sm-12">
         <p>In this tutorial, we'll create a simple LED blinking app and connect a LED to your Windows 10 IoT Core device.</p>
@@ -71,13 +74,23 @@ deviceName: RPI2
 
 <script>
   function hideDiv(div) {
-    var div = "#" + div;
-    var button = div + "-toggle"
-    $(div).toggle('slow');
-    var currentState = $(button)[0].innerHTML;
-    $(button)[0].innerHTML = currentState === "Hide" ? "Show" : "Hide"
+    var div = "#" + div,
+        button = div + "-toggle",
+        currentState = $(button)[0].innerHTML;
+
+    for(var i = 0; i < 3 ; i ++){
+        $(".toggle-button")[i].innerHTML = "Show";
+      }
+
+    if(currentState === "Hide") {
+      $(div).toggle('slow');
+    }
+    else
+    {
+      $(".hidden").removeClass("hidden");
+      $(".toggle-section").hide();
+      $(div).toggle('slow');
+      $(button)[0].innerHTML = "Hide";
+    }
   }
 </script>
-
-
-

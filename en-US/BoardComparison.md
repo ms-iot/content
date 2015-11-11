@@ -10,8 +10,8 @@ lang: en-US
   </li>
   <li class="active">Choose a Board</li>
 </ol>
-<h1> Choose a Board </h1>
-<h3 class="section-heading">Lorem Ipsum compare the features to understand which board suits your needs. </h3>
+<h1 class="page-title"> Choose a Board </h1>
+<h2 class="subtext">Lorem Ipsum compare the features to understand which board suits your needs. </h3>
 <h3>Boards Running Windows 10 IoT Core lorem ipsum</h3>
 <hr>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
