@@ -1,4 +1,11 @@
-###Appx Installation on IoT
+---
+layout: default
+title: App Installation Sample
+permalink: /en-US/win10/samples/AppInstall.htm
+lang: en-US
+---
+
+###App Installation Sample
 
 You can find the source code for this sample by going [here](https://github.com/ms-iot/samples/) and navigating to the AppInstall folder.
 
