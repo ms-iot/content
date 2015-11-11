@@ -5,14 +5,23 @@ permalink: /en-US/win10/DB410c.htm
 lang: en-US
 deviceName: DB410c
 ---
-<h1> Set up a DragonBoard </h1>
-<h2>Get your computer ready for the Windows Developer Proram for IoT, set up your DragonBoard and Build your first Windows IoT Core app.</h2>
-
+<ol class="breadcrumb">
+  <li>
+    <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
+  </li>
+  <li class="active">Set up a DragonBoard</li>
+</ol>
+<h1 class="page-title"> Set up a DragonBoard </h1>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <h2 class="subtext">Get your computer ready for the Windows Developer Proram for IoT, set up your DragonBoard and Build your first Windows IoT Core app.</h2>
+  </div>
+</div>
 
 <h2>1. Set up your PC <span class="pull-right"><a id="pc-content-toggle" onClick="hideDiv('pc-content')">Hide</a></span></h2>
 
 <hr>
-<div id="pc-content">
+<div id="pc-content" class="toggle-section">
 {% include_relative SetupPCContent.md %}
 <!-- DragonBoard-Specific SetupPC Content -->
 {% include_relative SetupPCDB410c.htm %}
@@ -21,15 +30,15 @@ deviceName: DB410c
 
 <h2>2. Set up your DragonBoard <span class="pull-right"><a id="setup-content-toggle" onClick="hideDiv('setup-content')">Hide</a></span></h2>
 <hr>
-<div id="setup-content">
+<div id="setup-content" class="toggle-section">
   {% include_relative SetupDB410c.htm %}
 </div>
 
 <h2>3. Write your first app: Hello, Blinky!   <span class="pull-right"><a id="app-content-toggle" onClick="hideDiv('app-content')">Hide</a></span>  </h2>
 <hr>
-  <div id="app-content" class="setup-content-list">
+<div id="app-content" class="toggle-section">
   <div class="row">
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12 col-no-padding">
         <p>In this tutorial, we'll create a simple LED blinking app and connect a LED to your Windows 10 IoT Core device.</p>
         <p>This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions <a href="{{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm"> here.</a></p>
         <p>Also, be aware that the GPIO APIs are only available on Windows 10 IoT Core, so this sample cannot run on your desktop.</p>
@@ -63,8 +72,10 @@ deviceName: DB410c
 <script>
   function hideDiv(div) {
     var div = "#" + div;
-    var button = div + "-toggle"
-    $(div).toggle('slow');
+    var button = div + "-toggle";
+    $(".toggle-section").hide()
+    $(div).show('slow');
+    $(div).scrollIntoView();
     var currentState = $(button)[0].innerHTML;
     $(button)[0].innerHTML = currentState === "Hide" ? "Show" : "Hide"
   }

@@ -20,17 +20,17 @@ lang: en-US
     <tr>
       <th style="width:25%"></th>
       <th style="width:25%">
-        <img src="http://placehold.it/324x182">
+        <img class="comparison-picture" src="{{site.baseurl}}/images/devices/RPI2_0.png">
         <h4>Raspberry Pi 2</h4>
         <p>The Raspberry Pi 2 is a low cost, credit-card sized computer that plugs into a computer monitor or TV, and uses a standard keyboard and mouse.  The Raspberry Pi 2 runs Windows 10 IoT Core.</p>
       </th>
       <th style="width:25%">
-        <img src="http://placehold.it/324x182">
+        <img class="comparison-picture" src="{{site.baseurl}}/images/devices/MBM_0.png">
         <h4>MinnowBoard MAX</h4>
         <p>MinnowBoard MAX is an open hardware embedded board with the Intel Atom E38XX series SOC at its core. MinnowBoard MAX supports Windows 10 IoT Core.</p>
       </th>
       <th style="width:25%">
-        <img src="http://placehold.it/324x182">
+        <img class="comparison-picture" src="{{site.baseurl}}/images/devices/DB410c.png">
         <h4>DragonBoard 410c</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
       </th>
