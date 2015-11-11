@@ -11,8 +11,7 @@ lang: en-US
 ###Set up your PC
 * Install Windows 10.
 * Install Visual Studio 2015.
-* TODO: [Replace private link] Install the latest Node.js Tools for Windows IoT from \\cpvsbuild\Drops\Windows_IoT\NodejsTools\20151103.1\Installers\Release.
-* Install Node.js console app (needed for npm v3) from [here](https://nodejs.org/en/download/stable/).
+* Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
 
 
 ###Set up your Windows IoT Core device
