@@ -19,7 +19,7 @@ Connect to your device with PowerShell using the instructions found [here]({{sit
 
 Run the command below to enable Node.js (Universal Windows) apps to be deployed successfully:
 
-* `reg.exe ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\EmbeddedMode\ProcessLauncher" /v AllowedExecutableFilesList /t REG_MULTI_SZ /d "c:\windows\system32\xcopy.exe\0`
+* `reg.exe ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\EmbeddedMode\ProcessLauncher" /v AllowedExecutableFilesList /t REG_MULTI_SZ /d "c:\windows\system32\xcopy.exe\0"`
 
 
 ###Create a new Express (Windows Universal) project
