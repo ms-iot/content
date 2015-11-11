@@ -174,10 +174,9 @@ lang: en-US
 
                 <div class="row section-heading">
                     <div class="col-md-3">
-                        <h3>Console App</h3>
-                        <p>Create a console app that monitors memory usage on devices running Windows 10 IoT Core</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/ConsoleApp.htm">Console App (C++)</a><br>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Nodejs.htm">Console App (Node.js)</a><br>
+                        <h3>IoT Core Default App</h3>
+                        <p>Create a UWP app that provides a device-management experience for Windows 10 IoT Core</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/IotDefaultApp.htm">Iot Core Default App (C#)</a><br>
                     </div>
                     <div class="col-md-3">
                         <h3>I2C/SPI Accelerometer</h3>
@@ -356,9 +355,12 @@ lang: en-US
                         <p>Learn how to discover and connect to a WiFi network from a UWP app using <code>Windows.Devices.WiFi.WiFiAdapter</code> API</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/WifiConnectSample.htm">WiFi Connect Sample (C#)</a>
                     </div>
-                  <div class="col-md-3">
-					<!-- col placeholder -->
-				  </div>
+					<div class="col-md-3">
+                        <h3>Console App</h3>
+                        <p>Create a console app that monitors memory usage on devices running Windows 10 IoT Core</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/ConsoleApp.htm">Console App (C++)</a><br>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Nodejs.htm">Console App (Node.js)</a><br>
+					</div>
                 </div>
 
                 <div class="row">
