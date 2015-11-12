@@ -112,3 +112,11 @@ Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10
 
 ##Result
 You should see the Stepper motor infinitely moving forward, then in reverse, and finally in small-step mode before starting all over!
+
+##Having trouble?
+
+Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.
+
+---
+
+[&laquo; Return to Samples]({{site.baseurl}}/{{page.lang}}/win10/StartCoding.htm){:role="button"}{:class="btn btn-default"}

@@ -211,6 +211,10 @@ Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10
 ##Result
 You should see the LED pixel strip rotate through a series of colors, spending about 1 second on each arrangement.
 
+##Having trouble?
+
+Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.
+
 ---
 
-[&laquo; Return to Samples](SampleApps.htm){:role="button"}{:class="btn btn-default"}
+[&laquo; Return to Samples]({{site.baseurl}}/{{page.lang}}/win10/StartCoding.htm){:role="button"}{:class="btn btn-default"}
