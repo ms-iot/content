@@ -6,7 +6,10 @@ lang: en-US
 ---
 <ol class="breadcrumb">
   <li>
-    <a href="#">Get Started</a>
+    <a href="https://dev.windows.com/en-us/iot">IoT Home</a>
+  </li>
+  <li>
+    <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
   </li>
   <li class="active">Choose a Board</li>
 </ol>
