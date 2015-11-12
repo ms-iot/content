@@ -80,7 +80,7 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 
     ![RemoteMachine Target]({{site.baseurl}}/images/HelloWorld/cs-remote-machine-debugging.png)
 
-1. At this point, Visual Studio will present the 'Remote Connections' dialog. Put the IP address or name of your Windows IoT Core device (in this example, we're using 'my-device') and select `Universal (Unencrypted Protocol)` for Windows Authentication. Then click 'Select'.
+1. At this point, Visual Studio will present the 'Remote Connections' dialog. Put the IP address or name of your Windows IoT Core device (in this example, we're using 'my-device') and select `Universal (Unencrypted Protocol)` for Authentication Mode. Then click 'Select'.
 
     ![Remote Machine Debugging]({{site.baseurl}}/images/HelloWorld/cs-remote-connections.PNG)
 
