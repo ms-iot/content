@@ -105,9 +105,22 @@ lang: en-US
       <td>Yes</td>
     </tr>
     <tr>
-      <td>Peripherals</td>
-      <td>17 GPIO pins plus specific functions. HAT ID bus.</td>
-      <td>8 buffered GPIO pins</td>
-      <td>12 GPIO pins</td>
+      <td>
+        Peripherals
+      </td>
+      <td>
+        <p>17 GPIO pins plus specific functions. HAT ID bus.</p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/win10/RPI.htm">Set up your Raspberry Pi 2</a></p>
+        <p><a href="">Use Device Center to get set up</a></p>
+      </td>
+      <td>
+        <p>8 buffered GPIO pins</p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/win10/MBM.htm">Set up your MinnowBoard MAX</a></p>
+        <p><a href="">Use Device Center to get set up</a></p>
+      </td>
+      <td>
+        <p>12 GPIO pins</p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/win10/DB410c.htm">Set up your DragonBorad 410c</a></p>
+      </td>
     </tr>
 </table>
