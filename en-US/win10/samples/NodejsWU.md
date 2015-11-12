@@ -14,6 +14,14 @@ lang: en-US
 * Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
 
 
+###Set up your Windows IoT Core device
+Connect to your device with PowerShell using the instructions found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
+
+Run the command below to enable Node.js (Universal Windows) apps to be deployed successfully:
+
+* `reg.exe ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\EmbeddedMode\ProcessLauncher" /v AllowedExecutableFilesList /t REG_MULTI_SZ /d "c:\windows\system32\xcopy.exe\0"`
+
+
 ###Create a new Node.js (Windows Universal) project
 Start Visual Studio 2015 and create a new project (File \| New Project...). In the `New Project` dialog, navigate to `Node.js` as shown below (in the left pane in the dialog: Templates \| JavaScript \| Node.js).
 

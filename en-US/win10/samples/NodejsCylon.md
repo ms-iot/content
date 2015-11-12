@@ -34,15 +34,8 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 
 
 ###Copy Node.js to your Raspberry Pi 2
-* Open up an explorer window on your PC and enter **\\\\\<IP address of your device\>\\C$** to access files on your device. The credentials are:
-
-   username: <IP address or device name, default is minwinpc>\Administrator  
-   password: p@ssw0rd  
-
-  NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).  
-
-* Run `& 'C:\Program Files (x86)\Node.js (chakra)\CopyNodeChakra.ps1' -arch <ARM | x86 | x64 > -ip <Device IP Address>`. Use `ARM` if you have a Raspberry Pi 2. Use `x86` if you have a MinnowBoard Max. 
-  After completing this step, Node.js will be in `c:\Node.js (Chakra)` on your device. **Note:** If you haven't entered the credentials through the explorer window you will get an "Access Denied" error.
+* From PowerShell on your PC, run `& 'C:\Program Files (x86)\NodejsUwp\CopyNodeChakra.ps1' -arch <ARM | x86 | x64 > -ip <Device IP Address> -user <Username> -pass <Password>`. Use `ARM` if you have a Raspberry Pi 2. Use `x86` if you have a MinnowBoard Max.  
+  If you have not changed your username and password for your device, use `Administrator` for username and `p@ssw0rd` for the password. After completing this step, Node.js will be in `c:\Node.js (Chakra)` on your device.
 
 
 ###Create a file with the code to control the Arduino LED
