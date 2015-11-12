@@ -1,16 +1,20 @@
-
-<p>In this project, we will use Windows Remote Arduino to turn an LED on and off. It is a simple example, but will reveal the power that the library can give you to create many more advanced projects. Let's get started!</p>
-
+<div class="row">
+    <div class="col-md-6 col-sm-12 col-no-padding">
+        <p>In this project, we will use Windows Remote Arduino to turn an LED on and off. It is a simple example, but will reveal the power that the library can give you to create many more advanced projects. Let's get started!</p>
+    </div>
+</div>
 <h4>Hardware</h4>
-
-<p>You can always use a USB connection to get started, but let's cover simple hook up of a Bluetooth device and an LED that we will turn on and off over Bluetooth using the Windows Remote Arduino library!</p>
-
+<div class="row">
+    <div class="col-md-6 col-sm-12 col-no-padding">
+        <p>You can always use a USB connection to get started, but let's cover simple hook up of a Bluetooth device and an LED that we will turn on and off over Bluetooth using the Windows Remote Arduino library!</p>
+    </div>
+</div>
 <h3>Parts</h3>
 <div class="row">
     <div class="col-md-6 col-sm-12">
         <p>You will need the following parts:</p>
         <p>An Arduino (Uno pictured here), as setup in the previous step</p>
-        <p>A Bluetooth device ([Sparkfun Mate Silver](https://www.sparkfun.com/products/12576){:target="_blank"} pictured here) **OR** a Standard A to Standard B USB Cable</p>
+        <p>A Bluetooth device (<a href="https://www.sparkfun.com/products/12576" target="_blank">Sparkfun Mate Silver</a> pictured here) or a Standard A to Standard B USB Cable</p>
         <p>A breadboard</p>
         <p>A 330Ω resistor</p>
         <p>An LED</p>
@@ -22,7 +26,11 @@
 </div>
 
 <h3> Set up </h3>
-<p>This section will cover how to hook up a Bluetooth device and an LED in order to use Windows Remote Arduino to toggle the LED. You can skip any steps regarding Bluetooth setup if you prefer to use a USB connection!</p>
+<div class="row">
+    <div class="col-md-6 col-sm-12 col-no-padding">
+        <p>This section will cover how to hook up a Bluetooth device and an LED in order to use Windows Remote Arduino to toggle the LED. You can skip any steps regarding Bluetooth setup if you prefer to use a USB connection!</p>
+    </div>
+</div>
 <ol class="setup-content-list">
     <div class="row">
         <div class="col-md-6 col-sm-12">
@@ -128,7 +136,7 @@
                         <li>On the <i>Details</i> tab, select <i>Hardware Ids</i> from the drop-down menu.</li>
                         <li>You may see multiple entries in the <i>Value</i> box, but any entries will have matching PID and VID.</li>
                         <li>The entries will have the format "USB\VID_****&PID_****" where **** are the numeric ID values.</li>
-                        <li>You can put in <b>just</b> the numbers, or also include "VID_" to guarantee you will correctly identify the device. <br/></li>
+                        <li>You can put in just the numbers, or also include "VID_" to guarantee you will correctly identify the device. <br/></li>
                     </ul>
                 </li>
             </ul>
@@ -177,7 +185,7 @@
     </div>
     <div class="row">
         <div class="col-md-6 col-sm-12">
-            <li>Jump over to the MainPage.xaml file and create a couple buttons that will turn an LED on and off. You'll notice I've added button callbacks to the<code>Click</code> event & set the<code>IsEnabled</code> property to false, and you'll see why in the next step!</li>
+            <li>Jump over to the MainPage.xaml file by right-clicking MainPage.xaml in your Solution Explorer and choosing "View Designer" - the XAML code will appear alongside the Designer view.  We're now going to create buttons that will turn an LED on and off. You'll notice I've added button callbacks to the <code>Click</code> event & set the <code>IsEnabled</code> property to false, and you'll see why in the next step!</li>
         </div>
         <div class="col-md-6 col-sm-12">
             <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/project02.png">
@@ -198,12 +206,39 @@
     </div>
     <div class="row">
         <div class="col-md-6 col-sm-12">
-            <li>Build! Your buttons will be enabled when the connection is established, and you can freely toggle your LED on and off at will! You can also deploy the code to another Windows 10 device and utilize the same functionality there. Here is a screenshot of this basic example running on Windows Phone 10.</li>
+            <li>Build! Use the settings shown in the image below to run the app you've written on your Windows device.</li>
         </div>
         <div class="col-md-6 col-sm-12">
             <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/screenshot.png">
         </div>
     </div>
 </ol>
+<ul class="setup-content-list">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-no-padding">
+            <li>Your buttons will be enabled when the connection is established, and you can freely toggle your LED on and off at will! The app will look like the following picture when running on a Windows 10 PC.</li>
+        </div>
+        <div class="col-md-6 col-sm-12 col-no-padding">
+            <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/regularstart.PNG">
+        </div>
+    </div>
+</ul>
+<h3> Deploying to a Windows Phone </h3>
+<div class="row">
+    <div class="col-md-6 col-sm-12 col-no-padding">
+        <p>You can also deploy your code to another Windows 10 device and utilize the same functionality there.  In order to get the code running on a Windows Phone, plug your phone into your development PC (the PC on which you've been writing the code above) using a microUSB cord.  Set the deploy destination to "Device" and the architecture to "ARM" in Visual Studio.  The proper settings for this deploy can be seen in the image below.</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+         <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/devicedeploy.PNG">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 col-sm-12 col-no-padding">
+        <p>When you build and deploy, you should see the following app running on your phone.</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+         <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/screenshot.png">
+    </div>
+</div>
 
 <p>I really hope you enjoy replicating this project and using it as a baseline for an incredible new set of Maker projects!</p>
