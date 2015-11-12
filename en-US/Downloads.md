@@ -21,16 +21,20 @@ lang: en-US
 			<p>
 				Download the most recent RTM version of Windows 10 IoT Core. Built for devices, Windows 10 IoT Core enables you to create cool connected projects, amazing applications, and much more. It leverages the Windows development environment you know -- adapted to run on embedded devices like the Raspberry Pi 2.
 			</p>
-			<p>
-				The RTM version is the latest release available for the public.
+			<p> 
+				This RTM version of Windows 10 IoT Core requires Visual Studio 2015 Update 1 for development purposes such as debugging and deploying images.
 			</p>
 		</div>
-		<div>
-			<a href="http://go.microsoft.com/fwlink/?LinkId=619755" class="button-blue button-flat"> Download RTM Release for Raspberry Pi 2 </a>
-			<a href="http://go.microsoft.com/fwlink/?LinkId=619756" class="button-blue button-flat"> Download RTM Release for MinnowBoard Max </a>
+		<div>		
+			<a href="http://go.microsoft.com/fwlink/?LinkId=691711" class="button-blue button-flat"> Download RTM Release for Raspberry Pi 2 </a>
+			<a href="http://go.microsoft.com/fwlink/?LinkId=691712" class="button-blue button-flat"> Download RTM Release for MinnowBoard Max </a>
+			<a href="http://go.microsoft.com/fwlink/?LinkId=691713" class="button-blue button-flat"> Download RTM Release for DragonBoard 410c</a>
+			<p class="subtext">
+				Please see <a href="http://aka.ms/thirdpartynotices" target="_blank"> third party notice for BSP restrictions </a> for DragonBoard 410c. 
+			</p>
 		</div>
 		<p class="subtext">
-			<a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesRTM.htm"> Release notes. </a>
+			<a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesRTM.htm"> Release notes for RTM. </a>
 		</p>
 	</div>
 	<div class="col-md-6">
@@ -47,13 +51,16 @@ lang: en-US
 		<div>
 			<a href="http://go.microsoft.com/fwlink/?LinkID=625104" class="button-blue button-flat"> Download Insider Preview for Raspberry Pi 2 </a>
 			<a href="http://go.microsoft.com/fwlink/?LinkID=625103" class="button-blue button-flat"> Download Insider Preview for MinnowBoard Max </a>
-      <a href="http://go.microsoft.com/fwlink/?LinkId=657684" class="button-blue button-flat"> Download Insider Preview for DragonBoard 410c</a>
+			<a href="http://go.microsoft.com/fwlink/?LinkId=657684" class="button-blue button-flat"> Download Insider Preview for DragonBoard 410c</a>
+			<p class="subtext">
+				Please see <a href="http://aka.ms/thirdpartynotices" target="_blank"> third party notice for BSP restrictions </a> for DragonBoard 410c. 
+			</p>	  
 		</div>
 		<p class="subtext">
-			This download requires sign-in with a Microsoft Account. <a href="http://www.microsoft.com/en-us/account/default.aspx" target="_blank"> What's this? </a>
+			The Insider Preview downloads requires sign-in with a Microsoft Account. <a href="http://www.microsoft.com/en-us/account/default.aspx" target="_blank"> What's this? </a> 
 		</p>
 		<p class="subtext">
-			<a href="http://go.microsoft.com/fwlink/?LinkId=534601"> Release notes. </a>
+			<a href="http://go.microsoft.com/fwlink/?LinkId=534601"> Release notes for Insider Preview. </a>
 		</p>
 	</div>
 	<div class="row">
