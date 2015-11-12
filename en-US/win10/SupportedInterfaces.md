@@ -5,6 +5,13 @@ permalink: /en-US/win10/SupportedInterfaces.htm
 lang: en-US
 ---
 <style>
+.MsVerified 
+{
+	margin: 0 auto;
+  display: block;
+  width: 45px;
+  height: 40px;
+}
 a {cursor:pointer}
 h2 
 {
@@ -43,6 +50,10 @@ td:nth-child(4)
 td:nth-child(5)
 {
     width: 200px;
+}
+td:nth-child(6)
+{
+    width: 100px;
 }
 .section {
 	padding-left: 10px;
@@ -110,9 +121,9 @@ Looking for information about supported hardware platforms? Click [here](https:/
 <div class="SearchResults" markdown="1">
 
 {:.table.table-bordered .SearchResults}
-Part Name / No. | Compatible Boards | Description | Notes  | Projects, Samples, Libraries |
-----------------|-------------------|-------------|--------|------------------------------|
-result          | result            | result      | result | result                       |
+Part Name / No. | Compatible Boards | Description | Notes  | Projects, Samples, Libraries |Microsoft Verified                  |
+----------------|-------------------|-------------|--------|------------------------------|------------------------------------|
+result          | result            | result      | result | result                       |result                              |
 
 </div></div>
 
@@ -269,6 +280,7 @@ result          | result            | result      | result | result             
 </script>
 
 <!-- Reference Links -->
+[MSVerified]: SupportedInterfaces/checkmark.svg "Microsoft Verified"
 [Contribute to this list on GitHub.]: {{site.repositoryurl}}{{ page.path }}
 [RPI2 Pin Mapping]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm#RPi2_I2C
 [MBM Pin Mapping]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm#MBM_I2C
