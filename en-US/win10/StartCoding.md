@@ -128,7 +128,9 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/Bluetooth.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <!-- Placeholder for spacing -->
+                        <h3>Embedded Mode</h3>
+                        <p>Enable embedded mode on desktop and mobile</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/EmbeddedMode.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
                         <!-- Placeholder for spacing -->
@@ -174,10 +176,9 @@ lang: en-US
 
                 <div class="row section-heading">
                     <div class="col-md-3">
-                        <h3>Console App</h3>
-                        <p>Create a console app that monitors memory usage on devices running Windows 10 IoT Core</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/ConsoleApp.htm">Console App (C++)</a><br>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Nodejs.htm">Console App (Node.js)</a><br>
+                        <h3>IoT Core Default App</h3>
+                        <p>Create a UWP app that provides a device-management experience for Windows 10 IoT Core</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/IotDefaultApp.htm">Iot Core Default App (C#)</a><br>
                     </div>
                     <div class="col-md-3">
                         <h3>I2C/SPI Accelerometer</h3>
@@ -230,6 +231,7 @@ lang: en-US
                         <h3>Potentiometer Sensor Sample</h3>
                         <p>A analog sensor is connected to Raspberry Pi through ADC converter and digital output data is displayed through Monitor and LED </p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm">Potentiometer Sensor Sample (C#)</a>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/Potentiometer.htm">Potentiometer Sensor Sample (Wiring)</a>
                     </div>
                    <div class="col-md-3">
                         <h3>GpioTestTool (Console)</h3>
@@ -344,6 +346,12 @@ lang: en-US
                         <h3>Controlling DC Motors</h3>
                         <p>Learn to control DC motors using a Windows IoT Core enabled device!</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/DCMotor.htm">DC Motors (Wiring)</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>Console App</h3>
+                        <p>Create a console app that monitors memory usage on devices running Windows 10 IoT Core</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/ConsoleApp.htm">Console App (C++)</a><br>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Nodejs.htm">Console App (Node.js)</a><br>
                     </div>
                 </div>
 

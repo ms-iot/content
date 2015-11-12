@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Python for IoT Sample
+title: Python 'Hello, World' sample
 permalink: /en-US/win10/samples/Python.htm
 lang: en-US
 ---
 
-##Python Apps
+##Python 'Hello, World' Sample
 
 ###Set up your PC
 
-* Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm) to install Visual Studio 2015.
+* Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) to setup your device and PC.
 
 * Install Python for Windows (3.*) from [http://www.python.org/downloads](http://www.python.org/downloads){:target="_blank"}
 
@@ -38,6 +38,8 @@ print("Hello, World from IoT!")
 * The Python app will deploy and start on the device.
 
 	**NOTE: Launching the debugger for Python can take a few minutes to connect and start debugging the remote Python.  If it takes more than a few minutes, there may be a problem with msvsmon on the remote device.  Please check the FAQ for any potential fixes/workarounds.**
+
+* The '*Hello, World from IoT!*' message will be displayed in the output window of Visual Studio.  Open the output window by `Debug > Window > Output`.
 
 ###Use Windows Devices from Python (e.g. GPIO, I2C, SPI)
 
