@@ -20,9 +20,12 @@ The tests were performed by toggling GPIO 5 between 0 and 1 at the fastest possi
 | Windows 10 IoT Core TH2 Native Stack    | C++/CX                            | 107.8 kHz  | 10/28/2015     |
 | Windows 10 IoT Core TH2 Native Stack    | WinJS                             | 17.4 kHz   | 10/28/2015     |
 | Windows 10 IoT Core TH2 Arduino Wiring  | Arduino Wiring                    | **6.05 MHz**   | 10/28/2015     |
-| Windows 10 IoT Core TH2 DMAP Stack      | C# with .NET Native tool chain    | 124.8 kHz  | 10/29/2015     |
-| Windows 10 IoT Core TH2 DMAP Stack      | C# without .NET Native tool chain | **1.21 MHz**   | 10/29/2015     |
-| Windows 10 IoT Core TH2 DMAP Stack      | C++/CX                            | **2.83 MHz**   | 10/28/2015     |
+| Windows 10 IoT Core TH2 DMAP Stack      | C# with .NET Native tool chain    | 135.1 kHz  | 11/13/2015     |
+| Windows 10 IoT Core TH2 DMAP Stack      | C# without .NET Native tool chain | **1.45 MHz**   | 11/13/2015     |
+| Windows 10 IoT Core TH2 DMAP Stack      | C++/CX                            | **4.71 MHz**   | 11/13/2015     |
 | Windows 10 IoT Core TH2 DMAP Stack      | WinJS                             | 23.4 kHz   | 10/28/2015     |
 | Remote Arduino - Bluetooth              | C#                                | 1.92 kHz   | 10/29/2015     |
 | Remote Arduino - USB                    | C#                                | 1.97 kHz   | 10/29/2015     |
+| Arduino Providers*                      | C#                                | 1.96 kHz   | 11/13/2015     |
+
+* The Arduino Provider tests were done using a Raspberry Pi 2 connected to an Arduino Uno via USB. A serial baud rate of 115200 was used.
