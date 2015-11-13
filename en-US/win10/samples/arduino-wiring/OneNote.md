@@ -13,7 +13,7 @@ Learn how to deploy an Arduino Wiring sketch on Raspberry Pi 2 or Minnowboard Ma
 1. Create a new project from the template. More information can be found in the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm).
 2. Replace the existing code in main.cpp with the following code. Make modifications for multiple action buttons as needed.
 3. Add the following files to the project, MinHttpGP.cpp/.h, and OneNoteHelper.cpp/.h,
-   found [on GitHub]](https://github.com/ms-iot/sample-todo).
+   found [on GitHub](https://github.com/ms-iot/sample-todo).
 
 # Code
 
@@ -138,6 +138,10 @@ After deploying, you will be able to log in to OneNote live at [http://onenote.c
 
 If you also hook up a button to pin 29 (GPIO pin 5) and a simple POS printer, you can press the button to print your TODOs from your printer!
 
+##Having trouble?
+
+Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.
+
 ---
 
-[&laquo; Return to Samples](SampleApps.htm){:role="button"}{:class="btn btn-default"}
+[&laquo; Return to Samples]({{site.baseurl}}/{{page.lang}}/win10/StartCoding.htm){:role="button"}{:class="btn btn-default"}
