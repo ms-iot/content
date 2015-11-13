@@ -28,4 +28,4 @@ The tests were performed by toggling GPIO 5 between 0 and 1 at the fastest possi
 | Remote Arduino - USB                    | C#                                | 1.97 kHz   | 10/29/2015     |
 | Arduino Providers*                      | C#                                | 1.96 kHz   | 11/13/2015     |
 
-* The Arduino Provider tests were done using a Raspberry Pi 2 connected to an Arduino Uno via USB. A serial baud rate of 115200 was used.
+\* The Arduino Provider tests were done using a Raspberry Pi 2 connected to an Arduino Uno via USB. A serial baud rate of 115200 was used.
