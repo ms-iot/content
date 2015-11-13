@@ -1,8 +1,9 @@
 <h3> Let's look at the code </h3>
 <div class="row">
     <p>The code for this sample is pretty simple. We use a timer, and each time the 'Tick' event is called, we flip the state of the LED.</p>
-    <div class="col-md-6 col-sm-12">
-        <h3> Timer Code </h3>
+    <h3> Timer Code </h3>
+    <div class="col-md-6 col-sm-12 col-no-padding">
+
         <p>Here is how you set up the timer in C#:</p>
     </div>
     <div class="col-md-6 col-sm-12">
@@ -43,10 +44,10 @@
 </div>
 <h3> Initialize the GPIO Pin </h3>
 <div class="row">
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12 col-no-padding">
         <p>To drive the GPIO pin, first we need to initialize it. Here is the C# code (notice how we leverage the new WinRT classes in the Windows.Devices.Gpio namespace):</p>
         <p> Let's break this down a little</p>
-            <ul>
+            <ul class="inline-list">
                 <li>First, we use <code>GpioController.GetDefault()</code> to get the GPIO controller.</li>
                 <li>If the device does not have a GPIO controller, this function will return <code>null</code>.</li>
                 <li>Then we attempt to open the pin by calling <code>GpioController.OpenPin()</code> with the <code>LED_PIN</code> value.</li>
@@ -84,7 +85,7 @@
 <h3> Modify the state of the GPIO pin </h3>
 <div class="row">
 <p>Once we have access to the <code>GpioOutputPin</code> instance, it's trivial to change the state of the pin to turn the LED on or off.</p>
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12 col-no-padding">
         <p>To turn the LED on, simply write the value <code>GpioPinValue.Low</code> to the pin:</p>
     </div>
     <div class="col-md-6 col-sm-12">
@@ -94,7 +95,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12 col-no-padding">
         <p>and of course, write <code>GpioPinValue.High</code> to turn the LED off:</p>
     </div>
     <div class="col-md-6 col-sm-12">
