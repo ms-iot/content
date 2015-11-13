@@ -40,6 +40,8 @@ In this sample we will be pairing and connecting a Windows IoT Core device with 
 
 6. Barometric pressure sensor (Epcos T5400)
 
+This sample needs Visual Studio Update 1 with SDK version 10586 for build and latest version of IoT Core OS on the device.
+
 For the sample, we are running firmware version 1.4.1 on the SensorTag. More detailed information about the SensorTag can be found [here](http://processors.wiki.ti.com/index.php/SensorTag_User_Guide){:target="_blank"}.
 
 [Click here to order a SensorTag from Texas Instruments.](http://www.ti.com/tool/cc2650stk#buy){:target="__blank"}
