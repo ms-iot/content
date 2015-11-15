@@ -50,21 +50,19 @@ Device System Bridges (DSBs) can help facilitate communication across existing i
 With the [AllJoyn Device System Bridge contribution](https://wiki.allseenalliance.org/gateway/dsb){:target="_blank"} from Microsoft, you can connect existing devices that use BACnet or Z-Wave to an AllJoyn network, thereby enabling existing devices to interact with new AllJoyn devices, as well as enabling cloud connectivity across all devices on the network.   There is also a useful [tool](https://github.com/MS-brock/AllJoynToasterDemo/tree/master/getajxml){:target="_blank"} published which generates AllJoyn introspection XML from an existing AllJoyn device, with usage described in detail in a posting on [channel9.](https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview){:target="_blank"}
 Be sure to check out samples and additional documentation below.  We hope you’ll help build many more IoT bridges and contribute your bridges to the AllSeen Alliance.
 
-**Mapping DSB Objects to Alljoyn**
-This document describes the key interfaces and methods used to build the Alljoyn System Bridge
+**AllJoyn Device System Bridge template for Visual Studio 2015**
+This template can be installed in Visual Studio 2015 to enable you to create AllJoyn Device System Bridge projects in both Native C++ and Managed C#.
 
-[AllJoyn DSB API]({{site.baseurl}}/en-US/win10/AlljoynDsbApiGuide.htm){:target="_blank"}
+* [AllJoyn Device System Bridge Template](https://visualstudiogallery.msdn.microsoft.com/aea0b437-ef07-42e3-bd88-8c7f906d5da8){:target="_blank"} - This Visual Studio extension contains both the Native and Managed AllJoyn Device System Bridge templates.
+* [Mapping DSB Objects to AllJoyn]({{site.baseurl}}/en-US/win10/AlljoynDsbApiGuide.htm){:target="_blank"} - This document describes the key interfaces and methods used to build the Alljoyn System Bridge.
 
-**AllJoyn Device System Bridge template for Visual Studio**
-This template can be installed in Visual Studio 2015 Preview to enable you to create AllJoyn Device System Bridge projects.
-* [DeviceSystemBridgeTemplate.vsix](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynDSBGuide/DeviceSystemBridgeTemplate.vsix?raw=true){:target="_blank"} - This vsix contains the AllJoyn Device System Bridge template. Note that this must be copied locally and cannot be installed remotely. You can also find it on [Visual Studio Online](https://visualstudiogallery.msdn.microsoft.com/aea0b437-ef07-42e3-bd88-8c7f906d5da8).
-
+<a name="AllJoynExplorer"/>
 **AllJoyn Explorer**
-This is a tool we use in several points when working with AllJoyn samples. You can find the AllJoyn Explorer [here](https://github.com/ms-iot/samples/tree/develop/AllJoyn/AllJoynExplorer){:target="_blank"}:
+This is a tool we use in several points when working with AllJoyn samples.
 
-* [AllJoyn Explorer](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.1.9.zip?raw=true){:target="_blank"} - This zip contains the AllJoyn Explorer AppX bundle.
-* [AllJoyn Explorer Setup Guide](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_Setup_Guide_v1.0.pdf?raw=true){:target="_blank"} - This pdf contains the documentation for how to deploy the AllJoyn Explorer.
-* [AllJoyn Explorer User Guide](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_User_Guide_v1.0.pdf?raw=true){:target="_blank"} - This pdf contains the documentation for how to use the AllJoyn Explorer.
+* [AllJoyn Explorer](https://github.com/ms-iot/samples/releases/download/AllJoynExplorer_1.0.11/AllJoynExplorer_1.0.1.11.zip) - This zip contains the AllJoyn Explorer AppX bundle.
+* [AllJoyn Explorer Setup Guide](https://github.com/ms-iot/samples/releases/download/AllJoynExplorer_1.0.11/AllJoyn_Explorer_Setup_Guide_v1.0.pdf) - This pdf contains the documentation for how to deploy the AllJoyn Explorer.
+* [AllJoyn Explorer User Guide](https://github.com/ms-iot/samples/releases/download/AllJoynExplorer_1.0.11/AllJoyn_Explorer_User_Guide_v1.0.pdf) - This pdf contains the documentation for how to use the AllJoyn Explorer.
 
 **Samples**
 
@@ -87,11 +85,11 @@ This is a tool we use in several points when working with AllJoyn samples. You c
 * [AllJoyn DSB ZigBee Adapter Tutorial and Sample]({{site.baseurl}}/en-US/win10/samples/ZigBeeAdapterTutorial.htm){:target="_blank"}
 
  This tutorial shows how to use the Device System Bridge app to connect your IoT Core devices to ZigBee devices.
-
+ 
 **Additional Resources**
 
-* Building AllJoyn Apps on Windows 10 - [https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview](https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview){:target="_blank"}
-* AllJoyn Interfaces in Windows 10 - [https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.devices.alljoyn.aspx](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.devices.alljoyn.aspx){:target="_blank"}
-* AllJoyn CodeGen Tool - [AllJoynCodeGen.htm]({{site.baseurl}}/en-US/win10/AllJoynCodeGen.htm){:target="_blank"}
-* AllJoyn Architecture Details - [https://allseenalliance.org/developers/learn/](https://allseenalliance.org/developers/learn/){:target="_blank"}
-* AllJoyn Developer Resources - [https://allseenalliance.org/developers/develop/](https://allseenalliance.org/developers/develop/){:target="_blank"}
+* [Channel 9: Building AllJoyn Apps on Windows 10 (MSDN)](https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview){:target="_blank"}
+* [AllJoyn Interfaces in Windows 10 (MSDN)](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.devices.alljoyn.aspx){:target="_blank"}
+* [AllJoyn CodeGen Tool]({{site.baseurl}}/en-US/win10/AllJoynCodeGen.htm){:target="_blank"}
+* [AllJoyn Architecture Details (Allseen Alliance)](https://allseenalliance.org/developers/learn/){:target="_blank"}
+* [AllJoyn Developer Resources (Allseen Alliance)](https://allseenalliance.org/developers/develop/){:target="_blank"}
