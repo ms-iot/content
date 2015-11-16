@@ -11,7 +11,7 @@
     </ol>
   </div>
   <div class="col-md-6 col-sm-12">
-    <img src="http://placehold.it/696x392">
+    <img src="{{site.baseurl}}/images/setup-pc.png">
   </div>
 </div>
 

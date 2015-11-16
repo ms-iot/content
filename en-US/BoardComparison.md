@@ -120,7 +120,7 @@ lang: en-US
       </td>
       <td>
         <p>12 GPIO pins</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/win10/DB410c.htm">Set up your DragonBorad 410c</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/win10/DB410c.htm">Set up your DragonBoard 410c</a></p>
       </td>
     </tr>
 </table>
