@@ -125,6 +125,3 @@ The following properties must be implemented for an ISignal
 | :-------------------------- | :--------------------------------- | :-------------------------------------------- |
 | Name	                      |Name of Signal                      | AllJoyn Signal |
 | Params | A set of objects that changed and their new values, or null if this is a pure signal. | Maps to an array of alljoyn signal arguments passed to the signal. |
-
-
-

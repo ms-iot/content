@@ -61,6 +61,3 @@ The generated classes wrap functionality exposed by the Core C API. Because the 
 The generated code needs to be contained in a component that shares the same interface name as the XML. For example, if the XML for a toaster is defined as com.microsoft.sample.toaster, we would create a runtime component com.microsoft.sample. 
 
 Alternatively, you can name the component whatever you want (e.g. fooCodeGenComponent), but you must manually update the root namespace under the Project properties to be the same as the interface name. (NOTE: you can find the root namespace in the pch.h file that is generated from the AllJoynCodeGen tool). 
-
-
- 
