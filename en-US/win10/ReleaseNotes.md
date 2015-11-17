@@ -65,6 +65,7 @@ On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to user mode a
 *	The time may not sync on devices running IoT Core. (4444681) Manually update the time or programmatically force a time sync.
 *   On MinnowBoardMax, Silicon Labs based USB-Serial converters (USB\VID_10C4&PID_EA60) will fail to load with error 31. (5307602) WORKAROUND: Ensure the device is unplugged, then run: `reg add "HKEY_LOCAL_MACHINE\system\controlset001\enum\usb\VID_10C4&PID_EA60\0001\Device Parameters" /v PortName /t REG_SZ /d COM3`
 *   On MinnowBoardMax, FTDI USB-Serial adapters will ignore the requested baud rate and will use 3.8Mhz. (5348073) WORKAROUND: [Workaround for FTDI devices on x86](#ftdiworkaround)
+*   WiFi direct is partially supported on IoT Core using the WinRT WiFi direct APIs. For more details see [WiFi Direct limitations on IoTCore](#wifidirect).
 
 ### <a name="ftdiworkaround"></a>Workaround for FTDI devices on x86
 
@@ -96,3 +97,7 @@ Windows Registry Editor Version 5.00
  4. Copy ftdi-fix.reg to your device and run `reg import ftdi-fix.reg` to apply the registry keys.
  5. Unplug and replug the FTDI device.
 
+### <a name="wifidirect"></a>WiFi Direct limitations on IoTCore
+ 1.	The IoTCore device has to be the connecting device – it will not work as the advertising device with another device initiating the connection.  
+ 2.	Advanced pairing must be used.  The sample app demonstrates how to use the advanced pairing API’s to pair the devices prior to connecting.
+ 3.	Not all wireless adapters support WiFi direct. We have tested and validated that the “Realtek RTL8188EU Wireless Lan 802.11n USB 2.0 Network adapter” works, but other adapters may not be supported.
