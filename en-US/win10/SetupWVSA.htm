@@ -8,13 +8,13 @@
       <li>Connecting wires.</li>
       <li>A PC - used to upload your Arduino sketches.</li>
       <li>Standard A to Standard B USB - needed to upload sketches to your Arduino device.</li>
-      <li>OPTIONAL Bluetooth module - only needed if you choose to connect by Bluetooth.  We recommend the <a href="https://www.sparkfun.com/products/12576" target="_blank"> SparkFun Bluetooth Mate Silver </a>.</li>
+      <li>OPTIONAL Bluetooth module - only needed if you choose to connect by Bluetooth.  We recommend the <a href="https://www.sparkfun.com/products/12576" target="_blank"> SparkFun Bluetooth Mate Silver</a>.</li>
       <li>OPTIONAL Wi-Fi module - only needed if you choose to connect by Wi-Fi.  We recommend this <a href="https://www.arduino.cc/en/Main/ArduinoWiFiShield" target="_blank">Arduino Wi-Fi Shield</a>.</li>
      </ol>
     <h4>Set up your Arduino</h4>
     <ol class="inline-list">
       <li>Prepare the Bluetooth module if necessary (the Bluetooth module may need to have headers soldered onto it).</li>
-      <li>Except for the one difference noted below, connect the Bluetooth module to the Arduino per the wiring diagram ([BlueSMiRF wiring diagram](https://learn.sparkfun.com/tutorials/using-the-bluesmirf/hardware-hookup){:target="_blank"}).</li>
+      <li>Except for the one difference noted below, connect the Bluetooth module to the Arduino per the <a href="https://learn.sparkfun.com/tutorials/using-the-bluesmirf/hardware-hookup" target="_blank">wiring diagram</a>.</li>
       <ul>
         <li><p>DIFFERENCE: Use pins 0 and 1 instead of 2 and 3:</p>
         <p>The Bluetooth TX should connect to pin 0 (Arduino RX or RX0).</p>
@@ -55,7 +55,7 @@
 
     <h4>Test your setup</h4>
     <ol class="inline-list">
-      <li>From the Arduino IDE, go to the menu item File->Examples->Virtual Shields->HelloWorld-Speech-Eventing. This should load the speech-recognition based Hello World example we're using for this tutorial.</li>
+      <li>From the Arduino IDE, go to the menu item File -> Examples -> Virtual Shield -> HelloWorld-Speech-Eventing. This should load the speech-recognition based Hello World example we're using for this tutorial.</li>
       <li>Before uploading the sketch to your Arduino, temporarily remove the Bluetooth TX and RX wires from the Arduino (there is only one serial port shared between the USB and Bluetooth - the Bluetooth interferes with the upload).</li>
       <li>Upload the sketch by pressing the "Upload" button in the IDE.</li>
       <li>Replace the Bluetooth TX and RX wires into the Arduino pins (Bluetooth TX to Arduino RX (or RX0) and Bluetooth RX to Arduino TX or (TX0)).</li>

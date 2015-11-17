@@ -10,11 +10,13 @@ h1 {
   font-size: 2.87em;
   font-weight: 100;
   margin-bottom: 32px;
+  margin-top: 44px;
 }
 h2 {
-  font-size: 1.7em;
+  font-size: 1.9em;
   font-weight: 100;
 }
+
 h3 {
   font-size: 1.5em;
   margin-bottom:20px;
@@ -344,6 +346,17 @@ iframe.maker-kit {
   overflow:hidden;
 }
 
+.col-3-image {
+  height:147px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col-4-image {
+  height: 207px;
+  margin-left:auto;
+  margin-right:auto;
+}
 .projectRow {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -381,10 +394,6 @@ iframe.maker-kit {
 .button-flat:active{
 	background-color:gray !important;
 	border-color: gray !important;
-}
-
-.page-title {
-  margin-top: 44px;
 }
 
 .section-title{
@@ -646,6 +655,10 @@ div.preview {
   img {
     margin-left:auto;
     margin-right:auto;
+  }
+  .col-3-image {
+    height:100%;
+    width:100%;
   }
 }
 
