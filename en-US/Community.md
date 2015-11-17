@@ -48,7 +48,7 @@ lang: en-US
   <div class="col-md-3">
     <h3>Forums</h3>
     <p>Forums are a great way to ask and answer technical questions and connect with fellow developers. We support the community through the following forums:</p>
-    <p>MSDN are our primary forums where you can ask us questions on all topics.</p>
+    <p>MSDN hosts the primary forums where you can ask us questions on all topics.</p>
     <p>
       <a href="https://social.msdn.microsoft.com/forums/en-US/home?forum=WindowsIoT" target="_blank">MSDN Forums &raquo;</a>
     </p>
