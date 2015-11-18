@@ -49,6 +49,9 @@ lang: en-US
 	</div>
 	<div class="col-md-6 col-sm-12">
 		<a href="http://go.microsoft.com/fwlink/?LinkID=708576" class="button-blue button-flat"> Get IoT Core Dashboard </a>
+    <p class="subtext">
+			<a href="{{site.baseurl}}/{{page.lang}}/win10/IoTDashboardTroubleshooting.htm"> Need help? Check out the troubleshooting page. </a>
+		</p>
 	</div>
 </div>
 
