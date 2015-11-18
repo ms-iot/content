@@ -1,9 +1,8 @@
 ---
 layout: default
 title: Windows 10 IoT Core Dashboard
-permalink: /en-US/win10/MBM.htm
+permalink: /en-US/win10/IoTDashboardTroubleshooting.htm
 lang: en-US
-deviceName: MBM
 ---
 <ol class="breadcrumb">
   <li>
@@ -18,15 +17,14 @@ deviceName: MBM
 <div class="row">
   <div class="col-md-6 col-sm-12 col-no-padding">
     <h2 class="subtext">IoT Dashboard is the best way to download, set up and connect your Windows 10 IOT Core devices, all from your pc. </h2>
-    <img src="{{site.baseurl}}/images/iotdashboard/IoTDashboardHomePage.jpg" height = "400">
   </div>
 </div>
 
 
-<h2>Troubleshooting <span class="pull-right"><a id="app-content-toggle" class="toggle-button" onClick="hideDiv('app-content')">Show</a></span>  </h2>
+<h2>Troubleshooting </h2>
 
 <hr>
-  <div id="app-content" class="toggle-section hidden">
+  <div id="app-content" class="toggle-section">
   <div class="row">
     <div class="col-md-6 col-sm-12">
         <p>If your device is running a build older than build 10586, you must upgrade in order to Windows 10 IoT Core Dashboard to work correctly </p>
@@ -43,29 +41,9 @@ deviceName: MBM
         <p>If you continue to have problems getting your device connect, <b>plug in an Ethernet cable</b> into your device. Ethernet has proven to be more reliable than Wi-Fi for some users. </p>
 
     </div>
+    <div class="col-md-6 col-sm-12">
+      <img src="{{site.baseurl}}/images/DeviceCenter.png">
+    </div>
 </div>
 
-
-<script>
-  function hideDiv(div) {
-    var div = "#" + div,
-        button = div + "-toggle",
-        currentState = $(button)[0].innerHTML;
-
-    for(var i = 0; i < 3 ; i ++){
-        $(".toggle-button")[i].innerHTML = "Show";
-      }
-
-    if(currentState === "Hide") {
-      $(div).toggle('slow');
-    }
-    else
-    {
-      $(".hidden").removeClass("hidden");
-      $(".toggle-section").hide();
-      $(div).toggle('slow');
-      $(button)[0].innerHTML = "Hide";
-    }
-  }
-</script>
 
