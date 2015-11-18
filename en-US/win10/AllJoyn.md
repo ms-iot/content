@@ -70,22 +70,31 @@ This is a tool we use in several points when working with AllJoyn samples.
 
  This tutorial shows how to use the Device System Bridge app to connect your  IoT Core devices to mock BACnet devices.
 
-* [AllJoyn DSB Z-Wave Tutorial and Sample]({{site.baseurl}}/en-US/win10/samples/ZWaveTutorial.htm){:target="_blank"}.
+* [AllJoyn DSB Z-Wave Adapter Tutorial and Sample]({{site.baseurl}}/en-US/win10/samples/ZWaveTutorial.htm){:target="_blank"}.
 
  This tutorial, based on the demo at the Build 2015 conference, shows how to use the Device System Bridge app to connect your  IoT Core devices to Z-Wave devices.
 
-* [AllJoyn DSB GPIO Device Tutorial C++]({{site.baseurl}}/en-US/win10/samples/AlljoynDSB_GpioTutorial.htm){:target="_blank"}
+* [AllJoyn DSB GPIO Adapter Tutorial C++]({{site.baseurl}}/en-US/win10/samples/AlljoynDSB_GpioTutorial.htm){:target="_blank"}
 
  This tutorial demonstrates how to use the AllJoyn Device System Bridge template to create a sample C++ app that exercises the device GPIO.
 
-* [AllJoyn DSB GPIO Device Tutorial C#]({{site.baseurl}}/en-US/win10/samples/AlljoynDSB_ManagedGpioTutorial.htm){:target="_blank"}
+* [AllJoyn DSB GPIO Adapter Tutorial C#]({{site.baseurl}}/en-US/win10/samples/AlljoynDSB_ManagedGpioTutorial.htm){:target="_blank"}
 
  This tutorial demonstrates how to use the AllJoyn Device System Bridge template to create a sample managed app that exercises the device GPIO.
 
 * [AllJoyn DSB ZigBee Adapter Tutorial and Sample]({{site.baseurl}}/en-US/win10/samples/ZigBeeAdapterTutorial.htm){:target="_blank"}
 
  This tutorial shows how to use the Device System Bridge app to connect your IoT Core devices to ZigBee devices.
- 
+
+* [AllJoyn DSB BACnet Adapter Tutorial and Sample]({{site.baseurl}}/en-US/win10/samples/BACnetAdapterTutorial.htm){:target="_blank"}
+
+ This tutorial shows how to use the Device System Bridge app to connect your IoT Core devices to BACnet devices.
+
+* [AllJoyn.JS Tutorial]({{site.baseurl}}/en-US/win10/samples/AllJoynJS.htm){:target="_blank"}
+
+ This tutorial shows how to run AllJoyn.JS application developed by Allseen Alliance as a Windows 10 application. AllJoyn.JS allows you to write JavaScript to create, monitor and control AllJoyn devices.
+
+
 **Additional Resources**
 
 * [Channel 9: Building AllJoyn Apps on Windows 10 (MSDN)](https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview){:target="_blank"}
