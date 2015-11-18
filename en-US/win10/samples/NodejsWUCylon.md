@@ -17,7 +17,7 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 
 
 ###Set up your PC
-* Install Windows 10.
+* Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
 * Install Visual Studio 2015 Update 1.
 * Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
