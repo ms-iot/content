@@ -3,8 +3,8 @@
 
 
 <ol class="setup-content-list">
+<p>Perform the following steps to create the circuit: </p>
   <div class="row">
-    <p>Perform the following steps to create the circuit: </p>
     <div class="col-md-6 col-sm-12">
       <li>Connect the shorter leg of the LED to GPIO 12 (pin 24 on the expansion header) on the DB.</li>
       <li>

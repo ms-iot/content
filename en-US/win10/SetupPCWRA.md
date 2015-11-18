@@ -25,7 +25,7 @@
 <div class="row">
   <div class="col-md-6 col-sm-12 col-no-padding">
     <p>NuGet is a quick and easy way to automatically install the packages and setup dependencies.</p>
-    <ol>
+    <ol class="inline-list">
       <li><a href="#install-vs">Install Visual Studio</a></li>
       <li><a href="#new-project">Create a New Project</a></li>
       <li>In Visul Studio, navigate to the following menu item: Tools > NuGet Package Manager > Package Manager Console</li>

@@ -408,6 +408,7 @@ iframe.maker-kit {
 
 .divider {
 	border-bottom-style: solid;
+  padding-bottom: 10px;
 	border-bottom-width: 2px;
 	border-bottom-color: #0078d7;
 }
@@ -543,6 +544,11 @@ div.preview {
 .devices-row {
   margin-bottom: 20px;
   margin-top: 10px;
+}
+
+.row-no-margin {
+  margin-left: 0;
+  margin-right: 0;
 }
 .btn-group-justified {
   margin-left:auto;
