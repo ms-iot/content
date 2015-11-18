@@ -22,9 +22,14 @@ To install your appx on an IoT device please do the following:
 	- Set tempappx = your temp appx's file name. This is optional. If you would like to provide your own temp appx that runs in the foreground during appx installation/update you can provide it here.
 	- Set tempappxid = your temp appx's file name. If you would like to provide your own temp appx that runs in the foreground during appx installation/update you can provide it here.
 
-3. Bin Place
+3. Bin Place the following binaries:
 	- Your Appx, Dependency Appx, Temp appx and Certs to c:\windows\appinstall
 	- AppInstall.bat and DeployApp.bat to c:\windows\appinstall
 	- OemCustomization.cmd to c:\windows\system32
 
-4. Restart device and appx will be automatically installed on boot.
+    You can do this by either:
+    
+    - Wrapping the binaries in an OEM Package and include it when you create the image with ICD/Imggen. [TODO: Add link to MSDN doc once live]
+    - Manually copy the files over to disk.
+    
+4. Restart the device and your appx will be automatically installed on boot.
