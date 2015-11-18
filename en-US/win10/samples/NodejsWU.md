@@ -84,7 +84,7 @@ The result from the code above should look like this:
 You have the option to build and deploy your app without using the Visual Studio UI. To do this, follow the instructions below:
 
 * Open Developer Command Prompt for VS 2015.
-* Navigate to to your project.
+* Navigate to your project.
 * Run `msbuild <Your solution name>.sln /p:configuration=release /p:platform=<arm | x86 | x64 >` (use arm for Raspberry Pi 2 and x86 for MBM).
 * After running the command above, you should see a new folder with the AppX in: \Your project root\AppPackages.
 * Once you have created an AppX, you can use [Web-based device management to deploy it]({{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm#apps) to your Windows 10 IoT Core device.
