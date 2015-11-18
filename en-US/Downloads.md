@@ -48,7 +48,7 @@ lang: en-US
 		</p>
 	</div>
 	<div class="col-md-6 col-sm-12">
-		<a href="#" class="button-blue button-flat"> Get IoT Core Dashboard </a>
+		<a href="https://iottools.blob.core.windows.net/iotdashboard" class="button-blue button-flat"> Get IoT Core Dashboard </a>
 	</div>
 </div>
 
