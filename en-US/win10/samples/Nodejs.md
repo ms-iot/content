@@ -11,12 +11,12 @@ Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/{{page.l
 
 ###Set up your PC
 * Install Windows 10.
-* Install Visual Studio 2015.
+* Install Visual Studio 2015 Update 1.
 * Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 
 ###Copy Node.js to your Raspberry Pi 2
-* From PowerShell on your PC, run `& 'C:\Program Files (x86)\NodejsUwp\CopyNodeChakra.ps1' -arch <ARM | x86 | x64 > -ip <Device IP Address> -user <Username> -pass <Password>`. Use `ARM` if you have a Raspberry Pi 2. Use `x86` if you have a MinnowBoard Max.  
+* From PowerShell on your PC, run `& 'C:\Program Files (x86)\NodejsUwp\Console\CopyNodeChakra.ps1' -arch <ARM | x86 | x64 > -ip <Device IP Address> -user <Username> -pass <Password>`. Use `ARM` if you have a Raspberry Pi 2. Use `x86` if you have a MinnowBoard Max.  
   If you have not changed your username and password for your device, use `Administrator` for username and `p@ssw0rd` for the password. After completing this step, Node.js will be in `c:\Node.js (Chakra)` on your device.
 
 

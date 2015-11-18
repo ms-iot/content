@@ -18,18 +18,10 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 
 ###Set up your PC
 * Install Windows 10.
-* Install Visual Studio 2015.
+* Install Visual Studio 2015 Update 1.
 * Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 * Install Arduino software from [here](https://www.arduino.cc/en/Main/Software).
-
-
-###Set up your Windows IoT Core device
-Connect to your device with PowerShell using the instructions found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
-
-Run the command below to enable Node.js (Universal Windows) apps to be deployed successfully:
-
-* `reg.exe ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\EmbeddedMode\ProcessLauncher" /v AllowedExecutableFilesList /t REG_MULTI_SZ /d "c:\windows\system32\xcopy.exe\0"`
 
 
 ###Upload Firmata to your Arduino
@@ -57,28 +49,18 @@ To do this, right click on the node_modules folder in the Solution Explorer wind
 When the command window opens, run `npm dedupe`.
 
 
-###Build Serialport
-**Note:** Even though serialport is installed when a new Cylon project is created, you still need to build the native serialport.node addon that:
+###Get Serialport
+**Note:** Even though serialport is installed when a new Cylon project is created, you still need to get a version that:
 
 * Corresponds with the processor architecture of the device you are targeting (in this case ARM for Raspberry Pi 2).
-* Is UWP (Universal Windows Platform) compatible.
+* Is UWP (Universal Windows Platform) compatible (built from [this](https://github.com/ms-iot/node-serialport/tree/uwp) fork of serialport).
 
-Steps to build serialport:
+Steps to get serialport:
 
-(**You can skip steps 1-8 by copying the zip file [here](https://github.com/ms-iot/ntvsiot/releases/download/1.7.4-uwp/serialport_uwp.zip) which contains prebuilt serialport.node binaries and serialport.js with a UWP patch**)
-
-1. From your Git shell (If you don't have it, get GitHub Desktop for Windows [here](https://desktop.github.com/)), clone [this](https://github.com/Microsoft/node) temporary fork of node.js.
-2. Run `git checkout ch0.12-uwp`
-3. Run `.\vcbuild.bat arm chakra uwp-dll openssl-no-asm` and wait for node to build.
-4. Clone [this](https://github.com/ms-iot/node-serialport) temporary fork of serialport and checkout the 'uwp' branch.
-5. In a command window, go to the serialport clone root.
-6. Run `npm install nan`
-7. Run `node.exe [node.js clone root]\deps\npm\node_modules\node-gyp\bin\node-gyp.js rebuild --nodedir=[node.js clone root] --node_win_onecore --winplat=uwp --target_arch=arm --module_name=serialport --module_path=.`
-8. If the last step is successful, you will see **serialport.node** in [serialport clone path]\build\release.
-9. Copy [serialport clone root]\build\release\serialport.node to [Cylon project root]\node_modules\serialport\build\serialport\v1.7.4\Release\node-v14-win32-arm\serialport.node
-  (**Note:** node-v14-win32-arm is a new folder you will create).
-  "Cylon project root" is the the folder created by your new project in the previous section.
-10. Copy [serialport clone root]\serialport.js to [Cylon project root]\node_modules\serialport\serialport.js.
+* Copy and unzip the file [here](https://github.com/ms-iot/ntvsiot/releases/download/2.0.4/serialport_WinIoT.zip) to your PC.
+* Copy &lt;Unzipped folder&gt;\uwp\arm\serialport.node to [Cylon project root]\node_modules\serialport\build\Release\node-v47-win32-arm\serialport.node  
+  **Note:** node-v14-win32-arm is a new folder you will create. [Cylon project root] is the the folder created by your new project in the previous section.
+* Copy &lt;Unzipped folder&gt;\uwp\serialport.js to [Cylon project root]\node_modules\serialport\serialport.js.
 
 
 ###Set up the connection between your Arduino and Raspberry Pi 2
