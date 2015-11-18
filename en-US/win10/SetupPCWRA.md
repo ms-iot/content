@@ -1,118 +1,164 @@
----
-layout: default
-title: SetupPCWRA
-permalink: /en-US/win10/SetupPCWRA.htm
-lang: en-US
-deviceName: WRA
----
+<h4>Installation</h4>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <p>This section of the tutorial explains how to setup your Windows 10 device - be it a PC, Surface, or Windows Phone - to remotely control an Arduino using the Windows Remote Arduino Experience app.  This application will allow you to operate all of the most basic abilities of your Arduino device without ever writing a single line of code! You can use digital read & write, analog read (ADC), and PWM by using the buttons provided on the user interface.</p>
 
-#Get Started
+    <p>Setup is as simple as installing the application on your chosen device.  There are three ways to get the Windows Remote Arduino Experience application running, in order from easiest to most difficult.</p>
+    <ol class="inline-list">
+      <li><a href="#option-1">Download the Windows Remote Arduino Expriecne app from the Microsoft Store</a></li>
+      <li><a href="#option-2">Install the NuGet package</a></li>
+      <li><a href="#option-3">Manually add the Windows Remote Arduino project files to a new Visual Studio solution.</a></li>
+    </ol>
+    <p>Of these options, downloading the application directly from the Microsoft Store is by far the easiest.</p>
+  </div>
+</div>
+<h2 id="option-1">Option 1: Download the Windows Remote Arduino Experience app from the Microsoft Store </h2>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <p> Follow <a href="https://www.microsoft.com/store/apps/9nblggh2041m" target="_blank">this link</a> to the Microsoft Store page for the app, download the file, and then install.  You can then open the application to ensure it runs properly.</p>
+    <p>You have now finished setting up your Windows device and can progress to the next section.</p>
+  </div>
+</div>
 
-Learn how to get your Windows 10 device ready for developing IoT applications using Windows Remote Arduino Experience.
+<h2 id="option-2">Option 2: Install the NuGet package</h2>
 
-{% include steps.html device=page.deviceName %}
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <p>NuGet is a quick and easy way to automatically install the packages and setup dependencies.</p>
+    <ol class="inline-list">
+      <li><a href="#install-vs">Install Visual Studio</a></li>
+      <li><a href="#new-project">Create a New Project</a></li>
+      <li>In Visul Studio, navigate to the following menu item: Tools > NuGet Package Manager > Package Manager Console</li>
+      <li>Enter the following command into the console window: <code> Install-Package Windows-Remote-Arduino</code></li>
+    </ol>
+    <p>As an alternative to step 4 above, you can also select <b>Manage NuGet packages for Solution</b> under the <b>NuGet Package Manager</b> context menu and manually search for and install <b>Windows Remote Arduino</b>.  Visit <a href="https://www.nuget.org/packages/Windows-Remote-Arduino">https://www.nuget.org/packages/Windows-Remote-Arduino</a> for more information on this package.</p>
 
-#Installation
+    <p>Once you're done with this section, skip to the Device Capabilities section to finish setting up the application.</p>
+  </div>
+</div>
+<h2 id="option-3">Option 3: Add the Windows Remote Arduino projects to a Visual Studio solution</h2>
+<h3 id="install-vs">Step 1: Install Visual Studio</h3>
+<p>We recommend <a href="http://go.microsoft.com/fwlink/?LinkID=534599"target="_blank">Visual Studio Community Edition</a>, but Visual Studio Professional 2015 and Visual Studio Enterprise 2015 will work as well (available <a href="https://www.visualstudio.com/vs-2015-product-editions" target="_blank"> here </a>). If you already have Visual Studio installed, you can proceed directly to the next step.</p>
+<h3 id="new-project">Step 2: Create a new project</h3>
+<ol class="setup-content-list">
+   <div class="row">
+     <div class="col-md-6 col-sm-12">
+       <li>Open Visual Studio.  Select <b>File -> New Project</b>.</li>
+     </div>
+     <div class="col-md-6 col-sm-12">
+       <img src="{{site.baseurl}}/images/remote-wiring/create_00.png">
+     </div>
+   </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <li>You can now select your language of choice. Windows Remote Arduino is a WinRT component, meaning it is compatible with C++, C#, or JavaScript - for this sample you'll want C#.</li>
+        </div>
+        <div class="col-md-6 col-sm-12">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <li>You'll see I have chosen C# by expanding the "Visual C#" menu. Select the "Windows" option and choose "Blank App (Windows Universal)" or "Blank App (Windows 8.1 Universal)" if you are building for Windows 8.1.</li>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <img src="{{site.baseurl}}/images/remote-wiring/create_01.png">
+        </div>
+      </div>
+    </ol>
 
-This section of the tutorial explains how to setup your Windows 10 device - be it a PC, Surface, or Windows Phone - to remotely control an Arduino using the Windows Remote Arduino Experience app.  This application will allow you to operate all of the most basic abilities of your Arduino device without ever writing a single line of code! You can use digital read & write, analog read (ADC), and PWM by using the buttons provided on the user interface.  
+    <h3>Step 3: Add Windows Remote Arduino projects to your solution</h3>
+    <ol class="setup-content-list">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <li>Clone the [Windows Remote Arduino GitHub repository](https://github.com/ms-iot/remote-wiring/){:target="_blank"}.  If you're not familiar with git and want to do a proper clone, follow the instructions [here](https://help.github.com/articles/cloning-a-repository/){:target="_blank"}.</li>
+        </div>
+        <div class="col-md-6 col-sm-12">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <li>Right-click on your solution in the Solution Explorer and select *Add -> Existing Project*.</li>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <img src="{{site.baseurl}}/images/remote-wiring/project_00.png">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <li>Navigate to your local copy of the repository. You'll see here that I've cloned it to **C:\git\remote-wiring**, but you can choose a different directory. Then, open the appropriate solution folder for your build environment (either Windows 10 or Windows 8.1).</li>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <img src="{{site.baseurl}}/images/remote-wiring/compile_00.png">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <li>We need to add three projects - Microsoft.Maker.Firmata, Microsoft.Maker.RemoteWiring, and Microsoft.Maker.Serial - to the project solution.  Let's start with the Serial project (Microsoft.Maker.Serial). Open this directory.</li>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <img src="{{site.baseurl}}/images/remote-wiring/project_01.png">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <li>Select the *.vcxproj* file. (If you are targeting Windows 8.1, you will first have to choose between Windows and Windows Phone platform directories. You do not have to do this for Windows 10, as it is Universal to all platforms.)</li>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <img src="{{site.baseurl}}/images/remote-wiring/project_02.png">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <li>Repeat the previous steps for all three Microsoft.Maker projects.  Once they've all been added to your solution, right-click on "References" in the original project you made, not one of the newly added Microsoft.Maker projects. Select *Add Reference*.</li>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <img src="{{site.baseurl}}/images/remote-wiring/project_05.png">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <li>Under the "Projects" tab, select all three of the Microsoft.Maker projects.</li>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <img src="{{site.baseurl}}/images/remote-wiring/project_06.png">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <li>Rebuild your solution by selecting *Build -> Rebuild Solution*.</li>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <img src="{{site.baseurl}}/images/remote-wiring/compile_03.png">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <li>Verify you have added the necessary [Device Capabilities](#device-capabilities) to your project manifest.  Once you've completed the section below, your device will be ready to go!</li>
+        </div>
+        <div class="col-md-6 col-sm-12">
+        </div>
+      </div>
+    </ol>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <h3>Device Capabilities</h3>
 
-Setup is as simple as installing the application on your chosen device.  There are three ways to get the Windows Remote Arduino Experience application running, in order from easiest to most difficult.
+    <p>Each Windows project will contain a manifest file that must be configured to allow certain permissions, such as Bluetooth and USB connectivity. Fortunately, it is fairly easy to configure these.</p>
 
-1. [Download the Windows Remote Arduino Experience app from the Microsoft Store](#option-1-download-the-windows-remote-arduino-experience-app-from-the-microsoft-store)
-2. [Install the NuGet package](#option-2-install-the-nuget-package)
-3. [Manually add the Windows Remote Arduino project files to a new Visual Studio solution](#option-3-add-the-windows-remote-arduino-projects-to-a-visual-studio-solution)
+    <p>You will need to open the package.appxmanifest file of your project by right-clicking the file and selecting the "View Code" option. Then, find the &lt;Capabilities&gt; tag and insert the relevant code snippets from the "Enabling Bluetooth Capabilities", "Enabling Network Capabilities", and "Enabling USB Capabilities" subsections below.</p>
 
-Of these options, downloading the application directly from the Microsoft Store is by far the easiest.
+    <p>NOTE: For **Windows 8.1**, you will need to add the following namespace to the top of the XML file, inside the `&lt;Package&gt;` tag.</p>
 
-##Option 1: Download the Windows Remote Arduino Experience app from the Microsoft Store
+    {% highlight XML %}
+    xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest"
+    {% endhighlight %}
 
-Follow [this link](https://www.microsoft.com/store/apps/9nblggh2041m){:target="_blank"} to the Microsoft Store page for the app, download the file, and then install.  You can then open the application to ensure it runs properly.
+    <h2>Enabling Bluetooth Capabilities</h2>
+    <p>In order to invoke the Bluetooth capabilities of a WinRT application, you must add the relevant DeviceCapability tags below <b>inside</b> the '&lt;Capabilities&gt;' tag of the 'Package.appxmanifest' file.</p>
 
-You have now finished setting up your Windows device and can progress to the next section.
-
-##Option 2: Install the NuGet package
-
-NuGet is a quick and easy way to automatically install the packages and setup dependencies.
-
-1. [Install Visual Studio](#step-1-install-visual-studio)
-2. [Create a New Project](#step-2-create-a-new-project)
-3. In Visual Studio, navigate to the following menu item: Tools > NuGet Package Manager > Package Manager Console
-4. Enter the following command into the console window: `Install-Package Windows-Remote-Arduino`
-
-As an alternative to step 4 above, you can also select **Manage NuGet packages for Solution** under the **NuGet Package Manager** context menu and manually search for and install **Windows Remote Arduino**.  Visit [https://www.nuget.org/packages/Windows-Remote-Arduino](https://www.nuget.org/packages/Windows-Remote-Arduino) for more information on this package.
-
-Once you're done with this section, skip to the Device Capabilities section to finish setting up the application.
-
-##Option 3: Add the Windows Remote Arduino projects to a Visual Studio solution
-
-###Step 1: Install Visual Studio
-
-- We recommend [Visual Studio Community Edition](http://go.microsoft.com/fwlink/?LinkID=534599){:target="_blank"}, but Visual Studio Professional 2015 and Visual Studio Enterprise 2015 will work as well (available [here](https://www.visualstudio.com/vs-2015-product-editions){:target="_blank"}). If you already have Visual Studio installed, you can proceed directly to the next step.
-
-###Step 2: Create a new project
-
-- Open Visual Studio.  Select *File -> New -> Project*.
-
- ![New Project]({{site.baseurl}}/images/remote-wiring/create_00.png)
-
-- You can now select your language of choice. Windows Remote Arduino is a WinRT component, meaning it is compatible with C++, C#, or JavaScript - for this sample you'll want C#.
-
-- You'll see I have chosen C# by expanding the "Visual C#" menu. Select the "Windows" option and choose "Blank App (Windows Universal)" or "Blank App (Windows 8.1 Universal)" if you are building for Windows 8.1.
-
- ![Windows Universal]({{site.baseurl}}/images/remote-wiring/create_01.png)
-
-
-###Step 3: Add Windows Remote Arduino projects to your solution
-
-- Clone the [Windows Remote Arduino GitHub repository](https://github.com/ms-iot/remote-wiring/){:target="_blank"}.  If you're not familiar with git and want to do a proper clone, follow the instructions [here](https://help.github.com/articles/cloning-a-repository/){:target="_blank"}.
-
-- Right-click on your solution in the Solution Explorer and select *Add -> Existing Project*.
-
- ![Add existing project]({{site.baseurl}}/images/remote-wiring/project_00.png)
-
-- Navigate to your local copy of the repository. You'll see here that I've cloned it to **C:\git\remote-wiring**, but you can choose a different directory. Then, open the appropriate solution folder for your build environment (either Windows 10 or Windows 8.1).
-
- ![Open the solution directory]({{site.baseurl}}/images/remote-wiring/compile_00.png)
-
-- We need to add three projects - Microsoft.Maker.Firmata, Microsoft.Maker.RemoteWiring, and Microsoft.Maker.Serial - to the project solution.  Let's start with the Serial project (Microsoft.Maker.Serial). Open this directory.
-
- ![Serial directory]({{site.baseurl}}/images/remote-wiring/project_01.png)
-
-- Select the *.vcxproj* file. (If you are targeting Windows 8.1, you will first have to choose between Windows and Windows Phone platform directories. You do not have to do this for Windows 10, as it is Universal to all platforms.)
-
- ![Select vcxproj]({{site.baseurl}}/images/remote-wiring/project_02.png)
-
-- Repeat the previous steps for all three Microsoft.Maker projects.  Once they've all been added to your solution, right-click on "References" in the original project you made, not one of the newly added Microsoft.Maker projects. Select *Add Reference*.
-
- ![Add Reference]({{site.baseurl}}/images/remote-wiring/project_05.png)
-
-- Under the "Projects" tab, select all three of the Microsoft.Maker projects.
-
- ![Project References]({{site.baseurl}}/images/remote-wiring/project_06.png)
-
-- Rebuild your solution by selecting *Build -> Rebuild Solution*.
-
- ![Rebuild All]({{site.baseurl}}/images/remote-wiring/compile_03.png)
-
-- Verify you have added the necessary [Device Capabilities](#device-capabilities) to your project manifest.  Once you've completed the section below, your device will be ready to go!
-
-#Device Capabilities
-
-Each Windows project will contain a manifest file that must be configured to allow certain permissions, such as Bluetooth and USB connectivity. Fortunately, it is fairly easy to configure these.
-
-You will need to open the package.appxmanifest file of your project by right-clicking the file and selecting the "View Code" option. Then, find the <Capabilities> tag and insert the relevant code snippets from the "Enabling Bluetooth Capabilities", "Enabling Network Capabilities", and "Enabling USB Capabilities" subsections below.
-
-####NOTE:
-For **Windows 8.1**, you will need to add the following namespace to the top of the XML file, inside the `<Package>` tag.
-
-{% highlight XML %}
-xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest"
-{% endhighlight %}
-
-##Enabling Bluetooth Capabilities
-In order to invoke the Bluetooth capabilities of a WinRT application, you must add the relevant DeviceCapability tags below *inside* the `<Capabilities>` tag of the `Package.appxmanifest` file.
-
-###Windows 10
+    <h3>Windows 10</h3>
+  </div>
+</div>
 
 {% highlight XML %}
 <DeviceCapability Name="bluetooth.rfcomm">
@@ -122,7 +168,7 @@ In order to invoke the Bluetooth capabilities of a WinRT application, you must a
 </DeviceCapability>
 {% endhighlight %}
 
-###Windows 8.1
+<h3>Windows 8.1</h3>
 
 {% highlight XML %}
 <m2:DeviceCapability Name="bluetooth.rfcomm">
@@ -133,10 +179,10 @@ In order to invoke the Bluetooth capabilities of a WinRT application, you must a
 {% endhighlight %}
 
 
-##Enabling Network Capabilities
-In order to invoke the network socket capabilities of a WinRT application, you will need to add the following code inside the `<Capabilities>` tag of the `Package.appxmanifest` file.
+<h2>Enabling Network Capabilities</h2>
+<p>In order to invoke the network socket capabilities of a WinRT application, you will need to add the following code inside the `&lt;Capabilities&gt;` tag of the `Package.appxmanifest` file.</p>
 
-###Windows 10 and Windows 8.1
+<h3>Windows 10 and Windows 8.1</h3>
 
 {% highlight XML %}
 <Capability Name="privateNetworkClientServer"/>
@@ -144,15 +190,15 @@ In order to invoke the network socket capabilities of a WinRT application, you w
 {% endhighlight %}
 
 
-##Enabling USB Capabilities
-In order to invoke the USB capabilities of a WinRT application, you must add the relevant DeviceCapability tags below *inside* the `<Capabilities>` tag of the `Package.appxmanifest` file.
+<h2>Enabling USB Capabilities</h2>
+<p>In order to invoke the USB capabilities of a WinRT application, you must add the relevant DeviceCapability tags below *inside* the `&lt;Capabilities&gt;` tag of the `Package.appxmanifest` file.</p>
 
-    Visual Studio 2015 has a known bug in the Manifest Designer (the visual editor for appxmanifest files) that affects the serialcommunication capability.  If 
-    your appxmanifest adds the serialcommunication capability, modifying your appxmanifest with the designer will corrupt your appxmanifest (the Device xml child 
-    will be lost).  You can workaround this problem by hand editting the appxmanifest by right-clicking your appxmanifest and selecting View Code from the 
+    Visual Studio 2015 has a known bug in the Manifest Designer (the visual editor for appxmanifest files) that affects the serialcommunication capability.  If
+    your appxmanifest adds the serialcommunication capability, modifying your appxmanifest with the designer will corrupt your appxmanifest (the Device xml child
+    will be lost).  You can workaround this problem by hand editting the appxmanifest by right-clicking your appxmanifest and selecting View Code from the
     context menu.
 
-###Windows 10
+<h3>Windows 10</h3>
 
 {% highlight XML %}
 <DeviceCapability Name="serialcommunication">
@@ -162,8 +208,6 @@ In order to invoke the USB capabilities of a WinRT application, you must add the
 </DeviceCapability>
 {% endhighlight %}
 
-###Windows 8.1
+<h3>Windows 8.1</h3>
 
 Unfortunately, this library does not support USB on Windows 8.1.
-
-{% include nextsteps.html device=page.deviceName %}

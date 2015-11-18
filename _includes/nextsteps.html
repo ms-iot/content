@@ -3,7 +3,7 @@
 {% for stepurl in site.data.steps[include.device]      %}
 {% if stepurl == localurl                              %}
 
-<h4 class="thin-header text-right"><a href="{{site.baseurl}}/{{page.lang}}/{{site.data.steps[include.device].[forloop.index]}}">Next: {{site.data.step-resources[page.lang][forloop.index]}}</a></h4>
+<h3 class="text-right"><a href="{{site.baseurl}}/{{page.lang}}/{{site.data.steps[include.device].[forloop.index]}}">Next: {{site.data.step-resources[page.lang][forloop.index]}}</a></h3>
 
 {% endif                                              %}
 {% endfor                                             %}
