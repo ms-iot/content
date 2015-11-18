@@ -9,17 +9,9 @@ lang: en-US
 
 
 ###Set up your PC
-* Install Windows 10.
-* Install Visual Studio 2015.
+* Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
+* Install Visual Studio 2015 Update 1.
 * Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
-
-
-###Set up your Windows IoT Core device
-Connect to your device with PowerShell using the instructions found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
-
-Run the command below to enable Node.js (Universal Windows) apps to be deployed successfully:
-
-* `reg.exe ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\EmbeddedMode\ProcessLauncher" /v AllowedExecutableFilesList /t REG_MULTI_SZ /d "c:\windows\system32\xcopy.exe\0"`
 
 
 ###Create a new Node.js (Windows Universal) project
@@ -86,6 +78,17 @@ uwp.close();
 The result from the code above should look like this:
 
 ![DateTime Result]({{site.baseurl}}/images/Nodejs/datetime-ie.PNG)
+
+
+### Building and deploying an app package (AppX)
+You have the option to build and deploy your app without using the Visual Studio UI. To do this, follow the instructions below:
+
+* Open Developer Command Prompt for VS 2015.
+* Navigate to your project.
+* Run `msbuild <Your solution name>.sln /p:configuration=release /p:platform=<arm | x86 | x64 >` (use arm for Raspberry Pi 2 and x86 for MBM).
+* After running the command above, you should see a new folder with the AppX in: \Your project root\AppPackages.
+* Once you have created an AppX, you can use [Web-based device management to deploy it]({{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm#apps) to your Windows 10 IoT Core device.
+
 
 ### GitHub
 * NTVS IoT Extension source code: [https://github.com/ms-iot/ntvsiot](https://github.com/ms-iot/ntvsiot)
