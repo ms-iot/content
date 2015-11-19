@@ -629,6 +629,10 @@ div.preview {
   cursor: pointer;
 }
 
+.maker-image {
+  max-height: 205px;
+}
+
 @media (max-width: 992px) {
   .hth-project-image {
   max-height:100%;
