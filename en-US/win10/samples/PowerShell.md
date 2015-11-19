@@ -132,4 +132,4 @@ See the [Command Line Utils]({{site.baseurl}}/{{page.lang}}/win10/tools/CommandL
 
 * Outbound CIM and PS Remoting is not supported. Relevant functionality in relying cmdlets will not work. These include: Enter-PSSession, Get-Job, Receive-Job, Import-Module, Invoke-Command, Copy-Item.
 
-* SecureString commands 'ConverFrom-SecureString' and 'ConverTo-SecureString' do not work unless the session is created using CredSSP authentication. Otherwise, the '-Key' parameter must be specified. Please see [http://blogs.msdn.com/b/clustering/archive/2009/06/25/9803001.aspx](http://blogs.msdn.com/b/clustering/archive/2009/06/25/9803001.aspx){:target="_blank"} for details on configuring CredSSP authentication.
+* SecureString commands 'ConvertFrom-SecureString' and 'ConvertTo-SecureString' do not work unless the session is created using CredSSP authentication. Otherwise, the '-Key' parameter must be specified. Please see [http://blogs.msdn.com/b/clustering/archive/2009/06/25/9803001.aspx](http://blogs.msdn.com/b/clustering/archive/2009/06/25/9803001.aspx){:target="_blank"} for details on configuring CredSSP authentication.
