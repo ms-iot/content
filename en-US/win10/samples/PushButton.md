@@ -7,6 +7,8 @@ lang: en-US
 
 ##Push Button Sample
 
+{% include_relative VerifiedVersion.md %}
+
 [View the code on GitHub](https://github.com/ms-iot/samples/tree/develop/PushButton/CS){:target="_blank"}
 
 In this sample, we connect a push button to your Raspberry Pi 2, MinnowBoard Max, or the DragonBoard 410c and use it to control an LED. We use GPIO interrupts to detect when the button is pressed and toggle the LED in response.

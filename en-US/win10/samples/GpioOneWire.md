@@ -7,6 +7,8 @@ lang: en-US
 
 ## GpioOneWire Sample (DHT11)
 
+{% include_relative VerifiedVersion.md %}
+
 [View the code on Github](https://github.com/ms-iot/samples/blob/develop/GpioOneWire)
 
 This sample shows how to read from the [DHT11](https://www.adafruit.com/product/386)

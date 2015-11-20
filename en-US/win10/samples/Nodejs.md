@@ -6,6 +6,9 @@ lang: en-US
 ---
 
 ##MemoryStatus Node.js (Console Application) Sample
+
+{% include_relative VerifiedVersion.md %}
+
 Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/ConsoleApp.htm)
 
 
