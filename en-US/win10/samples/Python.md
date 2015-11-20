@@ -7,6 +7,8 @@ lang: en-US
 
 ##Python 'Hello, World' Sample
 
+{% include_relative VerifiedVersion.md %}
+
 ###Set up your PC
 
 * Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) to setup your device and PC.

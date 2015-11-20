@@ -6,6 +6,9 @@ lang: en-US
 ---
 
 ## Potentiometer Sensor Sample
+
+{% include_relative VerifiedVersion.md %}
+
 This sample shows how to connect a rotary potentiometer and LED to a Raspberry Pi 2 or a DragonBoard 410c. We use a SPI-based ADC (Analog to Digital Converter) to read values from the potentiometer 
 and control an LED based on the knob position.
 

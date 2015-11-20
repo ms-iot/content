@@ -7,6 +7,8 @@ lang: en-US
 
 #Serial Port Sample
 
+{% include_relative VerifiedVersion.md %}
+
 We'll create a simple app that allows communication between a desktop and an IoT device over a serial interface.
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm){:target="_blank"}.
