@@ -16,7 +16,8 @@
 <h2 id="option-1">Option 1: Download the Windows Remote Arduino Experience app from the Microsoft Store </h2>
 <div class="row">
   <div class="col-md-6 col-sm-12 col-no-padding">
-    <p> Follow <a href="https://www.microsoft.com/store/apps/9nblggh2041m" target="_blank">this link</a> to the Microsoft Store page for the app, download the file, and then install.  You can then open the application to ensure it runs properly.</p>
+    <p> Follow <a href="https://www.microsoft.com/store/apps/9nblggh2041m" target="_blank">this link</a> to the Microsoft Store to download and install the app.  You can then open the application to ensure it runs properly.</p>
+
     <p>You have now finished setting up your Windows device and can progress to the next section.</p>
   </div>
 </div>
