@@ -27,7 +27,7 @@ lang: en-US
 
 3. **Connect to Windows Device Portal through your browser**
     * Enter the IP address into the address bar. Add :8080 onto the end.![Browser IP]({{site.baseurl}}/images/deviceportal/browser_ip.png)
-    * In the credentials dialog, use the default username and password: `Administrator`, `p@ssw0rd`
+    * In the credentials dialog, use the default username and password. Username: `Administrator` Password: `p@ssw0rd`
     * Windows Device Portal should launch and display the web management home screen!
 
  You can also launch the Windows Device Portal tool from the Windows IoT Core Watcher by right clicking on your device, and clicking Launch in browser
