@@ -15,7 +15,7 @@ lang: en-US
 </ol>
 <h1 class="page-title"> Choose a Board </h1>
 <h2 class="subtext"> Compare the features and functionality of various compatible Windows 10 IoT Core development boards. </h3>
-<h3>Boards Running Windows 10 IoT Core lorem ipsum</h3>
+<h3>Compatible Windows 10 IoT Core Platforms</h3>
 <hr>
 <p> Currently, Windows 10 IoT Core is supported on the Raspberry Pi 2, MinnowBoard MAX and the Dragonboard 410c. Learn more about the capabilities of each board below, and check out the <a href="http://go.microsoft.com/fwlink/p/?linkID=532948"> supported hardware peripherals </a> for each board to decide what board is right for you.</p>
 <table class="table table-striped maker-kit">
@@ -35,7 +35,7 @@ lang: en-US
       <th style="width:25%">
         <img class="comparison-picture" src="{{site.baseurl}}/images/devices/DB410c.png">
         <h4>DragonBoard 410c</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+        <p>The DragonBoard™ 410c based on Linaro 96Boards™ specification features the Qualcomm® Snapdragon™ 410 processor, a Quad-core ARM® Cortex™ A53 at up to 1.2GHz clock speed per core, capable of 32-bit and 64-bit operation. WLAN, Bluetooth, and GPS, all packed into a board the size of a credit card.</p>
       </th>
     </tr>
     <tr>
