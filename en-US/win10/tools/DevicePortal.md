@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Web-based Device Management
-permalink: /en-US/win10/tools/Webb.htm
+title: Windows Device Portal
+permalink: /en-US/win10/tools/DevicePortal.htm
 lang: en-US
 ---
 
 <div class="container" markdown="1">
 
-##Web-based device management
-   Web-based device management provides basic configuration and device management capabilities, in addition to advanced diagnostic tools to help you troubleshoot and view the real time performance of your Windows IoT Device. 
+##Windows Device Portal
+   Windows Device Portal provides basic configuration and device management capabilities, in addition to advanced diagnostic tools to help you troubleshoot and view the real time performance of your Windows IoT Device. 
    
    Once connected to your local network, every Windows 10 IoT Core device will allow you to access these tools.
 ![Webb Home]({{site.baseurl}}/images/webb/webb.png)
@@ -19,18 +19,18 @@ lang: en-US
 ##Set up
 1. **Connect your board to the internet**
 
-   To get Web-based device management up and running, you first need to connect your device to your network. To do so, connect an Ethernet cable from your board into to your local network.
+   To get Windows Device Portal up and running, you first need to connect your device to your network. To do so, connect an Ethernet cable from your board into to your local network.
 
 2. **Find your devices IP address**
     * If your device is connected to a monitor, your IP address is listed on the front page. If you do not see an IP address, your board is not properly connected to your network. ![DefaultApp IP]({{site.baseurl}}/images/webb/defaultapp_ip.png)
 	* If you have already [set up your PC]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm), you should have **Windows IoT Core Watcher** installed on your PC. Launch Windows IoT Core Watcher and find your machine name. Listed next to the machine name is your board's IP address. If you cannot find your machine, either your PC or your board is not properly connected to your network.![IotWatcher IP]({{site.baseurl}}/images/IoTCoreWatcher.PNG)
 
-3. **Connect to Web-based device management through your browser**
+3. **Connect to Windows Device Portal through your browser**
     * Enter the IP address into the address bar. Add :8080 onto the end.![Browser IP]({{site.baseurl}}/images/webb/browser_ip.png)
     * In the credentials dialog, use the default username and password: `Administrator`, `p@ssw0rd`
-    * Web-based device management should launch and display the web management home screen!
+    * Windows Device Portal should launch and display the web management home screen!
 
- You can also launch the Web-based device management tool from the Windows IoT Core Watcher by right clicking on your device, and clicking Launch in browser
+ You can also launch the Windows Device Portal tool from the Windows IoT Core Watcher by right clicking on your device, and clicking Launch in browser
 
 <hr>
 	
