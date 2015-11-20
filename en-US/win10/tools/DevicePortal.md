@@ -53,8 +53,6 @@ The top toolbar allows you to shutdown, reboot and give feedback.![Webb toolbar]
 * Feedback - Opens up the Windows 10 Feedback tool where you can enter any valuable feedback.
 * Help - Takes you to this documentation page.
 
-   ```Note: For Rpi2 users, the Shutdown button is not working correctly, and reboots the device. A fix is coming soon```
-
 ###**Home**
 
 This section is coming soon! Stay tuned
