@@ -13,12 +13,14 @@ lang: en-US
 
         <a href="#features"><h4>Features</h4></a>
 
+        <a href="#commercialization"><h4>Commercialization</h4></a>
+
         <a href="#galileo"><h4>Intel Galileo</h4></a>
 
         <a href="#errors"><h4>Errors</h4></a>
 
         <a href="#mbm_usb_port"><h4>MinnowBoard Max</h4></a>
-        
+
         <a href="#dragonboard"><h4>DragonBoard</h4></a>
     </div>
 
@@ -68,6 +70,11 @@ lang: en-US
         <br />
         <p class="bold"><em>Is Bluetooth currently supported on Windows 10 IoT Core?</em></p>
         <p>Bluetooth support for some dongles is now available in the public release of Windows 10 IoT Core. Click <a href="http://ms-iot.github.io/content/en-US/win10/Bluetooth.htm">here</a> to learn more</p>
+        <br />
+        <a name="commercialization"></a>
+        <h2 class="faq-h2">Commercialization</h2>
+        <p class="bold"><em>Can I commercialize my Proof of Concept on Windows 10 IoT Core?</em></p>
+        <p>Yes. If you already have a Proof of Concept with Windows 10 IoT Core, <a href="http://go.microsoft.com/fwlink/?LinkId=708649" target="_blank">click here</a> to find your options on how to commercialize your device.</p>
         <br />
         <a name="galileo"></a>
         <h2 class="faq-h2">Intel Galileo</h2>
@@ -123,7 +130,7 @@ lang: en-US
         <p class="bold"><em>Known issues with the top USB port</em></p>
         <p>You may experience degrading performance and lack of key functionality with USB devices plugged into the top port.  At this time we suggest using only the bottom port for USB peripherals.  We are currently investigating this issue.</p>
         <br />
-        
+
     <a name="dragonboard"></a>
         <h2 class="faq-h2">DragonBoard</h2>
         <p class="bold"><em>USB Issues</em></p>

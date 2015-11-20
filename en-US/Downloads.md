@@ -43,17 +43,23 @@ lang: en-US
 		<a href="http://go.microsoft.com/fwlink/?LinkId=691713" class="button-blue button-flat"> Download RTM Release for DragonBoard 410c&#42;</a>
 		<p>
 			&#42;Please see <a href="http://aka.ms/thirdpartynotices" target="_blank"> third party notice for BSP restrictions </a> for DragonBoard 410c.</p>
-		<p class="subtext">
+		<p>
 			<a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesRTM.htm"> Release notes for RTM. </a>
 		</p>
 	</div>
 	<div class="col-md-6 col-sm-12">
 		<a href="http://go.microsoft.com/fwlink/?LinkID=708576" class="button-blue button-flat"> Get IoT Core Dashboard </a>
-    <p class="subtext">
+    <p>
 			<a href="{{site.baseurl}}/{{page.lang}}/win10/IoTDashboardTroubleshooting.htm"> Need help? Check out the troubleshooting page. </a>
 		</p>
 	</div>
 </div>
+<div class="row">
+	<div class="col-md-12">
+		<p>Looking to commercialize? <a href="http://go.microsoft.com/fwlink/?LinkId=708649" target="_blank">Learn more</a> about how to distribute your device running a version of Windows 10 IoT Core.</p>
+	</div>
+</div>
+
 
 <div class="row">
 	<h3 class="divider"> Other Downloads </h3>
