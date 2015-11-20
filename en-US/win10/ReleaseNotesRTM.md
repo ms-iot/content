@@ -26,7 +26,7 @@ You can review linked terms by pasting the forward link into your browser window
    * Serial support on Raspberry Pi for TX and RX pins
    * High performance GPIO driver option with > 100x improvement
    * Support for the QualComm DragonBoard
-   * Updates to the WebB admin application
+   * Updated features for Windows Device Portal
    * Secure boot has been enabled
    * Third party pure python libraries can be run on IoT core
    * PWM and ADC chips have been enabled
@@ -58,7 +58,7 @@ On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to user mode a
 
 ##Known Issues
 
-*	The WebB administration application may stop working after a day of continuous uptime. (5458435) WORKAROUND: Reset the device.
+*	Windows Device Portal may stop working after a day of continuous uptime. (5458435) WORKAROUND: Restart the device.
 *	Setting the orientation to “Portrait” may not be honored in a Universal App (3039042) WORKAROUND: None
 *	GPIO pin 4 may behave unexpectedly when switching between drive modes (3890679) WORKAROUND: If you need to switch drive modes, use a pin other than GPIO 4
 *	The Default startup app may conflict with itself when it is also deployed from Visual Studio (4266059). WORKAROUND: Change the default startup app to an application other than that you wish to deploy.
