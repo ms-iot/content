@@ -195,21 +195,33 @@
       <li>Now boot up the device.</li>
     </div>
   </div>
+</ol>
+<h3>Connecting to Your Device</h3>
+<ol class="setup-content-list">
   <div class="row">
     <div class="col-md-6 col-sm-12">
       <li>
-        Follow the PowerShell documentation<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm" target="_blank"> here</a> to use PowerShell to connect to your running device.  You can also follow the instructions <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm" target="_blank">here</a> to use SSH to connect to your device.
+        You can use <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm" target="_blank">Windows Device Portal</a> to connect to your device through your favorite web browser. The device portal provides configuration and device management capabilities, in addition to advanced diagnostic tools to help you troubleshoot and view the real time performance of your Windows IoT Device. <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm" target="_blank">Click here to learn how to connect to Windows Device Portal!</a>
       </li>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <img class="device-images" src="{{site.baseurl}}/images/deviceportal/deviceportal_small.png">
     </div>
   </div>
   <div class="row">
     <div class="col-md-6 col-sm-12">
       <li>
-        It is highly recommended that you update the default password for the Administrator account. To do this, issue the following commands in your PowerShell connection:
-
-      Replace <code>[new password]</code> with a strong password:
-
-          <br><pre> <code>net user Administrator [new password]</code></pre>
-Once this is done, you'll need to re-establish the current session using enable-psSession with the new credentials.
-    </li>
+        You can also use PowerShell to connect to your device through a command shell. Follow the <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm" target="_blank">PowerShell documentation</a> to use PowerShell to connect to your running device.  You can also follow the <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm" target="_blank">SSH instructions</a> to use SSH to connect to your device.
+      </li>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <img class="device-images" src="{{site.baseurl}}/images/powershell/connection.png">
+    </div>
   </div>
+</ol>
+<div>
+  It is highly recommended that you update the default password for the Administrator account. Instructions are included in the relevant documentation for <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm" target="_blank">Windows Device Portal</a> or <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm" target="_blank">Powershell</a>.
+</div>
+<h3> Additional Resources </h3>
+<p><a href="{{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm" target="_blank">Supported Peripheral Interfaces and Devices</a></p>
+</div>
