@@ -3,7 +3,7 @@
         <p>In this project, we will use Windows Remote Arduino to turn an LED on and off. It is a simple example, but will reveal the power that the library can give you to create many more advanced projects. Let's get started!</p>
     </div>
 </div>
-<h4>Hardware</h4>
+<h3>Hardware</h3>
 <div class="row">
     <div class="col-md-6 col-sm-12 col-no-padding">
         <p>You can always use a USB connection to get started, but let's cover simple hook up of a Bluetooth device and an LED that we will turn on and off over Bluetooth using the Windows Remote Arduino library!</p>
@@ -240,5 +240,5 @@
          <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/screenshot.png">
     </div>
 </div>
-
-<p>I really hope you enjoy replicating this project and using it as a baseline for an incredible new set of Maker projects!</p>
+<p></p>
+<p>We really hope you enjoy replicating this project and using it as a baseline for an incredible new set of Maker projects!</p>
