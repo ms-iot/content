@@ -58,7 +58,7 @@ On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to user mode a
 
 ##Known Issues
 
-*	The WebB administration application may stop working after a day of continuos uptime. (5458435) WORKAROUND: Reset the device.
+*	The WebB administration application may stop working after a day of continuous uptime. (5458435) WORKAROUND: Reset the device.
 *	Setting the orientation to “Portrait” may not be honored in a Universal App (3039042) WORKAROUND: None
 *	GPIO pin 4 may behave unexpectedly when switching between drive modes (3890679) WORKAROUND: If you need to switch drive modes, use a pin other than GPIO 4
 *	The Default startup app may conflict with itself when it is also deployed from Visual Studio (4266059). WORKAROUND: Change the default startup app to an application other than that you wish to deploy.
@@ -75,7 +75,7 @@ On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to user mode a
 *	If an application or background task enter a bad state the device may blue screen instead of allowing an opportunity to connect through an SSH session and reconfigure the device. (5098713) WORKAROUND: None.
 *	The ICD image build may fail when using the commercial license. (5291899) WORKAROUND: None.
 *	The SiLabs USB-Serial driver may fail to load with an error 31 "Device Parameters\PortName property is not present." (5307602) WORKAROUND: Unplug the device from the USB port and add the following registry key: [HKEY_LOCAL_MACHINE\system\controlset001\enum\usb\VID_10C4&PID_EA60\0001\Device Parameters]" PortName"="COM3"
-*	The step-up packages may not work with ICD. (5382557) WORKAROUND: See the information at the following link: 
+*	The step-up packages may not work with ICD. (5382557) WORKAROUND: See the information at the following link: [http://go.microsoft.com/fwlink/?LinkId=708623](http://go.microsoft.com/fwlink/?LinkId=708623){:target="_blank"}
 *	A conflict may result if a webcam and a USB audio adapter or headset are connected to a Raspberry Pi2 at the same time. (5383535) WORKAROUND: None.
 *	SiLabs USB Serial adapter may return an error indicating that it cannot open handle (ACCESS DENIED) because the device has already been opened by the ZWaveHeadlessAdapterApp. (5385500) WORKAROUND: None.
 *	If the device name is set to a value longer than 15 characters, it may cause a boot failure. If this occurs the device will need to be reflashed to recover. (5474244) WORKAROUND: Do not use a device name that is longer than 15 characters.
