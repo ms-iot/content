@@ -15,7 +15,7 @@ lang: en-US
 </ol>
 <h1 class="page-title"> Choose a Board </h1>
 <h2 class="subtext"> Compare the features and functionality of various compatible Windows 10 IoT Core development boards. </h3>
-<h3>Compatible Windows 10 IoT Core Devices</h3>
+<h3>Compatible Windows 10 IoT Core Platforms</h3>
 <hr>
 <p> Currently, Windows 10 IoT Core is supported on the Raspberry Pi 2, MinnowBoard MAX and the Dragonboard 410c. Learn more about the capabilities of each board below, and check out the <a href="http://go.microsoft.com/fwlink/p/?linkID=532948"> supported hardware peripherals </a> for each board to decide what board is right for you.</p>
 <table class="table table-striped maker-kit">
