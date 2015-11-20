@@ -1,21 +1,23 @@
-<h4>Installation</h4>
+<h3>Installation</h3>
 <div class="row">
   <div class="col-md-6 col-sm-12 col-no-padding">
-    <p>This section of the tutorial explains how to setup your Windows 10 device - be it a PC, Surface, or Windows Phone - to remotely control an Arduino using the Windows Remote Arduino Experience app.  This application will allow you to operate all of the most basic abilities of your Arduino device without ever writing a single line of code! You can use digital read & write, analog read (ADC), and PWM by using the buttons provided on the user interface.</p>
+    <p>This section of the tutorial explains how to setup your Windows 10 device - be it a PC, Surface, or Windows Phone - to remotely control an Arduino using the <b>Windows Remote Arduino</b> library.</p>
 
-    <p>Setup is as simple as installing the application on your chosen device.  There are three ways to get the Windows Remote Arduino Experience application running, in order from easiest to most difficult.</p>
+    <p>There are three ways to get started using Windows Remote Arduino, in order from easiest to most difficult.</p>
     <ol class="inline-list">
-      <li><a href="#option-1">Download the Windows Remote Arduino Expriecne app from the Microsoft Store</a></li>
+      <li><a href="#option-1">Download the Windows Remote Arduino Experience app from the Microsoft Store</a></li>
       <li><a href="#option-2">Install the NuGet package</a></li>
       <li><a href="#option-3">Manually add the Windows Remote Arduino project files to a new Visual Studio solution.</a></li>
     </ol>
-    <p>Of these options, downloading the application directly from the Microsoft Store is by far the easiest.</p>
+    <p>Downloading the <b>Windows Remote Arduino Experience</b> app will allow you to operate all of the most basic abilities of your Arduino device without ever writing a single line of code! You can use digital read & write, analog read (ADC), and PWM by using the buttons provided on the user interface. This is a great way to experiment with the features of the library.</p>
+	<p>If you'd like to develop your own apps using Windows Remote Arduino, option 2 will allow you to easily add the library to any Visual Studio solution. Option 3 is more complex, but will allow you to add the latest source code directly to your solution. You will then be able to see and control exactly how the library operates!
   </div>
 </div>
 <h2 id="option-1">Option 1: Download the Windows Remote Arduino Experience app from the Microsoft Store </h2>
 <div class="row">
   <div class="col-md-6 col-sm-12 col-no-padding">
-    <p> Follow <a href="https://www.microsoft.com/store/apps/9nblggh2041m" target="_blank">this link</a> to the Microsoft Store page for the app, download the file, and then install.  You can then open the application to ensure it runs properly.</p>
+    <p> Follow <a href="https://www.microsoft.com/store/apps/9nblggh2041m" target="_blank">this link</a> to the Microsoft Store to download and install the app.  You can then open the application to ensure it runs properly.</p>
+
     <p>You have now finished setting up your Windows device and can progress to the next section.</p>
   </div>
 </div>
@@ -58,7 +60,7 @@
       </div>
       <div class="row">
         <div class="col-md-6 col-sm-12">
-          <li>You'll see I have chosen C# by expanding the "Visual C#" menu. Select the "Windows" option and choose "Blank App (Windows Universal)" or "Blank App (Windows 8.1 Universal)" if you are building for Windows 8.1.</li>
+          <li>You'll see I have chosen C# by expanding the <b>Visual C#</b> menu. Select the <b>Windows</b> option and choose <b>Blank App (Windows Universal)</b>. If you are building for Windows 8.1, you'll want <b>Blank App (Windows 8.1 Universal)</b>.</li>
         </div>
         <div class="col-md-6 col-sm-12">
           <img src="{{site.baseurl}}/images/remote-wiring/create_01.png">
@@ -70,14 +72,14 @@
     <ol class="setup-content-list">
       <div class="row">
         <div class="col-md-6 col-sm-12">
-          <li>Clone the [Windows Remote Arduino GitHub repository](https://github.com/ms-iot/remote-wiring/){:target="_blank"}.  If you're not familiar with git and want to do a proper clone, follow the instructions [here](https://help.github.com/articles/cloning-a-repository/){:target="_blank"}.</li>
+          <li>Clone the <A href="https://github.com/ms-iot/remote-wiring/" target="_blank">Windows Remote Arduino GitHub repository</a>.  If you're not familiar with Git and want to do a proper clone, follow the instructions <a href="https://help.github.com/articles/cloning-a-repository/" target="_blank">here</a>.</li>
         </div>
         <div class="col-md-6 col-sm-12">
         </div>
       </div>
       <div class="row">
         <div class="col-md-6 col-sm-12">
-          <li>Right-click on your solution in the Solution Explorer and select *Add -> Existing Project*.</li>
+          <li>Right-click on your solution in the Solution Explorer and select <b>Add -> Existing Project</b>.</li>
         </div>
         <div class="col-md-6 col-sm-12">
           <img src="{{site.baseurl}}/images/remote-wiring/project_00.png">
@@ -85,7 +87,7 @@
       </div>
       <div class="row">
         <div class="col-md-6 col-sm-12">
-          <li>Navigate to your local copy of the repository. You'll see here that I've cloned it to **C:\git\remote-wiring**, but you can choose a different directory. Then, open the appropriate solution folder for your build environment (either Windows 10 or Windows 8.1).</li>
+          <li>Navigate to your local copy of the repository. You'll see here that I've cloned it to <b>C:\git\remote-wiring</b>, but you can choose a different directory. Then, open the appropriate solution folder for your build environment (either Windows 10 or Windows 8.1).</li>
         </div>
         <div class="col-md-6 col-sm-12">
           <img src="{{site.baseurl}}/images/remote-wiring/compile_00.png">
@@ -93,7 +95,7 @@
       </div>
       <div class="row">
         <div class="col-md-6 col-sm-12">
-          <li>We need to add three projects - Microsoft.Maker.Firmata, Microsoft.Maker.RemoteWiring, and Microsoft.Maker.Serial - to the project solution.  Let's start with the Serial project (Microsoft.Maker.Serial). Open this directory.</li>
+          <li>We need to add three projects - <b>Microsoft.Maker.Firmata</b>, <b>Microsoft.Maker.RemoteWiring</b>, and <b>Microsoft.Maker.Serial</b> - to the project solution.  Let's start with the Serial project (Microsoft.Maker.Serial). Open this directory.</li>
         </div>
         <div class="col-md-6 col-sm-12">
           <img src="{{site.baseurl}}/images/remote-wiring/project_01.png">
@@ -109,7 +111,7 @@
       </div>
       <div class="row">
         <div class="col-md-6 col-sm-12">
-          <li>Repeat the previous steps for all three Microsoft.Maker projects.  Once they've all been added to your solution, right-click on "References" in the original project you made, not one of the newly added Microsoft.Maker projects. Select *Add Reference*.</li>
+          <li>Repeat the previous steps for all three Microsoft.Maker projects.  Once they've all been added to your solution, right-click on <b>References</b> in the original project you made, not one of the newly added Microsoft.Maker projects. Select <b>Add Reference</b>.</li>
         </div>
         <div class="col-md-6 col-sm-12">
           <img src="{{site.baseurl}}/images/remote-wiring/project_05.png">
@@ -117,7 +119,7 @@
       </div>
       <div class="row">
         <div class="col-md-6 col-sm-12">
-          <li>Under the "Projects" tab, select all three of the Microsoft.Maker projects.</li>
+          <li>Under the <b>Projects</b> tab, select all three of the Microsoft.Maker projects.</li>
         </div>
         <div class="col-md-6 col-sm-12">
           <img src="{{site.baseurl}}/images/remote-wiring/project_06.png">
@@ -125,7 +127,7 @@
       </div>
       <div class="row">
         <div class="col-md-6 col-sm-12">
-          <li>Rebuild your solution by selecting *Build -> Rebuild Solution*.</li>
+          <li>Rebuild your solution by selecting <b>Build -> Rebuild Solution</b>.</li>
         </div>
         <div class="col-md-6 col-sm-12">
           <img src="{{site.baseurl}}/images/remote-wiring/compile_03.png">
@@ -133,7 +135,7 @@
       </div>
       <div class="row">
         <div class="col-md-6 col-sm-12">
-          <li>Verify you have added the necessary [Device Capabilities](#device-capabilities) to your project manifest.  Once you've completed the section below, your device will be ready to go!</li>
+          <li>Verify you have added the necessary <a href="#device-capabilities">Device Capabilities</a> to your project manifest.  Once you've completed the section below, your device will be ready to go!</li>
         </div>
         <div class="col-md-6 col-sm-12">
         </div>
@@ -141,20 +143,21 @@
     </ol>
 <div class="row">
   <div class="col-md-6 col-sm-12 col-no-padding">
+	<a name="device-capabilities"></a>
     <h3>Device Capabilities</h3>
 
     <p>Each Windows project will contain a manifest file that must be configured to allow certain permissions, such as Bluetooth and USB connectivity. Fortunately, it is fairly easy to configure these.</p>
 
     <p>You will need to open the package.appxmanifest file of your project by right-clicking the file and selecting the "View Code" option. Then, find the &lt;Capabilities&gt; tag and insert the relevant code snippets from the "Enabling Bluetooth Capabilities", "Enabling Network Capabilities", and "Enabling USB Capabilities" subsections below.</p>
 
-    <p>NOTE: For **Windows 8.1**, you will need to add the following namespace to the top of the XML file, inside the `&lt;Package&gt;` tag.</p>
+    <p>NOTE: For Windows 8.1, you will need to add the following namespace to the top of the XML file, inside the &lt;Package&gt; tag.</p>
 
     {% highlight XML %}
     xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest"
     {% endhighlight %}
 
     <h2>Enabling Bluetooth Capabilities</h2>
-    <p>In order to invoke the Bluetooth capabilities of a WinRT application, you must add the relevant DeviceCapability tags below <b>inside</b> the '&lt;Capabilities&gt;' tag of the 'Package.appxmanifest' file.</p>
+    <p>In order to invoke the Bluetooth capabilities of a WinRT application, you must add the relevant DeviceCapability tags below inside the &lt;Capabilities&gt; tag of the <b>Package.appxmanifest</b> file.</p>
 
     <h3>Windows 10</h3>
   </div>
@@ -180,7 +183,7 @@
 
 
 <h2>Enabling Network Capabilities</h2>
-<p>In order to invoke the network socket capabilities of a WinRT application, you will need to add the following code inside the `&lt;Capabilities&gt;` tag of the `Package.appxmanifest` file.</p>
+<p>In order to invoke the network socket capabilities of a WinRT application, you will need to add the following code inside the &lt;Capabilities&gt; tag of the <b>Package.appxmanifest</b> file.</p>
 
 <h3>Windows 10 and Windows 8.1</h3>
 
@@ -191,7 +194,7 @@
 
 
 <h2>Enabling USB Capabilities</h2>
-<p>In order to invoke the USB capabilities of a WinRT application, you must add the relevant DeviceCapability tags below *inside* the `&lt;Capabilities&gt;` tag of the `Package.appxmanifest` file.</p>
+<p>In order to invoke the USB capabilities of a WinRT application, you must add the relevant DeviceCapability tags below inside the &lt;Capabilities&gt; tag of the <b>Package.appxmanifest</b> file.</p>
 
     Visual Studio 2015 has a known bug in the Manifest Designer (the visual editor for appxmanifest files) that affects the serialcommunication capability.  If
     your appxmanifest adds the serialcommunication capability, modifying your appxmanifest with the designer will corrupt your appxmanifest (the Device xml child
