@@ -94,9 +94,9 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/Glossary.htm">Learn More</a>
                     </div>
 					<div class="col-md-3">
-                        <h3>Web-based Device Management</h3>
-                        <p>Get advanced diagnostics about your machine from the web</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm">Learn More</a>
+                        <h3>Windows Device Portal</h3>
+                        <p>Connect to, control, configure, and get advanced diagnostics about your machine from the web</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm">Learn More</a>
                     </div>
                 </div>
                 <div class="row section-heading">
