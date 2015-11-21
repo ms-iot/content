@@ -96,7 +96,7 @@ lang: zh-CN
 					<div class="col-md-3">
                         <h4>基于 Web 的设备管理</h4>
                         <p>从 Web 获取关于你的计算机的高级诊断信息</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm">了解详细信息</a>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm">了解详细信息</a>
                     </div>
                 </div>
                 <div class="row section-heading">

@@ -7,7 +7,7 @@ lang: zh-CN
 
 ##在 Windows 10 IoT 核心版设备上使用 WiFi
 
-在使用 USB WiFi 适配器的过程中，WiFi 在 Windows 10 IoT 核心版设备上受支持。使用 WiFi 可提供有线连接的所有功能，包括 [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm)、[Powershell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)、[Web 设备管理]({{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm)以及应用程序调试和部署。
+在使用 USB WiFi 适配器的过程中，WiFi 在 Windows 10 IoT 核心版设备上受支持。使用 WiFi 可提供有线连接的所有功能，包括 [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm)、[Powershell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)、[Web 设备管理]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm)以及应用程序调试和部署。
 
 	注意: 插入一个有线的网络将会覆盖无线设置而成为缺省网络接口
 
@@ -46,7 +46,7 @@ lang: zh-CN
 ###选项 3： 基于 Web 的配置
 **先决条件：** 设备已需要通过以太网连接到本地网络，并且插入了 USB WiFi 适配器
 
-如果设备缺少 UI、显示器或输入设备，仍可通过[基于 Web 的管理]({{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm)配置该设备。
+如果设备缺少 UI、显示器或输入设备，仍可通过[基于 Web 的管理]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm)配置该设备。
 
 1. 通过使用 Web 浏览器，导航到 `http://[device_ip]:8080/`，其中 **\[device\_ip\]** 是 Windows 10 IoT 核心版设备的 IP 地址 \(ex: **192.168.1.4**\)。输入用户名的“管理员”，并提供密码。
 2. 单击左侧窗格中的“网络”

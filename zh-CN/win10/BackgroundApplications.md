@@ -70,7 +70,7 @@ deferral.Complete();
 
     **注意：**这不会将后台应用程序配置为在设备启动时启动。
 
-* 通过依次选择“项目”\>“存储”\>“创建应用包”，在 Visual Studio 中创建 AppX。创建 AppX 后，可使用[基于 Web 的设备管理将其部署]({{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm#apps)到 Windows 10 IoT 核心版设备。
+* 通过依次选择“项目”\>“存储”\>“创建应用包”，在 Visual Studio 中创建 AppX。创建 AppX 后，可使用[基于 Web 的设备管理将其部署]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm#apps)到 Windows 10 IoT 核心版设备。
 
 若要调用后台应用程序，可执行以下任一操作：
 
