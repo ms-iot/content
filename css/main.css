@@ -45,7 +45,7 @@ li {
 }
 
 .default-max-width {
-    max-width: 1296px;
+    max-width: 1206px;
     margin: 0 auto;
 }
 
@@ -571,8 +571,6 @@ div.preview {
     }
 
 #device-center-link {
-  width: 26%;
-  min-width:26%;
   margin-top:4px;
   margin-bottom:24px;
 }
@@ -664,6 +662,9 @@ div.preview {
     height:100%;
     width:100%;
   }
+}
+.condensed-list > li{
+  margin-bottom:5px;
 }
 
 #iot_iot_home{
