@@ -7,7 +7,7 @@ lang: en-US
 
 ## I2cTestTool Sample
 
-{% include_relative VerifiedVersion.md %}
+{% include VerifiedVersion.md %}
 
 [View the code on Github](https://github.com/ms-iot/samples/blob/develop/I2cTestTool/main.cpp)
 

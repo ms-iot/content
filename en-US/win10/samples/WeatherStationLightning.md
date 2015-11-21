@@ -7,6 +7,8 @@ lang: en-US
 
 ##Communicate with an I2C sensor using Lightning I2c provider
 
+{% include VerifiedVersion.md %}
+
 This sample demonstrates how to communicate with an I2c device using the Micorosot.IoT.Providers.Lightning.I2cProvider
 
 It's based on the WeatherShield sample shared on [Github](https://github.com/ms-iot/samples/tree/develop/WeatherStation/CS/WeatherStation). And shares the same setup steps and most of the code. The only difference is how the sensor device is initialized in each.

@@ -7,7 +7,7 @@ lang: en-US
 
 #Create A Universal Driver (UD) For Your Windows 10 IoT Core Device
 
-{% include_relative VerifiedVersion.md %}
+{% include VerifiedVersion.md %}
 
 If you are not very familiar with Windows universal drivers yet, we strongly encourage you to start by reading the following materials:
 

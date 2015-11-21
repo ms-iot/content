@@ -7,6 +7,8 @@ lang: en-US
 
 #Weather Station + Lightning
 
+{% include VerifiedVersion.md %}
+
 Learn how to create an Arduino Wiring sketch on Raspberry Pi 2 and set up your own Weather Station using the power of Lightning.  Gathering weather data from your surroundings is as easy as connecting a [Sparkfun Weather Shield](https://www.sparkfun.com/products/12081) to your Raspberry Pi 2 and deploying a UWP app. This shield mainly utilizes two sensors, the [HTU21D Humidity and Temperature Sensor](https://www.sparkfun.com/products/12064) and the [MPL3115A2 Altitude/Pressure Sensor](https://www.sparkfun.com/products/11084), but is also expandable to read wind and rain levels. You can replicate this entire project with the shield itself or with the individual sensors.
 
 Read on to get started!

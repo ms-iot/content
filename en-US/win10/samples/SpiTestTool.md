@@ -7,7 +7,7 @@ lang: en-US
 
 ## SpiTestTool Sample
 
-{% include_relative VerifiedVersion.md %}
+{% include VerifiedVersion.md %}
 
 [View the code on Github](https://github.com/ms-iot/samples/blob/develop/SpiTestTool/main.cpp)
 

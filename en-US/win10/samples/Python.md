@@ -7,7 +7,7 @@ lang: en-US
 
 ##Python 'Hello, World' Sample
 
-{% include_relative VerifiedVersion.md %}
+{% include VerifiedVersion.md %}
 
 ###Set up your PC
 

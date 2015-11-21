@@ -6,6 +6,9 @@ lang: en-US
 ---
 
 # Adafruit RGB Pixel Strip
+
+{% include VerifiedVersion.md %}
+
 Learn how to deploy an Arduino Wiring sketch on Raspberry Pi 2 or Minnowboard Max to control an RGB Pixel Strip.
 
 ![]({{site.baseurl}}/images/RGBPixel.jpg){:width="400"}
