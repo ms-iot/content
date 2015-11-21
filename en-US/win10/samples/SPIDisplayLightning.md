@@ -7,6 +7,8 @@ lang: en-US
 
 ##Communicate with SPI Display using Lightning providers
 
+{% include VerifiedVersion.md %}
+
 This sample demonstrates how to communicate with SPI bus controllers using the Micorosot.IoT.Providers.Lightning.SpiProvider
 
 It's based on the SPI Display sample shared on [SPI Display sample]({{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplay.htm). And shares the same setup steps and most of the code. The only difference is setting the Lightning provider as the default controllers provider.

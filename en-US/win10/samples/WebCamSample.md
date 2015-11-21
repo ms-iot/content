@@ -7,7 +7,7 @@ lang: en-US
   
 #Web Camera Sample  
 
-{% include_relative VerifiedVersion.md %} 
+{% include VerifiedVersion.md %}
 
 We'll create a simple app that initializes a web cam, takes pictures, and records video and audio.  
   

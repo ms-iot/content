@@ -7,7 +7,7 @@ lang: en-US
 
 ##Python Blinky Server Sample
 
-{% include_relative VerifiedVersion.md %}
+{% include VerifiedVersion.md %}
 
 We'll create a simple Python Blinky Web Server app and connect a LED to your Windows 10 IoT Core device (Raspberry Pi 2 or MinnowBoard Max).  Be aware that the GPIO APIs are
 only available on Windows IoT Core, so this sample cannot run on your desktop.

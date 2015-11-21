@@ -7,6 +7,8 @@ lang: en-US
 
 # Stepper Motor
 
+{% include VerifiedVersion.md %}
+
 Learn how to create an Arduino Wiring sketch on Raspberry Pi 2 or Minnowboard Max that controls a stepper motor. The app runs the motor in default forward mode, default reverse mode and small-step forward mode in a loop.
 
 ##Setup

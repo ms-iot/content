@@ -1,6 +1,6 @@
 #IoT Browser Sample
 
-{% include_relative VerifiedVersion.md %}
+{% include VerifiedVersion.md %}
 
 We'll create a simple web browser application for your your Windows 10 IoT Core device.
 

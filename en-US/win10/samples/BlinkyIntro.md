@@ -1,7 +1,7 @@
 {: .thin-header}
 #Blinky Sample
 
-{% include_relative VerifiedVersion.md %}
+{% include VerifiedVersion.md %}
 
 We'll create a simple LED blinking app and connect a LED to your Windows 10 IoT Core device.
 
