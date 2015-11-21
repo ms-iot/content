@@ -34,9 +34,9 @@ Z-Wave is a wireless communications protocol designed to allow devices in the ho
 
 ### To run previously installed
 
-The Z-Wave adapter DSB comes pre-installed for most Windows 10 IOT Core images. In that case, all you need is to launch the sample using SSH or WEBB. 
+The Z-Wave adapter DSB comes pre-installed for most Windows 10 IOT Core images. In that case, all you need is to launch the sample using SSH or Windows Device Portal. 
 
-1. Using [SSH]({{site.baseurl}}/en-US/win10/samples/SSH.htm){:target="_blank"} or [WEBB]({{site.baseurl}}/en-US/win10/tools/Webb.htm){:target="_blank"} run the following command
+1. Using [SSH]({{site.baseurl}}/en-US/win10/samples/SSH.htm){:target="_blank"} or [Windows Device Portal]({{site.baseurl}}/en-US/win10/tools/DevicePortal.htm){:target="_blank"} run the following command
    **iotstartup.exe add headless ZWave**
 2. Reboot the device. The Z-Wave adapter application now will be launched on boot.
 

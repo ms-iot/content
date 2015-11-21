@@ -153,7 +153,7 @@ Wi-Fi adapters are not currently supported.  This will be coming soon.
 	
 	`Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\IoT\webmanagement /v HttpsPort /t REG_DWORD /d <your port number> /f`
 	
-3. Restart the webb.exe process by restarting service (```net stop bwebmanage & net start bwebmanage```) it or rebooting the device.
+3. Restart the process by restarting service (```net stop bwebmanage & net start bwebmanage```) it or rebooting the device.
 
 
 
