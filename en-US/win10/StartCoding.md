@@ -133,7 +133,9 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/EmbeddedMode.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <!-- Placeholder for spacing -->
+                        <h3>Windows 10 IoT Core Pro</h3>
+                        <p>Create a Windows 10 IoT Core Pro image</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/CreateIoTCorePro.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
                         <!-- Placeholder for spacing -->
@@ -362,6 +364,14 @@ lang: en-US
                         <h3>Connecting to a WiFi Network</h3>
                         <p>Learn how to discover and connect to a WiFi network from a UWP app using <code>Windows.Devices.WiFi.WiFiAdapter</code> API</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/WifiConnectSample.htm">WiFi Connect Sample (C#)</a>
+                    </div>
+				  </div>
+
+                <div class="row section-heading">
+                    <div class="col-md-3">
+                        <h3>App Installation Sample</h3>
+                        <p>Learn how to install and deploy an app on Windows IoT Core</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/AppInstall.htm">Learn More</a>
                     </div>
 				  </div>
 
