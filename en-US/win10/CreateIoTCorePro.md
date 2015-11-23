@@ -20,7 +20,7 @@ Step 1: Download Windows 10 IoT Core Pro License File and ICD.
 
 Please go to [Windows 10 IoT Core Commericialization](http://go.microsoft.com/fwlink/?LinkID=614849) and select Windows 10 IoT Core Pro to find a distributor near you and download the Windows 10 IoT Core Pro License File.
 
-[TODO: Instructions to get ICD]
+Please install the Windows ADK and ICD.
 
 Step 2: Create a Provisioning Package with License File using ICD
 -------
@@ -72,13 +72,11 @@ Step 2: Create a Provisioning Package with License File using ICD
 Step 3: Wrap the Provisioning Package in an OEM Package
 -------
 
-Create a OEM Package to wrap the Provisioning Package
-
-[TODO: Provide a link to provisioning package internals]
+Create a OEM Package to wrap the Provisioning Package using PKGGEN tool.
 
 ![Create OEM Package]({{site.baseurl}}/images/CreateIoTCorePro/WrapPpkg.png)
 
 Step 4: Create the Image with ICD/Imggen
 -------
 
-[TODO: Provide Link to Image Creation]
+Use ICD to create a Windows IoT Core Image with your provisioning package.

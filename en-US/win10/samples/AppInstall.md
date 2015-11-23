@@ -26,7 +26,7 @@ To install your appx on an IoT device please do the following:
 		
     You can do this by either:
     
-    - Wrapping the binaries in an OEM Package and include it when you create the image with ICD/Imggen. [TODO: Add link to MSDN doc once live]
+    - Wrapping the binaries in an OEM Package and include it when you create the image with ICD/Imggen.
     - Manually copy the files over to disk.
     
 4. Restart the device and your appx will be automatically installed on boot.
