@@ -141,7 +141,7 @@ Windows 事件跟踪
 1. 启动 powershell 并[连接到设备。]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)
 2. 设置端口：```Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\IoT\webmanagement /v HttpPort /t REG_DWORD /d <your port number>```
 3. 如果要设置 https端口 ```Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\IoT\webmanagement /v UseHttps /t REG_DWORD /d 1 /f```、```Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\IoT\webmanagement /v HttpsPort /t REG_DWORD /d <your port number> /f```
-3. 通过重新启动服务 \(```net stop bwebmanage & net start bwebmanage```\) 或重新启动设备来重新启动 webb.exe 进程。
+3. 通过重新启动服务 \(```net stop webmanagement & net start webmanagement```\) 或重新启动设备来重新启动 webb.exe 进程。
 
 
 
