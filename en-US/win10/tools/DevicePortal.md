@@ -11,7 +11,7 @@ lang: en-US
    Windows Device Portal provides basic configuration and device management capabilities, in addition to advanced diagnostic tools to help you troubleshoot and view the real time performance of your Windows IoT Device. 
    
    Once connected to your local network, every Windows 10 IoT Core device will allow you to access these tools.
-![Webb Home]({{site.baseurl}}/images/deviceportal/deviceportal.png)
+![Device Portal Home]({{site.baseurl}}/images/deviceportal/deviceportal.png)
 
 <hr>
 
@@ -46,7 +46,7 @@ This tool is still in beta. Some of the features are untested or still being wor
 
 ###**Top Toolbar**
     
-The top toolbar allows you to shutdown, reboot and give feedback.![Webb toolbar]({{site.baseurl}}/images/deviceportal/toolbar.png)
+The top toolbar allows you to shutdown, reboot and give feedback.![Device Portal toolbar]({{site.baseurl}}/images/deviceportal/toolbar.png)
 
 * Shutdown - Shuts down the device.
 * Reboot - Reboots the device.
@@ -153,7 +153,7 @@ Wi-Fi adapters are not currently supported.  This will be coming soon.
 	
 	`Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\IoT\webmanagement /v HttpsPort /t REG_DWORD /d <your port number> /f`
 	
-3. Restart the process by restarting service (```net stop bwebmanage & net start bwebmanage```) it or rebooting the device.
+3. Restart the process by restarting service (```net stop webmanagement & net start webmanagement```) it or rebooting the device.
 
 
 
