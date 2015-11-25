@@ -8,7 +8,7 @@ lang: en-US
 #Using WiFi on your Windows 10 IoT Core device
 
 WiFi is supported on Windows 10 IoT Core devices through the use of a USB WiFi adapter. Using WiFi provides all the functionality of a wired connection,
-including [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm), [Powershell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm), [WWindows Device Portal]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm), and application debugging and deployment.
+including [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm), [Powershell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm), [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm), and application debugging and deployment.
 
 	Note: Plugging in a wired Ethernet cable will override WiFi as the default network interface
 

@@ -30,7 +30,7 @@ lang: en-US
     * In the credentials dialog, use the default username and password. Username: `Administrator` Password: `p@ssw0rd`
     * Windows Device Portal should launch and display the web management home screen!
 
- You can also launch the Windows Device Portal tool from the Windows IoT Core Watcher by right clicking on your device, and clicking Launch in browser
+ You can also launch Windows Device Portal tool from the Windows IoT Core Watcher by right clicking on your device, and clicking Launch in browser
 
 <hr>
 	
@@ -46,7 +46,7 @@ This tool is still in beta. Some of the features are untested or still being wor
 
 ###**Top Toolbar**
     
-The top toolbar allows you to shutdown, reboot and give feedback.![Device Portal toolbar]({{site.baseurl}}/images/deviceportal/toolbar.png)
+The top toolbar allows you to shutdown, reboot and give feedback.![Windows Device Portal toolbar]({{site.baseurl}}/images/deviceportal/toolbar.png)
 
 * Shutdown - Shuts down the device.
 * Reboot - Reboots the device.
