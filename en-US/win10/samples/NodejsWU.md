@@ -88,7 +88,7 @@ You have the option to build and deploy your app without using the Visual Studio
 * Navigate to your project.
 * Run `msbuild <Your solution name>.sln /p:configuration=release /p:platform=<arm | x86 | x64 >` (use arm for Raspberry Pi 2 and x86 for MBM).
 * After running the command above, you should see a new folder with the AppX in: \Your project root\AppPackages.
-* Once you have created an AppX, you can use [Web-based device management to deploy it]({{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm#apps) to your Windows 10 IoT Core device.
+* Once you have created an AppX, you can use [Windows Device Portal to deploy it]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm#apps) to your Windows 10 IoT Core device.
 
 
 ### GitHub

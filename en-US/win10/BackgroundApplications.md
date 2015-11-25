@@ -71,7 +71,7 @@ To deploy a Background Application, you can either:
 
     **NOTE:** this will not configure your Background Application to start when the device boots.
 
-* Create an AppX in Visual Studio by selecting Project > Store > Create App Packages.  Once you have created an AppX, you can use [Web-based device management to deploy it]({{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm#apps) to your Windows 10 IoT Core device.
+* Create an AppX in Visual Studio by selecting Project > Store > Create App Packages.  Once you have created an AppX, you can use [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm#apps) to deploy it to your Windows 10 IoT Core device.
 
 To invoke a Background Application, you can either:
 

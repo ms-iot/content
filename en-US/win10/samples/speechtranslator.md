@@ -55,7 +55,7 @@ lang: en-US
 	
 	Basically, the demo works like a phone line. You need to specify the ServerHostName which is where you are going to send data to. That is what 	`Define` is doing here.
 	
-6. Once deployment is done, open the webb url which should be something like this: http://yourdeivceipaddress:8080, under App/Installed APP, choose the `speechtranslator` app, 
+6. Once deployment is done, open the [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm) url which should be something like this: http://yourdeivceipaddress:8080, under App/Installed APP, choose the `speechtranslator` app, 
 	then click start;
 	Do this for the other deivce as well.
 	
