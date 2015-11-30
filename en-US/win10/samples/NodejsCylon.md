@@ -27,6 +27,7 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 * Install Arduino software from [here](https://www.arduino.cc/en/Main/Software).
 * Install [Git for Windows](http://git-scm.com/download/win). Ensure that Git is included in your ‘PATH’ environment variable.
 
+
 ###Upload Firmata to your Arduino
 * Connect the Arduino board with your PC using the USB cable.
 * Open Arduino software.
