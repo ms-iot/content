@@ -17,13 +17,13 @@ lang: en-US
 
 <div class="row">
 	<div class="col-md-6 col-sm-12">
-		<h3 class="divider">Download Windows 10</h3>
+		<h3 class="divider">Download Windows 10 IoT Core</h3>
 		<div class="preview">
 			<p>
-				Download the most recent RTM version of Windows 10 IoT Core. Built for devices, Windows 10 IoT Core enables you to create cool connected projects, amazing applications, and much more. It leverages the Windows development environment you know -- adapted to run on embedded devices like the Raspberry Pi 2.
+				Download the latest version of Windows 10 IoT Core, released as part of an Windows 10 update in November. Built for devices, Windows 10 IoT Core enables you to create cool connected projects, amazing applications, and much more. It leverages the Windows development environment you know -- adapted to run on embedded devices like the Raspberry Pi 2.
 			</p>
 			<p>
-				This RTM version of Windows 10 IoT Core requires Visual Studio 2015 Update 1 for development purposes such as debugging and deploying images.
+				The November update of Windows 10 IoT Core requires Visual Studio 2015 Update 1 for development purposes such as debugging and deploying images.
 			</p>
 		</div>
 	</div>
@@ -38,13 +38,13 @@ lang: en-US
 
 <div class="row">
 	<div class="col-md-6 col-sm-12">
-		<a href="http://go.microsoft.com/fwlink/?LinkId=691711" class="button-blue button-flat"> Download RTM Release for Raspberry Pi 2 </a>
-		<a href="http://go.microsoft.com/fwlink/?LinkId=691712" class="button-blue button-flat"> Download RTM Release for MinnowBoard Max </a>
-		<a href="http://go.microsoft.com/fwlink/?LinkId=691713" class="button-blue button-flat"> Download RTM Release for DragonBoard 410c&#42;</a>
+		<a href="http://go.microsoft.com/fwlink/?LinkId=691711" class="button-blue button-flat"> Download Windows 10 IoT Core for Raspberry Pi 2 </a>
+		<a href="http://go.microsoft.com/fwlink/?LinkId=691712" class="button-blue button-flat"> Download Windows 10 IoT Core for MinnowBoard Max </a>
+		<a href="http://go.microsoft.com/fwlink/?LinkId=691713" class="button-blue button-flat"> Download Windows 10 IoT Core for DragonBoard 410c&#42;</a>
 		<p>
 			&#42;Please see <a href="http://aka.ms/thirdpartynotices" target="_blank"> third party notice for BSP restrictions </a> for DragonBoard 410c.</p>
 		<p>
-			<a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesRTM.htm"> Release notes for RTM. </a>
+			<a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesRTM.htm"> Release notes. </a>
 		</p>
 	</div>
 	<div class="col-md-6 col-sm-12">
