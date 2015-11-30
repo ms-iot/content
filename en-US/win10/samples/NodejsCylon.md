@@ -79,11 +79,16 @@ Steps to get serialport:
 
 * Copy and unzip the file [here](https://github.com/ms-iot/ntvsiot/releases/download/2.0.4/serialport_WinIoT.zip) to your PC.
 * Copy &lt;Unzipped folder&gt;\console\arm\serialport.node to [CylonSample folder path]\node_modules\serialport\build\Release\node-v47-win32-arm\serialport.node  
-  **Note:** node-v14-win32-arm is a new folder you will create.
+  **Note:** node-v47-win32-arm is a new folder you will create.
 
 
 ###Copy the sample to your Raspberry Pi 2
-* Copy the CylonSample folder on your PC to C:\CylonSample on the Raspberry Pi 2.
+Open up an explorer window on your PC and enter **\\\\\<IP address of your device\>\\C$** to access files on your device. The credentials (if you have not changed them) are:
+
+   username: <IP address or device name, default is minwinpc>\Administrator  
+   password: p@ssw0rd  
+
+Copy the CylonSample folder on your PC to C:\CylonSample on the Raspberry Pi 2.
 
 
 ###Set up the connection between your Arduino and Raspberry Pi 2

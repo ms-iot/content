@@ -117,7 +117,12 @@ For more information on writing addons, go to [https://nodejs.org/api/addons.htm
 
 
 ###Copy the files to Windows IoT Core device
-Using an explorer window, create a folder on the device called C:\MemoryStatusSample. Then copy the following files from your PC to this folder:
+Open up an explorer window on your PC and enter **\\\\\<IP address of your device\>\\C$** to access files on your device. The credentials (if you have not changed them) are:
+
+   username: <IP address or device name, default is minwinpc>\Administrator  
+   password: p@ssw0rd  
+
+Create a folder on the device called C:\MemoryStatusSample. Then copy the files you created below from your PC to this folder:
 
 * MemoryStatusAddon.node
 * server.js

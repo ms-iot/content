@@ -62,7 +62,7 @@ Steps to get serialport:
 
 * Copy and unzip the file [here](https://github.com/ms-iot/ntvsiot/releases/download/2.0.4/serialport_WinIoT.zip) to your PC.
 * Copy &lt;Unzipped folder&gt;\uwp\arm\serialport.node to [Cylon project root]\node_modules\serialport\build\Release\node-v47-win32-arm\serialport.node  
-  **Note:** node-v14-win32-arm is a new folder you will create. [Cylon project root] is the the folder created by your new project in the previous section.
+  **Note:** node-v47-win32-arm is a new folder you will create. [Cylon project root] is the the folder created by your new project in the previous section.
 * Copy &lt;Unzipped folder&gt;\uwp\serialport.js to [Cylon project root]\node_modules\serialport\serialport.js.
 
 
