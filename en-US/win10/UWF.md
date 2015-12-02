@@ -25,12 +25,10 @@ More information on UWF is available [here](https://msdn.microsoft.com/en-us/win
 
   ![uwfmgr.exe on Windows 10 IoT Core]({{site.baseurl}}/images/uwfmgr.png)
 
-##How to include UWF in FFU 
-OEMs can include UWF as they configure their FFU following the steps given below.
-*	On your development system, download the IoT CoreKits Installation package from **todo provide link**.
-*	Double click on the ISO. It will automatically mount itself as a virtual drive so you can access the contents.
-*	Install Windows 10 IoT CoreKits **todo verify filename**. When the installation is complete, the `FMFiles` and `OEMInputSamples` will be available under `C:\Program Files(x86)\Windows Kits\10`.
-*	On your development system, download the [UWF Installation package]((http://go.microsoft.com/fwlink/?LinkId=708427).
+##How to include UWF in Your Custom FFU 
+**NOTE:** This process is for OEMs and developers who have the ability to create a custom FFU for their Windows 10 IoT Core device. This assumes that you have installed the OS packages on your development machine and the `FMFiles` and `OEMInputSamples` folders are available under `C:\Program Files(x86)\Windows Kits\10`.
+
+*	On your development system, download the [UWF Installation package](http://go.microsoft.com/fwlink/?LinkId=708427).
 *	Double click on `UWF.MSI`. When the installation is complete, the x86 and ARM packages will be extracted to `C:\Program Files (x86)\Microsoft IoT\UWF`.
 *	Copy `UWF Microsoft-IoTUAP-UnifiedWriteFilter-Package.cab` and `Microsoft-IoTUAP-UnifiedWriteFilter-Package_Lang_en-us.cab` from `C:\Program Files (x86)\Microsoft IoT\UWF\<arch>` to `C:\Program Files (x86)\Windows Kits\10\MSPackages\Retail\<arch>\fre\`.
 *	Create a UWF feature manifest and put it in `C:\Program Files (x86)\Windows Kits\10\FMFiles\<arch>\UWFFM.xml`.
@@ -55,7 +53,7 @@ OEMs can include UWF as they configure their FFU following the steps given below
 *	Create the image\FFU using [ICD imagegen](http://ms-iot.github.io/content/en-US/win10/CreateIoTCorePro.htm).
 
 
-##How to use UWF
+##How to Use UWF
 UWF can be configured using the uwfmgr.exe tool via a Powershell or SSH session.
 * For example, the following combination of commands enable uwfmgr and configure to protect the C drive
 
@@ -67,7 +65,7 @@ UWF can be configured using the uwfmgr.exe tool via a Powershell or SSH session.
 **NOTE:** The device needs to be rebooted to apply any changes to the UWF configuration. 
 * With the exception of some commands listed below, the full list of uwfmgr.exe options is available [here](https://msdn.microsoft.com/en-us/windows/hardware/mt572002). Review the default settings of the Overlay configurations and adapt them per your requirements.
 
-##Protecting Data volume
+##Protecting a Data Volume
 Data volume in IoT Core can be protected using the GUID for the volume. 
 The GUID for the available volumes can be found through the following command
 
