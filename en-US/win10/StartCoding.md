@@ -143,6 +143,24 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/UWF.htm">Learn More</a>
                     </div>
                 </div>
+                <div class="row section-heading">
+                    <div class="col-md-3">
+                        <h3>Securing IoT Devices with TPMs</h3>
+                        <p>Learn about Trusted Platform Modules (TPMs), along with various implementations on IoT Core as well as code samples</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/TPM.htm">Learn More</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>Enabling Secure Boot and BitLocker</h3>
+                        <p>Learn how to secure your IoT device by enabling Secure Boot and BitLocker device encryption on supported IoT Core devices</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/SB_BL.htm">Learn More</a>
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Placeholder for spacing -->
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Placeholder for spacing -->
+                    </div>
+                </div>
             </div>
 
             <div role="tabpanel" class="tab-pane" id="second">
