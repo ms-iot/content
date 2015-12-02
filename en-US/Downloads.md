@@ -49,6 +49,7 @@ lang: en-US
 	</div>
 	<div class="col-md-6 col-sm-12">
 		<a href="http://go.microsoft.com/fwlink/?LinkID=708576" class="button-blue button-flat"> Get IoT Core Dashboard </a>
+    <p> By downloading and using the Windows 10 IoT Core Dashboard you agree to the <a href="http://go.microsoft.com/fwlink/?LinkID=703960"> license terms </a> and <a href="http://go.microsoft.com/fwlink/?LinkId=521839"> privacy statement </a> for Windows 10 IoT Core Dashboard. </p>
     <p>
 			<a href="{{site.baseurl}}/{{page.lang}}/win10/IoTDashboardTroubleshooting.htm"> Need help? Check out the troubleshooting page. </a>
 		</p>
