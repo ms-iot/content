@@ -20,7 +20,7 @@ lang: en-US
 		<h3 class="divider">Download Windows 10 IoT Core</h3>
 		<div class="preview">
 			<p>
-				Download the latest version of Windows 10 IoT Core, released as part of an Windows 10 update in November. Built for devices, Windows 10 IoT Core enables you to create cool connected projects, amazing applications, and much more. It leverages the Windows development environment you know -- adapted to run on embedded devices like the Raspberry Pi 2.
+				Download the November update for Windows 10 IoT Core. Built for devices, Windows 10 IoT Core enables you to create cool connected projects, amazing applications, and much more. It leverages the Windows development environment you know -- adapted to run on embedded devices like the Raspberry Pi 2.
 			</p>
 			<p>
 				The November update of Windows 10 IoT Core requires Visual Studio 2015 Update 1 for development purposes such as debugging and deploying images.
