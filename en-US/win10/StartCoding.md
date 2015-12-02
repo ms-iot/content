@@ -138,7 +138,9 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/CreateIoTCorePro.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <!-- Placeholder for spacing -->
+                        <h3>Universal Write Filter</h3>
+                        <p>Enable a write filter on your OS image</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/UWF.htm">Learn More</a>
                     </div>
                 </div>
             </div>
