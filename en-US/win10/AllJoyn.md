@@ -5,11 +5,17 @@ permalink: /en-US/win10/AllJoyn.htm
 lang: en-US
 ---
 
-# DSB Overview
+# AllJoyn
 
-With AllJoyn gaining more traction in the industry and new devices getting released to consumers it will start to play a significant role in home and device automation. Even with the flexibility the technology gives to device and system manufactures to use a wide range of connection technologies and platforms it still creates its own, AllJoyn only ecosystem.
+AllJoyn empowers the Internet of Things. AllJoyn defines a common protocol for devices and applications to discover and communicate with each other regardless of transport technology, platform or manufacturer.  AllJoyn is an open source standard driven by the [AllSeen Alliance](https://allseenalliance.org/){:target="_blank"}, a cross-industry consortium dedicated to enabling the interoperability of billions of devices, services and applications for the Internet of Things.
 
-Early in 2015 Microsoft introduces the concept of the Device System Bridge (DSB) to address the issue and enable AllJoyn for a wide range of device technologies. Through a DSB device ecosystems such as Zigbee, Z-Wave or even industrial building automations as BACnet were enabled for AllJoyn. This gave application and solution developers the opportunity to use one framework, AllJoyn, to access these devices.
+Microsoft joined the AllSeen Alliance in 2014 and added AllJoyn as a core component in Windows 10. With the built-in [AllJoyn APIs](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.alljoyn.aspx){:target="_blank"}, developers are free to write AllJoyn capable applications that run on any of the Windows 10 devices including PCs, tablets, phones, Xbox as well as devices using Windows IoT Core. In addition to the platform support for AllJoyn, Microsoft released [AllJoyn Studio](https://visualstudiogallery.msdn.microsoft.com/064e58a7-fb56-464b-bed5-f85914c89286){:target="_blank"}, a Visual Studio extension that accelerates AllJoyn development by combining code generation with ready-made application templates. AllJoyn Studio allows developers to benefit from the power of AllJoyn without the hassle of set-up and configuration.
+
+Excited about AllJoyn? Have a look at [this](https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Using-the-AllJoyn--Studio-Extension){:target="_blank"} blog post on how to get started with AllJoyn on Windows.
+
+# Device System Bridge
+
+AllJoyn provides developers with the flexibility to use a wide range of platforms and connection technologies to build  devices for the AllJoyn ecosystem.  However, many device makers have existing device solutions in their portfolios. For these situations, Microsoft created the Device System Bridge (DSB). The DSB adapts non-AllJoyn devices to the AllJoyn eco-system so that the adapted devices can interoperate with AllJoyn as their common language. Microsoft DSB’s support home automation systems such as Zigbee, and Z-Wave, and can even support industrial building automation systems such as BACnet.  Additionally, the source code is available for customization to support other technologies
 
 ## How does a DSB works
 
@@ -25,7 +31,7 @@ The Microsoft proposed DSB architecture consists of three main components, Netwo
 ![AJ_Docu_DSB_Architecture]({{site.baseurl}}/images/AllJoyn/AJ_Docu_DSB_Architecture.png)
 
 __Bridge__
-- Represents each internal device object as AllJoyn device, separate bus attachment for each device 
+- Represents each internal device object as AllJoyn device, separate bus attachment for each device
 - Devices are dynamically added to or removed from the AllJoyn bus
 - Configuration manages device visibility and security
 - Creates bus attachment for bridge and adapter configuration interface
