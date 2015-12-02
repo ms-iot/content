@@ -141,4 +141,7 @@ Trusted Platform Module Detected on Device - Discrete TPM
 
 ##Additional Resources  
 * TPM Base Services - [https://msdn.microsoft.com/en-us/library/windows/desktop/aa446796(v=vs.85).aspx](https://msdn.microsoft.com/en-us/library/windows/desktop/aa446796(v=vs.85).aspx){:target="_blank"}
+* TSS.Net: Enabling Access to the TPM from Managed Code - [http://research.microsoft.com/en-us/downloads/35116857-e544-4003-8e7b-584182dc6833/default.aspx](http://research.microsoft.com/en-us/downloads/35116857-e544-4003-8e7b-584182dc6833/default.aspx){:target="_blank"}
+* TSS.MSR: The TPM Software Stack from Microsoft Research - [https://github.com/DMattoon/TSS.MSR](https://github.com/DMattoon/TSS.MSR){:target="_blank"}
+* TPM Platform Crypto-Provider Toolkit - [http://research.microsoft.com/en-us/downloads/74c45746-24ad-4cb7-ba4b-0c6df2f92d5d/default.aspx](http://research.microsoft.com/en-us/downloads/74c45746-24ad-4cb7-ba4b-0c6df2f92d5d/default.aspx){:target="_blank"}
 
