@@ -11,12 +11,11 @@ The Unified Write Filter (UWF) is a feature to protect physical storage media fr
 More information on UWF is available [here](https://msdn.microsoft.com/en-us/windows/hardware/mt572001).
 
 ##How to Install UWF on a System Running Windows 10 IoT Core
-*	On your development system, download the UWF Installation package from **todo provide link**.
-*	Double click on the ISO **(todo filename)**. It will automatically mount itself as a virtual drive so you can access the contents.
-*	Double click on UWF.MSI **todo verify filename**. When the installation is complete, the x86 and ARM packages will be extracted to `C:\Program Files (x86)\Microsoft IoT\UWF`. Launch [Powershell](http://ms-iot.github.io/content/en-US/win10/samples/PowerShell.htm) or [ssh](http://ms-iot.github.io/content/en-US/win10/samples/SSH.htm) and access your device running Windows 10 IoT Core.
+*	On your development system, download the [UWF Installation package]((http://go.microsoft.com/fwlink/?LinkId=708427).
+*	Double click on `UWF.MSI`. When the installation is complete, the x86 and ARM packages will be extracted to `C:\Program Files (x86)\Microsoft IoT\UWF`. Launch [Powershell](http://ms-iot.github.io/content/en-US/win10/samples/PowerShell.htm) or [ssh](http://ms-iot.github.io/content/en-US/win10/samples/SSH.htm) and access your device running Windows 10 IoT Core.
 * From Powershell or ssh, do the following
-  *	Create a folder name Test on Target machine (e.g. C:\UWFTemp).
-  *	Copy either the x86 or ARM UWF packages (including the lang pack) from your developer machine to `C:\UWFTemp`.
+  *	Create a temporary folder on the target machine (e.g. C:\UWFTemp).
+  *	Based on your target machine architecture, copy either the x86 or ARM UWF packages (including the lang pack) from your developer machine to `C:\UWFTemp`.
   *	Run these commands to install the packages to your IoT device system image:
     * ```ApplyUpdate –stage C:\UWFTemp\Microsoft-IoTUAP-UnifiedWriteFilter-Package.cab```
     * ```ApplyUpdate –stage C:\UWFTemp\Microsoft-IoTUAP-UnifiedWriteFilter-Package_Lang_en-us.cab```
@@ -29,11 +28,10 @@ More information on UWF is available [here](https://msdn.microsoft.com/en-us/win
 ##How to include UWF in FFU 
 OEMs can include UWF as they configure their FFU following the steps given below.
 *	On your development system, download the IoT CoreKits Installation package from **todo provide link**.
-*	Double click on the ISO **todo filename**. It will automatically mount itself as a virtual drive so you can access the contents.
+*	Double click on the ISO. It will automatically mount itself as a virtual drive so you can access the contents.
 *	Install Windows 10 IoT CoreKits **todo verify filename**. When the installation is complete, the `FMFiles` and `OEMInputSamples` will be available under `C:\Program Files(x86)\Windows Kits\10`.
-*	Download the UWF installation package from **todo provide link**.
-*	Double click on the ISO **todo filename**. It will automatically mount itself as a virtual drive so you can access the contents.
-*	Install UWF.MSI **todo verify filename**. When the installation is complete, the x86 and ARM packages will be extracted to `C:\Program Files (x86)\Microsoft IoT\UWF`.
+*	On your development system, download the [UWF Installation package]((http://go.microsoft.com/fwlink/?LinkId=708427).
+*	Double click on `UWF.MSI`. When the installation is complete, the x86 and ARM packages will be extracted to `C:\Program Files (x86)\Microsoft IoT\UWF`.
 *	Copy `UWF Microsoft-IoTUAP-UnifiedWriteFilter-Package.cab` and `Microsoft-IoTUAP-UnifiedWriteFilter-Package_Lang_en-us.cab` from `C:\Program Files (x86)\Microsoft IoT\UWF\<arch>` to `C:\Program Files (x86)\Windows Kits\10\MSPackages\Retail\<arch>\fre\`.
 *	Create a UWF feature manifest and put it in `C:\Program Files (x86)\Windows Kits\10\FMFiles\<arch>\UWFFM.xml`.
 
@@ -54,7 +52,7 @@ OEMs can include UWF as they configure their FFU following the steps given below
 ```
 
 *	Open `C:\Program Files (x86)\Windows Kits\10\OEMInputSamples\MBM(or)RPi2(or)DragonBoard\RetailOEMInput\ProductionOEMInput.xml` and add `%AKROOT%\FMFiles\x86\UWFFM.xml` under `AdditionalFMs`.
-*	Create the image\FFU using ICD imagegen**insert link**.
+*	Create the image\FFU using [ICD imagegen](http://ms-iot.github.io/content/en-US/win10/CreateIoTCorePro.htm).
 
 
 ##How to use UWF
