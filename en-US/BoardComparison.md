@@ -23,7 +23,7 @@ lang: en-US
     <tr>
       <th style="width:25%"></th>
       <th style="width:25%">
-        <img class="comparison-picture" src="{{site.baseurl}}/images/devices/RPI2_0.png">
+        <img class="comparison-picture" src="{{site.baseurl}}/images/devices/RPi2_0.png">
         <h4>Raspberry Pi 2</h4>
         <p>The Raspberry Pi 2 is a low cost, credit-card sized computer that plugs into a computer monitor or TV, and uses a standard keyboard and mouse.  The Raspberry Pi 2 runs Windows 10 IoT Core.</p>
       </th>
@@ -111,12 +111,12 @@ lang: en-US
       <td>
         <p>17 GPIO pins plus specific functions. HAT ID bus.</p>
         <p><a href="{{site.baseurl}}/{{page.lang}}/win10/RPI.htm">Set up your Raspberry Pi 2</a></p>
-        <p><a href="">Use Device Center to get set up</a></p>
+        <p><a href="http://ms-iot.github.io/content/en-US/GetStarted.htm">Get Started with the Windows 10 IoT Core Dashboard</a></p>
       </td>
       <td>
         <p>8 buffered GPIO pins</p>
         <p><a href="{{site.baseurl}}/{{page.lang}}/win10/MBM.htm">Set up your MinnowBoard MAX</a></p>
-        <p><a href="">Use Device Center to get set up</a></p>
+        <p><a href="http://ms-iot.github.io/content/en-US/GetStarted.htm">Get Started with the Windows 10 IoT Core Dashboard</a></p>
       </td>
       <td>
         <p>12 GPIO pins</p>
