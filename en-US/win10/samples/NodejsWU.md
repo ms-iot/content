@@ -91,7 +91,7 @@ You have the option to build and deploy your app without using the Visual Studio
 * Once you have created an AppX, you can use [Windows Device Portal to deploy it]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm#apps) to your Windows 10 IoT Core device.
 * In a PowerShell window connected to your device, run `iotstartup list` to get the full package name of your app.
 * Then run `iotstartup add headless <your package name>`
-* Reboot the device. When the reboot completes, the app will be running.
+* Run `shutdown /r /t 0` to reboot your device. When the reboot completes, the app will be running.
 
 
 ### GitHub

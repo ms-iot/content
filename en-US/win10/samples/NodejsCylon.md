@@ -20,9 +20,6 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 * Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
 * Install Visual Studio 2015 Update 1.
 * Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
-* Install npm v3 (to take advantage of the flat node module dependency structure npm v3 introduced):
-  * Open a command window (as Administrator) and run `npm install -g npm-windows-upgrade`
-  * Then run `npm-windows-upgrade --version:3.3.3 --npm-path:"C:\Program Files (x86)\Node.js (Chakra)"` (Note: Change npm-path if you picked a different installation path for Node.js (Chakra)).
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 * Install Arduino software from [here](https://www.arduino.cc/en/Main/Software).
 * Install [Git for Windows](http://git-scm.com/download/win). Ensure that Git is included in your ‘PATH’ environment variable.
