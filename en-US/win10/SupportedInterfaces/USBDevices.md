@@ -14,8 +14,8 @@ Airlink Wireless N 150 Mini USB Adapter Adapter | MBM               | Airlink101
 Panda PAU06                                     | MBM               | Panda 300Mbps Wireless N USB Adapter with High Gain Antenna                                                    |       |                              |![Verified][MSVerified]{:.MsVerified}
 TP-LINK TL_WN725N                               | RPI2, MBM         | TP-LINK TL-WN725N Wireless N Nano USB Adapter 150Mbps                                                          |       |                              |![Verified][MSVerified]{:.MsVerified}
 NET-DYN USB Wifi Adapter                        | MBM               | Wifi USB Adapter NET-DYN                                                                                       |       |                              |![Verified][MSVerified]{:.MsVerified}
-Realtek 8191 USB Wireless WIFI                  | MBM               | Realtek 8191 300Mbps 802.11n/g/b USB Wireless WIFI LAN Network Card Adapter                                    |       |                              |![Verified][MSVerified]{:.MsVerified}
-Realtek 8192 USB Wireless WIFI                  | MBM               | Realtek Single-Chip IEEE 802.11b/g/n 2T2R WLAN Controller with USB 2.0 Interface                               |       |                              |![Verified][MSVerified]{:.MsVerified}
+Realtek 8191 USB Wireless WIFI                  | RPI2, MBM         | Realtek 8191 300Mbps 802.11n/g/b USB Wireless WIFI LAN Network Card Adapter                                    |       |                              |![Verified][MSVerified]{:.MsVerified}
+Realtek 8192 USB Wireless WIFI                  | RPI2, MBM         | Realtek Single-Chip IEEE 802.11b/g/n 2T2R WLAN Controller with USB 2.0 Interface                               |       |                              |![Verified][MSVerified]{:.MsVerified}
 
 ### Bluetooth Dongles {#Bluetooth-Dongles}
 
