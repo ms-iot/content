@@ -16,6 +16,13 @@ lang: en-US
     <h2 class="subtext">Follow the instructions below to set up or select a board, set up your development environment and get started writing your first app. </h2>
   </div>
 </div>
+<h2>Set up your PC <span class="pull-right"><a id="pc-content-toggle" class="toggle-button" onClick="hideDiv('pc-content')">Hide</a></span></h2>
+
+<hr>
+<div id="pc-content" class="toggle-section">
+{% include_relative SetupPCContent.md %}
+</div>
+
 <h2>Set up a Windows 10 IoT Core Device</h2>
 <hr>
 <div class="row">
@@ -68,16 +75,26 @@ lang: en-US
   </div>
 </div>
 
+<script>
+  function hideDiv(div) {
+    var div = "#" + div,
+        button = div + "-toggle",
+        currentState = $(button)[0].innerHTML;
 
+    $(button)[0].innerHTML = "Show";
 
-
-
-
-
-
-
-
-
+    if(currentState === "Hide") {
+      $(div).toggle('slow');
+    }
+    else
+    {
+      $(".hidden").removeClass("hidden");
+      $(".toggle-section").hide();
+      $(div).toggle('slow');
+      $(button)[0].innerHTML = "Hide";
+    }
+  }
+</script>
 
 
 
