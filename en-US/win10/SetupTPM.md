@@ -15,7 +15,7 @@ Firmware TPM (fTPM) requires special Processor/SoC support and whence fTPM is no
 
         Device Manager -> System Setup -> Security Configuration -> PTT = <Enable>
 
-3. Ensure you do not have C:\Windows\System32\ACPITABL.dat for sTPM/dTPM (delete the file if necessary).
+3. Ensure you do not have C:\Windows\System32\ACPITABL.dat for sTPM/dTPM (resolve the conflict/delete the file if not needed).
 4. Verify you have the right TPM version enabled - run the [TPM 2.0 Tool][1] on the Windows IoT Core device.
 
         C:\>t2t.exe -cap
@@ -137,22 +137,23 @@ Firmware TPM (fTPM) requires special Processor/SoC support and whence fTPM is no
 These instructions are applicable for any dTPM module supported on either MBM or RPi2.
 
 1. Get a discrete TPM module and attach it to the MBM.
-2. Based on your discrete TPM module of choice, identify its matching ACPI table.
-3. Disable fTPM by changing the following UEFI settings:
+2. Based on your discrete TPM module of choice, identify its matching ACPI table [here][3].
+3. Enable testsigning on the device:
+
+        bcdedit /set {current} integrityservices disable
+        bcdedit /set testsigning on
+
+4. Copy the ACPI table to MBM _C:\Windows\System32\ACPITABL.dat_.
+5. Disable fTPM by changing the following UEFI settings:
 
         Device Manager -> System Setup -> Security Configuration -> PTT = <Disable>
 
-4. Enable dTPM by changing the following UEFI settings:
+6. Enable dTPM by changing the following UEFI settings:
 
         Device Manager -> System Setup -> Security Configuration -> Discrete TPM = <Enable>
 
-5. Copy the ACPI table to MBM.
-6. Instructions step 6 (TBD).
-7. Instructions step 7 (TBD).
-8. Reboot when prompted.
-9. Instructions step 9 (TBD).
-10. Reboot when prompted.
-11. Verify you have the right TPM version enabled - run the [TPM 2.0 Tool][1] on the Windows IoT Core device.
+7. Reboot the device.
+8. Verify you have the right TPM version enabled - run the [TPM 2.0 Tool][1] on the Windows IoT Core device.
 
         C:\>t2t.exe -cap
 
@@ -223,7 +224,7 @@ These instructions are applicable for any dTPM module supported on either MBM or
 
         C:\>
 
-12. Verify dTPM is functioning - run the [Urchin Unit Tests][2] on the Windows IoT Core device.  
+9. Verify dTPM is functioning - run the [Urchin Unit Tests][2] on the Windows IoT Core device.  
     You should see several PASS tests (note that some of the functionality may not be supported by the dTPM, so a few error codes are expected):
 
         C:\>urchintest.exe
@@ -281,12 +282,14 @@ Note that **sTPM is intended for development purposes only and does not provide 
 
         Device Manager -> System Setup -> Security Configuration -> Discrete TPM = <Enable>
 
-3. Copy the ACPI table to MBM.
-4. Instructions step 4 (TBD).
-5. Reboot when prompted.
-6. Instructions step 6 (TBD).
-7. Reboot when prompted.
-8. Verify you have the right TPM version enabled - run the [TPM 2.0 Tool][1] on the Windows IoT Core device.
+3. Enable testsigning on the device:
+
+        bcdedit /set {current} integrityservices disable
+        bcdedit /set testsigning on
+
+4. Copy the matching ACPI table from [here][3] to RPi2 _C:\Windows\System32\ACPITABL.dat_.
+5. Reboot the device.
+6. Verify you have the right TPM version enabled - run the [TPM 2.0 Tool][1] on the Windows IoT Core device.
 
         C:\>t2t.exe -cap
         TBS detected 2.0 simulated TPM (sTPM).
@@ -356,7 +359,7 @@ Note that **sTPM is intended for development purposes only and does not provide 
 
         C:\>
 
-9. Verify sTPM is functioning - run the [Urchin Unit Tests][2] on the Windows IoT Core device.  
+7. Verify sTPM is functioning - run the [Urchin Unit Tests][2] on the Windows IoT Core device.  
    You should see several PASS tests (note that some of the functionality is not supported by the sTPM, so a few error codes are expected):
 
         C:\>urchintest.exe
@@ -404,6 +407,7 @@ Note that **sTPM is intended for development purposes only and does not provide 
 
 [1]: https://github.com/ms-iot/security/tree/master/Urchin/T2T "T2T"
 [2]: https://github.com/ms-iot/security/tree/master/Urchin/UrchinTest "UrchinTest"
+[3]: https://github.com/ms-iot/security/tree/master/TPM-ACPITABL "TPM ACPI tables"
 
 *[sTPM]: Software TPM
 *[fTPM]: Firmware TPM
