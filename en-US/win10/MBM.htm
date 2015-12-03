@@ -21,21 +21,14 @@ deviceName: MBM
   </div>
 </div>
 
-<h2>1. Set up your PC <span class="pull-right"><a id="pc-content-toggle" class="toggle-button" onClick="hideDiv('pc-content')">Hide</a></span></h2>
-
-<hr>
-<div id="pc-content" class="toggle-section">
-{% include_relative SetupPCContent.md %}
-</div>
-
-<h2>2. Set up your MinnowBoard MAX <span class="pull-right"><a id="setup-content-toggle" class="toggle-button" onClick="hideDiv('setup-content')">Show</a></span></h2>
+<h2>1. Set up your MinnowBoard MAX <span class="pull-right"><a id="setup-content-toggle" class="toggle-button" onClick="hideDiv('setup-content')">Show</a></span></h2>
 <hr>
 <div id="setup-content" class="toggle-section hidden">
   {% include_relative SetupMBM.htm %}
 </div>
 </ol>
 
-<h2>3. Write your first app: Hello, Blinky!   <span class="pull-right"><a id="app-content-toggle" class="toggle-button" onClick="hideDiv('app-content')">Show</a></span>  </h2>
+<h2>2. Write your first app: Hello, Blinky!   <span class="pull-right"><a id="app-content-toggle" class="toggle-button" onClick="hideDiv('app-content')">Show</a></span>  </h2>
 <hr>
   <div id="app-content" class="toggle-section hidden">
   <div class="row">
@@ -76,7 +69,7 @@ deviceName: MBM
         button = div + "-toggle",
         currentState = $(button)[0].innerHTML;
 
-    for(var i = 0; i < 3 ; i ++){
+    for(var i = 0; i < 2 ; i ++){
         $(".toggle-button")[i].innerHTML = "Show";
       }
 
