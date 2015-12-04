@@ -1,6 +1,5 @@
 <div class="row">
   <div class="col-md-6 col-sm-12 col-no-padding">
-    <p> Have an MBM or RPI2? You can use the Windows 10 IoT Core Dashboard to set up your board. Check it out on our <a href="http://go.microsoft.com/fwlink/p/?linkID=532967"> downloads page</a>. </p>
     <p>To setup your Windows 10 IoT Core development PC, you first need to set up Visual Studio 2015 Update 1 on your PC. Install the following:</p>
     <ol class="inline-list">
       <li><b>Make sure you are running the public release of Windows 10 (version 10.0.10240) or better</b>. You can upgrade from <a href="http://www.microsoft.com/en-us/software-download/windows10" target="_blank">here</a>. If you are already running Windows 10, you can find your current build number by clicking the start button, typing "winver", and hitting enter.</li>
