@@ -201,5 +201,5 @@ In the DisplayNext() method, we traverse through our list of media files obtaine
 
  2. Using the physical keyboard or touch screen, you may specify a new config file to read from at the location you specify.
 
-<img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_settings2.png" height="400">
+<img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_settings1.png" height="400">
 
