@@ -1,7 +1,7 @@
 
 <h3>Hello World speech-enabled LED example</h3>
 <div class="row">
-  <div class="col-md-6 col-sm-12 col-no-padding">
+  <div class="col-md-12 col-sm-12 col-no-padding">
     <p>With your Windows Phone (or potentially any Windows 10 device!) and your Arduino prepared as detailed in the previous steps of this tutorial, you're now ready to try our sample.</p>
     <ol class="inline-list">
       <li>Prepare your Arduino board by hooking up an LED with a resistor to pin 8.</li>
