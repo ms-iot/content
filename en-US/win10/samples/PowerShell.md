@@ -45,7 +45,7 @@ Make sure to follow these steps to correctly configure your device running Windo
         
         Set-Item WSMan:\localhost\Client\TrustedHosts -Value "<machine1-name or IP Address>,<machine2-name or IP Address>"
 	
-* Now you can start a session with you Windows IoT Core device. From you administrator PS console, type:
+* Now you can start a session with your Windows IoT Core device. From you administrator PS console, type:
 
         Enter-PSSession -ComputerName <machine-name or IP Address> -Credential <machine-name or IP Address or localhost>\Administrator
 
