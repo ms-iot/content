@@ -24,6 +24,7 @@ You can review linked terms by pasting the forward link into your browser window
 * Windows 10 IoT Core Public Release
    * Support for servicing updates
    * Serial support on Raspberry Pi for TX and RX pins
+   * Support for Realtek Wi-Fi chipsets (RTL8188EU & RTL8192EU)
    * High performance GPIO driver option with > 100x improvement
    * Support for the QualComm DragonBoard
    * Updated features for Windows Device Portal
