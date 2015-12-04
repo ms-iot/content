@@ -1,7 +1,7 @@
 ---
 layout: default
 title: AllJoyn.JS
-permalink: /en-US/win10/samples/AlljoynJS.htm
+permalink: /en-US/win10/samples/AllJoynJS.htm
 lang: en-US
 ---
 
