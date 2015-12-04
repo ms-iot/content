@@ -29,7 +29,7 @@ It is strongly suggested to have a good grasp on these concepts before continuin
 ![SensorTag Picture]({{site.baseurl}}/images/BLEGatt/SensorTag_with_iPad.jpg)
 <sub>*[Image from Texas Instruments](http://processors.wiki.ti.com/index.php/File:SensorTag_with_iPad.jpg){:target="_blank"}*</sub>
 
-In this sample we will be connecting a Windows IoT Core device with the [Texas Instruments CC2541 SensorTag Development Kit](http://www.ti.com/tool/cc2541dk-sensor){:target="_blank"} via BLE. The SensorTag is a BLE device powered with the TI CC2541 chip, which features a programmable Bluetooth 4.0 stack. On the device are also the following 6 sensors, which are exposing data through the GATT profile:
+In this sample we will be pairing and connecting a Windows IoT Core device with the [Texas Instruments CC2541 SensorTag Development Kit](http://www.ti.com/tool/cc2541dk-sensor){:target="_blank"} via BLE. The SensorTag is a BLE device powered with the TI CC2541 chip, which features a programmable Bluetooth 4.0 stack. On the device are also the following 6 sensors, which are exposing data through the GATT profile:
 
 1. Contactless IR temperature sensor (Texas Instruments TMP006)
 
@@ -42,6 +42,8 @@ In this sample we will be connecting a Windows IoT Core device with the [Texas I
 5. Magnetometer (Freescale MAG3110)
 
 6. Barometric pressure sensor (Epcos T5400)
+
+This sample needs Visual Studio Update 1 with SDK version 10586 to build and run on the latest version of IoT Core OS on the device.
 
 For the sample, we are running firmware version 1.4.1 on the SensorTag. More detailed information about the SensorTag can be found [here](http://processors.wiki.ti.com/index.php/SensorTag_User_Guide){:target="_blank"}.
 
