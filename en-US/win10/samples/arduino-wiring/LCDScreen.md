@@ -23,7 +23,7 @@ You'll also need several wires, a potentiometer, and a 220 ohm resistor.
 
 ##Hardware Setup
 
-There is a really great guide over at Adafruit's website on [hooking up a 16-pin LCD screen](https://learn.adafruit.com/character-lcds). We've described the exact pinouts we used in our code directly below, as well as provided a fritzing diagram. For reference, we've also included a pinout diagram of the RPi2 GPIO header and the LCD screen. If you need additional help with your LCD screen, there is a really great 
+There is a fritzing diagram below, as well as a table of the exact pinouts we used in our code. For reference, we've also included a pinout diagram of the RPi2 GPIO header and the LCD screen. If you need additional help with your LCD screen, there is a really great guide over at Adafruit's website on [hooking up a 16-pin LCD screen](https://learn.adafruit.com/character-lcds).
 
 ###Fritzing Diagram
 
