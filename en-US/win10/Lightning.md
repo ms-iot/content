@@ -21,9 +21,9 @@ A set of Windows 10 IoT Core UWP providers for GPIO, SPI and I2C busses can be u
 
 Only very few code changes are needed to enable using the library in existing apps. To start using the provider library in your apps, refer to the [Microsoft.IoT.Lightning.Providers library and sample code]({{site.baseurl}}/{{page.lang}}/win10/LightningProviders.htm).
 
-##Windows 10 IoT Core Insider Preview required
-Arduino Wiring and Lightning providers support is currently included only in the Insider Preview builds for Windows 10 IoT Core.
+##Windows 10 IoT Core Required
+Arduino Wiring and Lightning providers support is currently included only in Windows 10 IoT Core.
 
-You can download a Windows 10 IoT Core image from our [downloads page]({{site.baseurl}}/{{page.lang}}/Downloads.htm ). Click on "Download Insider Preview" for your device type.
+You can download a Windows 10 IoT Core image from our [downloads page]({{site.baseurl}}/{{page.lang}}/Downloads.htm ). Click on "Download Windows 10 IoT Core" for your device type or "Get IoT Core Dashboard".
 
 Both Raspberry Pi2 and Minnowboard Max are currently supported.
