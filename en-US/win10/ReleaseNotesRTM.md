@@ -113,9 +113,9 @@ Windows Registry Editor Version 5.00
  4. Copy ftdi-fix.reg to your device and run `reg import ftdi-fix.reg` to apply the registry keys.
  5. Unplug and replug the FTDI device.
  
- ### <a name="wifidirect"></a>WiFi Direct limitations on IoTCore
- 
- 1.	The IoTCore device has to be the connecting device – it will not work as the advertising device with another device initiating the connection.  
- 2.	Advanced pairing must be used.  The sample app demonstrates how to use the advanced pairing API’s to pair the devices prior to connecting.
- 3.	Not all wireless adapters support WiFi direct. We have tested and validated that the “Realtek RTL8188EU Wireless Lan 802.11n USB 2.0 Network adapter” works, but other adapters may not be supported.
+### <a name="wifidirect"></a>WiFi Direct limitations on IoTCore
+
+1. The IoTCore device has to be the connecting device – it will not work as the advertising device with another device initiating the connection.  
+2. Advanced pairing must be used.  The sample app demonstrates how to use the advanced pairing API’s to pair the devices prior to connecting.
+3. Not all wireless adapters support WiFi direct. We have tested and validated that the “Realtek RTL8188EU Wireless Lan 802.11n USB 2.0 Network adapter” works, but other adapters may not be supported.
  
