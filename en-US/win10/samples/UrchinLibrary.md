@@ -24,7 +24,7 @@ This is a spec-compliant library derived from the TPM 2.0 reference implementati
 **Create a new C++ project.**  
 File -> New -> Project -> Visual C++ -> Empty Project
 
-![Create New Project Image]({{site.baseurl}}/images/TPM/CreateNewProject.png)
+![Create New Project Image]({{site.baseurl}}/Resources/images/TPM/CreateNewProject.png)
 
 **Add a new header file (TPMSample.h) to the project.**  
 Include the headers of the Urchin Library.
@@ -49,25 +49,25 @@ Include the header file you just created.
 **In the "Configuration Manager" create a new project configuration (ARM).**  
 Build -> Configuration Manager
 
-![Project Configuration Image]({{site.baseurl}}/images/TPM/CreateNewConfiguration.png)
+![Project Configuration Image]({{site.baseurl}}/Resources/images/TPM/CreateNewConfiguration.png)
 
-![Project Configuration Image]({{site.baseurl}}/images/TPM/NewProjectPlatform.png)
+![Project Configuration Image]({{site.baseurl}}/Resources/images/TPM/NewProjectPlatform.png)
 
 
 **In the project properties...**  
 Change the "Target Platform Version" to 10.0.10240.0.
 
-![Project Properties Image]({{site.baseurl}}/images/TPM/TargetPlatformVesion.png)
+![Project Properties Image]({{site.baseurl}}/Resources/images/TPM/TargetPlatformVesion.png)
 
 Update the path of the "Additional Include Directories" so that the header files of the Urchin library are on the path.  
 *$(SolutionDir)\Urchin;%(AdditionalIncludeDirectories)*
 
-![Project Properties Image]({{site.baseurl}}/images/TPM/AdditionalIncludeDirectories.png)
+![Project Properties Image]({{site.baseurl}}/Resources/images/TPM/AdditionalIncludeDirectories.png)
 
 Update the "Additional Dependencies" so that the linker finds the Urchin library.  
 *AdvAPI32.lib;BCrypt.lib;NCrypt.lib;Crypt32.lib;Tbs.lib;$(SolutionDir)\Urchin\arm\Urchin.lib;$(SolutionDir)\Urchin\arm\Platform.lib;%(AdditionalDependencies)*
 
-![Project Properties Image]({{site.baseurl}}/images/TPM/AdditionalDependencies.png)
+![Project Properties Image]({{site.baseurl}}/Resources/images/TPM/AdditionalDependencies.png)
 
 **Write your code that utilizes the definitions in the Urchin library exposed through UrchinLib.lib and UrchinPlatform.h.**  
 You can refer to the [TPM 2.0 Tool][2] and the [Unit Tests][3] which accompany the library.

@@ -9,7 +9,7 @@
     </div>
     <div class="col-md-6 col-sm-12">
       <p>And here is the JP1 connector on the MBM:</p>
-      <img src="{{site.baseurl}}/images/PinMappings/MBM_Pinout.png" height="400">
+      <img src="{{site.baseurl}}/Resources/images/PinMappings/MBM_Pinout.png" height="400">
     </div>
   </div>
 </ol>
@@ -18,7 +18,7 @@
     <p>Here is an example of what your breadboard might look like with the circuit assembled:</p>
   </div>
   <div class="col-md-6 col-sm-12">
-    <img src="{{site.baseurl}}/images/Blinky/breadboard_assembled.png" height="500">
+    <img src="{{site.baseurl}}/Resources/images/Blinky/breadboard_assembled.png" height="500">
     <sub>*Image made with <a href="http://fritzing.org/" target="_blank">Fritzing</a>*</sub>
   </div>
 </div>

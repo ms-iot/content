@@ -29,7 +29,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
     <h2 class="text-center thin-header">Click <a target="_blank" href="https://www.hackster.io/windows-iot/internet-connected-led">here</a> to get started!</h2>
   </div>
   <div class="col-md-6 col-sm-12">
-    <img src="{{site.baseurl}}/images/AdafruitStarterPack/WebBlinkyNoMap.jpg">
+    <img src="{{site.baseurl}}/Resources/images/AdafruitStarterPack/WebBlinkyNoMap.jpg">
   </div>
 </div>
 <div class="row lineTop">

@@ -69,13 +69,13 @@ deviceName: Galileo
                 <li>
                     Click to Tools in the navigation bar and go to "Extensions and Updates"
                     <br/>
-                    <img src="{{site.baseurl}}/images/InstallNugetPackageManagerStepOne.png">
+                    <img src="{{site.baseurl}}/Resources/images/InstallNugetPackageManagerStepOne.png">
                 </li>
                 <br/>
                 <li>
                     Then click on the Online tab and Search for "NuGet Package Manager".
                     <br/>
-                    <img src="{{site.baseurl}}/images/InstallNugetPackageManagerStepTwo.png">
+                    <img src="{{site.baseurl}}/Resources/images/InstallNugetPackageManagerStepTwo.png">
                 </li>
                 <li>
                     Download and install it.
@@ -114,13 +114,13 @@ deviceName: Galileo
                 <li>
                     Click to Tools in the navigation bar and go to "Extensions and Updates"
                     <br/>
-                    <img src="{{site.baseurl}}/images/InstallNugetPackageManagerStepOne.png">
+                    <img src="{{site.baseurl}}/Resources/images/InstallNugetPackageManagerStepOne.png">
                 </li>
                 <br/>
                 <li>
                     Then click on the Online tab and Search for "NuGet Package Manager".
                     <br/>
-                    <img src="{{site.baseurl}}/images/InstallNugetPackageManagerStepTwo.png">
+                    <img src="{{site.baseurl}}/Resources/images/InstallNugetPackageManagerStepTwo.png">
                 </li>
                 <li>
                     Download and install it.
@@ -161,7 +161,7 @@ deviceName: Galileo
   <ol>
     <li>On your desktop machine, go to the Control Panel and open:<br/>(if in icon view) Programs and Features<br/> or<br/> (if in category view) Programs -> Programs and Features.</li>
     <li>In the left hand column, select "Turn Windows Features on or off"</li>
-    <li>In the list, "Telnet Client" needs to be checked.<br/><img src="{{site.baseurl}}/images/Telnet.png"/></li>
+    <li>In the list, "Telnet Client" needs to be checked.<br/><img src="{{site.baseurl}}/Resources/images/Telnet.png"/></li>
     <li>Click "Ok"</li>
     <li>Restart your PC</li>
   </ol>

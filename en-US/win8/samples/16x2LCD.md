@@ -20,7 +20,7 @@ Learn how to use the 16x2 LCD shield with the Arduino Liquid Crystal Library.
 # Hooking up Components
 If you are using the 16x2 LCD listed above, follow the diagram below:
 
-![16x2]({{site.baseurl}}/images/16x2LCDDiagram.png)
+![16x2]({{site.baseurl}}/Resources/images/16x2LCDDiagram.png)
 
 # Create a new project
 

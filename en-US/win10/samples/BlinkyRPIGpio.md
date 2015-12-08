@@ -10,7 +10,7 @@
     </div>
     <div class="col-md-6 col-sm-12">
       <p>Here is the pinout of the RPi2:</p>
-      <img src="{{site.baseurl}}/images/PinMappings/RP2_Pinout.png" height="400">
+      <img src="{{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png" height="400">
     </div>
   </div>
 </ol>
@@ -19,7 +19,7 @@
     <p>Here is an example of what your breadboard might look like with the circuit assembled:</p>
   </div>
   <div class="col-md-6 col-sm-12">
-    <img src="{{site.baseurl}}/images/Blinky/breadboard_assembled_rpi2_kit.jpg" height="500">
+    <img src="{{site.baseurl}}/Resources/images/Blinky/breadboard_assembled_rpi2_kit.jpg" height="500">
     <sub>*Image made with <a href="http://fritzing.org/" target="_blank">Fritzing</a>*</sub>
   </div>
 </div>

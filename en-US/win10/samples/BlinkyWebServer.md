@@ -203,4 +203,4 @@ of the board and the port (something like http://123.456.789.0:8000 where you re
 of the device the server has been deployed to). The webserver client can then be used to toggle the LED on and off
 (see screenshot below).
 
-![WebServer Client]({{site.baseurl}}/images/WebServer/webserver_client.png)
+![WebServer Client]({{site.baseurl}}/Resources/images/WebServer/webserver_client.png)

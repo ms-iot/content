@@ -15,6 +15,6 @@
     </ol>
   </div>
   <div class="col-md-6 col-sm-12">
-    <img src="{{site.baseurl}}/images/setup-pc.png">
+    <img src="{{site.baseurl}}/Resources/images/setup-pc.png">
   </div>
 </div>

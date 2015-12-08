@@ -24,7 +24,7 @@ The basic flow is as follows:
 
 The following workflow diagram illustrates this process:
 
-![AllJoyn CodeGen Diagram]({{site.baseurl}}/images/AllJoyn/alljoyncodegen.png)
+![AllJoyn CodeGen Diagram]({{site.baseurl}}/Resources/images/AllJoyn/alljoyncodegen.png)
 
 ###Running from the command line
 

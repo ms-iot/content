@@ -15,21 +15,21 @@ Make sure to follow these steps to correctly configure your device running Windo
 ###Initiating a PowerShell (PS) Session
 * To start a PS session with your Windows 10 IoT Core device, you'll first need to create a trust relationship between your host PC and your device. After booting your Windows IoT Core device, an IP address will be shown on the screen attached to the device:
 
-    ![DefaultApp on Windows 10 IoT Core]({{site.baseurl}}/images/DefaultApp.png)
+    ![DefaultApp on Windows 10 IoT Core]({{site.baseurl}}/Resources/images/DefaultApp.png)
 
     You can find the same information on the Windows 10 IoT Core Watcher utility.
 
 * Launch an administrator PS console on your local PC. The easiest way to do this is to type 'powershell' in the "Search the web and Windows" textbox near the Windows Start Menu: Windows will find PowerShell on your machine:
 
-    ![Find PowerShell]({{site.baseurl}}/images/powershell/start-ps.png)
+    ![Find PowerShell]({{site.baseurl}}/Resources/images/powershell/start-ps.png)
 
     To start PS as an administrator, right click on the "Windows PowerShell" entry and select "Run as administrator":
 
-    ![Run PowerShell as administrator]({{site.baseurl}}/images/powershell/start-ps2.png)
+    ![Run PowerShell as administrator]({{site.baseurl}}/Resources/images/powershell/start-ps2.png)
 
     Now you should see the PS console:
 
-    ![PowerShell console]({{site.baseurl}}/images/powershell/ps.PNG)
+    ![PowerShell console]({{site.baseurl}}/Resources/images/powershell/ps.PNG)
 
 	**NOTE:** you may need to start the WinRM service on your desktop to enable remote connections. From the PS console type the following command:
 
@@ -55,7 +55,7 @@ Make sure to follow these steps to correctly configure your device running Windo
 
     If you successfully connected to the device, you should see the IP address of your device before the prompt.
 
-    ![PowerShell console]({{site.baseurl}}/images/powershell/ps_device.png)
+    ![PowerShell console]({{site.baseurl}}/Resources/images/powershell/ps_device.png)
 
 * **Update account password:**
 

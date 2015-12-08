@@ -15,7 +15,7 @@
     </div>
     <div class="col-md-6 col-sm-12">
       <p>For reference, the functionality of the low-speed expansion connector is outlined in the following diagram:</p>
-      <img src="{{site.baseurl}}/images/PinMappings/DB_Pinout.png">
+      <img src="{{site.baseurl}}/Resources/images/PinMappings/DB_Pinout.png">
     </div>
   </div>
   <div class="row">
@@ -28,7 +28,7 @@
     </div>
     <div class="col-md-6 col-sm-12">
       <p>Here is an illustration of what your breadboard might look like with the circuit assembled:</p>
-      <img src="{{site.baseurl}}/images/Blinky/breadboard_assembled_db_kit.png">
+      <img src="{{site.baseurl}}/Resources/images/Blinky/breadboard_assembled_db_kit.png">
       <sub>Image made with <a href="http://fritzing.org/">Fritzing</a></sub>
     </div>
   </div>

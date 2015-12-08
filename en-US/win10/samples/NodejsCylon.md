@@ -93,7 +93,7 @@ Copy the CylonSample folder on your PC to C:\CylonSample on the Raspberry Pi 2.
 Connect your Arduino and Raspberry Pi 2 with the USB cable. When you do, if your Raspberry Pi 2 is connected to a monitor, 
 you should see the device getting recognized like in the image below:
 
-![Arduino Start Screen]({{site.baseurl}}/images/Nodejs/arduino-startscreen.jpg)
+![Arduino Start Screen]({{site.baseurl}}/Resources/images/Nodejs/arduino-startscreen.jpg)
 
 We also need to assign a port name to (e.g. 'COM5') to the Arduino. Follow these steps to do this:
 
@@ -111,7 +111,7 @@ We also need to assign a port name to (e.g. 'COM5') to the Arduino. Follow these
 In PowerShell, run the command `& 'C:\Node.js (Chakra)\Node.exe' C:\CylonSample\cylonsample.js`.
 After running the command, the LED (shown with the arrow in the picture below) on the Arduino should start blinking every 1 second.
 
-![Arduino RPi2]({{site.baseurl}}/images/Nodejs/arduino-rpi2.jpg)
+![Arduino RPi2]({{site.baseurl}}/Resources/images/Nodejs/arduino-rpi2.jpg)
 
 
 ### GitHub

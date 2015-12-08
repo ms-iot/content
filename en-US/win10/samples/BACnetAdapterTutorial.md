@@ -32,7 +32,7 @@ See [BACnet standard](http://www.bacnet.org){:target="_blank"} for more informat
 
 > The BACnet hardware described above has been used to control and expose on AllJoyn two occupancy sensors, two temperature sensors, two temperature controllers and one body controller.
 
-![BACnetHardware]({{site.baseurl}}/images/AllJoyn/BACnetHardware.jpg)
+![BACnetHardware]({{site.baseurl}}/Resources/images/AllJoyn/BACnetHardware.jpg)
 
 ## Set up steps
 1. Install the required tools and driver listed in the prerequisites on your Windows 10 desktop
@@ -48,7 +48,7 @@ See instruction [here]({{site.baseurl}}/en-US/win10/SetupRPI.htm){:target="_blan
 Set up loopback exception:
 
  1. Find the installation folder of the modern application for which you want to enable the loopback exemption. It is located at 'C:\Users\*username*\AppData\Local\Packages'
- ![LoopBackException]({{site.baseurl}}/images/AllJoyn/BACnetLoopBackException.png)
+ ![LoopBackException]({{site.baseurl}}/Resources/images/AllJoyn/BACnetLoopBackException.png)
  2. Copy the installation folder name which is also the application ID.
  3. Run the following command from an elevated command prompt:
 `CheckNetIsolation LoopbackExempt -a -n=installation-folder-name`
@@ -68,19 +68,19 @@ BACnet adapter is written in managed C++. It uses the [open BACnet stack](http:/
 - Each BACnet object of a BACnet device is exposed as an AllJoyn Bus object
 - Each BACnet property of a BACnet object is exposed as an AllJoyn Property. Note that all properties of a BACnet object are grouped under a single AllJoyn interface.
 
-![BACnetToAllJoynMap]({{site.baseurl}}/images/AllJoyn/BACnetToAllJoynMap.png)
+![BACnetToAllJoynMap]({{site.baseurl}}/Resources/images/AllJoyn/BACnetToAllJoynMap.png)
 
 ### AllJoyn Explorer view of a set of BACnet devices
 
-![BACnetAJX1]({{site.baseurl}}/images/AllJoyn/BACnetAJX1.png)
+![BACnetAJX1]({{site.baseurl}}/Resources/images/AllJoyn/BACnetAJX1.png)
 
 After selecting BACnet001 VLC-2 device, we can see all the objects the device exposes.
 
-![BACnetAJX2]({{site.baseurl}}/images/AllJoyn/BACnetAJX2.png)
+![BACnetAJX2]({{site.baseurl}}/Resources/images/AllJoyn/BACnetAJX2.png)
 
 ### Class overview
 
-![ClassMap]({{site.baseurl}}/images/AllJoyn/BACnetClassMap.png)
+![ClassMap]({{site.baseurl}}/Resources/images/AllJoyn/BACnetClassMap.png)
 
 The __BACnetAdapter__ class is the main class of BACnet adapter. This class derives from __IAdapter__ (BridgeRT interface) and contains a collection of __BACnetAdapterDevice__ instances and an instance of the __BACnetInterface__ class. BACnetAdapter class uses __BACnetAdapterSignal__ to signal device arrival or removal.
 

@@ -42,11 +42,11 @@ Start Visual Studio 2015 and create a new project (File \| New Project...). In t
 
 Select the template `Basic Node.js Cylon Application (Universal Windows)`
 
-![Node.js Cylon Project Dialog]({{site.baseurl}}/images/Nodejs/nodejswucylon-newprojectdialog.png)
+![Node.js Cylon Project Dialog]({{site.baseurl}}/Resources/images/Nodejs/nodejswucylon-newprojectdialog.png)
 
 You may get a prompt (shown below) to run npm dedupe. If you do, make sure to run it.
 
-![npm dedupe dialog]({{site.baseurl}}/images/Nodejs/npm-dedupe-dialog.PNG)
+![npm dedupe dialog]({{site.baseurl}}/Resources/images/Nodejs/npm-dedupe-dialog.PNG)
 
 If you don't get the prompt, you still need to run npm dedupe to avoid node module paths that are too long for deployment on the Raspberry Pi 2.
 To do this, right click on the node_modules folder in the Solution Explorer window. Then click on "Open Command Prompt Here...". 
@@ -71,7 +71,7 @@ Steps to get serialport:
 Connect your Arduino and Raspberry Pi 2 with the USB cable. If your Raspberry Pi 2 is connected to a monitor, 
 you should see the device getting recognized as shown in the image below (the name of the device may be "Arduino Uno" instead of "USB Serial Device"):
 
-![Arduino Uno Start Screen]({{site.baseurl}}/images/Nodejs/arduino-uno-startscreen.png)
+![Arduino Uno Start Screen]({{site.baseurl}}/Resources/images/Nodejs/arduino-uno-startscreen.png)
 
 Now we need to get the string that identifies the Arduino and will be used in sample code. Follow these steps to do this:
 
@@ -114,7 +114,7 @@ Cylon.robot({
 
 * Attach the servo to the the arduino board using pin 3 (you can also change the pin number in app.js). In the setup shown below, the signal wire is connected to pin 3 and the power source is the Raspberry Pi 2.
 
-![Arduino Servo RPi2]({{site.baseurl}}/images/Nodejs/arduino-servo-rpi2.png)
+![Arduino Servo RPi2]({{site.baseurl}}/Resources/images/Nodejs/arduino-servo-rpi2.png)
 
 
 ###Deploy the app to your Raspberry Pi 2

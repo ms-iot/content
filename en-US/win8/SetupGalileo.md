@@ -89,11 +89,11 @@ Connecting the Galileo directly to your computer will allow you to communicate w
 1. Plug the power cord in
 1. You should see activity on the microSD light as it boots. The LED is circled in green in the following pictures.
 
-<!--![](/images/SDLed.png)-->
-<img class="device-images" src="{{site.baseurl}}/images/SDLed.png">
+<!--![](/Resources/images/SDLed.png)-->
+<img class="device-images" src="{{site.baseurl}}/Resources/images/SDLed.png">
 
-<!--![](/images/IntelGalileoGen2.jpg)-->
-<img class="device-images" src="{{site.baseurl}}/images/IntelGalileoGen2.jpg">
+<!--![](/Resources/images/IntelGalileoGen2.jpg)-->
+<img class="device-images" src="{{site.baseurl}}/Resources/images/IntelGalileoGen2.jpg">
 
 NOTE:
 : Windows on Galileo can take about 2 minutes to boot. During this time you will see the microSD activity LED flashing rapidly. Once it stops flashing for a few seconds, the Galileo is fully booted.
@@ -109,8 +109,8 @@ Username: Administrator
 Password: admin
 ~~~
 
-<!--![](/images/TelnetLogin.png)-->
-<img class="device-images" src="{{site.baseurl}}/images/TelnetLogin.png">
+<!--![](/Resources/images/TelnetLogin.png)-->
+<img class="device-images" src="{{site.baseurl}}/Resources/images/TelnetLogin.png">
 
 ## Shutting down the Galileo
 Before you unplug the power from the Galileo, it is advisable to gracefully shut it down. To do this:

@@ -7,7 +7,7 @@ lang: en-US
 
 ##Raspberry Pi 2 Pin Mappings
 
-![RPi2 Pin Header]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![RPi2 Pin Header]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
 <sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
 

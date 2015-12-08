@@ -13,7 +13,7 @@
       <li>Next, in the Visual Studio toolbar, click on the <code>Local Machine</code> dropdown and select <code>Remote Machine</code></li>
     </div>
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/images/AppDeployment/cs-remote-machine-debugging.png">
+      <img src="{{site.baseurl}}/Resources/images/AppDeployment/cs-remote-machine-debugging.png">
     </div>
   </div>
   <div class="row">
@@ -22,7 +22,7 @@
 Otherwise, use the IP address of your Windows IoT Core device. After entering the device name/IP select <code>Universal (Unencrypted Protocol)</code> Authentication Mode, then click <b>Select</b>.</li>
     </div>
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/images/AppDeployment/cs-remote-connections.PNG">
+      <img src="{{site.baseurl}}/Resources/images/AppDeployment/cs-remote-connections.PNG">
     </div>
   </div>
   <div class="row">
@@ -30,7 +30,7 @@ Otherwise, use the IP address of your Windows IoT Core device. After entering th
       <li> You can verify or modify these values by navigating to the project properties (select <b>Properties</b> in the Solution Explorer) and choosing the <code>Debug</code> tab on the left:</li>
     </div>
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/images/AppDeployment/cs-debug-project-properties.PNG">
+      <img src="{{site.baseurl}}/Resources/images/AppDeployment/cs-debug-project-properties.PNG">
     </div>
   </div>
 </ol>

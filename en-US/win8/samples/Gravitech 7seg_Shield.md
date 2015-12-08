@@ -13,7 +13,7 @@ lang: en-US
 # Gravitech 7-Segment Shield
 Learn how to use a Gravitech 7-Segment Shield.
 
-![]({{site.baseurl}}/images/Gravitech_7seg_shield.jpg){:width="400"}
+![]({{site.baseurl}}/Resources/images/Gravitech_7seg_shield.jpg){:width="400"}
 
 # Required Components
 * [Gravitech 7-Segment Shield](http://www.gravitech.us/7segmentshield.html){:target="_blank"}

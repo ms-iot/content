@@ -23,7 +23,7 @@ More information on UWF is available [here](https://msdn.microsoft.com/en-us/win
 *             The Device will boot to the Update OS, install UWF features, and reboot to the MainOS.
 *             Once the device comes back to the MainOS, the UWF feature is ready and available to use. This can be verified by typing ```uwfmgr.exe``` into your Powershell or SSH window.
 
-  ![uwfmgr.exe on Windows 10 IoT Core]({{site.baseurl}}/images/uwfmgr.png)
+  ![uwfmgr.exe on Windows 10 IoT Core]({{site.baseurl}}/Resources/images/uwfmgr.png)
 
 
 ##How to include UWF in Your Custom FFU 
@@ -75,7 +75,7 @@ The GUID for the available volumes can be found through the following command
   `uwfmgr.exe volume protect \\?\Volume {GUID}`
 
 
-  ![Protecting Volume on Windows 10 IoT Core]({{site.baseurl}}/images/uwfmgr_protect.png)
+  ![Protecting Volume on Windows 10 IoT Core]({{site.baseurl}}/Resources/images/uwfmgr_protect.png)
 
 ##Unsupported uwfmgr.exe Commands
 Note uwfmgr.exe on Windows 10 IoT Core does not support commands listed below.

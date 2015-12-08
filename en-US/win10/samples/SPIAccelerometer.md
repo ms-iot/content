@@ -28,7 +28,7 @@ You'll need a few components:
 
 Visit the **Raspberry Pi 2/MinnowBoard Max** sections below depending on which device you have:
 
-![Electrical Components]({{site.baseurl}}/images/SPIAccelerometer/components.png)
+![Electrical Components]({{site.baseurl}}/Resources/images/SPIAccelerometer/components.png)
 
 ####Raspberry Pi 2
 If you have a Raspberry Pi 2, we need to hook up power, ground, and the SPI lines to the accelerometer.
@@ -49,13 +49,13 @@ The ADXL345 breakout board has 8 IO pins, connect them as follows:
 
 Here are the connections shown on a breadboard:
 
-![Breadboard connections]({{site.baseurl}}/images/SPIAccelerometer/breadboard_assembled_rpi2.png)
+![Breadboard connections]({{site.baseurl}}/Resources/images/SPIAccelerometer/breadboard_assembled_rpi2.png)
 
 <sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
 
 Here are the schematics:
 
-![Accelerometer schematics]({{site.baseurl}}/images/SPIAccelerometer/schematics_rpi2.png)
+![Accelerometer schematics]({{site.baseurl}}/Resources/images/SPIAccelerometer/schematics_rpi2.png)
 
 ####MinnowBoard Max
 If you have a MinnowBoard Max, we need to hook up power, ground, and the SPI lines to the accelerometer.
@@ -76,13 +76,13 @@ The ADXL345 breakout board has 8 IO pins, connect them as follows:
 
 Here are the connections shown on a breadboard:
 
-![Breadboard connections]({{site.baseurl}}/images/SPIAccelerometer/breadboard_assembled_mbm.png)
+![Breadboard connections]({{site.baseurl}}/Resources/images/SPIAccelerometer/breadboard_assembled_mbm.png)
 
 <sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
 
 Here are the schematics:
 
-![Accelerometer schematics]({{site.baseurl}}/images/SPIAccelerometer/schematics_mbm.png)
+![Accelerometer schematics]({{site.baseurl}}/Resources/images/SPIAccelerometer/schematics_mbm.png)
 
 ####DragonBoard 410c
 
@@ -113,11 +113,11 @@ The Voltage-Level Translator breakout board pins are connected to the DragonBoar
 
 The following diagram shows what your breadboard might resemble with the circuit assembled:
 
-![DragonBoard SPI Accelerometer Breadboard](../../../images/SPIAccelerometer/breadboard_assembled_db410c.png)
+![DragonBoard SPI Accelerometer Breadboard](../../../Resources/images/SPIAccelerometer/breadboard_assembled_db410c.png)
 
 A schematic for the circuit is:
 
-![DragonBoard API Accelerometer Schematic](../../../images/SPIAccelerometer/schematics_db410c.png)
+![DragonBoard API Accelerometer Schematic](../../../Resources/images/SPIAccelerometer/schematics_db410c.png)
 
 ###Deploy and run the app
 
@@ -137,7 +137,7 @@ Follow the instructions to [setup remote debugging and deploy the app]({{site.ba
  This is normal and is due to minute vibrations and electrical noise. If you tilt or shake the sensor, you should see the values change in response. Note that this sample configures the device in 4G mode,
 so you wont be able to see G readings higher than 4Gs.
 
-![SPI Accelerometer running]({{site.baseurl}}/images/SPIAccelerometer/spiaccelerometer_screenshot.png)
+![SPI Accelerometer running]({{site.baseurl}}/Resources/images/SPIAccelerometer/spiaccelerometer_screenshot.png)
 
 Congratulations! You've connected an SPI accelerometer.
 

@@ -23,17 +23,17 @@ lang: en-US
     <tr>
       <th style="width:25%"></th>
       <th style="width:25%">
-        <img class="comparison-picture" src="{{site.baseurl}}/images/devices/RPi2_0.png">
+        <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/RPi2_0.png">
         <h4>Raspberry Pi 2</h4>
         <p>The Raspberry Pi 2 is a low cost, credit-card sized computer that plugs into a computer monitor or TV, and uses a standard keyboard and mouse.  The Raspberry Pi 2 runs Windows 10 IoT Core.</p>
       </th>
       <th style="width:25%">
-        <img class="comparison-picture" src="{{site.baseurl}}/images/devices/MBM_0.png">
+        <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/MBM_0.png">
         <h4>MinnowBoard MAX</h4>
         <p>MinnowBoard MAX is an open hardware embedded board with the Intel Atom E38XX series SOC at its core. MinnowBoard MAX supports Windows 10 IoT Core.</p>
       </th>
       <th style="width:25%">
-        <img class="comparison-picture" src="{{site.baseurl}}/images/devices/DB410c.png">
+        <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/DB410c.png">
         <h4>DragonBoard 410c</h4>
         <p>The DragonBoard™ 410c based on Linaro 96Boards™ specification features the Qualcomm® Snapdragon™ 410 processor, a Quad-core ARM® Cortex™ A53 at up to 1.2GHz clock speed per core, capable of 32-bit and 64-bit operation. WLAN, Bluetooth, and GPS, all packed into a board the size of a credit card.</p>
       </th>

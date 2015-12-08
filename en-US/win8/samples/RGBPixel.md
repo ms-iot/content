@@ -13,7 +13,7 @@ lang: en-US
 # Adafruit RGB Pixel Strip
 Learn how to use a RGB Pixel Strip.
 
-![]({{site.baseurl}}/images/RGBPixel.jpg){:width="400"}
+![]({{site.baseurl}}/Resources/images/RGBPixel.jpg){:width="400"}
 
 # Required Components
 * [RGB Pixel Strip](http://www.adafruit.com/products/306){:target="_blank"}

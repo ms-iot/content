@@ -33,4 +33,4 @@ lang: zh-CN
 
 处于无外设模式下的 Windows IoT 核心版设备可使用通过 Windows 10 IoT 核心版工具安装的 **WindowsIoTCoreWatcher** 应用程序来发现。运行时，应用程序将自动查找本地网络上的所有 Windows IoT 核心版设备，并显示诸如名称、MAC、IP 地址等设备信息。
 
-![Windows IoT 核心版观察程序]({{site.baseurl}}/images/HeadlessMode/IoTCoreWatcher.png)
+![Windows IoT 核心版观察程序]({{site.baseurl}}/Resources/images/HeadlessMode/IoTCoreWatcher.png)

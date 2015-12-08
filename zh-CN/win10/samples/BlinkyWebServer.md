@@ -185,4 +185,4 @@ if (res == AppServiceConnectionStatus.Success)
 ###Web 客户端
 对于我们的示例应用，我们已在 Windows IoT 核心版设备上的 WebServer 中托管了一个简单的客户端。可以通过开发板和端口的 IP 地址（类似于 http://123.456.789.0:8000，在其中你将 123.456.789.0 替换为服务器已部署到的设备的 IP 地址）访问它。然后，可以使用 WebServer 客户端打开和关闭 LED（请参阅以下屏幕截图）。
 
-![WebServer 客户端]({{site.baseurl}}/images/WebServer/webserver_client.png)
+![WebServer 客户端]({{site.baseurl}}/Resources/images/WebServer/webserver_client.png)

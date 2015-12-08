@@ -9,7 +9,7 @@ lang: zh-CN
 
 在此示例中，我们会将 RGB LED 条连接到 Arduino，并控制它在图片后指示天气预报。
 
-![RGB 带 1]({{site.baseurl}}/images/RGBSTRIP/rgbstrip_split1.JPG)
+![RGB 带 1]({{site.baseurl}}/Resources/images/RGBSTRIP/rgbstrip_split1.JPG)
 
 ###组件
 
@@ -45,7 +45,7 @@ RGB LED 条在条中附带 48 个 LED。
 
 * ...在裂缝之间焊接电线，以便各端通过电线重新连接。
 
-![RGB 带 2]({{site.baseurl}}/images/RGBSTRIP/rgbstrip_split2.JPG)
+![RGB 带 2]({{site.baseurl}}/Resources/images/RGBSTRIP/rgbstrip_split2.JPG)
 
 ###RGB 条的放置
 
@@ -53,7 +53,7 @@ RGB LED 条在条中附带 48 个 LED。
 
 将背衬用胶带粘贴或连接到项目上。
 
-![RGB 带 1]({{site.baseurl}}/images/RGBSTRIP/rgbstrip_split1.JPG)
+![RGB 带 1]({{site.baseurl}}/Resources/images/RGBSTRIP/rgbstrip_split1.JPG)
 
 ###将 RGB 条连接到 Arduino
 
@@ -67,7 +67,7 @@ RGB LED 条在条中附带 48 个 LED。
 
 * 将筒状电源连接器连接到 5 伏特电源（按照 Adafruit 的说明）。
 
-![RGB 连接]({{site.baseurl}}/images/RGBSTRIP/rgbconnect.JPG)
+![RGB 连接]({{site.baseurl}}/Resources/images/RGBSTRIP/rgbconnect.JPG)
 
 ###上载到你的设备
 
@@ -93,4 +93,4 @@ RGB LED 条在条中附带 48 个 LED。
 
 * 在 RGB LED 上条设置动画。
 
-![手机映像]({{site.baseurl}}/images/RGBSTRIP/Phone.JPG)
+![手机映像]({{site.baseurl}}/Resources/images/RGBSTRIP/Phone.JPG)

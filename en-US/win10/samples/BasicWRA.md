@@ -21,7 +21,7 @@
         <p>A few male-to-male connector wires</p>
     </div>
     <div class="col-md-6 col-sm-12">
-        <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/parts.JPG">
+        <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/parts.JPG">
     </div>
 </div>
 
@@ -37,7 +37,7 @@
             <li>Connect the power and ground rails on the breadboard to the 5V and GND pins, respectively, on the Arduino. Using color coded wires (red and black) will make it easy to keep track of the power connections.</li>
         </div>
         <div class="col-md-6 col-sm-12">
-            <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/step01.JPG">
+            <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/step01.JPG">
         </div>
     </div>
     <div class="row">
@@ -45,7 +45,7 @@
             <li>The next steps involve setting up the Bluetooth capabilities of the Arduino. Plug your Bluetooth device into the breadboard and connect the VCC and GND pins to the power and ground rails on the breadboard, respectively.</li>
         </div>
         <div class="col-md-6 col-sm-12">
-            <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/step02.JPG">
+            <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/step02.JPG">
         </div>
     </div>
     <div class="row">
@@ -53,7 +53,7 @@
             <li>Connect the TX-0 pin on the Bluetooth device to the RX pin on the Arduino. Similarly, connect the RX-1 pin on the Bluetooth device to the TX pin on the Arduino.  If your Arduino has multiple RX and TX pins, connect the TX-0 Bluetooth pin to the RX0 Arduino pin, and connect the RX-1 Bluetooth pin to the TX0 Arduino pin.</li>
         </div>
         <div class="col-md-6 col-sm-12">
-            <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/step03.JPG">
+            <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/step03.JPG">
         </div>
     </div>
     <div class="row">
@@ -61,8 +61,8 @@
             <li>Notice the yellow wire in the image goes from the transmit pin of the Bluetooth device to the receive pin of the Arduino and vice versa for the orange wire. This step is critical to establish serial communication between the Bluetooth device and the Arduino, allowing the messages transmitted from one device to be received by the other.</li>
         </div>
         <div class="col-md-6 col-sm-12">
-            <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/step03_2.JPG">
-            <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/step03_3.JPG">
+            <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/step03_2.JPG">
+            <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/step03_3.JPG">
         </div>
     </div>
     <div class="row">
@@ -78,7 +78,7 @@
             <li>Add an LED to the breadboard. Note that the longer (or bent) leg is the anode (positive) and the shorter leg is the cathode (negative).</li>
         </div>
         <div class="col-md-6 col-sm-12">
-            <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/step04.JPG">
+            <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/step04.JPG">
         </div>
     </div>
     <div class="row">
@@ -86,7 +86,7 @@
             <li>Connect the cathode of the LED to the ground rail of the breadboard using a 330Ω resistor. A 330Ω resistor is striped orange, orange, brown, gold as shown in the image.</li>
         </div>
         <div class="col-md-6 col-sm-12">
-            <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/step05.JPG">
+            <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/step05.JPG">
         </div>
     </div>
     <div class="row">
@@ -94,7 +94,7 @@
             <li>Connect the anode of the LED to any digital I/O pin on the Arduino - your choice will be reflected in the code. We are using pin 5 in the example.</li>
         </div>
         <div class="col-md-6 col-sm-12">
-            <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/step06.JPG">
+            <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/step06.JPG">
         </div>
     </div>
     <div class="row">
@@ -102,7 +102,7 @@
             <li>You setup is now ready! It should look similar to the setup shown in the image below. Again, if you would prefer to use USB, you may not have the serial wire connections shown here.</li>
         </div>
         <div class="col-md-6 col-sm-12">
-            <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/final.JPG">
+            <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/final.JPG">
         </div>
     </div>
 </ol>
@@ -119,7 +119,7 @@
             <li> Now that we're all set up, let's get into some code!  I've set up a project called RemoteBlinky by following the steps in the setup guide - you can start coding directly on top of the solution you set up earlier. In the screenshot below, you will see the code-behind file MainPage.xaml.cs which simply creates a Bluetooth connection object and passes it to the RemoteDevice class in the constructor. You'll see that I've specified my device name in this example. You may also enumerate the available devices by invoking the static<code>.listAvailableDevicesAsync()</code> function on BluetoothSerial (and USBSerial) class before constructing your object.  Take a look at the code below and begin manually transferring the needed additions.</li>
         </div>
         <div class="col-md-6 col-sm-12">
-            <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/project00.png">
+            <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/project00.png">
         </div>
     </div>
     <div class="row">
@@ -144,7 +144,7 @@
         <div class="col-md-6 col-sm-12">
              <p>For example: <code>USBSerial usb = new USBSerial( "VID_2341", "PID_0043" );</code><br/>
             is guaranteed to work **only** for the following hardware device:</p>
-            <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/vidpid.png">
+            <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/vidpid.png">
         </div>
     </div>
     <div class="row">
@@ -152,7 +152,7 @@
             <li>Next, I'm going to add a callback function to the ConnectionEstablished event on the BluetoothSerial object. This function will automatically be called when the Bluetooth device is connected. You'll notice that I haven't implemented anything in that function at this time. Last, call <code>.begin()</code> on the connection object to tell it to connect.</li>
         </div>
         <div class="col-md-6 col-sm-12">
-            <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/project01.png">
+            <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/project01.png">
         </div>
     </div>
     <div class="row">
@@ -188,7 +188,7 @@
             <li>Jump over to the MainPage.xaml file by right-clicking MainPage.xaml in your Solution Explorer and choosing "View Designer" - the XAML code will appear alongside the Designer view.  We're now going to create buttons that will turn an LED on and off. You'll notice I've added button callbacks to the <code>Click</code> event & set the <code>IsEnabled</code> property to false, and you'll see why in the next step!</li>
         </div>
         <div class="col-md-6 col-sm-12">
-            <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/project02.png">
+            <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/project02.png">
         </div>
     </div>
     <div class="row">
@@ -201,7 +201,7 @@
             <li>I've also set up the<code>.digitalWrite()</code> calls in the button callbacks<code>OnButton_Click</code> and<code>OffButton_Click</code></li>
         </div>
         <div class="col-md-6 col-sm-12">
-            <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/project04.png">
+            <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/project04.png">
         </div>
     </div>
     <div class="row">
@@ -209,7 +209,7 @@
             <li>Build! Use the settings shown in the image below to run the app you've written on your Windows device.</li>
         </div>
         <div class="col-md-6 col-sm-12">
-            <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/screenshot.png">
+            <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/screenshot.png">
         </div>
     </div>
 </ol>
@@ -219,7 +219,7 @@
             <li>Your buttons will be enabled when the connection is established, and you can freely toggle your LED on and off at will! The app will look like the following picture when running on a Windows 10 PC.</li>
         </div>
         <div class="col-md-6 col-sm-12 col-no-padding">
-            <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/regularstart.PNG">
+            <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/regularstart.PNG">
         </div>
     </div>
 </ul>
@@ -229,7 +229,7 @@
         <p>You can also deploy your code to another Windows 10 device and utilize the same functionality there.  In order to get the code running on a Windows Phone, plug your phone into your development PC (the PC on which you've been writing the code above) using a microUSB cord.  Set the deploy destination to "Device" and the architecture to "ARM" in Visual Studio.  The proper settings for this deploy can be seen in the image below.</p>
     </div>
     <div class="col-md-6 col-sm-12">
-         <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/devicedeploy.PNG">
+         <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/devicedeploy.PNG">
     </div>
 </div>
 <div class="row">
@@ -237,7 +237,7 @@
         <p>When you build and deploy, you should see the following app running on your phone.</p>
     </div>
     <div class="col-md-6 col-sm-12">
-         <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/screenshot.png">
+         <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/screenshot.png">
     </div>
 </div>
 <p></p>

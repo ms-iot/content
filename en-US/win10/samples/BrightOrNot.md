@@ -27,7 +27,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 
 <div class="row projectRow">
   <div class="col-md-6 col-sm-12">
-    <img src="{{site.baseurl}}/images/AdafruitStarterPack/BrightOrNot.jpg">
+    <img src="{{site.baseurl}}/Resources/images/AdafruitStarterPack/BrightOrNot.jpg">
   </div>
   <div class="col-md-6 col-sm-12">
     <h2 class="text-center thin-header">Click <a target="_blank" href="https://www.hackster.io/windows-iot/bright-or-not">here</a> to get started!</h2>

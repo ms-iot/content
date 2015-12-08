@@ -35,7 +35,7 @@ The name of the driver in this sample is `gpiokmdfdemo`.  This driver will recei
 
 <br/>
 
-![Driver Lab Overview]({{site.baseurl}}/images/DriverLab/drivers-overview.png)
+![Driver Lab Overview]({{site.baseurl}}/Resources/images/DriverLab/drivers-overview.png)
 
 <br/>
 

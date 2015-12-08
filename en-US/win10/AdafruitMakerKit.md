@@ -15,7 +15,7 @@ kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
     </center>
   </div>
   <div class="col-md-6 col-sm-12">
-   <img class="maker-kit" src="{{site.baseurl}}/images/AdafruitStarterPack/AdafruitDisplay.png">
+   <img class="maker-kit" src="{{site.baseurl}}/Resources/images/AdafruitStarterPack/AdafruitDisplay.png">
   </div>
 </div>
 

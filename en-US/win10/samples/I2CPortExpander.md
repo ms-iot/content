@@ -9,7 +9,7 @@ lang: en-US
 
 {% include VerifiedVersion.md %}
 
-![I2C Port Expander Image]({{site.baseurl}}/images/I2CPortExpander/PortExpanderProjectPicture_480.png)
+![I2C Port Expander Image]({{site.baseurl}}/Resources/images/I2CPortExpander/PortExpanderProjectPicture_480.png)
 
 In this sample, we'll connect an I2C port expander to your Raspberry Pi 2 and create a simple app that uses the port expander to read the status of a tactile switch and control an LED. No background knowledge of I2C or port expanders is needed.
 If you want to know more about I2C, SparkFun provides a great [tutorial on I2C](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}.
@@ -41,14 +41,14 @@ Let's start by wiring up the components on the breadboard as shown in the diagra
 
 **Note: Make sure to power off the RPi2 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
 
-![Breadboard connections]({{site.baseurl}}/images/I2CPortExpander/I2cPortExpanderDrawing_bb_750.png)
+![Breadboard connections]({{site.baseurl}}/Resources/images/I2CPortExpander/I2cPortExpanderDrawing_bb_750.png)
 
 *Image made with [Fritzing](http://fritzing.org/)*
 
 
 Here is the schematic:
 
-![Circuit Schematic]({{site.baseurl}}/images/I2CPortExpander/I2cPortExpanderDrawing_schem.png)
+![Circuit Schematic]({{site.baseurl}}/Resources/images/I2CPortExpander/I2cPortExpanderDrawing_schem.png)
 
 *Image made with [Fritzing](http://fritzing.org/)*
 
@@ -57,20 +57,20 @@ Here is the schematic:
 
 Place the MCP23008 Port Expander on your breadboard such that it straddles the center gap of the breadboard.
 
-![Breadboard IC Placement]({{site.baseurl}}/images/BreadBoardICPlacement.png)
+![Breadboard IC Placement]({{site.baseurl}}/Resources/images/BreadBoardICPlacement.png)
 
 *Image made with [Fritzing](http://fritzing.org/)*
 
 
  Locate pin 1 of the port expander by finding the notch on the IC. If you orient the IC so that the end with the notch is facing left, pin 1 will be the first pin in the lower left below the notch.
 
-![MCP23008 PinLocations]({{site.baseurl}}/images/I2CPortExpander/MCP23008_PortExpander_bb.png)
+![MCP23008 PinLocations]({{site.baseurl}}/Resources/images/I2CPortExpander/MCP23008_PortExpander_bb.png)
 
 *Image made with [Fritzing](http://fritzing.org/)*
 
 The pinout of the MCP23008 is shown below and can be found in the [datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/21919e.pdf){:target="_blank"}.
 
-![MCP23008 Pinout]({{site.baseurl}}/images/I2CPortExpander/MCP23008_Pinout.PNG)
+![MCP23008 Pinout]({{site.baseurl}}/Resources/images/I2CPortExpander/MCP23008_Pinout.PNG)
 
 *Image made with [Fritzing](http://fritzing.org/)*
 
@@ -124,7 +124,7 @@ Leave the remaining pins on the MCP23008 unconnected.
 
 We need to hook up power, ground, and the I2C lines from on the Raspberry Pi 2 to the MCP23008 Port Expander and the breadboard.
 
-![Raspberry Pi 2 pinout]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![Raspberry Pi 2 pinout]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
 * Pin 1 **3.3V PWR** Connect to the voltage supply rail on the side of the breadboard (red stripe)
 
@@ -413,7 +413,7 @@ Let's build, deploy and run the app on our Raspberry Pi 2.
 
 After several moments, you will see the screen attached to the RPi2 change to show a circle, some text, and a slider. The LED on the breadboard will begin to turn on and off.
 
-![I2C Port Expander Screenshot]({{site.baseurl}}/images/I2CPortExpander/I2CPortExpanderScreenShot_300p.png)
+![I2C Port Expander Screenshot]({{site.baseurl}}/Resources/images/I2CPortExpander/I2CPortExpanderScreenShot_300p.png)
 
 Congratulations! You've successfully connected an I2C port expander to your Raspberry Pi 2.
 

@@ -34,7 +34,7 @@ This tutorial shows how to get AllJoyn.JS running as a Windows 10 application.
 Set up loopback exception:
 
 1. Find the installation folder of the modern application for which you want to enable the loopback exemption. It is located at 'C:\Users\\**username**\AppData\Local\Packages'
- ![LoopBackException]({{site.baseurl}}/images/AllJoyn/AllJoynJS_LoopBackException.png)
+ ![LoopBackException]({{site.baseurl}}/Resources/images/AllJoyn/AllJoynJS_LoopBackException.png)
 
 2. Copy the installation folder name which is also the application ID.
 
@@ -55,7 +55,7 @@ Alternatively, you can download directly from Allseen Alliance by cloning AllJoy
 3. Download Duktape [here](http://www.duktape.org/duktape-1.2.1.tar.xz){:target="_blank"} and decompress it to `samples-develop\AllJoyn\Samples\AllJoyn.JS\External`.  Rename decompressed folder from `duktape-1.2.1` to `duktape`
 
 4. The final folder structure should look like this:
- ![FolderStructure]({{site.baseurl}}/images/AllJoyn/AllJoynJS_FolderStructure.png)
+ ![FolderStructure]({{site.baseurl}}/Resources/images/AllJoyn/AllJoynJS_FolderStructure.png)
 
 5. Open `samples-develop\AllJoyn\Samples\AllJoyn.JS\AllJoyn.JS.sln` in Visual Studio.
 
@@ -111,7 +111,7 @@ AllJoyn.JS provides a hardware-independent abstraction layer for GPIO and other 
 
 - For all GPIO APIs, please refer to [AllJoyn.JS IO APIs (Allseen Alliance)](https://git.allseenalliance.org/cgit/core/alljoyn-js.git/plain/doc/html/IO.html){:target="_blank"}
 
-> Even though the GPIO layer is hardware-independent, pin numbers and assignments differ among hardware devices.  Current pin numbers and assignments are based on [Raspberry Pi 2]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png).
+> Even though the GPIO layer is hardware-independent, pin numbers and assignments differ among hardware devices.  Current pin numbers and assignments are based on [Raspberry Pi 2]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png).
 
 ##Sample scripts
 

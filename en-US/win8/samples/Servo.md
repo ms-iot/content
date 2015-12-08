@@ -19,7 +19,7 @@ Learn how to use the basics of the Servo Library and interact with a Servo.
 
 # Hooking up Components
 If you are using a basic servo that does not require external power, this should be your configuration:<br/>
-![]({{site.baseurl}}/images/ServoDiagram.png)
+![]({{site.baseurl}}/Resources/images/ServoDiagram.png)
 
 # Create a new project
 

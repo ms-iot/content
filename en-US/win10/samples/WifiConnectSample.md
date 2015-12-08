@@ -36,23 +36,23 @@ Select **Remote Machine** to point to IoT device and hit F5 to deploy to your de
   
 The sample app when deployed displays a screen similar to the one below. 
 
-![App Started]({{site.baseurl}}/images/WiFiConnectSample/WiFiSample0.png)
+![App Started]({{site.baseurl}}/Resources/images/WiFiConnectSample/WiFiSample0.png)
 
 If you have a WiFi adapter connected to your board, click on the "Scan Available WiFi Networks" button to start scanning and displaying the list of WiFi networks in the vcinity.
 
 Each WiFi network is identified by its SSID. Aditionally, some information about the SSID including the signal strength, channel frequency and authentication mode are displayed for each. The connection status is also shown for each.
 
-![WiFi SSID list]({{site.baseurl}}/images/WiFiConnectSample/WiFiSample1.png)
+![WiFi SSID list]({{site.baseurl}}/Resources/images/WiFiConnectSample/WiFiSample1.png)
 
 You can connect to the your SSID by clicking on the one you need. If a security key (password) is needed, a dialog will be displayed asking for it. Also, a checkbox asking if the WiFi service should attempt to reconnect to the particular SSID automatically such as at boot time.
 
-![WiFi SSID list]({{site.baseurl}}/images/WiFiConnectSample/WiFiSample3.png)
+![WiFi SSID list]({{site.baseurl}}/Resources/images/WiFiConnectSample/WiFiSample3.png)
 
 A message on the status bar will indicate if the connection has been successful, or if not the reason the connection could not be made.
 
 Finally, because some networks may require additional information that can only be provided through a browser; e.g. WiFi hot spots, the app will open a browser control to enable users to complete a connection as needed. Or, if Internet access is already available, the Bing.com page will be displayed.
 
-![WiFi SSID list]({{site.baseurl}}/images/WiFiConnectSample/WiFiSample2.png)
+![WiFi SSID list]({{site.baseurl}}/Resources/images/WiFiConnectSample/WiFiSample2.png)
   
 
 ##Let's look at the code  

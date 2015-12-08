@@ -67,23 +67,23 @@ lang: en-US
       <div id="collapseNoNuGet" class="panel-collapse collapse">
         <div class="panel-body">
           <p>When you have received this message after creating a new project and trying to build and compile, then you may be missing the Galileo C++ SDK NuGet package. Also, Intellisense will be underlining all code relating the Arduino SDK (pictured below).</p>
-		  <img src="{{site.baseurl}}/images/vs_missing_nuget_build_errors.png"><br/><br/>
+		  <img src="{{site.baseurl}}/Resources/images/vs_missing_nuget_build_errors.png"><br/><br/>
 		  <p>
             To recover, go to the <b><i>TOOLS-&gt;NuGet Package Manager-&gt;Manage NuGet Packages for Solution...</i></b> menu.<br/>
 			<ul>
 			  <li>
 			    Confirm the NuGet Package is not already installed...
-		        <img src="{{site.baseurl}}/images/nuget_not_installed.png">
+		        <img src="{{site.baseurl}}/Resources/images/nuget_not_installed.png">
 			  </li>
 			  <br/>
 		      <li>
 			    Search for the <b><i>Galileo C++ SDK</i></b> NuGet package</p>
-		        <img src="{{site.baseurl}}/images/nuget_search.png">
+		        <img src="{{site.baseurl}}/Resources/images/nuget_search.png">
 			  </li>
 			  <br/>
 			  <li>
                 Install the NuGet package
-		        <img src="{{site.baseurl}}/images/nuget_search_galileo.png">
+		        <img src="{{site.baseurl}}/Resources/images/nuget_search_galileo.png">
 			  </li>
 		    </ul>
 		    When you return to your project, the Intellisense errors should be cleared up and your project should compile.
@@ -161,7 +161,7 @@ lang: en-US
           Make sure you have allowed it through the firewall.
 
           To check it's firewall configurations go to Control Panel > System and Security > Windows Firewall > Allowed Apps</li>
-          <img src="{{site.baseurl}}/images/GalileoWatcherFirewall.png"/>
+          <img src="{{site.baseurl}}/Resources/images/GalileoWatcherFirewall.png"/>
         </div>
       </div>
     </div>

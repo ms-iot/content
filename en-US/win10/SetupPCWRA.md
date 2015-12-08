@@ -48,7 +48,7 @@
        <li>Open Visual Studio.  Select <b>File -> New Project</b>.</li>
      </div>
      <div class="col-md-6 col-sm-12">
-       <img src="{{site.baseurl}}/images/remote-wiring/create_00.png">
+       <img src="{{site.baseurl}}/Resources/images/remote-wiring/create_00.png">
      </div>
    </div>
       <div class="row">
@@ -63,7 +63,7 @@
           <li>You'll see I have chosen C# by expanding the <b>Visual C#</b> menu. Select the <b>Windows</b> option and choose <b>Blank App (Windows Universal)</b>. If you are building for Windows 8.1, you'll want <b>Blank App (Windows 8.1 Universal)</b>.</li>
         </div>
         <div class="col-md-6 col-sm-12">
-          <img src="{{site.baseurl}}/images/remote-wiring/create_01.png">
+          <img src="{{site.baseurl}}/Resources/images/remote-wiring/create_01.png">
         </div>
       </div>
     </ol>
@@ -82,7 +82,7 @@
           <li>Right-click on your solution in the Solution Explorer and select <b>Add -> Existing Project</b>.</li>
         </div>
         <div class="col-md-6 col-sm-12">
-          <img src="{{site.baseurl}}/images/remote-wiring/project_00.png">
+          <img src="{{site.baseurl}}/Resources/images/remote-wiring/project_00.png">
         </div>
       </div>
       <div class="row">
@@ -90,7 +90,7 @@
           <li>Navigate to your local copy of the repository. You'll see here that I've cloned it to <b>C:\git\remote-wiring</b>, but you can choose a different directory. Then, open the appropriate solution folder for your build environment (either Windows 10 or Windows 8.1).</li>
         </div>
         <div class="col-md-6 col-sm-12">
-          <img src="{{site.baseurl}}/images/remote-wiring/compile_00.png">
+          <img src="{{site.baseurl}}/Resources/images/remote-wiring/compile_00.png">
         </div>
       </div>
       <div class="row">
@@ -98,7 +98,7 @@
           <li>We need to add three projects - <b>Microsoft.Maker.Firmata</b>, <b>Microsoft.Maker.RemoteWiring</b>, and <b>Microsoft.Maker.Serial</b> - to the project solution.  Let's start with the Serial project (Microsoft.Maker.Serial). Open this directory.</li>
         </div>
         <div class="col-md-6 col-sm-12">
-          <img src="{{site.baseurl}}/images/remote-wiring/project_01.png">
+          <img src="{{site.baseurl}}/Resources/images/remote-wiring/project_01.png">
         </div>
       </div>
       <div class="row">
@@ -106,7 +106,7 @@
           <li>Select the *.vcxproj* file. (If you are targeting Windows 8.1, you will first have to choose between Windows and Windows Phone platform directories. You do not have to do this for Windows 10, as it is Universal to all platforms.)</li>
         </div>
         <div class="col-md-6 col-sm-12">
-          <img src="{{site.baseurl}}/images/remote-wiring/project_02.png">
+          <img src="{{site.baseurl}}/Resources/images/remote-wiring/project_02.png">
         </div>
       </div>
       <div class="row">
@@ -114,7 +114,7 @@
           <li>Repeat the previous steps for all three Microsoft.Maker projects.  Once they've all been added to your solution, right-click on <b>References</b> in the original project you made, not one of the newly added Microsoft.Maker projects. Select <b>Add Reference</b>.</li>
         </div>
         <div class="col-md-6 col-sm-12">
-          <img src="{{site.baseurl}}/images/remote-wiring/project_05.png">
+          <img src="{{site.baseurl}}/Resources/images/remote-wiring/project_05.png">
         </div>
       </div>
       <div class="row">
@@ -122,7 +122,7 @@
           <li>Under the <b>Projects</b> tab, select all three of the Microsoft.Maker projects.</li>
         </div>
         <div class="col-md-6 col-sm-12">
-          <img src="{{site.baseurl}}/images/remote-wiring/project_06.png">
+          <img src="{{site.baseurl}}/Resources/images/remote-wiring/project_06.png">
         </div>
       </div>
       <div class="row">
@@ -130,7 +130,7 @@
           <li>Rebuild your solution by selecting <b>Build -> Rebuild Solution</b>.</li>
         </div>
         <div class="col-md-6 col-sm-12">
-          <img src="{{site.baseurl}}/images/remote-wiring/compile_03.png">
+          <img src="{{site.baseurl}}/Resources/images/remote-wiring/compile_03.png">
         </div>
       </div>
       <div class="row">

@@ -126,7 +126,7 @@ Also, you need to manually update the Application Package manifest manually to r
 
 Both capabilities must be added to the AppX manifest of your project under the `<Capabilities>` node.
 
-![AppX Manifest Capabailities]({{site.baseurl}}/images/Lightning/update_manifest.png)
+![AppX Manifest Capabailities]({{site.baseurl}}/Resources/images/Lightning/update_manifest.png)
 
 ###Windows SDK Update
 
@@ -150,7 +150,7 @@ In order to install prerelease (current) version of Microsoft.IoT.Lightning Nuge
 1. Click "Include prerelease".
 1. Click "Install" to install the nuget package to your project
 
-![Package Manager Config]({{site.baseurl}}/images/Lightning/Nuget_PackageManager.png)
+![Package Manager Config]({{site.baseurl}}/Resources/images/Lightning/Nuget_PackageManager.png)
 
 ##Runtime Requirements
 
@@ -164,5 +164,5 @@ The APIs in the Lightning Provider library require the Lightning Direct Memory M
 
 The driver can be enabled using the Windows Devices Web Portal. Refer to the [Lightning Setup Guide]({{site.baseurl}}/{{page.lang}}/win10/LightningSetup.htm) for detailed information on how to enable the Lightning driver.
 
-![Devices Page]({{site.baseurl}}/images/Lightning/dmap4.png)
+![Devices Page]({{site.baseurl}}/Resources/images/Lightning/dmap4.png)
 

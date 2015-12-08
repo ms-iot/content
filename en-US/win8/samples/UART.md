@@ -45,13 +45,13 @@ Learn how to use HardwareSerial to read and write to the UART port.
 1. Create a new project from the template.
 1. Plug the two serial ends of the cables together.
 1. Plug the 3.5mm end of the cable into the UART jack on the Galileo board.<br/>
-![]({{site.baseurl}}/images/uart.png)
+![]({{site.baseurl}}/Resources/images/uart.png)
 1. Plug the USB end of the cable into your computer's USB port.
 1. Open up Device Manager on your development machine and find out which COM port is being used by the adapter.
 1. Open a terminal program like [Tera Term](http://download.cnet.com/Tera-Term/3000-20432_4-75766675.html){:target="_blank"}
 1. Set the program to monitor the serial connection from the COM port you found in Step 5.
 1. Make sure your options are as shown below (with the Port set to the COM port you found in Step 5):<br/>
-    ![]({{site.baseurl}}/images/TeraTermSerialConfig.png)<br/>
+    ![]({{site.baseurl}}/Resources/images/TeraTermSerialConfig.png)<br/>
     * If you are using Tera Term, you can get to the menu shown above by clicking on Setup -> Serial port..
 1. Replace the existing code in main.cpp with the following code:
 

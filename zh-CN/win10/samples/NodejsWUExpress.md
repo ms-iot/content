@@ -19,15 +19,15 @@ lang: zh-CN
 
 选择模板 `Basic Node.js Express 4 Application (Windows Universal)`
 
-![Node.js Windows 通用“新建 Express 项目”对话框]({{site.baseurl}}/images/Nodejs/nodejswuexpress-newprojectdialog.PNG)
+![Node.js Windows 通用“新建 Express 项目”对话框]({{site.baseurl}}/Resources/images/Nodejs/nodejswuexpress-newprojectdialog.PNG)
 
 创建新项目后，你将看到如下所示的对话框，询问你是否希望使用 npm 将 Express 及其依赖项安装到该项目所在的位置。单击“是”。
 
-![npm 提示]({{site.baseurl}}/images/Nodejs/npm-prompt.PNG)
+![npm 提示]({{site.baseurl}}/Resources/images/Nodejs/npm-prompt.PNG)
 
 单击“是”后，npm 将在后台运行并安装依赖项。完成后，你的项目应该如下图所示。
 
-![npm Express 列表]({{site.baseurl}}/images/Nodejs/npm-express.PNG)
+![npm Express 列表]({{site.baseurl}}/Resources/images/Nodejs/npm-express.PNG)
 
 
 ###将服务器部署到 Windows IoT 核心版设备
@@ -36,13 +36,13 @@ lang: zh-CN
 * 你还可以将 `--use-logger` 添加为参数以将控制台输出重定向到 UWP 应用程序的本地存储文件夹中的文件 \(C:\\Users\\DefaultAccount\\AppData\\Local\\Packages&lt;你的项目名称&gt;\_&lt;发布者哈希字符串&gt;\\LocalState\\nodeuwp.log\)。
 * 如果你要针对 Minnowboard Max 进行生成，请选择下拉列表中的 `x86`。如果你要针对 Raspberry Pi 2 进行生成，请选择 `ARM`。
 
-    ![Node.js Windows 通用项目属性]({{site.baseurl}}/images/Nodejs/nodejswu-properties.png)
+    ![Node.js Windows 通用项目属性]({{site.baseurl}}/Resources/images/Nodejs/nodejswu-properties.png)
 
 * 现在，我们可以随时部署到远程 Windows IoT 核心版设备。只需按 F5（或依次选择“调试”\|“开始调试”）即可开始调试服务器。
 
 * 当服务器正在运行时，打开浏览器，然后输入地址 \<设备的 http://&lt;IP 地址\>:3000。结果应如下图所示。
 
-    ![Hello World 结果]({{site.baseurl}}/images/Nodejs/express-ie.PNG)
+    ![Hello World 结果]({{site.baseurl}}/Resources/images/Nodejs/express-ie.PNG)
 
 
 ### GitHub

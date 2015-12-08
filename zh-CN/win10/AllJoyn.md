@@ -22,9 +22,9 @@ AllJoyn 框架建立了一个标准化的体系结构，在其中设备和应用
 * *路由节点 \(RN\)* - 也称为“路由器”，此类节点可与任意节点通信。
 * *叶节点 \(LN\)* - 也称为“应用程序”，此类节点可通过路由节点与路由节点或其他叶节点通信。
 
-![AllJoyn 路由器和应用]({{site.baseurl}}/images/AllJoyn/AllJoyn_Routers_Apps.png)
+![AllJoyn 路由器和应用]({{site.baseurl}}/Resources/images/AllJoyn/AllJoyn_Routers_Apps.png)
 
-下图显示了 AllJoyn 框架的高级软件体系结构：![AllJoyn 体系结构]({{site.baseurl}}/images/AllJoyn/AllJoyn_Architecture.png)
+下图显示了 AllJoyn 框架的高级软件体系结构：![AllJoyn 体系结构]({{site.baseurl}}/Resources/images/AllJoyn/AllJoyn_Architecture.png)
 
 * *AllJoyn 应用层* - 用于定义用户体验
 * *AllJoyn 服务框架* - 可互操作的跨平台模块，用于定义设备之间的公共接口
@@ -35,13 +35,13 @@ AllJoyn 框架建立了一个标准化的体系结构，在其中设备和应用
 AllJoyn 框架有 2 种：
 
 * *标准框架* - 主要用于非嵌入式设备（支持整套核心库）
-* *纤薄框架* - 适用于 IoT 设备，它们受制于资源并且在网络中需使用 AllJoyn 路由器 ![AllJoyn 框架]({{site.baseurl}}/images/AllJoyn/AllJoyn_Frameworks.png)
+* *纤薄框架* - 适用于 IoT 设备，它们受制于资源并且在网络中需使用 AllJoyn 路由器 ![AllJoyn 框架]({{site.baseurl}}/Resources/images/AllJoyn/AllJoyn_Frameworks.png)
 
 AllJoyn 支持基于邻近感应的通信，从而允许通过以太网、Wi-Fi、串行线和电源线 \(PLC\) 进行传输。但由于 AllJoyn 框架在传输方面是不确定的，因此允许添加任何将来的传输机制。此外，还可以创建网桥软件，以便将 AllJoyn 框架连接到其他系统，如 Zigbee、Z-wave 或云。有关 Microsoft 中的 AllJoyn 设备系统网桥为 AllSeen Alliance 带来的贡献，请参阅下面的更多详细信息和示例。
 
 **AllJoyn 设备系统网桥**
 
-设备系统网桥 \(DSB\) 有助于促进跨现有的不兼容网络的通信。DSB 提供了一个经济高效的快捷方式，即，通过 AllJoyn 网络使现有设备以虚拟设备形式进入 AllJoyn。其实现方式如下：通过预焙 AllJoyn 生产商实现（网桥），并实现了对 SDK Hook 的调用，从而支持 AllJoyn 目标设备（适配器）概念的转换。开发人员不需要使用 DSB 修改 AllJoyn 生产商，除非必须要对该网桥的默认行为进行更改。有关设备系统网桥的用途及其结构的详细信息，请查看此[白皮书。](https://git.allseenalliance.org/cgit/dsb.git/plain/Docs/AllJoyn%20-%20Device%20System%20Bridge%20-%20Whitepaper%20v1.0.pdf){:target="_blank"}![AllJoyn DSB 体系结构]({{site.baseurl}}/images/AllJoyn/AllJoyn_DSBArch.png)
+设备系统网桥 \(DSB\) 有助于促进跨现有的不兼容网络的通信。DSB 提供了一个经济高效的快捷方式，即，通过 AllJoyn 网络使现有设备以虚拟设备形式进入 AllJoyn。其实现方式如下：通过预焙 AllJoyn 生产商实现（网桥），并实现了对 SDK Hook 的调用，从而支持 AllJoyn 目标设备（适配器）概念的转换。开发人员不需要使用 DSB 修改 AllJoyn 生产商，除非必须要对该网桥的默认行为进行更改。有关设备系统网桥的用途及其结构的详细信息，请查看此[白皮书。](https://git.allseenalliance.org/cgit/dsb.git/plain/Docs/AllJoyn%20-%20Device%20System%20Bridge%20-%20Whitepaper%20v1.0.pdf){:target="_blank"}![AllJoyn DSB 体系结构]({{site.baseurl}}/Resources/images/AllJoyn/AllJoyn_DSBArch.png)
 
 借助 Microsoft 中的 [AllJoyn 设备系统网桥贡献](https://wiki.allseenalliance.org/gateway/dsb){:target="_blank"}，你可以将使用 BACnet 或 Z-Wave 的现有设备连接到 AllJoyn 网络，以便这些设备既可以与新的 AllJoyn 设备交互，又可以通过该网络跨所有设备进行云连接。还推出了一款实用型[工具](https://github.com/MS-brock/AllJoynToasterDemo/tree/master/getajxml){:target="_blank"}，该工具可通过现有的 AllJoyn 设备生成 AllJoyn 自省 XML，[channel9](https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview){:target="_blank"} 上的一篇文章详细介绍了其用法。 请务必查看下面的示例和其他文档。我们希望你能帮助生成更多的 IoT 网桥，从而使其为 AllSeen Alliance 做出贡献。
 

@@ -32,7 +32,7 @@ Learn how to use HardwareSerial to communicate across TX/RX pins and view it on 
 1. Open a terminal program like [Tera Term](http://download.cnet.com/Tera-Term/3000-20432_4-75766675.html){:target="_blank"}
 1. Set the program to monitor the serial connection from the COM port you found in Step 5.
 1. Make sure your options are as shown below (with the Port set to the COM port you found in Step 5):<br/>
-    ![]({{site.baseurl}}/images/TeraTermSerialConfigForTXRX.png)<br/>
+    ![]({{site.baseurl}}/Resources/images/TeraTermSerialConfigForTXRX.png)<br/>
     * If you are using Tera Term, you can get to the menu shown above by clicking on Setup -> Serial port..
 1. Hook up the Orange pin from the cable to RX (pin 0)on your Galileo
 1. Hook up the Yellow pin from the cable to TX (pin 1) on your Galileo

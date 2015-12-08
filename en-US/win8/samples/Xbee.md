@@ -35,7 +35,7 @@ This sample requires the XBee to run in API mode, by setting AP=2. If you are us
 1. Connect the GND pin on the Galileo board to the GND pin (#10) on the XBee
 1. Connect the 3.3v pin on the Galileo board to the 3.3v pin (#1) on the XBee
 
-<img src="{{site.baseurl}}/images/XbeeGalileoWiring.png">
+<img src="{{site.baseurl}}/Resources/images/XbeeGalileoWiring.png">
 
 If you have an XBee Adapter, connect the wires to the equivalent pin-outs on the adapter.
 

@@ -6,7 +6,7 @@ lang: en-US
 ---
 ##MinnowBoard Max Pin Mappings
 
-![MinnowBoard Max Pin Header]({{site.baseurl}}/images/PinMappings/MBM_Pinout.png)
+![MinnowBoard Max Pin Header]({{site.baseurl}}/Resources/images/PinMappings/MBM_Pinout.png)
 
 <sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
 

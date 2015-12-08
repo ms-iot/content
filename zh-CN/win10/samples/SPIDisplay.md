@@ -25,7 +25,7 @@ lang: zh-CN
 
 根据自己所拥有的设备，查看以下 **Raspberry Pi 2/MinnowBoard Max** 部分：
 
-![电子元件]({{site.baseurl}}/images/SPIDisplay/components.png)
+![电子元件]({{site.baseurl}}/Resources/images/SPIDisplay/components.png)
 
 ####Raspberry Pi 2
 对于 Raspberry Pi 2，我们需要将电源、地线、SPI 和多个 GPIO 引脚接入 OLED 显示器。有关 Raspberry Pi 2 引脚的其他信息，请访问 [Raspberry Pi 2 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm)
@@ -45,13 +45,13 @@ OLED 显示器上具有 8 个 IO 引脚，应按如下方式连接它们：
 
 下面是试验板上所示的连接：
 
-![试验板连接]({{site.baseurl}}/images/SPIDisplay/breadboard_assembled_rpi2.png)
+![试验板连接]({{site.baseurl}}/Resources/images/SPIDisplay/breadboard_assembled_rpi2.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
 以下是电路原理图：
 
-![SPI 电路原理图]({{site.baseurl}}/images/SPIDisplay/schematics_rpi2.png)
+![SPI 电路原理图]({{site.baseurl}}/Resources/images/SPIDisplay/schematics_rpi2.png)
 
 ####MinnowBoard MAX
 对于 MinnowBoard Max，我们需要将电源、地线、SPI 和多个 GPIO 引脚接入 OLED 显示器。有关 MBM IO 引脚的更多详细信息，请参阅 [MBM 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm)。
@@ -71,13 +71,13 @@ OLED 显示器上具有 8 个 IO 引脚，应按如下方式连接它们：
 
 下面是试验板上所示的连接：
 
-![试验板连接]({{site.baseurl}}/images/SPIDisplay/breadboard_assembled_mbm.png)
+![试验板连接]({{site.baseurl}}/Resources/images/SPIDisplay/breadboard_assembled_mbm.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
 以下是电路原理图：
 
-![SPI 电路原理图]({{site.baseurl}}/images/SPIDisplay/schematics_mbm.png)
+![SPI 电路原理图]({{site.baseurl}}/Resources/images/SPIDisplay/schematics_mbm.png)
 
 ###部署和运行应用
 
@@ -106,7 +106,7 @@ public sealed partial class MainPage : Page
 
 紧接着，右键单击“解决方案资源管理器”中的“SPIDisplay”项目，然后选择“设置为启动项目”。按照[设置远程调试并部署应用]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp)的说明进行操作。SPIDisplay 应用将部署并启动，随后你应该看到 OLED 显示器上显示的文本数据。现在，你可以在该应用中键入内容，并且可在已连接的 OLED 显示器上对文本进行镜像操作。
 
-![SPI 运行]({{site.baseurl}}/images/SPIDisplay/spidisplay_screenshot.png)
+![SPI 运行]({{site.baseurl}}/Resources/images/SPIDisplay/spidisplay_screenshot.png)
 
 恭喜！ 你已连接 SPI 图形显示器。
 

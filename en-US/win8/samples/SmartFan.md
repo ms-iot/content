@@ -26,7 +26,7 @@ Use basic components found in most Arduino kits to develop a smart fan which tur
 
 ## Hooking up Components
 Please be sure to use the diode to keep the motor from burning out, and the correct resistors for the Photo Resistor and Temperature Sensor. Please do not mix up the temperature sensor with the Transistor, as it can cause the transistor to overheat. <br />
-<img src="{{site.baseurl}}/images/SmartFanDiagram.png" />
+<img src="{{site.baseurl}}/Resources/images/SmartFanDiagram.png" />
 
 ## Create a new project
 Open Visual Studio. Select File -> New Project and Select Templates -> Visual C++ -> Windows for IoT -> Galileo Wiring app
@@ -161,8 +161,8 @@ The following information is optional, but is aimed to give you a glimpse of the
 <a href="http://www.thingiverse.com/thing:322873">Fan Blade</a><br />
 <a href="http://www.thingiverse.com/thing:231507">Intel Galileo Case</a>
 
-<img style="max-width:100%;margin:20px" src="{{site.baseurl}}/images/3dfanparts.png" />
-<img style="max-width:100%;margin:20px" src="{{site.baseurl}}/images/3dfanparts_pic.JPG" />
+<img style="max-width:100%;margin:20px" src="{{site.baseurl}}/Resources/images/3dfanparts.png" />
+<img style="max-width:100%;margin:20px" src="{{site.baseurl}}/Resources/images/3dfanparts_pic.JPG" />
 
 More examples and 3D models can be found on <a href="http://www.thingiverse.com">www.thingiverse.com</a>.
 Be sure to maximize print time by laying pieces out strategically.

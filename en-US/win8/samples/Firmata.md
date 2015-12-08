@@ -33,7 +33,7 @@ _ino_ files require additional headers when compiling on Microsoft Windows. To s
 
 You'll need to edit the project settings - right click on the Project in the Solution Explorer, then select Properties. Under Configuration Properties -> C/C++ -> Preprocessor, add `USE_NETWORKSERIAL;_CRT_SECURE_NO_WARNINGS;INTEL_GALILEO;` to Preprocessor Definitions.
 
-![Preprocessor]({{site.baseurl}}/images/FirmataProjectSettings.png)
+![Preprocessor]({{site.baseurl}}/Resources/images/FirmataProjectSettings.png)
 
 Next, replace the content of main.cpp with the following:
 {% highlight C++ %}

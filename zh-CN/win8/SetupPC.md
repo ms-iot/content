@@ -58,13 +58,13 @@ lang: zh-CN
                 <li>
                     单击导航栏中的“工具”并转到“扩展和更新”
                     <br/>
-                    <img src="{{site.baseurl}}/images/InstallNugetPackageManagerStepOne.png">
+                    <img src="{{site.baseurl}}/Resources/images/InstallNugetPackageManagerStepOne.png">
                 </li>
                 <br/>
                 <li>
                     然后单击“联机”选项卡并搜索“NuGet 包管理器”。
                     <br/>
-                    <img src="{{site.baseurl}}/images/InstallNugetPackageManagerStepTwo.png">
+                    <img src="{{site.baseurl}}/Resources/images/InstallNugetPackageManagerStepTwo.png">
                 </li>
                 <li>
                     下载并安装它。
@@ -101,13 +101,13 @@ lang: zh-CN
                 <li>
                     单击导航栏中的“工具”并转到“扩展和更新”
                     <br/>
-                    <img src="{{site.baseurl}}/images/InstallNugetPackageManagerStepOne.png">
+                    <img src="{{site.baseurl}}/Resources/images/InstallNugetPackageManagerStepOne.png">
                 </li>
                 <br/>
                 <li>
                     然后单击“联机”选项卡并搜索“NuGet 包管理器”。
                     <br/>
-                    <img src="{{site.baseurl}}/images/InstallNugetPackageManagerStepTwo.png">
+                    <img src="{{site.baseurl}}/Resources/images/InstallNugetPackageManagerStepTwo.png">
                 </li>
                 <li>
                     下载并安装它。
@@ -145,7 +145,7 @@ lang: zh-CN
   <ol>
     <li>在台式机上，转到“控制面板”并打开以下项：<br/>（如果在图标视图中）程序和功能<br/> 或<br/> （如果在类别视图中）“程序”->“程序和功能”。</li>
     <li>在左侧列中，选择“打开或关闭 Windows 功能”。</li>
-    <li>在列表中，需要选中“Telnet 客户端”。<br/><img src="{{site.baseurl}}/images/Telnet.png"/></li>
+    <li>在列表中，需要选中“Telnet 客户端”。<br/><img src="{{site.baseurl}}/Resources/images/Telnet.png"/></li>
     <li>单击“确定”</li>
     <li>重新启动电脑</li>
   </ol>

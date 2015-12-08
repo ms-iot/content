@@ -37,7 +37,7 @@ Acronyms:
   
 AllJoyn Explorer and its documentation can be found [here]({{site.baseurl}}/en-US/win10/AllJoyn.htm#AllJoynExplorer){:target="_blank"}.
 
-![ZigBeeHardware]({{site.baseurl}}/images/ZigBee/ZigBeeHardware.png)
+![ZigBeeHardware]({{site.baseurl}}/Resources/images/ZigBee/ZigBeeHardware.png)
 
 ## Set up steps
 1. Install the required tools and driver listed in the prerequisites on your Windows 10 desktop
@@ -52,7 +52,7 @@ AllJoyn Explorer and its documentation can be found [here]({{site.baseurl}}/en-U
 Set up loopback exception: 
  1. Find the installation folder of the modern application for which you want to enable the loopback exemption. It is located at "C:\Users\\*username*\AppData\Local\Packages"
  
- ![LoopBackException]({{site.baseurl}}/images/ZigBee/LoopBackException.png)
+ ![LoopBackException]({{site.baseurl}}/Resources/images/ZigBee/LoopBackException.png)
  2. Copy the installation folder name which is also the application ID.
  3. Run the following command from an elevated command prompt:
 `CheckNetIsolation LoopbackExempt -a -n=installation-folder-name`
@@ -61,16 +61,16 @@ Set up loopback exception:
 ## Configure your XBee ZigBee module using XCTU tool
 Please look at the tool help to get more details about the tool (https://docs.digi.com/display/XCTU/XCTU+Overview){:target="_blank"}.
 
-![XBeeConfig1]({{site.baseurl}}/images/ZigBee/XBeeConfig1.png)
+![XBeeConfig1]({{site.baseurl}}/Resources/images/ZigBee/XBeeConfig1.png)
 
-![XBeeConfig2]({{site.baseurl}}/images/ZigBee/XBeeConfig2.png)
+![XBeeConfig2]({{site.baseurl}}/Resources/images/ZigBee/XBeeConfig2.png)
 
 ## Let ZigBee devices join your ZigBee network
 Once the XBee ZigBee module has been configured you can build your ZigBee network and let your ZigBee devices join. In order to do that you just need to power up your ZigBee devices. ZigBee Light Link (aka ZLL) and Home Automation devices will, by default and if not already part of a ZigBee network, try to join a ZigBee network which permit join is enabled. Since the XBee ZigBee module has been configured to always enable permit join, the ZigBee devices will join your network. 
 
 You can verify that devices have by using “network discovery” feature of XCTU tool.
 
-![ZigBeeJoinNetVerif]({{site.baseurl}}/images/ZigBee/ZigBeeJoinNetVerif.png)
+![ZigBeeJoinNetVerif]({{site.baseurl}}/Resources/images/ZigBee/ZigBeeJoinNetVerif.png)
 
 ## Set up your Raspberry Pi2
 1. Perform initial set up as instructed [here]({{site.baseurl}}/en-US/win10/SetupRPI.htm){:target="_blank"}
@@ -98,24 +98,24 @@ ZigBee adapter is written in C# and exposes ZigBee devices on AllJoyn through Br
 - Each Attribute of a cluster is exposed as an AllJoyn Property
 - All ZigBee commands of all clusters of an end point are grouped under the main AllJoyn bus object of the AllJoyn Service and exposed as AllJoyn method
 
-![ZigBee2AllJoynMapping]({{site.baseurl}}/images/ZigBee/ZigBee2AllJoynMapping.png)
+![ZigBee2AllJoynMapping]({{site.baseurl}}/Resources/images/ZigBee/ZigBee2AllJoynMapping.png)
 
 ### AllJoyn Explorer view of Philips Hue light bulb
 Philips Hue light bulb has 1 endpoint which has several clusters: Identify, Scene, Group, OnOff and LevelControl. ZigBee adapter only handles the OnOff and LevelControl clusters hence will only expose them to AllJoyn. Below is AllJoyn explorer view of what is exposed on AllJoyn. Path to “On” command is highlighted in green, path to “OnOff” status is highlighted in red.
 
-![AJXPhilipsHue1]({{site.baseurl}}/images/ZigBee/AJXPhilipsHue1.png)
+![AJXPhilipsHue1]({{site.baseurl}}/Resources/images/ZigBee/AJXPhilipsHue1.png)
 
-![AJXPhilipsHue2]({{site.baseurl}}/images/ZigBee/AJXPhilipsHue2.png)
+![AJXPhilipsHue2]({{site.baseurl}}/Resources/images/ZigBee/AJXPhilipsHue2.png)
 
-![AJXPhilipsHue3]({{site.baseurl}}/images/ZigBee/AJXPhilipsHue3.png)
+![AJXPhilipsHue3]({{site.baseurl}}/Resources/images/ZigBee/AJXPhilipsHue3.png)
 
-![AJXPhilipsHue4]({{site.baseurl}}/images/ZigBee/AJXPhilipsHue4.png)
+![AJXPhilipsHue4]({{site.baseurl}}/Resources/images/ZigBee/AJXPhilipsHue4.png)
 
-![AJXPhilipsHue5]({{site.baseurl}}/images/ZigBee/AJXPhilipsHue5.png)
+![AJXPhilipsHue5]({{site.baseurl}}/Resources/images/ZigBee/AJXPhilipsHue5.png)
 
 ### Class overview
 
-![ClassMap]({{site.baseurl}}/images/ZigBee/ClassMap.png)
+![ClassMap]({{site.baseurl}}/Resources/images/ZigBee/ClassMap.png)
 
 The __Adapter__ class is the main class of ZigBee adapter. This class derives from __IAdapter__ (BridgeRT interface) and contains a collection of __ZigBeeDevice__ instances and an instance of the __XBeeModule__ class.
 
@@ -143,7 +143,7 @@ AT command classes such as __AO_Command__,  __HV_Command__…  are used by XBeeM
 
 ### Sending ZDO or ZCL command and receiving response
 
-![SendZdoZcl]({{site.baseurl}}/images/ZigBee/SendZdoZcl.png)
+![SendZdoZcl]({{site.baseurl}}/Resources/images/ZigBee/SendZdoZcl.png)
 
 1. When ZclAttribute class reads the value of the attribute, it will build the read attribute payload following the ZCL standard and then call SendCommand method of the ZigBeeCommand class.
 2. SendCommand will then call SendZigBeeCommand method of XBeeModule.
@@ -154,7 +154,7 @@ AT command classes such as __AO_Command__,  __HV_Command__…  are used by XBeeM
 ### Receiving ZDO or ZCL command 
 ZigBee device can send ZDO or ZCL command to the XBee module, e.g.: device announce ZDO command which is sent when a device wakes up or join the network, report attribute ZCL command when an attribute of a ZCL cluster is reportable… This kind of command are not sent in response to another command and can be seen as “notification” by ZigBee adapter.  
 
-![ReceiveZdoZcl]({{site.baseurl}}/images/ZigBee/ReceiveZdoZcl.png)
+![ReceiveZdoZcl]({{site.baseurl}}/Resources/images/ZigBee/ReceiveZdoZcl.png)
 
 1. Adapter class will build a list of notifications it can receive upon initialization. This list contains instances of specific ZigBeeCommand such as DeviceAnnce, ZclReportAttribute.
 2. Upon reception of complete frame from the XBee module, the reception thread of the SerialController will call GetBytesFromModule callback of XBeeModule.
@@ -175,23 +175,23 @@ How to:
 
 Example of a new cluster class
 
-![NewClusterClass]({{site.baseurl}}/images/ZigBee/NewClusterClass.png)
+![NewClusterClass]({{site.baseurl}}/Resources/images/ZigBee/NewClusterClass.png)
 
 What needs to be done in ZclClusterFactory class
 
-![ZclFactoryChange]({{site.baseurl}}/images/ZigBee/ZclFactoryChange.png)
+![ZclFactoryChange]({{site.baseurl}}/Resources/images/ZigBee/ZclFactoryChange.png)
 
 ### Quick overview of frame used by XBee API
 Digi provide an API that can be used to interact with its XBee ZigBee module. This API is used to send or receive AT command or ZDO and ZCL command. AT commands are specific to the XBee module and can only be interpreted by the XBee module whereas ZDO or ZCL commands can be interpreted by any ZigBee devices. Frames used to send AT commands are a bit different than frames used to send ZDO or ZCL commands (see XBee ZigBee module documentation for more details).
 
 General frame layout:
 
-![XBeeFrame1]({{site.baseurl}}/images/ZigBee/XBeeFrame1.png)
+![XBeeFrame1]({{site.baseurl}}/Resources/images/ZigBee/XBeeFrame1.png)
 
 Explicit addressing ZigBee Command 
 
-![XBeeFrame2]({{site.baseurl}}/images/ZigBee/XBeeFrame2.png)
+![XBeeFrame2]({{site.baseurl}}/Resources/images/ZigBee/XBeeFrame2.png)
 
 Explicit Rx Indicator
 
-![XBeeFrame3]({{site.baseurl}}/images/ZigBee/XBeeFrame3.png)
+![XBeeFrame3]({{site.baseurl}}/Resources/images/ZigBee/XBeeFrame3.png)

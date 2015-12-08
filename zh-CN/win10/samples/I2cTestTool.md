@@ -63,7 +63,7 @@ I2cTestTool 是一种用于与命令行上的 I2C 设备交互的实用工具。
 
 1. 转至 `File -> New Project`，然后选择 `Visual C++ -> Windows -> Windows IoT Core -> Blank Windows IoT Core Console Application` 模板。
    
-   ![项目模板]({{site.baseurl}}/images/I2cTestTool/NewBlankConsoleApp.png)
+   ![项目模板]({{site.baseurl}}/Resources/images/I2cTestTool/NewBlankConsoleApp.png)
    
 1. 删除 pch.h、pch.cpp 和 ConsoleApplication.cpp。一般来说，预编译标头是个好主意，但为了简单起见，我们不打算在本示例中使用它们。
 1. 添加具有以下内容的名为 `main.cpp` 的新文件
@@ -87,15 +87,15 @@ I2cTestTool 是一种用于与命令行上的 I2C 设备交互的实用工具。
 1. 在“解决方案资源管理器”中右键单击你的项目，然后转至 `Properties`。在“配置”下拉列表中选择 `All Configurations`，在“平台”下拉列表中选择 `All Platforms`。
 1. 转到 `C/C++ -> General`，然后将 `Consume Windows Runtime Extensions` 设置为 `Yes`，而将 `Additional #using Directories` 设置为 `$(VCInstallDir)vcpackages;$(WindowsSdkDir)UnionMetadata;%(AdditionalUsingDirectories)`
 
-   ![使用 Windows 运行时扩展]({{site.baseurl}}/images/I2cTestTool/ConsumeWinRT.png)
+   ![使用 Windows 运行时扩展]({{site.baseurl}}/Resources/images/I2cTestTool/ConsumeWinRT.png)
     
 1. 转到 `C/C++ -> Code Generation` 并将 `Enable Minimal Rebuild` 设置为 `No`。
 
-   ![禁用最小重新生成]({{site.baseurl}}/images/I2cTestTool/EnableMinimalRebuild.png)
+   ![禁用最小重新生成]({{site.baseurl}}/Resources/images/I2cTestTool/EnableMinimalRebuild.png)
 
 1. 转到 `C/C++ -> Precompiled Headers` 并将 `Precompiled Header` 设置为 `Not Using Precompiled Headers`
 
-   ![预编译的标头]({{site.baseurl}}/images/I2cTestTool/PrecompiledHeaders.png)
+   ![预编译的标头]({{site.baseurl}}/Resources/images/I2cTestTool/PrecompiledHeaders.png)
 
 1. 单击“确定”以退出“项目属性”对话框。
 1. 生成你的解决方案 \(Ctrl + Shift + B\)。
