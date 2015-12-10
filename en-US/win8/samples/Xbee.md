@@ -20,7 +20,7 @@ Learn how to use HardwareSerial to communicate to an XBee device across the TX/R
 * Serial = COM1 = TX/RX pins
 
 # Required Components
-* [XBee ZB device](http://www.digi.com/products/wireless-wired-embedded-solutions/zigbee-rf-modules/zigbee-mesh-module/xbee-zb-module){:target="_blank"}
+* [XBee ZB device](http://www.digi.com/products/xbee-rf-solutions/modules/xbee-zigbee){:target="_blank"}
 * Wires to connect RX, TX, 3.3v power and ground wires to the XBee.
 
 This sample requires the XBee to run in API mode, by setting AP=2. If you are using Series 2 XBee, you'll need to install the API Firmware with [X-CTU](http://www.digi.com/support/productdetail?pid=3352&osvid=57&type=utilities){:target="_blank"} (Series 2 are manufactured with AT firmware), then set AP=2. This software will not work correctly with AP=1
