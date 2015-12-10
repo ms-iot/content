@@ -8,7 +8,7 @@ lang: zh-CN
 ## 将 BLE 设备和 GATT 属性表转储工具配对
 
 ### 配对 Sensortag
-在启动示例之前，我们需要首先将 SensorTag 与 Windows IoT 核心版设备配对。可采用两种方法配对设备：通过 [WebB]({{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm){:target="_blank"} 或命令行工具：`C:\Windows\System32\IoTBluetoothPairing.exe`。当前只有命令行工具支持与 PIN 身份验证配对，而这也是 SensorTag 的要求。请确保已将 USB 蓝牙硬件保护装置插入到 Windows IoT 核心版设备，并且已使 SensorTag 准备就绪。
+在启动示例之前，我们需要首先将 SensorTag 与 Windows IoT 核心版设备配对。可采用两种方法配对设备：通过 [Device Portal]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm){:target="_blank"} 或命令行工具：`C:\Windows\System32\IoTBluetoothPairing.exe`。当前只有命令行工具支持与 PIN 身份验证配对，而这也是 SensorTag 的要求。请确保已将 USB 蓝牙硬件保护装置插入到 Windows IoT 核心版设备，并且已使 SensorTag 准备就绪。
 
 #### 步骤 1
 使用 SSH 连接到 Windows IoT 核心版设备。可在[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm){:target="_blank"}找到有关如何执行此操作的说明。

@@ -7,6 +7,8 @@ lang: en-US
 
 ##'Hello, World!' Sample
 
+{% include VerifiedVersion.md %}
+
 In this sample, we will create and deploy the proverbial 1st app, "Hello World" to any device running Windows IoT Core!
 
 ###Create a new C# project
@@ -80,7 +82,7 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 
     ![RemoteMachine Target]({{site.baseurl}}/images/HelloWorld/cs-remote-machine-debugging.png)
 
-1. At this point, Visual Studio will present the 'Remote Connections' dialog. Put the IP address or name of your Windows IoT Core device (in this example, we're using 'my-device') and select `None` for Windows Authentication. Then click 'Select'.
+1. At this point, Visual Studio will present the 'Remote Connections' dialog. Put the IP address or name of your Windows IoT Core device (in this example, we're using 'my-device') and select `Universal (Unencrypted Protocol)` for Authentication Mode. Then click 'Select'.
 
     ![Remote Machine Debugging]({{site.baseurl}}/images/HelloWorld/cs-remote-connections.PNG)
 
@@ -94,51 +96,10 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 
 1. Now we're ready to deploy to the remote Windows IoT Core device. Simply press F5 (or select `Debug \| Start Debugging`) to start debugging our app. You should see the app come up in Windows IoT Core device screen, and you should be able to click on the button.
 
-1. If you see an error message in Visual Studio when deploying that says "Unable to connect to the Microsoft Visual Studio Remote Debugger named 'XXXX'.  The Visual Studio 2015 Remote Debugger (MSVSMON.EXE) does not appear to be running on the remote computer.", the Remote Debugger may have timed out.  Connect to your device using [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) and query the active processes by running `tlist`.  If at least one msvsmon.exe is not present in that list, you'll need to run this command to restart the Remote Debugger (or you can reboot your device): `schtasks /run /tn StartMsvsmon`.
-
 1. You can set breakpoints, see variable values, etc. To stop the app, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
 
 1. Having successfully deployed and debugged your first UWP application, create a Release version by simply changing the Visual Studio toolbar configuration dropdown from `Debug` to `Release`.  You can now build and deploy your app to your device by selecting Build \| Rebuild Solution and Build \| Deploy Solution.
 
 1. Congratulations! You just deployed your first UWP application to a device running Windows IoT Core!
 
-
-###Set HelloWorld as the Startup App
-
-1. You can also set this HelloWorld app to be the 'Startup App' for your Windows IoT Core device, so that when the device reboot, it will start HelloWorld automatically. To do so, you'll need to run a command line utility called iotstartup on the Windows IoT Core device. We will do this using PowerShell.
-
-    > NOTE: We are working on a bug that currently affects C#/VB Debug projects.  Please only use iotstartup to configure Release projects.
-
-1. Start a PowerShell (PS) session with your Windows IoT Core device as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
-
-1. From the PS session, type:
-
-        [192.168.0.243]: PS C:\> iotstartup list HelloWorld
-
-    and you should see the full name of our HelloWorld UWP application, i.e. something like:
-
-        Headed   : HelloWorld_n2pe7ts0w7wey!App
-
-    the utility is confirming that HelloWorld is an 'headed' application, and is installed correctly.
-
-1. Now, it's easy to set this app as the 'Startup App'. Just type the command:
-
-        [192.168.0.243]: PS C:\> iotstartup add headed HelloWorld
-
-    The utility will confirm that the new Startup headed app is now HelloWorld:
-
-        AppId changed to HelloWorld_n2pe7ts0w7wey!App
-
-1. Go ahead and restart your Windows IoT Core device. From the PS session, you can issue the shutdown command:
-
-        [192.168.0.243]: PS C:\> shutdown /r /t 0
-
-1. Once the device has restarted, you'll see HelloWorld start automatically.
-
-1. At this point, you can revert back to using the DefaultApp as your 'Startup App'. Just type the command:
-
-        [192.168.0.243]: PS C:\> iotstartup add headed DefaultApp
-
-    The utility will confirm that the new Startup headed app is now DefaultApp:
-
-        AppId changed to DefaultApp_cw5n1h2txyewy!App
+{% include_relative IotStartupContent.md %}

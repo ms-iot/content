@@ -1,0 +1,44 @@
+<h3>What you need</h3>
+
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <p>In this section, we prepare an Arduino device to be controlled remotely by the Windows 10 device prepared previously.  The Arduino needs to be running a version of Firmata, which will allow the board to communicate with our app via USB, Bluetooth, or Wi-Fi.  You can decide which of these communication connections you want - be sure to choose your parts below accordingly.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <p>You'll need:</p>
+    <ol class="inline-list">
+      <li><b>A Windows device</b> - not necessarily the one prepared in the previous step, but any device you can use to upload sketches to your Arduino.</li>
+      <li><b>An Arduino board</b> - our sample is tested to work with the Arduino Uno.</li>
+      <li><b>Standard A to Standard B USB cable</b> - needed no matter what to upload the Arduino sketch, regardless of connection choice.</li>
+      <li><b>Bluetooth device for Arduino</b> OPTIONAL - only needed if you choose to connect by Bluetooth. We recommend the <a href="https://www.sparkfun.com/products/12576" target="_blank">SparkFun Bluetooth Mate Silver</a>.</li>
+      <li><b>Wi-Fi device for Arduino</b> OPTIONAL - only needed if you choose to connect by Wi-Fi. We recommend this <a href="https://www.arduino.cc/en/Main/ArduinoWiFiShield" target="_blank">Arduino Wi-Fi Shield</a>.</li>
+    </ol>
+  </div>
+</div>
+
+<h3>Arduino Setup</h3>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <p>Windows Remote Arduino uses the <a href="https://github.com/firmata/protocol" target="_blank"> Firmata protocol </a>, which has implementations in many languages including Arduino. The Arduino implementation is called <a href="https://github.com/firmata/arduino/blob/master/examples/StandardFirmata/StandardFirmata.ino" target="_blank"> StandardFirmata </a> and comes pre-packaged with the Arduino software when you install it. Follow the steps below to upload the StandardFirmata sketch to your Arduino.</p>
+
+    <ol class="inline-list">
+      <li>Download and install the Arduino software from <a href="http://arduino.cc" target="_blank">http://arduino.cc</a>.</li>
+      <li>Connect your Arduino device to the computer using USB.</li>
+      <li>Launch the Arduino application.</li>
+      <li>Verify that you have the correct Arduino board selected under <b>Tools > Board</b>.</li>
+      <li>Verify that you have the correct COM Port selected under <b>Tools > Port</b>.  The name of the board should appear next to each option, making it much easier to choose the correct option.</li>
+      <li>In the Arduino IDE, navigate to <b>File > Examples > Firmata > StandardFirmata</b>.</li>
+      <li>Press “Upload” to deploy the StandardFirmata sketch to the Arduino device.</li>
+    </ol>
+
+    <p>Your Arduino will now run the StandardFirmata sketch forever unless reprogrammed with a different sketch. You can now optionally disconnect your Arduino from the computer and power it in any way you choose.</p>
+
+    <p>At this point, you can use the USB connection with no additional work - if you choose this option, move on to the next page.  Otherwise, follow one of the instruction sets below to setup a Bluetooth or Wi-Fi device.</p>
+
+    <p>If you wish to use the recommended Bluetooth pairing between your devices, you will need to <a href="https://github.com/ms-iot/remote-wiring/blob/master/bluetooth.md" target="_blank">hook up a Bluetooth device to the Arduino </a>.  Follow the steps on our GitHub to setup the Bluetooth module before moving on to the next step.</p>
+
+    <p>If you wish to use the Wi-Fi pairing between your devices, you will need to <a href="https://github.com/ms-iot/remote-wiring#notes-on-wifi-and-ethernet" target="_blank"> hook up a Wi-Fi device to the Arduino </a>.  Follow the steps on our GitHub to setup the Bluetooth module before moving on to the next step.</p>
+  </div>
+</div>

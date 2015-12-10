@@ -7,6 +7,8 @@ lang: en-US
 
 ##Push Button Sample
 
+{% include VerifiedVersion.md %}
+
 [View the code on GitHub](https://github.com/ms-iot/samples/tree/develop/PushButton/CS){:target="_blank"}
 
 In this sample, we connect a push button to your Raspberry Pi 2, MinnowBoard Max, or the DragonBoard 410c and use it to control an LED. We use GPIO interrupts to detect when the button is pressed and toggle the LED in response.
@@ -163,10 +165,8 @@ ledPin.SetDriveMode(GpioPinDriveMode.Output);
 {% endhighlight %}
 
 Next, we set up the button pin. For the Raspberry Pi 2 or the DragonBoard 410c, we take advantage of the fact that it has 
-built-in pull up resistors that we can activate. We use the
-built-in pull up resistor so that we don't need to supply a resistor externally.
-Configurable pull up resistors are not available on the MinnowBoard Max, so we insert a check to
-make sure this drive mode is supported.
+built-in pull up resistors that we can activate. We use the built-in pull up resistor so that we don't need to supply a resistor externally. 
+The MinnowBoard Max has 10k&#x2126; pull-up resistors that are on by default and not configurable, so we insert a check to make sure this drive mode is supported.
 
 {% highlight C# %}
 // Check if input pull-up resistors are supported

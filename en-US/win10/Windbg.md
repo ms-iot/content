@@ -113,7 +113,7 @@ Here is the first command you need to run:
 
 * The above command enables the serial connection for debugging
 
-* The baud-rate for the Raspberry Pi 2 is hard-coded to 912600, so you don't have to specify it
+* The baud-rate for the Raspberry Pi 2 is hard-coded to 921600, so you don't have to specify it
 
 Here is the second command you need to run:
 
@@ -125,7 +125,7 @@ As suggested earlier, use the Device Manager on your development PC to find out 
 
 On your development machine you can start WinDbg as follows:
 
-        "C:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k com:port=<PORT>,baud=912600
+        "C:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k com:port=<PORT>,baud=921600
 
         Note: If you have any of the Windows kits installed, you may find WinDbg under "C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\WinDbg.exe" 
 

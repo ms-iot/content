@@ -7,6 +7,8 @@ lang: en-US
 
 ##I2C Accelerometer Sample
 
+{% include VerifiedVersion.md %}
+
 We'll connect an I2C accelerometer to your Raspberry Pi 2/MinnowBoard Max/DragonBoard and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of I2C is needed.
 However, if you're curious, SparkFun provides a great [tutorial on I2C](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}.
 

@@ -6,6 +6,9 @@ lang: en-US
 ---
 
 ## Bluetooth Low Energy (BLE) Generic Attribute Profile (GATT) Sample Overview
+
+{% include VerifiedVersion.md %}
+
 In this sample we will discover how to work with Bluetooth Low Energy devices using the GATT profile and a TI CC2541 SensorTag. You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip){:target="_blank"}, and navigating to the [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} folder.
 
 Information on Bluetooth support for Windows IoT Core devices can be found [here]({{site.baseurl}}/{{page.lang}}/win10/Bluetooth.htm){:target="_blank"}.
@@ -13,7 +16,7 @@ Information on Bluetooth support for Windows IoT Core devices can be found [here
 This sample is supported on all Windows IoT Core devices. DragonBoard 410c has the added advantage of onboard Bluetooth, meaning you will not need an additional Bluetooth USB dongle to complete this or other Bluetooth samples.
 
 ### What is Bluetooth Low Energy & GATT?
-Bluetooth Low Energy (BLE), or Bluetooth Smart, is a wireless protocol that is part of the Bluetooth 4.0 core specification. The key feature of BLE is its low power consumption, leading to its widespread adoption by IoT and wearable devices. 
+Bluetooth Low Energy (BLE), or Bluetooth Smart, is a wireless protocol that is part of the Bluetooth 4.0 core specification. The key feature of BLE is its low power consumption, leading to its widespread adoption by IoT and wearable devices.
 
 Generic Attribute Profile (GATT) is the Bluetooth Profile that BLE devices will use to communicate with each other. Data is organized into nested objects called Profiles, Services, and Characteristics, as illustrated in the diagram below:
 
@@ -26,7 +29,7 @@ It is strongly suggested to have a good grasp on these concepts before continuin
 ![SensorTag Picture]({{site.baseurl}}/images/BLEGatt/SensorTag_with_iPad.jpg)
 <sub>*[Image from Texas Instruments](http://processors.wiki.ti.com/index.php/File:SensorTag_with_iPad.jpg){:target="_blank"}*</sub>
 
-In this sample we will be connecting a Windows IoT Core device with the [Texas Instruments CC2541 SensorTag Development Kit](http://www.ti.com/tool/cc2541dk-sensor){:target="_blank"} via BLE. The SensorTag is a BLE device powered with the TI CC2541 chip, which features a programmable Bluetooth 4.0 stack. On the device are also the following 6 sensors, which are exposing data through the GATT profile:
+In this sample we will be pairing and connecting a Windows IoT Core device with the [Texas Instruments CC2541 SensorTag Development Kit](http://www.ti.com/tool/cc2541dk-sensor){:target="_blank"} via BLE. The SensorTag is a BLE device powered with the TI CC2541 chip, which features a programmable Bluetooth 4.0 stack. On the device are also the following 6 sensors, which are exposing data through the GATT profile:
 
 1. Contactless IR temperature sensor (Texas Instruments TMP006)
 
@@ -39,6 +42,8 @@ In this sample we will be connecting a Windows IoT Core device with the [Texas I
 5. Magnetometer (Freescale MAG3110)
 
 6. Barometric pressure sensor (Epcos T5400)
+
+This sample needs Visual Studio Update 1 with SDK version 10586 to build and run on the latest version of IoT Core OS on the device.
 
 For the sample, we are running firmware version 1.4.1 on the SensorTag. More detailed information about the SensorTag can be found [here](http://processors.wiki.ti.com/index.php/SensorTag_User_Guide){:target="_blank"}.
 

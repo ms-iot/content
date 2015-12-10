@@ -5,17 +5,15 @@ permalink: /en-US/win10/samples/AlljoynDSB_GpioTutorial.htm
 lang: en-US
 ---
 
-## Alljoyn DSB Gpio Sample
+## Alljoyn DSB GPIO Tutorial
 
-This tutorial shows how a GPIO Device can be exposed to the AllJoyn Bus using the AllJoyn Device System Bridge.
+{% include VerifiedVersion.md %}
+
+You can find the source code for AllJoyn samples by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\AllJoyn`. This tutorial shows how a GPIO Device can be exposed to the AllJoyn Bus using the AllJoyn Device System Bridge.
 
 ### Prerequisites
 
-1. Alljoyn Explorer
-
-* [AllJoyn Explorer](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.1.9.zip?raw=true){:target="_blank"} - This zip contains the AllJoyn Explorer AppX bundle.
-* [AllJoyn Explorer Setup Guide](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_Setup_Guide_v1.0.pdf?raw=true){:target="_blank"} - Manual for installing and launching the AllJoyn Explorer.
-* [AllJoyn Explorer User Guide](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_User_Guide_v1.0.pdf?raw=true){:target="_blank"} - this pdf contains the documentation for how to use the AllJoyn Explorer
+1. Install [AllJoyn Explorer]({{site.baseurl}}/en-US/win10/AllJoyn.htm#AllJoynExplorer){:target="_blank"}.
 
 ### Step 1: Hardware Setup
 The sample uses a Raspberry Pi 2 that one of its GPIO pins is connected to a photo resistor as shown in the schematic below. If another device issues the pin number in the code has to be changed to match the HW setup.
@@ -26,8 +24,8 @@ The sample uses a Raspberry Pi 2 that one of its GPIO pins is connected to a pho
 
 The AllJoyn Device System Bridge Template is a Visual Studio extension that enables developers to create an AllJoyn Device System Bridge App project.
 
-1. Dowload the Alljoyn DSB VSIX template from Visual Studio Online [here](https://visualstudiogallery.msdn.microsoft.com/aea0b437-ef07-42e3-bd88-8c7f906d5da8).
-2. After the download, double-click on the DeviceSystemBridgeTemplate.vsix file to install the extension.
+1. Download the Alljoyn DSB VSIX template from Visual Studio Online [here](https://visualstudiogallery.msdn.microsoft.com/aea0b437-ef07-42e3-bd88-8c7f906d5da8){:target="_blank"}.
+2. After the download, double-click on the DeviceSystemBridgeTemplate.vsix file to install the extension. 
 
 ### Step 3: Create an AllJoyn Device System Bridge App Project
 
@@ -196,7 +194,7 @@ Select the "Custom_GPIO_Device" from the list.
 
 ![custom_gpio3_ajx]({{site.baseurl}}/images/AllJoyn/custom_gpio3.png)
 
-## EXTRA CREDIT: Signaling when the GPIO pin value changes
+## EXTRA CREDIT: Signalling when the GPIO pin value changes
 Suppose the applications on the AllJoyn bus do not want to poll the value of the GPIO pin but just to be notified when the GPIO pin value changes. For that, we need to add support for signals in our adapter. The contents below contain all the pieces needed to make the GPIO Device Sample notify the AllJoyn Consumer Applications.
 
 ### Additions to Adapter.h:

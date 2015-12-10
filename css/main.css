@@ -1,16 +1,46 @@
 body {
-    font-family: "Segoe UI Light","Segoe UI Web Light","Segoe UI Web Regular","Segoe UI","Segoe UI Symbol","HelveticaNeue-Light","Helvetica Neue",Arial,sans-serif;
-    font-size: 12pt;
+    font-family: "Segoe UI Light","Segoe UI Web Light","Segoe UI Web Regular","Segoe UI","Segoe UI Symbol","HelveticaNeue-Light","Helvetica Neue",Arial,sans-serif !important;
+    font-size: 11pt;
     margin: 0;
     padding: 0;
+    font-weight: 400;
 }
 
+h1 {
+  font-size: 2.87em;
+  font-weight: 100;
+  margin-bottom: 32px;
+  margin-top: 44px;
+}
+h2 {
+  font-size: 1.9em;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom:20px;
+}
+h4 {
+  font-size: 1.17em;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
 .default-body {
     background-color: #fff;
 }
 
 .default-main {
-    padding-top: 100px;
     width: 100%;
 }
 
@@ -44,7 +74,7 @@ body {
             color: #6d6d6d;
         }
 
-.chrome-header-wrapper .shell-header-wrapper, .chrome-footer-wrapper .shell-footer-wrapper {
+.chrome-header-wrapper .shell-header-wrapper, .chrome-footer-wrapper .shell-footer-wrapper , .shell-category-nav{
     max-width: 1206px !important;
 }
 
@@ -82,7 +112,6 @@ a:link {
     background-color: #fff !important;
     border: 0 !important;
     top: 0 !important;
-    position: absolute !important;
     width: 100% !important;
     z-index: 9999;
 }
@@ -111,6 +140,7 @@ a:hover {
 .section-heading {
     margin-bottom: 50px;
 }
+
 
 .build2015-iframe,
 .sanmateo-iframe {
@@ -141,7 +171,7 @@ a:hover {
 .downloads-image {
     background-image: url('../images/DevelopmentBoards.PNG');
     background-size: contain;
-	background-repeat: no-repeat;
+	  background-repeat: no-repeat;
     background-position: center;
     width: 75%;
     height: 200px;
@@ -209,7 +239,10 @@ ul.get-started-steps > li > a:hover {
 
 .steps {
   font-weight: lighter;
-  font-size: 30px;
+}
+
+h4.steps:hover{
+  color: #000;
 }
 
 h3.steps:hover{
@@ -242,8 +275,8 @@ h2.steps:hover{
   border-color: transparent;
 }
 .bottom-border{
-border-bottom: 1px solid rgb(230,230,230);
-padding-bottom:10px;
+  border-bottom: 1px solid rgb(230,230,230);
+  padding-bottom:10px;
 }
 
 h1.thin-header {
@@ -275,13 +308,14 @@ p.thin-header {
   margin-bottom: 20px;
 }
 
-table.maker-kit > tbody > tr:nth-of-type(odd) {
-  background-color: rgb(241,241,242);
-}
-table.maker-kit > tbody > tr > th {
-  font-weight:200;
-  color: rgb(000,000,000);
-}
+  table.maker-kit > tbody > tr:nth-of-type(odd) {
+    background-color: rgb(241,241,242);
+  }
+
+  table.maker-kit > tbody > tr > th {
+    font-weight:200;
+    color: rgb(000,000,000);
+  }
 
 ul.maker-kit > li > a > h3{
   text-align: left;
@@ -311,6 +345,13 @@ iframe.maker-kit {
   border: none;
   overflow:hidden;
 }
+
+.col-3-image {
+  height:147px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .projectRow {
   margin-top: 20px;
@@ -351,13 +392,23 @@ iframe.maker-kit {
 	border-color: gray !important;
 }
 
+.section-title{
+  margin-top: 0px;
+}
+
+.comparison-picture {
+  width:324px;
+  height:231px;
+}
 .subtext {
-	font-size: 0.8em;
 	color: gray;
+  margin-bottom: 64px;
+  margin-top: 0;
 }
 
 .divider {
 	border-bottom-style: solid;
+  padding-bottom: 10px;
 	border-bottom-width: 2px;
 	border-bottom-color: #0078d7;
 }
@@ -494,6 +545,11 @@ div.preview {
   margin-bottom: 20px;
   margin-top: 10px;
 }
+
+.row-no-margin {
+  margin-left: 0;
+  margin-right: 0;
+}
 .btn-group-justified {
   margin-left:auto;
   margin-right:auto;
@@ -514,9 +570,68 @@ div.preview {
       cursor: pointer;
     }
 
+#device-center-link {
+  margin-top:4px;
+  margin-bottom:24px;
+}
 
+.col-no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+.breadcrumb {
+  background-color: transparent;
+  margin-top:32px;
+  padding-left:0;
+  margin-bottom:0;
+  padding-top:0;
+  padding-bottom:0;
+}
+.breadcrumb > .active {
+  color: inherit;
+}
 
-@media (max-width: 800px) {
+    .breadcrumb > li + li:before {
+      content: ">\00a0";
+      color: inherit;
+    }
+
+    .breadcrumb > li {
+      margin-bottom: 0;
+    }
+
+.setup-content-list {
+  padding-left: 0;
+}
+
+        .setup-content-list > .row > .col-md-6 {
+          padding-left: 0;
+        }
+
+    #app-content > .row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    #pc-content > .row {
+      padding-left: 0;
+      margin-left:0;
+      margin-right:0;
+    }
+
+.inline-list {
+  padding-left:20px;
+}
+
+.toggle-button {
+  cursor: pointer;
+}
+
+.maker-image {
+  max-height: 205px;
+}
+
+@media (max-width: 992px) {
   .hth-project-image {
   max-height:100%;
   }
@@ -536,4 +651,23 @@ div.preview {
     border: none;
     background-color: transparent;
   }
+  #device-center-link {
+    width:100%;
+  }
+  img {
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .col-3-image {
+    height:100%;
+    width:100%;
+  }
+}
+.condensed-list > li{
+  margin-bottom:5px;
+}
+
+#iot_iot_home{
+  background-color: #0060AC;
+  font-weight: 600;
 }

@@ -7,6 +7,8 @@ lang: en-US
 
 ## GpioTestTool Sample
 
+{% include VerifiedVersion.md %}
+
 [View the code on Github](https://github.com/ms-iot/samples/blob/develop/GpioTestTool/main.cpp)
 
 GpioTestTool is a simple utility that allows you to write and 

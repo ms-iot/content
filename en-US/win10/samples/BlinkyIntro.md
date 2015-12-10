@@ -1,6 +1,8 @@
 {: .thin-header}
 #Blinky Sample
 
+{% include VerifiedVersion.md %}
+
 We'll create a simple LED blinking app and connect a LED to your Windows 10 IoT Core device.
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).

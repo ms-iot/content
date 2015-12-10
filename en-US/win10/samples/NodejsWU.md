@@ -7,10 +7,11 @@ lang: en-US
 
 ##'Hello, World' Node.js (Windows Universal) Sample
 
+{% include VerifiedVersion.md %}
 
 ###Set up your PC
-* Install Windows 10.
-* Install Visual Studio 2015.
+* Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
+* Install Visual Studio 2015 Update 1.
 * Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
 
 
@@ -40,7 +41,7 @@ http.createServer(function (req, res) {
 * Go to the Project menu and select '<Your project name> Properties.' You could also right-click on the project node in solution explorer to access Properties.
 * Enter the IP Address in the Remote Machine text box as shown below (the `--debug` argument is required for debugging and is added automatically).
 * You can also add `--use-logger` as an argument to redirect console output to a file in the local storage folder of the UWP application
-  (C:\Users\DefaultAccount\AppData\Local\Packages\&lt;Your Project Name&gt;_&lt;Publisher Hash String&gt;\LocalState\nodeuwp.log).
+  (C:\Data\Users\DefaultAccount\AppData\Local\Packages\&lt;Your Project Name&gt;_&lt;Publisher Hash String&gt;\LocalState\nodeuwp.log).
 * If you're building for Minnowboard Max, select `x86` in the dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
 
     ![Node.js Windows Universal Project Properties]({{site.baseurl}}/images/Nodejs/nodejswu-properties.png)
@@ -78,6 +79,20 @@ uwp.close();
 The result from the code above should look like this:
 
 ![DateTime Result]({{site.baseurl}}/images/Nodejs/datetime-ie.PNG)
+
+
+### Building and deploying an app package (AppX)
+You have the option to build and deploy your app without using the Visual Studio UI. To do this, follow the instructions below:
+
+* Open Developer Command Prompt for VS 2015.
+* Navigate to your project.
+* Run `msbuild <Your solution name>.sln /p:configuration=release /p:platform=<arm | x86 | x64 >` (use arm for Raspberry Pi 2 and x86 for MBM).
+* After running the command above, you should see a new folder with the AppX in: \Your project root\AppPackages.
+* Once you have created an AppX, you can use [Windows Device Portal to deploy it]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm#apps) to your Windows 10 IoT Core device.
+* In a PowerShell window connected to your device, run `iotstartup list` to get the full package name of your app.
+* Then run `iotstartup add headless <your package name>`
+* Run `shutdown /r /t 0` to reboot your device. When the reboot completes, the app will be running.
+
 
 ### GitHub
 * NTVS IoT Extension source code: [https://github.com/ms-iot/ntvsiot](https://github.com/ms-iot/ntvsiot)

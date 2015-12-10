@@ -7,6 +7,8 @@ lang: en-US
 
 #Serial Port Sample
 
+{% include VerifiedVersion.md %}
+
 We'll create a simple app that allows communication between a desktop and an IoT device over a serial interface.
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm){:target="_blank"}.
@@ -16,8 +18,6 @@ This is a headed sample.  To better understand what headed mode is and how to co
 You can find the C# and C++ versions of this sample [here](https://github.com/ms-iot/samples/tree/develop/SerialSample/){:target="_blank"}.  Make a copy of the folder on your disk and open the project from Visual Studio.
 
 This app is a Universal Windows app and will run on both the PC and your IoT device.
-
-#### Note: The C++ version of this sample is not compatible with DragonBoard 410c due to an issue with UART. It is recommended that the C# version be used for DragonBoard.
 
 ###Wiring the serial connection 
 
@@ -39,8 +39,8 @@ Make the following connections:
 
 * Insert the USB end of the USB-to-TTL cable into a USB port on the PC
 * Connect the GND wire of the USB-to-TTL cable to Pin 1 (GND) on the MBM board
-* Connect the RX wire of the USB-to-TTL cable to Pin 17 (TX) on the MBM board
-* Connect the TX wire of the USB-to-TTL cable to Pin 19 (RX) on the MBM board
+* Connect the RX wire (white) of the USB-to-TTL cable to Pin 17 (TX) on the MBM board
+* Connect the TX wire (green) of the USB-to-TTL cable to Pin 19 (RX) on the MBM board
 
 *Note: Leave the power wire of the USB-to-TTL cable unconnected.*
 
@@ -56,8 +56,8 @@ Make the following connections:
 
 * Insert the USB end of the USB-to-TTL cable into a USB port on the PC
 * Connect the GND wire of the USB-to-TTL cable to Pin 6 (GND) on the RPi2 board
-* Connect the RX wire of the USB-to-TTL cable to Pin 8 (TX) on the RPi2 board
-* Connect the TX wire of the USB-to-TTL cable to Pin 10 (RX) on the RPi2 board
+* Connect the RX wire (white) of the USB-to-TTL cable to Pin 8 (TX) on the RPi2 board
+* Connect the TX wire (green) of the USB-to-TTL cable to Pin 10 (RX) on the RPi2 board
 
 *Note: Leave the power wire of the USB-to-TTL cable unconnected.*
 
@@ -74,8 +74,8 @@ In this sample, UART1 will be used.  Make the following connections:
 
 * Insert the USB end of the USB-to-TTL cable into a USB port on the PC
 * Connect the GND wire of the USB-to-TTL cable to pin 1 (GND)
-* Connect the RX wire of the USB-to-TTL cable to pin 11 (UART1 TX)
-* Connect the TX wire of the USB-to-TTL cable to pin 13 (UART1 RX)
+* Connect the RX wire (white) of the USB-to-TTL cable to pin 11 (UART1 TX)
+* Connect the TX wire (green) of the USB-to-TTL cable to pin 13 (UART1 RX)
 
 _NOTE: Leave the power wire of the USB-to-TTL cable unconnected._
 
@@ -97,9 +97,9 @@ Make the following connections:
 
 * Connect the GND pin of the USB-to-TTL **module** to the GND wire of the USB-to-TTL cable 
 
-* Connect the RX pin of the USB-to-TTL **module** to the TX wire of the USB-to-TTL cable
+* Connect the RX pin of the USB-to-TTL **module** to the TX wire (green) of the USB-to-TTL cable
 
-* Connect the TX pin of the USB-to-TTL **module** to the RX wire of the USB-to-TTL cable
+* Connect the TX pin of the USB-to-TTL **module** to the RX wire (white) of the USB-to-TTL cable
 
 Leave the power pin of the USB-to-TTL cable unconnected. It is not needed.
 

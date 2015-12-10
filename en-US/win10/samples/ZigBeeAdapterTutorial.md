@@ -5,8 +5,11 @@ permalink: /en-US/win10/samples/ZigBeeAdapterTutorial.htm
 lang: en-US
 ---
 
-# ZigBee sample
-Get the [code](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynZigBeeAdapter/ZigBeeAdapter.zip?raw=true) on Github
+# ZigBee Adapter sample
+
+{% include VerifiedVersion.md %}
+
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\AllJoyn\Samples\ZigBeeAdapter`.  The sample code is available in C#. Make a copy of the folder on your disk and open the project from Visual Studio.
 
 This document describes the setup of the ZigBee adapter for Device System Bridge (DSB) on Windows 10. When using it you will be able to expose ZigBee devices to AllJoyn.
 
@@ -14,25 +17,25 @@ This document describes the setup of the ZigBee adapter for Device System Bridge
 
 ZigBee is a low cost, low power, wireless communications standard designed to allow devices to communicate with another. In addition to the communication protocol, ZigBee standard also defines profiles, such as ZigBee Light Link or Home Automation, which themselves define device. For example, ZigBee Light Link will define what a light is, what a dimmable light is, and so on. Each device uses clusters defined in the ZigBee Cluster Library (ZCL) to specify what they can do, what they expose…
 
-See [ZigBee standard](http://www.zigbee.org) for more information about ZigBee, ZigBee profiles, ZCL clusters...
+See [ZigBee standard](http://www.zigbee.org){:target="_blank"} for more information about ZigBee, ZigBee profiles, ZCL clusters...
 
 Acronyms:
 - ZDO: ZigBee Device Object
 - ZCL: ZigBee Cluster Library
 
 ## Prerequisites
-1. XBee ZigBee module from [Digi](http://www.digi.com), e.g.: XB24 Z7PIT-004
-2. XBee Explorer USB dongle from [SparkFun](https://www.sparkfun.com/products/11697)
-3. [XCTU](http://www.digi.com/products/xbee-rf-solutions/xctu-software/xctu) tool from Digi
-4. Windows 10 desktop with Visual Studio 2015 and [AllJoyn Explorer (AJX)](http://ms-iot.github.io/content/en-US/win10/AllJoyn.htm)
-5. [FTDI driver](http://www.ftdichip.com/Drivers/D2XX.htm) for Windows 10 which is required by the XBee Explorer USB dongle.
+1. XBee ZigBee module from [Digi](http://www.digi.com){:target="_blank"}, e.g.: XB24 Z7PIT-004
+2. XBee Explorer USB dongle from [SparkFun](https://www.sparkfun.com/products/11697){:target="_blank"}
+3. [XCTU](http://www.digi.com/products/xbee-rf-solutions/xctu-software/xctu){:target="_blank"} tool from Digi
+4. Windows 10 desktop with Visual Studio 2015 and [AllJoyn Explorer (AJX)]({{site.baseurl}}/en-US/win10/AllJoyn.htm){:target="_blank"}
+5. [FTDI driver](http://www.ftdichip.com/Drivers/D2XX.htm){:target="_blank"} for Windows 10 which is required by the XBee Explorer USB dongle.
 6. Some ZigBee devices like
- - [Philips Hue](http://www2.meethue.com/en-US) light bulb
- - [Dresden Elektronik](https://www.dresden-elektronik.de) ballast FLS-PP-IP that control a colored LED band 
+ - [Philips Hue](http://www2.meethue.com/en-US){:target="_blank"} light bulb
+ - [Dresden Elektronik](https://www.dresden-elektronik.de){:target="_blank"} ballast FLS-PP-IP that control a colored LED band 
 
 > Note that it is very important that the __ZigBee devices__ you will use __are not__ already __part of a ZigBee network__ otherwise they will not join your ZigBee network. Consequently, it is safer to buy single Philips Hue light bulb instead of a set of bulbs bundled with Philips Hue gateway because in that case bulbs will be part of the ZigBee network controlled by the gateway. 
   
-AllJoyn Explorer and its documentation (how to install, to use…) can be find [here](http://ms-iot.github.io/content/en-US/win10/AllJoyn.htm).
+AllJoyn Explorer and its documentation can be found [here]({{site.baseurl}}/en-US/win10/AllJoyn.htm#AllJoynExplorer){:target="_blank"}.
 
 ![ZigBeeHardware]({{site.baseurl}}/images/ZigBee/ZigBeeHardware.png)
 
@@ -56,7 +59,7 @@ Set up loopback exception:
  4. Restart your applications.
 
 ## Configure your XBee ZigBee module using XCTU tool
-Please look at the tool help to get more details about the tool (https://docs.digi.com/display/XCTU/XCTU+Overview).
+Please look at the tool help to get more details about the tool (https://docs.digi.com/display/XCTU/XCTU+Overview){:target="_blank"}.
 
 ![XBeeConfig1]({{site.baseurl}}/images/ZigBee/XBeeConfig1.png)
 
@@ -70,24 +73,16 @@ You can verify that devices have by using “network discovery” feature of XCT
 ![ZigBeeJoinNetVerif]({{site.baseurl}}/images/ZigBee/ZigBeeJoinNetVerif.png)
 
 ## Set up your Raspberry Pi2
-1. Perform initial set up as instructed [here](http://ms-iot.github.io/content/en-US/win10/SetupRPI.htm)
+1. Perform initial set up as instructed [here]({{site.baseurl}}/en-US/win10/SetupRPI.htm){:target="_blank"}
 2. Plug the XBee USB dongle into the Raspberry Pi2
-3. Install the FTDI driver if not already part of the Windows 10 image for Raspberry Pi2
- 4. Start a remote powershell session as administrator to the Raspberry Pi2
- 5. Copy the .inf and .sys file of the FTDI driver to c:\windows\system32 folder of the RaspBerry Pi2
- 6. Install the FTDI drivers using the following command:  `devcon.exe dp_add FTDIBUS.inf` and `devcon.exe dp_add FTDIPORT.inf`
- 7. Verify that driver works using the following command:  `devcon status "USB\VID_0403&PID_6001"`.
-You should see something like that: "_USB\VID_0403&PID_6001\... Name: FT232R USB UART Driver is running_".
-Note that PID could also be 6015 instead of 6001. This depends on the XBee Explorer USB dongle your using. 
- 8. Reboot the RaspBerry Pi2
 
 ## Deploy the ZigBee adapter on your Windows 10 machine
-1. Download the ZigBeeAdapter.zip file [here](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynZigBeeAdapter/ZigBeeAdapter.zip?raw=true)
-2. Navigate to the folder where you downloaded the zip file. Right click the file and “Extract All…” to the folder of your choice.
-3. Navigate to the extracted folder and open the ZigBeeAdapter.sln solution file in Visual Studio.
-4. Select the relevant target (x86, x64 or ARM) and build the solution in Visual Studio.
+
+1. Download a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip).
+2. Open `samples-develop\AllJoyn\Samples\ZigBeeAdapter\ZigBeeAdapter.sln` in Visual Studio.
+3. Select the relevant target (x86, x64 or ARM) and build the solution in Visual Studio.
 Your now ready to launch it, so launch or debug HeadedAdapterApp project on desktop or if the targeted Windows 10 device has a display or launch or debug HeadlessAdapterApp if it doesn’t. 
-If needed, see instruction [here](http://ms-iot.github.io/content/en-US/win10/AppDeployment.htm) for remote debugging.
+If needed, see instruction [here]({{site.baseurl}}/en-US/win10/AppDeployment.htm){:target="_blank"} for remote debugging.
  
  
 ### Known limitations of the current version of the ZigBee adapter
@@ -200,4 +195,3 @@ Explicit addressing ZigBee Command
 Explicit Rx Indicator
 
 ![XBeeFrame3]({{site.baseurl}}/images/ZigBee/XBeeFrame3.png)
-

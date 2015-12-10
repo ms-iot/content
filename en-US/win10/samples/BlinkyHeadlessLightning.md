@@ -7,6 +7,8 @@ lang: en-US
 
 ##Blinky Headless Sample with Lightning Provider
 
+{% include VerifiedVersion.md %}
+
 This sample demonstrates how to communicate with GPIO using the Micorosot.IoT.Providers.Lightning.I2cProvider
 
 It's based on the [BlinkyHeadless sample]({{site.baseurl}}/{{page.lang}}/win10/BlinkyHeadless.htm). And shares the same setup steps as well as most of the code. The only difference is setting the Lightning provider as the default controllers provider.

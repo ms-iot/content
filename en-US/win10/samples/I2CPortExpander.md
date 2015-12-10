@@ -7,6 +7,8 @@ lang: en-US
 
 ##I2C Port Expander Sample
 
+{% include VerifiedVersion.md %}
+
 ![I2C Port Expander Image]({{site.baseurl}}/images/I2CPortExpander/PortExpanderProjectPicture_480.png)
 
 In this sample, we'll connect an I2C port expander to your Raspberry Pi 2 and create a simple app that uses the port expander to read the status of a tactile switch and control an LED. No background knowledge of I2C or port expanders is needed.

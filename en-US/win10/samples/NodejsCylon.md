@@ -6,6 +6,9 @@ lang: en-US
 ---
 
 ##Cylon Node.js (Console Application) Sample
+
+{% include VerifiedVersion.md %}
+
 In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) running on a Raspberry Pi 2 to blink the LED on an Arduino (with [Firmata](https://www.npmjs.com/package/firmata) installed) once per second.
 
 ###Hardware required
@@ -14,14 +17,12 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 * USB to Micro USB cable.
 
 ###Set up your PC
-* Install Windows 10.
-* Install Visual Studio 2015.
+* Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
+* Install Visual Studio 2015 Update 1.
 * Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
-* Install npm v3 (to take advantage of the flat node module dependency structure npm v3 introduced):
-  * Open a command window (as Administrator) and run `npm install -g npm-windows-upgrade`
-  * Then run `npm-windows-upgrade --version:3.3.3 --npm-path:"C:\Program Files (x86)\Node.js (Chakra)"` (Note: Change npm-path if you picked a different installation path for Node.js (Chakra)).
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 * Install Arduino software from [here](https://www.arduino.cc/en/Main/Software).
+* Install [Git for Windows](http://git-scm.com/download/win). Ensure that Git is included in your ‘PATH’ environment variable.
 
 
 ###Upload Firmata to your Arduino
@@ -34,15 +35,8 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 
 
 ###Copy Node.js to your Raspberry Pi 2
-* Open up an explorer window on your PC and enter **\\\\\<IP address of your device\>\\C$** to access files on your device. The credentials are:
-
-   username: <IP address or device name, default is minwinpc>\Administrator  
-   password: p@ssw0rd  
-
-  NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).  
-
-* Run `& 'C:\Program Files (x86)\Node.js (chakra)\CopyNodeChakra.ps1' -arch <ARM | x86 | x64 > -ip <Device IP Address>`. Use `ARM` if you have a Raspberry Pi 2. Use `x86` if you have a MinnowBoard Max. 
-  After completing this step, Node.js will be in `c:\Node.js (Chakra)` on your device. **Note:** If you haven't entered the credentials through the explorer window you will get an "Access Denied" error.
+* From PowerShell on your PC, run `& 'C:\Program Files (x86)\NodejsUwp\Console\CopyNodeChakra.ps1' -arch <ARM | x86 | x64 > -ip <Device IP Address> -user <Username> -pass <Password>`. Use `ARM` if you have a Raspberry Pi 2. Use `x86` if you have a MinnowBoard Max.  
+  If you have not changed your username and password for your device, use `Administrator` for username and `p@ssw0rd` for the password. After completing this step, Node.js will be in `c:\Node.js (Chakra)` on your device.
 
 
 ###Create a file with the code to control the Arduino LED
@@ -73,28 +67,26 @@ Cylon.robot({
 * Run `npm install cylon cylon-firmata cylon-gpio cylon-i2c`
 
 
-###Build Serialport
-**Note:** Even though serialport is installed when Cylon is installed, you still need to build the native serialport.node addon that:
+###Get Serialport
+**Note:** Even though serialport is installed when Cylon is installed, you still need to get a version that:
 
 * Corresponds with the processor architecture of the device you are targeting (in this case ARM for Raspberry Pi 2).
 * Includes an [update](https://github.com/voodootikigod/node-serialport/pull/550) for serialport to work on Windows 10 IoT Core.
 
-Steps to build serialport:
+Steps to get serialport:
 
-1. From your Git shell (get GitHub Desktop for Windows [here](https://desktop.github.com/)),  clone [this](https://github.com/Microsoft/node) temporary fork of node.js.
-2. Run `git checkout ch0.12`
-3. Run `.\vcbuild.bat arm chakra openssl-no-asm` and wait for node to build.
-4. Clone [this](https://github.com/ms-iot/node-serialport) temporary fork of serialport and checkout the 'master' branch.
-5. In a command window, go to the serialport clone root.
-6. Run `npm install nan`
-7. Run `node.exe [node.js clone root]\deps\npm\node_modules\node-gyp\bin\node-gyp.js rebuild --nodedir=[node.js clone root] --target_arch=arm --module_name=serialport --module_path=.`
-8. If the last step is successful, you will see **serialport.node** in [serialport clone path]\build\release.
-9. Copy [serialport clone root]\build\release\serialport.node to [CylonSample folder path]\node_modules\serialport\build\serialport\v1.7.4\Release\node-v14-win32-arm\serialport.node
-  (**Note:** node-v14-win32-arm is a new folder you will create).
+* Copy and unzip the file [here](https://github.com/ms-iot/ntvsiot/releases/download/2.0.4/serialport_WinIoT.zip) to your PC.
+* Copy &lt;Unzipped folder&gt;\console\arm\serialport.node to [CylonSample folder path]\node_modules\serialport\build\Release\node-v47-win32-arm\serialport.node  
+  **Note:** node-v47-win32-arm is a new folder you will create.
 
 
 ###Copy the sample to your Raspberry Pi 2
-* Copy the CylonSample folder on your PC to C:\CylonSample on the Raspberry Pi 2.
+Open up an explorer window on your PC and enter **\\\\\<IP address of your device\>\\C$** to access files on your device. The credentials (if you have not changed them) are:
+
+   username: <IP address or device name, default is minwinpc>\Administrator  
+   password: p@ssw0rd  
+
+Copy the CylonSample folder on your PC to C:\CylonSample on the Raspberry Pi 2.
 
 
 ###Set up the connection between your Arduino and Raspberry Pi 2

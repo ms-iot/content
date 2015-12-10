@@ -7,6 +7,8 @@ lang: en-US
 
 ## GpioOneWire Sample (DHT11)
 
+{% include VerifiedVersion.md %}
+
 [View the code on Github](https://github.com/ms-iot/samples/blob/develop/GpioOneWire)
 
 This sample shows how to read from the [DHT11](https://www.adafruit.com/product/386)
@@ -15,10 +17,22 @@ humidity sensor that uses a single wire to interface to the host controller.
 This wire is used by the host to request a sample from the DHT11 and
 by the DHT11 to transmit data back to the host.
 
+The DHT11 is right on the edge performance-wise of what the GPIO APIs can
+handle. If there is background activity such as network, USB, filesystem, or
+graphics activity, it can prevent the sample from successfully sampling
+from the DHT11.
+
 For a description of the protocol used by the DHT11, see
 [this article](http://embedded-lab.com/blog/?p=4333). The datasheet is [here](http://akizukidenshi.com/download/ds/aosong/DHT11.pdf).
 
 ![Screenshot]({{site.baseurl}}/images/GpioOneWireScreen1.png)
+
+### Requirements
+
+{:.table.table-bordered}
+| Minimum supported build | 10.0.10556                      |
+|-------------------------|---------------------------------|
+| Supported Hardware      | Raspberry Pi 2<br />Dragonboard 410C |
 
 ### Hardware Setup
 
@@ -39,7 +53,7 @@ Connect the components as shown in the following diagram:
  1. Right click on the project in the solution explorer, and click `Properties`.
  1. In the project properties dialog, select the `Debugging` tab.
  1. Enter the IP address of your device in the `Machine Name` field.
- 1. Set `Requires Authentication` to `No`
+ 1. Set `Authentication Type` to `Universal (Unencrypted Protocol)`
  1. Hit `F5` to build, deploy, and debug the project. You should see temperature
     and humidity samples updated on the screen every 2 seconds.
 

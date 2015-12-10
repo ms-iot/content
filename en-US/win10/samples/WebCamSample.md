@@ -6,7 +6,9 @@ lang: en-US
 ---  
   
 #Web Camera Sample  
-  
+
+{% include VerifiedVersion.md %}
+
 We'll create a simple app that initializes a web cam, takes pictures, and records video and audio.  
   
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).  

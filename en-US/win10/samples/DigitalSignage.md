@@ -7,6 +7,8 @@ lang: en-US
 
 #Digital Signage App
 
+{% include VerifiedVersion.md %}
+
 This sample showcases a Digital Sign UWP running on Windows IoT Core. Here we will demonstrate how the app receives content in different multimedia forms - e.g. video, audio, image, slideshow - from an XML file stored online and displays this content to the user. The digital sign in this sample is interactive and allows web browsing as well as allowing for touch input. 
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
@@ -199,5 +201,5 @@ In the DisplayNext() method, we traverse through our list of media files obtaine
 
  2. Using the physical keyboard or touch screen, you may specify a new config file to read from at the location you specify.
 
-<img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_settings2.png" height="400">
+<img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_settings1.png" height="400">
 

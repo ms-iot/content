@@ -1,12 +1,10 @@
 {
    "RPI2":[
-      "GetStarted.htm",
 	  "win10/SetupPCRPI.htm",
       "win10/SetupRPI.htm",
       "win10/samples/Blinky.htm"
    ],
    "MBM":[
-      "GetStarted.htm",
       "win10/SetupPCMBM.htm",
       "win10/SetupMBM.htm",
       "win10/samples/BlinkyMBM.htm"

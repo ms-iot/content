@@ -7,6 +7,8 @@ lang: en-US
 
 ##MemoryStatus Console Application Sample
 
+{% include VerifiedVersion.md %}
+
 We'll create a simple console application that can be used to query the memory usage on your Windows IoT Core device (Raspberry Pi 2, MinnowBoard Max, or a DragonBoard). Please note that you need to compile the project for ARM for Raspberry Pi 2 or DragonBoard and x86 for MinnowBoard Max.
 
 ###Load the project in Visual Studio
@@ -152,11 +154,21 @@ int main(int argc, char **argv)
 </UL>
 * Make sure the app builds correctly invoking the Build \| Build Solution menu command.
 
-* This application can be run in either headed or headless mode.  To better understand what headed and headless mode are and how to configure your device, follow the instructions [here]{{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
+* This application can be run in either headed or headless mode.  To better understand what headed and headless mode are and how to configure your device, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
 
 * It is easy to deploy this console application to our Windows IoT Core device. In the [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) documentation, you can find instructions to use `setcomputername` to configure a unique name for your Windows IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in VS.
 
-    In Visual Studio, you can configure your target by editing your project's properties (be sure to make all of the highlighted changes as appropriate to your board's name or IP address):
+* You will first need to setup the Remote Debugger on your Windows IoT Core device. First follow the steps [here]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm) to deploy a Universal Windows Application on your device. This will copy all the required binaries to your device. 
+
+* To start remote debugger on your device, open a Web Browser on your PC and point it to `http://<device name/IP address>:8080` to launch [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm). In the credentials dialog, use the default username and password: `Administrator`, `p@ssw0rd`. Windows Device Management should launch and display the web management home screen.
+
+* Now navigate to the Debugging section of Windows Device Portal and click the Start button under Start Visual Studio Remote Debugger. 
+
+    ![WindowsDevicePortalDebugSettings Target]({{site.baseurl}}/images/Console/device_portal_start_debugger.png)
+
+* This will show pop-up a message box and give you the connection information. 
+
+*  In Visual Studio, you can configure your target by editing your project's properties (be sure to make all of the highlighted changes as appropriate to your board's name or IP address):
 
     ![RemoteMachineProjectSettings Target]({{site.baseurl}}/images/Console/console_project_settings.png)
 
@@ -178,6 +190,13 @@ int main(int argc, char **argv)
 
 * Congratulations! You just deployed your first console application to a device running Windows IoT Core!
 
-* You can now run the application as you would any other application.  Simply open a PowerShell connection (instructions can be found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)) and enter the Remote Command you specified above.
+* You can now run the application as you would any other application.  Simply open a PowerShell/SSH connection (instructions can be found [here for powershell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) and [here for SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm)) and enter the Remote Command you specified above.
 
     ![ConsoleOutput Target]({{site.baseurl}}/images/Console/console_output.png)
+
+* Once you are done debugging Console Applications, remember to kill the remote debugger on the Windows IoT Core device. Use powershell/SSH to open a console session and run the following commnand
+
+    `kill msvsmon.exe`
+
+
+

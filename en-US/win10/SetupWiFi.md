@@ -8,20 +8,12 @@ lang: en-US
 #Using WiFi on your Windows 10 IoT Core device
 
 WiFi is supported on Windows 10 IoT Core devices through the use of a USB WiFi adapter. Using WiFi provides all the functionality of a wired connection,
-including [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm), [Powershell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm), [Web Device Management]({{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm), and application debugging and deployment.
+including [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm), [Powershell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm), [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm), and application debugging and deployment.
 
 	Note: Plugging in a wired Ethernet cable will override WiFi as the default network interface
 
 ### <a name="WiFi_Devices"></a>Supported Adapters
-The following WiFi adapters have been tested on Windows 10 IoT Core:
-
-| Raspberry Pi 2                                                     || MinnowBoard Max                                                    |
-|--------------------------------------------------------------------||--------------------------------------------------------------------|
-|[Raspberry Pi WiFi Dongle](http://swag.raspberrypi.org/collections/frontpage/products/official-raspberry-pi-Wifi-dongle){:target="_blank"}||[Airlink Wireless N 150 Mini USB Adapter](http://www.amazon.com/Airlink101-AWLL5077-150Mbps-Wireless-Adapter/dp/B002VFWY9M){:target="_blank"}|
-|||[Panda PAU06](http://www.amazon.com/Panda-300Mbps-Wireless-N-Adapter-button/dp/B00JDVRCI0){:target="_blank"}|
-|||[TP-LINK TL_WN725N](http://www.amazon.com/TP-LINK-TL-WN725N-Wireless-Adapter-150Mbps/dp/B008IFXQFU){:target="_blank"}|
-|||[NET-DYN USB Adapter](http://www.amazon.com/Adapter-NET-DYN%C2%AE-Perfect-Desktop-Laptop/dp/B00LWE14TO){:target="_blank"}|
-|||[Realtek 8191](http://www.amazon.com/Realtek-300Mbps-802-11n-Wireless-Network/dp/B00AVSRLTO){:target="_blank"}|
+A list of WiFi adapters that have been tested on Windows 10 IoT Core can be found on our [Supported Hardware]({{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm#WiFi-Dongles){:target="_blank"} page
 
 ### Configuring WiFi
 To use WiFi, you'll need to provide Windows 10 IoT core with the WiFi network credentials. There are a few different options for doing so:
@@ -52,7 +44,7 @@ An alternative way to configure WiFi is to use the default app. You can use this
 ###Option 1: Web-Based Configuration
 **Prerequisite:** Your device will already need to be connected to your local network through Ethernet and should have a USB WiFi Adapter plugged in
 
-If you have device a with no UI, display, or input devices, you can still configure it through [web-based management]({{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm).
+If you have device a with no UI, display, or input devices, you can still configure it through the [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm).
 In **Windows IoT Core Watcher**, *Right Click* on your Raspberry Pi, then select **Web Browser Here**.
 
 <!-- This content is replicated at en-US/win10/KitSetupRPI.md -->

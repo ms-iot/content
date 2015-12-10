@@ -94,9 +94,9 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/Glossary.htm">Learn More</a>
                     </div>
 					<div class="col-md-3">
-                        <h3>Web-based Device Management</h3>
-                        <p>Get advanced diagnostics about your machine from the web</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm">Learn More</a>
+                        <h3>Windows Device Portal</h3>
+                        <p>Connect to, control, configure, and get advanced diagnostics about your machine from the web</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm">Learn More</a>
                     </div>
                 </div>
                 <div class="row section-heading">
@@ -128,7 +128,31 @@ lang: en-US
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/Bluetooth.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
-                        <!-- Placeholder for spacing -->
+                        <h3>Embedded Mode</h3>
+                        <p>Enable embedded mode on desktop and mobile</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/EmbeddedMode.htm">Learn More</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>Windows 10 IoT Core Pro</h3>
+                        <p>Create a Windows 10 IoT Core Pro image</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/CreateIoTCorePro.htm">Learn More</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>Universal Write Filter</h3>
+                        <p>Enable a write filter on your OS image</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/UWF.htm">Learn More</a>
+                    </div>
+                </div>
+                <div class="row section-heading">
+                    <div class="col-md-3">
+                        <h3>Securing IoT Devices with TPMs</h3>
+                        <p>Learn about Trusted Platform Modules (TPMs), along with various implementations on IoT Core as well as code samples</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/TPM.htm">Learn More</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>Enabling Secure Boot and BitLocker</h3>
+                        <p>Learn how to secure your IoT device by enabling Secure Boot and BitLocker device encryption on supported IoT Core devices</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/SB_BL.htm">Learn More</a>
                     </div>
                     <div class="col-md-3">
                         <!-- Placeholder for spacing -->
@@ -174,10 +198,9 @@ lang: en-US
 
                 <div class="row section-heading">
                     <div class="col-md-3">
-                        <h3>Console App</h3>
-                        <p>Create a console app that monitors memory usage on devices running Windows 10 IoT Core</p>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/ConsoleApp.htm">Console App (C++)</a><br>
-                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Nodejs.htm">Console App (Node.js)</a><br>
+                        <h3>IoT Core Default App</h3>
+                        <p>Create a UWP app that provides a device-management experience for Windows 10 IoT Core</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/IotDefaultApp.htm">Iot Core Default App (C#)</a><br>
                     </div>
                     <div class="col-md-3">
                         <h3>I2C/SPI Accelerometer</h3>
@@ -230,6 +253,7 @@ lang: en-US
                         <h3>Potentiometer Sensor Sample</h3>
                         <p>A analog sensor is connected to Raspberry Pi through ADC converter and digital output data is displayed through Monitor and LED </p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm">Potentiometer Sensor Sample (C#)</a>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/Potentiometer.htm">Potentiometer Sensor Sample (Wiring)</a>
                     </div>
                    <div class="col-md-3">
                         <h3>GpioTestTool (Console)</h3>
@@ -345,7 +369,31 @@ lang: en-US
                         <p>Learn to control DC motors using a Windows IoT Core enabled device!</p>
                         <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/DCMotor.htm">DC Motors (Wiring)</a>
                     </div>
-                </div>
+                    <div class="col-md-3">
+                        <h3>Console App</h3>
+                        <p>Create a console app that monitors memory usage on devices running Windows 10 IoT Core</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/ConsoleApp.htm">Console App (C++)</a><br>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/Nodejs.htm">Console App (Node.js)</a><br>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>Launching an external program</h3>
+                        <p>Learn how to use <code>Windows.System.ProcessLauncher</code> API to launch external executable programs from your UWP app</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/ProcessLauncherSample.htm">ProcessLauncher API Sample (C#)</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>Connecting to a WiFi Network</h3>
+                        <p>Learn how to discover and connect to a WiFi network from a UWP app using <code>Windows.Devices.WiFi.WiFiAdapter</code> API</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/WifiConnectSample.htm">WiFi Connect Sample (C#)</a>
+                    </div>
+				  </div>
+
+                <div class="row section-heading">
+                    <div class="col-md-3">
+                        <h3>App Installation Sample</h3>
+                        <p>Learn how to install and deploy an app on Windows IoT Core</p>
+                        <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/AppInstall.htm">Learn More</a>
+                    </div>
+				  </div>
 
                 <div class="row">
                     <h2>Previous Version of Windows</h2>

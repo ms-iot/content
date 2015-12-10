@@ -7,11 +7,13 @@ lang: en-US
 
 ##Blinky Node.js Server Sample (Windows Universal)
 
+{% include VerifiedVersion.md %}
 
 ###Set up your PC
-* Install Windows 10.
-* Install Visual Studio 2015.
+* Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
+* Install Visual Studio 2015 Update 1.
 * Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
+
 
 ###Set up your hardware
 The setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm).

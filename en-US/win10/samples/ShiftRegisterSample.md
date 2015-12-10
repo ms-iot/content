@@ -7,6 +7,8 @@ lang: en-US
 
 ##Shift Register Sample
 
+{% include VerifiedVersion.md %}
+
 ![Shift Register Sample Image]({{site.baseurl}}/images/ShiftRegister/ShiftRegisterProjectPicture_480.png)
 
 In this sample, we'll connect an 8-bit serial-in, parallel-out shift register to your Raspberry Pi 2* and create a simple app that uses the shift register to control eight LEDs.

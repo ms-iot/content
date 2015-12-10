@@ -23,14 +23,9 @@ Deploying and debugging your application is straightforward with Visual Studio. 
 
 5. Now we're ready to deploy. Simply press F5 (or select Debug \| Start Debugging) to start debugging our app. You should see the app come up in Windows IoT Core device screen.
 
-6. If you see an error message in Visual Studio when deploying that says **Unable to connect to the Microsoft Visual Studio Remote Debugger named 'XXXX'. 
-The Visual Studio 2015 Remote Debugger (MSVSMON.EXE) does not appear to be running on the remote computer.**, the Remote Debugger may have timed out. 
-Connect to your device using [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) and query the active processes by running `tlist`. 
-If **msvsmon.exe** is not present in that list, you'll need to run this command to restart the Remote Debugger (or you can reboot your device): `schtasks /run /tn StartMsvsmon`.
+6. Once deployed, you can set breakpoints, see variable values, etc. To stop the app, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
 
-7. Once deployed, you can set breakpoints, see variable values, etc. To stop the app, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
-
-8. Having successfully deployed and debugged your UWP application, create a Release version by simply changing the Visual Studio toolbar configuration dropdown from `Debug` to `Release`.  You can now build and deploy your app to your device by selecting Build \| Rebuild Solution and Build \| Deploy Solution.
+7. Having successfully deployed and debugged your UWP application, create a Release version by simply changing the Visual Studio toolbar configuration dropdown from `Debug` to `Release`.  You can now build and deploy your app to your device by selecting Build \| Rebuild Solution and Build \| Deploy Solution.
 
 <a name="cpp"/>
 
@@ -40,14 +35,9 @@ If **msvsmon.exe** is not present in that list, you'll need to run this command 
 
 5. Now we're ready to deploy. Simply press F5 (or select Debug \| Start Debugging) to start debugging our app. You should see the app come up in Windows IoT Core device screen.
 
-6. If you see an error message in Visual Studio when deploying that says **Unable to connect to the Microsoft Visual Studio Remote Debugger named 'XXXX'. 
-The Visual Studio 2015 Remote Debugger (MSVSMON.EXE) does not appear to be running on the remote computer.**, the Remote Debugger may have timed out. 
-Connect to your device using [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) and query the active processes by running `tlist`. 
-If **msvsmon.exe** is not present in that list, you'll need to run this command to restart the Remote Debugger (or you can reboot your device): `schtasks /run /tn StartMsvsmon`.
+6. Once deployed, you can set breakpoints, see variable values, etc. To stop the app, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
 
-7. Once deployed, you can set breakpoints, see variable values, etc. To stop the app, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
-
-8. Having successfully deployed and debugged your UWP application, create a Release version by simply changing the Visual Studio toolbar configuration dropdown from `Debug` to `Release`.  You can now build and deploy your app to your device by selecting Build \| Rebuild Solution and Build \| Deploy Solution.
+7. Having successfully deployed and debugged your UWP application, create a Release version by simply changing the Visual Studio toolbar configuration dropdown from `Debug` to `Release`.  You can now build and deploy your app to your device by selecting Build \| Rebuild Solution and Build \| Deploy Solution.
 
 <a name="python"/>
 

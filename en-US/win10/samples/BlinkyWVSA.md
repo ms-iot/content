@@ -1,28 +1,18 @@
----
-layout: default
-title: Blinky WVSA
-permalink: /en-US/win10/samples/BlinkyWVSA.htm
-lang: en-US
----
 
-{: .thin-header}
-#Get Started
+<h3>Hello World speech-enabled LED example</h3>
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-no-padding">
+    <p>With your Windows Phone (or potentially any Windows 10 device!) and your Arduino prepared as detailed in the previous steps of this tutorial, you're now ready to try our sample.</p>
+    <ol class="inline-list">
+      <li>Prepare your Arduino board by hooking up an LED with a resistor to pin 8.</li>
+      <li>Make sure that your Arduino is still uploaded with the HelloWorld-Speech-Eventing sample, and then plug the Arduino into a power supply.</li>
+      <li>Run the Virtual Shields for Arduino app on the Windows Phone you prepared previously.</li>
+      <li>If everything has been setup properly, your phone should welcome you with an audio cue. You can now say 'on' or 'off' to switch the LED on your Arduino between on and off!</li>
+    </ol>
+  </div>
+</div>
 
-Learn how to get your PC ready for developing IoT applications using Virtual Shields for Arduino.
-
-{% include steps.html device="WVSA" %}
-
-##Hello World speech-enabled LED example
-
-With your Windows Phone (or potentially any Windows 10 device!) and your Arduino prepared as detailed in the previous steps of this tutorial, you're now ready to try our sample.
-
-1. Prepare your Arduino board by hooking up an LED with a resistor to pin 8.
-2. Make sure that your Arduino is still uploaded with the HelloWorld-Speech-Eventing sample, and then plug the Arduino into a power supply.
-3. Run the Virtual Shields for Arduino app on the Windows Phone you prepared previously.
-4. If everything has been setup properly, your phone should welcome you with an audio cue. You can now say 'on' or 'off' to switch the LED on your Arduino between on and off!
-
-
-##Arduino Wiring Sketch : Hello World example
+<h3>Arduino Wiring Sketch : Hello World example</h3>
 
 {% highlight C++ %}
 #include <ArduinoJson.h>

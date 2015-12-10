@@ -7,19 +7,17 @@ lang: en-US
 
 ##Alljoyn Mock Adapter Sample
 
-[Get the code on Github](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AlljoynMockAdapter/MockAdapter.zip?raw=true)
+{% include VerifiedVersion.md %}
 
-This tutorial demonstrates the function of the AllJoyn Device System Bridge (DSB) in exposing and controlling mock BACnet devices.
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\AllJoyn\Samples\MockAdapter`.  The sample code is available in C++. Make a copy of the folder on your disk and open the project from Visual Studio.
+
+This tutorial demonstrates the function of the AllJoyn Device System Bridge (DSB) in exposing and controlling mock devices.
 
 ## Prerequisites
 
 1. Raspberry Pi2 running Windows 10 IoT Core build 10240+
 2. PC or Laptop with Windows 10 build 10240+
-3. AllJoyn Explorer (AJX)
-
-  * [AllJoyn Explorer](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoynExplorer_1.0.1.9.zip?raw=true){:target="_blank"} - This zip contains the AllJoyn Explorer AppX bundle.
-  * [AllJoyn Explorer Setup Guide](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_Setup_Guide_v1.0.pdf?raw=true){:target="_blank"} - Manual for installing and launching the AllJoyn Explorer.
-  * [AllJoyn Explorer User Guide](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynExplorer/AllJoyn_Explorer_User_Guide_v1.0.pdf?raw=true){:target="_blank"} - this pdf contains the documentation for how to use the AllJoyn Explorer
+3. Install [AllJoyn Explorer]({{site.baseurl}}/en-US/win10/AllJoyn.htm#AllJoynExplorer){:target="_blank"}.
 
 ## Setting up the Raspberry Pi2
 
@@ -27,17 +25,16 @@ This tutorial demonstrates the function of the AllJoyn Device System Bridge (DSB
 2. Connect power to start the Raspberry Pi2
 3. Verify that the PC can access the Raspberry Pi2 with the Windows IoT Core Watcher
 
-## Run the Mock BACnet Adapter in Visual Studio
+## Run the Mock Adapter in Visual Studio
 
-1. Download the MockAdapter.zip file [here](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AlljoynMockAdapter/MockAdapter.zip?raw=true) to a location on your local machine
-2. Navigate to the folder where you downloaded the zip file. Right click the file and "Extract All..." to the folder of your choosing.
-3. Navigate to the extracted folder and open the MockAdapter.sln solution file in Visual Studio.
-4. Once the solution has been opened in Visual Studio, Navigate to the Solution explorer and right click the HeadlessAdapterApp project. Select "Set as Startup Project".
+1. Download a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip).
+2. Open `samples-develop\AllJoyn\Samples\MockAdapter\MockAdapter.sln` in Visual Studio.
+3. Navigate to the Solution explorer and right click the HeadlessAdapterApp project. Select "Set as Startup Project".
 
 ![set_startup]({{site.baseurl}}/images/MockAdapter/mockadapter_vs.png)
 
-5. 	In the Main menu bar, select “Debug” -> HeadlessAdapterApp properties…”
-6.	Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#cpp)
+4. 	In the Main menu bar, select “Debug” -> HeadlessAdapterApp properties…”
+5.	Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#cpp)
 
 ## Controlling the Mock Devices via Alljoyn Explorer
 

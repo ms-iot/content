@@ -12,6 +12,6 @@
 
 	* **Machine Name**: If you previously used [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to set a unique name for your device, you can enter it here (in this example, we're using **my-device**). 
 Otherwise, use the IP address of your Windows IoT Core device.
-	* **Require Authentication**: Set to **No**
+	* **Authentication Mode**: Set to **Universal (Unencrypted Protocol)**
 
     ![Project Properties Debug Tab]({{site.baseurl}}/images/AppDeployment/cpp-debug-project-properties.PNG)

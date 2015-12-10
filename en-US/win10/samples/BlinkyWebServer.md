@@ -7,6 +7,8 @@ lang: en-US
 
 ##Blinky WebServer
 
+{% include VerifiedVersion.md %}
+
 We'll create a simple Blinky app controlled by another app's WebServer and connect a LED to your Windows IoT Core device.  Be aware that the GPIO APIs are
 only available on Windows IoT Core, so this sample cannot run on your desktop.
 

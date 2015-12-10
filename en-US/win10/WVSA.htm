@@ -1,0 +1,112 @@
+---
+layout: default
+title: Setup WVSA
+permalink: /en-US/win10/WVSA.htm
+lang: en-US
+deviceName: WVSA
+---
+<ol class="breadcrumb">
+  <li>
+    <a href="https://dev.windows.com/en-us/iot">IoT Home</a>
+  </li>
+  <li>
+    <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
+  </li>
+  <li class="active">Windows Virtual Shields for Arduino</li>
+</ol>
+<h1 class="page-title"> Set Up Windows Virtual Shields for Arduino  </h1>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <h2 class="subtext">Get your computer ready for the Windows Developer Program for IoT, set up your Raspberry Pi 2 and Build your first Windows IoT Core app.</h2>
+  </div>
+</div>
+
+<h2>1. Get your PC ready for developing IoT applications using Virtual Shields for Arduino. <span class="pull-right"><a id="pc-content-toggle" class="toggle-button" onClick="hideDiv('pc-content')">Hide</a></span></h2>
+
+<hr>
+<div id="pc-content" class="toggle-section">
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-no-padding">
+    <p>In this section of the tutorial, you'll prepare a Windows 10 device of your choice by loading it with the Virtual Shields for Arduino application - the program allows you to use your chosen device as a virtual shield for an Arduino board.  This results in some powerful possibilities for Makers, allowing them to utilize voice recognition, touch screens, and other assets of a Windows device with relative ease.</p>
+    <h3>Hardware</h3>
+      <p>The Virtual Shields for Arduino application can run on any Windows 10 device, but our particular sample will make use of the Windows Phone.</p>
+    <h4>What you need</h4>
+      <p>Windows Phone running Windows 10 - we recommend the <a href="http://www.microsoft.com/en-us/mobile/phone/lumia520/" target="_blank"> Lumia 520 </a> or <a href="http://www.microsoft.com/en-us/mobile/phone/lumia635/" target="_blank"> Lumia 635 </a>.
+    <h4>Set up your Windows Phone</h4>
+      <p>If your phone is not already running Windows 10, there are options to install preview versions of the software.  Windows Phone 8 users can go to the Microsoft Store app to download the "Windows Insider" application - this app allows the user to opt into receiving Windows 10 Technical Previews as updates.  Follow the prompts and instructions upon opening the app, and continue once your phone is successfully running Windows 10. </p>
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-no-padding">
+    <h3>Software</h3>
+
+    <p>There are two options for installing the Virtual Shields for Arduino on your Windows Phone.</p>
+    <ol class="inline-list">
+      <li><a href="#">Download the app from the Microsoft Store</a>.</li>
+      <li><a href="#">Sideload the app using a PC and Visual Studio</a>.</li>
+    </ol>
+    <p>Downloading the app is a much easier, quicker choice.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-no-padding">
+    <h3>Option 1: Download the app from the Microsoft Store</h3>
+      <p>Follow this <a href="https://www.microsoft.com/store/apps/9nblgggz0mld" target="_blank"> link </a> to the Microsoft Store page for the app, download the file, and then install. You can then open the application to ensure it runs properly.</p>
+      <p>Your device is now setup to be used as a virtual shield for an Arduino!  You can proceed to the next page.</p>
+
+    <h3>Option 2: Sideload the app using a PC and Visual Studio</h3>
+
+    <h4>What you need</h4>
+      <ol class="inline-list">
+        <li>Visual Studio 2015 to sideload the Virtual Shields for Arduino app onto a developer-unlocked phone.</li>
+        <li>This <a href="https://github.com/ms-iot/virtual-shields-universal" target="_blank"> repository </a> containing the code for the Virtual Shields for Arduino application.  Either clone the repository or download it as a ZIP on your local disk.  If you're not familiar with git and want to do a proper clone, follow the instructions <a href="https://help.github.com/articles/cloning-a-repository/" target="_blank">here</a>.</li>
+      </ol>
+
+    <h4>Set up your Visual Studio 2015</h4>
+      <ol class="inline-list">
+        <li>Install Visual Studio 2015 with the Windows 10 Developer Preview tools from <a href="https://dev.windows.com/en-us/windows-10-developer-preview-tools" target="_blank">dev.windows.com</a>.  We recommend the Community Version of Visual Studio, but both Enterprise and Professional will work as well.  If you already have Visual Studio installed, skip to the next step.</li>
+        <li>In Visual Studio, load the Shield.sln from the repository downloaded in the "What you need" section above.</li>
+        <li>Ensure your phone is developer-unlocked <a href="https://msdn.microsoft.com/en-us/library/windows/apps/dn614128.aspx" target="_blank"> this page</a> explains how to unlock Windows Phone 8.1, 8, and 7.1; however, the steps are the same for Windows 10 phones).</li>
+        <li>Deploy the Shield.sln program to your device.  To do this, deploy to a local machine, and be sure to set the architecture of the device as "ARM".</li>
+        <li>Run the Virtual Shields for Arduino application on your phone to ensure the deploy was successful.  Your Windows 10 device is now setup to be used as a virtual shield!</li>
+      </ol>
+  </div>
+</div>
+</div>
+
+<h2>2. Set up your Arduino to run with Virtual Shields for Arduino <span class="pull-right"><a id="setup-content-toggle" class="toggle-button" onClick="hideDiv('setup-content')">Show</a></span></h2>
+<hr>
+<div id="setup-content" class="toggle-section hidden">
+  {% include_relative SetupWVSA.htm %}
+</div>
+
+<h2>3. Write your first app: Hello, Blinky!   <span class="pull-right"><a id="app-content-toggle" class="toggle-button" onClick="hideDiv('app-content')">Show</a></span>  </h2>
+<hr>
+  <div id="app-content" class="toggle-section hidden setup-content-list">
+    {% include_relative samples/BlinkyWVSA.md %}
+  </div>
+
+
+<script>
+  function hideDiv(div) {
+    var div = "#" + div,
+        button = div + "-toggle",
+        currentState = $(button)[0].innerHTML;
+
+    for(var i = 0; i < 3 ; i ++){
+        $(".toggle-button")[i].innerHTML = "Show";
+      }
+
+    if(currentState === "Hide") {
+      $(div).toggle('slow');
+    }
+    else
+    {
+      $(".hidden").removeClass("hidden");
+      $(".toggle-section").hide();
+      $(div).toggle('slow');
+      $(button)[0].innerHTML = "Hide";
+    }
+  }
+</script>

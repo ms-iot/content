@@ -7,6 +7,8 @@ lang: en-US
 
 ##SPI Accelerometer Sample
 
+{% include VerifiedVersion.md %}
+
 We'll connect an SPI accelerometer to your Raspberry Pi 2, MinnowBoard Max, or DragonBoard 410c and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of SPI is needed.
 However, if you're curious, SparkFun provides a great [tutorial on SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}.
 
