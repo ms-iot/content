@@ -134,7 +134,7 @@ private const int BUTTON_PIN = 36;
 1. Go to `Build -> Build Solution`
 1. Select `Remote Machine` from the debug target
 1. Hit F5 to deploy and debug. Enter the IP address of your device
-   and select `None` for the authentication type.
+   and select `Universal` for the authentication type.
 
 ###Let's look at the code
 
