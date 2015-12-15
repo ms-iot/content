@@ -49,14 +49,24 @@ This is a tool can be used to visualize and interact with devices exposed on All
 
 ### Additional Resources
 
-- [Using the AllJoyn Studio extension](){:target="_blank"}
-- [AllJoyn Producer and Authoring AllJoyn Introspection](){:target="_blank"}
-- [Troubleshooting AllJoyn with Windows 10](){:target="_blank"}
+- [Using the AllJoyn Studio extension]({{site.baseurl}}/en-US/win10/AllJoynStudio.htm){:target="_blank"}
+- [AllJoyn Producer and Authoring AllJoyn Introspection]({{site.baseurl}}/en-US/win10/AllJoynProducer.htm){:target="_blank"}
+- [Troubleshooting AllJoyn with Windows 10]({{site.baseurl}}/en-US/win10/AllJoynTroubleshooting.htm){:target="_blank"}
 
-__Reference and Samples__
+__Videos__
+
+- [//build 2015 AllJoyn Technical Session](https://channel9.msdn.com/Events/Build/2015/2-623){:target="_blank"}
+- [WinHEC 2015 AllJoyn Technical Session](https://channel9.msdn.com/Events/WinHEC/2015/IOT200){:target="_blank"}
+
+__Samples__
+
+- [AllJoyn Producers](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AllJoyn/ProducerExperiences){:target="_blank"}
+- [AllJoyn Consumers](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AllJoyn/ConsumerExperiences){:target="_blank"}
+- [AllJoyn UWP Samples (MSDN)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AllJoyn/ConsumerExperiences){:target="_blank"}
+
+__Reference__
 
 - [AllJoyn APIs in Windows 10 (MSDN)](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.devices.alljoyn.aspx){:target="_blank"}
-- [AllJoyn UWP Samples (MSDN)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AllJoyn/ConsumerExperiences){:target="_blank"}
 - [AllJoyn Architecture Details (Allseen Alliance)](https://allseenalliance.org/developers/learn/){:target="_blank"}
 - [AllJoyn Developer Resources (Allseen Alliance)](https://allseenalliance.org/developers/develop/){:target="_blank"}
 - [AllJoyn C API Reference Manual (Allseen Alliance)](https://allseenalliance.org/docs/api/c/index.html){:target="_blank"}
