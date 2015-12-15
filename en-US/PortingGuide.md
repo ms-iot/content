@@ -52,13 +52,13 @@ ___
 
 Direct Port Manipulation
 
-* [Port Registers](http://www.arduino.cc/en/Reference/PortManipulation){:target="_blank"} - The port registers allow you to set a block of            Arduino pins with a single instruction, resulting in performance gains.
+* [Port Registers](http://www.arduino.cc/en/Reference/PortManipulation){:target="_blank"} - The port registers allow you to set a block of Arduino pins with a single instruction, resulting in performance gains.
 
    This can be ported by issuing the equivalent instruction for each pin represented in the bitmask.
 
-* DDR[B|C|D] = pinMode();
-* PORT[B|C|D] = digitalWrite();
-* PIN[B|C|D] = digitalRead();
+* DDR[B/C/D] = pinMode();
+* PORT[B/C/D] = digitalWrite();
+* PIN[B/C/D] = digitalRead();
 
 
 * [SPI Registers](http://www.arduino.cc/en/Tutorial/SPIEEPROM){:target="_blank"} (Introduction to the Serial Peripheral Interface)<br/>
