@@ -32,11 +32,11 @@ lang: en-US
         </ul>
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="first">
-              {% include_relative _docsandtutorials.htm %}
+              {% include _docsandtutorials.html %}
             </div>
 
             <div role="tabpanel" class="tab-pane" id="second">
-              {% include_relative _samples.htm %}
+              {% include _samples.html %}
             </div>
         </div>
     </div>
