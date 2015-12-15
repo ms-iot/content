@@ -85,7 +85,7 @@ ___Example___
 </node>
 {% endhighlight %}
 
-This example shows an interface exposed by a device: "com.example.Door.PrivateDoor". In the scope of the interface, the only thing we're concerned about is whether communication should be secured when using that interface, not what type of mechanism is being used.
+This example shows an interface exposed by a device: `com.example.Door.PrivateDoor`. In the scope of the interface, the only thing we're concerned about is whether communication should be secured when using that interface, not what type of mechanism is being used.
 
 __Interface Capabilities__
 
