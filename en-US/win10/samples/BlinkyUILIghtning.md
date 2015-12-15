@@ -12,7 +12,7 @@ deviceName: RPI2
 
 This sample demonstrates how to communicate with GPIO using the Micorosot.IoT.Providers.Lightning.I2cProvider
 
-It's based on the [Blinky UI sample]({{site.baseurl}}/{{page.lang}}/win10/Blinky.htm) and shares the same setup steps. The main difference is setting the Lightning provider as the default controllers provider.
+It's based on the [Blinky UI sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm) and shares the same setup steps. The main difference is setting the Lightning provider as the default controllers provider.
 
 ###Using Lightning Provider
 
