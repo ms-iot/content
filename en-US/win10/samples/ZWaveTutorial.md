@@ -64,7 +64,7 @@ The setup should look like in the picture below
 
 ## Controlling the Z-Wave switch via AllJoyn
 
-Let’s turn the Z-Wave power switch on! We will use the AllJoyn Explorer (AJX) to navigate the devices, objects and interfaces.
+Let's turn the Z-Wave power switch on! We will use the AllJoyn Explorer (AJX) to navigate the devices, objects and interfaces.
 
 Launch AlljoynExplorer. The AJX should find the following three devices:
 

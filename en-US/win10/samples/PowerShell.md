@@ -115,7 +115,7 @@ See the [Command Line Utils]({{site.baseurl}}/{{page.lang}}/win10/tools/CommandL
 
 **Issue:** Cmdlets from some modules like NetAdapter are sometimes not visible. For example, Get-Module NetAdapter returns an empty list. 
 
-**Workaround:** Use the ‘-Force’ parameter with Import-Module. For example, `Import-Module NetAdapter -Force`.
+**Workaround:** Use the '-Force' parameter with Import-Module. For example, `Import-Module NetAdapter -Force`.
 
 **Issue:** Setting execution policy to "AllSigned" breaks PS Remoting. Subsequent attempts to create a remote session fail with a SecurityException loading Typesv3.ps1xml. 
 

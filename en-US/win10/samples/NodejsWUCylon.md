@@ -25,7 +25,7 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 * Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 * Install Arduino software from [here](https://www.arduino.cc/en/Main/Software).
-* Install [Git for Windows](http://git-scm.com/download/win). Ensure that Git is included in your ‘PATH’ environment variable.
+* Install [Git for Windows](http://git-scm.com/download/win). Ensure that Git is included in your 'PATH' environment variable.
 
 
 ###Upload Firmata to your Arduino
