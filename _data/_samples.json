@@ -1,4 +1,5 @@
 {
+   "en-US-tags":["beginner","intermediate","advanced","c++","Wiring","headless","ui","Web","Server","c#","Python","Node.js","headed", "i2c","spi","alljoyn","driver","led","commandline","tool","express","uart","camera","wifi","memory","motor","lightning","lcd","rgb","onenote"],
    "en-US":[
       {
          "title":"Hello, World!",
@@ -96,7 +97,7 @@
          "description":"A analog sensor is connected to Raspberry Pi through ADC converter and digital output data is displayed through Monitor and LED.",
          "link-text":"<a href='{{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm'>Potentiometer Sensor Sample (C#)</a><a href='{{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/Potentiometer.htm'>Potentiometer Sensor Sample (Wiring)</a>",
          "ranking":3,
-         "tags":["beginner","c#","led","Wiring","analog","led","headed"]
+         "tags":["beginner","c#","led","Wiring","headed"]
       },
       {
          "title":"GpioTestTool (Console)",
