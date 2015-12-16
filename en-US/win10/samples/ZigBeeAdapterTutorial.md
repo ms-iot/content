@@ -47,7 +47,7 @@ AllJoyn Explorer and its documentation can be found [here]({{site.baseurl}}/en-U
 4. Set up your Raspberry Pi2 (if you target that device)
 5. Deploy ZigBee adapter
 
->Note that in Windows 10, when a machine has __multiple AllJoyn modern applications__ that __need to interact__ on the same machine, the user must __add a loopback exemption__ for these modern applications. Consequently, if you run both the ZigBee adapter and AllJoyn Explorer on the same machine you will need to add a loopback exemption for these 2 applications. This isn't needed for application you run from Visual Studio 2015. Note that when deploying an application from Visual Studio 2015, the loopback exemption is for the lifetime of the installed application. Meaning that you can launch the app directly (not from Visual Studio 2015) afterwards and it will have the loopback exemption.
+>Note that in Windows 10, when a machine has __multiple AllJoyn modern applications__ that __need to interact__ on the same machine, the user must __add a loopback exemption__ for these modern applications. Consequently, if you run both the ZigBee adapter and AllJoyn Explorer on the same machine you will need to add a loopback exemption for these 2 applications. This isn’t needed for application you run from Visual Studio 2015. Note that when deploying an application from Visual Studio 2015, the loopback exemption is for the lifetime of the installed application. Meaning that you can launch the app directly (not from Visual Studio 2015) afterwards and it will have the loopback exemption.
 
 Set up loopback exception: 
  1. Find the installation folder of the modern application for which you want to enable the loopback exemption. It is located at "C:\Users\\*username*\AppData\Local\Packages"
@@ -81,14 +81,14 @@ You can verify that devices have by using “network discovery” feature of XCT
 1. Download a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip).
 2. Open `samples-develop\AllJoyn\Samples\ZigBeeAdapter\ZigBeeAdapter.sln` in Visual Studio.
 3. Select the relevant target (x86, x64 or ARM) and build the solution in Visual Studio.
-Your now ready to launch it, so launch or debug HeadedAdapterApp project on desktop or if the targeted Windows 10 device has a display or launch or debug HeadlessAdapterApp if it doesn't. 
+Your now ready to launch it, so launch or debug HeadedAdapterApp project on desktop or if the targeted Windows 10 device has a display or launch or debug HeadlessAdapterApp if it doesn’t. 
 If needed, see instruction [here]({{site.baseurl}}/en-US/win10/AppDeployment.htm){:target="_blank"} for remote debugging.
  
  
 ### Known limitations of the current version of the ZigBee adapter
 - ZigBee adapter only discovers devices that are directly connected to the XBee module. 
 - ZigBee adapter only support some devices defined in ZigBee Light Link or Home Automation profiles. This means that it only implements the necessary ZCL clusters and ZDO commands to handle them. That said support for new devices and new ZCL clusters can easily be added to ZigBee adapter code.
-- ZigBee adapter doesn't expose any method to commission ZigBee devices.
+- ZigBee adapter doesn’t expose any method to commission ZigBee devices.
 
 ## ZigBee adapter in detail 
 ZigBee adapter is written in C# and exposes ZigBee devices on AllJoyn through BridgeRT interface. ZigBee device is exposed in AllJoyn as follow:
@@ -158,11 +158,11 @@ ZigBee device can send ZDO or ZCL command to the XBee module, e.g.: device annou
 
 1. Adapter class will build a list of notifications it can receive upon initialization. This list contains instances of specific ZigBeeCommand such as DeviceAnnce, ZclReportAttribute.
 2. Upon reception of complete frame from the XBee module, the reception thread of the SerialController will call GetBytesFromModule callback of XBeeModule.
-3. GetBytesFromModule will parse the XBee part of the frame and check if it's a response to a command that has been sent (see previous section). If not, it will go through the notification list and call the ParseResponse method of each element until one accept the frame or none have accepted. If none have accepted, the frame will be thrown away. 
+3. GetBytesFromModule will parse the XBee part of the frame and check if it’s a response to a command that has been sent (see previous section). If not, it will go through the notification list and call the ParseResponse method of each element until one accept the frame or none have accepted. If none have accepted, the frame will be thrown away. 
 4. What ParseResponse does is specific to each implementation of the ZigBeeCommand class. For example, the ParseResponse method of the DeviceAnnce class will get the 64 bit address (aka MAC address) and 16 bit address and may be more information about the signaled device and then send “device arrival” signal to BridgeRT (note that several classes are used to achieve that, see code for more). 
 
 ### Creating a new ZCL cluster class
-ZigBee adapter doesn't implement all clusters defined by ZCL. There will be cases where the ZigBee device you want to interact with won't be supported by ZigBee adapter. In such a case you will need to add support for the missing clusters. 
+ZigBee adapter doesn’t implement all clusters defined by ZCL. There will be cases where the ZigBee device you want to interact with won’t be supported by ZigBee adapter. In such a case you will need to add support for the missing clusters. 
 
 How to:
 
@@ -171,7 +171,7 @@ How to:
  - Create a new class that derives from ZclCluster
  - In constructor add attributes and commands
 3. Update ZigBeeProfileLibrary and ZclClusterFactory accordingly
-4. Don't forget to update ZclHelper if the cluster you added has either attributes or command that use a not yet supported ZigBee type
+4. Don’t forget to update ZclHelper if the cluster you added has either attributes or command that use a not yet supported ZigBee type
 
 Example of a new cluster class
 

@@ -31,7 +31,7 @@ Write the program serialReadWrite.ino as what in [here](https://github.com/ms-io
 It basically read from one serial port, then send what it gets to another serial port for sending out.
 
 
-Note: the bps has to be 115200 in order for the bluetooth to work. 9600 doesn't work.
+Note: the bps has to be 115200 in order for the bluetooth to work. 9600 doesn’t work.
  
 4. Compile the program
    Upload the program. Note, when you upload the program, you need to unplug the Tx and RX port, 

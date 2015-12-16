@@ -349,7 +349,7 @@ Once you have finished writing your XML, use the ajxmlcop.exe command line tool 
   <interface name="com.example.Door.PrivateDoor">
     <annotation name="org.alljoyn.Bus.Secure" value="true" />
     <description language="en">
-      Examples for an AllJoyn-enabled door.  Private interface that can only be used by the producer's owner.
+      Examples for an AllJoyn-enabled door.  Private interface that can only be used by the producer’s owner.
     </description>
     <method name="SetPasscode">
       <description language="en">

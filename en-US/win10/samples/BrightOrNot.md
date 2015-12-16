@@ -17,7 +17,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 <div class="row">
   <center>
     <h3>Learn how to get data from analog sensors using ADC with Raspberry Pi 2 and Windows 10 IoT Core.</h3>
-    Upon executing the sample, you'll have learned how to measure the light intensity in the room using an analog photocell!
+    Upon executing the sample, you’ll have learned how to measure the light intensity in the room using an analog photocell!
     <hr/>
     Each pin on the map below is another maker that has run this sample. Zoom around to see where they are and deploy the sample to put your pin on the map!
   </center>
