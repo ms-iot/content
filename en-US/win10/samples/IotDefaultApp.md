@@ -17,7 +17,7 @@ The IoT Core Default App provides a good example of creating a user experience f
 
 ####Set up
 
-Upon first boot, you will be taken through a quick set up experience. Set the language and connect to Wi-Fi. If you don’t have a USB Wi-Fi adapter, you can always connect later. 
+Upon first boot, you will be taken through a quick set up experience. Set the language and connect to Wi-Fi. If you don't have a USB Wi-Fi adapter, you can always connect later. 
 
 ![DefaultApp setup on Windows 10 IoT Core]({{site.baseurl}}/images/iotcoredefaultapp/DefaultApp_oobe.png)
 
@@ -31,7 +31,7 @@ Use the device name and IP address listed here when connecting to you device.
 
 ####Tutorials
 
-A quick set of instructions on how to get your board connected to your PC. If you’re on the web, you can find the same set of instructions [here](http://ms-iot.github.io/content/en-US/win10/StartCoding.htm)
+A quick set of instructions on how to get your board connected to your PC. If you're on the web, you can find the same set of instructions [here](http://ms-iot.github.io/content/en-US/win10/StartCoding.htm)
 
 ![DefaultApp tutorials on Windows 10 IoT Core]({{site.baseurl}}/images/iotcoredefaultapp/DefaultApp_tutorial.png)
 
