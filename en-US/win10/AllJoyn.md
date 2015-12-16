@@ -11,7 +11,7 @@ AllJoyn empowers the Internet of Things. AllJoyn defines a common protocol for d
 
 Microsoft joined the AllSeen Alliance in 2014 and added AllJoyn as a core component in Windows 10. With the built-in [AllJoyn APIs](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.alljoyn.aspx){:target="_blank"}, developers are free to write AllJoyn capable applications that run on any of the Windows 10 devices including PCs, tablets, phones, Xbox as well as devices using Windows IoT Core. In addition to the platform support for AllJoyn, Microsoft released [AllJoyn Studio](https://visualstudiogallery.msdn.microsoft.com/064e58a7-fb56-464b-bed5-f85914c89286){:target="_blank"}, a Visual Studio extension that accelerates AllJoyn development by combining code generation with ready-made application templates. AllJoyn Studio allows developers to benefit from the power of AllJoyn without the hassle of set-up and configuration.
 
-Excited about AllJoyn? Have a look at [this](https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Using-the-AllJoyn--Studio-Extension){:target="_blank"} blog post on how to get started with AllJoyn on Windows.
+Excited about AllJoyn? Have a look at [this]({{site.baseurl}}/en-US/win10/AllJoynStudio.htm){:target="_blank"} blog post on how to get started with AllJoyn on Windows.
 
 
 ## Developer Resources and Tools
@@ -36,7 +36,7 @@ Features:
 
 AllJoyn Studio can be installed through Visual Studio Tools -> Extensions and Updates … -> Online -> In the "Search" field type "AllJoyn"
 
-More detail about how to use AllJoyn Studio are available [here](https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Using-the-AllJoyn--Studio-Extension){:target="_blank"}
+More detail about how to use AllJoyn Studio are available [here]({{site.baseurl}}/en-US/win10/AllJoynStudio.htm){:target="_blank"}
 
 <a name="AllJoynExplorer"></a>__AllJoyn Explorer__
 

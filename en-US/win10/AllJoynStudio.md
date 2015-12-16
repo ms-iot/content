@@ -38,15 +38,26 @@ Follow these steps to develop AllJoyn-enabled UWP apps for Windows 10: (explaine
 4. Implement producer or ponsumer code in your app using APIs exposed from the generated UWP Windows Runtime Components.
 5. Build your UI.
 
+## Preparing your Build Environment
+
+The Windows 10 build and related tools include all of the resources that you'll need to write AllJoyn-enabled UWP apps.
+
+Here's what you'll need to do before you get started writing code:
+
+- Install [Windows 10](https://www.microsoft.com/windows/) on a PC
+- Install [Visual Studio 2015](https://www.visualstudio.com/downloads/download-visual-studio-vs) (do NOT use an  Express edition)
+- Download the [AllJoyn® Studio](https://visualstudiogallery.msdn.microsoft.com/064e58a7-fb56-464b-bed5-f85914c89286) Extension from the Visual Studio Gallery. 
+
+
 ## Obtaining Introspection XML for AllJoyn Interfaces
 
 There are three ways that you can obtain the AllJoyn interface  definitions that you will need to start your project:
 
 1. Extract the Introspection XML from AllJoyn Producers present on your network at runtime.
-2. Obtain the Introspection XML from documentation ; example: Lighting Service Framework (LSF) documentation from the AllSeen Alliance.
-3. Create your own Introspection XML that is compliant with the AllJoyn/D-Bus introspection format.
+2. Obtain the Introspection XML from documentation ; example: [Lighting Service Framework (LSF) documentation](https://wiki.allseenalliance.org/_media/compliance/alljoyn_lamp_service_14.06_interface_definition.pdf) from the AllSeen Alliance.
+3. Create your own Introspection XML that is compliant with the AllJoyn/[D-Bus introspection](http://dbus.freedesktop.org/doc/dbus-specification.html) format.
 
-This article covers the first two ways - AllJoyn® Studio natively supports querying the network for AllJoyn producers and extracting their XML as well as uploading Introspection XML files.  Learn how to create your own here.
+This article covers the first two ways - AllJoyn® Studio natively supports querying the network for AllJoyn producers and extracting their XML as well as uploading Introspection XML files.  Learn how to create your own [here]({{site.baseurl}}/en-US/win10/AllJoynProducer.htm).
 
 At //build/ 2015, an AllJoyn-enabled toaster device was shown which will serve as the example for this post. This toaster exposes controls for starting and stopping the toasting sequence, setting the "darkness", and notifications when the toast is burnt.
 

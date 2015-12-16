@@ -34,17 +34,16 @@ For AllJoyn devices to be able to discover and interact with each other, the net
 
 On a PC you can use the trace route command from a CMD or PowerShell window to check if another machine/device is on the same subnet as follows:
 
-```
-PS C:\Users\user> tracert WIN10PC1
- 
-Tracing route to WIN10PC1 [fe80::657d:d8bf:176f:d0b2%24]
- 
-over a maximum of 30 hops:
- 
-1       1 ms     1 ms     1 ms   WIN10PC1 [fe80::657d:d8bf:176f:d0b2]
- 
-Trace complete.
-```
+	PS C:\Users\user> tracert WIN10PC1
+	 
+	Tracing route to WIN10PC1 [fe80::657d:d8bf:176f:d0b2%24]
+	 
+	over a maximum of 30 hops:
+	 
+	1       1 ms     1 ms     1 ms   WIN10PC1 [fe80::657d:d8bf:176f:d0b2]
+	 
+	Trace complete.
+
 The first number output here is the number of hops, and since that value is "1" it means that both machines are on the same subnet.
 
 Below is an example of a typical AllJoyn network setup. In this example, all of the devices shown would be able to discover and interact with each other using AllJoyn assuming they were on the same subnet.
@@ -93,7 +92,7 @@ The following shows GetAjXml.exe output for an example device that supports Abou
 	      :3yZG_wu1.2                       25 /emergency
 	      :3yZG_wu1.2                       25 /info
 	      :3yZG_wu1.2                       25 /notificationDismisser
-	      :3yZG_wu1.2                      25 /notificationProducer
+	      :3yZG_wu1.2                       25 /notificationProducer
 	      :3yZG_wu1.2                       25 /toaster
 	      :3yZG_wu1.2                       25 /warning
 
@@ -106,7 +105,7 @@ Event Tracing for Windows (ETW) can help you get advanced debugging information 
 
 1. Launch the Event Viewer by typing "Event Logs" into the Start Menu search textbox, select "View Event Logs".
 2. In the "View" menu, ensure that "Show Analytic and Debug Logs" is checked.
-3. Navigate the tree view in the left navigation to "Applications and Services Logs | Microsoft | Windows | AllJoyn" in the folder view, and enable both the Debug channel and the Operational channel. (see red box in screenshot below).
+3. Navigate the tree view in the left navigation to "Applications and Services Logs > Microsoft > Windows > AllJoyn" in the folder view, and enable both the Debug channel and the Operational channel. (see red box in screenshot below).
 4. Reproduce the problem that you are experiencing with AllJoyn.
 5. Click on "Refresh" in the right "Actions" bar, then check the Operational and Debug channels from the left navigation bar under the "AllJoyn" folder.
 

@@ -33,9 +33,9 @@ A developer wanting to make a new AllJoyn producer needs to author their own Int
 
 A cursory examination of the following resources combined with this blogpost should accelerate developer understanding of Introspection XML:
 
-1. AllJoyn Events and Actions API Guide – AllJoyn implementation details and overview.
-2. AllJoyn Interface Review Board Design Guidelines - stringent structuring and specification for AllJoyn Introspection XML.
-3. D-Bus Specification – AllJoyn bases Introspection XML on this specification.
+1. [AllJoyn Events and Actions API Guide](https://allseenalliance.org/developers/develop/api-guide/events-and-actions) – AllJoyn implementation details and overview.
+2. [AllJoyn Interface Review Board Design Guidelines](https://wiki.allseenalliance.org/irb/interface_design_guidelines_1.0) - stringent structuring and specification for AllJoyn Introspection XML.
+3. [D-Bus Specification](http://dbus.freedesktop.org/doc/dbus-specification.html) – AllJoyn bases Introspection XML on this specification.
 
 __The three types of Introspection XML__
 
@@ -63,7 +63,7 @@ For an example, we have two interfaces: `com.contoso.Sensor` and `com.contoso.Se
 
 The `<description>` tag is used to describe interfaces, capabilities and arguments, and can be localized for various languages.  Liberal use of the `<description>` tag makes the XML more understandable and removes ambiguity.
 
-Standard practice dictates the use of the `org.alljoyn.Bus.Secure` annotation on an interface to enable security and authentication.  For strong authentication, use a pre-shared key (PSK) or a certificate key exchange (ECDSA).  Otherwise, a "null" authentication becomes the default behavior.  The actual authentication mechanism happens in implementation, not the declaration. This annotation enables security but does not specify the type of security used or how it will be implemented.
+Standard practice dictates the use of the `org.alljoyn.Bus.Secure` annotation on an interface to enable security and authentication.  For strong authentication, use a pre-shared key (PSK) or a certificate key exchange (ECDSA).  Otherwise, a "null" authentication becomes the default behavior.  **The actual authentication mechanism happens in implementation, not the declaration**. This annotation enables security but does not specify the type of security used or how it will be implemented.
 
 ___Example___
 
