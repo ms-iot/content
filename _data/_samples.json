@@ -1,5 +1,5 @@
 {
-   "en-US-tags":["beginner","intermediate","advanced","c++","Wiring","headless","ui","Web","Server","c#","Python","Node.js","headed", "i2c","spi","alljoyn","driver","led","commandline","tool","express","uart","camera","wifi","memory","motor","lightning","lcd","rgb","onenote"],
+   "en-US-tags":["beginner","intermediate","advanced","c++","Wiring","headless","c#","Python","Node.js","headed", "i2c","spi","alljoyn","commandline","tool","wifi"],
    "en-US":[
       {
          "title":"Hello, World!",
@@ -118,7 +118,7 @@
          "description":"Write and read from SPI devices on the command line.",
          "link-text":"<a href='{{site.baseurl}}/{{page.lang}}/win10/samples/SpiTestTool.htm'>SpiTestTool (C++)</a>",
          "ranking":3,
-         "tags":["beginner","spi","c++", "commandline"]
+         "tags":["beginner","spi","c++", "commandline","tool"]
       },
       {
          "title":"Express Node.js App (UWP)",
