@@ -136,8 +136,3 @@ If the contents need to be frequently accessed offline, BitLocker autounlock can
 Should there arise a need to temporarily disable BitLocker, initate a remote PowerShell session with your IoT device and run the following command: `sectask.exe -disable`.  
 **Note:** Dvice encryption will be re-enabled on subsequent device boot unless the scheduled encryption task is disabled.
 
-##[Optional] Checking if everything is secure  
-Once the system is setup for Secure Boot and the device encryption task created, a remote PowerShell or SSH session may be used to verify the device state with the optional internal tools (fvecon.exe and t2t.exe as mentioned above):
-
-1. Dump the TPM capabilities with T2T.exe -cap to make sure the TPM is operational
-
