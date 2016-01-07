@@ -88,6 +88,7 @@ The example below initializes **UART2** and performs a write followed by a read:
 
 
 {% highlight C# %}
+using Windows.Storage.Streams;
 using Windows.Devices.Enumeration;
 using Windows.Devices.SerialCommunication;
 
