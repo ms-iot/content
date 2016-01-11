@@ -81,11 +81,12 @@ The template can be installed through Visual Studio Tools -> Extensions and Upda
 
 The [Mapping DSB Objects to AllJoyn]({{site.baseurl}}/en-US/win10/AlljoynDsbApiGuide.htm){:target="_blank"}  document describes the key interfaces and methods used to build the Alljoyn System Bridge.
 
-<a name="AllJoynExplorer"></a>__AllJoyn Explorer__
+<a name="AllJoynExplorer"></a>__IoT Explorer for AllJoyn (AllJoyn Explorer)__
 
-This is a tool can be used to visualize and interact with devices exposed on AllJoyn.
+The IoT Explorer for AllJoyn (previously known as AllJoyn Explorer) is a Windows Universal Application for interacting with AllJoyn devices on the local proximity network. Developers can list all available AllJoyn devices, inspect their interface and object structure, as well as receive signals, set and get properties, and call methods.
 
-- [AllJoyn Explorer](https://github.com/ms-iot/samples/releases/download/AllJoynExplorer_1.0.11/AllJoynExplorer_1.0.1.11.zip){:target="_blank"}: This zip contains the AllJoyn Explorer AppX bundle.
+- [IoT Explorer for AllJoyn Store App](https://www.microsoft.com/store/apps/9nblggh6gpxl){:target="_blank"}: This is the official store app location.
+- [AllJoyn Explorer 1.0.1.11 (previous release)](https://github.com/ms-iot/samples/releases/download/AllJoynExplorer_1.0.11/AllJoynExplorer_1.0.1.11.zip){:target="_blank"}: This zip contains the AllJoyn Explorer AppX bundle to be side-loaded on a developer machine. This is a previously released version of the IoT Explorer for AllJoyn application.
 - [AllJoyn Explorer Setup Guide](https://github.com/ms-iot/samples/releases/download/AllJoynExplorer_1.0.11/AllJoyn_Explorer_Setup_Guide_v1.0.pdf){:target="_blank"}: This pdf contains the documentation for how to deploy the AllJoyn Explorer.
 - [AllJoyn Explorer User Guide](https://github.com/ms-iot/samples/releases/download/AllJoynExplorer_1.0.11/AllJoyn_Explorer_User_Guide_v1.0.pdf){:target="_blank"}: This pdf contains the documentation for how to use the AllJoyn Explorer.
 
