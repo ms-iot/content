@@ -6,7 +6,7 @@
          "description":"Create a 'Hello World' application that runs on devices running Windows 10 IoT Core",
          "link-text":"<a href='samples/HelloWorld.htm'>Hello World (C#)</a><br><a href='samples/Python.htm'>Hello World (Python)</a><br><a href='samples/NodejsWU.htm'>Hello World (Node.js)</a><br>",
          "ranking":0,
-         "tags":["beginner","c#","Python","Node.js","headed"]
+         "tags":["beginner","c#","Python","node.js","headed"]
       },
       {
          "title":"Hello Blinky (Headless App)",
@@ -27,7 +27,7 @@
          "description":"Create a Webserver app that controls an LED on devices running Windows 10 IoT Core",
          "link-text":"<a href='samples/BlinkyWebServer.htm'>Webserver Blinky (C#)</a><br><a href='samples/PythonBlinkyServer.htm'>Webserver Blinky (Python)</a><br><a href='samples/NodejsWUBlinky.htm'>Webserver Blinky (Node.js)</a>",
          "ranking":2,
-         "tags":["beginner","Web","Server","c#","Python","Node.js"]
+         "tags":["beginner","Web","Server","c#","Python","node.js"]
       },
       {
          "title":"IoT Core Default App",
@@ -121,13 +121,6 @@
          "tags":["beginner","spi","c++", "commandline","tool"]
       },
       {
-         "title":"Express Node.js App (UWP)",
-         "description":"Create an Express Node.js app that runs on devices running Windows 10 IoT Core",
-         "link-text":"<a href='samples/NodejsWUExpress.htm'>Express (Node.js)</a>",
-         "ranking":10,
-         "tags":["intermediate","server","node.js","express"]
-      },
-      {
          "title":"Digital Signage Sample",
          "description":"Showcases a Digital Sign app running on Windows 10 IoT Core",
          "link-text":"<a href='samples/DigitalSignage.htm'>DigitalSignageUWP (C#)</a>",
@@ -156,6 +149,27 @@
          "tags":["cylon","node.js","headless","intermediate"]
       },
       {
+         "title":"Cylon Node.js App (UWP)",
+         "description":"Control a servo connected to an Arduino using Cylon in a Node.js UWP app",
+         "link-text":"<a href='samples/NodejsWUCylon.htm'>Cylon (Node.js)</a>",
+         "ranking":0,
+         "tags":["intermediate","cylon","servo","node.js"]
+      },
+      {
+         "title":"Johnny-Five Node.js App (UWP)",
+         "description":"Control a servo connected to an Arduino using Johnny-Five in a Node.js UWP app",
+         "link-text":"<a href='samples/NodejsWUJ5.htm'>Johnny-Five (Node.js)</a>",
+         "ranking":0,
+         "tags":["intermediate","johnny-five","servo","node.js"]
+      },
+      {
+         "title":"Express Node.js App (UWP)",
+         "description":"Create an Express Node.js app that runs on devices running Windows 10 IoT Core",
+         "link-text":"<a href='samples/NodejsWUExpress.htm'>Express (Node.js)</a>",
+         "ranking":10,
+         "tags":["intermediate","server","node.js","express"]
+      },
+      {
          "title":"Bluetooth Low Energy GATT Sample (Windows Universal)",
          "description":"Learn how to interact with Bluetooth Low Energy devices on Windows 10 IoT core.",
          "link-text":"<a href='samples/BLEGatt.htm'>Bluetooth GATT (C#)</a>",
@@ -175,13 +189,6 @@
          "link-text":"<a href='samples/GpioOneWire.htm'>GPIO OneWire (C++)</a>",
          "ranking":3,
          "tags":["beginner","c++","gpio","single-wire"]
-      },
-      {
-         "title":"Cylon Node.js App (UWP)",
-         "description":"Control a servo connected to an Arduino with a Cylon Node.js UWP app running on a Raspberry Pi 2 with Windows 10 IoT Core",
-         "link-text":"<a href='samples/NodejsWUCylon.htm'>Cylon (Node.js)</a>",
-         "ranking":0,
-         "tags":["intermediate","cylon","servo","node.js"]
       },
       {
          "title":"OneNote API",
