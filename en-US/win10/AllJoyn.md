@@ -20,7 +20,7 @@ __Device System Bridge__
 
 AllJoyn Device System Bridge enables non-AllJoyn devices to interact with the AllJoyn ecosystem using AllJoyn as their common language.
 
-More details can be found on the [Device System Bridge page]({{site.baseurl}}/en-US/win10/AlljoynDSBhtm).
+More details can be found on the [Device System Bridge page]({{site.baseurl}}/en-US/win10/AlljoynDSB.htm).
 
 __AllJoyn Studio__
 
