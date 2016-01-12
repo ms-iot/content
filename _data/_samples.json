@@ -266,6 +266,13 @@
          "link-text":"<a href='samples/AppInstall.htm'>Learn More</a>",
          "ranking":0,
          "tags":["beginner"]
+      },
+      {
+         "title":"DeviceIoControlUwp Sample",
+         "description":"Learn how to use <code>CreateFile()</code> and <code>DeviceIoControl()</code> to access custom devices from UWP.",
+         "link-text":"<a href='samples/DeviceIoControlUwp.htm'>Learn More</a>",
+         "ranking":10,
+         "tags":["c++","advanced"]
       }
    ]
 }
