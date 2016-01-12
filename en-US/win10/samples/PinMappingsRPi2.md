@@ -78,7 +78,7 @@ When you open a pin, it will be in its power-on state. To disconnect the pull re
 
 When a pin is closed, it reverts to its power-on state.
 
-##<a name="MBM_UART"></a>Serial UART
+##<a name="RPi2_UART"></a>Serial UART
 
 There is one Serial UART available on the RPi2: **UART0**
 
