@@ -18,9 +18,17 @@ Excited about AllJoyn? Have a look at [this]({{site.baseurl}}/en-US/win10/AllJoy
 
 __Device System Bridge__
 
-AllJoyn Device System Bridge enables non-AllJoyn devices to interact with the AllJoyn ecosystem using AllJoyn as their common language.
+AllJoyn [Device System Bridge]({{site.baseurl}}/en-US/win10/AllJoynDSB.htm){:target="_blank"} enables non-AllJoyn devices to interact with the AllJoyn ecosystem using AllJoyn as their common language.
 
-More details can be found on the [Device System Bridge page]({{site.baseurl}}/en-US/win10/AlljoynDSB.htm).
+Features:
+- Creates virtual devices for each non-AllJoyn device exposed by Adapter
+- Automated runtime interface generation from Adapter device
+- Supports LSF, Control Panel base services, extensible to add more services
+- Universal app templates (C#, C++), for Desktop UI applications and Windows IoT startup tasks
+- Available as open source
+
+More details can be found on the [Device System Bridge page]({{site.baseurl}}/en-US/win10/AllJoynDSB.htm){:target="_blank"}.
+
 
 __AllJoyn Studio__
 
