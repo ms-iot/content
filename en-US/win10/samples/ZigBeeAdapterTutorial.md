@@ -27,7 +27,7 @@ Acronyms:
 1. XBee ZigBee module from [Digi](http://www.digi.com){:target="_blank"}, e.g.: XB24 Z7PIT-004
 2. XBee Explorer USB dongle from [SparkFun](https://www.sparkfun.com/products/11697){:target="_blank"}
 3. [XCTU](http://www.digi.com/products/xbee-rf-solutions/xctu-software/xctu){:target="_blank"} tool from Digi
-4. Windows 10 desktop with Visual Studio 2015 and [AllJoyn Explorer (AJX)]({{site.baseurl}}/en-US/win10/AllJoyn.htm){:target="_blank"}
+4. Windows 10 desktop with Visual Studio 2015 and [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/win10/AllJoyn.htm){:target="_blank"} app.
 5. [FTDI driver](http://www.ftdichip.com/Drivers/D2XX.htm){:target="_blank"} for Windows 10 which is required by the XBee Explorer USB dongle.
 6. Some ZigBee devices like
  - [Philips Hue](http://www2.meethue.com/en-US){:target="_blank"} light bulb
@@ -35,7 +35,7 @@ Acronyms:
 
 > Note that it is very important that the __ZigBee devices__ you will use __are not__ already __part of a ZigBee network__ otherwise they will not join your ZigBee network. Consequently, it is safer to buy single Philips Hue light bulb instead of a set of bulbs bundled with Philips Hue gateway because in that case bulbs will be part of the ZigBee network controlled by the gateway. 
   
-AllJoyn Explorer and its documentation can be found [here]({{site.baseurl}}/en-US/win10/AllJoyn.htm#AllJoynExplorer){:target="_blank"}.
+IoT Explorer for AllJoyn and its documentation can be found [here]({{site.baseurl}}/en-US/win10/AllJoyn.htm#AllJoynExplorer){:target="_blank"}.
 
 ![ZigBeeHardware]({{site.baseurl}}/images/ZigBee/ZigBeeHardware.png)
 
@@ -47,7 +47,7 @@ AllJoyn Explorer and its documentation can be found [here]({{site.baseurl}}/en-U
 4. Set up your Raspberry Pi2 (if you target that device)
 5. Deploy ZigBee adapter
 
->Note that in Windows 10, when a machine has __multiple AllJoyn modern applications__ that __need to interact__ on the same machine, the user must __add a loopback exemption__ for these modern applications. Consequently, if you run both the ZigBee adapter and AllJoyn Explorer on the same machine you will need to add a loopback exemption for these 2 applications. This isn’t needed for application you run from Visual Studio 2015. Note that when deploying an application from Visual Studio 2015, the loopback exemption is for the lifetime of the installed application. Meaning that you can launch the app directly (not from Visual Studio 2015) afterwards and it will have the loopback exemption.
+>Note that in Windows 10, when a machine has __multiple AllJoyn modern applications__ that __need to interact__ on the same machine, the user must __add a loopback exemption__ for these modern applications. Consequently, if you run both the ZigBee adapter and IoT Explorer for AllJoyn on the same machine you will need to add a loopback exemption for these 2 applications. This isn’t needed for application you run from Visual Studio 2015. Note that when deploying an application from Visual Studio 2015, the loopback exemption is for the lifetime of the installed application. Meaning that you can launch the app directly (not from Visual Studio 2015) afterwards and it will have the loopback exemption.
 
 Set up loopback exception: 
  1. Find the installation folder of the modern application for which you want to enable the loopback exemption. It is located at "C:\Users\\*username*\AppData\Local\Packages"
@@ -100,8 +100,8 @@ ZigBee adapter is written in C# and exposes ZigBee devices on AllJoyn through Br
 
 ![ZigBee2AllJoynMapping]({{site.baseurl}}/images/ZigBee/ZigBee2AllJoynMapping.png)
 
-### AllJoyn Explorer view of Philips Hue light bulb
-Philips Hue light bulb has 1 endpoint which has several clusters: Identify, Scene, Group, OnOff and LevelControl. ZigBee adapter only handles the OnOff and LevelControl clusters hence will only expose them to AllJoyn. Below is AllJoyn explorer view of what is exposed on AllJoyn. Path to “On” command is highlighted in green, path to “OnOff” status is highlighted in red.
+### IoT Explorer for AllJoyn view of Philips Hue light bulb
+Philips Hue light bulb has 1 endpoint which has several clusters: Identify, Scene, Group, OnOff and LevelControl. ZigBee adapter only handles the OnOff and LevelControl clusters hence will only expose them to AllJoyn. Below is IoT Explorer for AllJoyn view of what is exposed on AllJoyn. Path to “On” command is highlighted in green, path to “OnOff” status is highlighted in red.
 
 ![AJXPhilipsHue1]({{site.baseurl}}/images/ZigBee/AJXPhilipsHue1.png)
 

@@ -13,7 +13,7 @@ You can find the source code for AllJoyn samples by downloading a zip of all of 
 
 ### Prerequisites
 
-1. Install [AllJoyn Explorer]({{site.baseurl}}/en-US/win10/AllJoyn.htm#AllJoynExplorer){:target="_blank"}.
+1. Install [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/win10/AllJoyn.htm#AllJoynExplorer){:target="_blank"} app.
 
 ### Step 1: Hardware Setup
 The sample uses a Raspberry Pi 2 that one of its GPIO pins is connected to a photo resistor as shown in the schematic below. If another device issues the pin number in the code has to be changed to match the HW setup.
@@ -169,11 +169,11 @@ Next, modify the GetPropertyValue() function as follows:
 
 That is all for a basic GPIO pin device. At this point when this application runs, the GPIO pin will be seen on the AllJoyn bus. Whenever any AllJoyn Client Application polls the value of the pin, our AllJoyn Device System Bridge Application will read the value from the physical GPIO pin on the Raspberry Pi.
 
-### Step 5: Run the Alljoyn Explorer Application
+### Step 5: Run the IoT Explorer for AllJoyn Application
 
-When you run the AllJoyn Explorer Application in the same subnet with the AllJoyn Device System Bridge, you should be able to see that the GPIO Device is discovered.
+When you run the IoT Explorer for AllJoyn Application in the same subnet with the AllJoyn Device System Bridge, you should be able to see that the GPIO Device is discovered.
 
-1. Launch AlljoynExplorer
+1. Launch IoT Explorer for AllJoyn app.
 2. Locate two nodes in the list - the "Custom Adapter" and "Custom_GPIO_Device" in the list of exposed Devices and Services.
  
  NOTE: Your adapter name may be different than the one shown below. By default, the adapter name is the name of the project you've created. For example, if your project name is DsbAdapter, the name of the adapter node will be "DsbAdapter" instead of "Custom Adapter".
