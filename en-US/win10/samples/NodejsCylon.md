@@ -17,9 +17,6 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 * USB to Micro USB cable.
 
 ###Set up your PC
-* Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
-* Install Visual Studio 2015 Update 1.
-* Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 * Install Arduino software from [here](https://www.arduino.cc/en/Main/Software).
 * Install [Git for Windows](http://git-scm.com/download/win). Ensure that Git is included in your ‘PATH’ environment variable.
@@ -35,8 +32,8 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 
 
 ###Copy Node.js to your Raspberry Pi 2
-* From PowerShell on your PC, run `& 'C:\Program Files (x86)\NodejsUwp\Console\CopyNodeChakra.ps1' -arch <ARM | x86 | x64 > -ip <Device IP Address> -user <Username> -pass <Password>`. Use `ARM` if you have a Raspberry Pi 2. Use `x86` if you have a MinnowBoard Max.  
-  If you have not changed your username and password for your device, use `Administrator` for username and `p@ssw0rd` for the password. After completing this step, Node.js will be in `c:\Node.js (Chakra)` on your device.
+You can use [Windows file sharing]({{site.baseurl}}/{{page.lang}}/win10/samples/SMB.htm), [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm), 
+or [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to copy the ARM Node.js (ChakraCore) binaries from [here](http://aka.ms/nodecc_arm).
 
 
 ###Create a file with the code to control the Arduino LED
@@ -75,7 +72,7 @@ Cylon.robot({
 
 Steps to get serialport:
 
-* Copy and unzip the file [here](https://github.com/ms-iot/ntvsiot/releases/download/2.0.4/serialport_WinIoT.zip) to your PC.
+* Copy and unzip the file [here](http://aka.ms/spcc_zip) to your PC.
 * Copy &lt;Unzipped folder&gt;\console\arm\serialport.node to [CylonSample folder path]\node_modules\serialport\build\Release\node-v47-win32-arm\serialport.node  
   **Note:** node-v47-win32-arm is a new folder you will create.
 
