@@ -41,6 +41,10 @@ The following GPIO pins are accessible through APIs:
 | 7     | 22                 |
 | 8     | 24                 |
 | 9     | 26                 |
+
+**Note:** **GPIO 4** and **GPIO 5** are used by the MinnowBoard Max as bootstrap configuration pins for the BIOS.
+ Make sure that attached devices do not drive these GPIO low during boot, as this could prevent the MBM from booting.
+ After the MBM has booted past the BIOS, these GPIO can be used normally.
          
 As an example, the following code opens **GPIO 5** as an output and writes a digital '**1**' out on the pin:
          
