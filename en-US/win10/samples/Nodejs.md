@@ -16,8 +16,10 @@ Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/{{page.l
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 
 ###Copy Node.js to your Raspberry Pi 2
-You can use [Windows file sharing]({{site.baseurl}}/{{page.lang}}/win10/samples/SMB.htm), [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm), 
-or [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to copy the ARM Node.js (ChakraCore) binaries from [here](http://aka.ms/nodecc_arm).
+* Download the zip file with ARM Node.js (ChakraCore) from [here](http://aka.ms/nodecc_arm) to your PC and extract the files (node.exe and chakracore.dll).
+* Use [Windows file sharing]({{site.baseurl}}/{{page.lang}}/win10/samples/SMB.htm), [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm), 
+or [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to create `C:\Node.js (ChakraCore)` folder on your Raspberry Pi 2.
+* Copy node.exe and chakracore.dll to `C:\Node.js (ChakraCore)` on your Raspberry Pi 2.
 
 
 ###Create MemoryStatus Addon
@@ -81,8 +83,8 @@ NODE_MODULE(MemoryStatusAddon, Init)
 }
 {% endhighlight %}
 </UL>
-* Build the AddOn: `"[Node.js (Chakra) installation path]\node_modules\npm\bin\node-gyp-bin\node-gyp.cmd" rebuild --target_arch=arm` (use appropriate --target_arch depending on the device you have).  
-  The default Node.js (Chakra) installation path is "c:\Program Files (x86)\Node.js (chakra)".
+* Build the AddOn: `"[Node.js (ChakraCore) installation path]\node_modules\npm\bin\node-gyp-bin\node-gyp.cmd" rebuild --target_arch=arm` (use appropriate --target_arch depending on the device you have).  
+  The default Node.js (ChakraCore) installation path is "c:\Program Files\nodejs (chakracore)".
 
 
 ###Create the Node.js file
@@ -128,16 +130,16 @@ Connect to the device using PowerShell.  Please follow the instructions found [h
 
 Allow Node.exe to communicate through the firewall with the following command:
 
-* `netsh advfirewall firewall add rule name="Node.js" dir=in action=allow program="C:\Node.js (Chakra)\Node.exe" enable=yes`
+* `netsh advfirewall firewall add rule name="Node.js" dir=in action=allow program="C:\Node.js (ChakraCore)\Node.exe" enable=yes`
 
 
 ###Run the server!
-In PowerShell, run the command `& 'C:\Node.js (Chakra)\Node.exe' C:\MemoryStatusSample\server.js` to start the server.
+In PowerShell, run the command `& 'C:\Node.js (ChakraCore)\Node.exe' C:\MemoryStatusSample\server.js` to start the server.
 Open up a browser and enter the address http://&lt;IP address of your device&gt;:1337. The result should look something like the picture below.
 
 ![Memory Status Result]({{site.baseurl}}/images/Nodejs/memorystatus-ie.PNG)
 
 
 ### GitHub
-* Node.js (Chakra) source code: [https://github.com/Microsoft/node](https://github.com/Microsoft/node)
+* Node.js (ChakraCore) source code: [https://github.com/Microsoft/node](https://github.com/Microsoft/node)
 * NTVS IoT Extension source code: [https://github.com/ms-iot/ntvsiot](https://github.com/ms-iot/ntvsiot)

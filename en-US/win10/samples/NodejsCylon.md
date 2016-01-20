@@ -32,8 +32,10 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 
 
 ###Copy Node.js to your Raspberry Pi 2
-You can use [Windows file sharing]({{site.baseurl}}/{{page.lang}}/win10/samples/SMB.htm), [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm), 
-or [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to copy the ARM Node.js (ChakraCore) binaries from [here](http://aka.ms/nodecc_arm).
+* Download the zip file with ARM Node.js (ChakraCore) from [here](http://aka.ms/nodecc_arm) to your PC and extract the files (node.exe and chakracore.dll).
+* Use [Windows file sharing]({{site.baseurl}}/{{page.lang}}/win10/samples/SMB.htm), [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm), 
+or [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to create `C:\Node.js (ChakraCore)` folder on your Raspberry Pi 2.
+* Copy node.exe and chakracore.dll to `C:\Node.js (ChakraCore)` on your Raspberry Pi 2.
 
 
 ###Create a file with the code to control the Arduino LED
@@ -105,12 +107,12 @@ We also need to assign a port name to (e.g. 'COM5') to the Arduino. Follow these
 
 
 ###Run the sample!
-In PowerShell, run the command `& 'C:\Node.js (Chakra)\Node.exe' C:\CylonSample\cylonsample.js`.
+In PowerShell, run the command `& 'C:\Node.js (ChakraCore)\Node.exe' C:\CylonSample\cylonsample.js`.
 After running the command, the LED (shown with the arrow in the picture below) on the Arduino should start blinking every 1 second.
 
 ![Arduino RPi2]({{site.baseurl}}/images/Nodejs/arduino-rpi2.jpg)
 
 
 ### GitHub
-* Node.js (Chakra) source code: [https://github.com/Microsoft/node](https://github.com/Microsoft/node)
+* Node.js (ChakraCore) source code: [https://github.com/Microsoft/node](https://github.com/Microsoft/node)
 * NTVS IoT Extension source code: [https://github.com/ms-iot/ntvsiot](https://github.com/ms-iot/ntvsiot)
