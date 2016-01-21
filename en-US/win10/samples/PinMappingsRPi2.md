@@ -78,6 +78,66 @@ When you open a pin, it will be in its power-on state. To disconnect the pull re
 
 When a pin is closed, it reverts to its power-on state.
 
+##<a name="RPi2_UART"></a>Serial UART
+
+There is one Serial UART available on the RPi2: **UART0**
+
+* Pin 8  - **UART0 TX**
+* Pin 10  - **UART0 RX**
+
+The example below initializes **UART0** and performs a write followed by a read:
+
+
+{% highlight C# %}
+using Windows.Storage.Streams;
+using Windows.Devices.Enumeration;
+using Windows.Devices.SerialCommunication;
+
+public async void Serial()
+{
+	string aqs = SerialDevice.GetDeviceSelector("UART0");                   /* Find the selector string for the serial device   */
+	var dis = await DeviceInformation.FindAllAsync(aqs);                    /* Find the serial device with our selector string  */
+	SerialDevice SerialPort = await SerialDevice.FromIdAsync(dis[0].Id);    /* Create an serial device with our selected device */
+
+	/* Configure serial settings */
+	SerialPort.WriteTimeout = TimeSpan.FromMilliseconds(1000);
+	SerialPort.ReadTimeout = TimeSpan.FromMilliseconds(1000);
+	SerialPort.BaudRate = 9600;
+	SerialPort.Parity = SerialParity.None;         
+	SerialPort.StopBits = SerialStopBitCount.One;
+	SerialPort.DataBits = 8;
+
+	/* Write a string out over serial */
+	string txBuffer = "Hello Serial";
+	DataWriter dataWriter = new DataWriter();
+	dataWriter.WriteString(txBuffer);
+	uint bytesWritten = await SerialPort.OutputStream.WriteAsync(dataWriter.DetachBuffer());
+
+	/* Read data in from the serial port */
+	const uint maxReadLength = 1024;
+	DataReader dataReader = new DataReader(SerialPort.InputStream);
+	uint bytesToRead = await dataReader.LoadAsync(maxReadLength);
+	string rxBuffer = dataReader.ReadString(bytesToRead);
+}
+{% endhighlight %}
+
+Note that you must add the following capability to the **Package.appxmanifest** file in your UWP project to run Serial UART code:
+
+    Visual Studio 2015 has a known bug in the Manifest Designer (the visual editor for appxmanifest files) that affects the serialcommunication capability.  If 
+    your appxmanifest adds the serialcommunication capability, modifying your appxmanifest with the designer will corrupt your appxmanifest (the Device xml child 
+    will be lost).  You can workaround this problem by hand editting the appxmanifest by right-clicking your appxmanifest and selecting View Code from the 
+    context menu.
+
+{% highlight xml %}
+  <Capabilities>
+    <DeviceCapability Name="serialcommunication">
+      <Device Id="any">
+        <Function Type="name:serialPort" />
+      </Device>
+    </DeviceCapability>
+  </Capabilities>
+{% endhighlight %}
+
 ##<a name="RPi2_I2C"></a>I2C Bus
 
 There is one I2C controller **I2C1** exposed on the pin header with two lines **SDA** and **SCL**. 1.8K&#x2126; internal pull-up resistors are already installed on the board for this bus.

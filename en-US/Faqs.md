@@ -82,7 +82,7 @@ lang: en-US
         <p>No. We continue to focus on providing a great experience for Makers with Windows 10 IoT Core. While we’ve seen some fantastic innovation with the platform, unfortunately it does not meet the minimum hardware requirements for Windows 10 IoT Core.</p>
         <br />
 		<p class="bold"><em>When will the support for Windows on Galileo end?</em></p>
-        <p>The support for Windows on Galileo will end on November 30, 2015.</p>
+        <p>The support for Windows on Galileo has ended on November 30, 2015.</p>
         <br />
 		<p class="bold"><em>What can I do with my existing projects on Galileo?</em></p>
         <p>Wiring support is now available on Windows 10 IoT Core running on Raspberry Pi 2. This allows you to migrate your existing Galileo projects to Windows 10 IoT Core.</p>
