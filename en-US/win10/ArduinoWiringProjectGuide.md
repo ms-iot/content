@@ -9,7 +9,7 @@ lang: en-US
 
 This guide will walk through the creation, setup, and deployment of an Arduino Wiring project using Windows IoT Core!
 
-Arduino Wiring projects utilize the familiar, easy to use Arduino Wiring API with Windows IoT Lightning functionality: a driver using direct memory mapping to provide significant [performance speeds]({{site.baseurl}}\{{page.lang}}\win10\LightningPerformance.htm). You can copy & paste Arduino sketches and libraries into your IoT Core Arduino Wiring projects and run them on any of your IoT Core devices! See the <a href="#develop">develop section</a> of this page for more information.
+Arduino Wiring projects utilize the familiar, easy to use Arduino Wiring API with Windows IoT Lightning functionality: a driver using direct memory mapping to provide significant [performance speeds]({{site.baseurl}}/{{page.lang}}/win10/LightningPerformance.htm). You can copy & paste Arduino sketches and libraries into your IoT Core Arduino Wiring projects and run them on any of your IoT Core devices! See the <a href="#develop">develop section</a> of this page for more information.
 
 ##Install the Microsoft IoT Templates!
 
@@ -21,7 +21,7 @@ Open Visual Studio. Select File -> New Project -> Visual C++ -> Windows -> Windo
 
 ##Change the Default Controller Driver
 
-You will need to be running the Direct Memory Mapped Driver to write Arduino Wiring solutions! Refer to the [Lightning Setup Guide]({{site.baseurl}}\{{page.lang}}\win10\LightningSetup.htm) for instructions!
+You will need to be running the Direct Memory Mapped Driver to write Arduino Wiring solutions! Refer to the [Lightning Setup Guide]({{site.baseurl}}/{{page.lang}}/win10/LightningSetup.htm) for instructions!
 
 ##Windows IoT Core Insider Preview required
 Arduino Wiring app support is currently included only in the Insider Preview builds for Windows IoT Core.
@@ -30,7 +30,7 @@ You can download a Windows 10 IoT Core image from our [downloads page]({{site.ba
 <A name="develop"></a>
 
 ##Develop
-Complete one of the many "Wiring" samples on the [Samples Page]({{site.baseurl}}\{{page.lang}}\win10\StartCoding.htm), or build your own project! Any of the samples we've created that are written using Arduino Wiring will be listed like so: [Blinky (Wiring)]({{site.baseurl}}\{{page.lang}}\win10\samples\arduino-wiring\HelloBlinky.htm). Blinky, the cononical "Hello World" project for IoT projects, is a great place to start for your first project!
+Complete one of the many "Wiring" samples on the [Samples Page]({{site.baseurl}}/{{page.lang}}/win10/StartCoding.htm), or build your own project! Any of the samples we've created that are written using Arduino Wiring will be listed like so: [Blinky (Wiring)]({{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/HelloBlinky.htm). Blinky, the cononical "Hello World" project for IoT projects, is a great place to start for your first project!
 
 ###Porting
 

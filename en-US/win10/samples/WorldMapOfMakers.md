@@ -7,19 +7,27 @@ deviceName: RPI2
 kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 ---
 
-<ol class="breadcrumb">
-  <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
-  <li class="active">World Map of Makers</li>
-</ol>
+<div class="row">
+  <div class="col-xs-24">
+    <ol class="breadcrumb">
+      <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
+      <li class="active">World Map of Makers</li>
+    </ol>
+    <header class="page-title-header">
+      <h1 class="page-title">World Map of Makers</h1>
+      <div class="page-subtitle">Create a simple internet connected application to query the status of a web API and use that information to toggle an LED.</div>
+    </header>
+  </div>
+</div>
 
 <hr/>
 
 <div class="row">
-  <center>
-    <h3>Create a simple internet connected application to query the status of a web API and use that information to toggle an LED.</h3>
-    <hr/>
-    Each pin on the map below is another maker that has run this sample. Zoom around to see where they are and deploy the sample to put your pin on the map!
-  </center>
+  <div class="col-xs-24">
+    <center>
+      Each pin on the map below is another maker that has run this sample. Zoom around to see where they are and deploy the sample to put your pin on the map!
+    </center>
+  </div>
 </div>
 
 <iframe class="maker-kit" src="https://adafruitsample.azurewebsites.net/cardViewer?lesson=201" width="100%" height="550px" scrolling="no"></iframe>

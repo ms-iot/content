@@ -5,7 +5,14 @@ permalink: /en-US/AdafruitMakerKit.htm
 lang: en-US
 kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 ---
-<h3 class="thin-header section-heading">{{page.kit}}</h3>
+<div class="row">
+  <div class="col-xs-24">
+    <header class="page-title-header">
+      <h1 class="page-title">{{page.kit}}</h1>
+    </header>
+  </div>
+</div>
+
 <div class="row">
   <div class="col-md-6 col-sm-12">
     <center>

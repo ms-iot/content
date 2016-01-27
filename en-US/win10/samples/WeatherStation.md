@@ -8,20 +8,29 @@ deviceName: RPI2
 kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 ---
 
-<ol class="breadcrumb">
-  <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
-  <li class="active">Weather Station</li>
-</ol>
+<div class="row">
+  <div class="col-xs-24">
+    <ol class="breadcrumb">
+      <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
+      <li class="active">Weather Station</li>
+    </ol>
+    <header class="page-title-header">
+      <h1 class="page-title">Weather Station</h1>
+      <div class="page-subtitle">Communicate with an I2C/SPI based temperature and pressure sensor</div>
+    </header>
+  </div>
+</div>
 
 <hr/>
 
 <div class="row">
-  <center>
-    <h3>Communicate with an I2C/SPI based temperature and pressure sensor.</h3>
-    Upon executing this sample, you'll have learned how to measure temperature and pressure using I2C/SPI!
-    <hr/>
-    Each pin on the map below is another maker that has run this sample. Zoom around to see where they are and deploy the sample to put your pin on the map!
-  </center>
+  <div class="col-xs-24">
+    <center>
+      <h3>Upon executing this sample, you'll have learned how to measure temperature and pressure using I2C/SPI!</h3>
+      
+      Each pin on the map below is another maker that has run this sample. Zoom around to see where they are and deploy the sample to put your pin on the map!
+    </center>
+  </div>
 </div>
 
 <iframe class="maker-kit" src="https://adafruitsample.azurewebsites.net/cardViewer?lesson=203" width="100%" height="550px" scrolling="no"></iframe>
