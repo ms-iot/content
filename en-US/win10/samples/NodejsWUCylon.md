@@ -46,7 +46,7 @@ Select the `Basic Node.js Cylon Application (Universal Windows)` template (shown
 
 Wait for the Cylon package and its dependencies to complete downloading. This will be indicated by the message below in the npm output window.
 
-![Node.js Npm Menu]({{site.baseurl}}/images/Nodejs/npm-output-window.PNG)
+![Node.js Output Window]({{site.baseurl}}/images/Nodejs/npm-output-window.PNG)
 
 Right-click on the npm node in the Solution Explorer (shown below) and select Update npm Packages.
 This step will run npm dedupe and update [serialport](https://www.npmjs.com/package/serialport) (a Cylon dependency) with a [version](https://github.com/ms-iot/node-serialport/tree/uwp) that works with Node.js UWP.
