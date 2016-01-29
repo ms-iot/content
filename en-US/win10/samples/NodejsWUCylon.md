@@ -40,31 +40,18 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 ###Create a new Cylon (Universal Windows) project
 Start Visual Studio 2015 and create a new project (File \| New Project...). In the `New Project` dialog, navigate to `Node.js` as shown below (in the left pane in the dialog: Templates \| JavaScript \| Node.js).
 
-Select the template `Basic Node.js Cylon Application (Universal Windows)`
+Select the `Basic Node.js Cylon Application (Universal Windows)` template (shown below), enter a name for your project, then press OK.
 
 ![Node.js Cylon Project Dialog]({{site.baseurl}}/images/Nodejs/nodejswucylon-newprojectdialog.png)
 
-You may get a prompt (shown below) to run npm dedupe. If you do, make sure to run it.
+Wait for the Cylon package and its dependencies to complete downloading. This will be indicated by the message below in the npm output window.
 
-![npm dedupe dialog]({{site.baseurl}}/images/Nodejs/npm-dedupe-dialog.PNG)
+![Node.js Npm Menu]({{site.baseurl}}/images/Nodejs/npm-output-window.PNG)
 
-If you don't get the prompt, you still need to run npm dedupe to avoid node module paths that are too long for deployment on the Raspberry Pi 2.
-To do this, right click on the node_modules folder in the Solution Explorer window. Then click on "Open Command Prompt Here...". 
-When the command window opens, run `npm dedupe`.
+Right-click on the npm node in the Solution Explorer (shown below) and select Update npm Packages.
+This step will run npm dedupe and update [serialport](https://www.npmjs.com/package/serialport) (a Cylon dependency) with a [version](https://github.com/ms-iot/node-serialport/tree/uwp) that works with Node.js UWP.
 
-
-###Get Serialport
-**Note:** Even though serialport is installed when a new Cylon project is created, you still need to get a version that:
-
-* Corresponds with the processor architecture of the device you are targeting (in this case ARM for Raspberry Pi 2).
-* Is UWP (Universal Windows Platform) compatible (built from [this](https://github.com/ms-iot/node-serialport/tree/uwp) fork of serialport).
-
-Steps to get serialport:
-
-* Copy and unzip the file [here](https://github.com/ms-iot/ntvsiot/releases/download/2.0.4/serialport_WinIoT.zip) to your PC.
-* Copy &lt;Unzipped folder&gt;\uwp\arm\serialport.node to [Cylon project root]\node_modules\serialport\build\Release\node-v47-win32-arm\serialport.node  
-  **Note:** node-v47-win32-arm is a new folder you will create. [Cylon project root] is the the folder created by your new project in the previous section.
-* Copy &lt;Unzipped folder&gt;\uwp\serialport.js to [Cylon project root]\node_modules\serialport\serialport.js.
+![Node.js Npm Menu]({{site.baseurl}}/images/Nodejs/npm-update-menu.PNG)
 
 
 ###Set up the connection between your Arduino and Raspberry Pi 2
