@@ -154,6 +154,13 @@
          "link-text":"<a href='SB_BL.htm'>Learn More</a>",
          "ranking":10,
          "tags":["advanced"]
+      },
+      {
+         "title":"Network Packet Capture",
+         "description":"Use Microsoft Message Analyzer to capture network packets from your Windows 10 IoT Core device",
+         "link-text":"<a href='NetworkPacketCapture.htm'>Learn More</a>",
+         "ranking":6,
+         "tags":["intermediate","tool","configuration"]
       }
    ]
 }
