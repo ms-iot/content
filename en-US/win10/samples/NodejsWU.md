@@ -50,11 +50,11 @@ http.createServer(function (req, res) {
 
 * When the server is running, open up a browser and enter the address http://&lt;IP address of your device&gt;:1337. The result should look like the picture below.
 
-    ![Hello World Result]({{site.baseurl}}/images/Nodejs/helloworld-ie.PNG)
+    ![Hello World Result]({{site.baseurl}}/images/Nodejs/helloworld-ie.png)
 
 * You can set breakpoints, see variable values, etc. To stop the server, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
 
-    ![Debugging Screenshot]({{site.baseurl}}/images/Nodejs/debugging-vs.PNG)
+    ![Debugging Screenshot]({{site.baseurl}}/images/Nodejs/debugging-vs.png)
 
 
 ### Universal Windows Platform (UWP) namespaces
@@ -78,7 +78,7 @@ uwp.close();
 
 The result from the code above should look like this:
 
-![DateTime Result]({{site.baseurl}}/images/Nodejs/datetime-ie.PNG)
+![DateTime Result]({{site.baseurl}}/images/Nodejs/datetime-ie.png)
 
 
 ### Building and deploying an app package (AppX)
