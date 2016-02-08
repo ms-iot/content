@@ -137,7 +137,7 @@ Allow Node.exe to communicate through the firewall with the following command:
 In PowerShell, run the command `& 'C:\Node.js (ChakraCore)\Node.exe' C:\MemoryStatusSample\server.js` to start the server.
 Open up a browser and enter the address http://&lt;IP address of your device&gt;:1337. The result should look something like the picture below.
 
-![Memory Status Result]({{site.baseurl}}/images/Nodejs/memorystatus-ie.PNG)
+![Memory Status Result]({{site.baseurl}}/images/Nodejs/memorystatus-ie.png)
 
 
 ### GitHub

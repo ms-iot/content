@@ -12,7 +12,7 @@ lang: en-US
 ###Set up your PC
 * Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
 * Install Visual Studio 2015 Update 1.
-* Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
+* Install the latest Node.js Tools for Windows IoT from [here](http://aka.ms/ntvsiotlatest).
 
 
 ###Create a new Express (Windows Universal) project
@@ -20,15 +20,15 @@ Start Visual Studio 2015 and create a new project (File \| New Project...). In t
 
 Select the template `Basic Node.js Express 4 Application (Windows Universal)`
 
-![Node.js Windows Universal New Express Project Dialog]({{site.baseurl}}/images/Nodejs/nodejswuexpress-newprojectdialog.PNG)
+![Node.js Windows Universal New Express Project Dialog]({{site.baseurl}}/images/Nodejs/nodejswuexpress-newprojectdialog.png)
 
 When the new project is created, you will see the dialog shown below asking if you want to use npm to install Express and its dependencies to the location of the project. Click Yes.
 
-![npm Prompt]({{site.baseurl}}/images/Nodejs/npm-prompt.PNG)
+![npm Prompt]({{site.baseurl}}/images/Nodejs/npm-prompt.png)
 
 After clicking yes, npm will run in the background and install the dependencies. Once that is complete, your project should look like the picture shown below.
 
-![npm Express List]({{site.baseurl}}/images/Nodejs/npm-express.PNG)
+![npm Express List]({{site.baseurl}}/images/Nodejs/npm-express.png)
 
 
 ###Deploy the server to your Windows IoT Core device
@@ -44,7 +44,7 @@ After clicking yes, npm will run in the background and install the dependencies.
 
 * When the server is running, open up a browser and enter the address http://&lt;IP address of your device&gt;:3000. The result should look like the picture below.
 
-    ![Hello World Result]({{site.baseurl}}/images/Nodejs/express-ie.PNG)
+    ![Hello World Result]({{site.baseurl}}/images/Nodejs/express-ie.png)
 
 
 ### GitHub
