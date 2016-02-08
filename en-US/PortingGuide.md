@@ -5,13 +5,13 @@ permalink: /en-US/PortingGuide.htm
 lang: en-US
 ---
 
-#Porting Guide
+# Porting Guide
 Migrate your existing code to Windows!
 
-##Architectural differences between AVR and Quark
+## Architectural differences between AVR and Quark
 ___
 
-###Real-time OS vs General OS
+### Real-time OS vs General OS
 The key difference between general-computing operating systems and real-time operating systems is the need for "deterministic" timing behavior in the real-time operating systems. - belhob.wordpress.com
 
 - [Real-time OS](http://en.wikipedia.org/wiki/Real-time_operating_system){:target="_blank"} - The scheduling algorithms guarantee deterministic timing (i.e. AVR)
@@ -19,15 +19,15 @@ The key difference between general-computing operating systems and real-time ope
 
 ___
 
-###Microcontroller verses Microprocessor (CPU)
+### Microcontroller verses Microprocessor (CPU)
 
 Microcontrollers are designed for embedded applications, in contrast to the microprocessors used in personal computers or other general purpose applications. - wikipedia.org
 - [Microcontroller](http://en.wikipedia.org/wiki/Microcontroller){:target="_blank"} - A small computer on a single integrated circuit containing a processor core, memory, and programmable input/output peripherals (i.e. Atmel ATmega328).
 - [Microprocessor](http://en.wikipedia.org/wiki/Microprocessor){:target="_blank"} - a multipurpose, programmable device that accepts digital data as input, processes it according to instructions stored in its memory, and provides results as output (i.e. Intel Quark).
 
-##Serial
+## Serial
 
-###[Logic Level Voltages](http://en.wikipedia.org/wiki/Logic_level#Logic_voltage_levels){:target="_blank"}
+### [Logic Level Voltages](http://en.wikipedia.org/wiki/Logic_level#Logic_voltage_levels){:target="_blank"}
 
 The voltage levels used internally are called the "logic level", while the voltage levels used externally are called the "line level". In particular, when connecting a system that uses TTL levels internally to a RS-232 cable, the TTL levels are the "logic level". When connecting a system that uses 3.3 V CMOS levels internally to an IEEE 1284 bus, the TTL levels are the "line level".
 
@@ -40,15 +40,15 @@ The voltage levels used internally are called the "logic level", while the volta
    - LOW - 0V to 0.8V</li>
    - HIGH - 2V to 5V</li>
 
-###[RS232](http://en.wikipedia.org/wiki/RS-232){:target="_blank"}
+### [RS232](http://en.wikipedia.org/wiki/RS-232){:target="_blank"}
 
   The RS-232 standard is commonly used in computer serial ports. The standard defines the electrical characteristics and timing of signals, the meaning of signals, and the physical size and pinout of connectors. The current version of the standard is TIA-232-F Interface Between Data Terminal Equipment and Data Circuit-Terminating Equipment Employing Serial Binary Data Interchange, issued in 1997.
 
 ___
 
-##Porting Code
+## Porting Code
 
-###Arduino/AVR
+### Arduino/AVR
 
 Direct Port Manipulation
 
@@ -62,7 +62,7 @@ Direct Port Manipulation
 - [SPI Registers](http://www.arduino.cc/en/Tutorial/SPIEEPROM){:target="_blank"} (Introduction to the Serial Peripheral Interface)<br/>
 	  This fine grain level of control is not offered by the Windows Developer Program for IoT and in most cases, simply using the SPI library can replace this functionality.
 
-###GCC
+### GCC
 
 Non-portable GCC compiler commands/options
 
