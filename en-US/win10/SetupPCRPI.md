@@ -6,7 +6,7 @@ lang: en-US
 deviceName: RPI2
 ---
 
-#Get Started
+# Get Started
 
 Learn how to get your computer ready for Windows Developer Program for IoT.
 

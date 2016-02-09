@@ -5,11 +5,11 @@ permalink: /en-US/win10/samples/Python.htm
 lang: en-US
 ---
 
-##Python 'Hello, World' Sample
+## Python 'Hello, World' Sample
 
 {% include VerifiedVersion.md %}
 
-###Set up your PC
+### Set up your PC
 
 * Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) to setup your device and PC.
 
@@ -19,11 +19,11 @@ lang: en-US
 
 * Download and install the latest Python UWP SDK (pyuwpsdk.vsix) release from [here](https://github.com/ms-iot/python/releases){:target="_blank"}.
 
-###Create new Python project
+### Create new Python project
 
 * Create new project based on `Template > Python > Windows 10 IoT Core > Background Application (IoT)`
 
-###Output Hello World!
+### Output Hello World!
 
 Modify *StartupTask.py* like this
 
@@ -31,7 +31,7 @@ Modify *StartupTask.py* like this
 print("Hello, World from IoT!")
 {% endhighlight %}
 
-###Deploy Python app to your Windows 10 IoT Core device
+### Deploy Python app to your Windows 10 IoT Core device
 
 * Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#python).
 
@@ -43,7 +43,7 @@ print("Hello, World from IoT!")
 
 * The '*Hello, World from IoT!*' message will be displayed in the output window of Visual Studio.  Open the output window by `Debug > Window > Output`.
 
-###Use Windows Devices from Python (e.g. GPIO, I2C, SPI)
+### Use Windows Devices from Python (e.g. GPIO, I2C, SPI)
 
 * Right-click on the References node in the Python project
 
@@ -63,6 +63,6 @@ print("Hello, World from IoT!")
 
 * WinDevices documentation can be found [here](https://github.com/ms-iot/samples/tree/master/PyWinDevices/docs){:target="_blank"}
 
-###Questions/Suggestions
+### Questions/Suggestions
 
 Please refer to the [FAQ]({{site.baseurl}}/{{page.lang}}/Faqs.htm) for issues.

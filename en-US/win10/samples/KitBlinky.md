@@ -18,15 +18,15 @@ kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 <hr/>
 
 {: .thin-header}
-#Blinky Sample
+# Blinky Sample
 
 Let's create a simple Blinky app using an LED to test your setup.
 
-###Load the project in Visual Studio
+### Load the project in Visual Studio
 
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/adafruitsample/archive/master.zip) and navigating to the `Blinky`.  The sample code is available in either C++ or C#, however the documentation here only details the C# variant. Make a copy of the folder on your disk and open the project from Visual Studio.
 
-###Connect the LED to your Windows IoT device
+### Connect the LED to your Windows IoT device
 
 You'll need a few components:
 
@@ -45,7 +45,7 @@ You'll need a few components:
 
 <sub>*Image made with [Fritzing](http://fritzing.org/){:target="_blank"}*</sub>
 
-###Deploy your app
+### Deploy your app
 
 1. With the application open in Visual Studio, set the architecture in the toolbar dropdown to `ARM`.
 

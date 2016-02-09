@@ -5,13 +5,13 @@ permalink: /en-US/win10/samples/PictureTheWeather.htm
 lang: en-US
 ---
 
-##Picture The Weather sample, using Windows Virtual Shields for Arduino
+## Picture The Weather sample, using Windows Virtual Shields for Arduino
 
 In this sample, we will connect an RGB LED strip to an Arduino and control it to indicate the weather forecast behind a picture.
 
 ![RGB Strip 1]({{site.baseurl}}/images/RGBSTRIP/rgbstrip_split1.JPG)
 
-###Components
+### Components
 
 You will need the following components :
 
@@ -29,13 +29,13 @@ You will need the following components :
 
 * a 8x11" paper drawing from an artistic family member, friend or yourself
 
-###Connect to your Device
+### Connect to your Device
 
 * Follow the instructions at this [Arduino repository](https://github.com/ms-iot/virtual-shields-arduino){:target="_blank"} to set up your Arduino.
 
 * Follow the instructions at this [Universal repository](https://github.com/ms-iot/virtual-shields-universal){:target="_blank"} to set up your Windows Phone.
 
-###Modify the RGB strip
+### Modify the RGB strip
 
 The RGB LED strips come with 48 LEDs in a strip.
 
@@ -47,7 +47,7 @@ The RGB LED strips come with 48 LEDs in a strip.
 
 ![RGB Strip 2]({{site.baseurl}}/images/RGBSTRIP/rgbstrip_split2.JPG)
 
-###Placement of the RGB strip
+### Placement of the RGB strip
 
 With the original power connector placed at the lower right,
 place the 6 strips of 8 LEDs onto the inside backing of the picture frame so that a 8x11" white paper (with artwork) separates the LEDs from the glass frame.
@@ -56,7 +56,7 @@ Tape or connect the backing into/onto the frame.
 
 ![RGB Strip 1]({{site.baseurl}}/images/RGBSTRIP/rgbstrip_split1.JPG)
 
-###Hook up the RGB strip to the Arduino
+### Hook up the RGB strip to the Arduino
 
 From the RGB LED strip:
 
@@ -70,13 +70,13 @@ From the RGB LED strip:
 
 ![RGB connection]({{site.baseurl}}/images/RGBSTRIP/rgbconnect.JPG)
 
-###Upload to your device
+### Upload to your device
 
 * In the Arduino IDE (set up from Connect to your Device : Arduino), choose the menu item File->Examples->VirtualShield->PictureTheWeather
 
 * Upload to your Arduino.
 
-###See it run
+### See it run
 
 * The phone will show "Web Weather Indicator," your coordinates and your weather forecast.
 
@@ -84,7 +84,7 @@ From the RGB LED strip:
 
 * (There's also a not-so-secret debugging mode), try saying "show thunderstorms". Then, say "strike".
 
-###Here's what's happening...
+### Here's what's happening...
 
 Using the Windows Virtual Shields for Arduino, the Arduino sketch is:
 * Getting your GPS coordinates.

@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/PushButton.htm
 lang: en-US
 ---
 
-##Push Button Sample
+## Push Button Sample
 
 {% include VerifiedVersion.md %}
 
@@ -21,7 +21,7 @@ mode by running this command: `setbootoption.exe headed` (changing the headed/he
 Also, be aware that the GPIO APIs are only available on Windows IoT Core, so this sample cannot run on your desktop.
 
 
-###Components
+### Components
 
 You will need the following components :
 
@@ -33,7 +33,7 @@ You will need the following components :
 
 * a breadboard and several male-to-female for the Raspberry Pi 2 or MinnowBoard Max or male-to-male wires for the DragonBoard
 
-###Connect the circuit to your device
+### Connect the circuit to your device
 
 Let's start by wiring up the components on a breadboard. Visit the corresponding **Raspberry Pi 2, MinnowBoard Max, or DragonBoard 410c** sections below depending on your device.
 
@@ -45,7 +45,7 @@ Let's start by wiring up the components on a breadboard. Visit the corresponding
 
 <sub>*Images made with [Fritzing](http://fritzing.org/)*</sub>
 
-#####Connecting the LED
+##### Connecting the LED
 
 * Connect the cathode (the shorter leg) of the LED to Pin 31 (GPIO 6) of the Raspberry Pi 2
 
@@ -53,7 +53,7 @@ Let's start by wiring up the components on a breadboard. Visit the corresponding
 
 * Connect the other end of the 330 &#x2126; resistor to Pin 1 (3.3V) on Raspberry Pi 2
 
-#####Connecting the Push Button
+##### Connecting the Push Button
 
 * Connect one pin of the push button to Pin 29 (GPIO 5) of the Raspberry Pi 2
 
@@ -73,7 +73,7 @@ Here is the pinout of the RPi2:
 
 <sub>*Images made with [Fritzing](http://fritzing.org/)*</sub>
 
-#####Connecting the LED
+##### Connecting the LED
 
 * Connect the cathode (the shorter leg) of the LED to Pin 20 (GPIO 6) of the MinnowBoard Max
 
@@ -81,7 +81,7 @@ Here is the pinout of the RPi2:
 
 * Connect the other end of the 330 &#x2126; resistor to Pin 4 (3.3V) on MinnowBoard Max
 
-#####Connecting the Push Button
+##### Connecting the Push Button
 
 * Connect one pin of the push button to Pin 18 (GPIO 5) of the MinnowBoard Max
 
@@ -126,7 +126,7 @@ private const int BUTTON_PIN = 36;
 ~~~
 {: .language-c#}
 
-###Building and running the sample
+### Building and running the sample
 
 1. Download a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip).
 1. Open `samples-develop\PushButton\CS\PushButton.csproj` in Visual Studio.
@@ -136,7 +136,7 @@ private const int BUTTON_PIN = 36;
 1. Hit F5 to deploy and debug. Enter the IP address of your device
    and select `Universal` for the authentication type.
 
-###Let's look at the code
+### Let's look at the code
 
 First, we open the GpioPin resources we'll be using. The button is connected to
 GPIO5 in active LOW configuration, meaning the signal will be HIGH when the

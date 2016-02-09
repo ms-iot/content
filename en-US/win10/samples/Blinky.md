@@ -6,7 +6,7 @@ lang: en-US
 ---
 
 {: .thin-header}
-##Blinky Sample
+## Blinky Sample
 
 We'll create a simple LED blinking app and connect a LED to your Windows 10 IoT Core device.
 
@@ -14,11 +14,11 @@ This is a headed sample.  To better understand what headed mode is and how to co
 
 Also, be aware that the GPIO APIs are only available on Windows 10 IoT Core, so this sample cannot run on your desktop.
 
-###Load the project in Visual Studio
+### Load the project in Visual Studio
 
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\Blinky`.  The sample code is available in either C++ or C#, however the documentation here only details the C# variant. Make a copy of the folder on your disk and open the project from Visual Studio.
 
-###Connect the LED to your Windows IoT device
+### Connect the LED to your Windows IoT device
 
 
 You'll need a few components:
@@ -31,7 +31,7 @@ You'll need a few components:
 
 ![Electrical Components]({{site.baseurl}}/images/Blinky/components.png)
 
-###For Raspberry Pi 2 (RPi2)
+### For Raspberry Pi 2 (RPi2)
 
 1. Connect the shorter leg of the LED to GPIO 5 (pin 29 on the expansion header) on the RPi2.
 2. Connect the longer leg of the LED to the resistor.
@@ -49,7 +49,7 @@ Here is an example of what your breadboard might look like with the circuit asse
 <sub>*Image made with [Fritzing](http://fritzing.org/){:target="_blank"}*</sub>
 
 
-###For MinnowBoard Max (MBM)
+### For MinnowBoard Max (MBM)
 
 We will connect the one end of the LED to GPIO 5 (pin 18 on the JP1 expansion header) on the MBM, the other end to the resistor, and the resistor to the 3.3 volt power supply from the MBM.
 Note that the polarity of the LED is important. Make sure the shorter leg (-) is connected to GPIO 5 and the longer leg (+) to the resistor or it wont light up.
@@ -64,7 +64,7 @@ Here is an example of what your breadboard might look like with the circuit asse
 
 <sub>*Image made with [Fritzing](http://fritzing.org/){:target="_blank"}*</sub>
 
-###For DragonBoard 410c (DB)
+### For DragonBoard 410c (DB)
 
 For reference, the functionality of the low-speed expansion connector is outlined in the following diagram
 
@@ -90,7 +90,7 @@ private const int LED_PIN = 12;
 ~~~
 {: .language-c#}
 
-###Deploy your app
+### Deploy your app
 
 1. With the application open in Visual Studio, set the architecture in the toolbar dropdown. If you're building for MinnowBoard Max, select `x86`.  If you're building for Raspberry Pi 2 or the DragonBoard, select `ARM`.
 
@@ -113,11 +113,11 @@ When everything is set up, you should be able to press F5 from Visual Studio.  I
 
 Congratulations! You controlled one of the GPIO pins on your Windows IoT device.
 
-###Let's look at the code
+### Let's look at the code
 The code for this sample is pretty simple. We use a timer, and each time the 'Tick' event is called, we flip the state of the LED.
 
 
-###Timer code
+### Timer code
 Here is how you set up the timer in C#:
 {% highlight C# %}
 public MainPage()
@@ -153,7 +153,7 @@ private void Timer_Tick(object sender, object e)
 }
 {% endhighlight %}
 
-###Initialize the GPIO pin
+### Initialize the GPIO pin
 To drive the GPIO pin, first we need to initialize it. Here is the C# code (notice how we leverage the new WinRT classes in the Windows.Devices.Gpio namespace):
 
 {% highlight C# %}
@@ -194,7 +194,7 @@ Let's break this down a little:
 * We also set the `pin` to run in output mode using the `GpioPin.SetDriveMode()` function.
 
 
-###Modify the state of the GPIO pin
+### Modify the state of the GPIO pin
 Once we have access to the `GpioOutputPin` instance, it's trivial to change the state of the pin to turn the LED on or off.
 
 To turn the LED on, simply write the value `GpioPinValue.Low` to the pin:

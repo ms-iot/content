@@ -5,16 +5,16 @@ permalink: /en-US/win10/SB_BL.htm
 lang: en-US
 ---
 
-#Enabling Secure Boot and BitLocker Device Encryption on Windows 10 IoT Core
+# Enabling Secure Boot and BitLocker Device Encryption on Windows 10 IoT Core
 Deployment Guide  
 _Revision: 1.0_
 
-##Introduction  
+## Introduction  
 UEFI Secure Boot and BitLocker are the keystone features of a locked-down Windows OS that is resilient against offline and boot attacks. UEFI Secure Boot is the first policy enforcement point, located in UEFI. It restricts the system to only allow execution of binaries signed by a specified authority. This feature prevents unknown code from being executed on the platform and potentially weakening the security posture of it. Note that while the limitation to a defined set of publishing authorities excludes all unknown code, it does not necessarily prevent known bad code from being executed (e.g. rollback attack).  
 Windows 10 IoT Core also implements a lightweight version of BitLocker Device Encryption, which has a strong dependency on the presence of a TPM on the platform, including the necessary preOS protocol in UEFI that conducts the necessary measurements. These preOS measurements ensure that the OS later has a definitive record of how the OS was launched; however, it does not enforce any execution restrictions.  
 Together, Secure and Measured Boot provide the optimal protection that ensures that a platform will launch in a defined way, while locking out unknown binaries and protecting user data through the use of device encryption.  
 
-##Supported IoT Platforms  
+## Supported IoT Platforms  
 The following [Windows 10 IoT Core supported platforms][1] provide firmware TPM capabilities out of the box, along with Secure Boot, Measured Boot and BitLocker capabilities:
 
 * Intel MinnowBoard Max
@@ -29,7 +29,7 @@ Notes:
 [2]: https://firmware.intel.com/projects/minnowboard-max "MinnowBoard MAX firmware"
 [3]: {{site.baseurl}}/{{page.lang}}/win10/SetupPCDB410c.htm "Setup DragonBoard 410c"
 
-##Certificate Generation  
+## Certificate Generation  
 This section is pertinent if you are a hardware device manufacturer or developer that wants to create your own UEFI Secure Boot and BitLocker data recovery certificates in order to lock down the platform.  
 Note: For testing purposes, you may skip this section and use the pre-generated certificates provided in the [subsequent section][4].  
 Details on Secure Boot along with key creation and management guidance is available [here][5]. The below contents are provided for demonstration purposes only and should be adjusted based on your specific product security requirements.  
@@ -59,12 +59,12 @@ Note that the included script also provides the information required to secure t
 [6]: https://msdn.microsoft.com/en-us/windows/hardware/gg454513.aspx "Download kits and tools for Windows"
 [7]: https://github.com/ms-iot/security/tree/master/CertGen "CertGen.zip"
 
-##<a name="Certificates"></a>Pre-generated Certificates (for Testing only)  
+## <a name="Certificates"></a>Pre-generated Certificates (for Testing only)  
 In order to quickly test and deploy UEFI Secure Boot and Device Encryption functionality when security is **not** a priority, you can use a set of pre-generated certificates and keys (which are used for illustration) in the subsequent sections below. Please note that since the private keys are included in this published package, the resulting platform **cannot be considered trusted or secure**. You should download the zip from [here][8] unpack, and point to these files in the subsequent sections below.
 
 [8]: https://github.com/ms-iot/security/tree/master/PreGenPackage "PreGenPackage.zip"
 
-##Preparing OS Image  
+## Preparing OS Image  
 For the following steps, we'll assume that you've flashed the latest Windows 10 IoT Core image for your board (instructions available [here][1] based on your specific board) and that the "MainOS" volume is mounted as volume "v:" on your Windows 10 PC.
 
 1.	Copy the following 3 files to v:\EFI (will be used to set UEFI secure variables for Secure Boot):
@@ -91,18 +91,18 @@ For the following steps, we'll assume that you've flashed the latest Windows 10 
 [9]: https://github.com/ms-iot/security/tree/master/Urchin/T2T "T2T"
 [10]: https://github.com/ms-iot/security/tree/master/Urchin "OEM preparation and deployment guidance documentation"
 
-##Preparing UEFI Firmware  
+## Preparing UEFI Firmware  
 Depending on your device, you may need to ensure that firmware settings are updated to enable firmware TPM and Secure Boot:
 
-###Intel MinnowBoardMax  
+### Intel MinnowBoardMax  
 * Firmware must be 32-bit and version 0.82 or higher (get the [latest 32-bit firmware][2])
 * To enable TPM capabilities, power up board with a keyboard & display attached and press F2 to enter UEFI setup. Go to _Device Manager -> System Setup -> Security Configuration -> PTT_ and set it to _<Enable>_. Press F10 to save changes and proceed with a reboot of the platform.
 
-###Qualcomm DragonBoard 410c  
+### Qualcomm DragonBoard 410c  
 * In order to enable Secure Boot, it may be necessary to provision RPMB. Once the image has been prepared as mentioned in the section above, with a display attached to the device, press [Power] + [Vol+] + [Vol-] simultaneously on the device before powering up and select "Provision RPMB" from the BDS menu. **Please note that this is an irreversible step.**
  
-##Enabling UEFI Secure Boot and BitLocker  
-###UEFI Secure Boot  
+## Enabling UEFI Secure Boot and BitLocker  
+### UEFI Secure Boot  
 Once the device is set and the image prepared, boot the device into Windows and connect to the device from your Windows 10 PC through a remote PowerShell session (instructions on how to connect via PowerShell are availale [here][11]).  
 Run the following 3 commands from within the remote powershell session to set UEFI secure variables:
 
@@ -115,12 +115,12 @@ Next, in order to complete lock-down of the platform, reboot device using the co
 
 [11]: {{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm "PowerShell"
 
-###Scheduling BitLocker  
+### Scheduling BitLocker  
 In order to enable BitLocker, the device encryption task must be scheduled. This device encryption task is set to trigger when the TPM is provisioned and ready, also ensuring that device encryption stays enabled on all subsequent boots (should the volume be decrypted offline at any time). Once Secure Boot has been setup and the device booted up, re-initiate a remote PowerShell session and create a new (or append to existing) file labelled "OEMCustomization.cmd" under c:\windows\system32 using the following command:
 
 * `new-item c:\windows\system32\OEMCustomization.cmd -type file -value 'schtasks /Create /TN "\Microsoft\Windows\IoT\DeviceEncryption" /XML c:\efi\DETask.xml /f'`
 
-##Unlocking Encrypted Drives  
+## Unlocking Encrypted Drives  
 When attempting to read contents from an encrypted device offline (e.g. SD card for MinnowBoardMax or DragonBoard's eMMC through USB mass storage mode), 'diskpart' may be used to assign a drive letter to MainOS and Data volume (let's assume v: for MainOS and w: for Data).  
 The volumes will appear locked and need to be manually unlocked. This can be done on any machine that has the BitLockerDRA.pfx certificate package installed (included in attachment above). Install the PFX and then run the following commands from an administrative CMD prompt:
 
@@ -132,7 +132,7 @@ If the contents need to be frequently accessed offline, BitLocker autounlock can
 * `manage-bde -autounlock v: -enable`
 * `manage-bde -autounlock w: -enable`
 
-##Disabling BitLocker  
+## Disabling BitLocker  
 Should there arise a need to temporarily disable BitLocker, initate a remote PowerShell session with your IoT device and run the following command: `sectask.exe -disable`.  
 **Note:** Dvice encryption will be re-enabled on subsequent device boot unless the scheduled encryption task is disabled.
 

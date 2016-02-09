@@ -17,7 +17,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 
 <hr/>
 
-##Hook up your board
+## Hook up your board
 
 1. Insert the MicroSD card included in your kit (the slot is on the opposite side of the board shown below).
 2. Insert the WiFi Dongle included in your kit into one of the USB ports on your Raspberry Pi 2.
@@ -29,18 +29,18 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
     <img class="device-images" src="{{site.baseurl}}/images/rpi2Headless.png">
 
 
-##Download and Install the IoT Dashboard tool
+## Download and Install the IoT Dashboard tool
 
 The IoT Dashboard tool displays all the Windows 10 IoT Core devices on your network.  Click [here](https://iottools.blob.core.windows.net/iotdashboard/setup.exe) to download it, and follow the instructions to install it.  It should launch once it's finished installing.
 
 By downloading and using the Windows 10 IoT Core Dashboard you agree to the [license terms](http://go.microsoft.com/fwlink/?LinkID=703960&clcid=0x4809) and [privacy statement](http://go.microsoft.com/fwlink/?LinkId=521839) for Windows 10 IoT Core Dashboard. 
 
-##Boot Windows 10 IoT Core
+## Boot Windows 10 IoT Core
 1. Windows 10 IoT Core will boot automatically after connecting the power supply. Allow the Pi about five minutes for the first boot.
 2. Find your device on the IoT Dashboard application. When run, the application automatically finds all Windows IoT Core devices on the local network and displays device information such as the name, device type, IP address, and more.  Select the My Devices tab to view the current devices on the network.
         ![Windows IoT Dashboard]({{site.baseurl}}/images/HeadlessMode/IoTDashboard.png)
 
-##Configure your Raspberry Pi 2
+## Configure your Raspberry Pi 2
 
 Finally, you'll need to configure your Raspberry Pi 2 for WiFi connection using the Web-Based management Tool. In **Windows IoT Core Watcher**, *Right Click* on your Raspberry Pi, then select **Web Browser Here**.
 
