@@ -5,7 +5,7 @@ permalink: /en-US/win10/BuyMBM.htm
 lang: en-US
 ---
 
-#How to Buy a MinnowBoard Max
+# How to Buy a MinnowBoard Max
 
 You can buy a MinnowBoard Max by following the instructions below.
 

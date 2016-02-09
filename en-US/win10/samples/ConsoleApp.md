@@ -5,17 +5,17 @@ permalink: /en-US/win10/samples/ConsoleApp.htm
 lang: en-US
 ---
 
-##MemoryStatus Console Application Sample
+## MemoryStatus Console Application Sample
 
 {% include VerifiedVersion.md %}
 
 We'll create a simple console application that can be used to query the memory usage on your Windows IoT Core device (Raspberry Pi 2, MinnowBoard Max, or a DragonBoard). Please note that you need to compile the project for ARM for Raspberry Pi 2 or DragonBoard and x86 for MinnowBoard Max.
 
-###Load the project in Visual Studio
+### Load the project in Visual Studio
 
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\MemoryStatus`.  Make a copy of the folder on your disk and open the project from Visual Studio.
 
-###To create your own project in Visual Studio
+### To create your own project in Visual Studio
 
 * Create a new project (File \| New Project...). In the 'New Project' dialog, navigate to 'Windows IoT Core' as shown below (in the left pane in the dialog: Templates \| Visual C++ \| Windows \| Windows IoT Core).<br/>
 Select the template 'Blank Windows IoT Core Console Application'<br/>

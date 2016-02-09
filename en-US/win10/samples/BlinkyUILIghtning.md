@@ -6,7 +6,7 @@ lang: en-US
 deviceName: RPI2
 ---
 
-##Blinky UI Sample with Lightning Provider
+## Blinky UI Sample with Lightning Provider
 
 {% include VerifiedVersion.md %}
 
@@ -14,7 +14,7 @@ This sample demonstrates how to communicate with GPIO using the Micorosot.IoT.Pr
 
 It's based on the [Blinky UI sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm) and shares the same setup steps. The main difference is setting the Lightning provider as the default controllers provider.
 
-###Using Lightning Provider
+### Using Lightning Provider
 
 The original code of the Blinky sample used the default GPIO provider for obtaining the GPIO controller:
 
@@ -74,7 +74,7 @@ private async void InitGPIO()
 {% endhighlight %}
 
 
-###Building and deploying the sample
+### Building and deploying the sample
 
 1. Enable Lightning on your Raspberry Pi2 or MBM device using the the steps outlined in the [Lightning Setup Guide]({{site.baseurl}}/{{page.lang}}/win10/LightningSetup.htm).
 

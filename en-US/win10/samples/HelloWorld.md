@@ -5,13 +5,13 @@ permalink: /en-US/win10/samples/HelloWorld.htm
 lang: en-US
 ---
 
-##'Hello, World!' Sample
+## 'Hello, World!' Sample
 
 {% include VerifiedVersion.md %}
 
 In this sample, we will create and deploy the proverbial 1st app, "Hello World" to any device running Windows IoT Core!
 
-###Create a new C# project
+### Create a new C# project
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\HelloWorld`, but as an exercise, this tutorial will take you through the complete steps to create this app from scratch. You need to make sure you have installed the Windows IoT Core Project Templates from [here](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec). 
 
 1. Start Visual Studio 2015.
@@ -29,13 +29,13 @@ You can find the source code for this sample by downloading a zip of all of our 
 > ####A note on Developer Mode for Windows 10
 > If this is the first project you create, Visual Studio will likely prompt you to enable Developer Mode for Windows 10.  To do this, you'll need to follow the steps found [here](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx){:target="_blank"}
 
-###Add a reference to the Windows IoT extension SDK
+### Add a reference to the Windows IoT extension SDK
 
 Since the IoT extension SDK is not added to projects by default, we'll need to add a reference so that namespaces like `Windows.Devices.Gpio` will be available in the project.  To do so, just right-click on the References entry under the project, Select "Add Reference" then navigate the resulting dialog to `Universal Windows->Extensions->Windows IoT Extensions for the UWP`, check the box, and click OK.
 
 ![Add Extension SDK]({{site.baseurl}}/images/HelloWorld/Add_IoT_Extension_Reference.PNG)
 
-###Add content to MainPage.xaml
+### Add content to MainPage.xaml
 Let's add some content to the MainPage. From Solution Explorer, select the 'MainPage.xaml' file. We want to add a TextBox and a Button, to show some interaction. So we will edit the XAML file to add these elements. Locate the `<Grid>` tag in the XAML section of the designer, and add the following markup.  
 
 {% highlight XML %}
@@ -62,7 +62,7 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 }
 {% endhighlight %}
 
-###Build and test the app locally
+### Build and test the app locally
 1. Make sure the app builds correctly by invoking the Build \| Build Solution menu command.
 
 1. Since this is a Universal Windows Platform (UWP) application, you can test the app on your Visual Studio machine as well: Just press F5, and the app will run inside your machine. You should see something like this:
@@ -73,7 +73,7 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
     
     > If you would like to learn more about Universal Windows Platform applications, click [here](https://msdn.microsoft.com/library/windows/apps/dn894631.aspx){:target="_blank"}.
 
-###Deploy the app to your Windows IoT Core device
+### Deploy the app to your Windows IoT Core device
 1. Of course, we want to deploy our first app to our Windows IoT Core device. It's easy. In the [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) documentation, you can find instructions to chose a unique name for your Windows IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in Visual Studio.
 
     If you're building for Minnowboard Max, select `x86` in the Visual Studio toolbar architecture dropdown.  If you're building for Raspberry Pi 2 or the DragonBoard, select `ARM`.
