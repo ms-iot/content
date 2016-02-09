@@ -32,7 +32,7 @@
       {
          "title":"IoT Core Default App",
          "description":"Create a UWP app that provides a device-management experience for Windows 10 IoT Core",
-         "link-text":"<a href='samples/IotDefaultApp.htm'>Iot Core Default App (C#)</a>",
+         "link-text":"<a href='samples/IoTDefaultApp.htm'>Iot Core Default App (C#)</a>",
          "ranking":1,
          "tags":["beginner","c#"]
       },
