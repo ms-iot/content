@@ -5,14 +5,14 @@ permalink: /en-US/win10/samples/arduino-wiring/HelloBlinky.htm
 lang: en-US
 ---
 
-#Hello Blinky
+# Hello Blinky
 Learn to Deploy and Debug an Arduino Wiring sketch on Raspberry Pi 2 or Minnowboard Max to blink an LED!
 
-##Setup
+## Setup
 
 Follow the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm) to create a new wiring project!
 
-##Code
+## Code
 
 This code is included in the default template of an Arduino Wiring project, and is included here (with additional comments) for reference.
 
@@ -38,7 +38,7 @@ void loop()
 {% endhighlight %}
 
 
-##Wire your RPi2 with an LED
+## Wire your RPi2 with an LED
 
 LEDs are diodes which will emit light when powered. They are polarized - meaning they work only when plugged in correctly. Typically, the longer leg is positive, while the shorter leg is negative. Additionally, you should never connect an LED directly to power and ground without a resistor in the circuit. Without a resistor to slow the flow of current, you'll burn out the LED (at best) and could do damage to your other hardware! For an LED, it is fairly typical to use a 220 or 330 ohm resistor, but anything in the range of 220 - 1000 (1Kohm) ohms is acceptable.
 
@@ -47,19 +47,19 @@ Notice that we're using `GPIO_5` in the sketch above. This is a special value th
 Here is a pinout diagram of the Raspberry Pi 2:
 ![RPI Pinouts]({{site.baseurl}}/images/arduino_wiring/pi2_pinouts.png)
 
-###Fritzing Diagram
+### Fritzing Diagram
 
 ![LED Wiring]({{site.baseurl}}/images/arduino_wiring/led_fritz.png)
 
-##Build and deploy
+## Build and deploy
 Press F5 to build and deploy your project.
 
 Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm) for more instructions on how to deploy your app!
 
-##Result
+## Result
 You should see the LED blinking on and off, spending about a half second in each state. If it isn't blinking, try reversing the LED leads.
 
-##Having trouble?
+## Having trouble?
 
 Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.
 

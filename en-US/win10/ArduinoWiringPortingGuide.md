@@ -116,7 +116,7 @@ In the table below, replace the Arduino API Serial reference with the syntax in 
 | Serial.print( int num, format fmt ) | Log( num.ToString()->Begin() )      |
 
 
-####Why remove Serial.write()?
+#### Why remove Serial.write()?
 
 Serial.write() is typically used to send raw data over the serial lines. Windows IoT Core does not currently have UART functionality so these types of calls should be avoided.
 

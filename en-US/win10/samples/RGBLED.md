@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/RGBLED.htm
 lang: en-US
 ---
 
-##RGB LED Sample
+## RGB LED Sample
 
 {% include VerifiedVersion.md %}
 
@@ -19,7 +19,7 @@ mode by running this command: `setbootoption.exe headed` (changing the headed/he
 Also, be aware that the GPIO APIs are only available on Windows IoT Core, so this sample cannot run on your desktop.
 
 
-###Components
+### Components
 
 You will need the following components :
 
@@ -31,7 +31,7 @@ You will need the following components :
 
 * a breadboard and several male-to-female and male-to-male connector wires
 
-###Connect to your Device
+### Connect to your Device
 
 Let's start by wiring up the components on the breadboard as shown in the diagram below.
 
@@ -49,7 +49,7 @@ The pinout of the Tri-color LED is shown below and can be found in the [datashee
 
 ![Tri-color LED Pinout]({{site.baseurl}}/images/RGBLED/RGBLED_Pinout.png)
 
-####Connecting the Tri-color LED
+#### Connecting the Tri-color LED
 
 * Insert the Tri-color LED into the breadboard as shown in the breadboard diagram at the top of the page.
 
@@ -73,13 +73,13 @@ Here is the pinout of the RPi2:
 
 <sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
 
-###Deploy your app
+### Deploy your app
 
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\RGBLED`.  This sample is written in C#. Make a copy of the folder on your disk and open the project from Visual Studio.
 
 Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp). The RGBLED app will deploy and start on the Windows IoT device, and you should see the LED blink in sync with the simulation on the screen.
 
-###Let's look at the code
+### Let's look at the code
 
 First, we get the default GPIO controller and check that it's not null.
 `GpioController.GetDefault()` will return null on platforms that do not contain

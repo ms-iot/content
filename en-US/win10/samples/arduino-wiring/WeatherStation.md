@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/arduino-wiring/WeatherStation.htm
 lang: en-US
 ---
 
-#Weather Station + Lightning
+# Weather Station + Lightning
 
 {% include VerifiedVersion.md %}
 
@@ -13,7 +13,7 @@ Learn how to create an Arduino Wiring sketch on Raspberry Pi 2 and set up your o
 
 Read on to get started!
 
-##Hardware Set Up
+## Hardware Set Up
 
 <div class="row">
   <p>
@@ -89,11 +89,11 @@ Read on to get started!
   </div>
 </div>
 
-###Fritzing Diagram
+### Fritzing Diagram
 
 ![RPI Pinouts]({{site.baseurl}}/images/arduino_wiring/pi2_weathershield.png)
 
-##Software Set Up
+## Software Set Up
 
 There are two ways to go about seting up the software.
 
@@ -257,10 +257,10 @@ There are two ways to go about seting up the software.
     </li>
 </ol>
 
-####Note:
+#### Note:
 Pay special attention to this line near the top of the sketch file: `bool barometerMode = true;`. The MPL3115A2 sensor has two modes, and can operate differently under each mode. You can change this variable to `false` to disable barometer mode and enable altimeter mode instead! The result of the sketch will automatically change under the new mode!
 
-##Build and Deploy Your App
+## Build and Deploy Your App
 
 <p>Press F5 to build and deploy your project.
 Refer to the <a href="{{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm">Arduino Wiring Project Guide</a> for more instructions on how to deploy your app!
@@ -269,11 +269,11 @@ Refer to the <a href="{{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectG
 Once your project is deployed, you will see data appear in the output console while the program is running.
 </p>
 
-##Result
+## Result
 
 Watch your Output window in Visual Studio. The sketch will start reporting the data it gathers from the Weather Shield!
 
-##Having trouble?
+## Having trouble?
 
 Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.
 

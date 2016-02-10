@@ -5,7 +5,7 @@ permalink: /en-US/win10/Glossary.htm
 lang: en-US
 ---
 
-##Glossary
+## Glossary
 
 **AllJoyn**<br/>
 AllJoyn is an open source communication framework that enables apps and devices to communicate regardless of connection specifics and OS platform.

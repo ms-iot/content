@@ -5,7 +5,7 @@ permalink: /en-US/win10/SetupWiFi.htm
 lang: en-US
 ---
 
-#Using WiFi on your Windows 10 IoT Core device
+# Using WiFi on your Windows 10 IoT Core device
 
 WiFi is supported on Windows 10 IoT Core devices through the use of a USB WiFi adapter. Using WiFi provides all the functionality of a wired connection,
 including [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm), [Powershell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm), [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm), and application debugging and deployment.
@@ -18,9 +18,9 @@ A list of WiFi adapters that have been tested on Windows 10 IoT Core can be foun
 ### Configuring WiFi
 To use WiFi, you'll need to provide Windows 10 IoT core with the WiFi network credentials. There are a few different options for doing so:
 
-##Headed Options:
+## Headed Options:
 
-###Option 1: Startup Configuration
+### Option 1: Startup Configuration
 **Prerequisite:** The Windows 10 IoT core device needs a mouse, keyboard, display, and USB WiFi Adapter plugged in
 
 The first time you boot Windows 10 IoT Core with a supported USB WiFi adapter, you will be presented with a configuration screen.
@@ -28,7 +28,7 @@ On the configuration screen, select the WiFi network you would like to connect t
 
 ![Startup WiFi Configuration Screen]({{site.baseurl}}/images/SetupWiFi/WiFiStartupConfig.png)
 
-###Option 2: Default App Configuration
+### Option 2: Default App Configuration
 **Prerequisite:** The Windows 10 IoT core device needs a mouse, keyboard, display, and USB WiFi Adapter plugged in
 
 An alternative way to configure WiFi is to use the default app. You can use this to configure or modify WiFi settings after the device has booted.
@@ -39,9 +39,9 @@ An alternative way to configure WiFi is to use the default app. You can use this
 
 ![Default App WiFi Configuration]({{site.baseurl}}/images/SetupWiFi/DefaultAppWiFiConfig.png)
 
-##Headless Options:
+## Headless Options:
 
-###Option 1: Web-Based Configuration
+### Option 1: Web-Based Configuration
 **Prerequisite:** Your device will already need to be connected to your local network through Ethernet and should have a USB WiFi Adapter plugged in
 
 If you have device a with no UI, display, or input devices, you can still configure it through the [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm).
@@ -58,7 +58,7 @@ In **Windows IoT Core Watcher**, *Right Click* on your Raspberry Pi, then select
 <!-- End of Replicated Content -->
 
 
-###Option 2: Connect using WiFi Profiles
+### Option 2: Connect using WiFi Profiles
 
 **Prerequisite:** Your device will already need to be connected to your local network through Ethernet and should have a USB WiFi Adapter plugged in. You also need a Windows PC with WiFi capability.
 

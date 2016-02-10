@@ -5,7 +5,7 @@ permalink: /en-US/win10/ReleaseNotesInsiderPreview.htm
 lang: en-US
 ---
 
-#Release Notes for Windows 10 IoT Core
+# Release Notes for Windows 10 IoT Core
 Build Number 11099. January 2016
 
 &copy; 2016 Microsoft Corporation. All rights reserved
@@ -14,13 +14,13 @@ This document provides late-breaking or other information that supplements the d
 
 Thank you for downloading Windows 10 IoT Core. Windows 10 IoT Core is the version of Windows 10 intended for development of embedded or dedicated purpose devices and the choice for the Maker community. This package contains the bits and tools needed to install Windows 10 IoT Core on the MinnowBoard Max based on Intel&reg; Atom E38xx series SoC (also referred to as MBM board), the Raspberry PI2 based on the ARM Cortex-A7 based SoC (also referred to as the RPI) and the DragonBoard 410c based on the QualComm Snapdragon™ 400 series processor (also referred to as the Dragon).
 
-##Privacy Statement
+## Privacy Statement
 
 The privacy statement for this version of the Windows operating system can be viewed here: [http://go.microsoft.com/fwlink/?LinkId=506737](http://go.microsoft.com/fwlink/?LinkId=506737){:target="_blank"}
 
 You can review linked terms by pasting the forward link into your browser window.
 
-##What's New
+## What's New
 * Windows 10 IoT Core Public Release
    * Support for servicing updates
    * Updated base OS build
@@ -28,7 +28,7 @@ You can review linked terms by pasting the forward link into your browser window
    * Enhancements to the Windows Device Portal
    * Bug Fixes
 
-##Release Notes
+## Release Notes
 
 The default administrator user name and password are hard coded in the Windows 10 IoT Core image. This is a security risk for the device, and it should not be exposed to an open internet connection until the password has been changed.
 
@@ -51,7 +51,7 @@ Some USB keyboards and mice may not work on the Raspberry PI2. Use a different k
 On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to user mode applications in the April Insider Preview release of version of Windows 10 IoT Core, but are no longer available. Attempting to open these pins with Windows::Devices::Gpio::GpioController::OpenPin() will return HRESULT_FROM_WIN32(ERROR_NOT_FOUND). GPIO pins 0 and 1 are reserved on the Raspberry Pi by the HAT specification (https://github.com/raspberrypi/hats) and are under control of VC firmware. For compliance with this specification, these pins should be left unconnected.
 
 
-##Known Issues
+## Known Issues
 
 *	Windows Device Portal may stop working after a day of continuous uptime. (5458435) WORKAROUND: Restart the device.
 *	Setting the orientation to “Portrait” may not be honored in a Universal App (3039042) WORKAROUND: None

@@ -5,9 +5,9 @@ permalink: /en-US/win10/SetupTPM.htm
 lang: en-US
 ---
 
-#Setup TPM on Supported Platforms
+# Setup TPM on Supported Platforms
 
-##<a name="fTPM"></a>Setup fTPM  
+## <a name="fTPM"></a>Setup fTPM  
 Firmware TPM (fTPM) requires special Processor/SoC support and whence fTPM is not currently implemented on Raspberry Pi2.
 
 1. You must have MBM with UEFI version 0.80 or above.
@@ -133,7 +133,7 @@ Firmware TPM (fTPM) requires special Processor/SoC support and whence fTPM is no
 
         C:\>
 
-##<a name="dTPM"></a>Setup dTPM  
+## <a name="dTPM"></a>Setup dTPM  
 These instructions are applicable for any dTPM module supported on either MBM or RPi2.
 
 1. Get a discrete TPM module and attach it to the MBM/RPi2.
@@ -271,7 +271,7 @@ These instructions are applicable for any dTPM module supported on either MBM or
 
         C:\>
 
-##<a name="sTPM"></a>Enable and verify software TPM (sTPM)  
+## <a name="sTPM"></a>Enable and verify software TPM (sTPM)  
 Note that **sTPM is intended for development purposes only and does not provide any real security benefits**.
 
 1. (Applies to MBM) Disable fTPM by changing the following UEFI settings:

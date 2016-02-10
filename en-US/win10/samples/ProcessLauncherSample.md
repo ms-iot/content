@@ -5,35 +5,35 @@ permalink: /en-US/win10/samples/ProcessLauncherSample.htm
 lang: en-US  
 ---  
   
-#ProcessLauncher Sample  
+# ProcessLauncher Sample  
   
 We'll learn how to launch an external process (exe) from a Universal Windows Platform (UWP) app using `Windows.System.ProcessLauncher` API.  
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).  
 
-###Windows IoT Core Fall Update required
+### Windows IoT Core Fall Update required
 
 The `Windows.System.ProcessLauncher` API is new to Windows IoT Core Fall Update. You can download a Windows 10 IoT Core image with Fall Update from our [downloads page]({{site.baseurl}}/{{page.lang}}/Downloads.htm ).
 
-###Windows SDK Update required
+### Windows SDK Update required
 
 To use the `ProcessLauncher` API and other new features of Windows IoT Core Fall Update, a newer version of the Windows SDK is needed as well. Windows SDK 10.0.10586.0 or higher is required and can be downloaded from [here](https://dev.windows.com/en-US/downloads/windows-10-sdk).
 
 For more information on obtaining and setting up the required Windows SDK and other tools, refer to [Setting up your PC Guide]({{site.baseurl}}/{{page.lang}}/win10/SetupPCRPI.htm).
 
-###Load the project in Visual Studio  
+### Load the project in Visual Studio  
   
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/tree/develop/WebCamSample/CS){:target="_blank"}. Make a copy of the folder on your disk and open the project from Visual Studio.  
 
 The code for the ProcessLauncher sample can be found under: <samples root folder>\ProcessLauncher\CS  
  
-###Deploy your app  
+### Deploy your app  
  
 If you're building for Minnowboard Max, select `x86` as the architecture. If you're building for Raspberry Pi 2 or DragonBoard , select `ARM`.  
 
 Select **Remote Machine** to point to IoT device and hit F5 to deploy to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm){:target="_blank"}. if you need guidance   
   
-###Test your app   
+### Test your app   
   
 The sample app when deployed displays a screen similar to this one: 
 
@@ -45,13 +45,13 @@ When run, the SampleConsoleApplication exe, will send output to both the Standar
 
 ![SampleConsoleApplication Output]({{site.baseurl}}/images/ProcessLauncherSample/ProcessLauncher1.png)
 
-##Let's take a look at the code  
+## Let's take a look at the code  
  
 The code for this sample makes use of the `Windows.System.ProcessLauncher` API, which is part of the system management contract APIs available on Windows IoT Core.
  
 To use the API, we need to do a couple of things.
 
-###Add a reference to the Windows IoT extension SDK
+### Add a reference to the Windows IoT extension SDK
 
 Since the IoT extension SDK is not added to projects by default, we'll need to add a reference to it so its types, including `Windows.System.SystemManagement.ProcessLauncher`, will be available in the project.  
 
@@ -94,7 +94,7 @@ var result = await ProcessLauncher.RunToCompletionAsync(cmd.Text, args.Text == n
 ProcessExitCode.Text += "Process Exit Code: " + result.ExitCode;
 {% endhighlight %} 
 
-###Using standard streams 
+### Using standard streams 
 
 While the exit code is often enough to let us know if an executable has succeeded or not, sometimes we need to read the output from the program; e.g. to log information or to show that text in the app.
 
@@ -140,7 +140,7 @@ using (var outStreamRedirect = standardOutput.GetInputStreamAt(0))
 
 **Note**, while not used in the sample, the standard input stream can be used with the `ProcessLauncher` API as well.
 
-###Including an executable application with the AppX package
+### Including an executable application with the AppX package
 
 The `ProcessLauncher` API can launch executable programs packaged as part of the same AppX. So, a sample Win32 console app, SampleConsoleApplication, is included in the sample.
 

@@ -5,7 +5,7 @@ permalink: /en-US/win10/Windbg.htm
 lang: en-US
 ---
 
-#Debugging Windows 10 IoT Core Devices Using WinDbg
+# Debugging Windows 10 IoT Core Devices Using WinDbg
 
 The following sections describe how to successfully connect with WinDbg to a Windows 10 IoT Core device for debugging purposes.  This includes a description of the necessary software settings on the device as well as the physical hardware connections.  
 
@@ -18,11 +18,11 @@ WinDbg is a very powerful debugger that most Windows developers are familiar wit
 * [Crash Dump Analysis Using WinDbg](https://msdn.microsoft.com/en-us/library/windows/hardware/ff539316(v=vs.85).aspx) 
 
 
-##MinnowBoard Max (MBM) 
+## MinnowBoard Max (MBM) 
 
 You can connect WinDbg to the MinnowBoard Max using a network connection.
 
-###MinnowBoard Max (MBM) & WinDbg via a Network Connection
+### MinnowBoard Max (MBM) & WinDbg via a Network Connection
 
 In order to enable kernel debugging with WinDbg over a network, please make sure that:
 
@@ -54,11 +54,11 @@ On your development machine, you can start WinDbg with the PORT_NUM and the KEY 
 
         Note: If you have any of the Windows kits installed, you may find WinDbg under "C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\WinDbg.exe" 
 
-##Raspberry Pi 2 (RPi2) 
+## Raspberry Pi 2 (RPi2) 
 
 You can connect WinDbg to the Raspberry Pi 2 using a serial connection.
 
-###Raspberry Pi 2 (RPi2) & Windbg via a Serial Connection
+### Raspberry Pi 2 (RPi2) & Windbg via a Serial Connection
 
 In order to enable kernel debugging with WinDbg over a serial connection, please make sure that:
 

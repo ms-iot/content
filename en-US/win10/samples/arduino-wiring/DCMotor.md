@@ -5,11 +5,11 @@ permalink: /en-US/win10/samples/arduino-wiring/DCMotor.htm
 lang: en-US
 ---
 
-#Arduino Wiring DC Motor Sample
+# Arduino Wiring DC Motor Sample
 
 A DC motor is one of the basic elements of a maker's toolbox. Whether you're driving autonomous robots or spinning a cooling fan, a DC motor is a relatively simple way to accomplish your task! In this sample, we'll use pulse-width modulation (PWM) to vary the speed of a motor.
 
-##Components
+## Components
 
 You will need:
 
@@ -20,7 +20,7 @@ You will need:
 * 1 P2N2 222A transistor (NPN)
 * Assorted wires
 
-##Hardware Set Up
+## Hardware Set Up
 
 Motors draw more current than the pins on the Raspberry Pi 2 can safely provide. Therefore, we'll use a transistor to connect the motor to an external power source. Transistors are like switches; when we give it a small amount of current, it can enable the flow of a much larger current. For our motor, we used a 5v DC adapter that supplies at least 1A of current. It is OK to use an adapter with more current capacity than your motor needs; as the adapter should only supply what is needed by the motor.
 
@@ -34,15 +34,15 @@ Additionally, the controller should not have any I2C hardware address pins set. 
 
 Refer to the fritzing diagram below to hook up your motor and PWM controller.
 
-###Fritzing Diagram
+### Fritzing Diagram
 
 ![RPI Pinouts]({{site.baseurl}}/images/arduino_wiring/dcmotor.png)
 
-###Pinout Description
+### Pinout Description
 
 The PCA9685 PWM Controller should be connected as follows:
 
-####Raspberry Pi 2
+#### Raspberry Pi 2
 
 - VCC - 5V on Raspberry Pi 2 (Pin 2 or 4)
 - SDA - SDA1 pin on Raspberry Pi 2 (Pin 3)
@@ -50,7 +50,7 @@ The PCA9685 PWM Controller should be connected as follows:
 - OE - *leave disconnected*
 - GND - GND on Raspberry Pi 2 (Pin 14 as shown or any other GND pin)
 
-####External Power
+#### External Power
 
 - V+ - positive terminal of external power
 - GND - negative (ground) terminal of external power
@@ -58,7 +58,7 @@ The PCA9685 PWM Controller should be connected as follows:
 Refer to the fritzing diagram above for the remaining circuit connections.
 
 
-##Code
+## Code
 
 Replace the existing code in your main .ino file with the following code:
 
@@ -142,16 +142,16 @@ void loop()
 {% endhighlight %}
 
 
-##Build and deploy
+## Build and deploy
 Press F5 to build and deploy your project.
 
 Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm) for more instructions on how to deploy your app!
 
-##Result
+## Result
 
 The motor should run at max speed for 3 seconds, off for 3 seconds, and then perform an acceleration from a stopped state to maximum speed and back again. The motor will then stop for one second before starting all over again!
 
-##Having trouble?
+## Having trouble?
 
 Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.
 

@@ -5,11 +5,11 @@ permalink: /en-US/win10/LightningSetup.htm
 lang: en-US
 ---
 
-##Lightning Setup Guide
+## Lightning Setup Guide
 
 This guide will walk you through the steps of changing the default controller driver to the Lightning driver on a Windows IoT Core device. This will allow the use of Lightning-enabled applications on that device.
 
-###Change the Default Controller Driver
+### Change the Default Controller Driver
 
 We will want to open the Windows Device Portal
 
