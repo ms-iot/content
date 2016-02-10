@@ -115,11 +115,11 @@ The logic level converter is connected to the DragonBoard as follows:
 
 The following diagram shows what your breadboard might resemble with the circuit assembled:
 
-![DragonBoard SPI Display Breadboard](../../../Resources/images/SPIDisplay/breadboard_assembled_db410c.png)
+![DragonBoard SPI Display Breadboard]({{site.baseurl}}/Resources/images/SPIDisplay/breadboard_assembled_db410c.png)
 
 A schematic for the circuit is:
 
-![DragonBoard SPI Display Schematic](../../../Resources/images/SPIDisplay/schematics_db410c.png)
+![DragonBoard SPI Display Schematic]({{site.baseurl}}/Resources/images/SPIDisplay/schematics_db410c.png)
 
 
 ###Deploy and run the app

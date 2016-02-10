@@ -97,7 +97,7 @@ Here is the pinout of the MBM:
 
 For reference, the functionality of the low-speed expansion connector is outlined in the following diagram
 
-![DragonBoard Low-Speed Expansion Connector](../../../Resources/images/PinMappings/DB_pinout.png)
+![DragonBoard Low-Speed Expansion Connector]({{site.baseurl}}/Resources/images/PinMappings/DB_pinout.png)
 
 Perform the following steps to connect the LED:
 
@@ -112,11 +112,11 @@ Perform the following steps to connect the push button:
 
 The breadboard might look similar to the following with the circuit assembled:
 
-![DragonBoard Push Button Breadboard](../../../Resources/images/PushButton/DB_PushButton_bb.png)
+![DragonBoard Push Button Breadboard]({{site.baseurl}}/Resources/images/PushButton/DB_PushButton_bb.png)
 
 A schematic for the circuit is shown in the diagram below:
 
-![DragonBoard Push Button Schematic](../../../Resources/images/PushButton/DB_PushButton_schem.png)
+![DragonBoard Push Button Schematic]({{site.baseurl}}/Resources/images/PushButton/DB_PushButton_schem.png)
 
 Finally, the LED_PIN and BUTTON_PIN variables of the **MainPage.xml.cs** file of the sample code will need the following modification:
 

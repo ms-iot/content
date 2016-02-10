@@ -113,11 +113,11 @@ The Voltage-Level Translator breakout board pins are connected to the DragonBoar
 
 The following diagram shows what your breadboard might resemble with the circuit assembled:
 
-![DragonBoard SPI Accelerometer Breadboard](../../../Resources/images/SPIAccelerometer/breadboard_assembled_db410c.png)
+![DragonBoard SPI Accelerometer Breadboard]({{site.baseurl}}/Resources/images/SPIAccelerometer/breadboard_assembled_db410c.png)
 
 A schematic for the circuit is:
 
-![DragonBoard API Accelerometer Schematic](../../../Resources/images/SPIAccelerometer/schematics_db410c.png)
+![DragonBoard API Accelerometer Schematic]({{site.baseurl}}/Resources/images/SPIAccelerometer/schematics_db410c.png)
 
 ###Deploy and run the app
 
