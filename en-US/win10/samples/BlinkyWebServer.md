@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/BlinkyWebServer.htm
 lang: en-US
 ---
 
-##Blinky WebServer
+## Blinky WebServer
 
 {% include VerifiedVersion.md %}
 
@@ -13,7 +13,7 @@ We'll create a simple Blinky app controlled by another app's web server on your 
 only available on Windows IoT Core, so this sample cannot run on your desktop.
 
 
-###Load the project in Visual Studio
+### Load the project in Visual Studio
 
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\App2App WebServer`.  Make a copy of the folder on your disk and open the
 project from Visual Studio.
@@ -22,7 +22,7 @@ Make sure you connect the LED to your board. Go back to the basic 'Blinky' [samp
 
 Note that the app will not run successfully if it cannot find any available GPIO ports.
 
-###Let's look at the code
+### Let's look at the code
 
 We are demonstrating two ideas with this sample: how to implement a WebServer and how to enable app-to-app communication.  To demonstrate
 this, the sample contains:
@@ -32,7 +32,7 @@ this, the sample contains:
 * HttpServer - this is a background application that provides a simple web server, sending BlinkyApp updates based on input from the web page.
 
 
-###BlinkyApp
+### BlinkyApp
 
 The client app is very similar to the Blinky [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm).  The major addition here is that we are allowing a web server to
 be used to configure the on/off state for our LED.  
@@ -91,7 +91,7 @@ public void Run(IBackgroundTaskInstance taskInstance)
 {% endhighlight %}
 
 
-###HttpServer
+### HttpServer
 
 To create a web server that can communicate with BlinkyApp, we need to implement an actual
 server.  At the core of our server implementation is a 'StreamSocketListener'.
@@ -193,12 +193,12 @@ public void Run(IBackgroundTaskInstance taskInstance)
 {% endhighlight %}
 
 
-###Deploy and Run Sample
+### Deploy and Run Sample
 To get the Blinky WebServer running, first deploy the Blinky project.  This will start the GUI app and register the app-to-app communication mechanism.  Then deploy and run the HttpServer project.  You can then test it all with the web client as detailed in the next step.
 
 For instructions on how to deploy applications, see the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp).
 
-###Web Client
+### Web Client
 For our sample app, we have hosted a simple client in our HttpServer on the Windows Windows IoT Core device. It can be accessed via the IP address
 of the board and the port (something like http://123.456.789.0:8000 where you replace 123.456.789.0 with the IP address
 of the device the server has been deployed to). The webserver client can then be used to toggle the LED on and off
