@@ -46,12 +46,12 @@ Select the `Basic Node.js Johnny-Five Application (Universal Windows)` template 
 
 Wait for the Johnny-Five package and its dependencies to complete downloading. This will be indicated by the message below in the npm output window.
 
-![Node.js Output Window]({{site.baseurl}}/images/Nodejs/npm-output-window.png)
+![Node.js Output Window]({{site.baseurl}}/Resources/images/Nodejs/npm-output-window.png)
 
 Right-click on the npm node in the Solution Explorer (shown below) and select Update npm Packages.
 This step will run npm dedupe and update [serialport](https://www.npmjs.com/package/serialport) (a Johnny-Five dependency) with a [version](https://github.com/ms-iot/node-serialport/tree/uwp) that works with Node.js UWP.
 
-![Node.js Npm Menu]({{site.baseurl}}/images/Nodejs/npm-update-menu.png)
+![Node.js Npm Menu]({{site.baseurl}}/Resources/images/Nodejs/npm-update-menu.png)
 
 
 ###Set up the connection between your Arduino and Raspberry Pi 2
