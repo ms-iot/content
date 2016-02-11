@@ -191,7 +191,7 @@ function InitializeBoard() {
     ![Azure Data]({{site.baseurl}}/images/Nodejs/azure-hubdata.png)
 
 
-###Sending data to an Azure storage table
+### Sending data to an Azure storage table
 You can also send the light sensor data to Azure storage. If you don't have an account, go to [this](https://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/#create-a-storage-account) 
 link for instructions to set one up. It's free to try out!
 When you have a storage account set up, follow the instructions below:
