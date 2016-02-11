@@ -15,37 +15,31 @@ lang: en-US
 </div>
 <div class="row section-heading">
   <h3>New on the Window IoT Blog</h3>
-    <div class="col-md-4">
-    <div class="col-md-9">
+    <div class="col-md-6">
       <a href="http://blogs.windows.com/buildingapps/2015/10/28/announcing-dragonboard-410c-support-in-windows-10-iot-core-arduino-partnership-updates/" target="_blank">
         <h4>Announcing DragonBoard 410c support in Windows 10 IoT Core, Arduino partnership updates</h4>
       </a>
       <h4><em>Steve Teixeira, Oct 28 2015</em></h4>
     </div>
-  </div>
-  <div class="col-md-4">
-    <div class="col-md-9">
+  <div class="col-md-6">
       <a href="http://blogs.windows.com/buildingapps/2015/09/24/whats-next-for-windows-10-iot-core/" target="_blank">
         <h4>What's next for Windows 10 IoT Core</h4>
       </a>
       <h4><em>Steve Teixeira, Sep 24 2015</em></h4>
     </div>
-  </div>
-  <div class="col-md-4">
-    <div class="col-md-9">
+  <div class="col-md-6">
       <a href="http://blogs.windows.com/buildingapps/2015/08/10/hello-windows-10-iot-core/" target="_blank">
         <h4>Hello, Windows 10 IoT Core</h4>
       </a>
       <br>
       <h4><em>Steve Teixeira, Aug 10 2015</em></h4>
     </div>
-  </div>
 </div>
 
 <a name="contact"></a>
 
 <div class="row section-heading">
-  <div class="col-md-3">
+  <div class="col-md-6">
     <h3>Forums</h3>
     <p>Forums are a great way to ask and answer technical questions and connect with fellow developers. We support the community through the following forums:</p>
     <p>MSDN hosts the primary forums where you can ask us questions on all topics.</p>
@@ -65,7 +59,7 @@ lang: en-US
     <a href="http://stackoverflow.com/questions/tagged/WindowsIoT" target="_blank">Stack Overflow &raquo;</a>
     </p>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-6">
     <h3>Social Media</h3>
     <p>
       Connect with Windows IoT to learn more about technology, announcements, new product features, launches and more.
@@ -89,7 +83,7 @@ lang: en-US
       <a href="https://twitter.com/vkhandpur" target="_blank">@VKhandpur &raquo;</a>
     </p>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-6">
     <h3>Feedback</h3>
     <p>
       Review or submit bugs for Microsoft and the community. 
@@ -98,7 +92,7 @@ lang: en-US
       <a href='windows-feedback:?contextid=441&metadata={"Metadata":[{"OS":"IoTUAP"},{"Source":"WindowsOnDevices.com"}]}??' target="_blank">Windows 10 feedback tool <br />(Windows 10 only) &raquo;</a>
     </p>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-6">
     <h3>Support</h3>
     <p>
       We support the community via forums. Please post your questions on the forums and we will respond. Also, be sure to check out our FAQ.

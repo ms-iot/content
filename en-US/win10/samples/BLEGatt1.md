@@ -45,7 +45,7 @@ To confirm that you have paired the SensorTag, from the main menu select the `L 
 ![Pairing Tool 5]({{site.baseurl}}/Resources/images/BLEGatt/pairing5.png)
 
 ### GATT Attribute Table Dump Tool
-In order to communicate with a BLE device using GATT, you will need to know the UUIDs of the desired GATT services and characteristics. Luckily for us TI has provided us with a GATT attribute table for the SensorTag [here](http://processors.wiki.ti.com/Resources/images/a/a8/BLE_SensorTag_GATT_Server.pdf){:target="_blank"}. 
+In order to communicate with a BLE device using GATT, you will need to know the UUIDs of the desired GATT services and characteristics. Luckily for us TI has provided us with a GATT attribute table for the SensorTag [here](http://processors.wiki.ti.com/images/a/a8/BLE_SensorTag_GATT_Server.pdf){:target="_blank"}. 
 
 When a GATT attribute table is not provided for the device you are working with, you can use the Bluetooth GATT Database Viewer (BthGATTDump.exe) to generate a GATT attribute table as understood by Microsoft Windows. The tool is part of the Windows Driver Kit (WDK) which can be found [here](https://msdn.microsoft.com/en-us/library/windows/hardware/ff557573(v=vs.85).aspx){:target="_blank"}. Once installed the tool and a README.txt containing instructions are located here `C:\Program Files (x86)\Windows Kits\10\Tools\<ARCH>\Bluetooth\BthGATTDump\` where <ARCH> is the architecture of the system you installed the tool on.
 

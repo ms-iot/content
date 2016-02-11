@@ -116,7 +116,7 @@ The ADXL345 breakout board has 8 IO pins which are connected to the DragonBoard 
 
 Here is a diagram showing what your breadboard might look like with the circuit assembled:
 
-![DragonBoard I2C Accelerometer Breadboard](../../../Resources/images/I2CAccelerometer/breadboard_assembled_db410c.png)
+![DragonBoard I2C Accelerometer Breadboard]({{site.baseurl}}/Resources/images/I2CAccelerometer/breadboard_assembled_db410c.png)
 
 ###Deploy and run the app
 

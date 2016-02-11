@@ -42,7 +42,7 @@ Start Visual Studio 2015 and create a new project (File \| New Project...). In t
 
 Select the `Basic Node.js Johnny-Five Application (Universal Windows)` template (shown below), enter a name for your project, then press OK.
 
-![Node.js Johnny-Five Project Dialog]({{site.baseurl}}/images/Nodejs/nodejswuj5-newprojectdialog.png)
+![Node.js Johnny-Five Project Dialog]({{site.baseurl}}/Resources/images/Nodejs/nodejswuj5-newprojectdialog.png)
 
 Wait for the Johnny-Five package and its dependencies to complete downloading. This will be indicated by the message below in the npm output window.
 
@@ -58,7 +58,7 @@ This step will run npm dedupe and update [serialport](https://www.npmjs.com/pack
 Connect your Arduino and Raspberry Pi 2 with the USB cable. If your Raspberry Pi 2 is connected to a monitor, 
 you should see the device getting recognized as shown in the image below (the name of the device may be "Arduino Uno" instead of "USB Serial Device"):
 
-![Arduino Uno Start Screen]({{site.baseurl}}/images/Nodejs/arduino-uno-startscreen.png)
+![Arduino Uno Start Screen]({{site.baseurl}}/Resources/images/Nodejs/arduino-uno-startscreen.png)
 
 
 * Replace the code in app.js with the code shown below.
@@ -80,7 +80,7 @@ board.on("ready", function () {
 
 * Attach the servo to the the arduino board using pin 3 (you can also change the pin number in app.js). In the setup shown below, the signal wire is connected to pin 3 and the power source is the Raspberry Pi 2.
 
-![Arduino Servo RPi2]({{site.baseurl}}/images/Nodejs/arduino-servo-rpi2.png)
+![Arduino Servo RPi2]({{site.baseurl}}/Resources/images/Nodejs/arduino-servo-rpi2.png)
 
 
 ###Deploy the app to your Raspberry Pi 2

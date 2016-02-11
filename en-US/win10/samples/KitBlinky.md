@@ -18,7 +18,7 @@ kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 <hr/>
 
 {: .thin-header}
-##Blinky Sample
+#Blinky Sample
 
 Let's create a simple Blinky app using an LED to test your setup.
 
@@ -69,7 +69,7 @@ Congratulations! You controlled one of the GPIO pins on your Windows IoT device.
 {% include_relative BlinkyCodeCS.md%}
 
 <div class="row lineTop">
-  <div class="text-right col-sm-12">
+  <div class="text-right col-xs-24">
     <h2 class="thin-header"><a href="{{site.baseurl}}/{{page.lang}}/win10/samples/WorldMapOfMakers.htm">Next: Lesson 2 - Starter Projects</a></h2>
   </div>
 </div>

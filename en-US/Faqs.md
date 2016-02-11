@@ -4,8 +4,8 @@ title: Home
 permalink: /en-US/Faqs.htm
 lang: en-US
 ---
-<div class="row col-md-12">
-    <div class="col-md-2 col-xs-12 faq-nav section-heading">
+<div class="row col-md-24">
+    <div class="col-md-6 col-xs-12 faq-nav section-heading">
         <h1>FAQs</h1>
         <a href="#rpi2"><h4>Setting up Raspberry Pi 2</h4></a>
 
@@ -24,7 +24,7 @@ lang: en-US
         <a href="#dragonboard"><h4>DragonBoard</h4></a>
     </div>
 
-    <div class="col-md-8 col-md-offset-4 col-xs-8 col-xs-offset-4 section-heading">
+    <div class="col-md-16 col-md-offset-2 col-xs-8 col-xs-offset-4 section-heading">
         <a name="rpi2"></a>
         <h2 class="faq-h2">Setting up Raspberry Pi</h2>
         <p class="bold"><em>Why does my screen appear cropped or stretched?</em></p>

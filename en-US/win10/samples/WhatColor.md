@@ -36,10 +36,10 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 <iframe class="maker-kit" src="https://adafruitsample.azurewebsites.net/cardViewer?lesson=205" width="100%" height="550px" scrolling="no"></iframe>
 
 <div class="row projectRow">
-  <div class="col-md-6 col-sm-12">
+  <div class="col-md-12 col-xs-24">
     <img src="{{site.baseurl}}/Resources/images/AdafruitStarterPack/WhatColor.jpg">
   </div>
-  <div class="col-md-6 col-sm-12">
+  <div class="col-md-12 col-xs-24">
     <h2 class="text-center thin-header">Click <a target="_blank" href="https://www.hackster.io/windows-iot/what-color-is-it">here</a> to get started!</h2>
   </div>
 </div>

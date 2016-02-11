@@ -44,17 +44,17 @@ http.createServer(function (req, res) {
   (C:\Data\Users\DefaultAccount\AppData\Local\Packages\&lt;Your Project Name&gt;_&lt;Publisher Hash String&gt;\LocalState\nodeuwp.log).
 * If you're building for Minnowboard Max, select `x86` in the dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
 
-    ![Node.js Windows Universal Project Properties]({{site.baseurl}}/Resources/images/Nodejs/nodejswu-properties.png)
+    ![Project Properties]({{site.baseurl}}/Resources/images/Nodejs/nodejswu-properties.png)
 
 * Now we're ready to deploy to the remote Windows IoT Core device. Simply press F5 (or select Debug \| Start Debugging) to start debugging the server.
 
 * When the server is running, open up a browser and enter the address http://&lt;IP address of your device&gt;:1337. The result should look like the picture below.
 
-    ![Hello World Result]({{site.baseurl}}/Resources/images/Nodejs/helloworld-ie.png)
+    ![Hello World Result]({{site.baseurl}}/Resources/images/Nodejs/helloworld-ie.PNG)
 
 * You can set breakpoints, see variable values, etc. To stop the server, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
 
-    ![Debugging Screenshot]({{site.baseurl}}/Resources/images/Nodejs/debugging-vs.png)
+    ![Debugging Screenshot]({{site.baseurl}}/Resources/images/Nodejs/debugging-vs.PNG)
 
 
 ### Universal Windows Platform (UWP) namespaces
@@ -79,7 +79,6 @@ uwp.close();
 The result from the code above should look like this:
 
 ![DateTime Result]({{site.baseurl}}/Resources/images/Nodejs/datetime-ie.PNG)
-
 
 
 ### Building and deploying an app package (AppX)

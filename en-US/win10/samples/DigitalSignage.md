@@ -60,9 +60,9 @@ The app's slideshow can be likened to a screensaver which displays while the app
 3. Type "www.microsoft.com" into the address bar using either the physical or on-screen keyboard.
 
  When using the on-screen keyboard, you may click characters with your mouse or tap to type if your monitor is touch-enabled.
-
+ 
  <img src="{{site.baseurl}}/Resources/images/DigitalSignage/DigitalSign_keyboard2.png" height="400">
-
+ 
  4. Click or tap the "Go" button. This navigates the browser to the Microsoft home page
  
  <img src="{{site.baseurl}}/Resources/images/DigitalSignage/DigitalSign_microsoft.png" height="400">
