@@ -11,6 +11,10 @@ Windows and Windows Mobile can be configured allow embedded mode. This enables p
 
 Embedded mode is only enabled by default on Window IoT Core and must be enabled on standard Windows and Windows Mobile.
 
+If you are debugging on a device that is not running Windows IoT Core and you see either of the following error messages you need to ensure AllowEmbeddedMode is enabled on the device and that the Embedded Mode service is running:
+* There are no more endpoints available from the endpoint mapper.
+* This program is blocked by group policy. For more information, contact your system administrator.
+
 ##Changing the mode
 To enable embedded mode you will need to create a provisioning package in Imaging and Configuration Designer (ICD) that sets AllowEmbeddedMode=1.  To install ICD you need to download and install the Windows ADK for Windows 10.
 

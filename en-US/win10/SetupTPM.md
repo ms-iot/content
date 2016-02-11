@@ -136,21 +136,21 @@ Firmware TPM (fTPM) requires special Processor/SoC support and whence fTPM is no
 ##<a name="dTPM"></a>Setup dTPM  
 These instructions are applicable for any dTPM module supported on either MBM or RPi2.
 
-1. Get a discrete TPM module and attach it to the MBM.
-2. Based on your discrete TPM module of choice, identify its matching ACPI table [here][3].
-3. Enable testsigning on the device:
-
-        bcdedit /set {current} integrityservices disable
-        bcdedit /set testsigning on
-
-4. Copy the ACPI table to MBM _C:\Windows\System32\ACPITABL.dat_.
-5. Disable fTPM by changing the following UEFI settings:
+1. Get a discrete TPM module and attach it to the MBM/RPi2.
+2. (Applies to MBM) Disable fTPM by changing the following UEFI settings:
 
         Device Manager -> System Setup -> Security Configuration -> PTT = <Disable>
 
-6. Enable dTPM by changing the following UEFI settings:
+3. (Applies to MBM) Enable dTPM by changing the following UEFI settings:
 
         Device Manager -> System Setup -> Security Configuration -> Discrete TPM = <Enable>
+
+4. Based on your discrete TPM module of choice, identify its matching ACPI table [here][3].
+5. Copy that ACPI table to MBM/RPi2 _C:\Windows\System32\ACPITABL.dat_.
+6. Enable testsigning on the device:
+
+        bcdedit /set {current} integrityservices disable
+        bcdedit /set testsigning on
 
 7. Reboot the device.
 8. Verify you have the right TPM version enabled - run the [TPM 2.0 Tool][1] on the Windows IoT Core device.
@@ -274,11 +274,11 @@ These instructions are applicable for any dTPM module supported on either MBM or
 ##<a name="sTPM"></a>Enable and verify software TPM (sTPM)  
 Note that **sTPM is intended for development purposes only and does not provide any real security benefits**.
 
-1. Disable fTPM by changing the following UEFI settings:
+1. (Applies to MBM) Disable fTPM by changing the following UEFI settings:
 
         Device Manager -> System Setup -> Security Configuration -> PTT = <Disable>
 
-2. Enable dTPM by changing the following UEFI settings:
+2. (Applies to MBM) Enable dTPM by changing the following UEFI settings:
 
         Device Manager -> System Setup -> Security Configuration -> Discrete TPM = <Enable>
 
@@ -287,7 +287,7 @@ Note that **sTPM is intended for development purposes only and does not provide 
         bcdedit /set {current} integrityservices disable
         bcdedit /set testsigning on
 
-4. Copy the matching ACPI table from [here][3] to RPi2 _C:\Windows\System32\ACPITABL.dat_.
+4. Copy the ACPI table from [here][4] to MBM/RPi2 _C:\Windows\System32\ACPITABL.dat_.
 5. Reboot the device.
 6. Verify you have the right TPM version enabled - run the [TPM 2.0 Tool][1] on the Windows IoT Core device.
 
@@ -408,6 +408,7 @@ Note that **sTPM is intended for development purposes only and does not provide 
 [1]: https://github.com/ms-iot/security/tree/master/Urchin/T2T "T2T"
 [2]: https://github.com/ms-iot/security/tree/master/Urchin/UrchinTest "UrchinTest"
 [3]: https://github.com/ms-iot/security/tree/master/TPM-ACPITABL "TPM ACPI tables"
+[4]: https://github.com/ms-iot/security/tree/master/TPM-ACPITABL/fTPMSim "sTPM ACPI table"
 
 *[sTPM]: Software TPM
 *[fTPM]: Firmware TPM

@@ -141,7 +141,7 @@ If you chose to use the **MCP3008**, you can switch the MCP3208 for the MCP3008 
 6. Go to `Build -> Build Solution`
 7. Select `Remote Machine` from the debug target
 8. Hit F5 to deploy and debug. Enter the IP address of your device
-   and select `None` for the authentication type
+   and select `Universal` for the authentication type
  
 When you turn the potentiometer knob, you will see the number change on the screen indicating the potentiometer knob position. 
 When the number is larger than half the ADC resolution (For **MCP3002**, this number is **512**. For **MCP3008** or **MCP3208**, it's **2048**) the LED will turn ON. Otherwise, it turns OFF.

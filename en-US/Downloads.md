@@ -106,29 +106,3 @@ lang: en-US
 	</div>
 </div>
 
-<div class="row">
-	<h3 class="divider"> Previous versions of Windows </h3>
-	<div style="background-color:Silver; color:black; padding:20px;">
-		<h4><u>Support for Windows on Intel Galileo Gen 1 and Gen 2 will end on November 30, 2015</u></h4>
-		<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we've made the difficult decision to discontinue Windows support on the Galileo platform. We've seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>
-	</div>
-	<p>Download the version of Windows that runs on devices like Intel Galileo. Download Visual Studio, Software Development Kits and other tools you will need to develop for that version of Windows.</p>
-</div>
-<div class="row">
-	<div class="col-md-3">
-		<h3>Windows 8.1</h3>
-		<p>The Windows IoT platform that runs on devices like Intel Galileo</p>
-		<a href="https://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57182" target="_blank">Learn More</a>
-	</div>
-	<div class="col-md-3">
-		<h3>Visual Studio 2013</h3>
-		<p>State of the art IDE, tools and services that you can use to create great IoT apps</p>
-		<a href="https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx" target="_blank">Learn More</a>
-	</div>
-	<div class="col-md-3">
-		<h3>Windows Driver Kit 2013</h3>
-		<p>Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 8.1</p>
-		<a href="https://msdn.microsoft.com/library/windows/hardware/ff557573" target="_blank">Learn More</a>
-	</div>
-</div>
-

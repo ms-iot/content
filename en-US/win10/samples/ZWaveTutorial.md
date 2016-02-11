@@ -23,7 +23,7 @@ Z-Wave is a wireless communications protocol designed to allow devices in the ho
 2. <a name="AllJoyn_Z_Wave"></a>Z-Wave devices  Two Aeon Labs Z-Wave devices are needed for this demo:
   * Aeon Labs DSA02203-ZWUS Z-Wave Z-Stick Series 2 USB Dongle
   * Aeon Labs DSC24-ZWUS Smart Switch Z-Wave Appliance Module
-3. PC or Laptop with Windows 10 with installed [AllJoyn Explorer]({{site.baseurl}}/en-US/win10/AllJoyn.htm#AllJoynExplorer){:target="_blank"}.
+3. PC or Laptop with Windows 10 with installed [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/win10/AllJoyn.htm#AllJoynExplorer){:target="_blank"} app.
 
 
 ## Setting up the Raspberry Pi2
@@ -64,9 +64,9 @@ The setup should look like in the picture below
 
 ## Controlling the Z-Wave switch via AllJoyn
 
-Let's turn the Z-Wave power switch on! We will use the AllJoyn Explorer (AJX) to navigate the devices, objects and interfaces.
+Let’s turn the Z-Wave power switch on! We will use the IoT Explorer for AllJoyn application to navigate the devices, objects and interfaces.
 
-Launch AlljoynExplorer. The AJX should find the following three devices:
+Launch IoT Explorer for AllJoyn app. The app should find the following three devices:
 
 • ZWaveAdapter  – Microsoft DSB: This is the Z-Wave DSB
 • HomeID_xxx…  – Aeon Labs Smart Energy Switch: This is the Z-Wave power switch that is paired with the Z-Wave dongle

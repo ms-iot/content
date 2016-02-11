@@ -12,7 +12,7 @@ lang: en-US
 ###Set up your PC
 * Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
 * Install Visual Studio 2015 Update 1.
-* Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
+* Install the latest Node.js Tools for Windows IoT from [here](http://aka.ms/ntvsiotlatest).
 
 
 ###Create a new Express (Windows Universal) project
@@ -45,7 +45,6 @@ After clicking yes, npm will run in the background and install the dependencies.
 * When the server is running, open up a browser and enter the address http://&lt;IP address of your device&gt;:3000. The result should look like the picture below.
 
     ![Hello World Result]({{site.baseurl}}/Resources/images/Nodejs/express-ie.PNG)
-
 
 ### GitHub
 * NTVS IoT Extension source code: [https://github.com/ms-iot/ntvsiot](https://github.com/ms-iot/ntvsiot)

@@ -12,7 +12,7 @@ lang: en-US
 
     ![DefaultApp on Windows IoT Core]({{site.baseurl}}/Resources/images/DefaultApp.png)
     
-* Once you have the IP, open up **File Explorer** on your computer and type `\\<TARGET_DEVICE>\c$`, where `<TARGET_DEVICE>` is either the name or the IP Address of your Windows IoT Core device, then hit Enter.  Enter your administrator username and password if prompted.
+* Once you have the IP, open up **File Explorer** on your computer and type `\\<TARGET_DEVICE>\c$`, where `<TARGET_DEVICE>` is either the name or the IP Address of your Windows IoT Core device, then hit Enter.  Enter your administrator username and password if prompted. The username should be prefixed with the IP Address of your Windows IoT Core device. Example: '192.168.1.118\Administrator'.
 
     ![File explorer]({{site.baseurl}}/Resources/images/smb/smb_file_explorer.png)
 

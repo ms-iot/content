@@ -273,7 +273,6 @@ private async void InitializeSystem()
     try
     {
         var i2cSettings = new I2cConnectionSettings(PORT_EXPANDER_I2C_ADDRESS);
-        i2cSettings.BusSpeed = I2cBusSpeed.FastMode;
         string deviceSelector = I2cDevice.GetDeviceSelector(I2C_CONTROLLER_NAME);
         var i2cDeviceControllers = await DeviceInformation.FindAllAsync(deviceSelector);
         i2cPortExpander = await I2cDevice.FromIdAsync(i2cDeviceControllers[0].Id, i2cSettings);

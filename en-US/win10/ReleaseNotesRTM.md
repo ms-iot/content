@@ -61,22 +61,61 @@ On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to user mode a
 
 *	Windows Device Portal may stop working after a day of continuous uptime. (5458435) WORKAROUND: Restart the device.
 *	Setting the orientation to “Portrait” may not be honored in a Universal App (3039042) WORKAROUND: None
-*	GPIO pin 4 may behave unexpectedly when switching between drive modes (3890679) WORKAROUND: If you need to switch drive modes, use a pin other than GPIO 4
+*	On Raspberry Pi and Dragonboard, switching from a non-default drive mode to a different non-default drive mode may produce a glitch on the GPIO pin. (3890679) WORKAROUND: Set drive mode once at the beginning of the application.
 *	The Default startup app may conflict with itself when it is also deployed from Visual Studio (4266059). WORKAROUND: Change the default startup app to an application other than that you wish to deploy.
 *	BackgroundMediaPlayer.MessageReceivedFromForeground may crash. (2199869) WORKAROUND: The following line of code may crash: “BackgroundMediaPlayer.MessageReceivedFromForeground += OnMessageReceivedFromForeground;”. To prevent the crash, add this code so that it is executed first “var player = BackgroundMediaPlayer.Current;”
-*	A NULL value may be returned by SerialDevice::FromIdAsync() when devices are connected to the top USB port on MinnowBoardMax (2175837) WORKAROUND: Use the bottom USB port.
 *	Data breakpoints have been disabled on the Raspberry Pi2 (4266252). WORKAROUND: None at this time
 *	The Azure Active Directory Authentication Library may not work on Windows 10 IoT Core (4266261). WORKAROUND: Do not use the Azure Active Directory Authentication Library.
 *	A MediaEncodingProfile.CreateWma( Windows.Media.MediaProperties. AudioEncodingQuality.Auto) method call may fail on the Raspberry Pi 2 with the error message No suitable transform was found to encode or decode the content. (Exception from HRESULT: 0xC00D5212). (4510128) WORKAROUND: None.
 *	More.com!PAGER::DisplayString may return INVALID_POINTER_READ exception. (1552523) WORKAROUND: None.
 *	When deploying a Node.JS project BackgroundTaskHost.exe may fail with an error.(4873190) WORKAROUND: None.
-*	The GPIO/I2C/SPI drivers may be disabled when connecting to the DragonBoard with windbg. (4710796) WORKAROUND: None.
+*	The GPIO/I2C/SPI/UART drivers will be disabled when connecting to the DragonBoard with windbg. (4710796) WORKAROUND: None.
 *	The Dragonboard BSP has drivers for the headset jack and microphone jack, but it doesn't have either of these jacks on board. (4791855) WORKAROUND: USB headsets cannot be used without manually disabling these devices
-*	The SPI on the Dragonboard may ignore the requested speed and always run at 4.8 Mhz. (5055938) WORKAROUND: None.
+*	The SPI on the Dragonboard will ignore the requested speed and always run at 4.8 Mhz. (5055938) WORKAROUND: None.
 *	If an application or background task enter a bad state the device may blue screen instead of allowing an opportunity to connect through an SSH session and reconfigure the device. (5098713) WORKAROUND: None.
 *	The ICD image build may fail when using the commercial license. (5291899, 5382557) WORKAROUND: See the information at the following link: [http://go.microsoft.com/fwlink/?LinkId=708623](http://go.microsoft.com/fwlink/?LinkId=708623){:target="_blank"}
-*	The SiLabs USB-Serial driver may fail to load with an error 31 "Device Parameters\PortName property is not present." (5307602) WORKAROUND: Unplug the device from the USB port and add the following registry key: [HKEY_LOCAL_MACHINE\system\controlset001\enum\usb\VID_10C4&PID_EA60\0001\Device Parameters]" PortName"="COM3"
 *	A conflict may result if a webcam and a USB audio adapter or headset are connected to a Raspberry Pi2 at the same time. (5383535) WORKAROUND: Use an analog headset plugged into the onboard audio jack of the Raspberry Pi2.
-*	SiLabs USB Serial adapter may return an error indicating that it cannot open handle (ACCESS DENIED) because the device has already been opened by the ZWaveHeadlessAdapterApp. (5385500) WORKAROUND: Use Windows Device Portal to manually remove the ZWaveHeadlessAdapterApp application.
 *	If the device name is set to a value longer than 15 characters, it may cause a boot failure. If this occurs the device will need to be reflashed to recover. (5474244) WORKAROUND: Do not use a device name that is longer than 15 characters.
+*	SerialDevice.FromIdAsync() may return a NULL value when trying to open Silicon Labs USB-Serial adapters. (5385500) WORKAROUND: Run `iotstartup headless remove ZWaveHeadlessAdapterApp` and reboot.
+*	On MinnowBoardMax, the SPI driver will generate malformed bus traffic for FullDuplex and TransferSequential transfers at clock speeds less than 250kHz. (3076149) WORKAROUND: Use clock speeds of 250kHz or greater.
+*   On MinnowBoardMax, Silicon Labs based USB-Serial converters (USB\VID_10C4&PID_EA60) will fail to load with error 31. (5307602) WORKAROUND: Ensure the device is unplugged, then run: `reg add "HKEY_LOCAL_MACHINE\system\controlset001\enum\usb\VID_10C4&PID_EA60\0001\Device Parameters" /v PortName /t REG_SZ /d COM3`
+*   On MinnowBoardMax, FTDI USB-Serial adapters will ignore the requested baud rate and will use 3.8Mhz. (5348073) WORKAROUND: [Workaround for FTDI devices on x86](#ftdiworkaround)
+*	On MinnowBoardMax, a NULL value may be returned by SerialDevice::FromIdAsync() when devices are connected to the top USB port on MinnowBoardMax (2175837) WORKAROUND: Update to firmware version 0.83 or later from Intel's website: [http://firmware.intel.com/projects/minnowboard-max](http://firmware.intel.com/projects/minnowboard-max){:target="_blank"}.
+*   WiFi direct is partially supported on IoT Core using the WinRT WiFi direct APIs. For more details see [WiFi Direct limitations on IoTCore](#wifidirect).
 
+### <a name="ftdiworkaround"></a>Workaround for FTDI devices on x86
+
+ 1. Plug in the FTDI device to your MBM.
+ 2. Run `devcon status FTDIBUS\*` and note the *device instance path* of your device.
+
+    <pre>
+        C:\Data>devcon status ftdibus\*
+        <i>FTDIBUS\VID_0403+PID_6001+A700EXHLA\0000</i>
+            Name: USB Serial Port
+            Driver is running.
+        1 matching device(s) found.
+    </pre>
+
+ 3. Create a file named ftdi-fix.reg with the following contents, where `<device instance path>` is replaced with the device instance path determined in the previous step.
+
+{% highlight registry %}
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\system\controlset001\enum\<device instance path>\Device Parameters]
+"ConfigData"=hex:11,00,3f,3f,10,27,00,00,88,13,00,00,c4,09,00,00,e2,04,00,00,\
+  71,02,00,00,38,41,00,00,9c,80,00,00,4e,c0,00,00,34,00,00,00,1a,00,00,00,0d,\
+  00,00,00,06,40,00,00,03,80,00,00,00,00,00,00,d0,80,00,00
+"LatencyTimer"=dword:00000010
+"MinReadTimeout"=dword:00000000
+"MinWriteTimeout"=dword:00000000
+{% endhighlight %}
+
+ 4. Copy ftdi-fix.reg to your device and run `reg import ftdi-fix.reg` to apply the registry keys.
+ 5. Unplug and replug the FTDI device.
+ 
+### <a name="wifidirect"></a>WiFi Direct limitations on IoTCore
+
+1. The IoTCore device has to be the connecting device – it will not work as the advertising device with another device initiating the connection.  
+2. Advanced pairing must be used.  The sample app demonstrates how to use the advanced pairing API’s to pair the devices prior to connecting.
+3. Not all wireless adapters support WiFi direct. We have tested and validated that the “Realtek RTL8188EU Wireless Lan 802.11n USB 2.0 Network adapter” works, but other adapters may not be supported.
+ 

@@ -187,7 +187,7 @@ public int convertToInt(byte[] data)
 
 ## Deploy the sample
 Choose `Debug` and `ARM` configuration, choose `Remote Machine`, right click the project, under Property, click Debug tag,
-Put the Raspberry Pi 2 IP in the Remote machine field, and unclick `Use authentication`
+Put the Raspberry Pi 2 IP in the Remote machine field, and select `Universal` authentication.
 
 Press `F5`
 
