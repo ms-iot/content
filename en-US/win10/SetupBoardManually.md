@@ -53,7 +53,7 @@
       
    <div class="row">
     <div class="col-md-6 col-sm-12 col-no-padding">         
-      <li><b>Click ”Set up a new device”.</b> Once there, select “Custom” from the "Device type" drop down. Click the "Browse" button to find your .ffu </li>
+      <li><b>Click ”Set up a new device”.</b> Once there, select “Custom” from the "Device type" drop down. Click the "Browse" button to find your image (.ffu) </li>
     </div>
     <div class="col-md-6 col-sm-12">
       <img src="{{site.baseurl}}/images/ManualSetup/Manualstep5.png">
@@ -63,7 +63,7 @@
    
    <div class="row">
     <div class="col-md-6 col-sm-12 col-no-padding">           
-      <li><b>Navigate to “C:\Program Files (x86)\Microsoft IoT\FFU and select Flash.ffu. </b></li>  
+      <li><b>Navigate to “C:\Program Files (x86)\Microsoft IoT\FFU<DeviceType> and select Flash.ffu. </b></li>  
     </div>
     <div class="col-md-6 col-sm-12">
       <img src="{{site.baseurl}}/images/ManualSetup/Manualstep7.png">
