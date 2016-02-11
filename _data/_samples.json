@@ -151,7 +151,7 @@
       {
          "title":"Azure Node.js Sample (UWP)",
          "description":"Upload sensor data to Azure storage from a Node.js UWP app",
-         "link-text":"<a href='samples/NodejsWUAzure.htm'>Azure (Node.js)</a>",
+         "link-text":"<a href='samples/nodejs-wu-azure.htm'>Azure (Node.js)</a>",
          "ranking":0,
          "tags":["intermediate","johnny-five","azure","sensor","node.js"]
       },
