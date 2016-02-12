@@ -41,7 +41,7 @@ lang: en-US
       The November 2015 Release for Windows 10 IoT Core. The latest stable release.
     </p>
 		<p>
-			<a href="">Instructions on how to manually install images.</a>
+			<a href="http://go.microsoft.com/fwlink/?LinkId=723959">Instructions on how to manually install images.</a>
 		</p>
 		<a href="http://go.microsoft.com/fwlink/?LinkId=691711" class="button-blue button-flat"> Get Windows 10 IoT Core for Raspberry Pi 2 </a>
 		<a href="http://go.microsoft.com/fwlink/?LinkId=691712" class="button-blue button-flat"> Get Windows 10 IoT Core for MinnowBoard Max </a>
@@ -58,9 +58,9 @@ lang: en-US
       Only available to <a href="https://insider.windows.com/">Windows Insiders</a>
     </p>
     <p>
-      <a href="">Instructions on how to manually install images.</a>
+      <a href="http://go.microsoft.com/fwlink/?LinkId=723959">Instructions on how to manually install images.</a>
     </p>
-    <a href="http://go.microsoft.com/fwlink/?LinkID=708576" class="button-blue button-flat"> Get Windows 10 IoT Core Insider Preview </a>
+    <a href="http://go.microsoft.com/fwlink/?LinkID=724365" class="button-blue button-flat"> Get Windows 10 IoT Core Insider Preview </a>
     <p>You need to have a valid Microsoft Account and need to be signed up for the Windows Insider Program to be able to download the Insider Preview.</p>
     <p>
 			<a href="http://windows.microsoft.com/en-US/windows-live/sign-in-what-is-microsoft-account">What is a Microsoft Account?</a><br/>
