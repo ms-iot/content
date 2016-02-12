@@ -158,21 +158,14 @@
     <div class="row">
         <div class="col-md-6 col-sm-12">
             <ul>
-                <li> <b>Notes on baud rate for USB/Bluetooth:</b> Some hardware setups may require additional considerations when it comes to setting up your Bluetooth device over the serial pins 0 and 1.
-
-                <p>StandardFirmata uses the Serial lines to talk to a Bluetooth device or over USB. By default, it uses a baud rate of 57600 bps. Depending on the configuration of your Bluetooth device, you may need to modify that rate. It can be found in the<code>setup</code> method and looks like this:</p>
-
-                <p><code>Firmata.begin(57600);</code></p>
-
-                <p>Simply change the<code>begin</code> parameter to match the configuration of your Bluetooth device. The most common configurations are 115200, 57600, and 9600. The recommended SparkFun Bluetooth Mate devices use 115200 by default. If you are not sure of the default baud rate of your Bluetooth device, check the device documentation.</p>
-
-               <p>Many Arduino devices, such as the Leonardo and the Yun, use<code>Serial1</code> (Rather than just<code>Serial</code>) for serial communications over pins 0 and 1. If you are using one of these devices, you will need to change the serial initialization procedure. You will want to remove the line<code>Firmata.begin(57600);</code> and replace it with the code below:</p>
+				<li>
+				<p><b>Note for Serial use with USB/Bluetooth:</b> Many Arduino devices, such as the Leonardo and the Yun, use<code>Serial1</code> (Rather than just<code>Serial</code>) for serial communications over pins 0 and 1. If you are using one of these devices, you will need to change the serial initialization procedure. You will want to remove the line<code>Firmata.begin(57600);</code> and replace it with the code below:</p>
                 {% highlight C# %}
                     Serial1.begin( 57600 ); //or your baud rate here, it will be 115200 if using the Bluetooth Mate Silver or Gold
                     while( !Serial1 );
                     Firmata.begin( Serial1 );
                 {% endhighlight %}
-                </li>
+				</li>
                 <li>
                     <p><b>Note for USB:</b> The USBSerial class still has a ConnectionEstablished event that you can subscribe to. It will always be invoked at the proper time in both classes, so you are able to reuse your code in either scenario!</p>
 
