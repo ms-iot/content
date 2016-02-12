@@ -2,11 +2,11 @@
 <div class="row">
     <div class="col-md-6 col-sm-12 col-no-padding">
         <p>Now that everything is set up, open the Windows Remote Arduino Experience application on your chosen Windows 10 device. You should see the screen shown in the image on the right.</p>
-        <p>Select the connection type that you chose while setting up your Arduino.  You'll need to choose a Baud rate as well - follow the guidelines on the FAQ page linked here to choose the correct settings.</p>
+        <p>Select the connection type that you chose while setting up your Arduino.  You'll need to choose a Baud rate as well.  The most common configurations are 115200, 57600, and 9600. The recommended SparkFun Bluetooth Mate devices use 115200 by default. If you are not sure of the default baud rate of your Bluetooth device, check the device documentation.</p>
         <p>Once you've selected the correct settings, click "Connect" to connect remotely to your Arduino!</p>
     </div>
     <div class="col-md-6 col-sm-12 col-no-padding">
-        <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/ConnectionsFinal.JPG">
+        <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/connection-page-wrae.png">
     </div>
 </div>
 
@@ -17,7 +17,7 @@
         <p>From here, you can start controlling the pins on your Arduino.  Let's do a simple sample where we remotely control an LED attached to the Arduino.</p>
     </div>
     <div class="col-md-6 col-sm-12 col-no-padding">
-        <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/DigitalFinal.JPG">
+        <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/digital-page-wrae.png">
     </div>
 </div>
 <div class="row">
@@ -27,6 +27,6 @@
         <p>Try controlling all of the pins on your Arduino - you can control the Analog pins on the Analog page, and the PWM functionality of the digital pins on the PWM page.  Once you get an understanding of the technology, check out the tutorial on the Windows Remote Arduino library to start developing your own projects.</p>
     </div>
     <div class="col-md-6 col-sm-12 col-no-padding">
-        <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/LEDSetup.JPG">
+        <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/led-setup.png">
     </div>
 </div>
