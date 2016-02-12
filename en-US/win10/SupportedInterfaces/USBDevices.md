@@ -33,6 +33,7 @@ Part Name / No.                   | Compatible Boards | Description             
 ----------------------------------|-------------------|------------------------------------------|----------------------------------------------------------------------------|-------------------------------|------------------|                  
 Microsoft Lifecam 3000 USB Camera | RPI2, MBM         | USB Webcam                               | Limited to less than 5 frames per second, no known performance workarounds | [Home Security Camera Project]|![Verified][MSVerified]{:.MsVerified}
 Microsoft Lifecam HD-5000         | RPI2, MBM         | Microsoft LifeCam HD-5000 720p HD Webcam | USB 2.0                                                                    |                               |![Verified][MSVerified]{:.MsVerified}
+Microsoft® LifeCam Studio™         | RPI2 Model B 1GB        | Microsoft® LifeCam Studio™ (model: 1425) 1080p HD Webcam | USB 2.0                                                                    |                               | (max. 30 frames per second)
 Logitech Webcam C210              | RPI2, MBM         | USB Webcam, 1.3mp photo                  |                                                                            |                               |![Verified][MSVerified]{:.MsVerified}
 
 ### Audio {#Audio}
