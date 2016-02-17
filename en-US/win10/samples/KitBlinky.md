@@ -7,10 +7,14 @@ lang: en-US
 deviceName: RPI2
 kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 ---
-<ol class="breadcrumb">
-  <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
-  <li class="active">Blinky Sample</li>
-</ol>
+<div class="row">
+  <div class="col-xs-24">
+    <ol class="breadcrumb">
+      <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
+      <li class="active">Blinky Sample</li>
+    </ol>
+  </div>
+</div>
 
 <h1 class="thin-header">Lesson 1: Introduction and Setup</h1>
 {% include kit-steps.html device=page.deviceName %}
@@ -18,7 +22,7 @@ kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 <hr/>
 
 {: .thin-header}
-#Blinky Sample
+##Blinky Sample
 
 Let's create a simple Blinky app using an LED to test your setup.
 
