@@ -16,50 +16,67 @@ lang: en-US
 </div>
 
 <div class="row">
-	<div class="col-md-6 col-sm-12">
-		<h3 class="divider">Download Windows 10 IoT Core</h3>
-		<div class="preview">
-			<p>
-				Download the November update for Windows 10 IoT Core. Built for devices, Windows 10 IoT Core enables you to create cool connected projects, amazing applications, and much more. It leverages the Windows development environment you know -- adapted to run on embedded devices like the Raspberry Pi 2.
-			</p>
-			<p>
-				The November update of Windows 10 IoT Core requires Visual Studio 2015 Update 1 for development purposes such as debugging and deploying images.
-			</p>
-		</div>
+  <div class="col-md-6 col-sm-12">
+		<h3 class="divider">Windows 10 IoT Core Dashboard<br/></h3>
+		<p>Download, install and configure your new Windows 10 IoT Core devices.</p>
+    <a href="http://go.microsoft.com/fwlink/?LinkID=708576" class="button-blue button-flat"> Get IoT Core Dashboard </a>
+    <p> By downloading and using the Windows 10 IoT Core Dashboard you agree to the <a href="http://go.microsoft.com/fwlink/?LinkID=703960&clcid=0x4809"> license terms </a> and <a href="http://go.microsoft.com/fwlink/?LinkId=521839"> privacy statement </a> for Windows 10 IoT Core Dashboard. </p>
+    <p>
+			<a href="{{site.baseurl}}/{{page.lang}}/win10/IoTDashboardTroubleshooting.htm"> Need help? Check out the troubleshooting page. </a>
+    </p>
+    <p>
+		<a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesRTM.htm"> Release notes. </a>
+		</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <p>Looking to commercialize? <a href="http://go.microsoft.com/fwlink/?LinkId=708649" target="_blank">Learn more</a> about how to distribute your device running a version of Windows 10 IoT Core.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 col-sm-12">
+		<h3 class="divider">Windows 10 IoT Core Release Image<br/></h3>
+		<p>
+      The November 2015 Release for Windows 10 IoT Core. The latest stable release.
+    </p>
+		<p>
+			<a href="http://go.microsoft.com/fwlink/?LinkId=723959">Instructions on how to manually install images.</a>
+		</p>
+		<a href="http://go.microsoft.com/fwlink/?LinkId=691711" class="button-blue button-flat"> Get Windows 10 IoT Core for Raspberry Pi 2 </a>
+		<a href="http://go.microsoft.com/fwlink/?LinkId=691712" class="button-blue button-flat"> Get Windows 10 IoT Core for MinnowBoard Max </a>
+		<a href="http://go.microsoft.com/fwlink/?LinkId=691713" class="button-blue button-flat"> Get Windows 10 IoT Core for DragonBoard 410c&#42;</a>
+		<p>
+		&#42;Please see <a href="http://aka.ms/thirdpartynotices" target="_blank"> third party notice for BSP restrictions </a> for DragonBoard 410c.
+    </p>
+    <p>
+		<a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesRTM.htm"> Release notes. </a>
+		</p>
 	</div>
-	<div class="col-md-6 col-sm-12">
-		<h3 class="divider">Windows 10 IoT Core Dashboard</h3>
-		<p>The Windows 10 IoT Core Dashboard is your best tool for configuring new Windows 10 IoT Core devices, running demo applications, and much more. The Windows 10 IoT Core Dashboard supports the MinnowBoard MAX and the Raspberry Pi 2.</p>
-		<p>Click below to download the Dashboard today and get started with your Windows 10 IoT Core devices.</p>
+  <div class="col-md-6 col-sm-12">
+		<h3 class="divider">Windows 10 IoT Core Insider Preview</h3>
+		<p>
+      The February 2016 Insider Preview for Windows 10 IoT Core. The most recent available image.
+    </p>
+		<p>
+      Only available to <a href="https://insider.windows.com/">Windows Insiders</a>
+    </p>
+    <p>
+      <a href="http://go.microsoft.com/fwlink/?LinkId=723959">Instructions on how to manually install images.</a>
+    </p>
+    <a href="http://go.microsoft.com/fwlink/?LinkID=724365" class="button-blue button-flat"> Get Windows 10 IoT Core Insider Preview </a>
+    <p>You need to have a valid Microsoft Account and need to be signed up for the Windows Insider Program to be able to download the Insider Preview.</p>
+    <p>
+			<a href="http://windows.microsoft.com/en-US/windows-live/sign-in-what-is-microsoft-account">What is a Microsoft Account?</a><br/>
+      <a href="https://insider.windows.com/">What is the Windows Insider Program?</a>
+		</p>
+    <p>
+      <a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesInsiderPreview.htm">Release Notes</a>
+    </p>
 	</div>
 </div>
 
 <br>
-
-<div class="row">
-	<div class="col-md-6 col-sm-12">
-		<a href="http://go.microsoft.com/fwlink/?LinkId=691711" class="button-blue button-flat"> Download Windows 10 IoT Core for Raspberry Pi 2 </a>
-		<a href="http://go.microsoft.com/fwlink/?LinkId=691712" class="button-blue button-flat"> Download Windows 10 IoT Core for MinnowBoard Max </a>
-		<a href="http://go.microsoft.com/fwlink/?LinkId=691713" class="button-blue button-flat"> Download Windows 10 IoT Core for DragonBoard 410c&#42;</a>
-		<p>
-			&#42;Please see <a href="http://aka.ms/thirdpartynotices" target="_blank"> third party notice for BSP restrictions </a> for DragonBoard 410c.</p>
-		<p>
-			<a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesRTM.htm"> Release notes. </a>
-		</p>
-	</div>
-	<div class="col-md-6 col-sm-12">
-		<a href="http://go.microsoft.com/fwlink/?LinkID=708576" class="button-blue button-flat"> Get IoT Core Dashboard </a>
-    <p> By downloading and using the Windows 10 IoT Core Dashboard you agree to the <a href="http://go.microsoft.com/fwlink/?LinkID=703960&clcid=0x4809"> license terms </a> and <a href="http://go.microsoft.com/fwlink/?LinkId=521839"> privacy statement </a> for Windows 10 IoT Core Dashboard. </p>
-    <p>
-			<a href="{{site.baseurl}}/{{page.lang}}/win10/IoTDashboardTroubleshooting.htm"> Need help? Check out the troubleshooting page. </a>
-		</p>
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-12">
-		<p>Looking to commercialize? <a href="http://go.microsoft.com/fwlink/?LinkId=708649" target="_blank">Learn more</a> about how to distribute your device running a version of Windows 10 IoT Core.</p>
-	</div>
-</div>
 
 
 <div class="row">
