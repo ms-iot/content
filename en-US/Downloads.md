@@ -67,7 +67,7 @@ lang: en-US
       <a href="https://insider.windows.com/">What is the Windows Insider Program?</a>
 		</p>
     <p>
-      <a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesRTM.htm">Release Notes</a>
+      <a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesInsiderPreview.htm">Release Notes</a>
     </p>
 	</div>
 </div>
