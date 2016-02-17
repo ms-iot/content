@@ -47,7 +47,11 @@ lang: en-US
 		<a href="http://go.microsoft.com/fwlink/?LinkId=691712" class="button-blue button-flat"> Get Windows 10 IoT Core for MinnowBoard Max </a>
 		<a href="http://go.microsoft.com/fwlink/?LinkId=691713" class="button-blue button-flat"> Get Windows 10 IoT Core for DragonBoard 410c&#42;</a>
 		<p>
-		&#42;Please see <a href="http://aka.ms/thirdpartynotices" target="_blank"> third party notice for BSP restrictions </a> for DragonBoard 410c.</p>
+		&#42;Please see <a href="http://aka.ms/thirdpartynotices" target="_blank"> third party notice for BSP restrictions </a> for DragonBoard 410c.
+    </p>
+    <p>
+		<a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesRTM.htm"> Release notes. </a>
+		</p>
 	</div>
   <div class="col-md-6 col-sm-12">
 		<h3 class="divider">Windows 10 IoT Core Insider Preview</h3>
