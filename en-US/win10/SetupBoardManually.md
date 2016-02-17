@@ -29,7 +29,7 @@
       <li><b>Find the downloaded .ISO and double click on it.</b></li>
     </div>
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/images/ManualSetup/Manualstep1.png">
+      <img src="{{site.baseurl}}/images/manual-setup/manual-step-1.png">
     </div>
    </div>
    
@@ -38,8 +38,8 @@
       <li><b>Double click the .MSI and follow the installation steps</b></li>
     </div>
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/images/ManualSetup/Manualstep2.png">
-      <img src="{{site.baseurl}}/images/ManualSetup/Manualstep3.png">
+      <img src="{{site.baseurl}}/images/manual-setup/manual-step-2.png">
+      <img src="{{site.baseurl}}/images/manual-setup/manual-step-3.png">
     </div>
    </div>
    
@@ -56,8 +56,8 @@
       <li><b>Click ”Set up a new device”.</b> Once there, select “Custom” from the "Device type" drop down. Click the "Browse" button to find your image (.ffu) </li>
     </div>
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/images/ManualSetup/Manualstep5.png">
-      <img src="{{site.baseurl}}/images/ManualSetup/Manualstep6.png">    
+      <img src="{{site.baseurl}}/images/manual-setup/manual-step-5.png">
+      <img src="{{site.baseurl}}/images/manual-setup/manual-step-6.png">    
     </div>
    </div>
    
@@ -66,7 +66,7 @@
       <li><b>Navigate to “C:\Program Files (x86)\Microsoft IoT\FFU<DeviceType> and select Flash.ffu. </b></li>  
     </div>
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/images/ManualSetup/Manualstep7.png">
+      <img src="{{site.baseurl}}/images/manual-setup/manual-step-7.png.png">
     </div>
    </div>      
    
@@ -75,7 +75,7 @@
       <li><b>Click download and flash. </b> Note that you must have a compliant SD card to successfully flash. We recommend a Class 10 SD card with a size of at least 2 GB or more. Once done flashing, you can remove the SD card and plug it into your device.</li>  
     </div>
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/images/ManualSetup/Manualstep8.png">
+      <img src="{{site.baseurl}}/images/manual-setup/manual-step-8.png.png">
     </div>
    </div>   
       
