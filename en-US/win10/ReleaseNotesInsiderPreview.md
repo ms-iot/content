@@ -32,6 +32,12 @@ You can review linked terms by pasting the forward link into your browser window
 
 ## Release Notes
 
+#### .NET Native Tool Chain
+Enabling “Compile with .NET Native tool chain” may cause applications to fail deployment due to errors with the deployment of .NET Native runtime. 
+
+#### Bluetooth Pairing (6162324)
+Bluetooth devices may not show properly in the Bluetooth pairing web management interface. 
+
 #### Minnowboard Max Boot and Firmware Update
 The MinnowBoard Max will not boot unless the firmware is version .082 or later. The minimum recommended version of the firmware is “MinnowBoard MAX 0.83 32-Bit”. Firmware updates can be downloaded from [http://go.microsoft.com/fwlink/?LinkId=708613](http://go.microsoft.com/fwlink/?LinkId=708613){:target="_blank"}.
 
