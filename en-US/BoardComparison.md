@@ -86,7 +86,7 @@ lang: en-US
       <td>Video Output</td>
       <td>HDMI, Composite audio via 3.5 mm jack.</td>
       <td>Micro HDMI</td>
-      <td>HDMI 1080p HD @ 30 fps</td>
+      <td>HDMI 720p HD</td>
     </tr>
     <tr>
       <td>Audio Output</td>
