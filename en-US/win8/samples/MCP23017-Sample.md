@@ -1,7 +1,7 @@
 ---
 layout: default
 title: MCP23017Sample
-permalink: /en-US/win8/samples/MCP23017Sample.htm
+permalink: /en-US/win8/samples/MCP23017-Sample.htm
 lang: en-US
 ---
 

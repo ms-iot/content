@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
-permalink: /en-US/AdafruitMakerKit.htm
+permalink: /en-US/win10/AdafruitMakerKit.htm
 lang: en-US
 kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 ---

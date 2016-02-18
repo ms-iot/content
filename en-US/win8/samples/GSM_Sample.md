@@ -1,7 +1,7 @@
 ---
 layout: default
 title: GSM Shield
-permalink: /en-US/win8/samples/GSM Shield.htm
+permalink: /en-US/win8/samples/GSM_Sample.htm
 lang: en-US
 ---
 

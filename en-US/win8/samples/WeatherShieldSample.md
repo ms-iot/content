@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Weather Shield Sensors
-permalink: /en-US/win8/samples/WeatherShieldSensors.htm
+title: Weather Shield Sensors Sample
+permalink: /en-US/win8/samples/WeatherShieldSample.htm
 lang: en-US
 ---
 

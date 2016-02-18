@@ -1,7 +1,7 @@
 ---
 layout: default
-title: DSBGpioTutorial
-permalink: /en-US/win10/samples/AlljoynDSB_GpioTutorial.htm
+title: AllJoyn DSB Sample
+permalink: /en-US/win10/samples/AlljoynDSBSample.htm
 lang: en-US
 ---
 

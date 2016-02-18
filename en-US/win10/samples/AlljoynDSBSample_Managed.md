@@ -1,7 +1,7 @@
 ---
 layout: default
-title: ManagedDSBGpioTutorial
-permalink: /en-US/win10/samples/AlljoynDSB_ManagedGpioTutorial.htm
+title: AllJoyn Managed DSB Gpio Tutorial
+permalink: /en-US/win10/samples/AlljoynDSBSample_Managed.htm
 lang: en-US
 ---
 

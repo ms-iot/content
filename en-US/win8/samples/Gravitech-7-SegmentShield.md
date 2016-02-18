@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 7-SegmentShield
-permalink: /en-US/win8/samples/7-SegmentShield.htm
+permalink: /en-US/win8/samples/Gravitech-7-SegmentShield.htm
 lang: en-US
 ---
 
