@@ -5,19 +5,19 @@ permalink: /en-US/win10/samples/WifiConnectSample.htm
 lang: en-US  
 ---  
   
-#WiFi Connect Sample  
+# WiFi Connect Sample  
   
 We'll learn how to find and connect to WiFi networks using a Universal Windows Platform (UWP) app that makes use of the [`Windows.Devices.WiFi.WiFiAdapter`](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.wifi.wifiadapter.aspx){:target="_blank"} API.  
   
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).  
   
-###Load the project in Visual Studio  
+### Load the project in Visual Studio  
   
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/tree/develop/WebCamSample/CS){:target="_blank"}. Make a copy of the folder on your disk and open the project from Visual Studio.  
 
 The code for the WiFi Connect sample can be found under: <samples root folder>\WiFiConnect\CS\WiFiConnect  
 
-###Connecting your WiFi adapter  
+### Connecting your WiFi adapter  
   
 You'll need:  
   
@@ -25,14 +25,14 @@ You'll need:
   
 Connect the WiFi adapter to one of USB ports on the IoT Device  
   
-###Deploy your app  
+### Deploy your app  
   
 If you're building for Minnowboard Max, select `x86` as the architecture. If you're building for Raspberry Pi 2 or DragonBoard , select `ARM`.  
 
 
 Select **Remote Machine** to point to IoT device and hit F5 to deploy to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm){:target="_blank"}. if you need guidance   
   
-###Test your app   
+### Test your app   
   
 The sample app when deployed displays a screen similar to the one below. 
 
@@ -55,7 +55,7 @@ Finally, because some networks may require additional information that can only 
 ![WiFi SSID list]({{site.baseurl}}/images/WiFiConnectSample/WiFiSample2.png)
   
 
-##Let's look at the code  
+## Let's look at the code  
  
 The code for this sample makes use of the [`Windows.Devices.WiFi.WiFiAdapter`](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.wifi.wifiadapter.aspx){:target="_blank"} API.   
  
@@ -75,11 +75,11 @@ Accessing the WiFi adapter from your code requires a device capability for WiFi 
   </Capabilities>
 {% endhighlight %}  
  
-###Scenario Code
+### Scenario Code
 
 The code of this sample is mostly contained within WiFiConnect_Scanrio.xaml and .cs files.  
 
-###Requesting access
+### Requesting access
 The first step to access the device is to request access using the static `WiFiAdapter.RequestAccessAsync()` method.
 
 **Note**, in a headed app, the method must be called from the UI thread. However, in an IOT headless app (Background Application), which doesn't have a UI thread, the method can be called from any thread.
@@ -126,7 +126,7 @@ if (result.Count >= 1)
 {% endhighlight %} 
 
 
-###Scanning for WiFi networks
+### Scanning for WiFi networks
 
 The next step is to scan for available WiFi networks, this can be achieved using the `WiFiAdapter.ScanAsync()` method.
 
@@ -155,7 +155,7 @@ private void DisplayNetworkReport(WiFiNetworkReport report)
 }
 {% endhighlight %}  
 
-###Connecting to a WiFi network
+### Connecting to a WiFi network
 
 When a WiFi network is selected from the ones displayed, we need to determine if we want to collect the password credential. The WiFi network authentication type is what we need to determine that:
 
@@ -207,7 +207,7 @@ else
 
 If you need to disconnect, `WiFiAdapter.Disconnect()` can be used.
   
-###To summarize:  
+### To summarize:  
   
 * To enable WiFi device access, add the `wifiControl` DeviceCapability to the AppX manifest
 

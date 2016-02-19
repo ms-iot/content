@@ -5,7 +5,7 @@ permalink: /en-US/win10/CreateIoTCorePro.htm
 lang: en-US
 ---
 
-#Creating a Windows 10 IoT Core Pro Image
+# Creating a Windows 10 IoT Core Pro Image
 
 Here are the steps involved in creating an Enterprise Image
 

@@ -32,7 +32,7 @@
       {
          "title":"Hardware Pin Mappings",
          "description":"Pinout and interfacing information for GPIO, SPI, and I2C",
-         "link-text":"<a href='samples/PinMappingsRPi2.htm'>Raspberry Pi 2 Pinout</a><br><a href='samples/PinMappingsMBM.htm'>MinnowBoard Max Pinout</a>",
+         "link-text":"<a href='samples/PinMappingsRPi2.htm'>Raspberry Pi 2 Pinout</a><br><a href='samples/PinMappingsMBM.htm'>MinnowBoard Max Pinout</a><br><a href='samples/PinMappingsDb.htm'>Dragonboard Pinout</a>",
          "ranking":0,
          "tags":["beginner","hardware"]
       },

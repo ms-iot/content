@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/WebCamSample.htm
 lang: en-US  
 ---  
   
-#Web Camera Sample  
+# Web Camera Sample  
 
 {% include VerifiedVersion.md %}
 
@@ -13,13 +13,13 @@ We'll create a simple app that initializes a web cam, takes pictures, and record
   
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).  
   
-###Load the project in Visual Studio  
+### Load the project in Visual Studio  
   
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/tree/develop/WebCamSample/CS){:target="_blank"}. Make a copy of the folder on your disk and open the project from Visual Studio.  
   
 This is a Universal Windows application  
   
-###Connecting your webcam  
+### Connecting your webcam  
   
 You'll need:  
   
@@ -27,7 +27,7 @@ You'll need:
   
 Connect the web cam to one of USB ports on the IoT Device  
   
-###Deploy your app  
+### Deploy your app  
   
 If you're building for Minnowboard Max, select `x86` as the architecture. If you're building for Raspberry Pi 2 or DragonBoard , select `ARM`.  
 
@@ -41,17 +41,17 @@ devcon remove ADCM\QCOM242E
   
 Select **Remote Machine** to point to IoT device and hit F5 to deploy to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm){:target="_blank"}. if you need guidance   
   
-###Test your app   
+### Test your app   
   
 The sample app when deployed displays 2 buttons `Initialize Audio and Video` and `Initialize Audio Only`. Below is a description of the actions available when the buttons are clicked.  
   
-###Initialize Audio and Video:  
+### Initialize Audio and Video:  
   
 * Preview will appear in the left most canvas  
 * `Take Photo` when clicked would store the photo in the default location and show the last captured photo in the canvas in the middle  
 * `Start Video Record` when clicked would begin recording. When done, press `Stop Video Record` to save the video. Video is automatically played back in the right most canvas  
   
-###Initialize Audio Only:  
+### Initialize Audio Only:  
   
 * `Start Audio Record` when clicked will begin recording. When done press `Stop Audio Record` to save the video. Audio is automtically played back.  
   
@@ -59,7 +59,7 @@ The sample app when deployed displays 2 buttons `Initialize Audio and Video` and
   
 Congratulations! You created your first web cam app.  
  
-###Let's look at the code  
+### Let's look at the code  
  
 The code for this sample uses the [Windows.Media.Capture](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.capture.aspx){:target="_blank"} namespace.   
  
@@ -80,7 +80,7 @@ For accessing the web cam, the microphone, and the default storage folders, you 
  </Capabilities>  
 {% endhighlight %}  
  
-##Initialize MediaCapture object  
+## Initialize MediaCapture object  
  
 **MediaCapture** object can be initialized to capture video or audio only. In the sample,   
  
@@ -114,7 +114,7 @@ private async void initAudioOnly_Click(object sender, RoutedEventArgs e)
 }  
 {% endhighlight %}  
   
-###Audio and Video Mode: Start Preview, Take a photo  
+### Audio and Video Mode: Start Preview, Take a photo  
   
 This section describes some XAML components we create to display the preview and photo output from the web cam. First we create a **CaptureElement** for preview and a and **Image** for the captured photo.  
   
@@ -163,7 +163,7 @@ private async void takePhoto_Click(object sender, TextChangedEventArgs e)
 }  
 {% endhighlight %}  
   
-###Audio and Video Mode: Record a video and playback  
+### Audio and Video Mode: Record a video and playback  
   
 This section describes how we record a video and play it back. First we create a **MediaElement** in XAML to playback the video  
   
@@ -217,7 +217,7 @@ private async void recordVideo_Click(object sender, RoutedEventArgs e)
 }  
 {% endhighlight %}  
   
-###Audio Only Mode: Record audio and playback  
+### Audio Only Mode: Record audio and playback  
   
 This section describes how we record an audio and play it back. First we create a **MediaElement** in XAML to playback the audio  
   
@@ -272,7 +272,7 @@ private async void recordAudio_Click(object sender, RoutedEventArgs e)
 }  
 {% endhighlight %}  
   
-###MediaCapture callbacks  
+### MediaCapture callbacks  
   
 There are two callbacks illustrated in the sample: **MediaCapture.Failed** and **MediaCapture.RecordLimitationExceeded**.   
   

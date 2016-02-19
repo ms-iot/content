@@ -5,9 +5,9 @@ permalink: /en-US/win10/samples/speechtranslator.htm
 lang: en-US
 ---
 
-#Build the SpeechTranslator Project
+# Build the SpeechTranslator Project
 
-###Component Lists:
+### Component Lists:
 
 - 2 Raspberry Pi 2 boards
 - 2 Raspberry Pi 2 Power Supplies 

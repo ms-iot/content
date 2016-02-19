@@ -5,9 +5,9 @@ permalink: /en-US/win10/samples/DISM.htm
 lang: en-US
 ---
 
-##Using DISM to flash micro SD card for Windows IoT Core device
+## Using DISM to flash micro SD card for Windows IoT Core device
 
-###An alternative method to WindowsIoTImageHelper
+### An alternative method to WindowsIoTImageHelper
 
 **Dism.exe** is installed "C:\Program Files (x86)\Microsoft IoT\Dism" if you followed instructions to set up [Raspberry PI]({{site.baseurl}}/{{page.lang}}/win10/SetupRPI.htm) or [Minnowboard Max]({{site.baseurl}}/{{page.lang}}/win10/SetupMBM.htm)
 

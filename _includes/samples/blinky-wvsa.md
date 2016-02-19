@@ -6,8 +6,8 @@
     <ol class="inline-list">
       <li>Prepare your Arduino board by hooking up an LED with a resistor to pin 8.</li>
       <li>Make sure that your Arduino is still uploaded with the HelloWorld-Speech-Eventing sample, and then plug the Arduino into a power supply.</li>
-      <li>Run the Virtual Shields for Arduino app on the Windows Phone you prepared previously.</li>
-      <li>If everything has been setup properly, your phone should welcome you with an audio cue. You can now say 'on' or 'off' to switch the LED on your Arduino between on and off!</li>
+      <li>Run the Windows Virtual Shields for Arduino app on the Windows Phone you prepared previously.</li>
+      <li>If everything has been setup properly, your phone should connect to your Arduino sketch and welcome you with an audio cue. You can now say 'on' or 'off' to your Windows 10 device to switch the LED on your Arduino between on and off!</li>
     </ol>
   </div>
 </div>
@@ -67,3 +67,6 @@ void loop()
 	shield.checkSensors();		    // handles Virtual Shield events.
 }
 {% endhighlight %}
+
+<h3>More examples with Windows Virtual Shields for Arduino</h3>
+<p>Now that you know the basics of using the Windows Virtual Shields for Arduino library, you can explore other projects using the technology.  View the sample <a href="https://www.youtube.com/watch?v=6twpmU7FRlA" target="_blank">here</a> for another simple example, and see the project <a href="https://www.hackster.io/windowsiot/virtual-shield-draw-mode-38db04" target="_blank">here</a> for an end-to-end solution.
