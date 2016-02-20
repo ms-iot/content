@@ -19,7 +19,7 @@ Looking to configure some of the settings on your device? The below tools all co
 
 * **Set password**
 
-	To change the password on an account on your device, run `SetPassword [account-username] [new-password] [old-password]` to change the account password.
+	To change the password on an account on your device, run `net user [account-username] [new-password]` to change the account password.
 
 * **Query and set device name:**
 
