@@ -59,7 +59,7 @@ lang: en-US
       The February 2016 Insider Preview for Windows 10 IoT Core. The most recent available image.
     </p>
 		<p>
-      Only available to <a href="https://insider.windows.com/">Windows Insiders</a>
+      Only available to <a href="https://insider.windows.com/">Windows Insiders</a>, and compatible with Raspberry Pi 2, Raspberry Pi 3, MinnowBoard Max and DragonBoard 410c*.
     </p>
     <p>
       <a href="http://go.microsoft.com/fwlink/?LinkId=723959">Instructions on how to manually install images.</a>

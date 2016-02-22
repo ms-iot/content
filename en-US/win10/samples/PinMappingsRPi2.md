@@ -1,17 +1,17 @@
 ---
 layout: default
-title: RPi2 Pin Mappings
+title: Raspberry Pi2 & 3 Pin Mappings
 permalink: /en-US/win10/samples/PinMappingsRPi2.htm
 lang: en-US
 ---
 
-## Raspberry Pi 2 Pin Mappings
+## Raspberry Pi 2 & 3 Pin Mappings
 
 ![RPi2 Pin Header]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
 
 <sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
 
-Hardware interfaces for the Raspberry Pi 2 are exposed through the 40-pin header **J8** on the board. Functionality includes:
+Hardware interfaces for the Raspberry Pi 2 and Raspberry Pi 3 are exposed through the 40-pin header **J8** on the board. Functionality includes:
 
 * **17x** - GPIO pins
 * **1x** - SPI bus
@@ -44,8 +44,10 @@ The following GPIO pins are accessible through APIs:
 | 25    | PullDown      | 22                 |
 | 26    | PullDown      | 37                 |
 | 27    | PullDown      | 13                 |
-| 35    | PullUp        | Red Power LED      |
-| 47    | PullUp        | Green Activity LED |
+| 35*    | PullUp        | Red Power LED      |
+| 47*    | PullUp        | Green Activity LED |
+
+\* = Raspberry Pi 2 ONLY. GPIO 35 & 47 are not available on Raspberry Pi 3.
 
 As an example, the following code opens **GPIO 5** as an output and writes a digital '**1**' out on the pin:
 
@@ -80,7 +82,7 @@ When a pin is closed, it reverts to its power-on state.
 
 ## <a name="RPi2_UART"></a>Serial UART
 
-There is one Serial UART available on the RPi2: **UART0**
+There is one Serial UART available on the RPi2/3: **UART0**
 
 * Pin 8  - **UART0 TX**
 * Pin 10  - **UART0 RX**
@@ -176,7 +178,7 @@ public async void I2C()
 
 ## <a name="RPi2_SPI"></a>SPI Bus
 
-There is one SPI bus controller available on the RPi2. **SPI0** has the standard **MOSI**, **MISO**, and **SCLK** lines, and can be configured to use one of two chip-select lines **SPI0 CS0** and **SPI0 CS1**.
+There is one SPI bus controller available on the RPi2/3. **SPI0** has the standard **MOSI**, **MISO**, and **SCLK** lines, and can be configured to use one of two chip-select lines **SPI0 CS0** and **SPI0 CS1**.
 
 * Pin 19 - **SPI0 MOSI**
 * Pin 21 - **SPI0 MISO**
