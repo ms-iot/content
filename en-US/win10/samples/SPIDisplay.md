@@ -5,34 +5,35 @@ permalink: /en-US/win10/samples/SPIDisplay.htm
 lang: en-US
 ---
 
-##SPI Display Sample
+## SPI Display Sample
 
-In this sample, we interface a SPI based [OLED display](http://www.adafruit.com/product/938){:target="_blank"} to your Raspberry Pi 2/MinnowBoard Max. We then create an app that lets us write lines of text to the display. Step-by-step instructions are provided,
+{% include VerifiedVersion.md %}
+
+In this sample, we interface a SPI based [OLED display](http://www.adafruit.com/product/938){:target="_blank"} to your Raspberry Pi 2, MinnowBoard Max, or DragonBoard 410c. We then create an app that lets us write lines of text to the display. Step-by-step instructions are provided,
 so no background knowledge of SPI is needed. However, if you want to learn more, SparkFun provides a great [tutorial on SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}.
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
 
-###Load the project in Visual Studio
+### Load the project in Visual Studio
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/SPIDisplay){:target="_blank"}.  Make a copy of the folder on your disk and open the project from Visual Studio.
-
-Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
-
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\SPIDisplay`.  Make a copy of the folder on your disk and open the project from Visual Studio. 
 Note that this app requires a device with a physical SPI port and will not work if running in an emulated environment.
 
-###Connect the SPI Display to your device
+### Connect the SPI Display to your device
 
 First, we need to wire up the display to your device. You'll need a few components:
 
-* a [Monochrome 1.3" 128x64 OLED graphic display](http://www.adafruit.com/product/938){:target="_blank"} from Adafruit with pin headers soldered on
+* <a name="SPI_Display"></a>a [Monochrome 1.3" 128x64 OLED graphic display](http://www.adafruit.com/product/938){:target="_blank"} from Adafruit with pin headers soldered on
 
-* a breadboard and several male-to-female connector wires
+* a breadboard and several male-to-female connector wires (Raspberry Pi 2 or MinnowBoard Max) or male-to-male connector wires (DragonBoard 410c)
 
-Visit the **Raspberry Pi 2/MinnowBoard Max** sections below depending on which device you have:
+* <a name="SPI_Display"></a>If you are using a DragonBoard 410c, you'll also need a [8-channel Bi-directional Logic Level Converter](http://www.adafruit.com/products/395) from Adafruit with pin headers soldered on
+
+Visit the **Raspberry Pi 2, MinnowBoard Max, or DragonBoard 410c** sections below depending on which device you have:
 
 ![Electrical Components]({{site.baseurl}}/images/SPIDisplay/components.png)
 
-####Raspberry Pi 2
+#### Raspberry Pi 2
 For the Raspberry Pi 2, we need to hook up power, ground, SPI, and a few GPIO pins to the OLED display. For additional information on the Raspberry Pi 2 pins, visit the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm)
 
 **Note: Make sure to power off the RPi2 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
@@ -58,7 +59,7 @@ Here are the schematics:
 
 ![SPI schematics]({{site.baseurl}}/images/SPIDisplay/schematics_rpi2.png)
 
-####MinnowBoard Max
+#### MinnowBoard Max
 For the MinnowBoard Max, we need to hook up power, ground, SPI, and a few GPIO pins to the OLED display. See the [MBM pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm) for more details on the MBM IO pins.
 
 **Note: Make sure to power off the MBM when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
@@ -84,40 +85,83 @@ Here are the schematics:
 
 ![SPI schematics]({{site.baseurl}}/images/SPIDisplay/schematics_mbm.png)
 
-###Deploy and run the app
+#### DragonBoard 410c
 
-When everything is set up, power your device back on, and open up the sample app in Visual Studio. If you're building for MinnowBoard Max, select `x86` in the architecture dropdown. If you're building for Raspberry Pi 2, select `ARM`. Next, configure the code depending on which device you are using.
+For the DragonBoard 410c, connections need to be made from the power, ground, SPI, and a couple of GPIO connections of the single board computer to the OLED display.
+
+**Note:  Make sure to power off the DragonBoard 410c when connecting your circuit.  This is good practice to reduce the change of an accidental short circuit during contruction.**
+
+The OLED display has 8 IO pins that are connected to the logic level converter as follows:
+
+1.  **DATA:**    Connect to pin B5.  This is the SPI master data out line.
+2.  **CLK:**     Connect to pin B4.  This is the SPI clock line.
+3.  **SA0/DC:**  Connect to pin B3.  This is the data / command line for the display.
+4.  **RST:**     Connect to pin B2.  This is the hardware reset line for the display.
+5.  **CS:**      Connect to pin B1.  This is the SPI chip select line.
+6.  **3V3:**     This connection is _unused_.
+7.  **VIN:**     Connect to VCCB.
+8.  **GND:**     Connect to GND.
+
+The logic level converter is connected to the DragonBoard as follows:
+
+1.  **A5:**     Connect to pin 14 (SPI0 MOSI).  
+2.  **A4:**     Connect to pin 8 (SPI0 CLK).  
+3.  **A3:**     Connect to pin 24 (GPIO 12).  
+4.  **A2:**     Connect to pin 26 (GPIO 69).  
+5.  **A1:**     Connect to pin 12 (SPI0 CS N).  
+6.  **VCCA:**   Connect to pin 35 (1.8V PWR).
+7.  **VCCB:**   Connect to pin 37 (5V PWR).
+8.  **GND:**    Connect to pin 40 (GND).
+
+The following diagram shows what your breadboard might resemble with the circuit assembled:
+
+![DragonBoard SPI Display Breadboard](../../../images/SPIDisplay/breadboard_assembled_db410c.png)
+
+A schematic for the circuit is:
+
+![DragonBoard SPI Display Schematic](../../../images/SPIDisplay/schematics_db410c.png)
+
+
+### Deploy and run the app
+
+When everything is set up, power your device back on, and open up the sample app in Visual Studio. Configure the code depending on which device you are using.
 
 {% highlight C# %}
 public sealed partial class MainPage : Page
 {
-    /* Important! Uncomment the code below corresponding to your target device */
+        /* Important! Uncomment the code below corresponding to your target device */
 
-    /* Uncomment for MinnowBoard Max */
-    private const string SPI_CONTROLLER_NAME = "SPI0";  /* For MinnowBoard Max, use SPI0                            */
-    private const Int32 SPI_CHIP_SELECT_LINE = 0;       /* Line 0 maps to physical pin number 5 on the MBM          */
-    private const Int32 DATA_COMMAND_PIN = 3;           /* We use GPIO 3 since it's conveniently near the SPI pins  */
-    private const Int32 RESET_PIN = 4;                  /* We use GPIO 4 since it's conveniently near the SPI pins  */
+        /* Uncomment for MinnowBoard Max */
+        //private const string SPI_CONTROLLER_NAME = "SPI0";  /* For MinnowBoard Max, use SPI0                            */
+        //private const Int32 SPI_CHIP_SELECT_LINE = 0;       /* Line 0 maps to physical pin number 5 on the MBM          */
+        //private const Int32 DATA_COMMAND_PIN = 3;           /* We use GPIO 3 since it's conveniently near the SPI pins  */
+        //private const Int32 RESET_PIN = 4;                  /* We use GPIO 4 since it's conveniently near the SPI pins  */
 
-    /* Uncomment for Raspberry Pi 2 */
-    //private const string SPI_CONTROLLER_NAME = "SPI0";  /* For Raspberry Pi 2, use SPI0                             */
-    //private const Int32 SPI_CHIP_SELECT_LINE = 0;       /* Line 0 maps to physical pin number 24 on the Rpi2        */
-    //private const Int32 DATA_COMMAND_PIN = 22;          /* We use GPIO 22 since it's conveniently near the SPI pins */
-    //private const Int32 RESET_PIN = 23;                 /* We use GPIO 23 since it's conveniently near the SPI pins */
+        /* Uncomment for Raspberry Pi 2 */
+        //private const string SPI_CONTROLLER_NAME = "SPI0";  /* For Raspberry Pi 2, use SPI0                             */
+        //private const Int32 SPI_CHIP_SELECT_LINE = 0;       /* Line 0 maps to physical pin number 24 on the Rpi2        */
+        //private const Int32 DATA_COMMAND_PIN = 22;          /* We use GPIO 22 since it's conveniently near the SPI pins */
+        //private const Int32 RESET_PIN = 23;                 /* We use GPIO 23 since it's conveniently near the SPI pins */
 
-    // ...
+        /* Uncomment for DragonBoard 410c */
+        //private const string SPI_CONTROLLER_NAME = "SPI0";  /* For DragonBoard, use SPI0                                */
+        //private const Int32 SPI_CHIP_SELECT_LINE = 0;       /* Line 0 maps to physical pin number 12 on the DragonBoard */
+        //private const Int32 DATA_COMMAND_PIN = 12;          /* We use GPIO 12 since it's conveniently near the SPI pins */
+        //private const Int32 RESET_PIN = 69;                 /* We use GPIO 69 since it's conveniently near the SPI pins */
+        
+        //...
 }
 {% endhighlight %}
 
 Next, right-click on the **SPIDisplay** project in **Solution Explorer** and select **"Set as StartUp Project"**.
-Now you should be able to press F5 from Visual Studio: The SPIDisplay app will deploy and start, and you should see text data show up on OLED display.
+Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp). The SPIDisplay app will deploy and start, and you should see text data show up on OLED display.
  You can now type into the app and have the text mirrored on the attached OLED display.
 
 ![SPI running]({{site.baseurl}}/images/SPIDisplay/spidisplay_screenshot.png)
 
 Congratulations! You've connected a SPI graphics display.
 
-###Let's look at the code
+### Let's look at the code
 The code in this sample can be split up into two main sections:
 
 1. **Initialization Code:** This performs initializations for GPIO, SPI, and the OLED display. Setting up these prerequisites is necessary before we can send graphics data to the OLED display.
@@ -126,7 +170,7 @@ The code in this sample can be split up into two main sections:
 
 Let's start by digging into the initialization code first.
 
-###Initialization Code
+### Initialization Code
 Here is the C# code for the top-level initialization function.
 
 {% highlight C# %}
@@ -183,7 +227,7 @@ This ensures that our function gets called to update the display any time the us
 
 Next, let's take a closer look at what each of the initialization functions is doing in more detail.
 
-####InitGPIO()
+#### InitGPIO()
 
 There are two pins on the SPI OLED display we need to control, the Data/Command pin and the Reset pin. To communicate with these,
 we need to initialize the GPIO controller and configure the pins as outputs.
@@ -222,7 +266,7 @@ private void InitGpio()
 
 * If at any point we get a failure, we throw an exception to the top-level **InitAll()** function.
 
-####InitSpi()
+#### InitSpi()
 Following the GPIO initialization, we initialize the SPI bus. The bus is used to send graphics data and commands to the OLED screen for display,
 and needs to be configured before we can talk to the display.
 
@@ -262,7 +306,7 @@ private async Task InitSpi()
 
 * If at any point we get a failure, we throw an exception to the top-level **InitAll()** function.
 
-####InitDisplay()
+#### InitDisplay()
 Now that we have initialized GPIO and SPI, we can communicate with display. Before we can send graphics data however, we first need to configure some settings on the display controller.
 
 {% highlight C# %}
@@ -294,7 +338,7 @@ These commands turn the display on and put it into a state where it's ready to a
 
 * If at any point we get a failure, we throw an exception to the top-level **InitAll()** function.
 
-###Text Display Code
+### Text Display Code
 
 Now that the display is initialized, we can send text to the screen. Previously in the initialization function, we registered **Display_TextBox_TextChanged()** to trigger any time the user changes the textbox.
 This function calls the **DisplayTextBoxContents()** function below which runs through the process of writing text out to the screen:
@@ -335,7 +379,7 @@ private void Display_TextBox_TextChanged(object sender, TextChangedEventArgs e)
 
 In the following sections, we'll detail the **WriteCharDisplayBuf()** and **DisplayUpdate()** functions, which perform the bulk of the work in rendering character data and sending the data over SPI.
 
-####WriteCharDisplayBuf()
+#### WriteCharDisplayBuf()
 
 The **WriteCharDisplayBuf()** function performs the work to convert a single character into an array of bytes representing the character image data.
 This function is frequently called by **WriteLineDisplayBuf()** to render individual characters in a string. Lets take a look at how it works.
@@ -418,7 +462,7 @@ We use this buffer since it's much quicker to perform pixel operations on a loca
 Again, all of this is happening in our local screen buffer. No data has been sent to the screen yet.
 
 
-####DisplayUpdate()
+#### DisplayUpdate()
 After all of our data has been written to our local buffer. We're ready to write it out over SPI to the screen. For this, we call **DisplayUpdate()**:
 
 {% highlight C# %}

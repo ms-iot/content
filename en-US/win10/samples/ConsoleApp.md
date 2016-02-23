@@ -5,15 +5,17 @@ permalink: /en-US/win10/samples/ConsoleApp.htm
 lang: en-US
 ---
 
-##MemoryStatus Console Application Sample
+## MemoryStatus Console Application Sample
 
-We'll create a simple console application that can be used to query the memory usage on your Windows IoT Core device (Raspberry Pi 2 or MinnowBoard Max). Please note that you need to compile the project for ARM for Raspberry Pi 2 and x86 for MinnowBoard Max.
+{% include VerifiedVersion.md %}
 
-###Load the project in Visual Studio
+We'll create a simple console application that can be used to query the memory usage on your Windows IoT Core device (Raspberry Pi 2, MinnowBoard Max, or a DragonBoard). Please note that you need to compile the project for ARM for Raspberry Pi 2 or DragonBoard and x86 for MinnowBoard Max.
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/MemoryStatus){:target="_blank"}.  Make a copy of the folder on your disk and open the project from Visual Studio.
+### Load the project in Visual Studio
 
-###To create your own project in Visual Studio
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\MemoryStatus`.  Make a copy of the folder on your disk and open the project from Visual Studio.
+
+### To create your own project in Visual Studio
 
 * Create a new project (File \| New Project...). In the 'New Project' dialog, navigate to 'Windows IoT Core' as shown below (in the left pane in the dialog: Templates \| Visual C++ \| Windows \| Windows IoT Core).<br/>
 Select the template 'Blank Windows IoT Core Console Application'<br/>
@@ -73,15 +75,38 @@ void printMessageLine(LPCSTR msg, DWORDLONG value)
     cout << right << value << endl;
 }
 
+void checkInput(HANDLE exitEvent)
+{
+    for (;;)
+    {
+        char character;
+        cin.get(character);
+        if (character == 'q')
+        {
+            ::SetEvent(exitEvent);
+            break;
+        }
+    }
+}
+
 int main(int argc, char **argv)
 {
-    printMessageLine("Starting to monitor memory consumption!");
+    printMessageLine("Starting to monitor memory consumption! Press enter to start monitoring");
+    printMessageLine("You can press q and enter at anytime to exit");
+    cin.get();
+    HANDLE exitEvent = ::CreateEvent(NULL, FALSE, FALSE, NULL);
+    if (NULL == exitEvent)
+    {
+        printMessageLine("Failed to create exitEvent.");
+        return -1;
+    }
+    std::thread inputThread(checkInput, exitEvent);
     for (;;)
     {
         MEMORYSTATUSEX statex;
         statex.dwLength = sizeof(statex);
 
-        BOOL success = GlobalMemoryStatusEx(&statex);
+        BOOL success = ::GlobalMemoryStatusEx(&statex);
         if (!success)
         {
             DWORD error = GetLastError();
@@ -115,19 +140,35 @@ int main(int argc, char **argv)
 
         }
 
-        this_thread::sleep_for(chrono::milliseconds(100));
+        if (WAIT_OBJECT_0 == ::WaitForSingleObject(exitEvent, 100))
+        {
+            break;
+        }
     }
+
+    inputThread.join();
+    ::CloseHandle(exitEvent);
     printMessageLine("No longer monitoring memory consumption!");
 }
 {% endhighlight %}
 </UL>
 * Make sure the app builds correctly invoking the Build \| Build Solution menu command.
 
-* This application can be run in either headed or headless mode.  To better understand what headed and headless mode are and how to configure your device, follow the instructions [here]{{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
+* This application can be run in either headed or headless mode.  To better understand what headed and headless mode are and how to configure your device, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
 
 * It is easy to deploy this console application to our Windows IoT Core device. In the [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) documentation, you can find instructions to use `setcomputername` to configure a unique name for your Windows IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in VS.
 
-    In Visual Studio, you can configure your target by editing your project's properties (be sure to make all of the highlighted changes as appropriate to your board's name or IP address):
+* You will first need to setup the Remote Debugger on your Windows IoT Core device. First follow the steps [here]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm) to deploy a Universal Windows Application on your device. This will copy all the required binaries to your device. 
+
+* To start remote debugger on your device, open a Web Browser on your PC and point it to `http://<device name/IP address>:8080` to launch [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm). In the credentials dialog, use the default username and password: `Administrator`, `p@ssw0rd`. Windows Device Management should launch and display the web management home screen.
+
+* Now navigate to the Debugging section of Windows Device Portal and click the Start button under Start Visual Studio Remote Debugger. 
+
+    ![WindowsDevicePortalDebugSettings Target]({{site.baseurl}}/images/Console/device_portal_start_debugger.png)
+
+* This will show pop-up a message box and give you the connection information. 
+
+*  In Visual Studio, you can configure your target by editing your project's properties (be sure to make all of the highlighted changes as appropriate to your board's name or IP address):
 
     ![RemoteMachineProjectSettings Target]({{site.baseurl}}/images/Console/console_project_settings.png)
 
@@ -149,6 +190,13 @@ int main(int argc, char **argv)
 
 * Congratulations! You just deployed your first console application to a device running Windows IoT Core!
 
-* You can now run the application as you would any other application.  Simply open a PowerShell connection (instructions can be found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)) and enter the Remote Command you specified above.
+* You can now run the application as you would any other application.  Simply open a PowerShell/SSH connection (instructions can be found [here for powershell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) and [here for SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm)) and enter the Remote Command you specified above.
 
     ![ConsoleOutput Target]({{site.baseurl}}/images/Console/console_output.png)
+
+* Once you are done debugging Console Applications, remember to kill the remote debugger on the Windows IoT Core device. Use powershell/SSH to open a console session and run the following commnand
+
+    `kill msvsmon.exe`
+
+
+

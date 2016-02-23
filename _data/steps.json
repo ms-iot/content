@@ -1,32 +1,36 @@
 {
    "RPI2":[
-      "GetStarted.htm",
+	  "win10/SetupPCRPI.htm",
       "win10/SetupRPI.htm",
-      "win10/SetupPC.htm",
       "win10/samples/Blinky.htm"
    ],
    "MBM":[
-      "GetStarted.htm",
-      "win10/SetupMBM.htm",
       "win10/SetupPCMBM.htm",
+      "win10/SetupMBM.htm",
       "win10/samples/BlinkyMBM.htm"
+   ],
+   "DB410c":[
+      "GetStarted.htm",
+	  "win10/SetupPCDB410c.htm",
+      "win10/SetupDB410c.htm",
+      "win10/samples/Blinky.htm"
    ],
    "Galileo":[
       "GetStarted.htm",
-      "win8/SetupGalileo.htm",
       "win8/SetupPC.htm",
+      "win8/SetupGalileo.htm",
       "win8/samples/HelloBlinky.htm"
    ],
    "WRA":[
       "GetStarted.htm",
-      "win10/SetupWRA.htm",
       "win10/SetupPCWRA.htm",
+      "win10/SetupWRA.htm",
       "win10/samples/BasicWRA.htm"
    ],
    "WVSA":[
       "GetStarted.htm",
-      "win10/SetupWVSA.htm",
       "win10/SetupPCWVSA.htm",
+      "win10/SetupWVSA.htm",
       "win10/samples/BlinkyWVSA.htm"
    ]
 }

@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/Appx.htm
 lang: en-US
 ---
 
-#Creating and Deploying Appx to Windows IoT Core
+# Creating and Deploying Appx to Windows IoT Core
 
 Learn how to create and deploy appx packages to Windows IoT Core.
 

@@ -15,28 +15,29 @@ lang: en-US
 </div>
 <div class="row section-heading">
   <h3>New on the Window IoT Blog</h3>
-  <div class="col-md-4">
+    <div class="col-md-4">
     <div class="col-md-9">
-      <a href="http://blogs.windows.com/buildingapps/2015/05/12/bringing-node-js-to-windows-10-iot-core/" target="_blank">
-        <h4>Bringing Node.js to Windows 10 IoT Core</h4>
+      <a href="http://blogs.windows.com/buildingapps/2015/10/28/announcing-dragonboard-410c-support-in-windows-10-iot-core-arduino-partnership-updates/" target="_blank">
+        <h4>Announcing DragonBoard 410c support in Windows 10 IoT Core, Arduino partnership updates</h4>
       </a>
-      <h4><em>Windows Apps Team, May 12 2015</em></h4>
+      <h4><em>Steve Teixeira, Oct 28 2015</em></h4>
     </div>
   </div>
   <div class="col-md-4">
     <div class="col-md-9">
-      <a href="http://blogs.windows.com/buildingapps/2015/04/29/microsoft-brings-windows-10-to-makers/" target="_blank">
-        <h4>Microsoft brings Windows 10 to Makers</h4>
+      <a href="http://blogs.windows.com/buildingapps/2015/09/24/whats-next-for-windows-10-iot-core/" target="_blank">
+        <h4>What's next for Windows 10 IoT Core</h4>
       </a>
-      <h4><em>Steve Teixeira, Apr 29 2015</em></h4>
+      <h4><em>Steve Teixeira, Sep 24 2015</em></h4>
     </div>
   </div>
   <div class="col-md-4">
     <div class="col-md-9">
-      <a href="http://blogs.windows.com/bloggingwindows/2015/03/18/windows-10-iot-powering-the-internet-of-things/" target="_blank">
-        <h4>Windows 10 IoT Core:<br />Powering the Internet of Things</h4>
+      <a href="http://blogs.windows.com/buildingapps/2015/08/10/hello-windows-10-iot-core/" target="_blank">
+        <h4>Hello, Windows 10 IoT Core</h4>
       </a>
-      <h4><em>Kevin Dallas, Mar 18 2015</em></h4>
+      <br>
+      <h4><em>Steve Teixeira, Aug 10 2015</em></h4>
     </div>
   </div>
 </div>
@@ -47,7 +48,7 @@ lang: en-US
   <div class="col-md-3">
     <h3>Forums</h3>
     <p>Forums are a great way to ask and answer technical questions and connect with fellow developers. We support the community through the following forums:</p>
-    <p>MSDN are our primary forums where you can ask us questions on all topics.</p>
+    <p>MSDN hosts the primary forums where you can ask us questions on all topics.</p>
     <p>
       <a href="https://social.msdn.microsoft.com/forums/en-US/home?forum=WindowsIoT" target="_blank">MSDN Forums &raquo;</a>
     </p>
@@ -84,14 +85,14 @@ lang: en-US
     <p>
       <a href="https://twitter.com/IoTDan" target="_blank">@IoTDan &raquo;</a>
     </p>
+    <p>
+      <a href="https://twitter.com/vkhandpur" target="_blank">@VKhandpur &raquo;</a>
+    </p>
   </div>
   <div class="col-md-3">
     <h3>Feedback</h3>
     <p>
-      Review or submit bugs for Microsoft and the community. Please make sure you are signed up to our <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558" target="_blank">Microsoft Connect</a> program and signed in.
-    </p>
-    <p>
-      <a href="https://connect.microsoft.com/windowsembeddedIoT/Feedback" target="_blank" >Submit Feedback &raquo;</a>
+      Review or submit bugs for Microsoft and the community. 
     </p>
     <p>
       <a href='windows-feedback:?contextid=441&metadata={"Metadata":[{"OS":"IoTUAP"},{"Source":"WindowsOnDevices.com"}]}??' target="_blank">Windows 10 feedback tool <br />(Windows 10 only) &raquo;</a>

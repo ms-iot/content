@@ -1,105 +1,94 @@
 ---
 layout: default
-title: How to Contribute
-permalink: /en-US/Contribute.htm
-lang: en-US
+title: 如何参与
+permalink: /zh-CN/Contribute.htm
+lang: zh-CN
 ---
 
-# How to Contribute
-Thank you for your interest in contributing to the Windows Developer Program for IoT.
+# 如何参与
+感谢你对参与面向 IoT 的 Windows 开发人员计划感兴趣。
 
-We're actively accepting work for the following areas:
+我们正在积极主动地为以下领域接受相关工作：
 
-* <a href="https://github.com/ms-iot/content" target="_blank">Getting Started Guide</a>
+* <a href="https://github.com/ms-iot/content" target="_blank">入门指南</a>
 * <a href="https://github.com/ms-iot/galileo-sdk" target="_blank">Galileo SDK</a>
-* Tutorials
-* Adding or removing pointers to Projects
-* Adding or removing pointers to Library Ports
-* Adding or removing pointers to Arduino Shield Ports
+* 教程
+* 添加或删除指向项目的指针
+* 添加或删除指向库端口的指针
+* 添加或删除指向 Arduino Shield 端口的指针
 
 ___
 
-## References
-1. <a href="https://help.github.com/" title="GitHub documentation" target="_blank">GitHub Documentation</a>
+## 参考
+1. <a href="https://help.github.com/" title="GitHub documentation" target="_blank">GitHub 文档</a>
 1. <a href="https://github.com/github/training-materials/blob/master/downloads/github-git-cheat-sheet.pdf?raw=true" title="Git Cheatsheet!" target="_blank">Git Cheatsheet!</a>
-1. <a href="http://www.git-scm.com/book/en/" title="Git Documentation" target="_blank">Git Documentation</a>
+1. <a href="http://www.git-scm.com/book/en/" title="Git Documentation" target="_blank">Git 文档</a>
 
 ___
 
-## Git Guidelines
+## Git 指南
 
-1. Must be auto-mergable.
-    * You should have done the work so that we can automatically merge your changes with the current state of the repository. Otherwise we will reject your pull-request and wait until you have fixed it.
-1. Never have duplicate commits
+1. 必须是可自动合并的。
+    * 你应该做好相关工作，这样我们便可以自动针对存储库的当前状态合并你的更改。否则，我们将拒绝你的拉取请求，并一直等到你完成修复。
+1. 永远不要重复提交
 ___
 
-## Fork the repository
-1. Create a GitHub account by starting at <a href="https://github.com/" target="_blank">GitHub Home</a>
-1. Go to <a href="https://github.com/" target="_blank">GitHub Home</a> and navigate to the repository you'd like to contribute to, click *Fork*  
-  ![Fork]({{site.baseurl}}/images/GitHubFork.png)
-1. On GitHub, Navigate to your account's fork of the repository
-1. Clone the repository in one of two ways:
-    1. You can use command line <br/>
-    <kbd>git clone [link to .git] [NameYourLocalFolder]</kbd>
-    1. Or launch the GitHub app by clicking 'Clone in Desktop' on the right hand side of the repository  
-    ![Clone]({{site.baseurl}}/images/GitHubClone.png)
+## 分叉存储库
+1. 从 <a href="https://github.com/" target="_blank">GitHub 主页</a>开始创建 GitHub 帐户
+1. 转到 <a href="https://github.com/" target="_blank">GitHub 主页</a>并导航到你想要参与的存储库，单击“分叉” ![分叉]({{site.baseurl}}/images/GitHubFork.png)
+1. 在 GitHub 上，导航至你的帐户的存储库分叉
+1. 用以下两种方式之一克隆存储库：
+    1. 可使用命令行 <br/> <kbd>git clone \[链接至 .git\] \[NameYourLocalFolder\]</kbd>
+    1. 或通过单击存储库 ![克隆]({{site.baseurl}}/images/GitHubClone.png) 右侧的“在桌面中克隆”启动 GitHub 应用
 
 ___
 
-##Using Git
-If you are editing a fork of ms-iot/content, please submit pull request off of develop.<br/>
-If you are editing a fork of ms-iot/galileo-sdk, please submit pull request off of develop.
+##使用 Git
+如果你正在编辑 ms-iot/content 的分叉，请提交开发的拉取请求。<br/> 如果你正在编辑 ms-iot/galileo-sdk 的分叉，请提交开发的拉取请求。
 
-For clarification, what we mean when we say:<br/>
-**local repository:** the cloned repository that you have one on your machine<br/>
-**forked repository:** the fork you made from the main repository. This sits up on github's servers. (Also known as <b>"origin"</b>)<br/>
-**main repository:** the original repository that you forked from. This is the common ms-iot repository hosted on github's servers. (Also known as <b>"upstream"</b>)<br/>
+作为解释，以下描述的含义：<br/> **本地存储库：**你在计算机上所拥有的克隆存储库<br/> **分叉存储库：**你从主存储库中所做的分叉。它位于 github 的服务器上。（也称为 <b>“原点”</b>）<br/> **主存储库：**你从中分叉的原始存储库。这是在 github 服务器上承载的常见 ms-iot 存储库。（也称为 <b>“上游”</b>）<br/>
 
-###Setting up
-1. Set up your upstream
-    * <kbd>git remote add upstream [link to .git]</kbd>
+###设置
+1. 设置上游
+    * <kbd>git 远程添加上游 \[链接至 .git\]</kbd>
 
-###Making changes
-1. Make your edits, build, and test. Use the repository's readme for any specific editing requirements, build instructions, and testing methods.
-    * <kbd>git add [file]</kbd>
-1. Commit your changes to your local repository.
-    * <kbd>git commit -m "[descriptive message]" </kbd>
+###进行更改
+1. 进行编辑、生成和测试。使用任何特定编辑要求、生成说明和测试方法的存储库自述文件。
+    * <kbd>git 添加 \[文件\]</kbd>
+1. 将更改提交到本地存储库。
+    * <kbd>git 提交 -m“\[描述性消息\]”</kbd>
 
-###Submitting a Pull Request
-1. After you submit your first pull request, if you have not already signed a Contribution License Agreement, then our Contribution License Agreement service will request you to sign a Contribution License Agreement. We request you to complete this electronic request. Without completing this step, we unfortunately cannot accept a pull request. You only need to do this once.
-1. Fetch upstream
-    * <kbd>git fetch --all</kbd>
-1. Rebase upstream (This should now put your changes on top of the main repository's history.)
-    * <kbd>git rebase -i upstream/develop</kbd>
-    * This may highlight conflicts that you will have to hand-merge
-        * You can use your favorite merging tool or even notepad for this.
-    * After hand-merging, you can continue the rebase
-        * <kbd>git add [fileYouHandMerged]</kbd>
-        * <kbd>git rebase --continue</kbd>
-1. Force-push your changes to your forked repository.
-    * <kbd>git push -f origin develop</kbd>
-1. Now submit your pull request from your forked repository using the GitHub website.
+###提交拉取请求
+1. 提交首个拉取请求后，如果你尚未签署所占份额许可协议，我们的所占份额许可协议服务将要求你签署。我们将要求你完成此电子要求。若没有完成此步骤，我们无法接受拉取请求，对此我们表示遗憾。此操作只需执行一次。
+1. 提取上游
+    * <kbd>git 提取 --所有</kbd>
+1. 重新设定上游的基址（现在这应将更改放置于主存储库历史记录顶部。）
+    * <kbd>git 重新设定基址 -i 上游/开发</kbd>
+    * 这会突出显示你必须手动合并的冲突。
+        * 为此，可使用最中意的合并工具甚至是记事本。
+    * 手动合并后，可继续重新设定基址
+        * <kbd>git 添加 \[fileYouHandMerged\]</kbd>
+        * <kbd>git 重新设定基址 - 继续</kbd>
+1. 强制 - 将更改推送至分叉存储库。
+    * <kbd>git 推送 -f 原点开发</kbd>
+1. 现在，使用 GitHub 网站从分叉存储库提交你的拉取请求。
 
-###Making changes to a Pull Request
-1. Make your new changes, fetch upstream, rebase upstream, and force-push your changes.
-    * If your pull request was never closed, you should not have to submit a new pull request. It should automatically update.
+###对拉取请求进行更改
+1. 进行新的更改、提取上游、重新设定上游基址并且强制推送更改。
+    * 如果拉取请求从未关闭，无需提交新的拉取请求。它会自动更新。
 
 ___
 
-#Iterating on the Galileo SDK
-Fork  ms-iot/galileo-sdk as described above in the contribute section and follow the README instructions.
+#在 Galileo SDK 上进行迭代
+按如上所述，在参与部分中分叉 ms-iot/galileo-sdk 并遵循 README 说明。
 
 ___
 
-#Best Practices
+#最佳做法
 
-##Do not check in binaries
-Once a binary is added to the repository, it will be there forever.
+##请勿签入二进制文件
+二进制文件添加进存储库后，将永远在那。
 
-Please do not add binaries to Git including:
-* The output from a build (debug/release)
-* SDF file (code database)
-* Nuget package directories
+请勿将二进制文件添加到 Git，包括：\* 生成的输出（调试/发布）\* SDF 文件（代码数据库）\* Nuget 包目录
 
-Acceptable binaries:
-* PNG, JPG, or other image formats
+可接受的二进制文件：\* PNG、JPG 或其他图像格式

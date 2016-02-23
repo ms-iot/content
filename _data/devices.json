@@ -2,7 +2,7 @@
    "en-US":[
       {
          "name":"Raspberry Pi 2",
-         "link":"win10/SetupRPI.htm",
+         "link":"win10/SetupPCRPI.htm",
          "buy":"http://www.raspberrypi.org/products/raspberry-pi-2-model-b/",
          "image":"RPi2_0.png",
          "text":"The Raspberry Pi 2 is a low cost, credit-card sized computer that plugs into a computer monitor or TV, and uses a standard keyboard and mouse. The Raspberry Pi 2 runs Windows 10 IoT Core.",
@@ -11,25 +11,32 @@
       },
       {
          "name":"MinnowBoard Max",
-         "link":"win10/SetupMBM.htm",
+         "link":"win10/SetupPCMBM.htm",
          "buy-inter":"win10/BuyMBM.htm",
          "image":"MBM_0.png",
-         "text":"MinnowBoard MAX is an open hardware embedded board with the Intel Atom E38XX series SOC at its core. MinnowBoard MAX supports Windows 10 IoT Core Insider Preview.",
+         "text":"MinnowBoard MAX is an open hardware embedded board with the Intel Atom E38XX series SOC at its core. MinnowBoard MAX supports Windows 10 IoT Core.",
          "buy-text":"Buy a MinnowBoard Max",
          "start-text":"Start Now"
       },
       {
-         "name":"Galileo",
-         "link":"win8/SetupGalileo.htm",
-         "buy":"http://www.intel.com/content/www/us/en/do-it-yourself/where-to-buy.html#galileo",
-         "image":"Galileo_0.png",
-         "text":"Intel Galileo is the first in a line of Arduino-certified development boards based on Intel x86 architecture and is designed for the maker and education communities. Galileo supports only the previous versions of Windows, not Windows 10 IoT Core.",
-         "buy-text":"Buy a Galileo",
+         "name":"DragonBoard410c",
+         "link":"win10/SetupPCDB410c.htm",
+         "buy":"http://www.arrow.com/dragonboard410c",
+         "image":"DB410c.png",
+         "text":"The DragonBoard™ 410c based on Linaro 96Boards™ specification features the Qualcomm® Snapdragon™ 410 processor, a Quad-core ARM® Cortex™ A53 at up to 1.2GHz clock speed per core, capable of 32-bit and 64-bit operation. WLAN, Bluetooth, and GPS, all packed into a board the size of a credit card.",
+         "buy-text":"Buy a DragonBoard410c",
+         "start-text":"Start Now"
+      },
+      {
+         "name":"Arduino Wiring and UWP Lightning providers",
+         "link":"win10/Lightning.htm",
+         "image":"Lighning_0.png",
+         "text":"To enable the use of existing Arduino Wiring sketches on IoT Core devices, a project template for Arduino Wiring can now be used in Visual Studio. These projects make use of a direct memory mapped driver that offers high performance. Additionally, based on the same driver, a set of controller providers can be used in UWP apps to access GPIO, I2C and SPI controllers that offer high performance.",
          "start-text":"Start Now"
       },
       {
          "name":"Windows Remote Arduino",
-         "link":"win10/SetupWRA.htm",
+         "link":"win10/SetupPCWRA.htm",
          "buy":"http://store.arduino.cc",
          "image":"WindowsPhone_0.png",
          "text":"Windows Remote Arduino is an open-source Windows Runtime Component library which allows Makers to control an Arduino through a Bluetooth or USB connection. It is intended for Windows Runtime developers who want to harness the power of Arduino hardware using the Windows Runtime languages. Developers who include this component in their projects will automatically have access to its features in any of the WinRT languages (C++/CX, C# and JavaScript).",
@@ -38,59 +45,66 @@
       },
       {
          "name":"Windows Virtual Shields for Arduino",
-         "link":"win10/SetupWVSA.htm",
+         "link":"win10/SetupPCWVSA.htm",
          "buy":"http://store.arduino.cc",
          "image":"Arduino_1.png",
          "text":"Windows Virtual Shields for Arduino is an open-source library primarily for the Arduino UNO which communicates with an open-source Universal Windows application running on all Windows 10 devices, including Windows Lumia phones. The library exposes Lumia phones' sensors and capabilities to the an Arduino Wiring Sketch.",
          "buy-text":"Buy an Arduino",
          "start-text":"Start Now"
       }
-   ],   
+   ],
    "zh-CN":[
       {
          "name":"Raspberry Pi 2",
-         "link":"win10/SetupRPI.htm",
+         "link":"win10/SetupPCRPI.htm",
          "buy":"http://www.raspberrypi.org/products/raspberry-pi-2-model-b/",
          "image":"RPi2_0.png",
-         "text":"Raspberry Pi 2 是一个低成本、信用卡大小的计算机，支持外接显示器或电视，及标准键盘和鼠标。Raspberry Pi 2支持运行Windows 10 IoT Core。",
+         "text":"Raspberry Pi 2 是一种低成本、信用卡大小的计算机，可插入计算机显示器或电视机，并且使用标准键盘和鼠标。Raspberry Pi 2 运行 Windows 10 IoT 核心版。",
          "buy-text":"购买 Raspberry Pi 2",
-         "start-text":"现在开始"
+         "start-text":"立即开始"
       },
       {
          "name":"MinnowBoard Max",
-         "link":"win10/SetupMBM.htm",
+         "link":"win10/SetupPCMBM.htm",
          "buy-inter":"win10/BuyMBM.htm",
          "image":"MBM_0.png",
-         "text":"MinnowBoard Max 是一个硬件开放的嵌入式主板，采用英特尔凌动E38XX系列SOC核心。 MinnowBoard Max支持运行Windows 10 IoT Core Insider Preview。",
-         "buy-text":"Buy a MinnowBoard Max",
-         "start-text":"现在开始"
+         "text":"MinnowBoard MAX 是一款采用 Intel Atom E38XX 系列 SOC 作为其核心的开放硬件嵌入式板。MinnowBoard MAX 支持 Windows 10 IoT 核心版。",
+         "buy-text":"购买 MinnowBoard MAX",
+         "start-text":"立即开始"
       },
       {
          "name":"Galileo",
-         "link":"win8/SetupGalileo.htm",
+         "link":"win8/SetupPC.htm",
          "buy":"http://www.intel.com/content/www/us/en/do-it-yourself/where-to-buy.html#galileo",
          "image":"Galileo_0.png",
-         "text":"Intel Galileo 是基于Intel x86架构并且兼容Arduino的开发板，主要为创客和教育社区设计。伽利略只支持上一代Windows，不支持Windows 10 IoT Core。",
+         "text":"Intel Galileo 是首款基于 Intel x86 体系结构的 Arduino 认证开发板，专为制造商和教育群体而设计。Galileo 仅支持以前版本的 Windows，不支持 Windows 10 IoT 核心版。",
          "buy-text":"购买 Galileo",
-         "start-text":"现在开始"
+         "start-text":"立即开始"
       },
       {
          "name":"Windows Remote Arduino",
-         "link":"win10/SetupWRA.htm",
+         "link":"win10/SetupPCWRA.htm",
          "buy":"http://store.arduino.cc",
          "image":"WindowsPhone_0.png",
-         "text":"Windows Remote Arduino 是一个开源的Windows Runtime组件库，使创客能够通过蓝牙或USB连接来控制Arduino设备。其目的是使开发者能够方便的使用Windows Runtime编写程序来发挥Arduino相关硬件的力量。开发者只需在项目中引用这个组件库，就可以应用其功能于任何WinRT语言中（C++/ CX，C#和JavaScript）。",
+         "text":"Windows Remote Arduino 是一款开源 Windows 运行时组件库，可允许制造商通过蓝牙或 USB 连接控制 Arduino。它适用于希望使用 Windows 运行时语言控制 Arduino 硬件电源的 Windows 运行时开发人员。在其项目中包含此计算机的开发人员将自动获得使用任何 WinRT 语言（C++/CX、C# 和 JavaScript）访问其功能的权限。",
          "buy-text":"购买 Arduino",
-         "start-text":"现在开始"
+         "start-text":"立即开始"
       },
       {
          "name":"Windows Virtual Shields for Arduino",
-         "link":"win10/SetupWVSA.htm",
+         "link":"win10/SetupPCWVSA.htm",
          "buy":"http://store.arduino.cc",
          "image":"Arduino_1.png",
-         "text":"Windows Virtual Shields for Arduino是一个开源库，其目的是让Arduino UNO与一个开源的Universal Windows app进行通信，这个app可以运行在所有的Windows 10设备上，包括Windows Lumia手机。该库能够将Lumia手机的各种传感器和功能暴漏给Arduino Wiring Sketch使用。",
+         "text":"Windows Virtual Shields for Arduino 是一个开源库，主要用于与在所有 Window 10 设备（包括 Windows Lumia 手机）上运行的通用 Windows 应用程序通信的 Arduino UNO。该库向 Arduino Wiring Sketch 公开 Lumia 手机的传感器和功能。",
          "buy-text":"购买 Arduino",
-         "start-text":"现在开始"
+         "start-text":"立即开始"
+      },
+      {
+         "name":"Arduino Wiring and UWP Lightning providers",
+         "link":"win10/Lightning.htm",
+         "image":"Lighning_0.png",
+         "text":"To enable the use of existing Arduino Wiring sketches on IoT Core devices, a project template for Arduino Wiring can now be used in Visual Studio. These projects make use of a direct memory mapped driver that offers high performance. Additionally, based on the same driver, a set of controller providers can be used in UWP apps to access GPIO, I2C and SPI controllers that offers high performance.",
+         "start-text":"立即开始"
       }
    ]
 }

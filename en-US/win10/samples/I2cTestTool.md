@@ -7,6 +7,8 @@ lang: en-US
 
 ## I2cTestTool Sample
 
+{% include VerifiedVersion.md %}
+
 [View the code on Github](https://github.com/ms-iot/samples/blob/develop/I2cTestTool/main.cpp)
 
 I2cTestTool is a utility for interacting with I2C devices on the command
@@ -15,16 +17,28 @@ from command line applications. The resulting tool is a useful debugging aid.
 
 ### Usage
 
-    i2ctesttool.exe SlaveAddress [FriendlyName]
-    
+    I2cTestTool: Command line I2C testing utility
+    Usage: I2cTestTool.exe [-list] SlaveAddress [FriendlyName]
+
+      -list          List available I2C controllers and exit.
       SlaveAddress   The slave address of the device with which you
                      wish to communicate. This is a required parameter.
       FriendlyName   The friendly name of the I2C controller over
                      which you wish to communicate. This parameter is
                      optional and defaults to the first enumerated
-                     I2C controller. 
+                     I2C controller.
+
+    Examples:
+      List available I2C controllers and exit:
+        I2cTestTool.exe -list
+
+      Open connection on the first enumerated controller to slave address 0x57:
+        I2cTestTool.exe 0x57
+
+      Open connection on I2C1 to slave address 0x57:
+        I2cTestTool.exe 0x57 I2C1
          
-     Commands:
+    Commands:
      > write { 00 11 22 .. FF }         Write bytes to the device
      > read N                           Read N bytes
      > writeread { 00 11 .. FF } N      Write bytes, restart, read N bytes
@@ -97,7 +111,7 @@ consumes WinRT components with C++/CX.
    In the Configurations dropdown, select `All Configurations` and in the Platform
    dropdown, select `All Platforms`.
 1. Go to `C/C++ -> General` and set `Consume Windows Runtime Extensions` to `Yes`, and
-   `Additional #using Directories` to `$(VCInstallDir)vcpackages;$(WindowsSdkDir_UAP)UnionMetadata;%(AdditionalUsingDirectories)`
+   `Additional #using Directories` to `$(VCInstallDir)vcpackages;$(WindowsSdkDir)UnionMetadata;%(AdditionalUsingDirectories)`
 
    ![Consume Windows Runtime Extensions]({{site.baseurl}}/images/I2cTestTool/ConsumeWinRT.png)
     

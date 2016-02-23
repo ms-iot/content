@@ -13,17 +13,20 @@ lang: en-US
 
         <a href="#features"><h4>Features</h4></a>
 
+        <a href="#commercialization"><h4>Commercialization</h4></a>
+
         <a href="#galileo"><h4>Intel Galileo</h4></a>
 
         <a href="#errors"><h4>Errors</h4></a>
+
+        <a href="#mbm_usb_port"><h4>MinnowBoard Max</h4></a>
+
+        <a href="#dragonboard"><h4>DragonBoard</h4></a>
     </div>
 
     <div class="col-md-8 col-md-offset-4 col-xs-8 col-xs-offset-4 section-heading">
         <a name="rpi2"></a>
         <h2 class="faq-h2">Setting up Raspberry Pi</h2>
-        <p class="bold"><em>I can't download the Windows 10 IoT Core Insider Preview image for Raspberry Pi. I see a blank screen.</em></p>
-        <p>We release the Windows 10 IoT Core for Raspberry Pi 2 through our program on Microsoft Connect, which also provides a platform for bug reporting and providing feedback. To be able to download the image, you need to be signed up for our program on Microsoft Connect <u>and</u> signed in. If you have not signed up for our program on Microsoft Connect yet, please <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558" target="_blank">click here to sign up</a>. You can find step-by-step instructions for signing up or using Microsoft Connect <a href="http://ms-iot.github.io/content/SigninMSConnect.htm" target="_blank">here</a>. If you have already signed up for this program on Microsoft Connect, and try to sign up again, don't worry. You will just see a blank page.</p>
-        <p>Please make sure you are signed in to Microsoft Connect before trying to download the image.</p>
         <p class="bold"><em>Why does my screen appear cropped or stretched?</em></p>
         <p>This can happen on some monitors. To work around this force the board into DVI mode (vs. HDMI mode).  You can read more about this <a href='https://www.raspberrypi.org/forums/viewtopic.php?t=5851'>here</a>. Mount the SD card to a local PC and proceed to edit the file in the EFIESP partition. For example if the partition is marked as H drive, edit H:\config.txt by adding the following line.<br/><br/>
         <pre>hdmi_group=2                # forces DVI timing to be used</pre>
@@ -57,24 +60,38 @@ lang: en-US
         <p class="bold"><em>Are true console apps supported on Windows 10 IoT Core?</em></p>
         <p>True “console” apps aren’t really going to be supported for the IoT core OS, headless or not. You can still deploy and run a standard win32 console app here, it just won’t be connected to any on-device console. When running headless you should just get that black screen. When running headed the only supported UI is via the UWP UI stacks (XAML, HTML, DirectX).</p>
         <br />
+        <p class="bold"><em>Which languages can be used to create UWP apps that can run on Windows 10 IoT Core?</em></p>
+        <p>You can develop your UWP apps in C#, C++, JavaScript, VB, Node.js, Python and Arduino Wiring.</p>
+        <br />
         <a name="features"></a>
         <h2 class="faq-h2">Features</h2>
         <p class="bold"><em>Is WiFi supported on Windows 10 IoT Core?</em></p>
-        <p>We are in the process of getting WiFi ready, but it is not in the build that is currently publicly available.</p>
+        <p>WiFi support for some adapters is now available in the public release of Windows 10 IoT Core. Click <a href="http://ms-iot.github.io/content/en-US/win10/SetupWiFi.htm">here</a> to learn more.</p>
         <br />
         <p class="bold"><em>Is Bluetooth currently supported on Windows 10 IoT Core?</em></p>
-        <p>We are in the process of getting Bluetooth ready, but it is not in the build that is currently publicly available.</p>
+        <p>Bluetooth support for some dongles is now available in the public release of Windows 10 IoT Core. Click <a href="http://ms-iot.github.io/content/en-US/win10/Bluetooth.htm">here</a> to learn more</p>
+        <br />
+        <a name="commercialization"></a>
+        <h2 class="faq-h2">Commercialization</h2>
+        <p class="bold"><em>Can I commercialize my Proof of Concept on Windows 10 IoT Core?</em></p>
+        <p>Yes. If you already have a Proof of Concept with Windows 10 IoT Core, <a href="http://go.microsoft.com/fwlink/?LinkId=708649" target="_blank">click here</a> to find your options on how to commercialize your device.</p>
         <br />
         <a name="galileo"></a>
         <h2 class="faq-h2">Intel Galileo</h2>
-        <p class="bold"><em>Can I run Windows 10 IoT Core on the Intel Galileo Gen 1 or Gen 2 board?</em></p>
-        <p>We have no plans to bring Windows 10 to the Intel Galileo board at this time. </p>
+        <p class="bold"><em>Will you continue to support the Windows Developer Program for IoT for Intel Galileo?</em></p>
+        <p>No. We continue to focus on providing a great experience for Makers with Windows 10 IoT Core. While we’ve seen some fantastic innovation with the platform, unfortunately it does not meet the minimum hardware requirements for Windows 10 IoT Core.</p>
         <br />
-        <p class="bold"><em>Will you continue to support the Windows Developer Program for IoT for Galileo?</em></p>
-        <p>We’ve been overwhelmed by the interest in our Windows 8.1 based program and appreciate all the incredible feedback the community has provided. While there will be no new feature development for the Galileo release we will continue to support this release for as long as significant community activity exists.</p>
+		<p class="bold"><em>When will the support for Windows on Galileo end?</em></p>
+        <p>The support for Windows on Galileo has ended on November 30, 2015.</p>
+        <br />
+		<p class="bold"><em>What can I do with my existing projects on Galileo?</em></p>
+        <p>Wiring support is now available on Windows 10 IoT Core running on Raspberry Pi 2. This allows you to migrate your existing Galileo projects to Windows 10 IoT Core.</p>
         <br />
         <a name="errors"></a>
         <h2 class="faq-h2">Errors</h2>
+        <p class="bold"><em>When I try to build a project, I see this error: <br />“The package Microsoft.CSharp with version 4.0.0 could not be found in C:\Users\...\.nuget\packages. Run a NuGet package restore to download the package.” <br />How do I resolve this?</em></p>
+        <p>Be sure your project has a saved solution file (*.sln). The Nuget package manager requires a saved solution file to update the Nuget dependencies. You can ensure that a solution file exists by selecting File > Save All.</p>
+        <br />
         <p class="bold"><em>I’ve downloaded the RPi2.ffu image and tried to apply image from the administrator prompt using this command:<br />dism.exe /Apply-Image /ImageFile:Rpi2.ffu /ApplyDrive:\\.\PhysicalDrive1 /SkipPlatformCheck<br />I am getting the following error:<br />c:\Temp>dism.exe /Apply-Image /ImageFile:Rpi2.ffu /ApplyDrive:\\.\PhysicalDrive1  /SkipPlatformCheck<br /><br />
         Deployment Image Servicing and Management tool<br />
         Version: 6.3.9600.17031<br /><br />
@@ -92,10 +109,6 @@ lang: en-US
         <p>There is a known issue being actively investigated that sporadically occurs on some SD cards.  This can be worked around using the following command via a PowerShell session with the device:
         <div>reg add "hklm\software\microsoft\visualstudio\debugger" /v EmulateExclusiveBreakpoints /t REG_DWORD /d 0</div>        </p>
         <br />
-        <p class="bold"><em>My C#/VB UWP App successfully builds, deploys and launches using Visual Studio, but when I use iotstartup.exe to make my App the 'Startup App' all I see is the splash screen.  How do I resolve this?</em></p>
-        <p>There is a known issue being actively investigated that occurs with C#/VB Apps as the 'Startup App'.  This can be worked around by changing your App's configuration to Release (rather than Debug) and redeploying
-        to your device.  Note that another workaround is to use C++ rather than C#/VB.</p>
-        <br />
         <br />
         <p class="bold"><em>My C#/VB UWP App successfully builds, deploys but fails to start with the error "Unable to activate Windows Store App [appX]. The activation request failed with error 'The wait operation timed out'.  How do I resolve this?</em></p>
         <p>This occurs if you have put Pi2 into headless mode instead of headed mode. To put this back to headed mode issue the following command from powershell </p>
@@ -103,14 +116,25 @@ lang: en-US
         <br />
         <br />
         <p class="bold"><em>My Node.js UWP project fails to load after installing the latest release (NTVS Bundle VS 2015.exe v1.0).  How do I resolve this?</em></p>
-        <p>If you installed the first version of NTVS IoT Extension Beta, and then install the latest release which is bundled in NTVS Bundle VS 2015, you will see 
-        a project load error. The error will be something like "The imported project "...\Microsoft.NodejsUap.targets" was not found". To resolve this problem, do 
+        <p>If you installed the first version of NTVS IoT Extension Beta, and then install the latest release which is bundled in NTVS Bundle VS 2015, you will see
+        a project load error. The error will be something like "The imported project "...\Microsoft.NodejsUap.targets" was not found". To resolve this problem, do
         the following:
         <ul><li>Right click on the project and select Edit &lt;Your Project Name&gt;.</li>
         <li>Look for "NodejsUap" in the project file, replace it with "NodejsUwp", and save.</li></ul>
         If you attempt to deploy the app, it will crash immediately. To fix this:
         <ul><li>Open Package.appxmanifest.</li>
         <li>Replace all occurences of "winuniversalnode" with "nodeuwp" and save.</li></ul></p>
+        <br />
+		<a name="mbm_usb_port"></a>
+        <h2 class="faq-h2">MinnowBoard Max</h2>
+        <p class="bold"><em>Known issues with the top USB port</em></p>
+        <p>You may experience degrading performance and lack of key functionality with USB devices plugged into the top port.  At this time we suggest using only the bottom port for USB peripherals.  We are currently investigating this issue.</p>
+        <br />
+
+    <a name="dragonboard"></a>
+        <h2 class="faq-h2">DragonBoard</h2>
+        <p class="bold"><em>USB Issues</em></p>
+        <p>The Dragonboard is not capable of powering more than one USB device and needs a powered USB hub when connecting multiple devices to the same USB port.</p>
         <br />
     </div>
 </div>
