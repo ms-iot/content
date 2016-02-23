@@ -42,7 +42,7 @@ Initializes your adapter. This can be used anyway you need.  For example, a back
 
 This pair of methods are used for accessing your adapter's configuration data.  Typically, these settings consist of communication settings that your adapter needs for device enumeration, but they are not limited to that purpose.  
 
-The bridge exposes adapter configuration data to AllJoyn through the “com.microsoft.alljoynmanagement.config” interface.  From the bridge's perspective, adapter configuration data settings are completely arbitrary and are exchanged with the adapter as a simple byte array.  Internally to the adapter, you may store these settings as desired.   
+The bridge exposes adapter configuration data to AllJoyn through the "com.microsoft.alljoynmanagement.config" interface.  From the bridge's perspective, adapter configuration data settings are completely arbitrary and are exchanged with the adapter as a simple byte array.  Internally to the adapter, you may store these settings as desired.   
 
 #### IAdapter::EnumDevices
 

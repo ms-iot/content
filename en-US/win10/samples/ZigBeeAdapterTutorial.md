@@ -68,7 +68,7 @@ Please look at the tool help to get more details about the tool (https://docs.di
 ## Let ZigBee devices join your ZigBee network
 Once the XBee ZigBee module has been configured you can build your ZigBee network and let your ZigBee devices join. In order to do that you just need to power up your ZigBee devices. ZigBee Light Link (aka ZLL) and Home Automation devices will, by default and if not already part of a ZigBee network, try to join a ZigBee network which permit join is enabled. Since the XBee ZigBee module has been configured to always enable permit join, the ZigBee devices will join your network. 
 
-You can verify that devices have by using “network discovery” feature of XCTU tool.
+You can verify that devices have by using "network discovery" feature of XCTU tool.
 
 ![ZigBeeJoinNetVerif]({{site.baseurl}}/Resources/images/ZigBee/ZigBeeJoinNetVerif.png)
 
@@ -101,7 +101,7 @@ ZigBee adapter is written in C# and exposes ZigBee devices on AllJoyn through Br
 ![ZigBee2AllJoynMapping]({{site.baseurl}}/Resources/images/ZigBee/ZigBee2AllJoynMapping.png)
 
 ### IoT Explorer for AllJoyn view of Philips Hue light bulb
-Philips Hue light bulb has 1 endpoint which has several clusters: Identify, Scene, Group, OnOff and LevelControl. ZigBee adapter only handles the OnOff and LevelControl clusters hence will only expose them to AllJoyn. Below is IoT Explorer for AllJoyn view of what is exposed on AllJoyn. Path to “On” command is highlighted in green, path to “OnOff” status is highlighted in red.
+Philips Hue light bulb has 1 endpoint which has several clusters: Identify, Scene, Group, OnOff and LevelControl. ZigBee adapter only handles the OnOff and LevelControl clusters hence will only expose them to AllJoyn. Below is IoT Explorer for AllJoyn view of what is exposed on AllJoyn. Path to "On" command is highlighted in green, path to "OnOff" status is highlighted in red.
 
 ![AJXPhilipsHue1]({{site.baseurl}}/Resources/images/ZigBee/AJXPhilipsHue1.png)
 
@@ -125,7 +125,7 @@ The __ZigBeeDevice__ class represents a ZigBee device. This class has no interfa
 
 The __ZigBeeEndPoint__ class represents an EndPoint of a ZigBee device. This class derives from __IAdapterDevice__ (BridgeRT interface) and contains an instance of the __BasicCluster__ and a collection __ZclCluster__ instance. To be more accurate it contains a collection of cluster classes, e.g.: __OnOffCluster__, which derive from the abstract __ZclCluster__ class.
 
-The cluster classes, e.g.: __BasicCluster__, __OnOffCluster__, represent a ZCL cluster. Each cluster class is a “specific” implementation of the __ZclCluster__ abstract class.
+The cluster classes, e.g.: __BasicCluster__, __OnOffCluster__, represent a ZCL cluster. Each cluster class is a "specific" implementation of the __ZclCluster__ abstract class.
  
 The __ZclCluster__ class is an abstract class that derives from __IAdapterProperty__ (BridgeRT interface) and contains a collection of __ZclAttribute__ instances and a collection of __ZclCommand__ instances. A specific implementation of ZclCluster simply consists in defining the list of ZclAttribute and ZclCommand that should be supported for that specific cluster.
 
@@ -133,7 +133,7 @@ The __ZclAttribute__ class represents an attribute as defined in ZCL standard. T
 
 The __ZclCommand__ class represents a command as defined in ZCL standard. This class derives from __IAdapterMethod__ (BridgeRT interface) and from __ZigBeeCommand__ class. This class contains list of input and output parameters. These parameters are actually __IAdapterValue__ class which is a BridgeRT interface.
 
-The __ZigBeeCommand__ class is an Abstract class that is used to send and receive ZDO or ZCL command. Preparing (or parsing) the ZCL or ZDO payload that XBeeModule will send to XBee module (or receive from XBeeModule) is a shared task between ZigBeeCommand class for its “generic” part and the derived class of ZigBeeCommand for the specific part. 
+The __ZigBeeCommand__ class is an Abstract class that is used to send and receive ZDO or ZCL command. Preparing (or parsing) the ZCL or ZDO payload that XBeeModule will send to XBee module (or receive from XBeeModule) is a shared task between ZigBeeCommand class for its "generic" part and the derived class of ZigBeeCommand for the specific part. 
 
 ZDO command classes such as __ManagementLQI__ class, __ActiveEndPoints__ class… are used to discover the ZigBee network and the ZigBee devices and end points. These classes derive from __ZigBeeCommand__ class.
 
@@ -152,14 +152,14 @@ AT command classes such as __AO_Command__,  __HV_Command__…  are used by XBeeM
 5. GetBytesFromModule will parse the XBee part of the frame and check if the response received has a matching command. If so if will call the ParseResponse callback of the relevant command and then signal the reception of the response to that command. 
 
 ### Receiving ZDO or ZCL command 
-ZigBee device can send ZDO or ZCL command to the XBee module, e.g.: device announce ZDO command which is sent when a device wakes up or join the network, report attribute ZCL command when an attribute of a ZCL cluster is reportable… This kind of command are not sent in response to another command and can be seen as “notification” by ZigBee adapter.  
+ZigBee device can send ZDO or ZCL command to the XBee module, e.g.: device announce ZDO command which is sent when a device wakes up or join the network, report attribute ZCL command when an attribute of a ZCL cluster is reportable… This kind of command are not sent in response to another command and can be seen as "notification" by ZigBee adapter.  
 
 ![ReceiveZdoZcl]({{site.baseurl}}/Resources/images/ZigBee/ReceiveZdoZcl.png)
 
 1. Adapter class will build a list of notifications it can receive upon initialization. This list contains instances of specific ZigBeeCommand such as DeviceAnnce, ZclReportAttribute.
 2. Upon reception of complete frame from the XBee module, the reception thread of the SerialController will call GetBytesFromModule callback of XBeeModule.
 3. GetBytesFromModule will parse the XBee part of the frame and check if it's a response to a command that has been sent (see previous section). If not, it will go through the notification list and call the ParseResponse method of each element until one accept the frame or none have accepted. If none have accepted, the frame will be thrown away. 
-4. What ParseResponse does is specific to each implementation of the ZigBeeCommand class. For example, the ParseResponse method of the DeviceAnnce class will get the 64 bit address (aka MAC address) and 16 bit address and may be more information about the signaled device and then send “device arrival” signal to BridgeRT (note that several classes are used to achieve that, see code for more). 
+4. What ParseResponse does is specific to each implementation of the ZigBeeCommand class. For example, the ParseResponse method of the DeviceAnnce class will get the 64 bit address (aka MAC address) and 16 bit address and may be more information about the signaled device and then send "device arrival" signal to BridgeRT (note that several classes are used to achieve that, see code for more). 
 
 ### Creating a new ZCL cluster class
 ZigBee adapter doesn't implement all clusters defined by ZCL. There will be cases where the ZigBee device you want to interact with won't be supported by ZigBee adapter. In such a case you will need to add support for the missing clusters. 

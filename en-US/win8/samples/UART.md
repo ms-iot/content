@@ -36,7 +36,7 @@ Learn how to use HardwareSerial to read and write to the UART port.
 	* <kbd>bcdedit /store k:\efi\microsoft\boot\bcd /set {default} debug No</kbd>
 	* <kbd>bcdedit /store k:\efi\microsoft\boot\bcd /set {default} testsigning OFF</kbd>
 	* <kbd>bcdedit /store k:\efi\microsoft\boot\bcd /enum</kbd>
-	* Verify debug and testsigning are now “No”
+	* Verify debug and testsigning are now "No"
 1. Safe dismount of microSD from PC by ejecting in Windows Explorer.
 1. Put microSD in Galileo and powered up
 

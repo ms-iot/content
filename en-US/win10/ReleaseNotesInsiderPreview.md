@@ -33,13 +33,13 @@ You can review linked terms by pasting the forward link into your browser window
 ## Release Notes
 
 #### .NET Native Tool Chain
-Enabling “Compile with .NET Native tool chain” may cause applications to fail deployment due to errors with the deployment of .NET Native runtime. 
+Enabling "Compile with .NET Native tool chain" may cause applications to fail deployment due to errors with the deployment of .NET Native runtime. 
 
 #### Bluetooth Pairing (6162324)
 Bluetooth devices may not show properly in the Bluetooth pairing web management interface. 
 
 #### Minnowboard Max Boot and Firmware Update
-The MinnowBoard Max will not boot unless the firmware is version .082 or later. The minimum recommended version of the firmware is “MinnowBoard MAX 0.83 32-Bit”. Firmware updates can be downloaded from [http://go.microsoft.com/fwlink/?LinkId=708613](http://go.microsoft.com/fwlink/?LinkId=708613){:target="_blank"}.
+The MinnowBoard Max will not boot unless the firmware is version .082 or later. The minimum recommended version of the firmware is "MinnowBoard MAX 0.83 32-Bit". Firmware updates can be downloaded from [http://go.microsoft.com/fwlink/?LinkId=708613](http://go.microsoft.com/fwlink/?LinkId=708613){:target="_blank"}.
 
 #### Default Administrator User Name and Password
 The default administrator user name and password are hard coded in the Windows 10 IoT Core image. This is a security risk for the device, and it should not be exposed to an open internet connection until the password has been changed.
@@ -63,7 +63,7 @@ Hardware volume controls for USB microphones and speakers which depend on Window
 Some USB keyboards and mice may not work on IoT COre. Use a different keyboard or mouse. A list of validated peripheral devices can be found on the documentation at [http://go.microsoft.com/fwlink/?LinkId=619428](http://go.microsoft.com/fwlink/?LinkId=619428){:target="_blank"}.
 
 #### Screen Orientation
-Setting the orientation to “Portrait” may not be honored in a Universal App
+Setting the orientation to "Portrait" may not be honored in a Universal App
 
 #### Referencing Adapters with AllJoyn Templates
 Attempting to add references to AllJoyn adapter projects may result in errors when using specific SDK versions.  To resolve these errors, change Visual Studio’s target platform to match the current SDK version, then reload the project.
@@ -76,7 +76,7 @@ bcedit /set debug off
 #### <a name="wifidirect"></a>WiFi Direct limitations on IoTCore
 1. The IoTCore device has to be the connecting device – it will not work as the advertising device with another device initiating the connection.  
 2. Advanced pairing must be used.  The sample app demonstrates how to use the advanced pairing API’s to pair the devices prior to connecting.
-3. Not all wireless adapters support WiFi direct. We have tested and validated that the “Realtek RTL8188EU Wireless Lan 802.11n USB 2.0 Network adapter” works, but other adapters may not be supported.
+3. Not all wireless adapters support WiFi direct. We have tested and validated that the "Realtek RTL8188EU Wireless Lan 802.11n USB 2.0 Network adapter" works, but other adapters may not be supported.
  
 #### Non-default drive mode (3890679)
 On Raspberry Pi and Dragonboard, switching from a non-default drive mode to a different non-default drive mode may produce a glitch on the GPIO pin. WORKAROUND: Set drive mode once at the beginning of the application.
@@ -85,7 +85,7 @@ On Raspberry Pi and Dragonboard, switching from a non-default drive mode to a di
 The Default startup app may conflict with itself when it is also deployed from Visual Studio. WORKAROUND: Change the default startup app to an application other than that you wish to deploy.
 
 #### BackgroundMediaPlayer.MessageReceivedFromForeground may crash (2199869)
-The following line of code may crash: “BackgroundMediaPlayer.MessageReceivedFromForeground += OnMessageReceivedFromForeground;”. To prevent the crash, add this code so that it is executed first “var player = BackgroundMediaPlayer.Current;”
+The following line of code may crash: "BackgroundMediaPlayer.MessageReceivedFromForeground += OnMessageReceivedFromForeground;". To prevent the crash, add this code so that it is executed first "var player = BackgroundMediaPlayer.Current;"
 
 #### Data breakpoints have been disabled on the Raspberry Pi2 (4266252). 
 No workaround at this time

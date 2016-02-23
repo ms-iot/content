@@ -33,7 +33,7 @@ This tutorial demonstrates the function of the AllJoyn Device System Bridge (DSB
 
 ![set_startup]({{site.baseurl}}/Resources/images/MockAdapter/mockadapter_vs.png)
 
-4. 	In the Main menu bar, select “Debug” -> HeadlessAdapterApp properties…”
+4. 	In the Main menu bar, select "Debug" -> HeadlessAdapterApp properties…"
 5.	Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#cpp)
 
 ## Controlling the Mock Devices via IoT Explorer for Alljoyn

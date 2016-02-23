@@ -17,7 +17,7 @@ This document describes the setup of the BACnet Adapter for Device System Bridge
 ## What is BACnet?
 
 BACnet is a communications protocol for building automation and control networks. It is an [ASHRAE](http://www.bacnet.org){:target="_blank"}, ANSI, and ISO 16484-5 standard protocol. BACnet was designed to allow communication of building automation and control systems for applications such as heating, ventilating, and air-conditioning control (HVAC), lighting control, access control, and fire detection systems and their associated equipment. The BACnet protocol provides mechanisms for computerized building automation devices to exchange information, regardless of the particular building service they perform.
-BACnet is an object based standard. A BACnet device contains a set of objects. A BACnet object is a collection of information within a device. A typical object has a collection of properties, based on the function and purpose of the object. A BACnet Device is represented as a “Device Object” which is simply a collection of objects that represents the functions actually present in a given real device. 
+BACnet is an object based standard. A BACnet device contains a set of objects. A BACnet object is a collection of information within a device. A typical object has a collection of properties, based on the function and purpose of the object. A BACnet Device is represented as a "Device Object" which is simply a collection of objects that represents the functions actually present in a given real device. 
 
 See [BACnet standard](http://www.bacnet.org){:target="_blank"} for more information about BACnet...
 

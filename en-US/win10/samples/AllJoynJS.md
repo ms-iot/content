@@ -93,7 +93,7 @@ AllJoyn.JS provides a hardware-independent abstraction layer for GPIO and other 
 
 - Pins are labeled pin[0] through pin[N]
 - To enumerate information for all the pins on a device  
- `for (var i = 0; i < IO.pin.length; ++i) { print(IO.pin[i].info.description, “ “, IO.pin[i].functions)); };`
+ `for (var i = 0; i < IO.pin.length; ++i) { print(IO.pin[i].info.description, " ", IO.pin[i].functions)); };`
 
 - The I/O module currently has the following functions for configuring pins:  
    *digitalIn(), digitalOut()*
@@ -102,7 +102,7 @@ AllJoyn.JS provides a hardware-independent abstraction layer for GPIO and other 
   `var button = IO.digitalIn(IO.pin[2], IO.pullUp)`
 
 - A trigger function can be set on a digital input pin. The trigger function can be configured to be called when the pin state changes.  
-  `button.setTrigger(IO.risingEdge, function(){print(“button up”)})`
+  `button.setTrigger(IO.risingEdge, function(){print("button up")})`
 
 - Digital input and output pins have a level property that can be set and read. An optional initial value can be provided for digital output pins.  
 `var led = IO.digitalOut(IO.pin[2], 1);

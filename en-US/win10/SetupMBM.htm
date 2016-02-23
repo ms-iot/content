@@ -19,7 +19,7 @@
       <li><b>NOTE:</b> If you don't have a local wired network, see <a href="{{site.baseurl}}/{{page.lang}}/win10/ConnectToDevice.htm" target="_blank">here</a> for additional connection options.</li>
     </ul>
   </li>
-  <p><img alt=”minnowboard max connections” src="{{site.baseurl}}/Resources/images/mbm.bmp" class="device-images"/></p>
+  <p><img alt="minnowboard max connections" src="{{site.baseurl}}/Resources/images/mbm.bmp" class="device-images"/></p>
 </ol>
 
 <h3>Update Your Device Firmware</h3>
@@ -67,15 +67,15 @@
 <ol class="setup-content-list">
   <li>
     <p>Download a Windows 10 IoT Core image from our <a href="{{site.baseurl}}/{{page.lang}}/Downloads.htm" target="_blank">downloads page</a>. Save the ISO to a local folder.</p>
-    <p><img alt=”screenshot: iso for windows 10 iot core for minnowboard max” class="image-border" src="{{site.baseurl}}/Resources/images/mbm_iso.png" /></p>
+    <p><img alt="screenshot: iso for windows 10 iot core for minnowboard max" class="image-border" src="{{site.baseurl}}/Resources/images/mbm_iso.png" /></p>
   </li>
   <li>
     <p>Double clicking on the ISO (IoT Core MBM.iso) will automatically mount it as a virtual CD drive so you can access the contents.</p>
-    <p><img alt=”screenshot: msi for windows 10 iot core for minnowboard max” class="image-border" src="{{site.baseurl}}/Resources/images/mbm_msi.PNG" /></p>
+    <p><img alt="screenshot: msi for windows 10 iot core for minnowboard max" class="image-border" src="{{site.baseurl}}/Resources/images/mbm_msi.PNG" /></p>
   </li>
   <li>
     <p>Install <b>Windows_10_IoT_Core_Mbm.msi</b>. When installation is complete, flash.ffu will be located at <b>C:\Program Files (x86)\Microsoft IoT\FFU\MinnowBoardMax</b>.</p>
-    <p><img alt=”screenshot: ffu for windows 10 iot core for minnowboard max” class="image-border" src="{{site.baseurl}}/Resources/images/mbmffu.PNG"/></p>
+    <p><img alt="screenshot: ffu for windows 10 iot core for minnowboard max" class="image-border" src="{{site.baseurl}}/Resources/images/mbmffu.PNG"/></p>
   </li>
   <li>Eject the Virtual CD when installation is complete - this can be done by navigating to the top folder of File Explorer, right clicking on the virtual drive, and selecting "Eject".</li>
 </ol>
@@ -85,12 +85,12 @@
   <li>Insert a Micro SD Card into your SD card reader.</li>
   <li>
     <p>Use IoTCoreImageHelper.exe to flash the SD card. Search for "WindowsIoT" from start menu and select the shortcut "WindowsIoTImageHelper".</p>
-    <p><img alt=”screenshot: search for IoTCoreImageHeloper.exe to flash the sd card” src="{{site.baseurl}}/Resources/images/ImagerHelperSearch.PNG"/></p>
+    <p><img alt="screenshot: search for IoTCoreImageHeloper.exe to flash the sd card" src="{{site.baseurl}}/Resources/images/ImagerHelperSearch.PNG"/></p>
   </li>
   <li>
     <p>The tool will enumerate devices as shown. Select the SD card you want to flash, and then provide the location of the ffu to flash the image.</p>
     <p><b>NOTE:</b> IoTCoreImageHelper.exe is the recommended tool to flash the SD card. However, instructions are available for using <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/DISM.htm" target="_blank">DISM command line tool</a> directly.</p>
-    <p><img alt=”IoTCoreImageHeloper.exe to flash the sd card” src="{{site.baseurl}}/Resources/images/mbm_imagehelper.PNG"/></p>
+    <p><img alt="IoTCoreImageHeloper.exe to flash the sd card" src="{{site.baseurl}}/Resources/images/mbm_imagehelper.PNG"/></p>
   </li>
   <li>
     <p>Safely remove your USB SD card reader by clicking on "Safely Remove Hardware" in your task tray, or by finding the USB device in File Explorer, right clicking, and choosing "Eject".  Failing to do this can cause corruption of the image.</p>
@@ -119,7 +119,7 @@
   </li>
   <li>
     <p>Once the device has booted, the DefaultApp will launch and display the IP address of MBM.</p>
-    <p><img alt=”screenshot: defaultapp at boot up for minnowboard max” src="{{site.baseurl}}/Resources/images/DefaultAppMBM.png"/></p>
+    <p><img alt="screenshot: defaultapp at boot up for minnowboard max" src="{{site.baseurl}}/Resources/images/DefaultAppMBM.png"/></p>
   </li>
 </ol>
 
@@ -138,11 +138,11 @@
 <ol class="setup-content-list">
   <li>
     <p>You can use <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm" target="_blank">Windows Device Portal</a> to connect to your device through your favorite web browser. The device portal provides configuration and device management capabilities, in addition to advanced diagnostic tools to help you troubleshoot and view the real time performance of your Windows IoT Device. <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm" target="_blank">Click here to learn how to connect to Windows Device Portal!</a></p>
-    <p><img alt=”screenshot: device portal to connect to minnowboard max” class="device-images" src="{{site.baseurl}}/Resources/images/deviceportal/deviceportal_small_mbm.png" /></p>
+    <p><img alt="screenshot: device portal to connect to minnowboard max" class="device-images" src="{{site.baseurl}}/Resources/images/deviceportal/deviceportal_small_mbm.png" /></p>
   </li>
   <li>
     <p>You can also use PowerShell to connect to your device through a command shell. Follow the <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm" target="_blank">PowerShell documentation</a> to use PowerShell to connect to your running device.  You can also follow the <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm" target="_blank">SSH instructions</a> to use SSH to connect to your device.</p>
-    <p><img alt=”screenshot: use powershell to connect to your minnowboard max” class="device-images" src="{{site.baseurl}}/Resources/images/powershell/connection.png"/></p>
+    <p><img alt="screenshot: use powershell to connect to your minnowboard max" class="device-images" src="{{site.baseurl}}/Resources/images/powershell/connection.png"/></p>
   </li>
 </ol>
 

@@ -30,7 +30,7 @@ This will change it from Kernel Debugger use.
    bcdedit /store k:\efi\microsoft\boot\bcd /set {default} testsigning OFF
    bcdedit /store k:\efi\microsoft\boot\bcd /enum
    ~~~
-1. Verify debug and testsigning are now “No”
+1. Verify debug and testsigning are now "No"
 1. Safe dismount of micro-SD from PC (eject from Windows Explorer)
 1. Put micro-SD in Galileo and powered up
 
