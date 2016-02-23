@@ -15,11 +15,11 @@ lang: zh-CN
 
 * 在 Visual Studio 中打开你的项目。然后，右键单击该项目并选择“卸载项目”。
 
-  ![“卸载项目”选项]({{site.baseurl}}/images/appx/unload_project_menu.png)
+  ![“卸载项目”选项]({{site.baseurl}}/Resources/images/appx/unload_project_menu.png)
 
 * 现在，请右键单击卸载的项目并选择“编辑 <Project>.csproj 文件”。
 
-  ![“编辑 Csproj”选项]({{site.baseurl}}/images/appx/edit_projectproj.png)
+  ![“编辑 Csproj”选项]({{site.baseurl}}/Resources/images/appx/edit_projectproj.png)
 
 * 这将在 Visual Studio 中打开 <Project>.csproj 文件。现在，请将以下项添加到 .csproj 文件的“globals”属性组
 

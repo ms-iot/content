@@ -34,7 +34,7 @@ Devices running IoT Core may be extremely slow to boot up on the first boot when
 
 The default administrator user name and password are hard coded in the Windows 10 IoT Core image. This is a security risk for the device, and it should not be exposed to an open internet connection until the password has been changed.
 
-The MinnowBoard Max will not boot with builds of Windows 10 IoT Core which are later than 10240 unless the firmware is version .082 or later. The minimum recommended version of the firmware is “MinnowBoard MAX 0.82 32-Bit”. Firmware updates can be downloaded from [http://firmware.intel.com/projects/minnowboard-max](http://firmware.intel.com/projects/minnowboard-max).
+The MinnowBoard Max will not boot with builds of Windows 10 IoT Core which are later than 10240 unless the firmware is version .082 or later. The minimum recommended version of the firmware is "MinnowBoard MAX 0.82 32-Bit". Firmware updates can be downloaded from [http://firmware.intel.com/projects/minnowboard-max](http://firmware.intel.com/projects/minnowboard-max).
 
 The Windows 10 IoT Core image included in this drop supports the peripherals that are exposed on the MinnowBoard MAX board. Subsequently, Intel&reg; will provide support of the full feature set of the Baytrail processors including the Intel Celeron&trade; Processors J1900/N2930/N2807 and Intel Atom&trade; Processors E38XX.
 
@@ -52,7 +52,7 @@ On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to user mode a
 
 ## Known Issues
 
-*	Setting the orientation to “Portrait” may not be honored in a Universal App (3039042) WORKAROUND: None
+*	Setting the orientation to "Portrait" may not be honored in a Universal App (3039042) WORKAROUND: None
 *	On Raspberry Pi and Dragonboard, switching from a non-default drive mode to a different non-default drive mode may produce a glitch on the GPIO pin. (3890679) WORKAROUND: Set drive mode once at the beginning of the application.
 *	The Default startup app may conflict with itself when it is also deployed from Visual Studio (4266059). WORKAROUND: Change the default startup app to an application other than that you wish to deploy.
 *	GetNetworkUsageAsync may throw a System.UnauthorizedAccessException (1972129). WORKAROUND: None.
@@ -99,5 +99,5 @@ Windows Registry Editor Version 5.00
 
 ### <a name="wifidirect"></a>WiFi Direct limitations on IoTCore
  1.	The IoTCore device has to be the connecting device – it will not work as the advertising device with another device initiating the connection.  
- 2.	Advanced pairing must be used.  The sample app demonstrates how to use the advanced pairing API’s to pair the devices prior to connecting.
- 3.	Not all wireless adapters support WiFi direct. We have tested and validated that the “Realtek RTL8188EU Wireless Lan 802.11n USB 2.0 Network adapter” works, but other adapters may not be supported.
+ 2.	Advanced pairing must be used.  The sample app demonstrates how to use the advanced pairing API's to pair the devices prior to connecting.
+ 3.	Not all wireless adapters support WiFi direct. We have tested and validated that the "Realtek RTL8188EU Wireless Lan 802.11n USB 2.0 Network adapter" works, but other adapters may not be supported.

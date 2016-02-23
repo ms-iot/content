@@ -20,7 +20,7 @@ lang: zh-CN
 ### 步骤 1： 硬件设置
 此示例使用 Raspberry Pi 2，其 GPIO PIN 之一已连接到照片电阻器，如下图所示。如果其他设备为 Sues，则必须更改代码中的 PIN 码以匹配 HW 设置。
 
-![Rpi\_schematic]({{site.baseurl}}/images/AllJoyn/rpi_schematic.png)
+![Rpi\_schematic]({{site.baseurl}}/Resources/images/AllJoyn/rpi_schematic.png)
 
 ### 步骤 2： 下载并安装 AllJoyn 设备系统网桥模板
 
@@ -33,22 +33,22 @@ AllJoyn 设备系统网桥模板是 Visual Studio 扩展，可使开发人员创
 
 在 Visual Studio 中，依次选择“文件”\>“新建”\>“项目”，可打开“新建项目”对话框。在打开的对话框中，按照如下提供的方式创建新的 AllJoyn 设备系统网桥应用项目：
 
-![NewDSB\_project]({{site.baseurl}}/images/AllJoyn/VS_newproj1.png)
+![NewDSB\_project]({{site.baseurl}}/Resources/images/AllJoyn/VS_newproj1.png)
 
-![NewDSB\_project2]({{site.baseurl}}/images/AllJoyn/VS_newproj2.png)
+![NewDSB\_project2]({{site.baseurl}}/Resources/images/AllJoyn/VS_newproj2.png)
 
 将需要向 AdapterLib 项目添加引用，以使用 Windows IoT 扩展 SDK，它需要使用 Windows::Devices::Gpio API。请按照以下步骤向项目添加引用：
 
   1. 在 VS 解决方案资源管理器中，找到适配器 Lib 项目。扩展此项目
   2. 右键单击“引用”，然后选择“添加引用...”
 
-  ![add\_reference1]({{site.baseurl}}/images/AllJoyn/add_reference1.png)
+  ![add\_reference1]({{site.baseurl}}/Resources/images/AllJoyn/add_reference1.png)
 
   3. 在“添加引用”窗口的左侧，选择 Windows 通用下的“扩展”。
   4. 在列表中找到最新版本的 Windows IoT 扩展 SDK，并选中其左侧的框以选择此 SDK。
   5. 单击“确定”。
 
-  ![add\_reference2]({{site.baseurl}}/images/AllJoyn/add_reference2.png)
+  ![add\_reference2]({{site.baseurl}}/Resources/images/AllJoyn/add_reference2.png)
 
 ### 步骤 4： 将 GPIO PIN 公开到 AllJoyn 总线
 
@@ -151,19 +151,19 @@ AllJoyn 设备系统网桥模板是 Visual Studio 扩展，可使开发人员创
 
 从列表中选择“Custom\_GPIO\_Device”。
 
-![ajx\_dsb1]({{site.baseurl}}/images/AllJoyn/ajx_dsb1.png)
+![ajx\_dsb1]({{site.baseurl}}/Resources/images/AllJoyn/ajx_dsb1.png)
 
 3. 选择“Custom\_GPIO\_Device”后，请选择 Pin0
 
-![custom\_gpio\_ajx]({{site.baseurl}}/images/AllJoyn/custom_gpio1.png)
+![custom\_gpio\_ajx]({{site.baseurl}}/Resources/images/AllJoyn/custom_gpio1.png)
 
 4. 选择“Pin0”后，观察为此 GPIO PIN 宣布的接口。单击任何接口可查看其属性。
 
-![custom\_gpio\_ajx2]({{site.baseurl}}/images/AllJoyn/custom_gpio2.png)
+![custom\_gpio\_ajx2]({{site.baseurl}}/Resources/images/AllJoyn/custom_gpio2.png)
 
 5. 选择接口允许你查看其属性；应观察 PinValue 等于 1 的单个接口属性：
 
-![custom\_gpio3\_ajx]({{site.baseurl}}/images/AllJoyn/custom_gpio3.png)
+![custom\_gpio3\_ajx]({{site.baseurl}}/Resources/images/AllJoyn/custom_gpio3.png)
 
 ## 额外信用： 在 GPIO PIN 值更改时发出信号
 假设 AllJoyn 总线上的应用程序不希望轮询 GPIO PIN 的值，但仅在 GPIO PIN 值更改时收到通知。为此，我们需要在适配器中添加信号支持。以下内容包含使 GPIO 设备示例通知 AllJoyn 使用者应用程序所需的所有内容。

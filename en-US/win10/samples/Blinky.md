@@ -29,7 +29,7 @@ You'll need a few components:
 
 * a breadboard and a couple of connector wires
 
-![Electrical Components]({{site.baseurl}}/images/Blinky/components.png)
+![Electrical Components]({{site.baseurl}}/Resources/images/Blinky/components.png)
 
 ### For Raspberry Pi 2 (RPi2)
 
@@ -40,11 +40,11 @@ You'll need a few components:
 
 And here is the pinout of the RPi2:
 
-<img src="{{site.baseurl}}/images/PinMappings/RP2_Pinout.png" style="max-height:400px;">
+<img src="{{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png" style="max-height:400px;">
 
 Here is an example of what your breadboard might look like with the circuit assembled:
 
-<img src="{{site.baseurl}}/images/Blinky/breadboard_assembled_rpi2_kit.jpg" style="max-height:500px;">
+<img src="{{site.baseurl}}/Resources/images/Blinky/breadboard_assembled_rpi2_kit.jpg" style="max-height:500px;">
 
 <sub>*Image made with [Fritzing](http://fritzing.org/){:target="_blank"}*</sub>
 
@@ -56,11 +56,11 @@ Note that the polarity of the LED is important. Make sure the shorter leg (-) is
 
 And here is the JP1 connector on the MBM:
 
-<img src="{{site.baseurl}}/images/PinMappings/MBM_Pinout.png" style="max-height:400px;">
+<img src="{{site.baseurl}}/Resources/images/PinMappings/MBM_Pinout.png" style="max-height:400px;">
 
 Here is an example of what your breadboard might look like with the circuit assembled:
 
-<img src="{{site.baseurl}}/images/Blinky/breadboard_assembled.png" style="max-height:500px;">
+<img src="{{site.baseurl}}/Resources/images/Blinky/breadboard_assembled.png" style="max-height:500px;">
 
 <sub>*Image made with [Fritzing](http://fritzing.org/){:target="_blank"}*</sub>
 
@@ -68,7 +68,7 @@ Here is an example of what your breadboard might look like with the circuit asse
 
 For reference, the functionality of the low-speed expansion connector is outlined in the following diagram
 
-<img src="{{site.baseurl}}/images/PinMappings/DB_Pinout.png" style="max-height:500px;">
+<img src="{{site.baseurl}}/Resources/images/PinMappings/DB_Pinout.png" style="max-height:500px;">
 
 Perform the following steps to create the circuit:
 
@@ -79,7 +79,7 @@ Perform the following steps to create the circuit:
 
 Here is an illustration of what your breadboard might look like with the circuit assembled:
 
-<img src="{{site.baseurl}}/images/Blinky/breadboard_assembled_db_kit.png" style="max-height:500px;">
+<img src="{{site.baseurl}}/Resources/images/Blinky/breadboard_assembled_db_kit.png" style="max-height:500px;">
 
 <sub>Image made with [Fritzing](http://fritzing.org/){:target="_blank"}</sub>
 
@@ -96,20 +96,20 @@ private const int LED_PIN = 12;
 
 2. Next, in the Visual Studio toolbar, click on the `Local Machine` dropdown and select `Remote Machine`<br/>
 
-    ![RemoteMachine Target]({{site.baseurl}}/images/AppDeployment/cs-remote-machine-debugging.png)
+    ![RemoteMachine Target]({{site.baseurl}}/Resources/images/AppDeployment/cs-remote-machine-debugging.png)
 
 3. At this point, Visual Studio will present the **Remote Connections** dialog. If you previously used [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) to set a unique name for your device, you can enter it here (in this example, we're using **my-device**).
 Otherwise, use the IP address of your Windows IoT Core device. After entering the device name/IP select `Universal` for Windows Authentication, then click **Select**.
 
-    ![Remote Machine Debugging]({{site.baseurl}}/images/AppDeployment/cs-remote-connections.PNG)
+    ![Remote Machine Debugging]({{site.baseurl}}/Resources/images/AppDeployment/cs-remote-connections.PNG)
 
 4. You can verify or modify these values by navigating to the project properties (select **Properties** in the Solution Explorer) and choosing the `Debug` tab on the left:
 
-    ![Project Properties Debug Tab]({{site.baseurl}}/images/AppDeployment/cs-debug-project-properties.PNG)
+    ![Project Properties Debug Tab]({{site.baseurl}}/Resources/images/AppDeployment/cs-debug-project-properties.PNG)
 
 When everything is set up, you should be able to press F5 from Visual Studio.  If there are any missing packages that you did not install during setup, Visual Studio may prompt you to acquire those now.  The Blinky app will deploy and start on the Windows IoT device, and you should see the LED blink in sync with the simulation on the screen.
 
-<img src="{{site.baseurl}}/images/Blinky/blinky-screenshot.png" height="400">
+<img src="{{site.baseurl}}/Resources/images/Blinky/blinky-screenshot.png" height="400">
 
 Congratulations! You controlled one of the GPIO pins on your Windows IoT device.
 

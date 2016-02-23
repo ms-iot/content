@@ -31,7 +31,7 @@ lang: zh-CN
 
 完成所有设置后，你应可以在 Visual Studio 中按 F5。数字签名应用将部署并在 Windows IoT 设备上启动，你应该能看到主视图页，如下所示：
 
-<img src="{{site.baseurl}}/images/DigitalSignage/DigitalSignage1.png" height="400">
+<img src="{{site.baseurl}}/Resources/images/DigitalSignage/DigitalSignage1.png" height="400">
 
 ###幻灯片放映
 
@@ -39,11 +39,11 @@ lang: zh-CN
 
 1. 在主页面中，单击（或点击，前提是你的显示器支持触摸）“播放幻灯片放映”。 
 
-<img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_slideshow.png" height="400">
+<img src="{{site.baseurl}}/Resources/images/DigitalSignage/DigitalSign_slideshow.png" height="400">
 
 2. 幻灯片放映开始时 - 将显示各式各样的内容，包括带有音频的广告和屏幕保护程序视觉画面。
 
-<img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_horses.png" height="400">
+<img src="{{site.baseurl}}/Resources/images/DigitalSignage/DigitalSign_horses.png" height="400">
 
 3. 可通过以下方式结束幻灯片放映：a\) 移动鼠标；b\) 按任意键；或者 c\) 点击屏幕上的任意位置。主页面将返回至屏幕。
 
@@ -51,7 +51,7 @@ lang: zh-CN
 
 1. 在主页面中，单击（或点击，前提是你的监视器支持触摸）“Internet Explorer”。 
 
-<img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_web.png" height="400">
+<img src="{{site.baseurl}}/Resources/images/DigitalSignage/DigitalSign_web.png" height="400">
 
 2. 点击或单击该页面顶部的地址栏。
 
@@ -59,17 +59,17 @@ lang: zh-CN
 
  当使用屏幕键盘时，你可以用鼠标来单击字符，或点击以键入（如果你的监视器支持触摸）。
  
- <img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_keyboard1.png" height="400">
+ <img src="{{site.baseurl}}/Resources/images/DigitalSignage/DigitalSign_keyboard1.png" height="400">
  
- <img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_keyboard2.png" height="400">
+ <img src="{{site.baseurl}}/Resources/images/DigitalSignage/DigitalSign_keyboard2.png" height="400">
  
  4. 单击或点击“转到”按钮。这会将浏览器导航到 Microsoft 主页
  
- <img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_microsoft.png" height="400">
+ <img src="{{site.baseurl}}/Resources/images/DigitalSignage/DigitalSign_microsoft.png" height="400">
 
  5. 在浏览器中导航到其他页面，或通过功点击或单击屏幕上的“主页”图标返回到主屏幕
  
- <img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_home.png" height="400">
+ <img src="{{site.baseurl}}/Resources/images/DigitalSignage/DigitalSign_home.png" height="400">
 
 ##查看代码
 
@@ -195,9 +195,9 @@ XML 文件用于指定要在幻灯片放映期间查看的网页、图像和视�
   
   1. 在主页面中，单击（或点击，前提是你的监视器支持触摸）“设置”。 
 
-<img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_settings.png" height="400">
+<img src="{{site.baseurl}}/Resources/images/DigitalSignage/DigitalSign_settings.png" height="400">
 
  2. 通过使用物理键盘或触摸屏，你可以指定新的配置文件以从指定位置读取。
 
-<img src="{{site.baseurl}}/images/DigitalSignage/DigitalSign_settings2.png" height="400">
+<img src="{{site.baseurl}}/Resources/images/DigitalSignage/DigitalSign_settings2.png" height="400">
 

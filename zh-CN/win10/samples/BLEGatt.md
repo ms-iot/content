@@ -15,13 +15,13 @@ lang: zh-CN
 
 通用属性配置文件 \(GATT\) 是 BLE 设备之间将用于通信的蓝牙配置文件。数据将组织到称为配置文件、服务和特征的嵌套对象中，如下图所示：
 
-![GATT 结构图]({{site.baseurl}}/images/BLEGatt/GattDiagram.png)
+![GATT 结构图]({{site.baseurl}}/Resources/images/BLEGatt/GattDiagram.png)
 
 强烈建议在继续操作前理解这些概念。Adafruit 在[此处](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/introduction){:target="_blank"}出色地概述了低耗电 Bluetooth \(BLE\) 和 GATT 配置文件的工作原理。
 
 ### TI CC2541 SensorTag
 
-![SensorTag 图片]({{site.baseurl}}/images/BLEGatt/SensorTag_with_iPad.jpg)<sub>\*[Texas 仪器图像](http://processors.wiki.ti.com/index.php/File:SensorTag_with_iPad.jpg){:target="_blank"}\*</sub>
+![SensorTag 图片]({{site.baseurl}}/Resources/images/BLEGatt/SensorTag_with_iPad.jpg)<sub>\*[Texas 仪器图像](http://processors.wiki.ti.com/index.php/File:SensorTag_with_iPad.jpg){:target="_blank"}\*</sub>
 
 在此示例中，我们通过 BLE 将 Windows IoT 核心版设备与 [Texas 仪器 CC2541 SensorTag 开发工具包](http://www.ti.com/tool/cc2541dk-sensor){:target="_blank"}连接在一起。SensorTag 是 TI CC2541 芯片支持的 BLE 设备，具有可编程的蓝牙 4.0 堆栈。该设备上也有以下 6 种传感器，可通过 GATT 配置文件公开数据：
 

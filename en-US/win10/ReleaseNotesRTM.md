@@ -38,7 +38,7 @@ You can review linked terms by pasting the forward link into your browser window
 
 The default administrator user name and password are hard coded in the Windows 10 IoT Core image. This is a security risk for the device, and it should not be exposed to an open internet connection until the password has been changed.
 
-The MinnowBoard Max will not boot unless the firmware is version .082 or later. The minimum recommended version of the firmware is “MinnowBoard MAX 0.83 32-Bit”. Firmware updates can be downloaded from [http://go.microsoft.com/fwlink/?LinkId=708613](http://go.microsoft.com/fwlink/?LinkId=708613){:target="_blank"}.
+The MinnowBoard Max will not boot unless the firmware is version .082 or later. The minimum recommended version of the firmware is "MinnowBoard MAX 0.83 32-Bit". Firmware updates can be downloaded from [http://go.microsoft.com/fwlink/?LinkId=708613](http://go.microsoft.com/fwlink/?LinkId=708613){:target="_blank"}.
 
 The Windows 10 IoT Core image included in this drop supports the peripherals that are exposed on the MinnowBoard MAX board. Subsequently, Intel&reg; will provide support of the full feature set of the Baytrail processors including the Intel Celeron&trade; Processors J1900/N2930/N2807 and Intel Atom&trade; Processors E38XX.
 
@@ -60,10 +60,10 @@ On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to user mode a
 ## Known Issues
 
 *	Windows Device Portal may stop working after a day of continuous uptime. (5458435) WORKAROUND: Restart the device.
-*	Setting the orientation to “Portrait” may not be honored in a Universal App (3039042) WORKAROUND: None
+*	Setting the orientation to "Portrait" may not be honored in a Universal App (3039042) WORKAROUND: None
 *	On Raspberry Pi and Dragonboard, switching from a non-default drive mode to a different non-default drive mode may produce a glitch on the GPIO pin. (3890679) WORKAROUND: Set drive mode once at the beginning of the application.
 *	The Default startup app may conflict with itself when it is also deployed from Visual Studio (4266059). WORKAROUND: Change the default startup app to an application other than that you wish to deploy.
-*	BackgroundMediaPlayer.MessageReceivedFromForeground may crash. (2199869) WORKAROUND: The following line of code may crash: “BackgroundMediaPlayer.MessageReceivedFromForeground += OnMessageReceivedFromForeground;”. To prevent the crash, add this code so that it is executed first “var player = BackgroundMediaPlayer.Current;”
+*	BackgroundMediaPlayer.MessageReceivedFromForeground may crash. (2199869) WORKAROUND: The following line of code may crash: "BackgroundMediaPlayer.MessageReceivedFromForeground += OnMessageReceivedFromForeground;". To prevent the crash, add this code so that it is executed first "var player = BackgroundMediaPlayer.Current;"
 *	Data breakpoints have been disabled on the Raspberry Pi2 (4266252). WORKAROUND: None at this time
 *	The Azure Active Directory Authentication Library may not work on Windows 10 IoT Core (4266261). WORKAROUND: Do not use the Azure Active Directory Authentication Library.
 *	A MediaEncodingProfile.CreateWma( Windows.Media.MediaProperties. AudioEncodingQuality.Auto) method call may fail on the Raspberry Pi 2 with the error message No suitable transform was found to encode or decode the content. (Exception from HRESULT: 0xC00D5212). (4510128) WORKAROUND: None.
@@ -117,5 +117,5 @@ Windows Registry Editor Version 5.00
 
 1. The IoTCore device has to be the connecting device – it will not work as the advertising device with another device initiating the connection.  
 2. Advanced pairing must be used.  The sample app demonstrates how to use the advanced pairing API’s to pair the devices prior to connecting.
-3. Not all wireless adapters support WiFi direct. We have tested and validated that the “Realtek RTL8188EU Wireless Lan 802.11n USB 2.0 Network adapter” works, but other adapters may not be supported.
+3. Not all wireless adapters support WiFi direct. We have tested and validated that the "Realtek RTL8188EU Wireless Lan 802.11n USB 2.0 Network adapter" works, but other adapters may not be supported.
  

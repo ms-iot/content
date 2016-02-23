@@ -35,11 +35,11 @@ ___
 
 ## 分叉存储库
 1. 从 <a href="https://github.com/" target="_blank">GitHub 主页</a>开始创建 GitHub 帐户
-1. 转到 <a href="https://github.com/" target="_blank">GitHub 主页</a>并导航到你想要参与的存储库，单击“分叉” ![分叉]({{site.baseurl}}/images/GitHubFork.png)
+1. 转到 <a href="https://github.com/" target="_blank">GitHub 主页</a>并导航到你想要参与的存储库，单击“分叉” ![分叉]({{site.baseurl}}/Resources/images/GitHubFork.png)
 1. 在 GitHub 上，导航至你的帐户的存储库分叉
 1. 用以下两种方式之一克隆存储库：
     1. 可使用命令行 <br/> <kbd>git clone \[链接至 .git\] \[NameYourLocalFolder\]</kbd>
-    1. 或通过单击存储库 ![克隆]({{site.baseurl}}/images/GitHubClone.png) 右侧的“在桌面中克隆”启动 GitHub 应用
+    1. 或通过单击存储库 ![克隆]({{site.baseurl}}/Resources/images/GitHubClone.png) 右侧的“在桌面中克隆”启动 GitHub 应用
 
 ___
 

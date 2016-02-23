@@ -9,7 +9,7 @@ lang: zh-CN
 
 后台应用程序是没有直接 UI 的应用程序。部署和配置完成后，这些应用程序将在计算机启动时启动，并将持续运行，不受任何进程生命期管理资源使用的限制。如果这些应用程序崩溃或退出，系统将自动重新启动它们。这些后台应用程序有一个非常简单的执行模型。模板将创建实现“IBackgroundTask”接口并生成空的“运行”方法的类。此“运行”方法将是通向你的应用程序的入口点。
 
-![IBackground 任务]({{site.baseurl}}/images/BackgroundApplications/backgroundTaskScreenshot.png)
+![IBackground 任务]({{site.baseurl}}/Resources/images/BackgroundApplications/backgroundTaskScreenshot.png)
 
 需特别注意的一点是，默认情况下，应用程序将在运行方法完成时关闭。这意味着遵循运行等待输入或在计时器上的服务器的常用 IoT 模式的应用将会过早地发现应用退出这一情况。若要阻止这种情况发生，必须调用“GetDeferral”方法才能阻止应用程序退出。可在[此处](https://msdn.microsoft.com/zh-CN/library/windows/apps/windows.applicationmodel.background.backgroundtaskdeferral.aspx)查找有关延迟模式的详细信息。
 

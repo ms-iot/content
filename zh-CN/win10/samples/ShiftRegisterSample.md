@@ -7,7 +7,7 @@ lang: zh-CN
 
 ##移位寄存器示例
 
-![移位寄存器示例图像]({{site.baseurl}}/images/ShiftRegister/ShiftRegisterProjectPicture_480.png)
+![移位寄存器示例图像]({{site.baseurl}}/Resources/images/ShiftRegister/ShiftRegisterProjectPicture_480.png)
 
 在本示例中，我们将一个采用串行输入和并行输出的 8 位移位寄存器连接到你的 Raspberry Pi 2，并创建一个使用该移位寄存器控制 8 个 LED 的简单应用。
 
@@ -35,14 +35,14 @@ lang: zh-CN
 
 **注意： 确保在连接电路时关闭 RPi2 电源。若要降低构建期间意外出现短路的几率，这是一个很好的做法。**
 
-![试验板连接]({{site.baseurl}}/images/ShiftRegister/ShiftRegisterSampleDrawing_bb_50.png)
+![试验板连接]({{site.baseurl}}/Resources/images/ShiftRegister/ShiftRegisterSampleDrawing_bb_50.png)
 
 *使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
 
 以下是电路原理图：
 
-![电路示意图]({{site.baseurl}}/images/ShiftRegister/ShiftRegisterSampleDrawing_schem_75.png)
+![电路示意图]({{site.baseurl}}/Resources/images/ShiftRegister/ShiftRegisterSampleDrawing_schem_75.png)
 
 *使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
@@ -51,20 +51,20 @@ lang: zh-CN
 
 将移位寄存器置于你的试验板之上，以便它可以跨该试验板的中隙。
 
-![试验板 IC 位置]({{site.baseurl}}/images/BreadBoardICPlacement.png)
+![试验板 IC 位置]({{site.baseurl}}/Resources/images/BreadBoardICPlacement.png)
 
 *使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
 
 通过在 IC 上查找槽口，找到 74HC595N 移位寄存器的引脚 1。如果你需要定向 IC 以便槽口尾部朝向左边，则引脚 1 将是该槽口下方的左下角区域中的第一个引脚。
 
-![74HC595N 引脚位置]({{site.baseurl}}/images/ShiftRegister/FindNotchPin1.png)
+![74HC595N 引脚位置]({{site.baseurl}}/Resources/images/ShiftRegister/FindNotchPin1.png)
 
 *使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
 74HC595N 的引脚输出如下所示，并且可以在[数据表](http://www.ti.com/lit/ds/symlink/sn74hc595.pdf)中找到。
 
-![74HC595N 引脚输出]({{site.baseurl}}/images/ShiftRegister/ShiftRegister74HC595_pinout.png)
+![74HC595N 引脚输出]({{site.baseurl}}/Resources/images/ShiftRegister/ShiftRegister74HC595_pinout.png)
 
 *使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
@@ -112,7 +112,7 @@ lang: zh-CN
 
 我们需要将 Raspberry Pi 2 上的电源、地线和 I2C 线接入 74HC595N 移位寄存器和试验板。
 
-![Raspberry Pi 2 引脚输出]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![Raspberry Pi 2 引脚输出]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
 * 引脚 2 **5V PWR** 连接到试验板一侧的电源轨道（红色条带）
 
@@ -391,7 +391,7 @@ private void ToggleButtonClicked(object sender, RoutedEventArgs e)
 
 一段时间过后，你将看到已连接到 RPi2 的屏幕出现变化，即，将显示一个滑块、一些文本和一个按钮。LED 将亮起，并将采用“pinMask”中设置的模式。
 
-![ShiftRegister 屏幕截图]({{site.baseurl}}/images/ShiftRegister/ScreenShotA.png)
+![ShiftRegister 屏幕截图]({{site.baseurl}}/Resources/images/ShiftRegister/ScreenShotA.png)
 
 恭喜！ 你已成功将一个采用串行输入和并行输出的 8 位移位寄存器连接到你的 Raspberry Pi 2。
 

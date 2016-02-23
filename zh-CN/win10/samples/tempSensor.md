@@ -30,11 +30,11 @@ lang: zh-CN
 
 下面是本例中使用的 MCP3002 和 MCP3208 模拟到数字转换器 \(ADC\) 的引脚输出。
 
-![电子元件]({{site.baseurl}}/images/TempSensor/MCP3002.png) ![电子元件]({{site.baseurl}}/images/TempSensor/MCP3208.png)
+![电子元件]({{site.baseurl}}/Resources/images/TempSensor/MCP3002.png) ![电子元件]({{site.baseurl}}/Resources/images/TempSensor/MCP3208.png)
 
 * Raspberry Pi 2
 
-  <img src="{{site.baseurl}}/images/PinMappings/RP2_Pinout.png" height="400">
+  <img src="{{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png" height="400">
 
 ## 部件连接
 
@@ -44,7 +44,7 @@ lang: zh-CN
 
 连接详细信息如下：
 
-![整体电路图]({{site.baseurl}}/images/TempSensor/temp_mcp3002.png); ![整体电路图]({{site.baseurl}}/images/TempSensor/force_mcp3002.png);
+![整体电路图]({{site.baseurl}}/Resources/images/TempSensor/temp_mcp3002.png); ![整体电路图]({{site.baseurl}}/Resources/images/TempSensor/force_mcp3002.png);
 
 在每个型号的 Raspberry Pi 2 上，引脚布局可能稍有不同。但与 MCP3002 连接的引脚应如下所示：
 
@@ -60,7 +60,7 @@ lang: zh-CN
 
 连接详细信息如下：
 
-![整体电路图]({{site.baseurl}}/images/TempSensor/OverallCon_mcp3208.PNG)
+![整体电路图]({{site.baseurl}}/Resources/images/TempSensor/OverallCon_mcp3208.PNG)
 
 在每个型号的 Raspberry Pi 2 上，引脚布局可能稍有不同。但与 MCP3208 连接的引脚应如下所示：
 
@@ -184,4 +184,4 @@ public int convertToInt(byte[] data)
 
 如果你使用的是温度传感器，你可以尝试握住传感器或对其施加一些热量，以查看输出会如何变化。如果你使用的是力传感器，你可以用力或轻轻地握住它，以查看输出在屏幕上如何变化。你还可以将传感器切换到光传感器来使用它。
 
-<img src="{{site.baseurl}}/images/TempSensor/Deploy.png" height="400">
+<img src="{{site.baseurl}}/Resources/images/TempSensor/Deploy.png" height="400">

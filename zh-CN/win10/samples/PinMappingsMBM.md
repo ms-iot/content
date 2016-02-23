@@ -6,7 +6,7 @@ lang: zh-CN
 ---
 ##MinnowBoard Max 引脚映射
 
-![MinnowBoard Max 排针]({{site.baseurl}}/images/PinMappings/MBM_Pinout.png)
+![MinnowBoard Max 排针]({{site.baseurl}}/Resources/images/PinMappings/MBM_Pinout.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 

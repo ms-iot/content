@@ -1,19 +1,19 @@
 ---
 layout: default
 title: 7-SegmentShield
-permalink: /en-US/win8/samples/7-SegmentShield.htm
+permalink: /en-US/win8/samples/Gravitech-7-SegmentShield.htm
 lang: en-US
 ---
 
 <div style="background-color:Silver; color:black; padding:20px;">
 	<h4><u>Support for Windows on Intel Galileo Gen 1 and Gen 2 will end on November 30, 2015</u></h4>
-	<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we’ve made the difficult decision to discontinue Windows support on the Galileo platform. We’ve seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>
+	<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we've made the difficult decision to discontinue Windows support on the Galileo platform. We've seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>
 </div>
 
 # Gravitech 7-Segment Shield
 Learn how to use a Gravitech 7-Segment Shield.
 
-![]({{site.baseurl}}/images/Gravitech_7seg_shield.jpg){:width="400"}
+![]({{site.baseurl}}/Resources/images/Gravitech_7seg_shield.jpg){:width="400"}
 
 # Required Components
 * [Gravitech 7-Segment Shield](http://www.gravitech.us/7segmentshield.html){:target="_blank"}

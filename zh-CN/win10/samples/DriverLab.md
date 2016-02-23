@@ -33,7 +33,7 @@ lang: zh-CN
 
 <br/>
 
-![驱动程序实验概述]({{site.baseurl}}/images/DriverLab/drivers-overview.png)
+![驱动程序实验概述]({{site.baseurl}}/Resources/images/DriverLab/drivers-overview.png)
 
 <br/>
 

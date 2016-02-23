@@ -46,31 +46,31 @@ Read on to get started!
 
       <div class="carousel-inner" role="listbox">
       <div class="item active">
-          <img src="{{site.baseurl}}/images/PinMappings/RP2_Pinout.png">
+          <img src="{{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png">
           <div class="carousel-caption">
             Rasberry Pi 2 GPIO Schematic
           </div>
         </div>
         <div class="item">
-          <img src="{{site.baseurl}}/images/Lightning/Wiring_RasPi2_inside.jpeg">
+          <img src="{{site.baseurl}}/Resources/images/Lightning/Wiring_RasPi2_inside.jpeg">
           <div class="carousel-caption">
             Raspberry Pi 2 Wiring Diagram (Inside)
           </div>
         </div>
         <div class="item">
-          <img src="{{site.baseurl}}/images/Lightning/Wiring_RasPi2_outside.jpeg">
+          <img src="{{site.baseurl}}/Resources/images/Lightning/Wiring_RasPi2_outside.jpeg">
           <div class="carousel-caption">
             Raspberry Pi 2 Wiring Diagram (Outside)
           </div>
         </div>
         <div class="item">
-          <img src="{{site.baseurl}}/images/Lightning/Wiring_WeatherShield_LeftRail.jpeg" >
+          <img src="{{site.baseurl}}/Resources/images/Lightning/Wiring_WeatherShield_LeftRail.jpeg" >
           <div class="carousel-caption">
             Weather Shield (Light Rail)
           </div>
         </div>
         <div class="item">
-          <img src="{{site.baseurl}}/images/Lightning/Wiring_WeatherShield_RightRail.jpeg" >
+          <img src="{{site.baseurl}}/Resources/images/Lightning/Wiring_WeatherShield_RightRail.jpeg" >
           <div class="carousel-caption">
             Weather Shield (Right Rail)
           </div>
@@ -91,7 +91,7 @@ Read on to get started!
 
 ### Fritzing Diagram
 
-![RPI Pinouts]({{site.baseurl}}/images/arduino_wiring/pi2_weathershield.png)
+![RPI Pinouts]({{site.baseurl}}/Resources/images/arduino_wiring/pi2_weathershield.png)
 
 ## Software Set Up
 

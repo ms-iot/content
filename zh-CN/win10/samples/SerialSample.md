@@ -37,7 +37,7 @@ MinnowBoard Max 有两个可配置为使用 GPIO 引脚的板载 UART。
 
 这些 GPIO 引脚在下图中以绿色突出显示。在此示例中，我们将使用 UART2。有关 MBM GPIO 引脚的更多详细信息，请参阅 [MBM 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm)。
 
-<img src="{{site.baseurl}}/images/PinMappings/MBM_Pinout.png" height="400">
+<img src="{{site.baseurl}}/Resources/images/PinMappings/MBM_Pinout.png" height="400">
 
 建立以下连接：
 
@@ -51,7 +51,7 @@ MinnowBoard Max 有两个可配置为使用 GPIO 引脚的板载 UART。
 
 *注意： 让 USB-to-TTL 电缆的电源线保持未连接状态。因为不会用到它。*
 
-<img src="{{site.baseurl}}/images/SerialSample/SiLabs-UART.png">
+<img src="{{site.baseurl}}/Resources/images/SerialSample/SiLabs-UART.png">
 
 ###<a name="USB_TTL_Adapter"></a>使用 USB-to-TTL 适配器
 
@@ -79,7 +79,7 @@ MinnowBoard Max 有两个可配置为使用 GPIO 引脚的板载 UART。
 
 下面是 RPi2 中已连接到 USB 端口的 USB-to-TTL 模块的图像。将该模块的 GND、TX 和 RX 引脚分别连接到已接入电脑的 USB-to-TTL 电缆的 GND 线、RX 线和 TX 线。
 
-<img src="{{site.baseurl}}/images/SerialSample/CP2102_Connections_500.png">
+<img src="{{site.baseurl}}/Resources/images/SerialSample/CP2102_Connections_500.png">
 
 ###部署和启动 SerialSample 应用
 
@@ -111,7 +111,7 @@ MinnowBoard Max 有两个可配置为使用 GPIO 引脚的板载 UART。
 
 当 SerialSample 应用在电脑上启动时，将打开一个窗口，此时用户界面的外观类似于以下所示的屏幕截图。当在 RPi2 和 MBM 上启动时，SerialSample 将显示如下全屏显示的用户界面。
 
-<img src="{{site.baseurl}}/images/SerialSample/SerialSampleRunningPC.PNG">
+<img src="{{site.baseurl}}/Resources/images/SerialSample/SerialSampleRunningPC.PNG">
 
 ####选择串行设备
 
@@ -131,7 +131,7 @@ MinnowBoard Max 有两个可配置为使用 GPIO 引脚的板载 UART。
 
 该应用将尝试连接并配置所选的串行设备。当应用成功连接到已接入的串行设备时，它将显示该串行设备的配置。默认情况下，应用将串行设备配置为 9600 波特、八个数据位、无奇偶校验位、无任何握手和一个停止位。
 
-<img src="{{site.baseurl}}/images/SerialSample/SerialSampleRunningPC_ConnectDevice.PNG">
+<img src="{{site.baseurl}}/Resources/images/SerialSample/SerialSampleRunningPC_ConnectDevice.PNG">
 
 ####发送和接收数据
 
@@ -145,7 +145,7 @@ MinnowBoard Max 有两个可配置为使用 GPIO 引脚的板载 UART。
 
 传输设备上的应用将显示已发送的消息，并在应用显示底部的状态文本框中显示“字节已成功写入！”。
 
-<img src="{{site.baseurl}}/images/SerialSample/SendMessageB.PNG">
+<img src="{{site.baseurl}}/Resources/images/SerialSample/SendMessageB.PNG">
 
 正在接收消息的设备将自动在“读取数据:”窗口中显示文本。
 

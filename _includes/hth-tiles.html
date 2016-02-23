@@ -1,4 +1,4 @@
-  <div class="col-md-12 tile-display" onClick="buildCards()">
+  <div class="col-md-24 tile-display" onClick="buildCards()">
 
   </div>
 
@@ -26,10 +26,10 @@ function buildCards(filteredBlocks)
           boardCount--;
         }
       }
-      var columnWidth = (12 / boardCount);
+      var columnWidth = (12 / boardCount) * 2;
       console.log(columnWidth)
 
-      card = "<div class='col-sm-4 col-xs-12 block' id='card" + i + "'>" +
+      card = "<div class='col-sm-8 col-xs-24 block' id='card" + i + "'>" +
              "<div class='card'>" +
              "<div class='card-header'>" +
              "<h2 class='thin-header text-center'><a href='" + blocks[i].githubLink +"' target='_blank'>" + blocks[i].title + "</a></h2>" +

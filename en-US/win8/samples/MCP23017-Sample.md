@@ -1,13 +1,13 @@
 ---
 layout: default
 title: MCP23017Sample
-permalink: /en-US/win8/samples/MCP23017Sample.htm
+permalink: /en-US/win8/samples/MCP23017-Sample.htm
 lang: en-US
 ---
 
 <div style="background-color:Silver; color:black; padding:20px;">
 	<h4><u>Support for Windows on Intel Galileo Gen 1 and Gen 2 will end on November 30, 2015</u></h4>
-	<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we’ve made the difficult decision to discontinue Windows support on the Galileo platform. We’ve seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>
+	<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we've made the difficult decision to discontinue Windows support on the Galileo platform. We've seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>
 </div>
 
 # MCP23017 Sample
@@ -22,7 +22,7 @@ Use an MCP23017 - i2c 16 input/output port expander in a Windows Developer Progr
 
 ## Create a new Project
 Open Visual Studio. Select File -> New Project and Select Templates -> Visual C++ -> Windows for IoT -> Galileo Wiring app
-![AppCreate]({{site.baseurl}}/images/Nuget_AppCreate.png)
+![AppCreate]({{site.baseurl}}/Resources/images/Nuget_AppCreate.png)
 
 ## Add the MCP23017 Sample Code
 You will need to add the MCP23017.h & MCP23017.cpp to your project from [Adafruit GitHub](https://github.com/adafruit/Adafruit-MCP23017-Arduino-Library){:target="_blank"} and update your Main.cpp.
@@ -137,7 +137,7 @@ void loop()
 
 ## Wire your Galileo with an MCP23017
 LEDs are diodes which will emit light when powered. They are polarized - meaning they work only when plugged in correctly.
-![LED Wiring]({{site.baseurl}}/images/MCP23017Sample.png)
+![LED Wiring]({{site.baseurl}}/Resources/images/MCP23017Sample.png)
 
 
 ## Result

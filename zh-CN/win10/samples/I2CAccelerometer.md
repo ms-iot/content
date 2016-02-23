@@ -27,7 +27,7 @@ lang: zh-CN
 
 根据自己所拥有的设备，查看以下 **Raspberry Pi 2/MinnowBoard Max** 部分：
 
-![电子元件]({{site.baseurl}}/images/I2CAccelerometer/components.png)
+![电子元件]({{site.baseurl}}/Resources/images/I2CAccelerometer/components.png)
 
 ####Raspberry Pi 2
 如果你有一个 Raspberry Pi 2，我们需要将电源、地线和 I2C 线接入加速计。那些熟悉 I2C 的用户会知道通常需安装上拉式电阻器。但是，Raspberry Pi 2 的 I2C 引脚上已经有上拉式电阻器，所以我们不需要在此处添加任何其他外部上拉式电阻器。有关 RPi2 IO 引脚的更多详细信息，请参阅 [Raspberry Pi 2 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm)。
@@ -47,13 +47,13 @@ ADXL345 试验板上有 8 个 IO 引脚，应按如下方式连接它们：
 
 下面是试验板上所示的连接：
 
-![试验板连接]({{site.baseurl}}/images/I2CAccelerometer/breadboard_assembled_rpi2.png)
+![试验板连接]({{site.baseurl}}/Resources/images/I2CAccelerometer/breadboard_assembled_rpi2.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
 以下是电路原理图：
 
-![加速计示意图]({{site.baseurl}}/images/I2CAccelerometer/schematics_rpi2.png)
+![加速计示意图]({{site.baseurl}}/Resources/images/I2CAccelerometer/schematics_rpi2.png)
 
 ####MinnowBoard MAX
 如果你有一个 MinnowBoard Max，我们需要将电源、地线和 I2C 线接入加速计。那些熟悉 I2C 的用户会知道通常需安装上拉式电阻器。但是，MBM 的 IO 引脚上已经有 10K 上拉式电阻器，所以我们不需要在此处添加任何其他外部上拉式电阻器。有关 MBM IO 引脚的更多详细信息，请参阅 [MBM 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm)。
@@ -73,13 +73,13 @@ ADXL345 试验板上有 8 个 IO 引脚，应按如下方式连接它们：
 
 下面是试验板上所示的连接：
 
-![试验板连接]({{site.baseurl}}/images/I2CAccelerometer/breadboard_assembled_mbm.png)
+![试验板连接]({{site.baseurl}}/Resources/images/I2CAccelerometer/breadboard_assembled_mbm.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
 以下是电路原理图：
 
-![加速计示意图]({{site.baseurl}}/images/I2CAccelerometer/schematics_mbm.png)
+![加速计示意图]({{site.baseurl}}/Resources/images/I2CAccelerometer/schematics_mbm.png)
 
 ###部署和运行应用
 
@@ -96,7 +96,7 @@ public sealed partial class MainPage : Page
 
 按照[设置远程调试并部署应用]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp)的说明进行操作。I2CAccelerometer 应用将部署并启动，并且你应该会看到加速计数据显示在屏幕上。如果你将加速计平放在一个图面上，则 Z 轴所读取的值应接近 1.000G，而 X 和 Y 轴应接近 0.000G。这些值将会小幅度波动，即使设备静止不动也是如此。这是正常现象，这是因振动和电噪音而产生的。如果你倾斜或晃动传感器，你应该能看到响应中的值出现变化。注意，此示例在 4G 模式下配置设备，因此你不可能会看到高于 4G 的 G 读数。
 
-![I2C 加速计运行]({{site.baseurl}}/images/I2CAccelerometer/i2caccelerometer_screenshot.png)
+![I2C 加速计运行]({{site.baseurl}}/Resources/images/I2CAccelerometer/i2caccelerometer_screenshot.png)
 
 恭喜！ 你已连接一个 I2C 加速计。
 

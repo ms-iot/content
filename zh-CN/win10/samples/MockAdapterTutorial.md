@@ -34,7 +34,7 @@ lang: zh-CN
 3. 导航到解压缩的文件夹，然后在 Visual Studio 中打开 MockAdapter.sln 解决方案文件。
 4. 在 Visual Studio 中打开该解决方案后，导航到解决方案资源管理器，并右键单击 HeadlessAdapterApp 项目。选择“设置为启动项目”。
 
-![set\_startup]({{site.baseurl}}/images/AllJoyn/mockadapter_vs.png)
+![set\_startup]({{site.baseurl}}/Resources/images/AllJoyn/mockadapter_vs.png)
 
 5. 	在主菜单栏中，依次选择“调试”-\>“HeadlessAdapterApp 属性...”
 6.	按照[设置远程调试和部署应用]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#cpp)的说明进行操作
@@ -50,27 +50,27 @@ lang: zh-CN
 * Mock BACnet 可调光开关 - Microsoft 调光控件 725：Mock 可调光开关设备
 * Mock BACnet 开关 - Microsoft 2 X 开关：Mock 开关设备。
 
-![AJx\_Mock1]({{site.baseurl}}/images/MockAdapter/mock_ajx1.png)
+![AJx\_Mock1]({{site.baseurl}}/Resources/images/MockAdapter/mock_ajx1.png)
 
 选择 Mock BACnet 开关对象。
 
-![AJx\_Mock2]({{site.baseurl}}/images/MockAdapter/mock_ajx2.png)
+![AJx\_Mock2]({{site.baseurl}}/Resources/images/MockAdapter/mock_ajx2.png)
 
 选择 Mock\_BACnet\_Switch 对象。
 
-![AJx\_Mock3]({{site.baseurl}}/images/MockAdapter/mock_ajx3.png)
+![AJx\_Mock3]({{site.baseurl}}/Resources/images/MockAdapter/mock_ajx3.png)
 
   Mock\_BACnet\_Switch 对象的接口视图将列出多个接口。其中的大多数接口都是默认 AllJoyn 接口，例如 Introspectable 接口。选择 com.microsft.DSBMockAdapter.MockBACnetSwitch.MainInter... 接口。
 
-![AJx\_Mock4]({{site.baseurl}}/images/MockAdapter/mock_ajx4.png)
+![AJx\_Mock4]({{site.baseurl}}/Resources/images/MockAdapter/mock_ajx4.png)
 
 选择 DeviceReset 方法。
 
-![AJx\_Mock5]({{site.baseurl}}/images/MockAdapter/mock_ajx5.png)
+![AJx\_Mock5]({{site.baseurl}}/Resources/images/MockAdapter/mock_ajx5.png)
 
  在方法输入参数部分中，键入“重置”并按下“调用”。应该会显示状态 OK。
 
-![AJx\_Mock6]({{site.baseurl}}/images/MockAdapter/mock_ajx6.png)
+![AJx\_Mock6]({{site.baseurl}}/Resources/images/MockAdapter/mock_ajx6.png)
 
 
 

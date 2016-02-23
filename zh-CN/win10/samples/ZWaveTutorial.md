@@ -40,7 +40,7 @@ Z-Wave 是无线通信协议，旨在允许家庭中的设备（如照明、家�
 1. 在[此处](https://github.com/ms-iot/samples/blob/develop/AllJoyn/AllJoynZWaveDemo/ZWaveAdapter.zip?raw=true)下载 ZWaveAdapter.zip 文件
 2. 导航到下载了 zip 文件的文件夹。右键单击该文件以及“提取所有...”以提取到所选的文件夹。
 3. 导航至提取的文件夹，并在 Visual Studio 中打开 ZWaveAdapter.sln 解决方案文件。
-4. 在 Visual Studio 中打开解决方案后，请导航至解决方案资源管理器，并右键单击 ZWaveBackgroundService 项目。选择“设置为启动项目”。![set\_startup]({{site.baseurl}}/images/AllJoyn/startup_proj.png)
+4. 在 Visual Studio 中打开解决方案后，请导航至解决方案资源管理器，并右键单击 ZWaveBackgroundService 项目。选择“设置为启动项目”。![set\_startup]({{site.baseurl}}/Resources/images/AllJoyn/startup_proj.png)
 
 5. 	在主菜单栏中，依次选择“调试”-\>“ZWaveBackgroundService 属性...”
 6.	按照[设置远程调试和部署应用]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#cpp)的说明进行操作
@@ -55,7 +55,7 @@ Z-Wave 是无线通信协议，旨在允许家庭中的设备（如照明、家�
 
 设置的外观应如下图所示
  
-![Rpi\_ZStick]({{site.baseurl}}/images/AllJoyn/ZStick_RPi.png)
+![Rpi\_ZStick]({{site.baseurl}}/Resources/images/AllJoyn/ZStick_RPi.png)
 
 ## 通过 AllJoyn 控制 Z-Wave 开关  
 
@@ -65,28 +65,28 @@ Z-Wave 是无线通信协议，旨在允许家庭中的设备（如照明、家�
 
 • ZWaveAdapter – Microsoft DSB： 这是 Z-Wave DSB • HomeID\_xxx… – Aeon Labs 智能能源开关： 这是 Z-Wave 电源开关，已与 Z-Wave 硬件保护装置配对 • HomeID\_xxx… – Aeon Labs Z-Stick S2： 这是 Z-Wave USB 硬件保护装置，选择 Aeon Labs 智能能源开关。
 
-![AJx\_ZWave1]({{site.baseurl}}/images/AllJoyn/Ajx_shot1.png)
+![AJx\_ZWave1]({{site.baseurl}}/Resources/images/AllJoyn/Ajx_shot1.png)
   
 选择开关对象。
 
-![AJx\_ZWave2]({{site.baseurl}}/images/AllJoyn/ajx_shot2.png)
+![AJx\_ZWave2]({{site.baseurl}}/Resources/images/AllJoyn/ajx_shot2.png)
 
   该开关对象的接口视图列出了多个接口。大多数接口均为默认的 AllJoyn 接口，如 Introspectable 接口。选择 com.microsft.ZWaveAdapterHome… 接口。
 
 
-![AJx\_ZWave3]({{site.baseurl}}/images/AllJoyn/Ajx_shot3.png)
+![AJx\_ZWave3]({{site.baseurl}}/Resources/images/AllJoyn/Ajx_shot3.png)
   
   
 选择值属性。
 
-![AJx\_ZWave4]({{site.baseurl}}/images/AllJoyn/Ajx_shot4.png)
+![AJx\_ZWave4]({{site.baseurl}}/Resources/images/AllJoyn/Ajx_shot4.png)
 
   根据开关的当前状态（打开或关闭），如果状态为 ON，“当前值”字段将显示“true”；如果为 OFF，将显示“false”。在“新值”下拉列表中，选择新的设置。选择新设置后，按“设置”。
 
-![AJx\_ZWave5]({{site.baseurl}}/images/AllJoyn/Ajx_shot5.png)
+![AJx\_ZWave5]({{site.baseurl}}/Resources/images/AllJoyn/Ajx_shot5.png)
   
   视图将报告“当前值”字段中的值的更改以及返回操作的状态代码：
 
-![AJx\_ZWave6]({{site.baseurl}}/images/AllJoyn/Ajx_shot6.jpg)
+![AJx\_ZWave6]({{site.baseurl}}/Resources/images/AllJoyn/Ajx_shot6.jpg)
   
 

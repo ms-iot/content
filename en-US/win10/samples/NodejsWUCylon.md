@@ -25,7 +25,7 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 * Install the latest Node.js Tools for Windows IoT from [here](http://aka.ms/ntvsiotlatest).
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 * Install Arduino software from [here](https://www.arduino.cc/en/Main/Software).
-* Install [Git for Windows](http://git-scm.com/download/win). Ensure that Git is included in your ‘PATH’ environment variable.
+* Install [Git for Windows](http://git-scm.com/download/win). Ensure that Git is included in your 'PATH' environment variable.
 
 
 ### Upload Firmata to your Arduino
@@ -42,23 +42,23 @@ Start Visual Studio 2015 and create a new project (File \| New Project...). In t
 
 Select the `Basic Node.js Cylon Application (Universal Windows)` template (shown below), enter a name for your project, then press OK.
 
-![Node.js Cylon Project Dialog]({{site.baseurl}}/images/Nodejs/nodejswucylon-newprojectdialog.png)
+![Node.js Cylon Project Dialog]({{site.baseurl}}/Resources/images/Nodejs/nodejswucylon-newprojectdialog.png)
 
 Wait for the Cylon package and its dependencies to complete downloading. This will be indicated by the message below in the npm output window.
 
-![Node.js Output Window]({{site.baseurl}}/images/Nodejs/npm-output-window.png)
+![Node.js Output Window]({{site.baseurl}}/Resources/images/Nodejs/npm-output-window.png)
 
 Right-click on the npm node in the Solution Explorer (shown below) and select Update npm Packages.
 This step will run npm dedupe and update [serialport](https://www.npmjs.com/package/serialport) (a Cylon dependency) with a [version](https://github.com/ms-iot/node-serialport/tree/uwp) that works with Node.js UWP.
 
-![Node.js Npm Menu]({{site.baseurl}}/images/Nodejs/npm-update-menu.png)
+![Node.js Npm Menu]({{site.baseurl}}/Resources/images/Nodejs/npm-update-menu.png)
 
 
 ### Set up the connection between your Arduino and Raspberry Pi 2
 Connect your Arduino and Raspberry Pi 2 with the USB cable. If your Raspberry Pi 2 is connected to a monitor, 
 you should see the device getting recognized as shown in the image below (the name of the device may be "Arduino Uno" instead of "USB Serial Device"):
 
-![Arduino Uno Start Screen]({{site.baseurl}}/images/Nodejs/arduino-uno-startscreen.png)
+![Arduino Uno Start Screen]({{site.baseurl}}/Resources/images/Nodejs/arduino-uno-startscreen.png)
 
 Now we need to get the string that identifies the Arduino and will be used in sample code. Follow these steps to do this:
 
@@ -101,7 +101,7 @@ Cylon.robot({
 
 * Attach the servo to the the arduino board using pin 3 (you can also change the pin number in app.js). In the setup shown below, the signal wire is connected to pin 3 and the power source is the Raspberry Pi 2.
 
-![Arduino Servo RPi2]({{site.baseurl}}/images/Nodejs/arduino-servo-rpi2.png)
+![Arduino Servo RPi2]({{site.baseurl}}/Resources/images/Nodejs/arduino-servo-rpi2.png)
 
 
 ### Deploy the app to your Raspberry Pi 2

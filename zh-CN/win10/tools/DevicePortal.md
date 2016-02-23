@@ -10,7 +10,7 @@ lang: zh-CN
 ##基于 Web 的设备管理
    除了高级诊断工具外，基于 Web 的设备管理还提供基本的配置和设备管理功能，从而帮助你排除 Windows IoT 设备的故障并查看其实时性能。
    
-   连接到本地网络之后，每个 Windows 10 IoT 核心版设备都将允许你访问这些工具。![Web 主页]({{site.baseurl}}/images/deviceportal/deviceportal.png)
+   连接到本地网络之后，每个 Windows 10 IoT 核心版设备都将允许你访问这些工具。![Web 主页]({{site.baseurl}}/Resources/images/deviceportal/deviceportal.png)
 
 <hr>
 
@@ -21,11 +21,11 @@ lang: zh-CN
    若要使基于 Web 的设备管理正常工作，首先需要将设备连接到网络。为此，请将以太网电缆从你的开发板连接到本地网络中。
 
 2. **查找你的设备 IP 地址**
-    * 如果你的设备已连接到监视器，IP 地址将在首页上列出。如果未看到 IP 地址，则开发板未正确连接到网络。![DefaultApp IP]({{site.baseurl}}/images/deviceportal/defaultapp_ip.png)
-	* 如果你已[设置电脑]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm)，应当已在电脑上安装了 **Windows IoT Core Watcher**。启动 Windows IoT 核心版观察程序，并找到你的计算机名。计算机名旁边列出的是开发板的 IP 地址。如果找不到你的计算机，则表明你的电脑或开发板未正确连接到网络。![IotWatcher IP]({{site.baseurl}}/images/IoTCoreWatcher.PNG)
+    * 如果你的设备已连接到监视器，IP 地址将在首页上列出。如果未看到 IP 地址，则开发板未正确连接到网络。![DefaultApp IP]({{site.baseurl}}/Resources/images/deviceportal/defaultapp_ip.png)
+	* 如果你已[设置电脑]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm)，应当已在电脑上安装了 **Windows IoT Core Watcher**。启动 Windows IoT 核心版观察程序，并找到你的计算机名。计算机名旁边列出的是开发板的 IP 地址。如果找不到你的计算机，则表明你的电脑或开发板未正确连接到网络。![IotWatcher IP]({{site.baseurl}}/Resources/images/IoTCoreWatcher.PNG)
 
 3. **通过浏览器连接到基于 Web 的设备管理**
-    * 将 IP 地址输入地址栏。将 :8080 添加到末尾。![浏览器 IP]({{site.baseurl}}/images/deviceportal/browser_ip.png)
+    * 将 IP 地址输入地址栏。将 :8080 添加到末尾。![浏览器 IP]({{site.baseurl}}/Resources/images/deviceportal/browser_ip.png)
     * 基于 Web 的设备管理应启动并显示 Web 管理主屏幕！
 
  还可以通过右键单击设备，然后单击“在浏览器中启动”，从 Windows IoT Core Watcher 启动基于 Web 的设备管理工具
@@ -43,7 +43,7 @@ lang: zh-CN
 
 ###**顶部工具栏**
     
-顶部工具栏使你能够关机、重新启动和提供反馈。![Web 工具栏]({{site.baseurl}}/images/deviceportal/toolbar.png)
+顶部工具栏使你能够关机、重新启动和提供反馈。![Web 工具栏]({{site.baseurl}}/Resources/images/deviceportal/toolbar.png)
 
 * 关机 - 关闭设备。
 * 重新启动 - 重新启动设备。
@@ -64,7 +64,7 @@ lang: zh-CN
 
 **安装应用**
 
-1.	创建你的第一个应用后，可以远程将其安装到设备上。在从 Visual Studio 进行生成后，将生成一个输出文件夹。<img class = "screen-snippet" src="{{site.baseurl}}/images/deviceportal/installapp0.png">	
+1.	创建你的第一个应用后，可以远程将其安装到设备上。在从 Visual Studio 进行生成后，将生成一个输出文件夹。<img class = "screen-snippet" src="{{site.baseurl}}/Resources/images/deviceportal/installapp0.png">	
 2.	在 Web 中，单击“浏览”并查找你的 .appx。
 3.	单击“证书浏览”，查找 .cer 文件。 
 4.	添加依赖项。如果你有多个项，你将必须逐个添加。 	
@@ -79,33 +79,33 @@ lang: zh-CN
 3.	准备就绪后，请点击“卸载”。
     
 
-**部署日志** <img class="screen-snippet" src="{{site.baseurl}}/images/deviceportal/deploymentlog.png"> 部署日志是进度清单，用于指示你部署应用的进度。
+**部署日志** <img class="screen-snippet" src="{{site.baseurl}}/Resources/images/deviceportal/deploymentlog.png"> 部署日志是进度清单，用于指示你部署应用的进度。
 
 ###**进程**
 与电脑上的任务管理器非常相似，此部分允许你查看当前正在运行的进程以及每个进程占用的内存使用情况。单击进程旁的 X 可将其终止。
 
 ###**性能**
-显示 CPU 和 I/O 使用情况以及内存统计数据的实时诊断。<img src="{{site.baseurl}}/images/deviceportal/iograph.png">
+显示 CPU 和 I/O 使用情况以及内存统计数据的实时诊断。<img src="{{site.baseurl}}/Resources/images/deviceportal/iograph.png">
 
 * CPU 使用情况映射中央处理单元的使用情况。
 
-<img src="{{site.baseurl}}/images/deviceportal/cpugraph.png">
+<img src="{{site.baseurl}}/Resources/images/deviceportal/cpugraph.png">
 
 * I/O 显示磁盘利用率（即读取和写入存储）
 
 ###**调试**
 调试部分适用于标识应用程序内的问题。
 
-<img src="{{site.baseurl}}/images/deviceportal/debug1.png">
+<img src="{{site.baseurl}}/Resources/images/deviceportal/debug1.png">
 
 * 将自动记录任何系统崩溃，并且可通过 Web 管理工具查看这些崩溃。然后你可以下载内核转储，并尝试查明发生了什么情况。
 
-<img src="{{site.baseurl}}/images/deviceportal/debug2.png">
+<img src="{{site.baseurl}}/Resources/images/deviceportal/debug2.png">
 
 * 这类似于动态内核转储，但适用于用户模式处理。 
 * 单击“下载”按钮将导致“小型转储”，并将下载该进程的整个状态。这非常适用于调试悬挂进程。
 
-<img src="{{site.baseurl}}/images/deviceportal/debug3.png">
+<img src="{{site.baseurl}}/Resources/images/deviceportal/debug3.png">
 
 * 当 IoT 核心版设备崩溃时，你的计算机将尝试向 Windows 错误报告服务发送报告。当发生这种情况时，将存储报告的日志，并且该日志可供查看。
 * 错误报告不包含转储信息，并且更面向应用和进程。 

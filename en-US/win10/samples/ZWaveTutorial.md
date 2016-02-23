@@ -45,7 +45,7 @@ The Z-Wave adapter DSB comes pre-installed for most Windows 10 IOT Core images. 
 ### To run from source
 1. Download a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip).
 2. Open `samples-develop\AllJoyn\Samples\ZWaveAdapter\ZWaveAdapter.sln` in Visual Studio.
-3. Once the solution has been opened in Visual Studio, Navigate to the Solution explorer and right click the ZWaveBackgroundService project. Select "Set as Startup Project". ![set_startup]({{site.baseurl}}/images/AllJoyn/startup_proj.png)
+3. Once the solution has been opened in Visual Studio, Navigate to the Solution explorer and right click the ZWaveBackgroundService project. Select "Set as Startup Project". ![set_startup]({{site.baseurl}}/Resources/images/AllJoyn/startup_proj.png)
 
 4.  In the Main menu bar, select "Debug" -> ZWaveBackgroundService properties…"
 5.  Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#cpp)
@@ -60,7 +60,7 @@ NOTE: Do not plug in the Z-Wave USB dongle when pairing. Also, the Z-Wave Dongle
 
 The setup should look like in the picture below
 
-![Rpi_ZStick]({{site.baseurl}}/images/AllJoyn/ZStick_RPi.png)
+![Rpi_ZStick]({{site.baseurl}}/Resources/images/AllJoyn/ZStick_RPi.png)
 
 ## Controlling the Z-Wave switch via AllJoyn
 
@@ -72,28 +72,28 @@ Launch IoT Explorer for AllJoyn app. The app should find the following three dev
 • HomeID_xxx…  – Aeon Labs Smart Energy Switch: This is the Z-Wave power switch that is paired with the Z-Wave dongle
 • HomeID_xxx…  – Aeon Labs Z-Stick S2: This is the Z-Wave USB dongle  Select the Aeon Labs Smart Energy Switch.
 
-![AJx_ZWave1]({{site.baseurl}}/images/AllJoyn/Ajx_shot1.png)
+![AJx_ZWave1]({{site.baseurl}}/Resources/images/AllJoyn/Ajx_shot1.png)
 
 Select the Switch object.
 
-![AJx_ZWave2]({{site.baseurl}}/images/AllJoyn/ajx_shot2.png)
+![AJx_ZWave2]({{site.baseurl}}/Resources/images/AllJoyn/ajx_shot2.png)
 
   The interface view of the Switch object lists several interfaces. Most of them are default AllJoyn interfaces such as the Introspectable interface. Select the com.microsft.ZWaveAdapterHome… interface.
 
 
-![AJx_ZWave3]({{site.baseurl}}/images/AllJoyn/Ajx_shot3.png)
+![AJx_ZWave3]({{site.baseurl}}/Resources/images/AllJoyn/Ajx_shot3.png)
 
 
 Select the value property.
 
-![AJx_ZWave4]({{site.baseurl}}/images/AllJoyn/Ajx_shot4.png)
+![AJx_ZWave4]({{site.baseurl}}/Resources/images/AllJoyn/Ajx_shot4.png)
 
   Depending on the current state of the switch (on or off) the Current value field will show true for ON and false for OFF. In the New Value drop down list select the new setting. After the new setting is selected press Set.
 
-![AJx_ZWave5]({{site.baseurl}}/images/AllJoyn/Ajx_shot5.png)
+![AJx_ZWave5]({{site.baseurl}}/Resources/images/AllJoyn/Ajx_shot5.png)
 
   The view will report the change of the value in the Current value field as well as the return status code of the operation:
 
-![AJx_ZWave6]({{site.baseurl}}/images/AllJoyn/Ajx_shot6.jpg)
+![AJx_ZWave6]({{site.baseurl}}/Resources/images/AllJoyn/Ajx_shot6.jpg)
 
 

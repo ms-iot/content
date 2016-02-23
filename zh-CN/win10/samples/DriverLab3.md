@@ -24,20 +24,20 @@ lang: zh-CN
 
 * 接下来，在你的开发电脑上，打开“文件资源管理器”窗口，并在地址栏中键入 `\\<TARGET_DEVICE>\C$\`，然后点击 Enter。在此特定情况下，`<TARGET_DEVICE>` 是 Windows 10 IoT 核心版设备的 IP 地址：
 
-    ![使用文件资源管理器的 SMB]({{site.baseurl}}/images/DriverLab/smb1.png)
+    ![使用文件资源管理器的 SMB]({{site.baseurl}}/Resources/images/DriverLab/smb1.png)
 
     如果系统提示你输入用户名和密码，而你未更改过默认的用户名和密码，请使用以下凭据：
 
         User Name: <TARGET_DEVICE>Administrator
         Password:  p@ssw0rd
 
-    ![使用文件资源管理器的 SMB]({{site.baseurl}}/images/DriverLab/cred1.png)
+    ![使用文件资源管理器的 SMB]({{site.baseurl}}/Resources/images/DriverLab/cred1.png)
 
     注意： **强烈建议**你更新默认的管理员帐户密码。请按照在[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)找到的说明进行操作。
 
 * 导航到 SMB 文件资源管理器窗口中的 `\windows\system32\` 文件夹：
 
-    ![使用文件资源管理器的 SMB]({{site.baseurl}}/images/DriverLab/smb2.png)
+    ![使用文件资源管理器的 SMB]({{site.baseurl}}/Resources/images/DriverLab/smb2.png)
 
 * 将以下两个文件（上一部分中在 Visual Studio 中生成驱动程序时所创建）从开发计算机拖放（复制）到 IoT 核心版设备上的 `\windows\system32\` 文件夹：
 

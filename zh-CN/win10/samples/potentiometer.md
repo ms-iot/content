@@ -25,11 +25,11 @@ lang: zh-CN
 
 | MCP3002 | MCP3208 |
 | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| ![MCP3002 引出线]({{site.baseurl}}/images/Potentiometer/MCP3002.PNG) | ![MCP3208 引出线]({{site.baseurl}}/images/Potentiometer/MCP3208.PNG) |
+| ![MCP3002 引出线]({{site.baseurl}}/Resources/images/Potentiometer/MCP3002.PNG) | ![MCP3208 引出线]({{site.baseurl}}/Resources/images/Potentiometer/MCP3208.PNG) |
 
 Raspberry Pi 引出线
 
-![Raspberry Pi 2 引出线]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![Raspberry Pi 2 引出线]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
 ## 电线和连接
 
@@ -38,7 +38,7 @@ Raspberry Pi 引出线
 
 连接详细信息如下：
 
-![整体电路图]({{site.baseurl}}/images/Potentiometer/OverallCon-3002.PNG)
+![整体电路图]({{site.baseurl}}/Resources/images/Potentiometer/OverallCon-3002.PNG)
 
 MCP3002 应该按如下方式进行连接：
 
@@ -55,7 +55,7 @@ MCP3002 应该按如下方式进行连接：
 
 连接详细信息如下：
 
-![整体电路图]({{site.baseurl}}/images/Potentiometer/OverallCon-3208.PNG)
+![整体电路图]({{site.baseurl}}/Resources/images/Potentiometer/OverallCon-3208.PNG)
 
 MCP3002 应该按如下方式进行连接：
 
@@ -82,8 +82,8 @@ MCP3002 应该按如下方式进行连接：
 当转动电位计旋钮时，你将看到屏幕上的数字出现变化，该数字指示电位计旋钮的位置。当数字大于 ADC 分辨率的一半（对于 **MCP3002**，此数字为 **512**。对于 **MCP3208**，此数字为 **2048**）时，将打开 LED。否则，它将处于关闭状态。
 
 | ----------------------------------------------------------------------------------------- |-| ---------------------------------------------------------------------------------- |
-| ![运行 LED 的应用关闭]({{site.baseurl}}/images/Potentiometer/AppRunning-LEDOff.png) | | ![运行 LED 的应用打开]({{site.baseurl}}/images/Potentiometer/AppRunning-LEDOn.png) |
-| ![试验板 LED 关闭]({{site.baseurl}}/images/Potentiometer/Breadboard-LEDOff.png) | | ![试验板 LED 打开]({{site.baseurl}}/images/Potentiometer/Breadboard-LEDOn.png) |
+| ![运行 LED 的应用关闭]({{site.baseurl}}/Resources/images/Potentiometer/AppRunning-LEDOff.png) | | ![运行 LED 的应用打开]({{site.baseurl}}/Resources/images/Potentiometer/AppRunning-LEDOn.png) |
+| ![试验板 LED 关闭]({{site.baseurl}}/Resources/images/Potentiometer/Breadboard-LEDOff.png) | | ![试验板 LED 打开]({{site.baseurl}}/Resources/images/Potentiometer/Breadboard-LEDOn.png) |
 
 ##我们来看看代码
 

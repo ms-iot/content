@@ -17,11 +17,11 @@ lang: zh-CN
 
 * 创建新项目（“文件”\|“新建项目...”）。在“新建项目”对话框中，如下所示导航到“Windows IoT Core”（在该对话框的左窗格中： 模板 \| Visual C++ \| Windows \| Windows IoT Core）。<br/> 选择模板“空白 Windows IoT Core 控制台应用程序”<br/>请记得为你的第一个应用指定一个好记的名称！ 在本示例中，我们将项目命名为“MemoryStatus”。
 
-    ![控制台应用程序模板位置]({{site.baseurl}}/images/Console/new_cpp_console_proj.png)
+    ![控制台应用程序模板位置]({{site.baseurl}}/Resources/images/Console/new_cpp_console_proj.png)
 
 * 让我们来向该控制台应用程序添加一些内容。从解决方案资源管理器中，选择“ConsoleApplication.cpp”文件。
 
-    ![ConsoleApplication 文件]({{site.baseurl}}/images/Console/console_application.png)
+    ![ConsoleApplication 文件]({{site.baseurl}}/Resources/images/Console/console_application.png)
 
 * 若要向我们的控制台添加一些功能，请添加以下内存状态查询和显示代码：
 
@@ -130,17 +130,17 @@ int main(int argc, char **argv)
 
     在 Visual Studio 中，你可以通过编辑你的项目的属性配置你的目标项目（请确保所有突出显示的更改均适用于板名称或 IP 地址）：
 
-    ![RemoteMachineProjectSettings 目标]({{site.baseurl}}/images/Console/console_project_settings.png)
+    ![RemoteMachineProjectSettings 目标]({{site.baseurl}}/Resources/images/Console/console_project_settings.png)
 
         Note: You can use the IP address instead of the Windows IoT Core device name.
 
 * 项目配置需修改为启用部署。为此，请从工具栏的“解决方案配置”下拉菜单中选择“配置管理器”，以打开配置管理器。
 
-    ![SolutionConfiguration 目标]({{site.baseurl}}/images/Console/configuration_management.png)
+    ![SolutionConfiguration 目标]({{site.baseurl}}/Resources/images/Console/configuration_management.png)
 
     在配置管理器中，确保已针对自己的项目配置选中了“部署”复选框（如果此选项处于禁用状态，则很可能是因为部署选项未全部输入到项目属性的“调试”选项卡中）
 
-    ![RemoteMachineProjectSettings 目标]({{site.baseurl}}/images/Console/deploy_checkbox.png)
+    ![RemoteMachineProjectSettings 目标]({{site.baseurl}}/Resources/images/Console/deploy_checkbox.png)
 
 * 现在，我们可以随时部署到远程 Windows IoT Core 设备。只需按 F5（或依次选择“调试”\|“启动调试”）即可开始调试应用。你也可以通过使用“生成”\|“部署解决方案”，仅部署你的应用程序，而无需启动调试会话。
 
@@ -152,4 +152,4 @@ int main(int argc, char **argv)
 
 * 现在，你可以运行该应用程序，就像运行其他任何应用程序那样。只需打开 PowerShell 连接（可在[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)获取相关说明），并输入上面指定的远程命令。
 
-    ![ConsoleOutput 目标]({{site.baseurl}}/images/Console/console_output.png)
+    ![ConsoleOutput 目标]({{site.baseurl}}/Resources/images/Console/console_output.png)

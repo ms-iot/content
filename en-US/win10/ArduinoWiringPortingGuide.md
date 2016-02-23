@@ -58,7 +58,7 @@ The pre-defined pin names can be found in `PinNumbers.h` inside any Arduino Wiri
 
 #### Raspberry Pi 2
 
-[Pinout Diagram]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+[Pinout Diagram]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
 {:.table.table-bordered}
 | Pin Define      | Corresponding Pin Number   |
@@ -79,7 +79,7 @@ The pre-defined pin names can be found in `PinNumbers.h` inside any Arduino Wiri
 
 #### Minnowboard Max
 
-[Pinout Diagram]({{site.baseurl}}/images/PinMappings/MBM_Pinout.png)
+[Pinout Diagram]({{site.baseurl}}/Resources/images/PinMappings/MBM_Pinout.png)
 
 {:.table.table-bordered}
 | Pin Define      | Corresponding Pin Number   |

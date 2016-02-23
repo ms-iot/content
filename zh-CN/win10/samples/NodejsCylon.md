@@ -92,7 +92,7 @@ Cylon.robot({
 ###在你的 Arduino 和 Raspberry Pi 2 之间设置连接
 使用 USB 电缆将你的 Arduino 与 Raspberry Pi 2 相连接执行此操作时，如果你的 Raspberry Pi 2 已连接到监视器，你应该能看到该设备已被识别，如下图中所示：
 
-![Arduino“开始”屏幕]({{site.baseurl}}/images/Nodejs/arduino-startscreen.jpg)
+![Arduino“开始”屏幕]({{site.baseurl}}/Resources/images/Nodejs/arduino-startscreen.jpg)
 
 还需要将端口名称（例如“COM5”）分配给 Arduino。按照以下步骤执行此操作：
 
@@ -104,7 +104,7 @@ Cylon.robot({
 ###运行示例！
 在 PowerShell 中，运行命令 `& 'C:\Node.js (Chakra)\Node.exe' C:\CylonSample\cylonsample.js`。运行该命令后，Arduino 上的 LED（下图中以箭头形式显示）应开始每隔 1 秒闪烁一次。
 
-![Arduino RPi2]({{site.baseurl}}/images/Nodejs/arduino-rpi2.jpg)
+![Arduino RPi2]({{site.baseurl}}/Resources/images/Nodejs/arduino-rpi2.jpg)
 
 
 ### GitHub

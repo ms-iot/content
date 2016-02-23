@@ -15,21 +15,21 @@ lang: zh-CN
 ###启动 PowerShell \(PS\) 会话
 * 若要使用 Windows 10 IoT 核心版设备启动 PS 会话，首先需要在主机电脑与设备之间创建信任关系。在启动 Windows IoT 核心版设备后，与该设备相连的屏幕上将显示一个 IP 地址：
 
-    ![Windows 10 IoT 核心版上的 CoreDefaultApp]({{site.baseurl}}/images/DefaultApp.png)
+    ![Windows 10 IoT 核心版上的 CoreDefaultApp]({{site.baseurl}}/Resources/images/DefaultApp.png)
 
     可以在 Windows 10 IoT Core Watcher 实用工具中找到相同信息。
 
 * 在本地电脑上启动管理员 PS 控制台。执行此操作的最简单方法是在 Windows“开始”菜单旁的“搜索 Web 和 Windows”文本框中键入“powershell”： Windows 将在你的计算机上查找 PowerShell：
 
-    ![查找 PowerShell]({{site.baseurl}}/images/powershell/start-ps.png)
+    ![查找 PowerShell]({{site.baseurl}}/Resources/images/powershell/start-ps.png)
 
     若要以管理员身份启动 PS，请右键单击“Windows PowerShell”项并选择“以管理员身份运行”：
 
-    ![以管理员身份运行 PowerShell]({{site.baseurl}}/images/powershell/start-ps2.png)
+    ![以管理员身份运行 PowerShell]({{site.baseurl}}/Resources/images/powershell/start-ps2.png)
 
     现在你应该看到 PS 控制台：
 
-    ![PowerShell 控制台]({{site.baseurl}}/images/powershell/ps.PNG)
+    ![PowerShell 控制台]({{site.baseurl}}/Resources/images/powershell/ps.PNG)
 
 * 注意：你可能需要在桌面上启动 WinRM 服务以启用远程连接。在 PS 控制台中，键入以下命令：
 
@@ -51,7 +51,7 @@ lang: zh-CN
 
     如果你已成功连接到设备，你应该可以在提示符之前看到设备的 IP 地址。
 
-    ![PowerShell 控制台]({{site.baseurl}}/images/powershell/ps_device.png)
+    ![PowerShell 控制台]({{site.baseurl}}/Resources/images/powershell/ps_device.png)
 
 * **更新帐户密码：**
 
