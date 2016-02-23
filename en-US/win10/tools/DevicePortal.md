@@ -7,7 +7,7 @@ lang: en-US
 
 <div class="container" markdown="1">
 
-##Windows Device Portal
+## Windows Device Portal
    Windows Device Portal provides basic configuration and device management capabilities, in addition to advanced diagnostic tools to help you troubleshoot and view the real time performance of your Windows IoT Device. 
    
    Once connected to your local network, every Windows 10 IoT Core device will allow you to access these tools.
@@ -16,7 +16,7 @@ lang: en-US
 <hr>
 
 
-##Set up
+## Set up
 1. **Connect your board to the internet**
 
    To get Windows Device Portal up and running, you first need to connect your device to your network. To do so, connect an Ethernet cable from your board into to your local network.
@@ -40,11 +40,11 @@ lang: en-US
 
 
 
-##Features
+## Features
 
 This tool is still in beta. Some of the features are untested or still being worked on.
 
-###**Top Toolbar**
+### **Top Toolbar**
     
 The top toolbar allows you to shutdown, reboot and give feedback.![Windows Device Portal toolbar]({{site.baseurl}}/Resources/images/deviceportal/toolbar.png)
 
@@ -53,11 +53,11 @@ The top toolbar allows you to shutdown, reboot and give feedback.![Windows Devic
 * Feedback - Opens up the Windows 10 Feedback tool where you can enter any valuable feedback.
 * Help - Takes you to this documentation page.
 
-###**Home**
+### **Home**
 
 This section is coming soon! Stay tuned
 
-###**Apps**
+### **Apps**
 
 Provides install/uninstall functionality for AppX packages and bundles on your device.
 
@@ -84,10 +84,10 @@ Provides install/uninstall functionality for AppX packages and bundles on your d
     <img class="screen-snippet" src="{{site.baseurl}}/Resources/images/deviceportal/deploymentlog.png">
     The deployment log is a progress checklist indicating how far you are with deploying an app.
 
-###**Processes**
+### **Processes**
 Much like the Task Manager on your PC, this section allows you to see which processes are currently running as well as the memory usage each are holding.  Clicking the X next to a process terminates it.
 
-###**Performance**
+### **Performance**
 Displays real-time diagnostics of CPU and I/O usage, and memory stats.<img src="{{site.baseurl}}/Resources/images/deviceportal/iograph.png">
 
 * CPU usage maps the central processing unit's usage.
@@ -96,7 +96,7 @@ Displays real-time diagnostics of CPU and I/O usage, and memory stats.<img src="
 
 * I/O shows disk utilization (i.e reading and writing to the storage)
 
-###**Debugging**
+### **Debugging**
 The debugging section is great for identifying problems within your application.
 
 <img src="{{site.baseurl}}/Resources/images/deviceportal/debug1.png">
@@ -116,22 +116,22 @@ The debugging section is great for identifying problems within your application.
 
 Type: State of the report upload to the windows error reporting service. 
 
-###**ETW**
+### **ETW**
 Event tracing for Windows.
 
 More coming soon..
 
-###**Perf Tracing**
+### **Perf Tracing**
 
 This section allows you to do record a trace log for CPU, disk usage and memory. 
 
 More details coming soon. 
 
-###**Device Manager**
+### **Device Manager**
 
 Enumerates all peripherals attached to your device.
 
-###**Networking**
+### **Networking**
 
 Once your board is connected to the internet, the IP configuration section will allow you to view advanced network diagnostic information, such as your IP address, and the description of the connection.
 
@@ -139,9 +139,9 @@ Wi-Fi adapters are not currently supported.  This will be coming soon.
 <hr>
 
 
-##Additional Information
+## Additional Information
 
-###Changing the default port
+### Changing the default port
 1. Launch powershell and [connect to your device.]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)
 2. Set the port:
 

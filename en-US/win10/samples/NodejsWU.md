@@ -5,17 +5,17 @@ permalink: /en-US/win10/samples/NodejsWU.htm
 lang: en-US
 ---
 
-##'Hello, World' Node.js (Windows Universal) Sample
+## 'Hello, World' Node.js (Windows Universal) Sample
 
 {% include VerifiedVersion.md %}
 
-###Set up your PC
+### Set up your PC
 * Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
 * Install Visual Studio 2015 Update 1.
 * Install the latest Node.js Tools for Windows IoT from [here](http://aka.ms/ntvsiotlatest).
 
 
-###Create a new Node.js (Windows Universal) project
+### Create a new Node.js (Windows Universal) project
 Start Visual Studio 2015 and create a new project (File \| New Project...). In the `New Project` dialog, navigate to `Node.js` as shown below (in the left pane in the dialog: Templates \| JavaScript \| Node.js).
 
 Select the template `Basic Node.js Web Server (Windows Universal)`
@@ -37,7 +37,7 @@ http.createServer(function (req, res) {
 </UL>
 
 
-###Deploy the server to your Windows IoT Core device
+### Deploy the server to your Windows IoT Core device
 * Go to the Project menu and select '<Your project name> Properties.' You could also right-click on the project node in solution explorer to access Properties.
 * Enter the IP Address in the Remote Machine text box as shown below (the `--debug` argument is required for debugging and is added automatically).
 * You can also add `--use-logger` as an argument to redirect console output to a file in the local storage folder of the UWP application
@@ -50,11 +50,11 @@ http.createServer(function (req, res) {
 
 * When the server is running, open up a browser and enter the address http://&lt;IP address of your device&gt;:1337. The result should look like the picture below.
 
-    ![Hello World Result]({{site.baseurl}}/Resources/images/Nodejs/helloworld-ie.PNG)
+    ![Hello World Result]({{site.baseurl}}/Resources/images/Nodejs/helloworld-ie.png)
 
 * You can set breakpoints, see variable values, etc. To stop the server, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
 
-    ![Debugging Screenshot]({{site.baseurl}}/Resources/images/Nodejs/debugging-vs.PNG)
+    ![Debugging Screenshot]({{site.baseurl}}/Resources/images/Nodejs/debugging-vs.png)
 
 
 ### Universal Windows Platform (UWP) namespaces
@@ -78,7 +78,7 @@ uwp.close();
 
 The result from the code above should look like this:
 
-![DateTime Result]({{site.baseurl}}/Resources/images/Nodejs/datetime-ie.PNG)
+![DateTime Result]({{site.baseurl}}/Resources/images/Nodejs/datetime-ie.png)
 
 
 ### Building and deploying an app package (AppX)

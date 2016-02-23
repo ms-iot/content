@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/AllJoynJS.htm
 lang: en-US
 ---
 
-##AllJoyn.JS
+## AllJoyn.JS
 
 {% include VerifiedVersion.md %}
 
@@ -15,11 +15,11 @@ AllJoyn.JS runtime environment includes a ScriptConsole service that provides su
 
 This tutorial shows how to get AllJoyn.JS running as a Windows 10 application.
 
-##Prerequisties
+## Prerequisties
 
 1. Install [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/win10/AllJoyn.htm#AllJoynExplorer){:target="_blank"} app.
 
-##Set up steps
+## Set up steps
 
 1. Install the required tools listed in the prerequisites on your Windows 10 desktop
  (see their respective documentations to figure out how to proceed).
@@ -43,7 +43,7 @@ Set up loopback exception:
 
 4. Restart your applications.
 
-##Deploy AllJoyn.JS to Windows 10 device
+## Deploy AllJoyn.JS to Windows 10 device
 
 1. Download a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip).
 Alternatively, you can download directly from Allseen Alliance by cloning AllJoyn [DSB repository](https://git.allseenalliance.org/cgit/dsb.git){:target="_blank"}
@@ -64,7 +64,7 @@ Alternatively, you can download directly from Allseen Alliance by cloning AllJoy
 You are now ready to launch it, so launch or debug HeadedAdapterApp project on desktop or if the targeted Windows 10 device has a display or launch or debug HeadlessAdapterApp if it doesn't.
 If needed, see instruction [here]({{site.baseurl}}/en-US/win10/AppDeployment.htm){:target="_blank"} for remote debugging.
 
-##Deploy script file
+## Deploy script file
 
 ScripeConsole service can be used to deploy/install new scripts.  A command line console client is included in AllJoyn.JS source tree (dsb\Samples\AllJoyn.JS\External\allseen\core\alljoyn-js\console).  Pre-built console application can be found [here](https://build.allseenalliance.org/ci/job/alljoyn_js-console-win/){:target="_blank"}.
 
@@ -87,7 +87,7 @@ Eval compile success
 PRINT: Hello Hello  
 Eval result=0: undefined
 
-##General purpose I/O pins
+## General purpose I/O pins
 
 AllJoyn.JS provides a hardware-independent abstraction layer for GPIO and other I/O peripherals
 
@@ -113,11 +113,11 @@ AllJoyn.JS provides a hardware-independent abstraction layer for GPIO and other 
 
 > Even though the GPIO layer is hardware-independent, pin numbers and assignments differ among hardware devices.  Current pin numbers and assignments are based on [Raspberry Pi 2]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png).
 
-##Sample scripts
+## Sample scripts
 
 Many JavaScript samples are included in AllJoyn.JS source under folder `samples-develop\AllJoyn\Samples\AllJoyn.JS\External\allseen\core\alljoyn-js\js`.
 
-##Additional Resources
+## Additional Resources
 
 - [Getting started with AllJoyn.js (Allseen Alliance)](https://allseenalliance.org/framework/documentation/develop/building/alljoyn-js){:target="_blank"}.
 - [Programming IoT Applications Using AllJoyn.js (Allseen Alliance)](https://wiki.allseenalliance.org/_media/training/programming_alljoyn.js.pdf){:target="_blank"}.

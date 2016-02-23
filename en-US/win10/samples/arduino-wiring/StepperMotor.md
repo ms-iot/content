@@ -11,7 +11,7 @@ lang: en-US
 
 Learn how to create an Arduino Wiring sketch on Raspberry Pi 2 or Minnowboard Max that controls a stepper motor. The app runs the motor in default forward mode, default reverse mode and small-step forward mode in a loop.
 
-##Setup
+## Setup
 
 Follow the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm) to create a new wiring project!
 
@@ -107,15 +107,15 @@ void loop() {
 {% endhighlight %}
 
 
-##Build and deploy
+## Build and deploy
 Press F5 to build and deploy your project.
 
 Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm) for more instructions on how to deploy your app!
 
-##Result
+## Result
 You should see the Stepper motor infinitely moving forward, then in reverse, and finally in small-step mode before starting all over!
 
-##Having trouble?
+## Having trouble?
 
 Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.
 

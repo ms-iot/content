@@ -6,7 +6,7 @@ lang: en-US
 deviceName: MBM
 ---
 
-#Get Started
+# Get Started
 
 Learn how to get your computer ready for Windows Developer Program for IoT.
 

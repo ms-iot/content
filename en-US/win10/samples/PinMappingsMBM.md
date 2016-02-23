@@ -4,7 +4,7 @@ title: MinnowBoard Max Pin Mappings
 permalink: /en-US/win10/samples/PinMappingsMBM.htm
 lang: en-US
 ---
-##MinnowBoard Max Pin Mappings
+## MinnowBoard Max Pin Mappings
 
 ![MinnowBoard Max Pin Header]({{site.baseurl}}/Resources/images/PinMappings/MBM_Pinout.png)
 
@@ -24,7 +24,7 @@ Note that the MinnowBoard Max uses 3.3V logic levels on all IO pins. In addition
  These level shifters appear as open collector outputs with a **10K&#x2126; resistive pull-up, and the pull-up is present regardless of whether the IO is set to input or output.**
  The open-collector nature of the level shifters means is that the pins can output a '0' strongly, but only weakly output a '1'. This is important to keep in mind when attaching devices which draw current from the pins (such as an LED). See the [Blinky Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm) for the correct way to interface an LED to the MinnowBoard Max.
 
-##<a name="MBM_GPIO">GPIO Pins
+## <a name="MBM_GPIO">GPIO Pins
 
 The following GPIO pins are accessible through APIs:
 
@@ -61,7 +61,7 @@ public void GPIO()
 }
 {% endhighlight %}
 
-##<a name="MBM_UART"></a>Serial UART
+## <a name="MBM_UART"></a>Serial UART
 
 There are two Serial UARTS available on the MBM: **UART1** and **UART2**
 
@@ -141,7 +141,7 @@ Note that you must add the following capability to the **Package.appxmanifest** 
   </Capabilities>
 {% endhighlight %}
 
-##<a name="MBM_I2C"></a>I2C Bus
+## <a name="MBM_I2C"></a>I2C Bus
 
 There is one I2C controller **I2C5** exposed on the pin header with two lines **SDA** and **SCL**. 10K&#x2126; internal pull-up resistors are already present on these lines.
 
@@ -169,7 +169,7 @@ public async void I2C()
 }
 {% endhighlight %}
 
-###I2C Issues
+### I2C Issues
 
 The MinnowBoard Max has a known issue with the I2C bus which causes communication problems with certain I2C devices. Normally, an I2C device will acknowledge its address during a bus request.
 However, under certain conditions this acknowledge fails to propagate back through the level shifters to the MBM, and as a result the CPU thinks the device did not respond and cancels the bus transaction.
@@ -177,7 +177,7 @@ The issue seems to be related to the [TXS0104E](http://www.ti.com/product/txs010
 The current workaround is to insert a 100 ohm resistor in series with the I2C SCK line, which helps suppress spikes. Not all devices are affected, so this workaround is only required if you are having trouble
 getting a bus response. One device that is known to require this workaround is the HTU21D.
 
-##<a name="MBM_SPI"></a>SPI Bus
+## <a name="MBM_SPI"></a>SPI Bus
 
 There is one SPI controller **SPI0** available on the MBM:
 

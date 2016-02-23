@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/AppInstall.htm
 lang: en-US
 ---
 
-###App Installation Sample
+### App Installation Sample
 
 You can find the source code for this sample on our GitHub [here](https://github.com/ms-iot/samples/tree/develop/AppInstall).
 

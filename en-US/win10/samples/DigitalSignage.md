@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/DigitalSignage.htm
 lang: en-US
 ---
 
-#Digital Signage App
+# Digital Signage App
 
 {% include VerifiedVersion.md %}
 
@@ -13,7 +13,7 @@ This sample showcases a Digital Sign UWP running on Windows IoT Core. Here we wi
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
 
-###Prerequisites
+### Prerequisites
 
 * Device running Windows IoT Core build 10240 or greater. 
 * Mouse
@@ -21,13 +21,13 @@ This is a headed sample.  To better understand what headed mode is and how to co
 * Display monitor
   -  Optional: monitor with touch capabilities.
 
-##Load the project in Visual Studio
+## Load the project in Visual Studio
 
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\DigitalSignageUAP`.  Make a copy of the DigitalSignageUAP folder on your disk and open the project from Visual Studio.
 
 Make sure you set the 'Remote Debugging' setting to point to your Windows IoT device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
 
-##Deploy your app
+## Deploy your app
 
 If you're building for Minnowboard Max, select `x86` in the architecture dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
 
@@ -35,7 +35,7 @@ When everything is set up, you should be able to press F5 from Visual Studio.  T
 
 <img src="{{site.baseurl}}/Resources/images/DigitalSignage/DigitalSignage1.png" height="400">
 
-###Slideshow
+### Slideshow
 
 The app's slideshow can be likened to a screensaver which displays while the app is idle and ends upon user input.
 
@@ -49,7 +49,7 @@ The app's slideshow can be likened to a screensaver which displays while the app
 
 3. End the slideshow by either a) moving your mouse, b) pressing any key or c) tap anywhere on the screen. The main page will return to the screen.
 
-###Web Browser
+### Web Browser
 
 1. From the Main page, click (or tap, if your monitor is touch-enabled) "Internet Explorer". 
 
@@ -71,11 +71,11 @@ The app's slideshow can be likened to a screensaver which displays while the app
  
  <img src="{{site.baseurl}}/Resources/images/DigitalSignage/DigitalSign_home.png" height="400">
 
-##Exploring the Code
+## Exploring the Code
 
 Here we will walk though the code used to exercise the slideshow scenario.
 
-###Slideshow
+### Slideshow
 
 Navigate to Slideshow.xaml.cs. Observe that the imageExtensions variable maintains a list of expected image types
 

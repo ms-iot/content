@@ -135,6 +135,7 @@ lang: en-US
     Windows.System.Energy.Diagnostics.BackgroundEnergyDiagnostics
     Windows.System.Energy.Diagnostics.ForegroundEnergyDiagnostics
     Windows.System.Energy.ForegroundEnergyManager
+    Windows.System.Launcher
     Windows.System.Profile.HardwareIdentification
     Windows.System.Profile.KnownRetailInfoProperties
     Windows.System.Profile.RetailInfo

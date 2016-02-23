@@ -1,12 +1,12 @@
-﻿---
+---
 layout: default
 title: Bluetooth RFCOMM Sample
 permalink: /en-US/win10/samples/BTSerial.htm
 lang: en-US
 ---
-#Bluetooth RFCOMM Sample
+# Bluetooth RFCOMM Sample
 
-##Sample Introduction:
+## Sample Introduction:
 
 RPi2 sends a message to bluetooth device, after the bluetooth device receives the message, it sends the message
 back to rpi2 and then display it on the screen

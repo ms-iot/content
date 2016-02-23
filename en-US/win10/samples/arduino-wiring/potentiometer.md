@@ -34,15 +34,15 @@ Below are the pinouts of the MCP3002 and MCP3208 ADCs.
 | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | ![MCP3002 Pinout]({{site.baseurl}}/Resources/images/Potentiometer/MCP3002.PNG) | ![MCP3208 Pinout]({{site.baseurl}}/Resources/images/Potentiometer/MCP3208.PNG) |
 
-###Raspberry Pi
+### Raspberry Pi
 
-####Raspbery Pi Pinout
+#### Raspbery Pi Pinout
 
 ![Raspberry Pi 2 pinout]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
-####Wiring & Connections
+#### Wiring & Connections
 
-#####MCP3002
+##### MCP3002
 If you chose to use the **MCP3002**, assemble the circuit as follows. Note that the wiper pin (the middle pin on the 10k potentiometer) should be connected to `CH0` on MCP3002. You can also refer to the [datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/21294E.pdf){:target="_blank"} for more information.
 
 Detailed connection:
@@ -60,7 +60,7 @@ The MCP3002 should be connected as follows:
 - CH0 - Potentiometer wiper pin
 
 
-#####MCP3208 or MCP3008
+##### MCP3208 or MCP3008
 If you chose to use the **MCP3208** or **MCP3008**, assemble the circuit as follows (pinouts are identical on each chip). Note that the wiper pin (the middle pin on the 10k potentiometer) should be connected to `CH0` on MCP3208. You can also refer to the [MCP3208 datasheet](http://pdf.datasheetcatalog.com/datasheets2/43/435228_1.pdf){:target="_blank"} or the [MCP3008 datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/21295C.pdf){:target="_blank"} for more information.
 
 Detailed connection:
@@ -79,15 +79,15 @@ The MCP3208 should be connected as follows:
 - DGND - GND on Raspberry Pi 2 (Pin 6 or any other GND pin)
 - CH0 - Potentiometer wiper pin
 
-###MinnowBoard Max
+### MinnowBoard Max
 
-####MinnowBoard Max Pinout
+#### MinnowBoard Max Pinout
 
 ![MinnowBoard Max Pinout]({{site.baseurl}}/Resources/images/PinMappings/MBM_Pinout.png)
 
-####Wiring & Connections
+#### Wiring & Connections
 
-#####MCP3002
+##### MCP3002
 If you chose to use the **MCP3002**, assemble the circuit as follows. Note that the wiper pin (the middle pin on the 10k potentiometer) should be connected to `CH0` on MCP3002. You can also refer to the [datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/21294E.pdf){:target="_blank"} for more information.
 
 Detailed connection:
@@ -104,7 +104,7 @@ The MCP3002 should be connected as follows:
 - Vss - GND on MBM (Pin 1 or 2)
 - CH0 - Potentiometer wiper pin
 
-#####MCP3208 or MCP3008
+##### MCP3208 or MCP3008
 If you chose to use the **MCP3208** or **MCP3008**, assemble the circuit as follows (pinouts are identical on each chip). Note that the wiper pin (the middle pin on the 10k potentiometer) should be connected to `CH0` on MCP3208. You can also refer to the [MCP3208 datasheet](http://pdf.datasheetcatalog.com/datasheets2/43/435228_1.pdf){:target="_blank"} or the [MCP3008 datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/21295C.pdf){:target="_blank"} for more information.
 
 Detailed connection:
@@ -121,7 +121,7 @@ Detailed connection:
 - DGND - GND on MBM (Pin 1)
 - CH0 - Potentiometer wiper pin
 
-##Code
+## Code
 
 Replace the existing code in your main .ino file with the following code:
 
@@ -159,15 +159,15 @@ void loop()
 {% endhighlight %}
 
 
-##Build and deploy
+## Build and deploy
 Press F5 to build and deploy your project.
 
 Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm) for more instructions on how to deploy your app!
 
-##Result
+## Result
 You will see the LED lit to indicate that power is flowing, and the current value of the potentiometer's wiper pin will be read and displayed in the output console twice per second!
 
-##Having trouble?
+## Having trouble?
 
 Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.
 

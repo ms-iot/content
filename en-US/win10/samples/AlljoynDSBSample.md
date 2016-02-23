@@ -278,7 +278,7 @@ Suppose the applications on the AllJoyn bus do not want to poll the value of the
         }
     }
 
-###About Signals
+### About Signals
 
 In the AllJoyn Device System Bridge, we have 3 predefined signals DEVICE ARRIVAL, DEVICE REMOVAL and CHANGE OF VALUE signals.
 DEVICE ARRIVAL signal will be fired when a new device arrives to join to the AllJoyn network. To define the signal, you need to create an instance of IAdapterSignal with predefined constant signal name Constants::DEVICE_ARRIVAL_SIGNAL and a handle to the device (IAdapterDevice^) as signal parameter. Use predefined parameter name Constants::DEVICE_ARRIVAL__DEVICE_HANDLE. This signal is associated with the Adapter.

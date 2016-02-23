@@ -149,6 +149,13 @@
          "tags":["cylon","node.js","headless","intermediate"]
       },
       {
+         "title":"Azure Node.js Sample (UWP)",
+         "description":"Upload sensor data to Azure storage from a Node.js UWP app",
+         "link-text":"<a href='samples/nodejs-wu-azure.htm'>Azure (Node.js)</a>",
+         "ranking":0,
+         "tags":["intermediate","johnny-five","azure","sensor","node.js"]
+      },
+      {
          "title":"Cylon Node.js App (UWP)",
          "description":"Control a servo connected to an Arduino using Cylon in a Node.js UWP app",
          "link-text":"<a href='samples/NodejsWUCylon.htm'>Cylon (Node.js)</a>",

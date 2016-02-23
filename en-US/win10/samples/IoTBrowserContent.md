@@ -10,7 +10,7 @@ As this sample uses just standard windows UWP features it can also run on your d
 
 The sample is based around the windows
 
-###Load the project in Visual Studio
+### Load the project in Visual Studio
 
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\IoTBrowser`.  The sample code is C#. Make a copy of the folder on your disk and open the project from Visual Studio.
 
@@ -18,7 +18,7 @@ You can find the source code for this sample by downloading a zip of all of our 
 
 When everything is set up, you should be able to press F5 from Visual Studio.  The IoT Browser app will deploy and start on the Windows IoT device.
 
-###Let's look at the code
+### Let's look at the code
 The code for this sample is pretty simple:
 <ul>
 <li>An embedded webview control</li>
@@ -29,7 +29,7 @@ The code for this sample is pretty simple:
 
 When the go button is pressed we call a web navigation helper method to do the actual navigation.
 
-###UX code
+### UX code
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="65"></RowDefinition>
@@ -56,19 +56,19 @@ When the go button is pressed we call a web navigation helper method to do the a
         </StackPanel>
     </Grid>
 
-###DoWebNavigate navigation helper method
+### DoWebNavigate navigation helper method
 This helper uses the WebView.Navigate method with the value currently in the Web_Address.Text
 
-###DoWebNavigate code
+### DoWebNavigate code
     if (Web_Address.Text.Length > 0)
     {
         webView.Navigate(new Uri(Web_Address.Text));
     }
 
-###Favorites buttons
+### Favorites buttons
 The three favorites simply fill the address bar text with a preconfigured value then call the DoWebNavigate helper.
 
-###Favorite code
+### Favorite code
     private void Go_Hackster_Click(object sender, RoutedEventArgs e)
     {
         Web_Address.Text = "https://www.hackster.io/windowsiot";

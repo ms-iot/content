@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/SPIDisplay.htm
 lang: en-US
 ---
 
-##SPI Display Sample
+## SPI Display Sample
 
 {% include VerifiedVersion.md %}
 
@@ -14,12 +14,12 @@ so no background knowledge of SPI is needed. However, if you want to learn more,
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
 
-###Load the project in Visual Studio
+### Load the project in Visual Studio
 
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\SPIDisplay`.  Make a copy of the folder on your disk and open the project from Visual Studio. 
 Note that this app requires a device with a physical SPI port and will not work if running in an emulated environment.
 
-###Connect the SPI Display to your device
+### Connect the SPI Display to your device
 
 First, we need to wire up the display to your device. You'll need a few components:
 
@@ -33,7 +33,7 @@ Visit the **Raspberry Pi 2, MinnowBoard Max, or DragonBoard 410c** sections belo
 
 ![Electrical Components]({{site.baseurl}}/Resources/images/SPIDisplay/components.png)
 
-####Raspberry Pi 2
+#### Raspberry Pi 2
 For the Raspberry Pi 2, we need to hook up power, ground, SPI, and a few GPIO pins to the OLED display. For additional information on the Raspberry Pi 2 pins, visit the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm)
 
 **Note: Make sure to power off the RPi2 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
@@ -59,7 +59,7 @@ Here are the schematics:
 
 ![SPI schematics]({{site.baseurl}}/Resources/images/SPIDisplay/schematics_rpi2.png)
 
-####MinnowBoard Max
+#### MinnowBoard Max
 For the MinnowBoard Max, we need to hook up power, ground, SPI, and a few GPIO pins to the OLED display. See the [MBM pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm) for more details on the MBM IO pins.
 
 **Note: Make sure to power off the MBM when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
@@ -85,7 +85,7 @@ Here are the schematics:
 
 ![SPI schematics]({{site.baseurl}}/Resources/images/SPIDisplay/schematics_mbm.png)
 
-####DragonBoard 410c
+#### DragonBoard 410c
 
 For the DragonBoard 410c, connections need to be made from the power, ground, SPI, and a couple of GPIO connections of the single board computer to the OLED display.
 
@@ -122,7 +122,7 @@ A schematic for the circuit is:
 ![DragonBoard SPI Display Schematic]({{site.baseurl}}/Resources/images/SPIDisplay/schematics_db410c.png)
 
 
-###Deploy and run the app
+### Deploy and run the app
 
 When everything is set up, power your device back on, and open up the sample app in Visual Studio. Configure the code depending on which device you are using.
 
@@ -161,7 +161,7 @@ Follow the instructions to [setup remote debugging and deploy the app]({{site.ba
 
 Congratulations! You've connected a SPI graphics display.
 
-###Let's look at the code
+### Let's look at the code
 The code in this sample can be split up into two main sections:
 
 1. **Initialization Code:** This performs initializations for GPIO, SPI, and the OLED display. Setting up these prerequisites is necessary before we can send graphics data to the OLED display.
@@ -170,7 +170,7 @@ The code in this sample can be split up into two main sections:
 
 Let's start by digging into the initialization code first.
 
-###Initialization Code
+### Initialization Code
 Here is the C# code for the top-level initialization function.
 
 {% highlight C# %}
@@ -227,7 +227,7 @@ This ensures that our function gets called to update the display any time the us
 
 Next, let's take a closer look at what each of the initialization functions is doing in more detail.
 
-####InitGPIO()
+#### InitGPIO()
 
 There are two pins on the SPI OLED display we need to control, the Data/Command pin and the Reset pin. To communicate with these,
 we need to initialize the GPIO controller and configure the pins as outputs.
@@ -266,7 +266,7 @@ private void InitGpio()
 
 * If at any point we get a failure, we throw an exception to the top-level **InitAll()** function.
 
-####InitSpi()
+#### InitSpi()
 Following the GPIO initialization, we initialize the SPI bus. The bus is used to send graphics data and commands to the OLED screen for display,
 and needs to be configured before we can talk to the display.
 
@@ -306,7 +306,7 @@ private async Task InitSpi()
 
 * If at any point we get a failure, we throw an exception to the top-level **InitAll()** function.
 
-####InitDisplay()
+#### InitDisplay()
 Now that we have initialized GPIO and SPI, we can communicate with display. Before we can send graphics data however, we first need to configure some settings on the display controller.
 
 {% highlight C# %}
@@ -338,7 +338,7 @@ These commands turn the display on and put it into a state where it's ready to a
 
 * If at any point we get a failure, we throw an exception to the top-level **InitAll()** function.
 
-###Text Display Code
+### Text Display Code
 
 Now that the display is initialized, we can send text to the screen. Previously in the initialization function, we registered **Display_TextBox_TextChanged()** to trigger any time the user changes the textbox.
 This function calls the **DisplayTextBoxContents()** function below which runs through the process of writing text out to the screen:
@@ -379,7 +379,7 @@ private void Display_TextBox_TextChanged(object sender, TextChangedEventArgs e)
 
 In the following sections, we'll detail the **WriteCharDisplayBuf()** and **DisplayUpdate()** functions, which perform the bulk of the work in rendering character data and sending the data over SPI.
 
-####WriteCharDisplayBuf()
+#### WriteCharDisplayBuf()
 
 The **WriteCharDisplayBuf()** function performs the work to convert a single character into an array of bytes representing the character image data.
 This function is frequently called by **WriteLineDisplayBuf()** to render individual characters in a string. Lets take a look at how it works.
@@ -462,7 +462,7 @@ We use this buffer since it's much quicker to perform pixel operations on a loca
 Again, all of this is happening in our local screen buffer. No data has been sent to the screen yet.
 
 
-####DisplayUpdate()
+#### DisplayUpdate()
 After all of our data has been written to our local buffer. We're ready to write it out over SPI to the screen. For this, we call **DisplayUpdate()**:
 
 {% highlight C# %}

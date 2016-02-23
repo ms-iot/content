@@ -5,7 +5,7 @@ permalink: /en-US/win10/ReleaseNotes.htm
 lang: en-US
 ---
 
-#Release Notes for Windows 10 IoT Core
+# Release Notes for Windows 10 IoT Core
 Insider Preview Build Number 10556.0
 
 &copy; 2015 Microsoft Corporation. All rights reserved
@@ -14,13 +14,13 @@ This document provides late-breaking or other information that supplements the d
 
 Thank you for downloading Windows 10 IoT Core Insider Preview. Windows 10 IoT Core is the version of Windows 10 intended for development of embedded or dedicated purpose devices and the choice for the Maker community. This package contains the bits and tools needed to install Windows 10 IoT Core on the MinnowBoard Max based on Intel&reg; Atom E38xx series SoC (also referred to as MBM board) and the Raspberry PI2 based on the ARM Cortex-A7 based SoC (also referred to as the RPI).
 
-##Privacy Statement
+## Privacy Statement
 
 The privacy statement for this version of the Windows operating system can be viewed here: [http://go.microsoft.com/fwlink/?LinkId=506737](http://go.microsoft.com/fwlink/?LinkId=506737){:target="_blank"}
 
 You can review the privacy statement by pasting the forward link into your browser window.
 
-##What's New
+## What's New
 * Windows 10 IoT Core Insider Preview October 15 Release
    * Serial support on Raspberry Pi for TX and RX pins
    * High performance GPIO driver option with > 100x improvement
@@ -28,7 +28,7 @@ You can review the privacy statement by pasting the forward link into your brows
    * Updated base OS build
    * Bug Fixes
 
-##Release Notes
+## Release Notes
 
 Devices running IoT Core may be extremely slow to boot up on the first boot when using some 8GB class 10 SD cards. Slow boot times may be over 15 minutes. Subsequent boots will be much quicker on the affected cards.
 
@@ -50,7 +50,7 @@ Some USB keyboards and mice may not work on the Raspberry PI2. Use a different k
 
 On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to user mode applications in the April release of version of Windows 10 IoT Core, but are no longer available. Attempting to open these pins with Windows::Devices::Gpio::GpioController::OpenPin() will return HRESULT_FROM_WIN32(ERROR_NOT_FOUND). GPIO pins 0 and 1 are reserved on the Raspberry Pi by the HAT specification [https://github.com/raspberrypi/hats](https://github.com/raspberrypi/hats) and are under control of VC firmware. For compliance with this specification, these pins should be left unconnected.
 
-##Known Issues
+## Known Issues
 
 *	Setting the orientation to “Portrait” may not be honored in a Universal App (3039042) WORKAROUND: None
 *	On Raspberry Pi and Dragonboard, switching from a non-default drive mode to a different non-default drive mode may produce a glitch on the GPIO pin. (3890679) WORKAROUND: Set drive mode once at the beginning of the application.

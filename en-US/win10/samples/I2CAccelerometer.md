@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/I2CAccelerometer.htm
 lang: en-US
 ---
 
-##I2C Accelerometer Sample
+## I2C Accelerometer Sample
 
 {% include VerifiedVersion.md %}
 
@@ -14,11 +14,11 @@ However, if you're curious, SparkFun provides a great [tutorial on I2C](https://
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
 
-###Load the project in Visual Studio
+### Load the project in Visual Studio
 
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\I2CAccelerometer`.  Make a copy of the folder on your disk and open the project from Visual Studio.
 
-###Connect the I2C Accelerometer to your device
+### Connect the I2C Accelerometer to your device
 
 You'll need a few components:
 
@@ -32,7 +32,7 @@ Visit the **Raspberry Pi 2/MinnowBoard Max** sections below depending on which d
 
 ![Electrical Components]({{site.baseurl}}/Resources/images/I2CAccelerometer/components.png)
 
-####Raspberry Pi 2
+#### Raspberry Pi 2
 If you have a Raspberry Pi 2, we need to hook up power, ground, and the I2C lines to the accelerometer.
 Those familiar with I2C know that normally pull-up resistors need to be installed. However, the Raspberry Pi 2 already has pull-up resistors on its I2C pins, so we don't need to add any additional external pull-ups here.
  See the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm) for more details on the RPi2 IO pins.
@@ -60,7 +60,7 @@ Here are the schematics:
 
 ![Accelerometer schematics]({{site.baseurl}}/Resources/images/I2CAccelerometer/schematics_rpi2.png)
 
-####MinnowBoard Max
+#### MinnowBoard Max
 If you have a MinnowBoard Max, we need to hook up power, ground, and the I2C lines to the accelerometer. Those familiar with I2C know that normally pull-up resistors need to be installed. However, the MBM already has 10K pull-up resistors on its IO pins, so we don't need to add any additional external pull-ups here.
  See the [MBM pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm) for more details on the MBM IO pins.
 
@@ -118,7 +118,7 @@ Here is a diagram showing what your breadboard might look like with the circuit 
 
 ![DragonBoard I2C Accelerometer Breadboard]({{site.baseurl}}/Resources/images/I2CAccelerometer/breadboard_assembled_db410c.png)
 
-###Deploy and run the app
+### Deploy and run the app
 
 When everything is set up, power your device back on, and open up the sample app in Visual Studio. Open the file **MainPage.xaml.cs** and change the following line from **Protocol.NONE** to **Protocol.I2C**:
 
@@ -141,7 +141,7 @@ so you wont be able to see G readings higher than 4Gs.
 
 Congratulations! You've connected an I2C accelerometer.
 
-###Let's look at the code
+### Let's look at the code
 The code in this sample performs two main tasks:
 
 1. First the code initializes the I2C bus and the accelerometer
@@ -150,7 +150,7 @@ The code in this sample performs two main tasks:
 
 Let's start by digging into the initializations.
 
-###Initialize the I2C bus
+### Initialize the I2C bus
 To use the accelerometer, we need to initialize the I2C bus first. Here is the C# code.
 
 {% highlight C# %}
@@ -193,7 +193,7 @@ Here's an overview of what's happening:
 
 * Finally, we create a new **I2cDevice** and check that it's available for use.
 
-###Initialize the accelerometer
+### Initialize the accelerometer
 
 Now that we have the **I2cDevice** accelerometer instance, we're done with the I2C bus initialization. We can now write data over I2C to start up the accelerometer. We do this with the **Write()** function.
 For this particular accelerometer, there are two internal registers we need to configure before we can start using the device: The data format register, and the power control register.
@@ -235,7 +235,7 @@ private async void InitI2CAccel()
 }
 {% endhighlight %}
 
-###Timer code
+### Timer code
 After all the initializations are complete, we start a timer to read from the accelerometer periodically. Here is how you set up the timer to trigger every 100mS.
 {% highlight C# %}
 private async void InitI2CAccel()
@@ -268,7 +268,7 @@ private void TimerCallback(object state)
 {% endhighlight %}
 
 
-###Read data from the accelerometer
+### Read data from the accelerometer
 With the I2C bus and accelerometer initialized, we can start reading data from the accelerometer. Our **ReadAccel()** function gets called every 100mS by the timer:
 
 {% highlight C# %}

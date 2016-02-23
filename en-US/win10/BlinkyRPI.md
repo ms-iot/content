@@ -12,7 +12,7 @@
         <p>An LED (any color you like)</p>
     </div>
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/Resources/images/Blinky/components.png">
+      <img alt=”components needed for the blinky sample” src="{{site.baseurl}}/Resources/images/Blinky/components.png">
     </div>
   </div>
     {% include_relative BlinkyRPIGpio.md %}
@@ -22,7 +22,7 @@
       <p>When everything is set up, you should be able to press F5 from Visual Studio.  If there are any missing packages that you did not install during setup, Visual Studio may prompt you to acquire those now.  The Blinky app will deploy and start on the Windows IoT device, and you should see the LED blink in sync with the simulation on the screen.</p>
     </div>
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/Resources/images/Blinky/blinky-screenshot.png" height="400">
+      <img alt=”pinout diagram of raspberry pi 2” src="{{site.baseurl}}/Resources/images/Blinky/blinky-screenshot.png" height="400">
     </div>
   </div>
   <p>Congratulations! You controlled one of the GPIO pins on your Windows IoT device.</p>

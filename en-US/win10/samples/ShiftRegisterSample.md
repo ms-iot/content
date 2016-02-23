@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/ShiftRegisterSample.htm
 lang: en-US
 ---
 
-##Shift Register Sample
+## Shift Register Sample
 
 {% include VerifiedVersion.md %}
 
@@ -18,7 +18,7 @@ mode by running this command: `setbootoption.exe headed` (changing the headed/he
 
 *This sample only works with Raspberry Pi 2 and is not supported on Minnowboard Max or DragonBoard 410c.
 
-###Connect the Shift Register to Your Device
+### Connect the Shift Register to Your Device
 
 You will need the following components:
 
@@ -52,7 +52,7 @@ Here is the schematic:
 *Image made with [Fritzing](http://fritzing.org/)*
 
 
-####Connecting the 74HC595N Shift Register
+#### Connecting the 74HC595N Shift Register
 
 Place the Shift Register on your breadboard such that it straddles the center gap of the breadboard.
 
@@ -95,7 +95,7 @@ Make the following connections on the 74HC595N shift register:
 
 * Pin 16 **VCC**: Connect to the voltage supply rail on the side of the breadboard (red stripe)
 
-####Connecting the LEDs and Resistors
+#### Connecting the LEDs and Resistors
 
 Let's add the LEDs and resistors to the breadboard.
 
@@ -113,7 +113,7 @@ When done, you should have a row (or as close to a row as possible) of blue and 
 
 * Each LED should have its anode connected to the voltage supply rail.
 
-####Connecting the Raspberry Pi 2
+#### Connecting the Raspberry Pi 2
 
 We need to hook up power, ground, and the I2C lines from on the Raspberry Pi 2 to the 74HC595N shift register and the breadboard.
 
@@ -133,7 +133,7 @@ We need to hook up power, ground, and the I2C lines from on the Raspberry Pi 2 t
 
 * Pin 32 **GPIO12** If not already connected, connect to **SRCLR** (pin 10) on the shift register
 
-###Create the Sample App
+### Create the Sample App
 
 When everything is set up, power your device back on. You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\ShiftRegister`, 
 but as an exercise, this tutorial will take you through the complete steps to create this app from scratch. 
@@ -153,7 +153,7 @@ The code in this sample does three things:
     b. Inverts the LED flashing pattern if the user clicks the Invert button on the display
 
 
-####Add content to MainPage.xaml
+#### Add content to MainPage.xaml
 
 Let's add some content to the MainPage which will be displayed on a screen connected to the Raspberry Pi 2.
  We want to add a couple TextBoxes, a Slider, and a Button.
@@ -183,7 +183,7 @@ Let's begin.
 {% endhighlight %}
 </UL>
 
-####Add code to MainPage.xaml.cs
+#### Add code to MainPage.xaml.cs
 
 Before we add any code to MainPage.xaml.cs, we need to add a reference to the Windows IoT Extension SDK.
 
@@ -382,7 +382,7 @@ private void ToggleButtonClicked(object sender, RoutedEventArgs e)
 }
 {% endhighlight %}
 
-###Build, Deploy and Run the App
+### Build, Deploy and Run the App
 
 Let's build, deploy and run the app on our Raspberry Pi 2.
 
@@ -396,7 +396,7 @@ After several moments, you will see the screen attached to the RPi2 change to sh
 
 Congratulations! You've successfully connected an 8-bit serial-in, parallel-out shift register to your Raspberry Pi 2.
 
-###The complete MainPage.xaml.cs code
+### The complete MainPage.xaml.cs code
 
 {% highlight C# %}
 using System;

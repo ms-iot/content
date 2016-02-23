@@ -5,21 +5,21 @@ permalink: /en-US/win10/samples/NodejsWUCylon.htm
 lang: en-US
 ---
 
-##Cylon Node.js (Universal Windows) Sample
+## Cylon Node.js (Universal Windows) Sample
 
 {% include VerifiedVersion.md %}
 
 In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) running on a Raspberry Pi 2 to control a servo connected to an Arduino (with [Firmata](https://www.npmjs.com/package/firmata) installed).
 
 
-###Hardware required
+### Hardware required
 * Raspberry Pi 2.
 * [Arduino Board](https://www.arduino.cc/en/main/products) (Uno is used in this sample).
 * USB to USB B cable.
 * Servo.
 
 
-###Set up your PC
+### Set up your PC
 * Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
 * Install Visual Studio 2015 Update 1.
 * Install the latest Node.js Tools for Windows IoT from [here](http://aka.ms/ntvsiotlatest).
@@ -28,7 +28,7 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 * Install [Git for Windows](http://git-scm.com/download/win). Ensure that Git is included in your 'PATH' environment variable.
 
 
-###Upload Firmata to your Arduino
+### Upload Firmata to your Arduino
 * Connect the Arduino board with your PC using the USB cable.
 * Open Arduino software.
 * Go to Tools->Port and select your device.
@@ -37,7 +37,7 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 * Click the upload button to upload the sketch to the Arduino board. You should see a "Done uploading" message when the upload is complete.
 
 
-###Create a new Cylon (Universal Windows) project
+### Create a new Cylon (Universal Windows) project
 Start Visual Studio 2015 and create a new project (File \| New Project...). In the `New Project` dialog, navigate to `Node.js` as shown below (in the left pane in the dialog: Templates \| JavaScript \| Node.js).
 
 Select the `Basic Node.js Cylon Application (Universal Windows)` template (shown below), enter a name for your project, then press OK.
@@ -54,7 +54,7 @@ This step will run npm dedupe and update [serialport](https://www.npmjs.com/pack
 ![Node.js Npm Menu]({{site.baseurl}}/Resources/images/Nodejs/npm-update-menu.png)
 
 
-###Set up the connection between your Arduino and Raspberry Pi 2
+### Set up the connection between your Arduino and Raspberry Pi 2
 Connect your Arduino and Raspberry Pi 2 with the USB cable. If your Raspberry Pi 2 is connected to a monitor, 
 you should see the device getting recognized as shown in the image below (the name of the device may be "Arduino Uno" instead of "USB Serial Device"):
 
@@ -104,7 +104,7 @@ Cylon.robot({
 ![Arduino Servo RPi2]({{site.baseurl}}/Resources/images/Nodejs/arduino-servo-rpi2.png)
 
 
-###Deploy the app to your Raspberry Pi 2
+### Deploy the app to your Raspberry Pi 2
 * Go to the Project menu and select '&lt;Your project name&gt; Properties' (You could also right-click on the project node in solution explorer to access Properties). Enter the IP Address in the Remote Machine text box. Since you're building for Raspberry Pi 2, select `ARM` in the dropdown menu.
 
 * Now we're ready to deploy the app to the Raspberry Pi 2. Simply press F5 (or select Debug \| Start Debugging) to start debugging the app. This step will also start rotating the motor on the servo.

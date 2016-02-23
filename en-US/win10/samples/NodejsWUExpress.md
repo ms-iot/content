@@ -5,17 +5,17 @@ permalink: /en-US/win10/samples/NodejsWUExpress.htm
 lang: en-US
 ---
 
-##Express Node.js (Windows Universal) Sample
+## Express Node.js (Windows Universal) Sample
 
 {% include VerifiedVersion.md %}
 
-###Set up your PC
+### Set up your PC
 * Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
 * Install Visual Studio 2015 Update 1.
 * Install the latest Node.js Tools for Windows IoT from [here](http://aka.ms/ntvsiotlatest).
 
 
-###Create a new Express (Windows Universal) project
+### Create a new Express (Windows Universal) project
 Start Visual Studio 2015 and create a new project (File \| New Project...). In the `New Project` dialog, navigate to `Node.js` as shown below (in the left pane in the dialog: Templates \| JavaScript \| Node.js).
 
 Select the template `Basic Node.js Express 4 Application (Windows Universal)`
@@ -31,7 +31,7 @@ After clicking yes, npm will run in the background and install the dependencies.
 ![npm Express List]({{site.baseurl}}/Resources/images/Nodejs/npm-express.PNG)
 
 
-###Deploy the server to your Windows IoT Core device
+### Deploy the server to your Windows IoT Core device
 * Go to the Project menu and select '<Your project name> Properties.' You could also right-click on the project node in solution explorer to access Properties.
 * Enter the IP Address in the Remote Machine text box as shown below (the `--debug` argument is required for debugging and is added automatically).
 * You can also add `--use-logger` as an argument to redirect console output to a file in the local storage folder of the UWP application

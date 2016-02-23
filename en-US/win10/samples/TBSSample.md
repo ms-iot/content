@@ -5,24 +5,24 @@ permalink: /en-US/win10/samples/TBSSample.htm
 lang: en-US
 ---
 
-#TBS Sample Application
+# TBS Sample Application
 
 This tutorial demonstrates how to create a basic C++ application that uses TBS to poll the TPM.
 
 *[TBS]: TPM Base Services
 
-##About TBS  
+## About TBS  
 The Trusted Platform Module (TPM) Base Services (TBS) feature centralizes TPM access across applications. The TBS feature uses priorities specified by calling applications to cooperatively schedule TPM access.  
 The TBS feature runs as a system service in Windows and provides services as an API exposed through remote procedure calls (RPC).
 
-##Prerequisites  
+## Prerequisites  
 * Microsoft Visual Studio 2015, version 14.0.23107.10 or above  
 * SDK, version 10.0.10240 or above
 
-##Device Setup  
+## Device Setup  
 Links to instructions on setting up MBM and RPi2.
 
-##Create a project using TBS  
+## Create a project using TBS  
 
 **Create a new C++ project.**  
 File -> New -> Project -> Visual C++ -> Windows -> Windows IoT Core -> Blank Windows IoT Core Cosnsole Application
@@ -139,7 +139,7 @@ Trusted Platform Module Detected on Device - Discrete TPM
  TPM Interface Type: 1
 {% endhighlight %}
 
-##Additional Resources  
+## Additional Resources  
 * TPM Base Services - [https://msdn.microsoft.com/en-us/library/windows/desktop/aa446796(v=vs.85).aspx](https://msdn.microsoft.com/en-us/library/windows/desktop/aa446796(v=vs.85).aspx){:target="_blank"}
 * TSS.Net: Enabling Access to the TPM from Managed Code - [http://research.microsoft.com/en-us/downloads/35116857-e544-4003-8e7b-584182dc6833/default.aspx](http://research.microsoft.com/en-us/downloads/35116857-e544-4003-8e7b-584182dc6833/default.aspx){:target="_blank"}
 * TSS.MSR: The TPM Software Stack from Microsoft Research - [https://github.com/DMattoon/TSS.MSR](https://github.com/DMattoon/TSS.MSR){:target="_blank"}

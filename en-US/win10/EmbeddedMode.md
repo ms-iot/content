@@ -5,7 +5,7 @@ permalink: /en-US/win10/EmbeddedMode.htm
 lang: en-US
 ---
 
-##Embedded mode
+## Embedded mode
 
 Windows and Windows Mobile can be configured allow embedded mode. This enables packages to implement background applications.  It also enables applications to declare and use lowLevelDevice and systemManagement capabilities.
 
@@ -15,7 +15,7 @@ If you are debugging on a device that is not running Windows IoT Core and you se
 * There are no more endpoints available from the endpoint mapper.
 * This program is blocked by group policy. For more information, contact your system administrator.
 
-##Changing the mode
+## Changing the mode
 To enable embedded mode you will need to create a provisioning package in Imaging and Configuration Designer (ICD) that sets AllowEmbeddedMode=1.  To install ICD you need to download and install the Windows ADK for Windows 10.
 
 * <a href="http://go.microsoft.com/fwlink/p/?LinkId=526740">Download the Windows ADK for Windows 10</a>

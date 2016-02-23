@@ -5,12 +5,12 @@ permalink: /en-US/win10/LightningProviders.htm
 lang: en-US
 ---
 
-#Microsoft.IoT.Lightning.Providers library and sample code
+# Microsoft.IoT.Lightning.Providers library and sample code
 Microsoft.IoT.Lightning.Providers library contains a set of providers to interface with the GPIO, SPI and I2C buses through the Lightning direct memory access driver.
 
 The library as well as sample code can be obtained in source format from [GitHub](https://github.com/ms-iot/BusProviders/tree/develop/Microsoft.IoT.Lightning.Providers){:target="_blank"}.
 
-##Using the library
+## Using the library
 
 The Microsoft.IoT.Lightning.Providers library includes a set of Windows.Devices.*Providers WinRT APIs enabling UWP apps to make use of the Lightning driver to communicate with and control GPIO, I2C and SPI devices.
 
@@ -22,7 +22,7 @@ The current version of library includes this set of providers:
 * `Microsoft.IoT.Lightning.Providers.Lightning.Pwm.Provider`
 * `Microsoft.IoT.Lightning.Providers.Lightning.Spi.Provider`
 
-###Checking for the Lightning (DMAP) driver
+### Checking for the Lightning (DMAP) driver
 
 To check if Lightning is enabled, the `LightningProvider.IsLightningEnabled` property should be used. In general, it is always a good practice to verify if the Lightning driver is enabled before using the Lightning provider APIs. 
 {% highlight C# %}
@@ -32,7 +32,7 @@ if (Microsoft.IoT.Lightning.Providers.LightningProvider.IsLightningEnabled)
 }
 {% endhighlight %}
 
-###General usage pattern
+### General usage pattern
 
 The simplest way to use the providers is to set the Lightning Provider as the default inside your app. 
 
@@ -53,11 +53,11 @@ spiController = await SpiController.GetDefaultAsync();
 
 After you have a controller for the desired bus, you can use it as you normally would. 
 
-###Using Lightning for individual buses
+### Using Lightning for individual buses
 
 If you want to use a different default provider, the sections below show how you can use the Lightning providers for individual busses. 
 
-####For GPIO bus controller:
+#### For GPIO bus controller:
 
 {% highlight C# %}
 using Microsoft.IoT.Lightning.Providers;
@@ -71,7 +71,7 @@ if (LightningProvider.IsLightningEnabled)
 }
 {% endhighlight %}
 
-####For I2C bus controller:
+#### For I2C bus controller:
 
 {% highlight C# %}
 using Microsoft.IoT.Lightning.Providers;
@@ -85,7 +85,7 @@ if (LightningProvider.IsLightningEnabled)
 }
 {% endhighlight %}
 
-####For SPI bus controller:
+#### For SPI bus controller:
 using Microsoft.IoT.Lightning.Providers;
 using Windows.Devices;
 using Windows.Devices.Spi;
@@ -98,7 +98,7 @@ if (LightningProvider.IsLightningEnabled)
 }
 {% endhighlight %}
 
-##Lightning Provider Samples
+## Lightning Provider Samples
 
 The following samples demonstrate using the Lightning providers with supported bus types:
 
@@ -110,9 +110,9 @@ The following samples demonstrate using the Lightning providers with supported b
 
 * [WeatherStation with Lightning Provider]({{site.baseurl}}/{{page.lang}}/win10/samples/WeatherStationLightning.htm) demonstrates interacting with a device using I2C with Lightning Provider
 
-##Build Requirements
+## Build Requirements
 
-###Update Application Package manifest
+### Update Application Package manifest
 
 Also, you need to manually update the Application Package manifest manually to reference the Lightning device interface:
 
@@ -128,7 +128,7 @@ Both capabilities must be added to the AppX manifest of your project under the `
 
 ![AppX Manifest Capabailities]({{site.baseurl}}/Resources/images/Lightning/update_manifest.png)
 
-###Windows SDK Update
+### Windows SDK Update
 
 Windows SDK required for building and using the library is 10.0.10586.0 or higher which can be downloaded from [here](https://dev.windows.com/en-US/downloads/windows-10-sdk).
 
@@ -152,9 +152,9 @@ In order to install prerelease (current) version of Microsoft.IoT.Lightning Nuge
 
 ![Package Manager Config]({{site.baseurl}}/Resources/images/Lightning/Nuget_PackageManager.png)
 
-##Runtime Requirements
+## Runtime Requirements
 
-###Windows IoT Core Fall Update required
+### Windows IoT Core Fall Update required
 Lightning providers support is currently included in the Fall Update builds for Windows IoT Core.
 You can download a Windows 10 IoT Core image from our [downloads page]({{site.baseurl}}/{{page.lang}}/Downloads.htm ). Click on "Download Insider Preview" for your device type.
 

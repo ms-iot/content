@@ -5,17 +5,17 @@ permalink: /en-US/win10/samples/UrchinLibrary.htm
 lang: en-US
 ---
 
-#Urchin Library Sample
+# Urchin Library Sample
 
 [Get the code on GitHub][1]  
 This tutorial demonstrates how to create a Visual Studio project that includes and uses the Urchin library.
 
 [1]: https://github.com/ms-iot/security "Urchin library"
 
-##About the Urchin library  
+## About the Urchin library  
 This is a spec-compliant library derived from the TPM 2.0 reference implementation. It provides to the client the functionality to marshal/unmarshal all data structures, properly calculate authorizations, perform parameter encryption and do auditing.
 
-##<a name="NewProjectUrchin"></a>Create a project using the Urchin library  
+## <a name="NewProjectUrchin"></a>Create a project using the Urchin library  
 **Prerequisites:**
 
 * Microsoft Visual Studio 2015, version 14.0.23107.10 or above  
@@ -78,6 +78,6 @@ Links to instructions on how to do so go here.
 [2]: https://github.com/ms-iot/security/tree/master/Urchin/T2T "T2T"
 [3]: https://github.com/ms-iot/security/tree/master/Urchin/UrchinTest "UrchinTest"
 
-##Additional Resources  
+## Additional Resources  
 * Urchin Library Download Link - [https://github.com/ms-iot/security](https://github.com/ms-iot/security){:target="_blank"}
 

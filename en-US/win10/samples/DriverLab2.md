@@ -5,11 +5,11 @@ permalink: /en-US/win10/samples/DriverLab2.htm
 lang: en-US
 ---
 
-#Building The Driver In Visual Studio
+# Building The Driver In Visual Studio
 
 A Windows IoT Core driver is made up of one or more files.  Some of these files are simple text files to aid during installation, while others are binaries built during compilation of the source code.  For this lab, we are interested in files with the following extensions: **SYS** and **INF**. In this exercise, you will use Visual Studio to compile a driver for a specific platform.
 
-##On the development computer
+## On the development computer
 
 * From the Build menu, click `Build Solution(Ctrl+Shift+B)`. Make sure that you are building for `x86` if you are using a MinnowBoard Max, or `ARM` if you are using a Raspberry Pi 2.
 
@@ -46,6 +46,6 @@ A Windows IoT Core driver is made up of one or more files.  Some of these files 
 
 In the next section you will use these files (**ACPITABL.dat**, **gpiokmdfdemo.inf**, and **gpiokmdfdemo.sys**) to install the driver on the Windows IoT Core device.
 
-##Next Step
+## Next Step
 
 [Deploy the driver and confirm successful installation]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab3.htm)

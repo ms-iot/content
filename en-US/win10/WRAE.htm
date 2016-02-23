@@ -1,0 +1,83 @@
+---
+layout: default
+title: Windows Remote Arduino Experience
+permalink: /en-US/win10/WRAE.htm
+lang: en-US
+deviceName: WRAE
+---
+<ol class="breadcrumb">
+  <li>
+    <a href="https://dev.windows.com/en-us/iot">IoT Home</a>
+  </li>
+  <li>
+    <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
+  </li>
+  <li>
+  Windows Remote Arduino
+  </li>
+  <li class="active">
+  Windows Remote Arduino Experience
+  </li>
+</ol>
+<h1 class="page-title"> Windows Remote Arduino Experience</h1>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <h2 class="subtext">Explore the capabilities of the Windows Remote Arduino library with this end-to-end UI experience.</h2>
+  </div>
+</div>
+
+<div class="row">
+
+<h3>Overview</h3>
+The Windows Remote Arduino Experience application is a great way to learn about the capabilites of the Windows Remote Arduino library.  To get started, there are three simple steps to follow:
+<ul>
+  <li>
+  Set up your Windows 10 device
+  </li>
+  <li>
+  Set up your Arduino
+  </li>
+  <li>
+  Begin exploring
+  </li>
+</ul>
+</div>
+
+<h2>1. Set up your Windows 10 device<span class="pull-right"><a id="pc-content-toggle" class="toggle-button" onClick="hideDiv('pc-content')">Hide</a></span></h2>
+<hr>
+<div id="pc-content" class="toggle-section">
+  {% include setup-pc-wrae.md %}
+</div>
+
+<h2>2. Set up your Arduino<span class="pull-right"><a id="setup-content-toggle" class="toggle-button" onClick="hideDiv('setup-content')">Show</a></span></h2>
+<hr>
+<div id="setup-content" class="toggle-section hidden">
+  {% include setup-arduino-wra.htm %}
+</div>
+
+<h2>3. Explore<span class="pull-right"><a id="app-content-toggle" class="toggle-button" onClick="hideDiv('app-content')">Show</a></span></h2>
+<hr>
+<div id="app-content" class="setup-content-list toggle-section hidden">
+  {% include samples/basic-wrae.md %}
+</div>
+
+<script>
+  function hideDiv(div) {
+    var div = "#" + div,
+        button = div + "-toggle",
+        currentState = $(button)[0].innerHTML;
+    for(var i = 0; i < 3 ; i ++){
+        $(".toggle-button")[i].innerHTML = "Show";
+      }
+    if(currentState === "Hide") {
+      $(div).toggle('slow');
+    }
+    else
+    {
+      $(".hidden").removeClass("hidden");
+      $(".toggle-section").hide();
+      $(div).toggle('slow');
+      $(button)[0].innerHTML = "Hide";
+    }
+  }
+</script>

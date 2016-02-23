@@ -5,14 +5,14 @@ permalink: /en-US/win10/samples/PowerShell.htm
 lang: en-US
 ---
 
-##Using PowerShell to connect and configure a device running Windows 10 IoT Core
+## Using PowerShell to connect and configure a device running Windows 10 IoT Core
 
 ### Remote Administration and Configuration
 You can remotely configure and manage any Windows 10 IoT Core device using Windows PowerShell. PowerShell is a task-based command-line shell and scripting language, designed especially for system administration.
 
 Make sure to follow these steps to correctly configure your device running Windows 10 IoT Core to work well with Visual Studio 2015.
 
-###Initiating a PowerShell (PS) Session
+### Initiating a PowerShell (PS) Session
 * To start a PS session with your Windows 10 IoT Core device, you'll first need to create a trust relationship between your host PC and your device. After booting your Windows IoT Core device, an IP address will be shown on the screen attached to the device:
 
     ![DefaultApp on Windows 10 IoT Core]({{site.baseurl}}/Resources/images/DefaultApp.png)
@@ -73,13 +73,13 @@ Make sure to follow these steps to correctly configure your device running Windo
     	
     	Enter-PSSession -ComputerName <machine-name or IP Address> -Credential <machine-name or IP Address or localhost>\Administrator
 
-###Troubleshooting Visual Studio Remote Debugger
+### Troubleshooting Visual Studio Remote Debugger
 
 * To be able to deploy applications from Visual Studio 2015, you will need to make sure the Visual Studio Remote Debugger is running on your Windows IoT Core device. The remote debugger should launch automatically at machine boot time. To double check, use the `tlist` command to list all the running processes from powershell. There should be two instances of msvsmon.exe running on the device.
 
 * It is possible for the Visual Studio Remote Debugger to time out after long periods of inactivity.  If Visual Studio cannot connect to your Windows IoT Core device, try rebooting the device.
 
-###Configure your Windows IoT Core device
+### Configure your Windows IoT Core device
 
 * If you want, you can also rename your device. To change the 'computer name', use the `setcomputername` utility:
 
@@ -95,11 +95,11 @@ Make sure to follow these steps to correctly configure your device running Windo
         
     Your Windows IoT Core Device should now be properly configured and ready to use!
 
-###Commonly used utilities
+### Commonly used utilities
 
 See the [Command Line Utils]({{site.baseurl}}/{{page.lang}}/win10/tools/CommandLineUtils.htm) page for a list of commands and utilities you can use with PowerShell.
 
-###Known issues with workarounds
+### Known issues with workarounds
 
 **Issue:** A known bug in PowerShell security policies causes the following issues to manifest within the remote session:
 
@@ -126,7 +126,7 @@ See the [Command Line Utils]({{site.baseurl}}/{{page.lang}}/win10/tools/CommandL
 * Within remote cmd.exe, modify the appropriate registry key `reg add HKLM\Software\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell /v ExecutionPolicy /d RemoteSigned /f`
 * Exit remote cmd.exe session `exit`
 
-###Other known issues
+### Other known issues
 
 * In PS scripts, attributes  to PowerShell class or enumeration do not work. Adding attributed, results in the following exception thrown: 'Type must be a runtime Type object.'
 

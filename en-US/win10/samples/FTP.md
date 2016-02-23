@@ -5,9 +5,9 @@ permalink: /en-US/win10/samples/FTP.htm
 lang: en-US
 ---
 
-##Using FTP to transfer files to and from your device
+## Using FTP to transfer files to and from your device
 
-###Accessing your files over FTP<a name="accessftp"/>
+### Accessing your files over FTP<a name="accessftp"/>
 * The FTP server on your Windows IoT Core device starts automatically on boot.  In order to connect to it, you need the IP address of your device.  You can find the IP address on the default app that boots when your device starts.
 
     ![DefaultApp on Windows IoT Core]({{site.baseurl}}/Resources/images/DefaultApp.png)
@@ -18,7 +18,7 @@ lang: en-US
 
 * Now you can access the files on your device through FTP.
 
-###Stopping the FTP server on your device<a name="stopftp"/>
+### Stopping the FTP server on your device<a name="stopftp"/>
 * By default, the FTP server is running on your device.  In order to stop the FTP server on your device, you first need to connect to your device through [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) or [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm).  
 * If you connected using PowerShell, type `kill -processname ftpd*` to stop the FTP process.
 
@@ -28,14 +28,14 @@ lang: en-US
 
     ![FTP SSH Stop]({{site.baseurl}}/Resources/images/ftp/ftp_kill_ssh.png)
     
-###Starting the FTP server on your device
+### Starting the FTP server on your device
 * First connect to your device through [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) or [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm).
 * Type `start C:\Windows\System32\ftpd.exe`
 * You can check that the server is running by typing `tlist`, which will list all the running processes.  If the FTP server is running, you should see `ftpd.exe` in the list.
 
     ![FTP Start]({{site.baseurl}}/Resources/images/ftp/ftp_start.png)
 
-###Changing the root FTP directory
+### Changing the root FTP directory
 * By default the FTP server displays all the folders in the device's root directory C:\\.  In order to change the root directory, we follow the same steps to start the FTP server, except we need to pass in the root directory as a parameter.
 * In order to change it, first connect to your device through [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) or [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm).
 * [Stop](#stopftp) the FTP process if it's already running.

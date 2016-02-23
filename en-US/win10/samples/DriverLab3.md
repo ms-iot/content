@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/DriverLab3.htm
 lang: en-US
 ---
 
-#Installing The Sample Driver
+# Installing The Sample Driver
 
 This section demonstrates how to manually copy and install the driver to a Windows IoT Core device:  
  
@@ -56,7 +56,7 @@ The next steps involve connecting to the target device using PowerShell as expla
 
 <br/>
 
-##Installing the sample driver
+## Installing the sample driver
 
 * Connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
 
@@ -70,7 +70,7 @@ The next steps involve connecting to the target device using PowerShell as expla
 
 <br/>
 
-##Reboot The Windows IoT Core device
+## Reboot The Windows IoT Core device
 
 From the PowerShell window, type the following command:
 
@@ -80,7 +80,7 @@ The target device will reboot.  After the reboot, make sure PowerShell is still 
 
 <br/>
 
-##Check The Status Of The Sample Driver
+## Check The Status Of The Sample Driver
 
 From the PowerShell window, type the following command:
 
@@ -95,11 +95,11 @@ You should see the following output:
 
 <br/>
 
-##Toggle The GPIOs
+## Toggle The GPIOs
 
 Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm) to connect a resistor and an LED to your Windows IoT Core device.  When you toggle the GPIO connected to the LED, the LED will turn on or off. 
 
-###Use the application provided to communicate with the driver
+### Use the application provided to communicate with the driver
 
 We have provided a pre-built binary application called BlinkyApp.exe which communicates with the driver to turn on/off the LED.  The application can be found at `DriverSamples\BlinkyApp\BlinkyApp_<PLATFORM>.exe`.
 
@@ -145,13 +145,13 @@ If you are using GPIO #5 on the Raspberry Pi 2, type the following command to tu
 
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe low 5
 
-###Note:
+### Note:
 Driving the GPIO low will make the LED light-up because of the way the LED is connected as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm).
 
 To turn the LED off, simply type:
 
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe high 5
 
-###Use Visual Studio to deploy a driver 
+### Use Visual Studio to deploy a driver 
 Now that you know how to manually deploy a driver, you can also use Visual to deploy a driver by following the instructions on [this page]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab4.htm).
     
