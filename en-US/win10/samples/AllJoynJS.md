@@ -111,7 +111,7 @@ AllJoyn.JS provides a hardware-independent abstraction layer for GPIO and other 
 
 - For all GPIO APIs, please refer to [AllJoyn.JS IO APIs (Allseen Alliance)](https://git.allseenalliance.org/cgit/core/alljoyn-js.git/plain/doc/html/IO.html){:target="_blank"}
 
-> Even though the GPIO layer is hardware-independent, pin numbers and assignments differ among hardware devices.  Current pin numbers and assignments are based on [Raspberry Pi 2]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png).
+> Even though the GPIO layer is hardware-independent, pin numbers and assignments differ among hardware devices.  Current pin numbers and assignments are based on [Raspberry Pi 2 and 3]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png).
 
 ## Sample scripts
 

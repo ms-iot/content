@@ -11,7 +11,7 @@ lang: en-US
 
 [View the code on GitHub](https://github.com/ms-iot/samples/tree/develop/PushButton/CS){:target="_blank"}
 
-In this sample, we connect a push button to your Raspberry Pi 2, MinnowBoard Max, or the DragonBoard 410c and use it to control an LED. We use GPIO interrupts to detect when the button is pressed and toggle the LED in response.
+In this sample, we connect a push button to your Raspberry Pi 2 or 3, MinnowBoard Max, or the DragonBoard 410c and use it to control an LED. We use GPIO interrupts to detect when the button is pressed and toggle the LED in response.
 
 ![Push Button Image]({{site.baseurl}}/images/PushButton/PushButtonSample.png)
 
@@ -31,13 +31,13 @@ You will need the following components :
 
 * a [330 &#x2126; resistor](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
 
-* a breadboard and several male-to-female for the Raspberry Pi 2 or MinnowBoard Max or male-to-male wires for the DragonBoard
+* a breadboard and several male-to-female for the Raspberry Pi 2 or 3 or MinnowBoard Max or male-to-male wires for the DragonBoard
 
 ### Connect the circuit to your device
 
-Let's start by wiring up the components on a breadboard. Visit the corresponding **Raspberry Pi 2, MinnowBoard Max, or DragonBoard 410c** sections below depending on your device.
+Let's start by wiring up the components on a breadboard. Visit the corresponding **Raspberry Pi 2 or 3, MinnowBoard Max, or DragonBoard 410c** sections below depending on your device.
 
-#### Raspberry Pi 2
+#### Raspberry Pi 2 or 3
 
 | Breadboard Diagram                                                                        | Schematic                                                                          |
 | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
@@ -47,21 +47,21 @@ Let's start by wiring up the components on a breadboard. Visit the corresponding
 
 ##### Connecting the LED
 
-* Connect the cathode (the shorter leg) of the LED to Pin 31 (GPIO 6) of the Raspberry Pi 2
+* Connect the cathode (the shorter leg) of the LED to Pin 31 (GPIO 6) of the Raspberry Pi 2 or 3
 
 * Connect the anode (the longer leg) of the LED to one lead of the 330 &#x2126; resistor
 
-* Connect the other end of the 330 &#x2126; resistor to Pin 1 (3.3V) on Raspberry Pi 2
+* Connect the other end of the 330 &#x2126; resistor to Pin 1 (3.3V) on Raspberry Pi 2 or 3
 
 ##### Connecting the Push Button
 
-* Connect one pin of the push button to Pin 29 (GPIO 5) of the Raspberry Pi 2
+* Connect one pin of the push button to Pin 29 (GPIO 5) of the Raspberry Pi 2 or 3
 
 * Connect the other pin of the push button to the ground
 
-Here is the pinout of the RPi2:
+Here is the pinout of the RPi2 and RPi3:
 
-![Raspberry Pi 2 pinout]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![Raspberry Pi 2 and 3 pinout]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
 
 <sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
 
@@ -130,7 +130,7 @@ private const int BUTTON_PIN = 36;
 
 1. Download a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip).
 1. Open `samples-develop\PushButton\CS\PushButton.csproj` in Visual Studio.
-1. If you have **Raspberry Pi 2** or **DragonBoard 410c**, Select `ARM` for the target architecture. Otherwise, for **MinnowBoard Max** select `x86`
+1. If you have **Raspberry Pi 2 or 3** or **DragonBoard 410c**, Select `ARM` for the target architecture. Otherwise, for **MinnowBoard Max** select `x86`
 1. Go to `Build -> Build Solution`
 1. Select `Remote Machine` from the debug target
 1. Hit F5 to deploy and debug. Enter the IP address of your device
@@ -164,7 +164,7 @@ ledPin.Write(GpioPinValue.High);
 ledPin.SetDriveMode(GpioPinDriveMode.Output);
 {% endhighlight %}
 
-Next, we set up the button pin. For the Raspberry Pi 2 or the DragonBoard 410c, we take advantage of the fact that it has 
+Next, we set up the button pin. For the Raspberry Pi 2 or 3 or the DragonBoard 410c, we take advantage of the fact that it has 
 built-in pull up resistors that we can activate. We use the built-in pull up resistor so that we don't need to supply a resistor externally. 
 The MinnowBoard Max has 10k&#x2126; pull-up resistors that are on by default and not configurable, so we insert a check to make sure this drive mode is supported.
 

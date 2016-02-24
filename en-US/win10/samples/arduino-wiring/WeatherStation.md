@@ -9,7 +9,7 @@ lang: en-US
 
 {% include VerifiedVersion.md %}
 
-Learn how to create an Arduino Wiring sketch on Raspberry Pi 2 and set up your own Weather Station using the power of Lightning.  Gathering weather data from your surroundings is as easy as connecting a [Sparkfun Weather Shield](https://www.sparkfun.com/products/12081) to your Raspberry Pi 2 and deploying a UWP app. This shield mainly utilizes two sensors, the [HTU21D Humidity and Temperature Sensor](https://www.sparkfun.com/products/12064) and the [MPL3115A2 Altitude/Pressure Sensor](https://www.sparkfun.com/products/11084), but is also expandable to read wind and rain levels. You can replicate this entire project with the shield itself or with the individual sensors.
+Learn how to create an Arduino Wiring sketch on Raspberry Pi 2 or 3 and set up your own Weather Station using the power of Lightning.  Gathering weather data from your surroundings is as easy as connecting a [Sparkfun Weather Shield](https://www.sparkfun.com/products/12081) to your Raspberry Pi 2 or 3 and deploying a UWP app. This shield mainly utilizes two sensors, the [HTU21D Humidity and Temperature Sensor](https://www.sparkfun.com/products/12064) and the [MPL3115A2 Altitude/Pressure Sensor](https://www.sparkfun.com/products/11084), but is also expandable to read wind and rain levels. You can replicate this entire project with the shield itself or with the individual sensors.
 
 Read on to get started!
 
@@ -17,11 +17,11 @@ Read on to get started!
 
 <div class="row">
   <p>
-    The first step is to hook your Raspberry Pi 2 up to the Sparkfun Weather Shield.  Use the wiring diagram and photos in the carousel below for reference. <i> Note: This feature requires JavaScript.  If you are experiencing problems with the carousel, make sure that JavaScript is enabled on your browser. </i> You can also refer to the fritzing diagram below the reference images.
+    The first step is to hook your Raspberry Pi 2 or 3 up to the Sparkfun Weather Shield.  Use the wiring diagram and photos in the carousel below for reference. <i> Note: This feature requires JavaScript.  If you are experiencing problems with the carousel, make sure that JavaScript is enabled on your browser. </i> You can also refer to the fritzing diagram below the reference images.
   </p>
   <div class="col-md-6 col-sm-12">
     <div class="floatTop">
-    Pinout Diagram (Raspberry Pi 2 --> Sparkfun weather shield):
+    Pinout Diagram (Raspberry Pi 2 or 3 --> Sparkfun weather shield):
       <ul>
         <li> GND-------(black)------GND </li>
         <li> 5V----------(red)---------VIN </li>
@@ -48,19 +48,19 @@ Read on to get started!
       <div class="item active">
           <img src="{{site.baseurl}}/images/PinMappings/RP2_Pinout.png">
           <div class="carousel-caption">
-            Rasberry Pi 2 GPIO Schematic
+            Rasberry Pi 2 and 3 GPIO Schematic
           </div>
         </div>
         <div class="item">
           <img src="{{site.baseurl}}/images/Lightning/Wiring_RasPi2_inside.jpeg">
           <div class="carousel-caption">
-            Raspberry Pi 2 Wiring Diagram (Inside)
+            Raspberry Pi 2 or 3 Wiring Diagram (Inside)
           </div>
         </div>
         <div class="item">
           <img src="{{site.baseurl}}/images/Lightning/Wiring_RasPi2_outside.jpeg">
           <div class="carousel-caption">
-            Raspberry Pi 2 Wiring Diagram (Outside)
+            Raspberry Pi 2 or 3 Wiring Diagram (Outside)
           </div>
         </div>
         <div class="item">

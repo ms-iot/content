@@ -9,11 +9,11 @@ lang: en-US
 
 {% include VerifiedVersion.md %}
 
-In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) running on a Raspberry Pi 2 to control a servo connected to an Arduino (with [Firmata](https://www.npmjs.com/package/firmata) installed).
+In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) running on a Raspberry Pi 2 or 3 to control a servo connected to an Arduino (with [Firmata](https://www.npmjs.com/package/firmata) installed).
 
 
 ### Hardware required
-* Raspberry Pi 2.
+* Raspberry Pi 2 or 3.
 * [Arduino Board](https://www.arduino.cc/en/main/products) (Uno is used in this sample).
 * USB to USB B cable.
 * Servo.
@@ -54,15 +54,15 @@ This step will run npm dedupe and update [serialport](https://www.npmjs.com/pack
 ![Node.js Npm Menu]({{site.baseurl}}/images/Nodejs/npm-update-menu.png)
 
 
-### Set up the connection between your Arduino and Raspberry Pi 2
-Connect your Arduino and Raspberry Pi 2 with the USB cable. If your Raspberry Pi 2 is connected to a monitor, 
+### Set up the connection between your Arduino and Raspberry Pi 2 or 3
+Connect your Arduino and Raspberry Pi 2 or 3 with the USB cable. If your Raspberry Pi 2 or 3 is connected to a monitor, 
 you should see the device getting recognized as shown in the image below (the name of the device may be "Arduino Uno" instead of "USB Serial Device"):
 
 ![Arduino Uno Start Screen]({{site.baseurl}}/images/Nodejs/arduino-uno-startscreen.png)
 
 Now we need to get the string that identifies the Arduino and will be used in sample code. Follow these steps to do this:
 
-* In a PowerShell window connected to the Raspberry Pi 2, run `devcon status usb*`. When you do this, you should see a device similar to the one below:
+* In a PowerShell window connected to the Raspberry Pi 2 or 3, run `devcon status usb*`. When you do this, you should see a device similar to the one below:
 
    USB\VID_2341&PID_0043\85436323631351311141  
    Name: USB Serial Device  
@@ -99,15 +99,15 @@ Cylon.robot({
 {% endhighlight %}
 </UL>
 
-* Attach the servo to the the arduino board using pin 3 (you can also change the pin number in app.js). In the setup shown below, the signal wire is connected to pin 3 and the power source is the Raspberry Pi 2.
+* Attach the servo to the the arduino board using pin 3 (you can also change the pin number in app.js). In the setup shown below, the signal wire is connected to pin 3 and the power source is the Raspberry Pi 2 or 3.
 
 ![Arduino Servo RPi2]({{site.baseurl}}/images/Nodejs/arduino-servo-rpi2.png)
 
 
-### Deploy the app to your Raspberry Pi 2
-* Go to the Project menu and select '&lt;Your project name&gt; Properties' (You could also right-click on the project node in solution explorer to access Properties). Enter the IP Address in the Remote Machine text box. Since you're building for Raspberry Pi 2, select `ARM` in the dropdown menu.
+### Deploy the app to your Raspberry Pi 2 or 3
+* Go to the Project menu and select '&lt;Your project name&gt; Properties' (You could also right-click on the project node in solution explorer to access Properties). Enter the IP Address in the Remote Machine text box. Since you're building for Raspberry Pi 2 or 3, select `ARM` in the dropdown menu.
 
-* Now we're ready to deploy the app to the Raspberry Pi 2. Simply press F5 (or select Debug \| Start Debugging) to start debugging the app. This step will also start rotating the motor on the servo.
+* Now we're ready to deploy the app to the Raspberry Pi 2 or 3. Simply press F5 (or select Debug \| Start Debugging) to start debugging the app. This step will also start rotating the motor on the servo.
 
 
 ### GitHub

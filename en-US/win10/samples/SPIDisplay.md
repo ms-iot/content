@@ -9,7 +9,7 @@ lang: en-US
 
 {% include VerifiedVersion.md %}
 
-In this sample, we interface a SPI based [OLED display](http://www.adafruit.com/product/938){:target="_blank"} to your Raspberry Pi 2, MinnowBoard Max, or DragonBoard 410c. We then create an app that lets us write lines of text to the display. Step-by-step instructions are provided,
+In this sample, we interface a SPI based [OLED display](http://www.adafruit.com/product/938){:target="_blank"} to your Raspberry Pi 2 or 3, MinnowBoard Max, or DragonBoard 410c. We then create an app that lets us write lines of text to the display. Step-by-step instructions are provided,
 so no background knowledge of SPI is needed. However, if you want to learn more, SparkFun provides a great [tutorial on SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}.
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
@@ -25,29 +25,29 @@ First, we need to wire up the display to your device. You'll need a few componen
 
 * <a name="SPI_Display"></a>a [Monochrome 1.3" 128x64 OLED graphic display](http://www.adafruit.com/product/938){:target="_blank"} from Adafruit with pin headers soldered on
 
-* a breadboard and several male-to-female connector wires (Raspberry Pi 2 or MinnowBoard Max) or male-to-male connector wires (DragonBoard 410c)
+* a breadboard and several male-to-female connector wires (Raspberry Pi 2 or 3 or MinnowBoard Max) or male-to-male connector wires (DragonBoard 410c)
 
 * <a name="SPI_Display"></a>If you are using a DragonBoard 410c, you'll also need a [8-channel Bi-directional Logic Level Converter](http://www.adafruit.com/products/395) from Adafruit with pin headers soldered on
 
-Visit the **Raspberry Pi 2, MinnowBoard Max, or DragonBoard 410c** sections below depending on which device you have:
+Visit the **Raspberry Pi 2 or 3, MinnowBoard Max, or DragonBoard 410c** sections below depending on which device you have:
 
 ![Electrical Components]({{site.baseurl}}/images/SPIDisplay/components.png)
 
-#### Raspberry Pi 2
-For the Raspberry Pi 2, we need to hook up power, ground, SPI, and a few GPIO pins to the OLED display. For additional information on the Raspberry Pi 2 pins, visit the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm)
+#### Raspberry Pi 2 or 3
+For the Raspberry Pi 2 or 3, we need to hook up power, ground, SPI, and a few GPIO pins to the OLED display. For additional information on the Raspberry Pi 2 or 3 pins, visit the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm)
 
-**Note: Make sure to power off the RPi2 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
+**Note: Make sure to power off the RPi2 or RPi3 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
 
 The OLED display has 8 IO pins, connect them as follows:
 
-1. **DATA:**  Connect to MOSI on the RPi2 (Pin 19). This is the SPI master data out line.
-2. **CLK:**     Connect to SCLK on the RPi2 (Pin 23). This is the SPI clock line.
-3. **SA0/DC:**   Connect to GPIO 22 on the RPi2 (Pin 15). This is the Data/Command line for the display. (See the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf){:target="_blank"} for more information about the display pin functions)
-4. **RST:** Connect to GPIO 23 on the RPi2 (Pin 16). This is the hardware Reset line for the display. (See the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf){:target="_blank"} for more information about the display pin functions)
-5. **CS:** Connect to CE0 on the RPi2 (Pin 24). This is the SPI chip select line.
+1. **DATA:**  Connect to MOSI on the RPi2 or RPi3 (Pin 19). This is the SPI master data out line.
+2. **CLK:**     Connect to SCLK on the RPi2 or RPi3 (Pin 23). This is the SPI clock line.
+3. **SA0/DC:**   Connect to GPIO 22 on the RPi2 or RPi3 (Pin 15). This is the Data/Command line for the display. (See the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf){:target="_blank"} for more information about the display pin functions)
+4. **RST:** Connect to GPIO 23 on the RPi2 or RPi3 (Pin 16). This is the hardware Reset line for the display. (See the [datasheet](http://www.adafruit.com/datasheets/SSD1306.pdf){:target="_blank"} for more information about the display pin functions)
+5. **CS:** Connect to CE0 on the RPi2 or RPi3 (Pin 24). This is the SPI chip select line.
 6. **3V3:**  Leave unconnected. The display has its own on-board power regulator which provides it with 3.3V
-7. **VIN:**  Connect 5V the RPi2 (Pin 2).
-8. **GND:**  Connect to ground on the RPi2 (Pin 6).
+7. **VIN:**  Connect 5V the RPi2 or RPi3 (Pin 2).
+8. **GND:**  Connect to ground on the RPi2 or RPi3 (Pin 6).
 
 Here are the connections shown on a breadboard:
 
@@ -137,9 +137,9 @@ public sealed partial class MainPage : Page
         //private const Int32 DATA_COMMAND_PIN = 3;           /* We use GPIO 3 since it's conveniently near the SPI pins  */
         //private const Int32 RESET_PIN = 4;                  /* We use GPIO 4 since it's conveniently near the SPI pins  */
 
-        /* Uncomment for Raspberry Pi 2 */
-        //private const string SPI_CONTROLLER_NAME = "SPI0";  /* For Raspberry Pi 2, use SPI0                             */
-        //private const Int32 SPI_CHIP_SELECT_LINE = 0;       /* Line 0 maps to physical pin number 24 on the Rpi2        */
+        /* Uncomment for Raspberry Pi 2 or 3 */
+        //private const string SPI_CONTROLLER_NAME = "SPI0";  /* For Raspberry Pi 2 or 3, use SPI0                             */
+        //private const Int32 SPI_CHIP_SELECT_LINE = 0;       /* Line 0 maps to physical pin number 24 on the RPi2 or RPi3        */
         //private const Int32 DATA_COMMAND_PIN = 22;          /* We use GPIO 22 since it's conveniently near the SPI pins */
         //private const Int32 RESET_PIN = 23;                 /* We use GPIO 23 since it's conveniently near the SPI pins */
 

@@ -42,7 +42,7 @@ http.createServer(function (req, res) {
 * Enter the IP Address in the Remote Machine text box as shown below (the `--debug` argument is required for debugging and is added automatically).
 * You can also add `--use-logger` as an argument to redirect console output to a file in the local storage folder of the UWP application
   (C:\Data\Users\DefaultAccount\AppData\Local\Packages\&lt;Your Project Name&gt;_&lt;Publisher Hash String&gt;\LocalState\nodeuwp.log).
-* If you're building for Minnowboard Max, select `x86` in the dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
+* If you're building for Minnowboard Max, select `x86` in the dropdown.  If you're building for Raspberry Pi 2 or 3, select `ARM`.
 
     ![Project Properties]({{site.baseurl}}/images/Nodejs/nodejswu-properties.png)
 
@@ -86,7 +86,7 @@ You have the option to build and deploy your app without using the Visual Studio
 
 * Open Developer Command Prompt for VS 2015.
 * Navigate to your project.
-* Run `msbuild <Your solution name>.sln /p:configuration=release /p:platform=<arm | x86 | x64 >` (use arm for Raspberry Pi 2 and x86 for MBM).
+* Run `msbuild <Your solution name>.sln /p:configuration=release /p:platform=<arm | x86 | x64 >` (use arm for Raspberry Pi 2 or 3 and x86 for MBM).
 * After running the command above, you should see a new folder with the AppX in: \Your project root\AppPackages.
 * Once you have created an AppX, you can use [Windows Device Portal to deploy it]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm#apps) to your Windows 10 IoT Core device.
 * In a PowerShell window connected to your device, run `iotstartup list` to get the full package name of your app.

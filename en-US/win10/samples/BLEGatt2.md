@@ -16,7 +16,7 @@ Download the code [here](https://github.com/ms-iot/samples/archive/develop.zip){
 Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
 
 ### Deploy and run the app
-First we need to select the correct architecture to build for. If you're building for MinnowBoard Max, select `x86` in the architecture dropdown. If you're building for Raspberry Pi 2, select `ARM`.
+First we need to select the correct architecture to build for. If you're building for MinnowBoard Max, select `x86` in the architecture dropdown. If you're building for Raspberry Pi 2 or 3, select `ARM`.
 
 Next, right-click on the **BluetoothGATT** project in **Solution Explorer** and select **"Set as StartUp Project"**.
 Now you should be able to press F5 from Visual Studio: The BluetoothGATT app will deploy and start, and you should see this on the device output:

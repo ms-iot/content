@@ -104,7 +104,7 @@ Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/Blin
 We have provided a pre-built binary application called BlinkyApp.exe which communicates with the driver to turn on/off the LED.  The application can be found at `DriverSamples\BlinkyApp\BlinkyApp_<PLATFORM>.exe`.
 
 For MinnowBoard Max, `<PLATFORM>` will be `x86`.
-For Raspberry Pi 2, `<PLATFORM>` will be `ARM`.
+For Raspberry Pi 2 or 3, `<PLATFORM>` will be `ARM`.
 
 You will need to copy this file to the target device (Windows IoT Core device) using SMB, or some other means.
 
@@ -123,7 +123,7 @@ You should see a help menu similar to this:
       (h)igh 5  : Sets GPIO #5 HIGH.
 
 
-    Raspberry Pi 2 (RPi2) [ARM]: GPIO Pin Mapping and Examples
+    Raspberry Pi 2 or 3 (RPi2 or RPi3) [ARM]: GPIO Pin Mapping and Examples
 
       GPIO No. |      Example       |      Example       | Header
                |     (GPIO low)     |     (GPIO high)    | Pin No.
@@ -141,7 +141,7 @@ You should see a help menu similar to this:
       GPIO 26  | BlinkyApp.exe l 26 | BlinkyApp.exe h 26 |   37
       GPIO 27  | BlinkyApp.exe l 27 | BlinkyApp.exe h 27 |   13
 
-If you are using GPIO #5 on the Raspberry Pi 2, type the following command to turn the LED on:
+If you are using GPIO #5 on the Raspberry Pi 2 or 3, type the following command to turn the LED on:
 
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe low 5
 

@@ -76,7 +76,7 @@ private void ClickMe_Click(object sender, RoutedEventArgs e)
 ### Deploy the app to your Windows IoT Core device
 1. Of course, we want to deploy our first app to our Windows IoT Core device. It's easy. In the [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) documentation, you can find instructions to chose a unique name for your Windows IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in Visual Studio.
 
-    If you're building for Minnowboard Max, select `x86` in the Visual Studio toolbar architecture dropdown.  If you're building for Raspberry Pi 2 or the DragonBoard, select `ARM`.
+    If you're building for Minnowboard Max, select `x86` in the Visual Studio toolbar architecture dropdown.  If you're building for Raspberry Pi 2 or 3 or the DragonBoard, select `ARM`.
 
     Next, in the Visual Studio toolbar, click on the `Local Machine` dropdown and select `Remote Machine`<br/>
 

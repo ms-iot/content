@@ -9,7 +9,7 @@ lang: en-US
 
 {% include VerifiedVersion.md %}
 
-Learn to Deploy and Debug an Arduino Wiring sketch on Raspberry Pi 2 or Minnowboard Max to control text on an LCD screen!
+Learn to Deploy and Debug an Arduino Wiring sketch on Raspberry Pi 2 and 3 or Minnowboard Max to control text on an LCD screen!
 
 ## Setup
 
@@ -23,7 +23,7 @@ You'll also need several wires, a potentiometer, and a 220 ohm resistor.
 
 ## Hardware Setup
 
-There is a fritzing diagram below, as well as a table of the exact pinouts we used in our code. For reference, we've also included a pinout diagram of the RPi2 GPIO header and the LCD screen. If you need additional help with your LCD screen, there is a really great guide over at Adafruit's website on [hooking up a 16-pin LCD screen](https://learn.adafruit.com/character-lcds).
+There is a fritzing diagram below, as well as a table of the exact pinouts we used in our code. For reference, we've also included a pinout diagram of the RPi2 or RPi3 GPIO header and the LCD screen. If you need additional help with your LCD screen, there is a really great guide over at Adafruit's website on [hooking up a 16-pin LCD screen](https://learn.adafruit.com/character-lcds).
 
 ### Fritzing Diagram
 

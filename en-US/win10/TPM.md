@@ -37,7 +37,7 @@ The TPM provides cryptographic functions designed to provide trust in the platfo
 _A few words about sTPM, fTPM, dTPM..._
 
 ### Firmware TPM (fTPM)  
-Firmware TPM (fTPM) requires special Processor/SoC support that is not currently implemented on Raspberry Pi 2. MinnowBoard Max needs firmware version 0.80 or higher. DragonBoard410c provides fTPM capabilities out of the box.  
+Firmware TPM (fTPM) requires special Processor/SoC support that is not currently implemented on Raspberry Pi 2 or 3. MinnowBoard Max needs firmware version 0.80 or higher. DragonBoard410c provides fTPM capabilities out of the box.  
 Instructions on how to set up fTPM on Windows IoT Core are available [here][1].
 
 ### Discrete TPM (dTPM)  

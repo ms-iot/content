@@ -9,10 +9,10 @@ lang: en-US
 
 {% include VerifiedVersion.md %}
 
-In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) running on a Raspberry Pi 2 to blink the LED on an Arduino (with [Firmata](https://www.npmjs.com/package/firmata) installed) once per second.
+In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) running on a Raspberry Pi 2 or 3 to blink the LED on an Arduino (with [Firmata](https://www.npmjs.com/package/firmata) installed) once per second.
 
 ### Hardware required
-* Raspberry Pi 2.
+* Raspberry Pi 2 or 3.
 * [Arduino Board](https://www.arduino.cc/en/main/products) (Leonardo is used in this sample).
 * USB to Micro USB cable.
 
@@ -31,11 +31,11 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 * Click the upload button to upload the sketch to the Arduino board. You should see a "Done uploading" message when the upload is complete.
 
 
-### Copy Node.js to your Raspberry Pi 2
+### Copy Node.js to your Raspberry Pi 2 or 3
 * Download the zip file with ARM Node.js (ChakraCore) from [here](http://aka.ms/nodecc_arm) to your PC and extract the files (node.exe and chakracore.dll).
 * Use [Windows file sharing]({{site.baseurl}}/{{page.lang}}/win10/samples/SMB.htm), [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm), 
-or [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to create `C:\Node.js (ChakraCore)` folder on your Raspberry Pi 2.
-* Copy node.exe and chakracore.dll to `C:\Node.js (ChakraCore)` on your Raspberry Pi 2.
+or [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to create `C:\Node.js (ChakraCore)` folder on your Raspberry Pi 2 or 3.
+* Copy node.exe and chakracore.dll to `C:\Node.js (ChakraCore)` on your Raspberry Pi 2 or 3.
 
 
 ### Create a file with the code to control the Arduino LED
@@ -69,7 +69,7 @@ Cylon.robot({
 ### Get Serialport
 **Note:** Even though serialport is installed when Cylon is installed, you still need to get a version that:
 
-* Corresponds with the processor architecture of the device you are targeting (in this case ARM for Raspberry Pi 2).
+* Corresponds with the processor architecture of the device you are targeting (in this case ARM for Raspberry Pi 2 or 3).
 * Includes an [update](https://github.com/voodootikigod/node-serialport/pull/550) for serialport to work on Windows 10 IoT Core.
 
 Steps to get serialport:
@@ -79,24 +79,24 @@ Steps to get serialport:
   **Note:** node-v47-win32-arm is a new folder you will create.
 
 
-### Copy the sample to your Raspberry Pi 2
+### Copy the sample to your Raspberry Pi 2 or 3
 Open up an explorer window on your PC and enter **\\\\\<IP address of your device\>\\C$** to access files on your device. The credentials (if you have not changed them) are:
 
    username: <IP address or device name, default is minwinpc>\Administrator  
    password: p@ssw0rd  
 
-Copy the CylonSample folder on your PC to C:\CylonSample on the Raspberry Pi 2.
+Copy the CylonSample folder on your PC to C:\CylonSample on the Raspberry Pi 2 or 3.
 
 
-### Set up the connection between your Arduino and Raspberry Pi 2
-Connect your Arduino and Raspberry Pi 2 with the USB cable. When you do, if your Raspberry Pi 2 is connected to a monitor, 
+### Set up the connection between your Arduino and Raspberry Pi 2 or 3
+Connect your Arduino and Raspberry Pi 2 or 3 with the USB cable. When you do, if your Raspberry Pi 2 or 3 is connected to a monitor, 
 you should see the device getting recognized like in the image below:
 
 ![Arduino Start Screen]({{site.baseurl}}/images/Nodejs/arduino-startscreen.jpg)
 
 We also need to assign a port name to (e.g. 'COM5') to the Arduino. Follow these steps to do this:
 
-* In PowerShell connected to the Raspberry Pi 2, run `devcon status usb*`. When you do this, you should see a device similar to the one below:
+* In PowerShell connected to the Raspberry Pi 2 or 3, run `devcon status usb*`. When you do this, you should see a device similar to the one below:
 
    USB\VID_2341&PID_8036\5&3753427A&0&4  
    Name: USB Serial Device  

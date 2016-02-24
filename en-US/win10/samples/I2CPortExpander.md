@@ -11,7 +11,7 @@ lang: en-US
 
 ![I2C Port Expander Image]({{site.baseurl}}/images/I2CPortExpander/PortExpanderProjectPicture_480.png)
 
-In this sample, we'll connect an I2C port expander to your Raspberry Pi 2 and create a simple app that uses the port expander to read the status of a tactile switch and control an LED. No background knowledge of I2C or port expanders is needed.
+In this sample, we'll connect an I2C port expander to your Raspberry Pi 2 or 3 and create a simple app that uses the port expander to read the status of a tactile switch and control an LED. No background knowledge of I2C or port expanders is needed.
 If you want to know more about I2C, SparkFun provides a great [tutorial on I2C](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}.
 
 This is a headed sample, so please ensure that your device is in headed
@@ -21,7 +21,7 @@ mode by running this command: `setbootoption.exe headed` (changing the headed/he
 
 You will need the following components:
 
-* 1 Raspberry Pi 2
+* 1 Raspberry Pi 2 or 3
 
 * <a name="I2C_PortExpander"></a>1 [MCP23008 8-bit I/O Port Expander](http://www.digikey.com/product-detail/en/MCP23008-E%2FP/MCP23008-E%2FP-ND/735951){:target="_blank"} in PDIP package
 
@@ -39,7 +39,7 @@ You will need the following components:
 
 Let's start by wiring up the components on the breadboard as shown in the diagram below.
 
-**Note: Make sure to power off the RPi2 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
+**Note: Make sure to power off the RPi2 or RPi3 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
 
 ![Breadboard connections]({{site.baseurl}}/images/I2CPortExpander/I2cPortExpanderDrawing_bb_750.png)
 
@@ -77,9 +77,9 @@ The pinout of the MCP23008 is shown below and can be found in the [datasheet](ht
 
 Make the following connections on the MCP23008 Port Expander:
 
-* Pin 1  **SCL**: Connect to **I2C1 SCL** (Pin 5) on the RPi2 (pin mapping is below)
+* Pin 1  **SCL**: Connect to **I2C1 SCL** (Pin 5) on the RPi2 or RPi3 (pin mapping is below)
 
-* Pin 2  **SDA**: Connect to **I2C1 SDA** (Pin 3) on the RPi2
+* Pin 2  **SDA**: Connect to **I2C1 SDA** (Pin 3) on the RPi2 or RPi3
 
 * Pin 3  **A2**:  Connect to the ground rail on the side of the breadboard (blue stripe)
 
@@ -120,11 +120,11 @@ Leave the remaining pins on the MCP23008 unconnected.
 * Connect the other pin of the tactile switch to the ground rail on the side of the breadboard (blue stripe)
 
 
-#### Connecting the Raspberry Pi 2
+#### Connecting the Raspberry Pi 2 or 3
 
-We need to hook up power, ground, and the I2C lines from on the Raspberry Pi 2 to the MCP23008 Port Expander and the breadboard.
+We need to hook up power, ground, and the I2C lines from on the Raspberry Pi 2 or 3 to the MCP23008 Port Expander and the breadboard.
 
-![Raspberry Pi 2 pinout]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![Raspberry Pi 2 or 3 pinout]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
 
 * Pin 1 **3.3V PWR** Connect to the voltage supply rail on the side of the breadboard (red stripe)
 
@@ -134,8 +134,8 @@ We need to hook up power, ground, and the I2C lines from on the Raspberry Pi 2 t
 
 * Pin 6 **GND** Connect to the ground rail on the side of the breadboard (blue stripe)
 
-The I2C bus requires pull-up resistors on the SDA and SCL lines. However, the Raspberry Pi 2 SDA and SCL pins we are using in this sample already have pull-up resistors connected on the RPi2, so we don't need to add any additional external pull-ups.
- See the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm) for more details on the RPi2 IO pins.
+The I2C bus requires pull-up resistors on the SDA and SCL lines. However, the Raspberry Pi 2 and 3 SDA and SCL pins we are using in this sample already have pull-up resistors connected on the RPi2 or RPi3, so we don't need to add any additional external pull-ups.
+ See the [Raspberry Pi 2 or 3 pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm) for more details on the RPi2 and RPi3 IO pins.
 
 ### Create the sample app
 
@@ -152,7 +152,7 @@ The code in this sample does several things:
 
 3. Communicates over I2C with the port expander to check the status of the tactile switch (is it pressed or not) at regular intervals
 
-4. Displays the LED on/off status and the tactile switch pressed/released status to the display attached to the Raspberry Pi 2
+4. Displays the LED on/off status and the tactile switch pressed/released status to the display attached to the Raspberry Pi 2 or 3
 
 5. Stops flashing the LED when the tactile switch is pressed and restarts flashing the LED when the tactile switch is released
 
@@ -160,7 +160,7 @@ The code in this sample does several things:
 
 #### Add content to MainPage.xaml
 
-Let's add some content to the MainPage which will be displayed on a screen connected to the Raspberry Pi 2. We want to add a Circle, a couple TextBoxes and a Slider. The circle will emulate the on/off status of the LED. The Slider allows the user to control the frequency that the LED flashes. The Textboxes will provide info about the slider and report the tactile button status.
+Let's add some content to the MainPage which will be displayed on a screen connected to the Raspberry Pi 2 or 3. We want to add a Circle, a couple TextBoxes and a Slider. The circle will emulate the on/off status of the LED. The Slider allows the user to control the frequency that the LED flashes. The Textboxes will provide info about the slider and report the tactile button status.
 
 * From Solution Explorer, select the MainPage.xaml file.
 
@@ -206,7 +206,7 @@ Variables and Constants
 
 {% highlight C# %}
 // use these constants for controlling how the I2C bus is setup
-private const string I2C_CONTROLLER_NAME = "I2C1"; //specific to RPI2
+private const string I2C_CONTROLLER_NAME = "I2C1"; //specific to RPi2 or RPi3
 private const byte PORT_EXPANDER_I2C_ADDRESS = 0x20; // 7-bit I2C address of the port expander
 private const byte PORT_EXPANDER_IODIR_REGISTER_ADDRESS = 0x00; // IODIR register controls the direction of the GPIO on the port expander
 private const byte PORT_EXPANDER_GPIO_REGISTER_ADDRESS = 0x09; // GPIO register is used to read the pins input
@@ -234,7 +234,7 @@ private SolidColorBrush grayBrush = new SolidColorBrush(Windows.UI.Colors.LightG
 
 Here are what some of these constants and variables represent
 
- * `I2C_CONTROLLER_NAME` holds the string constant `I2C1` which is the name of the I2C controller on the Raspberry Pi 2.
+ * `I2C_CONTROLLER_NAME` holds the string constant `I2C1` which is the name of the I2C controller on the Raspberry Pi 2 or 3.
 
  * `PORT_EXPANDER_I2C_ADDRESS` is the I2C address of the port expander we are using. \*
 
@@ -252,7 +252,7 @@ The method `InitializeSystem()`
 
 `InitializeSystem()` does the following:
 
- * Sets up the I2C communications on the Raspberry Pi 2
+ * Sets up the I2C communications on the Raspberry Pi 2 or 3
 
  * Configures the port expander to be able to turn the LED on and off and to get the tactile switch status
 
@@ -260,7 +260,7 @@ The method `InitializeSystem()`
 
  * Sets up two timers - One for controlling the LED and another for checking the tactile switch status
 
-When complete, the variable `i2cPortExpander` will be our handle to the Raspberry Pi 2 I2C bus.
+When complete, the variable `i2cPortExpander` will be our handle to the Raspberry Pi 2 or 3 I2C bus.
 
 {% highlight C# %}
 private async void InitializeSystem()
@@ -342,7 +342,7 @@ private async void InitializeSystem()
 
 The method `FlipLED()`
 
-`FlipLED()` is called by the ledTimer whenever the LED timer has reached the end of its interval length. Initially, this is 500 milliseconds but can be changed by a user via the slider displayed on a monitor connected to the RPi2.
+`FlipLED()` is called by the ledTimer whenever the LED timer has reached the end of its interval length. Initially, this is 500 milliseconds but can be changed by a user via the slider displayed on a monitor connected to the RPi2 or RPi3.
 
  This method determines if the LED is currently on or off.
 
@@ -404,17 +404,17 @@ private void CheckButtonStatus()
 
 ### Build, Deploy and Run the App
 
-Let's build, deploy and run the app on our Raspberry Pi 2.
+Let's build, deploy and run the app on our Raspberry Pi 2 or 3.
 
 * If not already open, open in Visual Studio the app you created with the code above.
 
 * Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp).
 
-After several moments, you will see the screen attached to the RPi2 change to show a circle, some text, and a slider. The LED on the breadboard will begin to turn on and off.
+After several moments, you will see the screen attached to the RPi2 or RPi3 change to show a circle, some text, and a slider. The LED on the breadboard will begin to turn on and off.
 
 ![I2C Port Expander Screenshot]({{site.baseurl}}/images/I2CPortExpander/I2CPortExpanderScreenShot_300p.png)
 
-Congratulations! You've successfully connected an I2C port expander to your Raspberry Pi 2.
+Congratulations! You've successfully connected an I2C port expander to your Raspberry Pi 2 or 3.
 
 ### The complete MainPage.xaml.cs code
 
@@ -447,7 +447,7 @@ namespace I2cPortExpanderLedSample
     public sealed partial class MainPage : Page
     {
         // use these constants for controlling how the I2C bus is setup
-        private const string I2C_CONTROLLER_NAME = "I2C1"; //specific to RPI2
+        private const string I2C_CONTROLLER_NAME = "I2C1"; //specific to RPi2 or RPi3
         private const byte PORT_EXPANDER_I2C_ADDRESS = 0x20; // 7-bit I2C address of the port expander
         private const byte PORT_EXPANDER_IODIR_REGISTER_ADDRESS = 0x00; // IODIR register controls the direction of the GPIO on the port expander
         private const byte PORT_EXPANDER_GPIO_REGISTER_ADDRESS = 0x09; // GPIO register is used to read the pins input

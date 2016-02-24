@@ -7,7 +7,7 @@ lang: en-US
 <div class="row col-md-12">
     <div class="col-md-2 col-xs-12 faq-nav section-heading">
         <h1>FAQs</h1>
-        <a href="#rpi2"><h4>Setting up Raspberry Pi 2</h4></a>
+        <a href="#rpi2"><h4>Setting up Raspberry Pi 2 or 3</h4></a>
 
         <a href="#uwp"><h4>UWP apps</h4></a>
 
@@ -30,8 +30,8 @@ lang: en-US
         <p class="bold"><em>Why does my screen appear cropped or stretched?</em></p>
         <p>This can happen on some monitors. To work around this force the board into DVI mode (vs. HDMI mode).  You can read more about this <a href='https://www.raspberrypi.org/forums/viewtopic.php?t=5851'>here</a>. Mount the SD card to a local PC and proceed to edit the file in the EFIESP partition. For example if the partition is marked as H drive, edit H:\config.txt by adding the following line.<br/><br/>
         <pre>hdmi_group=2                # forces DVI timing to be used</pre>
-        <p class="bold"><em>Can I set up a Raspberry Pi 2 using Windows 8.1?</em></p>
-        <p>You will need Windows 10 on your PC to be able to set up Raspberry Pi 2 running Windows 10 IoT Core.</p>
+        <p class="bold"><em>Can I set up a Raspberry Pi 2 or 3 using Windows 8.1?</em></p>
+        <p>You will need Windows 10 on your PC to be able to set up Raspberry Pi 2 or 3 running Windows 10 IoT Core.</p>
 		<p class="bold"><em>Why does my SD card have to be 8gb, do you really need all that space?</em></p>
         <p>The IoT Core image is under 1gb, the 8gb is meant to give you space to install additional content on your device.</p>
 		<p class="bold"><em>How do I remove Windows 10 IoT Core from my SD card?</em></p>
@@ -85,7 +85,7 @@ lang: en-US
         <p>The support for Windows on Galileo has ended on November 30, 2015.</p>
         <br />
 		<p class="bold"><em>What can I do with my existing projects on Galileo?</em></p>
-        <p>Wiring support is now available on Windows 10 IoT Core running on Raspberry Pi 2. This allows you to migrate your existing Galileo projects to Windows 10 IoT Core.</p>
+        <p>Wiring support is now available on Windows 10 IoT Core running on Raspberry Pi 2 or 3. This allows you to migrate your existing Galileo projects to Windows 10 IoT Core.</p>
         <br />
         <a name="errors"></a>
         <h2 class="faq-h2">Errors</h2>

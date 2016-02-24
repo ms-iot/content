@@ -3,7 +3,7 @@
 <ol class="setup-content-list">
   <div class="row">
     <div class="col-md-6 col-sm-12">
-      <li>With the application open in Visual Studio, set the architecture in the toolbar dropdown. If you're building for MinnowBoard Max, select <code>x86</code>.  If you're building for Raspberry Pi 2 or the DragonBoard, select <code>ARM</code>.</li>
+      <li>With the application open in Visual Studio, set the architecture in the toolbar dropdown. If you're building for MinnowBoard Max, select <code>x86</code>.  If you're building for Raspberry Pi 2, Raspberry Pi 3 or the DragonBoard, select <code>ARM</code>.</li>
     </div>
     <div class="col-md-6 col-sm-12">
     </div>

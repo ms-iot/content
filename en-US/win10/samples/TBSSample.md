@@ -20,7 +20,7 @@ The TBS feature runs as a system service in Windows and provides services as an 
 * SDK, version 10.0.10240 or above
 
 ## Device Setup  
-Links to instructions on setting up MBM and RPi2.
+Links to instructions on setting up MBM and RPi2 or RPi3.
 
 ## Create a project using TBS  
 

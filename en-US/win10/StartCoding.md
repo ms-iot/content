@@ -12,7 +12,7 @@ lang: en-US
         <p>Download code samples to get started with Windows on Devices. Also, read docs to help you use tools and resources to help you develop.</p>
         <br/>
         <h4>Did you set up your environment?</h4>
-        <p>We assume you already <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">set up your environment</a>, have a working Visual Studio and have a device running Windows IoT Core (MinnowBoard Max or Raspberry Pi 2).</p>
+        <p>We assume you already <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">set up your environment</a>, have a working Visual Studio and have a device running Windows IoT Core (MinnowBoard Max or Raspberry Pi 2 or 3).</p>
         <br/>
         <h4>Questions/Suggestions</h4>
         <p>Remember, you can always send <a href="{{site.baseurl}}/{{page.lang}}/Community.htm#contact">contact us</a> for help and suggestions!</p>

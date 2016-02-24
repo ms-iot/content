@@ -27,7 +27,7 @@ Connect the WiFi adapter to one of USB ports on the IoT Device
   
 ### Deploy your app  
   
-If you're building for Minnowboard Max, select `x86` as the architecture. If you're building for Raspberry Pi 2 or DragonBoard , select `ARM`.  
+If you're building for Minnowboard Max, select `x86` as the architecture. If you're building for Raspberry Pi 2 or 3 or DragonBoard , select `ARM`.  
 
 
 Select **Remote Machine** to point to IoT device and hit F5 to deploy to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm){:target="_blank"}. if you need guidance   

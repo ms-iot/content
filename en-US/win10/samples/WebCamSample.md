@@ -29,7 +29,7 @@ Connect the web cam to one of USB ports on the IoT Device
   
 ### Deploy your app  
   
-If you're building for Minnowboard Max, select `x86` as the architecture. If you're building for Raspberry Pi 2 or DragonBoard , select `ARM`.  
+If you're building for Minnowboard Max, select `x86` as the architecture. If you're building for Raspberry Pi 2 or 3 or DragonBoard , select `ARM`.  
 
 **DragonBoard only:** Before deploying this app, disable the on-board mic and audio drivers. This is required on every reboot when running this app
 {% highlight xml %} 

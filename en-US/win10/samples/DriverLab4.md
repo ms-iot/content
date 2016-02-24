@@ -59,7 +59,7 @@ Your target device is now configured for driver development using Visual Studio.
 
 Build and install the demo driver using Visual Studio
 
-* From the Build menu, click `Build Solution(Ctrl+Shift+B)`. Make sure that you are building for `x86` if you are using a MinnowBoard Max, or `ARM` if you are using a Raspberry Pi 2.  Visual Studio will build your driver and deploy the driver to your target device.
+* From the Build menu, click `Build Solution(Ctrl+Shift+B)`. Make sure that you are building for `x86` if you are using a MinnowBoard Max, or `ARM` if you are using a Raspberry Pi 2 or 3.  Visual Studio will build your driver and deploy the driver to your target device.
 
     ![Driver Settings properties]({{site.baseurl}}/images/DriverLab/driver-build-option.png)
 

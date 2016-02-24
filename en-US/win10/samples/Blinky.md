@@ -25,20 +25,20 @@ You'll need a few components:
 
 * a LED (any color you like)
 
-* a 220 &#x2126; resistor for the Raspberry Pi 2 and the MinnowBoard Max or a 330 &#x2126; resistor for the DragonBoard
+* a 220 &#x2126; resistor for the Raspberry Pi 2, Raspberry Pi 3 and the MinnowBoard Max or a 330 &#x2126; resistor for the DragonBoard
 
 * a breadboard and a couple of connector wires
 
 ![Electrical Components]({{site.baseurl}}/images/Blinky/components.png)
 
-### For Raspberry Pi 2 (RPi2)
+### For Raspberry Pi 2 or 3 (RPi2 or RPi3)
 
-1. Connect the shorter leg of the LED to GPIO 5 (pin 29 on the expansion header) on the RPi2.
+1. Connect the shorter leg of the LED to GPIO 5 (pin 29 on the expansion header) on the RPi2 or RPi3.
 2. Connect the longer leg of the LED to the resistor.
-3. Connect the other end of the resistor to one of the 3.3V pins on the RPi2.
+3. Connect the other end of the resistor to one of the 3.3V pins on the RPi2 or RPi3.
 4. Note that the polarity of the LED is important. (This configuration is commonly known as Active Low)
 
-And here is the pinout of the RPi2:
+And here is the pinout of the RPi2 and RPi3:
 
 <img src="{{site.baseurl}}/images/PinMappings/RP2_Pinout.png" style="max-height:400px;">
 
@@ -92,7 +92,7 @@ private const int LED_PIN = 12;
 
 ### Deploy your app
 
-1. With the application open in Visual Studio, set the architecture in the toolbar dropdown. If you're building for MinnowBoard Max, select `x86`.  If you're building for Raspberry Pi 2 or the DragonBoard, select `ARM`.
+1. With the application open in Visual Studio, set the architecture in the toolbar dropdown. If you're building for MinnowBoard Max, select `x86`.  If you're building for Raspberry Pi 2 or 3 or the DragonBoard, select `ARM`.
 
 2. Next, in the Visual Studio toolbar, click on the `Local Machine` dropdown and select `Remote Machine`<br/>
 

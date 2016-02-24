@@ -54,25 +54,25 @@ On your development machine, you can start WinDbg with the PORT_NUM and the KEY 
 
         Note: If you have any of the Windows kits installed, you may find WinDbg under "C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\WinDbg.exe" 
 
-## Raspberry Pi 2 (RPi2) 
+## Raspberry Pi 2 or 3 (RPi2 or RPi3) 
 
-You can connect WinDbg to the Raspberry Pi 2 using a serial connection.
+You can connect WinDbg to the Raspberry Pi 2 or 3 using a serial connection.
 
-### Raspberry Pi 2 (RPi2) & Windbg via a Serial Connection
+### Raspberry Pi 2 or 3 (RPi2 or RPi3) & Windbg via a Serial Connection
 
 In order to enable kernel debugging with WinDbg over a serial connection, please make sure that:
 
 * You have a debug cable such as the USB-to-TTL Serial Cable from [Adafruit](https://www.adafruit.com/product/954) or [FTDI](http://shop.clickandbuild.com/cnb/shop/ftdichip?productID=53&op=catalogue-product_info-null&prodCategoryID=105). 
 
-* An Ethernet cable is connecting your Raspberry Pi 2 to your network 
+* An Ethernet cable is connecting your Raspberry Pi 2 or 3 to your network 
 
-* Your Raspberry Pi 2 has a valid IP address in your network
+* Your Raspberry Pi 2 or 3 has a valid IP address in your network
 
-* You have an active connection to the Raspberry Pi 2 via [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) 
+* You have an active connection to the Raspberry Pi 2 or 3 via [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) 
 
-UART0 will be used on the Raspberry Pi 2 for the kernel debugging connection.  The following shows the pin mappings for the Raspberry Pi 2 as well as the serial cables: 
+UART0 will be used on the Raspberry Pi 2 or 3 for the kernel debugging connection.  The following shows the pin mappings for the Raspberry Pi 2 or 3 as well as the serial cables: 
 
-        Raspberry Pi 2 pins:
+        Raspberry Pi 2 or 3 pins:
             Pin #6 : GND
             Pin #8 : UART0 TX (3.3V)
             pin #10: UART0 RX (3.3V)
@@ -91,21 +91,21 @@ UART0 will be used on the Raspberry Pi 2 for the kernel debugging connection.  T
             Yellow : RX  (3.3V)
             Green  : RTS (NOT USED)
 
-The basic idea for making the correct serial connections is to remember that while one device uses its TX to transmit data, the other device uses its RX to receive the data.  Therefore, the following is how you should connect your RPi2:
+The basic idea for making the correct serial connections is to remember that while one device uses its TX to transmit data, the other device uses its RX to receive the data.  Therefore, the following is how you should connect your RPi2 or RPi3:
 
         If using Adafruit's serial cable:
-            [RPi2] Pin #6  (GND) <-> [Adafruti] Black (GND)
-            [RPi2] Pin #8  (TX)  <-> [Adafruit] White (RX) 
-            [RPi2] Pin #10 (RX)  <-> [Adafruit] Green (TX)
+            [RPi2 or RPi3] Pin #6  (GND) <-> [Adafruti] Black (GND)
+            [RPi2 or RPi3] Pin #8  (TX)  <-> [Adafruit] White (RX) 
+            [RPi2 or RPi3] Pin #10 (RX)  <-> [Adafruit] Green (TX)
         
         If using FTDI's serial cable:
-            [RPi2] Pin #6  (GND) <-> [FTDI] Black  (GND)
-            [RPi2] Pin #8  (TX)  <-> [FTDI] Yellow (RX) 
-            [RPi2] Pin #10 (RX)  <-> [FTDI] ORange (TX)
+            [RPi2 or RPi3] Pin #6  (GND) <-> [FTDI] Black  (GND)
+            [RPi2 or RPi3] Pin #8  (TX)  <-> [FTDI] Yellow (RX) 
+            [RPi2 or RPi3] Pin #10 (RX)  <-> [FTDI] ORange (TX)
 
 When you connect the USB end of the serial cable to your development PC (where WinDbg will be running), you will need to know what COM port number Windows assigned to it.  The easiest way is to use the Device Manager in Windows and check under the "Ports (COM & LPT)" section to know what COM number your cable was assigned in the system.  You will need to know this information for one of the later steps! 
 
-Using the active PowerShell connection to your Raspberry Pi 2, you will modify two BCD settings to enable debugging over the serial connection.  
+Using the active PowerShell connection to your Raspberry Pi 2 or 3, you will modify two BCD settings to enable debugging over the serial connection.  
 
 Here is the first command you need to run:   
     
@@ -113,7 +113,7 @@ Here is the first command you need to run:
 
 * The above command enables the serial connection for debugging
 
-* The baud-rate for the Raspberry Pi 2 is hard-coded to 921600, so you don't have to specify it
+* The baud-rate for the Raspberry Pi 2 or 3 is hard-coded to 921600, so you don't have to specify it
 
 Here is the second command you need to run:
 

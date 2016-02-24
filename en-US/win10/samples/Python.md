@@ -53,7 +53,7 @@ print("Hello, World from IoT!")
 
 * Download pywindevices content from [here](https://github.com/ms-iot/samples/tree/master/PyWinDevices){:target="_blank"}
 
-* Navigate to ARM for RPi2 or win32 for MBM
+* Navigate to ARM for RPi2 or RPi3 or win32 for MBM
 
 * Select the PYD file for the device type and configuration you want to use (e.g. _wingpio_d.pyd if a Debug configuration and _wingpio.pyd for a Release configuration)
 

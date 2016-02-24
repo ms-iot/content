@@ -29,7 +29,7 @@ Make sure you set the 'Remote Debugging' setting to point to your Windows IoT de
 
 ## Deploy your app
 
-If you're building for Minnowboard Max, select `x86` in the architecture dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
+If you're building for Minnowboard Max, select `x86` in the architecture dropdown.  If you're building for Raspberry Pi 2 or 3, select `ARM`.
 
 When everything is set up, you should be able to press F5 from Visual Studio.  The Digital Signage app will deploy and start on the Windows IoT device, and you should see the main view page as displayed below:
 

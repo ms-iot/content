@@ -51,7 +51,7 @@ lang: en-US
     <p>
       <a href="https://social.msdn.microsoft.com/forums/en-US/home?forum=WindowsIoT" target="_blank">MSDN Forums &raquo;</a>
     </p>
-    <p>Raspberry Pi forums are the best place to direct Raspberry Pi 2 board-specific questions.</p>
+    <p>Raspberry Pi forums are the best place to direct Raspberry Pi 2 and 3 board-specific questions.</p>
     <p>
     <a href="https://www.raspberrypi.org/forums/viewforum.php?f=105" target="_blank">Raspberry Pi Forums &raquo;</a>
     </p>

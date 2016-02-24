@@ -9,8 +9,8 @@ lang: en-US
 
 ### Component Lists:
 
-- 2 Raspberry Pi 2 boards
-- 2 Raspberry Pi 2 Power Supplies 
+- 2 Raspberry Pi 2 or 3 boards
+- 2 Raspberry Pi 2 or 3 Power Supplies 
 - 2 [Microsoft LifeChat-3000 Headset](https://www.microsoft.com/hardware/en-us/p/lifechat-lx-3000/JUG-00013) 
 - 2 Mice 
 - 2 Ethernet cables 

@@ -9,7 +9,7 @@ lang: en-US
 
 {% include VerifiedVersion.md %}
 
-We'll connect an SPI accelerometer to your Raspberry Pi 2, MinnowBoard Max, or DragonBoard 410c and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of SPI is needed.
+We'll connect an SPI accelerometer to your Raspberry Pi 2 or 3, MinnowBoard Max, or DragonBoard 410c and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of SPI is needed.
 However, if you're curious, SparkFun provides a great [tutorial on SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}.
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
@@ -26,26 +26,26 @@ You'll need a few components:
 
 * a breadboard and a couple of male-to-female connector wires
 
-Visit the **Raspberry Pi 2/MinnowBoard Max** sections below depending on which device you have:
+Visit the **Raspberry Pi 2 or 3/MinnowBoard Max** sections below depending on which device you have:
 
 ![Electrical Components]({{site.baseurl}}/images/SPIAccelerometer/components.png)
 
-#### Raspberry Pi 2
-If you have a Raspberry Pi 2, we need to hook up power, ground, and the SPI lines to the accelerometer.
- See the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm) for more details on the RPi2 IO pins.
+#### Raspberry Pi 2 or 3
+If you have a Raspberry Pi 2 or 3, we need to hook up power, ground, and the SPI lines to the accelerometer.
+ See the [Raspberry Pi 2 and 3 pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm) for more details on the RPi2 and RPi3 IO pins.
 
-**Note: Make sure to power off the RPi2 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
+**Note: Make sure to power off the RPi2 or RPi3 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
 
 The ADXL345 breakout board has 8 IO pins, connect them as follows:
 
-1. **GND:**  Connect to ground on the RPi2 (Pin 6)
-2. **VCC:**  Connect to 3.3V on the RPi2 (Pin 1)
-3. **CS:**   Connect to SPI0 CS0 on the RPi2 (Pin 24). This is the chip-select line for the SPI bus.
+1. **GND:**  Connect to ground on the RPi2 or RPi3 (Pin 6)
+2. **VCC:**  Connect to 3.3V on the RPi2 or RPi3 (Pin 1)
+3. **CS:**   Connect to SPI0 CS0 on the RPi2 or RPi3 (Pin 24). This is the chip-select line for the SPI bus.
 4. **INT1:** Leave unconnected, we're not using this pin
 5. **INT2:** Leave unconnected, we're not using this pin
-6. **SDO:**  Connect to SPI0 MISO on the RPi2 (Pin 21)
-7. **SDA:**  Connect to SPI0 MOSI on the RPi2 (Pin 19)
-8. **SCL:**  Connect to SPI0 SCLK on the RPi2 (Pin 23). This is the clock line for the SPI bus.
+6. **SDO:**  Connect to SPI0 MISO on the RPi2 or RPi3 (Pin 21)
+7. **SDA:**  Connect to SPI0 MOSI on the RPi2 or RPi3 (Pin 19)
+8. **SCL:**  Connect to SPI0 SCLK on the RPi2 or RPi3 (Pin 23). This is the clock line for the SPI bus.
 
 Here are the connections shown on a breadboard:
 
@@ -70,9 +70,9 @@ The ADXL345 breakout board has 8 IO pins, connect them as follows:
 3. **CS:**   Connect to SPI0 CS0 on the MBM (Pin 5)
 4. **INT1:** Leave unconnected, we're not using this pin
 5. **INT2:** Leave unconnected, we're not using this pin
-6. **SDO:**  Connect to SPI0 MISO on the RPi2 (Pin 7)
-7. **SDA:**  Connect to SPI0 MOSI on the RPi2 (Pin 9)
-8. **SCL:**  Connect to SPI0 SCLK on the RPi2 (Pin 11). This is the clock line for the SPI bus.
+6. **SDO:**  Connect to SPI0 MISO on the RPi2 or RPi3 (Pin 7)
+7. **SDA:**  Connect to SPI0 MOSI on the RPi2 or RPi3 (Pin 9)
+8. **SCL:**  Connect to SPI0 SCLK on the RPi2 or RPi3 (Pin 11). This is the clock line for the SPI bus.
 
 Here are the connections shown on a breadboard:
 

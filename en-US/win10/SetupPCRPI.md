@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Setup your PC for Raspberry Pi 2
+title: Setup your PC for Raspberry Pi 2 or 3
 permalink: /en-US/win10/SetupPCRPI.htm
 lang: en-US
 deviceName: RPI2

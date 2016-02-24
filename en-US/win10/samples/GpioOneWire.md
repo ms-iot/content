@@ -32,7 +32,7 @@ For a description of the protocol used by the DHT11, see
 {:.table.table-bordered}
 | Minimum supported build | 10.0.10556                      |
 |-------------------------|---------------------------------|
-| Supported Hardware      | Raspberry Pi 2<br />Dragonboard 410C |
+| Supported Hardware      | Raspberry Pi 2 or 3<br />Dragonboard 410C |
 
 ### Hardware Setup
 

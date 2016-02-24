@@ -11,7 +11,7 @@ lang: en-US
 This sample shows how to send data from a light sensor (photoresistor) to an Azure IoT Hub (and to Azure storage) using a Node.js UWP app.
 
 ### Hardware required
-* Raspberry Pi 2.
+* Raspberry Pi 2 or 3.
 * [Arduino Board](https://www.arduino.cc/en/main/products) (Uno is used in this sample).
 * USB to USB B cable.
 * Breadboard.
@@ -167,7 +167,7 @@ function InitializeBoard() {
 
 
 ### Set up the hardware
-* Connect your Arduino and Raspberry Pi 2 with the USB cable. If your Raspberry Pi 2 is connected to a monitor, 
+* Connect your Arduino and Raspberry Pi 2 or 3 with the USB cable. If your Raspberry Pi 2 or 3 is connected to a monitor, 
   you should see the device getting recognized as shown in the image below (the name of the device may be "Arduino Uno" instead of "USB Serial Device"):
 
   ![Arduino Uno Start Screen]({{site.baseurl}}/images/Nodejs/arduino-uno-startscreen.png)
@@ -178,11 +178,11 @@ function InitializeBoard() {
   ![Arduino Light Sensor RPi2]({{site.baseurl}}/images/Nodejs/arduino-lightsensor-rpi2.png)
 
 
-### Deploy the app to your Raspberry Pi 2
+### Deploy the app to your Raspberry Pi 2 or 3
 * Go to the Project menu and select '&lt;Your project name&gt; Properties' (You could also right-click on the project node in solution explorer to access Properties).
-  Enter the IP Address in the Remote Machine text box. Since you're building for Raspberry Pi 2, select `ARM` in the dropdown menu.
+  Enter the IP Address in the Remote Machine text box. Since you're building for Raspberry Pi 2 or 3, select `ARM` in the dropdown menu.
 
-* Now we're ready to deploy the app to the Raspberry Pi 2. Simply press F5 (or select Debug \| Start Debugging) to start the app. 
+* Now we're ready to deploy the app to the Raspberry Pi 2 or 3. Simply press F5 (or select Debug \| Start Debugging) to start the app. 
 
 * You can then view the data sent in real-time with [iothub-explorer](https://www.npmjs.com/package/iothub-explorer).
   * In a cmd window on your PC run `npm install -g iothub-explorer@latest`
@@ -270,7 +270,7 @@ function InsertValue(value) {
 
 * You can then view the data being sent to Azure storage with Power BI ([download here](https://powerbi.microsoft.com/en-us/)).
   In Power BI, click on the Get Data button, select 'Microsoft Azure Table Storage' as your source, then follow the steps to connect.
-  Once connected you can select your table and view the light sensor data that has been sent from your Raspberry Pi 2.
+  Once connected you can select your table and view the light sensor data that has been sent from your Raspberry Pi 2 or 3.
 
   ![Azure Data]({{site.baseurl}}/images/Nodejs/azure-storagedata.png)
 

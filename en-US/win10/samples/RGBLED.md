@@ -11,7 +11,7 @@ lang: en-US
 
 [View the code on Github](https://github.com/ms-iot/samples/blob/develop/RGBLED/CS/MainPage.xaml.cs)
 
-In this sample, we will connect a Tri-color LED to Raspberry Pi 2. The LED will blink changing colors from Red, Blue, and Green.
+In this sample, we will connect a Tri-color LED to Raspberry Pi 2 or 3. The LED will blink changing colors from Red, Blue, and Green.
 
 This is a headed sample, so please ensure that your device is in headed
 mode by running this command: `setbootoption.exe headed` (changing the headed/headless state will require a reboot).
@@ -55,21 +55,21 @@ The pinout of the Tri-color LED is shown below and can be found in the [datashee
 
 * Connect one end of the 330 &#x2126; resistor to the red lead of the Tri-color LED.
 
-* Connect the other end of the 330 &#x2126; resistor to Pin 29 GPIO5 of the Raspberry Pi 2.
+* Connect the other end of the 330 &#x2126; resistor to Pin 29 GPIO5 of the Raspberry Pi 2 or 3.
 
 * Connect one end of a 100 &#x2126; resistor to the blue lead of the Tri-color LED.
 
-* Connect the other end of the 100 &#x2126; resistor to Pin 31 GPIO6 of the Raspberry Pi 2.
+* Connect the other end of the 100 &#x2126; resistor to Pin 31 GPIO6 of the Raspberry Pi 2 or 3.
 
 * Connect one end of a 100 &#x2126; resistor to the green lead of the Tri-color LED.
 
-* Connect the other end of the 100 &#x2126; resistor to Pin 33 GPIO13 of the Raspberry Pi 2.
+* Connect the other end of the 100 &#x2126; resistor to Pin 33 GPIO13 of the Raspberry Pi 2 or 3.
 
 * Connect the cathode (the longest leg) of the Tri-color LED to Pin 6 GND.
 
-Here is the pinout of the RPi2:
+Here is the pinout of the Raspberry Pi 2 and 3:
 
-![Raspberry Pi 2 pinout]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![Raspberry Pi 2 and 3 pinout]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
 
 <sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
 

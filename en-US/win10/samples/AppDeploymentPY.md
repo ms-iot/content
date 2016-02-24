@@ -1,4 +1,4 @@
-1. With the application open in Visual Studio, set the architecture in the toolbar dropdown. If you're building for MinnowBoard Max, select `x86`.  If you're building for Raspberry Pi 2, select `ARM`.
+1. With the application open in Visual Studio, set the architecture in the toolbar dropdown. If you're building for MinnowBoard Max, select `x86`.  If you're building for Raspberry Pi 2 or 3, select `ARM`.
 
 2. In the Visual Studio toolbar, make sure the target dropdown is set to `Remote Machine`<br/>
 

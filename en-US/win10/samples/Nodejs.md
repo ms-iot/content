@@ -15,11 +15,11 @@ Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/{{page.l
 ### Set up your PC
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 
-### Copy Node.js to your Raspberry Pi 2
+### Copy Node.js to your Raspberry Pi 2 or 3
 * Download the zip file with ARM Node.js (ChakraCore) from [here](http://aka.ms/nodecc_arm) to your PC and extract the files (node.exe and chakracore.dll).
 * Use [Windows file sharing]({{site.baseurl}}/{{page.lang}}/win10/samples/SMB.htm), [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm), 
-or [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to create `C:\Node.js (ChakraCore)` folder on your Raspberry Pi 2.
-* Copy node.exe and chakracore.dll to `C:\Node.js (ChakraCore)` on your Raspberry Pi 2.
+or [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to create `C:\Node.js (ChakraCore)` folder on your Raspberry Pi 2 or 3.
+* Copy node.exe and chakracore.dll to `C:\Node.js (ChakraCore)` on your Raspberry Pi 2 or 3.
 
 
 ### Create MemoryStatus Addon

@@ -9,7 +9,7 @@ lang: en-US
 
 {% include VerifiedVersion.md %}
 
-We'll connect an I2C accelerometer to your Raspberry Pi 2/MinnowBoard Max/DragonBoard and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of I2C is needed.
+We'll connect an I2C accelerometer to your Raspberry Pi 2 or 3/MinnowBoard Max/DragonBoard and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of I2C is needed.
 However, if you're curious, SparkFun provides a great [tutorial on I2C](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}.
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
@@ -28,27 +28,27 @@ You'll need a few components:
 
 * If you are using a MinnowBoard Max, you'll need a 100 &#x2126; resistor (this is a workaround for a [known I2C hardware issue]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm))
 
-Visit the **Raspberry Pi 2/MinnowBoard Max** sections below depending on which device you have:
+Visit the **Raspberry Pi 2 or 3/MinnowBoard Max** sections below depending on which device you have:
 
 ![Electrical Components]({{site.baseurl}}/images/I2CAccelerometer/components.png)
 
-#### Raspberry Pi 2
-If you have a Raspberry Pi 2, we need to hook up power, ground, and the I2C lines to the accelerometer.
-Those familiar with I2C know that normally pull-up resistors need to be installed. However, the Raspberry Pi 2 already has pull-up resistors on its I2C pins, so we don't need to add any additional external pull-ups here.
- See the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm) for more details on the RPi2 IO pins.
+#### Raspberry Pi 2 or 3
+If you have a Raspberry Pi 2 or 3, we need to hook up power, ground, and the I2C lines to the accelerometer.
+Those familiar with I2C know that normally pull-up resistors need to be installed. However, the Raspberry Pi 2 or 3 already has pull-up resistors on its I2C pins, so we don't need to add any additional external pull-ups here.
+ See the [Raspberry Pi 2 or 3 pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm) for more details on the RPi2 and RPi3 IO pins.
 
-**Note: Make sure to power off the RPi2 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
+**Note: Make sure to power off the RPi2 or RPi3 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
 
 The ADXL345 breakout board has 8 IO pins, connect them as follows:
 
-1. **GND:**  Connect to ground on the RPi2 (Pin 6)
-2. **VCC:**  Connect to 3.3V on the RPi2 (Pin 1)
+1. **GND:**  Connect to ground on the RPi2 or RPi3 (Pin 6)
+2. **VCC:**  Connect to 3.3V on the RPi2 or RPi3 (Pin 1)
 3. **CS:**   Connect to 3.3V (The ADXL345 actually supports both SPI and I2C protocols. To select I2C, we keep this pin tied to 3.3V. The [datasheet](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf){:target="_blank"} contains much more information about the pin functions)
 4. **INT1:** Leave unconnected, we're not using this pin
 5. **INT2:** Leave unconnected, we're not using this pin
 6. **SDO:**  Connect to ground (In I2C mode, this pin is used to select the device address. You can attach two ADXL345 to the same I2C bus if you connect this pin to 3.3V on the second device. See the [datasheet](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf){:target="_blank"} for more details)
-7. **SDA:**  Connect to SDA on the RPi2 (Pin 3). This is the data line for the I2C bus.
-8. **SCL:**  Connect to SCL on the RPi2 (Pin 5). This is the clock line for the I2C bus.
+7. **SDA:**  Connect to SDA on the RPi2 or RPi3 (Pin 3). This is the data line for the I2C bus.
+8. **SCL:**  Connect to SCL on the RPi2 or RPi3 (Pin 5). This is the clock line for the I2C bus.
 
 Here are the connections shown on a breadboard:
 
