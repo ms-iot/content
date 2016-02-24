@@ -8,6 +8,6 @@
     </ol>
   </div>
   <div class="col-md-6 col-sm-12">
-    <img src="{{site.baseurl}}/images/get-started/dashboard-4.png" />
+    <img src="{{site.baseurl}}/images/get-started/dashboard-5.png" />
   </div>
 </div>

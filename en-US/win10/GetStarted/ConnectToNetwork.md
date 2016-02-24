@@ -17,5 +17,7 @@
   </div>
   <div class="col-md-6 col-sm-12">
     <img src="{{site.baseurl}}/images/get-started/dashboard-2.png" />
+    <br>
+    <img src="{{site.baseurl}}/images/get-started/dashboard-3.png" />
   </div>
 </div>
