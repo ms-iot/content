@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Use PowerShell to connect to a Windows 10 IoT Core device.
 permalink: /en-US/win10/samples/PowerShell.htm
@@ -17,7 +17,7 @@ Make sure to follow these steps to correctly configure your device running Windo
 
     ![DefaultApp on Windows 10 IoT Core]({{site.baseurl}}/images/DefaultApp.png)
 
-    You can find the same information on the Windows 10 IoT Core Watcher utility.
+    You can find the same information on the Windows 10 IoT Core Dashboard utility.
 
 * Launch an administrator PS console on your local PC. The easiest way to do this is to type 'powershell' in the "Search the web and Windows" textbox near the Windows Start Menu: Windows will find PowerShell on your machine:
 

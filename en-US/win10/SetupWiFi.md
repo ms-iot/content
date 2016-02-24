@@ -45,7 +45,7 @@ An alternative way to configure WiFi is to use the default app. You can use this
 **Prerequisite:** Your device will already need to be connected to your local network through Ethernet and should have a USB WiFi Adapter plugged in
 
 If you have device a with no UI, display, or input devices, you can still configure it through the [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm).
-In **Windows IoT Core Watcher**, *Right Click* on your Raspberry Pi, then select **Web Browser Here**.
+In **Windows 10 IoT Core Dashboard**, *Click* on the **Open in Device Portal** icon for your device.
 
 <!-- This content is replicated at en-US/win10/KitSetupRPI.md -->
 

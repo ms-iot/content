@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Alljoyn Mock Adapter Tutorial
 permalink: /en-US/win10/samples/MockAdapterTutorial.htm
@@ -23,7 +23,7 @@ This tutorial demonstrates the function of the AllJoyn Device System Bridge (DSB
 
 1. Connect your Raspberry Pi2 to the LAN
 2. Connect power to start the Raspberry Pi2
-3. Verify that the PC can access the Raspberry Pi2 with the Windows IoT Core Watcher
+3. Verify that the PC can access the Raspberry Pi2 with the Windows 10 IoT Core Dashboard
 
 ## Run the Mock Adapter in Visual Studio
 

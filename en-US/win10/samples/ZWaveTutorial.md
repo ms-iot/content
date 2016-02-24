@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: ZWaveTutorial
 permalink: /en-US/win10/samples/ZWaveTutorial.htm
@@ -30,7 +30,7 @@ Z-Wave is a wireless communications protocol designed to allow devices in the ho
 
 1. Connect your Raspberry Pi2 to the LAN (via hub or direct via cross over or Auto MDI-X)
 2. Connect power to start the Raspberry Pi2
-3. Verify that the PC can access the Raspberry Pi2 with the Windows IoT Core Watcher
+3. Verify that the PC can access the Raspberry Pi2 with the Windows 10 IoT Core Dashboard
 
 ## Deploying the Z-Wave DSB
 

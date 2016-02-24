@@ -42,7 +42,7 @@ By downloading and using the Windows 10 IoT Core Dashboard you agree to the [lic
 
 ## Configure your Raspberry Pi 2
 
-Finally, you'll need to configure your Raspberry Pi 2 for WiFi connection using the Web-Based management Tool. In **Windows IoT Core Watcher**, *Right Click* on your Raspberry Pi, then select **Web Browser Here**.
+Finally, you'll need to configure your Raspberry Pi 2 for WiFi connection using the Web-Based management Tool. In **Windows IoT Core Dashboard**, *Click* on the Open in Device Portal icon.
 
 <!-- This content is replicated at en-US/win10/SetupWiFi.md  -->
 

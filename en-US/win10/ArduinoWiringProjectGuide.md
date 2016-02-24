@@ -38,7 +38,7 @@ The Arduino Wiring API has been carefully implemented to make it possible to cop
 
 ## Build and Deploy
 
-- **Optional** Use the Windows IoT Core Watcher application (or hook up your device to a monitor) to locate the IP address of your device.
+- **Optional** Use the Windows 10 IoT Core Dashboard application (or hook up your device to a monitor) to locate the IP address of your device.
 - In Visual Studio, make sure "Remote Machine" is selected as your deployment target.
 
 ![Remote Machine]({{site.baseurl}}/images/arduino_wiring/wiringapp_remotemachine.png)

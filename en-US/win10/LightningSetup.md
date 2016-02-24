@@ -13,7 +13,7 @@ This guide will walk you through the steps of changing the default controller dr
 
 We will want to open the Windows Device Portal
 
-1. Locate the IP address of your device, either by using the Windows IoT Core Watcher application or hooking up your board to a monitor.
+1. Locate the IP address of your device, either by using the Windows 10 IoT Core Dashboard application or hooking up your board to a monitor.
 
 1. From your local machine, open the Windows Devices Portal web page by entering this address http://{BoardIPAddress}:8080/ in your web browser.
  ![Windows Devices Portal]({{site.baseurl}}/images/Lightning/dmap1.png)
