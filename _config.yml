@@ -14,6 +14,6 @@ downloadurl: "http://connect.microsoft.com/windowsembeddedIoT/Downloads/"
 markdown: kramdown
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
 permalink: pretty
-highlighter: rouge
+highlighter: pygments
 safe: true
 lsi: false
