@@ -23,7 +23,7 @@ lang: en-US
 
 2. **Find your devices IP address**
     * If your device is connected to a monitor, your IP address is listed on the front page. If you do not see an IP address, your board is not properly connected to your network. ![DefaultApp IP]({{site.baseurl}}/images/deviceportal/defaultapp_ip.png)
-	* If you have already [set up your PC]({{site.baseurl}}/{{page.lang}}/Getstarted.htm), you should have **Windows IoT Core Watcher** installed on your PC. Launch Windows IoT Core Watcher and find your machine name. Listed next to the machine name is your board's IP address. If you cannot find your machine, either your PC or your board is not properly connected to your network.![IotWatcher IP]({{site.baseurl}}/images/IoTCoreWatcher.PNG)
+	* If you have already [set up your PC]({{site.baseurl}}/{{page.lang}}/GetStarted.htm), you should have **Windows IoT Core Watcher** installed on your PC. Launch Windows IoT Core Watcher and find your machine name. Listed next to the machine name is your board's IP address. If you cannot find your machine, either your PC or your board is not properly connected to your network.![IotWatcher IP]({{site.baseurl}}/images/IoTCoreWatcher.PNG)
 
 3. **Connect to Windows Device Portal through your browser**
     * Enter the IP address into the address bar. Add :8080 onto the end.![Browser IP]({{site.baseurl}}/images/deviceportal/browser_ip.png)
