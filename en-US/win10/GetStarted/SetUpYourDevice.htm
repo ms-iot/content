@@ -5,39 +5,59 @@ permalink: /en-US/win10/GetStarted/SetUpYourDevice.htm
 lang: en-US
 
 ---
-<div class="row">
-  <div class="col-xs-24">
-    <ol class="breadcrumb">
-      <li>
+<ol class="breadcrumb">
+    <li>
         <a href="https://dev.windows.com/en-us/iot">IoT Home</a>
-      </li>
-      <li>
+    </li>
+    <li>
         <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
-      </li>
-      <li class="active">Set up your device</li>
-    </ol>
-    <header class="page-title-header">
-      <h1 class="page-title">Set up your device </h1>
-      <div class="page-subtitle">Download, flash and install Windows 10 IoT Core onto your board using the IoT Core Dashboard</div>
-    </header>
-  </div>
+    </li>
+    <li class="active">Set up your device</li>
+</ol>
+<h1 class="page-title">Set up your device </h1>
+<div class="row">
+    <div class="col-md-12 col-sm-24 col-no-padding">
+        <h2 class="subtext">Download, flash and install Windows 10 IoT Core onto your board using the IoT Core Dashboard </h2>
+    </div>
 </div>
 
-<h2>Set up your Device <span class="pull-right"><a id="setup-your-device-toggle" class="toggle-button" onClick="hideDiv('setup-your-device')">Hide</a></span></h2>
+<div class="row">
+    <p><span class="pull-right">
+        <a href="http://go.microsoft.com/fwlink/?LinkID=708576" class="button-blue button-flat">Next: Set up Visual Studio</a>
+    </span></p>
+</div>
+
+<h2>Download and flash <span class="pull-right"><a id="download-and-flash-toggle" class="toggle-button" onClick="hideDiv('download-and-flash')">Hide</a></span></h2>
 <hr>
-<div id="setup-your-device" class="toggle-section">
-{% include_relative IotDashboardContent.md %}
+<div id="download-and-flash" class="toggle-section">
+{% include_relative DownloadAndFlash.md %}
 </div>
 
-
-<h2>Set up your PC <span class="pull-right"><a id="setup-your-pc-toggle" class="toggle-button" onClick="hideDiv('setup-your-pc')">Hide</a></span></h2>
+<h2>Connect the board to the network <span class="pull-right"><a id="connect-to-network-toggle" class="toggle-button" onClick="hideDiv('connect-to-network')">Hide</a></span></h2>
 <hr>
-<div id="setup-your-pc" class="toggle-section">
-    {% include_relative SetupPCContent.md %}
+<div id="connect-to-network" class="toggle-section">
+{% include_relative ConnectToNetwork.md %}
+</div>
+
+<h2>Configure your board <span class="pull-right"><a id="configure-board-toggle" class="toggle-button" onClick="hideDiv('configure-board')">Hide</a></span></h2>
+<hr>
+<div id="configure-board" class="toggle-section">
+{% include_relative ConfigureBoard.md %}
+</div>
+
+<h2>Quick-run samples <span class="pull-right"><a id="quick-run-samples-toggle" class="toggle-button" onClick="hideDiv('quick-run-samples')">Hide</a></span></h2>
+<hr>
+<div id="quick-run-samples" class="toggle-section">
+{% include_relative QuickRunSamples.md %}
+</div>
+
+<div class="row">
+    <p><span class="pull-right">
+        <a href="http://go.microsoft.com/fwlink/?LinkID=708576" class="button-blue button-flat">Next: Set up Visual Studio</a>
+    </span></p>
 </div>
 
 
-      
 <script>
     function hideDiv(div) {
         var pdiv = "#" + div,
