@@ -1,0 +1,55 @@
+---
+layout: default
+title: Set up your device
+permalink: /en-US/win10/GetStarted/SetUpYourDevice.htm
+lang: en-US
+
+---
+<div class="row">
+  <div class="col-xs-24">
+    <ol class="breadcrumb">
+      <li>
+        <a href="https://dev.windows.com/en-us/iot">IoT Home</a>
+      </li>
+      <li>
+        <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
+      </li>
+      <li class="active">Set up your device</li>
+    </ol>
+    <header class="page-title-header">
+      <h1 class="page-title">Set up your device </h1>
+      <div class="page-subtitle">Download, flash and install Windows 10 IoT Core onto your board using the IoT Core Dashboard</div>
+    </header>
+  </div>
+</div>
+
+<h2>Set up your Device <span class="pull-right"><a id="setup-your-device-toggle" class="toggle-button" onClick="hideDiv('setup-your-device')">Hide</a></span></h2>
+<hr>
+<div id="setup-your-device" class="toggle-section">
+{% include_relative IotDashboardContent.md %}
+</div>
+
+
+<h2>Set up your PC <span class="pull-right"><a id="setup-your-pc-toggle" class="toggle-button" onClick="hideDiv('setup-your-pc')">Hide</a></span></h2>
+<hr>
+<div id="setup-your-pc" class="toggle-section">
+    {% include_relative SetupPCContent.md %}
+</div>
+
+
+      
+<script>
+    function hideDiv(div) {
+        var pdiv = "#" + div,
+            button = pdiv + "-toggle"
+
+        if ($(pdiv).css('display') == 'none') {
+            $(pdiv).toggle('slow');
+            $(button).html('Hide');
+        }
+        else {
+            $(pdiv).toggle('slow');
+            $(button).html('Show');
+        }
+    }
+</script>

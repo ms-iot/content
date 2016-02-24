@@ -6,3 +6,4 @@ _site
 .deployment
 Gemfile.lock
 _config.dev.yml
+.jekyll-metadata
