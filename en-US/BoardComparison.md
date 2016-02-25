@@ -99,8 +99,8 @@ lang: en-US
     </tr>
     <tr>
       <td>Video Output</td>
-	  <td>HDMI, Composite Video via 3.5mm jack.</td>
-      <td>HDMI, Composite Video via 3.5mm jack.</td>
+	  <td>HDMI, DSI</td>
+      <td>HDMI, DSI</td>
       <td>Micro HDMI</td>
       <td>HDMI 1080p HD @ 30 fps</td>
     </tr>
