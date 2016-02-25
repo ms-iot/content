@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Get Started
+title: Setup with NOOBS
 permalink: /en-US/win10/Noobs.htm
 lang: en-US
 ---
@@ -8,14 +8,19 @@ lang: en-US
   <li>
     <a href="https://dev.windows.com/en-us/iot">IoT Home</a>
   </li>
-  <li class="active">Get Started with Noobs</li>
+     <li>
+        <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
+    </li>
+  <li class="active">Setup with NOOBS</li>
 </ol>
-<h1 class="page-title">Get Started with Noobs</h1>
+<h1 class="page-title">Setup with NOOBS</h1>
 <div class="row">
-  <div xclass="col-md-6 col-sm-12 col-no-padding">
+	<div class="col-md-12 col-sm-24 col-no-padding">
     <h2 class="subtext">If you have a micro SD with NOOBS, follow these instructions to get Windows 10 IoT Core installed.</h2>
-  </div>
+	</div>
 </div>
+
+
 <h2>Choose Windows 10 IoT Core in NOOBS<span class="pull-right"><a id="NOOBSChoices-toggle" class="toggle-button" onClick="hideDiv('NOOBSChoices')">Show</a></span></h2>
 <hr>
 <div id="NOOBSChoices" class="toggle-section hidden">
@@ -34,7 +39,6 @@ lang: en-US
 <h3>Windows 10 IoT Core RTM Choice<span class="pull-right"><a id="NOOBSRPI2ChoiceRTM-toggle" class="toggle-button" onClick="hideDivWithoutSlowToggle('NOOBSRPI2ChoiceRTM')">Show</a></span></h3>
 <hr>
 <div id="NOOBSRPI2ChoiceRTM" class="toggle-section" style="display:none">
-##Installing Windows IoT Core Insider RTM
 {% capture my-include %}{% include_relative NOOBSRTM.md %}{% endcapture %}
 {{ my-include | markdownify }}
 </div>
@@ -42,7 +46,6 @@ lang: en-US
 <h3>Windows 10 IoT Core Insider Preview Choice<span class="pull-right"><a id="NOOBSRPI2ChoiceIP-toggle" class="toggle-button" onClick="hideDivWithoutSlowToggle('NOOBSRPI2ChoiceIP')">Show</a></span></h3>
 <hr>
 <div id="NOOBSRPI2ChoiceIP" class="toggle-section" style="display:none">
-##Installing Windows IoT Core Insider Preview
 {% capture my-include %}{% include_relative NOOBSInsiderProgram.md %}{% endcapture %}
 {{ my-include | markdownify }}
 </div>
@@ -69,7 +72,11 @@ lang: en-US
 
 </div>
 
-
+<div class="row">
+    <p><span class="pull-right">
+        <a href="{{site.baseurl}}/{{page.lang}}/win10/GetStarted/SetUpVisualStudio.htm" class="button-blue button-flat">Next: Set up Visual Studio</a>
+    </span></p>
+</div>
 <script>
  function hideDivWithoutSlowToggle(div) {
     var div = "#" + div,

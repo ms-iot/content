@@ -20,7 +20,7 @@ lang: en-US
       <a href="http://go.microsoft.com/fwlink/?LinkId=734075" target="_blank">
         <h4>Windows 10 IoT Core support for Raspberry Pi 3</h4>
       </a>
-      <h4><em>Billy Anders<br>Director Of Program Management<br>Windows IoT<br>Feb 29 2016</em></h4>
+      <h4><em>Billy Anders<br>Director of Program Management<br>Windows IoT<br>Feb 29 2016</em></h4>
     </div>
   </div>
   <div class="col-md-4">

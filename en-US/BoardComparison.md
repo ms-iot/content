@@ -53,9 +53,9 @@ lang: en-US
     <tr>
       <td>CPU</td>
       <td>900MHz Quad-Core ARM Cortex A53</td>
-	  <td>900MHz quad-core ARM Cortex A7</td>
+	  <td>900MHz Quad-Core ARM Cortex A7</td>
       <td></td>
-      <td>900MHz quad-core ARM Cortex A7</td>
+      <td>900MHz Quad-Core ARM Cortex A7</td>
     </tr>
     <tr>
       <td>Memory</td>
@@ -73,7 +73,7 @@ lang: en-US
 	  <td>Broadcom Video Core IV @ 250MHz</td>
       <td>Broadcom Video Core IV @ 250MHz</td>
       <td>Intel HD Graphics</td>
-      <td>Qualcomm ADreno 306 @ 400MHz</td>
+      <td>Qualcomm Adreno 306 @ 400MHz</td>
     </tr>
     <tr>
       <td>USB</td>
@@ -87,7 +87,7 @@ lang: en-US
       <td>
         Features Onboard Wi-Fi 802.11 b/g/n and Onboard BlueTooth 4.1.
 		<br>
-		Windows 10 IoT Core supports supports Wi-Fi and BlueTooth dongles or 10/1000MBit/s Ethernet.
+		Windows 10 IoT Core supports Wi-Fi and BlueTooth dongles or 10/1000MBit/s Ethernet.
 	  </td>
       <td>No onboard Wi-Fi or BlueTooth. Supports Wi-Fi and BlueTooth dongles or 10/1000MBit/s Ethernet.</td>
       <td>10/100/1000 Ethernet</td>
@@ -99,8 +99,8 @@ lang: en-US
     </tr>
     <tr>
       <td>Video Output</td>
-	  <td>HDMI, Composite audio via 3.5 mm jack.</td>
-      <td>HDMI, Composite audio via 3.5 mm jack.</td>
+	  <td>HDMI, Composite Video via 3.5mm jack.</td>
+      <td>HDMI, Composite Video via 3.5mm jack.</td>
       <td>Micro HDMI</td>
       <td>HDMI 1080p HD @ 30 fps</td>
     </tr>

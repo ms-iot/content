@@ -1,22 +1,31 @@
-When choosing Windows 10 IoT core on a Raspberry Pi 2, you are offered two choices. The first choice is to install the supported version of IoT Core called the RTM release, or if you want to preview what is to come memebers of the Windows Insider Program may choose to install the unsuported Windows 10 IoT Core Insider release. 
+When choosing Windows 10 IoT core on a Raspberry Pi 2, you are offered two operating system installation choices. 
 
-## Windows IoT Core choices for Raspberry Pi 2 
+### Choice 1: Windows 10 IoT Core RTM Release
+
+The first choice is to install the **Windows 10 IoT Core RTM release** from 2015 (no registration required) as shown here:
+
+![NOOBS RTM Choice]({{site.baseurl}}/images/noobs/noobs-choice-rtm.jpg)
+
+### Choice 2: Windows 10 IoT Core Insider Preview Release 
+
+The second choice is to install the most recent **Windows 10 IoT Core Insider Preview release** (registration required) as shown here:
 
 ![NOOBS Insider Choice UK]({{site.baseurl}}/images/noobs/noobs-insider-choice-uk.jpg)
 
+### Don't forget to make your NOOBS Keyboard and Language selection
 
-### Don't forget to change the NOOBS Keyboard and Language to US
+If you decide to choose the Windows 10 IoT Core Insider Preview, please be sure to make your appropriate language and keyboard selection. For example, US English keyboard users will want to change the language to **English (US)** and keyboard to **us** as shown here:
 
 ![NOOBS Insider Choice US]({{site.baseurl}}/images/noobs/noobs-insider-choice-us.jpg)
 
-### WARNING: How to handle cancel error
+#### **WARNING:** What to do if you click cancel
 
-It should be noted that if you choose Cancel here you will be presented with the following error dialog:
+It should be noted that if you choose **Cancel** here you will be presented with the following error dialog:
 
 ![NOOBS EULA Insider No Choice]({{site.baseurl}}/images/noobs/noobs-eula-insider-no-choice.jpg)
 
-After clicking Ok you will see:
+After clicking **Close** you will see:
 
 ![NOOBS - Need to Reboot (cancel os)]({{site.baseurl}}/images/noobs/noobs-need-to-eboot-cancel-os.jpg)
 
-This is an unrecoverable error and requires you to physically reboot your Raspberry Pi 2 or 3 device to return to the operating system selection screen again.
+This is an unrecoverable error and requires you to physically reboot your Raspberry Pi 2 device to return to the operating system selection screen again.
