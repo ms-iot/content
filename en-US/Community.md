@@ -17,10 +17,10 @@ lang: en-US
   <h3>New on the Window IoT Blog</h3>
     <div class="col-md-4">
     <div class="col-md-9">
-      <a href="http://blogs.windows.com/buildingapps/2015/10/28/announcing-dragonboard-410c-support-in-windows-10-iot-core-arduino-partnership-updates/" target="_blank">
-        <h4>Announcing DragonBoard 410c support in Windows 10 IoT Core, Arduino partnership updates</h4>
+      <a href="http://go.microsoft.com/fwlink/?LinkId=734075" target="_blank">
+        <h4>Windows 10 IoT Core support for Raspberry Pi 3</h4>
       </a>
-      <h4><em>Steve Teixeira, Oct 28 2015</em></h4>
+      <h4><em>Billy Anders<br>Director Of Program Management<br>Windows IoT<br>Feb 29 2016</em></h4>
     </div>
   </div>
   <div class="col-md-4">
@@ -28,7 +28,7 @@ lang: en-US
       <a href="http://blogs.windows.com/buildingapps/2016/02/04/what-is-windows-remote-arduino-and-what-can-it-do/" target="_blank">
         <h4>What is Windows Remote Arduino and What Can It Do?</h4>
       </a>
-      <h4><em>Windows Apps Team, Feb 4, 2016</em></h4>
+      <h4><em>Windows Apps Team<br>Feb 4, 2016</em></h4>
     </div>
   </div>
   <div class="col-md-4">
@@ -36,7 +36,7 @@ lang: en-US
       <a href="http://blogs.windows.com/buildingapps/2016/01/27/what-is-windows-virtual-shields-for-arduino-and-what-can-it-do/" target="_blank">
         <h4>What is Windows Virtual Shields for Arduino and What Can It Do?</h4>
       </a>
-      <h4><em>Windows Apps Team, Jan 27, 2016</em></h4>
+      <h4><em>Windows Apps Team<br>Jan 27, 2016</em></h4>
     </div>
   </div>
 </div>

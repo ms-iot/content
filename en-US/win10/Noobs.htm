@@ -31,7 +31,7 @@ lang: en-US
 {% capture my-include %}{% include_relative NOOBSRPI2Choices.md %}{% endcapture %}
 {{ my-include | markdownify }}
 
-<h3>Windows 10 IoT Core RTM Choice<span class="pull-right"><a id="NOOBSRPI2ChoiceRTM-toggle" class="toggle-button" onClick="hideDiv2('NOOBSRPI2ChoiceRTM')">Show</a></span></h3>
+<h3>Windows 10 IoT Core RTM Choice<span class="pull-right"><a id="NOOBSRPI2ChoiceRTM-toggle" class="toggle-button" onClick="hideDivWithoutSlowToggle('NOOBSRPI2ChoiceRTM')">Show</a></span></h3>
 <hr>
 <div id="NOOBSRPI2ChoiceRTM" class="toggle-section" style="display:none">
 ##Installing Windows IoT Core Insider RTM
@@ -39,7 +39,7 @@ lang: en-US
 {{ my-include | markdownify }}
 </div>
 
-<h3>Windows 10 IoT Core Insider Preview Choice<span class="pull-right"><a id="NOOBSRPI2ChoiceIP-toggle" class="toggle-button" onClick="hideDiv2('NOOBSRPI2ChoiceIP')">Show</a></span></h3>
+<h3>Windows 10 IoT Core Insider Preview Choice<span class="pull-right"><a id="NOOBSRPI2ChoiceIP-toggle" class="toggle-button" onClick="hideDivWithoutSlowToggle('NOOBSRPI2ChoiceIP')">Show</a></span></h3>
 <hr>
 <div id="NOOBSRPI2ChoiceIP" class="toggle-section" style="display:none">
 ##Installing Windows IoT Core Insider Preview
@@ -71,7 +71,7 @@ lang: en-US
 
 
 <script>
- function hideDiv2(div) {
+ function hideDivWithoutSlowToggle(div) {
     var div = "#" + div,
         button = div + "-toggle",
         currentState = $(button)[0].innerText;

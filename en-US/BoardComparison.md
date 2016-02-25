@@ -25,12 +25,12 @@ lang: en-US
       <th style="width:20%">
 	          <img class="comparison-picture" src="{{site.baseurl}}/images/devices/RPi3Top.jpg">
         <h4>Raspberry Pi 3</h4>
-        <p>The Raspberry Pi 3 is a low cost, credit-card sized computer that plugs into a computer monitor or TV, and uses a standard keyboard and mouse.  The Raspberry Pi 3 runs Windows 10 IoT Core.</p>
+        <p>The Raspberry Pi 3 is a low cost, credit-card sized computer that plugs into a computer monitor or TV, and uses an optional standard keyboard and mouse.  The Raspberry Pi 3 runs Windows 10 IoT Core.</p>
 	  </th>
       <th style="width:20%">
         <img class="comparison-picture" src="{{site.baseurl}}/images/devices/RPi2_0.png">
         <h4>Raspberry Pi 2</h4>
-        <p>The Raspberry Pi 2 is a low cost, credit-card sized computer that plugs into a computer monitor or TV, and uses a standard keyboard and mouse.  The Raspberry Pi 2 runs Windows 10 IoT Core.</p>
+        <p>The Raspberry Pi 2 is a low cost, credit-card sized computer that plugs into a computer monitor or TV, and uses an optional standard keyboard and mouse.  The Raspberry Pi 2 runs Windows 10 IoT Core.</p>
       </th>
       <th style="width:20%">
         <img class="comparison-picture" src="{{site.baseurl}}/images/devices/MBM_0.png">
@@ -85,13 +85,11 @@ lang: en-US
     <tr>
       <td>Networking</td>
       <td>
-        Onboard Wi-Fi 802.11 b/g/n
-        <br>
-        Onboard BlueTooth 4.1
+        Features Onboard Wi-Fi 802.11 b/g/n and Onboard BlueTooth 4.1.
 		<br>
-		10/1000MBit/s Ethernet
+		Windows 10 IoT Core supports supports Wi-Fi and BlueTooth dongles or 10/1000MBit/s Ethernet.
 	  </td>
-      <td>No onboard Wi-Fi or BlueTooth. Supports Wi-Fi and BlueTooth dongles at 10/1000MBit/s Ethernet.</td>
+      <td>No onboard Wi-Fi or BlueTooth. Supports Wi-Fi and BlueTooth dongles or 10/1000MBit/s Ethernet.</td>
       <td>10/100/1000 Ethernet</td>
       <td>
         Onboard Wi-Fi 802.11 a/b/g/n

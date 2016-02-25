@@ -2,21 +2,21 @@ When choosing Windows 10 IoT core on a Raspberry Pi 2, you are offered two choic
 
 ## Windows IoT Core choices for Raspberry Pi 2 
 
-![NOOBS Insider Choice UK]({{site.baseurl}}/images/NOOBS/NOOBS Insider Choice UK.jpg)
+![NOOBS Insider Choice UK]({{site.baseurl}}/images/noobs/noobs-insider-choice-uk.jpg)
 
 
-###Don't forget to change the NOOBS Keyboard and Language to US
+### Don't forget to change the NOOBS Keyboard and Language to US
 
-![NOOBS Insider Choice US]({{site.baseurl}}/images/NOOBS/NOOBS Insider Choice US.jpg)
+![NOOBS Insider Choice US]({{site.baseurl}}/images/noobs/noobs-insider-choice-us.jpg)
 
-###WARNING: How to handle cancel error
+### WARNING: How to handle cancel error
 
 It should be noted that if you choose Cancel here you will be presented with the following error dialog:
 
-![NOOBS EULA Insider No Choice]({{site.baseurl}}/images/NOOBS/NOOBS EULA Insider No Choice.jpg)
+![NOOBS EULA Insider No Choice]({{site.baseurl}}/images/noobs/noobs-eula-insider-no-choice.jpg)
 
 After clicking Ok you will see:
 
-![NOOBS - Need to Reboot (cancel os)]({{site.baseurl}}/images/NOOBS/NOOBS - Need to Reboot (cancel os).jpg)
+![NOOBS - Need to Reboot (cancel os)]({{site.baseurl}}/images/noobs/noobs-need-to-eboot-cancel-os.jpg)
 
 This is an unrecoverable error and requires you to physically reboot your Raspberry Pi 2 or 3 device to return to the operating system selection screen again.
