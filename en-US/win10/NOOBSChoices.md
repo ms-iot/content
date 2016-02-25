@@ -8,7 +8,10 @@ When using NOOBS, check the **Windows 10 IoT Core** choice in the list, and then
 
 After making your operating system selection, NOOBS will confirm that you want to overwrite all of the data on the OS partition. **This operation cannot be undone**. 
 
-### Insufficient space on SD card error
+## Proceed to the next step **Using a Raspberry Pi**
+----------
+
+#### Insufficient space on SD card error
 
 If the install button is disabled, then be sure to check the **Disk space** section of this dialog to see how much space is needed.
 
