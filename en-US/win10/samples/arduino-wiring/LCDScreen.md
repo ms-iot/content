@@ -59,7 +59,7 @@ There is a fritzing diagram below, as well as a table of the exact pinouts we us
 
 ### Reference Diagrams
 
-| LCD Pinouts | Raspberry Pi 2 Pinouts |
+| LCD Pinouts | Raspberry Pi 2 and 3 Pinouts |
 |:-----------:|:----------------------:|
 | ![LCD Display]({{site.baseurl}}/images/arduino_wiring/lcd_16pins.jpg) | ![RPI Pinouts]({{site.baseurl}}/images/arduino_wiring/pi2_pinouts.png) |
 
