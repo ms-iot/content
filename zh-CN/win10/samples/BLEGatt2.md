@@ -279,5 +279,3 @@ async void accelChanged(GattCharacteristic sender, GattValueChangedEventArgs eve
 
 #### 以前的页面
 [示例概述]({{site.baseurl}}/{{page.lang}}/win10/samples/BLEGatt.htm) - 了解 BLE、GATT 和 TI CC2541 SensorTag。
-
-[将 BLE 设备和 GATT 属性表转储工具配对]({{site.baseurl}}/{{page.lang}}/win10/samples/BLEGatt1.htm) - 了解如何将 SensorTag 与 Windows IoT 核心版设备配对，以及如何在 Windows 中检索 GATT 属性表。
