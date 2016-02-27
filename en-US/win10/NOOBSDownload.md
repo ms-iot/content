@@ -4,8 +4,6 @@ Upon accepting the licensing agreement, you should see the downloading progress 
 
 ![NOOBS - Downloading]({{site.baseurl}}/images/noobs/noobs-downloading.jpg)
 
-**NOTE:** Windows 10 IoT Core is a very large file to download over the Internet so it's not unusual for this process to take an extended period of time.
-
 After the download has completed successfully, you should see a confirmation dialog as shown below:
 
 ![NOOBS - Download Complete]({{site.baseurl}}/images/noobs/noobs-download-complete.png)

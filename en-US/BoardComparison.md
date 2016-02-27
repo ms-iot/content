@@ -128,18 +128,15 @@ lang: en-US
       </td>
       <td>
         <p>17 GPIO pins plus specific functions. HAT ID bus.</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/win10/RPI.htm">Set up your Raspberry Pi 3</a></p>
-        <p><a href="http://ms-iot.github.io/content/en-US/GetStarted.htm">Get Started with the Windows 10 IoT Core Dashboard</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Set up your Raspberry Pi 3</a></p>
       </td>	  
       <td>
         <p>17 GPIO pins plus specific functions. HAT ID bus.</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/win10/RPI.htm">Set up your Raspberry Pi 2</a></p>
-        <p><a href="http://ms-iot.github.io/content/en-US/GetStarted.htm">Get Started with the Windows 10 IoT Core Dashboard</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Set up your Raspberry Pi 2</a></p>
       </td>
       <td>
         <p>8 buffered GPIO pins</p>
         <p><a href="{{site.baseurl}}/{{page.lang}}/win10/MBM.htm">Set up your MinnowBoard MAX</a></p>
-        <p><a href="http://ms-iot.github.io/content/en-US/GetStarted.htm">Get Started with the Windows 10 IoT Core Dashboard</a></p>
       </td>
       <td>
         <p>12 GPIO pins</p>

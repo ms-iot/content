@@ -10,4 +10,4 @@ If you have successfully completed the previous steps you will be asked to read 
 
 ![NOOBS EULA]({{site.baseurl}}/images/noobs/noobs-rtm-eula.jpg)
 
-Please proceed to the section labeled **Final Step - Download and Restart**
+### Please proceed to the section labeled **Final Step - Download and Restart**
