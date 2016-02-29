@@ -44,6 +44,4 @@ lang: zh-CN
 我们当前支持 [Orico 模型 A 蓝牙硬件保护装置](http://www.amazon.com/ORICO-BTA-403-Bluetooth-Adapter-Compatible/dp/B00ESBRTMO/ref=sr_1_7?ie=UTF8&qid=1436917745&sr=8-7&keywords=bluetooth+4.0+orico){:target="_blank"}。
 
 ### 下一步操作是什么？
-1. [将 BLE 设备和 GATT 属性表转储工具配对]({{site.baseurl}}/{{page.lang}}/win10/samples/BLEGatt1.htm) - 了解如何将 SensorTag 与 Windows IoT 核心版设备配对，以及如何在 Windows 中检索 GATT 属性表。
-
-2. [使用和分解代码]({{site.baseurl}}/{{page.lang}}/win10/samples/BLEGatt2.htm) - 了解如何使用示例以及代码的操作实例。
+[使用和分解代码]({{site.baseurl}}/{{page.lang}}/win10/samples/BLEGatt2.htm) - 了解如何使用示例以及代码的操作实例。
