@@ -119,3 +119,26 @@ Windows Registry Editor Version 5.00
 2. Advanced pairing must be used.  The sample app demonstrates how to use the advanced pairing API’s to pair the devices prior to connecting.
 3. Not all wireless adapters support WiFi direct. We have tested and validated that the “Realtek RTL8188EU Wireless Lan 802.11n USB 2.0 Network adapter” works, but other adapters may not be supported.
  
+### <a name="shellcrashes"></a>Shell Management of Application Crashes
+IoT Core’s shell infrastructure monitors APPX-type applications running on the device for crashes, and restarts those applications when crashes occur.  If the restarted applications continue to crash, the shell will employ a __failfast – a system critical process that causes a bugcheck and reboot in an attempt to recover.  Comparable logic and handling is used to background tasks and foreground applications in a headed configuration.   Crash handing and retry logic is captured below:
+
+<pre>
+  Software\Microsoft\Windows NT\CurrentVersion\Winlogon\IoTShellExtension\CBTConfig  (or ForegroundAppConfig for headed)
+    Qword:"FailureResetIntervalMs" – length of time app has to run successfully to reset failures seen to 0. – default is 0x00000000000493E0 == 5 minutes
+    Qword:"BaseRetryDelayMs"  -- wait time coefficient.  Default is 0xa.
+    Dword:"MaxFailureCount". Default is 10
+    DWord:"FallbackExponentNumerator", default is 31.
+    Dword:"FallbackExponentDenominator", default is 20
+
+
+Fallback_exponent = FallbackExponentNumerator / FallbackExponentDenominator; // default is 1.55
+
+When app crash is detected:
+    if time_since_last_crash > failureresetinterval then crashes_seen = 1
+    else ++crashes_seen;
+    
+    if crashes_seen > MaxFailureCount then __failfast;
+    else
+      delay = (dword) ((float)BaseRetryDelayMs * (crashes_seen ** Fallback_exponent))
+      wait for delay and relaunch app
+</pre>
