@@ -2,11 +2,11 @@
 
 2. In the Visual Studio toolbar, make sure the target dropdown is set to `Remote Machine`<br/>
 
-    ![RemoteMachine Target]({{site.baseurl}}/images/AppDeployment/py-remote-machine-debugging.png)
+    ![RemoteMachine Target]({{site.baseurl}}/Resources/images/AppDeployment/py-remote-machine-debugging.png)
 
 3. Next, right click on your project in the **Solution Explorer** pane. Select **Properties**.
 
-    ![Remote Machine Debugging]({{site.baseurl}}/images/AppDeployment/py-project-properties.PNG)
+    ![Remote Machine Debugging]({{site.baseurl}}/Resources/images/AppDeployment/py-project-properties.PNG)
 
 4. Under **UWP Project Settings**, modify the following fields:
 
@@ -14,4 +14,4 @@
 	Otherwise, use the IP address of your Windows IoT Core device.
 	* **Remote Port**: Set to **5678**
 
-    ![Project Properties Debug Tab]({{site.baseurl}}/images/AppDeployment/py-debug-project-properties.PNG)
+    ![Project Properties Debug Tab]({{site.baseurl}}/Resources/images/AppDeployment/py-debug-project-properties.PNG)

@@ -11,7 +11,7 @@ lang: zh-CN
 
 在此示例中，我们将“推送”按钮连接到你的 Raspberry Pi 2/MinnowBoard Max 并将其用于控制 LED。我们使用 GPIO 中断来检测按下该按钮和切换 LED 时的响应。
 
-![“推送”按钮图像]({{site.baseurl}}/images/PushButton/PushButtonSample.png)
+![“推送”按钮图像]({{site.baseurl}}/Resources/images/PushButton/PushButtonSample.png)
 
 这是一个有外设示例，所以请确保你的设备处于有外设模式下，方法为运行以下命令：`setbootoption.exe headed`（更改有外设/无外设状态将需要重新启动）。
 
@@ -38,7 +38,7 @@ lang: zh-CN
 
 | 试验板图 | 示意图 |
 | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| ![试验板连接]({{site.baseurl}}/images/PushButton/RPi2_PushButton_bb.png) | ![电路示意图]({{site.baseurl}}/images/PushButton/RPi2_PushButton_schem.png) |
+| ![试验板连接]({{site.baseurl}}/Resources/images/PushButton/RPi2_PushButton_bb.png) | ![电路示意图]({{site.baseurl}}/Resources/images/PushButton/RPi2_PushButton_schem.png) |
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
@@ -58,7 +58,7 @@ lang: zh-CN
 
 下面是 RPi2 的引出线：
 
-![Raspberry Pi 2 引出线]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![Raspberry Pi 2 引出线]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
@@ -66,7 +66,7 @@ lang: zh-CN
 
 | 试验板图 | 示意图 |
 | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| ![试验板连接]({{site.baseurl}}/images/PushButton/MBM_PushButton_bb.png) | ![电路示意图]({{site.baseurl}}/images/PushButton/MBM_PushButton_schem.png) |
+| ![试验板连接]({{site.baseurl}}/Resources/images/PushButton/MBM_PushButton_bb.png) | ![电路示意图]({{site.baseurl}}/Resources/images/PushButton/MBM_PushButton_schem.png) |
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
@@ -86,7 +86,7 @@ lang: zh-CN
 
 下面是 MBM 的引出线：
 
-![MinnowBoard Max 引出线]({{site.baseurl}}/images/PinMappings/MBM_Pinout.png)
+![MinnowBoard Max 引出线]({{site.baseurl}}/Resources/images/PinMappings/MBM_Pinout.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 

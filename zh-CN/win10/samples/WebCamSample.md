@@ -57,7 +57,7 @@ lang: zh-CN
  
 若要访问摄像头、麦克风和默认存储文件夹，你必须将以下功能添加到项目中的 **Package.appxmanifest** 文件：
 
-<img src="{{site.baseurl}}/images/PMWebCamOptions.png">
+<img src="{{site.baseurl}}/Resources/images/PMWebCamOptions.png">
 
 **注意：** 你还可以通过在 XML 编辑器中打开 **Package.appxmanifest** 文件（右键单击“文件”-\>“打开方式”-\>“XML（文本）编辑器）并添加以下功能来直接添加功能：
  

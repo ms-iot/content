@@ -20,11 +20,11 @@ lang: zh-CN
 
 接下来，右键单击“解决方案资源管理器”中的“BluetoothGATT”项目，然后选择“设置为启动项目”。现在，你应该可以在 Visual Studio 中按 F5： BluetoothGATT 应用将部署并启动，随后你应该能在设备输出上看到此应用：
 
-![BluetoothGatt 应用]({{site.baseurl}}/images/BLEGatt/app.png)
+![BluetoothGatt 应用]({{site.baseurl}}/Resources/images/BLEGatt/app.png)
 
 单击顶部的“开始”按钮以连接到 SensorTag，并显示传感器数据。此时，可能会出现一个弹出窗口，提示用户是否允许访问 SensorTag 服务，单击“是”以继续操作。几秒钟后，你应该能看到更新后的数据，如下所示：
 
-![BluetoothGatt 应用运行]({{site.baseurl}}/images/BLEGatt/appRunning.png)
+![BluetoothGatt 应用运行]({{site.baseurl}}/Resources/images/BLEGatt/appRunning.png)
 
 ### 我们来看看代码
 

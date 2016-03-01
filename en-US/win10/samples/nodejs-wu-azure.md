@@ -33,7 +33,7 @@ link for instructions to set one up. It's free to try out!
 
 For this sample you will only need to get the connection string (see below) for your IoT Hub. You'll get that from your [Azure Portal](https://ms.portal.azure.com/)
 
-![Azure Connection String]({{site.baseurl}}/images/Nodejs/azure-connstr.png)
+![Azure Connection String]({{site.baseurl}}/Resources/images/Nodejs/azure-connstr.png)
 
 
 ### Upload Firmata to your Arduino
@@ -49,20 +49,20 @@ For this sample you will only need to get the connection string (see below) for 
 * Start Visual Studio 2015 and create a new project (File \| New Project...). In the `New Project` dialog, navigate to `Node.js` as shown below (in the left pane in the dialog: Templates \| JavaScript \| Node.js).
   Select the `Basic Node.js Johnny-Five Application (Universal Windows)` template (shown below), enter a name for your project, then press OK.
 
-  ![Node.js Johnny-Five Project Dialog]({{site.baseurl}}/images/Nodejs/nodejswuj5-newprojectdialog.png)
+  ![Node.js Johnny-Five Project Dialog]({{site.baseurl}}/Resources/images/Nodejs/nodejswuj5-newprojectdialog.png)
 
 * Wait for the Johnny-Five package and its dependencies to complete downloading. This will be indicated by the message below in the npm output window.
 
-  ![Node.js Output Window]({{site.baseurl}}/images/Nodejs/npm-output-window.png)
+  ![Node.js Output Window]({{site.baseurl}}/Resources/images/Nodejs/npm-output-window.png)
 
 * Right-click on the npm node in the Solution Explorer (shown below) and select Update npm Packages.
   This step will run npm dedupe and update [serialport](https://www.npmjs.com/package/serialport) (a Johnny-Five dependency) with a [version](https://github.com/ms-iot/node-serialport/tree/uwp) that works with Node.js UWP.
 
-  ![Node.js Npm Menu]({{site.baseurl}}/images/Nodejs/npm-update-menu.png)
+  ![Node.js Npm Menu]({{site.baseurl}}/Resources/images/Nodejs/npm-update-menu.png)
 
 * Right-click on the npm node again and select Install New npm Packages(s). When the dialog (shown below) is displayed, search for `azure-iothub`, select the latest version found, then click on the Install Package button.
 
-  ![Azure Npm Dialog]({{site.baseurl}}/images/Nodejs/azure-npmdialog.png)
+  ![Azure Npm Dialog]({{site.baseurl}}/Resources/images/Nodejs/azure-npmdialog.png)
 
   **Repeat this step for `azure-iot-device` and `azure-iot-device-mqtt`.**
 
@@ -170,12 +170,12 @@ function InitializeBoard() {
 * Connect your Arduino and Raspberry Pi 2 or 3 with the USB cable. If your Raspberry Pi 2 or 3 is connected to a monitor, 
   you should see the device getting recognized as shown in the image below (the name of the device may be "Arduino Uno" instead of "USB Serial Device"):
 
-  ![Arduino Uno Start Screen]({{site.baseurl}}/images/Nodejs/arduino-uno-startscreen.png)
+  ![Arduino Uno Start Screen]({{site.baseurl}}/Resources/images/Nodejs/arduino-uno-startscreen.png)
 
 
 * Use the instructions [here](https://www.arduino.cc/en/Tutorial/AnalogInput) to set up the connection between your photoresistor and the Arduino. The final setup should look something like this:
 
-  ![Arduino Light Sensor RPi2]({{site.baseurl}}/images/Nodejs/arduino-lightsensor-rpi2.png)
+  ![Arduino Light Sensor RPi2]({{site.baseurl}}/Resources/images/Nodejs/arduino-lightsensor-rpi2.png)
 
 
 ### Deploy the app to your Raspberry Pi 2 or 3
@@ -188,7 +188,7 @@ function InitializeBoard() {
   * In a cmd window on your PC run `npm install -g iothub-explorer@latest`
   * Then run `iothub-explorer <Your IoT Hub connection string> monitor-events myRPi2`. After running the command you should then see your data being received:
 
-    ![Azure Data]({{site.baseurl}}/images/Nodejs/azure-hubdata.png)
+    ![Azure Data]({{site.baseurl}}/Resources/images/Nodejs/azure-hubdata.png)
 
 
 ### Sending data to an Azure storage table
@@ -272,7 +272,7 @@ function InsertValue(value) {
   In Power BI, click on the Get Data button, select 'Microsoft Azure Table Storage' as your source, then follow the steps to connect.
   Once connected you can select your table and view the light sensor data that has been sent from your Raspberry Pi 2 or 3.
 
-  ![Azure Data]({{site.baseurl}}/images/Nodejs/azure-storagedata.png)
+  ![Azure Data]({{site.baseurl}}/Resources/images/Nodejs/azure-storagedata.png)
 
 ### GitHub
 * NTVS IoT Extension source code: [https://github.com/ms-iot/ntvsiot](https://github.com/ms-iot/ntvsiot)

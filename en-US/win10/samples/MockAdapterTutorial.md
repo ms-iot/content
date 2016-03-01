@@ -31,9 +31,9 @@ This tutorial demonstrates the function of the AllJoyn Device System Bridge (DSB
 2. Open `samples-develop\AllJoyn\Samples\MockAdapter\MockAdapter.sln` in Visual Studio.
 3. Navigate to the Solution explorer and right click the HeadlessAdapterApp project. Select "Set as Startup Project".
 
-![set_startup]({{site.baseurl}}/images/MockAdapter/mockadapter_vs.png)
+![set_startup]({{site.baseurl}}/Resources/images/MockAdapter/mockadapter_vs.png)
 
-4. 	In the Main menu bar, select “Debug” -> HeadlessAdapterApp properties…”
+4. 	In the Main menu bar, select "Debug" -> HeadlessAdapterApp properties…"
 5.	Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#cpp)
 
 ## Controlling the Mock Devices via IoT Explorer for Alljoyn
@@ -47,24 +47,24 @@ Launch IoT Explorer for AllJoyn app. The app should find the following four devi
 * Mock BACnet Dimmable Switch - Microsoft Dim Control 725: the mock dimmable switch device
 * Mock BACnet Switch - Microsoft 2 X Switch: the mock switch device.
 
-![AJx_Mock1]({{site.baseurl}}/images/MockAdapter/mock_ajx1.png)
+![AJx_Mock1]({{site.baseurl}}/Resources/images/MockAdapter/mock_ajx1.png)
 
 Select the Mock BACnet Switch object.
 
-![AJx_Mock2]({{site.baseurl}}/images/MockAdapter/mock_ajx2.png)
+![AJx_Mock2]({{site.baseurl}}/Resources/images/MockAdapter/mock_ajx2.png)
 
 Select the Mock_BACnet_Switch object.
 
-![AJx_Mock3]({{site.baseurl}}/images/MockAdapter/mock_ajx3.png)
+![AJx_Mock3]({{site.baseurl}}/Resources/images/MockAdapter/mock_ajx3.png)
 
   The interface view of the Mock_BACnet_Switch object lists several interfaces. Most of them are default AllJoyn interfaces such as the Introspectable interface. Select the com.microsft.DSBMockAdapter.MockBACnetSwitch.MainInter... interface.
 
-![AJx_Mock4]({{site.baseurl}}/images/MockAdapter/mock_ajx4.png)
+![AJx_Mock4]({{site.baseurl}}/Resources/images/MockAdapter/mock_ajx4.png)
 
 Select the DeviceReset Method.
 
-![AJx_Mock5]({{site.baseurl}}/images/MockAdapter/mock_ajx5.png)
+![AJx_Mock5]({{site.baseurl}}/Resources/images/MockAdapter/mock_ajx5.png)
 
  In the method input arguments section, type "reset" and press "Invoke". Status OK should be displayed.
 
-![AJx_Mock6]({{site.baseurl}}/images/MockAdapter/mock_ajx6.png)
+![AJx_Mock6]({{site.baseurl}}/Resources/images/MockAdapter/mock_ajx6.png)

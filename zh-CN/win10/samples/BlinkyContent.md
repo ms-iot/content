@@ -20,7 +20,7 @@
 
 * 一块试验板和几根连接线
 
-![电子元件]({{site.baseurl}}/images/Blinky/components.png)
+![电子元件]({{site.baseurl}}/Resources/images/Blinky/components.png)
 
 ###适用于 Raspberry Pi 2 \(RPi2\)
 
@@ -28,13 +28,13 @@
 
 下面是 RPi2 的引出线：
 
-<img src="{{site.baseurl}}/images/PinMappings/RP2_Pinout.png" height="400">
+<img src="{{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png" height="400">
 
 <sub>\*使用 [Fritzing](http://fritzing.org/){:target="_blank"} 制作的图像\*</sub>
 
 下面是使用电路组装的试验板可能样子的一个示例：
 
-<img src="{{site.baseurl}}/images/Blinky/breadboard_assembled_rpi2.png" height="500">
+<img src="{{site.baseurl}}/Resources/images/Blinky/breadboard_assembled_rpi2.png" height="500">
 
 <sub>\*使用 [Fritzing](http://fritzing.org/){:target="_blank"} 制作的图像\*</sub>
 
@@ -44,13 +44,13 @@
 
 以下是 MBM 上的 JP1 连接器：
 
-<img src="{{site.baseurl}}/images/PinMappings/MBM_Pinout.png" height="400">
+<img src="{{site.baseurl}}/Resources/images/PinMappings/MBM_Pinout.png" height="400">
 
 <sub>\*使用 [Fritzing](http://fritzing.org/){:target="_blank"} 制作的图像\*</sub>
 
 下面是使用电路组装的试验板可能样子的一个示例：
 
-<img src="{{site.baseurl}}/images/Blinky/breadboard_assembled.png" height="500">
+<img src="{{site.baseurl}}/Resources/images/Blinky/breadboard_assembled.png" height="500">
 
 <sub>\*使用 [Fritzing](http://fritzing.org/){:target="_blank"} 制作的图像\*</sub>
 
@@ -60,7 +60,7 @@
 
 完成所有设置后，你应可以在 Visual Studio 中按 F5。Blinky 应用将会部署并在 Windows IoT 设备上启动，此时你应会看到 LED 与屏幕上的模拟图像同步闪烁。
 
-<img src="{{site.baseurl}}/images/Blinky/blinky-screenshot.png" height="400">
+<img src="{{site.baseurl}}/Resources/images/Blinky/blinky-screenshot.png" height="400">
 
 恭喜你！ 你已控制了 Windows IoT 设备上的一个 GPIO 引脚！
 

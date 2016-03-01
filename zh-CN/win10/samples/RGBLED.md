@@ -30,13 +30,13 @@ lang: zh-CN
 
 我们先来为试验板上的组件布线，如下图所示。
 
-![试验板连接]({{site.baseurl}}/images/RGBLED/RGBLED_bb.png)
+![试验板连接]({{site.baseurl}}/Resources/images/RGBLED/RGBLED_bb.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
 以下是电路原理图：
 
-![电路示意图]({{site.baseurl}}/images/RGBLED/RGBLED-schematic_schem.png)
+![电路示意图]({{site.baseurl}}/Resources/images/RGBLED/RGBLED-schematic_schem.png)
 
 ####连接 LED
 
@@ -50,7 +50,7 @@ lang: zh-CN
 
 下面是 RPi2 的引出线：
 
-![Raspberry Pi 2 引出线]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![Raspberry Pi 2 引出线]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 

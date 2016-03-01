@@ -1,7 +1,7 @@
 ---
 layout: default
-title: ManagedDSBGpioTutorial
-permalink: /en-US/win10/samples/AlljoynDSB_ManagedGpioTutorial.htm
+title: AllJoyn Managed DSB Gpio Tutorial
+permalink: /en-US/win10/samples/AlljoynDSBSample_Managed.htm
 lang: en-US
 ---
 
@@ -18,7 +18,7 @@ You can find the source code for AllJoyn samples by downloading a zip of all of 
 ### Step 1: Hardware Setup  
 The sample uses a Raspberry Pi 2 that one of its GPIO pins is connected to a photo resistor as shown in the schematic below. If another device is sues the pin number in the code has to be changed to match the HW setup.
 
-![Rpi_schematic]({{site.baseurl}}/images/AllJoyn/rpi_schematic.png)
+![Rpi_schematic]({{site.baseurl}}/Resources/images/AllJoyn/rpi_schematic.png)
 
 ### Step 2: Download and Install the AllJoyn Device System Bridge Template  
 
@@ -31,20 +31,20 @@ The AllJoyn Device System Bridge Template is a Visual Studio extension that enab
 
 In the Visual Studio, choose File > New > Project which opens the New Project dialog box. In the open dialog box, create a new AllJoyn Device System Bridge App project (under Visual C#) as given in the following: 
 
-![NewDSB_project]({{site.baseurl}}/images/AllJoyn/new_csharp_proj.png)
+![NewDSB_project]({{site.baseurl}}/Resources/images/AllJoyn/new_csharp_proj.png)
 
 You will need to add a reference to the AdapterLib project to use the Windows IoT Extension SDK, which is required to use the Windows::Devices::Gpio API. Follow the below steps to add a reference to the project:
 
   1. In the VS Solution explorer, locate the Adapter Lib project. Expand this project
   2. Right click "References" and select "Add Reference..."
   
-  ![add_reference1]({{site.baseurl}}/images/AllJoyn/csharp_add_reference1.png)
+  ![add_reference1]({{site.baseurl}}/Resources/images/AllJoyn/csharp_add_reference1.png)
   
   3. On the left-hand side of the Add Reference window, select "Extensions" under Windows Universal.
   4. Locate the latest version of the Windows IoT Extension SDK in the list and check the box its left to select this SDK.
   5. Click "OK".
   
-  ![add_reference2]({{site.baseurl}}/images/AllJoyn/csharp_add_reference2.png)
+  ![add_reference2]({{site.baseurl}}/Resources/images/AllJoyn/csharp_add_reference2.png)
 
 ### Step 4: Expose a GPIO Pin to the AllJoyn Bus  
 
@@ -177,19 +177,19 @@ When you run the IoT Explorer for AllJoyn Application in the same subnet with th
 
 Select the "Custom_GPIO_Device" from the list
 
-![ajx_dsb1]({{site.baseurl}}/images/AllJoyn/ajx_dsb1.png)
+![ajx_dsb1]({{site.baseurl}}/Resources/images/AllJoyn/ajx_dsb1.png)
 
 3. Once you have selected "Custom_GPIO_Device", Select Pin0
 
-![custom_gpio_ajx]({{site.baseurl}}/images/AllJoyn/custom_gpio1.png)
+![custom_gpio_ajx]({{site.baseurl}}/Resources/images/AllJoyn/custom_gpio1.png)
 
 4. After selecting "Pin0", observe the interfaces announced for this GPIO pin. Click any interface to view its properties.
 
-![custom_gpio_ajx2]({{site.baseurl}}/images/AllJoyn/custom_gpio2.png)
+![custom_gpio_ajx2]({{site.baseurl}}/Resources/images/AllJoyn/custom_gpio2.png)
 
 5. Selecting an interface allows you to view its properties; You should observe a single interface property, with PinValue equal to 1:
 
-![custom_gpio3_ajx]({{site.baseurl}}/images/AllJoyn/custom_gpio3.png)
+![custom_gpio3_ajx]({{site.baseurl}}/Resources/images/AllJoyn/custom_gpio3.png)
 
 ## EXTRA CREDIT: Signalling when the GPIO pin value changes 
 Suppose the applications on the AllJoyn bus do not want to poll the value of the GPIO pin but just to be notified when the GPIO pin value changes. For that, we need to add support for signals in our adapter. The contents below contain all the pieces needed to make the GPIO Device Sample notify the AllJoyn Consumer Applications. 

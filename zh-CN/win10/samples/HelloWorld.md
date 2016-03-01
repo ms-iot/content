@@ -20,7 +20,7 @@ lang: zh-CN
 
   请记住为你的第一个应用指定一个好听的名称！ 在本示例中，我们将该项目命名为“HelloWorld”。
 
-  ![应用模板位置]({{site.baseurl}}/images/HelloWorld/new-cs-project-dialog.PNG)
+  ![应用模板位置]({{site.baseurl}}/Resources/images/HelloWorld/new-cs-project-dialog.PNG)
 
 > ####Windows 10 开发人员模式说明
 
@@ -30,7 +30,7 @@ lang: zh-CN
 
 由于默认情况下 IoT 扩展 SDK 不会添加到项目，因此我们将需要添加引用，以便 `Windows.Devices.Gpio` 之类的命名空间在项目中可用。若要执行此操作，只需右键单击项目下的“引用”项、选择“添加引用”，然后将生成的对话框导航到 `Universal Windows->Extensions->Windows IoT Extensions for the UWP`、选中该复选框，并单击“确定”。
 
-![添加扩展 SDK]({{site.baseurl}}/images/HelloWorld/Add_IoT_Extension_Reference.PNG)
+![添加扩展 SDK]({{site.baseurl}}/Resources/images/HelloWorld/Add_IoT_Extension_Reference.PNG)
 
 ###向 MainPage.xaml 添加内容
   1. 让我们向 MainPage 添加一些内容。从“解决方案资源管理器”中，选择“MainPage.xaml”文件。我们想要添加一个文本框和一个按钮，以显示某些交互信息。因此，让我们编辑 XAML 文件来添加这些元素。找到位于设计器的 XAML 部分中的 `<Grid>` 标记，并添加以下标记：
@@ -56,7 +56,7 @@ lang: zh-CN
 
 1. 由于这是一个 Windows 通用应用，你也可以在 Visual Studio 计算机上测试它： 只需按 F5，该应用就会在你的计算机中运行。你应该会看到如下内容：
 
-    ![HelloWorld 正在运行]({{site.baseurl}}/images/HelloWorld/HelloWorldAppLocal.PNG)
+    ![HelloWorld 正在运行]({{site.baseurl}}/Resources/images/HelloWorld/HelloWorldAppLocal.PNG)
 
     在完成验证后，请关闭该应用。
 
@@ -68,11 +68,11 @@ lang: zh-CN
 
     接下来，在 Visual Studio 工具栏中，单击 `Local Machine` 下拉列表并选择 `Remote Machine`<br/>
 
-    ![RemoteMachine 目标]({{site.baseurl}}/images/HelloWorld/cs-remote-machine-debugging.png)
+    ![RemoteMachine 目标]({{site.baseurl}}/Resources/images/HelloWorld/cs-remote-machine-debugging.png)
 
 1. 此时，Visual Studio 将显示“远程连接”对话框。输入 IP 地址或你的 Windows IoT 核心版设备的名称（在此示例中，我们使用的是“我的设备”），然后选择 `None` 以进行 Windows 身份验证。然后单击“选择”。
 
-    ![远程计算机调试]({{site.baseurl}}/images/HelloWorld/cs-remote-connections.PNG)
+    ![远程计算机调试]({{site.baseurl}}/Resources/images/HelloWorld/cs-remote-connections.PNG)
 
     > 几点说明：
 
@@ -80,7 +80,7 @@ lang: zh-CN
 
     > 2. 其次，你可以通过导航到项目属性（在解决方案资源管理器中选择“属性”）验证和/或修改这些值并在左侧选择“调试”选项卡：
 
-    > ![项目属性调试选项卡]({{site.baseurl}}/images/HelloWorld/cs-debug-project-properties.PNG)
+    > ![项目属性调试选项卡]({{site.baseurl}}/Resources/images/HelloWorld/cs-debug-project-properties.PNG)
 
 1. 现在，我们可以随时部署到远程 Windows IoT Core 设备。只需按 F5（或依次选择“调试”\|“启动调试”）即可开始调试应用。你应在 Windows IoT 核心版设备屏幕上看到该应用出现，并且你应该能够单击该按钮。
 

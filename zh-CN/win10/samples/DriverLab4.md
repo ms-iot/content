@@ -48,7 +48,7 @@ lang: zh-CN
 
 * 从“生成”菜单中，单击“`Build Solution(Ctrl+Shift+B)`”。如果你使用的是 MinnowBoard Max，请确保针对 `x86` 进行生成；如果你使用的是 Raspberry Pi 2，则针对 `ARM` 进行生成。Visual Studio 将生成驱动程序并将该驱动程序部署到你的目标设备。
 
-    ![驱动程序设置属性]({{site.baseurl}}/images/DriverLab/driver-build-option.png)
+    ![驱动程序设置属性]({{site.baseurl}}/Resources/images/DriverLab/driver-build-option.png)
 
 * 目标设备将重新启动。重新启动后，请确保 PowerShell 仍能连接到它，否则，使用 PowerShell `enter-pssession` 命令重新连接到目标设备，如[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)所述。
 

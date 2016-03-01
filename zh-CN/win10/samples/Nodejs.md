@@ -139,7 +139,7 @@ http.createServer(function (req, res) {
 ###运行服务器！
 在 PowerShell 中，运行命令 `& 'C:\Node.js (Chakra)\Node.exe' C:\MemoryStatusSample\server.js` 来启动服务器。打开浏览器并输入你的设备的 http://&lt;IP 地址 \>:1337。结果的外观应类似于以下图片。
 
-![内存状态结果]({{site.baseurl}}/images/Nodejs/memorystatus-ie.PNG)
+![内存状态结果]({{site.baseurl}}/Resources/images/Nodejs/memorystatus-ie.PNG)
 
 
 ### GitHub

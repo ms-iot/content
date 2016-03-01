@@ -42,7 +42,7 @@
 <div class="row section-heading">
 {% assign sortedInfo = (site.data._samples[page.lang] | sort: 'ranking') %}
 {% for entry in sortedInfo %}
-    <div class="col-sm-4 col-md-3" style="min-height: 275px;">
+    <div class="col-md-6" style="min-height: 275px;">
         <h3>{{entry.title}}</h3>
         <p>{{entry.description}}</p>
         {{entry.link-text}}

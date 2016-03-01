@@ -45,11 +45,11 @@ LEDs are diodes which will emit light when powered. They are polarized - meaning
 Notice that we're using `GPIO_5` in the sketch above. This is a special value that maps to a specific pin on a Raspberry Pi 2 and 3. If we connect the positive leg of the LED to the same pin, this sketch will provide power to the circuit when we toggle that pin HIGH, turning the LED on. The fritzing diagram below shows this connection. If you wish to use another GPIO pin, you'll need to change both the `GPIO_x` value (where `x` is the GPIO pin number) in the sketch, as well as the physical wiring of the LED.
 
 Here is a pinout diagram of the Raspberry Pi 2:
-![RPI Pinouts]({{site.baseurl}}/images/arduino_wiring/pi2_pinouts.png)
+![RPI Pinouts]({{site.baseurl}}/Resources/images/arduino_wiring/pi2_pinouts.png)
 
 ### Fritzing Diagram
 
-![LED Wiring]({{site.baseurl}}/images/arduino_wiring/led_fritz.png)
+![LED Wiring]({{site.baseurl}}/Resources/images/arduino_wiring/led_fritz.png)
 
 ## Build and deploy
 Press F5 to build and deploy your project.

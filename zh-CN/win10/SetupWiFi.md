@@ -30,7 +30,7 @@ lang: zh-CN
 
 首次使用受支持的 USB WiFi 适配器启动 Windows 10 IoT 核心版时，将呈现配置屏幕。在配置屏幕上，选择想要连接到的 WiFi 网络，并提供密码。单击“连接”以启动连接。
 
-![启动 WiFi 配置屏幕]({{site.baseurl}}/images/SetupWiFi/WiFiStartupConfig.png)
+![启动 WiFi 配置屏幕]({{site.baseurl}}/Resources/images/SetupWiFi/WiFiStartupConfig.png)
 
 ###选项 2： 默认应用配置
 **先决条件：** Windows 10 IoT 核心版设备需要插入鼠标、键盘、显示器和 USB WiFi 适配器
@@ -41,7 +41,7 @@ lang: zh-CN
 2. 在左侧窗格中选择“网络和 Wi-Fi”
 3. 单击要连接到的 WiFi 网络。在提示时提供密码，并单击“连接”
 
-![默认应用 WiFi 配置]({{site.baseurl}}/images/SetupWiFi/DefaultAppWiFiConfig.png)
+![默认应用 WiFi 配置]({{site.baseurl}}/Resources/images/SetupWiFi/DefaultAppWiFiConfig.png)
 
 ###选项 3： 基于 Web 的配置
 **先决条件：** 设备已需要通过以太网连接到本地网络，并且插入了 USB WiFi 适配器
@@ -52,7 +52,7 @@ lang: zh-CN
 2. 单击左侧窗格中的“网络”
 3. 在“可用网络”下，选择要连接到的网络，并提供连接凭据。单击“连接”以启动连接
 
-![基于 Web 的 WiFi 配置]({{site.baseurl}}/images/SetupWiFi/WebBWiFiConfig.png)
+![基于 Web 的 WiFi 配置]({{site.baseurl}}/Resources/images/SetupWiFi/WebBWiFiConfig.png)
 
 ###选项 4： 使用 WiFi 配置文件进行连接
 **先决条件：** 设备已需要通过以太网连接到本地网络，并且插入了 USB WiFi 适配器。还需要具有 WiFi 功能的 Windows 电脑。
@@ -67,14 +67,14 @@ Windows 10 IoT 核心版支持使用无线配置文件设置 WiFi。有关详细
 
 2. 打开“文件资源管理器”窗口，并在地址栏中键入 `\\<TARGET_DEVICE>\C$\`，然后点击 Enter。在此特定情况下，`<TARGET_DEVICE>` 可以是 Windows 10 IoT 核心版设备的名称或 IP 地址：
 
-    ![使用文件资源管理器的 SMB]({{site.baseurl}}/images/DriverLab/smb1.png)
+    ![使用文件资源管理器的 SMB]({{site.baseurl}}/Resources/images/DriverLab/smb1.png)
 
     如果系统提示输入用户名和密码，请使用以下凭据：
 
         User Name: <TARGET_DEVICE>\Administrator
         Password:  p@ssw0rd
 
-    ![使用文件资源管理器的 SMB]({{site.baseurl}}/images/DriverLab/cred1.png)
+    ![使用文件资源管理器的 SMB]({{site.baseurl}}/Resources/images/DriverLab/cred1.png)
 	
     注意： **强烈建议**你更新默认的管理员帐户密码。请按照在[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)获取的说明进行操作。
 

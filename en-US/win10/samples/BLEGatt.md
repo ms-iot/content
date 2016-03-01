@@ -20,13 +20,13 @@ Bluetooth Low Energy (BLE), or Bluetooth Smart, is a wireless protocol that is p
 
 Generic Attribute Profile (GATT) is the Bluetooth Profile that BLE devices will use to communicate with each other. Data is organized into nested objects called Profiles, Services, and Characteristics, as illustrated in the diagram below:
 
-![Gatt Structure Diagram]({{site.baseurl}}/images/BLEGatt/GattDiagram.png)
+![Gatt Structure Diagram]({{site.baseurl}}/Resources/images/BLEGatt/GattDiagram.png)
 
 It is strongly suggested to have a good grasp on these concepts before continuing. Adafruit has a great overview of how Bluetooth Low Energy (BLE) & the GATT profile work [here](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/introduction){:target="_blank"}.
 
 ### The TI CC2541 SensorTag
 
-![SensorTag Picture]({{site.baseurl}}/images/BLEGatt/SensorTag_with_iPad.jpg)
+![SensorTag Picture]({{site.baseurl}}/Resources/images/BLEGatt/SensorTag_with_iPad.jpg)
 <sub>*[Image from Texas Instruments](http://processors.wiki.ti.com/index.php/File:SensorTag_with_iPad.jpg){:target="_blank"}*</sub>
 
 In this sample we will be pairing and connecting a Windows IoT Core device with the [Texas Instruments CC2541 SensorTag Development Kit](http://www.ti.com/tool/cc2541dk-sensor){:target="_blank"} via BLE. The SensorTag is a BLE device powered with the TI CC2541 chip, which features a programmable Bluetooth 4.0 stack. On the device are also the following 6 sensors, which are exposing data through the GATT profile:

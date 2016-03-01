@@ -7,7 +7,7 @@ lang: zh-CN
 
 ##Raspberry Pi 2 引脚映射
 
-![RPi2 排针]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![RPi2 排针]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 

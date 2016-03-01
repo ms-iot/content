@@ -9,7 +9,7 @@ lang: en-US
 
 [AllJoyn](https://allseenalliance.org/developers/learn) is a technology that enables IoT devices and applications to discover and interact with each other. Since AllJoyn is built into Windows 10 and the Windows 10 SDK, it's easy to take advantage of AllJoyn using the Universal Windows Platform (UWP).
 
-![AJ_Troubleshooting_intro]({{site.baseurl}}/images/AllJoyn/AJ_Troubleshooting_intro.jpg){:target="_blank"}
+![AJ_Troubleshooting_intro]({{site.baseurl}}/Resources/images/AllJoyn/AJ_Troubleshooting_intro.jpg){:target="_blank"}
 
 This blog post will help you configure your AllJoyn network and devices, and also provide troubleshooting steps to follow when things don't work as expected. The primary focus of this article will be enabling communication between UWP AllJoyn client apps (AllJoyn consumers) and AllJoyn devices (AllJoyn producers). Many of the same configuration steps are required to enable communication with UWP AllJoyn Producer apps, but further details will be left to future blog posts and articles.
 
@@ -48,13 +48,13 @@ The first number output here is the number of hops, and since that value is "1" 
 
 Below is an example of a typical AllJoyn network setup. In this example, all of the devices shown would be able to discover and interact with each other using AllJoyn assuming they were on the same subnet.
 
-![AJ_Troubleshooting_Devices]({{site.baseurl}}/images/AllJoyn/AJ_Troubleshooting_Devices.jpg){:target="_blank"}
+![AJ_Troubleshooting_Devices]({{site.baseurl}}/Resources/images/AllJoyn/AJ_Troubleshooting_Devices.jpg){:target="_blank"}
 
 When you connect your Windows 10 PC to the network with AllJoyn devices, you'll need to click "Yes" if a dialog is displayed regarding finding devices and PCs on the network. (Note: This does not apply when joining networks from Windows 10 Phone as there is no such dialog).
 
 You can also manage this setting in the "Advanced Settings" page in Wi-Fi settings as shown here: (this page may look slightly different depending on which Windows 10 Insider build you are using)
 
-![AJ_Troubleshooting_Settings]({{site.baseurl}}/images/AllJoyn/AJ_Troubleshooting_Settings.jpg){:target="_blank"}
+![AJ_Troubleshooting_Settings]({{site.baseurl}}/Resources/images/AllJoyn/AJ_Troubleshooting_Settings.jpg){:target="_blank"}
 
 The toggle for "Find devices and content" should be in the "On" position in order to enable AllJoyn functionality.
 
@@ -109,7 +109,7 @@ Event Tracing for Windows (ETW) can help you get advanced debugging information 
 4. Reproduce the problem that you are experiencing with AllJoyn.
 5. Click on "Refresh" in the right "Actions" bar, then check the Operational and Debug channels from the left navigation bar under the "AllJoyn" folder.
 
-![AJ_Troubleshooting_ETW]({{site.baseurl}}/images/AllJoyn/AJ_Troubleshooting_ETW.jpg){:target="_blank"}
+![AJ_Troubleshooting_ETW]({{site.baseurl}}/Resources/images/AllJoyn/AJ_Troubleshooting_ETW.jpg){:target="_blank"}
 
 AllJoyn ETW traces are partitioned as follows:
 

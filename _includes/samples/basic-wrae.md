@@ -6,7 +6,7 @@
         <p>Once you've selected the correct settings, click "Connect" to connect remotely to your Arduino!</p>
     </div>
     <div class="col-md-6 col-sm-12 col-no-padding">
-        <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/connection-page-wrae.png">
+        <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/connection-page-wrae.png">
     </div>
 </div>
 
@@ -17,7 +17,7 @@
         <p>From here, you can start controlling the pins on your Arduino.  Let's do a simple sample where we remotely control an LED attached to the Arduino.</p>
     </div>
     <div class="col-md-6 col-sm-12 col-no-padding">
-        <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/digital-page-wrae.png">
+        <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/digital-page-wrae.png">
     </div>
 </div>
 <div class="row">
@@ -27,6 +27,6 @@
         <p>Try controlling all of the pins on your Arduino - you can control the Analog pins on the Analog page, and the PWM functionality of the digital pins on the PWM page.  Once you get an understanding of the technology, check out the tutorial on the Windows Remote Arduino library to start developing your own projects.</p>
     </div>
     <div class="col-md-6 col-sm-12 col-no-padding">
-        <img src="{{site.baseurl}}/images/remote-wiring/samples/basic/led-setup.png">
+        <img src="{{site.baseurl}}/Resources/images/remote-wiring/samples/basic/led-setup.png">
     </div>
 </div>

@@ -19,7 +19,7 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 ### Set up your PC
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 * Install Arduino software from [here](https://www.arduino.cc/en/Main/Software).
-* Install [Git for Windows](http://git-scm.com/download/win). Ensure that Git is included in your ‘PATH’ environment variable.
+* Install [Git for Windows](http://git-scm.com/download/win). Ensure that Git is included in your 'PATH' environment variable.
 
 
 ### Upload Firmata to your Arduino
@@ -92,7 +92,7 @@ Copy the CylonSample folder on your PC to C:\CylonSample on the Raspberry Pi 2 o
 Connect your Arduino and Raspberry Pi 2 or 3 with the USB cable. When you do, if your Raspberry Pi 2 or 3 is connected to a monitor, 
 you should see the device getting recognized like in the image below:
 
-![Arduino Start Screen]({{site.baseurl}}/images/Nodejs/arduino-startscreen.jpg)
+![Arduino Start Screen]({{site.baseurl}}/Resources/images/Nodejs/arduino-startscreen.jpg)
 
 We also need to assign a port name to (e.g. 'COM5') to the Arduino. Follow these steps to do this:
 
@@ -110,7 +110,7 @@ We also need to assign a port name to (e.g. 'COM5') to the Arduino. Follow these
 In PowerShell, run the command `& 'C:\Node.js (ChakraCore)\Node.exe' C:\CylonSample\cylonsample.js`.
 After running the command, the LED (shown with the arrow in the picture below) on the Arduino should start blinking every 1 second.
 
-![Arduino RPi2]({{site.baseurl}}/images/Nodejs/arduino-rpi2.jpg)
+![Arduino RPi2]({{site.baseurl}}/Resources/images/Nodejs/arduino-rpi2.jpg)
 
 
 ### GitHub

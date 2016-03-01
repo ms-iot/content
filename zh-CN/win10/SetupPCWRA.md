@@ -30,13 +30,13 @@ NuGet 是自动安装程序包并设置依存关系的快速且简单的方法�
 
 - “文件”-\>“新建项目”
 
- ![新建项目]({{site.baseurl}}/images/remote-wiring/create_00.png)
+ ![新建项目]({{site.baseurl}}/Resources/images/remote-wiring/create_00.png)
 
 - 选择所需语言。Windows Remote Arduino 是 WinRT 组件，这意味着它与 C++、C\# 或 JavaScript 兼容。
 
 - 通过展开“Visual C\#”菜单，你将看到我选择了 C\#。如果你要针对 Windows 8.1 进行生成，请选择“Windows”选项，然后选择“空白应用（Windows 通用）”或“空白应用（Windows 8.1 通用）”。
 
- ![Windows 通用]({{site.baseurl}}/images/remote-wiring/create_01.png)
+ ![Windows 通用]({{site.baseurl}}/Resources/images/remote-wiring/create_01.png)
 
 
 ###第 2 步： 将 Windows Remote Arduino 项目添加到解决方案
@@ -45,31 +45,31 @@ NuGet 是自动安装程序包并设置依存关系的快速且简单的方法�
 
 - 在“解决方案资源管理器”中右键单击你的解决方案，然后选择“添加”\>“现有项目”
 
- ![添加现有项目]({{site.baseurl}}/images/remote-wiring/project_00.png)
+ ![添加现有项目]({{site.baseurl}}/Resources/images/remote-wiring/project_00.png)
 
 - 导航到存储库的本地副本。你将在此处看到我已将其克隆到 **C:\\git\\remote-wiring**，但你可以选择不同的目录。然后，针对你的生成环境（Windows 10 或 Windows 8.1）打开适当的解决方案文件夹。
 
- ![打开解决方案目录]({{site.baseurl}}/images/remote-wiring/compile_00.png)
+ ![打开解决方案目录]({{site.baseurl}}/Resources/images/remote-wiring/compile_00.png)
 
 - 让我们从串行项目开始操作 \(Microsoft.Maker.Serial\)。打开此目录。
 
- ![串行目录]({{site.baseurl}}/images/remote-wiring/project_01.png)
+ ![串行目录]({{site.baseurl}}/Resources/images/remote-wiring/project_01.png)
 
 - 选择 *.vcxproj* 文件。（如果你要面向 Windows 8.1，必须先在 Windows 和 Windows Phone 平台目录之间进行选择。你无需针对 Windows 10 执行此操作，因为它通用于所有平台。）
 
- ![选择 vcxproj]({{site.baseurl}}/images/remote-wiring/project_02.png)
+ ![选择 vcxproj]({{site.baseurl}}/Resources/images/remote-wiring/project_02.png)
 
 - 右键单击项目中的“引用”。选择“添加引用”
 
- ![添加引用]({{site.baseurl}}/images/remote-wiring/project_05.png)
+ ![添加引用]({{site.baseurl}}/Resources/images/remote-wiring/project_05.png)
 
 - 在“项目”选项卡下，选择所有三个 Microsoft.Maker 项目
 
- ![项目引用]({{site.baseurl}}/images/remote-wiring/project_06.png)
+ ![项目引用]({{site.baseurl}}/Resources/images/remote-wiring/project_06.png)
 
 - 通过选择“生成”-\>“全部重新生成”重新生成你的解决方案
 
- ![全部重新生成]({{site.baseurl}}/images/remote-wiring/compile_03.png)
+ ![全部重新生成]({{site.baseurl}}/Resources/images/remote-wiring/compile_03.png)
 
 - 验证你是否已将必要的[设备功能](#device-capabilities)添加到你的项目清单。
 
@@ -77,7 +77,7 @@ NuGet 是自动安装程序包并设置依存关系的快速且简单的方法�
 
 现在可在源代码中直接使用这三个项目。值得注意的是，我已构造了一个 BluetoothSerial 对象并将其附加到我的 RemoteDevice 对象，因此我在 `MainPage.xaml.cs` 文件顶部包含了两个相应命名空间。
 
- ![享受乐趣！]({{site.baseurl}}/images/remote-wiring/utilize_00.png)
+ ![享受乐趣！]({{site.baseurl}}/Resources/images/remote-wiring/utilize_00.png)
 
 
 #设备功能

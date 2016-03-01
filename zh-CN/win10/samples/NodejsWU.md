@@ -19,7 +19,7 @@ lang: zh-CN
 
 选择模板 `Basic Node.js Web Server (Windows Universal)`
 
-![Node.js Windows 通用“新建项目”对话框]({{site.baseurl}}/images/Nodejs/nodejswu-newprojectdialog.png)
+![Node.js Windows 通用“新建项目”对话框]({{site.baseurl}}/Resources/images/Nodejs/nodejswu-newprojectdialog.png)
 
 
 ### “Hello World”代码
@@ -44,17 +44,17 @@ http.createServer(function (req, res) {
 * 你还可以将 `--use-logger` 添加为参数以将控制台输出重定向到 UWP 应用程序的本地存储文件夹中的文件 \(C:\\Users\\DefaultAccount\\AppData\\Local\\Packages&lt;你的项目名称&gt;\_&lt;发布者哈希字符串&gt;\\LocalState\\nodeuwp.log\)。
 * 如果你要针对 Minnowboard Max 进行生成，请选择下拉列表中的 `x86`。如果你要针对 Raspberry Pi 2 进行生成，请选择 `ARM`。
 
-    ![Node.js Windows 通用项目属性]({{site.baseurl}}/images/Nodejs/nodejswu-properties.png)
+    ![Node.js Windows 通用项目属性]({{site.baseurl}}/Resources/images/Nodejs/nodejswu-properties.png)
 
 * 现在，我们可以随时部署到远程 Windows IoT 核心版设备。只需按 F5（或依次选择“调试”\|“开始调试”）即可开始调试服务器。
 
 * 当服务器正在运行时，打开浏览器，然后输入地址 \<你的设备的地址\>：1337。结果的外观应类似于以下图片。
 
-    ![Hello World 结果]({{site.baseurl}}/images/Nodejs/helloworld-ie.PNG)
+    ![Hello World 结果]({{site.baseurl}}/Resources/images/Nodejs/helloworld-ie.PNG)
 
 * 你可以设置断点、查看变量值，等等。若要停止服务器调试，请按“停止调试”按钮（或依次选择“调试”\|“停止调试”）。
 
-    ![调试屏幕截图]({{site.baseurl}}/images/Nodejs/debugging-vs.PNG)
+    ![调试屏幕截图]({{site.baseurl}}/Resources/images/Nodejs/debugging-vs.PNG)
 
 
 ### 通用 Windows 平台 \(UWP\) 命名空间
@@ -80,7 +80,7 @@ uwp.close();
 
 上述代码所生成的结果应如下所示：
 
-![DateTime 结果]({{site.baseurl}}/images/Nodejs/datetime-ie.PNG)
+![DateTime 结果]({{site.baseurl}}/Resources/images/Nodejs/datetime-ie.PNG)
 
 ### GitHub
 * NTVS IoT 扩展源代码：[https://github.com/ms-iot/ntvsiot](https://github.com/ms-iot/ntvsiot)

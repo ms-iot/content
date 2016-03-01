@@ -56,9 +56,9 @@ Direct Port Manipulation
 
    This can be ported by issuing the equivalent instruction for each pin represented in the bitmask.
 
-* DDR[B|C|D] = pinMode();
-* PORT[B|C|D] = digitalWrite();
-* PIN[B|C|D] = digitalRead();
+* DDR[B/C/D] = pinMode();
+* PORT[B/C/D] = digitalWrite();
+* PIN[B/C/D] = digitalRead();
 
 
 * [SPI Registers](http://www.arduino.cc/en/Tutorial/SPIEEPROM){:target="_blank"} (Introduction to the Serial Peripheral Interface)<br/>

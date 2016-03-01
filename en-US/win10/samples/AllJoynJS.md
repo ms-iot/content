@@ -29,12 +29,12 @@ This tutorial shows how to get AllJoyn.JS running as a Windows 10 application.
 
 3. Deploy AllJoyn.JS
 
->Note that in Windows 10, when a machine has __multiple AllJoyn modern applications__ that __need to interact__ on the same machine, the user must __add a loopback exemption__ for these modern applications. Consequently, if you run both the ZigBee adapter and IoT Explorer for AllJoyn on the same machine you will need to add a loopback exemption for these 2 applications. This isn’t needed for application you run from Visual Studio 2015. Note that when deploying an application from Visual Studio 2015, the loopback exemption is for the lifetime of the installed application. Meaning that you can launch the app directly (not from Visual Studio 2015) afterwards and it will have the loopback exemption.
+>Note that in Windows 10, when a machine has __multiple AllJoyn modern applications__ that __need to interact__ on the same machine, the user must __add a loopback exemption__ for these modern applications. Consequently, if you run both the ZigBee adapter and IoT Explorer for AllJoyn on the same machine you will need to add a loopback exemption for these 2 applications. This isn't needed for application you run from Visual Studio 2015. Note that when deploying an application from Visual Studio 2015, the loopback exemption is for the lifetime of the installed application. Meaning that you can launch the app directly (not from Visual Studio 2015) afterwards and it will have the loopback exemption.
 
 Set up loopback exception:
 
 1. Find the installation folder of the modern application for which you want to enable the loopback exemption. It is located at 'C:\Users\\**username**\AppData\Local\Packages'
- ![LoopBackException]({{site.baseurl}}/images/AllJoyn/AllJoynJS_LoopBackException.png)
+ ![LoopBackException]({{site.baseurl}}/Resources/images/AllJoyn/AllJoynJS_LoopBackException.png)
 
 2. Copy the installation folder name which is also the application ID.
 
@@ -55,13 +55,13 @@ Alternatively, you can download directly from Allseen Alliance by cloning AllJoy
 3. Download Duktape [here](http://www.duktape.org/duktape-1.2.1.tar.xz){:target="_blank"} and decompress it to `samples-develop\AllJoyn\Samples\AllJoyn.JS\External`.  Rename decompressed folder from `duktape-1.2.1` to `duktape`
 
 4. The final folder structure should look like this:
- ![FolderStructure]({{site.baseurl}}/images/AllJoyn/AllJoynJS_FolderStructure.png)
+ ![FolderStructure]({{site.baseurl}}/Resources/images/AllJoyn/AllJoynJS_FolderStructure.png)
 
 5. Open `samples-develop\AllJoyn\Samples\AllJoyn.JS\AllJoyn.JS.sln` in Visual Studio.
 
 6. Select the relevant target (x86, x64 or ARM) and build the solution in Visual Studio.
 
-You are now ready to launch it, so launch or debug HeadedAdapterApp project on desktop or if the targeted Windows 10 device has a display or launch or debug HeadlessAdapterApp if it doesn’t.
+You are now ready to launch it, so launch or debug HeadedAdapterApp project on desktop or if the targeted Windows 10 device has a display or launch or debug HeadlessAdapterApp if it doesn't.
 If needed, see instruction [here]({{site.baseurl}}/en-US/win10/AppDeployment.htm){:target="_blank"} for remote debugging.
 
 ## Deploy script file
@@ -93,7 +93,7 @@ AllJoyn.JS provides a hardware-independent abstraction layer for GPIO and other 
 
 - Pins are labeled pin[0] through pin[N]
 - To enumerate information for all the pins on a device  
- `for (var i = 0; i < IO.pin.length; ++i) { print(IO.pin[i].info.description, “ “, IO.pin[i].functions)); };`
+ `for (var i = 0; i < IO.pin.length; ++i) { print(IO.pin[i].info.description, " ", IO.pin[i].functions)); };`
 
 - The I/O module currently has the following functions for configuring pins:  
    *digitalIn(), digitalOut()*
@@ -102,7 +102,7 @@ AllJoyn.JS provides a hardware-independent abstraction layer for GPIO and other 
   `var button = IO.digitalIn(IO.pin[2], IO.pullUp)`
 
 - A trigger function can be set on a digital input pin. The trigger function can be configured to be called when the pin state changes.  
-  `button.setTrigger(IO.risingEdge, function(){print(“button up”)})`
+  `button.setTrigger(IO.risingEdge, function(){print("button up")})`
 
 - Digital input and output pins have a level property that can be set and read. An optional initial value can be provided for digital output pins.  
 `var led = IO.digitalOut(IO.pin[2], 1);
@@ -111,7 +111,7 @@ AllJoyn.JS provides a hardware-independent abstraction layer for GPIO and other 
 
 - For all GPIO APIs, please refer to [AllJoyn.JS IO APIs (Allseen Alliance)](https://git.allseenalliance.org/cgit/core/alljoyn-js.git/plain/doc/html/IO.html){:target="_blank"}
 
-> Even though the GPIO layer is hardware-independent, pin numbers and assignments differ among hardware devices.  Current pin numbers and assignments are based on [Raspberry Pi 2 and 3]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png).
+> Even though the GPIO layer is hardware-independent, pin numbers and assignments differ among hardware devices.  Current pin numbers and assignments are based on [Raspberry Pi 2 and 3]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png).
 
 ## Sample scripts
 

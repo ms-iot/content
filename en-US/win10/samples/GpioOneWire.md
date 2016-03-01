@@ -25,7 +25,7 @@ from the DHT11.
 For a description of the protocol used by the DHT11, see
 [this article](http://embedded-lab.com/blog/?p=4333). The datasheet is [here](http://akizukidenshi.com/download/ds/aosong/DHT11.pdf).
 
-![Screenshot]({{site.baseurl}}/images/GpioOneWireScreen1.png)
+![Screenshot]({{site.baseurl}}/Resources/images/GpioOneWireScreen1.png)
 
 ### Requirements
 
@@ -43,8 +43,8 @@ You will need the following hardware to run this demo:
 
 Connect the components as shown in the following diagram:
 
-![Schematic]({{site.baseurl}}/images/GpioOneWireSchematic.png)
-![Wiring Diagram]({{site.baseurl}}/images/GpioOneWireFritz.png)
+![Schematic]({{site.baseurl}}/Resources/images/GpioOneWireSchematic.png)
+![Wiring Diagram]({{site.baseurl}}/Resources/images/GpioOneWireFritz.png)
 
 ### Running the Demo
 

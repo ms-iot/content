@@ -37,4 +37,4 @@ You can modify the headed/headless state of your device from a PowerShell sessio
 A Windows IoT Core device that is in headless mode can be discovered using the **Windows 10 IoT Core Dashboard** application.  You can download the IoT Dashboard [here](http://go.microsoft.com/fwlink/?LinkID=708576)
 When running, the application listens for pings from any Windows IoT Core devices on the local network and displays device information such as the name, IP address, and more.
 
-![Windows IoT Core Dashboard]({{site.baseurl}}/images/IoTDashboard.png)
+![Windows IoT Core Dashboard]({{site.baseurl}}/Resources/images/IoTDashboard.png)

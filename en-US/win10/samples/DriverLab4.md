@@ -61,7 +61,7 @@ Build and install the demo driver using Visual Studio
 
 * From the Build menu, click `Build Solution(Ctrl+Shift+B)`. Make sure that you are building for `x86` if you are using a MinnowBoard Max, or `ARM` if you are using a Raspberry Pi 2 or 3.  Visual Studio will build your driver and deploy the driver to your target device.
 
-    ![Driver Settings properties]({{site.baseurl}}/images/DriverLab/driver-build-option.png)
+    ![Driver Settings properties]({{site.baseurl}}/Resources/images/DriverLab/driver-build-option.png)
 
 * The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
 

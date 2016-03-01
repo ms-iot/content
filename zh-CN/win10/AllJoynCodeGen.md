@@ -24,7 +24,7 @@ lang: zh-CN
 
 以下工作流图表说明了这一过程：
 
-![AllJoyn CodeGen 图]({{site.baseurl}}/images/AllJoyn/alljoyncodegen.png)
+![AllJoyn CodeGen 图]({{site.baseurl}}/Resources/images/AllJoyn/alljoyncodegen.png)
 
 ###从命令行运行
 

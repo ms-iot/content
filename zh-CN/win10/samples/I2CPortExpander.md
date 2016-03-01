@@ -7,7 +7,7 @@ lang: zh-CN
 
 ##I2C 端口扩展器示例
 
-![I2C 端口扩展器图像]({{site.baseurl}}/images/I2CPortExpander/PortExpanderProjectPicture_480.png)
+![I2C 端口扩展器图像]({{site.baseurl}}/Resources/images/I2CPortExpander/PortExpanderProjectPicture_480.png)
 
 在本示例中，我们会将一个 I2C 端口扩展器连接到你的 Raspberry Pi 2，并创建一个简单的应用，以便将该端口扩展器用于读取触摸开关的状态并控制 LED。无需具备 I2C 或端口扩展器的相关背景知识。如果你希望了解有关 I2C 的详细信息，Sparkfun 提供了一个出色的[与 I2C 相关的教程](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}。
 
@@ -37,14 +37,14 @@ lang: zh-CN
 
 **注意： 确保在连接电路时关闭 RPi2 电源。若要降低构建期间意外出现短路的几率，这是一个很好的做法。**
 
-![试验板连接]({{site.baseurl}}/images/I2CPortExpander/I2cPortExpanderDrawing_bb_750.png)
+![试验板连接]({{site.baseurl}}/Resources/images/I2CPortExpander/I2cPortExpanderDrawing_bb_750.png)
 
 *使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
 
 以下是电路原理图：
 
-![电路示意图]({{site.baseurl}}/images/I2CPortExpander/I2cPortExpanderDrawing_schem.png)
+![电路示意图]({{site.baseurl}}/Resources/images/I2CPortExpander/I2cPortExpanderDrawing_schem.png)
 
 *使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
@@ -53,20 +53,20 @@ lang: zh-CN
 
 将 MCP23008 端口扩展器置于你的试验板之上，以便它可以跨该试验板的中隙。
 
-![试验板 IC 位置]({{site.baseurl}}/images/BreadBoardICPlacement.png)
+![试验板 IC 位置]({{site.baseurl}}/Resources/images/BreadBoardICPlacement.png)
 
 *使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
 
  通过在 IC 上查找槽口，找到该端口扩展器的引脚 1。如果你需要定向 IC 以便槽口尾部朝向左边，则引脚 1 将是该槽口下方的左下角区域中的第一个引脚。
 
-![MCP23008 引脚位置]({{site.baseurl}}/images/I2CPortExpander/MCP23008_PortExpander_bb.png)
+![MCP23008 引脚位置]({{site.baseurl}}/Resources/images/I2CPortExpander/MCP23008_PortExpander_bb.png)
 
 *使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
 MCP23008 的引脚输出如下所示，并且可以在[数据表](http://ww1.microchip.com/downloads/en/DeviceDoc/21919e.pdf){:target="_blank"}中找到。
 
-![MCP23008 引脚输出]({{site.baseurl}}/images/I2CPortExpander/MCP23008_Pinout.PNG)
+![MCP23008 引脚输出]({{site.baseurl}}/Resources/images/I2CPortExpander/MCP23008_Pinout.PNG)
 
 *使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
@@ -120,7 +120,7 @@ MCP23008 的引脚输出如下所示，并且可以在[数据表](http://ww1.mic
 
 我们需要将 Raspberry Pi 2 上的电源、地线和 I2C 线接入 MCP23008 端口扩展器和试验板。
 
-![Raspberry Pi 2 引脚输出]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![Raspberry Pi 2 引脚输出]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
 * 引脚 1 **3.3V PWR** 连接到试验板一侧的电源轨道（红色条带）
 
@@ -406,7 +406,7 @@ private void CheckButtonStatus()
 
 一段时间过后，你将看到已连接到 RPi2 的屏幕上出现变化，即，将显示一个圆圈、一些文本和一个滑块。试验板上的 LED 将开始打开和关闭。
 
-![I2C 端口扩展器屏幕截图]({{site.baseurl}}/images/I2CPortExpander/I2CPortExpanderScreenShot_300p.png)
+![I2C 端口扩展器屏幕截图]({{site.baseurl}}/Resources/images/I2CPortExpander/I2CPortExpanderScreenShot_300p.png)
 
 恭喜！ 你已成功将一个 I2C 端口扩展器连接到你的 Raspberry Pi 2。
 

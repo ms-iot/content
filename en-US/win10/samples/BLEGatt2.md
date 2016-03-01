@@ -21,11 +21,11 @@ First we need to select the correct architecture to build for. If you're buildin
 Next, right-click on the **BluetoothGATT** project in **Solution Explorer** and select **"Set as StartUp Project"**.
 Now you should be able to press F5 from Visual Studio: The BluetoothGATT app will deploy and start, and you should see this on the device output:
 
-![BluetoothGatt App]({{site.baseurl}}/images/BLEGatt/app.png)
+![BluetoothGatt App]({{site.baseurl}}/Resources/images/BLEGatt/app.png)
 
 Click on the Start button at the top to connect to the SensorTag and display the sensor data. A popup may appear asking for permission to access the SensorTag service, click yes to continue. After a couple of seconds you should see the data being updated like this:
 
-![BluetoothGatt App Running]({{site.baseurl}}/images/BLEGatt/appRunning.png)
+![BluetoothGatt App Running]({{site.baseurl}}/Resources/images/BLEGatt/appRunning.png)
 
 ### Let's look at the code
 
