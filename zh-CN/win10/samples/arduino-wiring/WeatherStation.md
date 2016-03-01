@@ -109,7 +109,7 @@ lang: zh-cn
     <li>按照 <a href="{{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm" target="_blank">Arduino 接线项目设置指南</a>创建新项目。</li>
     <li>将以下库从 GitHub 克隆到 WeatherShield 文件夹（与 .vcxproj 文件处于同一个级别）： <a target="_blank" href="https://github.com/sparkfun/MPL3115A2_Breakout/">MPL3115A2 突围</a>和 <a target="_blank" href="https://github.com/sparkfun/HTU21D_Breakout">HTU21D 突围</a>。</li>
     <li>将主要 .ino 文件（{yourProject}.ino，其中 {yourProject} 是你在创建项目时指定的项目名）中的现有代码替换为以下代码:
-      {% endhighlight %}
+      {% highlight C++ %}
         /*
         HTU21D 湿度传感器示例代码
         作者： Nathan Seidle
