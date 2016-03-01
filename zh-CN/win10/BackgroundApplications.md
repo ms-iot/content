@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 后台应用程序
-permalink: /zh-CN/win10/BackgroundApplications.htm
-lang: zh-CN
+permalink: /zh-cn/win10/BackgroundApplications.htm
+lang: zh-cn
 ---
 
 #开发后台应用程序
@@ -11,7 +11,7 @@ lang: zh-CN
 
 ![IBackground 任务]({{site.baseurl}}/Resources/images/BackgroundApplications/backgroundTaskScreenshot.png)
 
-需特别注意的一点是，默认情况下，应用程序将在运行方法完成时关闭。这意味着遵循运行等待输入或在计时器上的服务器的常用 IoT 模式的应用将会过早地发现应用退出这一情况。若要阻止这种情况发生，必须调用“GetDeferral”方法才能阻止应用程序退出。可在[此处](https://msdn.microsoft.com/zh-CN/library/windows/apps/windows.applicationmodel.background.backgroundtaskdeferral.aspx)查找有关延迟模式的详细信息。
+需特别注意的一点是，默认情况下，应用程序将在运行方法完成时关闭。这意味着遵循运行等待输入或在计时器上的服务器的常用 IoT 模式的应用将会过早地发现应用退出这一情况。若要阻止这种情况发生，必须调用“GetDeferral”方法才能阻止应用程序退出。可在[此处](https://msdn.microsoft.com/zh-cn/library/windows/apps/windows.applicationmodel.background.backgroundtaskdeferral.aspx)查找有关延迟模式的详细信息。
 
 ##后台应用程序可从何处安装？ 
 
@@ -70,7 +70,7 @@ deferral.Complete();
 
     **注意：**这不会将后台应用程序配置为在设备启动时启动。
 
-* 通过依次选择“项目”\>“存储”\>“创建应用包”，在 Visual Studio 中创建 AppX。创建 AppX 后，可使用[基于 Web 的设备管理将其部署]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm#apps)到 Windows 10 IoT 核心版设备。
+* 通过依次选择“项目”\>“应用商店”\>“创建应用包”，在 Visual Studio 中创建 AppX。创建 AppX 后，可使用 [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm#apps) 来将其部署到 Windows 10 IoT 核心版设备。
 
 若要调用后台应用程序，可执行以下任一操作：
 

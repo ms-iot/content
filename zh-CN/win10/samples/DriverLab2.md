@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 驱动程序实验 - 使用 Visual Studio 生成驱动程序
-permalink: /zh-CN/win10/samples/DriverLab2.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/DriverLab2.htm
+lang: zh-cn
 ---
 
 #在 Visual Studio 中生成驱动程序

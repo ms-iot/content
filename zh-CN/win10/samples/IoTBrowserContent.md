@@ -1,8 +1,10 @@
 #IoT 浏览器示例
 
+{% include VerifiedVersion.md %}
+
 我们将为你的 Windows 10 IoT 核心版设备创建简单的 Web 浏览器应用程序。
 
-这是一个有外设示例。若要更好地理解什么是有外设模式以及如何将你的设备配置为有外设，请按照[此处]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm)的说明操作。
+这是一个有外设示例。若要更好地了解什么是有外设模式以及如何将你的设备配置为有外设，请按照[此处]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm)的说明操作。
 
 由于此示例只使用标准 Windows UWP 功能，因此它还可以在桌面上运行。
 
@@ -10,13 +12,11 @@
 
 ###在 Visual Studio 中加载项目
 
-你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\IoTBrowser`，查找此示例的源代码。示例代码为 C\#。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
-
-###部署你的应用
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\IoTBrowser` 来查找此示例的源代码。示例代码为 C\#。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
 {% include_relative AppDeploymentCS.md %}
 
-完成所有设置后，你应可以在 Visual Studio 中按 F5。IoT 浏览器应用将在 Windows IoT 设备上部署并启动。
+完成所有设置后，你应该可以在 Visual Studio 中按 F5。IoT 浏览器应用将在 Windows IoT 设备上部署并启动。
 
 ###我们来看看代码
 此示例的代码相当简单：
@@ -37,16 +37,16 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="65"></RowDefinition>
         </Grid.RowDefinitions>
-        
+
         <!--Address bar-->
         <StackPanel Grid.Row="0" Orientation="Horizontal">
             <TextBox x:Name="Web_Address" FontSize="24" TextWrapping="Wrap" Text="http://www.bing.com" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="54" Width="958" KeyUp="Web_Address_KeyUp"/>
             <Button x:Name="Go_Web" Content="Go!" HorizontalAlignment="Right" VerticalAlignment="Center" Height="60" Width="107" Click="Go_Web_Click"/>
         </StackPanel>
-        
+
         <!--Web view control-->
         <WebView x:Name="webView" Grid.Row="1"/>
-        
+
         <!--Favorites buttons-->
         <StackPanel Grid.Row="2" Orientation="Horizontal" >
             <Button x:Name="Go_WOD" VerticalAlignment="Center" HorizontalAlignment="Center" Height="60" Width="120" Margin="0,0,15,0" Click="Go_WOD_Click">

@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 驱动程序实验 - 部署驱动程序并确认安装
-permalink: /zh-CN/win10/samples/DriverLab3.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/DriverLab3.htm
+lang: zh-cn
 ---
 
 #安装示例驱动程序
@@ -151,7 +151,6 @@ lang: zh-CN
 
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe high 5
 
-<br/>
 ###使用 Visual Studio 部署驱动程序 
-现在你知道了如何手动部署驱动程序，你也可以按照[本页]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab4.htm)上的相关说明使用 Visual 部署驱动程序
+现在你知道了如何手动部署驱动程序，你也可以按照[本页]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab4.htm)上的相关说明使用 Visual 部署驱动程序。
     

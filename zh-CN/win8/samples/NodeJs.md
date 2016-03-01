@@ -1,9 +1,14 @@
 ---
 layout: default
 title: Node.js
-permalink: /zh-CN/win8/samples/NodeJS.htm
-lang: zh-CN
+permalink: /zh-cn/win8/samples/NodeJS.htm
+lang: zh-cn
 ---
+
+<div style="background-color:Silver; color:black; padding:20px;">
+	<h4><u>对 Intel Galileo 第 1 代和第 2 代的 Windows 的支持将于 2015 年 11 月 30 日结束</u></h4>
+	<p><h5>由于我们将继续侧重于为制造商提供 Windows 10 IoT 核心版的出色体验，因此我们做出了一项艰难的决定，即停止对 Galileo 平台提供 Windows 支持。我们看到了平台上一些很出色的创新，但遗憾的是，它并不能满足 Windows 10 IoT 核心版的最低硬件要求。请单击<a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">此处</a>了解详细信息。</h5></p>
+</div>
 
 #Node.js 示例
 了解如何在 galileo 上运行 node.js，以及如何从 javscript 文件调用 API。
@@ -17,7 +22,7 @@ lang: zh-CN
     * 通过使用你电脑上的文件资源管理器，打开 `\\mygalileo\c$`，然后右键单击并创建一个名为 `node` 的新文件夹
 1. 从 [nodejs.org v0.10.9](http://nodejs.org/dist/v0.10.9/){:target="_blank"} 下载 32 位 Windows 二进制文件 \(.exe\) 并将其放入新建的 `node` 目录内。
 1. 从 [nodejs.org](http://nodejs.org/dist/npm/){:target="_blank"} 下载 npm 的最新压缩版本，并将内容提取到新的 `node` 目录中。
-1. 使用[转发器项目](https://github.com/ms-iot/forwarders)生成 User32.dll。
+1. 使用[转发器项目](https://github.com/ms-iot/forwarders){:target="_blank"}生成 User32.dll。
 1. 将 User32.dll 从转发器项目发布目录复制到 `node` 目录中。
 1. 通过使用 Telnet，将此 `node` 文件夹添加到 Galileo 映像的路径，然后使用以下命令重新启动：
 

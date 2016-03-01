@@ -1,17 +1,19 @@
 ---
 layout: default
 title: NodejsWUBlinky
-permalink: /zh-CN/win10/samples/NodejsWUBlinky.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/NodejsWUBlinky.htm
+lang: zh-cn
 ---
 
 ##Blinky Node.js 服务器示例（Windows 通用）
 
+{% include VerifiedVersion.md %}
 
 ###设置电脑
-* 安装 Windows 10。
-* 安装 Visual Studio 2015。
-* 从[此处](https://github.com/ms-iot/ntvsiot/releases)安装适用于 Windows IoT 的最新 Node.js 工具。
+* 安装[含有 11 月更新](http://windows.microsoft.com/zh-cn/windows-10/windows-update-faq)的 Windows 10。
+* 安装 Visual Studio 2015 Update 1。
+* 从[此处](http://aka.ms/ntvsiotlatest)安装适用于 Windows IoT 的最新 Node.js 工具。
+
 
 ###设置你的硬件
 此示例的设置与 C\#“Blinky”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)相同。

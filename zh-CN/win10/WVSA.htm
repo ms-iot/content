@@ -1,0 +1,109 @@
+﻿---
+layout: default
+title: 设置 WVSA
+permalink: /zh-cn/win10/WVSA.htm
+lang: zh-cn
+
+deviceName: WVSA
+---
+<div class="row">
+  <div class="col-xs-24">
+    <ol class="breadcrumb">
+      <li><a href="https://dev.windows.com/zh-cn/iot">IoT 主页</a></li>
+      <li><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">入门</a></li>
+      <li class="active">Windows Virtual Shields for Arduino</li>
+    </ol>
+    <header class="page-title-header">
+      <h1 class="page-title"> 设置 Windows Virtual Shields for Arduino</h1>
+      <div class="page-subtitle">为适用于 IoT 的 Windows 开发人员计划准备好计算机、设置 Raspberry Pi 2，然后生成你的第一个 Windows IoT 核心版应用。</div>
+    </header>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-24">
+    <h2>1.准备好电脑以使用 Virtual Shields for Arduino 开发 IoT 应用程序。<span class="pull-right"><a id="pc-content-toggle" class="toggle-button" onClick="hideDiv('pc-content')">隐藏</a></span></h2>
+    <hr />
+    <div id="pc-content" class="toggle-section">
+      <p>在教程的这一部分中，你将通过使用 Virtual Shields for Arduino 应用程序（该程序允许你使用所选设备作为 Arduino 开发板的虚拟防火墙）加载准备好你选择的 Windows 10 设备。 这将为制造商带来一些强大的功能，从而使他们能够相对轻松地使用语音识别、触摸屏幕以及 Windows 设备的其他资源。</p>
+
+      <h3>硬件</h3>
+      <p>Virtual Shields for Arduino 应用程序可以在任何 Windows 10 设备上运行，但本特定示例将使用 Windows Phone。</p>
+      <h4>所需内容</h4>
+      <p>运行 Windows 10 的 Windows Phone - 我们建议使用 <a href="http://www.microsoft.com/zh-cn/mobile/phone/lumia520/" target="_blank">Lumia 520</a> 或 <a href="http://www.microsoft.com/zh-cn/mobile/phone/lumia635/" target="_blank">Lumia 635</a>。</p>
+      <h4>设置 Windows Phone</h4>
+      <p>如果你的手机尚未运行 Windows 10，可以选择安装该软件的预览版。 Windows Phone 8 用户可以转到 Microsoft 官方商城应用下载“Windows 预览体验成员”应用程序 - 此应用允许用户选择以更新方式接收 Windows 10 Technical Preview。 打开该应用后，按照提示和说明进行操作，直到你的手机成功运行 Windows 10 为止。</p>
+
+      <h3>软件</h3>
+      <p>在 Windows Phone 上安装 Virtual Shields for Arduino 的选项有两个。</p>
+      <ol class="inline-list">
+        <li><a href="#">从 Microsoft 官方商城下载该应用</a>。</li>
+        <li><a href="#">使用电脑和 Visual Studio 旁加载该应用</a>。</li>
+      </ol>
+      <p>比较方便快捷的方法是下载该应用。</p>
+
+      <h3>选项 1： 从 Microsoft 官方商城下载该应用</h3>
+      <p>按照此<a href="https://www.microsoft.com/store/apps/9nblgggz0mld" target="_blank">链接</a>进入该应用的 Microsoft 官方商城页面、下载该文件，随后进行安装。然后，打开应用程序以确保它可以正常运行。</p>
+      <p>你的设备现已设置为用作 Arduino 的虚拟防火墙！  你可以继续到下一个页面。</p>
+
+      <h3>选项 2： 使用电脑和 Visual Studio 旁加载该应用</h3>
+      <h4>所需内容</h4>
+      <ol class="inline-list">
+        <li>Visual Studio 2015，用于将 Virtual Shields for Arduino 应用旁加载到开发人员解锁的手机上。</li>
+        <li>此<a href="https://github.com/ms-iot/virtual-shields-universal" target="_blank">存储库</a>，包含 Virtual Shields for Arduino 应用程序的代码。 克隆此存储库或将其作为 ZIP 下载到本地磁盘上。 如果你不熟悉 Git 并想要进行正确的克隆，请按照<a href="https://help.github.com/articles/cloning-a-repository/" target="_blank">此处</a>的说明进行操作。</li>
+      </ol>
+      <h4>设置 Visual Studio 2015</h4>
+      <ol class="inline-list">
+        <li>使用 <a href="https://dev.windows.com/zh-cn/windows-10-developer-preview-tools" target="_blank">dev.windows.com</a> 中的 Windows 10 开发者预览版工具安装 Visual Studio 2015。 我们建议使用 Visual Studio 社区版，但也可以使用企业版和专业版。 如果已安装 Visual Studio，请跳到下一步。</li>
+        <li>在 Visual Studio 中，从上面的“所需内容”部分中下载的存储库中加载 Shield.sln。</li>
+        <li>确保你的手机已经过开发人员解锁（<a href="https://msdn.microsoft.com/zh-cn/library/windows/apps/dn614128.aspx" target="_blank">此页面</a>介绍如何解锁 Windows Phone 8.1、8 和 7.1；但是，对于 Windows 10 手机，步骤完全相同）。</li>
+        <li>将 Shield.sln 程序部署到设备。 若要执行此操作，请先部署到本地计算机，并确保将设备的体系结构设置为“ARM”。</li>
+        <li>在手机上运行 Virtual Shields for Arduino 应用程序以确保部署已成功。 你的 Windows 10 设备现已设置为用作虚拟防火墙！</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-24">
+    <h2>2.将 Arduino 设置为与 Virtual Shields for Arduino 一起运行 <span class="pull-right"><a id="setup-content-toggle" class="toggle-button" onClick="hideDiv('setup-content')">显示</a></span></h2>
+    <hr />
+    <div id="setup-content" class="toggle-section hidden">
+      {% include_relative SetupWVSA.htm %}
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-24">
+    <h2>3.编写你的第一个应用： 你好，Blinky！   <span class="pull-right"><a id="app-content-toggle" class="toggle-button" onClick="hideDiv('app-content')">显示</a></span>  </h2>
+    <hr />
+    <div id="app-content" class="toggle-section hidden setup-content-list">
+      {% include_relative samples/BlinkyWVSA.md %}
+    </div>
+  </div>
+</div>
+
+
+<script>
+  function hideDiv(div) {
+    var div = "#" + div,
+        button = div + "-toggle",
+        currentState = $(button)[0].innerHTML;
+
+    for(var i = 0; i < 3 ; i ++){
+        $(".toggle-button")[i].innerHTML = "Show";
+      }
+
+    if(currentState === "Hide") {
+      $(div).toggle('slow');
+    }
+    else
+    {
+      $(".hidden").removeClass("hidden");
+      $(".toggle-section").hide();
+      $(div).toggle('slow');
+      $(button)[0].innerHTML = "Hide";
+    }
+  }
+</script>

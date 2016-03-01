@@ -1,8 +1,8 @@
 ---
 layout: default
 title: AppX 创建与部署
-permalink: /zh-CN/win10/samples/Appx.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/Appx.htm
+lang: zh-cn
 ---
 
 #创建 Appx 并将其部署到 Windows IoT Core
@@ -38,7 +38,7 @@ lang: zh-CN
   <AppDesignerFolder>Properties</AppDesignerFolder>
   <RootNamespace>MyApp</RootNamespace>
   <AssemblyName>MyApp</AssemblyName>
-  <DefaultLanguage>zh-CN</DefaultLanguage>
+  <DefaultLanguage>zh-cn</DefaultLanguage>
   <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
   <TargetPlatformVersion>10.0.9910.0</TargetPlatformVersion>
   <TargetPlatformMinVersion>10.0.9910.0</TargetPlatformMinVersion>

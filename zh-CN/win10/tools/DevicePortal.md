@@ -1,34 +1,35 @@
 ---
 layout: default
-title: 基于 Web 的设备管理
-permalink: /zh-CN/win10/tools/DevicePortal.htm
-lang: zh-CN
+title: Windows Device Portal
+permalink: /zh-cn/win10/tools/DevicePortal.htm
+lang: zh-cn
 ---
 
 <div class="container" markdown="1">
 
-##基于 Web 的设备管理
-   除了高级诊断工具外，基于 Web 的设备管理还提供基本的配置和设备管理功能，从而帮助你排除 Windows IoT 设备的故障并查看其实时性能。
+##Windows Device Portal
+   除了高级诊断工具外，Windows Device Portal 还提供基本的配置和设备管理功能，从而帮助你排除 Windows IoT 设备的故障并查看其实时性能。
    
-   连接到本地网络之后，每个 Windows 10 IoT 核心版设备都将允许你访问这些工具。![Web 主页]({{site.baseurl}}/Resources/images/deviceportal/deviceportal.png)
+   连接到本地网络之后，每台 Windows 10 IoT 核心版设备都将允许你访问这些工具。![Device Portal 主页]({{site.baseurl}}/Resources/images/deviceportal/deviceportal.png)
 
 <hr>
 
 
 ##设置
-1. **将你的开发板连接到 Internet**
+1. **将开发板连接到 Internet**
 
-   若要使基于 Web 的设备管理正常工作，首先需要将设备连接到网络。为此，请将以太网电缆从你的开发板连接到本地网络中。
+   若要使 Windows Device Portal 正常工作，首先需要将设备连接到网络。为此，请将开发板的以太网电缆连接到本地网络。
 
 2. **查找你的设备 IP 地址**
     * 如果你的设备已连接到监视器，IP 地址将在首页上列出。如果未看到 IP 地址，则开发板未正确连接到网络。![DefaultApp IP]({{site.baseurl}}/Resources/images/deviceportal/defaultapp_ip.png)
-	* 如果你已[设置电脑]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm)，应当已在电脑上安装了 **Windows IoT Core Watcher**。启动 Windows IoT 核心版观察程序，并找到你的计算机名。计算机名旁边列出的是开发板的 IP 地址。如果找不到你的计算机，则表明你的电脑或开发板未正确连接到网络。![IotWatcher IP]({{site.baseurl}}/Resources/images/IoTCoreWatcher.PNG)
+	* 如果你已[设置电脑]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm)，应当已在电脑上安装了 **Windows IoT Core Watcher**。启动 Windows IoT 核心版观察程序，并找到你的计算机名。计算机名旁边列出的是开发板的 IP 地址。如果找不到计算机，则表明你的电脑或开发板未正确连接到网络。![IotWatcher IP]({{site.baseurl}}/Resources/images/IoTCoreWatcher.PNG)
 
-3. **通过浏览器连接到基于 Web 的设备管理**
-    * 将 IP 地址输入地址栏。将 :8080 添加到末尾。![浏览器 IP]({{site.baseurl}}/Resources/images/deviceportal/browser_ip.png)
-    * 基于 Web 的设备管理应启动并显示 Web 管理主屏幕！
+3. **通过浏览器连接到 Windows Device Portal**
+    * 将 IP 地址输入到地址栏中。将 :8080 添加到末尾。![浏览器 IP]({{site.baseurl}}/Resources/images/deviceportal/browser_ip.png)
+    * 在凭据对话框中，使用默认的用户名和密码。用户名： `Administrator` 密码：`p@ssw0rd`
+    * Windows Device Portal 应启动并显示 Web 管理主屏幕！
 
- 还可以通过右键单击设备，然后单击“在浏览器中启动”，从 Windows IoT Core Watcher 启动基于 Web 的设备管理工具
+ 还可以通过右键单击设备并单击浏览器中的“启动”，从 Windows IoT Core Watcher 启动 Windows Device Portal 工具
 
 <hr>
 
@@ -43,14 +44,12 @@ lang: zh-CN
 
 ###**顶部工具栏**
     
-顶部工具栏使你能够关机、重新启动和提供反馈。![Web 工具栏]({{site.baseurl}}/Resources/images/deviceportal/toolbar.png)
+可通过顶部工具栏关机、重新启动和提供反馈。![Windows Device Portal 工具栏]({{site.baseurl}}/Resources/images/deviceportal/toolbar.png)
 
 * 关机 - 关闭设备。
 * 重新启动 - 重新启动设备。
 * 反馈 - 打开 Windows 10 反馈工具，你可以在其中输入任何有价值的反馈。
 * 帮助 - 将你带到此文档页。
-
-   ```Note: For Rpi2 users, the Shutdown button is not working correctly, and reboots the device. A fix is coming soon```
 
 ###**主页**
 
@@ -65,7 +64,7 @@ lang: zh-CN
 **安装应用**
 
 1.	创建你的第一个应用后，可以远程将其安装到设备上。在从 Visual Studio 进行生成后，将生成一个输出文件夹。<img class = "screen-snippet" src="{{site.baseurl}}/Resources/images/deviceportal/installapp0.png">	
-2.	在 Web 中，单击“浏览”并查找你的 .appx。
+2.	在 Windows Device Portal 中，单击“浏览”并查找 .appx。
 3.	单击“证书浏览”，查找 .cer 文件。 
 4.	添加依赖项。如果你有多个项，你将必须逐个添加。 	
 5.	点击“安装”。 
@@ -138,10 +137,18 @@ Windows 事件跟踪
 ##其他信息
 
 ###更改默认端口
-1. 启动 powershell 并[连接到设备。]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)
-2. 设置端口：```Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\IoT\webmanagement /v HttpPort /t REG_DWORD /d <your port number>```
-3. 如果要设置 https端口 ```Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\IoT\webmanagement /v UseHttps /t REG_DWORD /d 1 /f```、```Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\IoT\webmanagement /v HttpsPort /t REG_DWORD /d <your port number> /f```
-3. 通过重新启动服务 \(```net stop webmanagement & net start webmanagement```\) 或重新启动设备来重新启动 webb.exe 进程。
+1. 启动 PowerShell 并[连接到设备。]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)
+2. 设置端口：
+
+    `Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\IoT\webmanagement /v HttpPort /t REG_DWORD /d <your port number>`
+	
+3. 如果要设置 https 端口
+
+	`Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\IoT\webmanagement /v UseHttps /t REG_DWORD /d 1 /f`
+	
+	`Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\IoT\webmanagement /v HttpsPort /t REG_DWORD /d <your port number> /f`
+	
+3. 通过重新启动服务 \(```net stop webmanagement & net start webmanagement```\) 或重新启动设备来重新启动该进程。
 
 
 

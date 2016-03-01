@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 使用 SSH 连接到 Windows IoT 核心版设备。
-permalink: /zh-CN/win10/samples/SSH.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/SSH.htm
+lang: zh-cn
 ---
 
 ##使用 SSH 连接并配置运行 Windows IoT 核心版的设备

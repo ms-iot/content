@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 电位计示例
-permalink: /zh-CN/win10/samples/tempSensor.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/tempSensor.htm
+lang: zh-cn
 ---
 
 ## 温度/力传感器示例
@@ -76,9 +76,11 @@ lang: zh-CN
 
 你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\TempSensor`，查找此示例的源代码。
 
-让我们来看看代码。我们在示例中使用计时器，每次调用“滴答”事件时，会通过 ADC 读取传感器数据，并且该值将显示在屏幕上。
+让我们来看看代码。我们在示例中使用计时器，每次调用“刻度”事件时，会通过 ADC 读取传感器数据，并且该值将显示在屏幕上。
 
-* 采用 C\# 的计时器代码设置计时器：
+* 计时器代码
+
+使用 C\# 设置计时器：
 
 {% highlight C# %}
 public MainPage()
@@ -178,7 +180,7 @@ public int convertToInt(byte[] data)
 {% endhighlight %}
 
 ## 部署示例
-选择 `Debug` 和 `ARM` 配置、选择 `Remote Machine`、右键单击该项目、在“属性”下单击“调试标记”、将 Raspberry Pi 2 IP 放入“远程计算机”字段中，然后取消单击 `Use authentication`
+选择 `Debug` 和 `ARM` 配置、选择 `Remote Machine`、右键单击该项目、在“属性”下单击“调试”标记、将 Raspberry Pi 2 IP 放入“远程计算机”字段中，然后选择 `Universal` 身份验证。
 
 按 `F5`
 

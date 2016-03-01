@@ -1,15 +1,17 @@
 ---
 layout: default
 title: 数字签名 UWP 示例
-permalink: /zh-CN/win10/samples/DigitalSignage.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/DigitalSignage.htm
+lang: zh-cn
 ---
 
 #数字签名应用
 
+{% include VerifiedVersion.md %}
+
 此示例展示了一个可在 Windows IoT 核心版上运行的数字签名 UWP。下面我们将演示该应用如何从联机存储的 XML 文件中以各种多媒体形式（如视频、音频、图像、幻灯片放映）接收内容，以及将此内容显示给用户。该示例中的数字签名是交互式的，并且允许 Web 浏览和支持触摸输入。
 
-这是一个有外设示例。若要更好地理解什么是有外设模式以及如何将你的设备配置为有外设，请按照[此处]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm)的说明操作。
+这是一个有外设示例。若要更好地了解什么是有外设模式以及如何将你的设备配置为有外设，请按照[此处]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm)的说明操作。
 
 ###先决条件
 
@@ -21,7 +23,7 @@ lang: zh-CN
 
 ##在 Visual Studio 中加载项目
 
-你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\DigitalSignageUAP`，查找此示例的源代码。在磁盘上创建 DigitalSignageUAP 文件夹的副本，然后从 Visual Studio 中打开项目。
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\DigitalSignageUAP` 来查找此示例的源代码。在磁盘上创建 DigitalSignageUAP 文件夹的副本，然后从 Visual Studio 中打开项目。
 
 确保将“远程调试”设置设为指向 Windows IoT 设备。如需指导，请返回基本“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)。
 
@@ -58,8 +60,6 @@ lang: zh-CN
 3. 使用物理键盘或屏幕键盘，在地址栏中键入“www.microsoft.com”。
 
  当使用屏幕键盘时，你可以用鼠标来单击字符，或点击以键入（如果你的监视器支持触摸）。
- 
- <img src="{{site.baseurl}}/Resources/images/DigitalSignage/DigitalSign_keyboard1.png" height="400">
  
  <img src="{{site.baseurl}}/Resources/images/DigitalSignage/DigitalSign_keyboard2.png" height="400">
  
@@ -199,5 +199,5 @@ XML 文件用于指定要在幻灯片放映期间查看的网页、图像和视�
 
  2. 通过使用物理键盘或触摸屏，你可以指定新的配置文件以从指定位置读取。
 
-<img src="{{site.baseurl}}/Resources/images/DigitalSignage/DigitalSign_settings2.png" height="400">
+<img src="{{site.baseurl}}/Resources/images/DigitalSignage/DigitalSign_settings1.png" height="400">
 

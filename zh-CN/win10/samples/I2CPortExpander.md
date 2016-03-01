@@ -1,33 +1,35 @@
 ---
 layout: default
 title: I2C 端口扩展器示例
-permalink: /zh-CN/win10/samples/I2CPortExpander.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/I2CPortExpander.htm
+lang: zh-cn
 ---
 
 ##I2C 端口扩展器示例
+
+{% include VerifiedVersion.md %}
 
 ![I2C 端口扩展器图像]({{site.baseurl}}/Resources/images/I2CPortExpander/PortExpanderProjectPicture_480.png)
 
 在本示例中，我们会将一个 I2C 端口扩展器连接到你的 Raspberry Pi 2，并创建一个简单的应用，以便将该端口扩展器用于读取触摸开关的状态并控制 LED。无需具备 I2C 或端口扩展器的相关背景知识。如果你希望了解有关 I2C 的详细信息，Sparkfun 提供了一个出色的[与 I2C 相关的教程](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}。
 
-这是一个有外设示例，所以请确保你的设备处于有外设模式下，方法为运行以下命令：`setbootoption.exe headed`（更改有外设/无外设状态将需要重新启动）。
+这是一个有外设示例，所以请确保你的设备处于有外设模式下，方法为运行以下命令：`setbootoption.exe headed`（更改有外设/无外设状态需要重新启动）。
 
 ###将 I2C 端口扩展器连接到你的设备
 
-你将需要以下组件，这些组件包含在基本工具包中：
+你将需要以下组件：
 
-* 1 个 Raspberry Pi 2
+* 一个 Raspberry Pi 2
 
-* PDIP 程序包中的<a name="I2C_PortExpander"></a> 1 个 [MCP23008 8 位 I/O 端口扩展器](http://www.digikey.com/product-detail/en/MCP23008-E%2FP/MCP23008-E%2FP-ND/735951){:target="_blank"}
+* PDIP 程序包中的<a name="I2C_PortExpander"></a>一个 [MCP23008 8 位 I/O 端口扩展器](http://www.digikey.com/product-detail/en/MCP23008-E%2FP/MCP23008-E%2FP-ND/735951){:target="_blank"}
 
-* 1 个[红色 LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832){:target="_blank"}
+* 一个[红色 LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832){:target="_blank"}
 
-* 一个[触摸开关](http://www.digikey.com/product-detail/en/320.02E11.08BLK/EG1311-ND/101397){:target="_blank"}
+* 1 个[触摸开关](http://www.digikey.com/product-detail/en/320.02E11.08BLK/EG1311-ND/101397){:target="_blank"}
 
-* 一个 [330 &\#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
+* 1 个 [330 &#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
 
-* 一个 [10k &\#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-10K/10KQBK-ND/338){:target="_blank"}
+* 1 个 [10k &#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-10K/10KQBK-ND/338){:target="_blank"}
 
 * 一台 HDMI 监视器
 
@@ -89,7 +91,7 @@ MCP23008 的引脚输出如下所示，并且可以在[数据表](http://ww1.mic
 
 * 引脚 10 **GP0**： 连接到 LED 的阴极（较短的阴极引线）
 
-* 引脚 11 **GP1**： 连接到 10k &\#x2126; 电阻器中的一条引线和触摸开关的一个引脚
+* 引脚 11 **GP1**： 连接到 10k &#x2126; 电阻器中的一条引线和触摸开关的一个引脚
 
 * 引脚 18 **VDD**： 连接到试验板一侧的电源轨道
 
@@ -100,16 +102,16 @@ MCP23008 的引脚输出如下所示，并且可以在[数据表](http://ww1.mic
 
 * 如果尚未连接，则将 LED 阴极（较短的阴极引线）连接到 MCP23008 端口扩展器的引脚 10
 
-* 将 LED 阳极（较长的阳极引线）连接到 330 &\#x2126; 电阻器中的一条引线
+* 将 LED 阳极（较长的阳极引线）连接到 330 &#x2126; 电阻器中的一条引线
 
-* 将 330 &\#x2126; 电阻器的另一端连接到试验板一侧的电源轨道（红色条带）
+* 将 330 &#x2126; 电阻器的另一端连接到试验板一侧的电源轨道（红色条带）
 
 
 ####连接触摸开关
 
-* 如果尚未连接，则将 10k &\#x2126; 电阻器中的一条引线连接到 MCP23008 端口扩展器的引脚 11
+* 如果尚未连接，则将 10k &#x2126; 电阻器中的一条引线连接到 MCP23008 端口扩展器的引脚 11
 
-* 将 10k &\#x2126; 电阻器的另一端连接到试验板一侧的电源轨道（红色条带）
+* 将 10k &#x2126; 电阻器的另一端连接到试验板一侧的电源轨道（红色条带）
 
 * 如果尚未连接，则将触摸开关中的一个引脚连接到 MCP23008 端口扩展器的引脚 11
 
@@ -266,7 +268,6 @@ private async void InitializeSystem()
     try
     {
         var i2cSettings = new I2cConnectionSettings(PORT_EXPANDER_I2C_ADDRESS);
-        i2cSettings.BusSpeed = I2cBusSpeed.FastMode;
         string deviceSelector = I2cDevice.GetDeviceSelector(I2C_CONTROLLER_NAME);
         var i2cDeviceControllers = await DeviceInformation.FindAllAsync(deviceSelector);
         i2cPortExpander = await I2cDevice.FromIdAsync(i2cDeviceControllers[0].Id, i2cSettings);

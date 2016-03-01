@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 工具
-permalink: /zh-CN/win10/Tools.htm
-lang: zh-CN
+permalink: /zh-cn/win10/Tools.htm
+lang: zh-cn
 ---
 
 #适用于 Windows 10 IoT 核心版的电源工具

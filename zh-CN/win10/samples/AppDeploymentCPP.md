@@ -11,6 +11,6 @@
 4. 在“配置属性”-\>“调试”下，修改以下字段：
 
 	* **计算机名**： 如果以前使用过 [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) 设置设备的唯一名称，可在此处输入该名称（在此示例中，我们使用的是 **my-device**）。否则，使用 Windows IoT 核心版设备的 IP 地址。
-	* **要求身份验证**： 设置为**否**
+	* **身份验证模式**： 设置为“通用\(未加密协议\)”
 
     ![项目属性调试选项卡]({{site.baseurl}}/Resources/images/AppDeployment/cpp-debug-project-properties.PNG)

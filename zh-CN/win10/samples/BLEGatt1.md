@@ -1,14 +1,14 @@
 ---
 layout: default
 title: BLE GATT 示例 - 配对和工具
-permalink: /zh-CN/win10/samples/BLEGatt1.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/BLEGatt1.htm
+lang: zh-cn
 ---
 
 ## 将 BLE 设备和 GATT 属性表转储工具配对
 
 ### 配对 Sensortag
-在启动示例之前，我们需要首先将 SensorTag 与 Windows IoT 核心版设备配对。可采用两种方法配对设备：通过 [Device Portal]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm){:target="_blank"} 或命令行工具：`C:\Windows\System32\IoTBluetoothPairing.exe`。当前只有命令行工具支持与 PIN 身份验证配对，而这也是 SensorTag 的要求。请确保已将 USB 蓝牙硬件保护装置插入到 Windows IoT 核心版设备，并且已使 SensorTag 准备就绪。
+在启动示例之前，我们需要首先将 SensorTag 与 Windows IoT 核心版设备配对。可采用两种方法配对设备：通过 [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm){:target="_blank"} 或命令行工具：`C:\Windows\System32\IoTBluetoothPairing.exe`。当前只有命令行工具支持与 PIN 身份验证配对，而这也是 SensorTag 的要求。请确保已将 USB 蓝牙硬件保护装置插入到 Windows IoT 核心版设备，并且已使 SensorTag 准备就绪。
 
 #### 步骤 1
 使用 SSH 连接到 Windows IoT 核心版设备。可在[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm){:target="_blank"}找到有关如何执行此操作的说明。
@@ -45,9 +45,9 @@ lang: zh-CN
 ![配对工具 5]({{site.baseurl}}/Resources/images/BLEGatt/pairing5.png)
 
 ### GATT 属性表转储工具
-为使用 GATT 与 BLE 设备通信，将需要了解所需 GATT 服务和特征的 UUID。幸运的是，TI [在此处](http://processors.wiki.ti.com/Resources/images/a/a8/BLE_SensorTag_GATT_Server.pdf){:target="_blank"}为我们提供了 SensorTag 的 GATT 属性表。
+为使用 GATT 与 BLE 设备通信，将需要了解所需 GATT 服务和特征的 UUID。幸运的是，TI [在此处](http://processors.wiki.ti.com/images/a/a8/BLE_SensorTag_GATT_Server.pdf){:target="_blank"}为我们提供了 SensorTag 的 GATT 属性表。
 
-如果未提供所用设备的 GATT 属性表，可使用蓝牙 GATT 数据库查看器 \(BthGATTDump.exe\) 生成 Microsoft Windows 可理解的 GATT 属性表。该工具是 Windows 驱动程序工具包 \(WDK\) 的一部分，可在 \[此处\]\(https://msdn.microsoft.com/zh-CN/library/windows/hardware/ff557573(v=vs.85).aspx){:target="_blank"} 找到。安装工具后，包含指示的 README.txt 位于 `C:\Program Files (x86)\Windows Kits\10\Tools\<ARCH>\Bluetooth\BthGATTDump\` 处，其中 <ARCH> 是安装了该工具的系统的体系结构。
+如果未提供所用设备的 GATT 属性表，可使用蓝牙 GATT 数据库查看器 \(BthGATTDump.exe\) 生成 Microsoft Windows 可理解的 GATT 属性表。该工具是 Windows 驱动程序工具包 \(WDK\) 的一部分，可在 \[此处\]\(https://msdn.microsoft.com/zh-cn/library/windows/hardware/ff557573(v=vs.85).aspx){:target="_blank"} 找到。安装工具后，包含指示的 README.txt 位于 `C:\Program Files (x86)\Windows Kits\10\Tools\<ARCH>\Bluetooth\BthGATTDump\` 处，其中 <ARCH> 是安装了该工具的系统的体系结构。
 
 请记住，它是命令行工具，并且[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/BLEGattDump.htm){:target="_blank"}是 SensorTag 的示例 GATT 属性表转储文件。
 

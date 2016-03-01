@@ -1,8 +1,8 @@
 ---
 layout: default
 title: BLE GATT 示例 - 代码
-permalink: /zh-CN/win10/samples/BLEGatt2.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/BLEGatt2.htm
+lang: zh-cn
 ---
 
 ## 使用和分解代码
@@ -44,7 +44,7 @@ using Windows.Storage.Streams;
 using System.Threading.Tasks;
 {% endhighlight %}
 
-此外，你必须在应用清单 \(`Package.appxmanifest`\) 的声明中提供有关设备功能的信息。这使应用可以与设备相关联。在[此处](https://msdn.microsoft.com/zh-CN/library/windows/apps/xaml/dn263090.aspx){:target="_blank"}了解有关蓝牙设备功能的详细信息。
+此外，你必须在应用清单 \(`Package.appxmanifest`\) 的声明中提供有关设备功能的信息。这使应用可以与设备相关联。在[此处](https://msdn.microsoft.com/zh-cn/library/windows/apps/xaml/dn263090.aspx){:target="_blank"}了解有关蓝牙设备功能的详细信息。
 
 {% highlight XML %}
 <Capabilities>
@@ -275,7 +275,7 @@ async void accelChanged(GattCharacteristic sender, GattValueChangedEventArgs eve
 {% endhighlight %}
 
 ### 就这么简单！
-你所需了解的有关如何与 BLE GATT 设备交互的全部信息均在本指南中。有关如何使用蓝牙 API 的更多示例，请参阅[支持蓝牙设备 \(XAML\)](https://msdn.microsoft.com/zh-CN/library/windows/apps/xaml/dn264587.aspx){:target="_blank"}。
+你所需了解的有关如何与 BLE GATT 设备交互的全部信息均在本指南中。有关如何使用蓝牙 API 的更多示例，请参阅[支持蓝牙设备 \(XAML\)](https://msdn.microsoft.com/zh-cn/library/windows/apps/xaml/dn264587.aspx){:target="_blank"}。
 
 #### 以前的页面
 [示例概述]({{site.baseurl}}/{{page.lang}}/win10/samples/BLEGatt.htm) - 了解 BLE、GATT 和 TI CC2541 SensorTag。

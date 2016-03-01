@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 使用 Windows 文件共享
-permalink: /zh-CN/win10/samples/SMB.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/SMB.htm
+lang: zh-cn
 ---
 
 ##使用 Windows 文件共享在你的设备中传输文件
@@ -12,7 +12,7 @@ lang: zh-CN
 
     ![Windows IoT 核心版上的 DefaultApp]({{site.baseurl}}/Resources/images/DefaultApp.png)
     
-* 有了 IP 后，在计算机上打开“文件资源管理器”并键入 `\\<TARGET_DEVICE>\c$`，其中 `<TARGET_DEVICE>` 是 Windows IoT 核心版设备的名称或 IP 地址，然后点击 Enter。如果出现提示，请输入你的管理员用户名和密码。
+* 有了 IP 后，在计算机上打开“文件资源管理器”并键入 `\\<TARGET_DEVICE>\c$`，其中 `<TARGET_DEVICE>` 是 Windows IoT 核心版设备的名称或 IP 地址，然后点击 Enter。如果出现提示，请输入你的管理员用户名和密码。用户名应使用 Windows IoT 核心版设备的 IP 地址作为前缀。示例: “192.168.1.118\\管理员”。
 
     ![文件资源管理器]({{site.baseurl}}/Resources/images/smb/smb_file_explorer.png)
 

@@ -1,15 +1,17 @@
 ---
 layout: default
 title: GpioTestTool
-permalink: /zh-CN/win10/samples/GpioTestTool.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/GpioTestTool.htm
+lang: zh-cn
 ---
 
 ## GpioTestTool 示例
 
+{% include VerifiedVersion.md %}
+
 [在 Github 上查看代码](https://github.com/ms-iot/samples/blob/develop/GpioTestTool/main.cpp)
 
-GpioTestTool 是一个简单的实用工具，它允许你在命令行上写入和读取 GPIO 引脚。GpioTestTool 采用标准 C++ 进行编写，并在 [Windows 运行时库 \(WRL\)](https://msdn.microsoft.com/zh-CN/library/hh438466.aspx) 的帮助下使用 ABI 级的 Windows.Devices.Gpio WinRT API。这些技术可用于使用本机应用程序中的大多数 WinRT API。
+GpioTestTool 是一个简单的实用工具，它允许你在命令行上写入和读取 GPIO 引脚。GpioTestTool 采用标准 C++ 进行编写，并在 [Windows 运行时库 \(WRL\)](https://msdn.microsoft.com/zh-cn/library/hh438466.aspx) 的帮助下使用 ABI 级的 Windows.Devices.Gpio WinRT API。这些技术可用于使用本机应用程序中的大多数 WinRT API。
 
 ### 用法
 
@@ -54,7 +56,7 @@ GpioTestTool 是一个简单的实用工具，它允许你在命令行上写入�
 1. 将[示例](https://github.com/ms-iot/samples)存储库克隆到本地计算机。 
 1. 在 Visual Studio 中打开 `GpioTestTool\GpioTestTool.sln`。
 1. 选择目标体系结构。
-   - 为 Raspberry Pi 选择 `ARM`
+   - 为 Raspberry Pi 或 DragonBoard 410c 选择 `ARM`
    - 为 MinnowBoardMax 选择 `x86`
 1. 转到 `Build -> Build Solution`
 1. 将 GpioTestTool.exe 从生成输出文件夹复制到你的设备。
@@ -68,7 +70,7 @@ GpioTestTool 是一个简单的实用工具，它允许你在命令行上写入�
     {
         ComPtr<IGpioPin> pin;
 
-第一步是激活 IGpioControllerStatics 的实例，这是用于实现 GpioController 运行时类的静态函数的接口。可以使用名为 [GetActivationFactory\(\)](https://msdn.microsoft.com/zh-CN/library/br244854.aspx) 的 Windows 函数获取运行时类的静态函数：
+第一步是激活 IGpioControllerStatics 的实例，这是用于实现 GpioController 运行时类的静态函数的接口。可以使用名为 [GetActivationFactory\(\)](https://msdn.microsoft.com/zh-cn/library/br244854.aspx) 的 Windows 函数获取运行时类的静态函数：
 
          // get the activation factory
         ComPtr<IGpioControllerStatics> controllerStatics;

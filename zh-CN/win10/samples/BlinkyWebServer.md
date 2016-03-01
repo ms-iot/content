@@ -1,18 +1,20 @@
 ---
 layout: default
 title: Blinky WebServer 示例
-permalink: /zh-CN/win10/samples/BlinkyWebServer.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/BlinkyWebServer.htm
+lang: zh-cn
 ---
 
 ##Blinky Webserver
+
+{% include VerifiedVersion.md %}
 
 我们将要创建一个受其他应用的 WebServer 控制的简单 Blinky 应用，并将 LED 连接到你的 Windows IoT 核心版设备。请注意，GPIO API 仅在 Windows IoT 核心版上可用，因此该示例无法在你的桌面上运行。
 
 
 ###在 Visual Studio 中加载项目
 
-你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\App2App WebServer`，查找此示例的源代码。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\App2App WebServer` 来查找此示例的源代码。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
 确保将 LED 连接到开发板。如需指导，请返回基本“Blinky”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)。
 

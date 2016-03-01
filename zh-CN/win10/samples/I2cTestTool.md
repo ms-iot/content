@@ -1,11 +1,13 @@
 ---
 layout: default
 title: I2cTestTool
-permalink: /zh-CN/win10/samples/I2cTestTool.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/I2cTestTool.htm
+lang: zh-cn
 ---
 
 ## I2cTestTool 示例
+
+{% include VerifiedVersion.md %}
 
 [在 Github 上查看代码](https://github.com/ms-iot/samples/blob/develop/I2cTestTool/main.cpp)
 
@@ -13,16 +15,28 @@ I2cTestTool 是一种用于与命令行上的 I2C 设备交互的实用工具。
 
 ### 用法
 
-    i2ctesttool.exe SlaveAddress [FriendlyName]
-    
+    I2cTestTool: Command line I2C testing utility
+    Usage: I2cTestTool.exe [-list] SlaveAddress [FriendlyName]
+
+      -list          List available I2C controllers and exit.
       SlaveAddress   The slave address of the device with which you
                      wish to communicate. This is a required parameter.
       FriendlyName   The friendly name of the I2C controller over
                      which you wish to communicate. This parameter is
                      optional and defaults to the first enumerated
-                     I2C controller. 
+                     I2C controller.
+
+    Examples:
+      List available I2C controllers and exit:
+        I2cTestTool.exe -list
+
+      Open connection on the first enumerated controller to slave address 0x57:
+        I2cTestTool.exe 0x57
+
+      Open connection on I2C1 to slave address 0x57:
+        I2cTestTool.exe 0x57 I2C1
          
-     Commands:
+    Commands:
      > write { 00 11 22 .. FF }         Write bytes to the device
      > read N                           Read N bytes
      > writeread { 00 11 .. FF } N      Write bytes, restart, read N bytes
@@ -55,13 +69,13 @@ I2cTestTool 是一种用于与命令行上的 I2C 设备交互的实用工具。
    - 为 MinnowBoardMax 选择 `x86`
 1. 转到 `Build -> Build Solution`
 1. 将 `I2cTestTool.exe` 从生成输出文件夹复制到你的设备。
-1. （当然，需使用必需的命令行参数）通过 SSH 复制到你的设备并运行 `I2cTestTool.exe`
+1. （当然，使用必需的命令行参数）通过 SSH 复制到你的设备并运行 `I2cTestTool.exe`
 
 ### 创建一个空白的 C++/CX 控制台应用程序 
 
 我们将逐步介绍创建可使用 C++/CX 形式的 WinRT 组件的控制台应用程序的过程。
 
-1. 转至 `File -> New Project`，然后选择 `Visual C++ -> Windows -> Windows IoT Core -> Blank Windows IoT Core Console Application` 模板。
+1. 转到 `File -> New Project`，然后选择 `Visual C++ -> Windows -> Windows IoT Core -> Blank Windows IoT Core Console Application` 模板。
    
    ![项目模板]({{site.baseurl}}/Resources/images/I2cTestTool/NewBlankConsoleApp.png)
    
@@ -84,8 +98,8 @@ I2cTestTool 是一种用于与命令行上的 I2C 设备交互的实用工具。
    }
    {% endhighlight %}
     
-1. 在“解决方案资源管理器”中右键单击你的项目，然后转至 `Properties`。在“配置”下拉列表中选择 `All Configurations`，在“平台”下拉列表中选择 `All Platforms`。
-1. 转到 `C/C++ -> General`，然后将 `Consume Windows Runtime Extensions` 设置为 `Yes`，而将 `Additional #using Directories` 设置为 `$(VCInstallDir)vcpackages;$(WindowsSdkDir)UnionMetadata;%(AdditionalUsingDirectories)`
+1. 在“解决方案资源管理器”中右键单击你的项目，然后转到 `Properties`。在“配置”下拉列表中选择 `All Configurations`，在“平台”下拉列表中选择 `All Platforms`。
+1. 转到 `C/C++ -> General`，然后将 `Consume Windows Runtime Extensions` 设置为 `Yes`，将 `Additional #using Directories` 设置为 `$(VCInstallDir)vcpackages;$(WindowsSdkDir)UnionMetadata;%(AdditionalUsingDirectories)`
 
    ![使用 Windows 运行时扩展]({{site.baseurl}}/Resources/images/I2cTestTool/ConsumeWinRT.png)
     

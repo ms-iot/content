@@ -1,17 +1,19 @@
 ---
 layout: default
 title: 控制台应用示例
-permalink: /zh-CN/win10/samples/ConsoleApp.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/ConsoleApp.htm
+lang: zh-cn
 ---
 
 ##MemoryStatus 控制台应用程序示例
 
-我们将要创建一个可用于在你的 Windows IoT Core 设备（Raspberry Pi 2 或 MinnowBoard Max）上查询内存使用情况的简单的控制台应用程序。请注意，你需要针对 Raspberry Pi 2 和 MinnowBoard Max \(x86\) 的 ARM 编译项目。
+{% include VerifiedVersion.md %}
+
+我们将要创建一个可用于在 Windows IoT 核心版设备（Raspberry Pi 2、MinnowBoard Max 或 DragonBoard）上查询内存使用情况的简单控制台应用程序。请注意，你需要针对 Raspberry Pi 2 或 DragonBoard 的 ARM 和 MinnowBoard Max 的 x86 编译项目。
 
 ###在 Visual Studio 中加载项目
 
-你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\MemoryStatus`，查找此示例的源代码。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\MemoryStatus` 来查找此示例的源代码。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
 ###在 Visual Studio 中创建你自己的项目
 
@@ -73,15 +75,38 @@ void printMessageLine(LPCSTR msg, DWORDLONG value)
     cout << right << value << endl;
 }
 
+void checkInput(HANDLE exitEvent)
+{
+    for (;;)
+    {
+        char character;
+        cin.get(character);
+        if (character == 'q')
+        {
+            ::SetEvent(exitEvent);
+            break;
+        }
+    }
+}
+
 int main(int argc, char **argv)
 {
-    printMessageLine("Starting to monitor memory consumption!");
+    printMessageLine("Starting to monitor memory consumption! Press enter to start monitoring");
+    printMessageLine("You can press q and enter at anytime to exit");
+    cin.get();
+    HANDLE exitEvent = ::CreateEvent(NULL, FALSE, FALSE, NULL);
+    if (NULL == exitEvent)
+    {
+        printMessageLine("Failed to create exitEvent.");
+        return -1;
+    }
+    std::thread inputThread(checkInput, exitEvent);
     for (;;)
     {
         MEMORYSTATUSEX statex;
         statex.dwLength = sizeof(statex);
 
-        BOOL success = GlobalMemoryStatusEx(&statex);
+        BOOL success = ::GlobalMemoryStatusEx(&statex);
         if (!success)
         {
             DWORD error = GetLastError();
@@ -115,8 +140,14 @@ int main(int argc, char **argv)
 
         }
 
-        this_thread::sleep_for(chrono::milliseconds(100));
+        if (WAIT_OBJECT_0 == ::WaitForSingleObject(exitEvent, 100))
+        {
+            break;
+        }
     }
+
+    inputThread.join();
+    ::CloseHandle(exitEvent);
     printMessageLine("No longer monitoring memory consumption!");
 }
 {% endhighlight %}
@@ -124,11 +155,21 @@ int main(int argc, char **argv)
 
 * 确保通过调用“生成”\|“生成解决方案”菜单命令正确生成应用。
 
-* 此应用程序既能在有外设模式下运行，也能在无外设模式下运行。若要更好地理解什么是有外设和无外设模式以及如何配置你的设备，请按照 \[此处\] \({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm\) 的说明操作。
+* 此应用程序既能在有外设模式下运行，也能在无外设模式下运行。若要更好地了解什么是有外设模式和无外设模式以及如何配置设备，请按照[此处]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm)的说明操作。
 
-* 可轻松将此控制台应用程序部署到 Windows IoT 核心版设备。在 [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) 文档中，你可以找到关于使用 `setcomputername` 为你的 Windows IoT Core 设备配置唯一名称的说明。在本示例中，我们将在 VS 的“远程计算机调试”设置中使用该名称（尽管你也可以使用自己的 IP 地址）。
+* 可轻松将此控制台应用程序部署到 Windows IoT 核心版设备。在 [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) 文档中，你可以找到关于使用 `setcomputername` 为你的 Windows IoT Core 设备配置唯一名称的说明。在本示例中，我们将在 VS 的“远程计算机调试”设置中使用该名称（不过你也可以使用自己的 IP 地址）。
 
-    在 Visual Studio 中，你可以通过编辑你的项目的属性配置你的目标项目（请确保所有突出显示的更改均适用于板名称或 IP 地址）：
+* 首先，需要在 Windows IoT 核心版设备上设置远程调试器。首先按照[此处]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm)的步骤在设备上部署通用 Windows 应用程序。这会将所有必需的二进制文件复制到你的设备。
+
+* 若要在设备上启动远程调试器，请打开电脑上的 Web 浏览器并将其指向 `http://<device name/IP address>:8080` 以启动 [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm)。在凭据对话框中，使用默认的用户名和密码：`Administrator`，`p@ssw0rd`。Windows 设备管理应启动并显示 Web 管理主屏幕。
+
+* 现在导航到 Windows Device Portal 的“调试”部分，并单击“启动 Visual Studio 远程调试器”下的“开始”按钮。
+
+    ![WindowsDevicePortalDebugSettings 目标]({{site.baseurl}}/Resources/images/Console/device_portal_start_debugger.png)
+
+* 这将弹出一个消息框并提供连接信息。
+
+*  在 Visual Studio 中，你可以通过编辑项目的属性配置你的目标（请确保所有突出显示的更改均适用于开发板的名称或 IP 地址）：
 
     ![RemoteMachineProjectSettings 目标]({{site.baseurl}}/Resources/images/Console/console_project_settings.png)
 
@@ -150,6 +191,13 @@ int main(int argc, char **argv)
 
 * 恭喜你！ 你已将第一个控制台应用程序部署到运行 Windows IoT Core 的设备！
 
-* 现在，你可以运行该应用程序，就像运行其他任何应用程序那样。只需打开 PowerShell 连接（可在[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)获取相关说明），并输入上面指定的远程命令。
+* 现在，你可以运行该应用程序，就像运行其他任何应用程序一样。只需打开 PowerShell/SSH 连接（可在[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)和[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm)分别获取有关 PowerShell 和 SSH 的说明），并输入上面指定的远程命令。
 
     ![ConsoleOutput 目标]({{site.baseurl}}/Resources/images/Console/console_output.png)
+
+* 完成调试控制台应用程序后，请记得终止 Windows IoT 核心版设备上的远程调试器。使用 PowerShell/SSH 打开控制台会话并运行以下命令
+
+    `kill msvsmon.exe`
+
+
+
