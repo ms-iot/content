@@ -23,7 +23,7 @@ lang: en-US
     <tr>
 	  <th style="width:20%"></th>
       <th style="width:20%">
-	          <img src="{{site.baseurl}}/images/devices/RPi3_0.png">
+	          <img src="{{site.baseurl}}/Resources/images/devices/RPi3_0.png">
         <h4>Raspberry Pi 3</h4>
         <p>The Raspberry Pi 3 is a low cost, credit-card sized computer that plugs into a computer monitor or TV, and uses an optional standard keyboard and mouse.  The Raspberry Pi 3 runs Windows 10 IoT Core.</p>
 	  </th>
