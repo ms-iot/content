@@ -1,8 +1,8 @@
 ---
 layout: default
 title: AllJoynCodeGen
-permalink: /zh-CN/win10/AllJoynCodeGen.htm
-lang: zh-CN
+permalink: /zh-cn/win10/AllJoynCodeGen.htm
+lang: zh-cn
 ---
 
 ##AllJoyn CodeGen 工具
@@ -18,13 +18,13 @@ lang: zh-CN
 基本流程如下所示：
 
 1. 以 AllJoyn XML 编写（当前为 DBus 内省格式）、描述服务的 XML 文件会被送入代码生成器工具中。
-2. AllJoynCodeGen 工具将生成结果为 Windows 运行时组件的代码。此生成的代码依赖于 Windows 10 SDK 中的 **MSAJAPI.lib** 和 [Windows.Devices.AllJoyn](https://msdn.microsoft.com/zh-CN/library/windows/apps/xaml/windows.devices.alljoyn.aspx)。
+2. AllJoynCodeGen 工具将生成结果为 Windows 运行时组件的代码。此生成的代码依赖于 Windows 10 SDK 中的 **MSAJAPI.lib** 和 [Windows.Devices.AllJoyn](https://msdn.microsoft.com/zh-cn/library/windows/apps/xaml/windows.devices.alljoyn.aspx)。
 3. 开发人员可生成使用此组件的应用程序。
 4. 运行时，开发人员的应用程序将加载该工具生成的 Windows 运行时组件（例如：foo.dll）以及内置 DLL **MSAJAPI.dll** 和 **Windows.Devices.AllJoyn.dll**。
 
 以下工作流图表说明了这一过程：
 
-![AllJoyn CodeGen 图]({{site.baseurl}}/images/AllJoyn/alljoyncodegen.png)
+![AllJoyn CodeGen 图]({{site.baseurl}}/Resources/images/AllJoyn/alljoyncodegen.png)
 
 ###从命令行运行
 
@@ -60,7 +60,4 @@ AllJoynCodeGen 工具当前作为随 Windows 10 SDK 提供的命令行工具的�
 
 生成的代码需要包含在与 XML 共享相同接口名称的组件中。例如，如果将某个 toaster 的 XML 定义为 com.microsoft.sample.toaster，我们将创建运行时组件 com.microsoft.sample。
 
-或者，可随意命名组件（例如，fooCodeGenComponent），但必须手动将“项目”属性下的根命名空间更新为与接口名称相同的名称。（请注意：可在 pch.h 文件中找到根命名空间，该文件由 AllJoynCodeGen 工具生成）。
-
-
- 
+或者，可以随意命名组件（例如，fooCodeGenComponent），但必须手动将“项目”属性下的根命名空间更新为与接口名称相同的名称。（请注意：可在 pch.h 文件中找到根命名空间，该文件由 AllJoynCodeGen 工具生成）。

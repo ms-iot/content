@@ -1,0 +1,59 @@
+﻿<h3>硬件</h3>
+<h4>所需内容</h4>
+<p>此应用程序使用 USB、蓝牙或 WLAN 在 Arduino 和 Windows 10 虚拟防火墙之间建立连接。 本特别教程将介绍如何使用蓝牙连接来完成设置，不过也可以随意尝试使用其他选项。</p>
+<ol class="inline-list">
+  <li>Arduino Uno 或兼容设备。</li>
+  <li>连接电线。</li>
+  <li>一台电脑 - 用于上载 Arduino 草图。</li>
+  <li>标准 A 到标准 B USB - 用于将草图上载到 Arduino 设备。</li>
+  <li>蓝牙模块（可选）- 仅当你选择通过蓝牙连接时才需要。 我们建议使用 <a href="https://www.sparkfun.com/products/12576" target="_blank">SparkFun Bluetooth Mate Silver</a>。</li>
+  <li>WLAN 模块（可选）- 仅当你选择通过 WLAN 连接时才需要。 我们建议使用此 <a href="https://www.arduino.cc/en/Main/ArduinoWiFiShield" target="_blank">Arduino WLAN Shield</a>。</li>
+</ol>
+<h4>设置 Arduino</h4>
+<ol class="inline-list">
+  <li>如有必要，请准备好蓝牙模块（蓝牙模块可能需要在其上附加标题）。</li>
+  <li>
+    <p>除了下面提到的一项区别外，请按照<a href="https://learn.sparkfun.com/tutorials/using-the-bluesmirf/hardware-hookup" target="_blank">接线图</a>将蓝牙模块连接到 Arduino。</p>
+    <ul>
+      <li>
+        <p>区别： 使用引脚 0 和 1，而非引脚 2 和 3：</p>
+        <p>蓝牙 TX 应连接到引脚 0（Arduino RX 或 RX0）。</p>
+        <p>蓝牙 RX 应连接到引脚 1（Arduino TX 或 TX0）。</p>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h3>软件</h3>
+<h4>所需内容</h4>
+<ol class="inline-list">
+  <li>Arduino IDE 1.6 或更高版本。</li>
+  <li>ArduinoJson 库。</li>
+  <li>此<a href="https://github.com/ms-iot/virtual-shields-arduino" target="_blank">存储库</a>，包含将在 Arduino 上运行的示例草图。</li>
+</ol>
+<h4>设置 Arduino IDE</h4>
+<ol class="inline-list">
+  <li>下载并安装 Arduino IDE <a href="http://www.arduino.cc/en/Main/Software" target="_blank">Arduino IDE</a>。 启动该程序。</li>
+  <li>请验证你在“工具”>“开发板”<b></b>下选择了正确的 Arduino 开发板。</li>
+  <li>请验证你在“工具”>“端口”<b></b>下选择了正确的 COM 端口。 每个选项的旁边都应该显示开发板的名称，以便可以更轻松地选择正确的选项。</li>
+</ol>
+<h4>设置 ArduinoJson 库</h4>
+<ol class="inline-list">
+  <li>从 <a href="https://github.com/bblanchon/ArduinoJson" target="_blank">ArduinoJson 存储库</a>中，克隆存储库或下载 zip。</li>
+  <li>将整个存储库放入库文件夹（即 Documents\Arduino\libraries\ArduinoJson\）中。</li>
+</ol>
+<h4>设置此存储库</h4>
+<ol class="inline-list">
+  <li>克隆此<a href="https://github.com/ms-iot/virtual-shields-arduino" target="_blank">存储库</a>或下载 ZIP。 如果你不熟悉 Git 并想要进行正确的克隆，请按照<a href="https://help.github.com/articles/cloning-a-repository/" target="_blank">此处</a>的说明进行操作。</li>
+  <li>将“VirtualShield”文件夹（位于你刚下载的存储库的“Arduino\Libraries”文件夹中）复制到 Arduino 库文件夹（即 Documents\Arduino\libraries\VirtualShield\）。</li>
+</ol>
+<h4>测试设置</h4>
+<ol class="inline-list">
+  <li>从 Arduino IDE 中，转到菜单项“文件”->“示例”->“虚拟防火墙”->“HelloWorld-语音-事件”。此操作应该会加载我们在本教程中使用的基于语音-识别的 Hello World 示例。</li>
+  <li>在将草图上载到 Arduino 之前，临时将蓝牙 TX 和 RX 线从 Arduino 中删除（在 USB 和蓝牙之间仅共享一个串行端口 - 蓝牙会干扰上载）。</li>
+  <li>通过按下 IDE 中的“上载”按钮来上载草图。</li>
+  <li>将蓝牙 TX 和 RX 线替换为 Arduino 引脚（蓝牙 TX 对应 Arduino RX（或 RX0），蓝牙 RX 对应 Arduino TX 或 (TX0)）。</li>
+  <li>在你在上一页中准备的手机（或其他 Windows 设备）上，在蓝牙设置中，配对到 Arduino 上的蓝牙设备。如果你使用的是 BlueSMiRF，默认引脚代码为 1234。注意： 配对成功后，BlueSMiRF 上的红色闪烁灯会继续闪烁红色。这是预期情况。仅在与应用程序连接后，才会变为绿色。</li>
+</ol>
+
+

@@ -1,15 +1,17 @@
 ---
 layout: default
-title: Python for IoT 示例
-permalink: /zh-CN/win10/samples/Python.htm
-lang: zh-CN
+title: Python“Hello, World”示例
+permalink: /zh-cn/win10/samples/Python.htm
+lang: zh-cn
 ---
 
-##Python 应用
+##Python“Hello, World”示例
+
+{% include VerifiedVersion.md %}
 
 ###设置电脑
 
-* 按照[此处]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm)的说明安装 Visual Studio 2015。
+* 按照[此处]({{site.baseurl}}/{{page.lang}}/GetStarted.htm)的说明设置你的设备和电脑。
 
 * 为 Windows \(3.\*\) 安装 Python，网址为 [http://www.python.org/downloads](http://www.python.org/downloads){:target="_blank"}
 
@@ -37,7 +39,9 @@ print("Hello, World from IoT!")
 
 * Python 应用将在设备上部署并启动。
 
-	**注意： 启动 Python 的调试程序后，可能需要几分钟的时间来连接和开始调试远程 Python。如果所需的时间超过几分钟，可能是远程设备上的 msvsmon 出现了问题。有关任何潜在的修复/解决方法，请查看常见问题解答。**
+	**注意： 启动 Python 的调试程序后，可能需要几分钟的时间来连接和开始调试远程 Python。如果所需的时间超过几分钟，可能是远程设备上的 msvsmon 出现了问题。有关任何潜在的修复程序/解决方法，请查看常见问题。**
+
+* Visual Studio 的输出窗口中将会显示“*来自 IoT 的 Hello, World！*”消息。通过 `Debug > Window > Output` 打开输出窗口。
 
 ###从 Python 使用 Windows 设备（例如 GPIO、I2C、SPI）
 

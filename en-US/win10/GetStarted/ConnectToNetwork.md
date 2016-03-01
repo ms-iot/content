@@ -16,8 +16,8 @@
     </ol>
   </div>
   <div class="col-md-6 col-sm-12">
-    <img src="{{site.baseurl}}/images/get-started/dashboard-2.png" />
+    <img src="{{site.baseurl}}/Resources/images/get-started/dashboard-2.png" />
     <br>
-    <img src="{{site.baseurl}}/images/get-started/dashboard-3.png" />
+    <img src="{{site.baseurl}}/Resources/images/get-started/dashboard-3.png" />
   </div>
 </div>

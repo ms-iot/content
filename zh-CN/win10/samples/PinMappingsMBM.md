@@ -1,12 +1,12 @@
 ---
 layout: default
 title: MinnowBoard Max 引脚映射
-permalink: /zh-CN/win10/samples/PinMappingsMBM.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/PinMappingsMBM.htm
+lang: zh-cn
 ---
 ##MinnowBoard Max 引脚映射
 
-![MinnowBoard Max 排针]({{site.baseurl}}/images/PinMappings/MBM_Pinout.png)
+![MinnowBoard Max 排针]({{site.baseurl}}/Resources/images/PinMappings/MBM_Pinout.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
@@ -20,7 +20,7 @@ MinnowBoard Max 的硬件接口通过开发板上的 26 排针 **JP1** 公开。
 * **1x** - 3.3V 电源引脚
 * **2x** - 接地引脚
 
-请注意，MinnowBoard Max 在所有 IO 引脚上使用 3.3V 逻辑级别。此外所有引脚由 [TXS0104E](http://www.ti.com/product/txs0104e){:target="_blank"} 电平转换器缓冲，电源和接地引脚除外。这些电平转换器显示为开放收集器输出，并带有 **10K&\#x2126; 电阻式上拉，无论 IO 设置为输入还是输出该上拉都存在。** 电平转换器的开放收集器性质意味着引脚可以强输出“０”，但只能弱输出“１”。在连接从引脚（例如 LED）消耗电流的设备时记住这一点很重要。有关将 LED 接入到 MinnowBoard Max 的正确方法，请参阅 [Blinky 示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)。
+请注意，MinnowBoard Max 在所有 IO 引脚上使用 3.3V 逻辑级别。此外所有引脚由 [TXS0104E](http://www.ti.com/product/txs0104e){:target="_blank"} 电平转换器缓冲，电源和接地引脚除外。这些电平转换器显示为开放收集器输出，并带有 **10K&#x2126; 电阻式上拉，无论 IO 设置为输入还是输出该上拉都存在。** 电平转换器的开放收集器性质意味着引脚可以强输出“０”，但只能弱输出“１”。在连接从引脚（例如 LED）消耗电流的设备时记住这一点很重要。有关将 LED 接入到 MinnowBoard Max 的正确方法，请参阅 [Blinky 示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)。
 
 ##<a name="MBM_GPIO">GPIO 引脚
 
@@ -39,8 +39,10 @@ MinnowBoard Max 的硬件接口通过开发板上的 26 排针 **JP1** 公开。
 | 7 | 22 |
 | 8 | 24 |
 | 9 | 26 |
+
+**注意：** MinnowBoard Max 将 **GPIO 4** 和 **GPIO 5** 用作 BIOS 的引导配置引脚。确保连接的设备不会在启动时将 GPIO 电平降低，因为这会阻止 MBM 启动。在 MBM 晚于 BIOS 启动后，这些 GPIO 可正常使用。
          
-例如，以下代码将 **GPIO 5** 作为输出打开，并在该引脚上写出数字“**1**”：
+例如，以下代码将 **GPIO 5** 作为输出打开，并在该引脚上写入数字“**1**”：
          
 {% highlight C# %}
 using Windows.Devices.Gpio;
@@ -59,7 +61,7 @@ public void GPIO()
 
 MBM 上提供两个串行 UART： **UART1** 和 **UART2**
 
-**UART1** 具有标准 **UART1 TX** 和 **UART1 RX** 行，以及流控制信号 **UART1 CTS** 和 **UART1 RTS**。
+**UART1** 具有标准 **UART1 TX** 和 **UART1 RX** 线，以及流控制信号 **UART1 CTS** 和 **UART1 RTS**。
 
 * 引脚 6 - **UART1 TX**
 * 引脚 8- **UART1 RX**
@@ -68,7 +70,7 @@ MBM 上提供两个串行 UART： **UART1** 和 **UART2**
 
 从版本 10240 开始，UART1 不再工作。请使用 UART2 或 USB 串行转换器。
 
-**UART2** 仅包括 **UART2 TX** 和 **UART2 RX** 行。
+**UART2** 仅包括 **UART2 TX** 和 **UART2 RX** 线。
 
 * 引脚 17- **UART2 TX**
 * 引脚 19- **UART2 RX**
@@ -84,6 +86,7 @@ UART2 不支持流控制，因此访问 SerialDevice 的以下属性可能会导
 
 
 {% highlight C# %}
+using Windows.Storage.Streams;
 using Windows.Devices.Enumeration;
 using Windows.Devices.SerialCommunication;
 
@@ -134,7 +137,7 @@ public async void Serial()
 
 ##<a name="MBM_I2C"></a>I2C 总线
 
-有一个在排针上公开的 I2C 控制器 **I2C5**，以及两条线 **SDA** 和 **SCL**。10K&\#x2126; 内部上拉电阻已存在于这些线上。
+有一个在排针上公开的 I2C 控制器 **I2C5**，以及两条线 **SDA** 和 **SCL**。10K&#x2126; 内部上拉电阻已存在于这些线上。
 
 * 引脚 15 - **I2C5 SDA**
 * 引脚 13 - **I2C5 SCL**

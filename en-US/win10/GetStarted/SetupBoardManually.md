@@ -35,7 +35,7 @@
       <li value="3"><b>Find the downloaded .ISO and double click on it.</b></li>
     </div>
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/images/manual-setup/manual-step-1.png">
+      <img src="{{site.baseurl}}/Resources/images/manual-setup/manual-step-1.png">
       <br>
     </div>
    </div>
@@ -45,9 +45,9 @@
       <li value="4"><b>Double click the Windows Installer Package (.MSI) and follow the installation steps</b></li>
     </div>
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/images/manual-setup/manual-step-2.png">
+      <img src="{{site.baseurl}}/Resources/images/manual-setup/manual-step-2.png">
       <br>
-      <img src="{{site.baseurl}}/images/manual-setup/manual-step-3.png">
+      <img src="{{site.baseurl}}/Resources/images/manual-setup/manual-step-3.png">
       <br>
     </div>
    </div>
@@ -65,9 +65,9 @@
       <li value="6"><b>Click "Set up a new device".</b> Once there, select "Custom" from the "Device type" drop down. Click the "Browse" button to find your image (.ffu) </li>
     </div>
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/images/manual-setup/manual-step-5.png">
+      <img src="{{site.baseurl}}/Resources/images/manual-setup/manual-step-5.png">
       <br>
-      <img src="{{site.baseurl}}/images/manual-setup/manual-step-6.png">
+      <img src="{{site.baseurl}}/Resources/images/manual-setup/manual-step-6.png">
       <br>
     </div>
    </div>
@@ -77,7 +77,7 @@
       <li value="7"><b>Navigate to "C:\Program Files (x86)\Microsoft IoT\FFU\<i>DeviceType</i>" and select Flash.ffu. </b></li>  
     </div>
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/images/manual-setup/manual-step-7.png">
+      <img src="{{site.baseurl}}/Resources/images/manual-setup/manual-step-7.png">
       <br>
     </div>
    </div>
@@ -87,7 +87,7 @@
       <li value="8"><b>Click "Install". </b> Note that you must have a compliant SD card to successfully flash. We recommend a Class 10 SD card with a size of at least 8 GB or more. Once done flashing, you can remove the SD card and plug it into your device.</li>  
     </div>
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/images/manual-setup/manual-step-8.png">
+      <img src="{{site.baseurl}}/Resources/images/manual-setup/manual-step-8.png">
       <br>
     </div>
    </div>

@@ -28,7 +28,7 @@ lang: zh-CN
 
 	**注意：** 如果没有本地有线网络，请参阅[此处]({{site.baseurl}}/{{page.lang}}/win10/ConnectToDevice.htm)获取其他连接选项。
 
-![mbm]({{site.baseurl}}/images/mbm.bmp){:device-images}
+![mbm]({{site.baseurl}}/Resources/images/mbm.bmp){:device-images}
 
 ##更新设备固件
 
@@ -72,15 +72,15 @@ lang: zh-CN
 
 2. **将 ISO 保存**到本地文件夹
 
-	<img class="image-border" src="{{site.baseurl}}/images/mbm_iso.png">
+	<img class="image-border" src="{{site.baseurl}}/Resources/images/mbm_iso.png">
 
 3. 双击 ISO \(IoT Core MBM.iso\) 会自动将其作为虚拟 CD 驱动器进行装载，以便你可以访问内容。
 
-	<img class="image-border" src="{{site.baseurl}}/images/mbm_msi.PNG">
+	<img class="image-border" src="{{site.baseurl}}/Resources/images/mbm_msi.PNG">
 
 4. 安装 **Windows\_10\_IoT\_Core\_Mbm.msi**。安装完成后，flash.ffu 将位于 **C:\\Program Files \(x86\)\\Microsoft IoT\\FFU\\MinnowBoardMax**
 
-	<img class="image-border" src="{{site.baseurl}}/images/mbmffu.PNG">
+	<img class="image-border" src="{{site.baseurl}}/Resources/images/mbmffu.PNG">
 
 5. 完成后将弹出虚拟 CD
 
@@ -90,11 +90,11 @@ lang: zh-CN
 
 2. **使用 IoTCoreImageHelper.exe** 切换 SD 卡。从“开始”菜单搜索“WindowsIoT”，并选择快捷方式“WindowsIoTImageHelper”
 
-	<img src="{{site.baseurl}}/images/ImagerHelperSearch.PNG">。
+	<img src="{{site.baseurl}}/Resources/images/ImagerHelperSearch.PNG">。
 
 3. 该工具将按照显示方式枚举设备。选择希望切换的 SD 卡，然后提供 FFU 的位置并切换映像。
 
-	<img src="{{site.baseurl}}/images/mbm_imagehelper.PNG">
+	<img src="{{site.baseurl}}/Resources/images/mbm_imagehelper.PNG">
 
 4. 单击任务栏中的“安全删除硬件”图标，然后选择你的 USB SD 读卡器以将其从系统中安全删除。如果未正确执行此操作，可能导致映像损坏。
 
@@ -119,7 +119,7 @@ lang: zh-CN
 
 	<kbd>efi\\boot\\bootia32.efi</kbd>
 
-* 启动设备后，DefaultApp 将启动并显示 MBM 的 IP 地址。![mbm]({{site.baseurl}}/images/DefaultAppMBM.png){:device-images}
+* 启动设备后，DefaultApp 将启动并显示 MBM 的 IP 地址。![mbm]({{site.baseurl}}/Resources/images/DefaultAppMBM.png){:device-images}
 
 * 如果已在 MBM 上加载以前版本的 IoT 核心版，将需要完成以下步骤才能完成首次启动（请确保已插入用于 IoT 核心版的 SD 卡）：
   1. 打开 MBM 设备并按 F2。

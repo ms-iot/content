@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Adafruit Essential Maker Kit Contents
-permalink: /en-US/AdafruitKitContents.htm
+permalink: /en-US/win10/AdafruitKitContents.htm
 step: AdafruitKitContents.htm
 lang: en-US
 deviceName: RPI2

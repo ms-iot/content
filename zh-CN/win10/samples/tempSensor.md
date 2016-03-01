@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 电位计示例
-permalink: /zh-CN/win10/samples/tempSensor.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/tempSensor.htm
+lang: zh-cn
 ---
 
 ## 温度/力传感器示例
@@ -30,11 +30,11 @@ lang: zh-CN
 
 下面是本例中使用的 MCP3002 和 MCP3208 模拟到数字转换器 \(ADC\) 的引脚输出。
 
-![电子元件]({{site.baseurl}}/images/TempSensor/MCP3002.png) ![电子元件]({{site.baseurl}}/images/TempSensor/MCP3208.png)
+![电子元件]({{site.baseurl}}/Resources/images/TempSensor/MCP3002.png) ![电子元件]({{site.baseurl}}/Resources/images/TempSensor/MCP3208.png)
 
 * Raspberry Pi 2
 
-  <img src="{{site.baseurl}}/images/PinMappings/RP2_Pinout.png" height="400">
+  <img src="{{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png" height="400">
 
 ## 部件连接
 
@@ -44,7 +44,7 @@ lang: zh-CN
 
 连接详细信息如下：
 
-![整体电路图]({{site.baseurl}}/images/TempSensor/temp_mcp3002.png); ![整体电路图]({{site.baseurl}}/images/TempSensor/force_mcp3002.png);
+![整体电路图]({{site.baseurl}}/Resources/images/TempSensor/temp_mcp3002.png); ![整体电路图]({{site.baseurl}}/Resources/images/TempSensor/force_mcp3002.png);
 
 在每个型号的 Raspberry Pi 2 上，引脚布局可能稍有不同。但与 MCP3002 连接的引脚应如下所示：
 
@@ -60,7 +60,7 @@ lang: zh-CN
 
 连接详细信息如下：
 
-![整体电路图]({{site.baseurl}}/images/TempSensor/OverallCon_mcp3208.PNG)
+![整体电路图]({{site.baseurl}}/Resources/images/TempSensor/OverallCon_mcp3208.PNG)
 
 在每个型号的 Raspberry Pi 2 上，引脚布局可能稍有不同。但与 MCP3208 连接的引脚应如下所示：
 
@@ -76,9 +76,11 @@ lang: zh-CN
 
 你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\TempSensor`，查找此示例的源代码。
 
-让我们来看看代码。我们在示例中使用计时器，每次调用“滴答”事件时，会通过 ADC 读取传感器数据，并且该值将显示在屏幕上。
+让我们来看看代码。我们在示例中使用计时器，每次调用“刻度”事件时，会通过 ADC 读取传感器数据，并且该值将显示在屏幕上。
 
-* 采用 C\# 的计时器代码设置计时器：
+* 计时器代码
+
+使用 C\# 设置计时器：
 
 {% highlight C# %}
 public MainPage()
@@ -178,10 +180,10 @@ public int convertToInt(byte[] data)
 {% endhighlight %}
 
 ## 部署示例
-选择 `Debug` 和 `ARM` 配置、选择 `Remote Machine`、右键单击该项目、在“属性”下单击“调试标记”、将 Raspberry Pi 2 IP 放入“远程计算机”字段中，然后取消单击 `Use authentication`
+选择 `Debug` 和 `ARM` 配置、选择 `Remote Machine`、右键单击该项目、在“属性”下单击“调试”标记、将 Raspberry Pi 2 IP 放入“远程计算机”字段中，然后选择 `Universal` 身份验证。
 
 按 `F5`
 
 如果你使用的是温度传感器，你可以尝试握住传感器或对其施加一些热量，以查看输出会如何变化。如果你使用的是力传感器，你可以用力或轻轻地握住它，以查看输出在屏幕上如何变化。你还可以将传感器切换到光传感器来使用它。
 
-<img src="{{site.baseurl}}/images/TempSensor/Deploy.png" height="400">
+<img src="{{site.baseurl}}/Resources/images/TempSensor/Deploy.png" height="400">

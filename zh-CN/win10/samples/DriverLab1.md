@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 驱动程序实验 - 打开现有驱动程序的项目
-permalink: /zh-CN/win10/samples/DriverLab1.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/DriverLab1.htm
+lang: zh-cn
 ---
 
 #下载源代码并在 Visual Studio 2015 中打开项目

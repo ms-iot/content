@@ -30,13 +30,13 @@ We highly recommend you use the PCA9685 PWM controller. You can use either the h
 
 Additionally, the controller should not have any I2C hardware address pins set. Below is an image of the I2C pins on the PCA9685 PWM controller, where none of the pins are set (and therefore hardware I2C address is the default 0x40).
 
-![PCA9685 I2c]({{site.baseurl}}/images/arduino_wiring/pca9685_i2c.jpg)
+![PCA9685 I2c]({{site.baseurl}}/Resources/images/arduino_wiring/pca9685_i2c.jpg)
 
 Refer to the fritzing diagram below to hook up your motor and PWM controller.
 
 ### Fritzing Diagram
 
-![RPI Pinouts]({{site.baseurl}}/images/arduino_wiring/dcmotor.png)
+![RPI Pinouts]({{site.baseurl}}/Resources/images/arduino_wiring/dcmotor.png)
 
 ### Pinout Description
 

@@ -4,8 +4,8 @@ title: Home
 permalink: /en-US/Faqs.htm
 lang: en-US
 ---
-<div class="row col-md-12">
-    <div class="col-md-2 col-xs-12 faq-nav section-heading">
+<div class="row col-md-24">
+    <div class="col-md-6 col-xs-12 faq-nav section-heading">
         <h1>FAQs</h1>
         <a href="#rpi2"><h4>Setting up Raspberry Pi 2 or 3</h4></a>
 
@@ -24,7 +24,7 @@ lang: en-US
         <a href="#dragonboard"><h4>DragonBoard</h4></a>
     </div>
 
-    <div class="col-md-8 col-md-offset-4 col-xs-8 col-xs-offset-4 section-heading">
+    <div class="col-md-16 col-md-offset-2 col-xs-8 col-xs-offset-4 section-heading">
         <a name="rpi2"></a>
         <h2 class="faq-h2">Setting up Raspberry Pi</h2>
         <p class="bold"><em>Why does my screen appear cropped or stretched?</em></p>
@@ -58,7 +58,7 @@ lang: en-US
 	<li>Allow development of Windows Store apps without installing a developer license (will enable developer F5 mode installs like the dev license would on win8.1)</li>
 	</ul></ol></p>
         <p class="bold"><em>Are true console apps supported on Windows 10 IoT Core?</em></p>
-        <p>True “console” apps aren’t really going to be supported for the IoT core OS, headless or not. You can still deploy and run a standard win32 console app here, it just won’t be connected to any on-device console. When running headless you should just get that black screen. When running headed the only supported UI is via the UWP UI stacks (XAML, HTML, DirectX).</p>
+        <p>True "console" apps aren't really going to be supported for the IoT core OS, headless or not. You can still deploy and run a standard win32 console app here, it just won't be connected to any on-device console. When running headless you should just get that black screen. When running headed the only supported UI is via the UWP UI stacks (XAML, HTML, DirectX).</p>
         <br />
         <p class="bold"><em>Which languages can be used to create UWP apps that can run on Windows 10 IoT Core?</em></p>
         <p>You can develop your UWP apps in C#, C++, JavaScript, VB, Node.js, Python and Arduino Wiring.</p>
@@ -79,7 +79,7 @@ lang: en-US
         <a name="galileo"></a>
         <h2 class="faq-h2">Intel Galileo</h2>
         <p class="bold"><em>Will you continue to support the Windows Developer Program for IoT for Intel Galileo?</em></p>
-        <p>No. We continue to focus on providing a great experience for Makers with Windows 10 IoT Core. While we’ve seen some fantastic innovation with the platform, unfortunately it does not meet the minimum hardware requirements for Windows 10 IoT Core.</p>
+        <p>No. We continue to focus on providing a great experience for Makers with Windows 10 IoT Core. While we've seen some fantastic innovation with the platform, unfortunately it does not meet the minimum hardware requirements for Windows 10 IoT Core.</p>
         <br />
 		<p class="bold"><em>When will the support for Windows on Galileo end?</em></p>
         <p>The support for Windows on Galileo has ended on November 30, 2015.</p>
@@ -89,10 +89,10 @@ lang: en-US
         <br />
         <a name="errors"></a>
         <h2 class="faq-h2">Errors</h2>
-        <p class="bold"><em>When I try to build a project, I see this error: <br />“The package Microsoft.CSharp with version 4.0.0 could not be found in C:\Users\...\.nuget\packages. Run a NuGet package restore to download the package.” <br />How do I resolve this?</em></p>
+        <p class="bold"><em>When I try to build a project, I see this error: <br />"The package Microsoft.CSharp with version 4.0.0 could not be found in C:\Users\...\.nuget\packages. Run a NuGet package restore to download the package." <br />How do I resolve this?</em></p>
         <p>Be sure your project has a saved solution file (*.sln). The Nuget package manager requires a saved solution file to update the Nuget dependencies. You can ensure that a solution file exists by selecting File > Save All.</p>
         <br />
-        <p class="bold"><em>I’ve downloaded the RPi2.ffu image and tried to apply image from the administrator prompt using this command:<br />dism.exe /Apply-Image /ImageFile:Rpi2.ffu /ApplyDrive:\\.\PhysicalDrive1 /SkipPlatformCheck<br />I am getting the following error:<br />c:\Temp>dism.exe /Apply-Image /ImageFile:Rpi2.ffu /ApplyDrive:\\.\PhysicalDrive1  /SkipPlatformCheck<br /><br />
+        <p class="bold"><em>I've downloaded the RPi2.ffu image and tried to apply image from the administrator prompt using this command:<br />dism.exe /Apply-Image /ImageFile:Rpi2.ffu /ApplyDrive:\\.\PhysicalDrive1 /SkipPlatformCheck<br />I am getting the following error:<br />c:\Temp>dism.exe /Apply-Image /ImageFile:Rpi2.ffu /ApplyDrive:\\.\PhysicalDrive1  /SkipPlatformCheck<br /><br />
         Deployment Image Servicing and Management tool<br />
         Version: 6.3.9600.17031<br /><br />
         Error: 87<br /><br />
@@ -101,7 +101,7 @@ lang: en-US
         </em></p>
         <p>You need to use DISM on Windows 10 and not Windows 8.1.</p>
         <br />
-        <p class="bold"><em>I want to move files from a host computer onto the RP2 via the remote power shell session. I’ve tried making a shared folder on my host computer (allow access to “everyone”), but the RP2 remote session fails with what seems to be an access denied error when I try to copy from the host shared folder. Has anyone done this successfully or have a good suggestion for how to do this?</em></p>
+        <p class="bold"><em>I want to move files from a host computer onto the RP2 via the remote power shell session. I've tried making a shared folder on my host computer (allow access to "everyone"), but the RP2 remote session fails with what seems to be an access denied error when I try to copy from the host shared folder. Has anyone done this successfully or have a good suggestion for how to do this?</em></p>
         <p>If you're just trying to copy files across and not doing this as part of some PowerShell script you're authoring, you can do it without PowerShell. You can try accessing your RPi2 from your local PC with "\\<IP>\c$" and see if that works for your scenario. If you can't do that, you do have access issues.</p>
         <br />
         <br />

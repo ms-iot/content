@@ -1,24 +1,25 @@
 ---
 layout: default
 title: NodejsCylon
-permalink: /zh-CN/win10/samples/NodejsCylon.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/NodejsCylon.htm
+lang: zh-cn
 ---
 
 ##Cylon Node.js（控制台应用程序）示例
-在本示例中，将使用在 Raspberry Pi 2 上运行的 [Cylon](https://www.npmjs.com/package/cylon)，Arduino（装有 [Firmata](https://www.npmjs.com/package/firmata)）上的 LED 将每秒闪烁一次。
+
+{% include VerifiedVersion.md %}
+
+在本示例中，将使用在 Raspberry Pi 2 上运行的 [Cylon](https://www.npmjs.com/package/cylon)，使 Arduino（装有 [Firmata](https://www.npmjs.com/package/firmata)）上的 LED 每秒闪烁一次。
 
 ###所需的硬件
 * Raspberry Pi 2。
-* [Arduino 开发板](https://www.arduino.cc/en/main/products)（本示例中使用了 Leonardo）。
+* [Arduino 开发板](https://www.arduino.cc/en/main/products)（本示例中使用的是 Leonardo）。
 * USB 至微型 USB 电缆。
 
 ###设置电脑
-* 安装 Windows 10。
-* 安装 Visual Studio 2015。
-* 从[此处](https://github.com/ms-iot/ntvsiot/releases)安装适用于 Windows IoT 的最新 Node.js 工具。
 * 安装 [Python 2.7](https://www.python.org/downloads/){:target="_blank"}。
 * 从[此处](https://www.arduino.cc/en/Main/Software)安装 Arduino 软件。
+* 安装[适用于 Windows 的 Git](http://git-scm.com/download/win)。确保 Git 包含在“路径”环境变量中。
 
 
 ###将 Firmata 上载到你的 Arduino
@@ -31,17 +32,13 @@ lang: zh-CN
 
 
 ###将 Node.js 复制到 Raspberry Pi 2
-* 在电脑上打开资源管理器窗口并输入 **\\\\\<你的设备的 IP 地址\>\\C$** 以访问设备上的文件。凭据是：
-
-   用户名：\<IP 地址或设备名称，默认值为 minwinpc\>\\管理员密码：p@ssw0rd
-
-  注意： **强烈推荐**你更新管理员帐户的默认密码。请按照在[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)找到的说明进行操作。
-
-* 运行 `& 'C:\Program Files (x86)\Node.js (chakra)\CopyNodeChakra.ps1' -arch <ARM | x86 | x64 > -ip <Device IP Address>`。如果你有 Raspberry Pi 2，请使用 `ARM`。如果你有 MinnowBoard Max，请使用 `x86`。完成此步骤后，Node.js 将位于你的设备上的 `c:\Node.js (Chakra)` 中。**注意：** 如果你尚未通过资源管理器窗口输入凭据，你将收到“拒绝访问”错误。
+* 从[此处](http://aka.ms/nodecc_arm)将包含 ARM Node.js \(ChakraCore\) 的 zip 文件下载到你的电脑，并提取文件（node.exe 和 chakracore.dll）。
+* 使用 [Windows 文件共享]({{site.baseurl}}/{{page.lang}}/win10/samples/SMB.htm)、[PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) 或 [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) 在 Raspberry Pi 2 上创建 `C:\Node.js (ChakraCore)` 文件夹。
+* 在 Raspberry Pi 2 上将 node.exe 和 chakracore.dll 复制到 `C:\Node.js (ChakraCore)`。
 
 
-###创建 Cylon Node.js 文件
-创建名为 cylonsample.js 的新文件并在其中放入以下内容。
+###创建具有代码的文件来控制 Arduino LED
+在电脑上创建一个名为“CylonSample”的新文件夹。打开该文件夹，创建名为 cylonsample.js 的新文件并在其中放入以下内容。
 
 <UL>
 
@@ -64,49 +61,50 @@ Cylon.robot({
 {% endhighlight %}
 </UL>
 
-使用名为 C:\\CylonSample 的资源管理器窗口，在设备上为 Node 创建文件夹。然后，将 cylonsample.js 复制到此文件夹中。
+###获取 Cylon
+* 打开命令窗口。
+* 导航到 CylonSample 文件夹（在上一部分中创建）。
+* 运行 `npm install cylon cylon-firmata cylon-gpio cylon-i2c`
 
 
-###生成 Serialport
-生成 [serialport](https://www.npmjs.com/package/serialport)，它是你将复制到 Raspberry Pi 2 的 Cylon 依赖项。因为 serialport 是本机模块，所以我们无法在 Windows IoT 核心版上运行 `npm install` 来生成代码。我们将在电脑上生成，然后将程序包复制到设备。
+###获取 Serialport
+**注意：** 即使安装 Cylon 时安装了串行口，你仍需需要获取：
 
-* 克隆 [serialport](https://github.com/voodootikigod/node-serialport)。
-* 根据 [https://github.com/voodootikigod/node-serialport/pull/550](https://github.com/voodootikigod/node-serialport/pull/550) 中的更改来编辑 serialport\_win.cpp。**在 Pull 请求合并之前，此步骤是临时性的**。
-* 运行 `npm install nan`。
-* 运行 `"[Node.js (Chakra) installation path]\node_modules\npm\bin\node-gyp-bin\node-gyp.cmd" rebuild --module_name=serialport --module_path=. --target_arch=arm`。Node.js \(Chakra\) 的默认安装路径为“c:\\Program Files \(x86\)\\Node.js \(chakra\)”。
-* 如果上一步成功执行，你将在 \[serialport 克隆路径\]\\build\\Release 中看到 **serialport.node**
-* 将\[ serialport 克隆路径\]\\package.json 中的“module\_path”更改为“./build/release/”。
+* 与目标设备的处理器体系结构（在本例中为适用于 Raspberry Pi 2 的 ARM）相对应的版本。
+* 包括在 Windows 10 IoT 核心版中工作的串行口[更新](https://github.com/voodootikigod/node-serialport/pull/550)。
+
+获取串行口的步骤：
+
+* 复制[此处](http://aka.ms/spcc_zip)的文件并将其解压缩到你的电脑。
+* 将 \<解压缩的文件夹\>\\console\\arm\\serialport.node 复制到 \[CylonSample 文件夹路径\]\\node\_modules\\serialport\\build\\Release\\node-v47-win32-arm\\serialport.node **注意：**node-v47-win32-arm 是你将要创建的新文件夹。
 
 
-###安装 Cylon 并将 Serialport 复制到你的 Raspberry Pi 2
-* 使用 PowerShell 连接到设备。可在[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)找到具体的操作说明。
-* 转至 C:\\CylonSample。
-* 创建一个名为 node\_modules 的文件夹（你可以运行 `mkdir node_modules`）。
-* 转至 C:\\CylonSample\\node\_modules 并创建一个名为 serialport 的文件夹（你可以运行 `mkdir serialport`）。最终路径应为 C:\\CylonSample\\node\_modules\\serialport
-* 将你电脑上的 serialport 克隆中的文件夹和文件复制到设备上的 serialport 文件夹。
-* 返回到 C:\\CylonSample。
-* 运行 `& 'C:\Node.js (Chakra)\npm.cmd' install cylon cylon-firmata cylon-gpio cylon-i2c`。你可能会看到一些有关版本不匹配的警告，你可以忽略它们。确保在复制 serialport **后**运行此命令。
+###将示例复制到你的 Raspberry Pi 2
+在电脑上打开资源管理器窗口并输入 **\\\\\<设备的 IP 地址\>\\C$** 以访问设备上的文件。凭据（如果你之前没有进行更改）为：
 
+   用户名：\<IP 地址或设备名称，默认值为 minwinpc\>\\管理员密码：p@ssw0rd
+
+将电脑上的 CylonSample 文件夹复制到 Raspberry Pi 2 上的 C:\\CylonSample 中。
 
 
 ###在你的 Arduino 和 Raspberry Pi 2 之间设置连接
 使用 USB 电缆将你的 Arduino 与 Raspberry Pi 2 相连接执行此操作时，如果你的 Raspberry Pi 2 已连接到监视器，你应该能看到该设备已被识别，如下图中所示：
 
-![Arduino“开始”屏幕]({{site.baseurl}}/images/Nodejs/arduino-startscreen.jpg)
+![Arduino“开始”屏幕]({{site.baseurl}}/Resources/images/Nodejs/arduino-startscreen.jpg)
 
 还需要将端口名称（例如“COM5”）分配给 Arduino。按照以下步骤执行此操作：
 
 * 在已连接到 Raspberry Pi 2 的 PowerShell 中，运行 `devcon status usb*`。在执行此操作时，你看到的设备应该类似于下面的设备：
 
-   USB\\VID\_2341&PID\_8036\\5&3753427A&0&4 名称： USB 串行设备驱动程序正在运行。\* 运行 `reg add "HKLM\SYSTEM\ControlSet001\Enum\usb\VID_2341&PID_8036\5&3753427A&0&4\Device Parameters" /v "PortName" /t REG_SZ /d "COM5" /f`。\* 运行 `shutdown /r /t 0` 以重新启动设备。\* 设备重新启动时，重新连接 PowerShell，以便你可以运行示例代码！
+   USB\\VID\_2341&PID\_8036\\5&3753427A&0&4 名称： USB 串行设备驱动程序正在运行。\* 运行 `reg add "HKLM\SYSTEM\ControlSet001\Enum\usb\VID_2341&PID_8036\5&3753427A&0&4\Device Parameters" /v "PortName" /t REG_SZ /d "COM5" /f`。\* 运行 `shutdown /r /t 0` 以重新启动设备。\* 设备重新启动时，重新连接 PowerShell，便可运行示例代码。
 
 
 ###运行示例！
-在 PowerShell 中，运行命令 `& 'C:\Node.js (Chakra)\Node.exe' C:\CylonSample\cylonsample.js`。运行该命令后，Arduino 上的 LED（下图中以箭头形式显示）应开始每隔 1 秒闪烁一次。
+在 PowerShell 中，运行命令 `& 'C:\Node.js (ChakraCore)\Node.exe' C:\CylonSample\cylonsample.js`。运行该命令后，Arduino 上的 LED（下图中以箭头形式显示）应开始每隔 1 秒闪烁一次。
 
-![Arduino RPi2]({{site.baseurl}}/images/Nodejs/arduino-rpi2.jpg)
+![Arduino RPi2]({{site.baseurl}}/Resources/images/Nodejs/arduino-rpi2.jpg)
 
 
 ### GitHub
-* Node.js \(Chakra\) 源代码：[https://github.com/Microsoft/node](https://github.com/Microsoft/node)
+* Node.js \(ChakraCore\) 源代码：[https://github.com/Microsoft/node](https://github.com/Microsoft/node)
 * NTVS IoT 扩展源代码：[https://github.com/ms-iot/ntvsiot](https://github.com/ms-iot/ntvsiot)

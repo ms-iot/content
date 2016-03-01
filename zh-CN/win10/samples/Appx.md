@@ -1,8 +1,8 @@
 ---
 layout: default
 title: AppX 创建与部署
-permalink: /zh-CN/win10/samples/Appx.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/Appx.htm
+lang: zh-cn
 ---
 
 #创建 Appx 并将其部署到 Windows IoT Core
@@ -15,11 +15,11 @@ lang: zh-CN
 
 * 在 Visual Studio 中打开你的项目。然后，右键单击该项目并选择“卸载项目”。
 
-  ![“卸载项目”选项]({{site.baseurl}}/images/appx/unload_project_menu.png)
+  ![“卸载项目”选项]({{site.baseurl}}/Resources/images/appx/unload_project_menu.png)
 
 * 现在，请右键单击卸载的项目并选择“编辑 <Project>.csproj 文件”。
 
-  ![“编辑 Csproj”选项]({{site.baseurl}}/images/appx/edit_projectproj.png)
+  ![“编辑 Csproj”选项]({{site.baseurl}}/Resources/images/appx/edit_projectproj.png)
 
 * 这将在 Visual Studio 中打开 <Project>.csproj 文件。现在，请将以下项添加到 .csproj 文件的“globals”属性组
 
@@ -38,7 +38,7 @@ lang: zh-CN
   <AppDesignerFolder>Properties</AppDesignerFolder>
   <RootNamespace>MyApp</RootNamespace>
   <AssemblyName>MyApp</AssemblyName>
-  <DefaultLanguage>zh-CN</DefaultLanguage>
+  <DefaultLanguage>zh-cn</DefaultLanguage>
   <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
   <TargetPlatformVersion>10.0.9910.0</TargetPlatformVersion>
   <TargetPlatformMinVersion>10.0.9910.0</TargetPlatformMinVersion>

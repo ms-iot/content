@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 如何参与
-permalink: /zh-CN/Contribute.htm
-lang: zh-CN
+permalink: /zh-cn/Contribute.htm
+lang: zh-cn
 ---
 
 # 如何参与
@@ -35,11 +35,11 @@ ___
 
 ## 分叉存储库
 1. 从 <a href="https://github.com/" target="_blank">GitHub 主页</a>开始创建 GitHub 帐户
-1. 转到 <a href="https://github.com/" target="_blank">GitHub 主页</a>并导航到你想要参与的存储库，单击“分叉” ![分叉]({{site.baseurl}}/images/GitHubFork.png)
+1. 转到 <a href="https://github.com/" target="_blank">GitHub 主页</a>并导航到你想要参与的存储库，单击“分叉” ![分叉]({{site.baseurl}}/Resources/images/GitHubFork.png)
 1. 在 GitHub 上，导航至你的帐户的存储库分叉
 1. 用以下两种方式之一克隆存储库：
     1. 可使用命令行 <br/> <kbd>git clone \[链接至 .git\] \[NameYourLocalFolder\]</kbd>
-    1. 或通过单击存储库 ![克隆]({{site.baseurl}}/images/GitHubClone.png) 右侧的“在桌面中克隆”启动 GitHub 应用
+    1. 或通过单击存储库 ![克隆]({{site.baseurl}}/Resources/images/GitHubClone.png) 右侧的“在桌面中克隆”来启动 GitHub 应用
 
 ___
 
@@ -87,8 +87,12 @@ ___
 #最佳做法
 
 ##请勿签入二进制文件
-二进制文件添加进存储库后，将永远在那。
+二进制文件添加到存储库后，将永远位于该库中。
 
-请勿将二进制文件添加到 Git，包括：\* 生成的输出（调试/发布）\* SDF 文件（代码数据库）\* Nuget 包目录
+请不要将以下二进制文件添加到 Git，包括：
+
+* 来自生成（调试/发布）的输出
+* SDF 文件（代码数据库）
+* Nuget 程序包目录
 
 可接受的二进制文件：\* PNG、JPG 或其他图像格式

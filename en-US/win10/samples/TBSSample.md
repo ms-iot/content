@@ -27,13 +27,13 @@ Links to instructions on setting up MBM and RPi2 or RPi3.
 **Create a new C++ project.**  
 File -> New -> Project -> Visual C++ -> Windows -> Windows IoT Core -> Blank Windows IoT Core Cosnsole Application
 
-![Create New Project Image]({{site.baseurl}}/images/TPM/TBS_NewProject.png)
+![Create New Project Image]({{site.baseurl}}/Resources/images/TPM/TBS_NewProject.png)
 
 **Edit the project properties...**  
 Update the "Additional Dependencies" so that the linker finds the TBS library.  
 *onecoreuap.lib;tbs.lib*
 
-![Project Properties Image]({{site.baseurl}}/images/TPM/TBS_LinkerDependencies.png)
+![Project Properties Image]({{site.baseurl}}/Resources/images/TPM/TBS_LinkerDependencies.png)
 
 **Write your code that utilizes the definitions in the TBS library exposed through tbs.lib.**  
 Edit the contents of the source file (TBSSample.cpp).

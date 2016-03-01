@@ -24,20 +24,20 @@ You can also deploy a driver using Visual Studio during driver development by fo
 
 * Next, on your development PC, open up a **File Explorer** window, and in the address bar type `\\<TARGET_DEVICE>\C$\` and then hit enter.  In this particular case, `<TARGET_DEVICE>` is the IP Address of your Windows IoT Core device:
 
-    ![SMB with File Explorer]({{site.baseurl}}/images/DriverLab/smb1.png)
+    ![SMB with File Explorer]({{site.baseurl}}/Resources/images/DriverLab/smb1.png)
 
     If you are prompted for a user name and password, and you have not changed the default user name and password, use the following credentials:
 
         User Name: <TARGET_DEVICE>Administrator
         Password:  p@ssw0rd
 
-    ![SMB with File Explorer]({{site.baseurl}}/images/DriverLab/cred1.png)
+    ![SMB with File Explorer]({{site.baseurl}}/Resources/images/DriverLab/cred1.png)
 
     NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)
 
 * Navigate to the `\windows\system32\` folder in the SMB File Explorer window:
 
-    ![SMB with File Explorer]({{site.baseurl}}/images/DriverLab/smb2.png)
+    ![SMB with File Explorer]({{site.baseurl}}/Resources/images/DriverLab/smb2.png)
 
 * Drag and drop (copy) the following two files (created in the previous section while building the driver in Visual Studio) from the development machine to the `\windows\system32\` folder on your IoT Core device:
 

@@ -13,7 +13,7 @@ A Windows IoT Core driver is made up of one or more files.  Some of these files 
 
 * From the Build menu, click `Build Solution(Ctrl+Shift+B)`. Make sure that you are building for `x86` if you are using a MinnowBoard Max, or `ARM` if you are using a Raspberry Pi 2 or 3.
 
-    ![Driver Settings properties]({{site.baseurl}}/images/DriverLab/driver-build-option.png)
+    ![Driver Settings properties]({{site.baseurl}}/Resources/images/DriverLab/driver-build-option.png)
 
 * You will now have a collection of files that make up the driver. Confirm you have both the **SYS** and **INF** files for your driver under the `DriverSamples\gpiokmdfdemo\Debug\gpiokmdfdemo\` folder.
 

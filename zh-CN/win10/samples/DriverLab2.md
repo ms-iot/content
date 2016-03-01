@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 驱动程序实验 - 使用 Visual Studio 生成驱动程序
-permalink: /zh-CN/win10/samples/DriverLab2.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/DriverLab2.htm
+lang: zh-cn
 ---
 
 #在 Visual Studio 中生成驱动程序
@@ -13,7 +13,7 @@ Windows IoT 核心版驱动程序由一个或多个文件组成。其中的一�
 
 * 从“生成”菜单中，单击“`Build Solution(Ctrl+Shift+B)`”。如果你使用 MinnowBoard Max，请确保面向 `x86` 生成驱动程序，或者如果你使用 Raspberry Pi 2，请确保面向 `ARM` 生成驱动程序。
 
-    ![驱动程序设置属性]({{site.baseurl}}/images/DriverLab/driver-build-option.png)
+    ![驱动程序设置属性]({{site.baseurl}}/Resources/images/DriverLab/driver-build-option.png)
 
 * 现在，你将会获得构成驱动程序的文件集合。请确认在 `DriverSamples\gpiokmdfdemo\Debug\gpiokmdfdemo\` 文件夹下有驱动程序的 **SYS** 和 **INF** 文件。
 

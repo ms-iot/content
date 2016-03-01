@@ -17,7 +17,7 @@ This document describes the setup of the BACnet Adapter for Device System Bridge
 ## What is BACnet?
 
 BACnet is a communications protocol for building automation and control networks. It is an [ASHRAE](http://www.bacnet.org){:target="_blank"}, ANSI, and ISO 16484-5 standard protocol. BACnet was designed to allow communication of building automation and control systems for applications such as heating, ventilating, and air-conditioning control (HVAC), lighting control, access control, and fire detection systems and their associated equipment. The BACnet protocol provides mechanisms for computerized building automation devices to exchange information, regardless of the particular building service they perform.
-BACnet is an object based standard. A BACnet device contains a set of objects. A BACnet object is a collection of information within a device. A typical object has a collection of properties, based on the function and purpose of the object. A BACnet Device is represented as a “Device Object” which is simply a collection of objects that represents the functions actually present in a given real device. 
+BACnet is an object based standard. A BACnet device contains a set of objects. A BACnet object is a collection of information within a device. A typical object has a collection of properties, based on the function and purpose of the object. A BACnet Device is represented as a "Device Object" which is simply a collection of objects that represents the functions actually present in a given real device. 
 
 See [BACnet standard](http://www.bacnet.org){:target="_blank"} for more information about BACnet...
 
@@ -32,7 +32,7 @@ See [BACnet standard](http://www.bacnet.org){:target="_blank"} for more informat
 
 > The BACnet hardware described above has been used to control and expose on AllJoyn two occupancy sensors, two temperature sensors, two temperature controllers and one body controller.
 
-![BACnetHardware]({{site.baseurl}}/images/AllJoyn/BACnetHardware.jpg)
+![BACnetHardware]({{site.baseurl}}/Resources/images/AllJoyn/BACnetHardware.jpg)
 
 ## Set up steps
 1. Install the required tools and driver listed in the prerequisites on your Windows 10 desktop
@@ -43,12 +43,12 @@ This document will not go into detail about that, please refer to the tool's doc
 See instruction [here]({{site.baseurl}}/en-US/win10/SetupRPI.htm){:target="_blank"}.
 5. Deploy BACnet adapter
 
->Note that in Windows 10, when a machine has __multiple AllJoyn modern applications__ that __need to interact__ on the same machine, the user must __add a loopback exemption__ for these modern applications. Consequently, if you run both the ZigBee adapter and IoT Explorer for AllJoyn on the same machine you will need to add a loopback exemption for these 2 applications. This isn’t needed for application you run from Visual Studio 2015. Note that when deploying an application from Visual Studio 2015, the loopback exemption is for the lifetime of the installed application. Meaning that you can launch the app directly (not from Visual Studio 2015) afterwards and it will have the loopback exemption.
+>Note that in Windows 10, when a machine has __multiple AllJoyn modern applications__ that __need to interact__ on the same machine, the user must __add a loopback exemption__ for these modern applications. Consequently, if you run both the ZigBee adapter and IoT Explorer for AllJoyn on the same machine you will need to add a loopback exemption for these 2 applications. This isn't needed for application you run from Visual Studio 2015. Note that when deploying an application from Visual Studio 2015, the loopback exemption is for the lifetime of the installed application. Meaning that you can launch the app directly (not from Visual Studio 2015) afterwards and it will have the loopback exemption.
 
 Set up loopback exception:
 
  1. Find the installation folder of the modern application for which you want to enable the loopback exemption. It is located at 'C:\Users\*username*\AppData\Local\Packages'
- ![LoopBackException]({{site.baseurl}}/images/AllJoyn/BACnetLoopBackException.png)
+ ![LoopBackException]({{site.baseurl}}/Resources/images/AllJoyn/BACnetLoopBackException.png)
  2. Copy the installation folder name which is also the application ID.
  3. Run the following command from an elevated command prompt:
 `CheckNetIsolation LoopbackExempt -a -n=installation-folder-name`
@@ -58,7 +58,7 @@ Set up loopback exception:
 1. Download a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip).
 2. Open `samples-develop\AllJoyn\Samples\BACnetAdapter\BACnetAdapter.sln` in Visual Studio.
 4. Select the relevant target (x86 or x64) and build the solution in Visual Studio.
-Your now ready to launch it, so launch or debug HeadedAdapterApp project on desktop or if the targeted Windows 10 device has a display or launch or debug HeadlessAdapterApp if it doesn’t. 
+Your now ready to launch it, so launch or debug HeadedAdapterApp project on desktop or if the targeted Windows 10 device has a display or launch or debug HeadlessAdapterApp if it doesn't. 
 If needed, see instruction [here]({{site.baseurl}}/en-US/win10/AppDeployment.htm){:target="_blank"} for remote debugging.
 
 ## BACnet adapter in detail 
@@ -68,19 +68,19 @@ BACnet adapter is written in managed C++. It uses the [open BACnet stack](http:/
 - Each BACnet object of a BACnet device is exposed as an AllJoyn Bus object
 - Each BACnet property of a BACnet object is exposed as an AllJoyn Property. Note that all properties of a BACnet object are grouped under a single AllJoyn interface.
 
-![BACnetToAllJoynMap]({{site.baseurl}}/images/AllJoyn/BACnetToAllJoynMap.png)
+![BACnetToAllJoynMap]({{site.baseurl}}/Resources/images/AllJoyn/BACnetToAllJoynMap.png)
 
 ### IoT Explorer for AllJoyn view of a set of BACnet devices
 
-![BACnetAJX1]({{site.baseurl}}/images/AllJoyn/BACnetAJX1.png)
+![BACnetAJX1]({{site.baseurl}}/Resources/images/AllJoyn/BACnetAJX1.png)
 
 After selecting BACnet001 VLC-2 device, we can see all the objects the device exposes.
 
-![BACnetAJX2]({{site.baseurl}}/images/AllJoyn/BACnetAJX2.png)
+![BACnetAJX2]({{site.baseurl}}/Resources/images/AllJoyn/BACnetAJX2.png)
 
 ### Class overview
 
-![ClassMap]({{site.baseurl}}/images/AllJoyn/BACnetClassMap.png)
+![ClassMap]({{site.baseurl}}/Resources/images/AllJoyn/BACnetClassMap.png)
 
 The __BACnetAdapter__ class is the main class of BACnet adapter. This class derives from __IAdapter__ (BridgeRT interface) and contains a collection of __BACnetAdapterDevice__ instances and an instance of the __BACnetInterface__ class. BACnetAdapter class uses __BACnetAdapterSignal__ to signal device arrival or removal.
 

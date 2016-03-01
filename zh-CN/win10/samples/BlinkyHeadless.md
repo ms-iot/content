@@ -1,13 +1,16 @@
 ---
 layout: default
 title: 无外设模式的 Blinky 示例
-permalink: /zh-CN/win10/samples/BlinkyHeadless.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/BlinkyHeadless.htm
+lang: zh-cn
 ---
 
+{: .thin-header}
 ##无外设模式的 Blinky 示例
 
-我们将要创建一个简单的 Blinky 应用，并将 LED 连接到你的 Windows IoT Core 设备（Raspberry Pi 2 或 MinnowBoard Max）。请注意 GPIO API 仅在 Windows IoT Core 上可用，因此该示例无法在你的桌面上运行。
+{% include VerifiedVersion.md %}
+
+我们将创建一个简单的 Blinky 应用，并将 LED 连接到你的 Windows IoT 核心版设备（Raspberry Pi 2、MinnowBoard Max 或 DragonBoard）。请注意，GPIO API 仅在 Windows IoT 核心版上可用，因此该示例无法在你的桌面上运行。
 
 ###无外设模式
 
@@ -15,13 +18,11 @@ lang: zh-CN
 
 ###在 Visual Studio 中加载项目
 
-你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\BlinkyHeadless`，查找此示例的源代码。示例代码可采用 C++ 或 C\# 提供，但此处的文档仅详细介绍了 C\# 变体。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\BlinkyHeadless` 来查找此示例的源代码。示例代码可采用 C++ 或 C\# 提供，但此处的文档仅详细介绍了 C\# 变体。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
 确保将 LED 连接到开发板。如需指导，请返回基本“Blinky”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)。
 
 请注意，如果应用找不到任何可用 GPIO 端口，则该应用将无法成功运行。
-
-###部署你的应用
 
 {% include_relative AppDeploymentCS.md %}
 
@@ -30,6 +31,7 @@ lang: zh-CN
 ###我们来看看代码
 此示例的代码相当简单。我们使用了一个计时器，每当调用“Tick”事件时，都会切换 LED 的状态。
 
+{: .thin-header}
 ###计时器代码
 下面说明如何使用 C\# 语言设置计时器：
 
@@ -50,6 +52,7 @@ private void Timer_Tick(ThreadPoolTimer timer)
     . . .
 }
 {% endhighlight %}
+
 
 ###初始化 GPIO 引脚
 为了驱动 GPIO 引脚，首先我们需要对其进行初始化。以下是 C\# 代码（请注意我们如何在 Windows.Devices.Gpio 命名空间中利用新 WinRT 类）：

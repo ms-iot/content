@@ -26,7 +26,7 @@ To use WiFi, you'll need to provide Windows 10 IoT core with the WiFi network cr
 The first time you boot Windows 10 IoT Core with a supported USB WiFi adapter, you will be presented with a configuration screen.
 On the configuration screen, select the WiFi network you would like to connect to and supply the password. Click **connect** to initiate the connection.
 
-![Startup WiFi Configuration Screen]({{site.baseurl}}/images/SetupWiFi/WiFiStartupConfig.png)
+![Startup WiFi Configuration Screen]({{site.baseurl}}/Resources/images/SetupWiFi/WiFiStartupConfig.png)
 
 ### Option 2: Default App Configuration
 **Prerequisite:** The Windows 10 IoT core device needs a mouse, keyboard, display, and USB WiFi Adapter plugged in
@@ -37,7 +37,7 @@ An alternative way to configure WiFi is to use the default app. You can use this
 2. Select **Network & Wi-Fi** in the left pane
 3. Click on the WiFi network you want to connect to. Supply the password if prompted, and click **Connect**
 
-![Default App WiFi Configuration]({{site.baseurl}}/images/SetupWiFi/DefaultAppWiFiConfig.png)
+![Default App WiFi Configuration]({{site.baseurl}}/Resources/images/SetupWiFi/DefaultAppWiFiConfig.png)
 
 ## Headless Options:
 
@@ -53,7 +53,7 @@ In **Windows 10 IoT Core Dashboard**, *Click* on the **Open in Device Portal** i
 2. Click on **Networking** in the left-hand pane
 3. Under **Available networks**, select network you would like to connect to and supply the connection credentials. Click **Connect** to initiate the connection
 
-![Web Based WiFi Configuration]({{site.baseurl}}/images/SetupWiFi/WebBWiFiConfig.png)
+![Web Based WiFi Configuration]({{site.baseurl}}/Resources/images/SetupWiFi/WebBWiFiConfig.png)
 
 <!-- End of Replicated Content -->
 
@@ -72,14 +72,14 @@ Setting up WiFi using wireless profiles is supported in Windows 10 IoT Core. See
 
 2. Open up a **File Explorer** window, and in the address bar type `\\<TARGET_DEVICE>\C$\` and then hit enter.  In this particular case, `<TARGET_DEVICE>` is either the name or the IP address of your Windows 10 IoT Core device:
 
-    ![SMB with File Explorer]({{site.baseurl}}/images/DriverLab/smb1.png)
+    ![SMB with File Explorer]({{site.baseurl}}/Resources/images/DriverLab/smb1.png)
 
     If you are prompted for a user name and password, use the following credentials:
 
         User Name: <TARGET_DEVICE>\Administrator
         Password:  p@ssw0rd
 
-    ![SMB with File Explorer]({{site.baseurl}}/images/DriverLab/cred1.png)
+    ![SMB with File Explorer]({{site.baseurl}}/Resources/images/DriverLab/cred1.png)
 
     NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)
 

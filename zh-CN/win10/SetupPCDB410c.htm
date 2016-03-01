@@ -1,0 +1,77 @@
+﻿<h3> 安装 DragonBoard 更新工具</h3>
+<ol class="setup-content-list">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <li>通过选择适合你的电脑的下载链接来下载 DragonBoard 更新工具：<a href="https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x86.zip">x86</a> 或 <a href="https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x64.zip">x64</a></li>
+    </div>
+    <div class="col-md-6 col-sm-12">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <li>右键单击下载的 zip 文件并选择全部解压缩。此操作将创建一个名称与下载的 zip 文件相同的新文件夹。</li>
+    </div>
+    <div class="col-md-6 col-sm-12">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <li>打开该文件夹并双击 setup.exe 文件。</li>
+    </div>
+    <div class="col-md-6 col-sm-12">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <li>按照说明进行操作，然后当系统出现提示时，通过单击“安装”安装 USB 驱动程序。</li>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <img class="image-border" src="{{site.baseurl}}/Resources/images/SetupDB410c/DB410c_UpdateTool_DriverInstall.png">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <li>安装程序会在桌面上和“开始”菜单中创建 DragonBoard 更新工具的快捷方式，具体位置在“Qualcomm”->“DragonBoardUpdate 工具”下。</li>
+    </div>
+    <div class="col-md-6 col-sm-12">
+    </div>
+  </div>
+</ol>
+
+<h3> 下载 DragonBoard Windows 10 IoT 核心版映像</h3>
+<ol class="setup-content-list">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <li>从我们的<a href="http://ms-iot.github.io/content/zh-cn/Downloads.htm" target="_blank">下载页</a>下载 Windows 10 IoT 核心版映像。</li>
+    </div>
+    <div class="col-md-6 col-sm-12">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <li>双击已下载的 ISO 文件。此操作会将该 ISO 作为新的虚拟 CD 驱动器自动装载。（查找新的 CD-ROM 驱动器）</li>
+    </div>
+    <div class="col-md-6 col-sm-12">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <li>
+        <p>已装载的虚拟驱动器中包含安装程序文件“Windows_10_IoT_Core_QCDB410C.msi”。双击该文件以开始安装。</p>
+        <p>安装程序会创建一个新目录： C:\Program Files (x86)\Microsoft IoT\FFU\QCDB410C\，其中包含 DragonBoard410c 映像文件“flash.ffu”。</p>
+        <p>与 Raspberry Pi 2 和 Minnowboard Max 不同，我们不会将此 FFU 应用到 SD 卡。相反，我们将在下一页上使用此刷机文件。</p>
+      </li>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <p><img class="image-border" src="{{site.baseurl}}/Resources/images/SetupDB410c/DB410c_WindowsInstaller.JPG"></p>
+      <p><img class="image-border" src="{{site.baseurl}}/Resources/images/SetupDB410c/DB410c_FlashFile_FFU.JPG"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <li>完成后，弹出虚拟 CD 驱动器。</li>
+    </div>
+    <div class="col-md-6 col-sm-12">
+    </div>
+  </div>
+</ol>

@@ -1,31 +1,35 @@
 ---
 layout: default
 title: SPI 显示器示例
-permalink: /zh-CN/win10/samples/SPIDisplay.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/SPIDisplay.htm
+lang: zh-cn
 ---
 
-##SPI 显示器示例
+##SPI 屏幕示例
 
-在本示例中，我们会将一个基于 [OLED 显示器](http://www.adafruit.com/product/938){:target="_blank"}的 SPI 连接到 Raspberry Pi 2/MinnowBoard Max。然后，我们将创建一个应用，以便于将文本行写入到该显示器。因为已提供分步说明，所以无需具备任何 SPI 背景知识。但是，如果你希望了解详细信息，Sparkfun 提供了一个出色的[与 SPI 相关的教程](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}。
+{% include VerifiedVersion.md %}
+
+在本示例中，我们会将一个基于 SPI 的 [OLED 屏幕](http://www.adafruit.com/product/938){:target="_blank"}连接到 Raspberry Pi 2、MinnowBoard Max 或 DragonBoard 410c。然后，我们将创建一个应用，以便于将文本行写入到该屏幕。因为已提供分步说明，所以无需具备任何 SPI 背景知识。但是，如果你希望了解详细信息，Sparkfun 提供了一个出色的[与 SPI 相关的教程](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}。
 
 这是一个有外设示例。若要更好地了解什么是有外设模式以及如何将你的设备配置为有外设，请按照[此处]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm)的说明操作。
 
 ###在 Visual Studio 中加载项目
 
-你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\SPIDisplay`，查找此示例的源代码。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。请注意，此应用需要使用一台带有物理 SPI 端口的设备，否则它在仿真环境中运行时将不起作用。
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\SPIDisplay` 来查找此示例的源代码。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。请注意，此应用需要使用一台带有物理 SPI 端口的设备，否则它在仿真环境中运行时将不起作用。
 
 ###将 SPI 显示器连接到你的设备
 
 首先，我们需要将显示器连接到你的设备。你将需要以下几个组件：
 
-* <a name="SPI_Display"></a>一台 Adafruit 的[单色 1.3 英寸 128 x64 OLED 图形显示器](http://www.adafruit.com/product/938){:target="_blank"}，且其上已焊接排针
+* <a name="SPI_Display"></a>一台 Adafruit 的[单色 1.3" 128 x64 OLED 图形显示器](http://www.adafruit.com/product/938){:target="_blank"}，且其上已焊接排针
 
-* 一块试验板以及多根公母头连接线
+* 一块试验板以及多根公母头连接线（Raspberry Pi 2 或 MinnowBoard Max）或双公头连接线 \(DragonBoard 410c\)
 
-根据自己所拥有的设备，查看以下 **Raspberry Pi 2/MinnowBoard Max** 部分：
+* <a name="SPI_Display"></a>如果使用的是 DragonBoard 410c，还需要 Adafruit 的 [8 通道双向逻辑电平转换器](http://www.adafruit.com/products/395)（其上已焊接排针）
 
-![电子元件]({{site.baseurl}}/images/SPIDisplay/components.png)
+根据自己所拥有的设备，查看以下 **Raspberry Pi 2、MinnowBoard Max 或 DragonBoard 410c** 部分：
+
+![电子元件]({{site.baseurl}}/Resources/images/SPIDisplay/components.png)
 
 ####Raspberry Pi 2
 对于 Raspberry Pi 2，我们需要将电源、地线、SPI 和多个 GPIO 引脚接入 OLED 显示器。有关 Raspberry Pi 2 引脚的其他信息，请访问 [Raspberry Pi 2 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm)
@@ -45,13 +49,13 @@ OLED 显示器上具有 8 个 IO 引脚，应按如下方式连接它们：
 
 下面是试验板上所示的连接：
 
-![试验板连接]({{site.baseurl}}/images/SPIDisplay/breadboard_assembled_rpi2.png)
+![试验板连接]({{site.baseurl}}/Resources/images/SPIDisplay/breadboard_assembled_rpi2.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
 以下是电路原理图：
 
-![SPI 电路原理图]({{site.baseurl}}/images/SPIDisplay/schematics_rpi2.png)
+![SPI 电路原理图]({{site.baseurl}}/Resources/images/SPIDisplay/schematics_rpi2.png)
 
 ####MinnowBoard MAX
 对于 MinnowBoard Max，我们需要将电源、地线、SPI 和多个 GPIO 引脚接入 OLED 显示器。有关 MBM IO 引脚的更多详细信息，请参阅 [MBM 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm)。
@@ -71,13 +75,50 @@ OLED 显示器上具有 8 个 IO 引脚，应按如下方式连接它们：
 
 下面是试验板上所示的连接：
 
-![试验板连接]({{site.baseurl}}/images/SPIDisplay/breadboard_assembled_mbm.png)
+![试验板连接]({{site.baseurl}}/Resources/images/SPIDisplay/breadboard_assembled_mbm.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
 以下是电路原理图：
 
-![SPI 电路原理图]({{site.baseurl}}/images/SPIDisplay/schematics_mbm.png)
+![SPI 电路原理图]({{site.baseurl}}/Resources/images/SPIDisplay/schematics_mbm.png)
+
+####DragonBoard 410c
+
+对于 DragonBoard 410c，需要建立单板计算机的电源、接地、SPI 和多个 GPIO 连接与 OLED 屏幕之间的连接。
+
+**注意： 确保在连接电路时关闭 DragonBoard 410c 电源。若要降低构建期间意外出现短路的几率，这是一个很好的做法。**
+
+OLED 屏幕上有 8 个可连接到逻辑电平转换器的 IO 引脚，如下所示：
+
+1.  **DATA：** 连接到引脚 B5。这是 SPI 主数据输出线。
+2.  **CLK：** 连接到引脚 B4。这是 SPI 时钟线。
+3.  **SA0/DC：** 连接到引脚 B3。这是屏幕的数据/命令线。
+4.  **RST：** 连接到引脚 B2。这是屏幕的硬件重置线。
+5.  **CS：** 连接到引脚 B1。这是 SPI 芯片选择线。
+6.  **3V3：** 此连接_未使用_。
+7.  **VIN：** 连接到 VCCB。
+8.  **GND：** 连接到 GND。
+
+逻辑电平转换器按如下方式连接到 DragonBoard：
+
+1.  **A5：** 连接到引脚 14 \(SPI0 MOSI\)。  
+2.  **A4：** 连接到引脚 8 \(SPI0 CLK\)。  
+3.  **A3：** 连接到引脚 24 \(GPIO 12\)。  
+4.  **A2：** 连接到引脚 26 \(GPIO 69\)。  
+5.  **A1：** 连接到引脚 12 \(SPI0 CS N\)。  
+6.  **VCCA：** 连接到引脚 35 \(1.8V PWR\)。
+7.  **VCCB：** 连接到引脚 37 \(5V PWR\)。
+8.  **GND：** 连接到引脚 40 \(GND\)。
+
+下图显示组装了电路的试验板的可能外观：
+
+![DragonBoard SPI 屏幕试验板]({{site.baseurl}}/Resources/images/SPIDisplay/breadboard_assembled_db410c.png)
+
+电路示意图如下所示：
+
+![DragonBoard SPI 屏幕示意图]({{site.baseurl}}/Resources/images/SPIDisplay/schematics_db410c.png)
+
 
 ###部署和运行应用
 
@@ -86,27 +127,33 @@ OLED 显示器上具有 8 个 IO 引脚，应按如下方式连接它们：
 {% highlight C# %}
 public sealed partial class MainPage : Page
 {
-    /* Important! Uncomment the code below corresponding to your target device */
+        /* Important! Uncomment the code below corresponding to your target device */
 
-    /* Uncomment for MinnowBoard Max */
-    private const string SPI_CONTROLLER_NAME = "SPI0";  /* For MinnowBoard Max, use SPI0                            */
-    private const Int32 SPI_CHIP_SELECT_LINE = 0;       /* Line 0 maps to physical pin number 5 on the MBM          */
-    private const Int32 DATA_COMMAND_PIN = 3;           /* We use GPIO 3 since it's conveniently near the SPI pins  */
-    private const Int32 RESET_PIN = 4;                  /* We use GPIO 4 since it's conveniently near the SPI pins  */
+        /* Uncomment for MinnowBoard Max */
+        //private const string SPI_CONTROLLER_NAME = "SPI0";  /* For MinnowBoard Max, use SPI0                            */
+        //private const Int32 SPI_CHIP_SELECT_LINE = 0;       /* Line 0 maps to physical pin number 5 on the MBM          */
+        //private const Int32 DATA_COMMAND_PIN = 3;           /* We use GPIO 3 since it's conveniently near the SPI pins  */
+        //private const Int32 RESET_PIN = 4;                  /* We use GPIO 4 since it's conveniently near the SPI pins  */
 
-    /* Uncomment for Raspberry Pi 2 */
-    //private const string SPI_CONTROLLER_NAME = "SPI0";  /* For Raspberry Pi 2, use SPI0                             */
-    //private const Int32 SPI_CHIP_SELECT_LINE = 0;       /* Line 0 maps to physical pin number 24 on the Rpi2        */
-    //private const Int32 DATA_COMMAND_PIN = 22;          /* We use GPIO 22 since it's conveniently near the SPI pins */
-    //private const Int32 RESET_PIN = 23;                 /* We use GPIO 23 since it's conveniently near the SPI pins */
+        /* Uncomment for Raspberry Pi 2 */
+        //private const string SPI_CONTROLLER_NAME = "SPI0";  /* For Raspberry Pi 2, use SPI0                             */
+        //private const Int32 SPI_CHIP_SELECT_LINE = 0;       /* Line 0 maps to physical pin number 24 on the Rpi2        */
+        //private const Int32 DATA_COMMAND_PIN = 22;          /* We use GPIO 22 since it's conveniently near the SPI pins */
+        //private const Int32 RESET_PIN = 23;                 /* We use GPIO 23 since it's conveniently near the SPI pins */
 
-    // ...
+        /* Uncomment for DragonBoard 410c */
+        //private const string SPI_CONTROLLER_NAME = "SPI0";  /* For DragonBoard, use SPI0                                */
+        //private const Int32 SPI_CHIP_SELECT_LINE = 0;       /* Line 0 maps to physical pin number 12 on the DragonBoard */
+        //private const Int32 DATA_COMMAND_PIN = 12;          /* We use GPIO 12 since it's conveniently near the SPI pins */
+        //private const Int32 RESET_PIN = 69;                 /* We use GPIO 69 since it's conveniently near the SPI pins */
+        
+        //...
 }
 {% endhighlight %}
 
-紧接着，右键单击“解决方案资源管理器”中的“SPIDisplay”项目，然后选择“设置为启动项目”。按照[设置远程调试并部署应用]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp)的说明进行操作。SPIDisplay 应用将部署并启动，随后你应该看到 OLED 显示器上显示的文本数据。现在，你可以在该应用中键入内容，并且可在已连接的 OLED 显示器上对文本进行镜像操作。
+接下来，右键单击“解决方案资源管理器”中的“SPIDisplay”项目，然后选择“设置为启动项目”。按照[设置远程调试并部署应用]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp)的说明进行操作。SPIDisplay 应用将部署并启动，随后你应该看到 OLED 显示器上显示的文本数据。现在，你可以在该应用中键入内容，并且可在已连接的 OLED 显示器上对文本进行镜像操作。
 
-![SPI 运行]({{site.baseurl}}/images/SPIDisplay/spidisplay_screenshot.png)
+![SPI 运行]({{site.baseurl}}/Resources/images/SPIDisplay/spidisplay_screenshot.png)
 
 恭喜！ 你已连接 SPI 图形显示器。
 
@@ -284,7 +331,7 @@ private async Task InitDisplay()
 
 ###文本显示代码
 
-现在屏幕已初始化，我们可以将文本发送到屏幕。我们前面在该初始化函数中，已将 **Display\_TextBox\_TextChanged\(\)** 注册为用户一更改该文本框就执行触发操作。此函数将调用下面的 **DisplayTextBoxContents\(\)** 函数，这将贯穿于将文本写出屏幕这一过程：
+现在屏幕已初始化，我们可以将文本发送到屏幕。我们之前已在该初始化函数中将 **Display\_TextBox\_TextChanged\(\)** 注册为用户一更改该文本框就执行触发操作。此函数将调用下面的 **DisplayTextBoxContents\(\)** 函数，这将贯穿于将文本写出屏幕这一过程：
 
 {% highlight C# %}
 /* Update the SPI display to mirror the textbox contents */
