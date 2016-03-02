@@ -77,7 +77,7 @@ function buildCards(filteredBlocks)
       }
     });
 }else{
-	{{% capture langLower %}{{ page.lang | downcase }}{% endcapture %}
+	{% capture langLower %}{{ page.lang | downcase }}{% endcapture %}
 	{% if langLower == 'zh-cn' %}
       $(".tile-display").append("<h2>我们似乎无法找到任何与你所选的所有条件都匹配的结果。</h2>")
 	 {% else %}
