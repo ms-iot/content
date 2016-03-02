@@ -48,7 +48,7 @@ Make the following connections:
 
 #### <a name="RPi2_UART"></a>On-board UART (Rasperry Pi2)
 
-The Rasperry Pi 2 or 3 has one on-board UART. See the [Raspberry Pi 2 Pin Mappings page]({{site.baseurl}}/{{page.lang}}/Samples/PinMappingsRPI2.htm) for more details on the GPIO pins. 
+The Rasperry Pi 2 or 3 has one on-board UART. See the [Raspberry Pi 2 Pin Mappings page]({{site.baseurl}}/{{page.lang}}/Samples/PinMappingsRPi2.htm) for more details on the GPIO pins. 
 
 * UART0 uses GPIO pins 6 (GND), 8 (TX) and 10 (RX). 
 
