@@ -1,11 +1,11 @@
 ---
 layout: default
 title: Adafruit Essential 制造商工具包内容
-permalink: /zh-cn/AdafruitKitContents.htm
+permalink: /zh-CN/AdafruitKitContents.htm
 step: AdafruitKitContents.htm
-lang: zh-cn
+lang: zh-CN
 deviceName: RPI2
-kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
+kit: Raspberry Pi2 上适用于 Windows 10 IoT 核心版的 Adafruit 初学者包
 ---
 <ol class="breadcrumb">
   <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">初学者包概述</a></li>

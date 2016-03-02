@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 针对 Raspberry Pi 2 设置你的电脑
-permalink: /zh-cn/win10/SetupPCRPI.htm
-lang: zh-cn
+permalink: /zh-CN/win10/SetupPCRPI.htm
+lang: zh-CN
 deviceName: RPI2
 ---
 

@@ -1,6 +1,9 @@
   <div class="col-md-24 tile-display" onClick="buildCards()">
 
   </div>
+  <div class="col-md-24 tile-display" onClick="buildCards()">
+
+  </div>
 
 <script>
 
@@ -74,7 +77,12 @@ function buildCards(filteredBlocks)
       }
     });
 }else{
-      $(".tile-display").append("<h2 class='thin-header text-center'>We can't seem to find any results that match all the criteria you selected.</h2>")
+	{{% capture langLower %}{{ page.lang | downcase }}{% endcapture %}
+	{% if langLower == 'zh-cn' %}
+      $(".tile-display").append("<h2>我们似乎无法找到任何与你所选的所有条件都匹配的结果。</h2>")
+	 {% else %}
+	  $(".tile-display").append("<h2 class='thin-header text-center'>We can't seem to find any results that match all the criteria you selected.</h2>")
+	 {% endif %}
   }
 };
 
