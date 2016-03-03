@@ -17,7 +17,7 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 * USB to Micro USB cable.
 
 ### Set up your PC
-* Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
+* Install [Python 2.7.x](https://www.python.org/downloads/){:target="_blank"}.
 * Install Arduino software from [here](https://www.arduino.cc/en/Main/Software).
 * Install [Git for Windows](http://git-scm.com/download/win). Ensure that Git is included in your 'PATH' environment variable.
 
