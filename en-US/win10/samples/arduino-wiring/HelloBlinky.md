@@ -16,24 +16,33 @@ Follow the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/A
 
 This code is included in the default template of an Arduino Wiring project, and is included here (with additional comments) for reference.
 
+If you are using a Raspberry Pi, you may choose to use the built-in LED by leaving the `int pin = LED_BUILTIN` as is, in which case you will not need to hook up an LED to your Pi. If you prefer to use a GPIO pin, change this to the appropriate pin macro (such as `GPIO_5`) and follow the instructions in the "Wire your RPi2 with an LED" section as normal.
+
 {% highlight C++ %}
+
+#if defined(_M_IX86) || defined(_M_X64) // MBM
+int pin = GPIO_5;       // Or any other pin available on MBM
+#elif defined (_M_ARM) // RPI2
+int pin = LED_BUILTIN;  // Or any other pin available on RPI2
+#endif
+
 
 void setup()
 {
     // put your setup code here, to run once:
-
-    pinMode(GPIO_5, OUTPUT); // Configure the pin for OUTPUT so you can turn on the LED.
+    pinMode(pin, OUTPUT);
 }
 
 void loop()
 {
     // put your main code here, to run repeatedly:
 
-    digitalWrite(GPIO_5, LOW);    // turn the LED off by making the voltage LOW
-    delay(500);                    // wait for a half second
-    digitalWrite(GPIO_5, HIGH);   // turn the LED on by making the voltage HIGH
-    delay(500);                    // wait for a half second
+    digitalWrite(pin, LOW);
+    delay(500);
+    digitalWrite(pin, HIGH);
+    delay(500);
 }
+
 
 {% endhighlight %}
 
