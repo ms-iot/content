@@ -5,14 +5,14 @@ permalink: /zh-cn/win10/samples/PowerShell.htm
 lang: zh-cn
 ---
 
-##使用 PowerShell 连接并配置运行 Windows 10 IoT 核心版的设备
+## 使用 PowerShell 连接并配置运行 Windows 10 IoT 核心版的设备
 
 ### 远程管理和配置
 你可以使用 Windows PowerShell 远程配置和管理任何 Windows 10 IoT 核心版设备。PowerShell 是基于任务的命令行 Shell 和脚本语言，专为进行系统管理而设计。
 
 请务必遵循以下步骤正确配置运行 Windows 10 IoT 核心版的设备，以便正常使用 VisualStudio 2015。
 
-###启动 PowerShell \(PS\) 会话
+### 启动 PowerShell \(PS\) 会话
 * 若要使用 Windows 10 IoT 核心版设备启动 PS 会话，首先需要在主机电脑与设备之间创建信任关系。在启动 Windows IoT 核心版设备后，与该设备相连的屏幕上将显示一个 IP 地址：
 
     ![Windows 10 IoT 核心版上的 CoreDefaultApp]({{site.baseurl}}/Resources/images/DefaultApp.png)
@@ -73,13 +73,13 @@ lang: zh-cn
     	
     	Enter-PSSession -ComputerName <machine-name or IP Address> -Credential <machine-name or IP Address or localhost>\Administrator
 
-###Visual Studio 远程调试程序疑难解答
+### Visual Studio 远程调试程序疑难解答
 
 * 为了能够从 Visual Studio 2015 部署应用程序，你将需要确保 Visual Studio 远程调试程序正在 Windows IoT 核心版设备上运行。远程调试器应在计算机启动时自动启动。若要再次检查，请使用 `tlist` 命令列出 powershell 中所有正在运行的进程。应有两个 msvsmon.exe 的实例正在设备上运行。
 
 * 在很长一段时间都处于非活动状态后，Visual Studio 远程调试器可能会超时。如果 Visual Studio 无法连接到 Windows IoT 核心版设备，请尝试重新启动设备。
 
-###配置 Windows IoT 核心版设备
+### 配置 Windows IoT 核心版设备
 
 * 你还可以根据需要重命名你的设备。若要更改“计算机名”，请使用 `setcomputername` 实用工具：
 
@@ -95,11 +95,11 @@ lang: zh-cn
         
     你的 Windows IoT 核心版设备现在应该已正确配置，并且可供随时使用！
 
-###常用的实用工具
+### 常用的实用工具
 
 有关可以与 PowerShell 结合使用的命令和实用工具的列表，请参阅[命令行实用工具]({{site.baseurl}}/{{page.lang}}/win10/tools/CommandLineUtils.htm)页面。
 
-###已知问题与解决方法
+### 已知问题与解决方法
 
 **问题：** PowerShell 安全策略中的一个已知 Bug 会导致远程会话内的清单出现以下问题：
 
@@ -126,7 +126,7 @@ lang: zh-cn
 * 在远程 cmd.exe 内，修改相应的注册表项 `reg add HKLM\Software\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell /v ExecutionPolicy /d RemoteSigned /f`
 * 退出远程 cmd.exe 会话 `exit`
 
-###其他已知问题
+### 其他已知问题
 
 * 在 PS 脚本中，PowerShell 类或枚举的属性不起作用。添加属性化引发以下异常： “类型必须为运行时类型对象。”
 
