@@ -66,6 +66,7 @@ On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to user mode a
 *   On MinnowBoardMax, Silicon Labs based USB-Serial converters (USB\VID_10C4&PID_EA60) will fail to load with error 31. (5307602) WORKAROUND: Ensure the device is unplugged, then run: `reg add "HKEY_LOCAL_MACHINE\system\controlset001\enum\usb\VID_10C4&PID_EA60\0001\Device Parameters" /v PortName /t REG_SZ /d COM3`
 *   On MinnowBoardMax, FTDI USB-Serial adapters will ignore the requested baud rate and will use 3.8Mhz. (5348073) WORKAROUND: [Workaround for FTDI devices on x86](#ftdiworkaround)
 *   WiFi direct is partially supported on IoT Core using the WinRT WiFi direct APIs. For more details see [WiFi Direct limitations on IoTCore](#wifidirect).
+*   On Raspberry Pi, audio via the 3.5mm jack stops working when the direct memory mapped drivers are enabled. (6678121) WORKAROUND: See [Workaround for audio and direct memory mapped drivers](#dmapaudioworkaround).
 
 ### <a name="ftdiworkaround"></a>Workaround for FTDI devices on x86
 
@@ -101,3 +102,20 @@ Windows Registry Editor Version 5.00
  1.	The IoTCore device has to be the connecting device – it will not work as the advertising device with another device initiating the connection.  
  2.	Advanced pairing must be used.  The sample app demonstrates how to use the advanced pairing API's to pair the devices prior to connecting.
  3.	Not all wireless adapters support WiFi direct. We have tested and validated that the "Realtek RTL8188EU Wireless Lan 802.11n USB 2.0 Network adapter" works, but other adapters may not be supported.
+
+### <a name="dmapaudioworkaround"></a>Workaround for audio and direct memory mapped drivers
+
+After the direct memory mapped drivers have been enabled, run:
+
+    reg add HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DeviceIds\ACPI\BCM2844 /v dmap.inf /t REG_BINARY /d 02ff0100
+    reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\enum\ACPI\bcm2844\0 /v ConfigFlags /t REG_DWORD /d 0x20
+    devcon restart acpi\bcm2844
+
+Verify that the driver for the PWM device node is `BCM2836 PWM Controller`:
+
+    C:\Data>devcon status acpi\bcm2844
+    ACPI\BCM2844\0
+        Name: BCM2836 PWM Controller
+        Driver is running.
+    1 matching device(s) found.
+

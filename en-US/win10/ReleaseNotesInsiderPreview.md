@@ -125,3 +125,21 @@ When app crash is detected:
       delay = (dword) ((float)BaseRetryDelayMs * (crashes_seen ** Fallback_exponent))
       wait for delay and relaunch app
 </pre>
+
+#### Raspberry Pi audio and direct memory mapped drivers (6678121)
+
+On Raspberry Pi, audio via the 3.5mm jack stops working when the direct memory mapped drivers are enabled.
+
+WORKAROUND: After the direct memory mapped drivers have been enabled, run:
+
+    reg add HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DeviceIds\ACPI\BCM2844 /v dmap.inf /t REG_BINARY /d 02ff0100
+    reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\enum\ACPI\bcm2844\0 /v ConfigFlags /t REG_DWORD /d 0x20
+    devcon restart acpi\bcm2844
+
+Verify that the driver for the PWM device node is `BCM2836 PWM Controller`:
+
+    C:\Data>devcon status acpi\bcm2844
+    ACPI\BCM2844\0
+        Name: BCM2836 PWM Controller
+        Driver is running.
+    1 matching device(s) found.
