@@ -95,7 +95,7 @@ Looking to configure some of the settings on your device? The below tools all co
 
 * **Boot configuration:**
 
-	You can make changes to the boot configuration of your Windows IoT Core device using `bcdedit.exe`. For instance, you can enable testsigning with `bcdedit –set testsigning` on command.
+	You can make changes to the boot configuration of your Windows IoT Core device using `bcdedit.exe`. For instance, you can enable testsigning with `bcdedit –set testsigning on` command.
 
 * **Shutdown/restart device:**
 
