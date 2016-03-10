@@ -50,13 +50,16 @@
      quantity: "1"},
   ],
   "Sensors": [
-    {name: "Photocell",
+     {name: "Photocell",
      link: "https://www.adafruit.com/products/161",
      quantity: "1"},
-      {name: "Adafruit BMP280 Temperature + Barometric Sensor",
+     {name: "Adafruit BMP280 Temperature + Barometric Sensor OR",
      link: "https://www.adafruit.com/products/2651",
      quantity: "1"},
-      {name: "Adafruit TCS34725 Color Sensor",
+     {name: "Adafruit BME280 Humidity + Temperature + Barometric Sensor",
+     link: "https://www.adafruit.com/products/2652",
+     quantity: "1"},
+     {name: "Adafruit TCS34725 Color Sensor",
      link: "https://www.adafruit.com/products/1334",
      quantity: "1"}]
 }
