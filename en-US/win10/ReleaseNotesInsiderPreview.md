@@ -6,7 +6,7 @@ lang: en-US
 ---
 
 # Release Notes for Windows 10 IoT Core
-Build Number 14262. February 2016
+Build Number 14279. March 2016
 
 &copy; 2016 Microsoft Corporation. All rights reserved
 
@@ -22,21 +22,15 @@ You can review linked terms by pasting the forward link into your browser window
 
 ## What's New
 * First Windows 10 IoT Core Redstone Insiders Release
-	* Includes bug fixes to the core OS and driver packages
+	* Includes bug fixes to the core OS and driver packages (including RPi3)
 	* Includes specific fixes addressing:
-		* Updates to the Web Management portal including UI and Stability updates
-		* Updates to the FTDI USB Serial Driver for the MinnowBoard Max/x86 platform
-		* Updates to the Silicon Labs USB Serial Driver
-		* Addresses stability issues in the SSH Server
+		* Issues with the .NET Native tool chain 
+		* Issues with Bluetooth Pairing via the Web management interface
+		* USB issues on the Qualcomm Dragon 
+
 
 
 ## Release Notes
-
-#### .NET Native Tool Chain
-Enabling "Compile with .NET Native tool chain" may cause applications to fail deployment due to errors with the deployment of .NET Native runtime. 
-
-#### Bluetooth Pairing (6162324)
-Bluetooth devices may not show properly in the Bluetooth pairing web management interface. 
 
 #### Minnowboard Max Boot and Firmware Update
 The MinnowBoard Max will not boot unless the firmware is version .082 or later. The minimum recommended version of the firmware is "MinnowBoard MAX 0.83 32-Bit". Firmware updates can be downloaded from [http://go.microsoft.com/fwlink/?LinkId=708613](http://go.microsoft.com/fwlink/?LinkId=708613){:target="_blank"}.
