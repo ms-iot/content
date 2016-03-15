@@ -4,7 +4,7 @@ title: Dragonboard Pin Mappings
 permalink: /en-US/win10/samples/PinMappingsDb.htm
 lang: en-US
 ---
-##Dragonboard Pin Mappings
+## Dragonboard Pin Mappings
 
 Hardware interfaces for the Dragonboard are exposed through the 40-pin header on the board. Functionality includes:
 
@@ -18,7 +18,7 @@ Hardware interfaces for the Dragonboard are exposed through the 40-pin header on
 
 Note that the Drangonboard Max uses 1.8V logic levels on all IO pins. 
 
-##<a name="DB_GPIO">GPIO Pins
+## <a name="DB_GPIO">GPIO Pins
 
 The following GPIO pins are accessible through APIs:
 
@@ -55,14 +55,14 @@ public void GPIO()
 }
 {% endhighlight %}
 
-###GPIO Issues
+### GPIO Issues
 * Output doesn't work on GPIO 24, input will work fine
 * Pins are configured as InputPullDown at boot, but will change to Input (floating) the first time they are opened
 * Pins do not revert to their default state when closed
 * Spurious interrupts may be seen when interrupts are enabled on multiple pins
 
 
-##<a name="DB_UART"></a>Serial UART
+## <a name="DB_UART"></a>Serial UART
 
 There are two Serial UARTS available on the Dragonboard **UART0** and **UART1**
 
@@ -135,7 +135,7 @@ Note that you must add the following capability to the **Package.appxmanifest** 
   </Capabilities>
 {% endhighlight %}
 
-##<a name="DB_I2C"></a>I2C Bus
+## <a name="DB_I2C"></a>I2C Bus
 
 There are two I2C controllers 
 
@@ -171,7 +171,7 @@ public async void I2C()
 {% endhighlight %}
 
 
-##<a name="DB_SPI"></a>SPI Bus
+## <a name="DB_SPI"></a>SPI Bus
 
 There is one SPI controller **SPI0** available on the DB
 
@@ -180,7 +180,7 @@ There is one SPI controller **SPI0** available on the DB
 * Pin 8 - **SPI0 SCLK**
 * Pin 12 - **SPI0 CS0**
 
-###SPI Issues
+### SPI Issues
 The SPI clock is fixed at 4.8mhz. The requested SPI clock will be ignored. 
 
 An example on how to perform a SPI write on bus **SPI0** is shown below:
