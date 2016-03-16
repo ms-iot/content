@@ -5,20 +5,24 @@ permalink: /en-US/win10/samples/ShiftRegisterSample.htm
 lang: en-US
 ---
 
-##Shift Register Sample
+## Shift Register Sample
 
-![Shift Register Sample Image]({{site.baseurl}}/images/ShiftRegister/ShiftRegisterProjectPicture_480.png)
+{% include VerifiedVersion.md %}
 
-In this sample, we'll connect an 8-bit serial-in, parallel-out shift register to your Raspberry Pi 2 and create a simple app that uses the shift register to control eight LEDs.
+![Shift Register Sample Image]({{site.baseurl}}/Resources/images/ShiftRegister/ShiftRegisterProjectPicture_480.png)
+
+In this sample, we'll connect an 8-bit serial-in, parallel-out shift register to your Raspberry Pi 2 or 3* and create a simple app that uses the shift register to control eight LEDs.
 
 This is a headed sample, so please ensure that your device is in headed
 mode by running this command: `setbootoption.exe headed` (changing the headed/headless state will require a reboot).
 
-###Connect the Shift Register to Your Device
+*This sample only works with Raspberry Pi 2 or 3 and is not supported on Minnowboard Max or DragonBoard 410c.
 
-You'll need the following components which are included in the Basic Kit:
+### Connect the Shift Register to Your Device
 
-* 1 Raspberry Pi 2
+You will need the following components:
+
+* 1 Raspberry Pi 2 or 3
 
 * 1 [74HC595N serial-in, parallel-out Shift Register](http://www.digikey.com/product-detail/en/SN74HC595N/296-1600-5-ND/277246)
 
@@ -34,38 +38,38 @@ You'll need the following components which are included in the Basic Kit:
 
 Let's start by wiring up the components on the breadboard as shown in the diagram below.
 
-**Note: Make sure to power off the RPi2 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
+**Note: Make sure to power off the RPi2 or RPi3 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
 
-![Breadboard connections]({{site.baseurl}}/images/ShiftRegister/ShiftRegisterSampleDrawing_bb_50.png)
+![Breadboard connections]({{site.baseurl}}/Resources/images/ShiftRegister/ShiftRegisterSampleDrawing_bb_50.png)
 
 *Image made with [Fritzing](http://fritzing.org/)*
 
 
 Here is the schematic:
 
-![Circuit Schematic]({{site.baseurl}}/images/ShiftRegister/ShiftRegisterSampleDrawing_schem_75.png)
+![Circuit Schematic]({{site.baseurl}}/Resources/images/ShiftRegister/ShiftRegisterSampleDrawing_schem_75.png)
 
 *Image made with [Fritzing](http://fritzing.org/)*
 
 
-####Connecting the 74HC595N Shift Register
+#### Connecting the 74HC595N Shift Register
 
 Place the Shift Register on your breadboard such that it straddles the center gap of the breadboard.
 
-![Breadboard IC Placement]({{site.baseurl}}/images/BreadBoardICPlacement.png)
+![Breadboard IC Placement]({{site.baseurl}}/Resources/images/BreadBoardICPlacement.png)
 
 *Image made with [Fritzing](http://fritzing.org/)*
 
 
 Locate pin 1 of the 74HC595N shift register by finding the notch on the IC. If you orient the IC so that the end with the notch is facing left, pin 1 will be the first pin in the lower left below the notch.
 
-![74HC595N PinLocations]({{site.baseurl}}/images/ShiftRegister/FindNotchPin1.png)
+![74HC595N PinLocations]({{site.baseurl}}/Resources/images/ShiftRegister/FindNotchPin1.png)
 
 *Image made with [Fritzing](http://fritzing.org/)*
 
 The pinout of the 74HC595N is shown below and can be found in the [datasheet](http://www.ti.com/lit/ds/symlink/sn74hc595.pdf).
 
-![74HC595N Pinout]({{site.baseurl}}/images/ShiftRegister/ShiftRegister74HC595_pinout.png)
+![74HC595N Pinout]({{site.baseurl}}/Resources/images/ShiftRegister/ShiftRegister74HC595_pinout.png)
 
 *Image made with [Fritzing](http://fritzing.org/)*
 
@@ -77,21 +81,21 @@ Make the following connections on the 74HC595N shift register:
 
 * Pin 9  **Q7'**:  Leave unconnected
 
-* Pin 10 **SRCLR**: Connect to **GPIO 12** (pin 32) on the RPi2 (pin mapping is below)
+* Pin 10 **SRCLR**: Connect to **GPIO 12** (pin 32) on the RPi2 or RPi3 (pin mapping is below)
 
-* Pin 11 **SRCLK**: Connect to **GPIO 18** (pin 12) on the RPi2
+* Pin 11 **SRCLK**: Connect to **GPIO 18** (pin 12) on the RPi2 or RPi3
 
-* Pin 12 **RCLK**: Connect to **GPIO 5** (pin 29) on the RPi2
+* Pin 12 **RCLK**: Connect to **GPIO 5** (pin 29) on the RPi2 or RPi3
 
-* Pin 13 **OE**: Connect to **GPIO 6** (pin 31) on the RPi2
+* Pin 13 **OE**: Connect to **GPIO 6** (pin 31) on the RPi2 or RPi3
 
-* Pin 14 **SER**: Connect to **GPIO 4** (pin 7) on the RPi2
+* Pin 14 **SER**: Connect to **GPIO 27** (pin 13) on the RPi2 or RPi3
 
 * Pin 15 **Q7**: See above.
 
 * Pin 16 **VCC**: Connect to the voltage supply rail on the side of the breadboard (red stripe)
 
-####Connecting the LEDs and Resistors
+#### Connecting the LEDs and Resistors
 
 Let's add the LEDs and resistors to the breadboard.
 
@@ -109,11 +113,11 @@ When done, you should have a row (or as close to a row as possible) of blue and 
 
 * Each LED should have its anode connected to the voltage supply rail.
 
-####Connecting the Raspberry Pi 2
+#### Connecting the Raspberry Pi 2 or 3
 
-We need to hook up power, ground, and the I2C lines from on the Raspberry Pi 2 to the 74HC595N shift register and the breadboard.
+We need to hook up power, ground, and the I2C lines from on the Raspberry Pi 2 or 3 to the 74HC595N shift register and the breadboard.
 
-![Raspberry Pi 2 pinout]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![Raspberry Pi 2 and 3 pinout]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
 * Pin 2 **5V PWR** Connect to the voltage supply rail on the side of the breadboard (red stripe)
 
@@ -121,7 +125,7 @@ We need to hook up power, ground, and the I2C lines from on the Raspberry Pi 2 t
 
 * Pin 12 **GPIO18** If not already connected, connect to **SRCLK** (pin 11) on the shift register
 
-* Pin 7 **GPIO4** If not already connected, connect to **SER** (pin 14) on the shift register
+* Pin 13 **GPIO27** If not already connected, connect to **SER** (pin 14) on the shift register
 
 * Pin 29 **GPIO5** If not already connected, connect to **RCLK** (pin 12) on the shift register
 
@@ -129,7 +133,7 @@ We need to hook up power, ground, and the I2C lines from on the Raspberry Pi 2 t
 
 * Pin 32 **GPIO12** If not already connected, connect to **SRCLR** (pin 10) on the shift register
 
-###Create the Sample App
+### Create the Sample App
 
 When everything is set up, power your device back on. You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\ShiftRegister`, 
 but as an exercise, this tutorial will take you through the complete steps to create this app from scratch. 
@@ -138,7 +142,7 @@ For this sample, we cleverly named ours **ShiftRegisterSample**.
 
 The code in this sample does three things:
 
-1. Initializes the RPi2 GPIO pins and the 74HC595N shift register
+1. Initializes the RPi2 or RPi3 GPIO pins and the 74HC595N shift register
 
 2. At regular intervals, it clocks in one data bit on the shift register's serial input.
 
@@ -149,9 +153,9 @@ The code in this sample does three things:
     b. Inverts the LED flashing pattern if the user clicks the Invert button on the display
 
 
-####Add content to MainPage.xaml
+#### Add content to MainPage.xaml
 
-Let's add some content to the MainPage which will be displayed on a screen connected to the Raspberry Pi 2.
+Let's add some content to the MainPage which will be displayed on a screen connected to the Raspberry Pi 2 or 3.
  We want to add a couple TextBoxes, a Slider, and a Button.
 
 * The Slider allows the user to control the rate at which the LEDs flash.
@@ -179,7 +183,7 @@ Let's begin.
 {% endhighlight %}
 </UL>
 
-####Add code to MainPage.xaml.cs
+#### Add code to MainPage.xaml.cs
 
 Before we add any code to MainPage.xaml.cs, we need to add a reference to the Windows IoT Extension SDK.
 
@@ -209,23 +213,23 @@ private const double TIME_DELAY = 1;
 // The 74HC595N has five input pins that are used to control the device.
 // See the datasheet http://www.ti.com/lit/ds/symlink/sn74hc595.pdf for details
 // Shift Register Clock (SRCLK): the clock for the serial input to the shift register
-private const int SRCLK_PIN = 18; // GPIO 18 is pin 12 on RPI2 header
+private const int SRCLK_PIN = 18; // GPIO 18 is pin 12 on RPi2 or RPi3 header
 private GpioPin shiftRegisterClock;
 
 // Serial input (SER): the serial data input to the shift register. Use in conjunction with SRCLK.
-private const int SER_PIN = 4; // GPIO 4 is pin 7 on RPI2 header
+private const int SER_PIN = 27; // GPIO 27 is pin 13 on RPi2 or RPi3 header
 private GpioPin serial;
 
 // Storage Register Clock (RCLK): the clock for clocking data from the serial input to the parallel output in the shift register
-private const int RCLK_PIN = 5; // GPIO 5 is pin 29 on RPI2 header
+private const int RCLK_PIN = 5; // GPIO 5 is pin 29 on RPi2 or RPi3 header
 private GpioPin registerClock;
 
 // Output Enable (OE): When set low, the each of the eight shift register outputs (Q0, Q1,...Q7) are set high/low depending on the binary value in the storage register
-private const int OE_PIN = 6; // GPIO 6 is pin 31 on RPI2 header
+private const int OE_PIN = 6; // GPIO 6 is pin 31 on RPi2 or RPi3 header
 private GpioPin outputEnable;
 
 // Storage Register Clock (SRCLK): the clock for clocking the current 8 bits of data from the serial input register to the storage register
-private const int SRCLR_PIN = 12; // GPIO 12 is pin 32 on RPI2 header
+private const int SRCLR_PIN = 12; // GPIO 12 is pin 32 on RPi2 or RPi3 header
 private GpioPin shiftRegisterClear;
 
 private DispatcherTimer timer;
@@ -238,9 +242,9 @@ private SolidColorBrush grayBrush = new SolidColorBrush(Windows.UI.Colors.LightG
 
 Here are what some of these constants and variables represent
 
- * `SRCLK_PIN`, `SER_PIN`, `RCLK_PIN`, `OE_PIN`, `SRCLR_PIN` represent the RPi2 GPIO numbers of the pins connected to the correspondingly named shift register control pins.
+ * `SRCLK_PIN`, `SER_PIN`, `RCLK_PIN`, `OE_PIN`, `SRCLR_PIN` represent the RPi2 or RPi3 GPIO numbers of the pins connected to the correspondingly named shift register control pins.
 
- * `shiftRegisterClock`, `serial`, `registerClock`, `outputEnable`, `shiftRegisterClear` are the GPIO objects that are used to control the RPi2 GPIO pins that connect to the correspondingly named shift register pins.
+ * `shiftRegisterClock`, `serial`, `registerClock`, `outputEnable`, `shiftRegisterClear` are the GPIO objects that are used to control the RPi2 or RPi3 GPIO pins that connect to the correspondingly named shift register pins.
 
  * `pinMask` contains the data bits that we clock in to the shift register one bit at a time. The bits in pinMask represent the on/off pattern for the LEDs. A bit value of '1' represents an off LED and a bit value of '0' is an on LED.
 
@@ -248,9 +252,9 @@ The method `InitializeSystem()`
 
 `InitializeSystem()` does the following:
 
- * Sets up the RPi2 GPIO that are used to control and send data to the shift register
+ * Sets up the RPi2 or RPi3 GPIO that are used to control and send data to the shift register
 
- * Sets up the timer used control the frequency at which the RPi2 sends one bit of data to the shift register
+ * Sets up the timer used control the frequency at which the RPi2 or RPi3 sends one bit of data to the shift register
 
 {% highlight C# %}
 private void InitializeSystem()
@@ -265,33 +269,22 @@ private void InitializeSystem()
         return;
     }
 
-    // setup the RPi2 GPIO that controls the shift register
+    // setup the RPi2 or RPi3 GPIO that controls the shift register
     shiftRegisterClock = gpio.OpenPin(SRCLK_PIN);
     serial = gpio.OpenPin(SER_PIN);
     registerClock = gpio.OpenPin(RCLK_PIN);
     outputEnable = gpio.OpenPin(OE_PIN);
     shiftRegisterClear = gpio.OpenPin(SRCLR_PIN);
 
-    // Show an error if the pin wasn't initialized properly
-    if (shiftRegisterClock == null || serial == null || registerClock == null || outputEnable == null || shiftRegisterClear == null)
-    {
-        GpioStatus.Text = "There were problems initializing the GPIO pin.";
-        return;
-    }
-
     // reset the pins to a known state
     shiftRegisterClock.Write(GpioPinValue.Low);
     shiftRegisterClock.SetDriveMode(GpioPinDriveMode.Output);
-
     serial.Write(GpioPinValue.Low);
     serial.SetDriveMode(GpioPinDriveMode.Output);
-
     registerClock.Write(GpioPinValue.Low);
     registerClock.SetDriveMode(GpioPinDriveMode.Output);
-
     outputEnable.Write(GpioPinValue.Low);
     outputEnable.SetDriveMode(GpioPinDriveMode.Output);
-
     shiftRegisterClear.Write(GpioPinValue.Low);
     shiftRegisterClear.SetDriveMode(GpioPinDriveMode.Output);
 
@@ -327,7 +320,7 @@ The method `SendDataBit()`
 
 `SendDataBit()` is called by the timer when the designated time interval has passed.
  This method clocks out one bit of data representing the most significant bit (MSB) in the variable `pinMask`. The data bit is clocked into the first bit position
- in the shift register. The toggling of the serial clock pin by the RPi2 to clock in the data bit also causes the previous eight bits of data in the shift register to shift one bit position with the bit in the last position being lost.
+ in the shift register. The toggling of the serial clock pin by the RPi2 or RPi3 to clock in the data bit also causes the previous eight bits of data in the shift register to shift one bit position with the bit in the last position being lost.
  After clocking in the data bit, all bits in `pinMask` are left shifted one bit position. The value of `pinMask` is then checked and, depending on whether the LED lighting pattern is set as inverted, the least significant bit (LSB) of 'pinMask' is set to either a '1' or '0'.
 
 {% highlight C# %}
@@ -389,21 +382,21 @@ private void ToggleButtonClicked(object sender, RoutedEventArgs e)
 }
 {% endhighlight %}
 
-###Build, Deploy and Run the App
+### Build, Deploy and Run the App
 
-Let's build, deploy and run the app on our Raspberry Pi 2.
+Let's build, deploy and run the app on our Raspberry Pi 2 or 3.
 
 * If not already open, open in Visual Studio the app you created with the code above.
 
 * Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp).
 
-After several moments, you will see the screen attached to the RPi2 change to show a slider, some text, and a button. The LEDs will light up and follow the pattern set in 'pinMask'.
+After several moments, you will see the screen attached to the RPi2 or RPi3 change to show a slider, some text, and a button. The LEDs will light up and follow the pattern set in 'pinMask'.
 
-![ShiftRegister Screenshot]({{site.baseurl}}/images/ShiftRegister/ScreenShotA.png)
+![ShiftRegister Screenshot]({{site.baseurl}}/Resources/images/ShiftRegister/ScreenShotA.png)
 
-Congratulations! You've successfully connected an 8-bit serial-in, parallel-out shift register to your Raspberry Pi 2.
+Congratulations! You've successfully connected an 8-bit serial-in, parallel-out shift register to your Raspberry Pi 2 or 3.
 
-###The complete MainPage.xaml.cs code
+### The complete MainPage.xaml.cs code
 
 {% highlight C# %}
 using System;
@@ -437,23 +430,23 @@ namespace ShiftRegisterSample
         // The 74HC595N has five input pins that are used to control the device.
         // See the datasheet http://www.ti.com/lit/ds/symlink/sn74hc595.pdf for details
         // Shift Register Clock (SRCLK): the clock for the serial input to the shift register
-        private const int SRCLK_PIN = 18; // GPIO 18 is pin 12 on RPI2 header
+        private const int SRCLK_PIN = 18; // GPIO 18 is pin 12 on RPi2 or RPi3 header
         private GpioPin shiftRegisterClock;
 
         // Serial input (SER): the serial data input to the shift register. Use in conjunction with SRCLK.
-        private const int SER_PIN = 4; // GPIO 4 is pin 7 on RPI2 header
+        private const int SER_PIN = 27; // GPIO 27 is pin 13 on RPi2 or RPi3 header
         private GpioPin serial;
 
         // Storage Register Clock (RCLK): the clock for clocking data from the serial input to the parallel output in the shift register
-        private const int RCLK_PIN = 5; // GPIO 5 is pin 29 on RPI2 header
+        private const int RCLK_PIN = 5; // GPIO 5 is pin 29 on RPi2 or RPi3 header
         private GpioPin registerClock;
 
         // Output Enable (OE): When set low, the each of the eight shift register outputs (Q0, Q1,...Q7) are set high/low depending on the binary value in the storage register
-        private const int OE_PIN = 6; // GPIO 6 is pin 31 on RPI2 header
+        private const int OE_PIN = 6; // GPIO 6 is pin 31 on RPi2 or RPi3 header
         private GpioPin outputEnable;
 
         // Storage Register Clock (SRCLK): the clock for clocking the current 8 bits of data from the serial input register to the storage register
-        private const int SRCLR_PIN = 12; // GPIO 12 is pin 32 on RPI2 header
+        private const int SRCLR_PIN = 12; // GPIO 12 is pin 32 on RPi2 or RPi3 header
         private GpioPin shiftRegisterClear;
 
         private DispatcherTimer timer;
@@ -485,33 +478,22 @@ namespace ShiftRegisterSample
                 return;
             }
 
-            // setup the RPi2 GPIO that controls the shift register
+            // setup the RPi2 or RPi3 GPIO that controls the shift register
             shiftRegisterClock = gpio.OpenPin(SRCLK_PIN);
             serial = gpio.OpenPin(SER_PIN);
             registerClock = gpio.OpenPin(RCLK_PIN);
             outputEnable = gpio.OpenPin(OE_PIN);
             shiftRegisterClear = gpio.OpenPin(SRCLR_PIN);
 
-            // Show an error if the pin wasn't initialized properly
-            if (shiftRegisterClock == null || serial == null || registerClock == null || outputEnable == null || shiftRegisterClear == null)
-            {
-                GpioStatus.Text = "There were problems initializing the GPIO pin.";
-                return;
-            }
-
             // reset the pins to a known state
             shiftRegisterClock.Write(GpioPinValue.Low);
             shiftRegisterClock.SetDriveMode(GpioPinDriveMode.Output);
-
             serial.Write(GpioPinValue.Low);
             serial.SetDriveMode(GpioPinDriveMode.Output);
-
             registerClock.Write(GpioPinValue.Low);
             registerClock.SetDriveMode(GpioPinDriveMode.Output);
-
             outputEnable.Write(GpioPinValue.Low);
             outputEnable.SetDriveMode(GpioPinDriveMode.Output);
-
             shiftRegisterClear.Write(GpioPinValue.Low);
             shiftRegisterClear.SetDriveMode(GpioPinDriveMode.Output);
 

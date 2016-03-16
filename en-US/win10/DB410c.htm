@@ -1,0 +1,96 @@
+---
+layout: default
+title: Setup your DragonBoard410c
+permalink: /en-US/win10/DB410c.htm
+lang: en-US
+deviceName: DB410c
+---
+<div class="row">
+  <div class="col-xs-24">
+    <ol class="breadcrumb">
+      <li>
+        <a href="https://dev.windows.com/en-us/iot">IoT Home</a>
+      </li>
+      <li>
+        <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
+      </li>
+      <li class="active">Set up a DragonBoard</li>
+    </ol>
+    <header class="page-title-header">
+      <h1 class="page-title">Set up a DragonBoard </h1>
+      <div class="page-subtitle">Get your computer ready for the Windows Developer Program for IoT, set up your DragonBoard and build your first Windows IoT Core app.</div>
+    </header>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-24">
+    <h2>1. Set up your PC <span class="pull-right"><a id="pc-content-toggle" class="toggle-button" onClick="hideDiv('pc-content')">Hide</a></span></h2>
+    <hr />
+    <div id="pc-content" class="toggle-section">
+    <!-- DragonBoard-Specific SetupPC Content -->
+    {% include_relative SetupPCDB410c.htm %}
+    <!-- End DragonBoard-Specific SetupPC Content -->
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-24">
+    <h2>2. Set up your DragonBoard <span class="pull-right"><a id="setup-content-toggle" class="toggle-button" onClick="hideDiv('setup-content')">Show</a></span></h2>
+    <hr />
+    <div id="setup-content" class="toggle-section hidden">
+      {% include_relative SetupDB410c.htm %}
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-24">
+    <h2>3. Write your first app: Hello, Blinky!   <span class="pull-right"><a id="app-content-toggle" class="toggle-button" onClick="hideDiv('app-content')">Show</a></span>  </h2>
+    <hr />
+    <div id="app-content" class="toggle-section hidden">
+      <p>In this tutorial, we'll create a simple LED blinking app and connect a LED to your Windows 10 IoT Core device.</p>
+      <p>This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions <a href="{{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm"> here.</a></p>
+      <p>Also, be aware that the GPIO APIs are only available on Windows 10 IoT Core, so this sample cannot run on your desktop.</p>
+      <h3>Load the project in Visual Studio</h3>
+      <p>You can find the source code for this sample by downloading a zip of all of our samples <a href="https://github.com/ms-iot/samples/archive/develop.zip" target="_blank">here</a> and navigating to the <code>samples-develop\Blinky</code>.  The sample code is available in either C++ or C#, however the documentation here only details the C# variant. Make a copy of the folder on your disk and open the project from Visual Studio.</p>
+      <h3>Connect the LED to your Windows IoT device</h3>
+      <p>You'll need a few components:</p>
+      <p>A 330 &#x2126; resistor</p>
+      <p>A breadboard and a couple of connector wires</p>
+      <p>An LED (any color you like)</p>
+      <p><img alt="components needed for the blinky sample" src="{{site.baseurl}}/Resources/images/Blinky/components.png" /></p>
+      {% include_relative samples/BlinkyDBGpio.md %}
+      {% include_relative samples/AppDeploymentCS.md %}
+      <p>When everything is set up, you should be able to press F5 from Visual Studio.  If there are any missing packages that you did not install during setup, Visual Studio may prompt you to acquire those now.  The Blinky app will deploy and start on the Windows IoT device, and you should see the LED blink in sync with the simulation on the screen.</p>
+      <p><img alt="blinky sample in action" src="{{site.baseurl}}/Resources/images/Blinky/blinky-screenshot.png" height="400" /></p>
+      <p>Congratulations! You controlled one of the GPIO pins on your Windows IoT device.</p>
+      {% include_relative samples/BlinkyCodeCS.md%}
+    </div>
+  </div>
+</div>
+
+<script>
+  function hideDiv(div) {
+    var div = "#" + div,
+        button = div + "-toggle",
+        currentState = $(button)[0].innerHTML;
+
+    for(var i = 0; i < 3 ; i ++){
+        $(".toggle-button")[i].innerHTML = "Show";
+      }
+
+    if(currentState === "Hide") {
+      $(div).toggle('slow');
+    }
+    else
+    {
+      $(".hidden").removeClass("hidden");
+      $(".toggle-section").hide();
+      $(div).toggle('slow');
+      $(button)[0].innerHTML = "Hide";
+    }
+  }
+</script>
+

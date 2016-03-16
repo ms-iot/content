@@ -1,79 +1,304 @@
 ---
 layout: default
-title: Supported Peripheral Interfaces and Devices
+title: Hardware Compatibility List
 permalink: /en-US/win10/SupportedInterfaces.htm
 lang: en-US
 ---
+<style>
+.MsVerified 
+{
+	margin: 0 auto;
+  display: block;
+  width: 45px;
+  height: 40px;
+}
+a {cursor:pointer}
+h2 
+{
+	border-bottom: 1px solid #AAAAAA;
+	padding-bottom: 10px;
+}
+.sectionControls
+{
+	font-size:15px;
+	float:right;
+	position:relative;
+	top:20px;
+}
+.sectionControls a
+{
+	padding-left: 10px;
+}
+tr:nth-child(even) {background: #f2f2f2;}
+th {background: #f2f2f2;}
+td:nth-child(1)
+{
+    width: 200px;
+}
+td:nth-child(2)
+{
+    width: 40px;
+}
+td:nth-child(3)
+{
+    width: 300px;
+}
+td:nth-child(4)
+{
+    width: 200px;
+}
+td:nth-child(5)
+{
+    width: 200px;
+}
+td:nth-child(6)
+{
+    width: 100px;
+}
+.section {
+	padding-left: 10px;
+}
+.searchbox
+{
+	background-color: #f2f2f2;
+	width: 600px;
+	padding: 15px;
+}
 
-##Supported Peripheral Interfaces and Devices
+.searchbox a
+{
+	padding-left: 20px;
+}
 
-Windows 10 IoT Core supports a variety of peripheral interfaces and protocols. Here is a list of what's been validated on the **Raspberry Pi 2** and **MinnowBoard Max**:
+.searchbox a:hover
+{
+	text-decoration: underline;
+}
 
-{:.table.table-bordered}
-|-----------------|--------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------------------------|
-| Interface       | Raspberry Pi 2                                         | MinnowBoard Max                                        | Reference Peripheral                                               |
-|-----------------|--------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------------------------|
-| AllJoyn         | [Yes][1]                                               | [Yes][1]                                               | * [Aeon Labs DSA02203-ZWUS Z-Wave Z-Stick Series 2 USB Dongle][20] <br> * [Aeon Labs DSC24-ZWUS Smart Switch Z-Wave Appliance Module][20] |
-| Audio (analog)  | Yes (onboard 3.5 mm stereo phone jack)                 | No                                                     | [Rpi2 3.5 mm TRRS Audio/Video Jack][34] |
-| Audio (digital) | No                                                     | Yes (via HDMI)                                         |  |
-| Audio (USB)     | Yes (via USB adapter)                                  | Yes (via USB adapter)                                  | [Sabrent USB External Stereo Sound Adapter, Model AU-EMAC][12][^1] |
-| Bluetooth v4.0  | [Yes][31] ([LE/GATT][32], RFCOMM, HID) via USB adapter | [Yes][31] ([LE/GATT][32], RFCOMM, HID) via USB adapter | * [Mini USB Bluetooth CSR V4.0 Adapter][13] <br> * [ORICO BTA-403 Mini Bluetooth 4.0 USB Dongle][2] <br> * [Mini Bluetooth Keyboard with Built-in Touchpad, Model: IS11-BT05][14] |
-| Ethernet        | Yes (10/100 Mbps)                                      | Yes (10/100/1000 Mbps)                                 |  |
-| GPIO            | [13x GPIOs][3]                                         | [10x GPIOs][4]                                         |  |
-| HDMI            | Yes                                                    | Yes (micro HDMI)                                       |  |
-| I<sup>2</sup>C  | [Yes][5]                                               | [Yes][6]                                               | * [Sparkfun ADXL345 accelerometer board][26] <br> * [MCP23008 8-bit I/O Port Expander][27] |
-| Micro SD (SDIO) | [Yes][7]                                               | [Yes][8]                                               | [Universal Media Reader F4U003][23] |
-| SPI             | [2x SPI][9]                                            | [Yes][10]                                              | * [Sparkfun ADXL345 accelerometer board][28] <br> * [Monochrome 1.3” 128x64 OLED graphic display][29] |
-| UART (onboard)  | No                                                     | [2x UART][11]                                          | [USB-to-TTL Adapter][25] |
-| UART (USB)      | Yes (via USB adapter)                                  | Yes (via USB adapter)                                  | * [USB-to-TTL Adapter][24] <br> * [Arduino Leonardo][33] |
-| USB             | 4x USB 2.0 (host)                                      | 1x USB 2.0 (host), 1x USB 3.0 (host)                   | * [Sabrent USB 2.0 Floppy Disk Drive][19] <br> * [Perixx Peripad-201 Plus Slim USB Keyboard][21] <br> * [Perixx Peripad-501 Professional Touchpad][22] <br> * [Microsoft LifeCam HD-3000][30] |
-| WiFi            | Yes (via USB adapter)                                  | Yes (via USB adapter)                                  | [External USB WiFi Adapters][18] |
-| HID             |                                                        |                                                        | * [Rii Mini Wireless Keyboard, Model: RT-MWK01][15] <br> * [Xbox-360 controller (wired)][16][^2] <br> * [Xbox-360 controller (wireless)][17][^2] |
+.searchbox div
+{
+	margin: 10px;
+}
+</style>
 
-*[GPIO]: General-Purpose Input/Output
-*[RFCOMM]: Radio Frequency Communication
-*[HDMI]: High-Definition Multimedia Interface
-*[I2C]: Inter-Integrated Circuit
-*[SD]: Secure Digital
-*[SPI]: Serial Peripheral Interface
-*[UART]: Universal Asynchronous Receiver/Transmitter
-*[USB]: Universal Serial Bus
-*[HID]: Human Interface Device
+# {{page.title}}
+Windows 10 IoT Core supports a variety of peripheral interfaces and protocols, including support for common busses like I2C, UART, USB, and more. This page lists known supported peripherals and is current as of the latest RTM release. Specific entries may only work on Insider releases and will be noted as such. 
 
-[1]: {{site.baseurl}}/{{page.lang}}/win10/AllJoyn.htm "AllJoyn Connectivity"
-[2]: http://amzn.com/B00ESBCT56 "ORICO BTA-403 Low Energy Bluetooth 4.0 Adapter"
-[3]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm#RPi2_GPIO "Raspberry Pi 2 GPIOs"
-[4]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm#MBM_GPIO "MinnowBoard Max GPIOs"
-[5]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm#RPi2_I2C "Raspberry Pi 2 I2C bus"
-[6]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm#MBM_I2C "MinnowBoard Max I2C bus"
-[7]: {{site.baseurl}}/{{page.lang}}/win10/SetupRPI.htm#RPi2_SDcard "Raspberry Pi 2 microSD card"
-[8]: {{site.baseurl}}/{{page.lang}}/win10/SetupMBM.htm#MBM_SDcard "MinnowBoard Max microSD card"
-[9]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm#RPi2_SPI "Raspberry Pi 2 SPI bus"
-[10]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm#MBM_SPI "MinnowBoard Max SPI bus"
-[11]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm#MBM_UART "MinnowBoard Max UART"
-[12]: http://www.sabrent.com/category/audio/AU-EMAC/ "Sabrent USB External Stereo Sound Adapter, Model AU-EMAC"
-[13]: http://www.amazon.com/RuiLing-Bluetooth-Adapter-Dongle-Class/dp/B00WMET36O "Mini USB Bluetooth CSR V4.0 Adapter"
-[14]: http://www.newegg.com/Product/Product.aspx?Item=9SIA1GK0TS7891 "Mini Bluetooth Keyboard with Built-in Touchpad, Model: IS11-BT05"
-[15]: http://www.riitek.com/goods/detail/39.htm "Rii Mini Wireless Keyboard, Model: RT-MWK01"
-[16]: http://www.xbox.com/en-US/xbox-360/accessories/controllers/wired-controller "Xbox-360 controller (wired)"
-[17]: http://www.xbox.com/en-US/xbox-360/accessories/controllers/wireless-controller "Xbox-360 controller (wireless)"
-[18]: {{site.baseurl}}/{{page.lang}}/win10/SetupWiFi.htm#WiFi_Devices "External USB WiFi Adapters"
-[19]: http://www.sabrent.com/category/accesories/SBT-UFDB/ "Sabrent USB 2.0 Floppy Disk Drive"
-[20]: {{site.baseurl}}/{{page.lang}}/win10/samples/ZWaveTutorial.htm#AllJoyn_Z_Wave "Aeon Labs Z-Wave"
-[21]: http://perixx.com/en/products/perixx-pro-16.html "Perixx Peripad-201 Plus Slim USB Keyboard"
-[22]: http://www.perixx.com/en/products/perixx-pro-2.html "Perixx Peripad-501 Professional Touchpad"
-[23]: http://cache-www.belkin.com/support/dl/man_f4u003_pm00758_mediareader.pdf "Universal Media Reader F4U003"
-[24]: {{site.baseurl}}/{{page.lang}}/win10/samples/SerialSample.htm#USB_TTL_Adapter "USB-to-TTL Adapter"
-[25]: {{site.baseurl}}/{{page.lang}}/win10/samples/SerialSample.htm#MBM_UART "USB-to-TTL Adapter"
-[26]: {{site.baseurl}}/{{page.lang}}/win10/samples/I2CAccelerometer.htm#I2C_Accelerometer "Sparkfun ADXL345 accelerometer board"
-[27]: {{site.baseurl}}/{{page.lang}}/win10/samples/I2CPortExpander.htm#I2C_PortExpander "MCP23008 8-bit I/O Port Expander"
-[28]: {{site.baseurl}}/{{page.lang}}/win10/samples/SPIAccelerometer.htm#SPI_Accelerometer "Sparkfun ADXL345 accelerometer board"
-[29]: {{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplay.htm#SPI_Display "Monochrome 1.3” 128x64 OLED graphic display"
-[30]: {{site.baseurl}}/{{page.lang}}/win10/samples/WebCamSample.htm#USB_WebCam "Microsoft LifeCam HD-3000"
-[31]: {{site.baseurl}}/{{page.lang}}/win10/Bluetooth.htm "Bluetooth Support"
-[32]: {{site.baseurl}}/{{page.lang}}/win10/samples/BLEGatt.htm "Generic Attribute Profile Sample "
-[33]: {{site.baseurl}}/{{page.lang}}/win10/samples/NodejsCylon.htm "Arduino Leonardo"
-[34]: http://www.raspberrypi-spy.co.uk/2014/07/raspberry-pi-model-b-3-5mm-audiovideo-jack/ "Rpi2 3.5 mm Audio/Video Jack"
+Browse, search, and filter, peripherals that are known to be supported on Windows 10 IoT Core devices. You can also contribute to this list on GitHub by clicking the "Contribute" links.  
 
-[^1]: Attaching an external USB sound card to RPi2 will add an extra audio endpoint (playback device) to the already existing onboard PWM headphone jack. Since the default order of the audio devices cannot be guaranteed at reboot, it is recommended that applications enumerate the audio endpoints and ensure the correct one is used.
-[^2]: Currently due to a bug in the OS the Xbox-360 controller does not work.
+This list is not exhaustive. There are many other peripherals not listed on this page that are compatible with Windows 10 IoT Core. We encourage you to contribute to this list to improve this resource!
+
+Looking for information about supported hardware platforms? Click [here](https://msdn.microsoft.com/library/windows/hardware/dn914597(v=vs.85).aspx) to be taken to a list of development boards compatible with Windows.
+
+<div class="searchbox">
+	<div id='javascriptWarn' class='javascriptWarn'>
+		Enable Javascript for this page to function properly.
+	</div>
+	<div class="searchTools" style="display:none">
+		<div>
+			<h3> Search and Filter </h3>
+			Filter lists by board type:
+			<select id="boardSelect" onchange="filterDeviceRows();">
+			  <option value=".">All</option>
+			  <option value="RPI2">RPi2/RPi3</option>
+			  <option value="MBM">MBM</option>
+			</select>
+		</div>
+		<div>
+			Search <b> all </b> lists by Part Name/Model:
+			<input id="filterInput" oninput="filterDeviceRows();"/>
+			<button onClick="$('#filterInput')[0].value='';filterDeviceRows();">Clear</button>
+		</div>
+		<div>
+			<a onClick="showHideAll(false); return false;"> Hide all Sections	</a>
+			<a onClick="showHideAll(true); return false;"> Show all Sections </a>
+		</div>
+	</div>
+</div>
+
+<div class="SearchResultsSection" markdown="1" style="display:none">
+## <a name="SearchResults" class="SearchResults" onClick="toggleSection('SearchResults');return false;">Search Results</a>
+<div class="SearchResults" markdown="1">
+
+{:.table.table-bordered .SearchResults}
+Part Name / No. | Compatible Boards | Description | Notes  | Projects, Samples, Libraries |Microsoft Verified                  |
+----------------|-------------------|-------------|--------|------------------------------|------------------------------------|
+result          | result            | result      | result | result                       |result                              |
+
+</div></div>
+
+
+<h2> <a onClick="toggleSection('USBDevices');return false;">USB Devices </a>
+	<div class="sectionControls">
+		<a class="sectionToggle" onClick="toggleSection('USBDevices');return false;">Show/Hide</a>
+		<a class="sectionContribute" onClick="contribute('USBDevices');return false;">Contribute</a>
+	</div>
+</h2>
+<div class="USBDevices section" markdown="1">
+{% include_relative SupportedInterfaces/USBDevices.md %}
+</div>
+
+<h2> <a onClick="toggleSection('ArduinoPeripherals');return false;"> Arduino Peripherals </a>
+	<div class="sectionControls">
+		<a class="sectionToggle" onClick="toggleSection('ArduinoPeripherals');return false;">Show/Hide</a>
+		<a class="sectionContribute" onClick="contribute('ArduinoPeripherals');return false;">Contribute</a>
+	</div>
+</h2>
+<div class="ArduinoPeripherals section" markdown="1">
+{% include_relative SupportedInterfaces/ArduinoPeripherals.md %}
+</div>
+
+<h2> <a onClick="toggleSection('OtherDevices');return false;"> Other Hardware Peripherals (e.g., Sensors, ICs)</a>
+	<div class="sectionControls">
+		<a class="sectionToggle" onClick="toggleSection('OtherDevices');return false;">Show/Hide</a>
+		<a class="sectionContribute" onClick="contribute('OtherDevices');return false;">Contribute</a>
+	</div>
+</h2>
+<div class="OtherDevices section" markdown="1">
+{% include_relative SupportedInterfaces/OtherDevices.md %}
+</div>
+
+<h2> <a onClick="toggleSection('Libraries');return false;"> Third Party Software Libraries</a>
+	<div class="sectionControls">
+		<a class="sectionToggle" onClick="toggleSection('Libraries');return false;">Show/Hide</a>
+		<a class="sectionContribute" onClick="contribute('Libraries');return false;">Contribute</a>
+	</div>
+</h2>
+<div class="Libraries section" markdown="1">
+{% include_relative SupportedInterfaces/Libraries.md %}
+</div>
+
+<h2> <a onClick="toggleSection('SupportedBusses');return false;"> Supported Busses</a>
+	<div class="sectionControls">
+		<a class="sectionToggle" onClick="toggleSection('SupportedBusses');return false;">Show/Hide</a>
+		<a class="sectionContribute" onClick="contribute('SupportedBusses');return false;">Contribute</a>
+	</div>
+</h2>
+<div class="SupportedBusses section" markdown="1">
+{% include_relative SupportedInterfaces/SupportedBusses.md %}
+</div>
+
+<script>
+	  function filterDeviceRows()
+	  {
+				var selectedBoard = $("#boardSelect option:selected")[0].value;
+				var boardColumn = 1; // compatible boards
+				var searchColumn = 0; // model
+				var searchString = $("#filterInput")[0].value;
+				if (searchString=='') {searchString = '.';}
+				var regExBoard = new RegExp(selectedBoard,"i");
+				var regEx = new RegExp(searchString,"i");
+
+				var rows = $(".devices tr");
+				var searchResults = [];
+				for (var rowNbr = 0; rowNbr < rows.length; rowNbr++){
+					if (rows[rowNbr].rowIndex > 0)
+					{
+						if ( rows[rowNbr].cells[boardColumn].innerHTML.match(regExBoard))
+						{
+							if ( rows[rowNbr].cells[searchColumn].innerHTML.match(regEx))
+							{
+								searchResults.push(rows[rowNbr]);
+					    }
+							rows[rowNbr].style.display = "";
+				    }
+				    else
+				    {
+							rows[rowNbr].style.display = "none";
+						}
+
+					}
+				}
+
+				//Update search results
+				if (searchString > '.' )
+				{
+					var searchTable = $('table.SearchResults')[0];
+
+					// remove existing rows
+					$('table.SearchResults tr').has('td').remove();
+
+					// Add all found rows
+					for (var rowNbr = 0; rowNbr < searchResults.length; rowNbr++){
+							var row = searchTable.insertRow(searchTable.rows.length);
+							for (cellNbr = 0; cellNbr < searchTable.rows[0].cells.length; cellNbr++) {
+	        			var cell = row.insertCell(cellNbr);
+	        			cell.innerHTML = searchResults[rowNbr].cells[cellNbr].innerHTML;
+	       			}
+					}
+					$("div.SearchResultsSection").show();
+				}
+				else
+				{
+					$("div.SearchResultsSection").hide();
+				}
+		}
+
+		function toggleSection(section) {
+			$("."+section+".section").toggle('slow');
+		}
+
+		function changeSectionState(section, shouldShow) {
+			var sectionObj = $("."+section+".section").filter(":visible");
+			if (shouldShow && sectionObj == null)
+			{
+				toggleSection(section);
+			}
+			if (!shouldShow && sectionObj != null)
+			{
+				toggleSection(section);
+			}
+		}
+
+		function showHideAll(shouldShow) {			
+			if (shouldShow)
+			{
+				$(".section").show('slow');
+			} else {
+				$(".section").hide('slow');
+			}
+		}
+		
+		function contribute(section) {			
+			var pagePath="{{site.repositoryurl}}{{page.path}}";
+			
+			var url = pagePath.replace("SupportedInterfaces", "SupportedInterfaces/" + section); 
+			
+	  	var win = window.open(url, '_blank');
+  		win.focus();
+		}
+
+		window.onload = function() {
+      $(".section").hide();
+      $(".javascriptWarn").hide();
+      $(".searchTools").show();
+      if(window.location.hash) {
+			  $(location.hash).parent().show();
+			  window.scrollTo(0, $(location.hash).offset().top);
+			} 
+    }
+</script>
+
+<!-- Reference Links -->
+[MSVerified]: SupportedInterfaces/checkmark.svg "Microsoft Verified"
+[Contribute to this list on GitHub.]: {{site.repositoryurl}}{{ page.path }}
+[RPi2 or RPi3 Pin Mapping]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm#RPi2_I2C
+[MBM Pin Mapping]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm#MBM_I2C
+[ZWave Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/ZWaveTutorial.htm
+[GpioOneWire Sample (DHT11)]: {{site.baseurl}}/{{page.lang}}/win10/samples/GpioOneWire.htm
+[I2C Accelerometer Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/I2CAccelerometer.htm#I2C_Accelerometer
+[I2C Port Explander Sample]: https://www.hackster.io/4803/i2c-port-expander-sample
+[Adafruit Starter Pack]: {{site.baseurl}}/{{page.lang}}/AdafruitKitContents.htm
+[//build 2014 - Piano]: https://www.hackster.io/windowsiot/build-2014-piano
+[SPI Display Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplay.htm
+[Shift Register Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/ShiftRegisterSample.htm
+[Serial Port Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/SerialSample.htm
+[Potentiometer Sensor Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm
+[ADC Bus Providers]: {{site.msiotorgurl}}/BusProviders/tree/develop/ADC
+[PWM Bus Providers]: {{site.msiotorgurl}}/BusProviders/tree/develop/PWM
+[Alljoyn DSB Gpio C# Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/AlljoynDSB_ManagedGpioTutorial.htm
+[Wiring API]: {{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm
+[Weather Station Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/WeatherStation.htm
+[RGB Pixel Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/RGBPixel.htm
+[Home Security Camera Project]: {{site.baseurl}}/{{page.lang}}/win10/samples/WebCamSample.htm
+

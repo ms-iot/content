@@ -1,98 +1,96 @@
 ---
 layout: default
-title: Picture the Weather
-permalink: /en-US/win10/samples/PictureTheWeather.htm
-lang: en-US
+title: 描绘天气
+permalink: /zh-cn/win10/samples/PictureTheWeather.htm
+lang: zh-cn
 ---
 
-##Picture The Weather sample, using Windows Virtual Shields for Arduino
+##“描绘天气”示例，使用面向 Arduino 的 Windows Virtual Shield
 
-In this sample, we will connect an RGB LED strip to an Arduino and control it to indicate the weather forecast behind a picture.
+在此示例中，我们会将 RGB LED 条连接到 Arduino，并控制它在图片后指示天气预报。
 
-![RGB Strip 1]({{site.baseurl}}/images/RGBSTRIP/rgbstrip_split1.JPG)
+![RGB 带 1]({{site.baseurl}}/Resources/images/RGBSTRIP/rgbstrip_split1.JPG)
 
-###Components
+###组件
 
-You will need the following components :
+你将需要以下硬件：
 
-* an Arduino UNO or compatible
+* 一个 Arduino UNO 或兼容设备
 
-* a [Digital RGB LED Weatherproof Strip - LPD8806 32 LED - (1m)](http://www.adafruit.com/products/306){:target="_blank"})
+* [数字 RGB LED 防风雨条 - LPD8806 32 LED - （1 米）](http://www.adafruit.com/products/306){:target="_blank"}）
 
-* a [SparkFun Bluetooth Modem - BlueSMiRF Silver](https://www.sparkfun.com/products/12577){:target="_blank"}
+* [SparkFun 蓝牙调制解调器 - BlueSMiRF 银色](https://www.sparkfun.com/products/12577){:target="_blank"}
 
-* solder and a soldering iron
+* 焊接和烙铁
 
-* 20 red/black/green/yellow wires at 6 inches length each (5 sets of 4 colors).
+* 20 根红色/黑色/绿色/黄色电线，每个长度为 6 英寸（5 组 4 种颜色）。
 
-* a picture frame
+* 相框
 
-* a 8x11" paper drawing from an artistic family member, friend or yourself
+* 来自会艺术创作的家庭成员、朋友或你自己的 8 x 11 英寸纸张绘图
 
-###Connect to your Device
+###连接到你的设备
 
-* Follow the instructions at this [Arduino repository](https://github.com/ms-iot/virtual-shields-arduino){:target="_blank"} to set up your Arduino.
+* 按照此 [Arduino 存储库](https://github.com/ms-iot/virtual-shields-arduino){:target="_blank"}中的说明设置 Arduino。
 
-* Follow the instructions at this [Universal repository](https://github.com/ms-iot/virtual-shields-universal){:target="_blank"} to set up your Windows Phone.
+* 按照此 [Arduino 存储库](https://github.com/ms-iot/virtual-shields-universal){:target="_blank"}中的说明设置 Windows Phone。
 
-###Modify the RGB strip
+###修改 RGB 条
 
-The RGB LED strips come with 48 LEDs in a strip.
+RGB LED 条在条中附带 48 个 LED。
 
-* Carefully split apart the RGB strips at the seams so that you have 6 strips of 8 lights.
+* 在接缝处仔细拆开 RGB 条，这样你就拥有了含有 8 个灯的 6 个条。
 
-* Keeping the power connector (and other original wires) at the bottom right of the 6 strips,
+* 将电源连接器（和其他原始电线）保留在 6 个条的右下角，
 
-* ... solder wires between the splits so that the ends are reconnected through the wires.
+* ...在裂缝之间焊接电线，以便各端通过电线重新连接。
 
-![RGB Strip 2]({{site.baseurl}}/images/RGBSTRIP/rgbstrip_split2.JPG)
+![RGB 带 2]({{site.baseurl}}/Resources/images/RGBSTRIP/rgbstrip_split2.JPG)
 
-###Placement of the RGB strip
+###RGB 条的放置
 
-With the original power connector placed at the lower right,
-place the 6 strips of 8 LEDs onto the inside backing of the picture frame so that a 8x11" white paper (with artwork) separates the LEDs from the glass frame.
+当原始电源连接器放置在右下角时，将含有 8 个 LED 的 6 个条放置在相框的背衬内，以便 8x11 英寸的白纸（带有插图）将 LED 与玻璃框架分隔开。
 
-Tape or connect the backing into/onto the frame.
+将背衬用胶带粘贴或连接到项目上。
 
-![RGB Strip 1]({{site.baseurl}}/images/RGBSTRIP/rgbstrip_split1.JPG)
+![RGB 带 1]({{site.baseurl}}/Resources/images/RGBSTRIP/rgbstrip_split1.JPG)
 
-###Hook up the RGB strip to the Arduino
+###将 RGB 条连接到 Arduino
 
-From the RGB LED strip:
+从 RGB LED 条：
 
-* Connect the ground wire to GND on the Arduino.
+* 将地线连接到 Arduino 上的 GND。
 
-* Connect the green wire to PIN 2 on the Arduino.
+* 将绿线连接到 Arduino 上的引脚 2。
 
-* Connect the yellow wire to PIN 3 on the Arduino.
+* 将黄线连接到 Arduino 上的引脚 3。
 
-* Connect the barrel power connector to a +5 volt power supply (per Adafruit's instructions).
+* 将筒状电源连接器连接到 5 伏特电源（按照 Adafruit 的说明）。
 
-![RGB connection]({{site.baseurl}}/images/RGBSTRIP/rgbconnect.JPG)
+![RGB 连接]({{site.baseurl}}/Resources/images/RGBSTRIP/rgbconnect.JPG)
 
-###Upload to your device
+###上载到你的设备
 
-* In the Arduino IDE (set up from Connect to your Device : Arduino), choose the menu item File->Examples->VirtualShield->PictureTheWeather
+* 在 Arduino IDE（从“连接到你的设备： Arduino”中设置）中，选择菜单项“文件”-\>“示例”-\>“VirtualShield”-\>“PictureTheWeather”
 
-* Upload to your Arduino.
+* 上载到你的 Arduino。
 
-###See it run
+###查看其运行
 
-* The phone will show "Web Weather Indicator," your coordinates and your weather forecast.
+* 手机将显示“Web 天气指示器”、你的坐标和你的天气预报。
 
-* You can say "tomorrow," "in 3 days," "in 5 days" to see different forecasts for your location.
+* 你可以说“明天”、“3 天内”、“5 天内”以查看你的方位的不同预报。
 
-* (There's also a not-so-secret debugging mode), try saying "show thunderstorms". Then, say "strike".
+* （还有一个不太秘密的调试模式），尝试说“显示雷暴”。然后说“打击”。
 
-###Here's what's happening...
+###以下是会发生的情况...
 
-Using the Windows Virtual Shields for Arduino, the Arduino sketch is:
-* Getting your GPS coordinates.
+使用适用于 Arduino 的 Windows Virtual Shield，Arduino 草稿是：\* 获取你的 GPS 坐标。
 
-* Using that to get the National Weather Service forecast and location using your coordinates
+* 使用它获取国家天气服务预报和使用你的坐标的位置
 
-* Presenting that information to you on screen as well as
+* 在屏幕上向你呈现该信息，并且
 
-* setting the animation on the RGB LED strip.
+* 在 RGB LED 上条设置动画。
 
-![Phone image]({{site.baseurl}}/images/RGBSTRIP/Phone.JPG)
+![手机映像]({{site.baseurl}}/Resources/images/RGBSTRIP/Phone.JPG)

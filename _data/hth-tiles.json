@@ -1,0 +1,124 @@
+{
+   "en-US":[
+      {
+         "title": "SparkFun Weather Shield",
+         "categories": "Devices",
+         "githubLink": "https://github.com/ms-iot/sparkfun-weather-shield",
+         "documentation": {
+            "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
+            "hackster": null,
+            "other": null
+            },
+         "compatibleDevices": {"rpi2": true,
+                               "mbm": true,
+                               "410c": true},
+         "flavorText": "Universal Windows Runtime Component for the Sparkfun Weather Shield, which incorporates the components for the HTU21D and MPL3115A2.",
+         "tags": []
+      },
+      {
+         "title": "HTU21D",
+         "categories": "Devices",
+         "githubLink": "https://github.com/ms-iot/htu21d",
+         "documentation": {
+            "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
+            "hackster": null,
+            "other": null
+            },
+         "compatibleDevices": {"rpi2": true,
+                               "mbm": true,
+                               "410c": true},
+         "flavorText": "Universal Windows Runtime Component for the HTU21D integrated circuit, which is used to sense and measure and humidity and temperature.",
+         "tags": []
+      },
+      {
+         "title": "MPL3115A2",
+         "categories": "Devices",
+         "githubLink": "https://github.com/ms-iot/mpl3115a2",
+         "documentation": {
+            "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
+            "hackster": null,
+            "other": null
+            },
+         "compatibleDevices": {"rpi2": true,
+                               "mbm": true,
+                               "410c": true},
+         "flavorText": "Universal Windows Runtime Component for the MPL3115A2 integrated circuit, which is used to sense and measure barometric pressure.",
+         "tags": []
+      },
+      {
+         "title": "PIR Motion Sensor",
+         "categories": "Devices",
+         "githubLink": "https://github.com/ms-iot/motion-sensor" ,
+         "documentation": {
+            "sample": null,
+            "hackster": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
+            "other": null
+            },
+         "compatibleDevices":{"rpi2": true,
+                               "mbm": true,
+                               "410c": false},
+         "flavorText": "Allows for easy use of a simple, three-wire motion detection sensor.",
+         "tags": []
+      },
+      {
+         "title": "USB Camera",
+         "categories": "Devices",
+         "githubLink": "https://github.com/ms-iot/usb-camera",
+         "documentation": {
+            "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
+            "hackster": null,
+            "other": null
+            },
+         "compatibleDevices": {"rpi2": true,
+                               "mbm": true,
+                               "410c": false},
+         "flavorText": "USB connected camera for capturing pictures.",
+         "tags": []
+      },
+      {"title": "OneDrive Connector",
+         "categories": "Storage",
+         "githubLink": "https://github.com/ms-iot/onedrive-connector",
+         "documentation": {
+            "sample": null,
+            "hackster": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
+            "other": null
+            },
+         "compatibleDevices": {"rpi2": true,
+                               "mbm": true,
+                               "410c": false},
+         "flavorText": "Simple commands for file upload and management on OneDrive.",
+         "tags": []
+      },
+      {
+         "title": "Text Display",
+         "categories": "Devices",
+         "githubLink": "https://github.com/ms-iot/TextDisplay",
+         "documentation": {
+            "sample": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
+            "hackster": null,
+            "other": null
+            },
+         "compatibleDevices": {"rpi2": true,
+                               "mbm": true,
+                               "410c": true},
+         "flavorText": "Provides the ability to write strings to text-based displays.",
+         "tags": []
+      },
+      {"title": "Universal Media Engine",
+         "categories": "Media",
+         "githubLink": "https://github.com/ms-iot/UniversalMediaEngine",
+         "documentation": {
+            "sample": null,
+            "hackster": "https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f",
+            "other": null
+            },
+         "compatibleDevices": {"rpi2": true,
+                               "mbm": true,
+                               "410c": true},
+         "flavorText": "Allows playback of Audio in headless Windows 10 IoT core applications.",
+         "tags": []
+      }
+   ],
+   "zh-CN":[
+   ]
+}

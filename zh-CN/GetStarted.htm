@@ -1,0 +1,101 @@
+﻿---
+layout: default
+title: 入门
+permalink: /zh-cn/GetStarted.htm
+lang: zh-cn
+---
+<div class="row">
+    <div class="col-xs-24">
+        <ol class="breadcrumb">
+            <li>
+                <a href="https://dev.windows.com/zh-cn/iot">IoT 主页</a>
+            </li>
+            <li class="active">入门</li>
+        </ol>
+        <header class="page-title-header">
+            <h1 class="page-title">Windows IoT 入门 </h1>
+        </header>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 col-xs-24 col-no-padding">
+        <h2 class="subtext">按照下面的说明来设置或选择开发板、设置开发环境，然后开始编写你的第一个应用。</h2>
+    </div>
+</div>
+<h2>设置电脑 <span class="pull-right"><a id="pc-content-toggle" class="toggle-button" onClick="hideDiv('pc-content')">隐藏</a></span></h2>
+
+<hr>
+<div id="pc-content" class="toggle-section">
+    {% include_relative SetupPCContent.md %}
+</div>
+
+<h2>设置 Windows 10 IoT 核心版设备</h2>
+<hr>
+<div class="row">
+    <div class="col-md-14 col-xs-24 col-no-padding">
+        <p>如果你有一个 Raspberry Pi 2 或 MinnowBoard MAX，可以使用 Windows 10 IoT 核心版仪表板轻松地对其进行设置和配置。可以使用该仪表板在 RTM（公共）版本的 Windows 10 IoT 核心版上进行设置，并且需要运行 Windows 10 的电脑。</p>
+        <p>请确保运行的是最新公共版本的 Windows 10 或 Windows 10 Insider Preview。如果不是，可从<a href="http://www.microsoft.com/zh-cn/software-download/windows10ISO">此处</a>升级。</p>
+        <a href="http://go.microsoft.com/fwlink/?LinkID=708576" id="device-center-link" class="button-blue button-flat">获取 Windows 10 IoT 核心版仪表板</a>
+        <p> 下载和使用 Windows 10 IoT 核心版仪表板即表示你同意 Windows 10 IoT 核心版仪表板的<a href="http://go.microsoft.com/fwlink/?LinkID=703960&clcid=0x4809">许可条款</a>和<a href="http://go.microsoft.com/fwlink/?LinkId=521839">隐私声明</a>。</p>
+        <p> <a href="{{site.baseurl}}/{{page.lang}}/win10/IoTDashboardTroubleshooting.htm">需要帮助？ 查看疑难解答页面。</a></p>
+        <p> Dragonboard 410c 不受该仪表板支持，但可使用以下说明进行配置。也可以按照下面的说明来获取每台设备的详细设置说明，无需使用仪表板。</p>
+        <p> <a href="{{site.baseurl}}/{{page.lang}}/win10/RPI.htm">设置 Raspberry Pi 2 的步骤</a></p>
+        <p> <a href="{{site.baseurl}}/{{page.lang}}/win10/MBM.htm">设置 MinnowBoard MAX 的步骤</a></p>
+        <p> <a href="{{site.baseurl}}/{{page.lang}}/win10/DB410c.htm">设置 DragonBoard 410c 的步骤</a></p>
+    </div>
+    <div class="col-md-10 col-xs-24">
+        <img src="{{site.baseurl}}/Resources/images/DeviceCenter.png">
+    </div>
+</div>
+<h2> 需要帮助选择开发板？ </h2>
+<hr>
+<p>许多开发板都运行 Windows 10 IoT 核心版。比较各个功能以了解哪些开发板满足你的需求。</p>
+<p><a href="{{site.baseurl}}/{{page.lang}}/BoardComparison.htm">帮助我选择一块开发板。</a></p>
+<br>
+<h2> Arduino 和 Windows 10 IoT 核心版 </h2>
+<hr>
+<p> Windows 10 和 Arduino 共同协作以帮助你创建令人惊叹的项目，单击以下链接之一即可开始。</p>
+<div class="row">
+    <div class="col-md-8 col-xs-24">
+        <a href="{{site.baseurl}}/{{page.lang}}/win10/Lightning.htm"><img src="{{site.baseurl}}/Resources/images/devices/Lighning_0.png"></a>
+        <h3>Arduino 接线和 UWP Lightning 提供程序</h3>
+        <p> 为了支持在 IoT 核心版设备上使用现有的 Arduino 接线草图，现在可以在 Visual Studio 中使用 Arduino 接线的项目模板。这些项目使用可提供高性能的直接内存映射的驱动程序。此外，基于相同的驱动程序，可以在 UWP 应用中使用一组控制器提供程序来访问可提供高性能的 GPIO、I2C 和 SPI 控制器。</p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/win10/Lightning.htm">开始使用 Arduino 接线</a></p>
+    </div>
+    <div class="col-md-8 col-xs-24">
+        <a href="{{site.baseurl}}/{{page.lang}}/win10/WRA.htm"><img src="{{site.baseurl}}/Resources/images/devices/WindowsPhone_0.png"></a>
+        <h3>Windows Remote Arduino</h3>
+        <p> Windows Remote Arduino 是一个开源 Windows 运行时组件库，可允许制造商通过蓝牙或 USB 连接控制 Arduino。它适用于希望使用 Windows 运行时语言控制 Arduino 硬件电源的 Windows 运行时开发人员。在其项目中包含此组件的开发人员将自动获得使用任何 WinRT 语言（C++/CX、C# 和 JavaScript）访问其功能的权限。</p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/win10/WRA.htm">开始使用 Windows Remote Arduino</a></p>
+        <p><a href="https://github.com/ms-iot/remote-wiring-experience" target="_blank">在 GitHub 上查看 Windows Remote Arduino</a></p>
+        <p><a href="http://store-usa.arduino.cc/" target="_blank">购买 Arduino</a></p>
+    </div>
+    <div class="col-md-8 col-xs-24">
+        <a href="{{site.baseurl}}/{{page.lang}}/win10/WVSA.htm"><img src="{{site.baseurl}}/Resources/images/devices/Arduino_1.png"></a>
+        <h3>Windows Virtual Shields for Arduino</h3>
+        <p> Windows Virtual Shields for Arduino 是一个开源库，主要用于与在所有 Window 10 设备（包括 Windows Lumia 手机）上运行的开源通用 Windows 应用程序通信的 Arduino UNO。该库向 Arduino 接线草图公开 Lumia 手机的传感器和功能。</p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/win10/WVSA.htm">开始使用 Windows Virtual Shield for Arduino</a></p>
+        <p><a href="https://github.com/ms-iot/virtual-shields-arduino" target="_blank">在 GitHub 上查看 Windows Virtual Shield for Arduino</a></p>
+        <p><a href="http://store-usa.arduino.cc/" target="_blank">购买 Arduino</a></p>
+    </div>
+</div>
+
+<script>
+    function hideDiv(div) {
+        var div = "#" + div,
+            button = div + "-toggle",
+            currentState = $(button)[0].innerHTML;
+
+        $(button)[0].innerHTML = "Show";
+
+        if (currentState === "Hide") {
+            $(div).toggle('slow');
+        }
+        else {
+            $(".hidden").removeClass("hidden");
+            $(".toggle-section").hide();
+            $(div).toggle('slow');
+            $(button)[0].innerHTML = "Hide";
+        }
+    }
+</script>

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Shield Compatibility
-permalink: /en-US/ShieldCompat.htm
+permalink: /en-US/win8/ShieldCompat.htm
 lang: en-US
 ---
 

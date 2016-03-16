@@ -1,0 +1,44 @@
+﻿<h3>所需内容</h3>
+
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <p>在本部分中，我们准备一台 Arduino 设备，通过之前准备的 Windows 10 设备远程控制它。 Arduino 需要运行 Firmata 版本，从而允许开发板通过 USB、蓝牙或 WLAN 与应用进行通信。 你可以决定所需的通信连接 - 请务必相应地选择以下部分：</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <p>你将需要：</p>
+    <ol class="inline-list">
+      <li><b>一台 Windows 设备</b> - 不一定是上一步骤中准备好的设备，可用来将草图上载到 Arduino 的任何设备皆可。</li>
+      <li><b>一块 Arduino 开发板</b> - 我们的示例已经过测试，可适用于 Arduino Uno。</li>
+      <li><b>标准 A 到标准 B USB 电缆</b> - 无论选择的是何种连接，只要是上载 Arduino 草图，都需要此电缆。</li>
+      <li><b>适用于 Arduino 的蓝牙设备</b>（可选）- 仅当你选择通过蓝牙连接时才需要。我们建议使用 <a href="https://www.sparkfun.com/products/12576" target="_blank">SparkFun Bluetooth Mate Silver</a>。</li>
+      <li><b>适用于 Arduino 的 WLAN 设备</b>（可选）- 仅当你选择通过 WLAN 连接时才需要。我们建议使用此 <a href="https://www.arduino.cc/en/Main/ArduinoWiFiShield" target="_blank">Arduino WLAN Shield</a>。</li>
+    </ol>
+  </div>
+</div>
+
+<h3>Arduino 设置</h3>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <p>Windows Remote Arduino 使用 <a href="https://github.com/firmata/protocol" target="_blank">Firmata 协议</a>，该协议已在多种语言版本中实现，包括 Arduino。Arduino 实现称为 <a href="https://github.com/firmata/arduino/blob/master/examples/StandardFirmata/StandardFirmata.ino" target="_blank">StandardFirmata</a>，并且在安装时通过与 Arduino 软件一起预打包来提供。请按照下面的步骤将 StandardFirmata 草图上载到你的 Arduino。</p>
+
+    <ol class="inline-list">
+      <li>从 <a href="http://arduino.cc" target="_blank">http://arduino.cc</a> 下载并安装 Arduino 软件。</li>
+      <li>使用 USB 将你的 Arduino 设备连接到计算机。</li>
+      <li>启动 Arduino 应用程序。</li>
+      <li>请验证你在“工具”>“开发板”<b></b>下选择了正确的 Arduino 开发板。</li>
+      <li>请验证你在“工具”>“端口”<b></b>下选择了正确的 COM 端口。 每个选项的旁边都应该显示开发板的名称，以便可以更轻松地选择正确的选项。</li>
+      <li>在 Arduino IDE 中，导航到“文件”>“示例”>“Firmata”>“StandardFirmata”<b></b>。</li>
+      <li>按“上载”以将 StandardFirmata 草图部署到 Arduino 设备。</li>
+    </ol>
+
+    <p>除非使用不同的草图重新编程，否则你的 Arduino 从现在开始将永远运行 StandardFirmata 草图。你现在可以选择将 Arduino 从计算机中断开连接，然后采用任何所选方式接通电源。</p>
+
+    <p>此时，可以使用 USB 连接（无需进行其他操作）- 如果你选择此选项，请转到下一个页面。 否则，请按照以下指令集之一设置蓝牙或 WLAN 设备。</p>
+
+    <p>如果你想要在设备之间使用推荐的蓝牙配对，则需要<a href="https://github.com/ms-iot/remote-wiring/blob/master/bluetooth.md" target="_blank">将蓝牙设备连接到 Arduino</a>。 按照我们 GitHub 上的步骤设置蓝牙模块，然后再转到下一步。</p>
+
+    <p>如果你想要在设备之间使用 WLAN 配对，则需要<a href="https://github.com/ms-iot/remote-wiring#notes-on-wifi-and-ethernet" target="_blank">将 WLAN 设备连接到 Arduino</a>。 按照我们 GitHub 上的步骤设置蓝牙模块，然后再转到下一步。</p>
+  </div>
+</div>

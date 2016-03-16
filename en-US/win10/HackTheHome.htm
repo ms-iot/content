@@ -1,0 +1,69 @@
+---
+layout: default
+title: Hack the Home
+permalink: /en-US/win10/HackTheHome.htm
+lang: en-US
+---
+
+<section class="section spacer-84-top remove-header-rule remove-bottom-margin" id="hth-welcome">
+    <header class="section-header">
+        <h1 class="hth-header">Hack the Home</h1>
+        <h4 class="hth-subheader">A suite of open-source tools designed to help you make your home start <i>working for you</i>.</h4>
+    </header>
+    <div class="row">
+        <div class="col-xs-24 col-md-12">
+            <section class="section item-section">
+                <div class="section-body">
+                    <img class="img-responsive center" src="{{site.baseurl}}/Resources/images/HackTheHomeLogo.png" alt="" />
+                </div>
+            </section>
+        </div>
+        <div class="col-xs-24 col-md-12">
+            <section class="section item-section">
+                <div class="section-body">
+                    <p class="hth-major-text floatTop text-center"> A growing community of makers is determined to change the way that they interact with their homes.  From automating every day tasks like watering plants and feeding pets to improving security by monitoring home cameras and door locks from anywhere in the world, the possibilities are endless.  With this in mind, the Microsoft Internet of Things Maker Team has released <a href="#hth-list-block">a host of open-source libraries and APIs</a> that, combined with the power of Windows 10 IoT Core, will allow you to quickly and easily hack your home to start working for you. </p>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+
+<section class="section remove-header-rule" id="hth-feature-block">
+    <header class="section-header">
+        <h2 class="hth-feature-header">Featured Projects</h2>
+    </header>
+    <div class="col-xs-24 col-md-16">
+        <section class="section item-section remove-header-rule">
+            <div class="section-body">
+                <h3 class="hth-feature-subheader text-center">Security Camera</h3>
+                <a href="https://microsoft.hackster.io/en-US/windows-iot/security-camera-579b7f?ref=platform&amp;ref_id=4087_trending___&amp;offset=24">
+					<img class="center featured-image img-responsive" src="{{site.baseurl}}/Resources/images/SecurityCamera.jpeg">  
+				</a>
+                <p class="hth-major-text remove-top-margin">Security camera project using Windows 10 IoT Core.  A PiR Motion Sensor detects movement, and triggers the camera accordingly, automatically uploading the photos to OneDrive. Utilizes the <a href="https://github.com/ms-iot/usb-camera"> USB Camera</a>, <a href="https://github.com/ms-iot/onedrive-connector">OneDrive Connector</a> and <a href="https://github.com/ms-iot/motion-sensor"> Motion Sensor</a> components. </p>
+            </div>
+        </section>
+    </div>
+    <div class="col-xs-24 col-md-7">
+        <section class="section item-section">
+            <div class="col-xs-24">
+                <h3 class="hth-feature-subheader text-center"> Connected Radio </h3>
+                <a href="https://microsoft.hackster.io/en-US/windows-iot/connected-clock-radio-85c9fc?ref=platform&amp;ref_id=4087_trending___&amp;offset=32">
+					<img class="hth-project-image center img-responsive" src="{{site.baseurl}}/Resources/images/InternetRadio.jpeg">
+				</a>
+                <p class="spacer-16-top">An internet connected clock radio device with a Pi-powered LCD screen to display what's currently playing. Utilizes the <a href="https://github.com/ms-iot/TextDisplay">TextDisplay</a> and <a href="https://github.com/ms-iot/UniversalMediaEngine"> Universal Media Engine </a> components.</p>
+            </div>
+            <div class="col-xs-24">
+                <h3 class="hth-feature-subheader text-center">IoT Weather Station</h3>
+                <a href="https://microsoft.hackster.io/en-US/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f?ref=platform&amp;ref_id=4087_trending___&amp;offset=1">
+					<img class="hth-project-image center img-responsive" src="{{site.baseurl}}/Resources/images/WeatherShield.jpg">
+				</a>
+                <p class="spacer-16-top">This project demonstrates how to leverage the power of Windows 10 IoT Core, and create a weather station using the Sparkfun weather shield. Utilizes the <a href="https://github.com/ms-iot/sparkfun-weather-shield">SparkFun Weather Shield</a> component.</p>
+            </div>
+        </section>
+    </div>
+</section>
+<div id="hth-list-block">
+  <h1 class="thin-header">Plug-and-Play Components</h1>
+  {% include hth-tiles.html %}
+</div>
+<p class="text-right"><b>Legend: </b> RPi2 = Raspberry Pi 2, RPi3 = Raspberry Pi 3,  MBM = MinnowBoard MAX,  410c = DragonBoard 410c</p>

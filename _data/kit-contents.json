@@ -1,0 +1,202 @@
+{
+  "en-US": {
+    "Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2": {
+      "Essentials": [
+        {
+          name: "Raspberry Pi 2 Board (Included in some versions of the Adafruit Starter Kit)",
+          link: "https://www.adafruit.com/products/2258",
+          quantity: "1"
+        },
+        {
+          name: "Adafruit Raspberry Pi Case",
+          link: "https://www.adafruit.com/products/2258",
+          quantity: "1"
+        },
+        {
+          name: "8GB SD card with Windows IoT Core",
+          link: "https://www.adafruit.com/products/2258",
+          quantity: "1"
+        },
+        {
+          name: "5V 2A Power Supply with MicroUSB Cable",
+          link: "https://www.adafruit.com/products/1995",
+          quantity: "1"
+        },
+        {
+          name: "USB WiFi Module",
+          link: "https://www.adafruit.com/products/2638",
+          quantity: "1"
+        },
+        {
+          name: "Ethernet Cable",
+          link: "https://www.adafruit.com/products/994",
+          quantity: "1"
+        },
+        {
+          name: "Full Size Breadboard",
+          link: "https://www.adafruit.com/products/239",
+          quantity: "1"
+        }
+      ],
+      "Components": [
+        {
+          name: "Premium Male/Male Jumper Wires",
+          link: "https://www.adafruit.com/products/1957",
+          quantity: "1"
+        },
+        {
+          name: "Premium Female/Male Jumper Wires",
+          link: "https://www.adafruit.com/products/2258",
+          quantity: "1"
+        },
+        {
+          name: "MCP3008 - 8-Channel 10-Bit ADC",
+          link: "https://www.adafruit.com/products/8566",
+          quantity: "1"
+        },
+        {
+          name: "Assorted LEDs",
+          link: "https://www.adafruit.com/products/2258",
+          quantity: "6"
+        },
+        {
+          name: "Potentiometers",
+          link: "https://www.adafruit.com/products/356",
+          quantity: "2"
+        },
+        {
+          name: "Tactile Switches",
+          link: "https://www.adafruit.com/products/1119",
+          quantity: "3"
+        },
+        {
+          name: "Resistors",
+          link: "",
+          quantity: "10"
+        },
+        {
+          name: "Capacitor",
+          link: "",
+          quantity: "1"
+        }
+      ],
+      "Sensors": [
+        {
+          name: "Photocell",
+          link: "https://www.adafruit.com/products/161",
+          quantity: "1"
+        },
+        {
+          name: "Adafruit BMP280 Temperature + Barometric Sensor",
+          link: "https://www.adafruit.com/products/2651",
+          quantity: "1"
+        },
+        {
+          name: "Adafruit TCS34725 Color Sensor",
+          link: "https://www.adafruit.com/products/1334",
+          quantity: "1"
+        }
+      ]
+    }
+  },
+  "zh-CN": {
+      "Raspberry Pi2 上适用于 Windows 10 IoT 核心版的 Adafruit 初学者包": {
+        "软件包": [
+          {
+            "name": "Raspberry Pi 2 板（包含在 Adafruit 初学者工具包的某些版本中）",
+            "link": "https://www.adafruit.com/products/2258",
+            "quantity": "1"
+          },
+          {
+            "name": "Adafruit Raspberry Pi 外壳",
+            "link": "https://www.adafruit.com/products/2258",
+            "quantity": "1"
+          },
+          {
+            "name": "使用 Windows IoT 核心版的 8GB SD 卡",
+            "link": "https://www.adafruit.com/products/2258",
+            "quantity": "1"
+          },
+          {
+            "name": "使用 MicroUSB 电缆的 5V 2A 电源",
+            "link": "https://www.adafruit.com/products/1995",
+            "quantity": "1"
+          },
+          {
+            "name": "USB WiFi 模块",
+            "link": "https://www.adafruit.com/products/2638",
+            "quantity": "1"
+          },
+          {
+            "name": "以太网电缆",
+            "link": "https://www.adafruit.com/products/994",
+            "quantity": "1"
+          },
+          {
+            "name": "全尺寸试验板",
+            "link": "https://www.adafruit.com/products/239",
+            "quantity": "1"
+          }
+        ],
+        "组件": [
+          {
+            "name": "高级双插头跳线",
+            "link": "https://www.adafruit.com/products/1957",
+            "quantity": "1"
+          },
+          {
+            "name": "高级插孔/插头跳线",
+            "link": "https://www.adafruit.com/products/2258",
+            "quantity": "1"
+          },
+          {
+            "name": "MCP3008 - 8 通道 10 位 ADC",
+            "link": "https://www.adafruit.com/products/8566",
+            "quantity": "1"
+          },
+          {
+            "name": "各式 LED",
+            "link": "https://www.adafruit.com/products/2258",
+            "quantity": "6"
+          },
+          {
+            "name": "电位计",
+            "link": "https://www.adafruit.com/products/356",
+            "quantity": "2"
+          },
+          {
+            "name": "触摸开关",
+            "link": "https://www.adafruit.com/products/1119",
+            "quantity": "3"
+          },
+          {
+            "name": "电阻",
+            "link": "",
+            "quantity": "10"
+          },
+          {
+            "name": "电容器",
+            "link": "",
+            "quantity": "1"
+          }
+        ],
+        "传感器": [
+          {
+            "name": "光电管",
+            "link": "https://www.adafruit.com/products/161",
+            "quantity": "1"
+          },
+          {
+            "name": "Adafruit BMP280 温度 + 气压传感器",
+            "link": "https://www.adafruit.com/products/2651",
+            "quantity": "1"
+          },
+          {
+            "name": "Adafruit TCS34725 色彩传感器",
+            "link": "https://www.adafruit.com/products/1334",
+            "quantity": "1"
+          }
+        ]
+      }
+    }
+}

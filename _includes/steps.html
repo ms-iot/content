@@ -1,9 +1,11 @@
 <div class="row">
-   <ul class="nav nav-justified get-started-steps text-center">
-       {% for step in site.data.steps[include.device] %}
-         <li>
-           <a href="{{site.baseurl}}/{{page.lang}}/{{step}}"><h3 class="steps inactive">{{forloop.index}}. {{site.data.step-resources[page.lang][forloop.index0]}}</h3></a>
-         </li>
-       {% endfor %}
-   </ul>
+  <div class="col-xs-24">
+    <ul class="nav nav-justified get-started-steps text-center">
+      {% for step in site.data.steps[include.device] %}
+      <li>
+        <a href="{{site.baseurl}}/{{page.lang}}/{{step}}"><h3 class="steps inactive text-left"> {{site.data.step-resources[page.lang][forloop.index0]}}</h3></a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>

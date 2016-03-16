@@ -1,0 +1,29 @@
+{% assign sortedInfo = (site.data._docsandtutorials[page.lang] | sort: 'ranking') %}
+{% for entry in sortedInfo %}
+    {% assign value = forloop.index0 | modulo:4 %}
+    {% if value == 0 %}
+        <div class="row section-heading">
+    {% endif %}
+    <div class="col-md-6">
+        <h3>{{entry.title}}</h3>
+        <p>{{entry.description}}</p>
+        {{entry.link-text}}
+        <span style="display: none;">
+            {% for tag in entry.tags %}
+                {% assign index = forloop.index0 %}
+                {% assign size = entry.tags.size | minus:1 %}
+                {% if index != size %}
+                    {{tag}},
+                {% elsif index == size %}
+                    {{tag}}
+                {% endif %}
+            {% endfor %}
+        </span>
+    </div>
+    {% if value == 3 %}
+        </div>
+    {% endif %}
+{% endfor %}
+{% if value != 3 %}
+    </div>
+{% endif %}

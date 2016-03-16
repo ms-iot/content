@@ -7,6 +7,8 @@ lang: en-US
 
 ## SpiTestTool Sample
 
+{% include VerifiedVersion.md %}
+
 [View the code on Github](https://github.com/ms-iot/samples/blob/develop/SpiTestTool/main.cpp)
 
 SpiTestTool is a utility for interacting with SPI devices on the command
@@ -15,22 +17,38 @@ from command line applications. The resulting tool is a useful debugging aid.
 
 ### Usage
 
-    spitesttool.exe [-n FriendlyName] [-c ChipSelectLine] [-m Mode]
-                    [-d DataBitLength] [-f ClockFrequency]
-    
-      FriendlyName      The friendly name of the SPI controller over which
-                        you wish to communicate. This parameter is 
-                        optional and defaults to the first enumerated SPI
-                        controller.
-      ChipSelectLine    The chip select line to use. This parameter is
-                        optional and defaults to 0.
-      Mode              The SPI mode to use (0-3). This parameter is
-                        optional and defaults to Mode 0.
-      DataBitLength     The data bit length to use. This parameter is optional
-                        and defaults to 8.
-      ClockFrequency    The SPI clock frequency to use. This parameter is
-                        optional and defaults to 4Mhz.
-         
+    SpiTestTool: Command line SPI testing utility
+    Usage: SpiTestTool.exe [-list] [-n FriendlyName] [-c ChipSelectLine] [-m Mode] [-d DataBitLength] [-f ClockFrequency]
+
+      -list           List available SPI controllers and exit.
+      FriendlyName    The friendly name of the SPI controller over which
+                      you wish to communicate. This parameter is
+                      optional and defaults to the first enumerated SPI
+                      controller.
+      ChipSelectLine  The chip select line to use. This parameter is
+                      optional and defaults to 0.
+      Mode            The SPI mode to use (0-3). This parameter is
+                      optional and defaults to Mode 0.
+      DataBitLength   The data bit length to use. This parameter is optional
+                      and defaults to 8.
+      ClockFrequency  The SPI clock frequency to use. This parameter is
+                      optional and defaults to 4Mhz.
+
+    Examples:
+      Connect to the first SPI controller found with default settings
+      (ChipSelectLine=0, Mode=0, DataBitLength=8, Frequency=4Mhz):
+        SpiTestTool.exe
+
+      List available SPI controllers and exit:
+        SpiTestTool.exe -list
+
+      Connect to SPI1 in mode 2, with default speed (4Mhz) and chip
+      select line (0):
+        SpiTestTool.exe -n SPI1 -m 2
+
+      Connect to chip select 1 on SPI1 in mode 2 at 1Mhz:
+        SpiTestTool.exe -c 1 -n SPI1 -m 2 -f 1000000
+
     Commands:
     > write { 00 11 22 .. FF }         Write bytes to device
     > read N                           Read N bytes
@@ -39,7 +57,7 @@ from command line applications. The resulting tool is a useful debugging aid.
     > info                             Display device information
     > help                             Display this help message
     > quit                             Quit
-                      
+
 Example session:
 
       spitesttool.exe
@@ -61,7 +79,7 @@ Example session:
 ### Building and running the sample
 
 1. Clone the [samples](https://github.com/ms-iot/samples)
-   repository to your local machine. 
+   repository to your local machine.
 1. Open `SpiTestTool\SpiTestTool.sln` in Visual Studio
 1. Select the target architecture.
    - Select `ARM` for Raspberry Pi

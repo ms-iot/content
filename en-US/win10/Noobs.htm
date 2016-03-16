@@ -1,0 +1,122 @@
+---
+layout: default
+title: Setup with NOOBS
+permalink: /en-US/win10/Noobs.htm
+lang: en-US
+---
+<ol class="breadcrumb">
+  <li>
+    <a href="https://dev.windows.com/en-us/iot">IoT Home</a>
+  </li>
+     <li>
+        <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
+    </li>
+  <li class="active">Setup with NOOBS</li>
+</ol>
+<h1 class="page-title">Setup with NOOBS</h1>
+<div class="row">
+	<div class="col-md-12 col-sm-24 col-no-padding">
+    <h2 class="subtext">If you have a SD with NOOBS, follow these instructions to get Windows 10 IoT Core installed.</h2>
+	</div>
+</div>
+
+
+<h2>Choose Windows 10 IoT Core in NOOBS<span class="pull-right"><a id="NOOBSChoices-toggle" class="toggle-button" onClick="hideDiv('NOOBSChoices')">Show</a></span></h2>
+<hr>
+<div id="NOOBSChoices" class="toggle-section hidden">
+{% capture my-include %}{% include_relative NOOBSChoices.md %}{% endcapture %}
+{{ my-include | markdownify }}
+
+</div>
+
+
+<h2>Using a Raspberry Pi 2? Click here<span class="pull-right"><a id="NOOBSRPI2Choices-toggle" class="toggle-button" onClick="hideDiv('NOOBSRPI2Choices')">Show</a></span></h2>
+<hr>
+<div id="NOOBSRPI2Choices" class="toggle-section hidden">
+{% capture my-include %}{% include_relative NOOBSRPI2Choices.md %}{% endcapture %}
+{{ my-include | markdownify }}
+
+<h3>Windows 10 IoT Core RTM Choice<span class="pull-right"><a id="NOOBSRPI2ChoiceRTM-toggle" class="toggle-button" onClick="hideDivWithoutSlowToggle('NOOBSRPI2ChoiceRTM')">Show</a></span></h3>
+<hr>
+<div id="NOOBSRPI2ChoiceRTM" class="toggle-section" style="display:none">
+{% capture my-include %}{% include_relative NOOBSRTM.md %}{% endcapture %}
+{{ my-include | markdownify }}
+</div>
+
+<h3>Windows 10 IoT Core Insider Preview Choice<span class="pull-right"><a id="NOOBSRPI2ChoiceIP-toggle" class="toggle-button" onClick="hideDivWithoutSlowToggle('NOOBSRPI2ChoiceIP')">Show</a></span></h3>
+<hr>
+<div id="NOOBSRPI2ChoiceIP" class="toggle-section" style="display:none">
+{% capture my-include %}{% include_relative NOOBSInsiderProgram.md %}{% endcapture %}
+{{ my-include | markdownify }}
+</div>
+
+</div>
+
+
+<h2>Using a Raspberry Pi 3? Click here<span class="pull-right"><a id="NOOBSRPI3-toggle" class="toggle-button" onClick="hideDiv('NOOBSRPI3')">Show</a></span></h2>
+<hr>
+<div id="NOOBSRPI3" class="toggle-section hidden">
+
+{% capture my-include %}{% include_relative NOOBSInsiderProgram.md %}{% endcapture %}
+{{ my-include | markdownify }}
+
+</div>
+
+
+
+<h2>Final Step - Download and Restart<span class="pull-right"><a id="NOOBSDownload-toggle" class="toggle-button" onClick="hideDiv('NOOBSDownload')">Show</a></span></h2>
+<hr>
+<div id="NOOBSDownload" class="toggle-section hidden">
+{% capture my-include %}{% include_relative NOOBSDownload.md %}{% endcapture %}
+{{ my-include | markdownify }}
+
+</div>
+
+<div class="row">
+    <p><span class="pull-right">
+        <a href="{{site.baseurl}}/{{page.lang}}/win10/GetStarted/SetUpVisualStudio.htm" class="button-blue button-flat">Next: Set up Visual Studio</a>
+    </span></p>
+</div>
+<script>
+ function hideDivWithoutSlowToggle(div) {
+    var div = "#" + div,
+        button = div + "-toggle",
+        currentState = $(button)[0].innerText;
+		
+	if($(div)[0].style.display === "none")
+	{
+		$(div)[0].style.display = "block";
+		$(button)[0].innerText = "Hide";
+	}
+	else
+	{
+		$(div)[0].style.display = "none";
+		$(button)[0].innerText = "Show";
+	}
+    
+	
+  }
+  
+
+  function hideDiv(div) {
+    var div = "#" + div,
+        button = div + "-toggle",
+        currentState = $(button)[0].innerText;
+
+    
+
+    if(currentState === "Hide") {
+      $(div).toggle('slow');
+	  $(button)[0].innerText = "Show";
+    }
+    else
+    {
+      $(".hidden").removeClass("hidden");
+      $(".toggle-section").hide();
+      $(div).toggle('slow');
+      $(button)[0].innerText = "Hide";
+    }
+  }
+  
+ 
+</script>

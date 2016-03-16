@@ -1,0 +1,72 @@
+﻿---
+layout: default
+
+title: 设计智能家居
+permalink: /zh-cn/win10/HackTheHome.htm
+
+lang: zh-cn
+
+---
+
+<section class="section spacer-84-top remove-header-rule remove-bottom-margin" id="hth-welcome">
+    <header class="section-header">
+        <h1 class="hth-header">设计智能家居</h1>
+        <h4 class="hth-subheader">一套旨在帮助你让家开始<i>为你工作</i>的开源工具。</h4>
+    </header>
+    <div class="row">
+        <div class="col-xs-24 col-md-12">
+            <section class="section item-section">
+                <div class="section-body">
+                    <img class="img-responsive center" src="{{site.baseurl}}/Resources/images/HackTheHomeLogo.png" alt="" />
+                </div>
+            </section>
+        </div>
+        <div class="col-xs-24 col-md-12">
+            <section class="section item-section">
+                <div class="section-body">
+                    <p class="hth-major-text floatTop text-center"> 越来越多的制造商社区决定更改他们与家的交互方式。 从自动化日常任务（如给植物浇水和给宠物喂食）到可以从世界上任何位置监视家庭相机和门锁来提高安全性，一切皆有可能。 基于这一点，Microsoft 物联网制造商团队已发布了<a href="#hth-list-block">一系列开源库和 API</a>，结合 Windows 10 IoT 核心版的强大功能，你将可以快速且轻松地设计你的智能家居以使其开始为你工作。</p>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+
+<section class="section remove-header-rule" id="hth-feature-block">
+    <header class="section-header">
+        <h2 class="hth-feature-header">特色项目</h2>
+    </header>
+    <div class="col-xs-24 col-md-16">
+        <section class="section item-section remove-header-rule">
+            <div class="section-body">
+                <h3 class="hth-feature-subheader text-center">安全相机</h3>
+                <a href="https://microsoft.hackster.io/zh-cn/windows-iot/security-camera-579b7f?ref=platform&amp;ref_id=4087_trending___&amp;offset=24">
+					<img class="center featured-image img-responsive" src="{{site.baseurl}}/Resources/images/SecurityCamera.jpeg">  
+				</a>
+                <p class="hth-major-text remove-top-margin">使用 Windows 10 IoT 核心版的安全相机项目。 PiR 运动传感器检测到运动并相应地触发相机，从而自动将照片上载到 OneDrive。利用 <a href="https://github.com/ms-iot/usb-camera">USB 相机</a>、<a href="https://github.com/ms-iot/onedrive-connector">OneDrive 连接器</a>和<a href="https://github.com/ms-iot/motion-sensor">运动传感器</a>组件。</p>
+            </div>
+        </section>
+    </div>
+    <div class="col-xs-24 col-md-7">
+        <section class="section item-section">
+            <div class="col-xs-24">
+                <h3 class="hth-feature-subheader text-center"> 已连接的无线收发器 </h3>
+                <a href="https://microsoft.hackster.io/zh-cn/windows-iot/connected-clock-radio-85c9fc?ref=platform&amp;ref_id=4087_trending___&amp;offset=32">
+					<img class="hth-project-image center img-responsive" src="{{site.baseurl}}/Resources/images/InternetRadio.jpeg">
+				</a>
+                <p class="spacer-16-top">Internet 连接的钟控无线收发器设备，带有一块 Pi 供电的 LCD 屏幕，用于显示当前正在播放的内容。利用 <a href="https://github.com/ms-iot/TextDisplay">TextDisplay</a> 和<a href="https://github.com/ms-iot/UniversalMediaEngine">通用媒体引擎</a>组件。</p>
+            </div>
+            <div class="col-xs-24">
+                <h3 class="hth-feature-subheader text-center">IoT 气象站</h3>
+                <a href="https://microsoft.hackster.io/zh-cn/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10-5b818f?ref=platform&amp;ref_id=4087_trending___&amp;offset=1">
+					<img class="hth-project-image center img-responsive" src="{{site.baseurl}}/Resources/images/WeatherShield.jpg">
+				</a>
+                <p class="spacer-16-top">本项目演示如何利用 Windows 10 IoT 核心版的强大功能，以及使用 Sparkfun Weather Shield 创建气象站。利用 <a href="https://github.com/ms-iot/sparkfun-weather-shield">SparkFun Weather Shield</a> 组件。</p>
+            </div>
+        </section>
+    </div>
+</section>
+<div id="hth-list-block">
+  <h1 class="thin-header">即插即用组件</h1>
+  {% include hth-tiles.html %}
+</div>
+<p class="text-right"><b>图例： </b> RPi2 = Raspberry Pi 2, MBM = MinnowBoard MAX, 410c = DragonBoard 410c</p>

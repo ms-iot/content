@@ -5,61 +5,87 @@ permalink: /en-US/win10/samples/SerialSample.htm
 lang: en-US
 ---
 
-#Serial Port Sample
+# Serial Port Sample
+
+{% include VerifiedVersion.md %}
 
 We'll create a simple app that allows communication between a desktop and an IoT device over a serial interface.
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm){:target="_blank"}.
 
-###Load the project in Visual Studio
+### Load the project in Visual Studio
 
 You can find the C# and C++ versions of this sample [here](https://github.com/ms-iot/samples/tree/develop/SerialSample/){:target="_blank"}.  Make a copy of the folder on your disk and open the project from Visual Studio.
 
 This app is a Universal Windows app and will run on both the PC and your IoT device.
 
-###Wiring the serial connection 
+### Wiring the serial connection 
 
 You have two options for wiring up your board:
 
-1. GPIO - using the On-board UART controller (MinnowBoard Max only)
-2. USB - using a USB-to-TTL adapter
+1. using the On-board UART controller
+2. using a USB-to-TTL adapter cable such as [this one](http://www.adafruit.com/products/954){:target="_blank"}
 
-####<a name="MBM_UART"></a>Using GPIO **(MinnowBoard Max Only)**
+#### <a name="MBM_UART"></a>On-board UART (MinnowBoard Max)
 
-You will need:
-
-* 1 X USB-to-TTL cable or module (for this sample we used a USB-to-TTL cable such as [this one](http://www.adafruit.com/products/954){:target="_blank"})
-
-The MinnowBoard Max has two on-board UARTs that can be configured to use GPIO pins. 
+The MinnowBoard Max has two on-board UARTs. See the [MBM pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm) for more details on the MBM GPIO pins. 
 
 * UART1 uses GPIO pins 6, 8, 10, and 12. 
 * UART2 uses GPIO pins 17 and 19. 
 
-These GPIO pins are highlighted in green in the diagram below. In this sample we will use UART2. See the [MBM pin mapping page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm) for more details on the MBM GPIO pins.
-
-<img src="{{site.baseurl}}/images/PinMappings/MBM_Pinout.png" height="400">
+In this sample we will use UART2.
 
 Make the following connections:
 
 * Insert the USB end of the USB-to-TTL cable into a USB port on the PC
-
 * Connect the GND wire of the USB-to-TTL cable to Pin 1 (GND) on the MBM board
+* Connect the RX wire (white) of the USB-to-TTL cable to Pin 17 (TX) on the MBM board
+* Connect the TX wire (green) of the USB-to-TTL cable to Pin 19 (RX) on the MBM board
 
-* Connect the RX wire of the USB-to-TTL cable to Pin 17 (TX) on the MBM board
+*Note: Leave the power wire of the USB-to-TTL cable unconnected.*
 
-* Connect the TX wire of the USB-to-TTL cable to Pin 19 (RX) on the MBM board
+<img src="{{site.baseurl}}/Resources/images/SerialSample/SiLabs-UART.png">
 
-*Note: Leave the power wire of the USB-to-TTL cable unconnected. It is not needed.*
+#### <a name="RPi2_UART"></a>On-board UART (Rasperry Pi2)
 
-<img src="{{site.baseurl}}/images/SerialSample/SiLabs-UART.png">
+The Rasperry Pi 2 or 3 has one on-board UART. See the [Raspberry Pi 2 Pin Mappings page]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPI2.htm) for more details on the GPIO pins. 
 
-###<a name="USB_TTL_Adapter"></a>Using USB-to-TTL Adapter
+* UART0 uses GPIO pins 6 (GND), 8 (TX) and 10 (RX). 
+
+Make the following connections:
+
+* Insert the USB end of the USB-to-TTL cable into a USB port on the PC
+* Connect the GND wire of the USB-to-TTL cable to Pin 6 (GND) on the RPi2 or RPi3 board
+* Connect the RX wire (white) of the USB-to-TTL cable to Pin 8 (TX) on the RPi2 or RPi3 board
+* Connect the TX wire (green) of the USB-to-TTL cable to Pin 10 (RX) on the RPi2 or RPi3 board
+
+*Note: Leave the power wire of the USB-to-TTL cable unconnected.*
+
+<img src="{{site.baseurl}}/Resources/images/SerialSample/RPi2_UART.png">
+
+#### On-Board UART (DragonBoard 410c)
+
+The DragonBoard has two on-board UARTs.
+
+* UART0 uses GPIO pins 3, 5, 7, and 9.
+* UART1 uses GPIO pins 11 and 13.
+
+In this sample, UART1 will be used.  Make the following connections:
+
+* Insert the USB end of the USB-to-TTL cable into a USB port on the PC
+* Connect the GND wire of the USB-to-TTL cable to pin 1 (GND)
+* Connect the RX wire (white) of the USB-to-TTL cable to pin 11 (UART1 TX)
+* Connect the TX wire (green) of the USB-to-TTL cable to pin 13 (UART1 RX)
+
+_NOTE: Leave the power wire of the USB-to-TTL cable unconnected._
+
+### <a name="USB_TTL_Adapter"></a>Using USB-to-TTL Adapter
 
 **Note: Only USB-to-TTL cables and modules with Silicon Labs chipsets are natively supported on MinnowBoard Max and Raspberry Pi2.**
 
 You will need:
 
-* 1 X USB-to-TTL module (This is what we will connect to our RPI2 or MBM device. We used [this Silicon Labs CP2102 based USB-to-TTL module](http://www.amazon.com/gp/product/B00LODGRV8){:target="_blank"})
+* 1 X USB-to-TTL module (This is what we will connect to our RPi2 or RPi3 or MBM device. We used [this Silicon Labs CP2102 based USB-to-TTL module](http://www.amazon.com/gp/product/B00LODGRV8){:target="_blank"})
 
 * 1 X USB-to-TTL cable (This will connect to our PC. We used [this one](http://www.adafruit.com/products/954){:target="_blank"})
 
@@ -67,23 +93,23 @@ Make the following connections:
 
 * Insert the USB end of the USB-to-TTL **cable** into a USB port on the PC
 
-* Insert the USB end of the USB-to-TTL **module** into a USB port on the RPI2 or MBM device 
+* Insert the USB end of the USB-to-TTL **module** into a USB port on the RPi2, RPi3 or MBM device 
 
 * Connect the GND pin of the USB-to-TTL **module** to the GND wire of the USB-to-TTL cable 
 
-* Connect the RX pin of the USB-to-TTL **module** to the TX wire of the USB-to-TTL cable
+* Connect the RX pin of the USB-to-TTL **module** to the TX wire (green) of the USB-to-TTL cable
 
-* Connect the TX pin of the USB-to-TTL **module** to the RX wire of the USB-to-TTL cable
+* Connect the TX pin of the USB-to-TTL **module** to the RX wire (white) of the USB-to-TTL cable
 
 Leave the power pin of the USB-to-TTL cable unconnected. It is not needed.
 
-Below is an image of our USB-to-TTL module connected to a USB port in our RPi2. The GND, TX, and RX pins of the module are connected to the GND, RX, TX wires of the USB-to-TTL cable that is connected to our PC.
+Below is an image of our USB-to-TTL module connected to a USB port in our RPi2 or RPi3. The GND, TX, and RX pins of the module are connected to the GND, RX, TX wires of the USB-to-TTL cable that is connected to our PC.
 
-<img src="{{site.baseurl}}/images/SerialSample/CP2102_Connections_500.png">
+<img src="{{site.baseurl}}/Resources/images/SerialSample/CP2102_Connections_500.png">
 
-###Deploy and Launch the SerialSample App
+### Deploy and Launch the SerialSample App
 
-Now that our PC and RPi2 or MBM are connected, let's setup and deploy the app. If you are not familiar with how to set the target device and target architecture in Visual Studio see [this section]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm#deploy-the-app-to-your-windows-iot-core-device) for details.
+Now that our PC and RPi2, RPi3 or MBM are connected, let's setup and deploy the app. If you are not familiar with how to set the target device and target architecture in Visual Studio see [this section]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm#deploy-the-app-to-your-windows-iot-core-device) for details.
 
 1. Download the Visual Studio 2015 [SerialSample source project](https://github.com/ms-iot/samples/tree/develop/SerialSample/){:target="_blank"}. 
 
@@ -95,57 +121,59 @@ Now that our PC and RPi2 or MBM are connected, let's setup and deploy the app. I
 
 5. Open the PC copy of the SerialSample app in VS Instance B.
 
-6. In VS Instance A, [configure the app for deployment to your RPi2 or MBM device]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm#deploy-the-app-to-your-windows-iot-core-device))
+6. In VS Instance A, [configure the app for deployment to your RPi2 or RPi3 or MBM device]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm#deploy-the-app-to-your-windows-iot-core-device))
 	
-	*For RPi2, set the target device to 'Remote Machine' and target architecture to 'ARM'
+	*For RPi2 or RPi3, set the target device to 'Remote Machine' and target architecture to 'ARM'
 	
 	*For MBM, set the target device to 'Remote Machine' and target architecture to 'x86'
 
 7. In VS Instance B, set the target architecture to 'x86'. This will be the instance of the sample we run on the PC.
 
-8. In VS Instance A, press F5 to deploy and launch the app on your RPi2 or MBM.
+8. In VS Instance A, press F5 to deploy and launch the app on your RPi2, RPi3 or MBM.
 
 9. In VS Instance B, press F5 to deploy and launch the app on your PC.
 
-###Using the SerialSample App 
+### Using the SerialSample App 
 
-When the SerialSample app is launched on the PC, a window will open with the user interface similar to the screenshot shown below. When launched on the RPi2 and MBM, the SerialSample will display the user interface shown below on the entire screen.
+When the SerialSample app is launched on the PC, a window will open with the user interface similar to the screenshot shown below. When launched on the RPi2 or RPi3 and MBM, the SerialSample will display the user interface shown below on the entire screen.
 
-<img src="{{site.baseurl}}/images/SerialSample/SerialSampleRunningPC.PNG">
+<img src="{{site.baseurl}}/Resources/images/SerialSample/SerialSampleRunningPC.PNG">
 
-####Selecting a Serial Device
+#### Selecting a Serial Device
 
 When the SerialSample app launches, it looks for all the serial devices that are connected to the device. The device ids of all the serial devices found connected to the device will be listed in the top ListBox of the SerialSample app window.
 
-Select and connect to a serial device on the PC and RPi2 or MBM by doing the following:
+Select and connect to a serial device on the PC and RPi2 or RPi3 or MBM by doing the following:
 
 1. Select the desired serial device by clicking on the device ID string in the top ListBox next to "Select Device:". 
 
 	* On the PC, the device ID for the USB-to-TTL cable connected in this example begins with '\\?\USB#VID_067B'.
 	
-	* On the MBM, if using the GPIO for serial communication, select the device ID with **UART2** in it.
+	* On the MBM, if using the GPIO for serial communication, select the device ID with **UART2** in it. **UART1** may require using CTS/RTS signals.
+    
+    * On the DragonBoard, select the device with **QCOM24D4** and **UART1** in it. This will likely be the last device in the listbox (you may need to scroll down).    
 	
-	* On the MBM and RPi2, if using the USB-to-TTL adapter module, select the device ID that begins with **\\?\USB#**. For the USB-to-TTL module used in this example, the device ID should begin with '\\?\USB#VID_10C4'.
+	* On the MBM and RPi2 or RPi3, if using the USB-to-TTL adapter module, select the device ID that begins with **\\?\USB#**. For the USB-to-TTL module used in this example, the device ID should begin with '\\?\USB#VID_10C4'.
 
 2. Click 'Connect'.	
 
-The app will attempt to connect and configure the selected serial device. When the app has successfully connected to the attached serial device it will display the configuration of the serial device. By default, the app configures the serial device for 9600 Baud, eight data bits, no parity bits, no handshaking and one stop bit.
+The app will attempt to connect and configure the selected serial device. When the app has successfully connected to the attached serial device it will display the configuration of the serial device. By default, the app configures the serial device for 9600 Baud, eight data bits, no parity bits and one stop bit (no handshaking).
 
-<img src="{{site.baseurl}}/images/SerialSample/SerialSampleRunningPC_ConnectDevice.PNG">
+<img src="{{site.baseurl}}/Resources/images/SerialSample/SerialSampleRunningPC_ConnectDevice.PNG">
 
-####Sending and Receiving Data
+#### Sending and Receiving Data
 
-After connecting the desired serial device in the SerialSample apps running on both the PC and the RPi2 or MBM we can begin sending and receiving data over the serial connection between the two devices.
+After connecting the desired serial device in the SerialSample apps running on both the PC and the RPi2 or RPi3 or MBM we can begin sending and receiving data over the serial connection between the two devices.
 
 To send data from one device to the other connected device do the following:
 
-1. Choose a device to transmit from. On the transmit device, type the message to be sent in the "Write Data" text box. For our example, we typed "Hello Raspberry Pi2! From your friend, PC." in the "Write Data" text box of the SerialSample app running on our PC.
+1. Choose a device to transmit from. On the transmit device, type the message to be sent in the "Write Data" text box. For our example, we typed "Hello World!" in the "Write Data" text box of the SerialSample app running on our PC.
 
-2. Click the 'WRITE' button.
+2. Click the 'Write' button.
 
-The app on the transmitting device will display the sent message and "Bytes written successfully!" in the status text box in the bottom of the app display.
+The app on the transmitting device will display the sent message and "bytes written successfully!" in the status text box in the bottom of the app display.
 
-<img src="{{site.baseurl}}/images/SerialSample/SendMessageB.PNG">
+<img src="{{site.baseurl}}/Resources/images/SerialSample/SendMessageB.PNG">
 
 The device that is receiving the message will automatically display the text in the 'Read Data:' window.
 
@@ -156,13 +184,13 @@ The device that is receiving the message will automatically display the text in 
 * When connecting USB-to-TTL device to MinnowBoard Max, use a powered USB hub or the bottom USB port
 
 
-###Let's look at the code
+### Let's look at the code
 
 The code for this sample uses the [Windows.Devices.SerialCommunication](https://msdn.microsoft.com/en-us/library/windows.devices.serialcommunication.aspx){:target="_blank"} namespace. 
 
 The SerialDevice class will be used to enumerate, connect, read, and write to the serial devices connected to the device. 
 
-**NOTE:** The SerialDevice class can be used only for supported USB-to-TTL devices (on PC, Raspberry Pi 2, and MinnowBoard Max) and the on-board UART (on MinnowBoard Max).
+**NOTE:** The SerialDevice class can be used only for supported USB-to-TTL devices (on PC, Raspberry Pi 2 or 3, and MinnowBoard Max) and the on-board UART (on MinnowBoard Max).
 
 For accessing the serial port, you must add the **DeviceCapability** to the **Package.appxmanifest** file in your project. 
 
@@ -183,7 +211,7 @@ You can add this by opening the **Package.appxmanifest** file in an XML editor (
   </Capabilities>
 {% endhighlight %}
 
-###Connect to selected serial device
+### Connect to selected serial device
 
 This sample app enumerates all serial devices connected to the device and displays the list in the **ListBox** ConnectDevices. The following code connects and configure the selected device ID and creates a **SerialDevice** object. 
 
@@ -219,42 +247,45 @@ private async void comPortInput_Click(object sender, RoutedEventArgs e)
 }
 {% endhighlight %}
 
-###Perform a read on the serial port
+### Perform a read on the serial port
 
-In order to not miss data, we post a read when bytes are expected. We do this in the sample code by creating an async read task using the **DataReader** object that waits on the **InputStream** of the **SerialDevice** object. 
+Reading input from serial port is done by **Listen()** invoked right after initialization of the serial port. We do this in the sample code by creating an async read task using the **DataReader** object that waits on the **InputStream** of the **SerialDevice** object. 
 
-The async task is created in the **rcvdText_TextChanged** event handler. We start the async task the first time by triggering the **rcvdText_TextChanged** event in **comPortInput_Click**
+Due to differences in handling concurrent tasks, the implementations of **Listen()** in C# and C++ differ:
+
+* C# allows awaiting **ReadAsync()**. All we do is keep reading the serial port in an infinite loop interrupted only when an exception is thrown (triggered by the cancellation token).
 
 {% highlight C# %}
-private async void comPortInput_Click(object sender, RoutedEventArgs e)
+
+private async void Listen()
 {
-    // ...
-
-    rcvdText.Text = "Waiting for data...";
-	
-    // ...
-}
-
-private async void rcvdText_TextChanged(object sender, TextChangedEventArgs e)
-{
-    // ...
-
-    DataReaderObject = new DataReader(serialPort.InputStream);
-    await ReadAsync(ReadCancellationTokenSource.Token);
-
-    // ...
-
-    if (DataReaderObject != null)
+    try
     {
-        DataReaderObject.DetachStream();
-        DataReaderObject = null;
+        if (serialPort != null)
+        {
+            dataReaderObject = new DataReader(serialPort.InputStream);
+
+            // keep reading the serial input
+            while (true)
+            {
+                await ReadAsync(ReadCancellationTokenSource.Token);
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+        ...
+    }
+    finally
+    {
+        ...
     }
 }
 
 private async Task ReadAsync(CancellationToken cancellationToken)
 {
-    // ...
-    
+    Task<UInt32> loadAsyncTask;
+
     uint ReadBufferLength = 1024;
 
     // If task cancellation was requested, comply
@@ -268,12 +299,58 @@ private async Task ReadAsync(CancellationToken cancellationToken)
 
     // Launch the task and wait
     UInt32 bytesRead = await loadAsyncTask;
-	
-    // ...
+    if (bytesRead > 0)
+    {
+        rcvdText.Text = dataReaderObject.ReadString(bytesRead);
+        status.Text = "bytes read successfully!";
+    }            
 }
 {% endhighlight %}
 
-###Perform a write to the serial port
+* C++ does not allow awaiting **ReadAsync()** in Windows Runtime STA (Single Threaded Apartment) threads due to blocking the UI. In order to chain continuation reads from the serial port, we dynamically generate repeating tasks via "recursive" task creation - "recursively" call **Listen()** at the end of the continuation chain. The "recursive" call is not a true recursion. It will not accumulate stack since every recursive is made in a new task.
+
+{% highlight C++ %}
+
+void MainPage::Listen()
+{
+    try
+    {
+        if (_serialPort != nullptr)
+        {
+            // calling task.wait() is not allowed in Windows Runtime STA (Single Threaded Apartment) threads due to blocking the UI.
+            concurrency::create_task(ReadAsync(cancellationTokenSource->get_token()));
+        }
+    }
+    catch (Platform::Exception ^ex)
+    {
+        ...
+    }
+}
+
+Concurrency::task<void> MainPage::ReadAsync(Concurrency::cancellation_token cancellationToken)
+{
+    unsigned int _readBufferLength = 1024;
+    
+    return concurrency::create_task(_dataReaderObject->LoadAsync(_readBufferLength), cancellationToken).then([this](unsigned int bytesRead)
+    {
+        if (bytesRead > 0)
+        {
+            rcvdText->Text = _dataReaderObject->ReadString(bytesRead);
+            status->Text = "bytes read successfully!";
+
+            /*
+            Dynamically generate repeating tasks via "recursive" task creation - "recursively" call Listen() at the end of the continuation chain.
+            The "recursive" call is not true recursion. It will not accumulate stack since every recursive is made in a new task.
+            */
+
+            // start listening again after done with this chunk of incoming data
+            Listen();
+        }
+    });
+}
+{% endhighlight %}
+
+### Perform a write to the serial port
 
 When the bytes are ready to be sent, we write asynchronously to the **OutputStream** of the **SerialDevice** object using the **DataWriter** object.
 
@@ -310,7 +387,7 @@ private async Task WriteAsync()
 }
 {% endhighlight %}
 
-###Cancelling Read
+### Cancelling Read
 
 You can cancel the read operation by using **CancellationToken** on the Task. Initialize the **CancellationToken** object and pass that as an argument to the read task.
 
@@ -359,7 +436,7 @@ private void CancelReadTask()
 }
 {% endhighlight %}
 
-###Closing the device
+### Closing the device
 
 When closing the connection with the device, we cancel all pending I/O operations and safely dispose of all the objects. 
 
@@ -402,4 +479,4 @@ To summarize:
 
 * We add the ability to cancel the read task using the **CancellationToken**.
 
-* Finally, we close the device connection and clean up when done
+* Finally, we close the device connection and clean up when done.

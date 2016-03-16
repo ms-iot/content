@@ -1,0 +1,16 @@
+﻿{
+  "en-US": [
+    "Welcome to Windows 10 IoT Core",
+    "What's in the Box?",
+    "Set up your PC",
+    "Set up your Raspberry Pi 2",
+    "Develop"
+  ],
+  "zh-CN": [
+    "欢迎使用 Windows 10 IoT 核心版",
+    "框中包含哪些内容？",
+    "设置电脑",
+    "设置 Raspberry Pi2",
+    "开发"
+  ]
+}

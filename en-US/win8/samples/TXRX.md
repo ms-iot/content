@@ -5,6 +5,11 @@ permalink: /en-US/win8/samples/TXRX.htm
 lang: en-US
 ---
 
+<div style="background-color:Silver; color:black; padding:20px;">
+	<h4><u>Support for Windows on Intel Galileo Gen 1 and Gen 2 will end on November 30, 2015</u></h4>
+	<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we've made the difficult decision to discontinue Windows support on the Galileo platform. We've seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>
+</div>
+
 # Communicating through TX/RX pins
 Learn how to use HardwareSerial to communicate across TX/RX pins and view it on the computer using a USB TTL Serial Cable
 
@@ -27,7 +32,7 @@ Learn how to use HardwareSerial to communicate across TX/RX pins and view it on 
 1. Open a terminal program like [Tera Term](http://download.cnet.com/Tera-Term/3000-20432_4-75766675.html){:target="_blank"}
 1. Set the program to monitor the serial connection from the COM port you found in Step 5.
 1. Make sure your options are as shown below (with the Port set to the COM port you found in Step 5):<br/>
-    ![]({{site.baseurl}}/images/TeraTermSerialConfigForTXRX.png)<br/>
+    ![]({{site.baseurl}}/Resources/images/TeraTermSerialConfigForTXRX.png)<br/>
     * If you are using Tera Term, you can get to the menu shown above by clicking on Setup -> Serial port..
 1. Hook up the Orange pin from the cable to RX (pin 0)on your Galileo
 1. Hook up the Yellow pin from the cable to TX (pin 1) on your Galileo

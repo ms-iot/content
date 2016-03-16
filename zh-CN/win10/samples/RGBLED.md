@@ -1,13 +1,17 @@
 ---
 layout: default
 title: RGB LED 示例
-permalink: /zh-CN/win10/samples/RGBLED.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/RGBLED.htm
+lang: zh-cn
 ---
 
 ##RGB LED 示例
 
-在此示例中，我们会将三色 LED 连接到 Raspberry Pi 2。LED 将闪烁，同时在红色、蓝色、绿色之间更改颜色。
+{% include VerifiedVersion.md %}
+
+[在 Github 上查看代码](https://github.com/ms-iot/samples/blob/develop/RGBLED/CS/MainPage.xaml.cs)
+
+在此示例中，我们会将三色 LED 连接到 Raspberry Pi 2。LED 将闪烁，同时在红色、蓝色与绿色之间更改颜色。
 
 这是一个有外设示例，所以请确保你的设备处于有外设模式下，方法为运行以下命令：`setbootoption.exe headed`（更改有外设/无外设状态需要重新启动）。
 
@@ -16,11 +20,13 @@ lang: zh-CN
 
 ###组件
 
-你将需要以下硬件：
+你将需要以下组件：
 
-* 一个 [754-1615-ND 三色 LED](http://www.digikey.com/product-detail/en/WP154A4SUREQBFZGC/754-1615-ND/3084119)）
+* 1 个 [754-1615-ND 三色 LED](http://www.digikey.com/product-detail/en/WP154A4SUREQBFZGC/754-1615-ND/3084119){:target="_blank"}
 
-* 一个 [330 &\#x2126; 电阻](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636)
+* 1 个 [330 &#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
+
+* 2 个 [100 &#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-100R/100QBK-ND/246){:target="_blank"}
 
 * 一块试验板以及多根公母头连接线和双公头连接线
 
@@ -28,162 +34,190 @@ lang: zh-CN
 
 我们先来为试验板上的组件布线，如下图所示。
 
-![试验板连接]({{site.baseurl}}/images/RGBLED/RGBLED_bb.png)
+![试验板连接]({{site.baseurl}}/Resources/images/RGBLED/RGBLED_bb.png)
 
-*使用 [Fritzing](http://fritzing.org/) 制作的图像*
-
+<sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
 以下是电路原理图：
 
-![电路示意图]({{site.baseurl}}/images/RGBLED/RGBLED-schematic_schem.png)
+![电路示意图]({{site.baseurl}}/Resources/images/RGBLED/RGBLED-schematic_schem.png)
 
-*使用 [Fritzing](http://fritzing.org/) 制作的图像*
+<sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
-####连接 LED
+三色 LED 的引出线如下所示，并且可以在[数据表](http://www.kingbrightusa.com/Resources/images/catalog/SPEC/WP154A4SUREQBFZGC.pdf){:target="_blank"}中找到。
 
-* 将 LED 的三个脚分别连接到 Raspberry Pi 2 的引脚 29、31、33（GPIO 5、6、13）
+![三色 LED 引出线]({{site.baseurl}}/Resources/images/RGBLED/RGBLED_Pinout.png)
 
-* 请注意，红色脚应通过 330 &\#x2126; 电阻连接到 Raspberry Pi 2 的引脚 29。
+####连接三色 LED
 
-* 将 LED 的阳极（较长的脚）连接到引脚 6 \(GND\)
+* 将三色 LED 插入试验板，如页面顶部的试验板图中所示。
+
+* 将 330 &#x2126; 电阻器的一端连接到三色 LED 的红色引线上。
+
+* 将 330 &#x2126; 电阻器的另一端连接到 Raspberry Pi 2 的引脚 29 GPIO5。
+
+* 将 100 &#x2126; 电阻器的一端连接到三色 LED 的蓝色引线上。
+
+* 将 100 &#x2126; 电阻器的另一端连接到 Raspberry Pi 2 的引脚 31 GPIO6。
+
+* 将 100 &#x2126; 电阻器的一端连接到三色 LED 的绿色引线上。
+
+* 将 100 &#x2126; 电阻器的另一端连接到 Raspberry Pi 2 上的引脚 33 GPIO13。
+
+* 将三色 LED 的阴极（最长的阴极引线）连接到引脚 6 GND。
 
 下面是 RPi2 的引出线：
 
-![Raspberry Pi 2 引出线]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![Raspberry Pi 2 引出线]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
 ###部署你的应用
 
-你可以在[此处](https://github.com/ms-iot/samples/tree/develop/RGBLED/CS)找到此示例的完整代码。本示例是采用 C\# 编写的。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\RGBLED` 来查找此示例的源代码。本示例是采用 C\# 编写的。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
-确保将“远程调试”设置设为指向 Windows IoT 设备。如需指导，请参考基本“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)。如果你要针对 Raspberry Pi 2 进行生成，请选择 `ARM`。
-
-完成所有设置后，你应可以在 Visual Studio 中按 F5。RGBLED 应用将进行部署并在 MBM 上启动，此时你应看到 LED 与屏幕上的模拟图像同步闪烁。
-
+按照[设置远程调试并部署应用]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp)的说明进行操作。RGBLED 应用将在 MBM 上部署并启动，此时你应看到 LED 与屏幕上的模拟图像同步闪烁。
 
 ###我们来看看代码
-此示例的代码相当简单。我们使用了一个计时器，每当调用“Tick”事件时，都会切换 LED 的状态。
 
-###计时器代码
-下面说明如何使用 C\# 语言设置计时器：
+首先，我们将获取默认的 GPIO 控制器，然后检查它不是 NULL。`GpioController.GetDefault()` 在不包含 GPIO 控制器的平台上返回 NULL。
 
 {% highlight C# %}
-public MainPage()
-{
-    // ...
-
-    this.timer = new DispatcherTimer();
-    this.timer.Interval = TimeSpan.FromMilliseconds(500);
-    this.timer.Tick += Timer_Tick;
-    this.timer.Start();
-
-    // ...
-}
-
-private void Timer_Tick(object sender, object e)
-{
-    FlipLED();
-}
-{% endhighlight %}
-
-###初始化 GPIO 引脚
-为了驱动 GPIO 引脚，首先我们需要对其进行初始化。以下是 C\# 代码（请注意我们如何在 Windows.Devices.Gpio 命名空间中利用新 WinRT 类）：
-
-{% highlight C# %}
-using Windows.Devices.Gpio;
-
-private void InitGPIO()
+        private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             var gpio = GpioController.GetDefault();
 
             // Show an error if there is no GPIO controller
             if (gpio == null)
             {
-                redpin = null;
-                bluepin = null;
-                greenpin = null;
                 GpioStatus.Text = "There is no GPIO controller on this device.";
                 return;
             }
+{% endhighlight %}
 
-           redpin = gpio.OpenPin(REDLED_PIN);
-           bluepin = gpio.OpenPin(BLUELED_PIN);
-           greenpin = gpio.OpenPin(GREENLED_PIN);
+接下来，我们将打开稍后将在程序中使用的引脚。RGB LED 需要 3 个 gpio 引脚，每个引脚用来驱动 LED 的每个颜色通道。代码会采取不同的行为，具体取决于它在哪个平台上运行。如果在 Raspberry Pi 上运行，我们将使用引脚 5、6 和 13，因为它们在标头上以物理方式彼此相邻。如果不在 Raspberry Pi 上运行，我们将采用前 3 个可用引脚。此外，跳过在已知硬件平台上连接到板载功能的引脚有一定的逻辑性。
 
-            // Show an error if the pin wasn't initialized properly
-            if (redpin == null || bluepin == null || greenpin == null)
+{% highlight C# %}
+            var deviceModel = GetDeviceModel();
+            if (deviceModel == DeviceModel.RaspberryPi2)
             {
-                GpioStatus.Text = "There were problems initializing the GPIO red/blue/green pin.";
-                return;
-            }
+                // Use pin numbers compatible with documentation
+                const int RPI2_RED_LED_PIN = 5;
+                const int RPI2_GREEN_LED_PIN = 13;
+                const int RPI2_BLUE_LED_PIN = 6;
 
+                redpin = gpio.OpenPin(RPI2_RED_LED_PIN);
+                greenpin = gpio.OpenPin(RPI2_GREEN_LED_PIN);
+                bluepin = gpio.OpenPin(RPI2_BLUE_LED_PIN);
+            }
+            else
+            {
+                // take the first 3 available GPIO pins
+                var pins = new List<GpioPin>(3);
+                for (int pinNumber = 0; pinNumber < gpio.PinCount; pinNumber++)
+                {
+                    // ignore pins used for onboard LEDs
+                    switch (deviceModel)
+                    {
+                        case DeviceModel.DragonBoard410:
+                            if (pinNumber == 21 || pinNumber == 120)
+                                continue;
+                            break;
+                    }
+
+                    GpioPin pin;
+                    GpioOpenStatus status;
+                    if (gpio.TryOpenPin(pinNumber, GpioSharingMode.Exclusive, out pin, out status))
+                    {
+                        pins.Add(pin);
+                        if (pins.Count == 3)
+                        {
+                            break;
+                        }
+                    }
+                }
+
+                if (pins.Count != 3)
+                {
+                    GpioStatus.Text = "Could not find 3 available pins. This sample requires 3 GPIO pins.";
+                    return;
+                }
+
+                redpin = pins[0];
+                greenpin = pins[1];
+                bluepin = pins[2];
+            }
+{% endhighlight %}
+
+接下来，我们将引脚初始化为较高驱动的输出，这会导致 LED 关闭。我们还能显示哪些引脚编号处于使用状态。如果你没有使用 Raspberry Pi，请将 RGB LED 连接到在屏幕中显示的引脚。
+
+{% highlight C# %}
             redpin.Write(GpioPinValue.High);
             redpin.SetDriveMode(GpioPinDriveMode.Output);
-            bluepin.Write(GpioPinValue.High);
-            bluepin.SetDriveMode(GpioPinDriveMode.Output);
             greenpin.Write(GpioPinValue.High);
             greenpin.SetDriveMode(GpioPinDriveMode.Output);
+            bluepin.Write(GpioPinValue.High);
+            bluepin.SetDriveMode(GpioPinDriveMode.Output);
 
-            GpioStatus.Text = "GPIO blue/red/green pin initialized correctly.";
+            GpioStatus.Text = string.Format(
+                "Red Pin = {0}, Green Pin = {1}, Blue Pin = {2}",
+                redpin.PinNumber,
+                greenpin.PinNumber,
+                bluepin.PinNumber);
+{% endhighlight %}
+
+最后，我们会启动用于轮换显示 LED 颜色的定期计时器。我们会使用 `DispatcherTimer`，因为我们将更新计时器回调上的 UI。如果我们无需更新该 UI，则使用在独立线程上运行的 `System.Threading.Timer` 会更好。我们在 UI 线程上可以执行的操作越少，UI 的响应速度会更快。
+
+{% highlight C# %}
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMilliseconds(500);
+            timer.Tick += Timer_Tick;
+            timer.Start();
         }
 {% endhighlight %}
 
-让让我们稍稍细分一下此过程：
-
-* 首先，我们使用 `GpioController.GetDefault()` 获取 GPIO 控制器。
-
-* 如果设备没有 GPIO 控制器，则此函数将返回 `null`。
-
-* 然后，我们尝试通过使用 `REDLED_PIN`、`BLUELED_PIN` 和 `GREENLED_PIN` 值调用 `GpioController.OpenPin()` 来打开引脚。
-
-* 获取 `redpin`、`bluepin` 和 `greenpin` 后，我们使用 `GpioPin.Write()` 函数将其设置为默认为“高”。
-
-* 我们还使用 `GpioPin.SetDriveMode()` 函数将引脚设置为在输出模式下运行。
-
-
-###修改 GPIO 引脚的状态
-在具有 `GpioOutputPin` 实例的访问权限后，没有必要再通过更改引脚状态来打开或关闭 LED。
-
-若要打开 LED，只需将值 `GpioPinValue.High` 写入引脚：
-
+在计时器回调中，我们将点亮当前活动的 LED 并更新 UI。
 
 {% highlight C# %}
-private void FlipLED()
+        private void FlipLED()
         {
-            if (LEDStatus == 0)
+            Debug.Assert(redpin != null && bluepin != null && greenpin != null);
+
+            switch (ledStatus)
             {
-               LEDStatus = 1;
-                if (redpin != null && bluepin != null && greenpin != null)
-                {
+                case LedStatus.Red:
                     //turn on red
                     redpin.Write(GpioPinValue.High);
                     bluepin.Write(GpioPinValue.Low);
                     greenpin.Write(GpioPinValue.Low);
-                }
-            }
-            else if (LEDStatus == 1)
-            {
-                LEDStatus = 2;
-                if (redpin != null && bluepin != null && greenpin != null)
-                {
-                    //turn on blue
-                    redpin.Write(GpioPinValue.Low);
-                    bluepin.Write(GpioPinValue.High);
-                    greenpin.Write(GpioPinValue.Low);
-                }
-            }
 
-          else
-            {
-                LEDStatus = 0;
-                if (redpin != null && bluepin != null && greenpin != null)
-                {
+                    LED.Fill = redBrush;
+                    ledStatus = LedStatus.Green;    // go to next state
+                    break;
+                case LedStatus.Green:
+
                     //turn on green
                     redpin.Write(GpioPinValue.Low);
-                    bluepin.Write(GpioPinValue.Low);
                     greenpin.Write(GpioPinValue.High);
-                }
-              }
+                    bluepin.Write(GpioPinValue.Low);
+
+                    LED.Fill = greenBrush;
+                    ledStatus = LedStatus.Blue;     // go to next state
+                    break;
+                case LedStatus.Blue:
+                    //turn on blue
+                    redpin.Write(GpioPinValue.Low);
+                    greenpin.Write(GpioPinValue.Low);
+                    bluepin.Write(GpioPinValue.High);
+
+                    LED.Fill = blueBrush;
+                    ledStatus = LedStatus.Red;      // go to next state
+                    break;
+            }
+        }
+
+        private void Timer_Tick(object sender, object e)
+        {
+            FlipLED();
         }
 {% endhighlight %}

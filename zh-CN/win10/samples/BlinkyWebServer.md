@@ -1,25 +1,24 @@
 ---
 layout: default
 title: Blinky WebServer 示例
-permalink: /zh-CN/win10/samples/BlinkyWebServer.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/BlinkyWebServer.htm
+lang: zh-cn
 ---
 
 ##Blinky Webserver
+
+{% include VerifiedVersion.md %}
 
 我们将要创建一个受其他应用的 WebServer 控制的简单 Blinky 应用，并将 LED 连接到你的 Windows IoT 核心版设备。请注意，GPIO API 仅在 Windows IoT 核心版上可用，因此该示例无法在你的桌面上运行。
 
 
 ###在 Visual Studio 中加载项目
 
-可以在[此处](https://github.com/ms-iot/samples/tree/develop/App2App%20WebServer)找到此示例。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\App2App WebServer` 来查找此示例的源代码。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
-* 确保将“远程调试”设置设为指向 Windows IoT 核心版设备。如需指导，请返回基本“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)。
+确保将 LED 连接到开发板。如需指导，请返回基本“Blinky”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)。
 
-* 确保将 LED 连接到开发板。如需指导，请返回基本“Blinky”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)。
-
-请注意，如果应用无法找到任何可用的 GPIO 端口（例如，如果你在运行 Windows IoT 核心版的 VM 上运行该应用），则该应用会适当降级。
-
+请注意，如果应用找不到任何可用 GPIO 端口，则该应用将无法成功运行。
 
 ###我们来看看代码
 
@@ -27,7 +26,7 @@ lang: zh-CN
 
 * WebServerApp – 此项目将注册一个 BackgroundTask，用于提供 Web 服务器，并托管应用到应用的通信服务。
 
-* BlinkyApp – 此 UAP 应用类似于 Blinky 示例应用，不过，LED 电源状态由 webserver 控制。
+* BlinkyApp – 此 UWP 应用类似于 Blinky 示例应用，不过，LED 电源状态由 webserver 控制。
 
 
 ###WebServerApp
@@ -145,7 +144,7 @@ public void Run(IBackgroundTaskInstance taskInstance)
 
 ###BlinkyApp
 
-客户端应用与 Blinky [示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)十分相似。此处补充的主要内容是，我们允许使用 WebServer 来配置 LED 的开/关状态。若要通过应用到应用的机制建立与 WebServer 应用的连接，我们需要：
+客户端应用与 Blinky [示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)十分相似。此处补充的主要内容是，我们允许使用 WebServer 来配置 LED 的开/关状态。若要通过应用到应用的机制建立与 WebServer 应用的连接，我们需要：
 
 1. 创建一个 AppServiceConnection 对象
 
@@ -180,12 +179,12 @@ if (res == AppServiceConnectionStatus.Success)
 }
 {% endhighlight %}
 
-###部署并运行示例
-如果你要针对 Minnowboard Max 进行生成，请选择体系结构下拉列表中的 `x86`。如果你要针对 Raspberry Pi 2 进行生成，请选择 `ARM`。
-
+###部署和运行示例
 若要使 Blinky WebServer 运行，请先部署 WebServer 项目。这将会注册应用到应用的通信机制。然后，部署并运行 Blinky 项目。这将会启动我们的有外设 Blinky 应用，然后初始化并启动应用到应用的通信（同时会启动 Web 服务器）。接下来，可以根据下一步骤的详细描述，使用 Web 客户端进行全面测试。
+
+有关如何部署应用程序的说明，请参阅[此处]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp)的说明。
 
 ###Web 客户端
 对于我们的示例应用，我们已在 Windows IoT 核心版设备上的 WebServer 中托管了一个简单的客户端。可以通过开发板和端口的 IP 地址（类似于 http://123.456.789.0:8000，在其中你将 123.456.789.0 替换为服务器已部署到的设备的 IP 地址）访问它。然后，可以使用 WebServer 客户端打开和关闭 LED（请参阅以下屏幕截图）。
 
-![WebServer 客户端]({{site.baseurl}}/images/WebServer/webserver_client.png)
+![WebServer 客户端]({{site.baseurl}}/Resources/images/WebServer/webserver_client.png)

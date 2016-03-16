@@ -1,0 +1,23 @@
+<div class="row">
+  {% for type in site.data.kit-contents[page.lang][include.kit] %}
+   <h3 class="thin-header">{{type[0]}}</h3>
+   <table class="table table-striped maker-kit">
+    <tr>
+	{% capture langLower %}{{ page.lang | downcase }}{% endcapture %}
+	{% if langLower == 'zh-cn' %}
+	  <th class="largeTH">项目</th>
+      <th>数量</th>
+	{% else %}
+	  <th class="largeTH">Item</th>
+      <th>Quantity</th>
+	 {% endif %}
+    </tr>
+    {% for item in type[1] %}
+    <tr>
+      <td class="largeTH">{{item.name}}</td>
+      <td>{{item.quantity}}</td>
+    </tr>
+    {% endfor %}
+   </table>
+  {% endfor %}
+</div>

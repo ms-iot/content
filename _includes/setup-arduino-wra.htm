@@ -1,0 +1,62 @@
+<h3>What you need</h3>
+
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <p>In this section, we prepare an Arduino device to be controlled remotely by the Windows 10 device prepared previously.  The Arduino needs to be running a version of Firmata, which will allow the board to communicate with our app via USB, Bluetooth, or Wi-Fi.  You can decide which of these communication connections you want - be sure to choose your parts below accordingly.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <p>You'll need:</p>
+    <ol class="inline-list">
+      <li><b>A Windows PC</b> - not necessarily the device prepared in the previous step, but any device you can use to upload sketches to your Arduino.</li>
+      <li><b>An Arduino board</b> - our sample is tested to work with the Arduino Uno.</li>
+      <li><b>Standard A to Standard B USB cable</b> - needed no matter what to upload the Arduino sketch, regardless of connection choice.</li>
+      <li><b>Bluetooth device for Arduino</b> (OPTIONAL) - only needed if you choose to connect by Bluetooth. We recommend the <a href="https://www.sparkfun.com/products/12576" target="_blank">SparkFun Bluetooth Mate Silver</a>.</li>
+      <li><b>Wi-Fi device for Arduino</b> (OPTIONAL) - only needed if you choose to connect by Wi-Fi. We recommend this <a href="https://www.arduino.cc/en/Main/ArduinoWiFiShield" target="_blank">Arduino Wi-Fi Shield</a>.</li>
+    </ol>
+  </div>
+</div>
+
+<h3>Arduino Setup</h3>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <p>Windows Remote Arduino uses the Firmata protocol - the Arduino implementation of this protocol is called <a href="https://github.com/firmata/arduino/blob/master/examples/StandardFirmata/StandardFirmata.ino" target="_blank"> StandardFirmata </a> and comes pre-packaged with the Arduino IDE when you install it. Follow the steps below to upload the StandardFirmata sketch to your Arduino.</p>
+
+    <ol class="inline-list">
+      <li>Download and install the <a href="http://arduino.cc" target="_blank">Arduino IDE</a> on your PC.</li>
+      <li>Connect your Arduino device to the PC using USB.</li>
+      <li>Launch the Arduino IDE (simply called "Arduino").</li>
+      <li>Verify that you have the correct Arduino board selected under <b>Tools > Board</b>.</li>
+      <li>Verify that you have the correct COM Port selected under <b>Tools > Port</b>.  The name of your board should appear next to the correct option.</li>
+      <li>In the Arduino IDE, navigate to <b>File > Examples > Firmata > StandardFirmata</b>.</li>
+      <li>Press “Upload” to deploy the StandardFirmata sketch to the Arduino device.</li>
+    </ol>
+    
+    <p>Your Arduino will now run the StandardFirmata sketch forever unless reprogrammed with a different sketch. You can now optionally disconnect your Arduino from the computer and power it in any way you choose.</p>
+    </div>
+</div>
+    
+<h3>Connection Options</h3>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <p>At this point, you can use a USB connection with no additional work - if you choose this option, move on to the next section.  Otherwise, follow one of the instruction sets below to setup a Bluetooth or Wi-Fi device.</p>
+
+    <p>If you wish to use the recommended Bluetooth pairing between your devices, you will need to <a href="https://github.com/ms-iot/remote-wiring/blob/master/bluetooth.md" target="_blank">hook up a Bluetooth device to the Arduino </a>.  Follow the steps on our GitHub to setup the Bluetooth module before moving on to the next step.</p>
+
+    <p>If you wish to use the Wi-Fi pairing between your devices, you will need to <a href="https://github.com/ms-iot/remote-wiring#notes-on-wifi-and-ethernet" target="_blank"> hook up a Wi-Fi device to the Arduino </a>.  Follow the steps on our GitHub to setup the Wi-Fi module before moving on to the next step.</p>
+  </div>
+</div>
+
+<h3>Notes on Baud rate for USB/Bluetooth</h3>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+		<p>Some hardware setups may require additional considerations when it comes to setting up your Bluetooth device over the serial pins 0 and 1.</p>
+
+                <p>StandardFirmata uses the Serial lines to talk to a Bluetooth device or over USB. By default, it uses a baud rate of 57600 bps. Depending on the configuration of your Bluetooth device, you may need to modify that rate. It can be found in the<code>setup</code> method and looks like this:</p>
+
+                <p><code>Firmata.begin(57600);</code></p>
+
+                <p>Simply change the<code>begin</code> parameter to match the configuration of your Bluetooth device. The most common configurations are 115200, 57600, and 9600. The recommended SparkFun Bluetooth Mate devices use 115200 by default. If you are not sure of the default baud rate of your Bluetooth device, check the device documentation.</p>
+  </div>
+</div>

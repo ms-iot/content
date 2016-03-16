@@ -1,0 +1,63 @@
+<p>With our Windows 10 companion device properly set up, let's get our Arduino ready to use the Windows Virtual Shields for Arduino library.  You can establish a connection between your Arduino and your Windows 10 "virtual shield" over USB, Bluetooth, or Wi-Fi.  This particular tutorial will explain how to complete setup using a Bluetooth connection, but feel free to experiment with the other options.</p>
+<h3>Hardware</h3>
+<h4>What you need</h4>
+<ol class="inline-list">
+  <li>Arduino Uno or compatible device.</li>
+  <li>Connecting wires.</li>
+  <li>A PC - used to upload your Arduino sketches.</li>
+  <li>Standard A to Standard B USB - needed to upload sketches to your Arduino device.</li>
+  <li>OPTIONAL Bluetooth module - only needed if you choose to connect by Bluetooth.  We recommend the <a href="https://www.sparkfun.com/products/12576" target="_blank"> SparkFun Bluetooth Mate Silver</a>.</li>
+  <li>OPTIONAL Wi-Fi module - only needed if you choose to connect by Wi-Fi.  We recommend this <a href="https://www.arduino.cc/en/Main/ArduinoWiFiShield" target="_blank">Arduino Wi-Fi Shield</a>.</li>
+</ol>
+
+<h4>Set up your Arduino</h4>
+<ol class="inline-list">
+  <li>Prepare the Bluetooth module if necessary (the Bluetooth module may need to have headers soldered onto it).</li>
+  <li>
+    <p>Except for the one difference noted below, connect the Bluetooth module to the Arduino per the <a href="https://learn.sparkfun.com/tutorials/using-the-bluesmirf/hardware-hookup" target="_blank">wiring diagram</a>.</p>
+    <ul>
+      <li>
+        <p>DIFFERENCE: Use pins 0 and 1 instead of 2 and 3:</p>
+        <p>The Bluetooth TX should connect to pin 0 (Arduino RX or RX0).</p>
+        <p>The Bluetooth RX should connect to pin 1 (Arduino TX or TX1).</p>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h3>Software</h3>
+<h4>What you need</h4>
+<ol class="inline-list">
+  <li>Arduino IDE 1.6 or better.</li>
+  <li>ArduinoJson library.</li>
+  <li>This <a href="https://github.com/ms-iot/virtual-shields-arduino" target="_blank">repository</a>, which contains the example sketch which will run on the Arduino.</li>
+</ol>
+<h4>Set up your Arduino IDE</h4>
+<ol class="inline-list">
+  <li>Download and install the <a href="http://www.arduino.cc/en/Main/Software" target="_blank"> Arduino IDE </a>.  Launch the program.</li>
+  <li>Verify that you have the correct Arduino board selected under <b>Tools > Board</b>.</li>
+  <li>Verify that you have the correct COM Port selected under <b>Tools > Port</b>.  The name of the board should appear next to each option, making it much easier to choose the correct option.</li>
+</ol>
+
+<h4>Set up the ArduinoJson library</h4>
+<ol class="inline-list">
+  <li>From the <a href="https://github.com/bblanchon/ArduinoJson" target="_blank"> ArduinoJson repository</a>, clone the repository or download the zip.</li>
+  <li>Place the whole repository into your libraries folder (i.e. Documents\Arduino\libraries\ArduinoJson\).</li>
+</ol>
+
+<h4>Set up the Windows Virtual Shields for Arduino library</h4>
+<ol class="inline-list">
+  <li>Clone this <a href="https://github.com/ms-iot/virtual-shields-arduino" target="_blank"> repository </a> or download the ZIP.  If you're not familiar with git and want to do a proper clone, follow the instructions<a href="https://help.github.com/articles/cloning-a-repository/" target="_blank"> here</a>.</li>
+  <li>Copy the "VirtualShield" folder, found in the "Arduino\Libraries" folder of the repository you just downloaded, to your Arduino library folder (i.e. Documents\Arduino\libraries\VirtualShield\).</li>
+</ol>
+
+<h4>Test your setup</h4>
+<ol class="inline-list">
+  <li>From the Arduino IDE, go to the menu item File -> Examples -> Virtual Shield -> HelloWorld-Speech-Eventing. This should load the speech-recognition based Hello World example we're using for this tutorial.</li>
+  <li>Before uploading the sketch to your Arduino, temporarily remove the Bluetooth TX and RX wires from the Arduino (there is only one serial port shared between the USB and Bluetooth - the Bluetooth interferes with the upload).</li>
+  <li>Upload the sketch by pressing the "Upload" button in the IDE.</li>
+  <li>Replace the Bluetooth TX and RX wires into the Arduino pins (Bluetooth TX to Arduino RX (or RX0) and Bluetooth RX to Arduino TX or (TX1)).</li>
+  <li>On the phone (or other Windows device) you prepared on the previous page, pair to the Bluetooth device on your Arduino in the Bluetooth settings. If you're using the BlueSMiRF, the default pin code is 1234. NOTE: The red blinking light on the BlueSMiRF continues to blink red after a successful pairing. This is expected. It only turns green after a connecting with the Windows Virtual Shields for Arduino application.</li>
+</ol>
+
+

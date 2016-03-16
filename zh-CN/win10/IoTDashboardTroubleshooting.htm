@@ -1,0 +1,51 @@
+﻿---
+
+layout: default
+
+title: Windows 10 IoT 核心版仪表板
+
+permalink: /zh-cn/win10/IoTDashboardTroubleshooting.htm
+
+lang: zh-cn
+
+---
+<ol class="breadcrumb">
+  <li>
+    <a href="https://dev.windows.com/zh-cn/iot">IoT 主页</a>
+  </li>
+  <li>
+    <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">入门</a>
+  </li>
+  <li class="active">Windows 10 IoT 核心版仪表板</li>
+</ol>
+<h1 class="page-title"> Windows 10 IoT 核心版仪表板 </h1>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <h2 class="subtext">IoT 仪表板是从电脑下载、设置和连接 Windows 10 IoT 核心版设备等所有操作的最佳方式。</h2>
+  </div>
+</div>
+
+
+<h2>疑难解答 </h2>
+
+<hr>
+  <div id="app-content" class="toggle-section">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+        <p>如果你的设备运行的是版本 10586 之前的版本，必须进行升级才能使 Windows 10 IoT 核心版仪表板正常工作 </p>
+     <h3> 刷写 SD 卡 </h3>
+        <p>已知某些 SD 卡与 Windows 10 IoT 核心版不兼容。 为获得最佳效果，请使用我们在<a href = "http://ms-iot.github.io/content/zh-cn/win10/SupportedInterfaces.htm" target ="_blank">兼容性列表</a>中建议的卡。</p>
+     <h3> 设置 WLAN </h3>
+        <p>注意： 在 Raspberry Pi 2 上设置 WLAN 已标记为不可靠。如果设置失败，你可能需要重复设置体验 </p>
+        <p>注意： 当连接到 WLAN 时，正式的 Raspberry Pi2 WLAN 适配器可能不稳定。有关受支持的 WLAN 适配器列表，请参阅我们的<a href = "http://ms-iot.github.io/content/zh-cn/win10/SupportedInterfaces.htm" target ="_blank">兼容性列表</a></p>
+        <p>在将 Windows 10 IoT 核心版下载并刷入 SD 卡后，请将 SD 卡插入设备中。设备完成启动后，应该会自动显示在“我的设备”中。这可能需要几分钟的时间。如果你将某台监视器插入设备，它将显示启动进度。</p>
+        <p>如果设备在一分钟后还未显示，则手动重新启动并等待它启动。</p>
+        <p>在你发现并连接到设备后，设备应该会以随机生成的以“AJ_”为开头的名称显示。</p>
+        
+        <h4>仍有问题？</h4>
+        <p>如果在连接设备时仍遇到问题，<b>请将以太网电缆插入</b>设备中。对于某些用户而言，以太网比 WLAN 更可靠，这一点已得到证明。</p>
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <img src="{{site.baseurl}}/Resources/images/DeviceCenter.png">
+    </div>

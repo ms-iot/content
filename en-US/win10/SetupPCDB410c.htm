@@ -1,0 +1,25 @@
+<h3> Install the DragonBoard Update Tool</h3>
+<ol class="setup-content-list">
+  <li>Download the DragonBoard Update Tool by selecting the download link appropriate for your PC: <a href="https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x86.zip">x86</a> or <a href="https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x64.zip">x64</a></li>
+  <li>Right click on the downloaded zip file and select extract all. This will create a new folder with the same name as the downloaded zip file.</li>
+  <li>Open the folder and double click the setup.exe file.</li>
+  <li>
+    <p>Follow the instructions and when prompted allow the USB driver to install by clicking "install".</p>
+    <p><img alt="screenshot: install usb driver" class="image-border" src="{{site.baseurl}}/Resources/images/SetupDB410c/DB410c_UpdateTool_DriverInstall.png" /></p>
+  </li>
+  <li>The installer will create a shortcut to the DragonBoard Update Tool on your desktop and in your start menu, under Qualcomm->DragonBoardUpdate Tool.</li>
+</ol>
+
+<h3> Download the DragonBoard Windows 10 IoT Core Image</h3>
+<ol class="setup-content-list">
+  <li>Download a Windows 10 IoT Core image from our<a href="{{site.baseurl}}/en-US/Downloads.htm" target="_blank"> downloads page</a>.</li>
+  <li>Double click the downloaded ISO file. This will automatically mount the ISO as a new virtual CD-drive. (Look for a new CD-ROM drive)</li>
+  <li>
+    <p>The mounted virtual drive contains an installer file "Windows_10_IoT_Core_QCDB410C.msi". Double click the file to start the installation.</p>
+    <p><img alt="windows installer for dragonboard 410c" class="image-border" src="{{site.baseurl}}/Resources/images/SetupDB410c/DB410c_WindowsInstaller.JPG" /></p>
+    <p>The installer creates a new directory: C:\Program Files (x86)\Microsoft IoT\FFU\QCDB410C\ which contains the DragonBoard410c image file "flash.ffu".</p>
+    <p><img alt="ffu for windows 10 iot core for dragonboard 410c" class="image-border" src="{{site.baseurl}}/Resources/images/SetupDB410c/DB410c_FlashFile_FFU.JPG" /></p>
+    <p>Unlike Raspberry Pi 2 or 3 and Minnowboard Max, we will not be applying this FFU to an SD card. Instead, we will use this flash file on the next page.</p>
+  </li>
+  <li>Eject the virtual CD-drive when done.</li>
+</ol>

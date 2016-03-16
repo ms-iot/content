@@ -15,6 +15,6 @@ Please refer to our [contribution page](http://ms-iot.github.io/content/Contribu
 
 ### Documentation rules
 * For samples, please use [Jekyll's Kramdown flavored Markdown](http://jekyllrb.com/docs/home/) to get nice formatting when rendered as a webpage.
-* For README.md files, please use [Github Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/) to get nice formatting on the file browser.
+* For README.md files, please use [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/) to get nice formatting on the file browser.
 * Please do not use HTML
 * For samples, please append ```{:target="_blank"}```, so the link opens in a new page

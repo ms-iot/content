@@ -5,12 +5,12 @@ permalink: /en-US/win10/samples/DriverLab4.htm
 lang: en-US
 ---
 
-##Use Visual Studio to deploy a driver 
+## Use Visual Studio to deploy a driver 
 
 In this exercise, you will configure your Visual Studio driver project so that you can compile and deploy a driver for a specific platform during driver development phase.  Note that currently this procedure requires that your target device reboot after the driver is deploy and as a result it may take a couple of minutes for the entire deployment to complete.
 For this exercise you can use the gpiokmdfdemo sample driver found [here](https://github.com/ms-iot/samples/tree/develop/DriverSamples).
 
-###On the target device
+### On the target device
 This section describes the steps required to configure your target device for driver development.
 
 * Make sure that your device has an IoTCore image installed by following the instructions [here]({{site.baseurl}}/{{page.lang}}/GetStarted.htm).
@@ -27,7 +27,7 @@ This section describes the steps required to configure your target device for dr
 		
 Your target device is now configured for driver development using Visual Studio.
 
-###On the development computer
+### On the development computer
 
 * Install the Windows Driver Kit on your development machine by following the instructions [here](https://msdn.microsoft.com/en-US/windows/hardware/dn913721(v=vs.8.5).aspx).  You will need to install the SDK and WDK.
 
@@ -59,9 +59,9 @@ Your target device is now configured for driver development using Visual Studio.
 
 Build and install the demo driver using Visual Studio
 
-* From the Build menu, click `Build Solution(Ctrl+Shift+B)`. Make sure that you are building for `x86` if you are using a MinnowBoard Max, or `ARM` if you are using a Raspberry Pi 2.  Visual Studio will build your driver and deploy the driver to your target device.
+* From the Build menu, click `Build Solution(Ctrl+Shift+B)`. Make sure that you are building for `x86` if you are using a MinnowBoard Max, or `ARM` if you are using a Raspberry Pi 2 or 3.  Visual Studio will build your driver and deploy the driver to your target device.
 
-    ![Driver Settings properties]({{site.baseurl}}/images/DriverLab/driver-build-option.png)
+    ![Driver Settings properties]({{site.baseurl}}/Resources/images/DriverLab/driver-build-option.png)
 
 * The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
 

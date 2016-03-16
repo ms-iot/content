@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/Appx.htm
 lang: en-US
 ---
 
-#Creating and Deploying Appx to Windows IoT Core
+# Creating and Deploying Appx to Windows IoT Core
 
 Learn how to create and deploy appx packages to Windows IoT Core.
 
@@ -15,11 +15,11 @@ We'll walk through the steps required to create an Appx Package from your Visual
 
 * Open your project in Visual Studio. Then right click on the project and select Unload Project.
 
-  ![Unload Project Option]({{site.baseurl}}/images/appx/unload_project_menu.png)
+  ![Unload Project Option]({{site.baseurl}}/Resources/images/appx/unload_project_menu.png)
 
 * Now right click on the unloaded project and select Edit <Project>.csproj file.
 
-  ![Edit Csproj Option]({{site.baseurl}}/images/appx/edit_projectproj.png)
+  ![Edit Csproj Option]({{site.baseurl}}/Resources/images/appx/edit_projectproj.png)
 
 * This will open the <Project>.csproj file in Visual Studio. Now Add the following item to the "globals" property group of the .csproj file
 

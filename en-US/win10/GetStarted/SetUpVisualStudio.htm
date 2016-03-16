@@ -1,0 +1,58 @@
+---
+layout: default
+title: Set up your device
+permalink: /en-US/win10/GetStarted/SetUpVisualStudio.htm
+lang: en-US
+
+---
+<ol class="breadcrumb">
+    <li>
+        <a href="https://dev.windows.com/en-us/iot">IoT Home</a>
+    </li>
+    <li>
+        <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
+    </li>
+    <li class="active">Set up Visual Studio</li>
+</ol>
+<h1 class="page-title">Set up Visual Studio </h1>
+<div class="row">
+    <div class="col-md-12 col-sm-24 col-no-padding">
+        <h2 class="subtext">Set up your development environment to start building</h2>
+    </div>
+</div>
+
+<div class="row">
+    <p><span class="pull-right">
+        <a href="{{site.baseurl}}/{{page.lang}}/win10/StartCoding.htm" class="button-blue button-flat">Next: Check out more samples</a>
+    </span></p>
+</div>
+
+<h2>Get Visual Studio <span class="pull-right"><a id="get-vs-toggle" class="toggle-button" onClick="hideDiv('get-vs')">Hide</a></span></h2>
+<hr>
+<div id="get-vs" class="toggle-section">
+{% include_relative SetupPCContent.md %}
+</div>
+<br>
+
+<div class="row">
+    <p><span class="pull-right">
+        <a href="{{site.baseurl}}/{{page.lang}}/win10/StartCoding.htm" class="button-blue button-flat">Next: Check out more samples</a>
+    </span></p>
+</div>
+
+
+<script>
+    function hideDiv(div) {
+        var pdiv = "#" + div,
+            button = pdiv + "-toggle"
+
+        if ($(pdiv).css('display') == 'none') {
+            $(pdiv).toggle('slow');
+            $(button).html('Hide');
+        }
+        else {
+            $(pdiv).toggle('slow');
+            $(button).html('Show');
+        }
+    }
+</script>

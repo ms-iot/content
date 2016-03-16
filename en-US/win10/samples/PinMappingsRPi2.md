@@ -1,26 +1,26 @@
 ---
 layout: default
-title: RPi2 Pin Mappings
+title: Raspberry Pi2 & 3 Pin Mappings
 permalink: /en-US/win10/samples/PinMappingsRPi2.htm
 lang: en-US
 ---
 
-##Raspberry Pi 2 Pin Mappings
+## Raspberry Pi 2 & 3 Pin Mappings
 
-![RPi2 Pin Header]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![RPi2 Pin Header]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
 <sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
 
-Hardware interfaces for the Raspberry Pi 2 are exposed through the 40-pin header **J8** on the board. Functionality includes:
+Hardware interfaces for the Raspberry Pi 2 and Raspberry Pi 3 are exposed through the 40-pin header **J8** on the board. Functionality includes:
 
-* **13x** - GPIO pins
-* **2x** - SPI buses
+* **17x** - GPIO pins
+* **1x** - SPI bus
 * **1x** - I2C bus
 * **2x** - 5V power pins
 * **2x** - 3.3V power pins
 * **8x** - Ground pins
 
-##<a name="RPi2_GPIO">GPIO Pins
+## <a name="RPi2_GPIO">GPIO Pins
 
 The following GPIO pins are accessible through APIs:
 
@@ -33,15 +33,21 @@ The following GPIO pins are accessible through APIs:
 | 12    | PullDown      | 32                 |
 | 13    | PullDown      | 33                 |
 | 16    | PullDown      | 36                 |
+| 17    | PullDown      | 11                 |
 | 18    | PullDown      | 12                 |
+| 19    | PullDown      | 35                 |
+| 20    | PullDown      | 38                 |
+| 21    | PullDown      | 40                 |
 | 22    | PullDown      | 15                 |
 | 23    | PullDown      | 16                 |
 | 24    | PullDown      | 18                 |
 | 25    | PullDown      | 22                 |
 | 26    | PullDown      | 37                 |
 | 27    | PullDown      | 13                 |
-| 35    | PullUp        | Red Power LED      |
-| 47    | PullUp        | Green Activity LED |
+| 35*    | PullUp        | Red Power LED      |
+| 47*    | PullUp        | Green Activity LED |
+
+\* = Raspberry Pi 2 ONLY. GPIO 35 & 47 are not available on Raspberry Pi 3.
 
 As an example, the following code opens **GPIO 5** as an output and writes a digital '**1**' out on the pin:
 
@@ -74,7 +80,67 @@ When you open a pin, it will be in its power-on state. To disconnect the pull re
 
 When a pin is closed, it reverts to its power-on state.
 
-##<a name="RPi2_I2C"></a>I2C Bus
+## <a name="RPi2_UART"></a>Serial UART
+
+There is one Serial UART available on the RPi2/3: **UART0**
+
+* Pin 8  - **UART0 TX**
+* Pin 10  - **UART0 RX**
+
+The example below initializes **UART0** and performs a write followed by a read:
+
+
+{% highlight C# %}
+using Windows.Storage.Streams;
+using Windows.Devices.Enumeration;
+using Windows.Devices.SerialCommunication;
+
+public async void Serial()
+{
+	string aqs = SerialDevice.GetDeviceSelector("UART0");                   /* Find the selector string for the serial device   */
+	var dis = await DeviceInformation.FindAllAsync(aqs);                    /* Find the serial device with our selector string  */
+	SerialDevice SerialPort = await SerialDevice.FromIdAsync(dis[0].Id);    /* Create an serial device with our selected device */
+
+	/* Configure serial settings */
+	SerialPort.WriteTimeout = TimeSpan.FromMilliseconds(1000);
+	SerialPort.ReadTimeout = TimeSpan.FromMilliseconds(1000);
+	SerialPort.BaudRate = 9600;
+	SerialPort.Parity = SerialParity.None;         
+	SerialPort.StopBits = SerialStopBitCount.One;
+	SerialPort.DataBits = 8;
+
+	/* Write a string out over serial */
+	string txBuffer = "Hello Serial";
+	DataWriter dataWriter = new DataWriter();
+	dataWriter.WriteString(txBuffer);
+	uint bytesWritten = await SerialPort.OutputStream.WriteAsync(dataWriter.DetachBuffer());
+
+	/* Read data in from the serial port */
+	const uint maxReadLength = 1024;
+	DataReader dataReader = new DataReader(SerialPort.InputStream);
+	uint bytesToRead = await dataReader.LoadAsync(maxReadLength);
+	string rxBuffer = dataReader.ReadString(bytesToRead);
+}
+{% endhighlight %}
+
+Note that you must add the following capability to the **Package.appxmanifest** file in your UWP project to run Serial UART code:
+
+    Visual Studio 2015 has a known bug in the Manifest Designer (the visual editor for appxmanifest files) that affects the serialcommunication capability.  If 
+    your appxmanifest adds the serialcommunication capability, modifying your appxmanifest with the designer will corrupt your appxmanifest (the Device xml child 
+    will be lost).  You can workaround this problem by hand editting the appxmanifest by right-clicking your appxmanifest and selecting View Code from the 
+    context menu.
+
+{% highlight xml %}
+  <Capabilities>
+    <DeviceCapability Name="serialcommunication">
+      <Device Id="any">
+        <Function Type="name:serialPort" />
+      </Device>
+    </DeviceCapability>
+  </Capabilities>
+{% endhighlight %}
+
+## <a name="RPi2_I2C"></a>I2C Bus
 
 There is one I2C controller **I2C1** exposed on the pin header with two lines **SDA** and **SCL**. 1.8K&#x2126; internal pull-up resistors are already installed on the board for this bus.
 
@@ -110,24 +176,15 @@ public async void I2C()
 {% endhighlight %}
 
 
-##<a name="RPi2_SPI"></a>SPI Bus
+## <a name="RPi2_SPI"></a>SPI Bus
 
-There are 2 SPI bus controllers available on the RPi2: **SPI0** and **SPI1**.
-
-**SPI0** has the standard **MOSI**, **MISO**, and **SCLK** lines, and can be configured to use one of two chip-select lines **SPI0 CS0** and **SPI0 CS1**.
+There is one SPI bus controller available on the RPi2/3. **SPI0** has the standard **MOSI**, **MISO**, and **SCLK** lines, and can be configured to use one of two chip-select lines **SPI0 CS0** and **SPI0 CS1**.
 
 * Pin 19 - **SPI0 MOSI**
 * Pin 21 - **SPI0 MISO**
 * Pin 23 - **SPI0 SCLK**
 * Pin 24 - **SPI0 CS0**
 * Pin 26 - **SPI0 CS1**
-
-**SPI1** includes **MOSI**, **MISO**, and **SCLK** lines, and only one chip-select line **SPI1 CS0**.
-
-* Pin 38 - **SPI1 MOSI**
-* Pin 35 - **SPI1 MISO**
-* Pin 40 - **SPI1 SCLK**
-* Pin 11 - **SPI1 CS0**
 
 An example on how to perform a SPI write on bus **SPI0** is shown below:
 {% highlight C# %}

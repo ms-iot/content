@@ -5,6 +5,11 @@ permalink: /en-US/win8/samples/SmartFan.htm
 lang: en-US
 ---
 
+<div style="background-color:Silver; color:black; padding:20px;">
+	<h4><u>Support for Windows on Intel Galileo Gen 1 and Gen 2 will end on November 30, 2015</u></h4>
+	<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we've made the difficult decision to discontinue Windows support on the Galileo platform. We've seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>
+</div>
+
 # Smart Fan
 Use basic components found in most Arduino kits to develop a smart fan which turns on and off based on the temperature and current lighting.
 
@@ -21,7 +26,7 @@ Use basic components found in most Arduino kits to develop a smart fan which tur
 
 ## Hooking up Components
 Please be sure to use the diode to keep the motor from burning out, and the correct resistors for the Photo Resistor and Temperature Sensor. Please do not mix up the temperature sensor with the Transistor, as it can cause the transistor to overheat. <br />
-<img src="{{site.baseurl}}/images/SmartFanDiagram.png" />
+<img src="{{site.baseurl}}/Resources/images/SmartFanDiagram.png" />
 
 ## Create a new project
 Open Visual Studio. Select File -> New Project and Select Templates -> Visual C++ -> Windows for IoT -> Galileo Wiring app
@@ -156,8 +161,8 @@ The following information is optional, but is aimed to give you a glimpse of the
 <a href="http://www.thingiverse.com/thing:322873">Fan Blade</a><br />
 <a href="http://www.thingiverse.com/thing:231507">Intel Galileo Case</a>
 
-<img style="max-width:100%;margin:20px" src="{{site.baseurl}}/images/3dfanparts.png" />
-<img style="max-width:100%;margin:20px" src="{{site.baseurl}}/images/3dfanparts_pic.JPG" />
+<img style="max-width:100%;margin:20px" src="{{site.baseurl}}/Resources/images/3dfanparts.png" />
+<img style="max-width:100%;margin:20px" src="{{site.baseurl}}/Resources/images/3dfanparts_pic.JPG" />
 
 More examples and 3D models can be found on <a href="http://www.thingiverse.com">www.thingiverse.com</a>.
 Be sure to maximize print time by laying pieces out strategically.

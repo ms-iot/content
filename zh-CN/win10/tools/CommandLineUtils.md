@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Windows 10 IoT Core 命令行实用程序
-permalink: /zh-CN/win10/tools/CommandLineUtils.htm
-lang: zh-CN
+permalink: /zh-cn/win10/tools/CommandLineUtils.htm
+lang: zh-cn
 ---
 
 #Windows 10 IoT Core 命令行实用程序
@@ -99,7 +99,7 @@ lang: zh-CN
 
 * **关闭/重新启动设备：**
 
-	若要关闭设备，请键入 `shutdown /s /t 0`。若要重新启动该设备，请使用{b\> \<b}`/r` 开关而不是 `shutdown /r /t 0` 命令。
+	若要关闭设备，请键入 `shutdown /s /t 0`。若要重新启动该设备，请使用 `/r` 开关而不是 `shutdown /r /t 0` 命令。
 
 * **设置显示器分辨率**
 

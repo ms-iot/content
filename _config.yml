@@ -2,6 +2,7 @@
 baseurl: "/content"
 url: "http://ms-iot.github.io/content"
 repositoryurl: "https://github.com/ms-iot/content/blob/develop/"
+msiotorgurl: "https://github.com/ms-iot"
 landingurl: "http://go.microsoft.com/fwlink/p/?LinkID=534186"
 hacksterurl: "http://microsoft.hackster.io"
 hardwareurl: "http://go.microsoft.com/fwlink/p/?linkID=532948"
@@ -13,6 +14,6 @@ downloadurl: "http://connect.microsoft.com/windowsembeddedIoT/Downloads/"
 markdown: kramdown
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
 permalink: pretty
-highlighter: pygments
+highlighter: pygments 
 safe: true
 lsi: false

@@ -1,0 +1,84 @@
+<h3> What you need </h3>
+<p>
+  A PC running Windows 10 - as prepared in the previous step.<br />
+  DragonBoard 410c<br />
+  12V power supply with at least 1.0A current.  If you plan on using several power-hungry USB peripherals, use a higher current power supply instead (>2.0A)<br />
+  HDMI cable and monitor<br />
+  USB keyboard and Mouse - <a href="{{site.baseurl}}/{{page.lang}}/Faqs.htm#dragonboard" target="_blank"> Having issues with USB? </a><br />
+  Logic-level shifter - recommended - Many peripheral devices require 3.3v or 5v logic level voltages. The DragonBoard 410c supplies 1.8v logic and therefore may require a logic level shifter when connecting your DragonBoard to these types of peripheral devices. Some example shifters include: <a href="https://www.adafruit.com/products/395" target="_blank">Adafruit 8-channel Logic Level Converter</a> and <a href="https://www.sparkfun.com/products/11771" target="_blank">SparkFun 4-channel Voltage-Level Translator</a>.
+  We will show you how to use these shifters in any of our samples that require them for DragonBoard. To see an example of one such sample, refer to the DragonBoard section of the <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SPIAccelerometer.htm" target="_blank">SPI Accelerometer Sample</a>.  You may also refer to <a href="https://learn.sparkfun.com/tutorials/txb0104-level-shifter-hookup-guide?_ga=1.63563695.1225669924.1446058808" target="_blank"> SparkFun's Hookup Guide</a>. You will not require this device in order to get started with the DragonBoard.<br />
+</p>
+
+<h4> Note: </h4>
+  <p>Unlike the Raspberry Pi 2 or 3 and Minnowboard Max, you *do not* need an SD card to load the Windows IoT Core image to your DragonBoard. The image will be directly uploaded to the board!</p>
+  
+<h3> Connect the DragonBoard to the Host PC</h3>
+  <ol class="setup-content-list">
+    <li>
+      <p>First, we must enable download mode by setting the first boot switch on the back of the board to: "USB Boot". Refer to the image below for a demonstration of the proper configuration.</p>
+      <p><img alt="set first boot switch on board to usb boot" class="image-border" src="{{site.baseurl}}/Resources/images/SetupDB410c/dragonboard_usbboot.png" /></p>
+      <p>The first of the four switches is set to ON, and the other 3 switches are set to OFF.</p>
+    </li>
+    <li>Connect a USB cable to the Dragonboard’s microUSB port and connect the other end to an empty USB port on the Host PC.</li>
+    <li>Connect the Dragonboard to the Power supply.</li>
+
+  </ol>
+<h3>Download the Windows 10 IoT Core Image to the DragonBoard</h3>
+<ol class="setup-content-list">
+  <li>
+    <p>Start the DragonBoard Update Tool you installed during the previous step.</p>
+    <p><img alt="screenshot: launch dragonboard update tool" class="image-border" src="{{site.baseurl}}/Resources/images/SetupDB410c/DB410c_UpdateTool.png" height="200" /></p>
+  </li>
+  <li>The Update Tool should detect the DragonBoard and the Connection Status should show: "Connected".</li>
+  <li>In the DragonBoard Update Tool click the "Browse" button and locate the Win10 IoT Core Image file you downloaded during the HostPC setup.</li>
+  <li>
+    <p>Click the "Program" Button and wait for the image to be downloaded to the board.</p>
+    <p>NOTE: The download will overwrite any previous content of the eMMC memory.</p>
+  </li>
+  <li>Once the download is complete, disconnect the power supply from the board and change the boot switches back to the OFF position.</li>
+  <li>The DragonBoard is now ready to boot into Win10 IoT Core OS.</li>
+</ol>
+
+<h3> First Boot </h3>
+  <ol class="setup-content-list">
+    <li>Connect Mouse, Keyboard and Display to the DragonBoard and plug in the power supply.</li>
+    <li>
+      <p>After a few seconds you should see the Win10 IoT boot-logo and shortly after you should see the Win10 IoT Core default application:</p>
+      <p><img alt="defaultapp at boot up for dragonboard 410c" class="image-border" src="{{site.baseurl}}/Resources/images/SetupDB410c/DB410c_DefaultApp.jpg" height="200" /></p>
+    </li>
+  </ol>
+  
+<h3> Connecting to a Network </h3>
+<p>The DragonBoard410c has onboard WiFi, but you may also choose to use a USB Ethernet Adapter to connect toa local network with an Ethernet cable.</p>
+
+<h4> Connecting to a Wireless Network </h4>
+  <ol class="setup-content-list">
+    <li>Click the Settings button next to the clock on the Win10 IoT Core default application.</li>
+    <li>On the Settings page, select "Network & Wi-Fi" via the menu on the left.</li>
+    <li>Your DragonBoard will automatically begin scanning for wireless networks.</li>
+    <li>Once your network appears in the list, select it and click the "Connect" button to connect.</li>
+  </ol>
+  
+<h4> Using a USB Ethernet Adapter </h4>
+<p>DragonBoard supports the <a href="http://www.trendnet.com/products/proddetail.asp?status=view&prod=280_TU2-ET100" target="_blank">TRENDnet TU2-ET100 </a> USB ethernet adapter. All you need to do is connect the adapter via USB and then to your local network using a standard ethernet cable.</p>
+<p>Other network adapters may also be compatable with DragonBoard, although they may not have been tested.</p>
+<li>
+  Follow the PowerShell documentation<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm" target="_blank"> here</a> to use PowerShell to connect to your running device.  You can also follow the instructions <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm" target="_blank">here</a> to use SSH to connect to your device.
+</li>
+
+<h3>Connecting to Your Device</h3>
+<ol class="setup-content-list">
+  <li>
+    <p>You can use <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm" target="_blank">Windows Device Portal</a> to connect to your device through your favorite web browser. The device portal provides configuration and device management capabilities, in addition to advanced diagnostic tools to help you troubleshoot and view the real time performance of your Windows IoT Device. <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm" target="_blank">Click here to learn how to connect to Windows Device Portal!</a></p>
+    <p><img alt="screenshot: device portal to connect to dragonboard 410c" class="device-images" src="{{site.baseurl}}/Resources/images/deviceportal/deviceportal_small_db.png" /></p>
+  </li>
+  <li>
+    <p>You can also use PowerShell to connect to your device through a command shell. Follow the <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm" target="_blank">PowerShell documentation</a> to use PowerShell to connect to your running device.  You can also follow the <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm" target="_blank">SSH instructions</a> to use SSH to connect to your device.</p>
+    <p><img alt="screenshot: use powershell to connect to your dragonboard 410c" class="device-images" src="{{site.baseurl}}/Resources/images/powershell/connection.png" /></p>
+  </li>
+</ol>
+
+<p>It is highly recommended that you update the default password for the Administrator account. Instructions are included in the relevant documentation for <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm" target="_blank">Windows Device Portal</a> or <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm" target="_blank">Powershell</a>.</p>
+
+<h3> Additional Resources </h3>
+<p><a href="{{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm" target="_blank">Supported Peripheral Interfaces and Devices</a></p>

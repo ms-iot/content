@@ -1,0 +1,85 @@
+---
+layout: default
+title: Windows Remote Arduino
+permalink: /en-US/win10/WRA.htm
+lang: en-US
+deviceName: WRA
+---
+<div class="row">
+  <div class="col-xs-24">
+    <ol class="breadcrumb">
+      <li><a href="https://dev.windows.com/en-us/iot">IoT Home</a></li>
+      <li><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a></li>
+      <li>Windows Remote Arduino</li>
+      <li class="active">Develop</li>
+    </ol>
+    <header class="page-title-header">
+      <h1 class="page-title">Develop with Windows Remote Arduino</h1>
+      <h2 class="page-subtitle">Setup your hardware and software to develop with the Windows Remote Arduino library.</h2>
+    </header>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-24">
+    <p>Windows Remote Arduino is an open-source (<a href="https://msdn.microsoft.com/en-us/magazine/jj651567.aspx?utm_source=rss&utm_medium=rss&utm_campaign=windows-runtime-reimagining-app-development-with-the-windows-runtime">Windows Runtime Component</a> library which allows Makers to control an Arduino through a Bluetooth, USB, WiFi, or Ethernet connection! It is intended for <a href="https://msdn.microsoft.com/en-us/library/windows/apps/br211369.aspx">Windows Runtime (WinRT)</a> Developers who want to harness the power of Arduino hardware using the Windows Runtime Languages. Developers who include this component in their projects will automatically have access to its features in any of the WinRT languages (C++/CX, C# and JavaScript). The library is built on top of the <a href="https://github.com/firmata/protocol">Firmata protocol</a>, which is implemented in a pre-packaged <a href="http://arduino.cc/en/reference/firmata">Firmata library</a> included in the Arduino software obtained from <a href="http://arduino.cc">http://arduino.cc</a>.</p>
+    <h3>Overview</h3>
+    <p>The Windows Remote Arduino library is easy to get started with - follow the guide below to start developing with the technology. To get started, there are three simple steps to follow:</p>
+    <ul>
+      <li>Set up your Windows 10 device</li>
+      <li>Set up your Arduino</li>
+      <li>Begin developing</li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-24">
+<h2>1. Set up your Windows 10 device<span class="pull-right"><a id="pc-content-toggle" class="toggle-button" onClick="hideDiv('pc-content')">Hide</a></span></h2>
+    <hr />
+    <div id="pc-content" class="toggle-section">
+      {% include setup-pc-wra.md %}
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-24">
+    <h2>2. Set up your Arduino<span class="pull-right"><a id="setup-content-toggle" class="toggle-button" onClick="hideDiv('setup-content')">Show</a></span></h2>
+    <hr />
+    <div id="setup-content" class="toggle-section hidden">
+      {% include setup-arduino-wra.htm %}
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-24">
+    <h2>3. Develop<span class="pull-right"><a id="app-content-toggle" class="toggle-button" onClick="hideDiv('app-content')">Show</a></span></h2>
+    <hr />
+    <div id="app-content" class="setup-content-list toggle-section hidden">
+      {% include samples/basic-wra.md %}
+    </div>
+  </div>
+</div>
+
+<script>
+  function hideDiv(div) {
+    var div = "#" + div,
+        button = div + "-toggle",
+        currentState = $(button)[0].innerHTML;
+    for(var i = 0; i < 3 ; i ++){
+        $(".toggle-button")[i].innerHTML = "Show";
+      }
+    if(currentState === "Hide") {
+      $(div).toggle('slow');
+    }
+    else
+    {
+      $(".hidden").removeClass("hidden");
+      $(".toggle-section").hide();
+      $(div).toggle('slow');
+      $(button)[0].innerHTML = "Hide";
+    }
+  }
+</script>

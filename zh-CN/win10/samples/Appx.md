@@ -1,8 +1,8 @@
 ---
 layout: default
 title: AppX 创建与部署
-permalink: /zh-CN/win10/samples/Appx.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/Appx.htm
+lang: zh-cn
 ---
 
 #创建 Appx 并将其部署到 Windows IoT Core
@@ -11,15 +11,15 @@ lang: zh-CN
 
 ### 如何为 VS 项目创建 Appx 程序包
 
-我们将演练从 Visual C\# UAP 项目创建 Appx 程序包所需执行的步骤。你也可以遵循用于 Visual C++ 项目的类似步骤。
+我们将演练从 Visual C\# UWP 项目创建 Appx 程序包所需的步骤。也可遵循用于 Visual C++ 项目的类似方法。
 
 * 在 Visual Studio 中打开你的项目。然后，右键单击该项目并选择“卸载项目”。
 
-  ![“卸载项目”选项]({{site.baseurl}}/images/appx/unload_project_menu.png)
+  ![“卸载项目”选项]({{site.baseurl}}/Resources/images/appx/unload_project_menu.png)
 
 * 现在，请右键单击卸载的项目并选择“编辑 <Project>.csproj 文件”。
 
-  ![“编辑 Csproj”选项]({{site.baseurl}}/images/appx/edit_projectproj.png)
+  ![“编辑 Csproj”选项]({{site.baseurl}}/Resources/images/appx/edit_projectproj.png)
 
 * 这将在 Visual Studio 中打开 <Project>.csproj 文件。现在，请将以下项添加到 .csproj 文件的“globals”属性组
 
@@ -38,7 +38,7 @@ lang: zh-CN
   <AppDesignerFolder>Properties</AppDesignerFolder>
   <RootNamespace>MyApp</RootNamespace>
   <AssemblyName>MyApp</AssemblyName>
-  <DefaultLanguage>zh-CN</DefaultLanguage>
+  <DefaultLanguage>zh-cn</DefaultLanguage>
   <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
   <TargetPlatformVersion>10.0.9910.0</TargetPlatformVersion>
   <TargetPlatformMinVersion>10.0.9910.0</TargetPlatformMinVersion>
@@ -72,12 +72,12 @@ lang: zh-CN
   {% endhighlight %}
 
 
-### 如何将 Appx 程序包部署到 Windows IoT Core 计算机
+### 如何将 Appx 程序包部署到 Windows IoT 核心版计算机
 
-只需执行以下步骤，就可以在运行 Windows IoT Core 的计算机或 VM 上部署/安装 Appx 程序包
+只需执行以下步骤，即可在运行 Windows IoT 核心版的计算机上部署/安装 Appx 程序包
 
-* 通过装入 VHD/FFU 或者在任一“文件资源管理器”窗口中执行 FTP://hostname，将签名的程序包复制到运行 Windows IoT Core 的 VM 或计算机
-* 使用 Username:DefaultAccount 和空密码对 Windows IoT Core 计算机执行 Telnet。
+* 通过装载 VHD/FFU 或者仅在任一“文件资源管理器”窗口中执行 FTP://hostname，将签名的程序包复制到运行 Windows IoT 核心版的计算机
+* 使用 Username:DefaultAccount 和空密码对 Windows IoT 核心版计算机执行 Telnet。
 * 运行以下命令
 
 

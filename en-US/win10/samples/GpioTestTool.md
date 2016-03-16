@@ -7,6 +7,8 @@ lang: en-US
 
 ## GpioTestTool Sample
 
+{% include VerifiedVersion.md %}
+
 [View the code on Github](https://github.com/ms-iot/samples/blob/develop/GpioTestTool/main.cpp)
 
 GpioTestTool is a simple utility that allows you to write and 
@@ -61,7 +63,7 @@ Example Session:
    repository to your local machine. 
 1. Open `GpioTestTool\GpioTestTool.sln` in Visual Studio.
 1. Select the target architecture.
-   - Select `ARM` for Raspberry Pi
+   - Select `ARM` for Raspberry Pi or DragonBoard 410c
    - Select `x86` for MinnowBoardMax
 1. Go to `Build -> Build Solution`
 1. Copy GpioTestTool.exe from the build output folder to your device.

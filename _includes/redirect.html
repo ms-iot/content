@@ -1,4 +1,3 @@
-
 {% if include.url %}
 
     {% capture url %}
@@ -19,5 +18,9 @@
 <script>
     window.location = '{{url}}';
 </script>
-
+{% capture langLower %}{{ page.lang | downcase }}{% endcapture %}
+{% if langLower == 'zh-cn' %}
+<p>将你重定向到 WindowsOnDevices.com...如果没有自动重定向，请单击<a href="{{url}}">此处</a>。</p>
+{% else %}
 <p>Redirecting you to WindowsOnDevices.com... Click <a href="{{url}}">here</a> if you are not automatically redirected.</p>
+{% endif %}
