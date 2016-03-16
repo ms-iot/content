@@ -1,0 +1,16 @@
+﻿{% assign localurl = page.url | remove_first:page.lang %}
+{% assign localurl = localurl | remove_first:'//'      %}
+{% for stepurl in site.data.kit-steps[include.device]      %}
+{% if stepurl == localurl                              %}
+
+<h4 class="thin-header text-right"><a href="{{site.baseurl}}/{{page.lang}}/{{site.data.kit-steps[include.device].[forloop.index]}}">
+	{% capture langLower %}{{ page.lang | downcase }}{% endcapture %}
+	{% if langLower == 'zh-cn' %}
+	下一步： {{site.data.kit-step-resources[page.lang][forloop.index]}}
+	{% else %}
+	Next: {{site.data.kit-step-resources[page.lang][forloop.index]}}
+	{% endif %}
+</a></h4>
+
+{% endif                                              %}
+{% endfor                                             %}

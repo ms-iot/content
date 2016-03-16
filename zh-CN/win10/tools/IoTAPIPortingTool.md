@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Windows 10 IoT Core API 移植工具
-permalink: /zh-CN/win10/tools/IoTAPIPortingTool.htm
-lang: zh-CN
+permalink: /zh-cn/win10/tools/IoTAPIPortingTool.htm
+lang: zh-cn
 ---
 
 #Windows 10 IoT Core API 移植工具
@@ -11,13 +11,13 @@ Windows 10 IoT Core 中是否提供你的当前 Win32 应用程序或库所依�
 
 ##用法
 
-你可以在 `C:\Program Files (x86)\Microsoft IoT` 下找到 `IoTAPIPortingTool.exe`。通过运行 `WindowsDeveloperProgramforIoT.msi`（可在你下载此文档的下载位置找到）来安装它。
+Windows 10 IoT 核心版 API 移植工具可在 [ms-iot/iot-utilities](https://github.com/ms-iot/iot-utilities) github 存储库中找到。下载存储库 [zip](https://github.com/ms-iot/iot-utilities/archive/master.zip) 并将 IoTAPIPortingTool 文件夹复制到本地计算机。在 Visual Studio 2015 中打开 **IoTAPIPortingTool.sln** 并生成项目。这将生成 `IotAPIPortingTool.exe`。
 
-可通过运行 `C:\Program Files (x86)\Microsoft IoT\IoTAPIPortingTool.exe <path> [-os]` 使用该工具。
+可通过运行 `IoTAPIPortingTool.exe <path> [-os]` 使用该工具。
 
 *  `<path>` 应提供你的 exe 和/或 dll 文件所在的目录的路径。
 
-*  如果你未计划使用 UAP，应指定 `-os`。默认情况下，该工具针对 Windows UAP 平台验证你的二进制文件。
+*  如果你不计划使用 UWP，应指定 `-os`。默认情况下，该工具针对 WindowsUWP 平台验证你的二进制文件。
 
         NOTE: IoTAPIPortingTool.exe must be run from a Visual Studio Developer Command Prompt.
 

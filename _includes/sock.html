@@ -1,0 +1,7 @@
+﻿{% capture langLower %}{{ page.lang | downcase }}{% endcapture %}
+{% if langLower == 'en-us' %}
+   {% include en-US/sock.html %}
+{% endif %}
+{% if langLower == 'zh-cn' %}
+   {% include zh-CN/sock.html %}
+{% endif %}

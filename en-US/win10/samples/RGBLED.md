@@ -5,9 +5,13 @@ permalink: /en-US/win10/samples/RGBLED.htm
 lang: en-US
 ---
 
-##RGB LED Sample
+## RGB LED Sample
 
-In this sample, we will connect a Tri-color LED to Raspberry Pi 2. The LED will blink changing colors from Red, Blue, and Green.
+{% include VerifiedVersion.md %}
+
+[View the code on Github](https://github.com/ms-iot/samples/blob/develop/RGBLED/CS/MainPage.xaml.cs)
+
+In this sample, we will connect a Tri-color LED to Raspberry Pi 2 or 3. The LED will blink changing colors from Red, Blue, and Green.
 
 This is a headed sample, so please ensure that your device is in headed
 mode by running this command: `setbootoption.exe headed` (changing the headed/headless state will require a reboot).
@@ -15,7 +19,7 @@ mode by running this command: `setbootoption.exe headed` (changing the headed/he
 Also, be aware that the GPIO APIs are only available on Windows IoT Core, so this sample cannot run on your desktop.
 
 
-###Components
+### Components
 
 You will need the following components :
 
@@ -27,161 +31,208 @@ You will need the following components :
 
 * a breadboard and several male-to-female and male-to-male connector wires
 
-###Connect to your Device
+### Connect to your Device
 
 Let's start by wiring up the components on the breadboard as shown in the diagram below.
 
-![Breadboard connections]({{site.baseurl}}/images/RGBLED/RGBLED_bb.png)
+![Breadboard connections]({{site.baseurl}}/Resources/images/RGBLED/RGBLED_bb.png)
 
 <sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
 
-Here are the schematics:
+Here is the schematic:
 
-![Circuit Schematic]({{site.baseurl}}/images/RGBLED/RGBLED-schematic_schem.png)
-
-####Connecting the LED
-
-* Connect the three legs of the LED to Pins 29,31,33 (GPIO 5,6,13) of the Raspberry Pi 2 respectively
-
-* Note that Red leg should be connected through a 330 &#x2126; resistor to Pin 29 of Raspberry Pi 2
-
-* The Blue and Green legs should be connected through a 100 &#x2126; resistor each to pins 31 and 33 of the Raspberry Pi 2
-
-* Connect the anode (the longer leg) of the LED to Pin 6 (GND)
-
-Here is the pinout of the RPi2:
-
-![Raspberry Pi 2 pinout]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![Circuit Schematic]({{site.baseurl}}/Resources/images/RGBLED/RGBLED-schematic_schem.png)
 
 <sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
 
-###Deploy your app
+The pinout of the Tri-color LED is shown below and can be found in the [datasheet](http://www.kingbrightusa.com/images/catalog/SPEC/WP154A4SUREQBFZGC.pdf){:target="_blank"}.
+
+![Tri-color LED Pinout]({{site.baseurl}}/Resources/images/RGBLED/RGBLED_Pinout.png)
+
+#### Connecting the Tri-color LED
+
+* Insert the Tri-color LED into the breadboard as shown in the breadboard diagram at the top of the page.
+
+* Connect one end of the 330 &#x2126; resistor to the red lead of the Tri-color LED.
+
+* Connect the other end of the 330 &#x2126; resistor to Pin 29 GPIO5 of the Raspberry Pi 2 or 3.
+
+* Connect one end of a 100 &#x2126; resistor to the blue lead of the Tri-color LED.
+
+* Connect the other end of the 100 &#x2126; resistor to Pin 31 GPIO6 of the Raspberry Pi 2 or 3.
+
+* Connect one end of a 100 &#x2126; resistor to the green lead of the Tri-color LED.
+
+* Connect the other end of the 100 &#x2126; resistor to Pin 33 GPIO13 of the Raspberry Pi 2 or 3.
+
+* Connect the cathode (the longest leg) of the Tri-color LED to Pin 6 GND.
+
+Here is the pinout of the Raspberry Pi 2 and 3:
+
+![Raspberry Pi 2 and 3 pinout]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
+
+<sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
+
+### Deploy your app
 
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\RGBLED`.  This sample is written in C#. Make a copy of the folder on your disk and open the project from Visual Studio.
 
 Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp). The RGBLED app will deploy and start on the Windows IoT device, and you should see the LED blink in sync with the simulation on the screen.
 
-###Let's look at the code
-The code for this sample is pretty simple. We use a timer, and each time the 'Tick' event is called, we flip the state of the LED.
+### Let's look at the code
 
-###Timer code
-Here is how you set up the timer in C#:
-{% highlight C# %}
-public MainPage()
-{
-    // ...
-
-    this.timer = new DispatcherTimer();
-    this.timer.Interval = TimeSpan.FromMilliseconds(500);
-    this.timer.Tick += Timer_Tick;
-    this.timer.Start();
-
-    // ...
-}
-
-private void Timer_Tick(object sender, object e)
-{
-    FlipLED();
-}
-{% endhighlight %}
-
-###Initialize the GPIO pin
-To drive the GPIO pin, first we need to initialize it. Here is the C# code (notice how we leverage the new WinRT classes in the Windows.Devices.Gpio namespace):
+First, we get the default GPIO controller and check that it's not null.
+`GpioController.GetDefault()` will return null on platforms that do not contain
+a GPIO controller.
 
 {% highlight C# %}
-using Windows.Devices.Gpio;
-
-private void InitGPIO()
+        private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             var gpio = GpioController.GetDefault();
 
             // Show an error if there is no GPIO controller
             if (gpio == null)
             {
-                redpin = null;
-                bluepin = null;
-                greenpin = null;
                 GpioStatus.Text = "There is no GPIO controller on this device.";
                 return;
             }
+{% endhighlight %}
 
-           redpin = gpio.OpenPin(REDLED_PIN);
-           bluepin = gpio.OpenPin(BLUELED_PIN);
-           greenpin = gpio.OpenPin(GREENLED_PIN);
+Next, we open the pins we'll be using later in the program. The RGB LED
+requires 3 gpio pins - one to drive each color channel of the LED.
+The code takes different behavior depending on which platform it's running on.
+If we're running on Raspberry Pi, we use pins 5, 6, and 13 because they're
+located next to each other physically on the header. If we're not running on
+Raspberry Pi, we take the first 3 available pins. There is also logic to skip
+pins connected to onboard functions on known hardware platforms.
 
-            // Show an error if the pin wasn't initialized properly
-            if (redpin == null || bluepin == null || greenpin == null)
+{% highlight C# %}
+            var deviceModel = GetDeviceModel();
+            if (deviceModel == DeviceModel.RaspberryPi2)
             {
-                GpioStatus.Text = "There were problems initializing the GPIO red/blue/green pin.";
-                return;
-            }
+                // Use pin numbers compatible with documentation
+                const int RPI2_RED_LED_PIN = 5;
+                const int RPI2_GREEN_LED_PIN = 13;
+                const int RPI2_BLUE_LED_PIN = 6;
 
+                redpin = gpio.OpenPin(RPI2_RED_LED_PIN);
+                greenpin = gpio.OpenPin(RPI2_GREEN_LED_PIN);
+                bluepin = gpio.OpenPin(RPI2_BLUE_LED_PIN);
+            }
+            else
+            {
+                // take the first 3 available GPIO pins
+                var pins = new List<GpioPin>(3);
+                for (int pinNumber = 0; pinNumber < gpio.PinCount; pinNumber++)
+                {
+                    // ignore pins used for onboard LEDs
+                    switch (deviceModel)
+                    {
+                        case DeviceModel.DragonBoard410:
+                            if (pinNumber == 21 || pinNumber == 120)
+                                continue;
+                            break;
+                    }
+
+                    GpioPin pin;
+                    GpioOpenStatus status;
+                    if (gpio.TryOpenPin(pinNumber, GpioSharingMode.Exclusive, out pin, out status))
+                    {
+                        pins.Add(pin);
+                        if (pins.Count == 3)
+                        {
+                            break;
+                        }
+                    }
+                }
+
+                if (pins.Count != 3)
+                {
+                    GpioStatus.Text = "Could not find 3 available pins. This sample requires 3 GPIO pins.";
+                    return;
+                }
+
+                redpin = pins[0];
+                greenpin = pins[1];
+                bluepin = pins[2];
+            }
+{% endhighlight %}
+
+Next, we initialize the pins as outputs driven HIGH, which causes the LED
+to be OFF. We also display which pin numbers are in use. If you're
+not using Raspberry Pi, hook up the RGB LED to the pins shown on the display.
+
+{% highlight C# %}
             redpin.Write(GpioPinValue.High);
             redpin.SetDriveMode(GpioPinDriveMode.Output);
-            bluepin.Write(GpioPinValue.High);
-            bluepin.SetDriveMode(GpioPinDriveMode.Output);
             greenpin.Write(GpioPinValue.High);
             greenpin.SetDriveMode(GpioPinDriveMode.Output);
+            bluepin.Write(GpioPinValue.High);
+            bluepin.SetDriveMode(GpioPinDriveMode.Output);
 
-            GpioStatus.Text = "GPIO blue/red/green pin initialized correctly.";
+            GpioStatus.Text = string.Format(
+                "Red Pin = {0}, Green Pin = {1}, Blue Pin = {2}",
+                redpin.PinNumber,
+                greenpin.PinNumber,
+                bluepin.PinNumber);
+{% endhighlight %}
+
+Finally, we start a periodic timer which we will use to rotate through the colors
+of the LED. We use a `DispatcherTimer` because we'll be updating the UI
+on the timer callback. If we did not need to update the UI, it would be better
+to use a `System.Threading.Timer` which runs on a separate thread. The less we
+can do on the UI thread, the more responsive the UI will be.
+
+{% highlight C# %}
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMilliseconds(500);
+            timer.Tick += Timer_Tick;
+            timer.Start();
         }
 {% endhighlight %}
 
-Let's break this down a little:
-
-* First, we use `GpioController.GetDefault()` to get the GPIO controller.
-
-* If the device does not have a GPIO controller, this function will return `null`.
-
-* Then we attempt to open the pin by calling `GpioController.OpenPin()` with the `REDLED_PIN`,`BLUELED_PIN` and `GREENLED_PIN` value.
-
-* Once we have the `redpin`, `bluepin` and `greenpin`, we set it to be High by default using the `GpioPin.Write()` function.
-
-* We also set the pins to run in output mode using the `GpioPin.SetDriveMode()` function.
-
-
-###Modify the state of the GPIO pin
-Once we have access to the `GpioOutputPin` instance, it's trivial to change the state of the pin to turn the LED on or off.
-
-To turn the LED on, simply write the value `GpioPinValue.High` to the pin:
-
+In the timer callback, we light up the currently active LED and update the UI.
 
 {% highlight C# %}
-private void FlipLED()
+        private void FlipLED()
         {
-            if (LEDStatus == 0)
+            Debug.Assert(redpin != null && bluepin != null && greenpin != null);
+
+            switch (ledStatus)
             {
-               LEDStatus = 1;
-                if (redpin != null && bluepin != null && greenpin != null)
-                {
+                case LedStatus.Red:
                     //turn on red
                     redpin.Write(GpioPinValue.High);
                     bluepin.Write(GpioPinValue.Low);
                     greenpin.Write(GpioPinValue.Low);
-                }
-            }
-            else if (LEDStatus == 1)
-            {
-                LEDStatus = 2;
-                if (redpin != null && bluepin != null && greenpin != null)
-                {
-                    //turn on blue
-                    redpin.Write(GpioPinValue.Low);
-                    bluepin.Write(GpioPinValue.High);
-                    greenpin.Write(GpioPinValue.Low);
-                }
-            }
 
-          else
-            {
-                LEDStatus = 0;
-                if (redpin != null && bluepin != null && greenpin != null)
-                {
+                    LED.Fill = redBrush;
+                    ledStatus = LedStatus.Green;    // go to next state
+                    break;
+                case LedStatus.Green:
+
                     //turn on green
                     redpin.Write(GpioPinValue.Low);
-                    bluepin.Write(GpioPinValue.Low);
                     greenpin.Write(GpioPinValue.High);
-                }
-              }
+                    bluepin.Write(GpioPinValue.Low);
+
+                    LED.Fill = greenBrush;
+                    ledStatus = LedStatus.Blue;     // go to next state
+                    break;
+                case LedStatus.Blue:
+                    //turn on blue
+                    redpin.Write(GpioPinValue.Low);
+                    greenpin.Write(GpioPinValue.Low);
+                    bluepin.Write(GpioPinValue.High);
+
+                    LED.Fill = blueBrush;
+                    ledStatus = LedStatus.Red;      // go to next state
+                    break;
+            }
+        }
+
+        private void Timer_Tick(object sender, object e)
+        {
+            FlipLED();
         }
 {% endhighlight %}

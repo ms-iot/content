@@ -1,19 +1,36 @@
 <div>
     {% for device in site.data.devices[page.lang] %}
-    <div class="col-md-4 device">
-        <a href="{{device.link}}"><img src="{{site.baseurl}}/images/devices/{{device.image}}"></a>
-        <h3 class="text-left"><a href="{{device.link}}">{{device.name}}</a></h3>
-        <p>{{device.text}}</p>
-        <p><a href="{{device.link}}">{{device.start-text}}</a></p>
-        <p>
-        <a
-        {%if device.buy %}
-            href="{{device.buy}}" target="_blank"
-        {%else%}
-            href="{{site.baseurl}}/{{page.lang}}/{{device.buy-inter}}"
-        {%endif%}
-        >{{device.buy-text}}</a>
-        </p>
-    </div>
+      {% assign value = forloop.index0 | modulo:3 %}
+      {% if value == 0 %}
+        <div class="row">
+      {% endif %}
+      <div class="col-xs-24 col-sm-8">
+                <section class="section item-section">
+          <header class="section-header">
+            <div class="media-container">
+              <a href="{{device.link}}"><img src="{{site.baseurl}}/Resources/images/devices/{{device.image}}"></a>
+            </div>
+            <h3 class="section-title"><a href="{{device.link}}">{{device.name}}</a></h3>
+          </header>
+          <div class="section-body">
+            <p>{{device.text}}</p>
+            <p><a href="{{device.link}}">{{device.start-text}}</a></p>
+            <ul>
+              <li>
+                <a
+                {%if device.buy %}
+                  href="{{device.buy}}" target="_blank"
+                {%else%}
+                  href="{{site.baseurl}}/{{page.lang}}/{{device.buy-inter}}"
+                {%endif%}
+                >{{device.buy-text}}</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      {% if value == 2 %}
+        </div>
+      {% endif %}
     {% endfor %}
 </div>

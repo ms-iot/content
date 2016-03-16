@@ -1,0 +1,316 @@
+{
+      "en-US-tags":["beginner","intermediate","advanced","tool","configuration","port","hardware","alljoyn","platform","deploy","debug","visual studio","wifi","bluetooth","connectivity"],
+   "en-US":[
+      {
+         "title":"On-Device Command-line Utilities",
+         "description":"A set of tools available on your device to help you configure a slew of options",
+         "link-text":"<a href='tools/CommandLineUtils.htm'>Learn More</a>",
+         "ranking":4,
+         "tags":["beginner", "tool", "configuration"]
+      },
+      {
+         "title":"Windows 10 IoT Core Porting Tool",
+         "description":"A tool for helping you port your existing Win32 and Windows CE applications to Windows 10 IoT Core",
+         "link-text":"<a href='tools/IoTAPIPortingTool.htm'>Learn More</a>",
+         "ranking":5,
+         "tags":["advanced", "tool", "port"]
+      },
+      {
+         "title":"Using PowerShell",
+         "description":"Allows Remote Administration and Configuration so that you can remotely configure and manage any Windows IoT Core device",
+         "link-text":"<a href='samples/PowerShell.htm'>Learn More</a>",
+         "ranking":6,
+         "tags":["intermediate","tool","configuration"]
+      },
+      {
+         "title":"Using SSH",
+         "description":"Allows Remote Administration and Configuration of your Windows IoT Core device over SSH",
+         "link-text":"<a href='samples/SSH.htm'>Learn More</a>",
+         "ranking":6,
+         "tags":["intermediate","tool","configuration"]
+      },
+      {
+         "title":"Hardware Pin Mappings",
+         "description":"Pinout and interfacing information for GPIO, SPI, and I2C",
+         "link-text":"<a href='samples/PinMappingsRPi2.htm'>Raspberry Pi 2 and 3 Pinout</a><br><a href='samples/PinMappingsMBM.htm'>MinnowBoard Max Pinout</a><br><a href='samples/PinMappingsDb.htm'>Dragonboard Pinout</a>",
+         "ranking":0,
+         "tags":["beginner","hardware"]
+      },
+      {
+         "title":"AllJoyn Connectivity",
+         "description":"Learn more about AllJoyn and explore the capabilities of the AllJoyn Device System Bridge with Windows 10 IoT Core",
+         "link-text":"<a href='AllJoyn.htm'>Learn More</a>",
+         "ranking":20,
+         "tags":["advanced","alljoyn","platform"]
+      },
+      {
+         "title":"Unavailable Universal APIs",
+         "description":"Windows IoT Core is a work in progress. Here are the UWP APIs that have not been implemented yet on our platform",
+         "link-text":"<a href='UnavailableApis.htm'>Learn More</a>",
+         "ranking":10,
+         "tags":["intermediate","api"]
+      },
+      {
+         "title":"Ecosystem Compatibility List",
+         "description":"Find a list of supported peripherals, interfaces, and protocols on Window 10 IoT Core devices",
+         "link-text":"<a href='SupportedInterfaces.htm'>Learn More</a>",
+         "ranking":6,
+         "tags":["intermediate","hardware","platform"]
+      },
+      {
+         "title":"Visual Studio App Deployment",
+         "description":"Use Visual Studio to deploy and debug applications on your Windows 10 IoT Core device",
+         "link-text":"<a href='AppDeployment.htm'>Learn More</a>",
+         "ranking":0,
+         "tags":["beginner","debug","deploy","visual studio"]
+      },
+      {
+         "title":"Using WINDBG",
+         "description":"Use WINDBG to debug",
+         "link-text":"<a href='Windbg.htm'>Learn More</a>",
+         "ranking":20,
+         "tags":["advanced","debug"]
+      },
+      {
+         "title":"Glossary",
+         "description":"A list of commonly used phrases and their meanings",
+         "link-text":"<a href='Glossary.htm'>Learn More</a>",
+         "ranking":5,
+         "tags":["beginner"]
+      },
+      {
+         "title":"Windows Device Portal",
+         "description":"Connect to, control, configure, and get advanced diagnostics about your machine from the web",
+         "link-text":"<a href='tools/DevicePortal.htm'>Learn More</a>",
+         "ranking":0,
+         "tags":["beginner","configuration"]
+      },
+      {
+         "title":"Headed and Headless devices",
+         "description":"Windows IoT Core can either be in headed or headless mode. The difference is the presence or absence of any form of UI",
+         "link-text":"<a href='HeadlessMode.htm'>Learn More</a>",
+         "ranking":1,
+         "tags":["beginner","deploy"]
+      },
+      {
+         "title":"Access your files using FTP",
+         "description":"Access the files on your device using FTP",
+         "link-text":"<a href='samples/FTP.htm'>Learn More</a>",
+         "ranking":6,
+         "tags":["beginner"]
+      },
+      {
+         "title":"Access your files using Windows File Sharing",
+         "description":"Access the files on your device using Windows file sharing",
+         "link-text":"<a href='samples/SMB.htm'>Learn More</a>",
+         "ranking":6,
+         "tags":["beginner"]
+      },
+      {
+         "title":"WiFi Connectivity",
+         "description":"Setup and configure WiFi on your Windows IoT Core device",
+         "link-text":"<a href='SetupWiFi.htm'>Learn More</a>",
+         "ranking":6,
+         "tags":["beginner","wifi","connectivity"]
+      },
+      {
+         "title":"Bluetooth Support",
+         "description":"Windows IoT Core Bluetooth support information",
+         "link-text":"<a href='Bluetooth.htm'>Learn More</a>",
+         "ranking":6,
+         "tags":["beginner","bluetooth","connectivity"]
+      },
+      {
+         "title":"Embedded Mode",
+         "description":"Enable embedded mode on desktop and mobile",
+         "link-text":"<a href='EmbeddedMode.htm'>Learn More</a>",
+         "ranking":7,
+         "tags":["advanced"]
+      },
+      {
+         "title":"Windows 10 IoT Core Pro",
+         "description":"Create a Windows 10 IoT Core Pro image",
+         "link-text":"<a href='CreateIoTCorePro.htm'>Learn More</a>",
+         "ranking":8,
+         "tags":["advanced"]
+      },
+      {
+         "title":"Universal Write Filter",
+         "description":"Enable a write filter on your OS image",
+         "link-text":"<a href='UWF.htm'>Learn More</a>",
+         "ranking":20,
+         "tags":["advanced"]
+      },
+      {
+         "title":"Securing IoT Devices with TPMs",
+         "description":"Learn about Trusted Platform Modules (TPMs), along with various implementations on IoT Core as well as code samples",
+         "link-text":"<a href='TPM.htm'>Learn More</a>",
+         "ranking":20,
+         "tags":["advanced"]
+      },
+      {
+         "title":"Enabling Secure Boot and BitLocker",
+         "description":"Learn how to secure your IoT device by enabling Secure Boot and BitLocker device encryption on supported IoT Core devices",
+         "link-text":"<a href='SB_BL.htm'>Learn More</a>",
+         "ranking":10,
+         "tags":["advanced"]
+      }
+   ],
+   "zh-CN-tags":["beginner","intermediate","advanced","tool","configuration","port","hardware","alljoyn","platform","deploy","debug","visual studio","wifi","bluetooth","connectivity"],
+   "zh-CN":[
+      {
+         "title":"On-Device Command-line Utilities",
+         "description":"A set of tools available on your device to help you configure a slew of options",
+         "link-text":"<a href='tools/CommandLineUtils.htm'>Learn More</a>",
+         "ranking":4,
+         "tags":["beginner", "tool", "configuration"]
+      },
+      {
+         "title":"Windows 10 IoT Core Porting Tool",
+         "description":"A tool for helping you port your existing Win32 and Windows CE applications to Windows 10 IoT Core",
+         "link-text":"<a href='tools/IoTAPIPortingTool.htm'>Learn More</a>",
+         "ranking":5,
+         "tags":["advanced", "tool", "port"]
+      },
+      {
+         "title":"Using PowerShell",
+         "description":"Allows Remote Administration and Configuration so that you can remotely configure and manage any Windows IoT Core device",
+         "link-text":"<a href='samples/PowerShell.htm'>Learn More</a>",
+         "ranking":6,
+         "tags":["intermediate","tool","configuration"]
+      },
+      {
+         "title":"Using SSH",
+         "description":"Allows Remote Administration and Configuration of your Windows IoT Core device over SSH",
+         "link-text":"<a href='samples/SSH.htm'>Learn More</a>",
+         "ranking":6,
+         "tags":["intermediate","tool","configuration"]
+      },
+      {
+         "title":"Hardware Pin Mappings",
+         "description":"Pinout and interfacing information for GPIO, SPI, and I2C",
+         "link-text":"<a href='samples/PinMappingsRPi2.htm'>Raspberry Pi 2 Pinout</a><br><a href='samples/PinMappingsMBM.htm'>MinnowBoard Max Pinout</a>",
+         "ranking":0,
+         "tags":["beginner","hardware"]
+      },
+      {
+         "title":"AllJoyn Connectivity",
+         "description":"Learn more about AllJoyn and explore the capabilities of the AllJoyn Device System Bridge with Windows 10 IoT Core",
+         "link-text":"<a href='AllJoyn.htm'>Learn More</a>",
+         "ranking":20,
+         "tags":["advanced","alljoyn","platform"]
+      },
+      {
+         "title":"Unavailable Universal APIs",
+         "description":"Windows IoT Core is a work in progress. Here are the UWP APIs that have not been implemented yet on our platform",
+         "link-text":"<a href='UnavailableApis.htm'>Learn More</a>",
+         "ranking":10,
+         "tags":["intermediate","api"]
+      },
+      {
+         "title":"Ecosystem Compatibility List",
+         "description":"Find a list of supported peripherals, interfaces, and protocols on Window 10 IoT Core devices",
+         "link-text":"<a href='SupportedInterfaces.htm'>Learn More</a>",
+         "ranking":6,
+         "tags":["intermediate","hardware","platform"]
+      },
+      {
+         "title":"Visual Studio App Deployment",
+         "description":"Use Visual Studio to deploy and debug applications on your Windows 10 IoT Core device",
+         "link-text":"<a href='AppDeployment.htm'>Learn More</a>",
+         "ranking":0,
+         "tags":["beginner","debug","deploy","visual studio"]
+      },
+      {
+         "title":"Using WINDBG",
+         "description":"Use WINDBG to debug",
+         "link-text":"<a href='Windbg.htm'>Learn More</a>",
+         "ranking":20,
+         "tags":["advanced","debug"]
+      },
+      {
+         "title":"Glossary",
+         "description":"A list of commonly used phrases and their meanings",
+         "link-text":"<a href='Glossary.htm'>Learn More</a>",
+         "ranking":5,
+         "tags":["beginner"]
+      },
+      {
+         "title":"Windows Device Portal",
+         "description":"Connect to, control, configure, and get advanced diagnostics about your machine from the web",
+         "link-text":"<a href='tools/DevicePortal.htm'>Learn More</a>",
+         "ranking":0,
+         "tags":["beginner","configuration"]
+      },
+      {
+         "title":"Headed and Headless devices",
+         "description":"Windows IoT Core can either be in headed or headless mode. The difference is the presence or absence of any form of UI",
+         "link-text":"<a href='HeadlessMode.htm'>Learn More</a>",
+         "ranking":1,
+         "tags":["beginner","deploy"]
+      },
+      {
+         "title":"Access your files using FTP",
+         "description":"Access the files on your device using FTP",
+         "link-text":"<a href='samples/FTP.htm'>Learn More</a>",
+         "ranking":6,
+         "tags":["beginner"]
+      },
+      {
+         "title":"Access your files using Windows File Sharing",
+         "description":"Access the files on your device using Windows file sharing",
+         "link-text":"<a href='samples/SMB.htm'>Learn More</a>",
+         "ranking":6,
+         "tags":["beginner"]
+      },
+      {
+         "title":"WiFi Connectivity",
+         "description":"Setup and configure WiFi on your Windows IoT Core device",
+         "link-text":"<a href='SetupWiFi.htm'>Learn More</a>",
+         "ranking":6,
+         "tags":["beginner","wifi","connectivity"]
+      },
+      {
+         "title":"Bluetooth Support",
+         "description":"Windows IoT Core Bluetooth support information",
+         "link-text":"<a href='Bluetooth.htm'>Learn More</a>",
+         "ranking":6,
+         "tags":["beginner","bluetooth","connectivity"]
+      },
+      {
+         "title":"Embedded Mode",
+         "description":"Enable embedded mode on desktop and mobile",
+         "link-text":"<a href='EmbeddedMode.htm'>Learn More</a>",
+         "ranking":7,
+         "tags":["advanced"]
+      },
+      {
+         "title":"Windows 10 IoT Core Pro",
+         "description":"Create a Windows 10 IoT Core Pro image",
+         "link-text":"<a href='CreateIoTCorePro.htm'>Learn More</a>",
+         "ranking":8,
+         "tags":["advanced"]
+      },
+      {
+         "title":"Universal Write Filter",
+         "description":"Enable a write filter on your OS image",
+         "link-text":"<a href='UWF.htm'>Learn More</a>",
+         "ranking":20,
+         "tags":["advanced"]
+      },
+      {
+         "title":"Securing IoT Devices with TPMs",
+         "description":"Learn about Trusted Platform Modules (TPMs), along with various implementations on IoT Core as well as code samples",
+         "link-text":"<a href='TPM.htm'>Learn More</a>",
+         "ranking":20,
+         "tags":["advanced"]
+      },
+      {
+         "title":"Enabling Secure Boot and BitLocker",
+         "description":"Learn how to secure your IoT device by enabling Secure Boot and BitLocker device encryption on supported IoT Core devices",
+         "link-text":"<a href='SB_BL.htm'>Learn More</a>",
+         "ranking":10,
+         "tags":["advanced"]
+      }
+   ]
+}

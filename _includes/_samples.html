@@ -1,0 +1,101 @@
+<style>
+.searchbox
+{
+	background-color: #f2f2f2;
+	width: 600px;
+	padding: 15px;
+}
+
+.searchbox a
+{
+	padding-left: 20px;
+}
+
+.searchbox a:hover
+{
+	text-decoration: underline;
+}
+
+.searchbox div
+{
+	margin: 10px;
+}
+</style>
+</style>
+{% assign tempGlobalTags = (site.data._samples['en-US-tags'] | downcase) %}
+{% assign globalTags = tempGlobalTags | remove:'["' | remove:'"]' | split:'", "' | sort %}
+<div class="searchbox">
+	<div class="filterTools" style="display:none">
+		<div>
+			<h3> Filter </h3>
+			Filter lists by tags:
+			<select id="tagSelect" onchange="filter();">
+			  <option value="All">All</option>
+        {% for tag in globalTags %}
+          <option value="{{tag}}">{{tag}}</option>
+        {% endfor %}
+			</select>
+		</div>
+	</div>
+</div>
+<span id="selectedTag"></span>
+<div class="row section-heading">
+{% assign sortedInfo = (site.data._samples[page.lang] | sort: 'ranking') %}
+{% for entry in sortedInfo %}
+    <div class="col-md-6" style="min-height: 275px;">
+        <h3>{{entry.title}}</h3>
+        <p>{{entry.description}}</p>
+        {{entry.link-text}}
+        <span style="display: none;" class="tagBox">
+            {% for tag in entry.tags %}
+                {% assign index = forloop.index0 %}
+                {% assign size = entry.tags.size | minus:1 %}
+                {% if index != size %}
+                    {{tag}},
+                {% elsif index == size %}
+                    {{tag}}
+                {% endif %}
+            {% endfor %}
+        </span>
+    </div>
+{% endfor %}
+</div>
+
+<script>
+	  function filter()
+	  {
+          var selectedTag = $("#tagSelect option:selected")[0].value;
+          //   var tagSpan = document.getElementById('selectedTag');
+          //   tagSpan.textContent = selectedTag;
+        
+          if(selectedTag == 'All')
+          {
+              var spanTags = document.getElementsByClassName('tagBox');
+              for (var i = 0; i < spanTags.length; i++)
+              {
+                spanTags[i].parentNode.style.display = 'block';
+              }
+          }else{
+              var spanTags = document.getElementsByClassName('tagBox');
+
+              for (var i = 0; i < spanTags.length; i++)
+              {
+                  if (spanTags[i].textContent.indexOf(selectedTag) > -1)
+                  {
+                      spanTags[i].parentNode.style.display = 'block';
+                  }else{
+                      spanTags[i].parentNode.style.display = 'none';
+                  }
+              }
+          }
+    }
+
+
+    window.onload = function() {
+      $(".filterTools").show();
+      if(window.location.hash) {
+			  $(location.hash).parent().show();
+			  window.scrollTo(0, $(location.hash).offset().top);
+			} 
+    }
+</script>

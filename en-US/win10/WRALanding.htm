@@ -1,0 +1,80 @@
+---
+layout: default
+title: Windows Remote Arduino
+permalink: /en-US/win10/WRALanding.htm
+lang: en-US
+deviceName: WRA
+---
+<ol class="breadcrumb">
+  <li>
+    <a href="https://dev.windows.com/en-us/iot">IoT Home</a>
+  </li>
+  <li>
+    <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
+  </li>
+  <li class="active">Windows Remote Arduino</li>
+</ol>
+<h1 class="page-title"> Windows Remote Arduino </h1>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <h2 class="subtext">Get ready to develop with Windows Remote Arduino.</h2>
+  </div>
+</div>
+
+<div class="row">
+<h3>Overview</h3>
+There are two main components of our offering - the Windows Remote Arduino library (called "remote-wiring" on GitHub and linked <a href="https://github.com/ms-iot/remote-wiring">here</a>), and the Windows Remote Arduino Experience app.
+
+The <b>Windows Remote Arduino library</b> is an open-source WinRT library that connects any Windows 10 device - be it a Windows Phone, Surface Pro, Windows PC, or even Raspberry Pi 2 or 3 - to an Arduino board running <a href="http://arduino.cc/en/reference/firmata">StandardFirmata</a>.  By writing programs that use the library on their Windows 10 device, developers can remotely control each of the pins on their Arduino board. Makers can control their Arduino over Bluetooth, USB, Wi-Fi, or Ethernet, and they can do so in any of the WinRT languages (C++/CX, C#, and Javascript).
+
+The <b>Windows Remote Arduino Experience app</b> is a UI experience built to demonstrate the power of the Windows Remote Arduino library.  You can run the app on any Windows 10 device, and then use the app to control the pins on an Arduino board running StandardFirmata.  This app is a excellent way to experiment with what the Windows Remote Arduino library is capable of!
+</div>
+
+<div class="row">
+<h3>Develop and Explore</h3>
+<p>If you want to build your first app with the <b>Windows Remote Arduino library</b>, follow this <a href="{{site.baseurl}}/{{page.lang}}/win10/WRA.htm">link</a> to remotely control an LED on your Arduino.</p>
+<p>If you want to see how the technology works in action, without digging into code yet, follow this <a href="{{site.baseurl}}/{{page.lang}}/win10/WRAE.htm">link</a> to get started with the <b>Windows Remote Arduino Experience app</b>.</p>
+</div>
+
+<div class="row">
+
+<h3>Functionality</h3>
+The Windows Remote Arduino library enables the following functionality:
+
+<ol>
+<li>
+GPIO – Analog and Digital I/O
+<ul>
+  <li>
+  Digital Write
+  </li>
+  <li>
+  Digital Read
+  </li>
+  <li>
+  Analog Write
+  </li>
+  <li>
+  Analog Read
+  </li>
+  <li>
+  Setting the pin mode for any pin
+  </li>
+  <li>
+  Receive events when values change / are reported.
+  </li>
+  </ul>
+</li>
+<li>
+I2C/TwoWire
+  <ul>
+    <li>
+    Send/Receive data to devices over I2C.
+    </li>
+  </ul>
+</li>
+<li>
+Custom protocols via Firmata SysEx command
+</li>
+
+</div>

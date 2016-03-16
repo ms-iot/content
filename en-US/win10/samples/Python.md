@@ -1,15 +1,17 @@
 ---
 layout: default
-title: Python for IoT Sample
+title: Python 'Hello, World' sample
 permalink: /en-US/win10/samples/Python.htm
 lang: en-US
 ---
 
-##Python Apps
+## Python 'Hello, World' Sample
 
-###Set up your PC
+{% include VerifiedVersion.md %}
 
-* Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm) to install Visual Studio 2015.
+### Set up your PC
+
+* Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) to setup your device and PC.
 
 * Install Python for Windows (3.*) from [http://www.python.org/downloads](http://www.python.org/downloads){:target="_blank"}
 
@@ -17,11 +19,11 @@ lang: en-US
 
 * Download and install the latest Python UWP SDK (pyuwpsdk.vsix) release from [here](https://github.com/ms-iot/python/releases){:target="_blank"}.
 
-###Create new Python project
+### Create new Python project
 
 * Create new project based on `Template > Python > Windows 10 IoT Core > Background Application (IoT)`
 
-###Output Hello World!
+### Output Hello World!
 
 Modify *StartupTask.py* like this
 
@@ -29,7 +31,7 @@ Modify *StartupTask.py* like this
 print("Hello, World from IoT!")
 {% endhighlight %}
 
-###Deploy Python app to your Windows 10 IoT Core device
+### Deploy Python app to your Windows 10 IoT Core device
 
 * Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#python).
 
@@ -39,7 +41,9 @@ print("Hello, World from IoT!")
 
 	**NOTE: Launching the debugger for Python can take a few minutes to connect and start debugging the remote Python.  If it takes more than a few minutes, there may be a problem with msvsmon on the remote device.  Please check the FAQ for any potential fixes/workarounds.**
 
-###Use Windows Devices from Python (e.g. GPIO, I2C, SPI)
+* The '*Hello, World from IoT!*' message will be displayed in the output window of Visual Studio.  Open the output window by `Debug > Window > Output`.
+
+### Use Windows Devices from Python (e.g. GPIO, I2C, SPI)
 
 * Right-click on the References node in the Python project
 
@@ -49,7 +53,7 @@ print("Hello, World from IoT!")
 
 * Download pywindevices content from [here](https://github.com/ms-iot/samples/tree/master/PyWinDevices){:target="_blank"}
 
-* Navigate to ARM for RPi2 or win32 for MBM
+* Navigate to ARM for RPi2 or RPi3 or win32 for MBM
 
 * Select the PYD file for the device type and configuration you want to use (e.g. _wingpio_d.pyd if a Debug configuration and _wingpio.pyd for a Release configuration)
 
@@ -59,6 +63,6 @@ print("Hello, World from IoT!")
 
 * WinDevices documentation can be found [here](https://github.com/ms-iot/samples/tree/master/PyWinDevices/docs){:target="_blank"}
 
-###Questions/Suggestions
+### Questions/Suggestions
 
 Please refer to the [FAQ]({{site.baseurl}}/{{page.lang}}/Faqs.htm) for issues.

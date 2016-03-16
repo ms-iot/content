@@ -3,13 +3,19 @@ layout: default
 title: Setup your Intel Galileo
 permalink: /en-US/win8/SetupGalileo.htm
 lang: en-US
+deviceName: Galileo
 ---
 
 #Get Started
 
 This guide will show you how to install and run the Windows Developer Program for IoT on an Intel Galileo Gen1 or Gen2.
 
-{% include steps.html device="Galileo" %}
+{% include steps.html device=page.deviceName %}
+
+<div style="background-color:Silver; color:black; padding:20px;">
+	<h4><u>Support for Windows on Intel Galileo Gen 1 and Gen 2 has ended on November 30, 2015</u></h4>
+	<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we've made the difficult decision to discontinue Windows support on the Galileo platform. We've seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>	
+</div>
 
 ## Step 1: Sign up for Microsoft Connect
 We release Windows for Galileo through the Microsoft Connect program.  Please go to the [Microsoft Connect](https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558){:target="_blank"} site to sign up.  You can find step-by-step instructions for signing up for Microsoft Connect [here]({{site.baseurl}}/{{page.lang}}/SigninMSConnect.htm){:target="_blank"}.
@@ -83,11 +89,11 @@ Connecting the Galileo directly to your computer will allow you to communicate w
 1. Plug the power cord in
 1. You should see activity on the microSD light as it boots. The LED is circled in green in the following pictures.
 
-<!--![](/images/SDLed.png)-->
-<img class="device-images" src="{{site.baseurl}}/images/SDLed.png">
+<!--![](/Resources/images/SDLed.png)-->
+<img class="device-images" src="{{site.baseurl}}/Resources/images/SDLed.png">
 
-<!--![](/images/IntelGalileoGen2.jpg)-->
-<img class="device-images" src="{{site.baseurl}}/images/IntelGalileoGen2.jpg">
+<!--![](/Resources/images/IntelGalileoGen2.jpg)-->
+<img class="device-images" src="{{site.baseurl}}/Resources/images/IntelGalileoGen2.jpg">
 
 NOTE:
 : Windows on Galileo can take about 2 minutes to boot. During this time you will see the microSD activity LED flashing rapidly. Once it stops flashing for a few seconds, the Galileo is fully booted.
@@ -103,8 +109,8 @@ Username: Administrator
 Password: admin
 ~~~
 
-<!--![](/images/TelnetLogin.png)-->
-<img class="device-images" src="{{site.baseurl}}/images/TelnetLogin.png">
+<!--![](/Resources/images/TelnetLogin.png)-->
+<img class="device-images" src="{{site.baseurl}}/Resources/images/TelnetLogin.png">
 
 ## Shutting down the Galileo
 Before you unplug the power from the Galileo, it is advisable to gracefully shut it down. To do this:
@@ -116,3 +122,5 @@ After the microSD activity LED stops blinking, you may unplug the Galileo.
 
 NOTE
 : If you do not shut the Galileo down, the next boot will take much longer. During this time, Windows will run a check disk on the SD card to verify the integrity of the file system. Please allow this to finish.
+
+{% include nextsteps.html device=page.deviceName %}

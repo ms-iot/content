@@ -1,79 +1,75 @@
 ---
 layout: default
-title: Porting Guide
-permalink: /en-US/PortingGuide.htm
-lang: en-US
+title: 移植指南
+permalink: /zh-cn/PortingGuide.htm
+lang: zh-cn
 ---
 
-#Porting Guide
-Migrate your existing code to Windows!
+#移植指南
+将现有代码迁移到 Windows！
 
-##Architectural differences between AVR and Quark
+##AVR 和 Quark 之间的体系结构差异
 ___
 
-###Real-time OS vs General OS
-The key difference between general-computing operating systems and real-time operating systems is the need for "deterministic" timing behavior in the real-time operating systems. - belhob.wordpress.com
+###实时操作系统和常规操作系统
+常规计算操作系统和实时操作系统之间的主要区别是在实时系统中需要“确定性的”计时行为 - belhob.wordpress.com
 
-* [Real-time OS](http://en.wikipedia.org/wiki/Real-time_operating_system){:target="_blank"} - The scheduling algorithms guarantee deterministic timing (i.e. AVR)
-* [General OS](http://en.wikipedia.org/wiki/Operating_system){:target="_blank"} - The scheduling algorithms make no guarantees about timing (i.e. Windows)
+- [实时操作系统](http://en.wikipedia.org/wiki/Real-time_operating_system){:target="_blank"} - 计划算法保证确定性的计时（即 AVR）
+- [常规操作系统](http://en.wikipedia.org/wiki/Operating_system){:target="_blank"} - 计划算法不对计时进行保证（即 Windows）
 
 ___
 
-###Microcontroller verses Microprocessor (CPU)
+###微控制器和微处理器 \(CPU\)
 
-Microcontrollers are designed for embedded applications, in contrast to the microprocessors used in personal computers or other general purpose applications. - wikipedia.org
-* [Microcontroller](http://en.wikipedia.org/wiki/Microcontroller){:target="_blank"} - A small computer on a single integrated circuit containing a processor core, memory, and programmable input/output peripherals (i.e. Atmel ATmega328).
-* [Microprocessor](http://en.wikipedia.org/wiki/Microprocessor){:target="_blank"} - a multipurpose, programmable device that accepts digital data as input, processes it according to instructions stored in its memory, and provides results as output (i.e. Intel Quark).
+微控制器为嵌入式应用程序设计，而微处理器则用于个人计算机或其他常规用途的应用程序。- wikipedia.org
 
-##Serial
+- [微控制器](http://en.wikipedia.org/wiki/Microcontroller){:target="_blank"} - 包含处理器核心、内存和可编程的输入/输出外设（即 Atmel ATmega328）的单个集成电路上的小型计算机。
+- [微处理器](http://en.wikipedia.org/wiki/Microprocessor){:target="_blank"} - 多功能、可编程设备，可将数字数据接受为输入、根据存储在内存中的指令进行处理，并将结果作为输出提供（即 Intel Quark）。
 
-###[Logic Level Voltages](http://en.wikipedia.org/wiki/Logic_level#Logic_voltage_levels){:target="_blank"}
+##序列
 
-The voltage levels used internally are called the "logic level", while the voltage levels used externally are called the "line level". In particular, when connecting a system that uses TTL levels internally to a RS-232 cable, the TTL levels are the "logic level". When connecting a system that uses 3.3 V CMOS levels internally to an IEEE 1284 bus, the TTL levels are the "line level".
+###[逻辑级别电压](http://en.wikipedia.org/wiki/Logic_level#Logic_voltage_levels){:target="_blank"}
 
-* CMOS
-   * LOW - 0V to 1/3Vdd
-   * HIGH - 2/3Vdd to Vdd
+内部使用电压级别称为“逻辑级别”，外部使用的电压级别称为“线级别”。值得一提的是，在将使用 TTL 级别的系统内部连接到 RS-232 电缆时，TTL 级别是“逻辑级别”。在将使用 3.3 V CMOS 级别的系统内部连接到 IEEE 1284 总线时，TTL 级别是“线级别”。
 
-* TTL
+- CMOS
+   - 低 - 0V 到 1/3Vdd
+   - 高 - 2/3Vdd 到 Vdd
 
-   * LOW - 0V to 0.8V</li>
-   * HIGH - 2V to 5V</li>
+- TTL
+
+   - 低 - 0V 到 0.8V</li>
+   - 高 - 2V 到 5V</li>
 
 ###[RS232](http://en.wikipedia.org/wiki/RS-232){:target="_blank"}
 
-  The RS-232 standard is commonly used in computer serial ports. The standard defines the electrical characteristics and timing of signals, the meaning of signals, and the physical size and pinout of connectors. The current version of the standard is TIA-232-F Interface Between Data Terminal Equipment and Data Circuit-Terminating Equipment Employing Serial Binary Data Interchange, issued in 1997.
+  RS-232 标准常用于计算机串行端口。该标准定义信号的电子特征和计时、信号的意义和连接器的物理大小和引出线。当前版本的标准是数据终端设备和数据电路端接设备之间的 TIA-232-F 接口，采用串行二进制数据交换，发布于 1997 年。
 
 ___
 
-##Porting Code
+##移植代码
 
 ###Arduino/AVR
 
-Direct Port Manipulation
+直接端口操作
 
-* [Port Registers](http://www.arduino.cc/en/Reference/PortManipulation){:target="_blank"} - The port registers allow you to set a block of            Arduino pins with a single instruction, resulting in performance gains.
-
-   This can be ported by issuing the equivalent instruction for each pin represented in the bitmask.
-
-* DDR[B|C|D] = pinMode();
-* PORT[B|C|D] = digitalWrite();
-* PIN[B|C|D] = digitalRead();
+- [端口寄存器](http://www.arduino.cc/en/Reference/PortManipulation){:target="_blank"}： 端口寄存器允许你通过单个指令设置 Arduino 引脚的块，从而产生性能增益。
+  - 这可以通过为位掩码中呈现的每个引脚发出等效的指令来移植。
+- DDR\[B/C/D\] = pinMode\(\);
+- PORT\[B/C/D\] = digitalWrite\(\);
+- PIN\[B/C/D\] = digitalRead\(\);
 
 
-* [SPI Registers](http://www.arduino.cc/en/Tutorial/SPIEEPROM){:target="_blank"} (Introduction to the Serial Peripheral Interface)<br/>
-	  This fine grain level of control is not offered by the Windows Developer Program for IoT and in most cases, simply using the SPI library can replace this functionality.
+- [SPI 寄存器](http://www.arduino.cc/en/Tutorial/SPIEEPROM){:target="_blank"}（串行外设接口的简介）<br/> 此细粒度级别的控制不是由 Windows Developer Program for IoT 提供的，并且在大部分情况下，只需使用 SPI 库即可替换此功能。
 
 ###GCC
 
-Non-portable GCC compiler commands/options
+不可移植 GCC 编译器命令/选项
 
-* **`__atrribute__(__packed__)`**
-This can be replaced by pushing a pack attribute on the data alignment stack [i.e. <code>#pragma pack(push, 1)</code>], then popping it off once your structs have been defined [i.e. `#pragma pack(pop)</code>`].
+- **`__atrribute__(__packed__)`** 这可通过将包属性推送到数据对齐堆栈上来替换 \[即 <code>\#pragma 包（推送，1）</code>\]，然后在定义你的结构后将其弹出 \[即 `#pragma pack(pop)</code>`\]。
 
-   Check [MSDN](http://msdn.microsoft.com/en-us/library/vstudio/2e70t5y1(v=vs.100).aspx){:target="_blank"} for more details.
+   有关详细信息，请参阅 \[MSDN\]\(http://msdn.microsoft.com/zh-cn/library/vstudio/2e70t5y1(v=vs.100).aspx){:target="_blank"\)。
 
-* **`asm volatile("nop");`**
-The same functionality exists on Windows, however the syntax is different <code>__asm nop</code>. The MSVC compiler does not optimize around assembly, so the `volatile` is not valid.
+- **`asm volatile("nop");`** Windows 上存在相同的功能，但语法是不同的 <code>\_\_asm nop</code>。MSVC 编译器不会优化周围程序集，因此 `volatile` 无效。
 
-   For a deeper discussion please check [StackOverflow](http://stackoverflow.com/questions/25878898/is-asm-nop-the-windows-equivalent-of-asm-volatilenop-from-gcc-compile){:target="_blank"}
+   有关更深入的讨论，请查看 [StackOverflow](http://stackoverflow.com/questions/25878898/is-asm-nop-the-windows-equivalent-of-asm-volatilenop-from-gcc-compile){:target="_blank"}

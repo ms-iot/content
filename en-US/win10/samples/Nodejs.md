@@ -5,29 +5,24 @@ permalink: /en-US/win10/samples/Nodejs.htm
 lang: en-US
 ---
 
-##MemoryStatus Node.js (Console Application) Sample
+## MemoryStatus Node.js (Console Application) Sample
+
+{% include VerifiedVersion.md %}
+
 Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/ConsoleApp.htm)
 
 
-###Set up your PC
-* Install Windows 10.
-* Install Visual Studio 2015.
-* Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases).
+### Set up your PC
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 
-###Copy Node.js to your Raspberry Pi 2
-* Open up an explorer window on your PC and enter **\\\\\<IP address of your device\>\\C$** to access files on your device. The credentials are:
-
-   username: <IP address or device name, default is minwinpc>\Administrator  
-   password: p@ssw0rd  
-
-  NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).  
-
-* Run `& 'C:\Program Files (x86)\Node.js (chakra)\CopyNodeChakra.ps1' -arch <ARM | x86 | x64 > -ip <Device IP Address>`. Use `ARM` if you have a Raspberry Pi 2. Use `x86` if you have a MinnowBoard Max. 
-  After completing this step, Node.js will be in `c:\Node.js (Chakra)` on your device. **Note:** If you haven't entered the credentials through the explorer window you will get an "Access Denied" error.
+### Copy Node.js to your Raspberry Pi 2 or 3
+* Download the zip file with ARM Node.js (ChakraCore) from [here](http://aka.ms/nodecc_arm) to your PC and extract the files (node.exe and chakracore.dll).
+* Use [Windows file sharing]({{site.baseurl}}/{{page.lang}}/win10/samples/SMB.htm), [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm), 
+or [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to create `C:\Node.js (ChakraCore)` folder on your Raspberry Pi 2 or 3.
+* Copy node.exe and chakracore.dll to `C:\Node.js (ChakraCore)` on your Raspberry Pi 2 or 3.
 
 
-###Create MemoryStatus Addon
+### Create MemoryStatus Addon
 Build a native addon for the Node.js server that will be deployed in this sample. This step is required because [GlobalMemoryStatusEx](https://msdn.microsoft.com/en-us/library/windows/desktop/aa366589(v=vs.85).aspx){:target="_blank"} is used to get the data we need.
 
 * On your Windows 10 PC, create the AddOn location in C:\NodeAddon
@@ -88,11 +83,11 @@ NODE_MODULE(MemoryStatusAddon, Init)
 }
 {% endhighlight %}
 </UL>
-* Build the AddOn: `"[Node.js (Chakra) installation path]\node_modules\npm\bin\node-gyp-bin\node-gyp.cmd" rebuild --target_arch=arm` (use appropriate --target_arch depending on the device you have).  
-  The default Node.js (Chakra) installation path is "c:\Program Files (x86)\Node.js (chakra)".
+* Build the AddOn: `"[Node.js (ChakraCore) installation path]\node_modules\npm\bin\node-gyp-bin\node-gyp.cmd" rebuild --target_arch=arm` (use appropriate --target_arch depending on the device you have).  
+  The default Node.js (ChakraCore) installation path is "c:\Program Files\nodejs (chakracore)".
 
 
-###Create the Node.js file
+### Create the Node.js file
 Create a new file called server.js and place the contents below to it.
 <UL>
 {% highlight JavaScript %}
@@ -120,8 +115,13 @@ the GlobalMemoryStatusEx method in our Addon is called to retrieve the memory st
 For more information on writing addons, go to [https://nodejs.org/api/addons.html](https://nodejs.org/api/addons.html).
 
 
-###Copy the files to Windows IoT Core device
-Using an explorer window, create a folder on the device called C:\MemoryStatusSample. Then copy the following files from your PC to this folder:
+### Copy the files to Windows IoT Core device
+Open up an explorer window on your PC and enter **\\\\\<IP address of your device\>\\C$** to access files on your device. The credentials (if you have not changed them) are:
+
+   username: <IP address or device name, default is minwinpc>\Administrator  
+   password: p@ssw0rd  
+
+Create a folder on the device called C:\MemoryStatusSample. Then copy the files you created below from your PC to this folder:
 
 * MemoryStatusAddon.node
 * server.js
@@ -130,16 +130,16 @@ Connect to the device using PowerShell.  Please follow the instructions found [h
 
 Allow Node.exe to communicate through the firewall with the following command:
 
-* netsh advfirewall firewall add rule name="Node.js" dir=in action=allow program="C:\Node.js (Chakra)\Node.exe" enable=yes
+* `netsh advfirewall firewall add rule name="Node.js" dir=in action=allow program="C:\Node.js (ChakraCore)\Node.exe" enable=yes`
 
 
-###Run the server!
-In PowerShell, run the command `& 'C:\Node.js (Chakra)\Node.exe' C:\MemoryStatusSample\server.js` to start the server.
+### Run the server!
+In PowerShell, run the command `& 'C:\Node.js (ChakraCore)\Node.exe' C:\MemoryStatusSample\server.js` to start the server.
 Open up a browser and enter the address http://&lt;IP address of your device&gt;:1337. The result should look something like the picture below.
 
-![Memory Status Result]({{site.baseurl}}/images/Nodejs/memorystatus-ie.PNG)
+![Memory Status Result]({{site.baseurl}}/Resources/images/Nodejs/memorystatus-ie.PNG)
 
 
 ### GitHub
-* Node.js (Chakra) source code: [https://github.com/Microsoft/node](https://github.com/Microsoft/node)
+* Node.js (ChakraCore) source code: [https://github.com/Microsoft/node](https://github.com/Microsoft/node)
 * NTVS IoT Extension source code: [https://github.com/ms-iot/ntvsiot](https://github.com/ms-iot/ntvsiot)

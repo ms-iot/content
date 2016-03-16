@@ -1,0 +1,117 @@
+﻿---
+layout: default
+title: Windows Remote Arduino
+permalink: /zh-cn/win10/WRA.htm
+lang: zh-cn
+deviceName: WRA
+---
+<ol class="breadcrumb">
+  <li>
+    <a href="https://dev.windows.com/zh-cn/iot">IoT 主页</a>
+  </li>
+  <li>
+    <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">入门</a>
+  </li>
+  <li class="active">Windows Remote Arduino</li>
+</ol>
+<h1 class="page-title"> Windows Remote Arduino </h1>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <h2 class="subtext">准备好计算机以针对 Windows Remote Arduino 和 Windows 10 IoT 核心版进行开发，然后生成你的第一个 Windows IoT 核心版应用。</h2>
+  </div>
+</div>
+<div class="row">
+Windows Remote Arduino 是一个开源 <a href="https://msdn.microsoft.com/zh-cn/magazine/jj651567.aspx?utm_source=rss&utm_medium=rss&utm_campaign=windows-runtime-reimagining-app-development-with-the-windows-runtime">Windows 运行时组件</a>库，可允许制造商通过蓝牙、USB、WLAN 或以太网连接控制 Arduino！ 它适用于希望使用 Windows 运行时语言控制 Arduino 硬件强大功能的 <a href="https://msdn.microsoft.com/zh-cn/library/windows/apps/br211369.aspx">Windows 运行时 (WinRT)</a> 开发人员。在其项目中包含此组件的开发人员将自动获得使用任何 WinRT 语言（C++/CX、C# 和 JavaScript）访问其功能的权限。库在 <a href="https://github.com/firmata/protocol">Firmata 协议</a>的基础之上进行生成，该协议已在预打包的 <a href="http://arduino.cc/en/reference/firmata">Firmata 库</a>（包含在从 <a href="http://arduino.cc">http://arduino.cc</a> 获取的 Arduino 软件中）中实现。
+
+</div>
+<div class="row">
+
+<h3>概述</h3>
+Windows Remote Arduino 桥接软件世界和真实世界之间的间隙。通过利用 Windows 10 的强大功能，我们可以展现 Windows 设备（如 Windows Phone、Surface Pro 3、Windows 台式机甚至是 Raspberry Pi 2）的新功能。将设备与 Arduino 进行配对，举手之间即可进入一个全新的世界。
+
+</div>
+<div class="row">
+
+<h3>功能</h3>
+Windows Remote Arduino 启用了以下功能，即“开箱即用”。
+
+<ol>
+<li>
+GPIO - 模拟和数字 I/O
+<ul>
+  <li>
+  数字写入
+  </li>
+  <li>
+  数字读取
+  </li>
+  <li>
+  模拟写入
+  </li>
+  <li>
+  模拟读取
+  </li>
+  <li>
+  为任意引脚设置引脚模式
+  </li>
+  <li>
+  接收值发生更改或进行报告时的事件。
+  </li>
+  </ul>
+</li>
+<li>
+I2C/TwoWire
+  <ul>
+    <li>
+    通过 I2C 将数据发送到设备或从中接收数据。
+    </li>
+  </ul>
+</li>
+<li>
+通过 Firmata SysEx 命令自定义协议
+</li>
+
+</div>
+
+<h2>1.设置电脑 <span class="pull-right"><a id="pc-content-toggle" class="toggle-button" onClick="hideDiv('pc-content')">隐藏</a></span></h2>
+
+<hr>
+<div id="pc-content" class="toggle-section">
+  {% include_relative SetupPCWRA.md %}
+</div>
+
+<h2>2.设置 Arduino 并将 Windows Remote Arduino 库添加到 Windows 项目 <span class="pull-right"><a id="setup-content-toggle" class="toggle-button" onClick="hideDiv('setup-content')">显示</a></span></h2>
+<hr>
+<div id="setup-content" class="toggle-section hidden">
+  {% include_relative SetupWRA.htm %}
+</div>
+
+<h2>3.开发   <span class="pull-right"><a id="app-content-toggle" class="toggle-button" onClick="hideDiv('app-content')">显示</a></span>  </h2>
+<hr>
+  <div id="app-content" class="setup-content-list toggle-section hidden">
+    {% include_relative samples/BasicWRA.md %}
+  </div>
+
+
+<script>
+  function hideDiv(div) {
+    var div = "#" + div,
+        button = div + "-toggle",
+        currentState = $(button)[0].innerHTML;
+
+    for(var i = 0; i < 3 ; i ++){
+        $(".toggle-button")[i].innerHTML = "Show";
+      }
+
+    if(currentState === "Hide") {
+      $(div).toggle('slow');
+    }
+    else
+    {
+      $(".hidden").removeClass("hidden");
+      $(".toggle-section").hide();
+      $(div).toggle('slow');
+      $(button)[0].innerHTML = "Hide";
+    }
+  }
+</script>

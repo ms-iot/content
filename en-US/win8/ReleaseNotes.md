@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Release Notes
-permalink: /en-US/ReleaseNotes.htm
+permalink: /en-US/win8/ReleaseNotes.htm
 lang: en-US
 ---
 

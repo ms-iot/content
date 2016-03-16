@@ -5,6 +5,11 @@ permalink: /en-US/win8/samples/UART.htm
 lang: en-US
 ---
 
+<div style="background-color:Silver; color:black; padding:20px;">
+	<h4><u>Support for Windows on Intel Galileo Gen 1 and Gen 2 will end on November 30, 2015</u></h4>
+	<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we've made the difficult decision to discontinue Windows support on the Galileo platform. We've seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>
+</div>
+
 # Writing to UART
 Learn how to use HardwareSerial to read and write to the UART port.
 
@@ -31,7 +36,7 @@ Learn how to use HardwareSerial to read and write to the UART port.
 	* <kbd>bcdedit /store k:\efi\microsoft\boot\bcd /set {default} debug No</kbd>
 	* <kbd>bcdedit /store k:\efi\microsoft\boot\bcd /set {default} testsigning OFF</kbd>
 	* <kbd>bcdedit /store k:\efi\microsoft\boot\bcd /enum</kbd>
-	* Verify debug and testsigning are now “No”
+	* Verify debug and testsigning are now "No"
 1. Safe dismount of microSD from PC by ejecting in Windows Explorer.
 1. Put microSD in Galileo and powered up
 
@@ -40,13 +45,13 @@ Learn how to use HardwareSerial to read and write to the UART port.
 1. Create a new project from the template.
 1. Plug the two serial ends of the cables together.
 1. Plug the 3.5mm end of the cable into the UART jack on the Galileo board.<br/>
-![]({{site.baseurl}}/images/uart.png)
+![]({{site.baseurl}}/Resources/images/uart.png)
 1. Plug the USB end of the cable into your computer's USB port.
 1. Open up Device Manager on your development machine and find out which COM port is being used by the adapter.
 1. Open a terminal program like [Tera Term](http://download.cnet.com/Tera-Term/3000-20432_4-75766675.html){:target="_blank"}
 1. Set the program to monitor the serial connection from the COM port you found in Step 5.
 1. Make sure your options are as shown below (with the Port set to the COM port you found in Step 5):<br/>
-    ![]({{site.baseurl}}/images/TeraTermSerialConfig.png)<br/>
+    ![]({{site.baseurl}}/Resources/images/TeraTermSerialConfig.png)<br/>
     * If you are using Tera Term, you can get to the menu shown above by clicking on Setup -> Serial port..
 1. Replace the existing code in main.cpp with the following code:
 

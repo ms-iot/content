@@ -1,26 +1,26 @@
 ---
 layout: default
 title: RPi2 引脚映射
-permalink: /zh-CN/win10/samples/PinMappingsRPi2.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/PinMappingsRPi2.htm
+lang: zh-cn
 ---
 
 ##Raspberry Pi 2 引脚映射
 
-![RPi2 排针]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![RPi2 排针]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
 Raspberry Pi 2 的硬件接口通过开发板上的 40 排针 **J8** 公开。功能包括：
 
-* **13x** - GPIO 引脚
-* **2x** - SPI 总线
+* **17x** - GPIO 引脚
+* **1x** - SPI 总线
 * **1x** - I2C 总线
 * **2x** - 5V 电源引脚
 * **2x** - 3.3V 电源引脚
 * **8x** - 接地引脚
 
-##GPIO 引脚
+##<a name="RPi2_GPIO">GPIO 引脚
 
 以下 GPIO 引脚可通过 API 访问：
 
@@ -33,7 +33,11 @@ Raspberry Pi 2 的硬件接口通过开发板上的 40 排针 **J8** 公开。�
 | 12 | 下拉 | 32 |
 | 13 | 下拉 | 33 |
 | 16 | 下拉 | 36 |
+| 17 | 下拉 | 11 |
 | 18 | 下拉 | 12 |
+| 19 | 下拉 | 35 |
+| 20 | 下拉 | 38 |
+| 21 | 下拉 | 40 |
 | 22 | 下拉 | 15 |
 | 23 | 下拉 | 16 |
 | 24 | 下拉 | 18 |
@@ -43,7 +47,7 @@ Raspberry Pi 2 的硬件接口通过开发板上的 40 排针 **J8** 公开。�
 | 35 | 上拉 | 红色电源 LED |
 | 47 | 上拉 | 绿色活动 LED |
 
-例如，以下代码将 **GPIO 5** 作为输出打开，并在引脚上写出数字“\*\*1\*\*”：
+例如，以下代码将 **GPIO 5** 作为输出打开，并在该引脚上写下数字“**1**”：
 
 {% highlight C# %}
 using Windows.Devices.Gpio;
@@ -53,12 +57,12 @@ public void GPIO()
     // Get the default GPIO controller on the system
     GpioController gpio = GpioController.GetDefault();
     if (gpio == null)
-        return; // GPIO not available on this sytem
+        return; // GPIO not available on this system
 
     // Open GPIO 5
     using (GpioPin pin = gpio.OpenPin(5))
     {
-        // Latch HIGH value
+        // Latch HIGH value first. This ensures a default value when the pin is set as output
         pin.Write(GpioPinValue.High);
     
         // Set the IO direction as output
@@ -74,9 +78,69 @@ public void GPIO()
 
 当关闭引脚时，它将还原到其通电状态。
 
-##I2C 总线
+##<a name="RPi2_UART"></a>串行 UART
 
-排针上公开了一个 I2C 控制器 **I2C1**，带有 **SDA** 和 **SCL** 两条线。用于此总线的 1.8K&\#x2126; 内部上拉电阻已安装在开发板上。
+RPi2 上有一个串行 UART： **UART0**
+
+* Pin 8 - **UART0 TX**
+* Pin 10 - **UART0 RX**
+
+以下示例初始化 **UART0** 并依次执行写入和读取操作：
+
+
+{% highlight C# %}
+using Windows.Storage.Streams;
+using Windows.Devices.Enumeration;
+using Windows.Devices.SerialCommunication;
+
+public async void Serial()
+{
+	string aqs = SerialDevice.GetDeviceSelector("UART0");                   /* Find the selector string for the serial device   */
+	var dis = await DeviceInformation.FindAllAsync(aqs);                    /* Find the serial device with our selector string  */
+	SerialDevice SerialPort = await SerialDevice.FromIdAsync(dis[0].Id);    /* Create an serial device with our selected device */
+
+	/* Configure serial settings */
+	SerialPort.WriteTimeout = TimeSpan.FromMilliseconds(1000);
+	SerialPort.ReadTimeout = TimeSpan.FromMilliseconds(1000);
+	SerialPort.BaudRate = 9600;
+	SerialPort.Parity = SerialParity.None;         
+	SerialPort.StopBits = SerialStopBitCount.One;
+	SerialPort.DataBits = 8;
+
+	/* Write a string out over serial */
+	string txBuffer = "Hello Serial";
+	DataWriter dataWriter = new DataWriter();
+	dataWriter.WriteString(txBuffer);
+	uint bytesWritten = await SerialPort.OutputStream.WriteAsync(dataWriter.DetachBuffer());
+
+	/* Read data in from the serial port */
+	const uint maxReadLength = 1024;
+	DataReader dataReader = new DataReader(SerialPort.InputStream);
+	uint bytesToRead = await dataReader.LoadAsync(maxReadLength);
+	string rxBuffer = dataReader.ReadString(bytesToRead);
+}
+{% endhighlight %}
+
+请注意，你必须将以下功能添加到 UWP 项目中的 **Package.appxmanifest** 文件，才能运行串行 UART 代码：
+
+    Visual Studio 2015 has a known bug in the Manifest Designer (the visual editor for appxmanifest files) that affects the serialcommunication capability.  If 
+    your appxmanifest adds the serialcommunication capability, modifying your appxmanifest with the designer will corrupt your appxmanifest (the Device xml child 
+    will be lost).  You can workaround this problem by hand editting the appxmanifest by right-clicking your appxmanifest and selecting View Code from the 
+    context menu.
+
+{% highlight xml %}
+  <Capabilities>
+    <DeviceCapability Name="serialcommunication">
+      <Device Id="any">
+        <Function Type="name:serialPort" />
+      </Device>
+    </DeviceCapability>
+  </Capabilities>
+{% endhighlight %}
+
+##<a name="RPi2_I2C"></a>I2C 总线
+
+排针上公开了一个 I2C 控制器 **I2C1**，带有 **SDA** 和 **SCL** 两条线。用于此总线的 1.8K&#x2126; 内部上拉电阻已安装在开发板上。
 
 * 引脚 3 - **I2C1 SDA**
 * 引脚 5 - **I2C1 SCL**
@@ -110,24 +174,15 @@ public async void I2C()
 {% endhighlight %}
 
 
-##SPI 总线
+##<a name="RPi2_SPI"></a>SPI 总线
 
-RPi2 上有 2 个 SPI 总线控制器可用： **SPI0** 和 **SPI1**。
-
-**SPI0** 具有标准的 **MOSI**、**MISO** 和 **SCLK** 线，并且可以配置为使用 **SPI0 CS0** 和 **SPI0 CS1** 两种芯片选择线之一。
+RPi2 上提供一个 SPI 总线控制器。**SPI0** 具有标准的 **MOSI**、**MISO** 和 **SCLK** 线，并且可以配置为使用 **SPI0 CS0** 和 **SPI0 CS1** 两种芯片选择线之一。
 
 * 引脚 19 - **SPI0 MOSI**
 * 引脚 21 - **SPI0 MISO**
 * 引脚 23 - **SPI0 SCLK**
 * 引脚 24 - **SPI0 CS0**
 * 引脚 26 - **SPI0 CS1**
-
-**SPI1** 包括 **MOSI**、**MISO** 和 **SCLK** 线，并且只有 **SPI1 CS0** 一种芯片选择线。
-
-* 引脚 38 - **SPI1 MOSI**
-* 引脚 35 - **SPI1 MISO**
-* 引脚 40 - **SPI1 SCLK**
-* 引脚 11 - **SPI1 CS0**
 
 有关如何在总线 **SPI0** 上执行 SPI 写入的示例如下所示：
 

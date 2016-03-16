@@ -1,0 +1,93 @@
+  <div class="col-md-24 tile-display" onClick="buildCards()">
+
+  </div>
+  <div class="col-md-24 tile-display" onClick="buildCards()">
+
+  </div>
+
+<script>
+
+var allBlocks = {{site.data.hth-tiles[page.lang] | jsonify}};
+
+function buildCards(filteredBlocks)
+{
+  var blocks = filteredBlocks ? filteredBlocks : {{site.data.hth-tiles[page.lang] | jsonify}},
+      cards = [],
+      card,
+      allBlocks;
+
+
+  $(".tile-display").empty();
+
+  if(blocks.length !== 0) {
+    for (var i = 0; i < blocks.length; i++) {
+      blocks[i].color = {};
+      var boardCount = 3;
+      for(device in blocks[i].compatibleDevices){
+        if(blocks[i].compatibleDevices[device] === false) {
+          blocks[i].color[device] = "style='display:none'"
+          boardCount--;
+        }
+      }
+      var columnWidth = (12 / boardCount) * 2;
+      console.log(columnWidth)
+
+      card = "<div class='col-sm-8 col-xs-24 block' id='card" + i + "'>" +
+             "<div class='card'>" +
+             "<div class='card-header'>" +
+             "<h2 class='thin-header text-center'><a href='" + blocks[i].githubLink +"' target='_blank'>" + blocks[i].title + "</a></h2>" +
+             "<p class='authors text-center'>" + blocks[i].categories + "</p>" +
+             "<hr>" +
+             "<p class='text-center'>" + blocks[i].flavorText + "</p>" +
+             "</div>" +
+             "<div class='card-body'>" +
+             "<div class='text-center'> Compatible Boards: </div>" +
+             "<div class='row devices-row text-center'>" +
+             "<div class='col-xs-" + columnWidth + "' " + blocks[i].color["rpi2"] + "> RPi2 </div>" +
+             "<div class='col-xs-" + columnWidth + "' " + blocks[i].color["mbm"] + "> MBM </div>" +
+             "<div class='col-xs-" + columnWidth + "' " + blocks[i].color["410c"] + "> 410c </div>" +
+             "</div>" +
+             "<a href='" + blocks[i].githubLink + "' target='_blank' class='button-blue button-flat'> View on GitHub </a>" +
+             "</div>" +
+             "</div>" +
+             "</div>";
+
+      cards.push(card);
+    }
+    allBlocks = allBlocks ? allBlocks : cards;
+    var parentHeight = 0;
+    for (var i = 0; i < cards.length; i++) {
+      $(".tile-display").append(cards[i]);
+    }
+
+    $(".card").each(function() {
+     if($(this).height() >= parentHeight) parentHeight = $(this).height();
+    })
+
+    $(".card").css('min-height', parentHeight)
+    $(".card").css('height', parentHeight)
+    $(".card").each(function() {
+      var totalHeight = $(this).height();
+      var bodyHeight = $(this).children('.card-header').height() + $(this).children('.card-body').height() + 30;
+
+      if(totalHeight !== bodyHeight){
+        $(this).children('.card-body').css('margin-top', function(){
+          return totalHeight - bodyHeight + 2
+        })
+      }
+    });
+}else{
+	{% capture langLower %}{{ page.lang | downcase }}{% endcapture %}
+	{% if langLower == 'zh-cn' %}
+      $(".tile-display").append("<h2>我们似乎无法找到任何与你所选的所有条件都匹配的结果。</h2>")
+	 {% else %}
+	  $(".tile-display").append("<h2 class='thin-header text-center'>We can't seem to find any results that match all the criteria you selected.</h2>")
+	 {% endif %}
+  }
+};
+
+window.onload = function() {
+  buildCards();
+
+}
+</script>

@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 术语表
-permalink: /zh-CN/win10/Glossary.htm
-lang: zh-CN
+permalink: /zh-cn/win10/Glossary.htm
+lang: zh-cn
 ---
 
 ##术语表

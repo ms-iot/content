@@ -1,36 +1,52 @@
 ---
 layout: default
 title: SpiTestTool
-permalink: /en-US/win10/samples/SpiTestTool.htm
-lang: en-US
+permalink: /zh-cn/win10/samples/SpiTestTool.htm
+lang: zh-cn
 ---
 
-## SpiTestTool Sample
+## SpiTestTool 示例
 
-[View the code on Github](https://github.com/ms-iot/samples/blob/develop/SpiTestTool/main.cpp)
+{% include VerifiedVersion.md %}
 
-SpiTestTool is a utility for interacting with SPI devices on the command
-line. SpiTestTool is written in C++/CX and shows how to consume WinRT components
-from command line applications. The resulting tool is a useful debugging aid.
+[在 Github 上查看代码](https://github.com/ms-iot/samples/blob/develop/SpiTestTool/main.cpp)
 
-### Usage
+SpiTestTool 是用于在命令行上与 SPI 设备交互的实用工具。SpiTestTool 是采用 C++/CX 编写的，演示了如何从命令行应用程序使用 WinRT 组件。生成的工具是非常有用的调试辅助工具。
 
-    spitesttool.exe [-n FriendlyName] [-c ChipSelectLine] [-m Mode]
-                    [-d DataBitLength] [-f ClockFrequency]
-    
-      FriendlyName      The friendly name of the SPI controller over which
-                        you wish to communicate. This parameter is 
-                        optional and defaults to the first enumerated SPI
-                        controller.
-      ChipSelectLine    The chip select line to use. This parameter is
-                        optional and defaults to 0.
-      Mode              The SPI mode to use (0-3). This parameter is
-                        optional and defaults to Mode 0.
-      DataBitLength     The data bit length to use. This parameter is optional
-                        and defaults to 8.
-      ClockFrequency    The SPI clock frequency to use. This parameter is
-                        optional and defaults to 4Mhz.
-         
+### 用法
+
+    SpiTestTool: Command line SPI testing utility
+    Usage: SpiTestTool.exe [-list] [-n FriendlyName] [-c ChipSelectLine] [-m Mode] [-d DataBitLength] [-f ClockFrequency]
+
+      -list           List available SPI controllers and exit.
+      FriendlyName    The friendly name of the SPI controller over which
+                      you wish to communicate. This parameter is
+                      optional and defaults to the first enumerated SPI
+                      controller.
+      ChipSelectLine  The chip select line to use. This parameter is
+                      optional and defaults to 0.
+      Mode            The SPI mode to use (0-3). This parameter is
+                      optional and defaults to Mode 0.
+      DataBitLength   The data bit length to use. This parameter is optional
+                      and defaults to 8.
+      ClockFrequency  The SPI clock frequency to use. This parameter is
+                      optional and defaults to 4Mhz.
+
+    Examples:
+      Connect to the first SPI controller found with default settings
+      (ChipSelectLine=0, Mode=0, DataBitLength=8, Frequency=4Mhz):
+        SpiTestTool.exe
+
+      List available SPI controllers and exit:
+        SpiTestTool.exe -list
+
+      Connect to SPI1 in mode 2, with default speed (4Mhz) and chip
+      select line (0):
+        SpiTestTool.exe -n SPI1 -m 2
+
+      Connect to chip select 1 on SPI1 in mode 2 at 1Mhz:
+        SpiTestTool.exe -c 1 -n SPI1 -m 2 -f 1000000
+
     Commands:
     > write { 00 11 22 .. FF }         Write bytes to device
     > read N                           Read N bytes
@@ -39,8 +55,8 @@ from command line applications. The resulting tool is a useful debugging aid.
     > info                             Display device information
     > help                             Display this help message
     > quit                             Quit
-                      
-Example session:
+
+示例会话：
 
       spitesttool.exe
       > info
@@ -58,18 +74,15 @@ Example session:
        0 aa b7 99
       > q
 
-### Building and running the sample
+### 生成和运行示例
 
-1. Clone the [samples](https://github.com/ms-iot/samples)
-   repository to your local machine. 
-1. Open `SpiTestTool\SpiTestTool.sln` in Visual Studio
-1. Select the target architecture.
-   - Select `ARM` for Raspberry Pi
-   - Select `x86` for MinnowBoardMax
-1. Go to `Build -> Build Solution`
-1. Copy `SpiTestTool.exe` from the build output folder to your device.
-1. SSH into your device and run `SpiTestTool.exe` (with appropriate command
-   line parameters, of course)
+1. 将[示例](https://github.com/ms-iot/samples)存储库克隆到本地计算机。
+1. 在 Visual Studio 中打开 `SpiTestTool\SpiTestTool.sln`
+1. 选择目标体系结构。
+   - 为 Raspberry Pi 选择 `ARM`
+   - 为 MinnowBoardMax 选择 `x86`
+1. 转到 `Build -> Build Solution`
+1. 将 `SpiTestTool.exe` 从生成输出文件夹复制到你的设备。
+1. 通过 SSH 复制到你的设备并运行 `SpiTestTool.exe`（当然，需使用相应的命令行参数）
 
-Creating a C++/CX command line program is documented in the
-[I2cTestTool sample](I2cTestTool.htm).
+创建 C++/CX 命令行程序记录在 [I2cTestTool 示例](I2cTestTool.htm)中。

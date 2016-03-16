@@ -5,20 +5,20 @@ permalink: /en-US/win10/BackgroundApplications.htm
 lang: en-US
 ---
 
-#Developing Background Applications
+# Developing Background Applications
 
 Background Applications are applications that have no direct UI. Once deployed and configured, these applications launch at machine startup and run continuously without any process lifetime management resource use limitations. If they crash or exit the system will automatically restart them.
 These Background Applications have a very simple execution model. The templates create a class that implements the "IBackgroundTask" interface and generates the empty "Run" method. This "Run" method is the entry point to your application.
 
-![IBackground Task]({{site.baseurl}}/images/BackgroundApplications/backgroundTaskScreenshot.png)
+![IBackground Task]({{site.baseurl}}/Resources/images/BackgroundApplications/backgroundTaskScreenshot.png)
 
 There is one critical point to note: by default, the application will shut down when the run method completes. This means that apps that follow the common IoT pattern of running a server waiting for input or on a timer will find the app exit prematurely. To prevent this from happening you must call the "GetDeferral" method to prevent the application from exiting. You can find more information on the deferral pattern [here](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.backgroundtaskdeferral.aspx).
 
-##Where can Background Applications be installed from? 
+## Where can Background Applications be installed from? 
 
-You can download and install IoT templates to enable Background Applications from the Visual Studio Gallery [here](https://visualstudiogallery.msdn.microsoft.com/06507e74-41cf-47b2-b7fe-8a2624202d36).  Alternatively, the templates can be found by searching for `Windows IoT Core Project Templates` in the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/) or directly from Visual Studio in the Extension and Updates dialog (Tools > Extensions and Updates > Online).
+You can download and install IoT templates to enable Background Applications from the Visual Studio Gallery [here](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec).  Alternatively, the templates can be found by searching for `Windows IoT Core Project Templates` in the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/) or directly from Visual Studio in the Extension and Updates dialog (Tools > Extensions and Updates > Online).
 
-##What languages are available?
+## What languages are available?
 
 **Background Application (IoT)** templates can be found for:
 
@@ -27,7 +27,7 @@ You can download and install IoT templates to enable Background Applications fro
 * **Visual Basic** `File > New > Project > Installed > Visual Basic > Windows > Windows IoT Core`
 * **JavaScript** `File > New > Project > Installed > JavaScript > Windows > Windows IoT Core`
 
-##How are Background Applications used? 
+## How are Background Applications used? 
 
 Creating a Background Application is very similar to creating a Background Task.  When the Background Application starts, the Run method is called:
 
@@ -61,7 +61,7 @@ deferral.Complete();
 
 Between the Background Application's start and eventual end, most Universal Windows Platform (UWP) APIs are be available for use (to be aware of the exceptions, please see our list of [Unavailable APIs]({{site.baseurl}}/{{page.lang}}/win10/UnavailableApis.htm)).
 
-##How do Background Applications start?
+## How do Background Applications start?
 
 This question can be broken into deployment and invocation.  
 
@@ -71,7 +71,7 @@ To deploy a Background Application, you can either:
 
     **NOTE:** this will not configure your Background Application to start when the device boots.
 
-* Create an AppX in Visual Studio by selecting Project > Store > Create App Packages.  Once you have created an AppX, you can use [Web-based device management to deploy it]({{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm#apps) to your Windows 10 IoT Core device.
+* Create an AppX in Visual Studio by selecting Project > Store > Create App Packages.  Once you have created an AppX, you can use [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm#apps) to deploy it to your Windows 10 IoT Core device.
 
 To invoke a Background Application, you can either:
 

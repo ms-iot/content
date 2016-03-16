@@ -1,17 +1,18 @@
 ---
 layout: default
 title: NodejsWUBlinky
-permalink: /zh-CN/win10/samples/NodejsWUBlinky.htm
-lang: zh-CN
+permalink: /zh-cn/win10/samples/NodejsWUBlinky.htm
+lang: zh-cn
 ---
 
 ##Blinky Node.js 服务器示例（Windows 通用）
 
+{% include VerifiedVersion.md %}
 
-###设置你的电脑
-* 按照[此处]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm)的说明安装 Visual Studio 2015 预览版。
-* 安装 [Node.js Tools 1.1 Beta for Visual Studio 2015](http://aka.ms/ntvslatest)。
-* 安装 [NTVS IoT Extension]({{site.downloadurl}})（此步骤要求你已在 Microsoft Connect 上注册我们的程序。有关如何完成此操作的说明，可访问[此处]({{site.baseurl}}/{{page.lang}}/Downloads.htm)）。
+###设置电脑
+* 安装[含有 11 月更新](http://windows.microsoft.com/zh-cn/windows-10/windows-update-faq)的 Windows 10。
+* 安装 Visual Studio 2015 Update 1。
+* 从[此处](http://aka.ms/ntvsiotlatest)安装适用于 Windows IoT 的最新 Node.js 工具。
 
 
 ###设置你的硬件
@@ -19,7 +20,7 @@ lang: zh-CN
 
 
 ###创建新的 Node.js（Windows 通用）项目
-启动 Visual Studio 2015 RC 并创建新项目（“文件”\|“新建项目...”\)。在“`New Project`”对话框中，导航到“`Node.js`”，如下所示（在该对话框的左侧窗格中： “模板”\|“JavaScript”\|“Node.js”）。使用 `Basic Node.js Web Server (Windows Universal)` 模板。
+启动 Visual Studio 2015 并创建新项目（“文件”\|“新建项目...”）。在“`New Project`”对话框中，导航到“`Node.js`”，如下所示（在该对话框的左侧窗格中： “模板”\|“JavaScript”\|“Node.js”）。使用 `Basic Node.js Web Server (Windows Universal)` 模板。
 
 创建项目后，打开 server.js 并使用如下所示的代码替换现有代码：
 
@@ -32,7 +33,7 @@ var uwp = require("uwp");
 uwp.projectNamespace("Windows");
 
 var gpioController = Windows.Devices.Gpio.GpioController.getDefault();
-var pin = gpioController.openPin(6);
+var pin = gpioController.openPin(5);
 pin.setDriveMode(Windows.Devices.Gpio.GpioPinDriveMode.output)
 var currentValue = Windows.Devices.Gpio.GpioPinValue.high;
 pin.write(currentValue);
@@ -50,7 +51,6 @@ http.createServer(function (req, res) {
 
 uwp.close();
 {% endhighlight %}
-
 </UL>
 
 下面是以上代码所执行的操作：
@@ -63,8 +63,10 @@ uwp.close();
 ###将服务器部署到 Windows IoT 核心版设备
 * 转到“项目”菜单，然后选择“\<项目名称\> 属性”（也可以在解决方案资源管理器中右键单击项目节点来访问“属性”）。在“远程计算机”文本框中输入 IP 地址。如果你要针对 Minnowboard Max 进行生成，请选择下拉列表中的 `x86`。如果你要针对 Raspberry Pi 2 进行生成，请选择 `ARM`。
 
-* 现在，我们可以随时部署到远程 Windows IoT 核心版设备。只需按 F5（或选择“调试”\|“开始调试”）即可开始调试服务器。
+* 现在，我们可以随时部署到远程 Windows IoT 核心版设备。只需按 F5（或依次选择“调试”\|“开始调试”）即可开始调试服务器。
 
-  **注意：** 在“输出”窗口中，你可能会看到消息“错误 - 无法加载程序包”。 这不会影响生成过程，因此可以忽略。尚不支持在你的项目中使用 npm 功能。
+* 当服务器正在运行时，打开浏览器，然后输入地址 \<你的设备的地址\>：1337。刷新页面将切换 LED 的开/关状态。
 
-* 当服务器正在运行时，打开浏览器，然后输入地址 http://&lt;IP 你的设备的地址\>：1337。刷新页面将切换 LED 的开/关状态。
+### GitHub
+* NTVS IoT 扩展源代码：[https://github.com/ms-iot/ntvsiot](https://github.com/ms-iot/ntvsiot)
+* Node.js UWP 包装器源代码：[https://github.com/ms-iot/node-uwp-wrapper](https://github.com/ms-iot/node-uwp-wrapper)

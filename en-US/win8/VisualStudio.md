@@ -1,7 +1,7 @@
 ---
 layout: default
 title: New to Visual Studio
-permalink: /en-US/VisualStudio.htm
+permalink: /en-US/win8/VisualStudio.htm
 lang: en-US
 ---
 

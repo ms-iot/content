@@ -82,6 +82,7 @@ lang: en-US
     Windows.ApplicationModel.Search.SearchQueryLinguisticDetails
     Windows.ApplicationModel.Sync.Office365SyncConfiguration
     Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager
+    Windows.ApplicationModel.VoiceCommands
     Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormatTypes
     Windows.Devices.Enumeration.DevicePicker
     Windows.Devices.Printers.Print3DDevice
@@ -134,6 +135,7 @@ lang: en-US
     Windows.System.Energy.Diagnostics.BackgroundEnergyDiagnostics
     Windows.System.Energy.Diagnostics.ForegroundEnergyDiagnostics
     Windows.System.Energy.ForegroundEnergyManager
+    Windows.System.Launcher
     Windows.System.Profile.HardwareIdentification
     Windows.System.Profile.KnownRetailInfoProperties
     Windows.System.Profile.RetailInfo
@@ -146,6 +148,7 @@ lang: en-US
     Windows.UI.Input.Inking.InkManager
     Windows.UI.Input.Inking.InkRecognizerContainer
     Windows.UI.Popups.MessageDialog
+    Windows.UI.ViewManagement.UISettings
     Windows.UI.Xaml.Controls.ListPickerFlyout
     Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter
     Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter

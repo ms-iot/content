@@ -5,7 +5,7 @@ permalink: /en-US/win10/Advanced.htm
 lang: en-US
 ---
 
-#Advanced Topics
+# Advanced Topics
 
 We collected here extra informations for non-core scenarios.
 

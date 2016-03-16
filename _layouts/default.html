@@ -1,27 +1,17 @@
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
-<body class="default-body">
-    <div class="chrome-header-wrapper">
-        {% include chrome-header-base.html %}
-    </div>
-
-    <div class="default-main">
+    {% include head.html %}
+<body>
+    <!-- Body -->
+    <div class="container">
         <div class="row">
-            <div class="default-max-width">
-                <div>
-                    {% include nav.html %}
-                </div>
-                <div class="content-container col-md-12">
-                    {{ content }}
-                </div>
+            <div class="col-xs-24">
+                {{ content }}
             </div>
         </div>
     </div>
-    <div class="chrome-header-wrapper">
-        {% include footer.html %}
-    </div>
+    {% include footer.html %}
     {% include script.html %}
-    {% include chrome-footer-base.html %}
+    {% include sock.html %}
 </body>
 </html>

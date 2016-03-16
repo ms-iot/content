@@ -11,22 +11,9 @@ lang: zh-CN
 
 我们将使用命令行工具 `imggen` 创建自定义的 Windows IoT 核心版映像。此工具作为 Windows 评估和部署 \(ADK\) 工具包的一部分进行提供。
 
-转到此文档的下载位置。我们将引用该下载位置所在的根目录，如以下 `<root>` 所示。
+###安装 Windows 10 IoT 核心版程序包
 
-###复制 Windows IoT 核心版程序包
-
-运行下面的 MSI，它们会将内容复制到文件夹 `C:\Program Files (x86)\Windows Kits\10\MSPackages\`：
-
-    x86fre: <root>\x86\AthensOS_MC-x86-fre.msi
-    armfre: <root>\arm\AthensOS_MC-arm-fre.msi
-
-注意： 当前，你需要同时安装两个 MSI，即便是只使用它们中的其中一个也是如此。
-
-###为 MinnowBoard Max \(MBM\) 复制示例 BSP
-
-运行下面的 MSI，它会将示例 Windows IoT 核心版 MBM BSP 复制到文件夹 `C:\Program Files (x86)\Windows Kits\10\OEMInputSamples\`：
-
-    <root>\x86\AthensMBMSample_MC-x86-fre.msi
+装载 Windows 10 IoT 核心版程序包 \[ISO\]（TODO：添加用于 ISO 的安装位置）并安装 `Windows_10_IoT_Core_Packages.msi`。
 
 ###使用 imggen 创建 MBM 映像
 

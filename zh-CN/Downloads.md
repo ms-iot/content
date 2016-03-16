@@ -1,118 +1,110 @@
 ---
 layout: default
 title: 下载
-permalink: /zh-CN/Downloads.htm
-lang: zh-CN
+permalink: /zh-cn/Downloads.htm
+lang: zh-cn
 ---
 
 <div class="row section-heading">
-    <div class="col-md-6">
-        <h1>下载和工具</h1>
-        <p>下载将需要用于 Windows IoT 设备开发的面向 IoT 的 Windows、Visual Studio、软件开发工具包和其他工具。</p>
-    </div>
-    <div class="col-md-6">
-        <div class="downloads-image"></div>
-    </div>
+  <div class="col-xs-24 col-md-12">
+    <h1>下载和工具</h1>
+    <p>下载此页面上提供的 Windows for IoT、Visual Studio、软件开发工具包或任何其他工具，立即开始针对物联网进行开发！</p>
+  </div>
+  <div class="col-xs-24 col-md-12">
+    <div class="downloads-image"></div>
+  </div>
 </div>
-<div class="row section-heading">
-    <div role="tabpanel">
-        <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#Win10" aria-controls="Win10" role="tab" data-toggle="tab"><h3>适用于 Windows 10 的下载</h3></a></li>
-            <li role="presentation"><a href="#Win8" aria-controls="Win8" role="tab" data-toggle="tab"><h3>以前版本的 Windows</h3></a></li>
-        </ul>
-        <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active" id="Win10">
-                <div class="row">
-                    <br />
-                    <h4>下载将需要用于开发 Windows IoT 设备（例如 Raspberry Pi 2 和 MinnowBoard MAX）的 Windows 10 IoT Core、Visual Studio、软件开发工具包和其他工具。</h4>
-                    <br />
-                </div>
-                <div class="row downloads-background">
-                    <div class="col-md-12">
-                        <h3>通过 Microsoft Connect 下载</h3>
-                        <p>请在 <a href="https://connect.microsoft.com/windowsembeddediot/SelfNomination.aspx?ProgramID=8558">Microsoft Connect</a> 上注册我们的计划，它是我们的软件发布管理平台。你将需要拥有 <a href="http://www.microsoft.com/zh-CN/account/default.aspx">Microsoft 帐户</a>。如果已在 Microsoft Connect 上注册我们的计划（或不确定之前是否注册过）并尝试重新注册，请不必担心，你将只会看到一个空白页面。如果你之前尚未在 Connect 上注册我们的计划，它将提示你创建社交资料并接受许可协议。你可以在<a href="http://ms-iot.github.io/content/SigninMSConnect.htm">此处</a>找到注册 Microsoft Connect 的分步说明。
-                        </p>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>适用于 Raspberry Pi 2 的 Windows 10 IoT 核心版</h4>
-                        <p>在 Raspberry Pi 2 上运行的 Windows IoT 平台</p>
-                        <a href="http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57782">下载</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>适用于 MinnowBoard MAX 的 Windows 10 IoT 核心版</h4>
-                        <p>在 MinnowBoard MAX 上运行的 Windows 10 IoT 平台</p>
-                        <a href="http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57783">下载</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>NTVS IoT 扩展 Beta 2015</h4>
-                        <p>扩展 NTVS（适用于 Visual Studio 的 Node.js 工具）以支持在 Windows 10 IoT 核心版上运行 Node.js</p>
-                        <a href="http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57785">下载</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>适用于 IoT Preview 2015 的 PTVS</h4>
-                        <p>为支持在 Windows 10 IoT 核心版上运行 Python 而扩展的 IoT 预览版 PTVS（适用于 Visual Studio 的 Python 工具）工具集</p>
-                        <a href="http://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57795">下载</a>
-                    </div>
 
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3>其他下载</h3>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>固件更新</h4>
-                        <p>从 Intel 下载 MinnowBoard MAX 参考板的固件组件和更新</p>
-                        <a href="http://firmware.intel.com/projects/minnowboard-max">了解详细信息</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Windows SDK</h4>
-                        <p>包含标头、库和工具，你可以在创建在 Windows 上运行的应用时使用它们。</p>
-                        <a href="https://dev.windows.com/zh-CN/windows-10-developer-preview-tools">了解详细信息</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Visual Studio 2015</h4>
-                        <p>可用于创建出色 IoT 应用的先进 IDE、工具和服务</p>
-                        <a href="https://www.visualstudio.com/vs-2015-product-editions">了解详细信息</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Windows 驱动程序工具包 2015</h4>
-                        <p>提供集成开发环境，用于创建适用于运行 Windows 10 的设备的高效优质驱动程序</p>
-                        <a href="https://dev.windows.com/zh-CN/featured/hardware/windows-10-hardware-preview-tools">了解详细信息</a>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>工具</h4>
-                        <p>通用 Windows 应用平台开发所需的 Windows 10 工具</p>
-                        <a href="https://dev.windows.com/zh-CN/develop/Building-universal-Windows-apps">了解详细信息</a>
-                    </div>
-                </div>
-            </div>
-
-            <div role="tabpanel" class="tab-pane" id="Win8">
-                <div class="row">
-                    <br />
-                    <h4>下载用于在 Intel Galileo 等设备上运行的 Windows 版本。下载将需要用于该版本 Windows 开发的 Visual Studio、软件开发工具包和其他工具。</h4>
-                    <br />
-                </div>
-                <div class="col-md-3">
-                    <h4>Windows 8.1</h4>
-                    <p>在 Intel Galileo 等设备上运行的 Windows IoT 平台</p>
-                    <a href="https://connect.microsoft.com/windowsembeddedIoT/Downloads/DownloadDetails.aspx?DownloadID=57182">了解详细信息</a>
-                </div>
-                <div class="col-md-3">
-                    <h4>Visual Studio 2013</h4>
-                    <p>可用于创建出色 IoT 应用的先进 IDE、工具和服务</p>
-                    <a href="https://www.visualstudio.com/zh-CN/downloads/download-visual-studio-vs.aspx">了解详细信息</a>
-                </div>
-                <div class="col-md-3">
-                    <h4>Windows 驱动程序工具包 2013</h4>
-                    <p>提供集成开发环境，用于创建适用于运行 Windows 8.1 的设备的高效优质驱动程序</p>
-                    <a href="https://msdn.microsoft.com/library/windows/hardware/ff557573">了解详细信息</a>
-                </div>
-
-                <div class="col-md-12">
-                    <h4>若要确保下载的是特定目的所需的必要工具，请遵循<a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">入门</a>中的分步说明</h4>
-                </div>
-            </div>
-        </div>
+<div class="row">
+  <div class="col-md-12 col-xs-24">
+    <h3 class="divider">下载 Windows 10 IoT 核心版</h3>
+    <div class="preview">
+      <p>
+        下载 Windows 10 IoT 核心版的 11 月更新。针对设备生成的 Windows 10 IoT 核心版使你可以创建酷炫的连接项目、令人惊叹的应用程序等。它利用你熟悉的 Windows 开发环境 - 调整该环境以使其在 Raspberry Pi 2 之类的嵌入式设备上运行。
+      </p>
+      <p>
+        Windows 10 IoT 核心版的 11 月更新需要 Visual Studio 2015 Update 1 才能进行开发，如调试和部署映像。
+      </p>
     </div>
+  </div>
+  <div class="col-md-12 col-xs-24">
+    <h3 class="divider">Windows 10 IoT 核心版仪表板</h3>
+    <p>Windows 10 IoT 核心版仪表板是配置新 Windows 10 IoT 核心版设备、运行演示应用程序等的最佳工具。Windows 10 IoT 核心版仪表板支持 MinnowBoard MAX 和 Raspberry Pi 2。</p>
+    <p>单击以下内容立即下载仪表板并开始使用 Windows 10 IoT 核心版设备。</p>
+  </div>
 </div>
+
+<br>
+
+<div class="row">
+  <div class="col-md-12 col-xs-24">
+    <a href="http://go.microsoft.com/fwlink/?LinkId=691711" class="button-blue button-flat">下载适用于 Raspberry Pi 2 的 Windows 10 IoT 核心版</a>
+    <a href="http://go.microsoft.com/fwlink/?LinkId=691712" class="button-blue button-flat">下载适用于 MinnowBoard Max 的 Windows 10 IoT 核心版</a>
+    <a href="http://go.microsoft.com/fwlink/?LinkId=691713" class="button-blue button-flat">下载适用于 DragonBoard 410c* 的 Windows 10 IoT 核心版</a>
+    <p>
+      *请参阅 <a href="http://aka.ms/thirdpartynotices" target="_blank">BSP 限制的第三方通知</a>以了解 DragonBoard 410c。
+    </p>
+    <p>
+      <a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesRTM.htm">发行说明。</a>
+    </p>
+  </div>
+  <div class="col-md-12 col-xs-24">
+    <a href="http://go.microsoft.com/fwlink/?LinkID=708576" class="button-blue button-flat">获取 IoT 核心版仪表板</a>
+    <p> 下载和使用 Windows 10 IoT 核心版仪表板即表示你同意 Windows 10 IoT 核心版仪表板的<a href="http://go.microsoft.com/fwlink/?LinkID=703960&clcid=0x4809">许可条款</a>和<a href="http://go.microsoft.com/fwlink/?LinkId=521839">隐私声明</a>。</p>
+    <p>
+      <a href="{{site.baseurl}}/{{page.lang}}/win10/IoTDashboardTroubleshooting.htm"> 需要帮助？ 查看疑难解答页面。</a>
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-24">
+    <p>期待商品化？ <a href="http://go.microsoft.com/fwlink/?LinkId=708649" target="_blank">了解</a>有关如何分配运行 Windows 10 IoT 核心版的设备的详细信息。</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-24">
+    <h3 class="divider"> 其他下载 </h3>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <h3>固件更新</h3>
+    <p>从 Intel 下载 MinnowBoard MAX 参考板的固件组件和更新</p>
+    <a href="http://firmware.intel.com/projects/minnowboard-max" target="_blank">了解详细信息</a>
+  </div>
+  <div class="col-md-6">
+    <h3>Visual Studio 2015</h3>
+    <p>可用于创建出色 IoT 应用的先进 IDE、工具和服务</p>
+    <a href="https://www.visualstudio.com/vs-2015-product-editions" target="_blank">了解详细信息</a>
+  </div>
+  <div class="col-md-6">
+    <h3>Windows 驱动程序工具包 2015</h3>
+    <p>提供集成开发环境，用于创建适用于运行 Windows 10 的设备的高效优质驱动程序</p>
+    <a href="https://msdn.microsoft.com/zh-cn/windows/hardware/dn913721(v=vs.8.5).aspx" target="_blank">了解详细信息</a>
+  </div>
+  <div class="col-md-6">
+    <h3>适用于 Visual Studio 的 Windows 开发人员工具</h3>
+    <p>开发通用 Windows 应用平台所需的且与 Visual Studio 2015 集成的工具。</p>
+    <a href="https://dev.windows.com/zh-cn/downloads" target="_blank">了解详细信息</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <h3>NTVS 捆绑包 VS 2015</h3>
+    <p>包含 NTVS（适用于 Visual Studio 的 Node.js 工具）和支持在 Windows 10 IoT 核心版上运行 Node.js 的扩展</p>
+    <a href="https://github.com/ms-iot/ntvsiot/releases" target="_blank">了解详细信息</a>
+  </div>
+  <div class="col-md-6">
+    <h3>PTVS</h3>
+    <p>PTVS（适用于 Visual Studio 的 Python 工具）包含支持在 Windows 10 IoT 核心版上运行 Python 的扩展</p>
+    <a href="https://github.com/microsoft/ptvs/releases" target="_blank">了解详细信息</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-24">
+    <h4>若要确保下载实现你的目的所需的所有必要工具，请遵循<a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">入门</a>中的分步说明</h4>
+  </div>
+</div>
+

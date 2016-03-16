@@ -30,14 +30,14 @@ This will change it from Kernel Debugger use.
    bcdedit /store k:\efi\microsoft\boot\bcd /set {default} testsigning OFF
    bcdedit /store k:\efi\microsoft\boot\bcd /enum
    ~~~
-1. Verify debug and testsigning are now “No”
+1. Verify debug and testsigning are now "No"
 1. Safe dismount of micro-SD from PC (eject from Windows Explorer)
 1. Put micro-SD in Galileo and powered up
 
 ## Setup a Wi-Fi to Ethernet adapter
 You can wirelessly connect your Intel Galileo to the internet by use of a [Wi-Fi to Ethernet bridge](http://www.newegg.com/Product/ProductList.aspx?Submit=ENE&DEPA=0&Order=BESTMATCH&Description=wireless+to+ethernet+adapter&N=-1&isNodeId=1"){:target="_blank"}.
 
-![]({{site.baseurl}}/images/galileo-wifi-bridge.png)
+![]({{site.baseurl}}/Resources/images/galileo-wifi-bridge.png)
 
 Netgear WNCE2001 pictured
 
@@ -47,27 +47,27 @@ When you connect your Galileo to your PC directly (as outlined [here](SetupGalil
 
 1. Open the "<b>Network and Sharing Center</b>" from the Start Screen.
 
-   ![]({{site.baseurl}}/images/Start_NetworkandSharingCenter.png)
+   ![]({{site.baseurl}}/Resources/images/Start_NetworkandSharingCenter.png)
 
 1. Select ```Change adapter settings``` from the left hand column.
 
-   ![]({{site.baseurl}}/images/NetworkandSharingCenter.png)
+   ![]({{site.baseurl}}/Resources/images/NetworkandSharingCenter.png)
 
 1. In the network connection settings select ```Layout->Menu bar``` from the ```Organize``` drop down menu.
 
-   ![]({{site.baseurl}}/images/NetworkConnections.png)
+   ![]({{site.baseurl}}/Resources/images/NetworkConnections.png)
 
 1. Select your "Ethernet" connection (to the Galileo) and your other connection (to the internet) ["Wi-Fi" pictured].
 
-   ![]({{site.baseurl}}/images/NetworkBridgeConnections.png)
+   ![]({{site.baseurl}}/Resources/images/NetworkBridgeConnections.png)
 
 1. Wait for connection to be created
 
-   ![]({{site.baseurl}}/images/Status_BridgeWait.png)
+   ![]({{site.baseurl}}/Resources/images/Status_BridgeWait.png)
 
 1. Once the bridge has been created and new connection will appear, labeled "Network Bridge".
 
-   ![]({{site.baseurl}}/images/NetworkBridge.png)
+   ![]({{site.baseurl}}/Resources/images/NetworkBridge.png)
 
 Now that your network bridge has been setup, your Galileo should be able to access the internet via your PC's internet connection.
 Use ```ping bing.com``` from a telnet session to your Galileo to confirm.

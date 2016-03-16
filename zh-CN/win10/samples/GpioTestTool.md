@@ -1,23 +1,19 @@
 ---
 layout: default
 title: GpioTestTool
-permalink: /en-US/win10/samples/GpioTestTool.htm
-lang: en-US
+permalink: /zh-cn/win10/samples/GpioTestTool.htm
+lang: zh-cn
 ---
 
-## GpioTestTool Sample
+## GpioTestTool 示例
 
-[View the code on Github](https://github.com/ms-iot/samples/blob/develop/GpioTestTool/main.cpp)
+{% include VerifiedVersion.md %}
 
-GpioTestTool is a simple utility that allows you to write and 
-read GPIO pins on the command line. GpioTestTool is written in standard
-C++ and consumes the Windows.Devices.Gpio WinRT APIs at the ABI level 
-with the help of the 
-[Windows Runtime Library (WRL)](https://msdn.microsoft.com/en-us/library/hh438466.aspx).
-These techniques can be used to consume most WinRT APIs from native
-applications.
+[在 Github 上查看代码](https://github.com/ms-iot/samples/blob/develop/GpioTestTool/main.cpp)
 
-### Usage
+GpioTestTool 是一个简单的实用工具，它允许你在命令行上写入和读取 GPIO 引脚。GpioTestTool 采用标准 C++ 进行编写，并在 [Windows 运行时库 \(WRL\)](https://msdn.microsoft.com/zh-cn/library/hh438466.aspx) 的帮助下使用 ABI 级的 Windows.Devices.Gpio WinRT API。这些技术可用于使用本机应用程序中的大多数 WinRT API。
+
+### 用法
 
     gpiotesttool.exe PinNumber
     
@@ -37,7 +33,7 @@ applications.
      > help                             Display this help message
      > quit                             Quit
 
-Example Session:
+示例会话：
 
     gpiotesttool.exe 47
       Type 'help' for a list of commands
@@ -55,32 +51,26 @@ Example Session:
     > t
     > q
 
-### Building and running the sample
+### 生成和运行示例
 
-1. Clone the [samples](https://github.com/ms-iot/samples)
-   repository to your local machine. 
-1. Open `GpioTestTool\GpioTestTool.sln` in Visual Studio.
-1. Select the target architecture.
-   - Select `ARM` for Raspberry Pi
-   - Select `x86` for MinnowBoardMax
-1. Go to `Build -> Build Solution`
-1. Copy GpioTestTool.exe from the build output folder to your device.
-1. SSH into your device and run `GpioTestTool.exe` (with the appropriate
-   command line parameters, of course).
+1. 将[示例](https://github.com/ms-iot/samples)存储库克隆到本地计算机。 
+1. 在 Visual Studio 中打开 `GpioTestTool\GpioTestTool.sln`。
+1. 选择目标体系结构。
+   - 为 Raspberry Pi 或 DragonBoard 410c 选择 `ARM`
+   - 为 MinnowBoardMax 选择 `x86`
+1. 转到 `Build -> Build Solution`
+1. 将 GpioTestTool.exe 从生成输出文件夹复制到你的设备。
+1. （当然，需使用相应的命令行参数）通过 SSH 复制到你的设备并运行 `GpioTestTool.exe`。
 
-### The code
+### 代码
 
-The function MakePin() takes a pin number and returns an IGpioPin instance.
-It handles the WinRT boilerplate necessary to create an IGpioPin instance. 
+函数 MakePin\(\) 将获取引脚编号并返回一个 IGpioPin 实例。它将处理创建 IGpioPin 实例所需的 WinRT 样板文字。
 
     ComPtr<IGpioPin> MakePin (int PinNumber)
     {
         ComPtr<IGpioPin> pin;
 
-The first step is to activate an instance of IGpioControllerStatics, which
-is the interface that implements the static functions of the GpioController
-runtime class. We can get the statics of a runtime class with a Windows function called 
-[GetActivationFactory()](https://msdn.microsoft.com/en-us/library/br244854.aspx):
+第一步是激活 IGpioControllerStatics 的实例，这是用于实现 GpioController 运行时类的静态函数的接口。可以使用名为 [GetActivationFactory\(\)](https://msdn.microsoft.com/zh-cn/library/br244854.aspx) 的 Windows 函数获取运行时类的静态函数：
 
          // get the activation factory
         ComPtr<IGpioControllerStatics> controllerStatics;
@@ -94,11 +84,9 @@ runtime class. We can get the statics of a runtime class with a Windows function
             throw wexception(msg.str());
         }
         
-This will fail if the type Windows.Devices.Gpio.GpioController is not
-registered on the system.
+如果未在系统上注册类型 Windows.Devices.Gpio.GpioController，这将失败。
 
-Now that we have an interface to the static methods of GpioController, we
-can call GetDefault() to get the default GpioController on the system:
+现在我们已有 GpioController 的静态方法的接口，可以调用 GetDefault\(\) 来获取系统上的默认 GpioController：
 
         ComPtr<IGpioController> controller;
         hr = controllerStatics->GetDefault(controller.GetAddressOf());
@@ -106,15 +94,13 @@ can call GetDefault() to get the default GpioController on the system:
             throw wexception(L"Failed to get instance of default GPIO controller");
         }
 
-We always check the return value of GetDefault() for null because 
-there may not be a GPIO controller on the current system.
+我们始终检查 GetDefault\(\) 的返回值是否为 null，因为当前系统上可能没有 GPIO 控制器。
 
         if (!controller) {
             throw wexception(L"GPIO is not available on this system");
         }
 
-Now that we have a GpioController instance, we can call OpenPin() to 
-get a pin instance:
+现在我们已有 GpioController 实例，可以调用 OpenPin\(\) 来获取引脚实例：
 
         hr = controller->OpenPin(PinNumber, pin.GetAddressOf());
         if (FAILED(hr)) {
@@ -126,7 +112,7 @@ get a pin instance:
         return pin;
     }
     
-Once we have a pin instance, we can read and write the pin:
+有了引脚实例后，即可读取和写入引脚：
 
     void Blink ()
     {
@@ -156,4 +142,4 @@ Once we have a pin instance, we can read and write the pin:
         }
     }
     
-That's it! Using WinRT from straight C++ isn't so bad after all.
+就这么简单！ 直接从 C++ 使用 WinRT 或许也不错。

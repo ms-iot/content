@@ -1,0 +1,53 @@
+---
+layout: default
+title: Get Started
+permalink: /en-US/win10/GetStartedManually.htm
+lang: en-US
+---
+<ol class="breadcrumb">
+  <li>
+    <a href="https://dev.windows.com/en-us/iot">IoT Home</a>
+  </li>
+  <li class="active">Manual Set up</li>
+</ol>
+<h1 class="page-title">Manually set up your IoT Core device</h1>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <h2 class="subtext">Download and install the Windows 10 IoT Core Insider Preview Image</h2>
+  </div>
+</div>
+<h2>Getting the image <span class="pull-right"><a id="pc-content-toggle" class="toggle-button" onClick="hideDiv('pc-content')">Hide</a></span></h2>
+
+<hr>
+<div id="pc-content" class="toggle-section">
+{% include_relative GetStarted/SetupBoardManually.md %}
+</div>
+
+
+
+<script>
+  function hideDiv(div) {
+    var div = "#" + div,
+        button = div + "-toggle",
+        currentState = $(button)[0].innerHTML;
+
+    $(button)[0].innerHTML = "Show";
+
+    if(currentState === "Hide") {
+      $(div).toggle('slow');
+    }
+    else
+    {
+      $(".hidden").removeClass("hidden");
+      $(".toggle-section").hide();
+      $(div).toggle('slow');
+      $(button)[0].innerHTML = "Hide";
+    }
+  }
+</script>
+
+
+
+
+
+
