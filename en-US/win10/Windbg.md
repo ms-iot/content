@@ -64,11 +64,11 @@ In order to enable kernel debugging with WinDbg over a serial connection, please
 
 * You have a debug cable such as the USB-to-TTL Serial Cable from [Adafruit](https://www.adafruit.com/product/954) or [FTDI](http://shop.clickandbuild.com/cnb/shop/ftdichip?productID=53&op=catalogue-product_info-null&prodCategoryID=105). 
 
-* An Ethernet cable is connecting your Raspberry Pi 2 or 3 to your network 
+* An Ethernet cable or active WiFi connecting your Raspberry Pi 2 or 3 to your network (for IP connections like SSH or PowerShell)
 
 * Your Raspberry Pi 2 or 3 has a valid IP address in your network
 
-* You have an active connection to the Raspberry Pi 2 or 3 via [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) 
+* You have an active connection to the Raspberry Pi 2 or 3 via [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) or [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm)
 
 UART0 will be used on the Raspberry Pi 2 or 3 for the kernel debugging connection.  The following shows the pin mappings for the Raspberry Pi 2 or 3 as well as the serial cables: 
 
@@ -105,7 +105,7 @@ The basic idea for making the correct serial connections is to remember that whi
 
 When you connect the USB end of the serial cable to your development PC (where WinDbg will be running), you will need to know what COM port number Windows assigned to it.  The easiest way is to use the Device Manager in Windows and check under the "Ports (COM & LPT)" section to know what COM number your cable was assigned in the system.  You will need to know this information for one of the later steps! 
 
-Using the active PowerShell connection to your Raspberry Pi 2 or 3, you will modify two BCD settings to enable debugging over the serial connection.  
+Using the active PowerShell or SSH connection to your Raspberry Pi 2 or 3, you will modify two BCD settings to enable debugging over the serial connection.
 
 Here is the first command you need to run:   
     
