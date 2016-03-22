@@ -235,9 +235,9 @@
       {
          "title":"Lightning Providers samples (UWP)",
          "description":"Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
-         "link-text":"<a href='samples/BlinkyUILightning.htm'>Blinky UI (C#/C++)</a><br><a href='samples/BlinkyHeadlessLightning.htm'>Blinky Headless (C#/C++)</a><br><a href='samples/WeatherStationLightning.htm'>Weather Station (C#/C++)</a><br><a href='samples/SPIDisplayLightning.htm'>SPI Display (C#/C++)</a>",
+         "link-text":"<a href='samples/BlinkyUILightning.htm'>Blinky UI (C#/C++)</a><br><a href='samples/BlinkyHeadlessLightning.htm'>Blinky Headless (C#/C++)</a><br><a href='samples/WeatherStationLightning.htm'>Weather Station (C#/C++)</a><br><a href='samples/SPIDisplayLightning.htm'>SPI Display (C#/C++)</a><br><a href='samples/NodejsWULightning.htm'>Blinky Headless (Node.js)</a>",
          "ranking":0,
-         "tags":["intermediate","c#","c++","lightning"]
+         "tags":["intermediate","c#","c++","lightning","node.js"]
       },
       {
          "title":"Controlling DC Motors",
@@ -511,9 +511,9 @@
       {
          "title":"Lightning Providers samples (UWP)",
          "description":"Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
-         "link-text":"<a href='samples/BlinkyUILightning.htm'>Blinky UI (C#/C++)</a><br><a href='samples/BlinkyHeadlessLightning.htm'>Blinky Headless (C#/C++)</a><br><a href='samples/WeatherStationLightning.htm'>Weather Station (C#/C++)</a><br><a href='samples/SPIDisplayLightning.htm'>SPI Display (C#/C++)</a>",
+         "link-text":"<a href='samples/BlinkyUILightning.htm'>Blinky UI (C#/C++)</a><br><a href='samples/BlinkyHeadlessLightning.htm'>Blinky Headless (C#/C++)</a><br><a href='samples/WeatherStationLightning.htm'>Weather Station (C#/C++)</a><br><a href='samples/SPIDisplayLightning.htm'>SPI Display (C#/C++)</a><br><a href='samples/NodejsWULightning.htm'>Blinky Headless (Node.js)</a>",
          "ranking":0,
-         "tags":["intermediate","c#","c++","lightning"]
+         "tags":["intermediate","c#","c++","lightning","node.js"]
       },
       {
          "title":"Controlling DC Motors",
