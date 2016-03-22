@@ -13,7 +13,7 @@ Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/{{page.l
 
 
 ### Set up your PC
-* Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
+* Install [Python 2.7.x](https://www.python.org/downloads/){:target="_blank"}.
 
 ### Copy Node.js to your Raspberry Pi 2 or 3
 * Download the zip file with ARM Node.js (ChakraCore) from [here](http://aka.ms/nodecc_arm) to your PC and extract the files (node.exe and chakracore.dll).
