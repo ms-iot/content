@@ -6,7 +6,7 @@ lang: en-US
 ---
 
 # Release Notes for Windows 10 IoT Core
-Build Number 14262. February 2016
+Build Number 14295. March 2016
 
 &copy; 2016 Microsoft Corporation. All rights reserved
 
@@ -20,23 +20,37 @@ The privacy statement for this version of the Windows operating system can be vi
 
 You can review linked terms by pasting the forward link into your browser window.
 
-## What's New
-* First Windows 10 IoT Core Redstone Insiders Release
-	* Includes bug fixes to the core OS and driver packages
-	* Includes specific fixes addressing:
-		* Updates to the Web Management portal including UI and Stability updates
-		* Updates to the FTDI USB Serial Driver for the MinnowBoard Max/x86 platform
-		* Updates to the Silicon Labs USB Serial Driver
-		* Addresses stability issues in the SSH Server
+## What's new this build: 
+
+* Remote display experience is now included in the image
+* Updates to the servicing engine to better support Windows as a Service
+* Better support for removal of installed headless applications
+* The IoTCoreImageHelper and IoTWatcher have been removed from the installation packages as their functionality has been included in the IoT Dashboard Application. 
+* Updated OS files including core OS bug fixes
+
+## Known issues in this build: 
+
+* This build has aggressive firewall settings enabled and is defaulting to blocking ports opened for listening. To unblock your app you need to connect to the device over SSH or Powershell and use these commands:
+	* To unblock a specific port:
+<pre>
+netsh advfirewall firewall add rule name=[Any name to identify rule] dir=in action=allow protocol=TCP localport=[Port number]
+</pre>
+	* For Node.JS the default port is 1337 and you can use the following command: 
+<pre>
+netsh advfirewall firewall add rule name=”Node.js UWP” dir=in action=allow protocol=TCP localport=1337
+</pre>
+* Deploying a Python project from Visual Studio may result in a Visual Studio hang or “Unable to attach debugger” error. This is due to the firewall blocking the Python debugger. To enable Python development connect to the device over SSH or Powershell and run the following commands: 
+<pre>
+netsh advfirewall firewall add rule name="TCP5678-TCP-in" dir=in action=allow protocol=TCP localport=5678
+netsh advfirewall firewall add rule name="TCP5678-TCP-out" dir=out action=allow protocol=TCP localport=5678
+</pre>
+
+* The AllJoyn DSB Visual Studio template may not deploy to IoT Core from the latest version of Visual Studio.
+* The UART/Serial (miniUART) driver for the Raspberry PI 3 onboard serial port is broken in this build.
+
 
 
 ## Release Notes
-
-#### .NET Native Tool Chain
-Enabling "Compile with .NET Native tool chain" may cause applications to fail deployment due to errors with the deployment of .NET Native runtime. 
-
-#### Bluetooth Pairing (6162324)
-Bluetooth devices may not show properly in the Bluetooth pairing web management interface. 
 
 #### Minnowboard Max Boot and Firmware Update
 The MinnowBoard Max will not boot unless the firmware is version .082 or later. The minimum recommended version of the firmware is "MinnowBoard MAX 0.83 32-Bit". Firmware updates can be downloaded from [http://go.microsoft.com/fwlink/?LinkId=708613](http://go.microsoft.com/fwlink/?LinkId=708613){:target="_blank"}.
