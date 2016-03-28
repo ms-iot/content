@@ -1,0 +1,68 @@
+---
+layout: default
+title: Windows Remote Arduino Experience
+permalink: /en-US/win10/WRAE.htm
+lang: en-US
+deviceName: WRAE
+---
+<ol class="breadcrumb">
+  <li>
+    <a href="https://dev.windows.com/en-us/iot">IoT Home</a>
+  </li>
+  <li>
+    <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
+  </li>
+  <li class="active">
+  Remote Display Experience
+  </li>
+</ol>
+<h1 class="page-title">Remote Display Experience</h1>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <h2 class="subtext">View and control your Windows 10 IoT Core UWP applications remotely, from a Windows 10 desktop PC, tablet, or phone.</h2>
+  </div>
+</div>
+
+<div class="row">
+
+<h3>Overview</h3>
+
+</div>
+
+
+<h2>Configure your board <span class="pull-right"><a id="configure-board-toggle" class="toggle-button" onClick="hideDiv('configure-board')">Hide</a></span></h2>
+<hr>
+<div id="configure-board" class="toggle-section">
+
+</div>
+<br>
+
+<h2>Configure your board <span class="pull-right"><a id="configure-board-toggle" class="toggle-button" onClick="hideDiv('configure-board')">Hide</a></span></h2>
+<hr>
+<div id="configure-board" class="toggle-section">
+
+</div>
+<br>
+
+<h2>Configure your board <span class="pull-right"><a id="configure-board-toggle" class="toggle-button" onClick="hideDiv('configure-board')">Hide</a></span></h2>
+<hr>
+<div id="configure-board" class="toggle-section">
+
+</div>
+<br>
+
+<script>
+  function hideDiv(div) {
+        var pdiv = "#" + div,
+            button = pdiv + "-toggle"
+
+        if ($(pdiv).css('display') == 'none') {
+            $(pdiv).toggle('slow');
+            $(button).html('Hide');
+        }
+        else {
+            $(pdiv).toggle('slow');
+            $(button).html('Show');
+        }
+    }
+</script>
