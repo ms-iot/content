@@ -94,7 +94,7 @@ lang: en-US
   <div class="col-md-6">
     <h3>Windows Driver Kit 2015</h3>
     <p>Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 10</p>
-    <a href="https://msdn.microsoft.com/en-US/windows/hardware/dn913721(v=vs.8.5).aspx" target="_blank">Learn More</a>
+    <a href="https://msdn.microsoft.com/en-US/windows/hardware/hh852365.aspx" target="_blank">Learn More</a>
   </div>
   <div class="col-md-6">
     <h3>Windows Developer Tools for Visual Studio</h3>
