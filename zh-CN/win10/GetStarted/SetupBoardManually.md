@@ -1,8 +1,8 @@
 <div class="row">
   <div class="col-md-6 col-sm-12 col-no-padding">
-    <p>The set up experience for the latest Insider Preview image is slightly different than our other products.
-    The following flow is to help you get going with our most recent builds (hot off the press!).<br>
-    If you have a Raspberry Pi 3, you will need to download the most recent Insider Preview image.
+    <p>最新的内部预览版镜像的设置经历与我们的其他版本产品是略有不同的。
+    以下的流程是帮助你得到我们最近的构建 (热门的新闻!).<br>
+    如果你有一个树莓派3，你将需要下载最新的内幕预览版镜像。
     </p>
   </div>
 </div>
@@ -10,10 +10,10 @@
 <ol class="inline-list">
   <div class="row">
     <div class="col-md-6 col-sm-12 col-no-padding">
-      <li value="1"><p><b>Download the most recent Insider Preview image</b>.</p>
-    <p><a href="http://go.microsoft.com/fwlink/?LinkId=733603" class="button-blue button-flat"> Get Windows 10 IoT Core Insider Preview </a></p>
-    You need to have a valid Microsoft Account and need to be signed up for the Windows Insider Program to be able to download the Insider Preview.
-    Visit the downloads page <a href="http://go.microsoft.com/fwlink/p/?linkID=532967" target="_blank">here</a> for more details.</li>
+      <li value="1"><p><b>下载最新的内幕预览版镜像</b>.</p>
+    <p><a href="http://go.microsoft.com/fwlink/?LinkId=733603" class="button-blue button-flat"> 获取Windows 10物联网核心内幕预览版 </a></p>
+    你需要有一个有效的微软帐户，并需要登陆Windows 内幕程序，才能够下载内幕预览版。
+    访问下载页面 <a href="http://go.microsoft.com/fwlink/p/?linkID=532967" target="_blank">here</a> 获取更多细节。</li>
     </div>
     <div class="col-md-6 col-sm-12">
 
@@ -22,8 +22,8 @@
    
    <div class="row">
     <div class="col-md-6 col-sm-12 col-no-padding">
-      <li value="2"><b>Click the desired image under the "Windows 10 IoT Core Insider Preview".</b> You are required to have a Microsoft account and must a part of the Windows Insider Program to gain access to this image. Joining the Windows Insider Program is free and anyone can join.
-      Once you're signed up, select the build version (a higher number indicates a newer build) and your device, click "Download Now". </li>
+      <li value="2"><b>在"物联网核心内幕预览"下面，点击你想要下载的镜像.</b> 你需要有一个微软帐户，且必须是Windows 内部程序的一分子，以获得这一镜像。 加入Windows内幕程序是免费的，任何人都可以加入。
+      一旦你注册了，选择构建版本（一个较高的数字表示一个较新的构建）和你的设备，点击“现在下载”。 </li>
     </div>
     <div class="col-md-6 col-sm-12">
 
@@ -32,7 +32,7 @@
 
    <div class="row">
     <div class="col-md-6 col-sm-12 col-no-padding">
-      <li value="3"><b>Find the downloaded .ISO and double click on it.</b></li>
+      <li value="3"><b>找到你下载.ISO 并双击它。</b></li>
     </div>
     <div class="col-md-6 col-sm-12">
       <img src="{{site.baseurl}}/Resources/images/manual-setup/manual-step-1.png">
@@ -42,7 +42,7 @@
    
    <div class="row">
     <div class="col-md-6 col-sm-12 col-no-padding">
-      <li value="4"><b>Double click the Windows Installer Package (.MSI) and follow the installation steps</b></li>
+      <li value="4"><b>双击Windows安装程序包（.msi），按照安装步骤</b></li>
     </div>
     <div class="col-md-6 col-sm-12">
       <img src="{{site.baseurl}}/Resources/images/manual-setup/manual-step-2.png">
@@ -54,7 +54,7 @@
    
    <div class="row">
     <div class="col-md-6 col-sm-12 col-no-padding">
-      <li value="5"><b>Launch the IoT Dashboard.</b> The Windows 10 IoT Core dashboard will allow you to flash the downloaded image onto your SD card. You can install the IoT Dashboard from <a href="http://go.microsoft.com/fwlink/?LinkID=708576" target="_blank">here.</a> </li>     
+      <li value="5"><b>启动物联网仪表盘</b> Windows 10 物联网核心仪表盘将会允许你把已经下载的镜像写入到你的SD卡. 你可以安装物联网仪表盘从<a href="http://go.microsoft.com/fwlink/?LinkID=708576" target="_blank">这里。</a> </li>     
     </div>
     <div class="col-md-6 col-sm-12">
     </div>
@@ -62,7 +62,7 @@
    
    <div class="row">
     <div class="col-md-6 col-sm-12 col-no-padding">
-      <li value="6"><b>Click "Set up a new device".</b> Once there, select "Custom" from the "Device type" drop down. Click the "Browse" button to find your image (.ffu) </li>
+      <li value="6"><b>点击 "设置一个新的设备"。</b> 然后, 从"设备类型"下拉菜单中，选择 "自定义" 。 点击 "浏览" 按钮按钮找到你的(.ffu) 镜像</li>
     </div>
     <div class="col-md-6 col-sm-12">
       <img src="{{site.baseurl}}/Resources/images/manual-setup/manual-step-5.png">
@@ -74,7 +74,7 @@
    
    <div class="row">
     <div class="col-md-6 col-sm-12 col-no-padding">
-      <li value="7"><b>Navigate to "C:\Program Files (x86)\Microsoft IoT\FFU\<i>DeviceType</i>" and select Flash.ffu. </b></li>  
+      <li value="7"><b>导航到 "C:\Program Files (x86)\Microsoft IoT\FFU\<i>设备类型</i>" 并选择 Flash.ffu. </b></li>  
     </div>
     <div class="col-md-6 col-sm-12">
       <img src="{{site.baseurl}}/Resources/images/manual-setup/manual-step-7.png">
@@ -84,7 +84,7 @@
    
    <div class="row">
     <div class="col-md-6 col-sm-12 col-no-padding">
-      <li value="8"><b>Click "Install". </b> Note that you must have a compliant SD card to successfully flash. We recommend a Class 10 SD card with a size of at least 8 GB or more. Once done flashing, you can remove the SD card and plug it into your device.</li>  
+      <li value="8"><b>点击 "安装"。 </b> 请注意，您必须要有一个兼容的SD卡，才能成功地写入。 我们推荐你使用一个等级 10的SD卡，至少有8G或更多的容量。一旦写入完成，您可以移除SD卡和插入到您的设备。</li>  
     </div>
     <div class="col-md-6 col-sm-12">
       <img src="{{site.baseurl}}/Resources/images/manual-setup/manual-step-8.png">
