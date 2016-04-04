@@ -69,7 +69,7 @@ On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to user mode a
 *	A MediaEncodingProfile.CreateWma( Windows.Media.MediaProperties. AudioEncodingQuality.Auto) method call may fail on the Raspberry Pi 2 with the error message No suitable transform was found to encode or decode the content. (Exception from HRESULT: 0xC00D5212). (4510128) WORKAROUND: None.
 *	More.com!PAGER::DisplayString may return INVALID_POINTER_READ exception. (1552523) WORKAROUND: None.
 *	When deploying a Node.JS project BackgroundTaskHost.exe may fail with an error.(4873190) WORKAROUND: None.
-*	The GPIO/I2C/SPI/UART drivers will be disabled when connecting to the DragonBoard with windbg. (4710796) WORKAROUND: None.
+*	On Dragonboard, GPIO/I2C/SPI/UART stop working when COM1 or COM2 is enabled for kernel debugging. (4710796) WORKAROUND: Use USB debug transport.
 *	The Dragonboard BSP has drivers for the headset jack and microphone jack, but it doesn't have either of these jacks on board. (4791855) WORKAROUND: USB headsets cannot be used without manually disabling these devices
 *	The SPI on the Dragonboard will ignore the requested speed and always run at 4.8 Mhz. (5055938) WORKAROUND: None.
 *	If an application or background task enter a bad state the device may blue screen instead of allowing an opportunity to connect through an SSH session and reconfigure the device. (5098713) WORKAROUND: None.
@@ -82,6 +82,7 @@ On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to user mode a
 *   On MinnowBoardMax, FTDI USB-Serial adapters will ignore the requested baud rate and will use 3.8Mhz. (5348073) WORKAROUND: [Workaround for FTDI devices on x86](#ftdiworkaround)
 *	On MinnowBoardMax, a NULL value may be returned by SerialDevice::FromIdAsync() when devices are connected to the top USB port on MinnowBoardMax (2175837) WORKAROUND: Update to firmware version 0.83 or later from Intel's website: [http://firmware.intel.com/projects/minnowboard-max](http://firmware.intel.com/projects/minnowboard-max){:target="_blank"}.
 *   WiFi direct is partially supported on IoT Core using the WinRT WiFi direct APIs. For more details see [WiFi Direct limitations on IoTCore](#wifidirect).
+*   On Raspberry Pi, audio via the 3.5mm jack stops working when the direct memory mapped drivers are enabled. (6678121) WORKAROUND: See [Workaround for audio and direct memory mapped drivers](#dmapaudioworkaround).
 
 ### <a name="ftdiworkaround"></a>Workaround for FTDI devices on x86
 
@@ -119,3 +120,21 @@ Windows Registry Editor Version 5.00
 2. Advanced pairing must be used.  The sample app demonstrates how to use the advanced pairing API’s to pair the devices prior to connecting.
 3. Not all wireless adapters support WiFi direct. We have tested and validated that the "Realtek RTL8188EU Wireless Lan 802.11n USB 2.0 Network adapter" works, but other adapters may not be supported.
  
+=======
+3. Not all wireless adapters support WiFi direct. We have tested and validated that the "Realtek RTL8188EU Wireless Lan 802.11n USB 2.0 Network adapter" works, but other adapters may not be supported.
+
+### <a name="dmapaudioworkaround"></a>Workaround for audio and direct memory mapped drivers
+
+After the direct memory mapped drivers have been enabled, run:
+
+    reg add HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DeviceIds\ACPI\BCM2844 /v dmap.inf /t REG_BINARY /d 02ff0100
+    reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\enum\ACPI\bcm2844\0 /v ConfigFlags /t REG_DWORD /d 0x20
+    devcon restart acpi\bcm2844
+
+Verify that the driver for the PWM device node is `BCM2836 PWM Controller`:
+
+    C:\Data>devcon status acpi\bcm2844
+    ACPI\BCM2844\0
+        Name: BCM2836 PWM Controller
+        Driver is running.
+    1 matching device(s) found.
