@@ -154,6 +154,13 @@
          "link-text":"<a href='SB_BL.htm'>Learn More</a>",
          "ranking":10,
          "tags":["advanced"]
+      },
+	  {
+         "title":"Enabling Internet Connection Sharing",
+         "description":"Learn how to enable Internet Connection Sharing on your IoT Core device by bridging a Software Wi-Fi Access Point and Ethernet adapter",
+         "link-text":"<a href='InternetConnectionSharing.htm'>Learn More</a>",
+         "ranking":20,
+         "tags":["advanced"]
       }
    ],
    "zh-CN-tags":["beginner","intermediate","advanced","tool","configuration","port","hardware","alljoyn","platform","deploy","debug","visual studio","wifi","bluetooth","connectivity"],
