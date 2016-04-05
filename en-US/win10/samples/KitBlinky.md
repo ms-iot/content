@@ -22,7 +22,7 @@ kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 <hr/>
 
 {: .thin-header}
-##Blinky Sample
+## Blinky Sample
 
 Let's create a simple Blinky app using an LED to test your setup.
 

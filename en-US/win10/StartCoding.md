@@ -30,6 +30,7 @@ lang: en-US
             <li role="presentation" class="active"><a href="#first" aria-controls="first" role="tab" data-toggle="tab"><h3>Docs and Tutorials</h3></a></li>
             <li role="presentation"><a href="#second" aria-controls="second" role="tab" data-toggle="tab"><h3>Samples</h3></a></li>
         </ul>
+        <hr>
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="first">
               {% include _docsandtutorials.html %}
