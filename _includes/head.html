@@ -1,10 +1,10 @@
-﻿<head>
+﻿<head>{% capture page_lang_lower %}{{page.lang | downcase}}{% endcapture %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{page.title}} - {{ site.data.resources[page.lang].title }}</title>
+    <title>{{page.title}} - {{ site.data.resources[page_lang_lower].title-suffix | default: site.data.resources["en-us"].title-suffix }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{{ site.data.resources[page.lang].description }}">
-    <meta name="keywords" content="{{ site.data.resources[page.lang].keywords }}">
+    <meta name="description" content="{{ page.description | default: site.data.resources[page_lang_lower].description | default: site.data.resources['en-us'].description }}">
+    <meta name="keywords" content="{{ page.keywords | default: site.data.resources[page_lang_lower].keywords | default: site.data.resources['en-us'].keywords }}">
 
     <link id="linkBaseUrl" href="{{site.baseurl}}" />
 

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default
 title: Alljoyn Mock Adapter Tutorial
 permalink: /en-US/win10/samples/MockAdapterTutorial.htm
