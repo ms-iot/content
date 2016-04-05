@@ -4,34 +4,36 @@ title: Internet Connection Sharing Tutorial (TH2)
 permalink: /en-US/win10/InternetConnectionSharing.htm
 lang: en-US
 ---
-## Enabling Internet Connection Sharing
+# Enabling Internet Connection Sharing
 
-Below are steps to enable Internet Connection Sharing (ICS) on latest Windows 10 IOT Core images. Goal is to share Internet Connection between a Software Wi-Fi Access Point (SoftAP) and Ethernet adapter. Please note that this solution will be replaced in future releases of Windows 10 IOT Core.
+Below are steps to enable Internet Connection Sharing (ICS) on latest Windows 10 IoT Core images. Goal is to share Internet Connection between a Software Wi-Fi Access Point (SoftAP) and Ethernet adapter. Please note that this solution will be replaced in future releases of Windows 10 IoT Core.
 
 ### Prerequisites
 
-1.	Latest Windows 10 IOT Core TH2 image deployed on device.
+1.	Latest Windows 10 IoT Core TH2 image deployed on device.
 2.	Wi-Fi USB device capable of starting a SoftAP. Consult the [Hardware Compatibility List]({{site.baseurl}}/en-US/win10/SupportedInterfaces.htm#WiFi-Dongles){:target="_blank"} for supported Wi-Fi USB devices for your platform.
 3.	Ethernet connection with Internet Access.
 
-### Setup
+## Setup
 
-#### Step 1: Gathering Network Information
+### Step 1: Gathering Network Information
 
 1.	Boot up device with Wi-Fi dongle plugged in, Ethernet cable plugged in.
-2.	Start SoftAP from the IOT Core device.
+2.	Start SoftAP from the IoT Core device.
 
-	By default, Maker images start an IOT Onboarding application that will setup a SoftAP if Wi-Fi radio is capable and no WLAN profile has been added. To start SoftAP, UWP applications can use the [Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher API](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.wifidirect.wifidirectadvertisementpublisher.aspx){:target="_blank"}. The source code for the IOT Onboarding application can be seen [here](https://github.com/ms-iot/samples/tree/develop/IotOnboarding){:target="_blank"}.
+	By default, Maker images start an IoT Onboarding application that will setup a SoftAP if Wi-Fi radio is capable and no WLAN profile has been added. To start SoftAP, UWP applications can use the [Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher API](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.wifidirect.wifidirectadvertisementpublisher.aspx){:target="_blank"}. The source code for the IoT Onboarding application can be seen [here](https://github.com/ms-iot/samples/tree/develop/IotOnboarding){:target="_blank"}.
 
-	> Record the SSID of the SoftAP network. You will need it later to connect to your IOT Core device via Wi-Fi.
+	> Record the SSID of the SoftAP network. You will need it later to connect to your IoT Core device via Wi-Fi.
 
-	For IOT Onboarding application the SSID will start with “AJ\_SoftAPSsid\_” and can be changed in application's configuration [file](https://github.com/ms-iot/samples/blob/develop/IotOnboarding/IoTOnboardingTask/Config.xml){:target="_blank"}.
+	For IoT Onboarding application the SSID will start with "AJ\_SoftAPSsid\_" and can be changed in application's configuration [file](https://github.com/ms-iot/samples/blob/develop/IotOnboarding/IoTOnboardingTask/Config.xml){:target="_blank"}.
 
-3.	Remotely connect to the IOT device [using ssh]({{site.baseurl}}/en-US/win10/samples/SSH.htm){:target="_blank"}
+3.	Remotely connect to the IoT device [using ssh]({{site.baseurl}}/en-US/win10/samples/SSH.htm){:target="_blank"}.
 4.	Collect information about device networks by finding network device indexes and descriptions. This is needed to declare which networks to bridge.
 
 	On device, run **route print** and collect the following data:
+
 	> Record PUBLIC Interface network index for the Ethernet.
+
 	> Record PRIVATE Interface network index for the SoftAP (e.g. “Microsoft Wi-Fi Direct Virtual Adapter #2”).
 
 	For example, the SoftAP is exposed through interface index 5, adapter description “Microsoft Wi-Fi Direct Virtual Adapter #2”.
@@ -45,9 +47,9 @@ Below are steps to enable Internet Connection Sharing (ICS) on latest Windows 10
 
 	![ipconfig all]({{site.baseurl}}/Resources/images/InternetConnectionSharing/internetconnectionsharing_ipconfig.png)
 
-#### Step 2: Scripting Internet Connection Sharing trigger
+### Step 2: Scripting Internet Connection Sharing trigger
 
-With current Windows 10 IOT Core latest TH2 build, starting Internet Connection Sharing between two networks requires the following steps:
+With current Windows 10 IoT Core latest TH2 build, starting Internet Connection Sharing between two networks requires the following steps:
 
 - Set registry keys to set private (SoftAP) and public (Ethernet) network interfaces to bridge.
 - Set appropriate firewall rules.
@@ -339,11 +341,11 @@ main(
 
 4. Build for target architecture, e.g. Release x86, and locate output **SharedAccessUtility.exe**
 
-#### Step 3: Starting Internet Connection Sharing
+### Step 3: Starting Internet Connection Sharing
 
 1. Copy **ConfigICS.cmd** script created in Step 2 to device in some location, e.g. to C:\test\
 2. Copy **SharedAccessUtility.exe** created in Step 2 to device in the same location, e.g. C:\test\
 3. On device, run **C:\test\ConfigureICS.cmd start [public index] [private index] [private adapter name]**
-	In our example, this would mean **C:\test\ConfigureICS.cmd start 4 5 “Local Area Connection* 3”**
+	In our example, this would mean **C:\test\ConfigureICS.cmd start 4 5 "Local Area Connection* 3"**
 
 At this point device will enable internet connection sharing for any client connected to the device’s advertised SSID.
