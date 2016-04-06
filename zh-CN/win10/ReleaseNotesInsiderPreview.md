@@ -46,7 +46,7 @@ Windows 10 IoT 核心版仍处于移植到 Raspberry PI 的过程中。Raspberry
 
 依赖于 Windows 系统更改系统音量的 USB 麦克风和扬声器的硬件音量控件当前在 Windows 10 IoT 核心版上不受支持。
 
-某些 USB 键盘和鼠标可能在 Raspberry PI2 上不起作用。使用其他键盘或鼠标。有关已验证的外围设备的列表，请参阅 [http://go.microsoft.com/fwlink/?LinkId=619428](http://go.microsoft.com/fwlink/?LinkId=619428){:target="_blank"} 上的文档。
+某些 USB 键盘和鼠标可能在 Raspberry PI2 上不起作用。使用其他键盘或鼠标。有关已验证的外围设备的列表，请参阅 [SupportedInterfaces](({{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm)){:target="_blank"} 上的文档。
 
 在 Raspberry Pi2 上，GPIO 引脚 0 和 GPIO 引脚 1 可用于 Windows 10 IoT 核心版的 4 月 Insider Preview 版中的用户模式应用程序，但现已不再可用。尝试使用 Windows::Devices::Gpio::GpioController::OpenPin\(\) 打开这些引脚将返回 HRESULT\_FROM\_WIN32\(ERROR\_NOT\_FOUND\)。GPIO 引脚 0 和 1 将由 HAT 规范 \(https://github.com/raspberrypi/hats\) 保留在 Raspberry Pi 上，并受 VC 固件的控制。根据此规范，这些 PIN 应保留为未连接状态。
 

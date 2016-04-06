@@ -1,7 +1,7 @@
 ---
 layout: default
-title: DSBGpioTutorial
-permalink: /zh-cn/win10/samples/AlljoynDSB_GpioTutorial.htm
+title: DSB Gpio Tutorial
+permalink: /zh-cn/win10/samples/AlljoynDSBSample.htm
 lang: zh-cn
 ---
 
