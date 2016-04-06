@@ -2,7 +2,7 @@
 layout: default
 title: Adafruit Essential Maker Kit Contents
 permalink: /en-US/win10/AdafruitKitContents.htm
-step: AdafruitKitContents.htm
+step: win10/AdafruitKitContents.htm
 lang: en-US
 deviceName: RPI2
 kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
