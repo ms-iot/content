@@ -17,7 +17,7 @@ lang: en-US
 
 In this sample, we will show you how to use these technologies to remotely control and expose a webpage from your Intel Galileo running Windows.
 
-# Firmata
+## Firmata
 The Standard Firmata software will be running in Windows on the Intel Galileo board. This project will use the _NetworkSerial_ implementation - which allows Arduino HardwareSerial to work over a Network Socket instead of a serial port.
 
 First, you'll need to create a new project. Open Visual Studio. Select File -> New Project and Select Templates -> Visual C++ -> Windows for IoT -> Galileo Wiring app.
@@ -58,7 +58,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 Finally, build and deploy this app to your board.
 
-# Cylon
+## Cylon
 You'll use Cylon.js through Node.js on your development to communicate with Standard Firmata over a network socket.
 
 * Install [Node.js](http://nodejs.org/){:target="_blank"}.
@@ -102,7 +102,7 @@ robot.start();
 
 {% endhighlight %}
 
-# Run Cylon on your development machine
+## Run Cylon on your development machine
 From the Node.js command prompt, launch your program:
 
 `node main.js`

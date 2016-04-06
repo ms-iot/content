@@ -16,5 +16,5 @@ This release contains the following:
 
 The intent of this release is to announce and enable support for Gen 2, get the community experimenting and providing feedback about Gen 2 support.
 
-#Setup Instructions
+## Setup Instructions
 Just follow the instructions for [Setting up your PC](SetupPC.htm){:target="_blank"}

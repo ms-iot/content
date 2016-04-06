@@ -15,22 +15,22 @@ Learn how to use a RGB Pixel Strip.
 
 ![]({{site.baseurl}}/Resources/images/RGBPixel.jpg){:width="400"}
 
-# Required Components
+## Required Components
 * [RGB Pixel Strip](http://www.adafruit.com/products/306){:target="_blank"}
 * [5V Power Supply (WARNING: do not exceed 6V DC)](http://www.adafruit.com/products/276){:target="_blank"}
     * Note: The strip draws 120mA per 2.5" strip segment, so choose your power supply accordingly.
 * [Female DC Power adapter](http://www.adafruit.com/products/368){:target="_blank"}
 
-# Hooking up Components
+## Hooking up Components
 * [Info on how to power the strip with the DC Power Supply and Female DC Power Adapter](https://learn.adafruit.com/digital-led-strip/powering){:target="_blank"}
 * [Info on how to wire the RGB Pixel Strip for use.](https://learn.adafruit.com/digital-led-strip/wiring){:target="_blank"}
 
-# Create a new project
+## Create a new project
 
 1. Create a new project from the template.
 1. Replace the existing code in main.cpp with the following code:
 
-# Code
+## Code
 
 ### Main.cpp
 {% highlight C++ %}

@@ -1,4 +1,4 @@
-#IoT Browser Sample
+## IoT Browser Sample
 
 {% include VerifiedVersion.md %}
 

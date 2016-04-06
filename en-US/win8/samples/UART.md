@@ -13,7 +13,7 @@ lang: en-US
 # Writing to UART
 Learn how to use HardwareSerial to read and write to the UART port.
 
-# Info on using UART and HardwareSerial
+## Info on using UART and HardwareSerial
 
 * HardwareSerial defines an object called Serial1.
     * This reads and writes to COM2 on the Windows Image which is linked to the UART port on the Galileo board.<br/>
@@ -22,11 +22,11 @@ Learn how to use HardwareSerial to read and write to the UART port.
     * Right click on the Project in the Solution Explorer, then select <kbd>Properties</kbd>.
     * Under Configuration Properties -> C/C++ -> Preprocessor, add <kbd>SERIAL_EVENT1;</kbd> to Preprocessor Definitions.
 
-# Required Components
+## Required Components
 * [DB9 Female to 3.5mm Cable](http://www.amazon.com/SF-Cable-Female-Serial-Cable-6/dp/B004T9BBJC/ref=sr_1_1?ie=UTF8&qid=1407960957&sr=8-1&keywords=audio+to+serial+cable){:target="_blank"}
 * [USB to Serial Cable](http://www.amazon.com/TRENDnet-RS-232-Serial-Converter-TU-S9/dp/B0007T27H8/ref=sr_1_1?ie=UTF8&qid=1407961117&sr=8-1&keywords=serial+to+usb){:target="_blank"}
 
-# Allow UART to be used for HardwareSerial (This will change it from kernel debugger use)
+## Allow UART to be used for HardwareSerial (This will change it from kernel debugger use)
 
 1. Shut down Galileo and remove power
 1. Remove microSD card and plug it in to a PC (Windows will automatically assign a drive letter, in our case it was "k")
@@ -40,7 +40,7 @@ Learn how to use HardwareSerial to read and write to the UART port.
 1. Safe dismount of microSD from PC by ejecting in Windows Explorer.
 1. Put microSD in Galileo and powered up
 
-# Create a new project
+## Create a new project
 
 1. Create a new project from the template.
 1. Plug the two serial ends of the cables together.
@@ -55,7 +55,7 @@ Learn how to use HardwareSerial to read and write to the UART port.
     * If you are using Tera Term, you can get to the menu shown above by clicking on Setup -> Serial port..
 1. Replace the existing code in main.cpp with the following code:
 
-# Code
+## Code
 
 ### Main.cpp
 {% highlight C++ %}

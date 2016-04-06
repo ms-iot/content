@@ -13,21 +13,21 @@ Learn how to deploy an Arduino Wiring sketch on Raspberry Pi 2 and 3 or Minnowbo
 
 ![]({{site.baseurl}}/Resources/images/RGBPixel.jpg){:width="400"}
 
-# Required Components
+## Required Components
 * [RGB Pixel Strip](http://www.adafruit.com/products/306){:target="_blank"}
 * [5V Power Supply (WARNING: do not exceed 6V DC)](http://www.adafruit.com/products/276){:target="_blank"}
     * Note: The strip draws 120mA per 2.5" strip segment, so choose your power supply accordingly.
 * [Female DC Power adapter](http://www.adafruit.com/products/368){:target="_blank"}
 
-# Hooking up Components
+## Hooking up Components
 * [How to power the strip with the DC Power Supply and Female DC Power Adapter](https://learn.adafruit.com/digital-led-strip/powering){:target="_blank"}
 * [How to wire the RGB Pixel Strip for use.](https://learn.adafruit.com/digital-led-strip/wiring){:target="_blank"}
 
-# Setup
+## Setup
 
 Follow the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm) to create a new Arduino Wiring project!
 
-# Code
+## Code
 
 Replace the existing code in your main .ino file with the following code:
 
@@ -214,7 +214,7 @@ Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10
 ## Result
 You should see the LED pixel strip rotate through a series of colors, spending about 1 second on each arrangement.
 
-## Having trouble?
+### Having trouble?
 
 Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.
 

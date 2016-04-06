@@ -15,21 +15,21 @@ Learn how to use the SeedStudio GSM shield
 
 ![]({{site.baseurl}}/Resources/images/GSM.jpg){:width="400"}
 
-# Required Components
+## Required Components
 * [Seed Studio GSM shield](http://www.seeedstudio.com/depot/GPRS-Shield-V20-p-1379.html){:target="_blank"}
 
 # Shield setup
 * Move the two switches to the rigth (Serial port select as indicates in the image) to select the hardware serial
 ![]({{site.baseurl}}/Resources/images/GPRS_Shield_interface_function.jpg){:width="400"}
 
-# Create a new project
+## Create a new project
 
 1. Create a new project from the template.
 2. Replace the existing code in main.cpp with the following code:
 3. Add to the project the files GSM.cpp, HWSerial.cpp, SIM900.cpp and sms.cpp
    found in [GSM Library](https://github.com/dacolgit/GSM-GPRS-GPS-Shield){:target="_blank"}
 
-# Code
+## Code
 
 ### Main.cpp
 {% highlight C++ %}

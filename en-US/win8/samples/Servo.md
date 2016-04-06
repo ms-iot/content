@@ -13,15 +13,15 @@ lang: en-US
 # Servo
 Learn how to use the basics of the Servo Library and interact with a Servo.
 
-# Required Components
+## Required Components
 * [Micro Servo](http://www.adafruit.com/products/169){:target="_blank"}
 * 3 wires to connect the servo
 
-# Hooking up Components
+## Hooking up Components
 If you are using a basic servo that does not require external power, this should be your configuration:<br/>
 ![]({{site.baseurl}}/Resources/images/ServoDiagram.png)
 
-# Create a new project
+## Create a new project
 
 1. Create a new project from the template.
 1. Hook up the signal wire (orange if you are using the Micro Servo above) to pin 3 on your Galileo.
@@ -29,7 +29,7 @@ If you are using a basic servo that does not require external power, this should
 1. Hook up the voltage wire (red if you are using the Micro Servo above) to the 5V pin on your Galileo.
 1. Replace the existing code in main.cpp with the following code:
 
-# Code
+## Code
 
 ### Main.cpp
 {% highlight C++ %}

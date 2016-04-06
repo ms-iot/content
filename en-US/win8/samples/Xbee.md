@@ -13,19 +13,19 @@ lang: en-US
 # Communicating with an XBee device
 Learn how to use HardwareSerial to communicate to an XBee device across the TX/RX pins.
 
-# Info on using HardwareSerial
+## Info on using HardwareSerial
 
 * HardwareSerial defines an object called Serial.
     * This reads and writes to COM1 on the Windows Image which is linked to the RX and TX pins on the Galileo board.<br/>
 * Serial = COM1 = TX/RX pins
 
-# Required Components
+## Required Components
 * [XBee ZB device](http://www.digi.com/products/xbee-rf-solutions/modules/xbee-zigbee){:target="_blank"}
 * Wires to connect RX, TX, 3.3v power and ground wires to the XBee.
 
 This sample requires the XBee to run in API mode, by setting AP=2. If you are using Series 2 XBee, you'll need to install the API Firmware with [X-CTU](http://www.digi.com/support/productdetail?pid=3352&osvid=57&type=utilities){:target="_blank"} (Series 2 are manufactured with AT firmware), then set AP=2. This software will not work correctly with AP=1
 
-# Create a new project
+## Create a new project
 
 1. Create a new project from the template.
     * Right click on the Project in the Solution Explorer, then select <kbd>Properties</kbd>.
@@ -39,7 +39,7 @@ This sample requires the XBee to run in API mode, by setting AP=2. If you are us
 
 If you have an XBee Adapter, connect the wires to the equivalent pin-outs on the adapter.
 
-# Code
+## Code
 
 ### Main.cpp
 {% highlight C++ %}

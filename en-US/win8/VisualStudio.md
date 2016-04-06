@@ -5,11 +5,13 @@ permalink: /en-US/win8/VisualStudio.htm
 lang: en-US
 ---
 
-#Using #pragmas
+# Using #pragmas
+
 #pragmas are a way to help inform the compiler to complete actions while your program is being compiled.
 You can find out more about #pragmas [here](http://www.programmershare.com/2784880/){:target="_blank"}.
 
-##Using #pragmas in Visual Studio
+## Using #pragmas in Visual Studio
+
 In Visual Studio we use [#pragma once](http://en.wikipedia.org/wiki/Pragma_once){:target="_blank"}.
 The intent of this #pragma is to allow for a file to only be included and compiled once.
 
@@ -17,7 +19,8 @@ While non standard in C, C++ and Wiring, it is quite common to use this #pragma 
 Using #pragma allows the Visual Studio compiler to efficiently open/read/close the file if #pragma once is encountered over the standard approach.
 This allows compile time of your program/sketch to be improved.
 
-#Precompiled Headers
+## Precompiled Headers
+
 While a new concept to Wiring and Sketches, precompiled headers are common in [C and C++ development](http://en.wikipedia.org/wiki/Precompiled_header){:target="_blank"}.
 They make compilation even more efficient than using #pragmas.
 

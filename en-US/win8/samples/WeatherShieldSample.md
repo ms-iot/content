@@ -13,13 +13,13 @@ lang: en-US
 # Weather Shield Sensors
 Learn how to create a simple app that uses the Weather Shield's sensors.
 
-# Required Components
+## Required Components
 * [Sparkfun Weather Shield](https://www.sparkfun.com/products/12081){:target="_blank"}
 
-# Hooking up Components
+## Hooking up Components
 Place the weather shield on top of the Galileo board making sure to line the pins up.
 
-# Create a new project
+## Create a new project
 
 1. Create a new project from the template.
 1. Go to [HTU21D Repo](https://github.com/sparkfun/HTU21D_Breakout){:target="_blank"} and download the HTU21D.cpp and HTU21D.h files.
@@ -27,7 +27,7 @@ Place the weather shield on top of the Galileo board making sure to line the pin
 1. Place the HTU21D and MPL3115A2 library files in your new project.
 1. Replace the existing code in main.cpp with the following code:
 
-# Code
+## Code
 
 ### Main.cpp
 {% highlight C++ %}

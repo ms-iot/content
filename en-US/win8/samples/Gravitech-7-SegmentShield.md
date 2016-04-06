@@ -15,15 +15,15 @@ Learn how to use a Gravitech 7-Segment Shield.
 
 ![]({{site.baseurl}}/Resources/images/Gravitech_7seg_shield.jpg){:width="400"}
 
-# Required Components
+## Required Components
 * [Gravitech 7-Segment Shield](http://www.gravitech.us/7segmentshield.html){:target="_blank"}
 
-# Create a new project
+## Create a new project
 
 1. Create a new project from the template.
 1. Replace the existing code in main.cpp with the following code:
 
-# Code
+## Code
 
 ### Main.cpp
 {% highlight C++ %}

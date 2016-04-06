@@ -13,18 +13,18 @@ lang: en-US
 # Phidgets Sensors
 Learn how to use the Phidgets Library and talk with a Phidgets Sound Pressure Level Sensor.
 
-# Required Components
+## Required Components
 * A Phidgets I/O board. We've used the [8/8/8](http://www.phidgets.com/products.php?category=0&product_id=1018_2){:target="_blank"}
 or the [2/2/2](http://www.phidgets.com/products.php?category=0&product_id=1011_0){:target="_blank"}
 * [Sound Sensor](http://www.phidgets.com/products.php?category=6&product_id=1133_0){:target="_blank"}
 * A USB female to micro USB Male converter
 
-# Hooking up Components
+## Hooking up Components
 1. Hook up the micro USB male end of the converter to your USB Host port on the Galileo.
 1. Hook up the USB female end of the converter to your Phidget I/O Board or the USB cable coming out of it.
 1. Hook up the Sound Sensor to a port on the Phidget I/O Board.
 
-# Create a new project
+## Create a new project
 
 1. Create a new project from the template.
 1. Go to the Quick Downloads section at the [Phidgets site](http://www.phidgets.com/docs/OS_-_Windows#Quick_Downloads){:target="_blank"}.
@@ -34,7 +34,7 @@ or the [2/2/2](http://www.phidgets.com/products.php?category=0&product_id=1011_0
 1. Place the phidget21.dll into your Galileo's Windows\System32 folder so that any future program using Phidget code can run.
 1. Replace the existing code in main.cpp with the following code:
 
-# Code
+## Code
 
 {% highlight C++ %}
 // Main.cpp : Defines the entry point for the console application.

@@ -12,10 +12,10 @@ As a programmer you access the pins exactly the same. The response time is impro
 
 All analog and digital pins are faster than without **Lightning**.
 
-#Setup Instructions
+## Setup Instructions
 Please follow the instructions for [Setting up your PC](SetupPC.htm){:target="_blank"} as the Visual Studio extension has been updated to support Lightning on Gen1 and Gen2.
 
-# This Release
+## This Release
 * Contains a single WIM for Intel Galileo Gen1 and Gen2.
 * Enables targeting Intel Galileo Gen1 and Gen2 platforms agnostically when Visual Studio creates a new project.
 * Supports Digital I/O (GPIO, I2C, SPI, UART) for Intel Galileo Gen1 and Gen2.

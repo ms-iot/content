@@ -13,18 +13,18 @@ lang: en-US
 # Communicating through TX/RX pins
 Learn how to use HardwareSerial to communicate across TX/RX pins and view it on the computer using a USB TTL Serial Cable
 
-# Info on using HardwareSerial
+## Info on using HardwareSerial
 * Serial = COM1 = TX/RX pins<br/>
 * While this sample doesn't use a serial event, if you want to use serialEvent, you will need to:
     * Create a method for <code>serialEvent()</code> that returns void and has no parameters in your main.cpp. This method will be called when data is available on the serial1 port at the end of the loop.
     * Right click on the Project in the Solution Explorer, then select <kbd>Properties</kbd>.
     * Under Configuration Properties -> C/C++ -> Preprocessor, add <kbd>SERIAL_EVENT;</kbd> to Preprocessor Definitions.
 
-# Required Components
+## Required Components
 * [FTDI Cable](https://www.sparkfun.com/products/9717){:target="_blank"}
 * 2 wires to connect the TX and RX pins to the FTDI Cable
 
-# Create the project
+## Create the project
 
 1. Create a new project from the template.
 1. Plug the USB end of the cable into your computer's USB port.
@@ -38,7 +38,7 @@ Learn how to use HardwareSerial to communicate across TX/RX pins and view it on 
 1. Hook up the Yellow pin from the cable to TX (pin 1) on your Galileo
 1. Replace the existing code in main.cpp of the project with the code below:
 
-# Code
+## Code
 
 ### Main.cpp of the Write Project
 {% highlight C++ %}
