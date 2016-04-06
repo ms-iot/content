@@ -11,7 +11,7 @@ kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi2
   <div class="col-xs-24">
     <ol class="breadcrumb">
       <li><a href="https://dev.windows.com/en-us/iot">IoT Home</a></li>
-      <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
+      <li><a href="{{site.baseurl}}/{{page.lang}}/win10/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
       <li class="active">Blinky Sample</li>
     </ol>
     <header class="page-title-header">
