@@ -35,7 +35,8 @@ You can review linked terms by pasting the forward link into your browser window
 <pre>
 netsh advfirewall firewall add rule name=[Any name to identify rule] dir=in action=allow protocol=TCP localport=[Port number]
 </pre>
-	* For Node.JS the default port is 1337 and you can use the following command: 
+
+	* For Node.JS the default port is 1337 and you can use the following command:   
 <pre>
 netsh advfirewall firewall add rule name=”Node.js UWP” dir=in action=allow protocol=TCP localport=1337
 </pre>

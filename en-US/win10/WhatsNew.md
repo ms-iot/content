@@ -8,7 +8,7 @@ lang: en-US
 
 <p>© 2016 Microsoft Corporation. All rights reserved</p>
 
-<p align="center"><a href="http://www.microsoftstore.com/RaspberryPi3" target="_blank"><img src="/content/images/devices/pi3withbox_web.jpg" alt="Raspberry Pi 3" class="img-responsive"><br>Click to see all Raspberry Pi 3 products at the Microsoft Store</a></p>
+<p align="center"><a href="http://www.microsoftstore.com/RaspberryPi3" target="_blank"><img src="{{site.baseurl}}/Resources/devices/pi3withbox_web.jpg" alt="Raspberry Pi 3" class="img-responsive"><br>Click to see all Raspberry Pi 3 products at the Microsoft Store</a></p>
 
 <p>We are excited to announce that you can immediately download Windows IoT Core for use on your Raspberry Pi 3 that offers the following benefits:</p>
 <p>
