@@ -1,6 +1,8 @@
 ---
 layout: default
 title: AllJoyn
+description: Learn about AllJoyn, a common protocol for IoT devices, and how it enables even more with Windows IoT.
+keyword: alljoyn, windows iot, allseen alliance
 permalink: /en-US/win10/AllJoyn.htm
 lang: en-US
 ---
