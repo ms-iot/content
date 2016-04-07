@@ -5,7 +5,6 @@ permalink: /en-US/iot.htm
 lang: en-US
 layout: default_nowrapper
 ---
-{% capture page_lang_lower %}{{page.lang | downcase}}{% endcapture %}
 <style type="text/css">
 #iot-hero {
   color: #fff;
@@ -26,9 +25,9 @@ layout: default_nowrapper
                     <div class="centering-col">
                         <div class="centered-content">
                             <div class="btn-group" role="group" aria-label="...">
-                                <a class="btn btn-primary" href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm" onclick="ICX.pixelEvent('6317');" target="_blank">Get started now</a>
+                                <a class="btn btn-primary" href="{{site.baseurl}}/GetStarted.htm" onclick="ICX.pixelEvent('6317');" target="_blank">Get started now</a>
                             </div>
-                            <a class="win-color-fg-primary color-alt" style="text-decoration: underline;" href="{{site.baseurl}}/{% if site.data.full-loc-support[page_lang_lower] %}{{page_lang_lower}}{% else %}{{'en-us'}}{% endif %}/win10/WhatsNew.htm" onclick="ICX.pixelEvent('6317');" target="_blank">See what’s New: Now on Raspberry Pi 3</a>
+                            <a class="win-color-fg-primary color-alt" style="text-decoration: underline;" href="{{site.baseurl}}/win10/WhatsNew.htm" onclick="ICX.pixelEvent('6317');" target="_blank">See what’s New: Now on Raspberry Pi 3</a>
                         </div>
                     </div>
                 </div>
@@ -46,11 +45,11 @@ layout: default_nowrapper
                         <section class="section item-section">
                             <div class="section-header">
                                 <div class="media-container">
-                                    <a href="{{site.baseurl}}/{{page.lang}}/iotcore">
+                                    <a href="{{site.baseurl}}/iotcore">
                                         <img src="{{site.baseurl}}/Resources/images/led.png" width="72" height="72" alt="LED light" />
                                     </a>
                                 </div>
-                                <div class="text-base"><a href="{{site.baseurl}}/{{page.lang}}/iotcore">What is Windows 10 IoT Core?</a></div>
+                                <div class="text-base"><a href="{{site.baseurl}}/iotcore">What is Windows 10 IoT Core?</a></div>
                             </div>
                             <div class="section-body">
                                 <p>Discover the features and functionality that Windows 10 IoT Core provides.  It’s ease of Windows combined with the power of IoT.</p>
@@ -61,11 +60,11 @@ layout: default_nowrapper
                         <section class="section item-section">
                             <div class="section-header">
                                 <div class="media-container">
-                                    <a href="{{site.baseurl}}/{{page.lang}}/win10/AdafruitMakerKit">
+                                    <a href="{{site.baseurl}}/win10/AdafruitMakerKit">
                                         <img src="{{site.baseurl}}/Resources/images/product.svg" width="72" height="72" alt="Started pack" />
                                     </a>
                                 </div>
-                                <div class="text-base"><a href="{{site.baseurl}}/{{page.lang}}/win10/AdafruitMakerKit">Learn about the Starter Pack</a></div>
+                                <div class="text-base"><a href="{{site.baseurl}}/win10/AdafruitMakerKit">Learn about the Starter Pack</a></div>
                             </div>
                             <div class="section-body">
                                 <p>Adafruit has created a Starter Pack for Windows 10 IoT Core. The pack includes compatible components, sensors, and parts that you can use to start making exciting projects.</p>
@@ -76,11 +75,11 @@ layout: default_nowrapper
                         <section class="section item-section">
                             <div class="section-header">
                                 <div class="media-container">
-                                    <a href="{{site.baseurl}}/{{page.lang}}/GetStarted">
+                                    <a href="{{site.baseurl}}/GetStarted">
                                         <img src="{{site.baseurl}}/Resources/images/iot-board.svg" width="72" height="72" alt="Windows IoT Device" />
                                     </a>
                                 </div>
-                                <div class="text-base"><a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Build your Windows IoT device</a></div>
+                                <div class="text-base"><a href="{{site.baseurl}}/GetStarted">Build your Windows IoT device</a></div>
                             </div>
                             <div class="section-body">
                                 <p>Rapidly prototype and build your Windows IoT solutions on a variety of devices running Windows 10 IoT Core. Windows 10 gives you powerful tools that let you develop fast and deploy to your device.</p>
@@ -91,11 +90,11 @@ layout: default_nowrapper
                         <section class="section item-section">
                             <div class="section-header">
                                 <div class="media-container">
-                                    <a href="{{site.baseurl}}/{{page.lang}}/Community">
+                                    <a href="{{site.baseurl}}/Community">
                                         <img src="{{site.baseurl}}/Resources/images/maker.svg" width="72" height="72" alt="Maker community" />
                                     </a>
                                 </div>
-                                <div class="text-base"><a href="{{site.baseurl}}/{{page.lang}}/Community">Join the Maker community</a></div>
+                                <div class="text-base"><a href="{{site.baseurl}}/Community">Join the Maker community</a></div>
                             </div>
                             <div class="section-body">
                                 <p>Connect with other makers to share code and make contributions through GitHub. Join the community to see what others are building and influence future releases of the SDK.</p>
@@ -205,7 +204,7 @@ layout: default_nowrapper
                     <ul class="list-unstyled">
                         <li><a href="http://www.microsoftstore.com/RaspberryPi3" class="more-action" target="_blank">Purchase Raspberry Pi 3</a></li>
                         <li><a href="http://insider.windows.com/" class="more-action" target="_blank">Become a Windows Insider</a></li>
-                        <li><a href="{{site.baseurl}}/{% if site.data.full-loc-support[page_lang_lower] %}{{page_lang_lower}}{% else %}{{'en-us'}}{% endif %}/win10/Noobs.htm" class="more-action" target="_blank">Get started with NOOBS</a></li>
+                        <li><a href="{{site.baseurl}}/win10/Noobs.htm" class="more-action" target="_blank">Get started with NOOBS</a></li>
                     </ul>
                 </div>
             </div>
@@ -251,7 +250,7 @@ layout: default_nowrapper
                                         <li><a href="http://stackoverflow.com/questions/tagged/WindowsIoT">Stack Overflow</a></li>
                                         <li><a href="https://twitter.com/WindowsIoT">@WindowsIoT on Twitter</a></li>
                                         <li><a href="https://www.youtube.com/channel/UCL7wy-iy_V76xxPnrIzGOZQ">Windows IoT YouTube channel</a></li>
-                                        <li><a href="{{site.baseurl}}/{% if site.data.full-loc-support[page_lang_lower] %}{{page_lang_lower}}{% else %}{{'en-us'}}{% endif %}/Community.htm">More Forums and Communities</a></li>
+                                        <li><a href="{{site.baseurl}}/Community.htm">More Forums and Communities</a></li>
                                     </ul>
                                 </div>
                             </section>
