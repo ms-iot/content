@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Tools
+description: Learn more about the tools for Windows 10 IoT Core that support activities like porting code and command-line configuration. 
+keyword: tools, windows iot, porting, power tools
 permalink: /en-US/win10/Tools.htm
 lang: en-US
 ---

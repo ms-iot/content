@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Board Comparison
+description: Compare the features and functionality of various compatible Windows 10 IoT Core development boards.
+keyword: iot, boards, windows iot, comparison
 permalink: /en-US/BoardComparison.htm
 lang: en-US
 ---

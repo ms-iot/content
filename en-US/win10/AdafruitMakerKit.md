@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
+description: See what this Windows 10 IoT Core package offers and learn how to set it up.
+keyword: adafruit, windows iot, raspberry pi, adafruit pack
 permalink: /en-US/win10/AdafruitMakerKit.htm
 lang: en-US
 kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi 2

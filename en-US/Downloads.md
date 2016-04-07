@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Downloads
+description: Download Windows for IoT, Visual Studio, Software Development Kits or any of the other tools available on this page to get started developing for the Internet of Things today!
+keyword: dashboard, download, windows 10 iot core, tools
 permalink: /en-US/Downloads.htm
 lang: en-US
 ---

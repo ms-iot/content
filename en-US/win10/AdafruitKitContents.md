@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Adafruit Essential Maker Kit Contents
+description: An brief introduction and setup instructions for the Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2.
+keywords: windows iot, adafruit, maker kit, starter pack
 permalink: /en-US/win10/AdafruitKitContents.htm
 step: win10/AdafruitKitContents.htm
 lang: en-US

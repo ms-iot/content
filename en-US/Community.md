@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Home
+description: Stay connected with other Windows IoT developers to learn about technology, announcements, new product features, launches and more for Windows IoT devices.
+keyword: community, forum, iot forum, iot
 permalink: /en-US/Community.htm
 lang: en-US
 ---

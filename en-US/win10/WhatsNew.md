@@ -1,6 +1,8 @@
 ---
 layout: default
 title: What's New for IoT Core on Raspberry Pi 3
+description: Learn what's new for Windows 10 IoT Core on Raspberry Pi 3, the most advanced Raspberry Pi available.
+keyword: raspberry pi 3, raspberry pi, windows iot, iot core, insider preview
 permalink: /en-US/win10/WhatsNew.htm
 lang: en-US
 ---

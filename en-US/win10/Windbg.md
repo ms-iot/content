@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Using WINDBG to debug
+description: Debug your Windows 10 IoT Core device using the powerful Windows debugger, WinDbg.
+keyword: debug, windbg, windows iot
 permalink: /en-US/win10/Windbg.htm
 lang: en-US
 ---

@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Setup TPM on Supported Platforms
+description: Learn how to set up TPM for IoT Core.
+keyword: setup, windows iot, tutorial, tpm
 permalink: /en-US/win10/SetupTPM.htm
 lang: en-US
 ---
