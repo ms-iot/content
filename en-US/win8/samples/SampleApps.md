@@ -69,7 +69,7 @@ lang: en-US
   <div class="col-md-8 col-xs-24">
     <h2>Weather Shield Sensors</h2>
     <p>Learn how to create a simple app that uses the Weather Shield's sensors.</p>
-    <p><a class="btn btn-default" href="WeatherShieldSensors.htm" role="button">View details &raquo;</a></p>
+    <p><a class="btn btn-default" href="WeatherShieldSample.htm" role="button">View details &raquo;</a></p>
   </div>
 </div>
 <div class="row">

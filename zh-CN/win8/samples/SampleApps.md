@@ -69,7 +69,7 @@ lang: zh-cn
   <div class="col-md-8 col-xs-24">
     <h2>Weather Shield 传感器</h2>
     <p>了解如何使用 Weather Shield 传感器创建简单的应用。</p>
-    <p><a class="btn btn-default" href="WeatherShieldSensors.htm" role="button">查看详细信息 »</a></p>
+    <p><a class="btn btn-default" href="WeatherShieldSample.htm" role="button">查看详细信息 »</a></p>
   </div>
 </div>
 <div class="row">
