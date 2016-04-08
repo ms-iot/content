@@ -93,6 +93,37 @@ deviceName: Remote Display Experience
 </div>
 <br/>
 
+<h2>Troubleshooting<span class="pull-right"><a id="troubleshooting-toggle" class="toggle-button" onClick="hideDiv('troubleshooting')">Hide</a></span></h2>
+<hr>
+<div id="troubleshooting" class="toggle-section">
+<p>Using the remote display technology is quick and easy, but there are still some issues that users may experience.  Make sure to follow the Setup instructions above closely - if problems persist, check below.</p>
+<h4><b>When I try to connect, the client app goes to a white screen.</b></h4>
+<p>Failed connections can be caused by a number of issues, but we've run into a couple more common problems:</p>
+<p><b>1.</b> First, make sure your IoT device is on the same network as your companion device.  Check that you're running the latest Insider build of Windows 10 IoT Core with the Windows IoT Remote Server enabled.</p>
+<p><b>2.</b> If this isn't the issue, try changing the resolution of your device to something we're guaranteed to support - to do so, follow the instructions in step 1 of the Setup section above to navigate to your device's web server.  Instead of selecting "Remote" from the menu on the left, stay on the "Home" page and scroll down to find resolution.  Try 800x600.</p>
+<p><b>3.</b> If this still doesn't fix your issue, you may have an issue that stems from never connecting your device to an external display.  This will cause the device to think of itself as purely headless.  To fix this:
+<ul>
+  <li>
+  Eject the MicroSD Card, and put into your computer
+  </li>
+  <li>
+  Edit the <MicroSD card drive>:\config.txt
+  </li>
+  <li>
+  Add the following lines:
+  </li>
+</ul>
+{% highlight XML %}
+hdmi_force_hotplug=1
+hdmi_group=2
+hdmi_mode=9
+{% endhighlight %}
+</p>
+<h4><b>The performance on Raspberry Pi 2 is low.</b></h4>
+<p>The Raspberry Pi 2 does not have GPU support on Windows 10 IoT Core, thus the framerate of the remote display experience is lower than on other boards.  Enhanced CPU on the Raspberry Pi 3, as well as graphics capabilities on the MBM and Dragonboard, allow for a more stable experience.  Lowering the resolution to 800x600 will increase performance.</p>
+</div>
+<br>
+
 <script>
   function hideDiv(div) {
         var pdiv = "#" + div,
