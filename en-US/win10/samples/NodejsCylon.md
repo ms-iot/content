@@ -67,10 +67,8 @@ Cylon.robot({
 
 
 ### Get Serialport
-**Note:** Even though serialport is installed when Cylon is installed, you still need to get a version that:
-
-* Corresponds with the processor architecture of the device you are targeting (in this case ARM for Raspberry Pi 2 or 3).
-* Includes an [update](https://github.com/voodootikigod/node-serialport/pull/550) for serialport to work on Windows 10 IoT Core.
+Even though serialport is installed when Cylon is installed, you still need to get a version that corresponds 
+with the processor architecture of the device you are targeting (in this case ARM for Raspberry Pi 2 or 3).
 
 Steps to get serialport:
 
