@@ -66,17 +66,6 @@ Cylon.robot({
 * Run `npm install cylon cylon-firmata cylon-gpio cylon-i2c`
 
 
-### Get Serialport
-Even though serialport is installed when Cylon is installed, you still need to get a version that corresponds 
-with the processor architecture of the device you are targeting (in this case ARM for Raspberry Pi 2 or 3).
-
-Steps to get serialport:
-
-* Copy and unzip the file [here](http://aka.ms/spcc_zip) to your PC.
-* Copy &lt;Unzipped folder&gt;\console\arm\serialport.node to [CylonSample folder path]\node_modules\serialport\build\Release\node-v47-win32-arm\serialport.node  
-  **Note:** node-v47-win32-arm is a new folder you will create.
-
-
 ### Copy the sample to your Raspberry Pi 2 or 3
 Open up an explorer window on your PC and enter **\\\\\<IP address of your device\>\\C$** to access files on your device. The credentials (if you have not changed them) are:
 
