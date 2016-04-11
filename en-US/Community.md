@@ -18,6 +18,12 @@ lang: en-US
 <div class="row section-heading">
   <h3>New on the Window IoT Blog</h3>
     <div class="col-md-6">
+      <a href="https://blogs.windows.com/buildingapps/2016/04/05/windows-10-iot-build-2016/" target="_blank">
+        <h4>Windows 10 IoT @ //Build 2016</h4>
+      </a>
+      <h4><em>Brett Bentsen<br>Partner Group Program Manager for Windows IoT<br>Apr 5 2016</em></h4>
+    </div>
+    <div class="col-md-6">
       <a href="http://go.microsoft.com/fwlink/?LinkId=734075" target="_blank">
         <h4>Windows 10 IoT Core support for Raspberry Pi 3</h4>
       </a>
@@ -28,12 +34,6 @@ lang: en-US
         <h4>What is Windows Remote Arduino and What Can It Do?</h4>
       </a>
       <h4><em>Windows Apps Team<br>Feb 4, 2016</em></h4>
-    </div>
-    <div class="col-md-6">
-      <a href="http://blogs.windows.com/buildingapps/2016/01/27/what-is-windows-virtual-shields-for-arduino-and-what-can-it-do/" target="_blank">
-        <h4>What is Windows Virtual Shields for Arduino and What Can It Do?</h4>
-      </a>
-      <h4><em>Steve Teixeira, Aug 10 2015</em></h4>
     </div>
 </div>
 
@@ -79,9 +79,6 @@ lang: en-US
     </p>
     <p>
       <a href="https://twitter.com/IoTDan" target="_blank">@IoTDan &raquo;</a>
-    </p>
-    <p>
-      <a href="https://twitter.com/vkhandpur" target="_blank">@VKhandpur &raquo;</a>
     </p>
   </div>
   <div class="col-md-6">
