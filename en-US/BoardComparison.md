@@ -104,7 +104,7 @@ lang: en-US
 	  <td>HDMI, DSI</td>
       <td>HDMI, DSI</td>
       <td>Micro HDMI</td>
-      <td>HDMI 1080p HD @ 30 fps</td>
+      <td>HDMI 720p HD</td>
     </tr>
     <tr>
       <td>Audio Output</td>
