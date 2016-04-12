@@ -26,6 +26,18 @@ lang: en-US
   <li>
     <p>UART/Serial (miniUART) driver for the Raspberry PI 3 onboard serial is now enabled for the Raspberry Pi 3</p>
   </li>
+  <li>
+    <p>Pin muxing support, increasing the number of available GPIO pins from 17 to 24.</p>
+  </li>
+  <li>
+    <p>An additional SPI bus (SPI1).</p>
+  </li>
+  <li>
+    <p>Increased UART baud rate support (was 115200, now 921600).</p>
+  </li>
+  <li>
+    <p>20% increase in GPIO performance.</p>
+  </li>
 </ul>
 
 <!-- 
