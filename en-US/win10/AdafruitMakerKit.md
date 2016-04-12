@@ -41,7 +41,7 @@ kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
         <td>Learn how you can rapidly create maker projects with Windows 10 IoT Core</td>
       </tr>
       <tr>
-        <td><a href="{{site.baseurl}}/{{page.lang}}/AdafruitKitContents.htm">Parts in the Kit</a></td>
+        <td><a href="{{site.baseurl}}/{{page.lang}}/win10/AdafruitKitContents.htm">Parts in the Kit</a></td>
         <td>See the list of all parts and capabilities in the kit</td>
       </tr>
       <tr>
