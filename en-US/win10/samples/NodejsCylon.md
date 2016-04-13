@@ -63,7 +63,7 @@ Cylon.robot({
 ### Get Cylon
 * Open a command window.
 * Navigate to the CylonSample folder (created in the previous section).
-* Run `npm install cylon cylon-firmata cylon-gpio cylon-i2c`
+* Run `npm install cylon cylon-firmata cylon-gpio cylon-i2c --target_arch=arm`
 
 
 ### Copy the sample to your Raspberry Pi 2 or 3
