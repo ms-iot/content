@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/SPIDisplay.htm
 lang: en-US
 ---
 
-## SPI Display Sample
+# SPI Display Sample
 
 {% include VerifiedVersion.md %}
 

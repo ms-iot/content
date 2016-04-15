@@ -5,7 +5,7 @@ permalink: /en-US/win10/HeadlessMode.htm
 lang: en-US
 ---
 
-## Headed and Headless mode
+# Headed and Headless mode
 
 Windows IoT Core can be configured for either **headed** or **headless** mode. The difference between these two modes is the presence or absence of any form of UI.
 By default, Windows 10 IoT Core is in **headed** mode and run the default startup app which displays system information like the computer name and IP address.

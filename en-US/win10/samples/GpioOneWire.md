@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/GpioOneWire.htm
 lang: en-US
 ---
 
-## GpioOneWire Sample (DHT11)
+# GpioOneWire Sample (DHT11)
 
 {% include VerifiedVersion.md %}
 

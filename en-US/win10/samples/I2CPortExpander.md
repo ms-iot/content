@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/I2CPortExpander.htm
 lang: en-US
 ---
 
-## I2C Port Expander Sample
+# I2C Port Expander Sample
 
 {% include VerifiedVersion.md %}
 

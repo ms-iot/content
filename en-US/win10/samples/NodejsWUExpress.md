@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/NodejsWUExpress.htm
 lang: en-US
 ---
 
-## Express Node.js (Windows Universal) Sample
+# Express Node.js (Windows Universal) Sample
 
 {% include VerifiedVersion.md %}
 

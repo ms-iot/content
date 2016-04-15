@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/NodejsCylon.htm
 lang: en-US
 ---
 
-## Cylon Node.js (Console Application) Sample
+# Cylon Node.js (Console Application) Sample
 
 {% include VerifiedVersion.md %}
 

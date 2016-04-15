@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/I2cTestTool.htm
 lang: en-US
 ---
 
-## I2cTestTool Sample
+# I2cTestTool Sample
 
 {% include VerifiedVersion.md %}
 

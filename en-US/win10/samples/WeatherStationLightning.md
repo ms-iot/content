@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/WeatherStationLightning.htm
 lang: en-US
 ---
 
-## Communicate with an I2C sensor using Lightning I2c provider
+# Communicate with an I2C sensor using Lightning I2c provider
 
 {% include VerifiedVersion.md %}
 

@@ -5,7 +5,7 @@ permalink: /en-US/win10/EmbeddedMode.htm
 lang: en-US
 ---
 
-## Embedded mode
+# Embedded mode
 
 Windows and Windows Mobile can be configured allow embedded mode. This enables packages to implement background applications.  It also enables applications to declare and use lowLevelDevice and systemManagement capabilities.
 

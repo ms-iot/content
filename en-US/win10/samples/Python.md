@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/Python.htm
 lang: en-US
 ---
 
-## Python 'Hello, World' Sample
+# Python 'Hello, World' Sample
 
 {% include VerifiedVersion.md %}
 

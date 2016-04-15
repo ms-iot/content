@@ -6,7 +6,7 @@ lang: en-US
 deviceName: RPI2
 ---
 
-## Blinky UI Sample with Lightning Provider
+# Blinky UI Sample with Lightning Provider
 
 {% include VerifiedVersion.md %}
 

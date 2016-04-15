@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/AlljoynDSBSample.htm
 lang: en-US
 ---
 
-## Alljoyn DSB GPIO Tutorial
+# Alljoyn DSB GPIO Tutorial
 
 {% include VerifiedVersion.md %}
 

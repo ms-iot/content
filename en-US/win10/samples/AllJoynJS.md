@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/AllJoynJS.htm
 lang: en-US
 ---
 
-## AllJoyn.JS
+# AllJoyn.JS
 
 {% include VerifiedVersion.md %}
 

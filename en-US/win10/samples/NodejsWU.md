@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/NodejsWU.htm
 lang: en-US
 ---
 
-## 'Hello, World' Node.js (Windows Universal) Sample
+# 'Hello, World' Node.js (Windows Universal) Sample
 
 {% include VerifiedVersion.md %}
 

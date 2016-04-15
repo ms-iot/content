@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/SPIAccelerometer.htm
 lang: en-US
 ---
 
-## SPI Accelerometer Sample
+# SPI Accelerometer Sample
 
 {% include VerifiedVersion.md %}
 

@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/AlljoynDSBSample_Managed.htm
 lang: en-US
 ---
 
-## Alljoyn DSB GPIO C# Tutorial
+# Alljoyn DSB GPIO C# Tutorial
 
 {% include VerifiedVersion.md %}
 

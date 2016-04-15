@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/I2CAccelerometer.htm
 lang: en-US
 ---
 
-## I2C Accelerometer Sample
+# I2C Accelerometer Sample
 
 {% include VerifiedVersion.md %}
 

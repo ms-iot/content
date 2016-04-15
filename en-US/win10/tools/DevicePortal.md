@@ -7,7 +7,7 @@ lang: en-US
 
 <div class="container" markdown="1">
 
-## Windows Device Portal
+# Windows Device Portal
    Windows Device Portal provides basic configuration and device management capabilities, in addition to advanced diagnostic tools to help you troubleshoot and view the real time performance of your Windows IoT Device. 
    
    Once connected to your local network, every Windows 10 IoT Core device will allow you to access these tools.

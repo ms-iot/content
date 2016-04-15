@@ -4,7 +4,7 @@ title: Dragonboard Pin Mappings
 permalink: /en-US/win10/samples/PinMappingsDb.htm
 lang: en-US
 ---
-## Dragonboard Pin Mappings
+# Dragonboard Pin Mappings
 
 Hardware interfaces for the Dragonboard are exposed through the 40-pin header on the board. Functionality includes:
 

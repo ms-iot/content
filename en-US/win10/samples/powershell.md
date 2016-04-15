@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/PowerShell.htm
 lang: en-US
 ---
 
-## Using PowerShell to connect and configure a device running Windows 10 IoT Core
+# Using PowerShell to connect and configure a device running Windows 10 IoT Core
 
 ### Remote Administration and Configuration
 You can remotely configure and manage any Windows 10 IoT Core device using Windows PowerShell. PowerShell is a task-based command-line shell and scripting language, designed especially for system administration.

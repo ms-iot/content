@@ -6,7 +6,7 @@ lang: en-US
 ---
 
 {: .thin-header}
-## Blinky Headless Sample
+# Blinky Headless Sample
 
 {% include VerifiedVersion.md %}
 

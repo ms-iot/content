@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/HelloWorld.htm
 lang: en-US
 ---
 
-## 'Hello, World!' Sample
+# 'Hello, World!' Sample
 
 {% include VerifiedVersion.md %}
 

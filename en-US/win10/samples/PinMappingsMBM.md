@@ -4,7 +4,7 @@ title: MinnowBoard Max Pin Mappings
 permalink: /en-US/win10/samples/PinMappingsMBM.htm
 lang: en-US
 ---
-## MinnowBoard Max Pin Mappings
+# MinnowBoard Max Pin Mappings
 
 ![MinnowBoard Max Pin Header]({{site.baseurl}}/Resources/images/PinMappings/MBM_Pinout.png)
 

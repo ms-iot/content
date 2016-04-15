@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/RGBLED.htm
 lang: en-US
 ---
 
-## RGB LED Sample
+# RGB LED Sample
 
 {% include VerifiedVersion.md %}
 

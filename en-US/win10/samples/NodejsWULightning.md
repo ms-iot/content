@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/NodejsWULightning.htm
 lang: en-US
 ---
 
-## Blinky Node.js (Windows Universal) Sample with Lightning
+# Blinky Node.js (Windows Universal) Sample with Lightning
 
 {% include VerifiedVersion.md %}
 

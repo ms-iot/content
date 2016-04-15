@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/PushButton.htm
 lang: en-US
 ---
 
-## Push Button Sample
+# Push Button Sample
 
 {% include VerifiedVersion.md %}
 

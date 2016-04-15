@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/BLEGatt.htm
 lang: en-US
 ---
 
-## Bluetooth Low Energy (BLE) Generic Attribute Profile (GATT) Sample Overview
+# Bluetooth Low Energy (BLE) Generic Attribute Profile (GATT) Sample Overview
 
 {% include VerifiedVersion.md %}
 

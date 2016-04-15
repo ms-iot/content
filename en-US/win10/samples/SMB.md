@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/SMB.htm
 lang: en-US
 ---
 
-## Using Windows file sharing to transfer files to and from your device
+# Using Windows file sharing to transfer files to and from your device
 
 ### Accessing your files using Windows file sharing
 * The file sharing server on your Windows IoT Core device starts automatically on boot.  In order to connect to it, you need the IP address of your device.  You can find the IP address on the default app that boots when your device starts.

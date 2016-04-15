@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/ShiftRegisterSample.htm
 lang: en-US
 ---
 
-## Shift Register Sample
+# Shift Register Sample
 
 {% include VerifiedVersion.md %}
 

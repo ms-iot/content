@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/PictureTheWeather.htm
 lang: en-US
 ---
 
-## Picture The Weather sample, using Windows Virtual Shields for Arduino
+# Picture The Weather sample, using Windows Virtual Shields for Arduino
 
 In this sample, we will connect an RGB LED strip to an Arduino and control it to indicate the weather forecast behind a picture.
 

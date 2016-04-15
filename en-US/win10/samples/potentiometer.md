@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/Potentiometer.htm
 lang: en-US
 ---
 
-## Potentiometer Sensor Sample
+# Potentiometer Sensor Sample
 
 {% include VerifiedVersion.md %}
 

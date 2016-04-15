@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/SPIDisplayLightning.htm
 lang: en-US
 ---
 
-## Communicate with SPI Display using Lightning providers
+# Communicate with SPI Display using Lightning providers
 
 {% include VerifiedVersion.md %}
 

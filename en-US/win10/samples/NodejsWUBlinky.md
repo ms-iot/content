@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/NodejsWUBlinky.htm
 lang: en-US
 ---
 
-## Blinky Node.js Server Sample (Windows Universal)
+# Blinky Node.js Server Sample (Windows Universal)
 
 {% include VerifiedVersion.md %}
 

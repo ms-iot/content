@@ -5,7 +5,7 @@ permalink: /en-US/win10/AlljoynDsbApiGuide.htm
 lang: en-US
 ---
 
-## Mapping Bridge Interface Objects to Alljoyn
+# Mapping Bridge Interface Objects to Alljoyn
 
 ### I. IAdapter
 

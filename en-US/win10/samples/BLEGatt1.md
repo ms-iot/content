@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/BLEGatt1.htm
 lang: en-US
 ---
 
-## Pairing a BLE Device and GATT Attribute Table Dump Tool
+# Pairing a BLE Device and GATT Attribute Table Dump Tool
 
 ### Pairing the Sensortag
 Before we start up the sample we need to first pair the SensorTag with the Windows IoT Core device. There are 2 ways to pair devices, either through [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm){:target="_blank"} or the command line tool: `C:\Windows\System32\IoTBluetoothPairing.exe`. Currently only the command line tool supports pairing with pin authentication, which is what the SensorTag requires. Make sure you have the USB Bluetooth dongle plugged into the Windows IoT Core device and also have the SensorTag ready to go.

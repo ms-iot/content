@@ -9,7 +9,7 @@ lang: en-US
 
 <div class="container" markdown= "1">
 
-## Universal APIs not functional in Windows 10 IoT Core at this time
+# Universal APIs not functional in Windows 10 IoT Core at this time
 
     Windows.ApplicationModel.Appointments.Appointment
     Windows.ApplicationModel.Appointments.AppointmentInvitee

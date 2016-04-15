@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/PythonBlinky.htm
 lang: en-US
 ---
 
-## Python Blinky Sample
+# Python Blinky Sample
 
 {% include VerifiedVersion.md %}
 

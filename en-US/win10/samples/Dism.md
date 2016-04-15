@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/DISM.htm
 lang: en-US
 ---
 
-## Using DISM to flash micro SD card for Windows IoT Core device
+# Using DISM to flash micro SD card for Windows IoT Core device
 
 ### An alternative method to WindowsIoTImageHelper
 

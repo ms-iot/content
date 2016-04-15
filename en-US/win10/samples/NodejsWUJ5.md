@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/NodejsWUJ5.htm
 lang: en-US
 ---
 
-## Johnny-Five Node.js (Universal Windows) Sample
+# Johnny-Five Node.js (Universal Windows) Sample
 
 {% include VerifiedVersion.md %}
 

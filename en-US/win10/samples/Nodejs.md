@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/Nodejs.htm
 lang: en-US
 ---
 
-## MemoryStatus Node.js (Console Application) Sample
+# MemoryStatus Node.js (Console Application) Sample
 
 {% include VerifiedVersion.md %}
 

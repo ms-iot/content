@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/NodejsWUCylon.htm
 lang: en-US
 ---
 
-## Cylon Node.js (Universal Windows) Sample
+# Cylon Node.js (Universal Windows) Sample
 
 {% include VerifiedVersion.md %}
 

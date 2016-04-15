@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/BlinkyWebServer.htm
 lang: en-US
 ---
 
-## Blinky WebServer
+# Blinky WebServer
 
 {% include VerifiedVersion.md %}
 

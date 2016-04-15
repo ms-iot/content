@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/ConsoleApp.htm
 lang: en-US
 ---
 
-## MemoryStatus Console Application Sample
+# MemoryStatus Console Application Sample
 
 {% include VerifiedVersion.md %}
 

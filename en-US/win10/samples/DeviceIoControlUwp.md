@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/DeviceIoControlUwp.htm
 lang: en-US
 ---
 
-## DeviceIoControlUwp Sample
+# DeviceIoControlUwp Sample
 
 {% include VerifiedVersion.md %}
 
