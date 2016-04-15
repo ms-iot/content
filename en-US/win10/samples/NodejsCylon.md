@@ -63,20 +63,7 @@ Cylon.robot({
 ### Get Cylon
 * Open a command window.
 * Navigate to the CylonSample folder (created in the previous section).
-* Run `npm install cylon cylon-firmata cylon-gpio cylon-i2c`
-
-
-### Get Serialport
-**Note:** Even though serialport is installed when Cylon is installed, you still need to get a version that:
-
-* Corresponds with the processor architecture of the device you are targeting (in this case ARM for Raspberry Pi 2 or 3).
-* Includes an [update](https://github.com/voodootikigod/node-serialport/pull/550) for serialport to work on Windows 10 IoT Core.
-
-Steps to get serialport:
-
-* Copy and unzip the file [here](http://aka.ms/spcc_zip) to your PC.
-* Copy &lt;Unzipped folder&gt;\console\arm\serialport.node to [CylonSample folder path]\node_modules\serialport\build\Release\node-v47-win32-arm\serialport.node  
-  **Note:** node-v47-win32-arm is a new folder you will create.
+* Run `npm install cylon cylon-firmata cylon-gpio cylon-i2c --target_arch=arm`
 
 
 ### Copy the sample to your Raspberry Pi 2 or 3
