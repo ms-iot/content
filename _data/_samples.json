@@ -534,7 +534,7 @@
          "description":"Create a Node.js console app that uses UWP APIs to blink an LED",
          "link-text":"<a href='samples/nodejs-blinky.htm'>Blinky Console App (Node.js)</a>",
          "ranking":10,
-         "tags":["tool","intermediate","node.js","memory"]
+         "tags":["tool","intermediate","node.js"]
       },
       {
          "title":"Launching an external program",

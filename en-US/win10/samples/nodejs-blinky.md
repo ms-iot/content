@@ -20,14 +20,11 @@ The hardware setup for this sample is the same as the C# 'Blinky' [sample]({{sit
 
 ### Set up your PC
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
-
-
-### Install Node.js (Chakra)
 * Install x64 or x86 Node.js (Chakra) from [here](http://aka.ms/node-chakra-installer). Even though we'll be running an ARM version
-  of Node.js on the Raspberry Pi, we still need this step to install the npm package we used in the next steps.
-* Create a folder on your PC that will contain the files for your app. Let's call it c:\MyNodejsBlinky
+  of Node.js on the Raspberry Pi, we still need this step to install the npm package used in the next steps.
+* Create a folder on your PC that will contain the files for your app. Let's call it c:\MyNodejsBlinky.
 * In a command window, cd to c:\MyNodejsBlinky.
-* Run `npm install uwp --target_arch=arm. This step will install the [uwp npm package](https://www.npmjs.com/package/uwp) 
+* Run `npm install uwp --target_arch=arm`. This step will install the [uwp npm package](https://www.npmjs.com/package/uwp) 
   that will allow you to access UWP APIs from your Node.js code.
 * In the same folder, create new file called blinky.js, copy the content below and save:
 <UL>
@@ -52,8 +49,10 @@ setInterval(function () {
 }, 1000);
 {% endhighlight %}
 </UL>
+
 Here's what the code above is doing:
-* We use the [node-uwp](https://www.npmjs.com/package/uwp) npm package to allow the code to use UWP APIs (within Windows and Microsoft namespaces).
+
+* We use the [node-uwp](https://www.npmjs.com/package/uwp) npm package to allow the code to use UWP APIs (within Windows namespace).
 * `GpioController.getDefault()` is called to get the GPIO controller.
 * Then we attempt to open the pin by calling `GpioController.openPin()` with the LED pin value.
 * Once we have the `pin`, we set it to be off (high) by default using the `GpioController.write()` function.
@@ -62,6 +61,7 @@ Here's what the code above is doing:
 
 ### Copy your app to the Raspberry Pi
 * Open up an explorer window on your PC and enter **\\\\\<IP address of your device\>\\C$** to access files on your device. The credentials (if you have not changed them) are:
+
    username: <IP address or device name, default is minwinpc>\Administrator  
    password: p@ssw0rd  
 * Copy your MyNodejsBlinky folder to C:\ drive root. 
@@ -69,7 +69,7 @@ Here's what the code above is doing:
 
 ### Copy Node.js to your Raspberry Pi
 * Download node.exe for ARM from [here](http://aka.ms/node-chakra-installer) to your PC.
-* Create `C:\Node.js (Chakra)` folder on your Raspberry Pi and copy node.exe to that location.
+* Create `C:\NodejsChakra` folder on your Raspberry Pi and copy node.exe to that location.
 
 
 ### Run the app!
@@ -78,5 +78,13 @@ Here's what the code above is doing:
 
 
 ### Notes
-* npm can be run on the device but it will only succeed if you are installing npm packages without a dependency on native addons.
-* [Node.js (Chakracore)] does not support the uwp npm package, only Node.js (Chakra) does.
+* npm can be run on your Windows 10 IoT Core device. However, installation of packages will only succeed if they do not depend on native addons.
+  Before running npm you need to follow the steps below.
+  * Copy the following folder and file to C:\NodejsChakra (assuming this is where you put node.exe):
+    * C:\Program Files\NodejsUwp\Console\node_modules
+    * C:\Program Files\NodejsUwp\Console\npm.cmd
+  * Run `setx APPDATA c:\Users\Default\AppData\Roaming /M` to set the APPDATA environment variable permanantly.
+  * Run `shutdown /r /t 0` to restart your device. When the device has booted you can now run `c:\NodejsChakra\npm.cmd`
+* If you get an error/crash when using a native addon with Node.js (Chakra), one of the reasons may be that the addon is using an API that's not supported on IoT Core.
+  You can use the [API Porting Tool]({{site.baseurl}}/{{page.lang}}/win10/tools/IoTAPIPortingTool.htm) to find out.
+* While Node.js (Chakra) supports using the uwp npm package, the open source [Node.js (ChakraCore)](https://github.com/nodejs/node-chakracore) does not.  
