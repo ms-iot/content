@@ -530,6 +530,13 @@
          "tags":["tool","intermediate","node.js","c++","memory"]
       },
       {
+         "title":"Blinky Node.js Console App",
+         "description":"Create a Node.js console app that uses UWP APIs to blink an LED",
+         "link-text":"<a href='samples/nodejs-blinky.htm'>Blinky Console App (Node.js)</a>",
+         "ranking":10,
+         "tags":["tool","intermediate","node.js","memory"]
+      },
+      {
          "title":"Launching an external program",
          "description":"Learn how to use <code>Windows.System.ProcessLauncher</code> API to launch external executable programs from your UWP app",
          "link-text":"<a href='samples/ProcessLauncherSample.htm'>ProcessLauncher API Sample (C#)</a>",
