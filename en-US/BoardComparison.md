@@ -54,7 +54,7 @@ lang: en-US
     </tr>
     <tr>
       <td>CPU</td>
-      <td>900MHz Quad-Core ARM Cortex A53</td>
+      <td>1.2GHz Quad-Core ARM Cortex A53</td>
 	  <td>900MHz Quad-Core ARM Cortex A7</td>
       <td></td>
       <td>900MHz Quad-Core ARM Cortex A7</td>
@@ -72,7 +72,7 @@ lang: en-US
     </tr>
     <tr>
       <td>GPU</td>
-	  <td>Broadcom Video Core IV @ 250MHz</td>
+	  <td>Broadcom Video Core IV @ 400MHz</td>
       <td>Broadcom Video Core IV @ 250MHz</td>
       <td>Intel HD Graphics</td>
       <td>Qualcomm Adreno 306 @ 400MHz</td>
