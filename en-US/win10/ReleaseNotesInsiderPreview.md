@@ -6,7 +6,7 @@ lang: en-US
 ---
 
 # Release Notes for Windows 10 IoT Core
-Build Number 14295. March 2016
+Build Number 14322. April 2016
 
 &copy; 2016 Microsoft Corporation. All rights reserved
 
@@ -22,33 +22,16 @@ You can review linked terms by pasting the forward link into your browser window
 
 ## What's new this build: 
 
-* Remote display experience is now included in the image
-* Updates to the servicing engine to better support Windows as a Service
-* Better support for removal of installed headless applications
-* The IoTCoreImageHelper and IoTWatcher have been removed from the installation packages as their functionality has been included in the IoT Dashboard Application. 
+* Updates and Bug fixes to the Remote Display Experience including exposure of Gyros and Magnetometers 
+* Onboard WiFi drivers are now enabled for the Raspberry Pi 3
+* The UART/Serial (miniUART) driver for the Raspberry PI 3 onboard serial port is included in this build.
+* Hardware Accelerated Media Encoders are now supported
 * Updated OS files including core OS bug fixes
+
 
 ## Known issues in this build: 
 
-* This build has aggressive firewall settings enabled and is defaulting to blocking ports opened for listening. To unblock your app you need to connect to the device over SSH or Powershell and use these commands:
-	* To unblock a specific port:
-<pre>
-netsh advfirewall firewall add rule name=[Any name to identify rule] dir=in action=allow protocol=TCP localport=[Port number]
-</pre>
-
-	* For Node.JS the default port is 1337 and you can use the following command:   
-<pre>
-netsh advfirewall firewall add rule name=”Node.js UWP” dir=in action=allow protocol=TCP localport=1337
-</pre>
-* Deploying a Python project from Visual Studio may result in a Visual Studio hang or “Unable to attach debugger” error. This is due to the firewall blocking the Python debugger. To enable Python development connect to the device over SSH or Powershell and run the following commands: 
-<pre>
-netsh advfirewall firewall add rule name="TCP5678-TCP-in" dir=in action=allow protocol=TCP localport=5678
-netsh advfirewall firewall add rule name="TCP5678-TCP-out" dir=out action=allow protocol=TCP localport=5678
-</pre>
-
-* The AllJoyn DSB Visual Studio template may not deploy to IoT Core from the latest version of Visual Studio.
-* The UART/Serial (miniUART) driver for the Raspberry PI 3 onboard serial port is broken in this build.
-
+* The AllJoyn DSB Visual Studio template may not deploy to IoT Core from the latest version of Visual Studio
 
 
 ## Release Notes
@@ -158,3 +141,13 @@ Verify that the driver for the PWM device node is `BCM2836 PWM Controller`:
         Name: BCM2836 PWM Controller
         Driver is running.
     1 matching device(s) found.
+
+#### Time Synchronization 
+If time sync is failing or timing out this may be due to unreachable or a distant time server, the following can be done to add additional or local time servers.
+
+* From a command line on the device (eg. SSH, Powershell)
+<pre>w32tm /config /syncfromflags:manual /manualpeerlist:"0.windows.time.com 1.pool.ntp.org 2.something else, ..."</pre>
+* You may also make these additions to the registry via a boot script or a custom runtime configuration package included as part of the image creation process if needed.
+	* For more details, see:
+		* https://msdn.microsoft.com/en-us/library/windows/hardware/mt670641(v=vs.85).aspx 
+		* https://blogs.msdn.microsoft.com/iot/2015/12/14/windows-10-iot-core-image-creation/  
