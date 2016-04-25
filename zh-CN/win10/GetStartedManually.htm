@@ -1,0 +1,53 @@
+---
+layout: default
+title: Get Started
+permalink: /zh-CN/win10/GetStartedManually.htm
+lang: zh-CN
+---
+<ol class="breadcrumb">
+  <li>
+    <a href="https://dev.windows.com/zh-cn/iot">物联网 首页</a>
+  </li>
+  <li class="active">手动设置</li>
+</ol>
+<h1 class="page-title">手动设置您的物联网核心设备</h1>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <h2 class="subtext">下载并安装Windows 10物联网核心内幕预览镜像</h2>
+  </div>
+</div>
+<h2>获取镜像 <span class="pull-right"><a id="pc-content-toggle" class="toggle-button" onClick="hideDiv('pc-content')">隐藏</a></span></h2>
+
+<hr>
+<div id="pc-content" class="toggle-section">
+{% include_relative GetStarted/SetupBoardManually.md %}
+</div>
+
+
+
+<script>
+  function hideDiv(div) {
+    var div = "#" + div,
+        button = div + "-toggle",
+        currentState = $(button)[0].innerHTML;
+
+    $(button)[0].innerHTML = "显示";
+
+    if(currentState === "隐藏") {
+      $(div).toggle('slow');
+    }
+    else
+    {
+      $(".hidden").removeClass("hidden");
+      $(".toggle-section").hide();
+      $(div).toggle('slow');
+      $(button)[0].innerHTML = "隐藏";
+    }
+  }
+</script>
+
+
+
+
+
+
