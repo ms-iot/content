@@ -232,12 +232,19 @@
          "ranking":3,
          "tags":["beginner","wiring"]
       },
-      {
-         "title":"Lightning Providers samples (UWP)",
-         "description":"Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
-         "link-text":"<a href='samples/BlinkyUILightning.htm'>Blinky UI (C#/C++)</a><br><a href='samples/BlinkyHeadlessLightning.htm'>Blinky Headless (C#/C++)</a><br><a href='samples/WeatherStationLightning.htm'>Weather Station (C#/C++)</a><br><a href='samples/SPIDisplayLightning.htm'>SPI Display (C#/C++)</a><br><a href='samples/NodejsWULightning.htm'>Blinky Headless (Node.js)</a>",
+    {
+      "title": "Lightning Providers samples (UWP)",
+      "description": "Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
+      "link-text": "<a href='samples/BlinkyUILightning.htm'>Blinky UI (C#/C++)</a><br><a href='samples/BlinkyHeadlessLightning.htm'>Blinky Headless (C#/C++)</a><br><a href='samples/WeatherStationLightning.htm'>Weather Station (C#/C++)</a><br><a href='samples/SPIDisplayLightning.htm'>SPI Display (C#/C++)</a><br><a href='samples/NodejsWULightning.htm'>Blinky Headless (Node.js)</a>",
+      "ranking": 0,
+      "tags": [ "intermediate", "c#", "c++", "lightning", "node.js" ]
+    },
+    {
+         "title":"Ardunio Wiring Libraries (UWP)",
+         "description":"Demonstrating how to build Arduino Wiring libraries that can be called from other languages like C# and Node.js",
+         "link-text":"<a href='samples/arduino-wiring/ArduinoWiringComponents.htm'>Blinky UI (C#/C++)</a>",
          "ranking":0,
-         "tags":["intermediate","c#","c++","lightning","node.js"]
+         "tags":["intermediate","c#","c++","lightning","node.js","wiring"]
       },
       {
          "title":"Controlling DC Motors",
