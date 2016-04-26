@@ -149,20 +149,26 @@
          "tags":["advanced"]
       },
       {
-         "title":"Enabling Secure Boot and BitLocker",
-         "description":"Learn how to secure your IoT device by enabling Secure Boot and BitLocker device encryption on supported IoT Core devices",
-         "link-text":"<a href='SB_BL.htm'>Learn More</a>",
-         "ranking":10,
-         "tags":["advanced"]
+         "title": "Enabling Secure Boot and BitLocker",
+         "description": "Learn how to secure your IoT device by enabling Secure Boot and BitLocker device encryption on supported IoT Core devices",
+         "link-text": "<a href='SB_BL.htm'>Learn More</a>",
+         "ranking": 10,
+         "tags": [ "advanced" ]
       },
-	  {
-         "title":"Enabling Internet Connection Sharing",
-         "description":"Learn how to enable Internet Connection Sharing on your IoT Core device by bridging a Software Wi-Fi Access Point and Ethernet adapter",
-         "link-text":"<a href='InternetConnectionSharing.htm'>Learn More</a>",
-         "ranking":20,
-         "tags":["advanced"]
-      }
-   ],
+      {
+         "title": "Remote display experience for Windows 10 IoT Core",
+         "description": "Learn how to put a display on any displayless device with this new technology.",
+         "link-text": "<a href='RemoteDisplay.htm'>Learn More</a>",
+         "ranking": 20,
+         "tags": [ "advanced" ]
+      },
+      {
+         "title": "Arduino and Windows 10",
+         "description": "Arduino and Windows 10 work together to help you make amazing projects. Our technologies support the Arduino Uno and Mega, as well as the new Arduino 101.",
+         "link-text": "<a href='ArduinoAndWindows10.htm'>Learn More</a>",
+         "ranking": 20,
+         "tags": [ "advanced" ]
+      }   ],
    "zh-CN-tags":["beginner","intermediate","advanced","tool","configuration","port","hardware","alljoyn","platform","deploy","debug","visual studio","wifi","bluetooth","connectivity"],
    "zh-CN":[
       {
@@ -313,11 +319,25 @@
          "tags":["advanced"]
       },
       {
-         "title":"Enabling Secure Boot and BitLocker",
-         "description":"Learn how to secure your IoT device by enabling Secure Boot and BitLocker device encryption on supported IoT Core devices",
-         "link-text":"<a href='SB_BL.htm'>Learn More</a>",
-         "ranking":10,
-         "tags":["advanced"]
+         "title": "Enabling Secure Boot and BitLocker",
+         "description": "Learn how to secure your IoT device by enabling Secure Boot and BitLocker device encryption on supported IoT Core devices",
+         "link-text": "<a href='SB_BL.htm'>Learn More</a>",
+         "ranking": 10,
+         "tags": [ "advanced" ]
+      },
+      {
+         "title": "Remote display experience for Windows 10 IoT Core",
+         "description": "Learn how to put a display on any displayless device with this new technology.",
+         "link-text": "<a href='RemoteDisplay.htm'>Learn More</a>",
+         "ranking": 20,
+         "tags": [ "advanced" ]
+      },
+      {
+         "title": "Arduino and Windows 10",
+         "description": "Arduino and Windows 10 work together to help you make amazing projects. Our technologies support the Arduino Uno and Mega, as well as the new Arduino 101.",
+         "link-text": "<a href='ArduinoAndWindows10.htm'>Learn More</a>",
+         "ranking": 20,
+         "tags": [ "advanced" ]
       }
    ]
 }
