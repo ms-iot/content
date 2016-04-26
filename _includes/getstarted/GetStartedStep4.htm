@@ -5,7 +5,7 @@
         <p class="text-caption">
           <span class="win-color-fg-secondary">Instructions for:</span><br/>
           {% include_relative selection-list.inc %}
-          <a href="GetStartedStep0.htm">Change</a>
+          <a href="{{site.baseurl}}/{{page.lang}}/GetStarted0.htm">Change</a>
         </p>
         <br/>
         <p><a href="GetStartedStep1.htm">1 Get the tools</a></p>
@@ -27,7 +27,7 @@
       <div class="col-xs-24">
         <section class="section">
           <div class="section-header">
-            <h2 class="section-title">1. Load the project in Visual Studio<span class="pull-right"><a id="load-project-toggle" class="text-body toggle-button" onClick="hideDiv('load-project')">Hide</a></span></h2>
+            <h2 class="section-title"><span class="step">1</span>Load the project in Visual Studio<span class="pull-right"><a id="load-project-toggle" class="text-body toggle-button" onClick="hideDiv('load-project')">Hide</a></span></h2>
           </div>
           <div class="section-body toggle-section" id="load-project">
             <p>
@@ -46,7 +46,7 @@
       <div class="col-xs-24">
         <section class="section">
           <div class="section-header">
-            <h2 class="section-title">2. Connect the LED to your Windows IoT device<span class="pull-right"><a id="connect-LED-toggle" class="text-body toggle-button" onClick="hideDiv('connect-LED')">Hide</a></span></h2>
+            <h2 class="section-title"><span class="step">2</span>Connect the LED to your Windows IoT device<span class="pull-right"><a id="connect-LED-toggle" class="text-body toggle-button" onClick="hideDiv('connect-LED')">Hide</a></span></h2>
           </div>
           <div class="section-body toggle-section" id="connect-LED">
             <div class="row">
@@ -79,7 +79,7 @@
       <div class="col-xs-24">
         <section class="section">
           <div class="section-header">
-            <h2 class="section-title">3. Deploy your app<span class="pull-right"><a id="deploy-app-toggle" class="text-body toggle-button" onClick="hideDiv('deploy-app')">Hide</a></span></h2>
+            <h2 class="section-title"><span class="step">3</span>Deploy your app<span class="pull-right"><a id="deploy-app-toggle" class="text-body toggle-button" onClick="hideDiv('deploy-app')">Hide</a></span></h2>
           </div>
           <div class="section-body toggle-section" id="deploy-app">
             <div class="row">
@@ -155,7 +155,7 @@
       <div class="col-xs-24">
         <section class="section">
           <div class="section-header">
-            <h2 class="section-title">4. Timer code<span class="pull-right"><a id="timer-code-toggle" class="text-body toggle-button" onClick="hideDiv('timer-code')">Hide</a></span></h2>
+            <h2 class="section-title"><span class="step">4</span>Timer code<span class="pull-right"><a id="timer-code-toggle" class="text-body toggle-button" onClick="hideDiv('timer-code')">Hide</a></span></h2>
           </div>
           <div class="section-body toggle-section" id="timer-code">
             <div class="row">
@@ -206,7 +206,7 @@ private void Timer_Tick(object sender, object e)
       <div class="col-xs-24">
         <section class="section">
           <div class="section-header">
-            <h2 class="section-title">5. Initialize the GPIO pin<span class="pull-right"><a id="init-gpio-code-toggle" class="text-body toggle-button" onClick="hideDiv('init-gpio-code')">Hide</a></span></h2>
+            <h2 class="section-title"><span class="step">5</span>Initialize the GPIO pin<span class="pull-right"><a id="init-gpio-code-toggle" class="text-body toggle-button" onClick="hideDiv('init-gpio-code')">Hide</a></span></h2>
           </div>
           <div class="section-body toggle-section" id="init-gpio-code">
             <div class="row">
@@ -255,7 +255,7 @@ private void InitGPIO()
       <div class="col-xs-24">
         <section class="section">
           <div class="section-header">
-            <h2 class="section-title">6. Modify the state of the GPIO pin<span class="pull-right"><a id="gpio-code-toggle" class="text-body toggle-button" onClick="hideDiv('gpio-code')">Hide</a></span></h2>
+            <h2 class="section-title"><span class="step">6</span>Modify the state of the GPIO pin<span class="pull-right"><a id="gpio-code-toggle" class="text-body toggle-button" onClick="hideDiv('gpio-code')">Hide</a></span></h2>
           </div>
           <div class="section-body toggle-section" id="gpio-code">
             <div class="row">

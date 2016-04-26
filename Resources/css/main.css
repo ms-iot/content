@@ -17,6 +17,17 @@ h2 {
     font-weight: 100;
 }
 
+h2 .step {
+    border: 1px solid #505050;
+    border-radius: 42px;
+    display: inline-block;
+    height: 42px;
+    line-height: 1.4;
+    margin-right: 10px;
+    text-align: center;
+    width: 42px;
+}
+
 h3 {
     font-size: 1.5em;
     margin-bottom: 20px;
@@ -125,9 +136,38 @@ a:link {
     margin-bottom: 50px;
 }
 
-    .iot-site-footer > .row > div > p {
+.iot-site-footer > .row > div > p {
         margin-bottom: 20px;
     }
+
+.iot-getstarted-list {
+    display:inline-block;
+    list-style: none;
+    list-style-position: outside;
+    margin-bottom: 15px;
+    margin-top:15px;
+    margin-left:0px;
+    text-align: -webkit-match-parent;
+}
+
+.iot-getstarted-buttons {
+    display:block;
+    float:left;
+    position:relative;
+    height:130px;
+    width:130px;
+    border-width:1px;
+    font-size:16px;
+    margin: 0 9px 15px;
+    padding: 15px;
+    text-align: -webkit-match-parent;
+}
+
+.iot-getstarted-buttons > img {
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+}
 
 a:hover {
     text-decoration: none;
