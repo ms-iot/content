@@ -28,9 +28,11 @@ lang: en-US
   </li>
 </ul>
 
+<!-- 
 <div class="btn-group">
   <a href="{{site.baseurl}}/{{page.lang}}/GetStarted0.htm" class="btn btn-primary">Get Started</a>
 </div>
+!-->
 
 <h2 id="coming-soon-in-a-future-release-of-windows-iot-core-insider-preview">Coming Soon in a future release of Windows IoT Core Insider Preview</h2>
 <ul>
