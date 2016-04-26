@@ -33,7 +33,6 @@ When the project has been created, open up server.js and replace the existing co
 
 <UL>
 {% highlight JavaScript %}
-var http = require('http');
 var uwp = require('uwp');
 
 // Inject 'Windows' and 'Microsoft' namespaces to global
@@ -64,8 +63,6 @@ setInterval(function () {
     pin.write(Windows.Devices.Gpio.GpioPinValue.high);
   }
 }, 1000);
-
-uwp.close();
 {% endhighlight %}
 </UL>
 
