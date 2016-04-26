@@ -1,89 +1,159 @@
----
-layout: default
-title: 安装 Raspberry Pi 2
-permalink: /zh-CN/win10/SetupRPI.htm
-lang: zh-CN
----
+﻿<h3> 所需内容 </h3>
+    运行 Windows 10 的电脑（在上一步中已准备就绪）。<br>
+    Raspberry Pi 2<br>
+    5V 微型 USB 电源，至少 1.0A 电流。 如果计划使用多个高耗电 USB 外设，请改用电流较高的电源 (>2.0A)。<br>
+    8GB 微型 SD 卡 - 类 10 或更高。我们建议使用<a href="http://www.amazon.com/gp/product/B00IVPU786" target="_blank">这个</a>或<a href="http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445" target="_blank">这个</a>。<br>
+    HDMI 电缆和监视器<br>
+    以太网电缆<br>
+    微型 SD 卡读卡器 - 因为大多数内部微型 SD 卡读卡器均会出现问题，所以我们建议使用外部 USB 微型 SD 卡读卡器，例如<a href="http://www.amazon.com/Transcend-Information-Card-Reader-TS-RDF5K/dp/B009D79VH4" target="_blank">这个</a>或<a href="http://www.amazon.com/Kingston-Digital-MobileLite-Multi-Function-FCR-MLG4/dp/B00KX4TORI" target="_blank">这个</a><br>
+<h3> 安装 Windows 10 IoT 核心版工具 </h3>
+  <ol class="setup-content-list">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <li>
+          从我们的<a href="http://ms-iot.github.io/content/zh-cn/Downloads.htm" target="_blank">下载页</a>下载 Windows 10 IoT 核心版映像。将 ISO 保存到本地文件夹。
+        </li>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <img class="image-border" src="{{site.baseurl}}/Resources/images/SetupRPI/Iso.PNG">
 
-#入门
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <li>
+          双击该 ISO (Iot Core RPi.iso)。它自动将其本身作为虚拟驱动器进行装载，以便你可以访问内容。
+        </li>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <img class="image-border" src="{{site.baseurl}}/Resources/images/SetupRPI/MSI.PNG">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <li>
+          安装 Windows_10_IoT_Core_RPi2.msi。安装完成后，flash.ffu 将位于 C:\Program Files (x86)\Microsoft IoT\FFU\RaspberryPi2 上。
+        </li>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <img class="image-border" src="{{site.baseurl}}/Resources/images/SetupRPI/rpiffu.PNG">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <li>
+          安装完成后，弹出虚拟 CD - 可通过以下步骤完成此操作：导航到文件资源管理器的顶级文件夹、右键单击该虚拟驱动器，然后选择“弹出”。
+        </li>
+      </div>
+    </div>
+  </ol>
 
-了解如何设置 Raspberry Pi 2 并将其连接到计算机。
-
-{% include steps.html device="RPI2" %}
-
-##需要具备的条件
-
-1. **运行 Windows 10 的电脑**（在上一步中已准备就绪）
-1. **Raspberry Pi 2**
-1. **5V 微型 USB 电源** - 使用至少 1.0A 电流。如果计划使用多个高耗电 USB 外围设备，请改用电流较高的电源 \(\>2.0A\)。
-1. <a name="RPi2_SDcard"></a>\*\*8GB 微型 SD 卡\*\* - 类 10 或更高。（我们建议使用[这个](http://www.amazon.com/gp/product/B00IVPU786){:target="_blank"}或[这个](http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445){:target="_blank"}）
-1. **HDMI 电缆和监视器**
-1. **以太网电缆**
-1. **微型 SD 卡读卡器**（因为大多数内部 SD 卡读卡器均会出现问题，所以我们建议使用外部 USB 卡读卡器，例如[这个](http://www.amazon.com/dp/B009D79VH4){:target="_blank"}或[这个](http://www.amazon.com/dp/B0096FB5CW){:target="_blank"}）
-
-## 安装 Windows 10 IoT 核心版工具
-
-1. 从 Microsoft 下载中心[下载](http://go.microsoft.com/fwlink/?LinkId=616847)用于 Raspberry Pi 2 的 ISO。
-
-2. **将 ISO 保存**到本地文件夹
-
-	<img class="image-border" src="{{site.baseurl}}/Resources/images/SetupRPI/Iso.PNG">
-
-3. 双击 ISO（IoT 核心版 RPi.iso）。它将自动将其本身作为虚拟驱动器进行装载，以便你可以访问内容。
-
-	<img class="image-border" src="{{site.baseurl}}/Resources/images/SetupRPI/MSI.PNG">
-
-4. 安装 **Windows\_10\_IoT\_Core\_RPi2.msi**。安装完成后，flash.ffu 将位于 **C:\\Program Files \(x86\)\\Microsoft IoT\\FFU\\RaspberryPi2**
-
-	<img class="image-border" src="{{site.baseurl}}/Resources/images/SetupRPI/rpiffu.PNG">
-
-5. 完成后将弹出虚拟 CD
-
-##将 Windows 10 IoT Core Insider Preview 映像放置在 SD 卡上
-
-1. **将微型 SD 卡插入** SD 卡读卡器。
-
-2. **使用 IoTCoreImageHelper.exe** 切换 SD 卡。从“开始”菜单搜索“WindowsIoT”，并选择快捷方式“WindowsIoTImageHelper”
-
-	<img src="{{site.baseurl}}/Resources/images/ImagerHelperSearch.PNG">
-
-3. 该工具将按照显示方式枚举设备。选择希望切换的 SD 卡，然后提供 FFU 的位置并切换映像。
-
-	<img src="{{site.baseurl}}/Resources/images/SetupRPI/ImageHelper.PNG">
-
-4. 单击任务栏中的“安全删除硬件”图标，然后选择你的 USB SD 读卡器以将其从系统中安全删除。如果未正确执行此操作，可能导致映像损坏。
-
-	**注意：** 如果希望在使用完 Windows 10 IoT 核心版后将其从 SD 卡中删除，请参阅标题为**如何从 SD 卡中删除 Windows 10 IoT 核心版？**的[常见问题]({{site.baseurl}}/{{page.lang}}/Faqs.htm)部分。
-
-	**注意：** IoTCoreImageHelper.exe 是推荐用来切换 SD 卡的工具。但是，说明可用于直接使用 [DISM 命令行工具]({{site.baseurl}}/{{page.lang}}/win10/samples/DISM.htm)
-
-##连接电路板
-
-1. 插入已准备的**微型 SD 卡**（插槽在如下所示的电路板的另一侧）。
-2. **将网络电缆**从本地网络连接到电路板上的以太网端口。请确保开发电脑在同一网络上。
-
-	**注意：** 如果没有本地有线网络，请参阅[此处]({{site.baseurl}}/{{page.lang}}/win10/ConnectToDevice.htm)获取其他连接选项。
-
-3. **将 HDMI 监视器连接到**电路板上的 HDMI 端口。
-4. **将电源连接到**开发板上的微型 USB 端口。
-
-<img class="device-images" src="{{site.baseurl}}/Resources/images/rpi2.png">
-
-##启动 Windows 10 IoT 核心版
-1. 连接电源后，Windows 10 IoT 核心版将自动启动。这可能需要几分钟时间。
-2. 启动设备后，DefaultApp 将启动并显示 RPi2 的 IP 地址。
-
-	<img class="device-images" src="{{site.baseurl}}/Resources/images/DefaultAppRpi2.png">
-
-3. 遵循[此处的 PowerShell 文档]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)，使用 PowerShell 连接到正在运行的设备。也可按照[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm)的说明使用 SSH 连接到设备。
-4. **强烈推荐**更新管理员帐户的默认密码。若要执行此操作，请在 PowerShell 连接中发出以下命令：
-
-    使用强密码替换 `[new password]`：
-
-        net user Administrator [new password]
-
-    此操作完成后，将需要使用 psSession 和新凭据重新建立当前会话。
-
-##其他资源
-* [受支持的外围接口和设备]({{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm){:target="_blank"}
-
+<h3> 将 Windows 10 IoT 核心版映像放置在 SD 卡上 </h3>
+  <ol class="setup-content-list">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <li>
+          将微型 SD 卡插入 SD 卡读卡器。
+        </li>
+      </div>
+      <div class="col-md-6 col-sm-12">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <li>
+           使用 IoTCoreImageHelper.exe 刷写 SD 卡。从“开始”菜单搜索“WindowsIoT”，并选择快捷方式“WindowsIoTImageHelper”。
+        </li>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <img src="{{site.baseurl}}/Resources/images/ImagerHelperSearch.PNG">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <li>
+          <p>该工具将枚举设备，如下所示。选择你希望刷写的 SD 卡，然后提供 FFU 的位置以刷入映像。</p>
+          <p><b>注意：</b> IoTCoreImageHelper.exe 是推荐用来刷写 SD 卡的工具。但是，说明可用于直接使用 <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/DISM.htm" target="_blank">DISM 命令行工具</a>。</p>
+        </li>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <img src="{{site.baseurl}}/Resources/images/SetupRPI/ImageHelper.PNG">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <li>
+          <p>通过以下步骤可安全删除你的 USB SD 卡读卡器：单击任务栏中的“安全删除硬件”，或在文件资源管理器中找到 USB 设备，然后右键单击并选择“弹出”。 如果未正确执行此操作，可能导致映像损坏。</p>
+          <p><b>注意：</b> 如果你希望在使用完 Windows 10 IoT 核心版后将其从 SD 卡中删除，请参阅标题为“如何从我的 SD 卡中删除 Windows 10 IoT 核心版？”的<a href="{{site.baseurl}}/{{page.lang}}/Faqs.htm" target="_blank">常见问题</a>部分。</p>
+        </li>
+      </div>
+      <div class="col-md-6 col-sm-12">
+      </div>
+    </div>
+  </ol>
+<h3> 连接开发板 </h3>
+<div class="setup-content-list">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <ol class="setup-content-list">
+        <li>将你准备好的微型 SD 卡插入 Raspberry Pi 2 中（该插槽由下图中的箭头 #1 指示）。</li>
+        <li>
+          <p>将网络电缆从本地网络连接到开发板上的以太网端口。请确保开发电脑在同一网络上。</p>
+          <p><b>注意：</b> 如果没有本地有线网络，请参阅<a href="{{site.baseurl}}/{{page.lang}}/win10/ConnectToDevice.htm" target="_blank">此处</a>获取其他连接选项。</p>
+        </li>
+        <li> 将 HDMI 监视器连接到开发板上的 HDMI 端口。</li>
+        <li>将电源连接到开发板上的微型 USB 端口。</li>
+      </ol>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <img class="device-images" src="{{site.baseurl}}/Resources/images/rpi2.png">
+    </div>
+  </div>
+</div>
+<h3>启动 Windows 10 IoT 核心版</h3>
+<ol class="setup-content-list">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <li>
+        连接电源后，Windows 10 IoT 核心版将自动启动。此过程可能需要几分钟。 看到 Windows 徽标后，屏幕可能会黑屏大约一分钟 - 不必担心，这是正常启动。 你还可能看到屏幕提示你为 Windows 10 IoT 核心版设备选择一种语言 - 连接鼠标并选择选项，或者等待 1 到 2 分钟，该屏幕即会消失。
+      </li>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <li>设备启动后，DefaultApp 将启动并显示 RPi2 的 IP 地址。
+      </li>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <img class="device-images" src="{{site.baseurl}}/Resources/images/DefaultAppRpi2.png">
+    </div>
+  </div>
+</ol>
+<h3>连接到设备</h3>
+<ol class="setup-content-list">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <li>
+        你可以使用 <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm" target="_blank">Windows Device Portal</a> 通过你最喜爱的 Web 浏览器来连接到设备。除了高级诊断工具外，设备门户还提供了配置和设备管理功能，从而帮助你排除 Windows IoT 设备的故障并查看其实时性能。<a href="{{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm" target="_blank">单击此处以了解如何连接到 Windows Device Portal！</a>
+      </li>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <img class="device-images" src="{{site.baseurl}}/Resources/images/deviceportal/deviceportal_small_rpi2.png">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <li>
+        你还可以使用 PowerShell 通过命令外壳来连接到设备。按照 <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm" target="_blank">PowerShell 文档</a>使用 PowerShell 来连接到正在运行的设备。 也可按照 <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm" target="_blank">SSH 说明</a>使用 SSH 来连接到设备。
+      </li>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <img class="device-images" src="{{site.baseurl}}/Resources/images/powershell/connection.png">
+    </div>
+  </div>
+</ol>
+<div>
+  强烈建议你更新 Administrator 帐户的默认密码。<a href="{{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm" target="_blank">Windows Device Portal</a> 或 <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm" target="_blank">Powershell</a> 的相关文档中有说明。
+</div>
+<h3> 其他资源 </h3>
+<p><a href="{{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm" target="_blank">受支持的外围接口和设备</a></p>
