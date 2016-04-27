@@ -19,13 +19,13 @@ h2 {
 
 h2 .step {
     border: 1px solid #505050;
-    border-radius: 42px;
+    border-radius: 50%;
     display: inline-block;
-    height: 42px;
+    height: 1.5em;
+    width: 1.5em;
     line-height: 1.4;
     margin-right: 10px;
     text-align: center;
-    width: 42px;
 }
 
 h3 {
