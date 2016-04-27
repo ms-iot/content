@@ -1,0 +1,263 @@
+---
+layout: default
+title: Get Started
+description: Begin with the set up or selection of a board, set up your development environment, and get started writing your first app.
+keyword: windows iot, get started, tutorial, iot
+permalink: /en-US/GetStarted0.htm
+lang: en-US
+---
+
+<div class="row">
+    <div class="col-xs-24">
+        <ol class="breadcrumb">
+            <li>
+                <a href="https://developer.microsoft.com/en-us/windows/iot">IoT Home</a>
+            </li>
+            <li class="active">Get Started</li>
+        </ol>
+        <header class="page-title-header">
+            <h1 class="page-title">Get Started</h1>
+        </header>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-24">
+        <h2 class="subtext">The setup and installation steps are different based on what hardware you have. </h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-24">
+        <h2 class="text-base">Choose your board, harware and OS version.</h2>
+    </div>
+</div>
+
+<div id="selectBoardSection">
+    <div class="row">
+        <div class="col-xs-24">
+            <h2><span class="step">1</span>Select your board</h2>
+            <p style="padding-left:52px"><a href="{{site.baseurl}}/{{page.lang}}/BoardComparison.htm">Help me choose a board</a></p>
+            <hr />
+        </div>
+    </div>
+
+    <ul class="iot-getstarted-list">
+        <li id="rpi2Button" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('rpi2')">
+            <img style="max-width:40%; padding-top:10px" src="{{site.baseurl}}/Resources/images/RaspberryPiIcon.png">
+            <p class="text-caption" style="padding-top:25px">Raspberry Pi 2</p>
+        </li>
+        <li id="rpi3Button" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('rpi3')">
+            <img style="max-width:40%; padding-top:10px" src="{{site.baseurl}}/Resources/images/RaspberryPiIcon.png">
+            <p class="text-caption" style="padding-top:25px">Raspberry Pi 3</p>
+        </li>
+        <li id="dragonboardButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('dragonboard')">
+            <img style="max-width:70%;" src="{{site.baseurl}}/Resources/images/DragonBoardIcon.png">
+            <p class="text-caption" style="padding-top:25px">Dragonboard 410c</p>
+        </li>
+        <li id="mbmButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('mbm')">
+            <img style="max-width:75%;" src="{{site.baseurl}}/Resources/images/minnowboard-max.png">
+            <p class="text-caption">Minnowboard Max</p>
+        </li>
+    </ul>
+</div>
+<div id="selectHardwareSection" class="toggle-section" style="display:none">
+    <div class="row">
+        <div class="col-xs-24">
+            <h2><span class="step">2</span>Select your hardware</h2>
+            <hr /> 
+        </div>
+    </div>
+    <ul class="iot-getstarted-list">
+        <li id="starterPackButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="hardwareButtonClick('starterPack')">
+            <img style="max-width:50%;" src="{{site.baseurl}}/Resources/images/product.png">
+            <p class="text-caption" style="padding-top:35px">Starter Pack</p>
+        </li>
+        <li id="sdcardButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="hardwareButtonClick('sdcard')">
+            <img style="max-width:40%;" src="{{site.baseurl}}/Resources/images/sdcard.png">
+            <p class="text-caption" style="padding-top:15px">Flash onto my blank micro SD card</p>
+        </li>
+        <li id="noobsButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="hardwareButtonClick('noobs')">
+            <img style="max-width:50%;" src="{{site.baseurl}}/Resources/images/noobs.png">
+            <p class="text-caption" style="padding-top:35px">NOOBS</p>
+        </li>
+    </ul>
+</div>
+<div id="selectOSSection" class="toggle-section" style="display:none">
+    <div class="row">
+        <div class="col-xs-24">
+            <h2><span class="step">3</span>Select your OS version</h2>
+            <hr />
+        </div>
+    </div>
+
+    <ul class="iot-getstarted-list">
+            <li id="stableButton" class="win-color-border-20 win-color-bg-0  iot-getstarted-buttons" onclick="osButtonClick('stable')">
+                <img style="max-width:60%;" src="{{site.baseurl}}/Resources/images/windows.png">
+                <p class="text-caption" >Windows 10 IoT Core Stable Release</p>
+            </li>
+            <li id="insiderButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="osButtonClick('insider')">
+                <img style="max-width:60%;" src="{{site.baseurl}}/Resources/images/windows.png">
+                <p class="text-caption" >Windows 10 IoT Core Insider Preview</p>
+            </li>
+    </ul>
+</div>
+<div id="getStartedCompletedSection" class="toggle-section" style="display:none">
+    <div class="row spacer-84-top">
+        <div class="col-xs-24">
+            <h2 class="text-base">Get started is complete. Get the tools is next.</h2>
+        </div>
+    </div>
+    <div class="row spacer-32-top">
+        <div class="col-xs-24">
+            <a id="getStartedNextButton" href="#" class="btn btn-primary" onclick="getStartedNextButtonClick()">Next</a>
+        </div>
+    </div>
+</div>
+<script>
+    var selectedBoard;
+    var selectedHardware;
+    var selectedOS;
+
+    function pressButton(button) {
+        $(button).addClass('win-color-bg-20');
+        $(button).removeClass('win-color-bg-0');
+    }
+
+    function unpressButton(button) {
+        $(button).removeClass('win-color-bg-20');
+        $(button).addClass('win-color-bg-0');
+    }
+
+    function boardButtonClick(board) {
+        // untoggle all the buttons
+        unpressButton('#rpi2Button');
+        unpressButton('#rpi3Button');
+        unpressButton('#dragonboardButton');
+        unpressButton('#mbmButton');
+        unpressButton('#starterPackButton');
+        unpressButton('#sdcardButton');
+        unpressButton('#noobsButton');
+        selectedBoard = board;
+        var pressedButton = '#' + board + 'Button';
+        switch (selectedBoard) {
+            case 'rpi2':
+                $('#noobsButton').show();
+                $('#starterPackButton').show();
+                $('#sdcardButton').show();
+                break;
+            case 'rpi3':
+                $('#starterPackButton').hide();
+                $('#noobsButton').show();
+                $('#sdcardButton').show();
+                break;
+            case 'mbm':
+                $('#sdcardButton').show();
+                $('#noobsButton').hide();
+                $('#starterPackButton').hide();
+                break;
+            case 'dragonboard':
+                pressButton(pressedButton);
+                $('#selectHardwareSection').hide('fast');
+                $('#selectOSSection').hide('fast');
+                $('#getStartedCompletedSection').show('fast');
+                return;
+        }
+
+        $('#selectHardwareSection').show('fast');
+        $('#selectOSSection').hide('fast');
+        $('#getStartedCompletedSection').hide('fast');
+        
+        pressButton(pressedButton);
+    }
+
+    function hardwareButtonClick(hardware) {
+        selectedHardware = hardware;
+
+        //untoggle all the buttons
+        unpressButton('#starterPackButton');
+        unpressButton('#sdcardButton');
+        unpressButton('#noobsButton');
+        unpressButton('#stableButton');
+        unpressButton('#insiderButton');
+
+        switch(selectedHardware)
+        {
+            case 'starterPack':
+                $('#selectOSSection').hide('fast');
+                $('#getStartedCompletedSection').show('fast');
+                break;
+            case 'noobs':
+                $('#selectOSSection').hide('fast');
+                $('#getStartedCompletedSection').show('fast');
+                break;
+            case 'sdcard':
+                $('#selectOSSection').show('fast');
+                if (selectedBoard == 'rpi3') {
+                  $('#stableButton').hide('fast');
+                } else {
+                  $('#stableButton').show('fast');
+                }
+                
+                $('#getStartedCompletedSection').hide('fast');
+                break;
+        }
+        var pressedButton = '#' + hardware + 'Button';
+        pressButton(pressedButton);
+    }
+
+    function osButtonClick(os) {
+        selectedOS = os;
+        $('#getStartedCompletedSection').show('fast');
+        var pressedButton = '#' + os + 'Button';
+
+        //untoggle all the buttons
+        unpressButton('#stableButton');
+        unpressButton('#insiderButton');
+        pressButton(pressedButton);
+    }
+
+    function getStartedNextButtonClick() {
+      var href = '{{site.baseurl}}/{{page.lang}}/win10/GetStarted/';
+      
+      switch (selectedBoard) {
+        case 'dragonboard':
+          window.location.href = '{{site.baseurl}}/{{page.lang}}/win10/DB410c.htm';
+          return;
+        case 'rpi2':
+        case 'rpi3':
+        case 'mbm':
+          href += selectedBoard + '/';
+          break;
+        default:
+          return;
+        }
+      
+      switch(selectedHardware)
+      {
+        case 'starterPack':
+          window.location.href = '{{site.baseurl}}/{{page.lang}}/win10/AdafruitMakerKit.htm';
+          return;
+        case 'noobs':
+          window.location.href = '{{site.baseurl}}/{{page.lang}}/win10/Noobs.htm';
+          return;
+        case 'sdcard':
+          href += selectedHardware + '/';
+          break;
+        default:
+          return;
+      }
+
+      switch(selectedOS)
+      {
+        case 'stable':
+        case 'insider':
+          href += selectedOS + '/';
+          break;
+        default:
+          return;
+      }
+
+      href += 'GetStartedStep1.htm';
+      window.location.href = href;
+    }
+</script>
