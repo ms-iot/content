@@ -128,6 +128,10 @@ lang: en-US
         $(button).addClass('win-color-bg-0');
     }
 
+    function scrollToEndofPage() {
+        $('html, body').animate({scrollTop:$(document).height()}, 'fast');
+    }
+
     function boardButtonClick(board) {
         // untoggle all the buttons
         unpressButton('#rpi2Button');
@@ -160,15 +164,16 @@ lang: en-US
                 $('#selectHardwareSection').hide('fast');
                 $('#selectOSSection').hide('fast');
                 $('#getStartedCompletedSection').show('fast');
+                scrollToEndofPage();
                 return;
         }
 
         $('#selectHardwareSection').show('fast');
         $('#selectOSSection').hide('fast');
         $('#getStartedCompletedSection').hide('fast');
-        
         pressButton(pressedButton);
-    }
+        scrollToEndofPage();
+     }
 
     function hardwareButtonClick(hardware) {
         selectedHardware = hardware;
@@ -192,6 +197,7 @@ lang: en-US
                 break;
             case 'sdcard':
                 $('#selectOSSection').show('fast');
+
                 if (selectedBoard == 'rpi3') {
                   $('#stableButton').hide('fast');
                 } else {
@@ -203,6 +209,7 @@ lang: en-US
         }
         var pressedButton = '#' + hardware + 'Button';
         pressButton(pressedButton);
+        scrollToEndofPage();
     }
 
     function osButtonClick(os) {
@@ -214,6 +221,7 @@ lang: en-US
         unpressButton('#stableButton');
         unpressButton('#insiderButton');
         pressButton(pressedButton);
+        scrollToEndofPage();
     }
 
     function getStartedNextButtonClick() {
