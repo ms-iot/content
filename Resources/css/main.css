@@ -141,32 +141,33 @@ a:link {
     }
 
 .iot-getstarted-list {
-    display:inline-block;
+    display: inline-block;
     list-style: none;
     list-style-position: outside;
     margin-bottom: 15px;
-    margin-top:15px;
-    margin-left:0px;
+    margin-top: 15px;
+    margin-left: 0px;
     text-align: -webkit-match-parent;
 }
 
 .iot-getstarted-buttons {
-    display:block;
-    float:left;
-    position:relative;
-    height:130px;
-    width:130px;
-    border-width:1px;
-    font-size:16px;
+    display: block;
+    float: left;
+    position: relative;
+    height: 130px;
+    width: 130px;
+    border-width: 1px;
+    font-size: 16px;
     margin: 0 9px 15px;
     padding: 15px;
     text-align: -webkit-match-parent;
+    cursor: pointer;
 }
 
 .iot-getstarted-buttons > img {
-    display:block;
+    display: block;
     margin-left: auto;
-    margin-right:auto;
+    margin-right: auto;
 }
 
 a:hover {
