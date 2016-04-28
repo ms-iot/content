@@ -85,3 +85,18 @@
     </div>
   </div>
 </div>
+<script>
+  function hideDiv(div) {
+    var pdiv = "#" + div,
+        button = pdiv + "-toggle"
+
+    if ($(pdiv).css('display') == 'none') {
+      $(pdiv).toggle('slow');
+      $(button).html('Hide');
+    }
+    else {
+      $(pdiv).toggle('slow');
+      $(button).html('Show');
+    }
+  }
+</script>
