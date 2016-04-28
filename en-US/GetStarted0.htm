@@ -60,7 +60,7 @@ lang: en-US
         </li>
     </ul>
 </div>
-<div id="selectHardwareSection" class="toggle-section" style="display:none">
+<div id="selectHardwareSection" style="display:none">
     <div class="row">
         <div class="col-xs-24">
             <h2><span class="step">2</span>Select your hardware</h2>
@@ -74,7 +74,7 @@ lang: en-US
         </li>
         <li id="sdcardButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="hardwareButtonClick('sdcard')">
             <img style="max-width:40%;" src="{{site.baseurl}}/Resources/images/sdcard.png">
-            <p class="text-caption" style="padding-top:15px">Flash onto my blank micro SD card</p>
+            <p class="text-caption" style="padding-top:15px">Flash onto my blank microSD card</p>
         </li>
         <li id="noobsButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="hardwareButtonClick('noobs')">
             <img style="max-width:50%;" src="{{site.baseurl}}/Resources/images/noobs.png">
@@ -82,7 +82,7 @@ lang: en-US
         </li>
     </ul>
 </div>
-<div id="selectOSSection" class="toggle-section" style="display:none">
+<div id="selectOSSection" style="display:none">
     <div class="row">
         <div class="col-xs-24">
             <h2><span class="step">3</span>Select your OS version</h2>
@@ -93,7 +93,7 @@ lang: en-US
     <ul class="iot-getstarted-list">
             <li id="stableButton" class="win-color-border-20 win-color-bg-0  iot-getstarted-buttons" onclick="osButtonClick('stable')">
                 <img style="max-width:60%;" src="{{site.baseurl}}/Resources/images/windows.png">
-                <p class="text-caption" >Windows 10 IoT Core Stable Release</p>
+                <p class="text-caption" >Windows 10 IoT Core Version 1511</p>
             </li>
             <li id="insiderButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="osButtonClick('insider')">
                 <img style="max-width:60%;" src="{{site.baseurl}}/Resources/images/windows.png">
@@ -101,7 +101,7 @@ lang: en-US
             </li>
     </ul>
 </div>
-<div id="getStartedCompletedSection" class="toggle-section" style="display:none">
+<div id="getStartedCompletedSection" style="display:none">
     <div class="row spacer-84-top">
         <div class="col-xs-24">
             <h2 class="text-base">Get started is complete. Get the tools is next.</h2>
@@ -128,8 +128,9 @@ lang: en-US
         $(button).addClass('win-color-bg-0');
     }
 
-    function scrollToEndofPage() {
-        $('html, body').animate({scrollTop:$(document).height()}, 'fast');
+    function scrollToSection(section) {
+        var div = "#" + section;
+        $('html, body').animate({ scrollTop: $(div).offset().top }, 'fast');
     }
 
     function boardButtonClick(board) {
@@ -164,7 +165,7 @@ lang: en-US
                 $('#selectHardwareSection').hide('fast');
                 $('#selectOSSection').hide('fast');
                 $('#getStartedCompletedSection').show('fast');
-                scrollToEndofPage();
+                scrollToSection('getStartedCompletedSection');
                 return;
         }
 
@@ -172,7 +173,7 @@ lang: en-US
         $('#selectOSSection').hide('fast');
         $('#getStartedCompletedSection').hide('fast');
         pressButton(pressedButton);
-        scrollToEndofPage();
+        scrollToSection('selectHardwareSection');
      }
 
     function hardwareButtonClick(hardware) {
@@ -190,10 +191,12 @@ lang: en-US
             case 'starterPack':
                 $('#selectOSSection').hide('fast');
                 $('#getStartedCompletedSection').show('fast');
+                scrollToSection('getStartedCompletedSection');
                 break;
             case 'noobs':
                 $('#selectOSSection').hide('fast');
                 $('#getStartedCompletedSection').show('fast');
+                scrollToSection('getStartedCompletedSection');
                 break;
             case 'sdcard':
                 $('#selectOSSection').show('fast');
@@ -205,11 +208,11 @@ lang: en-US
                 }
                 
                 $('#getStartedCompletedSection').hide('fast');
+                scrollToSection('selectOSSection');
                 break;
         }
         var pressedButton = '#' + hardware + 'Button';
         pressButton(pressedButton);
-        scrollToEndofPage();
     }
 
     function osButtonClick(os) {
@@ -221,7 +224,7 @@ lang: en-US
         unpressButton('#stableButton');
         unpressButton('#insiderButton');
         pressButton(pressedButton);
-        scrollToEndofPage();
+        scrollToSection('getStartedCompletedSection');
     }
 
     function getStartedNextButtonClick() {
