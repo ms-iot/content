@@ -69,7 +69,7 @@ Attempting to add references to AllJoyn adapter projects may result in errors wh
 #### Serial Port Usage and Access on RPi2
 Raspberry Pi 2 supports the serial transport for communication through the PL011 UART.  This is set by default in kernel debugging scenarios.  An application or device driver can use the PL011 UART to send and receive data with the PL011 device driver turning off the debugger using the following command:  
 
-bcedit /set debug off
+bcdedit /set debug off
 
 #### <a name="wifidirect"></a>WiFi Direct limitations on IoTCore
 1. The IoTCore device has to be the connecting device – it will not work as the advertising device with another device initiating the connection.  
