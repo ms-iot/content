@@ -104,7 +104,9 @@ lang: en-US
         button = div + "-toggle",
         currentState = $(button)[0].innerText;
 
-    
+    for (var i = 0; i < 6 ; i++) {
+        $(".toggle-button")[i].innerHTML = "Show";
+    }
 
     if(currentState === "Hide") {
       $(div).toggle('slow');
