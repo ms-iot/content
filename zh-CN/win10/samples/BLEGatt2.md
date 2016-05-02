@@ -2,7 +2,7 @@
 layout: default
 title: BLE GATT 示例 - 代码
 permalink: /zh-cn/win10/samples/BLEGatt2.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 使用和分解代码

@@ -2,7 +2,7 @@
 layout: default
 title: ZWaveTutorial
 permalink: /zh-cn/win10/samples/ZWaveTutorial.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Z-Wave 示例

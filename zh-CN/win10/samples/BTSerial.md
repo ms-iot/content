@@ -2,7 +2,7 @@
 layout: default
 title: 蓝牙 RFCOMM 示例
 permalink: /zh-cn/win10/samples/BTSerial.htm
-lang: zh-cn
+lang: zh-CN
 ---
 # 蓝牙 RFCOMM 示例
 

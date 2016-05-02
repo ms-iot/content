@@ -2,7 +2,7 @@
 layout: default
 title: 标准 Firmata
 permalink: /zh-cn/win8/samples/Firmata.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 <div style="background-color:Silver; color:black; padding:20px;">

@@ -2,7 +2,7 @@
 layout: default
 title: 性能报告
 permalink: /zh-cn/win10/LightningPerformance.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Windows IoT Lightning 性能测试

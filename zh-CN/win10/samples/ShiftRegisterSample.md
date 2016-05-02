@@ -2,7 +2,7 @@
 layout: default
 title: 移位寄存器示例
 permalink: /zh-cn/win10/samples/ShiftRegisterSample.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 移位寄存器示例

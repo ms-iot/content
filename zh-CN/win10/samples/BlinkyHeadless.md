@@ -2,7 +2,7 @@
 layout: default
 title: 无外设模式的 Blinky 示例
 permalink: /zh-cn/win10/samples/BlinkyHeadless.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 {: .thin-header}

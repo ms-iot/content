@@ -4,7 +4,7 @@ title: 高级主题
 description: 了解 Windows IoT 的高级主题。
 keyword: windows iot
 permalink: /zh-cn/win10/Advanced.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 高级主题

@@ -2,7 +2,7 @@
 layout: default
 title: 后台应用程序
 permalink: /zh-cn/win10/BackgroundApplications.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 开发后台应用程序

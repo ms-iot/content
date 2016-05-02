@@ -2,7 +2,7 @@
 layout: default
 title: 数字签名 UWP 示例
 permalink: /zh-cn/win10/samples/DigitalSignage.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 数字签名应用

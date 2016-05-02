@@ -2,7 +2,7 @@
 layout: default
 title: 项目设置
 permalink: /zh-cn/win10/ArduinoWiringProjectGuide.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Arduino 接线项目指南

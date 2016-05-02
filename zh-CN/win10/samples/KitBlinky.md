@@ -3,7 +3,7 @@ layout: default
 title: Blinky 示例
 permalink: /zh-cn/win10/samples/KitBlinky.htm
 step: win10/samples/KitBlinky.htm
-lang: zh-cn
+lang: zh-CN
 deviceName: RPI2
 kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 ---

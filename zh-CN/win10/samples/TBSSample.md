@@ -2,7 +2,7 @@
 layout: default
 title: TBS 示例应用程序
 permalink: /zh-cn/win10/samples/TBSSample.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # TBS 示例应用程序

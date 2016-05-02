@@ -2,7 +2,7 @@
 layout: default
 title: SpeechTranslator 示例
 permalink: /zh-cn/win10/samples/speechtranslator.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 生成 SpeechTranslator 项目

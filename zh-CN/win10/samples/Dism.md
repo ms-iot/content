@@ -2,7 +2,7 @@
 layout: default
 title: 使用 DISM 将映像应用到 Windows IoT 核心版设备的 SD 卡
 permalink: /zh-cn/win10/samples/DISM.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 使用 DISM 可将微型 SD 卡刷入 Windows IoT 核心版设备

@@ -4,7 +4,7 @@ title: AllJoyn
 description: 了解 IoT 设备的常见协议 AllJoyn，以及它如何通过 Windows IoT 来支持更多功能。
 keyword: alljoyn, windows iot, allseen alliance
 permalink: /zh-cn/win10/AllJoyn.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # AllJoyn

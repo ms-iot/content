@@ -2,7 +2,7 @@
 layout: default
 title: 蓝牙支持
 permalink: /zh-cn/win10/Bluetooth.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 蓝牙支持

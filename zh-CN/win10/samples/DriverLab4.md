@@ -2,7 +2,7 @@
 layout: default
 title: 驱动程序实验 - 使用 Visual Studio 部署驱动程序
 permalink: /zh-cn/win10/samples/DriverLab4.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 ## 使用 Visual Studio 部署驱动程序 

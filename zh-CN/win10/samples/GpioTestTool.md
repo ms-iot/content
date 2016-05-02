@@ -2,7 +2,7 @@
 layout: default
 title: GpioTestTool
 permalink: /zh-cn/win10/samples/GpioTestTool.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 ## GpioTestTool 示例

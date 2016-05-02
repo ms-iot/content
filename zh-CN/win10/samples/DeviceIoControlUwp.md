@@ -2,7 +2,7 @@
 layout: default
 title: DeviceIoControlUwp
 permalink: /zh-cn/win10/samples/DeviceIoControlUwp.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 ## DeviceIoControlUwp 示例

@@ -2,7 +2,7 @@
 layout: default
 title: DragonBoard 引脚映射
 permalink: /zh-cn/win10/samples/PinMappingsDb.htm
-lang: zh-cn
+lang: zh-CN
 ---
 # DragonBoard 引脚映射
 

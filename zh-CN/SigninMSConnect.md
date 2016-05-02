@@ -2,7 +2,7 @@
 layout: default
 title: 登录 Microsoft Connect
 permalink: /zh-cn/SigninMSConnect.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 <h1>登录 Microsoft Connect</h1>

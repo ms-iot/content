@@ -2,7 +2,7 @@
 layout: default
 title: MCP23017Sample
 permalink: /zh-cn/win8/samples/MCP23017-Sample.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 <div style="background-color:Silver; color:black; padding:20px;">

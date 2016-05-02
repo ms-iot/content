@@ -2,7 +2,7 @@
 layout: default
 title: 使用 Lightning 提供程序的 Blinky UI 示例
 permalink: /zh-cn/win10/samples/BlinkyUILightning.htm
-lang: zh-cn
+lang: zh-CN
 deviceName: RPI2
 ---
 

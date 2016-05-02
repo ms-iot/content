@@ -2,7 +2,7 @@
 layout: default
 title: AllJoyn 设备系统网桥
 permalink: /zh-cn/win10/AllJoynDSB.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # AllJoyn 设备系统网桥

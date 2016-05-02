@@ -2,7 +2,7 @@
 layout: default
 title: 制造商世界地图
 permalink: /zh-cn/win10/samples/WorldMapOfMakers.htm
-lang: zh-cn
+lang: zh-CN
 deviceName: RPI2
 kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 ---

@@ -2,7 +2,7 @@
 layout: default
 title: Windows 10 IoT Core API 移植工具
 permalink: /zh-cn/win10/tools/IoTAPIPortingTool.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Windows 10 IoT Core API 移植工具

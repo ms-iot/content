@@ -2,7 +2,7 @@
 layout: default
 title: Blinky 示例
 permalink: /zh-cn/win10/samples/BlinkyMBM.htm
-lang: zh-cn
+lang: zh-CN
 deviceName: MBM
 ---
 

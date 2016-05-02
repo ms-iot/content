@@ -2,7 +2,7 @@
 layout: default
 title: AllJoyn 托管的 DSB Gpio 教程
 permalink: /zh-cn/win10/samples/AlljoynDSBSample_Managed.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Alljoyn DSB GPIO C\# 教程

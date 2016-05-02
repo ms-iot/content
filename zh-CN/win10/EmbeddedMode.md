@@ -2,7 +2,7 @@
 layout: default
 title: 嵌入模式
 permalink: /zh-cn/win10/EmbeddedMode.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 嵌入模式

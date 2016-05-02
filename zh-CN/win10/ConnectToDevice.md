@@ -2,7 +2,7 @@
 layout: default
 title: 连接到设备
 permalink: /zh-cn/win10/ConnectToDevice.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 ## 将 Windows 10 IoT 核心版设备连接到开发电脑：

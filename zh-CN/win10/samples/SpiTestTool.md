@@ -2,7 +2,7 @@
 layout: default
 title: SpiTestTool
 permalink: /zh-cn/win10/samples/SpiTestTool.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # SpiTestTool 示例

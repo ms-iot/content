@@ -2,7 +2,7 @@
 layout: default
 title: Windows 7 上的映像
 permalink: /zh-cn/win8/ImageOnWin7.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Windows 7 上的映像处理

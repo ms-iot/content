@@ -2,7 +2,7 @@
 layout: default
 title: LCD 文本屏幕
 permalink: /zh-cn/win10/samples/arduino-wiring/LCDScreen.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # LCD 文本屏幕

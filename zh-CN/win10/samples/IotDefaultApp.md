@@ -2,7 +2,7 @@
 layout: default
 title: IoT 核心版默认应用
 permalink: /zh-cn/win10/samples/IoTDefaultApp.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # IoT 核心版默认应用示例

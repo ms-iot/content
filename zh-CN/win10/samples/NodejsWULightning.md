@@ -2,7 +2,7 @@
 layout: default
 title: NodejsWULightning
 permalink: /zh-cn/win10/samples/NodejsWULightning.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 带有 Lightning 的 Blinky Node.js（Windows 通用）示例

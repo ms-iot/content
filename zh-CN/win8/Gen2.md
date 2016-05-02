@@ -2,7 +2,7 @@
 layout: default
 title: Intel Galileo 第 2 代 Alpha 支持
 permalink: /zh-cn/win8/Gen2.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 欢迎评估！

@@ -2,7 +2,7 @@
 layout: default
 title: Urchin 库
 permalink: /zh-cn/win10/samples/UrchinLibrary.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Urchin 库示例

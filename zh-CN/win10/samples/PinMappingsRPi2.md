@@ -2,7 +2,7 @@
 layout: default
 title: Raspberry Pi 2 和 3 引脚映射
 permalink: /zh-cn/win10/samples/PinMappingsRPi2.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Raspberry Pi 2 和 3 引脚映射

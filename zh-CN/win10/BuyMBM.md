@@ -2,7 +2,7 @@
 layout: default
 title: 购买 MBM
 permalink: /zh-cn/win10/BuyMBM.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 如何购买 MinnowBoard MAX

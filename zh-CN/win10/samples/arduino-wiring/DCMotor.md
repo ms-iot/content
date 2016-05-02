@@ -2,7 +2,7 @@
 layout: default
 title: Arduino 接线 DC 马达示例
 permalink: /zh-cn/win10/samples/arduino-wiring/DCMotor.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Arduino 接线 DC 马达示例

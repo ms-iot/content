@@ -2,7 +2,7 @@
 layout: default
 title: 驱动程序实验 - 部署驱动程序并确认安装
 permalink: /zh-cn/win10/samples/DriverLab3.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 安装示例驱动程序

@@ -2,7 +2,7 @@
 layout: default
 title: Arduino 接线气象站
 permalink: /zh-cn/win10/samples/arduino-wiring/WeatherStation.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 气象站 + Lightning

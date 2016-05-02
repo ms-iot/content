@@ -2,7 +2,7 @@
 layout: default
 title: Node.js
 permalink: /zh-cn/win8/samples/NodeJS.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 <div style="background-color:Silver; color:black; padding:20px;">

@@ -2,7 +2,7 @@
 layout: default
 title: 发行说明
 permalink: /zh-cn/win8/ReleaseNotes.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 #发行说明

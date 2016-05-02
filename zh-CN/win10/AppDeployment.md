@@ -2,7 +2,7 @@
 layout: default
 title: 使用 Visual Studio 部署应用
 permalink: /zh-cn/win10/AppDeployment.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 使用 Visual Studio 部署应用

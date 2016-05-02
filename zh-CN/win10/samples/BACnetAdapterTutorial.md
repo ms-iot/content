@@ -2,7 +2,7 @@
 layout: default
 title: BACnetAdapterTutorial
 permalink: /zh-cn/win10/samples/BACnetAdapterTutorial.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # BACnet 示例

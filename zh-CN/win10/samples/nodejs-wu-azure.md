@@ -2,7 +2,7 @@
 layout: default
 title: NodejsWU
 permalink: /zh-cn/win10/samples/nodejs-wu-azure.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Azure Node.js 示例 \(UWP\)

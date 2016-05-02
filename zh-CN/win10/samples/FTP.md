@@ -2,7 +2,7 @@
 layout: default
 title: 使用 FTP
 permalink: /zh-cn/win10/samples/FTP.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 ## 使用 FTP 在你的设备中传输文件

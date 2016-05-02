@@ -4,7 +4,7 @@ title: 使用适用于 Windows 10 IoT 核心版的统一写入筛选器
 description: 了解如何使用统一写入筛选器提高 Windows 10 IoT 核心版设备上物理存储的可靠性和稳定性。
 keyword: unified write filter, windows iot, uwf, protected volume
 permalink: /zh-cn/win10/UWF.htm
-lang: zh-cn
+lang: zh-CN
 ---
 # 在 Windows 10 IoT 核心版上使用统一写入筛选器
 

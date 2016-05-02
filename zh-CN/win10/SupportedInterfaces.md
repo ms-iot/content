@@ -4,7 +4,7 @@ title: 硬件兼容性列表
 description: Windows 10 IoT 核心版支持各种外设接口和协议，包括对诸如 I2C、UART、USB 等常见总线的支持。
 keyword: windows iot, hardware, compatibility, interfaces
 permalink: /zh-cn/win10/SupportedInterfaces.htm
-lang: zh-cn
+lang: zh-CN
 ---
 <style>
 .MsVerified 

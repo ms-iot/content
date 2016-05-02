@@ -4,7 +4,7 @@ title: 工具
 description: 了解有关支持移植代码和命令行配置等活动的 Windows 10 IoT 核心版工具的详细信息。 
 keyword: tools, windows iot, porting, power tools
 permalink: /zh-cn/win10/Tools.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 适用于 Windows 10 IoT 核心版的电源工具

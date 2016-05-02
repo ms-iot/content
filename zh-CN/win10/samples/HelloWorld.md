@@ -2,7 +2,7 @@
 layout: default
 title: HelloWorld
 permalink: /zh-cn/win10/samples/HelloWorld.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # “Hello, World!” 示例

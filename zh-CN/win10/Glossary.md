@@ -2,7 +2,7 @@
 layout: default
 title: 术语表
 permalink: /zh-cn/win10/Glossary.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 术语表

@@ -4,7 +4,7 @@ title: 安全启动和 BitLocker
 description: 了解如何在 IoT 设备上启用安全启动和 BitLocker 加密。
 keyword: secure boot, windows iot, bitlocker, encryption, security
 permalink: /zh-cn/win10/SB_BL.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 在 Windows 10 IoT 核心版上启用安全启动和 BitLocker 设备加密

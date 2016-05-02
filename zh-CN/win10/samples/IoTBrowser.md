@@ -2,7 +2,7 @@
 layout: default
 title: IoT 浏览器示例
 permalink: /zh-cn/win10/samples/IoTBrowser.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 {: .thin-header}

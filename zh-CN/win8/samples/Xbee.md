@@ -2,7 +2,7 @@
 layout: default
 title: 与 XBee 设备通信
 permalink: /zh-cn/win8/samples/XBee.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 <div style="background-color:Silver; color:black; padding:20px;">

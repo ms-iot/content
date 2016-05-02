@@ -2,7 +2,7 @@
 layout: default  
 title: 摄像头示例  
 permalink: /zh-cn/win10/samples/WebCamSample.htm  
-lang: zh-cn  
+lang: zh-CN  
 ---  
   
 # 摄像头示例  

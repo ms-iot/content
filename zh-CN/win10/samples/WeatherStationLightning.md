@@ -2,7 +2,7 @@
 layout: default
 title: 使用 Lightning 提供程序的 WeatherStation 示例
 permalink: /zh-cn/win10/samples/WeatherStationLightning.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 使用 Lightning I2c 提供程序与 I2C 传感器通信

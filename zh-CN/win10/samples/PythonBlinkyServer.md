@@ -2,7 +2,7 @@
 layout: default
 title: Python Blinky 服务器示例
 permalink: /zh-cn/win10/samples/PythonBlinkyServer.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 ## Python Blinky 服务器示例

@@ -2,7 +2,7 @@
 layout: default
 title: 应用安装示例
 permalink: /zh-cn/win10/samples/AppInstall.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 应用安装示例

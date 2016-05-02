@@ -2,7 +2,7 @@
 layout: default
 title: 你好，Blinky
 permalink: /zh-cn/win10/samples/arduino-wiring/HelloBlinky.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 你好，Blinky

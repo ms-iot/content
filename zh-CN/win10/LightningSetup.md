@@ -2,7 +2,7 @@
 layout: default
 title: 项目设置
 permalink: /zh-cn/win10/LightningSetup.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Lightning 设置指南

@@ -2,7 +2,7 @@
 layout: default
 title: GpioOneWire
 permalink: /zh-cn/win10/samples/GpioOneWire.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # GpioOneWire 示例 \(DHT11\)

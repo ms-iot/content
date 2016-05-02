@@ -2,7 +2,7 @@
 layout: default
 title: 电位计示例
 permalink: /zh-cn/win10/samples/tempSensor.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 温度/力传感器示例

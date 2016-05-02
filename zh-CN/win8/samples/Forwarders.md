@@ -2,7 +2,7 @@
 layout: default
 title: 转发器和存根
 permalink: /zh-cn/win8/samples/Forwarders.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 <div style="background-color:Silver; color:black; padding:20px;">

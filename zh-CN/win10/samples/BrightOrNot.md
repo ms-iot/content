@@ -3,7 +3,7 @@ layout: default
 title: Adafruit 亮不亮？
 permalink: /zh-cn/win10/samples/BrightOrNot.htm
 step: AdafruitKitContents.htm
-lang: zh-cn
+lang: zh-CN
 deviceName: RPI2
 kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 ---

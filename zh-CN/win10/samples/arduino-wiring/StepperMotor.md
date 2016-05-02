@@ -2,7 +2,7 @@
 layout: default
 title: 步进马达
 permalink: /zh-cn/win10/samples/arduino-wiring/StepperMotor.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 步进马达

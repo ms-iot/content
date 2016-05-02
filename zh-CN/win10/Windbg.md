@@ -4,7 +4,7 @@ title: 使用 WINDBG 进行调试
 description: 使用功能强大的 Windows 调试器 WinDbg 调试 Windows 10 IoT 核心版设备。
 keyword: debug, windbg, windows iot
 permalink: /zh-cn/win10/Windbg.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 使用 WinDbg 调试 Windows 10 IoT 核心版设备

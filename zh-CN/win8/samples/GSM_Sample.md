@@ -2,7 +2,7 @@
 layout: default
 title: GSM Shield
 permalink: /zh-cn/win8/samples/GSM_Sample.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 <div style="background-color:Silver; color:black; padding:20px;">

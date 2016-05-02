@@ -2,7 +2,7 @@
 layout: default
 title: 针对 MinnowBoard Max 设置电脑
 permalink: /zh-cn/win10/SetupPCMBM.htm
-lang: zh-cn
+lang: zh-CN
 deviceName: MBM
 ---
 

@@ -2,7 +2,7 @@
 layout: default
 title: AllJoyn 创建器和编写 AllJoyn 自检 XML
 permalink: /zh-cn/win10/AllJoynProducer.htm
-lang: zh-cn
+lang: zh-CN
 ---
 <style>
 tr:nth-child(even) {background: #f2f2f2;}

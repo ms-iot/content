@@ -4,7 +4,7 @@ title: 开发板比较
 description: 比较各种兼容 Windows 10 IoT 核心版开发板的特征和功能。
 keyword: iot, boards, windows iot, comparison
 permalink: /zh-cn/BoardComparison.htm
-lang: zh-cn
+lang: zh-CN
 ---
 <ol class="breadcrumb">
   <li>

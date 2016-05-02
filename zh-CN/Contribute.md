@@ -4,7 +4,7 @@ title: 如何参与
 description: 了解如何使用 Git 对 Windows 10 IoT 核心版开发人员内容做出贡献。
 keyword: windows 10, iot, git, github
 permalink: /zh-cn/Contribute.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 如何参与

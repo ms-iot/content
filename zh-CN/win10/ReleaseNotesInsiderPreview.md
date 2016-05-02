@@ -2,7 +2,7 @@
 layout: default
 title: 发行说明
 permalink: /zh-cn/win10/ReleaseNotesInsiderPreview.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Windows 10 IoT 核心版的发行说明

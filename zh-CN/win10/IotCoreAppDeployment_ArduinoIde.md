@@ -2,7 +2,7 @@
 layout: default
 title: 远程连接的 Arduino IDE 扩展
 permalink: /zh-cn/IotCoreAppDeployment_ArduinoIde.htm
-lang: zh-cn
+lang: zh-CN
 ---
 # 使用 Arduino IDE 创建远程连接应用
 

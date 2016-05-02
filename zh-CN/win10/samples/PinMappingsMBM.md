@@ -2,7 +2,7 @@
 layout: default
 title: MinnowBoard Max 引脚映射
 permalink: /zh-cn/win10/samples/PinMappingsMBM.htm
-lang: zh-cn
+lang: zh-CN
 ---
 # MinnowBoard Max 引脚映射
 

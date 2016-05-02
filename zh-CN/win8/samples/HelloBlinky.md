@@ -2,7 +2,7 @@
 layout: default
 title: 你好，Blinky
 permalink: /zh-cn/win8/samples/HelloBlinky.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 {% include steps.html device="Galileo" %}

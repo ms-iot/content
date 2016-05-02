@@ -4,7 +4,7 @@ title: 移植指南
 description: 了解如何将现有代码迁移到 Windows。
 keyword: port, migrate, code, windows iot
 permalink: /zh-cn/PortingGuide.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 移植指南

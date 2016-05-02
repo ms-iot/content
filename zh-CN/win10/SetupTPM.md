@@ -4,7 +4,7 @@ title: 在支持的平台上设置 TPM
 description: 了解如何为 IoT 核心版设置 TPM。
 keyword: setup, windows iot, tutorial, tpm
 permalink: /zh-cn/win10/SetupTPM.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 在支持的平台上设置 TPM

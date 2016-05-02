@@ -2,7 +2,7 @@
 layout: default
 title: 设置 Intel Galileo
 permalink: /zh-cn/win8/SetupGalileo.htm
-lang: zh-cn
+lang: zh-CN
 deviceName: Galileo
 ---
 

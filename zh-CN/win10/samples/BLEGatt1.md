@@ -2,7 +2,7 @@
 layout: default
 title: BLE GATT 示例 - 配对和工具
 permalink: /zh-cn/win10/samples/BLEGatt1.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 ## 将 BLE 设备和 GATT 属性表转储工具配对

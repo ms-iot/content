@@ -2,7 +2,7 @@
 layout: default
 title: 使用 PowerShell 连接到 Windows 10 IoT 核心版设备。
 permalink: /zh-cn/win10/samples/PowerShell.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 使用 PowerShell 连接并配置运行 Windows 10 IoT 核心版的设备

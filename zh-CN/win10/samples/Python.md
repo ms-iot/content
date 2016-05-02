@@ -2,7 +2,7 @@
 layout: default
 title: Python“Hello, World”示例
 permalink: /zh-cn/win10/samples/Python.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Python“Hello, World”示例

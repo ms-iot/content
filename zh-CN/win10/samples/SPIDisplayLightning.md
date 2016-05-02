@@ -2,7 +2,7 @@
 layout: default
 title: 使用 Lightning 提供程序的 SPI 屏幕示例
 permalink: /zh-cn/win10/samples/SPIDisplayLightning.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 使用 Lightning 提供程序与 SPI 屏幕通信

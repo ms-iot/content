@@ -2,7 +2,7 @@
 layout: default
 title: 写入 UART
 permalink: /zh-cn/win8/samples/UART.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 <div style="background-color:Silver; color:black; padding:20px;">

@@ -2,7 +2,7 @@
 layout: default
 title: Windows Device Portal
 permalink: /zh-cn/win10/tools/DevicePortal.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 <div class="container" markdown="1">

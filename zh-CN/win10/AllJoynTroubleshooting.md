@@ -2,7 +2,7 @@
 layout: default
 title: AllJoyn 疑难解答
 permalink: /zh-cn/win10/AllJoynTroubleshooting.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # AllJoyn 疑难解答

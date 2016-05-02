@@ -2,7 +2,7 @@
 layout: default
 title: NodejsCylon
 permalink: /zh-cn/win10/samples/NodejsCylon.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Cylon Node.js（控制台应用程序）示例

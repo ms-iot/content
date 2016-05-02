@@ -2,7 +2,7 @@
 layout: default
 title: BLE GATT 示例 - 概述
 permalink: /zh-cn/win10/samples/BLEGatt.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 ## 低耗电 Bluetooth \(BLE\) 通用属性配置文件 \(GATT\) 示例概述

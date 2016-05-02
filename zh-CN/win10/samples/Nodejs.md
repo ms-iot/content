@@ -2,7 +2,7 @@
 layout: default
 title: Nodejs
 permalink: /zh-cn/win10/samples/Nodejs.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # MemoryStatus Node.js（控制台应用程序）示例

@@ -4,7 +4,7 @@ title: 开始编写代码
 description: 使用代码示例以及经文档演示验证的概念、工具和资源帮助你开始编写代码。
 keyword: windows iot, samples, docs, download
 permalink: /zh-cn/win10/StartCoding.htm
-lang: zh-cn
+lang: zh-CN
 ---
 <div class="row">
   <div class="col-xs-24">

@@ -2,7 +2,7 @@
 layout: default
 title: RGBPixel
 permalink: /zh-cn/win10/samples/arduino-wiring/RGBPixel.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Adafruit RGB 像素带

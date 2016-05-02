@@ -2,7 +2,7 @@
 layout: default
 title: 高级用法
 permalink: /zh-cn/win8/AdvancedUsage.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 高级用法

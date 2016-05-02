@@ -2,7 +2,7 @@
 layout: default
 title: Alljoyn Mock 适配器教程
 permalink: /zh-cn/win10/samples/MockAdapterTutorial.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Alljoyn Mock 适配器示例

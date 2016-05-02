@@ -3,7 +3,7 @@ layout: default
 title: 针对 Raspberry Pi 2 设置你的电脑
 permalink: /zh-cn/win10/KitSetupPCRPI.htm
 step: win10/KitSetupPCRPI.htm
-lang: zh-cn
+lang: zh-CN
 deviceName: RPI2
 kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 ---

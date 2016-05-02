@@ -2,7 +2,7 @@
 layout: default
 title: SPI 加速计示例
 permalink: /zh-cn/win10/samples/SPIAccelerometer.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # SPI 加速计示例

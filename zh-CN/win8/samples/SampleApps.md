@@ -2,7 +2,7 @@
 layout: default
 title: 示例应用程序
 permalink: /zh-cn/win8/samples/SampleApps.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 <div class="row">

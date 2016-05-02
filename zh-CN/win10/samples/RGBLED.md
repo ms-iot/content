@@ -2,7 +2,7 @@
 layout: default
 title: RGB LED 示例
 permalink: /zh-cn/win10/samples/RGBLED.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # RGB LED 示例

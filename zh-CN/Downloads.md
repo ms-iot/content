@@ -4,7 +4,7 @@ title: 下载
 description: 下载此页面上提供的 Windows for IoT、Visual Studio、软件开发工具包或任何其他工具，立即开始针对物联网进行开发！
 keyword: dashboard, download, windows 10 iot core, tools
 permalink: /zh-cn/Downloads.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 <div class="row section-heading">

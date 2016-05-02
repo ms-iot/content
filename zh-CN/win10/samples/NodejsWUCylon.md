@@ -2,7 +2,7 @@
 layout: default
 title: NodejsWUCylon
 permalink: /zh-cn/win10/samples/NodejsWUCylon.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Cylon Node.js（通用 Windows）示例

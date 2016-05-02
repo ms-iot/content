@@ -2,7 +2,7 @@
 layout: default
 title: 描绘天气
 permalink: /zh-cn/win10/samples/PictureTheWeather.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # “描绘天气”示例，使用面向 Arduino 的 Windows Virtual Shield

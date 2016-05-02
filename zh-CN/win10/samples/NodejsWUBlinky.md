@@ -2,7 +2,7 @@
 layout: default
 title: NodejsWUBlinky
 permalink: /zh-cn/win10/samples/NodejsWUBlinky.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Blinky Node.js 服务器示例（Windows 通用）

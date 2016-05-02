@@ -2,7 +2,7 @@
 layout: default
 title: BLE GATT 示例 - SensorTag 示例转储
 permalink: /zh-cn/win10/samples/BLEGattDump.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 示例 GATT 属性转储文件

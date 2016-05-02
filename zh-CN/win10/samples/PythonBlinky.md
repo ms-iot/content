@@ -2,7 +2,7 @@
 layout: default
 title: Python Blinky 示例
 permalink: /zh-cn/win10/samples/PythonBlinky.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Python Blinky 示例

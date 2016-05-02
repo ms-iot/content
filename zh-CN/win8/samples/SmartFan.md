@@ -2,7 +2,7 @@
 layout: default
 title: 智能风扇
 permalink: /zh-cn/win8/samples/SmartFan.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 <div style="background-color:Silver; color:black; padding:20px;">

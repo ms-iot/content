@@ -2,7 +2,7 @@
 layout: default
 title: TX/RX 示例
 permalink: /zh-cn/win8/samples/TXRX.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 <div style="background-color:Silver; color:black; padding:20px;">

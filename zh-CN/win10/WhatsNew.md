@@ -4,7 +4,7 @@ title: 适用于 Raspberry Pi 3 上的 IoT 核心版的新增功能
 description: 了解适用于 Raspberry Pi 3（它是可用的最高级 Raspberry Pi）上的 Windows 10 IoT 核心版的新增功能。
 keyword: raspberry pi 3, raspberry pi, windows iot, iot core, insider preview
 permalink: /zh-cn/win10/WhatsNew.htm
-lang: zh-cn
+lang: zh-CN
 ---
 <h1 id="whats-new-for-windows-iot-core-insider-preview-for-raspberry-pi-3-users">适用于 Raspberry Pi 3 的 Windows IoT Core Insider Preview 的新增功能</h1>
 

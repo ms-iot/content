@@ -2,7 +2,7 @@
 layout: default
 title: 商品化
 permalink: /zh-cn/win10/Commercialization.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 适用于 Windows 10 IoT 核心版的 Microsoft 商业使用条款 

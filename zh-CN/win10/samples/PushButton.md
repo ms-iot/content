@@ -2,7 +2,7 @@
 layout: default
 title: “推送”按钮示例
 permalink: /zh-cn/win10/samples/PushButton.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # “推送”按钮示例

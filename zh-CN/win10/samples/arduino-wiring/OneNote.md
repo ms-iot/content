@@ -2,7 +2,7 @@
 layout: default
 title: OneNote 云服务
 permalink: /zh-cn/win10/samples/arduino-wiring/OneNote.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # OneNote 云服务

@@ -2,7 +2,7 @@
 layout: default
 title: AllJoynCodeGen
 permalink: /zh-cn/win10/AllJoynCodeGen.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # AllJoyn CodeGen 工具

@@ -2,7 +2,7 @@
 layout: default
 title: 使用 Lightning
 permalink: /zh-cn/win10/Lightning.htm
-lang: zh-cn
+lang: zh-CN
 ---
 {:.page-title}
 # Lightning

@@ -2,7 +2,7 @@
 layout: default  
 title: WLAN 连接示例  
 permalink: /zh-cn/win10/samples/WifiConnectSample.htm  
-lang: zh-cn  
+lang: zh-CN  
 ---  
   
 # WLAN 连接示例  

@@ -4,7 +4,7 @@ title: 不可用的通用 API
 description: 在 Windows 10 IoT 核心版中无法正常运行的 Windows 运行时 API 的当前列表。
 keyword: windows runtime, windows iot, unsupported apis
 permalink: /zh-cn/win10/UnavailableApis.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 <div class="container" markdown= "1">

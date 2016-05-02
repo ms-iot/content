@@ -2,7 +2,7 @@
 layout: default
 title: NodejsWUJ5
 permalink: /zh-cn/win10/samples/NodejsWUJ5.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Johnny-Five Node.js（通用 Windows）示例

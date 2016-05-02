@@ -2,7 +2,7 @@
 layout: default
 title: Casablanca
 permalink: /zh-cn/win8/samples/Casablanca.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 <div style="background-color:Silver; color:black; padding:20px;">

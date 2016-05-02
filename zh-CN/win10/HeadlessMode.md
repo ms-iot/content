@@ -2,7 +2,7 @@
 layout: default
 title: 有外设/无外设模式
 permalink: /zh-cn/win10/HeadlessMode.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 有外设模式和无外设模式

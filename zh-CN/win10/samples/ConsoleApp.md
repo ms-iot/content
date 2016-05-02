@@ -2,7 +2,7 @@
 layout: default
 title: 控制台应用示例
 permalink: /zh-cn/win10/samples/ConsoleApp.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # MemoryStatus 控制台应用程序示例

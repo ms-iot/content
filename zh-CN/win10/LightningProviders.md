@@ -2,7 +2,7 @@
 layout: default
 title: 使用 Microsoft.IoT.Lightning.Providers 库和示例代码
 permalink: /zh-cn/win10/LightningProviders.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Microsoft.IoT.Lightning.Providers 库和示例代码

@@ -2,7 +2,7 @@
 layout: default
 title: 7-SegmentShield
 permalink: /zh-cn/win8/samples/Gravitech-7-SegmentShield.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 <div style="background-color:Silver; color:black; padding:20px;">

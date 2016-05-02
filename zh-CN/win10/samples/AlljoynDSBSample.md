@@ -2,7 +2,7 @@
 layout: default
 title: AllJoyn DSB 示例
 permalink: /zh-cn/win10/samples/AlljoynDSBSample.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Alljoyn DSB GPIO 教程

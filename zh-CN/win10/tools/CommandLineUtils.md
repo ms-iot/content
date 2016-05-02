@@ -2,7 +2,7 @@
 layout: default
 title: Windows 10 IoT Core 命令行实用程序
 permalink: /zh-cn/win10/tools/CommandLineUtils.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Windows 10 IoT Core 命令行实用程序

@@ -5,7 +5,7 @@ description: Raspberry Pi2 上适用于 Windows 10 IoT 核心版的 Adafruit 初
 keywords: windows iot, adafruit, maker kit, starter pack
 permalink: /zh-cn/win10/AdafruitKitContents.htm
 step: win10/AdafruitKitContents.htm
-lang: zh-cn
+lang: zh-CN
 deviceName: RPI2
 kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 ---

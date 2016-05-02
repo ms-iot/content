@@ -2,7 +2,7 @@
 layout: default
 title: 串行示例
 permalink: /zh-cn/win10/samples/SerialSample.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 串行端口示例

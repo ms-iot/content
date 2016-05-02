@@ -4,7 +4,7 @@ title: 主页
 description: 以下是一些有关受支持的开发板和针对 Windows 10 的 IoT 软件开发的常见问题。 
 keywords: faq, windows iot, windows 10, questions
 permalink: /zh-cn/Faqs.htm
-lang: zh-cn
+lang: zh-CN
 ---
 <div class="row col-md-24">
     <div class="col-md-6 col-xs-12 faq-nav section-heading">

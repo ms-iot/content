@@ -3,7 +3,7 @@ layout: default
 title: 它是什么颜色？
 permalink: /zh-cn/win10/samples/WhatColor.htm
 step: AdafruitKitContents.htm
-lang: zh-cn
+lang: zh-CN
 deviceName: RPI2
 kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 ---

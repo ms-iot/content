@@ -2,7 +2,7 @@
 layout: default
 title: 电位计示例
 permalink: /zh-cn/win10/samples/Potentiometer.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 电位计传感器示例

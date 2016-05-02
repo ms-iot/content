@@ -4,7 +4,7 @@ title: 主页
 description: 通过保持与其他 Windows IoT 开发人员的联系，了解与 Windows IoT 设备相关的技术、公告、新的产品功能、启动以及更多内容。
 keyword: community, forum, iot forum, iot
 permalink: /zh-cn/Community.htm
-lang: zh-cn
+lang: zh-CN
 ---
 <div class="row section-heading">
     <h1>社区</h1>

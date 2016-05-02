@@ -2,7 +2,7 @@
 layout: default
 title: NodejsWU
 permalink: /zh-cn/win10/samples/NodejsWU.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # “Hello, World”Node.js（Windows 通用）示例

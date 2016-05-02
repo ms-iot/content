@@ -4,7 +4,7 @@ title: 主页
 description: Build 2015 Windows 10 IoT 核心版材料、演示文稿和公告的概述。
 keyword: build 2015, windows iot, raspberry pi, arduino
 permalink: /zh-cn/Build2015.htm
-lang: zh-cn
+lang: zh-CN
 ---
 <div class="build-2015-background">
   <div class="col-md-24 text-center">

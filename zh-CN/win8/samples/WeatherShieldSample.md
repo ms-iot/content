@@ -2,7 +2,7 @@
 layout: default
 title: Weather Shield 传感器示例
 permalink: /zh-cn/win8/samples/WeatherShieldSample.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 <div style="background-color:Silver; color:black; padding:20px;">

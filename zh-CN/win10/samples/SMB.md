@@ -2,7 +2,7 @@
 layout: default
 title: 使用 Windows 文件共享
 permalink: /zh-cn/win10/samples/SMB.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 使用 Windows 文件共享在你的设备中传输文件

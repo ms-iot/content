@@ -2,7 +2,7 @@
 layout: default
 title: I2cTestTool
 permalink: /zh-cn/win10/samples/I2cTestTool.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 ## I2cTestTool 示例

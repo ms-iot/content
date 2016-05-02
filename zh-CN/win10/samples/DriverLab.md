@@ -2,7 +2,7 @@
 layout: default
 title: 驱动程序实验
 permalink: /zh-cn/win10/samples/DriverLab.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 为你的 Windows 10 IoT 核心版设备创建通用驱动程序 \(UD\)

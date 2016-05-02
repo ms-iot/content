@@ -2,7 +2,7 @@
 layout: default
 title: Blinky WebServer 示例
 permalink: /zh-cn/win10/samples/BlinkyWebServer.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Blinky Webserver

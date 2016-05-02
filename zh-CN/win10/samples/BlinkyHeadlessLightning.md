@@ -2,7 +2,7 @@
 layout: default
 title: 使用 Lightning 提供程序的无外设模式的 Blinky 示例
 permalink: /zh-cn/win10/samples/BlinkyHeadlessLightning.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 带有 Lightning 提供程序的无外设模式的 Blinky 示例

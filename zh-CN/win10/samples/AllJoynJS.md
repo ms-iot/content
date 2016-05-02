@@ -2,7 +2,7 @@
 layout: default
 title: AllJoyn.JS
 permalink: /zh-cn/win10/samples/AllJoynJS.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # AllJoyn.JS

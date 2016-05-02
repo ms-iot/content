@@ -2,7 +2,7 @@
 layout: default
 title: 设置电脑
 permalink: /zh-cn/win8/SetupPC.htm
-lang: zh-cn
+lang: zh-CN
 deviceName: Galileo
 ---
 

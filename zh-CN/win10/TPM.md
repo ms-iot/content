@@ -4,7 +4,7 @@ title: TPM
 description: 了解有关可用于 Windows IoT 核心版的加密功能的详细信息。
 keyword: TPM, trusted platform module, windows iot, cryptographic
 permalink: /zh-cn/win10/TPM.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Windows IoT 核心版上的 TPM

@@ -2,7 +2,7 @@
 layout: default
 title: I2C 端口扩展器示例
 permalink: /zh-cn/win10/samples/I2CPortExpander.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # I2C 端口扩展器示例

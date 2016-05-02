@@ -2,7 +2,7 @@
 layout: default
 title: ZigBeeAdapterTutorial
 permalink: /zh-cn/win10/samples/ZigBeeAdapterTutorial.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # ZigBee 适配器示例

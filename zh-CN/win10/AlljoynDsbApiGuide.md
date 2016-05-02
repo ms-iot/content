@@ -2,7 +2,7 @@
 layout: default
 title: Alljoyn 设备系统网桥 - API 指南
 permalink: /zh-cn/win10/AlljoynDsbApiGuide.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 将网桥接口对象映射到 Alljoyn

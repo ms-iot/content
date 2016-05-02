@@ -2,7 +2,7 @@
 layout: default
 title: OneNote 云服务
 permalink: /zh-cn/win8/samples/TODO_Sample.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 <div style="background-color:Silver; color:black; padding:20px;">

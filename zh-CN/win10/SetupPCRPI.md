@@ -2,7 +2,7 @@
 layout: default
 title: 针对 Raspberry Pi 2 或 3 设置你的电脑
 permalink: /zh-cn/win10/SetupPCRPI.htm
-lang: zh-cn
+lang: zh-CN
 deviceName: RPI2
 ---
 

@@ -2,7 +2,7 @@
 layout: default  
 title: ProcessLauncher 示例  
 permalink: /zh-cn/win10/samples/ProcessLauncherSample.htm  
-lang: zh-cn  
+lang: zh-CN  
 ---  
   
 # ProcessLauncher 示例  

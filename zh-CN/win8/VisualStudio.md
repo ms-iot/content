@@ -2,7 +2,7 @@
 layout: default
 title: 初次使用 Visual Studio
 permalink: /zh-cn/win8/VisualStudio.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 使用 \#pragmas

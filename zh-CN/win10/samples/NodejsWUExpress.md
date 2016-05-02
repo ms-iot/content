@@ -2,7 +2,7 @@
 layout: default
 title: NodejsWU
 permalink: /zh-cn/win10/samples/NodejsWUExpress.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # Express Node.js（Windows 通用）示例

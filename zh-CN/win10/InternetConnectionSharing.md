@@ -2,7 +2,7 @@
 layout: default
 title: Internet 连接共享教程 (TH2)
 permalink: /zh-cn/win10/InternetConnectionSharing.htm
-lang: zh-cn
+lang: zh-CN
 ---
 # 启用 Internet 连接共享
 

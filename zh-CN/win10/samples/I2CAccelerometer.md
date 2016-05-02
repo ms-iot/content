@@ -2,7 +2,7 @@
 layout: default
 title: I2C 加速计示例
 permalink: /zh-cn/win10/samples/I2CAccelerometer.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # I2C 加速计示例

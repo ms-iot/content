@@ -2,7 +2,7 @@
 layout: default
 title: 疑难解答
 permalink: /zh-cn/win8/TroubleShooting.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 <div class="row">

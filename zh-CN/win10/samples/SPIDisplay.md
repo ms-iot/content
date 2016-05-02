@@ -2,7 +2,7 @@
 layout: default
 title: SPI 显示器示例
 permalink: /zh-cn/win10/samples/SPIDisplay.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # SPI 屏幕示例

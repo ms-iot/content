@@ -2,7 +2,7 @@
 layout: default
 title: Intel Galileo Gen 1 和 Gen2 Lightning 支持
 permalink: /zh-cn/win8/Lightning.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 新 Lightning 功能

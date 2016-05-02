@@ -4,7 +4,7 @@ title: 在 Windows 10 IoT 核心版设备上使用 WLAN。
 description: 了解如何在 Windows 10 IoT 核心版设备上设置 WLAN。
 keyword: wifi, windows iot, device, wireless
 permalink: /zh-cn/win10/SetupWiFi.htm
-lang: zh-cn
+lang: zh-CN
 ---
 
 # 在 Windows 10 IoT 核心版设备上使用 WiFi
