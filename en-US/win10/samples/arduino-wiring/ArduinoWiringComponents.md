@@ -67,6 +67,6 @@ At this point your code is complete and ready to run. Right-click on your C# pro
 The Arduino Wiring Project is designed to build a standalone application and so includes things not necessary when building a component to be used in another app. If you wish you can delete this. 
 
 * Remove the "loop" method from your .ino file
-* Expand "Package Dependencies" in your Arduino project, right click on "StarupTask.cpp", and click "Remove"
+* Expand "Package Dependencies" in your Arduino project, right click on "StartupTask.cpp", and click "Remove"
 
-![LedOnOffCleanup]{{site.baseurl}}/Resources/images/arduino_wiring/ArduinoWiringComponent/LedOnOffCleanup.png) 
+![LedOnOffCleanup]({{site.baseurl}}/Resources/images/arduino_wiring/ArduinoWiringComponent/LedOnOffCleanup.png) 
