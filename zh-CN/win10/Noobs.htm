@@ -1,0 +1,127 @@
+---
+
+layout: default
+
+title: 通过 NOOBS 进行安装
+
+permalink: /zh-cn/win10/Noobs.htm
+lang: zh-cn
+
+---
+
+<ol class="breadcrumb">
+  <li>
+    <a href="https://developer.microsoft.com/zh-cn/windows/iot">IoT 主页</a>
+  </li>
+     <li>
+        <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">入门</a>
+    </li>
+  <li class="active">通过 NOOBS 进行安装</li>
+</ol>
+<h1 class="page-title">通过 NOOBS 进行安装</h1>
+<div class="row">
+	<div class="col-md-12 col-sm-24 col-no-padding">
+    <h2 class="subtext">如果你拥有带有 NOOBS 的 SD，请按照以下说明来安装 Windows 10 IoT 核心版。</h2>
+	</div>
+</div>
+
+
+<h2>在 NOOBS 中选择 Windows 10 IoT 核心版<span class="pull-right"><a id="NOOBSChoices-toggle" class="toggle-button" onClick="hideDiv('NOOBSChoices')">显示</a></span></h2>
+<hr>
+<div id="NOOBSChoices" class="toggle-section hidden">
+{% capture my-include %}{% include_relative NOOBSChoices.md %}{% endcapture %}
+{{ my-include | markdownify }}
+
+</div>
+
+
+<h2>使用 Raspberry Pi 2？ 单击此处<span class="pull-right"><a id="NOOBSRPI2Choices-toggle" class="toggle-button" onClick="hideDiv('NOOBSRPI2Choices')">显示</a></span></h2>
+<hr>
+<div id="NOOBSRPI2Choices" class="toggle-section hidden">
+{% capture my-include %}{% include_relative NOOBSRPI2Choices.md %}{% endcapture %}
+{{ my-include | markdownify }}
+
+<h3>Windows 10 IoT 核心版 RTM 选项<span class="pull-right"><a id="NOOBSRPI2ChoiceRTM-toggle" class="toggle-button" onClick="hideDivWithoutSlowToggle('NOOBSRPI2ChoiceRTM')">显示</a></span></h3>
+<hr>
+<div id="NOOBSRPI2ChoiceRTM" class="toggle-section" style="display:none">
+{% capture my-include %}{% include_relative NOOBSRTM.md %}{% endcapture %}
+{{ my-include | markdownify }}
+</div>
+
+<h3>Windows 10 IoT Core Insider Preview 选项<span class="pull-right"><a id="NOOBSRPI2ChoiceIP-toggle" class="toggle-button" onClick="hideDivWithoutSlowToggle('NOOBSRPI2ChoiceIP')">显示</a></span></h3>
+<hr>
+<div id="NOOBSRPI2ChoiceIP" class="toggle-section" style="display:none">
+{% capture my-include %}{% include_relative NOOBSInsiderProgram.md %}{% endcapture %}
+{{ my-include | markdownify }}
+</div>
+
+</div>
+
+
+<h2>使用 Raspberry Pi 3？ 单击此处<span class="pull-right"><a id="NOOBSRPI3-toggle" class="toggle-button" onClick="hideDiv('NOOBSRPI3')">显示</a></span></h2>
+<hr>
+<div id="NOOBSRPI3" class="toggle-section hidden">
+
+{% capture my-include %}{% include_relative NOOBSInsiderProgram.md %}{% endcapture %}
+{{ my-include | markdownify }}
+
+</div>
+
+
+
+<h2>最后一步：下载并重新启动<span class="pull-right"><a id="NOOBSDownload-toggle" class="toggle-button" onClick="hideDiv('NOOBSDownload')">显示</a></span></h2>
+<hr>
+<div id="NOOBSDownload" class="toggle-section hidden">
+{% capture my-include %}{% include_relative NOOBSDownload.md %}{% endcapture %}
+{{ my-include | markdownify }}
+
+</div>
+
+<div class="row">
+    <p><span class="pull-right">
+        <a href="{{site.baseurl}}/{{page.lang}}/win10/GetStarted/SetUpVisualStudio.htm" class="button-blue button-flat">下一步： 设置 Visual Studio</a>
+    </span></p>
+</div>
+<script>
+ function hideDivWithoutSlowToggle(div) {
+    var div = "#" + div,
+        button = div + "-toggle",
+        currentState = $(button)[0].innerText;
+		
+	if($(div)[0].style.display === "none")
+	{
+		$(div)[0].style.display = "block";
+		$(button)[0].innerText = "Hide";
+	}
+	else
+	{
+		$(div)[0].style.display = "none";
+		$(button)[0].innerText = "Show";
+	}
+    
+	
+  }
+  
+
+  function hideDiv(div) {
+    var div = "#" + div,
+        button = div + "-toggle",
+        currentState = $(button)[0].innerText;
+
+    
+
+    if(currentState === "Hide") {
+      $(div).toggle('slow');
+	  $(button)[0].innerText = "Show";
+    }
+    else
+    {
+      $(".hidden").removeClass("hidden");
+      $(".toggle-section").hide();
+      $(div).toggle('slow');
+      $(button)[0].innerText = "Hide";
+    }
+  }
+  
+ 
+</script>

@@ -5,7 +5,7 @@ permalink: /zh-cn/win10/Glossary.htm
 lang: zh-cn
 ---
 
-##术语表
+# 术语表
 
 **AllJoyn**<br/> AllJoyn 是一种开源通信框架，允许应用和设备在无需考虑连接细节和操作系统平台的情况下进行通信。
 

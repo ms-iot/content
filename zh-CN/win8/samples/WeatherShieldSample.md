@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Weather Shield 传感器
-permalink: /zh-cn/win8/samples/WeatherShieldSensors.htm
+title: Weather Shield 传感器示例
+permalink: /zh-cn/win8/samples/WeatherShieldSample.htm
 lang: zh-cn
 ---
 
@@ -13,13 +13,13 @@ lang: zh-cn
 # Weather Shield 传感器
 了解如何使用 Weather Shield 传感器创建简单的应用。
 
-# 所需组件
+## 所需组件
 * [Sparkfun Weather Shield](https://www.sparkfun.com/products/12081){:target="_blank"}
 
-# 连接组件
+## 连接组件
 将 Weather Shield 放置到 Galileo 开发板顶部，确保排好引脚顺序。
 
-# 创建一个新项目
+## 创建一个新项目
 
 1. 使用模板创建新项目。
 1. 转到 [HTU21D 存储库](https://github.com/sparkfun/HTU21D_Breakout){:target="_blank"}，并下载 HTU21D.cpp 和 HTU21D.h 文件。
@@ -27,7 +27,7 @@ lang: zh-cn
 1. 将 HTU21D 和 MPL3115A2 库文件放置在新项目中。
 1. 使用以下代码替换 main.cpp 中的现有代码：
 
-# 代码
+## 代码
 
 ### Main.cpp
 

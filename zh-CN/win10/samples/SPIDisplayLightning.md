@@ -5,7 +5,7 @@ permalink: /zh-cn/win10/samples/SPIDisplayLightning.htm
 lang: zh-cn
 ---
 
-##使用 Lightning 提供程序与 SPI 屏幕通信
+# 使用 Lightning 提供程序与 SPI 屏幕通信
 
 {% include VerifiedVersion.md %}
 
@@ -13,7 +13,7 @@ lang: zh-cn
 
 本示例基于 [SPI 屏幕示例]({{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplay.htm)上所共享的 SPI 屏幕示例。并共享相同的设置步骤和大部分代码。唯一区别是将 Lightning 提供程序设置为默认控制器提供程序。
 
-###使用 Lightning 提供程序
+### 使用 Lightning 提供程序
 
 通过使用默认 GPIO 和 SPI 控制器，按如下方式使用用于初始化 SPI 和 GPIO 控制器的原始代码：
 
@@ -127,7 +127,7 @@ private async Task InitGpio()
 }
 {% endhighlight %}
 
-###生成和部署示例
+### 生成和部署示例
 
 1. 在 Raspberry Pi2 或 MBM 设备上使用 [Lightning 设置指南]({{site.baseurl}}/{{page.lang}}/win10/LightningSetup.htm)中概述的步骤启用 Lightning。
 

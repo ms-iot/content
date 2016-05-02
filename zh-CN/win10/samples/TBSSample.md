@@ -5,23 +5,23 @@ permalink: /zh-cn/win10/samples/TBSSample.htm
 lang: zh-cn
 ---
 
-#TBS 示例应用程序
+# TBS 示例应用程序
 
 本教程演示如何创建使用 TBS 轮询 TPM 的基本 C++ 应用程序。
 
 *[TBS]: TPM 基本服务
 
-##关于 TBS  
+## 关于 TBS  
 受信任的平台模块 \(TPM\) 基本服务 \(TBS\) 功能集中跨应用程序的 TPM 访问。TBS 功能使用调用应用程序指定的优先级来协调安排 TPM 访问。TBS 功能在 Windows 中运行为系统服务，并以远程过程调用 \(RPC\) 公开的 API 形式提供服务。
 
-##先决条件  
+## 先决条件  
 * Microsoft Visual Studio 2015，版本 14.0.23107.10 或更高版本  
 * SDK，版本 10.0.10240 或更高版本
 
-##设备设置  
-有关设置 MBM 和 RPi2 的说明的链接。
+## 设备设置  
+有关设置 MBM 和 RPi2 或 RPi3 的说明的链接。
 
-##使用 TBS 创建项目  
+## 使用 TBS 创建项目  
 
 **创建新的 C++ 项目。** “文件”-\>“新建”-\>“项目”-\>“Visual C++”-\>“Windows”-\>“Windows IoT 核心版”-\>“空白 Windows IoT 核心版控制台应用程序”
 
@@ -123,20 +123,13 @@ void main()
 
 * “生成”-\>“重新生成解决方案”  
 * 将可执行文件 TBSSample.exe 复制到 Windows IoT 核心版设备。  
-* 在目标设备上运行该应用程序。你应该得到与如下所示相类似的打印输出。  
+* 在目标设备上运行该应用程序。应该期待出现类似以下内容的打印输出。{% highlight console %} C:\>TBSSample.exe
 
-{% highlight console %}
-C:\>TBSSample.exe
+设备上检测到受信任的平台模块 - 离散 TPM
 
-Trusted Platform Module Detected on Device - Discrete TPM
+ TPM 版本号： 2.0 TPM 结构版本： 1 TPM Impl。修订： 0 TPM 接口类型： 1 {% endhighlight %}
 
- TPM Version Number: 2.0
- TPM Struct Version: 1
- TPM Impl. Revision: 0
- TPM Interface Type: 1
-{% endhighlight %}
-
-##其他资源  
+## 其他资源  
 * TPM 基本服务 - \[https://msdn.microsoft.com/zh-cn/library/windows/desktop/aa446796\(v=vs.85\).aspx\]\(https://msdn.microsoft.com/zh-cn/library/windows/desktop/aa446796(v=vs.85).aspx){:target="_blank"}
 * TSS.Net： 支持从托管代码访问 TPM - [http://research.microsoft.com/zh-cn/downloads/35116857-e544-4003-8e7b-584182dc6833/default.aspx](http://research.microsoft.com/zh-cn/downloads/35116857-e544-4003-8e7b-584182dc6833/default.aspx){:target="_blank"}
 * TSS.MSR： Microsoft Research 的 TPM 软件堆栈 - [https://github.com/DMattoon/TSS.MSR](https://github.com/DMattoon/TSS.MSR){:target="_blank"}

@@ -1,5 +1,5 @@
 {: .thin-header}
-#Blinky 示例
+# Blinky 示例
 
 {% include VerifiedVersion.md %}
 
@@ -9,9 +9,9 @@
 
 另外，还请注意 GPIO API 仅在 Windows 10 IoT Core 上可用，因此该示例无法在你的桌面上运行。
 
-###在 Visual Studio 中加载项目
+### 在 Visual Studio 中加载项目
 
-你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\Blinky` 来查找此示例的源代码。示例代码可采用 C++ 或 C\# 提供，但此处的文档仅详细介绍了 C\# 变体。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\Blinky`，查找此示例的源代码。示例代码可采用 C++ 或 C\# 提供，但此处的文档仅详细介绍了 C\# 变体。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
-###将 LED 连接到你的 Windows IoT 设备
+### 将 LED 连接到你的 Windows IoT 设备
 

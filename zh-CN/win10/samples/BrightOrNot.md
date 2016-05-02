@@ -7,11 +7,17 @@ lang: zh-cn
 deviceName: RPI2
 kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 ---
-<ol class="breadcrumb">
-  <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">初学者包概述</a></li>
-  <li class="active">亮不亮？</li>
-</ol>
-
+<div class="row">
+  <div class="col-xs-24">
+    <ol class="breadcrumb">
+      <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">初学者包概述</a></li>
+      <li class="active">亮不亮？</li>
+    </ol>
+    <header class="page-title-header">
+      <h1 class="page-title">亮不亮？</h1>
+    </header>
+  </div>
+</div>
 <hr/>
 
 <div class="row">
@@ -20,7 +26,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
       <h3>了解如何针对 Raspberry Pi 2 和 Windows 10 IoT 核心版使用 ADC 从模拟传感器获取数据。</h3>
       在执行此示例时，你将了解如何使用模拟光电管测量房间内的光源强度。
       <hr />
-      以下地图上的每个销是已运行此示例的其他制造商。进行缩放以查看他们的位置，并部署示例以在地图上放置你的销！
+      以下地图上的每个销是已运行此示例的其他制造商。进行缩放以查看他们的位置，并部署示例以在地图上放置你的大头针。
     </center>
   </div>
 </div>

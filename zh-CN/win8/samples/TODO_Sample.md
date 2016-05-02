@@ -13,13 +13,13 @@ lang: zh-cn
 # OneNote 云服务
 了解如何使用 GET 和 POST OneNote 页面的 http 消息。
 
-# 创建一个新项目
+## 创建一个新项目
 
 1. 使用模板创建新项目。
 2. 使用以下代码替换 main.cpp 中的现有代码。根据需要修改多个操作按钮。
 3. 将在 [Sample-ToDo](https://github.com/ms-iot/sample-todo) 上找到的以下文件（MinHttpGP.cpp/.h、MinXHttpRqst.cpp/.h、MinSer.cpp/.h 和 OneNoteHelper.cpp/.h）添加到该项目。
 
-# 代码
+## 代码
 
 ### Main.cpp
 

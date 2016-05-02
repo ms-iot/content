@@ -1,6 +1,8 @@
 ---
 layout: default
 title: 主页
+description: Build 2015 Windows 10 IoT 核心版材料、演示文稿和公告的概述。
+keyword: build 2015, windows iot, raspberry pi, arduino
 permalink: /zh-cn/Build2015.htm
 lang: zh-cn
 ---
@@ -15,11 +17,10 @@ lang: zh-cn
     <hr>
     <h3 class="spacer-32-bottom">它在这里！</h3>
     <div class="build-2015-windows"></div>
-    <p>在此处，在 Microsoft 上，我们不断受到制造商社区表现的技术激情和热情的鼓舞今天我们很高兴共享在使用 Arduino、Raspberry Pi、Intel Minnowboard Max 和 Hackster.IO 的 Windows 10 上的制造商的未来将如何发展。</p>
+    <p>在此处，在 Microsoft 上，我们不断受到制造商社区表现的技术激情和热情的鼓舞今天我们很高兴分享在使用 Arduino、Raspberry Pi、Intel Minnowboard Max 和 Hackster.IO 的 Windows 10 上的制造商的未来将如何发展。</p>
 
-    <p>在 3 月的 <a href="https://msdn.microsoft.com/zh-cn/windows/hardware/dn913720(v=vs.85).aspx">WinHEC</a> 中，我们大致介绍了小型设备上的 Windows 10，而今天你可以<a href="https://developer.microsoft.com/zh-cn/windows/iot">下载</a>支持 Raspberry Pi 2 和 Intel 的 Minnowboard Max 的 Windows 10 IoT 核心版。Windows 10 IoT 核心版是针对低成本、占用较小的设备的新 Windows 10 版本，将向制造商和商业设备组装商免费提供。</p>
 
-    <p>强有力的合作关系是 Microsoft 面向开发人员的独特产品的一部分。今天我们还很高兴地宣布与 Arduino 的合作关系，使 Windows 10 成为世界上第一个 Arduino 认证的操作系统。作为在此 Arduino 合作关系中的初始步骤，我们宣布<a href="http://ms-iot.github.io/content/win10/SetupWRA.htm">“Windows Remote Arduino”</a>和<a href="http://ms-iot.github.io/content/win10/SetupWVSA.htm">“Windows Virtual Shield for Arduino”</a>的可用性，它们作为开源库于今天同时发布。</p>
+    <p>强有力的合作关系是 Microsoft 面向开发人员的独特产品/服务的一部分。今天我们还很高兴地宣布与 Arduino 的合作关系，使 Windows 10 成为世界上第一个 Arduino 认证的操作系统。作为在此 Arduino 合作关系中的初始步骤，我们宣布<a href="http://ms-iot.github.io/content/win10/SetupWRA.htm">“Windows Remote Arduino”</a>和<a href="http://ms-iot.github.io/content/win10/SetupWVSA.htm">“Windows Virtual Shield for Arduino”</a>的可用性，它们作为开源库于今天同时发布。</p>
   </div>
 </div>
 <div class="row section-heading">
@@ -32,11 +33,11 @@ lang: zh-cn
     <iframe class="build2015-iframe" src="https://www.youtube.com/embed/r1PaAWvygQk" frameborder="0" allowfullscreen></iframe>
   </div>
   <div class="col-xs-24 col-md-8">
-    <h4>Windows 10 + Raspberry Pi 2：//生成 IoT Core 制造商机器人工具包</h4>
+        <h4>Windows 10 + Raspberry Pi 2 或 3：//生成 IoT Core 制造商机器人工具包</h4>
     <iframe class="build2015-iframe" src="https://www.youtube.com/embed/aKCieb-Gf2g" frameborder="0" allowfullscreen></iframe>
   </div>
   <div class="col-xs-24 col-md-8">
-    <h4>Windows 10 + Raspberry Pi 2：//生成实例实验 - 气象站</h4>
+        <h4>Windows 10 + Raspberry Pi 2 或 3：//生成动手实验 — 气象站</h4>
     <iframe class="build2015-iframe" src="https://www.youtube.com/embed/Hkm4THS3Rf8" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>

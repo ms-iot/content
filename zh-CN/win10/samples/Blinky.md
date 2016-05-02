@@ -6,7 +6,7 @@ lang: zh-cn
 ---
 
 {: .thin-header}
-##Blinky 示例
+# Blinky 示例
 
 我们将创建一个简单的 LED 闪烁应用并将 LED 连接到你的 Windows 10 IoT Core 设备。
 
@@ -14,31 +14,31 @@ lang: zh-cn
 
 另外，还请注意 GPIO API 仅在 Windows 10 IoT Core 上可用，因此该示例无法在你的桌面上运行。
 
-###在 Visual Studio 中加载项目
+### 在 Visual Studio 中加载项目
 
-你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\Blinky` 来查找此示例的源代码。示例代码可采用 C++ 或 C\# 提供，但此处的文档仅详细介绍了 C\# 变体。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\Blinky`，查找此示例的源代码。示例代码可采用 C++ 或 C\# 提供，但此处的文档仅详细介绍了 C\# 变体。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
-###将 LED 连接到你的 Windows IoT 设备
+### 将 LED 连接到你的 Windows IoT 设备
 
 
 你将会需要一些组件：
 
 * 一个 LED（任何你喜欢的颜色）
 
-* 一个 220 &#x2126;适用于 Raspberry Pi 2 和 MinnowBoard Max 或 330 &#x2126; 的电阻器；适用于 DragonBoard 的电阻器
+* 一个适用于 Raspberry Pi 2、Raspberry Pi 3 和 MinnowBoard Max 的 220 &\#x2126; 电阻器，或者一个适用于 DragonBoard 的 330 &\#x2126; 电阻器
 
 * 一块试验板和几根连接线
 
 ![电子元件]({{site.baseurl}}/Resources/images/Blinky/components.png)
 
-###适用于 Raspberry Pi 2 \(RPi2\)
+### 对于 Raspberry Pi 2 或 3（RPi2 或 RPi3）
 
-1. 将 LED 的较短的脚连接到 RPi2 上的 GPIO 5（扩展头上的引脚 29）。
+1. 将 LED 的较短的脚连接到 RPi2 或 RPi3 上的 GPIO 5（扩展头上的引脚 29）。
 2. 将 LED 的较长的脚连接到电阻器。
-3. 将电阻器的另一端连接到 RPi2 上的 3.3V 引脚之一。
+3. 将电阻器的另一端连接到 RPi2 或 RPi3 上的 3.3V 引脚之一。
 4. 请注意 LED 的正负极非常重要。（此配置通常称为低电平有效）
 
-下面是 RPi2 的引出线：
+下面是 RPi2 和 RPi3 的引出线：
 
 <img src="{{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png" style="max-height:400px;">
 
@@ -49,7 +49,7 @@ lang: zh-cn
 <sub>\*使用 [Fritzing](http://fritzing.org/){:target="_blank"} 制作的图像\*</sub>
 
 
-###适用于 MinnowBoard Max \(MBM\)
+### 适用于 MinnowBoard Max \(MBM\)
 
 我们要将 LED 的一端连接到 MBM 上的 GPIO 5（JP1 扩展头上的引脚 18），将另一端连接到电阻器，并将电阻器连接到 MBM 上的 3.3 伏电源。请注意 LED 的正负极非常重要。请确保将较短的腿 \(-\) 连接到 GPIO 5 并将较长的腿 \(+\) 连接到电阻器，否则它不会点亮。
 
@@ -63,7 +63,7 @@ lang: zh-cn
 
 <sub>\*使用 [Fritzing](http://fritzing.org/){:target="_blank"} 制作的图像\*</sub>
 
-###适用于 DragonBoard 410c \(DB\)
+### 适用于 DragonBoard 410c \(DB\)
 
 作为参考，下图概述了低速扩展连接器的功能
 
@@ -89,9 +89,9 @@ private const int LED_PIN = 12;
 ~~~
 {: .language-c\#}
 
-###部署你的应用
+### 部署你的应用
 
-1. 应用程序在 Visual Studio 中打开后，在工具栏下拉列表中设置体系结构。如果你要针对 MinnowBoard Max 进行生成，请选择 `x86`。如果你要针对 Raspberry Pi 2 或 DragonBoard 进行生成，请选择 `ARM`。
+1. 应用程序在 Visual Studio 中打开后，在工具栏下拉列表中设置体系结构。如果你要针对 MinnowBoard Max 进行生成，请选择 `x86`。如果你要针对 Raspberry Pi 2 或 3 或者 DragonBoard 进行生成，请选择 `ARM`。
 
 2. 接下来，在 Visual Studio 工具栏中，单击 `Local Machine` 下拉列表并选择 `Remote Machine`<br/>
 
@@ -111,11 +111,11 @@ private const int LED_PIN = 12;
 
 恭喜你！ 你已控制了 Windows IoT 设备上的一个 GPIO 引脚！
 
-###我们来看看代码
+### 我们来看看代码
 此示例的代码相当简单。我们使用了一个计时器，每当调用“Tick”事件时，都会切换 LED 的状态。
 
 
-###计时器代码
+### 计时器代码
 下面说明如何使用 C\# 语言设置计时器：
 
 {% highlight C# %}
@@ -152,7 +152,7 @@ private void Timer_Tick(object sender, object e)
 }
 {% endhighlight %}
 
-###初始化 GPIO 引脚
+### 初始化 GPIO 引脚
 为了驱动 GPIO 引脚，首先我们需要对其进行初始化。以下是 C\# 代码（请注意我们如何在 Windows.Devices.Gpio 命名空间中利用新 WinRT 类）：
 
 {% highlight C# %}
@@ -193,7 +193,7 @@ private void InitGPIO()
 * 我们还使用了 `GpioPin.SetDriveMode()` 函数将 `pin` 设置为以输出模式运行。
 
 
-###修改 GPIO 引脚的状态
+### 修改 GPIO 引脚的状态
 在具有 `GpioOutputPin` 实例的访问权限后，没有必要再通过更改引脚状态来打开或关闭 LED。
 
 若要打开 LED，只需将值 `GpioPinValue.Low` 写入引脚：
@@ -208,4 +208,5 @@ pin.Write(GpioPinValue.Low);
 pin.Write(GpioPinValue.High);
 {% endhighlight %}
 
-记得我们已将 LED 的另一端连接到了 3.3 伏电源，因此，我们需要将引脚驱动到低位，使电流通过 LED。<h3><a href="{{site.baseurl}}/{{page.lang}}/win10/StartCoding.htm">下一个： 其他教程和示例</a></h3>
+请记住，我们已将 LED 的另一端连接到 3.3 伏电源，因此我们需要将引脚驱动到低位，才能使电流通过 LED。
+<h3><a href="{{site.baseurl}}/{{page.lang}}/win10/StartCoding.htm">下一步： 其他教程和示例</a></h3>

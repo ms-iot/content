@@ -1,0 +1,65 @@
+---
+
+layout: default
+
+title: 设置设备
+
+permalink: /zh-cn/win10/GetStarted/SetUpVisualStudio.htm
+
+lang: zh-cn
+
+
+---
+<div class="row">
+  <div class="col-xs-24">
+    <ol class="breadcrumb">
+      <li><a href="https://developer.microsoft.com/zh-cn/windows/iot">IoT 主页</a></li>
+      <li><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">入门</a></li>
+      <li class="active">设置 Visual Studio</li>
+    </ol>
+    <header class="page-title-header">
+      <h1 class="page-title">设置 Visual Studio</h1>
+      <h2 class="page-subtitle">设置开发环境以开始生成。</h2>
+    </header>
+  </div>
+</div>
+
+<div class="row">
+    <p><span class="pull-right">
+        <a href="{{site.baseurl}}/{{page.lang}}/win10/StartCoding.htm" class="button-blue button-flat">下一步： 查看更多示例</a>
+    </span></p>
+</div>
+
+<div class="row">
+  <div class="col-xs-24">
+    <h2>获取 Visual Studio <span class="pull-right"><a id="get-vs-toggle" class="toggle-button" onClick="hideDiv('get-vs')">隐藏</a></span></h2>
+    <hr>
+    <div id="get-vs" class="toggle-section">
+    {% include_relative SetupPCContent.md %}
+    </div>
+  </div>>
+</div>>
+<br>
+
+<div class="row">
+    <p><span class="pull-right">
+        <a href="{{site.baseurl}}/{{page.lang}}/win10/StartCoding.htm" class="button-blue button-flat">下一步： 查看更多示例</a>
+    </span></p>
+</div>
+
+
+<script>
+    function hideDiv(div) {
+        var pdiv = "#" + div,
+            button = pdiv + "-toggle"
+
+        if ($(pdiv).css('display') == 'none') {
+            $(pdiv).toggle('slow');
+            $(button).html('Hide');
+        }
+        else {
+            $(pdiv).toggle('slow');
+            $(button).html('Show');
+        }
+    }
+</script>

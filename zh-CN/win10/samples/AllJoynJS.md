@@ -5,7 +5,7 @@ permalink: /zh-cn/win10/samples/AllJoynJS.htm
 lang: zh-cn
 ---
 
-##AllJoyn.JS
+# AllJoyn.JS
 
 {% include VerifiedVersion.md %}
 
@@ -15,11 +15,11 @@ AllJoyn.JS 运行时环境包含 ScriptConsole 服务，该服务提供对安装
 
 此教程介绍如何获取作为 Windows 10 应用程序运行的 AllJoyn.JS。
 
-##先决条件
+## 先决条件
 
 1. 安装 [AllJoyn 的 IoT 资源管理器]({{site.baseurl}}/zh-cn/win10/AllJoyn.htm#AllJoynExplorer){:target="_blank"}应用。
 
-##设置步骤
+## 设置步骤
 
 1. 在 Windows 10 桌面版上安装先决条件中列出的所需工具（请参阅其各自的文档以确定如何操作）。
 
@@ -39,7 +39,7 @@ AllJoyn.JS 运行时环境包含 ScriptConsole 服务，该服务提供对安装
 
 4. 重新启动应用程序。
 
-##将 AllJoyn.JS 部署到 Windows 10 设备
+## 将 AllJoyn.JS 部署到 Windows 10 设备
 
 1. 在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载包含我们所有示例的 zip。此外，你可以直接从 Allseen 联盟下载，方法是克隆 AllJoyn [DSB 存储库](https://git.allseenalliance.org/cgit/dsb.git){:target="_blank"} `git clone https://git.allseenalliance.org/gerrit/dsb.git`
 
@@ -56,7 +56,7 @@ AllJoyn.JS 运行时环境包含 ScriptConsole 服务，该服务提供对安装
 
 你现在已准备好启动它，因此如果所面向的 Windows 10 设备具有屏幕，请在桌面上启动或调试 HeadedAdapterApp 项目；如果没有，则启动或调试 HeadlessAdapterApp。如果需要，请参阅[此处]({{site.baseurl}}/zh-cn/win10/AppDeployment.htm){:target="_blank"}的说明以了解远程调试。
 
-##部署脚本文件
+## 部署脚本文件
 
 ScripeConsole 服务可用于部署/安装新脚本。AllJoyn.JS 源树 \(dsb\\Samples\\AllJoyn.JS\\External\\allseen\\core\\alljoyn-js\\console\) 中包含一个命令行控制台客户端。可以在[此处](https://build.allseenalliance.org/ci/job/alljoyn_js-console-win/){:target="_blank"}找到预生成的控制台应用程序。
 
@@ -69,18 +69,18 @@ ScripeConsole 服务可用于部署/安装新脚本。AllJoyn.JS 源树 \(dsb\\S
 
 > C:\\bin\>ajs\_console.exe echo.js Found script console service: :GdpFgXrQ.86 Joined session: 1920857932 Installing script echo.js Installing script of length 52 Eval result=0: Script installed Echo\("Hello"\); Eval compile success PRINT: Hello Hello Eval result=0: undefined
 
-##通用 I/O 引脚
+## 通用 I/O 引脚
 
 AllJoyn.JS 为 GPIO 和其他 I/O 外设提供独立于硬件的抽象层
 
 - 引脚标记为从 pin\[0\] 到 pin\[N\]
-- 为设备上所有引脚枚举信息 `for (var i = 0; i < IO.pin.length; ++i) { print(IO.pin[i].info.description, “ “, IO.pin[i].functions)); };`
+- 为设备上的所有引脚枚举信息 `for (var i = 0; i < IO.pin.length; ++i) { print(IO.pin[i].info.description, " ", IO.pin[i].functions)); };`
 
 - I/O 模块当前具有以下用于配置引脚的函数：*digitalIn\(\)、digitalOut\(\)*
 
 - 当引脚配置为数字输入引脚时，应用程序必须指定该引脚是 pullUp、pullDown 还是 openDrain。`var button = IO.digitalIn(IO.pin[2], IO.pullUp)`
 
-- 可在数字输入引脚上设置触发器函数。触发器函数可配置为在引脚状态发生更改时进行调用。`button.setTrigger(IO.risingEdge, function(){print(“button up”)})`
+- 可在数字输入引脚上设置触发器函数。触发器函数可配置为在引脚状态发生更改时进行调用。`button.setTrigger(IO.risingEdge, function(){print("button up")})`
 
 - 数字输入和输出引脚具有可设置和读取的级别属性。可为数字输出引脚提供可选的初始值。`var led = IO.digitalOut(IO.pin[2], 1);
  led.level = 0;
@@ -88,13 +88,13 @@ AllJoyn.JS 为 GPIO 和其他 I/O 外设提供独立于硬件的抽象层
 
 - 对于所有 GPIO API，请参考 [AllJoyn.JS IO API（Allseen 联盟）](https://git.allseenalliance.org/cgit/core/alljoyn-js.git/plain/doc/html/IO.html){:target="_blank"}
 
-> 即使 GPIO 层独立于硬件，引脚编号和分配也会因硬件设备而不同。当前引脚编号和分配基于 [Raspberry Pi 2]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)。
+> 即使 GPIO 层独立于硬件，引脚编号和分配也会因硬件设备而不同。当前引脚编号和分配基于 [Raspberry Pi 2 和 3]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)。
 
-##示例脚本
+## 示例脚本
 
 文件夹 `samples-develop\AllJoyn\Samples\AllJoyn.JS\External\allseen\core\alljoyn-js\js` 下的 AllJoyn.JS 源中包含许多 JavaScript 示例。
 
-##其他资源
+## 其他资源
 
 - [AllJoyn.js 入门（Allseen 联盟）](https://allseenalliance.org/framework/documentation/develop/building/alljoyn-js){:target="_blank"}。
 - [使用 AllJoyn.js 为 IoT 应用程序编程（Allseen 联盟）](https://wiki.allseenalliance.org/_media/training/programming_alljoyn.js.pdf){:target="_blank"}。

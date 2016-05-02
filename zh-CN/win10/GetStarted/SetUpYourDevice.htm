@@ -1,0 +1,98 @@
+---
+
+layout: default
+title: 设置设备
+
+permalink: /zh-cn/win10/GetStarted/SetUpYourDevice.htm
+
+lang: zh-cn
+
+
+---
+<div class="row">
+  <div class="col-xs-24">
+    <ol class="breadcrumb">
+      <li><a href="https://developer.microsoft.com/zh-cn/windows/iot">IoT 主页</a></li>
+      <li><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">入门</a></li>
+      <li class="active">设置设备</li>
+    </ol>
+    <header class="page-title-header">
+      <h1 class="page-title">设置设备</h1>
+      <h2 class="page-subtitle">使用 IoT 核心版仪表板在开发板上下载、刷入和安装 Windows 10 IoT 核心版。</h2>
+    </header>
+  </div>
+</div>
+
+<p>
+此页上的说明适用于 Windows 10 IoT 核心版 RTM（无需注册），但如果你是预览体验计划的成员（或想要注册），你可以：
+ </p>
+     <p><span>
+        <a href="{{site.baseurl}}/{{page.lang}}/win10/GetStarted/SetUpYourDeviceManually.htm" class="button-blue button-flat">获取 Raspberry Pi 2 或 3 的最新 Insider Preview。</a>
+    </span></p>
+ 
+<div class="row">
+  <div class="col-xs-24">
+    <h2>下载并刷入<span class="pull-right"><a id="download-and-flash-toggle" class="toggle-button" onClick="hideDiv('download-and-flash')">隐藏</a></span></h2>
+    <hr />
+    <div id="download-and-flash" class="toggle-section">
+      {% include_relative DownloadAndFlash.md %}
+    </div>
+  </div>
+</div>
+<br />
+
+<div class="row">
+  <div class="col-xs-24">
+    <h2>将开发板连接到网络<span class="pull-right"><a id="connect-to-network-toggle" class="toggle-button" onClick="hideDiv('connect-to-network')">隐藏</a></span></h2>
+    <hr />
+    <div id="connect-to-network" class="toggle-section">
+      {% include_relative ConnectToNetwork.md %}
+    </div>
+  </div>
+</div>
+<br />
+
+<div class="row">
+  <div class="col-xs-24">
+    <h2>配置开发板<span class="pull-right"><a id="configure-board-toggle" class="toggle-button" onClick="hideDiv('configure-board')">隐藏</a></span></h2>
+    <hr />
+    <div id="configure-board" class="toggle-section">
+      {% include_relative ConfigureBoard.md %}
+    </div>
+  </div>
+</div>
+<br />
+
+<div class="row">
+  <div class="col-xs-24">
+    <h2>快速运行示例<span class="pull-right"><a id="quick-run-samples-toggle" class="toggle-button" onClick="hideDiv('quick-run-samples')">隐藏</a></span></h2>
+    <hr>
+    <div id="quick-run-samples" class="toggle-section">
+      {% include_relative QuickRunSamples.md %}
+    </div>
+  </div>
+</div>
+<br />
+
+<div class="row">
+    <p><span class="pull-right">
+        <a href="{{site.baseurl}}/{{page.lang}}/win10/GetStarted/SetUpVisualStudio.htm" class="button-blue button-flat">下一步： 设置 Visual Studio</a>
+    </span></p>
+</div>
+
+
+<script>
+    function hideDiv(div) {
+        var pdiv = "#" + div,
+            button = pdiv + "-toggle"
+
+        if ($(pdiv).css('display') == 'none') {
+            $(pdiv).toggle('slow');
+            $(button).html('Hide');
+        }
+        else {
+            $(pdiv).toggle('slow');
+            $(button).html('Show');
+        }
+    }
+</script>

@@ -4,11 +4,11 @@ title: 蓝牙 RFCOMM 示例
 permalink: /zh-cn/win10/samples/BTSerial.htm
 lang: zh-cn
 ---
-#蓝牙 RFCOMM 示例
+# 蓝牙 RFCOMM 示例
 
-##示例介绍：
+## 示例介绍：
 
-RPi2 向蓝牙设备发送消息，在蓝牙设备收到消息后，它会将该消息发送回 rpi2，然后在屏幕上显示它。
+RPi2 或 RPi3 向蓝牙设备发送消息，在蓝牙设备收到消息后，它会将该消息发送回 RPi2 或 RPi3 ，然后在屏幕上显示它
 
 1. 所需部件
 	- 蓝牙 BlueSMIRF
@@ -16,10 +16,10 @@ RPi2 向蓝牙设备发送消息，在蓝牙设备收到消息后，它会将该
 	- 蓝牙硬件保护装置
 	
 2.	步骤
-	- 将蓝牙与 Rpi2 配对
-	- 将蓝牙硬件保护装置插入 Rip2
+	- 将蓝牙与 RPi2 或 RPi3 配对
+	- 将蓝牙硬件保护装置插入 RPi2（RPi3 具有内置的蓝牙）
 	- 将 BlueSMIRF 插入 Uno，后者将连接到任何电脑；连接： 蓝牙 TX-\>PC RX，蓝牙 RX-\>PC TX
-        - 按照说明将蓝牙与 Rpi2 引脚配对以进行蓝牙配对： 1234
+    - 按照说明将蓝牙与 RPi2 或 RPi3 引脚配对以便进行蓝牙配对： 1234
  
 3.	将程序上载到 Arduino UNO
 
@@ -30,9 +30,9 @@ RPi2 向蓝牙设备发送消息，在蓝牙设备收到消息后，它会将该
  
 4. 编译程序。上载程序。请注意，当你上载程序时，你需要拔出 Tx 和 RX 端口，在上载完成后，将它们重新插入。否则，你将看到会弹出某些错误要求上载
  
-5.	在 UWP 中编写程序，并将其部署到 Rpi2。你可以在[此处](https://github.com/ms-iot/samples/tree/develop/BTSerial)找到完整示例代码。
+5.	在 UWP 中编写程序，并将其部署到 RPi2 或 RPi3。你可以在[此处](https://github.com/ms-iot/samples/tree/develop/BTSerial)找到完整示例代码。
  
-下载[代码](https://github.com/ms-iot/samples/tree/develop/BTSerial)并将应用部署到你的 Rpi2。然后你可以看到示例如何作为回显行为工作
+下载[代码](https://github.com/ms-iot/samples/tree/develop/BTSerial)并将应用部署到你的 RPi2 或 RPi3。然后你可以看到示例如何作为回显行为工作
 
 
 

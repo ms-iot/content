@@ -5,19 +5,19 @@ permalink: /zh-cn/win10/samples/I2CAccelerometer.htm
 lang: zh-cn
 ---
 
-##I2C 加速计示例
+# I2C 加速计示例
 
 {% include VerifiedVersion.md %}
 
-我们会将 I2C 加速计连接到你的 Raspberry Pi 2/MinnowBoard Max/DragonBoard，并创建一个简单应用，用于从其中读取数据。我们将分步演示，所以你不需要具备任何 I2C 背景知识。不过，如果你感兴趣的话，SparkFun 提供了一个出色的[与 I2C 相关的教程](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}。
+我们会将 I2C 加速计连接到你的 Raspberry Pi 2 或 3/MinnowBoard Max/DragonBoard，并创建一个用于从中读取数据简单应用。我们将分步演示，所以你不需要具备任何 I2C 背景知识。不过，如果你感兴趣的话，SparkFun 提供了一个出色的[与 I2C 相关的教程](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}。
 
 这是一个有外设示例。若要更好地了解什么是有外设模式以及如何将你的设备配置为有外设，请按照[此处]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm)的说明操作。
 
-###在 Visual Studio 中加载项目
+### 在 Visual Studio 中加载项目
 
-你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\I2CAccelerometer` 来查找此示例的源代码。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\I2CAccelerometer`，查找此示例的源代码。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
-###将 I2C 加速计连接到你的设备
+### 将 I2C 加速计连接到你的设备
 
 你将需要以下几个组件：
 
@@ -25,27 +25,27 @@ lang: zh-cn
 
 * 一块试验板和几根公母头连接线
 
-* 如果你使用的是 MinnowBoard Max，你将需要一个 100 &#x2126; 电阻器（这是[已知的 I2C 硬件问题]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm)的解决方法）
+* 如果你使用的是 MinnowBoard Max，你将需要一个 100 &\#x2126; 电阻器（这是[已知的 I2C 硬件问题]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm)的解决方法）
 
-根据自己所拥有的设备，查看以下 **Raspberry Pi 2/MinnowBoard Max** 部分：
+根据自己所拥有的设备，查看以下 **Raspberry Pi 2 或 3/MinnowBoard Max** 部分：
 
 ![电子元件]({{site.baseurl}}/Resources/images/I2CAccelerometer/components.png)
 
-####Raspberry Pi 2
-如果你有一个 Raspberry Pi 2，我们需要将电源、地线和 I2C 线接入加速计。那些熟悉 I2C 的用户会知道通常需安装上拉式电阻器。但是，Raspberry Pi 2 的 I2C 引脚上已经有上拉式电阻器，所以我们不需要在此处添加任何其他外部上拉式电阻器。有关 RPi2 IO 引脚的更多详细信息，请参阅 [Raspberry Pi 2 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm)。
+#### Raspberry Pi 2 或 3
+如果你有一个 Raspberry Pi 2 或 3，我们需要将电源、地线和 I2C 线接入加速计。那些熟悉 I2C 的用户会知道通常需安装上拉式电阻器。但是，Raspberry Pi 2 或 3 的 I2C 引脚上已经有上拉式电阻器，所以我们不需要在此处添加任何其他外部上拉式电阻器。有关 RPi2 和 RPi3 IO 引脚的更多详细信息，请参阅 [Raspberry Pi 2 或 3 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm)。
 
-**注意： 确保在连接电路时关闭 RPi2 电源。若要降低构建期间意外出现短路的几率，这是一个很好的做法。**
+**注意： 确保在连接电路时关闭 RPi2 或 RPi3 电源。若要降低构建期间意外出现短路的几率，这是一个很好的做法。**
 
 ADXL345 试验板上有 8 个 IO 引脚，应按如下方式连接它们：
 
-1. **GND：** 连接到 RPi2 上的地线（引脚 6）
-2. **VCC：** 连接到 RPi2 上的 3.3V（引脚 1）
+1. **GND：** 连接到 RPi2 或 RPi3 上的地线（引脚 6）
+2. **VCC：** 连接到 RPi2 或 RPi3 上的 3.3V（引脚 1）
 3. **CS：** 连接到 3.3V（实际上，ADXL345 既支持 SPI 协议，也支持 I2C 协议。若要选择 I2C，应将此引脚绑定到 3.3V。[数据表](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf){:target="_blank"}包含关于引脚功能的更多详细信息）
 4. **INT1：** 保持不连接，我们不会用到此引脚
 5. **INT2：** 保持不连接，我们不会用到此引脚
 6. **SDO：** 连接到地线（在 I2C 模式下，此引脚用于选择设备地址。如果你将此引脚连接到第二台设备上的 3.3V，则可以将两个 ADXL345 连接到相同的 I2C 总线。有关详细信息，请参阅[数据表](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf){:target="_blank"}）
-7. **SDA：** 连接到 RPi2 上的 SDA（引脚 3）。这是 I2C 总线中的数据线。
-8. **SCL：** 连接到 RPi2 上的 SCL（引脚 5）。这是 I2C 总线中的时钟线。
+7. **SDA：** 连接到 RPi2 或 RPi3 上的 SDA（引脚 3）。这是 I2C 总线中的数据线。
+8. **SCL：** 连接到 RPi2 或 RPi3 上的 SCL（引脚 5）。这是 I2C 总线中的时钟线。
 
 下面是试验板上所示的连接：
 
@@ -57,7 +57,7 @@ ADXL345 试验板上有 8 个 IO 引脚，应按如下方式连接它们：
 
 ![加速计示意图]({{site.baseurl}}/Resources/images/I2CAccelerometer/schematics_rpi2.png)
 
-####MinnowBoard MAX
+#### MinnowBoard MAX
 如果你有一个 MinnowBoard Max，我们需要将电源、地线和 I2C 线接入加速计。那些熟悉 I2C 的用户会知道通常需安装上拉式电阻器。但是，MBM 的 IO 引脚上已经有 10K 上拉式电阻器，所以我们不需要在此处添加任何其他外部上拉式电阻器。有关 MBM IO 引脚的更多详细信息，请参阅 [MBM 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm)。
 
 **注意： 确保在连接电路时关闭 MBM 电源。若要降低构建期间意外出现短路的几率，这是一个很好的做法。**
@@ -71,7 +71,7 @@ ADXL345 试验板上有 8 个 IO 引脚，应按如下方式连接它们：
 5. **INT2：** 保持不连接，我们不会用到此引脚
 6. **SDO：** 连接到地线（在 I2C 模式下，此引脚用于选择设备地址。如果你将此引脚连接到第二台设备上的 3.3V，则可以将两个 ADXL345 连接到相同的 I2C 总线。有关详细信息，请参阅[数据表](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf)）
 7. **SDA：** 连接到 MBM 上的 SDA（引脚 15）。这是 I2C 总线中的数据线。
-8. **SCL：** 通过 100 &#x2126; 电阻器连接到 MBM 上的 SCL（引脚 13）。这是 I2C 总线中的时钟线。
+8. **SCL：** 通过 100 &\#x2126; 电阻器连接到 MBM 上的 SCL（引脚 13）。这是 I2C 总线中的时钟线。
 
 下面是试验板上所示的连接：
 
@@ -85,16 +85,16 @@ ADXL345 试验板上有 8 个 IO 引脚，应按如下方式连接它们：
 
 #### DragonBoard 410C
 
-对于 DragonBoard 410C，需要建立单板计算机与加速计的电源线、地线和 I2C 线之间的连接。那些熟悉 I2C 的用户会知道通常需安装上拉式电阻器。但是，DragonBoard 已经有了 2k&#x2126; 电阻器，因为该电阻器具有 I2C 功能。
+对于 DragonBoard 410C，需要建立单板计算机与加速计的电源线、地线和 I2C 线之间的连接。那些熟悉 I2C 的用户会知道通常需安装上拉式电阻器。但是，DragonBoard 已经有了 2k&\#x2126; 电阻器，因为该电阻器具有 I2C 功能。
 
-**注意： 确保在连接电路时关闭 DragonBoard 电源。这是一个很好的做法，可降低在构建期间意外出现短路的可能性。**
+**注意： 确保在连接电路时关闭 DragonBoard 电源。若要降低构建期间意外出现短路的更改，这是一个很好的做法。**
 
-你还需要一个 LM317 电压调整器和 2x 120 &#x2126; 电阻器，才能使加速计获得电源。当如试验板图所示进行配置时，该调整器将输出 2.5V，从而允许 ADXL345 开发板与 1.8V DragonBoard 410c 连接。
+你还需要一个 LM317 电压调整器和 2x 120 &\#x2126; 电阻器，才能使加速计获得电源。当如试验板图所示进行配置时，该调整器将输出 2.5V，这允许 ADXL345 开发板与 1.8V DragonBoard 410c 连接。
 
 LM317 有 3 个引脚需要连线：
 
-1. **ADJ：** 通过 120 &#x2126; 电阻器连接地线
-2. **输出：** 通过 120 &#x2126; 电阻器连接 **ADJ**LM317 连线后，该引脚将输出 2.5V。
+1. **调节：** 通过 120 &\#x2126; 电阻器连接地线
+2. **输出：** 通过 120 &\#x2126; 电阻器连接**调节**。LM317 连线后，该引脚将输出 2.5V。
 3. **输入：** 连接 DragonBoard 上的 5V（引脚 37）
 
 ADXL345 试验板上有 8 个可连接到 DragonBoard 的 IO 引脚，如下所示：
@@ -112,7 +112,7 @@ ADXL345 试验板上有 8 个可连接到 DragonBoard 的 IO 引脚，如下所�
 
 ![DragonBoard I2C 加速计试验板]({{site.baseurl}}/Resources/images/I2CAccelerometer/breadboard_assembled_db410c.png)
 
-###部署和运行应用
+### 部署和运行应用
 
 完成所有设置后，重新打开你的设备的电源，然后在 Visual Studio 中打开示例应用。打开文件 **MainPage.xaml.cs**，并将以下行从 **Protocol.NONE** 更改为 **Protocol.I2C**：
 
@@ -131,7 +131,7 @@ public sealed partial class MainPage : Page
 
 恭喜！ 你已连接一个 I2C 加速计。
 
-###我们来看看代码
+### 我们来看看代码
 此示例中的代码将执行两个主要任务：
 
 1. 第一，此代码将初始化 I2C 总线和加速计
@@ -140,7 +140,7 @@ public sealed partial class MainPage : Page
 
 让我们从深入了解初始化开始吧。
 
-###初始化 I2C 总线
+### 初始化 I2C 总线
 若要使用加速计，我们需要先初始化 I2C 总线。下面是 C\# 代码。
 
 {% highlight C# %}
@@ -183,7 +183,7 @@ private async void InitI2CAccel()
 
 * 最后，我们创建一个新 **I2cDevice**，并检查它是否可供使用。
 
-###初始化加速计
+### 初始化加速计
 
 现在我们已经有了 **I2cDevice** 加速计实例，这表示我们已经完成了 I2C 总线的初始化。现在，我们可以通过 I2C 写入数据，从而启动加速计。我们使用 **Write\(\)** 函数执行此操作。对于这一特定加速计，存在两个内部寄存器，我们需要先配置它们，然后才能开始使用设备： 数据格式寄存器和电源控制寄存器。
 
@@ -223,7 +223,7 @@ private async void InitI2CAccel()
 }
 {% endhighlight %}
 
-###计时器代码
+### 计时器代码
 在所有初始化均完成后，我们将启动一个计时器，以定期从加速计读取相关数据。下面介绍如何将计时器设置为每 100 毫秒触发。
 
 {% highlight C# %}
@@ -257,7 +257,7 @@ private void TimerCallback(object state)
 {% endhighlight %}
 
 
-###从加速计读取数据
+### 从加速计读取数据
 在 I2C 总线和加速计初始化后，我们可以开始从加速计读取数据。我们的 **ReadAccel\(\)** 函数可由计时器每 100 毫秒调用一次：
 
 {% highlight C# %}

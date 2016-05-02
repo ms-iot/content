@@ -5,15 +5,15 @@ permalink: /zh-cn/win10/LightningSetup.htm
 lang: zh-cn
 ---
 
-##Lightning 设置指南
+# Lightning 设置指南
 
 本指南将为你演练将默认控制器驱动程序更改为 Windows IoT 核心版设备上的 Lightning 驱动程序的步骤。此操作将允许在该设备上使用支持 Lightning 的应用程序。
 
-###更改默认控制器驱动程序
+### 更改默认控制器驱动程序
 
 我们将需要打开 Windows Device Portal
 
-1. 通过使用 Windows IoT Core Watcher 应用程序或将开发板连接到监视器来找到设备的 IP 地址。
+1. 通过使用 Windows 10 IoT 核心版仪表板应用程序或将开发板接入监视器来查找设备的 IP 地址。
 
 1. 在本地计算机中，可通过在 Web 浏览器中输入地址 http://{BoardIPAddress}:8080/ 来打开 Windows Devices Portal 网页。![Windows Devices Portal]({{site.baseurl}}/Resources/images/Lightning/dmap1.png)
 

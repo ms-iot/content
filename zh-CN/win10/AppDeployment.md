@@ -5,7 +5,7 @@ permalink: /zh-cn/win10/AppDeployment.htm
 lang: zh-cn
 ---
 
-##使用 Visual Studio 部署应用
+# 使用 Visual Studio 部署应用
 
 使用 Visual Studio 部署和调试应用程序很简单。我们将使用**远程调试**功能将应用部署到本地连接的 IoT 核心版设备。
 
@@ -17,7 +17,7 @@ lang: zh-cn
 
 <a name="csharp"/>
 
-###将 C\# 应用部署到 Windows IoT 核心版设备 
+### 将 C\# 应用部署到 Windows IoT 核心版设备 
 
 {% include_relative samples/AppDeploymentCS.md %}
 
@@ -29,7 +29,7 @@ lang: zh-cn
 
 <a name="cpp"/>
 
-###将 C++ 应用部署到 Windows IoT 核心版设备
+### 将 C++ 应用部署到 Windows IoT 核心版设备
 
 {% include_relative samples/AppDeploymentCPP.md %}
 
@@ -41,7 +41,7 @@ lang: zh-cn
 
 <a name="python"/>
 
-###将 Python 应用部署到 Windows IoT 核心版设备
+### 将 Python 应用部署到 Windows IoT 核心版设备
 
 {% include_relative samples/AppDeploymentPY.md %}
 

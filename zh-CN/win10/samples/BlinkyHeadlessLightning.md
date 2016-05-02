@@ -5,7 +5,7 @@ permalink: /zh-cn/win10/samples/BlinkyHeadlessLightning.htm
 lang: zh-cn
 ---
 
-##带有 Lightning 提供程序的无外设模式的 Blinky 示例
+# 带有 Lightning 提供程序的无外设模式的 Blinky 示例
 
 {% include VerifiedVersion.md %}
 
@@ -13,7 +13,7 @@ lang: zh-cn
 
 它基于 [BlinkyHeadless 示例]({{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyHeadless.htm)。并共享相同的设置步骤以及大部分代码。唯一的区别是将 Lightning 提供程序设置为默认控制器提供程序。
 
-###使用 Lightning 提供程序
+### 使用 Lightning 提供程序
 
 无外设模式的 Blinky 示例的原始代码曾使用默认 GPIO 提供程序来获取 GPIO 控制器：
 
@@ -82,7 +82,7 @@ private async void InitGPIO()
 {% endhighlight %}
 
 
-###生成和部署示例
+### 生成和部署示例
 
 1. 在 Raspberry Pi2 或 MBM 设备上使用 [Lightning 设置指南]({{site.baseurl}}/{{page.lang}}/win10/LightningSetup.htm)中概述的步骤启用 Lightning。
 

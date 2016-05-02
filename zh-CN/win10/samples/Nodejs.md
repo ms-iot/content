@@ -5,23 +5,23 @@ permalink: /zh-cn/win10/samples/Nodejs.htm
 lang: zh-cn
 ---
 
-##MemoryStatus Node.js（控制台应用程序）示例
+# MemoryStatus Node.js（控制台应用程序）示例
 
 {% include VerifiedVersion.md %}
 
 相关： [MemoryStatus C++ 控制台应用程序示例]({{site.baseurl}}/{{page.lang}}/win10/samples/ConsoleApp.htm)
 
 
-###设置电脑
+### 设置电脑
 * 安装 [Python 2.7](https://www.python.org/downloads/){:target="_blank"}。
 
-###将 Node.js 复制到 Raspberry Pi 2
-* 从[此处](http://aka.ms/nodecc_arm)将包含 ARM Node.js \(ChakraCore\) 的 zip 文件下载到你的电脑，并提取文件（node.exe 和 chakracore.dll）。
-* 使用 [Windows 文件共享]({{site.baseurl}}/{{page.lang}}/win10/samples/SMB.htm)、[PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) 或 [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) 在 Raspberry Pi 2 上创建 `C:\Node.js (ChakraCore)` 文件夹。
-* 在 Raspberry Pi 2 上将 node.exe 和 chakracore.dll 复制到 `C:\Node.js (ChakraCore)`。
+### 将 Node.js 复制到 Raspberry Pi 2 或 3
+* 从[此处](http://aka.ms/nodecc_arm)将包含 ARM Node.js \(ChakraCore\) 的压缩文件下载到你的电脑，并解压文件（node.exe 和 chakracore.dll）。
+* 使用 [Windows 文件共享]({{site.baseurl}}/{{page.lang}}/win10/samples/SMB.htm)、[PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) 或 [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) 在 Raspberry Pi 2 或 3 上创建 `C:\Node.js (ChakraCore)` 文件夹。
+* 将 node.exe 和 chakracore.dll 复制到 Raspberry Pi 2 或 3 上的 `C:\Node.js (ChakraCore)`。
 
 
-###创建 MemoryStatus 加载项
+### 创建 MemoryStatus 加载项
 为 Node.js 服务器生成将在此示例中部署的本机加载项。必须执行此步骤，因为要使用 \[GlobalMemoryStatusEx\]\(https://msdn.microsoft.com/zh-cn/library/windows/desktop/aa366589(v=vs.85).aspx){:target="_blank"} 来获取我们需要的数据。
 
 * 在 Windows 10 电脑上，在 C:\\NodeAddon 中创建 AddOn 位置
@@ -90,7 +90,7 @@ NODE_MODULE(MemoryStatusAddon, Init)
 * 生成加载项：`"[Node.js (ChakraCore) installation path]\node_modules\npm\bin\node-gyp-bin\node-gyp.cmd" rebuild --target_arch=arm`（根据你所拥有的设备使用相应的 --target\_arch）。默认的 Node.js \(ChakraCore\) 安装路径为“c:\\Program Files\\nodejs \(chakracore\)”。
 
 
-###创建 Node.js 文件
+### 创建 Node.js 文件
 创建名为 server.js 的新文件并在其中放入以下内容。
 
 <UL>
@@ -119,10 +119,10 @@ http.createServer(function (req, res) {
 在第一行中，我们将加载之前创建的加载项。我们还加载 http 模块并创建服务器。当向服务器进行请求时，调用我们的加载项中的 GlobalMemoryStatusEx 方法以检索内存状态。有关编写加载项的详细信息，请转到 [https://nodejs.org/api/addons.html](https://nodejs.org/api/addons.html)。
 
 
-###将文件复制到 Windows IoT 核心版设备
+### 将文件复制到 Windows IoT 核心版设备
 在电脑上打开资源管理器窗口并输入 **\\\\\<设备的 IP 地址\>\\C$** 以访问设备上的文件。凭据（如果你之前没有进行更改）为：
 
-   用户名：\<IP 地址或设备名称，默认值为 minwinpc\>'\\管理员密码：p@ssw0rd
+   用户名：<IP address or device name  default is minwinpc>\\管理员密码：p@ssw0rd
 
 在设备上创建名为 C:\\MemoryStatusSample 的文件夹。然后，将你创建的以下文件从电脑复制到此文件夹：
 
@@ -136,7 +136,7 @@ http.createServer(function (req, res) {
 * `netsh advfirewall firewall add rule name="Node.js" dir=in action=allow program="C:\Node.js (ChakraCore)\Node.exe" enable=yes`
 
 
-###运行服务器！
+### 运行服务器！
 在 PowerShell 中，运行命令 `& 'C:\Node.js (ChakraCore)\Node.exe' C:\MemoryStatusSample\server.js` 来启动服务器。打开浏览器并输入你的设备的 http://&lt;IP 地址 \>:1337。结果的外观应类似于以下图片。
 
 ![内存状态结果]({{site.baseurl}}/Resources/images/Nodejs/memorystatus-ie.PNG)

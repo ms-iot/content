@@ -5,32 +5,32 @@ permalink: /zh-cn/win10/samples/RGBLED.htm
 lang: zh-cn
 ---
 
-##RGB LED 示例
+# RGB LED 示例
 
 {% include VerifiedVersion.md %}
 
 [在 Github 上查看代码](https://github.com/ms-iot/samples/blob/develop/RGBLED/CS/MainPage.xaml.cs)
 
-在此示例中，我们会将三色 LED 连接到 Raspberry Pi 2。LED 将闪烁，同时在红色、蓝色与绿色之间更改颜色。
+在此示例中，我们会将三色 LED 连接到 Raspberry Pi 2 或 3。LED 将闪烁，同时在红色、蓝色与绿色之间更改颜色。
 
 这是一个有外设示例，所以请确保你的设备处于有外设模式下，方法为运行以下命令：`setbootoption.exe headed`（更改有外设/无外设状态需要重新启动）。
 
 另外，还请注意 GPIO API 仅在 Windows IoT 核心版上可用，因此该示例无法在你的桌面上运行。
 
 
-###组件
+### 组件
 
 你将需要以下组件：
 
-* 1 个 [754-1615-ND 三色 LED](http://www.digikey.com/product-detail/en/WP154A4SUREQBFZGC/754-1615-ND/3084119){:target="_blank"}
+* 一个 [754-1615-ND 三色 LED](http://www.digikey.com/product-detail/en/WP154A4SUREQBFZGC/754-1615-ND/3084119){:target="_blank"}
 
-* 1 个 [330 &#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
+* 一个 [330 &\#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
 
-* 2 个 [100 &#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-100R/100QBK-ND/246){:target="_blank"}
+* 2x [100 &\#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-100R/100QBK-ND/246){:target="_blank"}
 
 * 一块试验板以及多根公母头连接线和双公头连接线
 
-###连接到你的设备
+### 连接到你的设备
 
 我们先来为试验板上的组件布线，如下图所示。
 
@@ -44,41 +44,41 @@ lang: zh-cn
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
-三色 LED 的引出线如下所示，并且可以在[数据表](http://www.kingbrightusa.com/Resources/images/catalog/SPEC/WP154A4SUREQBFZGC.pdf){:target="_blank"}中找到。
+三色 LED 的引出线如下所示，并且可以在[数据表](http://www.kingbrightusa.com/images/catalog/SPEC/WP154A4SUREQBFZGC.pdf){:target="_blank"}中找到。
 
 ![三色 LED 引出线]({{site.baseurl}}/Resources/images/RGBLED/RGBLED_Pinout.png)
 
-####连接三色 LED
+#### 连接三色 LED
 
-* 将三色 LED 插入试验板，如页面顶部的试验板图中所示。
+* 将三色 LED 插入试验板，如在页面顶部的试验板图中所示。
 
-* 将 330 &#x2126; 电阻器的一端连接到三色 LED 的红色引线上。
+* 将 330 &\#x2126; 电阻器的一端连接到三色 LED 的红色引线上。
 
-* 将 330 &#x2126; 电阻器的另一端连接到 Raspberry Pi 2 的引脚 29 GPIO5。
+* 将 330 &\#x2126; 电阻器的另一端连接到 Raspberry Pi 2 或 3 的引脚 29 GPIO5。
 
-* 将 100 &#x2126; 电阻器的一端连接到三色 LED 的蓝色引线上。
+* 将 100 &\#x2126; 电阻器的一端连接到三色 LED 的蓝色引线上。
 
-* 将 100 &#x2126; 电阻器的另一端连接到 Raspberry Pi 2 的引脚 31 GPIO6。
+* 将 100 &\#x2126; 电阻器的另一端连接到 Raspberry Pi 2 或 3 的引脚 31 GPIO6。
 
-* 将 100 &#x2126; 电阻器的一端连接到三色 LED 的绿色引线上。
+* 将 100 &\#x2126; 电阻器的一端连接到三色 LED 的绿色引线上。
 
-* 将 100 &#x2126; 电阻器的另一端连接到 Raspberry Pi 2 上的引脚 33 GPIO13。
+* 将 100 &\#x2126; 电阻器的另一端连接到 Raspberry Pi 2 或 3 上的引脚 33 GPIO13。
 
 * 将三色 LED 的阴极（最长的阴极引线）连接到引脚 6 GND。
 
-下面是 RPi2 的引出线：
+下面是 Raspberry 2 和 3 的引出线：
 
-![Raspberry Pi 2 引出线]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
+![Raspberry Pi 2 和 3 引出线]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
-###部署你的应用
+### 部署你的应用
 
-你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\RGBLED` 来查找此示例的源代码。本示例是采用 C\# 编写的。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\RGBLED`，查找此示例的源代码。本示例是采用 C\# 编写的。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
 按照[设置远程调试并部署应用]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp)的说明进行操作。RGBLED 应用将在 MBM 上部署并启动，此时你应看到 LED 与屏幕上的模拟图像同步闪烁。
 
-###我们来看看代码
+### 我们来看看代码
 
 首先，我们将获取默认的 GPIO 控制器，然后检查它不是 NULL。`GpioController.GetDefault()` 在不包含 GPIO 控制器的平台上返回 NULL。
 

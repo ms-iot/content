@@ -5,9 +5,9 @@ permalink: /zh-cn/win10/samples/FTP.htm
 lang: zh-cn
 ---
 
-##使用 FTP 在你的设备中传输文件
+## 使用 FTP 在你的设备中传输文件
 
-###通过 FTP 访问你的文件<a name="accessftp"/>
+### 通过 FTP 访问你的文件<a name="accessftp"/>
 * 你的 Windows IoT 核心版设备上的 FTP 服务器在设备启动时自动启动。若要连接到它，需要你的设备的 IP 地址。你可以在默认应用上找到该 IP 地址，该应用会在设备启动时启动。
 
     ![Windows IoT 核心版上的 DefaultApp]({{site.baseurl}}/Resources/images/DefaultApp.png)
@@ -18,7 +18,7 @@ lang: zh-cn
 
 * 现在，你可以通过 FTP 访问你的设备上的文件。
 
-###停止在你的设备上运行 FTP 服务器<a name="stopftp"/>
+### 停止在你的设备上运行 FTP 服务器<a name="stopftp"/>
 * 默认情况下，FTP 服务器运行在你的设备上。若要在你的设备上停止 FTP 服务器，则首先需要通过 [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) 或 [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) 连接到你的设备。  
 * 如果使用 PowerShell 进行连接，请键入 `kill -processname ftpd*` 以停止 FTP 进程。
 
@@ -28,14 +28,14 @@ lang: zh-cn
 
     ![FTP SSH 停止]({{site.baseurl}}/Resources/images/ftp/ftp_kill_ssh.png)
     
-###在你的设备上启动 FTP 服务器
+### 在你的设备上启动 FTP 服务器
 * 先通过 [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) 或 [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) 连接到你的设备。
 * 键入 `start C:\Windows\System32\ftpd.exe`
 * 你可以通过键入 `tlist` 检查该服务器是否正在运行，这将列出所有运行中的进程。如果 FTP 服务器正在运行，你应该能在该列表中看到 `ftpd.exe`。
 
     ![FTP 启动]({{site.baseurl}}/Resources/images/ftp/ftp_start.png)
 
-###更改 FTP 根目录
+### 更改 FTP 根目录
 * 默认情况下，FTP 服务器将在设备的根目录 C:\\ 下显示所有文件夹。若要更改根目录，我们将按照相同步骤启动 FTP 服务器，但需要作为参数传入根目录的情况除外。
 * 若要更改它，请先通过 [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) 或 [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) 连接到你的设备。
 * 如果 FTP 进程已在运行，请[停止](#stopftp)该进程。

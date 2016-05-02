@@ -13,18 +13,18 @@ lang: zh-cn
 # 通过 TX/RX 引脚进行通信
 了解如何使用 HardwareSerial 跨 TX/RX 引脚进行通信，以及如何在使用 USB TTL 串行电缆的计算机上查看它
 
-# 有关使用 HardwareSerial 的信息
+## 有关使用 HardwareSerial 的信息
 * 串行 = COM1 = TX/RX 引脚<br/>
 * 尽管此示例未使用串行事件，但如果你想使用 serialEvent，则需要：
     * 为 <code>serialEvent\(\)</code> 创建一种返回空值的方法，并且 main.cpp 中没有参数。当数据在循环末尾的 serial1 端口上可用时，将调用此方法。
     * 在解决方案资源管理器中右键单击“项目”，然后选择“属性”<kbd></kbd>。
     * 在“配置属性”-\>“C/C++”-\>“预处理器”下，将 <kbd>SERIAL\_EVENT;</kbd> 添加到“预处理器定义”。
 
-# 所需组件
+## 所需组件
 * [FTDI 电缆](https://www.sparkfun.com/products/9717){:target="_blank"}
 * 用于将 TX 和 RX 引脚连接到 FTDI 电缆的 2 条线
 
-# 创建项目
+## 创建项目
 
 1. 使用模板创建新项目。
 1. 将电缆的 USB 端插入计算机的 USB 端口。
@@ -37,7 +37,7 @@ lang: zh-cn
 1. 将黄色引脚从电缆连接到 Galileo 上的 TX（引脚 1）
 1. 将项目的 main.cpp 中的现有代码替换为以下代码：
 
-# 代码
+## 代码
 
 ### “写入”项目中的 main.cpp
 

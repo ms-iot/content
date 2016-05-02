@@ -5,12 +5,12 @@ permalink: /zh-cn/win10/LightningProviders.htm
 lang: zh-cn
 ---
 
-#Microsoft.IoT.Lightning.Providers 库和示例代码
+# Microsoft.IoT.Lightning.Providers 库和示例代码
 Microsoft.IoT.Lightning.Providers 库包含一组通过 Lightning 直接内存访问驱动程序与 GPIO、SPI 和 I2C 总线连接的提供程序。
 
 可以在 [GitHub](https://github.com/ms-iot/BusProviders/tree/develop/Microsoft.IoT.Lightning.Providers){:target="_blank"} 的源格式中获取库和示例代码。
 
-##使用库
+## 使用库
 
 Microsoft.IoT.Lightning.Providers 库包含一组 Windows.Devices.\*Providers WinRT API，使 UWP 应用可以使用 Lightning 驱动程序与 GPIO、I2C 和 SPI 设备通信并对其加以控制。
 
@@ -22,10 +22,9 @@ Microsoft.IoT.Lightning.Providers 库包含一组 Windows.Devices.\*Providers Wi
 * `Microsoft.IoT.Lightning.Providers.Lightning.Pwm.Provider`
 * `Microsoft.IoT.Lightning.Providers.Lightning.Spi.Provider`
 
-###检查 Lightning \(DMAP\) 驱动程序
+### 检查 Lightning \(DMAP\) 驱动程序
 
 若要检查是否已启用 Lightning，应使用 `LightningProvider.IsLightningEnabled` 属性。通常，最好在使用 Lightning 提供程序 API 之前验证 Lightning 驱动程序是否已启用。
-
 {% highlight C# %}
 if (Microsoft.IoT.Lightning.Providers.LightningProvider.IsLightningEnabled)
 {
@@ -33,7 +32,7 @@ if (Microsoft.IoT.Lightning.Providers.LightningProvider.IsLightningEnabled)
 }
 {% endhighlight %}
 
-###一般使用模式
+### 一般使用模式
 
 使用提供程序的最简单方法是在应用内部将 Lightning 提供程序设置为默认提供程序。
 
@@ -54,11 +53,11 @@ spiController = await SpiController.GetDefaultAsync();
 
 为所需总线配备了控制器后，你可以像往常一样使用它。
 
-###将 Lightning 用于个别总线
+### 将 Lightning 用于个别总线
 
 如果你需要使用不同的默认提供程序，以下部分将介绍如何将 Lightning 提供程序用于个别总线。
 
-####对于 GPIO 总线控制器：
+#### 对于 GPIO 总线控制器：
 
 {% highlight C# %}
 using Microsoft.IoT.Lightning.Providers;
@@ -72,7 +71,7 @@ if (LightningProvider.IsLightningEnabled)
 }
 {% endhighlight %}
 
-####对于 I2C 总线控制器：
+#### 对于 I2C 总线控制器：
 
 {% highlight C# %}
 using Microsoft.IoT.Lightning.Providers;
@@ -84,16 +83,12 @@ if (LightningProvider.IsLightningEnabled)
     I2cController controller =  (await I2cController.GetControllersAsync(LightningI2cProvider.GetI2cProvider()))[0];
     I2cDevice sensor = controller.GetDevice(new I2cConnectionSettings(0x40));
 }
-
 {% endhighlight %}
 
-####对于 SPI 总线控制器：
+#### 对于 SPI 总线控制器：
+使用 Microsoft.IoT.Lightning.Providers; 使用 Windows.Devices; 使用 Windows.Devices.Spi;
 
 {% highlight C# %}
-using Microsoft.IoT.Lightning.Providers;
-using Windows.Devices;
-using Windows.Devices.Spi;
-
 if (LightningProvider.IsLightningEnabled)
 {
     SpiController controller =  (await SpiController.GetControllersAsync(LightningSpiProvider.GetSpiProvider()))[0];
@@ -101,7 +96,7 @@ if (LightningProvider.IsLightningEnabled)
 }
 {% endhighlight %}
 
-##Lightning 提供程序示例
+## Lightning 提供程序示例
 
 以下示例演示了如何使用 Lightning 提供程序以及受支持的总线类型：
 
@@ -113,9 +108,9 @@ if (LightningProvider.IsLightningEnabled)
 
 * [带有 Lightning 提供程序的 WeatherStation]({{site.baseurl}}/{{page.lang}}/win10/samples/WeatherStationLightning.htm) 演示了与使用带有 Lightning 提供程序的 I2C 的设备进行交互
 
-##生成要求
+## 生成要求
 
-###更新应用程序包清单
+### 更新应用程序包清单
 
 此外，你需要手动更新应用程序包清单来引用 Lightning 备接口：
 
@@ -131,11 +126,11 @@ if (LightningProvider.IsLightningEnabled)
 
 ![AppX 清单功能]({{site.baseurl}}/Resources/images/Lightning/update_manifest.png)
 
-###Windows SDK 更新
+### Windows SDK 更新
 
 生成和使用库所需的 Windows SDK 为 10.0.10586.0 或更高版本（可以从[此处](https://dev.windows.com/zh-cn/downloads/windows-10-sdk)下载）。
 
-有关获取和设置所需的 Windows SDK 及其他工具的详细信息，请参阅[设置电脑指南]({{site.baseurl}}/{{page.lang}}/win10/SetupPCRPI.htm)。
+有关获取和设置所需 Windows SDK 和其他工具的详细信息，请参阅[设置电脑指南]({{site.baseurl}}/{{page.lang}}/win10/SetupPCRPI.htm)。
 
 ### Nuget 包依赖关系
 
@@ -155,9 +150,9 @@ Microsoft.IoT.Lightning Nuget 目前仍是预发行版，因此当更新的版�
 
 ![程序包管理器配置]({{site.baseurl}}/Resources/images/Lightning/Nuget_PackageManager.png)
 
-##运行时要求
+## 运行时要求
 
-###需要 Windows IoT 核心版秋季更新
+### 需要 Windows IoT 核心版秋季更新
 目前仅 Windows IoT 核心版的秋季更新版本中包含 Lightning 提供程序支持。你可以从我们的[下载页]({{site.baseurl}}/{{page.lang}}/Downloads.htm)下载 Windows 10 IoT 核心版映像。根据你的设备类型，单击“下载 Insider Preview”。
 
 ### 必须启用直接内存映射的驱动程序

@@ -5,7 +5,7 @@ permalink: /zh-cn/win10/samples/PowerShell.htm
 lang: zh-cn
 ---
 
-## 使用 PowerShell 连接并配置运行 Windows 10 IoT 核心版的设备
+# 使用 PowerShell 连接并配置运行 Windows 10 IoT 核心版的设备
 
 ### 远程管理和配置
 你可以使用 Windows PowerShell 远程配置和管理任何 Windows 10 IoT 核心版设备。PowerShell 是基于任务的命令行 Shell 和脚本语言，专为进行系统管理而设计。
@@ -17,7 +17,7 @@ lang: zh-cn
 
     ![Windows 10 IoT 核心版上的 CoreDefaultApp]({{site.baseurl}}/Resources/images/DefaultApp.png)
 
-    可以在 Windows 10 IoT Core Watcher 实用工具中找到相同信息。
+    可以在 Windows 10 IoT 核心版仪表板实用工具中找到相同信息。
 
 * 在本地电脑上启动管理员 PS 控制台。执行此操作的最简单方法是在 Windows“开始”菜单旁的“搜索 Web 和 Windows”文本框中键入“powershell”： Windows 将在你的计算机上查找 PowerShell：
 

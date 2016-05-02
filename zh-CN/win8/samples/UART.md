@@ -13,7 +13,7 @@ lang: zh-cn
 # 写入 UART
 了解如何使用 HardwareSerial 读取和写入 UART 端口。
 
-# 有关使用 UART 和 HardwareSerial 的信息
+## 有关使用 UART 和 HardwareSerial 的信息
 
 * HardwareSerial 定义一个名为 Serial1 的对象。
     * 这会读取并写入 Windows 映像上的 COM2（已链接到 Galileo 开发板上 UART 端口）<br/>
@@ -22,11 +22,11 @@ lang: zh-cn
     * 在解决方案资源管理器中右键单击“项目”，然后选择“属性”<kbd></kbd>。
     * 在“配置属性”-\>“C/C++”-\>“预处理器”下，将 <kbd>SERIAL\_EVENT1;</kbd> 添加到“预处理器定义”。
 
-# 所需组件
+## 所需组件
 * [DB9 母头转 3.5 毫米电缆](http://www.amazon.com/SF-Cable-Female-Serial-Cable-6/dp/B004T9BBJC/ref=sr_1_1?ie=UTF8&qid=1407960957&sr=8-1&keywords=audio+to+serial+cable){:target="_blank"}
 * [USB 转串行电缆](http://www.amazon.com/TRENDnet-RS-232-Serial-Converter-TU-S9/dp/B0007T27H8/ref=sr_1_1?ie=UTF8&qid=1407961117&sr=8-1&keywords=serial+to+usb){:target="_blank"}
 
-# 允许 UART 用于 HardwareSerial（这会在使用内核调试程序时进行更改）
+## 允许 UART 用于 HardwareSerial（这会在使用内核调试程序时进行更改）
 
 1. 关闭 Galileo 并移除电源
 1. 移除 microSD 卡并将其插入电脑（Windows 会自动分配驱动器号，在本例中是“k”）
@@ -36,11 +36,11 @@ lang: zh-cn
 	* <kbd>bcdedit /store k:\\efi\\microsoft\\boot\\bcd /set {default} debug No</kbd>
 	* <kbd>bcdedit /store k:\\efi\\microsoft\\boot\\bcd /set {default} testsigning OFF</kbd>
 	* <kbd>bcdedit /store k:\\efi\\microsoft\\boot\\bcd /enum</kbd>
-	* 验证 debug 和 testsigning 现在是"No"。
-1. 从电脑安全卸除 microSD（从 Windows 资源管理器弹出）。
+	* 现在“不可以”验证 debug 和 testsigning。
+1. 从电脑安全卸除 microSD（通过从 Windows 资源管理器弹出）。
 1. 将 microSD 放置在 Galileo 中并接通电源
 
-# 创建一个新项目
+## 创建一个新项目
 
 1. 使用模板创建新项目。
 1. 将电缆的两个串行端插在一起。
@@ -53,7 +53,7 @@ lang: zh-cn
     * 如果使用 Tera Term，可通过依次单击“设置”-\>“串行端口”来转到如上所示的菜单。
 1. 使用以下代码替换 main.cpp 中的现有代码：
 
-# 代码
+## 代码
 
 ### Main.cpp
 

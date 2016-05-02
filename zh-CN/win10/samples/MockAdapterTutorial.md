@@ -5,11 +5,11 @@ permalink: /zh-cn/win10/samples/MockAdapterTutorial.htm
 lang: zh-cn
 ---
 
-##Alljoyn Mock 适配器示例
+# Alljoyn Mock 适配器示例
 
 {% include VerifiedVersion.md %}
 
-你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\AllJoyn\Samples\MockAdapter` 来查找此示例的源代码。示例代码在 C++ 中可用。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\AllJoyn\Samples\MockAdapter`，查找此示例的源代码。示例代码在 C++ 中可用。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
 本教程将演示 AllJoyn 设备系统网桥 \(DSB\) 公开和控制 mock 设备的功能。
 
@@ -22,8 +22,8 @@ lang: zh-cn
 ## 设置 Raspberry Pi2
 
 1. 将你的 Raspberry Pi2 连接到 LAN
-2. 接通电源以启动 Raspberry Pi2
-3. 验证电脑是否可以访问带有 Windows IoT Core Watcher 的 Raspberry Pi2
+2. 连接电源以启动 Raspberry Pi2
+3. 验证电脑是否可以访问带有 Windows 10 IoT 核心版仪表板的 Raspberry Pi2
 
 ## 在 Visual Studio 中运行 Mock 适配器
 
@@ -33,7 +33,7 @@ lang: zh-cn
 
 ![set\_startup]({{site.baseurl}}/Resources/images/MockAdapter/mockadapter_vs.png)
 
-4. 	在主菜单栏中，依次选择“调试”-\>“HeadlessAdapterApp 属性...”
+4. 	在“主菜单”栏中，依次选择“调试”-\>“HeadlessAdapterApp 属性...”
 5.	按照[设置远程调试并部署应用]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#cpp)的说明进行操作
 
 ## 通过 IoT Explorer for Alljoyn 控制 Mock 设备

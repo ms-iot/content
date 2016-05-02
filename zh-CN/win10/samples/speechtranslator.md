@@ -5,13 +5,13 @@ permalink: /zh-cn/win10/samples/speechtranslator.htm
 lang: zh-cn
 ---
 
-#生成 SpeechTranslator 项目
+# 生成 SpeechTranslator 项目
 
-###组件列表：
+### 组件列表：
 
-- 两个 Raspberry Pi 2 板
-- 两个 Raspberry Pi 2 电源 
-- 两个 [Microsoft LifeChat-3000 耳机](https://www.microsoft.com/hardware/zh-cn/p/lifechat-lx-3000/JUG-00013) 
+- 2 个 Raspberry Pi 2 或 3 开发板
+- 2 个 Raspberry Pi 2 或 3 电源 
+- 2 个 [Microsoft LifeChat-3000 耳机](https://www.microsoft.com/hardware/zh-cn/p/lifechat-lx-3000/JUG-00013) 
 - 两个鼠标 
 - 两条以太网电缆 
 - 两块 micro-SD 卡 

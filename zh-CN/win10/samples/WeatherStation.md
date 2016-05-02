@@ -41,7 +41,9 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
     <img src="{{site.baseurl}}/Resources/images/AdafruitStarterPack/WeatherStation.jpg">
   </div>
   <div class="col-md-12 col-xs-24">
-    <h2 class="text-center thin-header">单击<a target="_blank" href="https://www.hackster.io/windows-iot/weather-station">此处</a>以开始操作！</h2>
+    <h2>此项目有两个版本。</h2>
+    <h2 class="text-center thin-header">如果你有附带 BMP280 的工具包的 v1，请单击<a target="_blank" href="https://www.hackster.io/windows-iot/weather-station">此处</a>以开始操作！</h2>
+    <h2 class="text-center thin-header">如果你有附带 BME280 的工具包的 v2，请单击<a target="_blank" href="https://www.hackster.io/windows-iot/weather-station-v-2-0-8abe16?auth_token=80b912d8d81919969ccab0080ddd8e2f">此处</a>以开始操作！</h2>
   </div>
 </div>
 

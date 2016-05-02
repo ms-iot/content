@@ -5,7 +5,7 @@ permalink: /zh-cn/win10/LightningPerformance.htm
 lang: zh-cn
 ---
 
-##Windows IoT Lightning 性能测试
+# Windows IoT Lightning 性能测试
 
 使用一个简单的 GPIO 切换应用来测试 Windows IoT Lightning 功能的 GPIO 性能。通过以尽可能快的速度切换 0 和 1 之间的 GPIO 5 来执行测试。使用 Tektronix TDS 2012C 示波器测量每种情况的切换频率。通过分析得出以下结果：
 

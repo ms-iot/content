@@ -1,6 +1,8 @@
 ---
 layout: default
 title: 主页
+description: 通过保持与其他 Windows IoT 开发人员的联系，了解与 Windows IoT 设备相关的技术、公告、新的产品功能、启动以及更多内容。
+keyword: community, forum, iot forum, iot
 permalink: /zh-cn/Community.htm
 lang: zh-cn
 ---
@@ -16,22 +18,21 @@ lang: zh-cn
 <div class="row section-heading">
   <h3>Window IoT 博客的新增内容</h3>
     <div class="col-md-6">
-      <a href="http://blogs.windows.com/buildingapps/2015/10/28/announcing-dragonboard-410c-support-in-windows-10-iot-core-arduino-partnership-updates/" target="_blank">
-        <h4>宣布推出 Windows 10 IoT 核心版中的 DragonBoard 410c 支持，即 Arduino 合作关系更新</h4>
+      <a href="http://go.microsoft.com/fwlink/?LinkId=734075" target="_blank">
+        <h4>适用于 Raspberry Pi 3 的 Windows 10 IoT 核心版支持</h4>
       </a>
-      <h4><em>Steve Teixeira，2015 年 10 月 28 日</em></h4>
+      <h4><em>Billy Anders<br>程序管理主管<br>Windows IoT<br>2016 年 2 月 29 日</em></h4>
     </div>
-  <div class="col-md-6">
-      <a href="http://blogs.windows.com/buildingapps/2015/09/24/whats-next-for-windows-10-iot-core/" target="_blank">
-        <h4>Windows 10 IoT 核心版未来将如何发展</h4>
+    <div class="col-md-6">
+      <a href="http://blogs.windows.com/buildingapps/2016/02/04/what-is-windows-remote-arduino-and-what-can-it-do/" target="_blank">
+        <h4>什么是 Windows Remote Arduino 以及其功能？</h4>
       </a>
-      <h4><em>Steve Teixeira，2015 年 9 月 24 日</em></h4>
+      <h4><em>Windows 应用团队<br>2016 年 2 月 4 日</em></h4>
     </div>
-  <div class="col-md-6">
-      <a href="http://blogs.windows.com/buildingapps/2015/08/10/hello-windows-10-iot-core/" target="_blank">
-        <h4>你好，Windows 10 IoT 核心版</h4>
+    <div class="col-md-6">
+      <a href="http://blogs.windows.com/buildingapps/2016/01/27/what-is-windows-virtual-shields-for-arduino-and-what-can-it-do/" target="_blank">
+        <h4>什么是 Windows Virtual Shields for Arduino 以及其功能？</h4>
       </a>
-      <br>
       <h4><em>Steve Teixeira，2015 年 8 月 10 日</em></h4>
     </div>
 </div>
@@ -46,7 +47,7 @@ lang: zh-cn
     <p>
       <a href="https://social.msdn.microsoft.com/forums/zh-cn/home?forum=WindowsIoT" target="_blank">MSDN 论坛 »</a>
     </p>
-    <p>Raspberry Pi 论坛是直接查找特定于 Raspberry Pi 2 板的问题的最佳位置。</p>
+    <p>Raspberry Pi 论坛是直接查找特定于 Raspberry Pi 2 和 3 板的问题的最佳位置。</p>
     <p>
     <a href="https://www.raspberrypi.org/forums/viewforum.php?f=105" target="_blank">Raspberry Pi 论坛 »</a>
     </p>

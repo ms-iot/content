@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Shield 兼容性
-permalink: /zh-cn/ShieldCompat.htm
+permalink: /zh-cn/win8/ShieldCompat.htm
 lang: zh-cn
 ---
 

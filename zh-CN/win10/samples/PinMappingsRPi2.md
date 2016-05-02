@@ -1,17 +1,17 @@
 ---
 layout: default
-title: RPi2 引脚映射
+title: Raspberry Pi 2 和 3 引脚映射
 permalink: /zh-cn/win10/samples/PinMappingsRPi2.htm
 lang: zh-cn
 ---
 
-##Raspberry Pi 2 引脚映射
+# Raspberry Pi 2 和 3 引脚映射
 
 ![RPi2 排针]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
-Raspberry Pi 2 的硬件接口通过开发板上的 40 排针 **J8** 公开。功能包括：
+Raspberry Pi 2 和 Raspberry Pi 3 的硬件接口通过开发板上的 40 排针 **J8** 公开。功能包括：
 
 * **17x** - GPIO 引脚
 * **1x** - SPI 总线
@@ -20,7 +20,7 @@ Raspberry Pi 2 的硬件接口通过开发板上的 40 排针 **J8** 公开。�
 * **2x** - 3.3V 电源引脚
 * **8x** - 接地引脚
 
-##<a name="RPi2_GPIO">GPIO 引脚
+## <a name="RPi2_GPIO">GPIO 引脚
 
 以下 GPIO 引脚可通过 API 访问：
 
@@ -44,8 +44,10 @@ Raspberry Pi 2 的硬件接口通过开发板上的 40 排针 **J8** 公开。�
 | 25 | 下拉 | 22 |
 | 26 | 下拉 | 37 |
 | 27 | 下拉 | 13 |
-| 35 | 上拉 | 红色电源 LED |
-| 47 | 上拉 | 绿色活动 LED |
+| 35\* | 上拉 | 红色电源 LED |
+| 47\* | 上拉 | 绿色活动 LED |
+
+\* = 仅限 Raspberry Pi 2。Raspberry Pi 3 上未提供 GPIO 35 和 47。
 
 例如，以下代码将 **GPIO 5** 作为输出打开，并在该引脚上写下数字“**1**”：
 
@@ -78,9 +80,9 @@ public void GPIO()
 
 当关闭引脚时，它将还原到其通电状态。
 
-##<a name="RPi2_UART"></a>串行 UART
+## <a name="RPi2_UART"></a>串行 UART
 
-RPi2 上有一个串行 UART： **UART0**
+RPi2/3 上有一个串行 UART： **UART0**
 
 * Pin 8 - **UART0 TX**
 * Pin 10 - **UART0 RX**
@@ -121,7 +123,7 @@ public async void Serial()
 }
 {% endhighlight %}
 
-请注意，你必须将以下功能添加到 UWP 项目中的 **Package.appxmanifest** 文件，才能运行串行 UART 代码：
+请注意，必须将以下功能添加到 UWP 项目中的 **Package.appxmanifest** 文件，才能运行串行 UART 代码：
 
     Visual Studio 2015 has a known bug in the Manifest Designer (the visual editor for appxmanifest files) that affects the serialcommunication capability.  If 
     your appxmanifest adds the serialcommunication capability, modifying your appxmanifest with the designer will corrupt your appxmanifest (the Device xml child 
@@ -138,9 +140,9 @@ public async void Serial()
   </Capabilities>
 {% endhighlight %}
 
-##<a name="RPi2_I2C"></a>I2C 总线
+## <a name="RPi2_I2C"></a>I2C 总线
 
-排针上公开了一个 I2C 控制器 **I2C1**，带有 **SDA** 和 **SCL** 两条线。用于此总线的 1.8K&#x2126; 内部上拉电阻已安装在开发板上。
+排针上公开了一个 I2C 控制器 **I2C1**，带有 **SDA** 和 **SCL** 两条线。用于此总线的 1.8K&\#x2126; 内部上拉电阻已安装在开发板上。
 
 * 引脚 3 - **I2C1 SDA**
 * 引脚 5 - **I2C1 SCL**
@@ -174,9 +176,9 @@ public async void I2C()
 {% endhighlight %}
 
 
-##<a name="RPi2_SPI"></a>SPI 总线
+## <a name="RPi2_SPI"></a>SPI 总线
 
-RPi2 上提供一个 SPI 总线控制器。**SPI0** 具有标准的 **MOSI**、**MISO** 和 **SCLK** 线，并且可以配置为使用 **SPI0 CS0** 和 **SPI0 CS1** 两种芯片选择线之一。
+RPi2/3 上提供一个 SPI 总线控制器。**SPI0** 具有标准的 **MOSI**、**MISO** 和 **SCLK** 线，并且可以配置为使用 **SPI0 CS0** 和 **SPI0 CS1** 两种芯片选择线之一。
 
 * 引脚 19 - **SPI0 MOSI**
 * 引脚 21 - **SPI0 MISO**

@@ -1,6 +1,8 @@
 ---
 layout: default
 title: 硬件兼容性列表
+description: Windows 10 IoT 核心版支持各种外设接口和协议，包括对诸如 I2C、UART、USB 等常见总线的支持。
+keyword: windows iot, hardware, compatibility, interfaces
 permalink: /zh-cn/win10/SupportedInterfaces.htm
 lang: zh-cn
 ---
@@ -100,7 +102,7 @@ Windows 10 IoT 核心版支持各种外设接口和协议，包括对诸如 I2C�
 			按开发板类型筛选列表：
 			<select id="boardSelect" onchange="filterDeviceRows();">
 			  <option value=".">全部</option>
-			  <option value="RPI2">RPI2</option>
+			  <option value="RPI2">RPi2/RPi3</option>
 			  <option value="MBM">MBM</option>
 			</select>
 		</div>
@@ -280,5 +282,25 @@ Windows 10 IoT 核心版支持各种外设接口和协议，包括对诸如 I2C�
 </script>
 
 <!-- Reference Links -->
+[MSVerified]: {{site.baseurl}}/Resources/images/checkmark.svg "Microsoft 验证"
+\[在 GitHub 上生成此列表\]：{{site.repositoryurl}}{{ page.path }}
+[RPi2 or RPi3 Pin Mapping]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm#RPi2_I2C
+[MBM Pin Mapping]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm#MBM_I2C
+[ZWave Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/ZWaveTutorial.htm
+[GpioOneWire Sample (DHT11)]: {{site.baseurl}}/{{page.lang}}/win10/samples/GpioOneWire.htm
+[I2C Accelerometer Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/I2CAccelerometer.htm#I2C_Accelerometer
+[I2C Port Explander Sample]: https://www.hackster.io/4803/i2c-port-expander-sample
+[Adafruit Starter Pack]: {{site.baseurl}}/{{page.lang}}/AdafruitKitContents.htm
+[//build 2014 - Piano]: https://www.hackster.io/windowsiot/build-2014-piano
+[SPI Display Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplay.htm
+[Shift Register Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/ShiftRegisterSample.htm
+[Serial Port Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/SerialSample.htm
+[Potentiometer Sensor Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm
+[ADC Bus Providers]: {{site.msiotorgurl}}/BusProviders/tree/develop/ADC
+[PWM Bus Providers]: {{site.msiotorgurl}}/BusProviders/tree/develop/PWM
+[Alljoyn DSB Gpio C# Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/AlljoynDSB_ManagedGpioTutorial.htm
+[Wiring API]: {{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm
+[Weather Station Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/WeatherStation.htm
+[RGB Pixel Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/RGBPixel.htm
+[Home Security Camera Project]: {{site.baseurl}}/{{page.lang}}/win10/samples/WebCamSample.htm
 
-[经 Microsoft 验证](SupportedInterfaces/checkmark.svg "Microsoft 验证") [补充此份关于 GitHub 的列表。]({{site.repositoryurl}}{{page.path}}) [RPI2 引脚映射]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm#RPi2_I2C) [MBM 引脚映射]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm#MBM_I2C) [ZWave 示例]({{site.baseurl}}/{{page.lang}}/win10/samples/ZWaveTutorial.htm) [GpioOneWire 示例 \(DHT11\)]({{site.baseurl}}/{{page.lang}}/win10/samples/GpioOneWire.htm) [I2C 加速计示例]({{site.baseurl}}/{{page.lang}}/win10/samples/I2CAccelerometer.htm#I2C_Accelerometer) [I2C 端口扩展器示例](https://www.hackster.io/4803/i2c-port-expander-sample) [Adafruit 初学者包]({{site.baseurl}}/{{page.lang}}/AdafruitKitContents.htm) [//build 2014 - 钢琴](https://www.hackster.io/windowsiot/build-2014-piano) [SPI 显示示例]({{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplay.htm) [移位寄存器示例]({{site.baseurl}}/{{page.lang}}/win10/samples/ShiftRegisterSample.htm) [串行端口示例]({{site.baseurl}}/{{page.lang}}/win10/samples/SerialSample.htm) [电位计传感器示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm) [ADC 总线提供程序]({{site.msiotorgurl}}/BusProviders/tree/develop/ADC) [PWM 总线提供程序]({{site.msiotorgurl}}/BusProviders/tree/develop/PWM) [Alljoyn DSB Gpio C\# 示例]({{site.baseurl}}/{{page.lang}}/win10/samples/AlljoynDSB_ManagedGpioTutorial.htm) [连线 API]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm) [气象站示例]({{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/WeatherStation.htm) [RGB 像素示例]({{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/RGBPixel.htm) [家用监控摄像头项目]({{site.baseurl}}/{{page.lang}}/win10/samples/WebCamSample.htm)

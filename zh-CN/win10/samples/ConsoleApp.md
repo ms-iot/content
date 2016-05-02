@@ -5,17 +5,17 @@ permalink: /zh-cn/win10/samples/ConsoleApp.htm
 lang: zh-cn
 ---
 
-##MemoryStatus 控制台应用程序示例
+# MemoryStatus 控制台应用程序示例
 
 {% include VerifiedVersion.md %}
 
-我们将要创建一个可用于在 Windows IoT 核心版设备（Raspberry Pi 2、MinnowBoard Max 或 DragonBoard）上查询内存使用情况的简单控制台应用程序。请注意，你需要针对 Raspberry Pi 2 或 DragonBoard 的 ARM 和 MinnowBoard Max 的 x86 编译项目。
+我们将要创建一个可用于在 Windows IoT 核心版设备（Raspberry Pi 2（或 3）、MinnowBoard Max 或 DragonBoard）上查询内存使用情况的简单控制台应用程序。请注意，你需要针对 Raspberry Pi 2（或 3）或 DragonBoard 的 ARM 和 MinnowBoard Max 的 x86 编译项目。
 
-###在 Visual Studio 中加载项目
+### 在 Visual Studio 中加载项目
 
-你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\MemoryStatus` 来查找此示例的源代码。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\MemoryStatus`，查找此示例的源代码。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
-###在 Visual Studio 中创建你自己的项目
+### 在 Visual Studio 中创建你自己的项目
 
 * 创建新项目（“文件”\|“新建项目...”）。在“新建项目”对话框中，如下所示导航到“Windows IoT Core”（在该对话框的左窗格中： 模板 \| Visual C++ \| Windows \| Windows IoT Core）。<br/> 选择模板“空白 Windows IoT Core 控制台应用程序”<br/>请记得为你的第一个应用指定一个好记的名称！ 在本示例中，我们将项目命名为“MemoryStatus”。
 

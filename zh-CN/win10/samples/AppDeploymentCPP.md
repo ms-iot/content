@@ -1,4 +1,4 @@
-1. 应用程序在 Visual Studio 中打开后，在工具栏下拉列表中设置体系结构。如果针对 MinnowBoard Max 进行生成，请选择 `x86`。如果针对 Raspberry Pi 2 进行生成，请选择 `ARM`。
+1. 应用程序在 Visual Studio 中打开后，在工具栏下拉列表中设置体系结构。如果你要针对 MinnowBoard Max 进行生成，请选择 `x86`。如果你要针对 Raspberry Pi 2 或 3 进行生成，请选择 `ARM`。
 
 2. 接下来，在 Visual Studio 工具栏中，单击 `Local Machine` 下拉列表并选择 `Remote Machine`<br/>
 

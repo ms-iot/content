@@ -4,7 +4,7 @@
 
 * 一个 LED（任何你喜欢的颜色）
 
-* 一个 220 &#x2126;适用于 Raspberry Pi 2 和 MinnowBoard Max 或 330 &#x2126; 的电阻器；适用于 DragonBoard 的电阻器
+* 一个适用于 Raspberry Pi 2、Raspberry Pi 3 和 MinnowBoard Max 的 220 &\#x2126; 电阻器，或者一个适用于 DragonBoard 的 330 &\#x2126; 电阻器
 
 * 一块试验板和几根连接线
 

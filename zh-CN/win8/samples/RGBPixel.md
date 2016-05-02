@@ -15,22 +15,22 @@ lang: zh-cn
 
 ![]({{site.baseurl}}/Resources/images/RGBPixel.jpg){:width="400"}
 
-# 所需组件
+## 所需组件
 * [RGB 像素带](http://www.adafruit.com/products/306){:target="_blank"}
 * [5V 电源（警告：不可超过 6V 直流）](http://www.adafruit.com/products/276){:target="_blank"}
     * 注意： 像素带每 2.5" 带段会吸取 120mA，所以请相应地选择你的电源。
 * [母直流电源适配器](http://www.adafruit.com/products/368){:target="_blank"}
 
-# 连接组件
+## 连接组件
 * [有关如何给装有直流电源和母直流电源适配器的像素带通电的信息](https://learn.adafruit.com/digital-led-strip/powering){:target="_blank"}
 * [有关如何连接 RGB 像素带以供使用的信息。](https://learn.adafruit.com/digital-led-strip/wiring){:target="_blank"}
 
-# 创建一个新项目
+## 创建一个新项目
 
 1. 从模板创建新项目。
 1. 使用以下代码替换 main.cpp 中的现有代码：
 
-# 代码
+## 代码
 
 ### Main.cpp
 

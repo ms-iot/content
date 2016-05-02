@@ -5,11 +5,11 @@ permalink: /zh-cn/win10/samples/Python.htm
 lang: zh-cn
 ---
 
-##Python“Hello, World”示例
+# Python“Hello, World”示例
 
 {% include VerifiedVersion.md %}
 
-###设置电脑
+### 设置电脑
 
 * 按照[此处]({{site.baseurl}}/{{page.lang}}/GetStarted.htm)的说明设置你的设备和电脑。
 
@@ -19,11 +19,11 @@ lang: zh-cn
 
 * 从[此处](https://github.com/ms-iot/python/releases){:target="_blank"}下载并安装 Python UWP SDK \(pyuwpsdk.vsix\) 最新版本。
 
-###创建新的 Python 项目
+### 创建新的 Python 项目
 
 * 基于 `Template > Python > Windows 10 IoT Core > Background Application (IoT)` 创建新项目
 
-###输出 Hello World!
+### 输出 Hello World!
 
 修改 *StartupTask.py*，如下所示
 
@@ -31,7 +31,7 @@ lang: zh-cn
 print("Hello, World from IoT!")
 {% endhighlight %}
 
-###将 Python 应用部署到 Windows 10 IoT 核心版设备
+### 将 Python 应用部署到 Windows 10 IoT 核心版设备
 
 * 按照[设置远程调试并部署应用]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#python)的说明进行操作。
 
@@ -43,7 +43,7 @@ print("Hello, World from IoT!")
 
 * Visual Studio 的输出窗口中将会显示“*来自 IoT 的 Hello, World！*”消息。通过 `Debug > Window > Output` 打开输出窗口。
 
-###从 Python 使用 Windows 设备（例如 GPIO、I2C、SPI）
+### 从 Python 使用 Windows 设备（例如 GPIO、I2C、SPI）
 
 * 在 Python 项目中右键单击引用节点
 
@@ -53,7 +53,7 @@ print("Hello, World from IoT!")
 
 * 从[此处](https://github.com/ms-iot/samples/tree/master/PyWinDevices){:target="_blank"}下载 pywindevices 内容
 
-* 导航到 RPi2 的 ARM 或 MBM 的 win32
+* 导航到 RPi2 或 RPi3 的 ARM 或 MBM 的 win32
 
 * 针对设备类型和要使用的配置选择 PYD 文件（例如，如果要使用调试配置，则选择 \_wingpio\_d.pyd；如果要使用发布配置，则选择 \_wingpio.pyd）
 
@@ -63,6 +63,6 @@ print("Hello, World from IoT!")
 
 * 可在[此处](https://github.com/ms-iot/samples/tree/master/PyWinDevices/docs){:target="_blank"}找到 WinDevices 文档
 
-###问题/建议
+### 问题/建议
 
 如果有问题，请参考[常见问题]({{site.baseurl}}/{{page.lang}}/Faqs.htm)。

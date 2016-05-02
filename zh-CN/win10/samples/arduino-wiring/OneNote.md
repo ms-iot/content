@@ -9,15 +9,15 @@ lang: zh-cn
 
 {% include VerifiedVersion.md %}
 
-了解如何在 Raspberry Pi 2 或 Minnowboard Max 上部署 Arduino 接线草图和如何使用 http 消息获取和发布 OneNote 页面。
+了解如何在 Raspberry Pi 2 和 3 或 Minnowboard Max 上部署 Arduino 接线草图以及如何使用 http 消息获取和发布 OneNote 页面。
 
-# 创建新项目
+## 创建一个新项目
 
 1. 从模板创建新项目。可在 [Arduino 接线项目指南]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm)中查找详细信息。
 2. 使用以下代码替换 main.cpp 中的现有代码。根据需要修改多个操作按钮。
 3. 将以下在 [GitHub](https://github.com/ms-iot/sample-todo) 上找到的文件（MinHttpGP.cpp/.h 和 OneNoteHelper.cpp/.h）添加到该项目。
 
-# 代码
+## 代码
 
 使用以下代码替换主 .ino 文件中的现有代码：
 
@@ -113,7 +113,7 @@ void loop()
 {% endhighlight %}
 
    
-# 生成令牌
+## 生成令牌
 
 你的 Windows Live 帐户处于安全状态，且受到保护。为了访问 Windows Live API 的 OneNote 功能，我们需要生成能提供应用权限的访问令牌。
 
@@ -128,19 +128,19 @@ void loop()
 7. 将令牌值粘贴到位于 .ino 草图顶部（已从上面复制）的 `const std::wstring oauth_token` 字符串中。（替换当前所有内容：`<PASTE YOUR TOKEN HERE>`）
 
 
-##生成和部署
+### 生成和部署
 按 F5 来生成并部署项目。
 
 有关如何部署应用的详细说明，请参阅 [Arduino 接线项目指南]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm)！
 
 
-#结果
+## 结果
 
 部署后，你将能够在 [http://onenote.com/hrd](http://onenote.com/hrd) 上实时登录 OneNote，或在 Windows 桌面上打开 OneNote 并在工作簿中查看新添加的“任务”页！
 
 如果你还将某个按钮连接到引脚 29（GPIO 引脚 5）和一个简单的 POS 打印机，你可以按下该按钮来从你的打印机中打印任务！
 
-##是否遇到难题?
+### 是否遇到难题?
 
 有关在处理 Arduino 接线草图时会遇到的常见问题和关注内容，请参阅 [Arduino 接线移植指南]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPortingGuide.htm)。
 
