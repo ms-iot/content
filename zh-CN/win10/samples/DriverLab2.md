@@ -5,13 +5,13 @@ permalink: /zh-cn/win10/samples/DriverLab2.htm
 lang: zh-cn
 ---
 
-#在 Visual Studio 中生成驱动程序
+# 在 Visual Studio 中生成驱动程序
 
 Windows IoT 核心版驱动程序由一个或多个文件组成。其中的一些文件是在安装期间用于帮助的简单文本文件，而其他文件则是在编译源代码期间生成的二进制文件。对于此实验，我们感兴趣的是带有以下扩展名的文件： **SYS** 和 **INF**。在本练习中，你将使用 Visual Studio 为特定的平台编译驱动程序。
 
-##在开发计算机上
+## 在开发计算机上
 
-* 从“生成”菜单中，单击“`Build Solution(Ctrl+Shift+B)`”。如果你使用 MinnowBoard Max，请确保面向 `x86` 生成驱动程序，或者如果你使用 Raspberry Pi 2，请确保面向 `ARM` 生成驱动程序。
+* 从“生成”菜单中，单击 `Build Solution(Ctrl+Shift+B)`。如果你使用的是 MinnowBoard Max，请确保针对 `x86` 进行生成；如果你使用的是 Raspberry Pi 2 或 3，请确保针对 `ARM` 进行生成。
 
     ![驱动程序设置属性]({{site.baseurl}}/Resources/images/DriverLab/driver-build-option.png)
 
@@ -26,7 +26,7 @@ Windows IoT 核心版驱动程序由一个或多个文件组成。其中的一�
 
     ASL 编译器将具有扩展名 **ASL** 的文件作为输入参数。你会在 `DriverSamples\gpiokmdfdemo\asl\` 下的 asl 目录中发现 2 个 **ASL** 文件
 
-    如果要部署到 MinnowBoard Max，则使用 `gpiokmdfdemo.asl`。如果要部署到 Raspberry Pi 2，则使用 `rpi2.asl`。
+    如果要部署到 MinnowBoard Max，则使用 `gpiokmdfdemo.asl`。如果要部署到 Raspberry Pi 2 或 3，则使用 `rpi2.asl`。
 
 * 将 **ASL** 文件复制到 `C:\Program Files (x86)\Windows Kits\10\Tools\x86\ACPIVerify\` 目录
 
@@ -34,11 +34,11 @@ Windows IoT 核心版驱动程序由一个或多个文件组成。其中的一�
 
         cd "C:\Program Files (x86)\Windows Kits\10\Tools\x86\ACPIVerify"
 
-* 如果你使用 MinnowBoard Max，请键入：
+* 如果你使用的是 MinnowBoard Max，请键入：
 
         asl.exe gpiokmdfdemo.asl
 
-    如果你使用 Raspberry Pi 2，请键入：
+    如果你使用的是 Raspberry Pi 2 或 3，请键入：
 
         asl.exe rpi2.asl
 
@@ -46,6 +46,6 @@ Windows IoT 核心版驱动程序由一个或多个文件组成。其中的一�
 
 在下一部分中，你将使用这些文件（**ACPITABL.dat**、**gpiokmdfdemo.inf** 和 **gpiokmdfdemo.sys**）在 Windows IoT 核心版设备上安装驱动程序。
 
-##下一步
+## 下一步
 
 [部署驱动程序并确认安装成功]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab3.htm)

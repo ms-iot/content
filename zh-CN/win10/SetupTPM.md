@@ -1,13 +1,15 @@
 ---
 layout: default
 title: 在支持的平台上设置 TPM
+description: 了解如何为 IoT 核心版设置 TPM。
+keyword: setup, windows iot, tutorial, tpm
 permalink: /zh-cn/win10/SetupTPM.htm
 lang: zh-cn
 ---
 
-#在支持的平台上设置 TPM
+# 在支持的平台上设置 TPM
 
-##<a name="fTPM"></a>设置 fTPM  
+## <a name="fTPM"></a>设置 fTPM  
 固件 TPM \(fTPM\) 需要特殊处理器/SoC 支持，因此，fTPM 当前在 Raspberry Pi2 上无法实现。
 
 1. 必须使用内含版本 0.80 或更高版本的 UEFI 的 MBM。
@@ -132,10 +134,10 @@ lang: zh-cn
 
         C:\>
 
-##<a name="dTPM"></a>设置 dTPM  
-以下说明适用于 MBM 或 RPi2 上受支持的任何 dTPM 模块。
+## <a name="dTPM"></a>设置 dTPM  
+以下说明适用于 MBM、RPi2 或 RPi3 上受支持的任何 dTPM 模块。
 
-1. 获取一个离散 TPM 模块，并将其附加到 MBM/RPi2。
+1. 获取一个离散 TPM 模块，并将其附加到 MBM/RPi2/RPi3。
 2. （适用于 MBM）通过更改以下 UEFI 设置来禁用 fTPM：
 
         Device Manager -> System Setup -> Security Configuration -> PTT = <Disable>
@@ -145,7 +147,7 @@ lang: zh-cn
         Device Manager -> System Setup -> Security Configuration -> Discrete TPM = <Enable>
 
 4. 根据选择的离散 TPM 模块，在[此处][3]标记其匹配的 ACPI 表。
-5. 将 ACPI 表复制到 MBM/RPi2 _C:\\Windows\\System32\\ACPITABL.dat_。
+5. 将该 ACPI 表复制到 MBM/RPi2/RPi3 _C:\\Windows\\System32\\ACPITABL.dat_。
 6. 启用设备上的 testsigning：
 
         bcdedit /set {current} integrityservices disable
@@ -269,7 +271,7 @@ lang: zh-cn
 
         C:\>
 
-##<a name="sTPM"></a>启用和验证软件 TPM \(sTPM\)  
+## <a name="sTPM"></a>启用和验证软件 TPM \(sTPM\)  
 请注意，**sTPM 仅用于开发目的，并不提供任何切实的安全优势**。
 
 1. （适用于 MBM）通过更改以下 UEFI 设置来禁用 fTPM：
@@ -285,7 +287,7 @@ lang: zh-cn
         bcdedit /set {current} integrityservices disable
         bcdedit /set testsigning on
 
-4. 将 ACPI 表从[此处][4]复制到 MBM/RPi2 _C:\\Windows\\System32\\ACPITABL.dat_。
+4. 将 ACPI 表从[此处][4]复制到 MBM/RPi2/RPi3 _C:\\Windows\\System32\\ACPITABL.dat_。
 5. 重新启动设备。
 6. 验证是否已启用正确的 TPM 版本 - 在 Windows IoT 核心版设备上运行 [TPM 2.0 工具][1]。
 

@@ -6,17 +6,17 @@ lang: zh-cn
 ---
 
 <div style="background-color:Silver; color:black; padding:20px;">
-	<h4><u>对 Intel Galileo 第 1 代和第 2 代上的 Windows 的支持将于 2015 年 11 月 30 日结束</u></h4>
-		<p><h5>由于我们将继续侧重于为制造商提供 Windows 10 IoT 核心版的出色体验，因此我们做出了一项艰难的决定，即停止对 Galileo 平台的 Windows 支持。我们看到了平台的一些很出色的创新，但遗憾的是，它并不能满足 Windows 10 IoT 核心版的最低硬件要求。请单击<a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">此处</a>了解详细信息。</h5></p>
+	<h4><u>对 Intel Galileo 第 1 代和第 2 代的 Windows 的支持将于 2015 年 11 月 30 日结束</u></h4>
+		<p><h5>由于我们将继续侧重于为制造商提供 Windows 10 IoT 核心版的出色体验，因此我们做出了一项艰难的决定，即停止对 Galileo 平台提供 Windows 支持。我们看到了平台上一些很出色的创新，但遗憾的是，它并不能满足 Windows 10 IoT 核心版的最低硬件要求。请单击<a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">此处</a>了解详细信息。</h5></p>
 </div>
 
 # C++ REST SDK（代码名“Casablanca”）
 了解如何使用 C++ REST SDK NuGet 包生成项目
 
-# 必需的 NuGet 包
+## 必需的 NuGet 包
 * [C++ REST SDK](https://www.nuget.org/packages/cpprestsdk/){:target="_blank"}
 
-# 构建 Casablanca
+## 构建 Casablanca
 1. 下载 [Casablanca CodePlex Git 存储库](http://casablanca.codeplex.com/SourceControl/latest){:target="_blank"}
 2. 核对主分支上的标记 v2.2.0 \(9cc7758d714bebbc00d66bf9a49bb648e9a57c17\)
 * `git checkout v2.2.0`
@@ -26,11 +26,11 @@ lang: zh-cn
 * 针对调试和发布设置 `Enable Enhanced Instruction Set` = `No Enhanced Instructions (/arch:IA32)`
 5. 生成解决方案
 
-# 将 lib 放置在 Galileo 上
+## 将 lib 放置在 Galileo 上
 1. 使用文件资源管理器导航到 `\\mygalileo\c$\test`（如有必要，则创建“test”文件夹）。
 2. 将 `cpprest120d_2_2.dll` 文件（它是在执行生成步骤期间生成的且被放置在 *git\_root\_folder*\\casablanca\\Binaries\\Win32\\Debug 下）复制到上一步中所创建的“test”文件夹中。
 
-# 创建一个新项目
+## 创建一个新项目
 1. 从模板创建新项目。
 2. “工具”\>\>“NuGet 包管理器”\>\>“程序包管理器控制台”
 * 将 `Install-Package cpprestsdk -Version 2.2.0` 键入到命令行中。
@@ -40,7 +40,7 @@ lang: zh-cn
 ### 注意：
 * Galileo 不支持 C++ REST SDK 库的 websocket 功能；有关 websocket 功能的信息，请参阅 [WinHTTP WebSocket 示例](https://code.msdn.microsoft.com/windowsdesktop/WinHTTP-WebSocket-sample-50a140b5){:target="_blank"}。
 
-# 代码
+## 代码
 
 ### Main.cpp
 

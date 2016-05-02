@@ -1,13 +1,15 @@
 ---
 layout: default
 title: 不可用的通用 API
+description: 在 Windows 10 IoT 核心版中无法正常运行的 Windows 运行时 API 的当前列表。
+keyword: windows runtime, windows iot, unsupported apis
 permalink: /zh-cn/win10/UnavailableApis.htm
 lang: zh-cn
 ---
 
 <div class="container" markdown= "1">
 
-## 此时，通用 API 在 Windows 10 IoT 核心版中不起作用
+# 此时，通用 API 在 Windows 10 IoT 核心版中不起作用
 
     Windows.ApplicationModel.Appointments.Appointment
     Windows.ApplicationModel.Appointments.AppointmentInvitee
@@ -135,6 +137,7 @@ lang: zh-cn
     Windows.System.Energy.Diagnostics.BackgroundEnergyDiagnostics
     Windows.System.Energy.Diagnostics.ForegroundEnergyDiagnostics
     Windows.System.Energy.ForegroundEnergyManager
+    Windows.System.Launcher
     Windows.System.Profile.HardwareIdentification
     Windows.System.Profile.KnownRetailInfoProperties
     Windows.System.Profile.RetailInfo

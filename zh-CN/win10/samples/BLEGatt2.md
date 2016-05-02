@@ -5,7 +5,7 @@ permalink: /zh-cn/win10/samples/BLEGatt2.htm
 lang: zh-cn
 ---
 
-## 使用和分解代码
+# 使用和分解代码
 让我们先看一下示例，然后再浏览重要的代码位！ 请记住，所需的所有代码都在[此处](https://github.com/ms-iot/samples/archive/develop.zip){:target="_blank"}（即 [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} 文件夹中）。
 
 这是一个有外设示例。若要更好地了解什么是有外设模式以及如何将你的设备配置为有外设，请按照[此处]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm)的说明操作。
@@ -16,9 +16,9 @@ lang: zh-cn
 确保将“远程调试”设置设为指向你的设备。如需指导，请返回基本“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)。
 
 ### 部署和运行应用
-首先，我们需要选择用于进行生成的正确体系结构。如果你要针对 Minnowboard Max 进行生成，请选择体系结构下拉列表中的 `x86`。如果你要针对 Raspberry Pi 2 进行生成，请选择 `ARM`。
+首先，我们需要选择用于进行生成的正确体系结构。如果你要针对 Minnowboard Max 进行生成，请选择体系结构下拉列表中的 `x86`。如果你要针对 Raspberry Pi 2 或 3 进行生成，请选择 `ARM`。
 
-接下来，右键单击“解决方案资源管理器”中的“BluetoothGATT”项目，然后选择“设置为启动项目”。现在，你应该可以在 Visual Studio 中按 F5： BluetoothGATT 应用将部署并启动，随后你应该能在设备输出上看到此应用：
+接下来，右键单击“解决方案资源管理器”中的“BluetoothGATT”项目，然后选择“设为启动项目”。现在，你应该可以在 Visual Studio 中按 F5： BluetoothGATT 应用将部署并启动，随后你应该能在设备输出上看到此应用：
 
 ![BluetoothGatt 应用]({{site.baseurl}}/Resources/images/BLEGatt/app.png)
 

@@ -5,35 +5,35 @@ permalink: /zh-cn/win10/samples/ProcessLauncherSample.htm
 lang: zh-cn  
 ---  
   
-#ProcessLauncher 示例  
+# ProcessLauncher 示例  
   
 我们将了解如何使用 `Windows.System.ProcessLauncher` API 在通用 Windows 平台 \(UWP\) 应用上启动外部进程 \(exe\)。
 
 这是一个有外设示例。若要更好地了解什么是有外设模式以及如何将你的设备配置为有外设，请按照[此处]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm)的说明操作。
 
-###需要 Windows IoT 核心版秋季更新
+### 需要 Windows IoT 核心版秋季更新
 
 `Windows.System.ProcessLauncher` API 是 Windows IoT 核心版秋季更新的新增内容。你可以在我们的[下载页]({{site.baseurl}}/{{page.lang}}/Downloads.htm)下载带有秋季更新的 Windows 10 IoT 核心版映像。
 
-###需要 Windows SDK 更新
+### 需要 Windows SDK 更新
 
 若要使用 `ProcessLauncher` API 和 Windows IoT 核心版秋季更新的其他新功能，还需要更高版本的 Windows SDK。需要 Windows SDK 10.0.10586.0 或更高版本，在[此处](https://dev.windows.com/zh-cn/downloads/windows-10-sdk)即可下载。
 
 有关获取和设置所需 Windows SDK 和其他工具的详细信息，请参阅[设置电脑指南]({{site.baseurl}}/{{page.lang}}/win10/SetupPCRPI.htm)。
 
-###在 Visual Studio 中加载项目  
+### 在 Visual Studio 中加载项目  
   
 你可以通过在[此处](https://github.com/ms-iot/samples/tree/develop/WebCamSample/CS){:target="_blank"}下载所有示例的 zip 来查找此示例的源代码。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
 ProcessLauncher 示例的代码可在 <samples root folder>\\ProcessLauncher\\CS 下找到
  
-###部署你的应用  
+### 部署你的应用  
  
-如果你要针对 Minnowboard Max 进行生成，请选择 `x86` 作为体系结构。如果你要针对 Raspberry Pi 2 或 DragonBoard 进行生成，请选择 `ARM`。
+如果你要针对 Minnowboard Max 进行生成，请选择 `x86` 作为体系结构。如果你要针对 Raspberry Pi 2 或 3 或者 DragonBoard 进行生成，请选择 `ARM`。
 
 选择“远程计算机”以指向 IoT 设备并点击 F5 以部署到你的设备。如需指导，请返回基本“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm){:target="_blank"}。
   
-###测试你的应用   
+### 测试你的应用   
   
 示例应用在部署时会显示与以下屏幕类似的屏幕：
 
@@ -45,13 +45,13 @@ ProcessLauncher 示例的代码可在 <samples root folder>\\ProcessLauncher\\CS
 
 ![SampleConsoleApplication 输出]({{site.baseurl}}/Resources/images/ProcessLauncherSample/ProcessLauncher1.png)
 
-##我们来看看代码  
+## 我们来看看代码  
  
 本示例的代码使用 `Windows.System.ProcessLauncher` API，它是 Windows IoT 核心版上提供的系统管理合约 API 的一部分。
  
 若要使用该 API，我们需要完成几项操作。
 
-###添加对 Windows IoT 扩展 SDK 的引用
+### 添加对 Windows IoT 扩展 SDK 的引用
 
 由于默认情况下 IoT 扩展 SDK 不会添加到项目，因此我们将需要添加对它的引用，以便它的各种类型（包括 `Windows.System.SystemManagement.ProcessLauncher`）在项目中可用。
 
@@ -94,7 +94,7 @@ var result = await ProcessLauncher.RunToCompletionAsync(cmd.Text, args.Text == n
 ProcessExitCode.Text += "Process Exit Code: " + result.ExitCode;
 {% endhighlight %} 
 
-###使用标准流 
+### 使用标准流 
 
 虽然退出代码通常足以让我们知道某个可执行文件是否成功，但有时候我们需要读取程序中的输出；例如在应用中记录信息或显示该文本。
 
@@ -140,7 +140,7 @@ using (var outStreamRedirect = standardOutput.GetInputStreamAt(0))
 
 **注意**，虽然没有在此示例中使用标准输入流，但也可以将其与 `ProcessLauncher` API 一起使用。
 
-###将可执行的应用程序与 AppX 程序包包含在一起
+### 将可执行的应用程序与 AppX 程序包包含在一起
 
 `ProcessLauncher` API 可启动打包为相同 AppX 的一部分的可执行程序。因此，该示例中包括示例 Win32 控制台应用 SampleConsoleApplication。
 

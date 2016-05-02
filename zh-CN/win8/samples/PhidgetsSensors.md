@@ -13,17 +13,17 @@ lang: zh-cn
 # Phidgets 传感器
 了解如何使用 Phidgets 库和使用 Phidgets 声压级传感器交谈。
 
-# 所需组件
+## 所需组件
 * 一个 Phidgets I/O 板。我们使用了 [8/8/8](http://www.phidgets.com/products.php?category=0&product_id=1018_2){:target="_blank"} 或 [2/2/2](http://www.phidgets.com/products.php?category=0&product_id=1011_0){:target="_blank"}
 * [声音传感器](http://www.phidgets.com/products.php?category=6&product_id=1133_0){:target="_blank"}
 * 带有 USB 插孔和微型 USB 插头的转换器
 
-# 连接组件
+## 连接组件
 1. 将转换器的 USB 插头一端连接到 Galileo 上的 USB 主机端口。
 1. 将转换器的 USB 插孔一端连接到 Phidget I/O 板或从其伸出的 USB 电缆。
 1. 将声音传感器连接到 Phidget I/O 板上的端口。
 
-# 创建一个新项目
+## 创建一个新项目
 
 1. 从模板创建新项目。
 1. 转到 [Phidgets 站点](http://www.phidgets.com/docs/OS_-_Windows#Quick_Downloads){:target="_blank"}上的“快速下载”部分。
@@ -33,7 +33,7 @@ lang: zh-cn
 1. 将 phidget21.dll 放置在你的 Galileo 的 Windows\\System32 文件夹上以便使用 Phidget 代码的任何将来的程序都可运行。
 1. 使用以下代码替换 main.cpp 中的现有代码：
 
-# 代码
+## 代码
 
 {% highlight C++ %}
 // Main.cpp : Defines the entry point for the console application.

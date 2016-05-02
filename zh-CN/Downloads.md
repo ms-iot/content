@@ -1,6 +1,8 @@
 ---
 layout: default
 title: 下载
+description: 下载此页面上提供的 Windows for IoT、Visual Studio、软件开发工具包或任何其他工具，立即开始针对物联网进行开发！
+keyword: dashboard, download, windows 10 iot core, tools
 permalink: /zh-cn/Downloads.htm
 lang: zh-cn
 ---
@@ -17,50 +19,62 @@ lang: zh-cn
 
 <div class="row">
   <div class="col-md-12 col-xs-24">
-    <h3 class="divider">下载 Windows 10 IoT 核心版</h3>
-    <div class="preview">
-      <p>
-        下载 Windows 10 IoT 核心版的 11 月更新。针对设备生成的 Windows 10 IoT 核心版使你可以创建酷炫的连接项目、令人惊叹的应用程序等。它利用你熟悉的 Windows 开发环境 - 调整该环境以使其在 Raspberry Pi 2 之类的嵌入式设备上运行。
-      </p>
-      <p>
-        Windows 10 IoT 核心版的 11 月更新需要 Visual Studio 2015 Update 1 才能进行开发，如调试和部署映像。
-      </p>
-    </div>
-  </div>
-  <div class="col-md-12 col-xs-24">
-    <h3 class="divider">Windows 10 IoT 核心版仪表板</h3>
-    <p>Windows 10 IoT 核心版仪表板是配置新 Windows 10 IoT 核心版设备、运行演示应用程序等的最佳工具。Windows 10 IoT 核心版仪表板支持 MinnowBoard MAX 和 Raspberry Pi 2。</p>
-    <p>单击以下内容立即下载仪表板并开始使用 Windows 10 IoT 核心版设备。</p>
-  </div>
-</div>
-
-<br>
-
-<div class="row">
-  <div class="col-md-12 col-xs-24">
-    <a href="http://go.microsoft.com/fwlink/?LinkId=691711" class="button-blue button-flat">下载适用于 Raspberry Pi 2 的 Windows 10 IoT 核心版</a>
-    <a href="http://go.microsoft.com/fwlink/?LinkId=691712" class="button-blue button-flat">下载适用于 MinnowBoard Max 的 Windows 10 IoT 核心版</a>
-    <a href="http://go.microsoft.com/fwlink/?LinkId=691713" class="button-blue button-flat">下载适用于 DragonBoard 410c* 的 Windows 10 IoT 核心版</a>
-    <p>
-      *请参阅 <a href="http://aka.ms/thirdpartynotices" target="_blank">BSP 限制的第三方通知</a>以了解 DragonBoard 410c。
-    </p>
-    <p>
-      <a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesRTM.htm">发行说明。</a>
-    </p>
-  </div>
-  <div class="col-md-12 col-xs-24">
+    <h3 class="divider">Windows 10 IoT 核心版仪表板<br/></h3>
+    <p>下载、安装和配置你的新 Windows 10 IoT 核心版设备。</p>
     <a href="http://go.microsoft.com/fwlink/?LinkID=708576" class="button-blue button-flat">获取 IoT 核心版仪表板</a>
     <p> 下载和使用 Windows 10 IoT 核心版仪表板即表示你同意 Windows 10 IoT 核心版仪表板的<a href="http://go.microsoft.com/fwlink/?LinkID=703960&clcid=0x4809">许可条款</a>和<a href="http://go.microsoft.com/fwlink/?LinkId=521839">隐私声明</a>。</p>
-    <p>
-      <a href="{{site.baseurl}}/{{page.lang}}/win10/IoTDashboardTroubleshooting.htm"> 需要帮助？ 查看疑难解答页面。</a>
-    </p>
+    <p><a href="{{site.baseurl}}/{{page.lang}}/win10/IoTDashboardTroubleshooting.htm"> 需要帮助？ 查看疑难解答页面。</a></p>
+    <p><a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesRTM.htm">发行说明。</a></p>
   </div>
 </div>
 <div class="row">
   <div class="col-md-24">
-    <p>期待商品化？ <a href="http://go.microsoft.com/fwlink/?LinkId=708649" target="_blank">了解</a>有关如何分配运行 Windows 10 IoT 核心版的设备的详细信息。</p>
+    <p>期待商品化？ <a href="http://go.microsoft.com/fwlink/?LinkId=708649" target="_blank">了解</a>有关如何分配运行某个版本的 Windows 10 IoT 核心版设备的详细信息。</p>
   </div>
 </div>
+<div class="row">
+  <div class="col-md-6 col-sm-12">
+    <h3 class="divider">Windows 10 IoT 核心版版本映像<br/></h3>
+    <p>
+      Windows 10 IoT 核心版的 2015 年 11 月版本。最新的稳定版本。
+    </p>
+    <p>
+      <a href="http://go.microsoft.com/fwlink/?LinkId=723959">有关如何手动安装映像的说明。</a>
+    </p>
+    <a href="http://go.microsoft.com/fwlink/?LinkId=691711" class="button-blue button-flat">获取适用于 Raspberry Pi 2 的 Windows 10 IoT 核心版</a>
+    <a href="http://go.microsoft.com/fwlink/?LinkId=691712" class="button-blue button-flat">获取适用于 MinnowBoard Max 的 Windows 10 IoT 核心版</a>
+    <a href="http://go.microsoft.com/fwlink/?LinkId=691713" class="button-blue button-flat">获取适用于 DragonBoard 410c* 的 Windows 10 IoT 核心版</a>
+    <p>
+		*请参阅 <a href="http://aka.ms/thirdpartynotices" target="_blank">BSP 限制的第三方通知</a>以了解 DragonBoard 410c。
+    </p>
+    <p>
+		<a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesRTM.htm">发行说明。</a>
+		</p>
+	</div>
+  <div class="col-md-6 col-sm-12">
+		<h3 class="divider">Windows 10 IoT Core Insider Preview</h3>
+		<p>
+      Windows 10 IoT 核心版的 2016 年 3 月 Insider Preview最新的可用映像。
+    </p>
+		<p>
+      仅适用于 <a href="https://insider.windows.com/">Windows 预览体验成员</a>，并且与 Raspberry Pi 2、Raspberry Pi 3、MinnowBoard Max 和 DragonBoard 410c* 兼容。
+    </p>
+    <p>
+      <a href="http://go.microsoft.com/fwlink/?LinkId=723959">有关如何手动安装映像的说明。</a>
+    </p>
+    <a href="http://go.microsoft.com/fwlink/?LinkId=733603" class="button-blue button-flat">获取 Windows 10 IoT Core Insider Preview</a>
+    <p>你需要拥有有效的 Microsoft 帐户，并且需要注册 Windows 预览体验计划才能下载该 Insider Preview。</p>
+    <p>
+			<a href="http://windows.microsoft.com/zh-cn/windows-live/sign-in-what-is-microsoft-account">什么是 Microsoft 帐户？</a><br/>
+      <a href="https://insider.windows.com/">什么是 Windows 预览体验计划？</a>
+		</p>
+    <p>
+      <a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesInsiderPreview.htm">发行说明</a>
+    </p>
+	</div>
+</div>
+
+<br>
 
 <div class="row">
   <div class="col-xs-24">

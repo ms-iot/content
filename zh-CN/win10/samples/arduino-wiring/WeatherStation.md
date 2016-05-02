@@ -5,23 +5,23 @@ permalink: /zh-cn/win10/samples/arduino-wiring/WeatherStation.htm
 lang: zh-cn
 ---
 
-#气象站 + Lightning
+# 气象站 + Lightning
 
 {% include VerifiedVersion.md %}
 
-了解如何在 Raspberry Pi 2 上创建 Arduino 接线草图，并使用 Lightning 的强大功能设置自己的气象站。只需将 [Sparkfun Weather Shield](https://www.sparkfun.com/products/12081) 连接到 Raspberry Pi 2 并部署 UWP 应用，即可收集你周围的天气数据。此 Shield 主要使用两个传感器（[HTU21D 湿度和温度传感器](https://www.sparkfun.com/products/12064)和 [MPL3115A2 高度/压力传感器](https://www.sparkfun.com/products/11084)），但也可扩展用于读取风级和雨量。可以复制附带 Shield 本身或个别传感器的整个项目。
+了解如何在 Raspberry Pi 2 或 3 上创建 Arduino 接线草图，并使用 Lightning 的强大功能设置自己的气象站。只需将 [Sparkfun Weather Shield](https://www.sparkfun.com/products/12081) 连接到 Raspberry Pi 2 或 3 并部署 UWP 应用，即可收集你周围的天气数据。此 Shield 主要使用两个传感器（[HTU21D 湿度和温度传感器](https://www.sparkfun.com/products/12064)和 [MPL3115A2 高度/压力传感器](https://www.sparkfun.com/products/11084)），但也可扩展用于读取风级和雨量。可以复制附带 Shield 本身或个别传感器的整个项目。
 
 继续阅读以便开始操作！
 
-##硬件设置
+## 硬件设置
 
 <div class="row">
   <p>
-    第一步是将 Raspberry Pi 2 连接到 Sparkfun Weather Shield。 将接线图和以下旋转中的照片用于参照。<i> 注意： 此功能需要使用 JavaScript。 如果你在旋转时遇到问题，请确保已在你的浏览器中启用了 JavaScript。</i> 还可以参考参照图下方的 fritzing 图。
+    第一步是将 Raspberry Pi 2 或 3 接入 Sparkfun Weather Shield。 将接线图和以下旋转中的照片用于参照。<i> 注意： 此功能需要使用 JavaScript。 如果你在旋转时遇到问题，请确保已在你的浏览器中启用了 JavaScript。</i> 还可以参考参照图下方的 fritzing 图。
   </p>
   <div class="col-md-6 col-sm-12">
     <div class="floatTop">
-    引出线图 (Raspberry Pi 2 --> Sparkfun Weather Shield)：
+    引出线图（Raspberry Pi 2 或 3 --> Sparkfun Weather Shield）：
       <ul>
         <li> GND-------(黑色)------GND </li>
         <li> 5V----------（红色）---------VIN </li>
@@ -48,19 +48,19 @@ lang: zh-cn
       <div class="item active">
           <img src="{{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png">
           <div class="carousel-caption">
-            Rasberry Pi 2 GPIO 示意图
+            Rasberry Pi 2 和 3 GPIO 示意图
           </div>
         </div>
         <div class="item">
           <img src="{{site.baseurl}}/Resources/images/Lightning/Wiring_RasPi2_inside.jpeg">
           <div class="carousel-caption">
-            Raspberry Pi 2 接线图（内部）
+            Raspberry Pi 2 或 3 接线图（内部）
           </div>
         </div>
         <div class="item">
           <img src="{{site.baseurl}}/Resources/images/Lightning/Wiring_RasPi2_outside.jpeg">
           <div class="carousel-caption">
-            Raspberry Pi 2 接线图（外部）
+            Raspberry Pi 2 或 3 接线图（外部）
           </div>
         </div>
         <div class="item">
@@ -89,11 +89,11 @@ lang: zh-cn
   </div>
 </div>
 
-###Fritzing 图
+### Fritzing 图
 
 ![RPI 引出线]({{site.baseurl}}/Resources/images/arduino_wiring/pi2_weathershield.png)
 
-##软件设置
+## 软件设置
 
 有两种方法可用来设置软件。
 
@@ -109,7 +109,7 @@ lang: zh-cn
     <li>按照 <a href="{{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm" target="_blank">Arduino 接线项目设置指南</a>创建新项目。</li>
     <li>将以下库从 GitHub 克隆到 WeatherShield 文件夹（与 .vcxproj 文件处于同一个级别）： <a target="_blank" href="https://github.com/sparkfun/MPL3115A2_Breakout/">MPL3115A2 突围</a>和 <a target="_blank" href="https://github.com/sparkfun/HTU21D_Breakout">HTU21D 突围</a>。</li>
     <li>将主要 .ino 文件（{yourProject}.ino，其中 {yourProject} 是你在创建项目时指定的项目名）中的现有代码替换为以下代码:
-      {% highlight C++ %}
+      {% endhighlight %}
         /*
         HTU21D 湿度传感器示例代码
         作者： Nathan Seidle
@@ -257,10 +257,10 @@ lang: zh-cn
     </li>
 </ol>
 
-####注意：
+#### 注意：
 特别注意草图文件顶部附近的以下行：`bool barometerMode = true;`。MPL3115A2 传感器有两种模式，并且可在每种模式下以不同方式运行。可以将此变量更改为 `false`，以禁用气压计模式，而改为启用高度计模式！ 在新的模式下，将自动更改草图结果！
 
-##生成和部署应用
+## 生成和部署应用
 
 <p>按 F5 生成并部署项目。
 有关如何部署应用的详细说明，请参阅 <a href="{{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm">Arduino 接线项目指南</a>！
@@ -269,11 +269,11 @@ lang: zh-cn
 项目部署完成后，运行该程序就会看到数据显示在输出控制台中。
 </p>
 
-##结果
+## 结果
 
 观看 Visual Studio 中的输出窗口。草图将开始报告它从 Weather Shield 收集的数据！
 
-##是否遇到难题?
+## 是否遇到难题?
 
 有关在处理 Arduino 接线草图时会遇到的常见问题和关注内容，请参阅 [Arduino 接线移植指南]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPortingGuide.htm)。
 

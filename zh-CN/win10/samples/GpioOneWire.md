@@ -5,7 +5,7 @@ permalink: /zh-cn/win10/samples/GpioOneWire.htm
 lang: zh-cn
 ---
 
-## GpioOneWire 示例 \(DHT11\)
+# GpioOneWire 示例 \(DHT11\)
 
 {% include VerifiedVersion.md %}
 
@@ -24,7 +24,7 @@ lang: zh-cn
 {:.table.table-bordered}
 | 最低支持版本 | 10\.0.10556 |
 |-------------------------|---------------------------------|
-| 受支持的硬件 | Raspberry Pi 2<br />Dragonboard 410C |
+| 受支持的硬件 | Raspberry Pi 2 或 3<br />Dragonboard 410C |
 
 ### 硬件设置
 

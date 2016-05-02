@@ -5,16 +5,16 @@ permalink: /zh-cn/win10/samples/UrchinLibrary.htm
 lang: zh-cn
 ---
 
-#Urchin 库示例
+# Urchin 库示例
 
 [在 GitHub 上获取代码][1] 本教程演示如何创建包含和使用 Urchin 库的 Visual Studio 项目。
 
 [1]: https://github.com/ms-iot/security "Urchin 库"
 
-##关于 Urchin 库  
+## 关于 Urchin 库  
 这是一个派生自 TPM 2.0 参考实现、符合规范的库。它向客户端提供封送/取消封送所有数据结构、正确计算授权、执行参数加密和执行审核功能。
 
-##<a name="NewProjectUrchin"></a>创建使用 Urchin 库的项目  
+## <a name="NewProjectUrchin"></a>创建使用 Urchin 库的项目  
 **先决条件：**
 
 * Microsoft Visual Studio 2015，版本 14.0.23107.10 或更高版本  
@@ -70,6 +70,6 @@ lang: zh-cn
 [2]: https://github.com/ms-iot/security/tree/master/Urchin/T2T "T2T"
 [3]: https://github.com/ms-iot/security/tree/master/Urchin/UrchinTest "UrchinTest"
 
-##其他资源  
+## 其他资源  
 * Urchin 库下载链接 - [https://github.com/ms-iot/security](https://github.com/ms-iot/security){:target="_blank"}
 

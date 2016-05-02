@@ -1,11 +1,13 @@
 ---
 layout: default
 title: 移植指南
+description: 了解如何将现有代码迁移到 Windows。
+keyword: port, migrate, code, windows iot
 permalink: /zh-cn/PortingGuide.htm
 lang: zh-cn
 ---
 
-#移植指南
+# 移植指南
 将现有代码迁移到 Windows！
 
 ## AVR 和 Quark 之间的体系结构差异
@@ -22,8 +24,7 @@ ___
 ### 微控制器和微处理器 \(CPU\)
 
 微控制器为嵌入式应用程序设计，而微处理器则用于个人计算机或其他常规用途的应用程序。- wikipedia.org
-
-- [微控制器](http://en.wikipedia.org/wiki/Microcontroller){:target="_blank"} - 包含处理器核心、内存和可编程的输入/输出外设（即 Atmel ATmega328）的单个集成电路上的小型计算机。
+- [微控制器](http://en.wikipedia.org/wiki/Microcontroller){:target="_blank"} - 包含处理器核心、内存和可编程输入/输出外设（即 Atmel ATmega328）的单个集成电路上的小型计算机。
 - [微处理器](http://en.wikipedia.org/wiki/Microprocessor){:target="_blank"} - 多功能、可编程设备，可将数字数据接受为输入、根据存储在内存中的指令进行处理，并将结果作为输出提供（即 Intel Quark）。
 
 ## 序列
@@ -70,6 +71,6 @@ ___
 
    有关详细信息，请参阅 \[MSDN\]\(http://msdn.microsoft.com/zh-cn/library/vstudio/2e70t5y1(v=vs.100).aspx){:target="_blank"\)。
 
-- **`asm volatile("nop");`** Windows 上存在相同的功能，但语法是不同的 <code>\_\_asm nop</code>。MSVC 编译器不会优化周围程序集，因此 `volatile` 无效。
+- **`asm volatile("nop");`** Windows 上存在相同的功能，但语法不同 <code>\_\_asm nop</code>。MSVC 编译器不会优化周围程序集，因此 `volatile` 无效。
 
    有关更深入的讨论，请查看 [StackOverflow](http://stackoverflow.com/questions/25878898/is-asm-nop-the-windows-equivalent-of-asm-volatilenop-from-gcc-compile){:target="_blank"}

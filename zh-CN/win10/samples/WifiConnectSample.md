@@ -5,19 +5,19 @@ permalink: /zh-cn/win10/samples/WifiConnectSample.htm
 lang: zh-cn  
 ---  
   
-#WLAN 连接示例  
+# WLAN 连接示例  
   
 我们将了解如何使用通用 Windows 平台 \(UWP\) 应用（可使用 [`Windows.Devices.WiFi.WiFiAdapter`](https://msdn.microsoft.com/zh-cn/library/windows/apps/windows.devices.wifi.wifiadapter.aspx){:target="_blank"} API）来查找和连接到 WLAN 网络。
   
 这是一个有外设示例。若要更好地了解什么是有外设模式以及如何将你的设备配置为有外设，请按照[此处]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm)的说明操作。
   
-###在 Visual Studio 中加载项目  
+### 在 Visual Studio 中加载项目  
   
 你可以通过在[此处](https://github.com/ms-iot/samples/tree/develop/WebCamSample/CS){:target="_blank"}下载所有示例的 zip 来查找此示例的源代码。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
 可在以下位置找到 WLAN 连接示例的代码：<samples root folder>\\WLANConnect\\CS\\WLANConnect
 
-###连接 WLAN 适配器  
+### 连接 WLAN 适配器  
   
 你将需要：
   
@@ -25,14 +25,14 @@ lang: zh-cn
   
 将 WLAN 适配器连接到 IoT 设备上的其中一个 USB 端口
   
-###部署你的应用  
+### 部署你的应用  
   
-如果你要针对 Minnowboard Max 进行生成，请选择 `x86` 作为体系结构。如果你要针对 Raspberry Pi 2 或 DragonBoard 进行生成，请选择 `ARM`。
+如果你要针对 Minnowboard Max 进行生成，请选择 `x86` 作为体系结构。如果你要针对 Raspberry Pi 2 或 3 或者 DragonBoard 进行生成，请选择 `ARM`。
 
 
 选择“远程计算机”以指向 IoT 设备并点击 F5 以部署到你的设备。如需指导，请返回基本“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm){:target="_blank"}。
   
-###测试你的应用   
+### 测试你的应用   
   
 示例应用在部署时会显示与以下屏幕类似的屏幕。
 
@@ -55,7 +55,7 @@ lang: zh-cn
 ![WLAN SSID 列表]({{site.baseurl}}/Resources/images/WiFiConnectSample/WiFiSample2.png)
   
 
-##我们来看看代码  
+## 我们来看看代码  
  
 此示例的代码使用 [`Windows.Devices.WiFi.WiFiAdapter`](https://msdn.microsoft.com/zh-cn/library/windows/apps/windows.devices.wifi.wifiadapter.aspx){:target="_blank"} API。
  
@@ -75,11 +75,11 @@ lang: zh-cn
   </Capabilities>
 {% endhighlight %}  
  
-###方案代码
+### 方案代码
 
 此示例的代码通常包含在 WLANConnect\_Scanrio.xaml 和 .cs 文件中。
 
-###请求访问
+### 请求访问
 访问设备的第一步是使用静态 `WiFiAdapter.RequestAccessAsync()` 方法来请求访问。
 
 **注意**，在有外设应用中，必须从 UI 线程调用该方法。但是，在 IOT 无外设应用（后台应用程序）中，它不具有 UI 线程，可以从任何线程调用该方法。
@@ -126,7 +126,7 @@ if (result.Count >= 1)
 {% endhighlight %} 
 
 
-###扫描 WLAN 网络
+### 扫描 WLAN 网络
 
 下一步是扫描可用的 WLAN 网络，可使用 `WiFiAdapter.ScanAsync()` 方法来实现此操作。
 
@@ -155,7 +155,7 @@ private void DisplayNetworkReport(WiFiNetworkReport report)
 }
 {% endhighlight %}  
 
-###连接到 WLAN 网络
+### 连接到 WLAN 网络
 
 当选择其中一个显示的 WLAN 网络时，我们需要确定是否要收集密码凭据。WLAN 网络身份验证类型是我们需要确定的内容：
 
@@ -207,7 +207,7 @@ else
 
 如果需要断开连接，可使用 `WiFiAdapter.Disconnect()`。
   
-###总结：  
+### 总结：  
   
 * 若要启用 WLAN 设备访问，请将 `wifiControl` DeviceCapability 添加到 AppX 清单
 

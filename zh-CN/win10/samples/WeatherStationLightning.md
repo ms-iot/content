@@ -5,7 +5,7 @@ permalink: /zh-cn/win10/samples/WeatherStationLightning.htm
 lang: zh-cn
 ---
 
-##使用 Lightning I2c 提供程序与 I2C 传感器通信
+# 使用 Lightning I2c 提供程序与 I2C 传感器通信
 
 {% include VerifiedVersion.md %}
 
@@ -13,7 +13,7 @@ lang: zh-cn
 
 本示例基于 [Github](https://github.com/ms-iot/samples/tree/develop/WeatherStation/CS/WeatherStation) 上所共享的 WeatherShield 示例。并共享相同的设置步骤和大部分代码。唯一的区别是传感器设备各自的初始化方式不同。
 
-###使用 Lightning 提供程序
+### 使用 Lightning 提供程序
 
 如下所示，原始示例曾使用默认 I2C 提供程序来获取 I2C 传感器设备：
 
@@ -65,7 +65,7 @@ public async void Run(IBackgroundTaskInstance taskInstance)
 
 {% endhighlight %}
 
-###生成和部署示例
+### 生成和部署示例
 
 1. 在 Raspberry Pi2 或 MBM 设备上使用 [Lightning 设置指南]({{site.baseurl}}/{{page.lang}}/win10/LightningSetup.htm)中概述的步骤启用 Lightning。
 

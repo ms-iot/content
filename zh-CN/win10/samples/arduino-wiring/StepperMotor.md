@@ -9,9 +9,9 @@ lang: zh-cn
 
 {% include VerifiedVersion.md %}
 
-了解如何在控制步进马达的 Raspberry Pi 2 或 Minnowboard Max 上创建 Arduino 接线草图。该应用在一个循环中以默认正向模式、默认反向模式和小步正向模式的方式运行该马达。
+了解如何在控制步进马达的 Raspberry Pi 2 和 3 或者 Minnowboard Max 上创建 Arduino 接线草图。该应用在一个循环中以默认正向模式、默认反向模式和小步正向模式的方式运行该马达。
 
-##设置
+## 设置
 
 按照 [Arduino 接线项目指南]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm)创建新的布接线项目！
 
@@ -25,7 +25,7 @@ lang: zh-cn
 
 ![步进 Fritzing]({{site.baseurl}}/Resources/images/arduino_wiring/StepperMotorFritz.PNG)
 
-1. 首先将 Raspberry Pi 2 连接到 Big Easy Driver。
+1. 首先将 Raspberry Pi 2 或 3 接入 Big Easy Driver。
    1. 将该驱动程序上的 ENABLE 引脚连接到 Pi 上的引脚 12 \(GPIO 18\)。
    2. 将该驱动程序上的 MS1、MS2 和 MS3 引脚分别连接到引脚 36、38 和 40。（GPIO 16、GPIO 20 和 GPIO 21）
    3. 将该驱动程序上的 STEP 引脚连接到 Pi 上的引脚 10 \(GPIO 15\)。
@@ -107,15 +107,15 @@ void loop() {
 {% endhighlight %}
 
 
-##生成和部署
+## 生成和部署
 按 F5 来生成并部署项目。
 
 有关如何部署应用的详细说明，请参阅 [Arduino 接线项目指南]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm)！
 
-##结果
+## 结果
 你应该看到步进马达无限地正向转动、接着以反向模式转动，最后以小步模式转到，然后继续从头开始！
 
-##是否遇到难题?
+## 是否遇到难题?
 
 有关在处理 Arduino 接线草图时会遇到的常见问题和关注内容，请参阅 [Arduino 接线移植指南]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPortingGuide.htm)。
 

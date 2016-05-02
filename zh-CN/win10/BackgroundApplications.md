@@ -5,7 +5,7 @@ permalink: /zh-cn/win10/BackgroundApplications.htm
 lang: zh-cn
 ---
 
-#开发后台应用程序
+# 开发后台应用程序
 
 后台应用程序是没有直接 UI 的应用程序。部署和配置完成后，这些应用程序将在计算机启动时启动，并将持续运行，不受任何进程生命期管理资源使用的限制。如果这些应用程序崩溃或退出，系统将自动重新启动它们。这些后台应用程序有一个非常简单的执行模型。模板将创建实现“IBackgroundTask”接口并生成空的“运行”方法的类。此“运行”方法将是通向你的应用程序的入口点。
 
@@ -13,11 +13,11 @@ lang: zh-cn
 
 需特别注意的一点是，默认情况下，应用程序将在运行方法完成时关闭。这意味着遵循运行等待输入或在计时器上的服务器的常用 IoT 模式的应用将会过早地发现应用退出这一情况。若要阻止这种情况发生，必须调用“GetDeferral”方法才能阻止应用程序退出。可在[此处](https://msdn.microsoft.com/zh-cn/library/windows/apps/windows.applicationmodel.background.backgroundtaskdeferral.aspx)查找有关延迟模式的详细信息。
 
-##后台应用程序可从何处安装？ 
+## 后台应用程序可从何处安装？ 
 
 可在[此处](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec)从 Visual Studio 库中下载并安装 IoT 模板以启用后台应用程序。或者，可通过在 [Visual Studio 库](https://visualstudiogallery.msdn.microsoft.com/)中或直接从“扩展和更新”对话框（“工具”\>“扩展和更新”\>“联机”）中的 Visual Studio 搜索 `Windows IoT Core Project Templates` 来找到模板。
 
-##哪些语言可用？
+## 哪些语言可用？
 
 可找到采用以下语言的**后台应用程序 \(IoT\)** 模板：
 
@@ -26,7 +26,7 @@ lang: zh-cn
 * **Visual Basic**`File > New > Project > Installed > Visual Basic > Windows > Windows IoT Core`
 * **JavaScript**`File > New > Project > Installed > JavaScript > Windows > Windows IoT Core`
 
-##如何使用后台应用程序？ 
+## 如何使用后台应用程序？ 
 
 创建后台应用程序与创建后台任务十分相似。在启动后台应用程序时，将调用运行方法：
 
@@ -60,7 +60,7 @@ deferral.Complete();
 
 在后台应用程序的开始和最终结束之间，大多数通用 Windows 平台 \(UWP\) API 均可用（若要了解例外情况，请参阅[不可用 API]({{site.baseurl}}/{{page.lang}}/win10/UnavailableApis.htm) 列表）。
 
-##如何启动后台应用程序？
+## 如何启动后台应用程序？
 
 此问题可分解为部署和调用两个方面。
 

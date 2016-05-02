@@ -5,12 +5,12 @@ permalink: /zh-cn/win10/samples/SSH.htm
 lang: zh-cn
 ---
 
-##使用 SSH 连接并配置运行 Windows IoT 核心版的设备
+# 使用 SSH 连接并配置运行 Windows IoT 核心版的设备
 
-###下载 SSH 客户端
+### 下载 SSH 客户端
 若要使用 SSH 连接到设备，你将首先需要下载一个 SSH 客户端，例如 [PuTTY](http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe)。
 
-###连接到设备
+### 连接到设备
 * 若要连接到设备，你首先需要获取设备的 IP 地址。在启动 Windows IoT 核心版设备后，与该设备相连的屏幕上将显示一个 IP 地址：
 
     ![Windows IoT 核心版上的 DefaultApp]({{site.baseurl}}/Resources/images/DefaultApp.png)
@@ -31,7 +31,7 @@ lang: zh-cn
 
     ![PuTTY 控制台]({{site.baseurl}}/Resources/images/ssh/putty_console.png)
 
-###更新帐户密码
+### 更新帐户密码
 
 **强烈建议**你更新管理员帐户的默认密码。
 
@@ -39,7 +39,7 @@ lang: zh-cn
     
     net user Administrator [new password]
     
-###配置 Windows IoT 核心版设备
+### 配置 Windows IoT 核心版设备
 * 为了能够从 Visual Studio 2015 部署应用程序，你需要确保 Visual Studio 远程调试器正在 Windows IoT 核心版设备上运行。远程调试器应在计算机启动时自动启动。若要再次检查，请使用 tlist 命令从 powershell 列出所有正在运行的进程。应有两个 msvsmon.exe 的实例正在设备上运行。
 
 * 在很长一段时间都处于非活动状态后，Visual Studio 远程调试器可能会超时。如果 Visual Studio 无法连接到 Windows IoT 核心版设备，请尝试重新启动设备。
@@ -52,6 +52,6 @@ lang: zh-cn
 
         shutdown /r /t 0
         
-###常用的实用工具
+### 常用的实用工具
 
 有关可以与 SSH 结合使用的命令和实用工具的列表，请参阅[命令行实用工具]({{site.baseurl}}/{{page.lang}}/win10/tools/CommandLineUtils.htm)页面。

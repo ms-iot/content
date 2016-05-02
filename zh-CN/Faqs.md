@@ -1,13 +1,15 @@
 ---
 layout: default
 title: 主页
+description: 以下是一些有关受支持的开发板和针对 Windows 10 的 IoT 软件开发的常见问题。 
+keywords: faq, windows iot, windows 10, questions
 permalink: /zh-cn/Faqs.htm
 lang: zh-cn
 ---
 <div class="row col-md-24">
     <div class="col-md-6 col-xs-12 faq-nav section-heading">
         <h1>常见问题</h1>
-        <a href="#rpi2"><h4>设置 Raspberry Pi 2</h4></a>
+        <a href="#rpi2"><h4>设置 Raspberry Pi 2 或 3</h4></a>
 
         <a href="#uwp"><h4>UWP 应用</h4></a>
 
@@ -30,8 +32,8 @@ lang: zh-cn
         <p class="bold"><em>为什么我的屏幕看上去遭到裁剪或拉伸？</em></p>
         <p>某些监视器上可能会发生这种情况。若要解决此问题，请强制使开发板进入 DVI 模式（相对于HDMI 模式）。 你可以在<a href='https://www.raspberrypi.org/forums/viewtopic.php?t=5851'>此处</a>阅读有关此问题的详细信息。将 SD 卡装载到本地电脑，然后继续编辑 EFIESP 分区中的文件。例如，如果分区标记为 H 驱动器，请通过添加以下行编辑 H:\config.txt。<br/><br/>
         <pre>hdmi_group=2                # 强制使用 DVI 定时</pre>
-        <p class="bold"><em>是否可以使用 Windows 8.1 设置 Raspberry Pi 2？</em></p>
-        <p>你将需要在电脑上安装 Windows 10，然后才能设置运行 Windows 10 IoT 核心版的 Raspberry Pi 2。</p>
+        <p class="bold"><em>是否可以使用 Windows 8.1 设置 Raspberry Pi 2 或 3？</em></p>
+        <p>你将需要在电脑上安装 Windows 10，然后才能设置运行 Windows 10 IoT 核心版的 Raspberry Pi 2 或 3。</p>
 		<p class="bold"><em>为什么我的 SD 卡必须是 8 GB，是否确实需要全部这些空间？</em></p>
         <p>IoT 核心版映像小于 1 GB，使用 8 GB 是为了提供在设备上安装其他内容的空间。</p>
 		<p class="bold"><em>如何从我的 SD 卡中删除 Windows 10 IoT 核心版？</em></p>
@@ -85,7 +87,7 @@ lang: zh-cn
         <p>对 Galileo 的 Windows 支持已于 2015 年 11 月 30 日结束。</p>
         <br />
 		<p class="bold"><em>如何处理 Galileo 上的现有项目？</em></p>
-        <p>在 Raspberry Pi 2 上运行的 Windows 10 IoT 核心版中现在提供接线支持。这允许你将现有的 Galileo 项目迁移到 Windows 10 IoT 核心版。</p>
+        <p>在 Raspberry Pi 2 或 3 上运行的 Windows 10 IoT 核心版中现在提供接线支持。这允许你将现有的 Galileo 项目迁移到 Windows 10 IoT 核心版。</p>
         <br />
         <a name="errors"></a>
         <h2 class="faq-h2">错误</h2>

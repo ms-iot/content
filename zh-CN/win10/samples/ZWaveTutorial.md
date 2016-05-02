@@ -5,11 +5,11 @@ permalink: /zh-cn/win10/samples/ZWaveTutorial.htm
 lang: zh-cn
 ---
 
-## Z-Wave 示例
+# Z-Wave 示例
 
 {% include VerifiedVersion.md %}
 
-你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\AllJoyn\Samples\ZWaveAdapter` 来查找此示例的源代码。示例代码在 C++ 中可用。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\AllJoyn\Samples\ZWaveAdapter`，查找此示例的源代码。示例代码在 C++ 中可用。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
 本教程将演示 AllJoyn 设备系统网桥 \(DSB\) 公开和控制 Z-Wave 设备的功能，并介绍在 Raspberry Pi2 映像包含的 //Build/2015 中提供的 AllJoyn Z-Wave 演示的设置。它将演示 Z-Wave AllJoyn 设备系统网桥 \(DSB\) 公开和控制 Z-Wave 设备的功能。
 
@@ -30,7 +30,7 @@ Z-Wave 是无线通信协议，旨在允许家庭中的设备（如照明、家�
 
 1. 将 Raspberry Pi2 连接到 LAN（通过集线器或直接通过跨越或自动 MDI-X）
 2. 连接电源以启动 Raspberry Pi2
-3. 验证电脑是否可以访问带有 Windows IoT Core Watcher 的 Raspberry Pi2
+3. 验证电脑是否可以访问带有 Windows 10 IoT 核心版仪表板的 Raspberry Pi2
 
 ## 部署 Z-Wave DSB
 
@@ -38,7 +38,7 @@ Z-Wave 是无线通信协议，旨在允许家庭中的设备（如照明、家�
 
 对于大多数 Windows 10 IOT 核心版映像，Z-Wave 适配器 DSB 已预安装。在这种情况下，只需使用 SSH 或 Windows Device Portal 启动该示例。
 
-1. 使用 [SSH]({{site.baseurl}}/zh-cn/win10/samples/SSH.htm){:target="_blank"} 或 [Windows Device Portal]({{site.baseurl}}/zh-cn/win10/tools/DevicePortal.htm){:target="_blank"} 运行以下命令 `iotstartup.exe add headless ZWave`
+1. 使用 [SSH]({{site.baseurl}}/zh-cn/win10/samples/SSH.htm){:target="_blank"} 或 [Windows Device Portal]({{site.baseurl}}/zh-cn/win10/tools/DevicePortal.htm){:target="_blank"} 运行以下命令 **iotstartup.exe 添加无外设 ZWave**
 2. 重新启动设备。将在启动时立即启动 Z-wave 适配器应用程序。
 
 ### 从源运行
@@ -52,7 +52,6 @@ Z-Wave 是无线通信协议，旨在允许家庭中的设备（如照明、家�
 ## 配对 Z-Wave 设备
 
 注意： 不要在配对时插入 Z-Wave USB 硬件保护装置。此外，Z-Wave 硬件保护装置和 Z-Wave 开关需紧密相邻
-
 1. 点击圆形按钮，将 Z-Stick 置于包含模式下。LED 灯应开始缓慢闪烁。
 2. 在 Z-Stick 进入包含模式后，插入 Z-Wave 开关（它将在连接到电源后起作用），并按“电源”按钮以将其添加至 Z-Wave 网络。控制器上的指示灯在邻近发现期间将快速闪烁，并保持不变 3 秒钟，以指示成功将设备包含到网络中。
 3. LED 灯变回缓慢闪烁后，再次点击 Z-Stick 上的按钮以关闭包含模式。
@@ -66,11 +65,9 @@ Z-Wave 是无线通信协议，旨在允许家庭中的设备（如照明、家�
 
 让我们打开 Z-Wave 电源开关吧！ 我们将使用 Alljoyn 的 IoT 资源管理器应用程序来导航设备、对象和接口。
 
-启动 IoT Explorer for AllJoyn 应用。AJX 应查找以下三台设备：
+启动 IoT Explorer for AllJoyn 应用。应用应查找以下三台设备：
 
-* ZWaveAdapter – Microsoft DSB： 这是 Z-Wave DSB
-* HomeID\_xxx… – Aeon Labs 智能能源开关： 这是 Z-Wave 电源开关，已与 Z-Wave 硬件保护装置配对
-* HomeID\_xxx… – Aeon Labs Z-Stick S2： 这是 Z-Wave USB 硬件保护装置，选择 Aeon Labs 智能能源开关。
+• ZWaveAdapter – Microsoft DSB： 这是 Z-Wave DSB • HomeID\_xxx… – Aeon Labs 智能能源开关： 这是 Z-Wave 电源开关，已与 Z-Wave 硬件保护装置配对 • HomeID\_xxx… – Aeon Labs Z-Stick S2： 这是 Z-Wave USB 硬件保护装置，选择 Aeon Labs 智能能源开关。
 
 ![AJx\_ZWave1]({{site.baseurl}}/Resources/images/AllJoyn/Ajx_shot1.png)
 

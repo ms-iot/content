@@ -1,0 +1,90 @@
+---
+
+layout: default
+
+title: Windows Remote Arduino
+
+description: 了解如何设置 Windows Remote Arduino 以及如何准备好生成你的第一个 Windows 10 IoT 核心版应用。
+
+keyword: arduino, windows iot, windows remote, app
+
+permalink: /zh-cn/win10/WRALanding.htm
+
+lang: zh-cn
+
+deviceName: WRA
+
+---
+<ol class="breadcrumb">
+  <li>
+    <a href="https://developer.microsoft.com/zh-cn/windows/iot">IoT 主页</a>
+  </li>
+  <li>
+    <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">入门</a>
+  </li>
+  <li class="active">Windows Remote Arduino</li>
+</ol>
+<h1 class="page-title"> Windows Remote Arduino </h1>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-no-padding">
+    <h2 class="subtext">准备好使用 Windows Remote Arduino 进行开发</h2>
+  </div>
+</div>
+
+<div class="row">
+<h3>概述</h3>
+我们的产品/服务有两个主要组件：Windows Remote Arduino 库（在 GitHub 上称为“远程连接”，链接在<a href="https://github.com/ms-iot/remote-wiring">此处</a>）和 Windows Remote Arduino 体验应用。
+
+<b>Windows Remote Arduino 库</b>是一种开源 WinRT 库，可将任何 Windows 10 设备（可能是 Windows Phone、Surface Pro、Windows 电脑，甚至是 Raspberry Pi 2 或 3）连接到运行 <a href="http://arduino.cc/en/reference/firmata">StandardFirmata</a> 的 Arduino 开发板。 通过编写在 Windows 10 设备上使用库的程序，开发人员可以在 Arduino 开发板上远程控制每个引脚。制造商可以通过蓝牙、USB、WLAN 或以太网控制他们的 Arduino，并且他们可以使用任何 WinRT 语言（C++/CX、C# 和 Javascript）执行此操作。
+
+<b>Windows Remote Arduino 体验应用</b>是为演示 Windows Remote Arduino 库的强大功能而生成的 UI 体验。 你可以在任何 Windows 10 设备上运行该应用，并且在运行 StandardFirmata 的 Arduino 开发板上使用该应用控制引脚。 此应用可以完美试验 Windows Remote Arduino 库的功能！
+</div>
+
+<div class="row">
+<h3>开发和浏览</h3>
+<p>如果你想使用 <b>Windows Remote Arduino 库</b>生成你的第一个应用，请遵循此<a href="{{site.baseurl}}/{{page.lang}}/win10/WRA.htm">链接</a>以在 Arduino 上远程控制 LED。</p>
+<p>如果你想在不深入研究代码的情况下查看该技术在执行操作时的运行方式，请遵循此<a href="{{site.baseurl}}/{{page.lang}}/win10/WRAE.htm">链接</a>以开始使用 <b>Windows Remote Arduino 体验应用</b>。</p>
+</div>
+
+<div class="row">
+
+<h3>功能</h3>
+Windows Remote Arduino 库支持以下功能：
+
+<ol>
+<li>
+GPIO - 模拟和数字 I/O
+<ul>
+  <li>
+  数字写入
+  </li>
+  <li>
+  数字读取
+  </li>
+  <li>
+  模拟写入
+  </li>
+  <li>
+  模拟读取
+  </li>
+  <li>
+  为任意引脚设置引脚模式
+  </li>
+  <li>
+  接收值发生更改或进行报告时的事件。
+  </li>
+  </ul>
+</li>
+<li>
+I2C/TwoWire
+  <ul>
+    <li>
+    通过 I2C 将数据发送到设备或从中接收数据。
+    </li>
+  </ul>
+</li>
+<li>
+通过 Firmata SysEx 命令自定义协议
+</li>
+
+</div>

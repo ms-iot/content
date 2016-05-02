@@ -12,19 +12,19 @@
         <p>一个 LED（任何你喜欢的颜色）</p>
     </div>
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/Resources/images/Blinky/components.png">
+      <img alt="blinky 示例所需的组件" src="{{site.baseurl}}/Resources/images/Blinky/components.png">
     </div>
   </div>
     {% include_relative BlinkyRPIGpio.md %}
     {% include_relative AppDeploymentCS.md %}
   <div class="row">
     <div class="col-md-6 col-sm-12">
-      <p>完成所有设置后，你应可以在 Visual Studio 中按 F5。 如果有任何缺少的程序包未在设置期间安装，Visual Studio 可能会提示你立即获取它们。 Blinky 应用将在 Windows IoT 设备上部署并启动，此时你应看到 LED 与屏幕上的模拟图像同步闪烁。</p>
+      <p>完成所有设置后，你应该可以在 Visual Studio 中按 F5。 如果有任何缺少的程序包未在设置期间安装，Visual Studio 可能会提示你立即获取它们。 Blinky 应用将在 Windows IoT 设备上部署并启动，此时你应看到 LED 与屏幕上的模拟图像同步闪烁。</p>
     </div>
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/Resources/images/Blinky/blinky-screenshot.png" height="400">
+      <img alt="Raspberry Pi 2 或 3 的引出线图" src="{{site.baseurl}}/Resources/images/Blinky/blinky-screenshot.png" height="400">
     </div>
   </div>
-  <p>恭喜你！ 你已控制了 Windows IoT 设备上的一个 GPIO 引脚。</p>
+  <p>恭喜！ 你已控制了 Windows IoT 设备上的一个 GPIO 引脚。</p>
 
   {% include_relative BlinkyCodeCS.md%}

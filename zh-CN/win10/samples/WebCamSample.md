@@ -5,7 +5,7 @@ permalink: /zh-cn/win10/samples/WebCamSample.htm
 lang: zh-cn  
 ---  
   
-#摄像头示例  
+# 摄像头示例  
 
 {% include VerifiedVersion.md %}
 
@@ -13,13 +13,13 @@ lang: zh-cn
   
 这是一个有外设示例。若要更好地了解什么是有外设模式以及如何将你的设备配置为有外设，请按照[此处]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm)的说明操作。
   
-###在 Visual Studio 中加载项目  
+### 在 Visual Studio 中加载项目  
   
 你可以通过在[此处](https://github.com/ms-iot/samples/tree/develop/WebCamSample/CS){:target="_blank"}下载所有示例的 zip 来查找此示例的源代码。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
   
 这是通用 Windows 应用程序
   
-###连接你的摄像头  
+### 连接你的摄像头  
   
 你需将需要：
   
@@ -27,9 +27,9 @@ lang: zh-cn
   
 将网络摄像头连接到 IoT 设备上的其中一个 USB 端口
   
-###部署你的应用  
+### 部署你的应用  
   
-如果你要针对 Minnowboard Max 进行生成，请选择 `x86` 作为体系结构。如果你要针对 Raspberry Pi 2 或 DragonBoard 进行生成，请选择 `ARM`。
+如果你要针对 Minnowboard Max 进行生成，请选择 `x86` 作为体系结构。如果你要针对 Raspberry Pi 2 或 3 或者 DragonBoard 进行生成，请选择 `ARM`。
 
 **仅适用于 DragonBoard：** 部署此应用之前，请禁用板载麦克风和声卡驱动程序。运行此应用就要在每次重启时执行此操作
 
@@ -42,17 +42,17 @@ devcon remove ADCM\QCOM242E
   
 选择“远程计算机”以指向 IoT 设备并点击 F5 以部署到你的设备。如需指导，请返回基本“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm){:target="_blank"}。
   
-###测试你的应用   
+### 测试你的应用   
   
 示例应用在部署时显示 2 个按钮：`Initialize Audio and Video` 和 `Initialize Audio Only`。以下是单击按钮时可用的操作的说明。
   
-###初始化音频和视频：  
+### 初始化音频和视频：  
   
 * 预览将显示在最左边的画布中。  
 * `Take Photo` 在单击时会将照片存储在默认位置，并在中间的画布中显示最后捕获的照片。  
 * `Start Video Record` 在单击时将开始录制。完成后，按 `Stop Video Record` 保存视频。视频在最右边的画布中自动播放  
   
-###仅初始化音频：  
+### 仅初始化音频：  
   
 * `Start Audio Record` 在单击时将开始录制。完成后，按 `Stop Audio Record` 保存视频。音频将自动播放。  
   
@@ -60,7 +60,7 @@ devcon remove ADCM\QCOM242E
   
 恭喜你！ 你已创建你的第一个摄像头应用。
  
-###我们来看看代码  
+### 我们来看看代码  
  
 此示例代码使用 [Windows.Media.Capture](https://msdn.microsoft.com/zh-cn/library/windows/apps/windows.media.capture.aspx){:target="_blank"} 命名空间。
  
@@ -81,7 +81,7 @@ devcon remove ADCM\QCOM242E
  </Capabilities>  
 {% endhighlight %}  
  
-##初始化 MediaCapture 对象  
+## 初始化 MediaCapture 对象  
  
 仅可初始化 **MediaCapture** 对象以捕获视频或音频。在示例中，
  
@@ -115,7 +115,7 @@ private async void initAudioOnly_Click(object sender, RoutedEventArgs e)
 }  
 {% endhighlight %}  
   
-###音频和视频模式： 开始预览、捕获照片  
+### 音频和视频模式： 开始预览、捕获照片  
   
 本部分介绍一些我们创建用于从摄像头显示预览和照片输出的 XAML 组件。首先我们创建一个 **CaptureElement** 用于预览，并创建一个 **Image** 用于所捕获的照片。
   
@@ -164,7 +164,7 @@ private async void takePhoto_Click(object sender, TextChangedEventArgs e)
 }  
 {% endhighlight %}  
   
-###音频和视频模式： 录制视频并播放  
+### 音频和视频模式： 录制视频并播放  
   
 本部分介绍如何录制视频并进行播放。首先我们在 XAML 中创建 **MediaElement** 以播放视频
   
@@ -218,7 +218,7 @@ private async void recordVideo_Click(object sender, RoutedEventArgs e)
 }  
 {% endhighlight %}  
   
-###仅音频模式： 录制音频并播放  
+### 仅音频模式： 录制音频并播放  
   
 本部分介绍如何录制音频并播放。首先我们在 XAML 中创建 **MediaElement** 以播放音频
   
@@ -273,7 +273,7 @@ private async void recordAudio_Click(object sender, RoutedEventArgs e)
 }  
 {% endhighlight %}  
   
-###MediaCapture 回调  
+### MediaCapture 回调  
   
 示例中阐述了两个回调： **MediaCapture.Failed** 和 **MediaCapture.RecordLimitationExceeded**。
   

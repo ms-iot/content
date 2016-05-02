@@ -13,14 +13,14 @@ lang: zh-cn
 # 伺服
 了解如何使用伺服库的基础知识以及如何与伺服交互。
 
-# 所需组件
+## 所需组件
 * [Micro 伺服](http://www.adafruit.com/products/169){:target="_blank"}
 * 连接伺服的 3 条线
 
-# 连接组件
+## 连接组件
 如果使用无需外部电源的基本伺服，应进行如下配置：<br/> ![]({{site.baseurl}}/Resources/images/ServoDiagram.png)
 
-# 创建一个新项目
+## 创建一个新项目
 
 1. 使用模板创建新项目。
 1. 在 Galileo 上将信号线（如果使用上述的 Micro 伺服，则为橘黄色线）连接到引脚 3。
@@ -28,7 +28,7 @@ lang: zh-cn
 1. 在 Galileo 上将电压线（如果使用上述的 Micro 伺服，则为红色线）连接到 5V 引脚。
 1. 使用以下代码替换 main.cpp 中的现有代码：
 
-# 代码
+## 代码
 
 ### Main.cpp
 

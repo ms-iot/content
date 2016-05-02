@@ -5,18 +5,17 @@ permalink: /zh-cn/win10/EmbeddedMode.htm
 lang: zh-cn
 ---
 
-##嵌入模式
+# 嵌入模式
 
 Windows 和 Windows 移动版可以配置为允许嵌入模式。这使程序包能够实现后台应用程序。它还可以使应用程序声明和使用 lowLevelDevice 和 systemManagement 功能。
 
 嵌入模式仅在 Window IoT 核心版中默认启用，并且必须在标准 Windows 和 Windows 移动版中启用。
 
 如果正在调试的设备运行的不是 Windows IoT 核心版，并且看到以下任一错误消息，你需要确保该设备上已启用 AllowEmbeddedMode 且“嵌入模式”服务处于运行状态：
-
 * 端点映射程序中未提供更多端点。
 * 此程序由组策略阻止。有关详细信息，请与系统管理员联系。
 
-##更改模式
+## 更改模式
 若要启用嵌入模式，你将需要在映像和配置设计器 \(ICD\)（将 AllowEmbeddedMode 设置为 1）中创建设置包。若要安装 ICD，你需要下载并安装适用于 Windows 10 的 Windows ADK。
 
 * <a href="http://go.microsoft.com/fwlink/p/?LinkId=526740">下载适用于 Windodws 10 的 Windows ADK</a>

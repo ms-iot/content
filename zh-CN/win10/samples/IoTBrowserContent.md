@@ -1,4 +1,4 @@
-#IoT 浏览器示例
+## IoT 浏览器示例
 
 {% include VerifiedVersion.md %}
 
@@ -10,15 +10,15 @@
 
 该示例基于 Windows。
 
-###在 Visual Studio 中加载项目
+### 在 Visual Studio 中加载项目
 
-你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\IoTBrowser` 来查找此示例的源代码。示例代码为 C\#。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\IoTBrowser`，查找此示例的源代码。示例代码为 C\#。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
 {% include_relative AppDeploymentCS.md %}
 
 完成所有设置后，你应该可以在 Visual Studio 中按 F5。IoT 浏览器应用将在 Windows IoT 设备上部署并启动。
 
-###我们来看看代码
+### 我们来看看代码
 此示例的代码相当简单：
 
 <ul>
@@ -30,7 +30,7 @@
 
 当按下“转到”按钮时，我们将调用 Web 导航帮助程序方法以执行实际导航。
 
-###UX 代码
+### UX 代码
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="65"></RowDefinition>
@@ -57,19 +57,19 @@
         </StackPanel>
     </Grid>
 
-###DoWebNavigate 导航帮助程序方法
+### DoWebNavigate 导航帮助程序方法
 此帮助程序通过 Web\_Address.Text 中的当前值使用 WebView.Navigate 方法
 
-###DoWebNavigate 代码
+### DoWebNavigate 代码
     if (Web_Address.Text.Length > 0)
     {
         webView.Navigate(new Uri(Web_Address.Text));
     }
 
-###“收藏夹”按钮
+### “收藏夹”按钮
 三个收藏夹只使用预配置的值填充地址栏，然后调用 DoWebNavigate 帮助程序。
 
-###收藏夹代码
+### 收藏夹代码
     private void Go_Hackster_Click(object sender, RoutedEventArgs e)
     {
         Web_Address.Text = "https://www.hackster.io/windowsiot";

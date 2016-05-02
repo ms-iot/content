@@ -10,10 +10,10 @@ lang: zh-cn
 
 所有模拟和数字引脚都比在没有 **Lightning** 的情况下快。
 
-#设置说明
+## 设置说明
 请按照[设置电脑](SetupPC.htm){:target="_blank"}的说明进行操作，因为 Visual Studio 扩展已进行了更新以在 Gen1 和 Gen2 上支持 Lightning。
 
-# 此版本
+## 此版本
 * 包含适用于 Intel Galileo Gen1 和 Gen2 的单个 WIM。
 * 支持在 Visual Studio 创建新项目时支持不可知地面向 Intel Galileo Gen1 和 Gen2 平台。
 * 支持 Intel Galileo Gen1 和 Gen2 的数字 I/O（GPIO、I2C、SPI、UART）。

@@ -6,8 +6,8 @@ lang: zh-cn
 ---
 
 <div style="background-color:Silver; color:black; padding:20px;">
-	<h4><u>对 Intel Galileo 第 1 代和第 2 代上的 Windows 的支持将于 2015 年 11 月 30 日结束</u></h4>
-	<p><h5>由于我们将继续侧重于为制造商提供 Windows 10 IoT 核心版的出色体验，因此我们做出了一项艰难的决定，即停止对 Galileo 平台的 Windows 支持。我们看到了平台的一些很出色的创新，但遗憾的是，它并不能满足 Windows 10 IoT 核心版的最低硬件要求。请单击<a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">此处</a>了解详细信息。</h5></p>
+	<h4><u>对 Intel Galileo 第 1 代和第 2 代的 Windows 的支持将于 2015 年 11 月 30 日结束</u></h4>
+	<p><h5>由于我们将继续侧重于为制造商提供 Windows 10 IoT 核心版的出色体验，因此我们做出了一项艰难的决定，即停止对 Galileo 平台提供 Windows 支持。我们看到了平台上一些很出色的创新，但遗憾的是，它并不能满足 Windows 10 IoT 核心版的最低硬件要求。请单击<a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">此处</a>了解详细信息。</h5></p>
 </div>
 
 # Firmata 和 Cylon
@@ -17,7 +17,7 @@ lang: zh-cn
 
 在此示例中，我们将向你展示如何使用这些技术以从运行 Windows 的 Intel Galileo 上远程控制和暴露网页。
 
-# Firmata
+## Firmata
 标准 Firmata 软件将在 Intel Galileo 开发板上的 Windows 中运行。此项目将使用 _NetworkSerial_ 实现，这允许 Arduino HardwareSerial 在 Network Socket 而非在串行端口上运行。
 
 首先，你需要创建新项目。打开 Visual Studio。依次选择“文件”-\>“新建项目和选择模板”-\>“Visual C++”-\>“适用于 IoT 的 Windows”-\>“Galileo Wiring”应用。
@@ -59,7 +59,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 最后，生成此应用并将其部署到你的开发板上。
 
-# Cylon
+## Cylon
 在开发上通过 Node.js 使用 Cylon.js，从而通过网络套接字与标准 Firmata 通信。
 
 * 安装 [Node.js](http://nodejs.org/){:target="_blank"}。
@@ -103,7 +103,7 @@ robot.start();
 
 {% endhighlight %}
 
-# 在开发计算机上运行 Cylon
+## 在开发计算机上运行 Cylon
 从 Node.js 命令提示符中启动程序：
 
 `node main.js`

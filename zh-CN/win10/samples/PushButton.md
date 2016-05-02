@@ -5,13 +5,13 @@ permalink: /zh-cn/win10/samples/PushButton.htm
 lang: zh-cn
 ---
 
-##“推送”按钮示例
+# “推送”按钮示例
 
 {% include VerifiedVersion.md %}
 
 [在 GitHub 上查看代码](https://github.com/ms-iot/samples/tree/develop/PushButton/CS){:target="_blank"}
 
-在此示例中，我们将“推送”按钮连接到你的 Raspberry Pi 2、MinnowBoard Max 或 DragonBoard 410c 并将其用于控制 LED。我们使用 GPIO 中断来检测按下该按钮的时间并切换 LED 进行响应。
+在此示例中，我们将“推送”按钮连接到你的 Raspberry Pi 2 或 3、MinnowBoard Max 或 DragonBoard 410c 并将其用于控制 LED。我们使用 GPIO 中断来检测按下该按钮的时间并切换 LED 进行响应。
 
 ![“推送”按钮图像]({{site.baseurl}}/Resources/images/PushButton/PushButtonSample.png)
 
@@ -20,23 +20,23 @@ lang: zh-cn
 另外，还请注意 GPIO API 仅在 Windows IoT 核心版上可用，因此该示例无法在你的桌面上运行。
 
 
-###组件
+### 组件
 
 你将需要以下组件：
 
 * 一个 [EG1311-ND 触摸按钮](http://www.digikey.com/product-detail/en/320.02E11.08BLK/EG1311-ND/101397){:target="_blank"}
 
-* 1 个[红色 LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832){:target="_blank"}
+* 一个[红色 LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832){:target="_blank"}
 
-* 1 个 [330 &#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
+* 一个 [330 &\#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
 
-* 一块试验板以及多根用于 Raspberry Pi 2 或 MinnowBoard Max 的公母头连接线或用于 DragonBoard 的双公头连接线
+* 一块试验板以及多根用于 Raspberry Pi 2 或 3 或者 MinnowBoard Max 的公母头连接线或用于 DragonBoard 的双公头连接线
 
-###将电路连接到你的设备
+### 将电路连接到你的设备
 
-我们先来为试验板上的组件布线。根据你的设备，查看以下相应的 **Raspberry Pi 2、MinnowBoard Max 或 DragonBoard 410c** 部分。
+我们先来为试验板上的组件布线。根据你的设备，查看以下相应的 **Raspberry Pi 2 或 3、MinnowBoard Max 或 DragonBoard 410c** 部分。
 
-#### Raspberry Pi 2
+#### Raspberry Pi 2 或 3
 
 | 试验板图 | 示意图 |
 | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
@@ -44,23 +44,23 @@ lang: zh-cn
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
-#####连接 LED
+##### 连接 LED
 
-* 将 LED 阴极（较短的阴极引线）连接到 Raspberry Pi 2 的引脚 31 \(GPIO 6\)
+* 将 LED 阴极（较短的阴极引线）连接到 Raspberry Pi 2 或 3 的引脚 31 \(GPIO 6\)
 
-* 将 LED 阳极（较长的阳极引线）连接到 330 &#x2126; 电阻器中的一条引线
+* 将 LED 阳极（较长的阳极引线）连接到 330 &\#x2126; 电阻器中的一条引线
 
-* 将 330 &#x2126; 电阻器的另一端连接到 Raspberry Pi 2 上的引脚 1 \(3.3V\)
+* 将 330 &\#x2126; 电阻器的另一端连接到 Raspberry Pi 2 或 3 上的引脚 1 \(3.3V\)
 
-#####连接“推送”按钮
+##### 连接“推送”按钮
 
-* 将“推送”按钮中的一个引脚连接到 Raspberry Pi 2 的引脚 29 \(GPIO 5\)
+* 将“推送”按钮中的一个引脚连接到 Raspberry Pi 2 或 3 的引脚 29 \(GPIO 5\)
 
 * 将“推送”按钮中的另一个引脚连接到地线
 
-下面是 RPi2 的引出线：
+下面是 RPi2 和 RPi3 的引出线：
 
-![Raspberry Pi 2 引出线]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
+![Raspberry Pi 2 和 3 引出线]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
@@ -72,15 +72,15 @@ lang: zh-cn
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
-#####连接 LED
+##### 连接 LED
 
 * 将 LED 阴极（较短的阴极引线）连接到 MinnowBoard Max 的引脚 20 \(GPIO 6\)
 
-* 将 LED 阳极（较长的阳极引线）连接到 330 &#x2126; 电阻器中的一条引线
+* 将 LED 阳极（较长的阳极引线）连接到 330 &\#x2126; 电阻器中的一条引线
 
-* 将 330 &#x2126; 电阻器的另一端连接到 MinnowBoard Max 上的引脚 4 \(3.3V\)
+* 将 330 &\#x2126; 电阻器的另一端连接到 MinnowBoard Max 上的引脚 4 \(3.3V\)
 
-#####连接“推送”按钮
+##### 连接“推送”按钮
 
 * 将“推送”按钮中的一个引脚连接到 MinnowBoard Max 的引脚 18 \(GPIO 5\)
 
@@ -101,8 +101,8 @@ lang: zh-cn
 执行下列步骤以连接 LED：
 
 * 将 LED 阴极（较短的阴极引线）连接到引脚 25 \(GPIO 13\)
-* 将 LED 阳极（较长的阳极引线）连接到 330 &#x2126; 电阻器中的一条引线
-* 将 330 &#x2126; 电阻器的另一端连接到引脚 35 \(1.8V PWR\)
+* 将 LED 阳极（较长的阳极引线）连接到 330 &\#x2126; 电阻器中的一条引线
+* 将 330 &\#x2126; 电阻器的另一端连接到引脚 35 \(1.8V PWR\)
 
 执行以下步骤来连接“推送”按钮：
 
@@ -125,16 +125,16 @@ private const int BUTTON_PIN = 36;
 ~~~
 {: .language-c\#}
 
-###生成和运行示例
+### 生成和运行示例
 
 1. 在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载包含我们所有示例的 zip。
 1. 在 Visual Studio 中打开 `samples-develop\PushButton\CS\PushButton.csproj`。
-1. 如果你有 **Raspberry Pi 2** 或 **DragonBoard 410c**，请为目标体系结构选择 `ARM`。否则，为 **MinnowBoard Max** 选择 `x86`
+1. 如果你有 **Raspberry Pi 2 或 3** 或者 **DragonBoard 410c**，请为目标体系结构选择 `ARM`。否则，为 **MinnowBoard Max** 选择 `x86`
 1. 转到 `Build -> Build Solution`
 1. 从调试目标中选择 `Remote Machine`
 1. 点击 F5 以进行部署和调试。输入你的设备的 IP 地址并为身份验证类型选择 `Universal`。
 
-###我们来看看代码
+### 我们来看看代码
 
 首先，我们打开将使用的 GpioPin 资源。将按钮连接到活动的 LOW 配置中的 GPIO5，这意味着当未按下该按钮时信号值为 HIGH，而当按下该按钮时信号值将变为 LOW。我们将使用已连接到 GPIO6 的 LED（这是在活动的 LOW 配置中连接的），这意味着当该引脚值为 HIGH 时将关闭 LED，而当该引脚值为 LOW 时将打开 LED。
 
@@ -152,7 +152,7 @@ ledPin.Write(GpioPinValue.High);
 ledPin.SetDriveMode(GpioPinDriveMode.Output);
 {% endhighlight %}
 
-接下来，我们将设置按钮引脚。对于 Raspberry Pi 2 或 DragonBoard 410c，我们将充分利用其内置了可激活的上拉式电阻器这一优势。我们使用内置的上拉式电阻器，这样无需在外部提供电阻器。MinnowBoard Max 具有的 10k&#x2126; 上拉式电阻器在默认情况下处于打开状态并且不可配置，因此我们将进行检查以确保此驱动器模式受支持。
+接下来，我们将设置按钮引脚。对于 Raspberry Pi 2 或 3 或者 DragonBoard 410c，我们将充分利用其中内置了可激活的上拉式电阻器这一优势。我们使用内置的上拉式电阻器，这样无需在外部提供电阻器。MinnowBoard Max 具有的 10k&\#x2126; 上拉式电阻器在默认情况下处于打开状态并且不可配置，因此我们将进行检查以确保此驱动器模式受支持。
 
 {% highlight C# %}
 // Check if input pull-up resistors are supported

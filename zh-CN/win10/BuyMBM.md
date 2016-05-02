@@ -5,7 +5,7 @@ permalink: /zh-cn/win10/BuyMBM.htm
 lang: zh-cn
 ---
 
-#如何购买 MinnowBoard MAX
+# 如何购买 MinnowBoard MAX
 
 可按照以下说明购买 MinnowBoard Max。
 

@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Managed DSB Gpio Tutorial
+title: AllJoyn 托管的 DSB Gpio 教程
 permalink: /zh-cn/win10/samples/AlljoynDSBSample_Managed.htm
 lang: zh-cn
 ---
 
-## Alljoyn DSB GPIO C\# 教程
+# Alljoyn DSB GPIO C\# 教程
 
 {% include VerifiedVersion.md %}
 
@@ -265,11 +265,9 @@ AllJoyn 设备系统网桥模板是 Visual Studio 扩展，可使开发人员创
         }
     }
     
-###关于信号
+### 关于信号
 
-在 AllJoyn 设备系统网桥中，我们具有 3 种预定义信号：设备到达、设备删除和值更改信号。
-
-在新设备到达以加入 AllJoyn 网络时，将引发设备到达信号。若要定义信号，需创建 IAdapterSignal 的实例，其预定义常量信号名称为 Constants::DEVICE\_ARRIVAL\_SIGNAL，并创建作为信号参数的设备句柄 \(IAdapterDevice^\)。使用预定义参数名称 Constants::DEVICE\_ARRIVAL\_\_DEVICE\_HANDLE。此信号与适配器关联。
+在 AllJoyn 设备系统网桥中，我们具有 3 种预定义信号：设备到达、设备删除和值更改信号。在新设备到达以加入 AllJoyn 网络时，将引发设备到达信号。若要定义信号，需创建 IAdapterSignal 的实例，其预定义常量信号名称为 Constants::DEVICE\_ARRIVAL\_SIGNAL，并创建作为信号参数的设备句柄 \(IAdapterDevice^\)。使用预定义参数名称 Constants::DEVICE\_ARRIVAL\_\_DEVICE\_HANDLE。此信号与适配器关联。
 
 在设备退出网络时，将引发设备删除信号。若要定义该信号，需创建 IAdapterSignal 的实例，其预定义常量信号名称为 Constants::DEVICE\_REMOVAL\_SIGNAL，并创建作为信号参数的设备句柄 \(IAdapterDevice^\)。使用预定义参数名称 Constants::DEVICE\_REMOVAL\_\_DEVICE\_HANDLE。此信号与适配器关联。
 

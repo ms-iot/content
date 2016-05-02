@@ -5,7 +5,7 @@ permalink: /zh-cn/win10/samples/SpiTestTool.htm
 lang: zh-cn
 ---
 
-## SpiTestTool 示例
+# SpiTestTool 示例
 
 {% include VerifiedVersion.md %}
 

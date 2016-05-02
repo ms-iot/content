@@ -5,7 +5,7 @@ permalink: /zh-cn/win10/samples/SerialSample.htm
 lang: zh-cn
 ---
 
-#串行端口示例
+# 串行端口示例
 
 {% include VerifiedVersion.md %}
 
@@ -13,20 +13,20 @@ lang: zh-cn
 
 这是一个有外设示例。若要更好地了解什么是有外设模式以及如何将你的设备配置为有外设，请按照[此处]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm){:target="_blank"}的说明操作。
 
-###在 Visual Studio 中加载项目
+### 在 Visual Studio 中加载项目
 
 你可以在[此处](https://github.com/ms-iot/samples/tree/develop/SerialSample/){:target="_blank"}找到此示例的 C\# 和 C++ 版本。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
 此应用是一个通用 Windows 应用，并且可在电脑和 IoT 设备上运行。
 
-###连接串行连接 
+### 连接串行连接 
 
 有两个选项可用来连接你的开发板：
 
 1. 使用板载 UART 控制器
 2. 使用 USB-to-TTL 适配器电缆，例如[此电缆](http://www.adafruit.com/products/954){:target="_blank"}
 
-####<a name="MBM_UART"></a>板载 UART \(MinnowBoard Max\)
+#### <a name="MBM_UART"></a>板载 UART \(MinnowBoard Max\)
 
 MinnowBoard Max 有两个板载 UART。有关 MBM GPIO 引脚的更多详细信息，请参阅 [MBM 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm)。
 
@@ -46,24 +46,24 @@ MinnowBoard Max 有两个板载 UART。有关 MBM GPIO 引脚的更多详细信�
 
 <img src="{{site.baseurl}}/Resources/images/SerialSample/SiLabs-UART.png">
 
-####<a name="RPi2_UART"></a>板载 UART \(Rasperry Pi2\)
+#### <a name="RPi2_UART"></a>板载 UART \(Rasperry Pi2\)
 
-Rasperry Pi2 有一个板载 UART。有关 MBM GPIO 引脚的更多详细信息，请参阅 [Raspberry Pi 2 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPI2.htm)。
+Rasperry Pi 2 或 3 有一个板载 UART。有关 GPIO 引脚的更多详细信息，请参阅 [Raspberry Pi 2 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPI2.htm)。
 
 * UART0 使用 GPIO 引脚 6 \(GND\)、8 \(TX\) 和 10 \(RX\)。 
 
 建立以下连接：
 
 * 将 USB-to-TTL 电缆的 USB 端插入电脑上的 USB 端口
-* 将 USB-to-TTL 电缆的 GND 线连接到 RPi2 板上的引脚 6 \(GND\)
-* 将 USB-to-TTL 电缆的 RX 线（白色）连接到 RPi2 板上的引脚 8 \(TX\)
-* 将 USB-to-TTL 电缆的 TX 线（绿色）连接到 RPi2 板上的引脚 10 \(RX\)
+* 将 USB-to-TTL 电缆的 GND 线连接到 RPi2 或 RPi3 板上的引脚 6 \(GND\)
+* 将 USB-to-TTL 电缆的 RX 线（白色）连接到 RPi2 或 RPi3 板上的引脚 8 \(TX\)
+* 将 USB-to-TTL 电缆的 TX 线（绿色）连接到 RPi2 或 RPi3 板上的引脚 10 \(RX\)
 
 *注意： 让 USB-to-TTL 电缆的电源线保持未连接状态。*
 
 <img src="{{site.baseurl}}/Resources/images/SerialSample/RPi2_UART.png">
 
-####板载 UART \(DragonBoard 410c\)
+#### 板载 UART \(DragonBoard 410c\)
 
 DragonBoard 有两个板载 UART。
 
@@ -79,13 +79,13 @@ DragonBoard 有两个板载 UART。
 
 _注意： 让 USB-to-TTL 电缆的电源线保持未连接状态。_
 
-###<a name="USB_TTL_Adapter"></a>使用 USB-to-TTL 适配器
+### <a name="USB_TTL_Adapter"></a>使用 USB-to-TTL 适配器
 
 **注意： USB-to-TTL 电缆和模块以及 Silicon Labs 芯片集仅受 MinnowBoard Max 和 Raspberry Pi2 本机支持。**
 
 你将需要：
 
-* 1 X USB-to-TTL 模块（这便是我们即将连接到 RPI2 或 MBM 设备的模块。我们使用了[此基于 Silicon Labs CP2102 的 USB-to-TTL 模块](http://www.amazon.com/gp/product/B00LODGRV8){:target="_blank"}）
+* 1 X USB-to-TTL 模块（这便是我们即将连接到 RPi2、RPi3 或 MBM 设备的模块。我们使用了[此基于 Silicon Labs CP2102 的 USB-to-TTL 模块](http://www.amazon.com/gp/product/B00LODGRV8){:target="_blank"}）
 
 * 1 X USB-to-TTL 电缆（这将连接到我们的电脑。我们使用了[此电缆](http://www.adafruit.com/products/954){:target="_blank"}）
 
@@ -93,7 +93,7 @@ _注意： 让 USB-to-TTL 电缆的电源线保持未连接状态。_
 
 * 将 USB-to-TTL **电缆**的 USB 端插入电脑上的 USB 端口
 
-* 将 USB-to-TTL **模块**的 USB 端插入 RPI2 或 MBM 设备上的 USB 端口
+* 将 USB-to-TTL **模块**的 USB 端插入 RPi2、RPi3 或 MBM 设备上的 USB 端口
 
 * 将 USB-to-TTL **模块**的 GND 引脚连接到 USB-to-TTL 电缆的 GND 线
 
@@ -103,13 +103,13 @@ _注意： 让 USB-to-TTL 电缆的电源线保持未连接状态。_
 
 让 USB-to-TTL 电缆的电源引脚保持未连接状态。因为不会用到它。
 
-下面是 RPi2 中已连接到 USB 端口的 USB-to-TTL 模块的图像。将该模块的 GND、TX 和 RX 引脚分别连接到已接入电脑的 USB-to-TTL 电缆的 GND 线、RX 线和 TX 线。
+下面是 RPi2 或 RPi3 中已连接到 USB 端口的 USB-to-TTL 模块的图像。将该模块的 GND、TX 和 RX 引脚分别连接到已接入电脑的 USB-to-TTL 电缆的 GND 线、RX 线和 TX 线。
 
 <img src="{{site.baseurl}}/Resources/images/SerialSample/CP2102_Connections_500.png">
 
-###部署和启动 SerialSample 应用
+### 部署和启动 SerialSample 应用
 
-现在我们的电脑与 RPi2 或 MBM 已建立连接，接下来我们将设置和部署该应用。如果你不熟悉如何在 Visual Studio 中设置目标设备和目标体系结构，请参阅[本部分]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm#deploy-the-app-to-your-windows-iot-core-device)获取详细信息。
+现在我们的电脑与 RPi2、RPi3 或 MBM 已建立连接，接下来我们将设置和部署该应用。如果你不熟悉如何在 Visual Studio 中设置目标设备和目标体系结构，请参阅[本部分]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm#deploy-the-app-to-your-windows-iot-core-device)获取详细信息。
 
 1. 下载 Visual Studio 2015 [SerialSample 源项目](https://github.com/ms-iot/samples/tree/develop/SerialSample/){:target="_blank"}。 
 
@@ -121,29 +121,29 @@ _注意： 让 USB-to-TTL 电缆的电源线保持未连接状态。_
 
 5. 在 VS 实例 B 中打开 SerialSample 应用的电脑副本。
 
-6. 在 VS 实例 A 中，[配置该应用以便部署到你的 RPi2 或 MBM 设备]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm#deploy-the-app-to-your-windows-iot-core-device)）
+6. 在 VS 实例 A 中，[配置该应用以便部署到你的 RPi2、RPi3 或 MBM 设备]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm#deploy-the-app-to-your-windows-iot-core-device)）
 	
-	*\*对于 RPi2，将目标设备设置为“远程计算机”，而将目标体系结构设置为“ARM”
+	*\*对于 RPi2 或 RPi3，将目标设备设置为“远程计算机”，而将目标体系结构设置为“ARM”
 	
 	*\*对于 MBM，将目标设备设置为“远程计算机”，而将目标体系结构设置为“x86”
 
 7. 在 VS 实例 B 中，将目标体系结构设置为“x86”。这便是我们在电脑上运行的示例的实例。
 
-8. 在 VS 实例 A 中，按 F5 以在你的 RPi2 或 MBM 上部署和启动该应用。
+8. 在 VS 实例 A 中，按 F5 以在你的 RPi2、RPi3 或 MBM 上部署和启动该应用。
 
 9. 在 VS 实例 B 中，按 F5 以在你的电脑上部署和启动该应用。
 
-###使用 SerialSample 应用 
+### 使用 SerialSample 应用 
 
-当 SerialSample 应用在电脑上启动时，将打开一个窗口，此时用户界面的外观类似于以下所示的屏幕截图。当在 RPi2 和 MBM 上启动时，SerialSample 将显示如下全屏显示的用户界面。
+当 SerialSample 应用在电脑上启动时，将打开一个窗口，此时用户界面的外观类似于以下所示的屏幕截图。当在 RPi2 或 RPi3 和 MBM 上启动时，SerialSample 将显示如下全屏显示的用户界面。
 
 <img src="{{site.baseurl}}/Resources/images/SerialSample/SerialSampleRunningPC.PNG">
 
-####选择串行设备
+#### 选择串行设备
 
 当 SerialSample 应用启动时，它将查找已连接到设备的所有串行设备。找到的已连接到设备的所有串行设备的设备 ID 将在 SerialSample 应用窗口的顶部列表框中列出。
 
-通过执行以下操作，选择并连接到电脑和 RPi2 或 MBM 上的串行设备：
+通过执行以下操作，选择并连接到电脑和 RPi2、RPi3 或 MBM 上的串行设备：
 
 1. 通过单击“选择设备：”旁的顶部列表框中的设备 ID 字符串，来选择所需的串行设备。 
 
@@ -153,7 +153,7 @@ _注意： 让 USB-to-TTL 电缆的电源线保持未连接状态。_
     
     * 在 DragonBoard 上，选择其中带有 **QCOM24D4** 和 **UART1** 的设备。这可能是列表框中的最后一台设备（可能需要向下滚动）。
 	
-	* 在 MBM 和 RPi2 上，如果使用的是 USB-to-TTL 适配器模块，则选择以 **\\?\\USB\#** 开头的设备 ID。对于该示例中所使用的 USB-to-TTL 模块，设备 ID 应以“\\?\\USB\#VID\_10C4”开头。
+	* 在 MBM 和 RPi2 或 RPi3 上，如果使用的是 USB-to-TTL 适配器模块，则选择以 **\\?\\USB\#** 开头的设备 ID。对于该示例中所使用的 USB-to-TTL 模块，设备 ID 应以“\\?\\USB\#VID\_10C4”开头。
 
 2. 单击“连接”。
 
@@ -161,9 +161,9 @@ _注意： 让 USB-to-TTL 电缆的电源线保持未连接状态。_
 
 <img src="{{site.baseurl}}/Resources/images/SerialSample/SerialSampleRunningPC_ConnectDevice.PNG">
 
-####发送和接收数据
+#### 发送和接收数据
 
-在使用可在电脑和 RPi2 或 MBM 上运行的 SerialSample 应用连接所需的串行设备后，我们可以开始通过这两台设备间的串行连接发送和接收数据。
+在使用可在电脑和 RPi2、RPi3 或 MBM 上运行的 SerialSample 应用连接所需的串行设备后，我们可以开始通过这两台设备间的串行连接发送和接收数据。
 
 若要将数据从一台设备发送到另一台连接的设备，请执行以下操作：
 
@@ -184,13 +184,13 @@ _注意： 让 USB-to-TTL 电缆的电源线保持未连接状态。_
 * 当将 USB-to-TTL 设备连接到 MinnowBoard Max 时，使用已通电的 USB 集线器或底部 USB 端口
 
 
-###我们来看看代码
+### 我们来看看代码
 
 此示例代码使用 [Windows.Devices.SerialCommunication](https://msdn.microsoft.com/zh-cn/library/windows.devices.serialcommunication.aspx){:target="_blank"} 命名空间。
 
 SerialDevice 类将用于枚举、连接、读取和写入已连接到设备的串行设备。
 
-**注意：** SerialDevice 类仅用于（电脑、Raspberry Pi 2 和 MinnowBoard Max 上）受支持的 USB-to-TTL 设备，以及（MinnowBoard Max 上）板载 UART。
+**注意：** SerialDevice 类仅用于（电脑、Raspberry Pi 2（或 3）和 MinnowBoard Max 上）受支持的 USB-to-TTL 设备，以及（MinnowBoard Max 上）板载 UART。
 
 若要访问串行端口，必须将 **DeviceCapability** 添加到项目中的 **Package.appxmanifest** 文件。
 
@@ -211,7 +211,7 @@ SerialDevice 类将用于枚举、连接、读取和写入已连接到设备的�
   </Capabilities>
 {% endhighlight %}
 
-###连接到所选的串行设备
+### 连接到所选的串行设备
 
 此示例应用将枚举已连接到设备的所有串行设备，并将列表显示在**列表框** ConnectDevices 中。以下代码将连接和配置所选的设备 ID 并创建 **SerialDevice** 对象。
 
@@ -247,7 +247,7 @@ private async void comPortInput_Click(object sender, RoutedEventArgs e)
 }
 {% endhighlight %}
 
-###在串行端口上执行读取操作
+### 在串行端口上执行读取操作
 
 在初始化串行端口后，立刻由调用的 **Listen\(\)** 执行从串行端口读取输入的操作。我们在此示例代码中执行此操作，方法是使用 **DataReader** 对象（它会等待 **SerialDevice** 对象的 **InputStream**）来创建异步读取任务。
 
@@ -350,7 +350,7 @@ Concurrency::task<void> MainPage::ReadAsync(Concurrency::cancellation_token canc
 }
 {% endhighlight %}
 
-###对串行端口执行写入操作
+### 对串行端口执行写入操作
 
 在字节准备好发送时，我们使用 **DataWriter** 对象以异步方式写入到 **SerialDevice** 对象的 **OutputStream**。
 
@@ -387,7 +387,7 @@ private async Task WriteAsync()
 }
 {% endhighlight %}
 
-###取消读取操作
+### 取消读取操作
 
 你可以通过在该任务上使用 **CancellationToken** 来取消读取操作。初始化 **CancellationToken** 对象并将其以参数形式传递给读取任务。
 
@@ -436,7 +436,7 @@ private void CancelReadTask()
 }
 {% endhighlight %}
 
-###关闭设备
+### 关闭设备
 
 在关闭与设备的连接后，我们将取消所有挂起的 I/O 操作并安全地释放所有对象。
 

@@ -5,7 +5,7 @@ permalink: /zh-cn/win10/ReleaseNotes.htm
 lang: zh-cn
 ---
 
-#Windows 10 IoT 核心版的发行说明
+# Windows 10 IoT 核心版的发行说明
 Insider Preview 内部版本号 10556.0
 
 &copy; 2015 Microsoft Corporation。保留所有权利
@@ -14,13 +14,13 @@ Insider Preview 内部版本号 10556.0
 
 感谢下载 Windows 10 IoT Core Insider Preview。Windows 10 IoT 核心版是用于开发嵌入式或专用设备的 Windows 10 版本，可供制造商社区选择使用。此程序包包含在基于 Intel&reg; Atom E38xx 系列 SoC 的 MinnowBoard Max（也称为 MBM 板）和基于 ARM Cortex-A7 SoC 的 Raspberry PI2（也称为 RPI）上安装 Windows 10 IoT 核心版所需的位和工具。
 
-##隐私声明
+## 隐私声明
 
 在此处查看此 Windows 操作系统版本的隐私声明：[http://go.microsoft.com/fwlink/?LinkId=506737](http://go.microsoft.com/fwlink/?LinkId=506737){:target="_blank"}
 
 可通过将正向链接粘贴到浏览器窗来查看隐私声明。
 
-##新增功能
+## 新增功能
 * Windows 10 IoT Core Insider Preview 10 月 15 日版本
    * Raspberry Pi 上对 TX 和 RX 引脚的串行支持
    * 改进超过 100x 的高性能 GPIO 驱动程序选项
@@ -28,7 +28,7 @@ Insider Preview 内部版本号 10556.0
    * 已更新基础操作系统版本
    * Bug 修复
 
-##发行说明
+## 发行说明
 
 运行 IoT 核心版的设备在使用某些 8GB 类 10 SD 卡时，首次启动将可能极其缓慢。启动时间可能慢到超过 15 分钟。后续启动在受影响的卡上将快得多。
 
@@ -46,11 +46,11 @@ Windows 10 IoT 核心版仍处于移植到 Raspberry PI 的过程中。Raspberry
 
 依赖于 Windows 系统更改系统音量的 USB 麦克风和扬声器的硬件音量控件当前在 Windows 10 IoT 核心版上不受支持。
 
-某些 USB 键盘和鼠标可能在 Raspberry PI2 上不起作用。使用其他键盘或鼠标。有关已验证的外围设备的列表，请参阅 [SupportedInterfaces]({{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm){:target="_blank"} 上的文档。
+某些 USB 键盘和鼠标可能在 Raspberry PI2 上不起作用。使用其他键盘或鼠标。有关已验证的外围设备列表，请参阅[此处的文档]({{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm){:target="_blank"}。
 
-在 Raspberry Pi2 上，GPIO PIN 0 和 GPIO PIN 1 可用于 Windows 10 IoT 核心版的 4 月版中的用户模式应用程序，但现已不再可用。尝试使用 Windows::Devices::Gpio::GpioController::OpenPin\(\) 打开这些引脚将返回 HRESULT\_FROM\_WIN32\(ERROR\_NOT\_FOUND\)。GPIO引脚 0 和 1 将由 HAT 规范 [https://github.com/raspberrypi/hats](https://github.com/raspberrypi/hats) 保留在 Raspberry Pi 上，并受 VC 固件的控制。根据此规范，这些引脚应保留为未连接状态。
+在 Raspberry Pi2 上，GPIO PIN 0 和 GPIO PIN 1 可用于 Windows 10 IoT 核心版的 4 月版本中的用户模式应用程序，但现已不再可用。尝试使用 Windows::Devices::Gpio::GpioController::OpenPin\(\) 打开这些引脚将返回 HRESULT\_FROM\_WIN32\(ERROR\_NOT\_FOUND\)。GPIO引脚 0 和 1 将由 HAT 规范 [https://github.com/raspberrypi/hats](https://github.com/raspberrypi/hats) 保留在 Raspberry Pi 上，并受 VC 固件的控制。根据此规范，这些引脚应保留为未连接状态。
 
-##已知问题
+## 已知问题
 
 *	将方向设置为“纵向”在通用应用 \(3039042\) 中可能不受支持。解决方法： 无
 *	在 Raspberry Pi 和 Dragonboard 上，从非默认驱动器模式切换到其他非默认驱动器模式可能会在 GPIO 引脚上产生故障。\(3890679\) 解决方法： 在应用程序开端处设置一次驱动器模式。
@@ -66,6 +66,7 @@ Windows 10 IoT 核心版仍处于移植到 Raspberry PI 的过程中。Raspberry
 *   在 MinnowBoardMax 上，因为错误 31 而无法加载基于 Silicon Labs 的 USB 串行转换器 \(USB\\VID\_10C4&PID\_EA60\)。\(5307602\) 解决方法： 确保设备已拔出，然后运行：`reg add "HKEY_LOCAL_MACHINE\system\controlset001\enum\usb\VID_10C4&PID_EA60\0001\Device Parameters" /v PortName /t REG_SZ /d COM3`
 *   在 MinnowBoardMax 上，FTDI USB 串行适配器将忽略所请求的波特率，并使用 3.8Mhz。\(5348073\) 解决方法： [适用于基于 x86 的 FTDI 设备的解决方法](#ftdiworkaround)
 *   通过使用 WinRT WLAN direct API，WLAN direct 在 IoT 核心版上部分受支持。有关更多详细信息，请参阅 [IoTCore 上的 WLAN Direct 限制](#wifidirect)。
+*   在 Raspberry Pi 上启用直接内存映射驱动程序时，通过 3.5mm 插孔的音频将停止播放。\(6678121\) 解决方法： 请参阅[音频和直接内存映射驱动程序的解决方法](#dmapaudioworkaround)。
 
 ### <a name="ftdiworkaround"></a>适用于基于 x86 的 FTDI 设备的解决方法
 
@@ -73,12 +74,12 @@ Windows 10 IoT 核心版仍处于移植到 Raspberry PI 的过程中。Raspberry
  2. 运行 `devcon status FTDIBUS\*` 并记录设备的*设备实例路径*。
 
     <pre>
-    C:\Data>devcon status ftdibus\*
-    <i>FTDIBUS\VID_0403+PID_6001+A700EXHLA\0000</i>
-        名称： USB 串行端口
-        驱动程序正在运行。
-    已找到 1 台匹配的设备。
-</pre>
+	    C:\Data>devcon status ftdibus\*
+	    <i>FTDIBUS\VID_0403+PID_6001+A700EXHLA\0000</i>
+	        名称： USB 串行端口
+	        驱动程序正在运行。
+	    已找到 1 台匹配的设备。
+	</pre>
 
  3. 创建一个名为 ftdi-fix.reg 的文件，内容如下所示，其中 `<device instance path>` 将替换为在上一步中确定的设备实例路径。
 
@@ -100,4 +101,21 @@ Windows Registry Editor Version 5.00
 ### <a name="wifidirect"></a>IoTCore 上的 WLAN Direct 限制
  1.	IoTCore 设备必须是连接设备，因为在其他设备初始化连接时，该设备无法作为广告设备运行。  
  2.	必须使用高级配对。示例应用演示了如何在连接前使用高级配对 API 对设备进行配对。
- 3.	并非所有无线适配器都支持 WLAN direct。我们已测试并验证“Realtek RTL8188EU 无线 LAN 802.11n USB 2.0 网络适配器”有效，但其他适配器可能不受支持。
+ 3.	并非所有无线适配器都支持 WLAN Direct。我们已测试并验证“Realtek RTL8188EU 无线 LAN 802.11n USB 2.0 网络适配器”有效，但其他适配器可能不受支持。
+
+### <a name="dmapaudioworkaround"></a>音频和直接内存映射驱动程序的解决方法
+
+在启用直接内存映射驱动程序后，请运行：
+
+    reg add HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DeviceIds\ACPI\BCM2844 /v dmap.inf /t REG_BINARY /d 02ff0100
+    reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\enum\ACPI\bcm2844\0 /v ConfigFlags /t REG_DWORD /d 0x20
+    devcon restart acpi\bcm2844
+
+验证 PWM 设备节点的驱动程序是否为 `BCM2836 PWM Controller`：
+
+    C:\Data>devcon status acpi\bcm2844
+    ACPI\BCM2844\0
+        Name: BCM2836 PWM Controller
+        Driver is running.
+    1 matching device(s) found.
+

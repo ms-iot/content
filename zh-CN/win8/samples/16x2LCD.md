@@ -6,23 +6,23 @@ lang: zh-cn
 ---
 
 <div style="background-color:Silver; color:black; padding:20px;">
-	<h4><u>对 Intel Galileo 第 1 代和第 2 代上的 Windows 的支持将于 2015 年 11 月 30 日结束</u></h4>
-		<p><h5>由于我们将继续侧重于为制造商提供 Windows 10 IoT 核心版的出色体验，因此我们做出了一项艰难的决定，即停止对 Galileo 平台的 Windows 支持。我们看到了平台的一些很出色的创新，但遗憾的是，它并不能满足 Windows 10 IoT 核心版的最低硬件要求。请单击<a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">此处</a>了解详细信息。</h5></p>
+	<h4><u>对 Intel Galileo 第 1 代和第 2 代的 Windows 的支持将于 2015 年 11 月 30 日结束</u></h4>
+		<p><h5>由于我们将继续侧重于为制造商提供 Windows 10 IoT 核心版的出色体验，因此我们做出了一项艰难的决定，即停止对 Galileo 平台提供 Windows 支持。我们看到了平台上一些很出色的创新，但遗憾的是，它并不能满足 Windows 10 IoT 核心版的最低硬件要求。请单击<a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">此处</a>了解详细信息。</h5></p>
 </div>
 
 # 16x2 LCD
 了解如何借助 Arduino 液晶库使用 16x2 LCD 防火墙。
 
-# 所需组件
+## 所需组件
 * [16x2 LCD](https://www.sparkfun.com/products/255){:target="_blank"}
 * 提供所需对比度的电阻器（查看 LCD 的规格表）
 
-# 连接组件
+## 连接组件
 如果使用上面列出的 16x2 LCD，请按照以下关系图：
 
 ![16x2]({{site.baseurl}}/Resources/images/16x2LCDDiagram.png)
 
-# 创建一个新项目
+## 创建一个新项目
 
 1. 从模板创建新项目。
 1. 转到 [Arduino 的液晶库 GitHub](https://github.com/arduino/Arduino/tree/master/libraries/LiquidCrystal){:target="_blank"}，然后下载 LiquidCrystal.cpp 和 LiquidCrystal.h 文件。
@@ -30,7 +30,7 @@ lang: zh-cn
 1. 根据你可能需要的 16x2 LCD 指定其他引脚以供 LiquidCrystal 库使用。
 1. 将在 stdafx.h 和 main.cpp 中的现有代码替换为以下代码：
 
-# 代码
+## 代码
 
 ### stdafx.h
 

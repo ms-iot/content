@@ -1,6 +1,8 @@
 ---
 layout: default
 title: AllJoyn
+description: 了解 IoT 设备的常见协议 AllJoyn，以及它如何通过 Windows IoT 来支持更多功能。
+keyword: alljoyn, windows iot, allseen alliance
 permalink: /zh-cn/win10/AllJoyn.htm
 lang: zh-cn
 ---
@@ -21,7 +23,6 @@ __设备系统网桥__
 AllJoyn [设备系统网桥]({{site.baseurl}}/zh-cn/win10/AllJoynDSB.htm){:target="_blank"}支持非 AllJoyn 设备使用 AllJoyn 作为其公共语言与 AllJoyn 生态系统进行交互。
 
 功能：
-
 - 为适配器公开的每个非 AllJoyn 设备创建虚拟设备
 - 从适配器设备自动生成运行时接口
 - 支持 LSF，控制面板基本服务，可扩展添加更多服务
@@ -36,7 +37,6 @@ __AllJoyn Studio__
 [AllJoyn Studio](https://visualstudiogallery.msdn.microsoft.com/064e58a7-fb56-464b-bed5-f85914c89286){:target="_blank"} 是由 Microsoft 开发的 Visual Studio 扩展，用于通过将代码生成和 WinRT API 与自动项目管理和现成应用程序模板结合来加快 AllJoyn® 开发。它使开发人员无需进行繁琐的设置和配置即可从 AllJoyn 的强大功能中受益。
 
 功能：
-
 - 通用应用模板（C\#、JavaScript、C++、Visual Basic）
 - 自动引用管理和项目配置
 - 在解决方案中添加/删除接口
@@ -84,5 +84,5 @@ __参考__
 
 ___仅信息___
 
-- \[弃用\] \[频道 9： 在 Windows 10 上生成 AllJoyn 应用 \(MSDN\)\]\(https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview){:target="_blank"}
-- \[弃用\] \[AllJoyn CodeGen 工具\]\({{site.baseurl}}/zh-CN/win10/AllJoynCodeGen.htm\){:target="\_blank"}
+- \[已弃用\] \[频道 9： 在 Windows 10 上生成 AllJoyn 应用 \(MSDN\)\]\(https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview){:target="_blank"}
+- \[已弃用\] \[AllJoyn CodeGen 工具\]\({{site.baseurl}}/zh-CN/win10/AllJoynCodeGen.htm\){:target="\_blank"}

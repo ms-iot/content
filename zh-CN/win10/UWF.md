@@ -1,16 +1,18 @@
 ---
 layout: default
 title: 使用适用于 Windows 10 IoT 核心版的统一写入筛选器
+description: 了解如何使用统一写入筛选器提高 Windows 10 IoT 核心版设备上物理存储的可靠性和稳定性。
+keyword: unified write filter, windows iot, uwf, protected volume
 permalink: /zh-cn/win10/UWF.htm
 lang: zh-cn
 ---
-#在 Windows 10 IoT 核心版上使用统一写入筛选器
+# 在 Windows 10 IoT 核心版上使用统一写入筛选器
 
 统一写入筛选器 \(UWF\) 可用于保护物理存储媒体以免数据写入。UWF 将拦截所有针对受保护卷的写入尝试，并将这些写入尝试重定向到虚拟覆盖。这可改进设备的可靠性和稳定性，同时减少写入敏感媒体（例如，诸如固态硬盘等闪存媒体）的损耗。
 
 有关 UWF 的详细信息可从[此处](https://msdn.microsoft.com/zh-cn/windows/hardware/mt572001)获取。
 
-##如何在运行 Windows 10 IoT 核心版的系统上安装 UWF
+## 如何在运行 Windows 10 IoT 核心版的系统上安装 UWF
 *             在开发系统上，下载 [UWF 安装程序包](http://go.microsoft.com/fwlink/?LinkId=708427)。
 *             双击 `UWF.MSI`。安装完成后，x86 和 ARM 程序包将提取到 `C:\Program Files (x86)\Microsoft IoT\UWF`。启动 [Powershell](http://ms-iot.github.io/content/zh-cn/win10/samples/PowerShell.htm) 或 [ssh](http://ms-iot.github.io/content/zh-cn/win10/samples/SSH.htm)并访问运行 Windows 10 IoT 核心版的设备。
 * 在 Powershell 或 ssh 中，执行以下操作：
@@ -26,7 +28,7 @@ lang: zh-cn
   ![Windows 10 IoT 核心版上的 uwfmgr.exe]({{site.baseurl}}/Resources/images/uwfmgr.png)
 
 
-##如何在自定义 FFU 中包含 UWF 
+## 如何在自定义 FFU 中包含 UWF 
 **注意：** 此过程适用于 OEM 和能够针对其 Windows 10 IoT 核心版设备创建自定义 FFU 的开发人员。这假定你已在开发计算机上安装了操作系统程序包，并且在 `C:\Program Files(x86)\Windows Kits\10` 下提供了 `FMFiles` 和 `OEMInputSamples` 文件夹。
 
 *             在开发系统上，下载 [UWF 安装程序包](http://go.microsoft.com/fwlink/?LinkId=708427)。
@@ -55,19 +57,16 @@ lang: zh-cn
 *             使用 [ICD imagegen](http://ms-iot.github.io/content/zh-cn/win10/CreateIoTCorePro.htm) 创建 image\\FFU。
 
 
-##如何使用 UWF
+## 如何使用 UWF
 可以通过 Powershell 或 SSH 会话使用 uwfmgr.exe 工具配置 UWF。
-
 * 例如，以下命令组合可启用 uwfmgr 并配置为保护 C 驱动器
 
   `uwfmgr.exe filter enable` <br> `uwfmgr.exe volume protect c:`
 
 **注意：** 设备需要重启才能将任何更改应用到 UWF 配置。
+* 除下面列出的一些命令外，[此处](https://msdn.microsoft.com/zh-cn/windows/hardware/mt572002)还提供 uwfmgr.exe 选项的完整列表。查看覆盖配置的默认设置，并根据你的要求对其进行调整。
 
-* 除以下列出的一些命令外，[此处](https://msdn.microsoft.com/zh-cn/windows/hardware/mt572002)还提供 uwfmgr.exe 选项的完整列表。查看覆盖配置的默认设置，并根据你的要求对其进行调整。
-
-##保护数据卷
-
+## 保护数据卷
 可以使用卷的 GUID 来保护 IoT 核心版中的数据卷。可以通过以下命令查找可用卷的 GUID
 
   `C:\dir /AL` <br> `uwfmgr.exe volume protect \\?\Volume {GUID}`
@@ -75,7 +74,7 @@ lang: zh-cn
 
   ![在 Windows 10 IoT 核心版上保护卷]({{site.baseurl}}/Resources/images/uwfmgr_protect.png)
 
-##不受支持的 uwfmgr.exe 命令
+## 不受支持的 uwfmgr.exe 命令
 请注意，Windows 10 IoT 核心版上的 uwfmgr.exe 不支持以下列出的命令。
 
 {% highlight XML %}

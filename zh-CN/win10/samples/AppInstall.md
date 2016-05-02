@@ -5,7 +5,7 @@ permalink: /zh-cn/win10/samples/AppInstall.htm
 lang: zh-cn
 ---
 
-###应用安装示例
+# 应用安装示例
 
 你可以在[此处](https://github.com/ms-iot/samples/tree/develop/AppInstall)在我们的 GitHub 上找到该示例的源代码。
 

@@ -13,19 +13,19 @@ lang: zh-cn
 # 与 XBee 设备通信
 了解如何使用 HardwareSerial 在 TX/RX 引脚上与 XBee 设备通信。
 
-# 有关使用 HardwareSerial 的信息
+## 有关使用 HardwareSerial 的信息
 
 * HardwareSerial 定义一个名为 Serial 的对象。
     * 这会读取并写入链接到 Galileo 开发板上的 RX 和 TX 引脚的 Windows 映像上的 COM1。<br/>
 * 串行 = COM1 = TX/RX 引脚
 
-# 所需组件
+## 所需组件
 * [XBee ZB 设备](http://www.digi.com/products/xbee-rf-solutions/modules/xbee-zigbee){:target="_blank"}
 * 将 RX、TX、3.3v 电源和地线连接到 XBee 的电线
 
 此示例要求 XBee 在 API 模式中运行，方法是设置 AP=2。如果使用的是系列 2 XBee，则需要通过 [X-CTU](http://www.digi.com/support/productdetail?pid=3352&osvid=57&type=utilities){:target="_blank"} 安装 API 固件（系列 2 通过 AT 固件制造），然后设置 AP=2。此软件在设置为 AP=1 时无法正常工作
 
-# 创建一个新项目
+## 创建一个新项目
 
 1. 使用模板创建新项目。
     * 在解决方案资源管理器中右键单击“项目”，然后选择“属性”<kbd></kbd>。
@@ -39,7 +39,7 @@ lang: zh-cn
 
 如果你有 XBee 适配器，请将电线连接到适配器上的等效引脚。
 
-# 代码
+## 代码
 
 ### Main.cpp
 

@@ -7,7 +7,7 @@ lang: zh-cn
 
 # Arduino 接线移植指南
 
-Arduino 接线草图和库可在 Visual Studio 内复制/粘贴到 Arduino 接线项目，并在 Raspberry Pi 2 或 Minnowboard Max 上运行。有时需要对这些文件进行轻微修改，以便使它们与 Windows 环境或你正在使用的板更兼容。本指南将介绍这些修改以及你可能会在部署 Arduino 接线项目时遇到的常见问题！
+Arduino 接线草图和库可在 Visual Studio 内复制/粘贴到 Arduino 接线项目，并在 Raspberry Pi 2、Raspberry Pi 3 或 Minnowboard Max 上运行。有时需要对这些文件稍作修改，以便使它们与 Windows 环境或你正在使用的板更兼容。本指南将介绍这些修改以及你可能会在部署 Arduino 接线项目时遇到的常见问题！
 
 ### 缺少某些内容？
 需要有关[在 Visual Studio 中设置 Arduino 接线]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm)的详细信息？
@@ -34,9 +34,9 @@ Arduino 接线草图和库可在 Visual Studio 内复制/粘贴到 Arduino 接�
 
 不言而喻，许多草图和库（尤其是用于 Arduino 防护的草图和库）可能包含对 Arduino 设备的特定连接器引脚的引用。你将要自定义你的草图来针对你正在处理的设备和你正在使用的配置使用相应的连接器引脚。
 
-Arduino 接线最终需要引用“引脚”的任何函数的物理连接器引脚编号。你可以直接使用这些编号，但我们还提供了一些对应于特定板上的连接器引脚的预定义引脚名称。
+Arduino 接线最终需要引用“引脚”的任何函数的物理连接器引脚编号。你可以直接使用这些编号，不过我们还提供了一些对应于特定板上的连接器引脚的预定义引脚名称。
 
-例如，Raspberry Pi 2 上的物理连接器引脚 29 也称为 `GPIO_5`。你可以通过使用以下任一命令在 Raspberry Pi 2 上将 GPIO 引脚 5 设置为 HIGH 状态：
+例如，Raspberry Pi 2 和 3 上的物理连接器引脚 29 也称为 `GPIO_5`。你可以通过使用以下任一命令在 Raspberry Pi 2 和 3 上将 GPIO 引脚 5 设置为 HIGH 状态：
 
 {% highlight C++ %}
 
@@ -56,7 +56,7 @@ digitalWrite( GPIO_5, HIGH );
 
 预定义引脚名称可以在任何 Arduino 接线项目内的 `PinNumbers.h` 中找到，但由于物理连接器引脚因你进行生成所针对的硬件设置而异，因此我们还在此处包含了一张表，用于介绍每台设备可以使用哪些引脚名称。
 
-#### Raspberry Pi 2
+#### Raspberry Pi 2 和 3
 
 [引出线图]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
@@ -110,10 +110,12 @@ digitalWrite( GPIO_5, HIGH );
 | Arduino API 语法 | Windows IoT 语法 |
 | -------------| ------------- |
 | Serial.begin\( int \) | *删除* |
-| Serial.write\( char\* str \) | *删除* \*如下所示 \| \| Serial.print\( char\* str \) \| Log\( str \) \| \| Serial.print\( int num \) \| Log\( num.ToString\(\)-\>Begin\(\) \) \| \| Serial.print\( int num, format fmt \) \| Log\( num.ToString\(\)-\>Begin\(\) \) \|
+| Serial.write\( char\* str \) | *删除* *如下所示 \| \| Serial.print\( char* str \) | Log\( str \) |
+| Serial.print\( int num \) | Log\( num.ToString\(\)-\>Begin\(\) \) |
+| Serial.print\( int num, format fmt \) | Log\( num.ToString\(\)-\>Begin\(\) \) |
 
 
-####为何删除 Serial.write\(\)？
+#### 为何删除 Serial.write\(\)？
 
 Serial.write\(\) 通常用于通过串行线发送原始数据。Windows IoT 核心版当前没有 UART 功能，因此应避免这些类型的调用。
 
@@ -320,7 +322,7 @@ void loop()
 
 {% endhighlight %}
 
-解决方案如下。我们已将对象更改为对象指针，并将对象的初始化移动到 `setup()`。
+解决方案如下。我们已将对象更改为对象指针，并将对象的初始化移到了 `setup()`。
 
 {% highlight C++ %}
 

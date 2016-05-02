@@ -5,7 +5,7 @@ permalink: /zh-cn/win10/samples/DigitalSignage.htm
 lang: zh-cn
 ---
 
-#数字签名应用
+# 数字签名应用
 
 {% include VerifiedVersion.md %}
 
@@ -13,7 +13,7 @@ lang: zh-cn
 
 这是一个有外设示例。若要更好地了解什么是有外设模式以及如何将你的设备配置为有外设，请按照[此处]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm)的说明操作。
 
-###先决条件
+### 先决条件
 
 * 运行 Windows IoT 核心版 10240 或更高版本的设备。 
 * 鼠标
@@ -21,21 +21,21 @@ lang: zh-cn
 * 显示监视器
   -  可选：具有触摸功能的监视器。
 
-##在 Visual Studio 中加载项目
+## 在 Visual Studio 中加载项目
 
-你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\DigitalSignageUAP` 来查找此示例的源代码。在磁盘上创建 DigitalSignageUAP 文件夹的副本，然后从 Visual Studio 中打开项目。
+你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\DigitalSignageUAP`，查找此示例的源代码。在磁盘上创建 DigitalSignageUAP 文件夹的副本，然后从 Visual Studio 中打开项目。
 
 确保将“远程调试”设置设为指向 Windows IoT 设备。如需指导，请返回基本“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)。
 
-##部署你的应用
+## 部署你的应用
 
-如果你正在构建 Minnowboard Max，请选择体系结构下拉列表中的 `x86`。如果你正在构建 Raspberry Pi 2，请选择 `ARM`。
+如果你要针对 Minnowboard Max 进行生成，请选择体系结构下拉列表中的 `x86`。如果你要针对 Raspberry Pi 2 或 3 进行生成，请选择 `ARM`。
 
-完成所有设置后，你应可以在 Visual Studio 中按 F5。数字签名应用将部署并在 Windows IoT 设备上启动，你应该能看到主视图页，如下所示：
+完成所有设置后，你应该可以在 Visual Studio 中按 F5。数字签名应用将部署并在 Windows IoT 设备上启动，你应该能看到主视图页，如下所示：
 
 <img src="{{site.baseurl}}/Resources/images/DigitalSignage/DigitalSignage1.png" height="400">
 
-###幻灯片放映
+### 幻灯片放映
 
 应用的幻灯片放映好比屏幕保护程序，前者会在应用空闲时显示，而在用户输入时终止。
 
@@ -49,7 +49,7 @@ lang: zh-cn
 
 3. 可通过以下方式结束幻灯片放映：a\) 移动鼠标；b\) 按任意键；或者 c\) 点击屏幕上的任意位置。主页面将返回至屏幕。
 
-###Web 浏览器
+### Web 浏览器
 
 1. 在主页面中，单击（或点击，前提是你的监视器支持触摸）“Internet Explorer”。 
 
@@ -71,11 +71,11 @@ lang: zh-cn
  
  <img src="{{site.baseurl}}/Resources/images/DigitalSignage/DigitalSign_home.png" height="400">
 
-##查看代码
+## 查看代码
 
 下面我们将演示用于执行幻灯片放映方案的代码。
 
-###幻灯片放映
+### 幻灯片放映
 
 导航到 Slideshow.xaml.cs。观察 imageExtensions 变量维护预期图像类型的列表
 

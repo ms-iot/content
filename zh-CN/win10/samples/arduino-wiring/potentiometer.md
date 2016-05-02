@@ -6,21 +6,21 @@ lang: zh-cn
 ---
 
 # Arduino 接线电位计示例
-此示例演示了如何使用 Arduino 接线将旋转电位计和 LED 连接到 Raspberry Pi 2 或 MinnowBoard Max。我们使用基于 SPI 的 ADC（模拟数字转换器）从该电位计读取值，并根据旋钮位置控制 LED。
+此示例演示了如何使用 Arduino 接线将旋转电位计和 LED 连接到 Raspberry Pi 2 和 3 或 MinnowBoard Max。我们使用基于 SPI 的 ADC（模拟数字转换器）从该电位计读取值，并根据旋钮位置控制 LED。
 
 此示例类似于 [C\# 电位计示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm)，但使用 Arduino 接线而非 C\#。接线和硬件配置几乎完全相同。但是，DragonBoard 410c 当前不支持 Arduino 接线。
 
 ## 硬件
 - 试验板 - 仅限以下内容之一
-	- Raspberry Pi 2
+	- Raspberry Pi 2 或 3
 	- MinnowBoard Max
 - ADC - 仅限以下内容之一
 	- [一个 MCP3002 10 位 ADC](http://www.microchip.com/wwwproducts/Devices.aspx?product=MCP3002){:target="_blank"} 或
 	- [一个 MCP3008 10 位 ADC](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en010530){:target="_blank"} 或
 	- [一个 MCP3208 12 位 ADC](http://www.digikey.com/product-search/en?KeyWords=mcp3208%20ci%2Fp&WT.z_header=search_go){:target="_blank"}
-- [1 个 LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832){:target="_blank"}
-- [1 个 330 &#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
-- [1 个 10k &#x2126; 微调电位计](http://www.digikey.com/product-detail/en/3362P-1-103TLF/3362P-103TLF-ND/1232540){:target="_blank"}或相似仪器
+- [一个 LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832){:target="_blank"}
+- [一个 330 &\#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
+- [一个 10k &\#x2126; 裁边器电位计](http://www.digikey.com/product-detail/en/3362P-1-103TLF/3362P-103TLF-ND/1232540){:target="_blank"}或类似仪器
 - 一块试验板和各种电线
 
 ## 硬件设置
@@ -33,15 +33,15 @@ lang: zh-cn
 | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | ![MCP3002 引出线]({{site.baseurl}}/Resources/images/Potentiometer/MCP3002.PNG) | ![MCP3208 引出线]({{site.baseurl}}/Resources/images/Potentiometer/MCP3208.PNG) |
 
-###Raspberry Pi
+### Raspberry Pi
 
-####Raspbery Pi 引出线
+#### Raspberry Pi 2 和 3 引出线
 
-![Raspberry Pi 2 引出线]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
+![Raspberry Pi 2 和 3 引出线]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
-####电线和连接
+#### 电线和连接
 
-#####MCP3002
+##### MCP3002
 如果你已选择使用 **MCP3002**，则按如下方式组装电路。请注意，wiper 引脚（10k 电位计上的中间引脚）应连接到 MCP3002 上的 `CH0`。有关详细信息，你还可以参阅[数据表](http://ww1.microchip.com/downloads/en/DeviceDoc/21294E.pdf){:target="_blank"}。
 
 连接详细信息如下：
@@ -50,16 +50,16 @@ lang: zh-cn
 
 MCP3002 应该按如下方式进行连接：
 
-- VDD/VREF - Raspberry Pi 2 上的 3.3V（引脚 1）
-- CLK - Raspberry Pi 2 上的“SPI0 SCLK”（引脚 23）
-- Dout - Raspberry Pi 2 上的“SPI0 MISO”（引脚 21）
-- Din - Raspberry Pi 2 上的“SPI0 MOSI”（引脚 19）
-- CS/SHDN - Raspberry Pi 2 上的“SPI0 CS0”（引脚 24）
-- Vss - Raspberry Pi 2 上的 GND（引脚 6 或任何其他 GND 引脚）
+- VDD/VREF - Raspberry Pi 2 或 3 上的 3.3V（引脚 1）
+- CLK - Raspberry Pi 2 或 3 上的“SPI0 SCLK”（引脚 23）
+- Dout - Raspberry Pi 2 或 3 上的“SPI0 MISO”（引脚 21）
+- Din - Raspberry Pi 2 或 3 上的“SPI0 MOSI”（引脚 19）
+- CS/SHDN - Raspberry Pi 2 或 3 上的“SPI0 CS0”（引脚 24）
+- Vss - Raspberry Pi 2 或 3 上的 GND（引脚 6 或任何其他 GND 引脚）
 - CH0 - 电位计 wiper 引脚
 
 
-#####MCP3208 或 MCP3008
+##### MCP3208 或 MCP3008
 如果你已选择使用 **MCP3208** 或 **MCP3008**，则按如下方式组装电路（引出线在每块芯片上均相同）。请注意，wiper 引脚（10k 电位计上的中间引脚）应连接到 MCP3208 上的 `CH0`。有关详细信息，你还可以参阅 [MCP3208 数据表](http://pdf.datasheetcatalog.com/datasheets2/43/435228_1.pdf){:target="_blank"}或 [MCP3008 数据表](http://ww1.microchip.com/downloads/en/DeviceDoc/21295C.pdf){:target="_blank"}。
 
 连接详细信息如下：
@@ -68,25 +68,25 @@ MCP3002 应该按如下方式进行连接：
 
 MCP3208 应该按如下方式进行连接：
 
-- VDD - Raspberry Pi 2 上的 3.3V（引脚 1）
-- VREF - Raspberry Pi 2 上的 3.3V（引脚 1）
-- AGND - Raspberry Pi 2 上的 GND（引脚 6 或任何其他 GND 引脚）
-- CLK - Raspberry Pi 2 上的“SPI0 SCLK”（引脚 23）
-- Dout - Raspberry Pi 2 上的“SPI0 MISO”（引脚 21）
-- Din - Raspberry Pi 2 上的“SPI0 MOSI”（引脚 19）
-- CS/SHDN - Raspberry Pi 2 上的“SPI0 CS0”（引脚 24）
-- DGND - Raspberry Pi 2 上的 GND（引脚 6 或任何其他 GND 引脚）
+- VDD - Raspberry Pi 2 或 3 上的 3.3V（引脚 1）
+- VREF - Raspberry Pi 2 或 3 上的 3.3V（引脚 1）
+- AGND - Raspberry Pi 2 或 3 上的 GND（引脚 6 或任何其他 GND 引脚）
+- CLK - Raspberry Pi 2 或 3 上的“SPI0 SCLK”（引脚 23）
+- Dout - Raspberry Pi 2 或 3 上的“SPI0 MISO”（引脚 21）
+- Din - Raspberry Pi 2 或 3 上的“SPI0 MOSI”（引脚 19）
+- CS/SHDN - Raspberry Pi 2 或 3 上的“SPI0 CS0”（引脚 24）
+- DGND - Raspberry Pi 2 或 3 上的 GND（引脚 6 或任何其他 GND 引脚）
 - CH0 - 电位计 wiper 引脚
 
-###MinnowBoard Max
+### MinnowBoard Max
 
-####MinnowBoard Max 引出线
+#### MinnowBoard Max 引出线
 
 ![MinnowBoard Max 引出线]({{site.baseurl}}/Resources/images/PinMappings/MBM_Pinout.png)
 
-####电线和连接
+#### 电线和连接
 
-#####MCP3002
+##### MCP3002
 如果你已选择使用 **MCP3002**，则按如下方式组装电路。请注意，wiper 引脚（10k 电位计上的中间引脚）应连接到 MCP3002 上的 `CH0`。有关详细信息，你还可以参阅[数据表](http://ww1.microchip.com/downloads/en/DeviceDoc/21294E.pdf){:target="_blank"}。
 
 连接详细信息如下：
@@ -103,7 +103,7 @@ MCP3002 应该按如下方式进行连接：
 - Vss - MBM 上的 GND（引脚 1 或引脚 2）
 - CH0 - 电位计 wiper 引脚
 
-#####MCP3208 或 MCP3008
+##### MCP3208 或 MCP3008
 如果你已选择使用 **MCP3208** 或 **MCP3008**，则按如下方式组装电路（引出线在每块芯片上均相同）。请注意，wiper 引脚（10k 电位计上的中间引脚）应连接到 MCP3208 上的 `CH0`。有关详细信息，你还可以参阅 [MCP3208 数据表](http://pdf.datasheetcatalog.com/datasheets2/43/435228_1.pdf){:target="_blank"}或 [MCP3008 数据表](http://ww1.microchip.com/downloads/en/DeviceDoc/21295C.pdf){:target="_blank"}。
 
 连接详细信息如下：
@@ -120,7 +120,7 @@ MCP3002 应该按如下方式进行连接：
 - DGND - MBM 上的 GND（引脚 1）
 - CH0 - 电位计 wiper 引脚
 
-##代码
+## 代码
 
 使用以下代码替换主 .ino 文件中的现有代码：
 
@@ -158,15 +158,15 @@ void loop()
 {% endhighlight %}
 
 
-##生成和部署
+## 生成和部署
 按 F5 来生成并部署项目。
 
 有关如何部署应用的详细说明，请参阅 [Arduino 接线项目指南]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm)！
 
-##结果
+## 结果
 你将看到 LED 亮起，指示电源在流动，并且在输出控制台中每秒读取并显示电位计 wiper 引脚的当前值两次。
 
-##是否遇到难题?
+## 是否遇到难题?
 
 有关在处理 Arduino 接线草图时会遇到的常见问题和关注内容，请参阅 [Arduino 接线移植指南]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPortingGuide.htm)。
 

@@ -1,18 +1,25 @@
 ---
 layout: default
 title: 针对 Raspberry Pi 2 设置你的电脑
-permalink: /zh-CN/win10/KitSetupPCRPI.htm
+permalink: /zh-cn/win10/KitSetupPCRPI.htm
 step: win10/KitSetupPCRPI.htm
-lang: zh-CN
+lang: zh-cn
 deviceName: RPI2
 kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 ---
-<ol class="breadcrumb">
-  <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">初学者包概述</a></li>
-  <li class="active">设置电脑</li>
-</ol>
+<div class="row">
+  <div class="col-xs-24">
+    <ol class="breadcrumb">
+      <li><a href="https://developer.microsoft.com/zh-cn/windows/iot">IoT 主页</a></li>
+      <li><a href="{{site.baseurl}}/{{page.lang}}/win10/AdafruitMakerKit.htm">初学者包概述</a></li>
+      <li class="active">设置电脑</li>
+    </ol>
+    <header class="page-title-header">
+      <h1 class="page-title">第 1 课： 简介和设置</h1>
+    </header>
+  </div>
+</div>
 
-<h1 class="thin-header">第 1 课： 简介和设置</h1>
 {% include kit-steps.html device=page.deviceName %}
 
 <hr>
