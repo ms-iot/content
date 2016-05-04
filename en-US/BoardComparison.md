@@ -23,12 +23,12 @@ lang: en-US
 <table class="table table-striped maker-kit">
     <tr></tr>
     <tr>
-	  <th style="width:20%"></th>
+      <th style="width:20%"></th>
       <th style="width:20%">
-	          <img src="{{site.baseurl}}/Resources/images/devices/RPi3_0.png">
+              <img src="{{site.baseurl}}/Resources/images/devices/RPi3_0.png">
         <h4>Raspberry Pi 3</h4>
         <p>The Raspberry Pi 3 is a low cost, credit-card sized computer that plugs into a computer monitor or TV, and uses an optional standard keyboard and mouse.  The Raspberry Pi 3 runs Windows 10 IoT Core.</p>
-	  </th>
+      </th>
       <th style="width:20%">
         <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/RPi2_0.png">
         <h4>Raspberry Pi 2</h4>
@@ -55,13 +55,13 @@ lang: en-US
     <tr>
       <td>CPU</td>
       <td>900MHz Quad-Core ARM Cortex A53</td>
-	  <td>900MHz Quad-Core ARM Cortex A7</td>
-      <td></td>
+      <td>900MHz Quad-Core ARM Cortex A7</td>
+      <td>1.3GHz Intel Atom E3825</td>
       <td>900MHz Quad-Core ARM Cortex A7</td>
     </tr>
     <tr>
       <td>Memory</td>
-	  <td>1GB (shared with GPU)</td>
+      <td>1GB (shared with GPU)</td>
       <td>1GB (shared with GPU)</td>
       <td>
         1GB($99 MSRP)
@@ -72,25 +72,25 @@ lang: en-US
     </tr>
     <tr>
       <td>GPU</td>
-	  <td>Broadcom Video Core IV @ 250MHz</td>
+      <td>Broadcom Video Core IV @ 250MHz</td>
       <td>Broadcom Video Core IV @ 250MHz</td>
       <td>Intel HD Graphics</td>
       <td>Qualcomm Adreno 306 @ 400MHz</td>
     </tr>
     <tr>
       <td>USB</td>
-	  <td>4 Ports</td>
-      <td>4 Ports</td>
-      <td>2 Ports (1 USB 2, 1 USB 3)</td>
-      <td>4 Ports</td>
+      <td>4x USB 2.0</td>
+      <td>4x USB 2.0</td>
+      <td>1x USB 2.0, 1x USB 3.0</td>
+      <td>2x USB 2.0</td>
     </tr>
     <tr>
       <td>Networking</td>
       <td>
-        Features Onboard Wi-Fi 802.11 b/g/n and Onboard BlueTooth 4.1.
-		<br>
-		Windows 10 IoT Core supports Wi-Fi and BlueTooth dongles or 10/1000MBit/s Ethernet.
-	  </td>
+        Features Onboard Wi-Fi 802.11 b/g/n
+        <br>
+        Windows 10 IoT Core supports Wi-Fi and BlueTooth dongles or 10/1000MBit/s Ethernet.
+      </td>
       <td>No onboard Wi-Fi or BlueTooth. Supports Wi-Fi and BlueTooth dongles or 10/1000MBit/s Ethernet.</td>
       <td>10/100/1000 Ethernet</td>
       <td>
@@ -101,14 +101,14 @@ lang: en-US
     </tr>
     <tr>
       <td>Video Output</td>
-	  <td>HDMI, DSI</td>
+      <td>HDMI, DSI</td>
       <td>HDMI, DSI</td>
       <td>Micro HDMI</td>
       <td>HDMI (16:9 @ 1280x720 recommended)</td>
     </tr>
     <tr>
       <td>Audio Output</td>
-	  <td>Analog via 3.5 mm jack</td>
+      <td>Analog via 3.5 mm jack</td>
       <td>Analog via 3.5 mm jack</td>
       <td>
         Digital via HDMI
@@ -119,7 +119,7 @@ lang: en-US
     </tr>
     <tr>
       <td>GPS</td>
-	  <td>No</td>
+      <td>No</td>
       <td>No</td>
       <td>No</td>
       <td>Yes</td>
@@ -129,19 +129,31 @@ lang: en-US
         Peripherals
       </td>
       <td>
-        <p>17 GPIO pins plus specific functions. HAT ID bus.</p>
+        <p>17x GPIO pins</p>
+        <p>1x SPI bus</p>
+        <p>1x I2C bus</p>
+        <p>1x Serial UART</p>
         <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Set up your Raspberry Pi 3</a></p>
-      </td>	  
+      </td>   
       <td>
-        <p>17 GPIO pins plus specific functions. HAT ID bus.</p>
+        <p>17x GPIO pins</p>
+        <p>1x SPI bus</p>
+        <p>1x I2C bus</p>
+        <p>1x Serial UART</p>
         <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Set up your Raspberry Pi 2</a></p>
       </td>
       <td>
-        <p>8 buffered GPIO pins</p>
+        <p>17x GPIO pins</p>
+        <p>1x SPI bus</p>
+        <p>1x I2C bus</p>
+        <p>2x Serial UARTs</p>
         <p><a href="{{site.baseurl}}/{{page.lang}}/win10/MBM.htm">Set up your MinnowBoard MAX</a></p>
       </td>
       <td>
-        <p>12 GPIO pins</p>
+        <p>11x GPIO pins</p>
+        <p>1x SPI bus</p>
+        <p>2x I2C buses</p>
+        <p>2x Serial UARTs</p>
         <p><a href="{{site.baseurl}}/{{page.lang}}/win10/DB410c.htm">Set up your DragonBoard 410c</a></p>
       </td>
     </tr>
