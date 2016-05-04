@@ -108,8 +108,16 @@ lang: en-US
     </tr>
     <tr>
       <td>Audio Output</td>
-	  <td>Analog via 3.5 mm jack</td>
-      <td>Analog via 3.5 mm jack</td>
+	<td>
+	  Digital via HDMI
+          <br>
+          Analog via 3.5 mm jack
+        </td>
+	<td>
+          Digital via HDMI
+          <br>
+          Analog via 3.5 mm jack
+      </td>
       <td>
         Digital via HDMI
         <br>
