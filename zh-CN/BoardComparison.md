@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default
 title: 开发板比较
 description: 比较各种兼容 Windows 10 IoT 核心版开发板的特征和功能。
@@ -138,7 +138,7 @@ lang: zh-CN
       </td>
       <td>
         <p>8 个缓冲的 GPIO 引脚</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">设置 MinnowBoard MAX</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/win10/MBM.htm">设置 MinnowBoard MAX</a></p>
       </td>
       <td>
         <p>12 个 GPIO 引脚</p>
