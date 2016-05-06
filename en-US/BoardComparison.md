@@ -147,7 +147,7 @@ lang: en-US
         <p>1x SPI bus</p>
         <p>1x I2C bus</p>
         <p>2x Serial UARTs</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/win10/MBM.htm">Set up your MinnowBoard MAX</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Set up your MinnowBoard MAX</a></p>
       </td>
       <td>
         <p>11x GPIO pins</p>
