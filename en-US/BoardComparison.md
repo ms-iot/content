@@ -89,14 +89,14 @@ lang: en-US
       <td>
         Features Onboard Wi-Fi 802.11 b/g/n
         <br>
-        Windows 10 IoT Core supports Wi-Fi and BlueTooth dongles or 10/1000MBit/s Ethernet.
+        Windows 10 IoT Core supports Wi-Fi and Bluetooth dongles or 10/1000MBit/s Ethernet.
       </td>
-      <td>No onboard Wi-Fi or BlueTooth. Supports Wi-Fi and BlueTooth dongles or 10/1000MBit/s Ethernet.</td>
+      <td>No onboard Wi-Fi or Bluetooth. Supports Wi-Fi and Bluetooth dongles or 10/1000MBit/s Ethernet.</td>
       <td>10/100/1000 Ethernet</td>
       <td>
         Onboard Wi-Fi 802.11 a/b/g/n
         <br>
-        Onboard BlueTooth 4.1
+        Onboard Bluetooth 4.1
       </td>
     </tr>
     <tr>
