@@ -3,8 +3,8 @@ layout: default
 title: Release Notes
 permalink: /en-US/win10/ReleaseNotesInsiderPreview.htm
 lang: en-US
-redirect_url: https://developer.microsoft.com/en-us/windows/iot/win10/releasenotesinsiderpreview
 ---
+{% include redirect-dc.html %}
 
 # Release Notes for Windows 10 IoT Core
 Build Number 14295. March 2016

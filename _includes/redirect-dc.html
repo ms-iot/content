@@ -1,0 +1,12 @@
+{% capture url %}
+{{site.devcenterurl}}/{{page.url | remove_first: "en-US/" | remove_first: "zh-CN/"}}
+{% endcapture %}
+
+
+<meta http-equiv="refresh" content="0;URL={{url}}">
+
+<script>
+    window.location = '{{url}}';
+</script>
+
+<p>Redirecting you to Developer Center... Click <a href="{{url}}">here</a> if you are not automatically redirected.</p>
