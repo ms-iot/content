@@ -3,6 +3,7 @@ layout: default
 title: Release Notes
 permalink: /en-US/win10/ReleaseNotesInsiderPreview.htm
 lang: en-US
+redirect_url: https://developer.microsoft.com/en-us/windows/iot/win10/releasenotesinsiderpreview
 ---
 
 # Release Notes for Windows 10 IoT Core
