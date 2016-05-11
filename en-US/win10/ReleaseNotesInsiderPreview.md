@@ -6,7 +6,7 @@ lang: en-US
 ---
 
 # Release Notes for Windows 10 IoT Core
-Build Number 14322. April 2016
+Build Number 14328. May 2016
 
 &copy; 2016 Microsoft Corporation. All rights reserved
 
@@ -20,13 +20,17 @@ The privacy statement for this version of the Windows operating system can be vi
 
 You can review linked terms by pasting the forward link into your browser window.
 
-## What's new this build: 
+## What's new: 
 
+#### This build 14328: 
+* Updated OS files including core OS bug fixes
+
+#### From build 14322:
 * Updates and Bug fixes to the Remote Display Experience including exposure of Gyros and Magnetometers 
 * Onboard WiFi drivers are now enabled for the Raspberry Pi 3
 * The UART/Serial (miniUART) driver for the Raspberry PI 3 onboard serial port is included in this build.
 * Hardware Accelerated Media Encoders are now supported
-* Updated OS files including core OS bug fixes
+
 
 
 ## Known issues in this build: 
