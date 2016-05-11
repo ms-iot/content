@@ -20,7 +20,7 @@ The privacy statement for this version of the Windows operating system can be vi
 
 You can review linked terms by pasting the forward link into your browser window.
 
-## What's new build: 
+## What's new: 
 
 #### This build 14328: 
 * Updated OS files including core OS bug fixes
