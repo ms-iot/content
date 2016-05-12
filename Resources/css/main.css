@@ -736,6 +736,7 @@ div.preview {
     img {
         margin-left: auto;
         margin-right: auto;
+		border:1px solid #6c6c6c;
     }
 
     .col-3-image {
