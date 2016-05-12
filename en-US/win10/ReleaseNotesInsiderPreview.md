@@ -62,7 +62,7 @@ With this release of Windows 10 IoT Core for the Raspberry Pi 2, support for cam
 Hardware volume controls for USB microphones and speakers which depend on Windows system to change system volume are currently not supported on Windows 10 IoT Core.
 
 #### USB Keyboards 
-Some USB keyboards and mice may not work on IoT Core. Use a different keyboard or mouse. A list of validated peripheral devices can be found on the [documentation here](({{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm)){:target="_blank"}.
+Some USB keyboards and mice may not work on IoT Core. Use a different keyboard or mouse. A list of validated peripheral devices can be found on the [documentation here](({{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm){:target="_blank"}.
 
 #### Screen Orientation
 Setting the orientation to "Portrait" may not be honored in a Universal App
