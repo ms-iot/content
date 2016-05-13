@@ -81,7 +81,7 @@ public void GPIO()
 }
 {% endhighlight %}
 
-When you open a pin, it will be in its power-on state. To disconnect the pull resistors and get a high-impedance input, set the drive mode to GpioPinDriveMode.Input:
+When you open a pin, it will be in its power-on state, which may include a pull resistor. To disconnect the pull resistors and get a high-impedance input, set the drive mode to GpioPinDriveMode.Input:
 
     pin.SetDriveMode(GpioDriveMode.Input);
 
@@ -89,7 +89,7 @@ When a pin is closed, it reverts to its power-on state.
 
 ### Pin Muxing
 
-As you can see in the table above, some GPIO pins have alternate functions. By default, pins are configured as GPIO inputs with the specified pull state. When you open an alternate function by calling `I2cDevice.FromIdAsync()` or `SpiDevice.FromIdAsync()` , the pins required by the function are automatically switched ("muxed") to the correct function. When the device is closed by calling `I2cDevice.Dispose()` or `SpiDevice.Dispose()`, the pins revert back to their default function (GPIO input). If you try to use a pin for two different functions at once, an exception will be thrown when you try to open the conflicting function. For example,
+Some GPIO pins can perform multiple functions. By default, pins are configured as GPIO inputs. When you open an alternate function by calling `I2cDevice.FromIdAsync()` or `SpiDevice.FromIdAsync()` , the pins required by the function are automatically switched ("muxed") to the correct function. When the device is closed by calling `I2cDevice.Dispose()` or `SpiDevice.Dispose()`, the pins revert back to their default function. If you try to use a pin for two different functions at once, an exception will be thrown when you try to open the conflicting function. For example,
 
 {% highlight C# %}
 
@@ -173,6 +173,7 @@ Note that you must add the following capability to the **Package.appxmanifest** 
 
 There is one I2C controller **I2C1** exposed on the pin header with two lines **SDA** and **SCL**. 1.8K&#x2126; internal pull-up resistors are already installed on the board for this bus.
 
+{:.table.table-bordered}
 | Signal Name | Header Pin Number | Gpio Number |
 |-------------|-------------------|-------------|
 | SDA         | 3                 | 2           |
@@ -213,6 +214,7 @@ There are two SPI bus controllers available on the RPi2/3.
 
 ### SPI0
 
+{:.table.table-bordered}
 | Signal Name | Header Pin Number | Gpio Number |
 |-------------|-------------------|-------------|
 | MOSI        | 19                | 10          |
@@ -223,6 +225,7 @@ There are two SPI bus controllers available on the RPi2/3.
 
 ### SPI1
 
+{:.table.table-bordered}
 | Signal Name | Header Pin Number | Gpio Number |
 |-------------|-------------------|-------------|
 | MOSI        | 38                | 20          |
