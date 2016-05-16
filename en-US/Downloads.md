@@ -33,7 +33,7 @@ lang: en-US
   </div>
 </div>
 <div class="row">
-  <div class="col-md-6 col-sm-12">
+  <div class="col-md-12 col-sm-24">
     <h3 class="divider">Windows 10 IoT Core Release Image<br/></h3>
     <p>
       The November 2015 Release for Windows 10 IoT Core. The latest stable release.
@@ -51,7 +51,7 @@ lang: en-US
 		<a href="{{site.baseurl}}/{{page.lang}}/Docs/ReleaseNotesRTM.htm"> Release notes. </a>
 		</p>
 	</div>
-  <div class="col-md-6 col-sm-12">
+  <div class="col-md-12 col-sm-24">
 		<h3 class="divider">Windows 10 IoT Core Insider Preview</h3>
 		<p>
       The March 2016 Insider Preview for Windows 10 IoT Core. The most recent available image.
