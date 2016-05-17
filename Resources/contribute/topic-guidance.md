@@ -4,7 +4,7 @@ When creating a new topic, or updating an exisitng one, there are a handful of t
 
 Going forward, we're doing everything we can to stick to .md files.  We know that there are times when we can't rely on the limited formatting of .md, but for those times we'll use a liquid template instead of converting it all to html.  For information on those templates, see below.
 
-There is a sample topic you can use as a starting point - just copy and paste it into your blank document and update it to your liking.  [That template can be found here]({{site.baseurl}}/Resources/contribute/templates/standard-topic.md)
+There is a sample topic you can use as a starting point - just copy and paste it into your blank document and update it to your liking.  [That template can be found here]({{site.baseurl}}/Resources/contribute/Templates/standard-topic.md)
 
 Here are a few things we need to adhere to - PRs will be denied until they are fixed.
 
