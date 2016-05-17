@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Signing into Microsoft Connect
-permalink: /en-US/SigninMSConnect.htm
+permalink: /en-US/Support/SigninMSConnect.htm
 lang: en-US
 ---
 

@@ -1,7 +1,7 @@
-#Contribute
-Please refer to our [contribution page](http://ms-iot.github.io/content/Contribute.htm) for general guidelines on how to contribute.
+# Contribute
+Please refer to our [contribution page](en-US/Contribute.md) for general guidelines on how to contribute.
 
-#Contributing to documentation
+# Contributing to documentation
 ### Setting up Jekyll on Windows
 1. We use this easy to follow [Jekyll on Windows](http://jekyllrb.com/docs/windows/) guide. Use the pygments option when you go through the install.
 

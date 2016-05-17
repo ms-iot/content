@@ -82,4 +82,4 @@ Remember that we connected the other end of the LED to the 3.3 Volts power suppl
 
 ### Questions/Suggestions
 
-Please refer to the [FAQ]({{site.baseurl}}/{{page.lang}}/Faqs.htm) for issues.
+Please refer to the [FAQ]({{site.baseurl}}/{{page.lang}}/Support/Faqs.htm) for issues.

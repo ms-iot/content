@@ -40,7 +40,7 @@
   </li>
   <li>
     <p>Safely remove your USB SD card reader by clicking on "Safely Remove Hardware" in your task tray, or by finding the USB device in File Explorer, right clicking, and choosing "Eject".  Failing to do this can cause corruption of the image.</p>
-    <p><b>NOTE:</b> If you want to remove Windows 10 IoT Core from your SD card after you are done using it, see the <a href="{{site.baseurl}}/{{page.lang}}/Faqs.htm" target="_blank"> FAQ </a> section titled "How do I remove Windows 10 IoT Core from my SD card?".</p>
+    <p><b>NOTE:</b> If you want to remove Windows 10 IoT Core from your SD card after you are done using it, see the <a href="{{site.baseurl}}/{{page.lang}}/Support/Faqs.htm" target="_blank"> FAQ </a> section titled "How do I remove Windows 10 IoT Core from my SD card?".</p>
   </li>
 </ol>
 

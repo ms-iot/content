@@ -96,7 +96,7 @@ lang: en-US
       We support the community via forums. Please post your questions on the forums and we will respond. Also, be sure to check out our FAQ.
     </p>
     <p>
-      <a href="{{site.baseurl}}/{{page.lang}}/Faqs.htm">FAQ &raquo;</a>
+      <a href="{{site.baseurl}}/{{page.lang}}/Support/Faqs.htm">FAQ &raquo;</a>
     </p>
   </div>
 </div>

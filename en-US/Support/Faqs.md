@@ -3,7 +3,7 @@ layout: default
 title: Home
 description: The following are some frequently asked questions about supported boards and IoT software development with Windows 10. 
 keywords: faq, windows iot, windows 10, questions
-permalink: /en-US/Faqs.htm
+permalink: /en-US/Support/Faqs.htm
 lang: en-US
 ---
 <div class="row col-md-24">

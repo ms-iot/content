@@ -3,7 +3,7 @@ layout: default
 title: Home
 description: An overview of the Build 2015 Windows 10 IoT Core materials, presentations, and announcements.
 keyword: build 2015, windows iot, raspberry pi, arduino
-permalink: /en-US/Build2015.htm
+permalink: /en-US/Explore/Build2015.htm
 lang: en-US
 ---
 <div class="build-2015-background">

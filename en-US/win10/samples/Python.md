@@ -65,4 +65,4 @@ print("Hello, World from IoT!")
 
 ### Questions/Suggestions
 
-Please refer to the [FAQ]({{site.baseurl}}/{{page.lang}}/Faqs.htm) for issues.
+Please refer to the [FAQ]({{site.baseurl}}/{{page.lang}}/Support/Faqs.htm) for issues.

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Release Notes
-permalink: /en-US/win10/ReleaseNotes.htm
+permalink: /en-US/Downloads/ReleaseNotes.htm
 lang: en-US
 ---
 
