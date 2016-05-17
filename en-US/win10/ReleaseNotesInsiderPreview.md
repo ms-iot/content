@@ -6,7 +6,7 @@ lang: en-US
 ---
 
 # Release Notes for Windows 10 IoT Core
-Build Number 14328. May 2016
+Build Number 14342. May 2016
 
 &copy; 2016 Microsoft Corporation. All rights reserved
 
@@ -20,22 +20,16 @@ The privacy statement for this version of the Windows operating system can be vi
 
 You can review linked terms by pasting the forward link into your browser window.
 
-## What's new: 
-
-#### This build 14328: 
+## What's new in this build: 
+* The minimum required storage space for the IoT Core FFUs has been reduced to 4GB. 
+	* With this change it is recommended that all application storage be done on the DATA partition. The MainOS partition should be reserved for the OS use. 
 * Updated OS files including core OS bug fixes
-
-#### From build 14322:
-* Updates and Bug fixes to the Remote Display Experience including exposure of Gyros and Magnetometers 
-* Onboard WiFi drivers are now enabled for the Raspberry Pi 3
-* The UART/Serial (miniUART) driver for the Raspberry PI 3 onboard serial port is included in this build.
-* Hardware Accelerated Media Encoders are now supported
-
 
 
 ## Known issues in this build: 
+* The latest Windows SDK (Build greater than 14337) is not compatible with this build, use the SDK included in with Visual Studio update 2
+* Networking on the Raspberry Pi 3 may fail on first boot with slower SD cards
 
-* The AllJoyn DSB Visual Studio template may not deploy to IoT Core from the latest version of Visual Studio
 
 
 ## Release Notes
