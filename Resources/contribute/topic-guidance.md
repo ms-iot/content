@@ -14,7 +14,7 @@ For SEO, we need a single H1 (#) per topic.  This should match or at least be ve
 
 ### Fill out frontmatter
 
-At the top of each file, you'll see a section starting and ending with "---" where metadata for that topic lives.  Fill this section with information pertaining to the topic you're working on.  What those fields should be can be found in the sample template provided [here]({{site.baseurl}}/Resources/contribute/templates/standard-topic.md).
+At the top of each file, you'll see a section starting and ending with "---" where metadata for that topic lives.  Fill this section with information pertaining to the topic you're working on.  What those fields should be can be found in the sample template provided [here](Templates/standard-topic.md).
 
 ### Images, and where to put them
 
