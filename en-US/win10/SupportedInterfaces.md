@@ -284,23 +284,23 @@ result          | result            | result      | result | result             
 <!-- Reference Links -->
 [MSVerified]: {{site.baseurl}}/Resources/images/checkmark.svg "Microsoft Verified"
 [Contribute to this list on GitHub.]: {{site.repositoryurl}}{{ page.path }}
-[RPi2 or RPi3 Pin Mapping]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm#RPi2_I2C
-[MBM Pin Mapping]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm#MBM_I2C
-[ZWave Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/ZWaveTutorial.htm
-[GpioOneWire Sample (DHT11)]: {{site.baseurl}}/{{page.lang}}/win10/samples/GpioOneWire.htm
-[I2C Accelerometer Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/I2CAccelerometer.htm#I2C_Accelerometer
+[RPi2 or RPi3 Pin Mapping]: {{site.baseurl}}/{{page.lang}}/Samples/PinMappingsRPi2.htm#RPi2_I2C
+[MBM Pin Mapping]: {{site.baseurl}}/{{page.lang}}/Samples/PinMappingsMBM.htm#MBM_I2C
+[ZWave Sample]: {{site.baseurl}}/{{page.lang}}/Samples/ZWaveTutorial.htm
+[GpioOneWire Sample (DHT11)]: {{site.baseurl}}/{{page.lang}}/Samples/GpioOneWire.htm
+[I2C Accelerometer Sample]: {{site.baseurl}}/{{page.lang}}/Samples/I2CAccelerometer.htm#I2C_Accelerometer
 [I2C Port Explander Sample]: https://www.hackster.io/4803/i2c-port-expander-sample
 [Adafruit Starter Pack]: {{site.baseurl}}/{{page.lang}}/AdafruitKitContents.htm
 [//build 2014 - Piano]: https://www.hackster.io/windowsiot/build-2014-piano
-[SPI Display Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplay.htm
-[Shift Register Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/ShiftRegisterSample.htm
-[Serial Port Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/SerialSample.htm
-[Potentiometer Sensor Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm
+[SPI Display Sample]: {{site.baseurl}}/{{page.lang}}/Samples/SPIDisplay.htm
+[Shift Register Sample]: {{site.baseurl}}/{{page.lang}}/Samples/ShiftRegisterSample.htm
+[Serial Port Sample]: {{site.baseurl}}/{{page.lang}}/Samples/SerialSample.htm
+[Potentiometer Sensor Sample]: {{site.baseurl}}/{{page.lang}}/Samples/Potentiometer.htm
 [ADC Bus Providers]: {{site.msiotorgurl}}/BusProviders/tree/develop/ADC
 [PWM Bus Providers]: {{site.msiotorgurl}}/BusProviders/tree/develop/PWM
-[Alljoyn DSB Gpio C# Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/AlljoynDSB_ManagedGpioTutorial.htm
+[Alljoyn DSB Gpio C# Sample]: {{site.baseurl}}/{{page.lang}}/Samples/AlljoynDSB_ManagedGpioTutorial.htm
 [Wiring API]: {{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm
-[Weather Station Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/WeatherStation.htm
-[RGB Pixel Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/RGBPixel.htm
-[Home Security Camera Project]: {{site.baseurl}}/{{page.lang}}/win10/samples/WebCamSample.htm
+[Weather Station Sample]: {{site.baseurl}}/{{page.lang}}/Samples/arduino-wiring/WeatherStation.htm
+[RGB Pixel Sample]: {{site.baseurl}}/{{page.lang}}/Samples/arduino-wiring/RGBPixel.htm
+[Home Security Camera Project]: {{site.baseurl}}/{{page.lang}}/Samples/WebCamSample.htm
 

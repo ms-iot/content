@@ -14,7 +14,7 @@ More information on UWF is available [here](https://msdn.microsoft.com/en-us/win
 
 ## How to Install UWF on a System Running Windows 10 IoT Core
 *             On your development system, download the [UWF Installation package](http://go.microsoft.com/fwlink/?LinkId=708427).
-*             Double click on `UWF.MSI`. When the installation is complete, the x86 and ARM packages will be extracted to `C:\Program Files (x86)\Microsoft IoT\UWF`. Launch [Powershell](http://ms-iot.github.io/content/en-US/win10/samples/PowerShell.htm) or [ssh](http://ms-iot.github.io/content/en-US/win10/samples/SSH.htm) and access your device running Windows 10 IoT Core.
+*             Double click on `UWF.MSI`. When the installation is complete, the x86 and ARM packages will be extracted to `C:\Program Files (x86)\Microsoft IoT\UWF`. Launch [Powershell](http://ms-iot.github.io/content/en-US/Samples/PowerShell.htm) or [ssh](http://ms-iot.github.io/content/en-US/Samples/SSH.htm) and access your device running Windows 10 IoT Core.
 * From Powershell or ssh, do the following:
   *           Create a temporary folder on the target machine (e.g. ```C:\UWFTemp```).
   *           Based on your target machine architecture, copy either the x86 or ARM UWF packages (including the lang pack) from your developer machine to `C:\UWFTemp`.

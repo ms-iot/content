@@ -35,7 +35,7 @@
   </li>
   <li>
     <p>The tool will enumerate devices as shown. Select the SD card you want to flash, and then provide the location of the ffu to flash the image.</p>
-    <p><b>NOTE:</b> IoTCoreImageHelper.exe is the recommended tool to flash the SD card. However, instructions are available for using <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/DISM.htm" target="_blank">DISM command line tool</a> directly.</p>
+    <p><b>NOTE:</b> IoTCoreImageHelper.exe is the recommended tool to flash the SD card. However, instructions are available for using <a href="{{site.baseurl}}/{{page.lang}}/Samples/DISM.htm" target="_blank">DISM command line tool</a> directly.</p>
     <p><img alt="screenshot: IoTCoreImageHeloper.exe to flash the sd card" src="{{site.baseurl}}/Resources/images/SetupRPI/ImageHelper.PNG" /></p>
   </li>
   <li>
@@ -72,12 +72,12 @@
     <p><img alt="screenshot: device portal to connect to raspberry pi 2 or 3" class="device-images" src="{{site.baseurl}}/Resources/images/deviceportal/deviceportal_small_rpi2.png"/></p>
   </li>
   <li>
-    <p>You can also use PowerShell to connect to your device through a command shell. Follow the <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm" target="_blank">PowerShell documentation</a> to use PowerShell to connect to your running device.  You can also follow the <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm" target="_blank">SSH instructions</a> to use SSH to connect to your device.</p>
+    <p>You can also use PowerShell to connect to your device through a command shell. Follow the <a href="{{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm" target="_blank">PowerShell documentation</a> to use PowerShell to connect to your running device.  You can also follow the <a href="{{site.baseurl}}/{{page.lang}}/Samples/SSH.htm" target="_blank">SSH instructions</a> to use SSH to connect to your device.</p>
     <p><img alt="screenshot: use powershell to connect to your raspberry pi 2 or 3" class="device-images" src="{{site.baseurl}}/Resources/images/powershell/connection.png"/></p>
   </li>
 </ol>
 
-<p>It is highly recommended that you update the default password for the Administrator account. Instructions are included in the relevant documentation for <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm" target="_blank">Windows Device Portal</a> or <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm" target="_blank">Powershell</a>.</p>
+<p>It is highly recommended that you update the default password for the Administrator account. Instructions are included in the relevant documentation for <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm" target="_blank">Windows Device Portal</a> or <a href="{{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm" target="_blank">Powershell</a>.</p>
 
 <h3> Additional Resources </h3>
 <p><a href="{{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm" target="_blank">Supported Peripheral Interfaces and Devices</a></p>

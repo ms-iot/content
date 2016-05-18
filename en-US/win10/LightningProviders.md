@@ -102,13 +102,13 @@ if (LightningProvider.IsLightningEnabled)
 
 The following samples demonstrate using the Lightning providers with supported bus types:
 
-* [Blinky (UI) with Lightning Provider]({{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyUILightning.htm) demonstrates GPIO with Lightning Provider in a foreground application
+* [Blinky (UI) with Lightning Provider]({{site.baseurl}}/{{page.lang}}/Samples/BlinkyUILightning.htm) demonstrates GPIO with Lightning Provider in a foreground application
 
-* [BlinkyHeadless with Lightning Provider]({{site.baseurl}}/{{page.lang}}/win10/samples/BlinkyHeadlessLightning.htm) demonstrates GPIO with Lightning Provider in a headless application
+* [BlinkyHeadless with Lightning Provider]({{site.baseurl}}/{{page.lang}}/Samples/BlinkyHeadlessLightning.htm) demonstrates GPIO with Lightning Provider in a headless application
 
-* [SPIDisplay with Lightning Provider]({{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplayLightning.htm) demonstrates the usage of the API to control a device using SPI with Lightning Provider
+* [SPIDisplay with Lightning Provider]({{site.baseurl}}/{{page.lang}}/Samples/SPIDisplayLightning.htm) demonstrates the usage of the API to control a device using SPI with Lightning Provider
 
-* [WeatherStation with Lightning Provider]({{site.baseurl}}/{{page.lang}}/win10/samples/WeatherStationLightning.htm) demonstrates interacting with a device using I2C with Lightning Provider
+* [WeatherStation with Lightning Provider]({{site.baseurl}}/{{page.lang}}/Samples/WeatherStationLightning.htm) demonstrates interacting with a device using I2C with Lightning Provider
 
 ## Build Requirements
 

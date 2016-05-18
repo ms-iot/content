@@ -6,7 +6,7 @@
   HDMI cable and monitor (HDMI monitors with a native resolution of 16:9 at 1280x720 are recommended)<br />
   USB keyboard and Mouse - <a href="{{site.baseurl}}/{{page.lang}}/Support/Faqs.htm#dragonboard" target="_blank"> Having issues with USB? </a><br />
   Logic-level shifter - recommended - Many peripheral devices require 3.3v or 5v logic level voltages. The DragonBoard 410c supplies 1.8v logic and therefore may require a logic level shifter when connecting your DragonBoard to these types of peripheral devices. Some example shifters include: <a href="https://www.adafruit.com/products/395" target="_blank">Adafruit 8-channel Logic Level Converter</a> and <a href="https://www.sparkfun.com/products/11771" target="_blank">SparkFun 4-channel Voltage-Level Translator</a>.
-  We will show you how to use these shifters in any of our samples that require them for DragonBoard. To see an example of one such sample, refer to the DragonBoard section of the <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SPIAccelerometer.htm" target="_blank">SPI Accelerometer Sample</a>.  You may also refer to <a href="https://learn.sparkfun.com/tutorials/txb0104-level-shifter-hookup-guide?_ga=1.63563695.1225669924.1446058808" target="_blank"> SparkFun's Hookup Guide</a>. You will not require this device in order to get started with the DragonBoard.<br />
+  We will show you how to use these shifters in any of our samples that require them for DragonBoard. To see an example of one such sample, refer to the DragonBoard section of the <a href="{{site.baseurl}}/{{page.lang}}/Samples/SPIAccelerometer.htm" target="_blank">SPI Accelerometer Sample</a>.  You may also refer to <a href="https://learn.sparkfun.com/tutorials/txb0104-level-shifter-hookup-guide?_ga=1.63563695.1225669924.1446058808" target="_blank"> SparkFun's Hookup Guide</a>. You will not require this device in order to get started with the DragonBoard.<br />
 </p>
 
 <h4> Note: </h4>
@@ -63,7 +63,7 @@
 <p>DragonBoard supports the <a href="http://www.trendnet.com/products/proddetail.asp?status=view&prod=280_TU2-ET100" target="_blank">TRENDnet TU2-ET100 </a> USB ethernet adapter. All you need to do is connect the adapter via USB and then to your local network using a standard ethernet cable.</p>
 <p>Other network adapters may also be compatable with DragonBoard, although they may not have been tested.</p>
 <li>
-  Follow the PowerShell documentation<a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm" target="_blank"> here</a> to use PowerShell to connect to your running device.  You can also follow the instructions <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm" target="_blank">here</a> to use SSH to connect to your device.
+  Follow the PowerShell documentation<a href="{{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm" target="_blank"> here</a> to use PowerShell to connect to your running device.  You can also follow the instructions <a href="{{site.baseurl}}/{{page.lang}}/Samples/SSH.htm" target="_blank">here</a> to use SSH to connect to your device.
 </li>
 
 <h3>Connecting to Your Device</h3>
@@ -73,12 +73,12 @@
     <p><img alt="screenshot: device portal to connect to dragonboard 410c" class="device-images" src="{{site.baseurl}}/Resources/images/deviceportal/deviceportal_small_db.png" /></p>
   </li>
   <li>
-    <p>You can also use PowerShell to connect to your device through a command shell. Follow the <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm" target="_blank">PowerShell documentation</a> to use PowerShell to connect to your running device.  You can also follow the <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm" target="_blank">SSH instructions</a> to use SSH to connect to your device.</p>
+    <p>You can also use PowerShell to connect to your device through a command shell. Follow the <a href="{{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm" target="_blank">PowerShell documentation</a> to use PowerShell to connect to your running device.  You can also follow the <a href="{{site.baseurl}}/{{page.lang}}/Samples/SSH.htm" target="_blank">SSH instructions</a> to use SSH to connect to your device.</p>
     <p><img alt="screenshot: use powershell to connect to your dragonboard 410c" class="device-images" src="{{site.baseurl}}/Resources/images/powershell/connection.png" /></p>
   </li>
 </ol>
 
-<p>It is highly recommended that you update the default password for the Administrator account. Instructions are included in the relevant documentation for <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm" target="_blank">Windows Device Portal</a> or <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm" target="_blank">Powershell</a>.</p>
+<p>It is highly recommended that you update the default password for the Administrator account. Instructions are included in the relevant documentation for <a href="{{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm" target="_blank">Windows Device Portal</a> or <a href="{{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm" target="_blank">Powershell</a>.</p>
 
 <h3> Additional Resources </h3>
 <p><a href="{{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm" target="_blank">Supported Peripheral Interfaces and Devices</a></p>

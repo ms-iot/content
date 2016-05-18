@@ -79,9 +79,9 @@ Instructions on how to set up sTPM on Windows IoT Core are available [here][3].
 *[dTPM]: Discrete TPM
  
 ## Samples  
-* [TBSSample project C++]({{site.baseurl}}/{{page.lang}}/win10/samples/TBSSample.htm){:target="_blank"}  
+* [TBSSample project C++]({{site.baseurl}}/{{page.lang}}/Samples/TBSSample.htm){:target="_blank"}  
   This tutorial demonstrates how to create a basic C++ application that uses TBS to poll the TPM.  
-* [Urchin Library Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/UrchinLibrary.htm){:target="_blank"}  
+* [Urchin Library Sample]({{site.baseurl}}/{{page.lang}}/Samples/UrchinLibrary.htm){:target="_blank"}  
   This tutorial demonstrates how to create a sample C++ application that exercises the TPM functionality using the [Urchin library][8].  
   Urchin is a spec-compliant library derived from the TPM 2.0 reference implementation. It provides to the client the functionality to marshal/unmarshal all data structures, properly calculate authorizations, perform parameter encryption and do auditing.
   

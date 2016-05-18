@@ -30,7 +30,7 @@ You can download a Windows 10 IoT Core image from our [downloads page]({{site.ba
 <A name="develop"></a>
 
 ## Develop
-Complete one of the many "Wiring" samples on the [Samples Page]({{site.baseurl}}/{{page.lang}}/win10/StartCoding.htm), or build your own project! Any of the samples we've created that are written using Arduino Wiring will be listed like so: [Blinky (Wiring)]({{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/HelloBlinky.htm). Blinky, the cononical "Hello World" project for IoT projects, is a great place to start for your first project!
+Complete one of the many "Wiring" samples on the [Samples Page]({{site.baseurl}}/{{page.lang}}/win10/StartCoding.htm), or build your own project! Any of the samples we've created that are written using Arduino Wiring will be listed like so: [Blinky (Wiring)]({{site.baseurl}}/{{page.lang}}/Samples/arduino-wiring/HelloBlinky.htm). Blinky, the cononical "Hello World" project for IoT projects, is a great place to start for your first project!
 
 ### Porting
 

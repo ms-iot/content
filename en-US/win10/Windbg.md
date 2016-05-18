@@ -32,7 +32,7 @@ In order to enable kernel debugging with WinDbg over a network, please make sure
 
 * Your MinnowBoard Max has a valid IP address in your network
 
-* You have an active connection to the MinnowBoard Max via [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) 
+* You have an active connection to the MinnowBoard Max via [PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm) 
 
 Using the active PowerShell connection you will modify two BCD settings on the MinnowBoard Max to enable debugging over the network.  
 
@@ -70,7 +70,7 @@ In order to enable kernel debugging with WinDbg over a serial connection, please
 
 * Your Raspberry Pi 2 or 3 has a valid IP address in your network
 
-* You have an active connection to the Raspberry Pi 2 or 3 via [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) or [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm)
+* You have an active connection to the Raspberry Pi 2 or 3 via [PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm) or [SSH]({{site.baseurl}}/{{page.lang}}/Samples/SSH.htm)
 
 UART0 will be used on the Raspberry Pi 2 or 3 for the kernel debugging connection.  The following shows the pin mappings for the Raspberry Pi 2 or 3 as well as the serial cables: 
 

@@ -16,7 +16,7 @@ When configured to run in headed mode, a single UI app will launch at boot and t
     NOTE: If you put your device into headless mode, then you can use the Windows 10 IoT Core Dashboard application, described below, to find its' IP address.
 
 ## Changing the mode
-You can modify the headed/headless state of your device from a PowerShell session.  To review the PowerShell details, look [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
+You can modify the headed/headless state of your device from a PowerShell session.  To review the PowerShell details, look [here]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm).
 
 * To display the current state of your device, use the `setbootoption` utility like this:
 

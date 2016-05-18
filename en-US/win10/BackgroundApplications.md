@@ -67,7 +67,7 @@ This question can be broken into deployment and invocation.
 
 To deploy a Background Application, you can either:
 
-* Use Visual Studio's F5 (which will build, deploy and invoke).  For more detail, see our [Hello World sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm#deploy-the-app-to-your-windows-iot-core-device) where we describe how to deploy and launch from Visual Studio.
+* Use Visual Studio's F5 (which will build, deploy and invoke).  For more detail, see our [Hello World sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloWorld.htm#deploy-the-app-to-your-windows-iot-core-device) where we describe how to deploy and launch from Visual Studio.
 
     **NOTE:** this will not configure your Background Application to start when the device boots.
 
@@ -81,7 +81,7 @@ To invoke a Background Application, you can either:
 
 * For a Background Application that has been deployed to an IoT device, you can use the iotstartup.exe utility to configure your Background Application to start when the device boots.  To specify your Background Application as a Startup App, follow these instructions (**substitute your app's name** for `BackgroundApplication1` below):
 
-    1. Start a PowerShell (PS) session with your Windows IoT Core device as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
+    1. Start a PowerShell (PS) session with your Windows IoT Core device as described [here]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm).
 
     2. From the PS session, type:
 

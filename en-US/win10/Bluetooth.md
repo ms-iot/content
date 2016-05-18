@@ -15,5 +15,5 @@ Windows IoT Core currently supports the following Bluetooth profiles:
 
 2.  Bluetooth Basic Rate (BR): [RFCOMM](https://github.com/ms-iot/remote-wiring)
 
-3.  Bluetooth Low Energy (LE): [GATT]({{site.baseurl}}/{{page.lang}}/win10/samples/BLEGatt.htm)
+3.  Bluetooth Low Energy (LE): [GATT]({{site.baseurl}}/{{page.lang}}/Samples/BLEGatt.htm)
 
