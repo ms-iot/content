@@ -240,7 +240,7 @@
       "tags": [ "intermediate", "c#", "c++", "lightning", "node.js" ]
     },
     {
-         "title":"Ardunio Wiring Libraries (UWP)",
+         "title":"Arduino Wiring Libraries (UWP)",
          "description":"Demonstrating how to build Arduino Wiring libraries that can be called from other languages like C# and Node.js",
          "link-text":"<a href='samples/arduino-wiring/ArduinoWiringComponents.htm'>Blinky UI (C#/C++)</a>",
          "ranking":0,
