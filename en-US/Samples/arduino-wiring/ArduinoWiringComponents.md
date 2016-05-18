@@ -14,7 +14,7 @@ These two samples show how easy it is to build these components in your Arduino 
 [Blinky Arduino Library](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryBlinky)
 [LCD Display Arduino Library(https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryLcdDisplay)
 
-## Step 1: Create a new Ardunio Wiring project and add the basic functionality
+## Step 1: Create a new Arduino Wiring project and add the basic functionality
 
 When you create your new Arduino Wiring projects, choose a project name that works for your scenario as this project name will be the namespace all of your WinRT components will reside in. From this blank project you simply add the "ledOn" and "ledOff" methods to your .ino file. 
 
