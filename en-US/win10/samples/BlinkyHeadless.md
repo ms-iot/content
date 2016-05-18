@@ -6,11 +6,11 @@ lang: en-US
 ---
 
 {: .thin-header}
-## Blinky Headless Sample
+# Blinky Headless Sample
 
 {% include VerifiedVersion.md %}
 
-We'll create a simple Blinky app and connect a LED to your Windows IoT Core device (Raspberry Pi 2, MinnowBoard Max or DragonBoard).  Be aware that the GPIO APIs are
+We'll create a simple Blinky app and connect a LED to your Windows IoT Core device (Raspberry Pi 2 or 3, MinnowBoard Max or DragonBoard).  Be aware that the GPIO APIs are
 only available on Windows IoT Core, so this sample cannot run on your desktop.
 
 ### Headless mode
@@ -60,7 +60,7 @@ To drive the GPIO pin, first we need to initialize it. Here is the C# code (noti
 {% highlight C# %}
 using Windows.Devices.Gpio;
 
-private async void InitGPIO()
+private void InitGPIO()
 {
     var gpio = GpioController.GetDefault();
 

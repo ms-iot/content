@@ -1,6 +1,8 @@
 ---
 layout: default
 title: How to Contribute
+description: Learn how you can use Git to contribute to the Windows 10 IoT Core developer content.
+keyword: windows 10, iot, git, github
 permalink: /en-US/Contribute.htm
 lang: en-US
 ---
@@ -36,17 +38,17 @@ ___
 ## Fork the repository
 1. Create a GitHub account by starting at <a href="https://github.com/" target="_blank">GitHub Home</a>
 1. Go to <a href="https://github.com/" target="_blank">GitHub Home</a> and navigate to the repository you'd like to contribute to, click *Fork*  
-  ![Fork]({{site.baseurl}}/images/GitHubFork.png)
+  ![Fork]({{site.baseurl}}/Resources/images/GitHubFork.png)
 1. On GitHub, Navigate to your account's fork of the repository
 1. Clone the repository in one of two ways:
     1. You can use command line <br/>
     <kbd>git clone [link to .git] [NameYourLocalFolder]</kbd>
     1. Or launch the GitHub app by clicking 'Clone in Desktop' on the right hand side of the repository  
-    ![Clone]({{site.baseurl}}/images/GitHubClone.png)
+    ![Clone]({{site.baseurl}}/Resources/images/GitHubClone.png)
 
 ___
 
-##Using Git
+## Using Git
 If you are editing a fork of ms-iot/content, please submit pull request off of develop.<br/>
 If you are editing a fork of ms-iot/galileo-sdk, please submit pull request off of develop.
 
@@ -55,17 +57,17 @@ For clarification, what we mean when we say:<br/>
 **forked repository:** the fork you made from the main repository. This sits up on github's servers. (Also known as <b>"origin"</b>)<br/>
 **main repository:** the original repository that you forked from. This is the common ms-iot repository hosted on github's servers. (Also known as <b>"upstream"</b>)<br/>
 
-###Setting up
+### Setting up
 1. Set up your upstream
     * <kbd>git remote add upstream [link to .git]</kbd>
 
-###Making changes
+### Making changes
 1. Make your edits, build, and test. Use the repository's readme for any specific editing requirements, build instructions, and testing methods.
     * <kbd>git add [file]</kbd>
 1. Commit your changes to your local repository.
     * <kbd>git commit -m "[descriptive message]" </kbd>
 
-###Submitting a Pull Request
+### Submitting a Pull Request
 1. After you submit your first pull request, if you have not already signed a Contribution License Agreement, then our Contribution License Agreement service will request you to sign a Contribution License Agreement. We request you to complete this electronic request. Without completing this step, we unfortunately cannot accept a pull request. You only need to do this once.
 1. Fetch upstream
     * <kbd>git fetch --all</kbd>
@@ -80,20 +82,20 @@ For clarification, what we mean when we say:<br/>
     * <kbd>git push -f origin develop</kbd>
 1. Now submit your pull request from your forked repository using the GitHub website.
 
-###Making changes to a Pull Request
+### Making changes to a Pull Request
 1. Make your new changes, fetch upstream, rebase upstream, and force-push your changes.
     * If your pull request was never closed, you should not have to submit a new pull request. It should automatically update.
 
 ___
 
-#Iterating on the Galileo SDK
+## Iterating on the Galileo SDK
 Fork  ms-iot/galileo-sdk as described above in the contribute section and follow the README instructions.
 
 ___
 
-#Best Practices
+## Best Practices
 
-##Do not check in binaries
+### Do not check in binaries
 Once a binary is added to the repository, it will be there forever.
 
 Please do not add binaries to Git including:

@@ -1,0 +1,311 @@
+<div class="row">
+  <div class="col-xs-4">
+    <section class="section section-top-margin">
+      <div class="section-body">
+        <p class="text-caption">
+          <span class="win-color-fg-secondary">Instructions for:</span><br/>
+          {% include_relative selection-list.inc %}
+          <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Change</a>
+        </p>
+        <br/>
+        <p><a href="GetStartedStep1.htm">1 Get the tools</a></p>
+        <p><a href="GetStartedStep2.htm">2 Set up your device</a></p>
+        <p><a href="GetStartedStep3.htm">3 Set up Visual Studio</a></p>
+        <p>4 Write your first app</a></p>
+      </div>
+    </section>
+  </div>
+  <div class="col-xs-20">
+    <section class="section">
+      <header class="page-title-header">
+        <h1 class="page-title">Step 4 of 4: Write your first app</h1>
+        <h2 class="page-subtitle">We'll create a simple LED blinking app and connect a LED to your Windows 10 IoT Core device.</h2>
+      </header>
+    </section>
+
+    <div class="row">
+      <div class="col-xs-24">
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title"><span class="step">1</span>Load the project in Visual Studio<span class="pull-right"><a id="load-project-toggle" class="text-body toggle-button" onClick="hideDiv('load-project')">Hide</a></span></h2>
+          </div>
+          <div class="section-body toggle-section" id="load-project">
+            <p>
+              You can find the source code for this sample by downloading a zip of all of our samples <a href="https://github.com/ms-iot/samples/archive/develop.zip">here</a> and navigating to the <code>samples-develop\Blinky</code>.
+              The sample code is available in either C++ or C#, however the documentation here only details the C# variant. Make a copy of the folder on your disk and open the project from Visual Studio.
+            </p>
+            <p>
+              Be aware that the GPIO APIs are only available on Windows 10 IoT Core, so this sample cannot run on your desktop.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-24">
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title"><span class="step">2</span>Connect the LED to your Windows IoT device<span class="pull-right"><a id="connect-LED-toggle" class="text-body toggle-button" onClick="hideDiv('connect-LED')">Hide</a></span></h2>
+          </div>
+          <div class="section-body toggle-section" id="connect-LED">
+            <div class="row">
+              <div class="col-xs-24 col-md-12">
+                <p>You'll need a few components:</p>
+                <ul>
+                  <li>a LED (any color you like)</li>
+                  <li>a {% include_relative blinky-resistor.inc %} &#x2126; resistor</li>
+                  <li>a breadboard and a couple of connector wires</li>
+                </ul>
+              </div>
+              <div class="col-xs-24 col-md-11">
+                <p><img alt="Electrical Components" src="{{site.baseurl}}/Resources/images/Blinky/components.png"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-24 col-md-12">
+                {% include_relative blinky-connections.inc %}
+              </div>
+              <div class="col-xs-24 col-md-11">
+                {% include_relative blinky-connections-images.inc %}
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-24">
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title"><span class="step">3</span>Deploy your app<span class="pull-right"><a id="deploy-app-toggle" class="text-body toggle-button" onClick="hideDiv('deploy-app')">Hide</a></span></h2>
+          </div>
+          <div class="section-body toggle-section" id="deploy-app">
+            <div class="row">
+              <div class="col-xs-24 col-md-12">
+                <ol>
+                  <li value="1">With the application open in Visual Studio, set the architecture (<code>{% include_relative board-arch.inc %}</code>) in the toolbar dropdown.</li>
+                </ol>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-24 col-md-12">
+                <ol>
+                  <li value="2">Next, in the Visual Studio toolbar, click on the <code>Local Machine</code> dropdown and select <code>Remote Machine</code>.</li>
+                </ol>
+              </div>
+              <div class="col-xs-24 col-md-11">
+                <p><img alt="Remote Machine Target" src="{{site.baseurl}}/Resources/images/AppDeployment/cs-remote-machine-debugging.png"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-24 col-md-12">
+                <ol>
+                  <li value="3">
+                    At this point, Visual Studio will present the <b>Remote Connections</b> dialog. If you previously used IoT Dashboard to set a unique name for your device, you can enter it here (in this example, we're using <b>my-device</b>).
+                    Otherwise, use the IP address of your Windows IoT Core device. After entering the device name/IP select <code>Universal</code> for Windows Authentication, then click <b>Select</b>.
+                  </li>
+                </ol>
+              </div>
+              <div class="col-xs-24 col-md-11">
+                <p><img alt="Remote Machine Debugging" src="{{site.baseurl}}/Resources/images/AppDeployment/cs-remote-connections.PNG"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-24 col-md-12">
+                <ol>
+                  <li value="4">
+                    You can verify or modify these values by navigating to the project properties
+                    (select <b>Properties</b> in the Solution Explorer) and choosing the <code>Debug</code> tab on the left.
+                  </li>
+                </ol>
+              </div>
+              <div class="col-xs-24 col-md-11">
+                <p><img alt="Project Properties Debug Tab" src="{{site.baseurl}}/Resources/images/AppDeployment/cs-debug-project-properties.PNG"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-24 col-md-12">
+                <ol>
+                  <li value="5">
+                    When everything is set up, you should be able to press F5 from Visual Studio.
+                    If there are any missing packages that you did not install during setup, Visual Studio may prompt you to acquire those now.
+                    The Blinky app will deploy and start on the Windows IoT device, and you should see the LED blink in sync with the simulation on the screen.
+                  </li>
+                </ol>
+              </div>
+              <div class="col-xs-24 col-md-11">
+                <p><img alt="Blinky Application Running" src="{{site.baseurl}}/Resources/images/Blinky/blinky-screenshot.png"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-24 col-md-12">
+                <ol>
+                  <li value="6">Congratulations! You controlled one of the GPIO pins on your Windows IoT device.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-24">
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title"><span class="step">4</span>Timer code<span class="pull-right"><a id="timer-code-toggle" class="text-body toggle-button" onClick="hideDiv('timer-code')">Hide</a></span></h2>
+          </div>
+          <div class="section-body toggle-section" id="timer-code">
+            <div class="row">
+              <div class="col-xs-24">
+                <p>The code for this sample is pretty simple. We use a timer, and each time the 'Tick' event is called, we flip the state of the LED.</p>
+                <p>Here is how you set up the timer in C#:</p>
+{% highlight C# %}
+public MainPage()
+{
+    // ...
+
+    timer = new DispatcherTimer();
+    timer.Interval = TimeSpan.FromMilliseconds(500);
+    timer.Tick += Timer_Tick;
+    InitGPIO();
+    if (pin != null)
+    {
+        timer.Start();
+    }
+
+    // ...
+}
+
+private void Timer_Tick(object sender, object e)
+{
+    if (pinValue == GpioPinValue.High)
+    {
+        pinValue = GpioPinValue.Low;
+        pin.Write(pinValue);
+        LED.Fill = redBrush;
+    }
+    else
+    {
+        pinValue = GpioPinValue.High;
+        pin.Write(pinValue);
+        LED.Fill = grayBrush;
+    }
+}
+{% endhighlight %}
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-24">
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title"><span class="step">5</span>Initialize the GPIO pin<span class="pull-right"><a id="init-gpio-code-toggle" class="text-body toggle-button" onClick="hideDiv('init-gpio-code')">Hide</a></span></h2>
+          </div>
+          <div class="section-body toggle-section" id="init-gpio-code">
+            <div class="row">
+              <div class="col-xs-24">
+                <p>To drive the GPIO pin, first we need to initialize it. Here is the C# code:</p>
+{% highlight C# %}
+using Windows.Devices.Gpio;
+
+private void InitGPIO()
+{
+    var gpio = GpioController.GetDefault();
+
+    // Show an error if there is no GPIO controller
+    if (gpio == null)
+    {
+        pin = null;
+        GpioStatus.Text = "There is no GPIO controller on this device.";
+        return;
+    }
+
+    pin = gpio.OpenPin(LED_PIN);
+    pinValue = GpioPinValue.High;
+    pin.Write(pinValue);
+    pin.SetDriveMode(GpioPinDriveMode.Output);
+
+    GpioStatus.Text = "GPIO pin initialized correctly.";
+
+}
+{% endhighlight %}
+                <p>Let's break this down a little:</p>
+                <ul>
+                  <li>First, we use <code>GpioController.GetDefault()</code> to get the GPIO controller.</li>
+                  <li>If the device does not have a GPIO controller, this function will return <code>null</code>.</li>
+                  <li>Then we attempt to open the pin by calling <code>GpioController.OpenPin()</code> with the <code>LED_PIN</code> value.</li>
+                  <li>Once we have the <code>pin</code>, we set it to be off (High) by default using the <code>GpioPin.Write()</code> function.</li>
+                  <li>We also set the <code>pin</code> to run in output mode using the <code>GpioPin.SetDriveMode()</code> function.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-24">
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title"><span class="step">6</span>Modify the state of the GPIO pin<span class="pull-right"><a id="gpio-code-toggle" class="text-body toggle-button" onClick="hideDiv('gpio-code')">Hide</a></span></h2>
+          </div>
+          <div class="section-body toggle-section" id="gpio-code">
+            <div class="row">
+              <div class="col-xs-24">
+                <p>Once we have access to the <code>GpioOutputPin</code> instance, it's trivial to change the state of the pin to turn the LED on or off.</p>
+                <p>To turn the LED on, simply write the value <code>GpioPinValue.Low</code> to the pin:</p>
+{% highlight C# %}
+pin.Write(GpioPinValue.Low);
+{% endhighlight %}
+                <p>and of course, write `GpioPinValue.High` to turn the LED off:</p>
+{% highlight C# %}
+pin.Write(GpioPinValue.High);
+{% endhighlight %}
+                <p>Remember that we connected the other end of the LED to the 3.3 Volts power supply, so we need to drive the pin to low to have current flow into the LED.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-24">
+        <section class="section">
+          <div class="section-body">
+            <p class="win-color-fg-green">Step 4 of 4: Write your first app is complete.</p>
+            <p class="win-color-fg-green">You're done. Setup and installation is now finished.</p>
+            <br/>
+            <p class="text-title">What next? Check out docs and other samples</p>
+            <div class="btn-group">
+              <a href="{{site.baseurl}}/en-US/win10/StartCoding.htm" class="btn btn-primary">View documentation</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function hideDiv(div) {
+    var pdiv = "#" + div,
+        button = pdiv + "-toggle"
+
+    if ($(pdiv).css('display') == 'none') {
+      $(pdiv).toggle('slow');
+      $(button).html('Hide');
+    }
+    else {
+      $(pdiv).toggle('slow');
+      $(button).html('Show');
+    }
+  }
+</script>

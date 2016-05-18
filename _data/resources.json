@@ -1,6 +1,6 @@
 {
-   "en-US":{
-      "title":"Windows IoT",
+   "en-us":{
+      "title-suffix":"Windows IoT",
       "description":"Get Windows and development tools to easily build and manage the next generation of Internet of Things solutions on multiple platforms.",
       "keywords":"setup windows 10 respberry pi 2, setup windows 10 dragonboard, setup windows 10 minnowboard max, windows 10 developer program, windows 10 iot core, internet of things, iot, download windows 10 iot core",
       "footer-header":"Questions/Suggestions",
@@ -8,10 +8,10 @@
       "footer-a-text":"contact us",
       "github-edit-text":"Edit this page on GitHub"
    },
-   "zh-CN":{
-      "title":"Windows IoT",
+   "zh-cn":{
+      "title-suffix":"Windows IoT",
       "description":"获取 Windows 和开发工具，以便在多个平台上轻松构建和管理下一代“物联网”解决方案。",
-      "keywords":"物联网, 物联网, IoT, Windows IoT, Microsoft IoT, 连接的设备, Windows 通用应用, Windows 跨平台应用, 跨平台应用, Windows 10, Windows 10 IoT Core, 开发板, Raspberry Pi, Raspberry Pi 2, Intel Galileo, Intel Galileo Gen 2, Galileo, MinnowBoard Max, MBM, Windows 开发人员, 面向 IoT 的 Windows 开发人员计划, 制造商, 制造商大会, Internet 连接设备, 连接各个点, .NET Micro Framework, .NET MF, Windows Embedded, Arduino, 智能事务, 智能设备, 智能连接设备, 家庭自动化, 机器人, 制造商云, Windows Analytics, Windows 仪表板",
+      "keywords":"设置 windows 10 respberry pi 2, 设置 windows 10 dragonboard, 设置 windows 10 minnowboard max, windows 10 开发人员计划, windows 10 iot 核心版, 物联网, iot, 下载 windows 10 iot 核心版",
       "footer-header":"问题/建议",
       "footer-p-text":"像往常一样，若有问题或反馈，",
       "footer-a-text":"请联系我们",

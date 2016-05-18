@@ -29,7 +29,7 @@ Connect the web cam to one of USB ports on the IoT Device
   
 ### Deploy your app  
   
-If you're building for Minnowboard Max, select `x86` as the architecture. If you're building for Raspberry Pi 2 or DragonBoard , select `ARM`.  
+If you're building for Minnowboard Max, select `x86` as the architecture. If you're building for Raspberry Pi 2 or 3 or DragonBoard , select `ARM`.  
 
 **DragonBoard only:** Before deploying this app, disable the on-board mic and audio drivers. This is required on every reboot when running this app
 {% highlight xml %} 
@@ -67,7 +67,7 @@ The code for this sample uses the [Windows.Media.Capture](https://msdn.microsoft
  
 For accessing the web cam, the microphone, and the default storage folders, you must add the following capabilities to the **Package.appxmanifest** file in your project:  
 
-<img src="{{site.baseurl}}/images/PMWebCamOptions.png">
+<img src="{{site.baseurl}}/Resources/images/PMWebCamOptions.png">
 
 **NOTE:** You can also add capabilities directly by opening the **Package.appxmanifest** file in an XML editor (Right Click on the file -> Open with -> XML (Text) Editor) and adding the capabilities below:
  

@@ -7,12 +7,19 @@ lang: en-US
 deviceName: RPI2
 kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 ---
-<ol class="breadcrumb">
-  <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
-  <li class="active">Setup your Raspberry Pi 2</li>
-</ol>
+<div class="row">
+  <div class="col-xs-24">
+    <ol class="breadcrumb">
+      <li><a href="https://developer.microsoft.com/en-us/windows/iot">IoT Home</a></li>
+      <li><a href="{{site.baseurl}}/{{page.lang}}/win10/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
+      <li class="active">Set up your Raspberry Pi 2</li>
+    </ol>
+    <header class="page-title-header">
+      <h1 class="page-title">Lesson 1: Introduction and Setup</h1>
+    </header>
+  </div>
+</div>
 
-<h1 class="thin-header">Lesson 1: Introduction and Setup</h1>
 {% include kit-steps.html device=page.deviceName %}
 
 <hr/>
@@ -26,7 +33,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 
 
 
-    <img class="device-images" src="{{site.baseurl}}/images/rpi2Headless.png">
+    <img class="device-images" src="{{site.baseurl}}/Resources/images/rpi2Headless.png">
 
 
 ## Download and Install the IoT Dashboard tool
@@ -38,11 +45,11 @@ By downloading and using the Windows 10 IoT Core Dashboard you agree to the [lic
 ## Boot Windows 10 IoT Core
 1. Windows 10 IoT Core will boot automatically after connecting the power supply. Allow the Pi about five minutes for the first boot.
 2. Find your device on the IoT Dashboard application. When run, the application automatically finds all Windows IoT Core devices on the local network and displays device information such as the name, device type, IP address, and more.  Select the My Devices tab to view the current devices on the network.
-        ![Windows IoT Dashboard]({{site.baseurl}}/images/HeadlessMode/IoTDashboard.png)
+        ![Windows IoT Dashboard]({{site.baseurl}}/Resources/images/HeadlessMode/IoTDashboard.png)
 
 ## Configure your Raspberry Pi 2
 
-Finally, you'll need to configure your Raspberry Pi 2 for WiFi connection using the Web-Based management Tool. In **Windows IoT Core Watcher**, *Right Click* on your Raspberry Pi, then select **Web Browser Here**.
+Finally, you'll need to configure your Raspberry Pi 2 for WiFi connection using the Web-Based management Tool. In **Windows IoT Core Dashboard**, *Click* on the Open in Device Portal icon.
 
 <!-- This content is replicated at en-US/win10/SetupWiFi.md  -->
 
@@ -50,7 +57,7 @@ Finally, you'll need to configure your Raspberry Pi 2 for WiFi connection using 
 2. Click on **Networking** in the left-hand pane
 3. Under **Available networks**, select network you would like to connect to and supply the connection credentials. Click **Connect** to initiate the connection
 
-![Web Based WiFi Configuration]({{site.baseurl}}/images/SetupWiFi/WebBWiFiConfig.png)
+![Web Based WiFi Configuration]({{site.baseurl}}/Resources/images/SetupWiFi/WebBWiFiConfig.png)
 
 <!-- End of Replicated Content -->
 

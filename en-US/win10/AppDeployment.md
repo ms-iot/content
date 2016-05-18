@@ -5,7 +5,7 @@ permalink: /en-US/win10/AppDeployment.htm
 lang: en-US
 ---
 
-## Deploying an App with Visual Studio
+# Deploying an App with Visual Studio
 
 Deploying and debugging your application is straightforward with Visual Studio. We'll use the **Remote Debugging** feature to deploy the app to your locally connected IoT Core device. 
 

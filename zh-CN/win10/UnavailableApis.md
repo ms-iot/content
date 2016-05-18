@@ -1,13 +1,15 @@
 ---
 layout: default
 title: 不可用的通用 API
-permalink: /zh-CN/win10/UnavailableApis.htm
+description: 在 Windows 10 IoT 核心版中无法正常运行的 Windows 运行时 API 的当前列表。
+keyword: windows runtime, windows iot, unsupported apis
+permalink: /zh-cn/win10/UnavailableApis.htm
 lang: zh-CN
 ---
 
 <div class="container" markdown= "1">
 
-## 此时，通用 API 在 Windows 10 IoT 核心版中不起作用
+# 此时，通用 API 在 Windows 10 IoT 核心版中不起作用
 
     Windows.ApplicationModel.Appointments.Appointment
     Windows.ApplicationModel.Appointments.AppointmentInvitee
@@ -82,6 +84,7 @@ lang: zh-CN
     Windows.ApplicationModel.Search.SearchQueryLinguisticDetails
     Windows.ApplicationModel.Sync.Office365SyncConfiguration
     Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager
+    Windows.ApplicationModel.VoiceCommands
     Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormatTypes
     Windows.Devices.Enumeration.DevicePicker
     Windows.Devices.Printers.Print3DDevice
@@ -134,6 +137,7 @@ lang: zh-CN
     Windows.System.Energy.Diagnostics.BackgroundEnergyDiagnostics
     Windows.System.Energy.Diagnostics.ForegroundEnergyDiagnostics
     Windows.System.Energy.ForegroundEnergyManager
+    Windows.System.Launcher
     Windows.System.Profile.HardwareIdentification
     Windows.System.Profile.KnownRetailInfoProperties
     Windows.System.Profile.RetailInfo
@@ -146,6 +150,7 @@ lang: zh-CN
     Windows.UI.Input.Inking.InkManager
     Windows.UI.Input.Inking.InkRecognizerContainer
     Windows.UI.Popups.MessageDialog
+    Windows.UI.ViewManagement.UISettings
     Windows.UI.Xaml.Controls.ListPickerFlyout
     Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter
     Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter

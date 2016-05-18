@@ -1,0 +1,435 @@
+---
+title: Desarrolla aplicaciones de Windows 10 IoT en Raspberry Pi 3 y Arduino
+description: Obtén Windows 10 IoT Core, Visual Studio y otras herramientas para compilar fácilmente la nueva generación de soluciones de Internet de las cosas en Raspberry Pi 3 y Arduino.
+permalink: /es-ES/iot.htm
+lang: es-ES
+layout: default_nowrapper
+---
+{% capture page_lang_lower %}{{page.lang | downcase}}{% endcapture %}
+<style type="text/css">
+    #iot-hero {
+        color: #fff;
+    }
+
+    .subtext-gray img {
+        width: 19px;
+    }
+</style>
+
+<!-- The Internet of your things -->
+<div style="background:url('https://az835927.vo.msecnd.net/sites/iot/Resources/images/hero.jpg') center/cover no-repeat;" class="jumbotron remove-bottom-margin" id="iot-hero" aria-label="IoT boards and components">
+    <div class="container">
+        <div class="row">
+            <div class="content-col col-xs-24 col-sm-24 col-md-14 col-md-pull-0 col-lg-14 col-lg-pull-0">
+                <div class="jumbotron-content">
+                    <h1 class="jumbotron-header header-large">Internet de tus cosas</h1>
+                    <p class="jumbotron-subheader">Internet de las cosas (IoT) combina dispositivos, sensores, nube, datos y tu imaginación.</p>
+                    <div class="centering-col">
+                        <div class="centered-content">
+                            <div class="btn-group" role="group" aria-label="...">
+                                <a class="btn btn-primary" href="http://go.microsoft.com/fwlink/p/?linkID=532957" onclick="ICX.pixelEvent('6317');" target="_blank">Empieza ahora</a>
+                            </div>
+                            <a class="win-color-fg-primary color-alt" style="text-decoration: underline;" href="{{site.baseurl}}/win10/WhatsNew.htm" onclick="ICX.pixelEvent('6317');" target="_blank">Consulta las novedades: ahora en Raspberry Pi 3</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container spacer-84-top">
+    <!-- Build your Windows IoT device -->
+    <div class="row">
+        <div class="col-xs-24">
+            <section class="section remove-header-rule spacer-32-bottom">
+                <div class="row">
+                    <div class="col-xs-24 col-md-12 col-lg-6">
+                        <section class="section item-section">
+                            <div class="section-header">
+                                <div class="media-container">
+                                    <a href="//go.microsoft.com/fwlink/p/?LinkId=619339">
+                                        <img src="{{site.baseurl}}/Resources/images/led.png" width="72" height="72" alt="Indicador LED" />
+                                    </a>
+                                </div>
+                                <div class="text-base"><a href="//go.microsoft.com/fwlink/?LinkId=699329">¿Qué es Windows 10 IoT Core?</a></div>
+                            </div>
+                            <div class="section-body">
+                                <p>Descubre las características y funciones que ofrece Windows 10 IoT Core.  La comodidad de Windows combinada con la potencia de IoT.</p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-xs-24 col-md-12 col-lg-6">
+                        <section class="section item-section">
+                            <div class="section-header">
+                                <div class="media-container">
+                                    <a href="//go.microsoft.com/fwlink/p/?LinkID=624560">
+                                        <img src="{{site.baseurl}}/Resources/images/product.svg" width="72" height="72" alt="Paquete de inicio" />
+                                    </a>
+                                </div>
+                                <div class="text-base"><a href="//go.microsoft.com/fwlink/p/?LinkID=624560">Obtener información sobre el paquete de inicio</a></div>
+                            </div>
+                            <div class="section-body">
+                                <p>Adafruit ha creado un paquete de inicio para Windows 10 IoT Core. El paquete incluye componentes compatibles, sensores y elementos que puedes usar para empezar a crear proyectos fascinantes.</p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-xs-24 col-md-12 col-lg-6">
+                        <section class="section item-section">
+                            <div class="section-header">
+                                <div class="media-container">
+                                    <a href="//go.microsoft.com/fwlink/p/?linkID=532957">
+                                        <img src="{{site.baseurl}}/Resources/images/iot-board.svg" width="72" height="72" alt="Dispositivo de Windows IoT" />
+                                    </a>
+                                </div>
+                                <div class="text-base"><a href="//go.microsoft.com/fwlink/p/?linkID=532957">Crear tu dispositivo de Windows IoT</a></div>
+                            </div>
+                            <div class="section-body">
+                                <p>Diseña prototipos rápidamente y crea soluciones de Windows IoT en una variedad de dispositivos que ejecutan Windows 10 IoT Core. Windows 10 ofrece herramientas eficaces que te permiten desarrollar e implementar rápidamente en el dispositivo.</p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-xs-24 col-md-12 col-lg-6">
+                        <section class="section item-section">
+                            <div class="section-header">
+                                <div class="media-container">
+                                    <a href="//go.microsoft.com/fwlink/p/?linkID=532968">
+                                        <img src="{{site.baseurl}}/Resources/images/maker.svg" width="72" height="72" alt="Comunidad de fabricantes" />
+                                    </a>
+                                </div>
+                                <div class="text-base"><a href="//go.microsoft.com/fwlink/p/?linkID=532968">Unirse a la comunidad de fabricantes</a></div>
+                            </div>
+                            <div class="section-body">
+                                <p>Conecta con otros fabricantes para compartir código y hacer contribuciones a través de GitHub. Únete a la comunidad para ver qué están creando otros desarrolladores y para influir en futuras versiones del SDK.</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- Featured projects -->
+    <div class="row">
+        <div class="col-xs-24">
+            <section class="section has-header-action spacer-32-bottom">
+                <header class="section-header">
+                    <div class="header-titles">
+                        <div class="titles-outer">
+                            <div class="titles-inner">
+                                <h2 class="section-title">Proyectos destacados</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="header-action nowrap" href="http://go.microsoft.com/fwlink/p/?LinkID=532977" target="_blank">Ver todo</a>
+                </header>
+                <div class="row">
+                    <div class="col-xs-24 col-md-12 col-lg-6">
+                        <section class="section item-section">
+                            <header class="section-header">
+                                <div class="media-container">
+                                    <a href="//go.microsoft.com/fwlink/p/?LinkId=734076" target="_blank">
+										<img class="img-responsive" src="{{site.baseurl}}/Resources/images/6674363-home.jpg" alt="Imagen de la información meteorológica" />
+									</a>
+                                </div>
+                                <div><a href="http://go.microsoft.com/fwlink/?LinkId=734076" target="_blank">Control de bucle cerrado, sensores remotos y experiencia del usuario remoto en Raspberry Pi 3</a></div>
+                            </header>
+                            <div class="section-body">
+                                <h5 class="spacer-16-bottom">Por <a href="http://www.hackster.io/windowsiot" target="_Blank">Windows IoT</a></h5>
+                                <p>Usa un controlador PID para supervisar la velocidad de una rueda y alcanzar coherentemente las RPM que quieras en la nueva Raspberry Pi 3.</p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-xs-24 col-md-12 col-lg-6">
+                        <section class="section item-section">
+                            <header class="section-header">
+                                <div class="media-container">
+                                    <a href="//go.microsoft.com/fwlink/p/?LinkId=624836" target="_blank">
+										<img class="img-responsive" src="{{site.baseurl}}/Resources/images/weather-of-makers-box.jpg" alt="Arduino remoto básico de Windows" />
+									</a>
+                                </div>
+                                <div><a href="//go.microsoft.com/fwlink/p/?LinkId=624836" target="_blank">World Map of Makers</a></div>
+                            </header>
+                            <div class="section-body">
+                                <h5 class="spacer-16-bottom">Por <a href="http://www.hackster.io/windowsiot" target="_Blank">Windows IoT</a></h5>
+                                <p>Crea una aplicación sencilla conectada a Internet para consultar el estado de una API web y usa esa información para activar o desactivar un LED.</p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-xs-24 col-md-12 col-lg-6">
+                        <section class="section item-section">
+                            <header class="section-header">
+                                <div class="media-container">
+                                    <a href="http://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10" target="_blank">
+										<img class="img-responsive" src="{{site.baseurl}}/Resources/images/weather-station.png" alt="Estación meteorológica de IoT" />
+									</a>
+                                </div>
+                                <div><a href="http://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10" target="_blank">Estación meteorológica con Windows 10</a></div>
+                            </header>
+                            <div class="section-body">
+                                <h5 class="spacer-16-bottom">Por <a href="http://www.hackster.io/windowsiot" target="_blank">Windows IoT</a></h5>
+                                <p>Crea una estación meteorológica que use las nuevas API de dispositivo en Windows 10 para aprovechar la potencia de Windows al interactuar con el mundo real a través de los interruptores y sensores. </p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-xs-24 col-md-12 col-lg-6">
+                        <section class="section item-section">
+                            <header class="section-header">
+                                <div class="media-container">
+                                    <a href="http://www.hackster.io/windowsiot/robot-kit" target="_blank">
+										<img class="img-responsive" src="{{site.baseurl}}/Resources/images/robot-kit.png" alt="Kit de robot" />
+									</a>
+                                </div>
+                                <div><a href="http://www.hackster.io/windowsiot/robot-kit" target="_blank">Kit de robot</a></div>
+                            </header>
+                            <div class="section-body">
+                                <h5 class="spacer-16-bottom">Por <a href="http://www.hackster.io/windowsiot" target="_Blank">Windows IoT</a></h5>
+                                <p>Crea un robot con ruedas mediante un kit de robot y luego conecta un joystick USB para controlar su movimiento con el panel de Raspberry Pi 2 o 3 que ejecuta Windows.</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- Windows IoT “Essentials” Maker Kit-->
+<div class="jumbotron jumbotron-highlight-band jumbotron-highlight-band-full-height">
+    <div class="container">
+        <div class="row">
+            <div style="background: url('https://az835927.vo.msecnd.net/sites/iot/Resources/images/677423-highlight.jpg') center / cover;" class="image-col col-xs-24 col-md-11 col-md-push-11">
+            </div>
+            <div class="content-col col-xs-24 col-md-11 col-md-pull-12">
+                <div class="jumbotron-content">
+                    <h2 class="jumbotron-highlight-band-header">Raspberry Pi 3 ya está disponible</h2>
+                    <p class="jumbotron-highlight-band-subheader">
+                        Obtén la nueva placa Raspberry Pi 3 con Windows 10 IoT Core, ahora parte del instalador de NOOBS. Publicamos una nueva versión de Windows 10 IoT Core Insider Preview a través de Windows Insider, que te permitirá aprovechar al máximo la Raspberry Pi 3.
+                    </p>
+                    <ul class="list-unstyled">
+                        <li><a href="http://www.microsoftstore.com/RaspberryPi3" class="more-action" target="_blank">Comprar la Raspberry Pi3</a></li>
+                        <li><a href="http://insider.windows.com/" class="more-action" target="_blank">Conviértete en usuario de Windows Insider</a></li>
+                        <li><a href="{{site.baseurl}}/win10/Noobs.htm" class="more-action" target="_blank">Introducción a NOOBS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Events and Blogs -->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-24">
+            <section class="section spacer-32-bottom">
+                <header class="section-header">
+                    <h2 class="section-title">Recursos</h2>
+                </header>
+                <div class="row">
+                    <div class="col-xs-24 col-sm-24 col-lg-7">
+                        <div class="section-body">
+                            <section class="section item-section">
+                                <div class="section-header">
+                                    <div class="section-title">Windows en dispositivos</div>
+                                </div>
+                                <div class="section-body">
+                                    <div class="video-player remove-top-margin">
+                                        <div class="video-view embed-responsive embed-responsive-16by9 remove-top-margin">
+                                            <div id="player"></div>
+                                            <ul class="list-unstyled">
+                                                <li><a href="https://www.youtube.com/channel/UCL7wy-iy_V76xxPnrIzGOZQ" target="_blank">Canal de YouTube de Windows IoT</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="col-xs-24 col-sm-12 col-md-8 col-lg-push-1">
+                        <div class="section-body">
+                            <section class="section item-section">
+                                <div class="section-header">
+                                    <div class="section-title">Comunidades y blogs</div>
+                                </div>
+                                <div class="section-body">
+                                    <ul class="list-unstyled">
+                                        <li><a href="http://stackoverflow.com/questions/tagged/WindowsIoT">Stack Overflow</a></li>
+                                        <li><a href="https://twitter.com/WindowsIoT">@WindowsIoT en Twitter</a></li>
+                                        <li><a href="https://www.youtube.com/channel/UCL7wy-iy_V76xxPnrIzGOZQ">Canal de YouTube de Windows IoT</a></li>
+                                        <li><a href="{{site.baseurl}}/Community.htm">Más foros y comunidades</a></li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="col-xs-24 col-sm-12 col-md-8 col-lg-push-1">
+                        <div class="section-body">
+                            <section class="section item-section">
+                                <div class="section-header">
+                                    <div class="section-title">Eventos</div>
+                                </div>
+                                <div class="section-body">
+                                    <!--<ul id="events-body" data-data-src="{cdn}/devcenter/en-us/devcenter_v3/data/iot-events.js" class="eventlist" data-bind="template: { name: 'event-template', foreach: secondaryEvents }"></ul>-->
+                                    <ul id="events-body" class="eventsList list-unstyled">
+                                        <!-- #1 -->
+                                        <li class="event">
+                                            <div class="event-info">
+                                                <div class="event-list">
+                                                    <!--<a href="http://www.makerfairerome.eu/en/">--><div class="name">Anuncio de Raspberry Pi 3</div><!--</a>-->
+                                                </div>
+                                                <div class="date">
+                                                    <span class="month">Febrero</span>
+                                                    <span class="day">29</span>
+                                                    <span class="year">2016</span> -
+                                                    <span class="loc">Londres</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <!-- #2 -->
+                                        <li class="event">
+                                            <div class="event-info">
+                                                <div class="event-list">
+                                                    <!--<a href="http://ignite.microsoft.com/">--><div class="name">Cumpleaños de Raspberry Pi 3</div><!--</a>-->
+                                                </div>
+                                                <div class="date">
+                                                    <span class="month">Marzo</span>
+                                                    <span class="day">07</span>
+                                                    <span class="year">2016</span> -
+                                                    <span class="loc">Londres</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <!-- #3 -->
+                                        <li class="event">
+                                            <div class="event-info">
+                                                <div class="event-list">
+                                                    <a href="http://build.microsoft.com/"><div class="name">Compilación 2016</div></a>
+                                                </div>
+                                                <div class="date">
+                                                    <span class="month">Marzo</span>
+                                                    <span class="day">30</span>
+                                                    <span class="year">2016</span> -
+                                                    <span class="loc">San Francisco</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- learn more -->
+    <div class="row">
+        <div class="col-xs-24">
+            <section class="section">
+                <header class="section-header">
+                    <h2 class="section-title">Más información</h2>
+                </header>
+                <div class="row">
+                    <div class="col-xs-24 col-md-8 col-lg-8">
+                        <section class="section item-section">
+                            <div class="section-header">
+                                <h5 class="section-title">Descargar herramientas y Windows 10</h5>
+                            </div>
+                            <div class="section-body">
+                                <p>Actualiza ahora y obtén de forma gratuita la versión más reciente de Windows y Visual Studio.</p>
+                                <ul class="list-unstyled">
+                                    <li><a href="http://go.microsoft.com/fwlink/?LinkId=619999" target="_blank">Actualizar a Windows 10</a></li>
+                                    <li> Obtener <a href="https://go.microsoft.com/fwlink/p/?LinkId=534785" target="_blank">Visual Studio 2015</a> o <a href="https://go.microsoft.com/fwlink/?LinkId=534198" target="_blank">Visual Studio 2013</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-xs-24 col-md-8 col-lg-8">
+                        <section class="section item-section">
+                            <div class="section-header">
+                                <h5 class="section-title">Visitar la Galería de proyectos</h5>
+                            </div>
+                            <div class="section-body">
+                                <p>Explora los proyectos populares, las categorías específicas o todos los proyectos disponibles para el dispositivo de Windows IoT.</p>
+                                <ul class="list-unstyled">
+                                    <li><a target="_blank" href="http://microsoft.hackster.io/">Examinar proyectos</a></li>
+                                    <li><a target="_blank" href="http://microsoft.hackster.io/projects/new" target="_blank">Enviar un proyecto</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-xs-24 col-md-8 col-lg-8">
+                        <section class="section item-section">
+                            <div class="section-header">
+                                <h5 class="section-title">Desarrollar controladores de Windows 10 para el hardware</h5>
+                            </div>
+                            <div class="section-body">
+                                <p>Encuentra lo que necesites para compilar, probar, certificar e implementar los controladores del hardware de Windows en el centro de hardware de Windows.</p>
+                                <ul class="list-unstyled">
+                                    <li><a href="https://msdn.microsoft.com/library/windows/hardware/ff554690.aspx" target="_blank">Más información sobre el desarrollo de controladores de dispositivo personalizados</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- YouTube WEDCS Tagging -->
+<script>
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+
+
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            playerVars: {
+                modestbranding: true,
+                controls: false
+            },
+            height: '390',
+            width: '640',
+            videoId: 'NNLwphK5MN4',
+            events: {
+                'onReady': onReady
+            }
+        });
+    }
+
+    function onReady() {
+        player.addEventListener('onStateChange', function (e) {
+            if (e.data === 1) {
+                MscomCustomEvent("ms.InteractionType", "100", "ms.video.completionrate", "0", "cn", "Windows IoT Core: Opening Doors with Facial Recognition");
+            }
+        });
+    }
+</script>
+<!-- cmp tracking code-->
+<script type="text/javascript">
+    window.ICX = window.ICX || {};
+    ICX.domain_id = "6745";
+    (function () {
+        var p, s, id;
+        id = '2076';
+        p = document.createElement('script');
+        p.type = 'text/javascript';
+        p.async = true;
+        p.src = document.location.protocol + '//c' + id + '. ic-live.com/pixel-js/c' + id + '-pixel.js';
+        s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(p, s);
+    })();
+</script>
+<script type="text/javascript">
+    var appInsights = window.appInsights || function (config) {
+        function s(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, r = document, f = window, e = "script", o = r.createElement(e), i, u; for (o.src = config.url || "//az416426.vo.msecnd.net/scripts/a/ai.0.js", r.getElementsByTagName(e)[0].parentNode.appendChild(o), t.cookie = r.cookie, t.queue = [], i = ["Event", "Exception", "Metric", "PageView", "Trace"]; i.length;) s("track" + i.pop()); return config.disableExceptionTracking || (i = "onerror", s("_" + i), u = f[i], f[i] = function (config, r, f, e, o) { var s = u && u(config, r, f, e, o); return s !== !0 && t["_" + i](config, r, f, e, o), s }), t
+    }({
+        instrumentationKey: "e38fbe82-9f06-4e70-a70e-86e018b1cbdf"
+    });
+
+    window.appInsights = appInsights;
+    appInsights.trackPageView(null, null, { urlReferrer: document.referrer });
+</script>
+<noscript><img alt="" width="1" height="1" src="http://c.microsoft.com/trans_pixel.aspx" /></noscript>
+

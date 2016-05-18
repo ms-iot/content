@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/SSH.htm
 lang: en-US
 ---
 
-## Using SSH to connect and configure a device running Windows IoT Core
+# Using SSH to connect and configure a device running Windows IoT Core
 
 ### Download a SSH client
 In order to connect to your device using SSH, you'll first need to download a SSH client, such as [PuTTY](http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe).
@@ -13,24 +13,24 @@ In order to connect to your device using SSH, you'll first need to download a SS
 ### Connect to your device
 * In order to connect to your device, you need to first get the IP address of the device.  After booting your Windows IoT Core device, an IP address will be shown on the screen attached to the device:
 
-    ![DefaultApp on Windows IoT Core]({{site.baseurl}}/images/DefaultApp.png)
+    ![DefaultApp on Windows IoT Core]({{site.baseurl}}/Resources/images/DefaultApp.png)
 
 * Now launch PuTTY and enter the IP address in the `Host Name` text box and make sure the `SSH` radio button is selected.  Then click `Open`.
 
-    ![PuTTY Configuration]({{site.baseurl}}/images/ssh/putty_config.png)
+    ![PuTTY Configuration]({{site.baseurl}}/Resources/images/ssh/putty_config.png)
 
 * If you're connecting to your device for the first time from your computer, you may see the following security alert.  Just click `Yes` to continue.
 
-    ![PuTTY Security Alert]({{site.baseurl}}/images/ssh/putty_security_prompt.png)
+    ![PuTTY Security Alert]({{site.baseurl}}/Resources/images/ssh/putty_security_prompt.png)
 
 * If the connection was successful, you should see `login as:` on the screen, prompting you to login.  
     Enter `Administrator` and press enter.  Then enter the default password `p@ssw0rd` as the password and press enter.
 
-    ![PuTTY Login]({{site.baseurl}}/images/ssh/putty_login.png)
+    ![PuTTY Login]({{site.baseurl}}/Resources/images/ssh/putty_login.png)
 
     If you were able to login successfully, you should see something like this:
 
-    ![PuTTY Console]({{site.baseurl}}/images/ssh/putty_console.png)
+    ![PuTTY Console]({{site.baseurl}}/Resources/images/ssh/putty_console.png)
 
 ### Update account password
 

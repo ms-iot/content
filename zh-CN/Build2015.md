@@ -1,57 +1,63 @@
 ---
 layout: default
-title: Home
-permalink: /en-US/Build2015.htm
-lang: en-US
+title: 主页
+description: Build 2015 Windows 10 IoT 核心版材料、演示文稿和公告的概述。
+keyword: build 2015, windows iot, raspberry pi, arduino
+permalink: /zh-cn/Build2015.htm
+lang: zh-CN
 ---
 <div class="build-2015-background">
-  <div class="col-md-12 text-center">
-    <h1>Build 2015</h1>
+  <div class="col-md-24 text-center">
+    <h1>版本 2015</h1>
+  </div>
+</div>
+<div class="row section-heading spacer-32-top">
+  <div class="col-xs-24">
+    <h2>欢迎</h2>
+    <hr>
+    <h3 class="spacer-32-bottom">它在这里！</h3>
+    <div class="build-2015-windows"></div>
+    <p>在此处，在 Microsoft 上，我们不断受到制造商社区表现的技术激情和热情的鼓舞今天我们很高兴分享在使用 Arduino、Raspberry Pi、Intel Minnowboard Max 和 Hackster.IO 的 Windows 10 上的制造商的未来将如何发展。</p>
+
+
+    <p>强有力的合作关系是 Microsoft 面向开发人员的独特产品/服务的一部分。今天我们还很高兴地宣布与 Arduino 的合作关系，使 Windows 10 成为世界上第一个 Arduino 认证的操作系统。作为在此 Arduino 合作关系中的初始步骤，我们宣布<a href="https://developer.microsoft.com/zh-cn/windows/iot/win10/wra">“Windows Remote Arduino”</a>和<a href="https://developer.microsoft.com/zh-cn/windows/iot/win10/wvsa">“Windows Virtual Shield for Arduino”</a>的可用性，它们作为开源库于今天同时发布。</p>
   </div>
 </div>
 <div class="row section-heading">
-  <h2>Welcome</h2>
-  <hr>
-  <h3>It's here!</h3>
-  <div class="build-2015-windows"></div>
-  <p>Here at Microsoft, we are constantly inspired by the enthusiasm and passion for technology represented by the Maker community. Today we are excited to share what’s next for Makers on Windows 10 with Arduino, Raspberry Pi, Intel’s Minnowboard Max, and Hackster.IO.</p>
-
-  <p>We touched on Windows 10 on small devices at <a href="https://msdn.microsoft.com/en-us/windows/hardware/dn913720(v=vs.85).aspx">WinHEC</a> in March and today you can <a href="https://dev.windows.com/en-US/iot">download</a> Windows 10 IoT Core with support for Raspberry Pi 2 and Intel’s Minnowboard Max. Windows 10 IoT Core is a new Windows 10 edition for low-cost, small-footprint devices that will be available ‘free’ for Makers and commercial device builders.</p>
-
-  <p>Strong partnerships are part of Microsoft’s unique offering to developers. We’re excited to also announce our partnership with Arduino today, making Windows 10, the world’s first Arduino-certified operating system. As an initial step in this Arduino partnership, we’re announcing the availability of <a href="http://ms-iot.github.io/content/win10/SetupWRA.htm">‘Windows Remote Arduino’</a> and <a href="http://ms-iot.github.io/content/win10/SetupWVSA.htm">‘Windows Virtual Shield for Arduino’</a>, both released as open source libraries today.</p>
-
-</div>
-<div class="row section-heading">
-  <h2>What's happening at //Build 2015</h2>
-  <hr>
-  <div class="col-md-12">
-    <div class="col-md-4">
-        <h4>Windows 10: Building the B15 HoloBot for //build 2015</h4>
-        <iframe class="build2015-iframe" src="https://www.youtube.com/embed/r1PaAWvygQk" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="col-md-4">
-        <h4>Windows 10 + Raspberry Pi 2: //build IoT Core Maker Robot Kit</h4>
-        <iframe class="build2015-iframe" src="https://www.youtube.com/embed/aKCieb-Gf2g" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="col-md-4">
-        <h4>Windows 10 + Raspberry Pi 2: //build Hands-On Lab - Weather Station</h4>
-        <iframe class="build2015-iframe" src="https://www.youtube.com/embed/Hkm4THS3Rf8" frameborder="0" allowfullscreen></iframe>
-    </div>
+  <div class="col-xs-24">
+    <h2>在 //Build 2015 中发生了什么</h2>
+    <hr>
+  </div>
+  <div class="col-xs-24 col-md-8">
+    <h4>Windows 10： 生成用于 //版本 2015 的 B15 HoloBot</h4>
+    <iframe class="build2015-iframe" src="https://www.youtube.com/embed/r1PaAWvygQk" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class="col-xs-24 col-md-8">
+        <h4>Windows 10 + Raspberry Pi 2 或 3：//生成 IoT Core 制造商机器人工具包</h4>
+    <iframe class="build2015-iframe" src="https://www.youtube.com/embed/aKCieb-Gf2g" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class="col-xs-24 col-md-8">
+        <h4>Windows 10 + Raspberry Pi 2 或 3：//生成动手实验 — 气象站</h4>
+    <iframe class="build2015-iframe" src="https://www.youtube.com/embed/Hkm4THS3Rf8" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 <div class="row section-heading">
-  <h2>Join the Windows Developer Program for IoT</h2>
-  <hr>
-  <a href="{{site.signupurl}}">
-      <h4 class="btn btn-default btn-build">Join the Windows Developers Program for IoT</h4>
+  <div class="col-xs-24">
+    <h2>加入面向 IoT 的 Windows 开发人员计划</h2>
+    <hr>
+    <a href="{{site.signupurl}}">
+      <h4 class="btn btn-default btn-build">加入面向 IoT 的 Windows 开发人员计划</h4>
     </a>
-    <p>Be amongst the first to receive new information about our Windows Developer Program for IoT, including product information, beta programs and launch specifics.</p>
+    <p>成为首批收到有关面向 loT 的 Windows 开发人员计划新信息（包括产品信息、Beta 计划和启动详细信息）的用户。</p>
+  </div>
 </div>
 <div class="row section-heading">
-  <h2>We're listening! Let us know what you think</h2>
-  <hr>
-  <a href="https://microsoft.qualtrics.com/jfe/form/SV_3ZUHQMqjAcS8zDT">
-      <h4 class="btn btn-default btn-build">Share your feedback</h4>
+  <div class="col-xs-24">
+    <h2>我们乐于倾听！ 让我们了解你的想法</h2>
+    <hr>
+    <a href="https://microsoft.qualtrics.com/jfe/form/SV_3ZUHQMqjAcS8zDT">
+      <h4 class="btn btn-default btn-build">共享你的反馈</h4>
     </a>
-    <p>Shape the future of Windows 10 IoT Core. Take a minute to share your feedback.</p>
+    <p>塑造 Windows 10 IoT 核心版的未来。花一些时间共享你的反馈。</p>
+  </div>
 </div>

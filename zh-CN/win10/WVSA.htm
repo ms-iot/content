@@ -1,0 +1,119 @@
+---
+layout: default
+title: WVSA
+description:  了解如何设置 Windows Virtual Shields for Arduino 以及如何生成你的第一个 Windows 10 IoT 核心版应用。
+keyword: arduino, windows iot, windows virtual shields, app
+permalink: /zh-cn/win10/WVSA.htm
+lang: zh-CN
+deviceName: WVSA
+---
+<div class="row">
+  <div class="col-xs-24">
+    <ol class="breadcrumb">
+      <li><a href="https://developer.microsoft.com/zh-cn/windows/iot">IoT 主页</a></li>
+      <li><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">入门</a></li>
+      <li class="active">Windows Virtual Shields for Arduino</li>
+    </ol>
+    <header class="page-title-header">
+      <h1 class="page-title"> 设置 Windows Virtual Shields for Arduino</h1>
+      <div class="page-subtitle">使 Arduino 和 Windows 10 设备准备好与 Windows Virtual Shields for Arduino 一起使用。</div>
+    </header>
+  </div>
+</div>
+
+<h3>概述</h3>
+如果你已使用 <a href="https://www.arduino.cc/" target="_blank">Arduino</a>，则已经熟悉防火墙的概念。每个防火墙都有特殊的用途（例如温度防火墙、加速计防火墙），使用多个防火墙生成设备将非常复杂、成本高且空间效率低。现在，假设你可以使用低成本的 Windows Lumia 手机作为一组压缩的防火墙。你的 Arduino 草图可通过易于使用的库调用来访问 Windows Phone 中价值数百美元的传感器和功能。
+
+这正是 Windows Virtual Shields for Arduino 库为开发人员启用的功能。还有一个更好的优势，即此技术适用于所有 Windows 10 设备，所以你也可以在电脑或 Surface 上使用这些传感器和功能。此外，Arduino 可以卸载 Windows 10 配套设备上耗费计算的任务（例如语音识别和 Web 解析）！
+
+让我们了解如何设置硬件和软件以与 Windows Virtual Shields for Arduino 一起使用。
+
+<div class="row">
+  <div class="col-xs-24">
+    <h2>1.使用 Windows Virtual Shields for Arduino 让你的 Windows 10 设备准备好开发项目。<span class="pull-right"><a id="pc-content-toggle" class="toggle-button" onClick="hideDiv('pc-content')">隐藏</a></span></h2>
+
+    <hr />
+    <div id="pc-content" class="toggle-section">
+      <p>在教程的这一部分中，你将通过使用 Windows Virtual Shields for Arduino 应用程序（该通用 Windows 应用程序允许你使用你的设备作为 Arduino 开发板的“虚拟防火墙”）加载来准备好你选择的 Windows 10 设备。 这将为制造商带来一些强大的功能，从而使他们能够相对轻松地使用语音识别、触摸屏以及 Windows 的计算功能。</p>
+
+      <h3>硬件</h3>
+      <p>Windows Virtual Shields for Arduino 应用程序可以在任何 Windows 10 设备上运行，但本教程将介绍如何设置 Windows Phone。</p>
+      <h4>所需内容</h4>
+      <p>运行 Windows 10 的 Windows Phone - 我们建议使用 <a href="http://www.microsoft.com/zh-cn/mobile/phone/lumia520/" target="_blank">Lumia 520</a> 或 <a href="http://www.microsoft.com/zh-cn/mobile/phone/lumia635/" target="_blank">Lumia 635</a>。</p>
+      <h4>设置 Windows Phone</h4>
+      <p>如果你的手机尚未运行 Windows 10，可以选择安装该软件的预览版。 Windows Phone 8 用户可以转到 Microsoft 官方商城应用下载“Windows 预览体验成员”应用程序 - 此应用允许用户选择以更新方式接收 Windows 10 Technical Preview。 打开该应用后，按照提示和说明进行操作，直到你的手机成功运行 Windows 10 为止。</p>
+
+      <h3>软件</h3>
+
+      <p>有两个选项可用于在 Windows Phone 上安装 Windows Virtual Shields for Arduino UWP 应用。 比较简单快捷的方法是下载该应用。</p>
+      <ol class="inline-list">
+        <li><a href="#">从 Microsoft 官方商城下载该应用</a></li>
+        <li><a href="#">使用电脑和 Visual Studio 旁加载该应用</a></li>
+      </ol>
+
+
+      <h3>选项 1： 从 Microsoft 官方商城下载该应用</h3>
+      <p>遵循此 Windows Virtual Shields for Arduino 的 Microsoft 官方商城页面的<a href="https://www.microsoft.com/store/apps/9nblgggz0mld" target="_blank">链接</a>来下载应用程序，然后进行安装。然后，打开应用程序以确保它可以正常运行。 你的设备现已设置为用作 Arduino 的“虚拟防火墙”！  你可以继续到下一个页面。</p>
+
+      <h3>选项 2： 使用电脑和 Visual Studio 旁加载该应用</h3>
+      <h4>所需内容</h4>
+      <ol class="inline-list">
+        <li>Visual Studio 2015，用于将 Windows Virtual Shields for Arduino 应用旁加载到开发人员解锁的手机上。</li>
+        <li>此<a href="https://github.com/ms-iot/virtual-shields-universal" target="_blank">存储库</a>，包含 Windows Virtual Shields for Arduino 应用程序的代码。 克隆此存储库或将其作为 ZIP 下载到本地磁盘上。 如果你不熟悉 Git 并想要进行正确的克隆，请按照<a href="https://help.github.com/articles/cloning-a-repository/" target="_blank">此处</a>的说明进行操作。</li>
+      </ol>
+
+      <h4>设置 Visual Studio 2015</h4>
+      <ol class="inline-list">
+        <li>使用 <a href="https://dev.windows.com/zh-cn/windows-10-developer-preview-tools" target="_blank">dev.windows.com</a> 中的 Windows 10 开发者预览版工具安装 Visual Studio 2015。 我们建议使用 Visual Studio 免费社区版，但也可以使用企业版和专业版。 如果已安装 Visual Studio，请跳到下一步。</li>
+        <li>在 Visual Studio 中，从上面的“所需内容”部分中下载的存储库中加载 Shield.sln。</li>
+        <li>确保 Windows 10 设备（在此情况下是 Windows Phone）已经过开发人员解锁。（<a href="https://msdn.microsoft.com/zh-cn/library/windows/apps/dn614128.aspx" target="_blank">此页面</a>介绍如何解锁 Windows Phone 8.1、8 和 7.1；但是，对于 Windows 10 手机，步骤完全相同）。</li>
+        <li>将 Windows 10 设备插入计算机，并将 Shield.sln 程序部署到设备。 若要执行此操作，请先部署到“本地计算机”，并确保将设备的体系结构设置为“ARM”。</li>
+        <li>在手机上运行新安装的 Windows Virtual Shields for Arduino 应用程序以确保部署已成功。 你的 Windows 10 设备现已设置为用作虚拟防火墙！</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-24">
+	<h2>2.设置 Arduino 以使用 Windows Virtual Shields for Arduino 库<span class="pull-right"><a id="setup-content-toggle" class="toggle-button" onClick="hideDiv('setup-content')">显示</a></span></h2>
+	<hr>
+	<div id="setup-content" class="toggle-section hidden">
+	  {% include setup-wvsa.htm %}
+	</div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-24">
+    <h2>3.编写你的第一个应用： 你好，Blinky！   <span class="pull-right"><a id="app-content-toggle" class="toggle-button" onClick="hideDiv('app-content')">显示</a></span>  </h2>
+    <hr />
+    <div id="app-content" class="toggle-section hidden setup-content-list">
+      {% include samples/blinky-wvsa.md %}
+    </div>
+  </div>
+</div>
+
+
+<script>
+  function hideDiv(div) {
+    var div = "#" + div,
+        button = div + "-toggle",
+        currentState = $(button)[0].innerHTML;
+
+    for(var i = 0; i < 3 ; i ++){
+        $(".toggle-button")[i].innerHTML = "Show";
+      }
+
+    if(currentState === "Hide") {
+      $(div).toggle('slow');
+    }
+    else
+    {
+      $(".hidden").removeClass("hidden");
+      $(".toggle-section").hide();
+      $(div).toggle('slow');
+      $(button)[0].innerHTML = "Hide";
+    }
+  }
+</script>

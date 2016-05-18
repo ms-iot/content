@@ -1,6 +1,8 @@
 ---
 layout: default
 title: AllJoyn
+description: Learn about AllJoyn, a common protocol for IoT devices, and how it enables even more with Windows IoT.
+keyword: alljoyn, windows iot, allseen alliance
 permalink: /en-US/win10/AllJoyn.htm
 lang: en-US
 ---
@@ -82,5 +84,5 @@ __Reference__
 
 ___Informational only___
 
-- [Depreciated] [Channel 9: Building AllJoyn Apps on Windows 10 (MSDN)](https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview){:target="_blank"}
-- [Depreciated] [AllJoyn CodeGen Tool]({{site.baseurl}}/en-US/win10/AllJoynCodeGen.htm){:target="_blank"}
+- [Deprecated] [Channel 9: Building AllJoyn Apps on Windows 10 (MSDN)](https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview){:target="_blank"}
+- [Deprecated] [AllJoyn CodeGen Tool]({{site.baseurl}}/en-US/win10/AllJoynCodeGen.htm){:target="_blank"}

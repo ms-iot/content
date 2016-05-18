@@ -7,21 +7,21 @@ lang: en-US
 
 <div style="background-color:Silver; color:black; padding:20px;">
 	<h4><u>Support for Windows on Intel Galileo Gen 1 and Gen 2 will end on November 30, 2015</u></h4>
-	<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we’ve made the difficult decision to discontinue Windows support on the Galileo platform. We’ve seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>
+	<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we've made the difficult decision to discontinue Windows support on the Galileo platform. We've seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>
 </div>
 
 # Servo
 Learn how to use the basics of the Servo Library and interact with a Servo.
 
-# Required Components
+## Required Components
 * [Micro Servo](http://www.adafruit.com/products/169){:target="_blank"}
 * 3 wires to connect the servo
 
-# Hooking up Components
+## Hooking up Components
 If you are using a basic servo that does not require external power, this should be your configuration:<br/>
-![]({{site.baseurl}}/images/ServoDiagram.png)
+![]({{site.baseurl}}/Resources/images/ServoDiagram.png)
 
-# Create a new project
+## Create a new project
 
 1. Create a new project from the template.
 1. Hook up the signal wire (orange if you are using the Micro Servo above) to pin 3 on your Galileo.
@@ -29,7 +29,7 @@ If you are using a basic servo that does not require external power, this should
 1. Hook up the voltage wire (red if you are using the Micro Servo above) to the 5V pin on your Galileo.
 1. Replace the existing code in main.cpp with the following code:
 
-# Code
+## Code
 
 ### Main.cpp
 {% highlight C++ %}

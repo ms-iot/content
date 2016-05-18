@@ -1,11 +1,11 @@
 ---
 layout: default
 title: BLE GATT 示例 - SensorTag 示例转储
-permalink: /zh-CN/win10/samples/BLEGattDump.htm
+permalink: /zh-cn/win10/samples/BLEGattDump.htm
 lang: zh-CN
 ---
 
-##示例 GATT 属性转储文件
+# 示例 GATT 属性转储文件
 下面是使用连接到系统的 SensorTag 运行蓝牙 GATT 数据库查看器 \(BthGATTDump.exe\) 中的输出。
 
     Microsoft Bluetooth GATT database viewer v1.00 Copyright (c) Microsoft Corp.

@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Advanced Topics
+description: Learn about the advanced topics for Windows IoT.
+keyword: windows iot
 permalink: /en-US/win10/Advanced.htm
 lang: en-US
 ---

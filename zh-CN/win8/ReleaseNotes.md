@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 发行说明
-permalink: /zh-CN/ReleaseNotes.htm
+permalink: /zh-cn/win8/ReleaseNotes.htm
 lang: zh-CN
 ---
 

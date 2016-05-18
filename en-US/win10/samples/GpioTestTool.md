@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/GpioTestTool.htm
 lang: en-US
 ---
 
-## GpioTestTool Sample
+# GpioTestTool Sample
 
 {% include VerifiedVersion.md %}
 

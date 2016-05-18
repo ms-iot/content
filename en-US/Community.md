@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Home
+description: Stay connected with other Windows IoT developers to learn about technology, announcements, new product features, launches and more for Windows IoT devices.
+keyword: community, forum, iot forum, iot
 permalink: /en-US/Community.htm
 lang: en-US
 ---
@@ -15,44 +17,37 @@ lang: en-US
 </div>
 <div class="row section-heading">
   <h3>New on the Window IoT Blog</h3>
-    <div class="col-md-4">
-    <div class="col-md-9">
-      <a href="http://blogs.windows.com/buildingapps/2015/10/28/announcing-dragonboard-410c-support-in-windows-10-iot-core-arduino-partnership-updates/" target="_blank">
-        <h4>Announcing DragonBoard 410c support in Windows 10 IoT Core, Arduino partnership updates</h4>
+    <div class="col-md-6">
+      <a href="https://blogs.windows.com/buildingapps/2016/04/05/windows-10-iot-build-2016/" target="_blank">
+        <h4>Windows 10 IoT @ //Build 2016</h4>
       </a>
-      <h4><em>Steve Teixeira, Oct 28 2015</em></h4>
+      <h4><em>Brett Bentsen<br>Partner Group Program Manager for Windows IoT<br>Apr 5 2016</em></h4>
     </div>
-  </div>
-  <div class="col-md-4">
-    <div class="col-md-9">
-      <a href="http://blogs.windows.com/buildingapps/2015/09/24/whats-next-for-windows-10-iot-core/" target="_blank">
-        <h4>What's next for Windows 10 IoT Core</h4>
+    <div class="col-md-6">
+      <a href="http://go.microsoft.com/fwlink/?LinkId=734075" target="_blank">
+        <h4>Windows 10 IoT Core support for Raspberry Pi 3</h4>
       </a>
-      <h4><em>Steve Teixeira, Sep 24 2015</em></h4>
+      <h4><em>Billy Anders<br>Director of Program Management<br>Windows IoT<br>Feb 29 2016</em></h4>
     </div>
-  </div>
-  <div class="col-md-4">
-    <div class="col-md-9">
-      <a href="http://blogs.windows.com/buildingapps/2015/08/10/hello-windows-10-iot-core/" target="_blank">
-        <h4>Hello, Windows 10 IoT Core</h4>
+    <div class="col-md-6">
+      <a href="http://blogs.windows.com/buildingapps/2016/02/04/what-is-windows-remote-arduino-and-what-can-it-do/" target="_blank">
+        <h4>What is Windows Remote Arduino and What Can It Do?</h4>
       </a>
-      <br>
-      <h4><em>Steve Teixeira, Aug 10 2015</em></h4>
+      <h4><em>Windows Apps Team<br>Feb 4, 2016</em></h4>
     </div>
-  </div>
 </div>
 
 <a name="contact"></a>
 
 <div class="row section-heading">
-  <div class="col-md-3">
+  <div class="col-md-6">
     <h3>Forums</h3>
     <p>Forums are a great way to ask and answer technical questions and connect with fellow developers. We support the community through the following forums:</p>
     <p>MSDN hosts the primary forums where you can ask us questions on all topics.</p>
     <p>
       <a href="https://social.msdn.microsoft.com/forums/en-US/home?forum=WindowsIoT" target="_blank">MSDN Forums &raquo;</a>
     </p>
-    <p>Raspberry Pi forums are the best place to direct Raspberry Pi 2 board-specific questions.</p>
+    <p>Raspberry Pi forums are the best place to direct Raspberry Pi 2 and 3 board-specific questions.</p>
     <p>
     <a href="https://www.raspberrypi.org/forums/viewforum.php?f=105" target="_blank">Raspberry Pi Forums &raquo;</a>
     </p>
@@ -65,7 +60,7 @@ lang: en-US
     <a href="http://stackoverflow.com/questions/tagged/WindowsIoT" target="_blank">Stack Overflow &raquo;</a>
     </p>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-6">
     <h3>Social Media</h3>
     <p>
       Connect with Windows IoT to learn more about technology, announcements, new product features, launches and more.
@@ -85,11 +80,8 @@ lang: en-US
     <p>
       <a href="https://twitter.com/IoTDan" target="_blank">@IoTDan &raquo;</a>
     </p>
-    <p>
-      <a href="https://twitter.com/vkhandpur" target="_blank">@VKhandpur &raquo;</a>
-    </p>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-6">
     <h3>Feedback</h3>
     <p>
       Review or submit bugs for Microsoft and the community. 
@@ -98,7 +90,7 @@ lang: en-US
       <a href='windows-feedback:?contextid=441&metadata={"Metadata":[{"OS":"IoTUAP"},{"Source":"WindowsOnDevices.com"}]}??' target="_blank">Windows 10 feedback tool <br />(Windows 10 only) &raquo;</a>
     </p>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-6">
     <h3>Support</h3>
     <p>
       We support the community via forums. Please post your questions on the forums and we will respond. Also, be sure to check out our FAQ.

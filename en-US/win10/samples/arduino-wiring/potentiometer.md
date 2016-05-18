@@ -6,13 +6,13 @@ lang: en-US
 ---
 
 # Arduino Wiring Potentiometer Sample
-This sample shows how to connect a rotary potentiometer and LED to a Raspberry Pi 2 or a MinnowBoard Max using Arduino Wiring. We use a SPI-based ADC (Analog to Digital Converter) to read values from the potentiometer and control an LED based on the knob position.
+This sample shows how to connect a rotary potentiometer and LED to a Raspberry Pi 2 and 3 or a MinnowBoard Max using Arduino Wiring. We use a SPI-based ADC (Analog to Digital Converter) to read values from the potentiometer and control an LED based on the knob position.
 
 This sample is similar to the [C# Potentiometer Sample]({{site.baseurl}}/{{page.lang}}/win10/samples/Potentiometer.htm), but uses Arduino Wiring instead of C#. The wiring and hardware configuration will be nearly identical. However, DragonBoard 410c does not currently support Arduino Wiring.
 
 ## Hardware
 - Board - one of the following only
-	- Raspberry Pi 2
+	- Raspberry Pi 2 or 3
 	- MinnowBoard Max
 - ADC - one of the following only
 	- [1 MCP3002 10-bit ADC](http://www.microchip.com/wwwproducts/Devices.aspx?product=MCP3002){:target="_blank"} or
@@ -32,13 +32,13 @@ Below are the pinouts of the MCP3002 and MCP3208 ADCs.
 
 | MCP3002                                                              | MCP3008 or MCP3208                                                              |
 | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| ![MCP3002 Pinout]({{site.baseurl}}/images/Potentiometer/MCP3002.PNG) | ![MCP3208 Pinout]({{site.baseurl}}/images/Potentiometer/MCP3208.PNG) |
+| ![MCP3002 Pinout]({{site.baseurl}}/Resources/images/Potentiometer/MCP3002.PNG) | ![MCP3208 Pinout]({{site.baseurl}}/Resources/images/Potentiometer/MCP3208.PNG) |
 
 ### Raspberry Pi
 
-#### Raspbery Pi Pinout
+#### Raspbery Pi 2 and 3 Pinout
 
-![Raspberry Pi 2 pinout]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![Raspberry Pi 2 and 3 pinout]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
 #### Wiring & Connections
 
@@ -47,16 +47,16 @@ If you chose to use the **MCP3002**, assemble the circuit as follows. Note that 
 
 Detailed connection:
 
-![Overall Schematics]({{site.baseurl}}/images/Potentiometer/OverallCon-3002.PNG)
+![Overall Schematics]({{site.baseurl}}/Resources/images/Potentiometer/OverallCon-3002.PNG)
 
 The MCP3002 should be connected as follows:
 
-- VDD/VREF - 3.3V on Raspberry Pi 2 (Pin 1)
-- CLK - "SPI0 SCLK" on Raspberry Pi 2 (Pin 23)
-- Dout - "SPI0 MISO" on Raspberry Pi 2 (Pin 21)
-- Din - "SPI0 MOSI" on Raspberry Pi 2 (Pin 19)
-- CS/SHDN - "SPI0 CS0" on Raspberry Pi 2 (Pin 24)
-- Vss - GND on Raspberry Pi 2 (Pin 6 or any other GND pin)
+- VDD/VREF - 3.3V on Raspberry Pi 2 or 3 (Pin 1)
+- CLK - "SPI0 SCLK" on Raspberry Pi 2 or 3 (Pin 23)
+- Dout - "SPI0 MISO" on Raspberry Pi 2 or 3 (Pin 21)
+- Din - "SPI0 MOSI" on Raspberry Pi 2 or 3 (Pin 19)
+- CS/SHDN - "SPI0 CS0" on Raspberry Pi 2 or 3 (Pin 24)
+- Vss - GND on Raspberry Pi 2 or 3 (Pin 6 or any other GND pin)
 - CH0 - Potentiometer wiper pin
 
 
@@ -65,25 +65,25 @@ If you chose to use the **MCP3208** or **MCP3008**, assemble the circuit as foll
 
 Detailed connection:
 
-![RPi2 Fritzing 3008]({{site.baseurl}}/images/Potentiometer/OverallCon-3208.PNG)
+![RPi2 Fritzing 3008]({{site.baseurl}}/Resources/images/Potentiometer/OverallCon-3208.PNG)
 
 The MCP3208 should be connected as follows:
 
-- VDD - 3.3V on Raspberry Pi 2 (Pin 1)
-- VREF - 3.3V on Raspberry Pi 2 (Pin 1)
-- AGND - GND on Raspberry Pi 2 (Pin 6 or any other GND pin)
-- CLK - "SPI0 SCLK" on Raspberry Pi 2 (Pin 23)
-- Dout - "SPI0 MISO" on Raspberry Pi 2 (Pin 21)
-- Din - "SPI0 MOSI" on Raspberry Pi 2 (Pin 19)
-- CS/SHDN - "SPI0 CS0" on Raspberry Pi 2 (Pin 24)
-- DGND - GND on Raspberry Pi 2 (Pin 6 or any other GND pin)
+- VDD - 3.3V on Raspberry Pi 2 or 3 (Pin 1)
+- VREF - 3.3V on Raspberry Pi 2 or 3 (Pin 1)
+- AGND - GND on Raspberry Pi 2 or 3 (Pin 6 or any other GND pin)
+- CLK - "SPI0 SCLK" on Raspberry Pi 2 or 3 (Pin 23)
+- Dout - "SPI0 MISO" on Raspberry Pi 2 or 3 (Pin 21)
+- Din - "SPI0 MOSI" on Raspberry Pi 2 or 3 (Pin 19)
+- CS/SHDN - "SPI0 CS0" on Raspberry Pi 2 or 3 (Pin 24)
+- DGND - GND on Raspberry Pi 2 or 3 (Pin 6 or any other GND pin)
 - CH0 - Potentiometer wiper pin
 
 ### MinnowBoard Max
 
 #### MinnowBoard Max Pinout
 
-![MinnowBoard Max Pinout]({{site.baseurl}}/images/PinMappings/MBM_Pinout.png)
+![MinnowBoard Max Pinout]({{site.baseurl}}/Resources/images/PinMappings/MBM_Pinout.png)
 
 #### Wiring & Connections
 
@@ -92,7 +92,7 @@ If you chose to use the **MCP3002**, assemble the circuit as follows. Note that 
 
 Detailed connection:
 
-![MBM Fritzing 3002]({{site.baseurl}}/images/arduino_wiring/MBM_pot3002.png)
+![MBM Fritzing 3002]({{site.baseurl}}/Resources/images/arduino_wiring/MBM_pot3002.png)
 
 The MCP3002 should be connected as follows:
 
@@ -109,7 +109,7 @@ If you chose to use the **MCP3208** or **MCP3008**, assemble the circuit as foll
 
 Detailed connection:
 
-![MBM Fritzing 3208]({{site.baseurl}}/images/arduino_wiring/MBM_pot3208.png)
+![MBM Fritzing 3208]({{site.baseurl}}/Resources/images/arduino_wiring/MBM_pot3208.png)
 
 - VDD - 3.3V on MBM (Pin 4)
 - VREF - 3.3V on MBM (Pin 4)

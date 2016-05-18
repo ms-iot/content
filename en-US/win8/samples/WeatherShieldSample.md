@@ -1,25 +1,25 @@
 ---
 layout: default
-title: Weather Shield Sensors
-permalink: /en-US/win8/samples/WeatherShieldSensors.htm
+title: Weather Shield Sensors Sample
+permalink: /en-US/win8/samples/WeatherShieldSample.htm
 lang: en-US
 ---
 
 <div style="background-color:Silver; color:black; padding:20px;">
 	<h4><u>Support for Windows on Intel Galileo Gen 1 and Gen 2 will end on November 30, 2015</u></h4>
-	<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we’ve made the difficult decision to discontinue Windows support on the Galileo platform. We’ve seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>
+	<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we've made the difficult decision to discontinue Windows support on the Galileo platform. We've seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>
 </div>
 
 # Weather Shield Sensors
 Learn how to create a simple app that uses the Weather Shield's sensors.
 
-# Required Components
+## Required Components
 * [Sparkfun Weather Shield](https://www.sparkfun.com/products/12081){:target="_blank"}
 
-# Hooking up Components
+## Hooking up Components
 Place the weather shield on top of the Galileo board making sure to line the pins up.
 
-# Create a new project
+## Create a new project
 
 1. Create a new project from the template.
 1. Go to [HTU21D Repo](https://github.com/sparkfun/HTU21D_Breakout){:target="_blank"} and download the HTU21D.cpp and HTU21D.h files.
@@ -27,7 +27,7 @@ Place the weather shield on top of the Galileo board making sure to line the pin
 1. Place the HTU21D and MPL3115A2 library files in your new project.
 1. Replace the existing code in main.cpp with the following code:
 
-# Code
+## Code
 
 ### Main.cpp
 {% highlight C++ %}

@@ -5,13 +5,13 @@ permalink: /en-US/win10/NetworkPacketCapture.htm
 lang: en-US
 ---
 
-##Use Microsoft Message Analyzer to capture network packets from your Windows 10 IoT Core device
+## Use Microsoft Message Analyzer to capture network packets from your Windows 10 IoT Core device
 
 You can use [Microsoft Message Analyzer](http://www.microsoft.com/en-us/download/details.aspx?id=44226){:target="_blank"} to capture, display, and analyze protocol messaging traffic on your Windows 10 IoT Core device.
 
 ![Message Analyzer]({{site.baseurl}}/images/packetcapture/message-analyzer.png)
 
-###Set up your device
+### Set up your device
 
 In order to connect to your device using Message Analyzer, you need to first rename your device.  This can be done through [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm){:target="_blank"} or 
 [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm){:target="_blank"} using the `setcomputername` command.
@@ -20,13 +20,13 @@ In order to connect to your device using Message Analyzer, you need to first ren
 
 After you rename your device, reboot the device to apply the name change.
 
-###Turn off the firewall
+### Turn off the firewall
 
 Connect to your device using PowerShell or SSH and run the following command to disable the firewall.
     
     netsh advfirewall set allprofiles state off
     
-###Connect to your device using Message Analyzer
+### Connect to your device using Message Analyzer
 
 Now that your device is set up, let's connect to it using Microsoft Message Analyzer.
 

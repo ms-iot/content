@@ -7,25 +7,25 @@ lang: en-US
 
 <div style="background-color:Silver; color:black; padding:20px;">
 	<h4><u>Support for Windows on Intel Galileo Gen 1 and Gen 2 will end on November 30, 2015</u></h4>
-	<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we’ve made the difficult decision to discontinue Windows support on the Galileo platform. We’ve seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>
+	<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we've made the difficult decision to discontinue Windows support on the Galileo platform. We've seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>
 </div>
 
 # Communicating with an XBee device
 Learn how to use HardwareSerial to communicate to an XBee device across the TX/RX pins.
 
-# Info on using HardwareSerial
+## Info on using HardwareSerial
 
 * HardwareSerial defines an object called Serial.
     * This reads and writes to COM1 on the Windows Image which is linked to the RX and TX pins on the Galileo board.<br/>
 * Serial = COM1 = TX/RX pins
 
-# Required Components
+## Required Components
 * [XBee ZB device](http://www.digi.com/products/xbee-rf-solutions/modules/xbee-zigbee){:target="_blank"}
 * Wires to connect RX, TX, 3.3v power and ground wires to the XBee.
 
 This sample requires the XBee to run in API mode, by setting AP=2. If you are using Series 2 XBee, you'll need to install the API Firmware with [X-CTU](http://www.digi.com/support/productdetail?pid=3352&osvid=57&type=utilities){:target="_blank"} (Series 2 are manufactured with AT firmware), then set AP=2. This software will not work correctly with AP=1
 
-# Create a new project
+## Create a new project
 
 1. Create a new project from the template.
     * Right click on the Project in the Solution Explorer, then select <kbd>Properties</kbd>.
@@ -35,11 +35,11 @@ This sample requires the XBee to run in API mode, by setting AP=2. If you are us
 1. Connect the GND pin on the Galileo board to the GND pin (#10) on the XBee
 1. Connect the 3.3v pin on the Galileo board to the 3.3v pin (#1) on the XBee
 
-<img src="{{site.baseurl}}/images/XbeeGalileoWiring.png">
+<img src="{{site.baseurl}}/Resources/images/XbeeGalileoWiring.png">
 
 If you have an XBee Adapter, connect the wires to the equivalent pin-outs on the adapter.
 
-# Code
+## Code
 
 ### Main.cpp
 {% highlight C++ %}

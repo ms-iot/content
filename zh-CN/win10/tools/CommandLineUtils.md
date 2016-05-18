@@ -1,11 +1,11 @@
 ---
 layout: default
 title: Windows 10 IoT Core 命令行实用程序
-permalink: /zh-CN/win10/tools/CommandLineUtils.htm
+permalink: /zh-cn/win10/tools/CommandLineUtils.htm
 lang: zh-CN
 ---
 
-#Windows 10 IoT Core 命令行实用程序
+# Windows 10 IoT Core 命令行实用程序
 
 正在寻找可用于配置设备上的某些设置的工具？ 下面的工具均可预安装在你的设备上，可帮助你实现这一目标！ 在[连接到你的设备]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)后，使用 PowerShell 运行这些命令。
 
@@ -19,7 +19,7 @@ lang: zh-CN
 
 * **设置密码**
 
-	若要更改你的设备上的帐户密码，可通过运行 `SetPassword [account-username] [new-password] [old-password]` 来更改帐户密码。
+	若要更改你的设备上的帐户密码，可通过运行 `net user [account-username] [new-password]` 来更改帐户密码。
 
 * **查询和设置设备名称：**
 

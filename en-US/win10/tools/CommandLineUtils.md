@@ -19,7 +19,7 @@ Looking to configure some of the settings on your device? The below tools all co
 
 * **Set password**
 
-	To change the password on an account on your device, run `SetPassword [account-username] [new-password] [old-password]` to change the account password.
+	To change the password on an account on your device, run `net user [account-username] [new-password]` to change the account password.
 
 * **Query and set device name:**
 
@@ -95,7 +95,7 @@ Looking to configure some of the settings on your device? The below tools all co
 
 * **Boot configuration:**
 
-	You can make changes to the boot configuration of your Windows IoT Core device using `bcdedit.exe`. For instance, you can enable testsigning with `bcdedit –set testsigning` on command.
+	You can make changes to the boot configuration of your Windows IoT Core device using `bcdedit.exe`. For instance, you can enable testsigning with `bcdedit –set testsigning on` command.
 
 * **Shutdown/restart device:**
 

@@ -5,11 +5,11 @@ permalink: /en-US/win10/samples/PictureTheWeather.htm
 lang: en-US
 ---
 
-## Picture The Weather sample, using Windows Virtual Shields for Arduino
+# Picture The Weather sample, using Windows Virtual Shields for Arduino
 
 In this sample, we will connect an RGB LED strip to an Arduino and control it to indicate the weather forecast behind a picture.
 
-![RGB Strip 1]({{site.baseurl}}/images/RGBSTRIP/rgbstrip_split1.JPG)
+![RGB Strip 1]({{site.baseurl}}/Resources/images/RGBSTRIP/rgbstrip_split1.JPG)
 
 ### Components
 
@@ -45,7 +45,7 @@ The RGB LED strips come with 48 LEDs in a strip.
 
 * ... solder wires between the splits so that the ends are reconnected through the wires.
 
-![RGB Strip 2]({{site.baseurl}}/images/RGBSTRIP/rgbstrip_split2.JPG)
+![RGB Strip 2]({{site.baseurl}}/Resources/images/RGBSTRIP/rgbstrip_split2.JPG)
 
 ### Placement of the RGB strip
 
@@ -54,7 +54,7 @@ place the 6 strips of 8 LEDs onto the inside backing of the picture frame so tha
 
 Tape or connect the backing into/onto the frame.
 
-![RGB Strip 1]({{site.baseurl}}/images/RGBSTRIP/rgbstrip_split1.JPG)
+![RGB Strip 1]({{site.baseurl}}/Resources/images/RGBSTRIP/rgbstrip_split1.JPG)
 
 ### Hook up the RGB strip to the Arduino
 
@@ -68,7 +68,7 @@ From the RGB LED strip:
 
 * Connect the barrel power connector to a +5 volt power supply (per Adafruit's instructions).
 
-![RGB connection]({{site.baseurl}}/images/RGBSTRIP/rgbconnect.JPG)
+![RGB connection]({{site.baseurl}}/Resources/images/RGBSTRIP/rgbconnect.JPG)
 
 ### Upload to your device
 
@@ -95,4 +95,4 @@ Using the Windows Virtual Shields for Arduino, the Arduino sketch is:
 
 * setting the animation on the RGB LED strip.
 
-![Phone image]({{site.baseurl}}/images/RGBSTRIP/Phone.JPG)
+![Phone image]({{site.baseurl}}/Resources/images/RGBSTRIP/Phone.JPG)

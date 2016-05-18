@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/BlinkyHeadlessLightning.htm
 lang: en-US
 ---
 
-## Blinky Headless Sample with Lightning Provider
+# Blinky Headless Sample with Lightning Provider
 
 {% include VerifiedVersion.md %}
 

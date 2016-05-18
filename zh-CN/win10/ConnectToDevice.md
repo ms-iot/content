@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 连接到设备
-permalink: /zh-CN/win10/ConnectToDevice.htm
+permalink: /zh-cn/win10/ConnectToDevice.htm
 lang: zh-CN
 ---
 

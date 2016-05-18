@@ -1,17 +1,17 @@
 ---
 layout: default
 title: 描绘天气
-permalink: /zh-CN/win10/samples/PictureTheWeather.htm
+permalink: /zh-cn/win10/samples/PictureTheWeather.htm
 lang: zh-CN
 ---
 
-##“描绘天气”示例，使用面向 Arduino 的 Windows Virtual Shield
+# “描绘天气”示例，使用面向 Arduino 的 Windows Virtual Shield
 
 在此示例中，我们会将 RGB LED 条连接到 Arduino，并控制它在图片后指示天气预报。
 
-![RGB 带 1]({{site.baseurl}}/images/RGBSTRIP/rgbstrip_split1.JPG)
+![RGB 带 1]({{site.baseurl}}/Resources/images/RGBSTRIP/rgbstrip_split1.JPG)
 
-###组件
+### 组件
 
 你将需要以下硬件：
 
@@ -29,13 +29,13 @@ lang: zh-CN
 
 * 来自会艺术创作的家庭成员、朋友或你自己的 8 x 11 英寸纸张绘图
 
-###连接到你的设备
+### 连接到你的设备
 
 * 按照此 [Arduino 存储库](https://github.com/ms-iot/virtual-shields-arduino){:target="_blank"}中的说明设置 Arduino。
 
 * 按照此 [Arduino 存储库](https://github.com/ms-iot/virtual-shields-universal){:target="_blank"}中的说明设置 Windows Phone。
 
-###修改 RGB 条
+### 修改 RGB 条
 
 RGB LED 条在条中附带 48 个 LED。
 
@@ -45,17 +45,17 @@ RGB LED 条在条中附带 48 个 LED。
 
 * ...在裂缝之间焊接电线，以便各端通过电线重新连接。
 
-![RGB 带 2]({{site.baseurl}}/images/RGBSTRIP/rgbstrip_split2.JPG)
+![RGB 带 2]({{site.baseurl}}/Resources/images/RGBSTRIP/rgbstrip_split2.JPG)
 
-###RGB 条的放置
+### RGB 条的放置
 
 当原始电源连接器放置在右下角时，将含有 8 个 LED 的 6 个条放置在相框的背衬内，以便 8x11 英寸的白纸（带有插图）将 LED 与玻璃框架分隔开。
 
 将背衬用胶带粘贴或连接到项目上。
 
-![RGB 带 1]({{site.baseurl}}/images/RGBSTRIP/rgbstrip_split1.JPG)
+![RGB 带 1]({{site.baseurl}}/Resources/images/RGBSTRIP/rgbstrip_split1.JPG)
 
-###将 RGB 条连接到 Arduino
+### 将 RGB 条连接到 Arduino
 
 从 RGB LED 条：
 
@@ -67,15 +67,15 @@ RGB LED 条在条中附带 48 个 LED。
 
 * 将筒状电源连接器连接到 5 伏特电源（按照 Adafruit 的说明）。
 
-![RGB 连接]({{site.baseurl}}/images/RGBSTRIP/rgbconnect.JPG)
+![RGB 连接]({{site.baseurl}}/Resources/images/RGBSTRIP/rgbconnect.JPG)
 
-###上载到你的设备
+### 上载到你的设备
 
 * 在 Arduino IDE（从“连接到你的设备： Arduino”中设置）中，选择菜单项“文件”-\>“示例”-\>“VirtualShield”-\>“PictureTheWeather”
 
 * 上载到你的 Arduino。
 
-###查看其运行
+### 查看其运行
 
 * 手机将显示“Web 天气指示器”、你的坐标和你的天气预报。
 
@@ -83,9 +83,10 @@ RGB LED 条在条中附带 48 个 LED。
 
 * （还有一个不太秘密的调试模式），尝试说“显示雷暴”。然后说“打击”。
 
-###以下是会发生的情况...
+### 以下是会发生的情况...
 
-使用适用于 Arduino 的 Windows Virtual Shield，Arduino 草稿是：\* 获取你的 GPS 坐标。
+使用适用于 Arduino 的 Windows Virtual Shield，Arduino 草图的用途：
+* 获取你的 GPS 坐标。
 
 * 使用它获取国家天气服务预报和使用你的坐标的位置
 
@@ -93,4 +94,4 @@ RGB LED 条在条中附带 48 个 LED。
 
 * 在 RGB LED 上条设置动画。
 
-![手机映像]({{site.baseurl}}/images/RGBSTRIP/Phone.JPG)
+![手机映像]({{site.baseurl}}/Resources/images/RGBSTRIP/Phone.JPG)

@@ -1,23 +1,27 @@
 ---
 layout: default
 title: 移位寄存器示例
-permalink: /zh-CN/win10/samples/ShiftRegisterSample.htm
+permalink: /zh-cn/win10/samples/ShiftRegisterSample.htm
 lang: zh-CN
 ---
 
-##移位寄存器示例
+# 移位寄存器示例
 
-![移位寄存器示例图像]({{site.baseurl}}/images/ShiftRegister/ShiftRegisterProjectPicture_480.png)
+{% include VerifiedVersion.md %}
 
-在本示例中，我们将一个采用串行输入和并行输出的 8 位移位寄存器连接到你的 Raspberry Pi 2，并创建一个使用该移位寄存器控制 8 个 LED 的简单应用。
+![移位寄存器示例图像]({{site.baseurl}}/Resources/images/ShiftRegister/ShiftRegisterProjectPicture_480.png)
 
-这是一个有外设示例，所以请确保你的设备处于有外设模式下，方法是运行以下命令：`setbootoption.exe headed`（更改有外设/无外设状态需要重新启动）。
+在本示例中，我们将一个采用串行输入和并行输出的 8 位移位寄存器连接到你的 Raspberry Pi 2 或 3\*，并创建一个使用该移位寄存器控制八个 LED 的简单应用。
 
-###将移位寄存器连接到你的设备
+这是一个有外设示例，所以请确保你的设备处于有外设模式下，方法为运行以下命令：`setbootoption.exe headed`（更改有外设/无外设状态将需要重新启动）。
 
-你将需要以下组件，这些组件包含在基本工具包中：
+*\*此示例仅适用于 Raspberry Pi 2 或 3，而在 Minnowboard Max 或 DragonBoard 410c 上并不受支持。
 
-* 一个 Raspberry Pi 2
+### 将移位寄存器连接到你的设备
+
+你将需要以下组件：
+
+* 1 个 Raspberry Pi 2 或 3
 
 * 1 个 [74HC595N 串行输入、并行输出的移位寄存器](http://www.digikey.com/product-detail/en/SN74HC595N/296-1600-5-ND/277246)
 
@@ -33,38 +37,38 @@ lang: zh-CN
 
 我们先来为试验板上的组件布线，如下图所示。
 
-**注意： 确保在连接电路时关闭 RPi2 电源。若要降低构建期间意外出现短路的几率，这是一个很好的做法。**
+**注意： 确保在连接电路时关闭 RPi2 或 RPi3 电源。若要降低构建期间意外出现短路的几率，这是一个很好的做法。**
 
-![试验板连接]({{site.baseurl}}/images/ShiftRegister/ShiftRegisterSampleDrawing_bb_50.png)
+![试验板连接]({{site.baseurl}}/Resources/images/ShiftRegister/ShiftRegisterSampleDrawing_bb_50.png)
 
 *使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
 
 以下是电路原理图：
 
-![电路示意图]({{site.baseurl}}/images/ShiftRegister/ShiftRegisterSampleDrawing_schem_75.png)
+![电路示意图]({{site.baseurl}}/Resources/images/ShiftRegister/ShiftRegisterSampleDrawing_schem_75.png)
 
 *使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
 
-####连接 74HC595N 移位寄存器
+#### 连接 74HC595N 移位寄存器
 
 将移位寄存器置于你的试验板之上，以便它可以跨该试验板的中隙。
 
-![试验板 IC 位置]({{site.baseurl}}/images/BreadBoardICPlacement.png)
+![试验板 IC 位置]({{site.baseurl}}/Resources/images/BreadBoardICPlacement.png)
 
 *使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
 
 通过在 IC 上查找槽口，找到 74HC595N 移位寄存器的引脚 1。如果你需要定向 IC 以便槽口尾部朝向左边，则引脚 1 将是该槽口下方的左下角区域中的第一个引脚。
 
-![74HC595N 引脚位置]({{site.baseurl}}/images/ShiftRegister/FindNotchPin1.png)
+![74HC595N 引脚位置]({{site.baseurl}}/Resources/images/ShiftRegister/FindNotchPin1.png)
 
 *使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
 74HC595N 的引脚输出如下所示，并且可以在[数据表](http://www.ti.com/lit/ds/symlink/sn74hc595.pdf)中找到。
 
-![74HC595N 引脚输出]({{site.baseurl}}/images/ShiftRegister/ShiftRegister74HC595_pinout.png)
+![74HC595N 引出线]({{site.baseurl}}/Resources/images/ShiftRegister/ShiftRegister74HC595_pinout.png)
 
 *使用 [Fritzing](http://fritzing.org/) 制作的图像*
 
@@ -76,21 +80,21 @@ lang: zh-CN
 
 * 引脚 9 **Q7'**： 保持不连接
 
-* 引脚 10 **SRCLR**： 连接到 RPi2 上的 **GPIO 12**（引脚 32）（引脚映射如下所示）
+* 引脚 10 **SRCLR**： 连接到 RPi2 或 RPi3 上的 **GPIO 12**（引脚 32）（引脚映射如下所示）
 
-* 引脚 11 **SRCLK**： 连接到 RPi2 上的 **GPIO 18**（引脚 12）
+* 引脚 11 **SRCLK**： 连接到 RPi2 或 RPi3 上的 **GPIO 18**（引脚 12）
 
-* 引脚 12 **RCLK**： 连接到 RPi2 上的 **GPIO 5**（引脚 29）
+* 引脚 12 **RCLK**： 连接到 RPi2 或 RPi3 上的 **GPIO 5**（引脚 29）
 
-* 引脚 13 **OE**： 连接到 RPi2 上的 **GPIO 6**（引脚 31）
+* 引脚 13 **OE**： 连接到 RPi2 或 RPi3 上的 **GPIO 6**（引脚 31）
 
-* 引脚 14 **SER**： 连接到 RPi2 上的 **GPIO 4**（引脚 7）
+* 引脚 14 **SER**： 连接到 RPi2 或 RPi3 上的 **GPIO 27**（引脚 13）
 
 * 引脚 15 **Q7**： 请参阅上述内容。
 
 * 引脚 16 **VCC**： 连接到试验板一侧的电源轨道（红色条带）
 
-####连接 LED 和电阻器
+#### 连接 LED 和电阻器
 
 让我们向试验板添加 LED 和电阻器。
 
@@ -108,11 +112,11 @@ lang: zh-CN
 
 * 每个 LED 都应将其阳极连接至电源轨道。
 
-####连接 Raspberry Pi 2
+#### 连接 Raspberry Pi 2 或 3
 
-我们需要将 Raspberry Pi 2 上的电源、地线和 I2C 线接入 74HC595N 移位寄存器和试验板。
+我们需要将 Raspberry Pi 2 或 3 上的电源、地线和 I2C 线接入 74HC595N 移位寄存器和试验板。
 
-![Raspberry Pi 2 引脚输出]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![Raspberry Pi 2 和 3 引出线]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
 * 引脚 2 **5V PWR** 连接到试验板一侧的电源轨道（红色条带）
 
@@ -120,7 +124,7 @@ lang: zh-CN
 
 * 引脚 12 **GPIO18** 如果尚未连接，连接到移位寄存器上的 **SRCLK**（引脚 11）
 
-* 引脚 7 **GPIO4** 如果尚未连接，连接到移位寄存器上的 **SER**（引脚 14）
+* 引脚 13 **GPIO27** 如果尚未连接，连接到移位寄存器上的 **SER**（引脚 14）
 
 * 引脚 29 **GPIO5** 如果尚未连接，连接到移位寄存器上的 **RCLK**（引脚 12）
 
@@ -128,13 +132,13 @@ lang: zh-CN
 
 * 引脚 32 **GPIO12** 如果尚未连接，连接到移位寄存器上的 **SRCLR**（引脚 10）
 
-###创建示例应用
+### 创建示例应用
 
 在完成一切设置后，重新打开你的设备的电源。你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\ShiftRegister` 来查找此示例的源代码，但作为练习，本教程将指导你完成从头开始创建此应用的完整步骤。打开 Visual Studio 并创建新的 C\# Windows 通用空白应用。依次单击“文件”-\>“新建”-\>“项目”，然后依次选择“模板”-\>“Visual C\#”-\>“Windows”-\>“通用”-\>“空白应用\(通用 Windows\)”。在本示例中，我们巧妙命名我们的 **ShiftRegisterSample**。
 
 此示例中的代码将执行以下三项操作：
 
-1. 初始化 RPi2 GPIO 引脚和 74HC595N 移位寄存器
+1. 初始化 RPi2 或 RPi3 GPIO 引脚和 74HC595N 移位寄存器
 
 2. 在常规时间间隔，它针对移位寄存器的串行输入上的一个数据位进行时钟输入操作。
 
@@ -145,9 +149,9 @@ lang: zh-CN
     b.如果用户单击显示器上的“反转”按钮，将反转 LED 的闪光模式
 
 
-####向 MainPage.xaml 添加内容
+#### 向 MainPage.xaml 添加内容
 
-让我们向 MainPage 添加一些内容，这些内容会显示在已连接到 Raspberry Pi 2 的屏幕上。我们想要添加两个文本框、一个滑块和一个按钮。
+让我们向 MainPage 添加一些内容，这些内容会显示在已连接到 Raspberry Pi 2 或 3 的屏幕上。我们想要添加两个文本框、一个滑块和一个按钮。
 
 * 滑块允许用户控制 LED 的闪光频率。
 
@@ -175,7 +179,7 @@ lang: zh-CN
 {% endhighlight %}
 </UL>
 
-####将代码添加到 MainPage.xaml.cs
+#### 将代码添加到 MainPage.xaml.cs
 
 在向 MainPage.xaml.cs 添加任何代码之前，我们需要添加对 Windows IoT 扩展 SDK 的引用。
 
@@ -205,23 +209,23 @@ private const double TIME_DELAY = 1;
 // The 74HC595N has five input pins that are used to control the device.
 // See the datasheet http://www.ti.com/lit/ds/symlink/sn74hc595.pdf for details
 // Shift Register Clock (SRCLK): the clock for the serial input to the shift register
-private const int SRCLK_PIN = 18; // GPIO 18 is pin 12 on RPI2 header
+private const int SRCLK_PIN = 18; // GPIO 18 is pin 12 on RPi2 or RPi3 header
 private GpioPin shiftRegisterClock;
 
 // Serial input (SER): the serial data input to the shift register. Use in conjunction with SRCLK.
-private const int SER_PIN = 4; // GPIO 4 is pin 7 on RPI2 header
+private const int SER_PIN = 27; // GPIO 27 is pin 13 on RPi2 or RPi3 header
 private GpioPin serial;
 
 // Storage Register Clock (RCLK): the clock for clocking data from the serial input to the parallel output in the shift register
-private const int RCLK_PIN = 5; // GPIO 5 is pin 29 on RPI2 header
+private const int RCLK_PIN = 5; // GPIO 5 is pin 29 on RPi2 or RPi3 header
 private GpioPin registerClock;
 
 // Output Enable (OE): When set low, the each of the eight shift register outputs (Q0, Q1,...Q7) are set high/low depending on the binary value in the storage register
-private const int OE_PIN = 6; // GPIO 6 is pin 31 on RPI2 header
+private const int OE_PIN = 6; // GPIO 6 is pin 31 on RPi2 or RPi3 header
 private GpioPin outputEnable;
 
 // Storage Register Clock (SRCLK): the clock for clocking the current 8 bits of data from the serial input register to the storage register
-private const int SRCLR_PIN = 12; // GPIO 12 is pin 32 on RPI2 header
+private const int SRCLR_PIN = 12; // GPIO 12 is pin 32 on RPi2 or RPi3 header
 private GpioPin shiftRegisterClear;
 
 private DispatcherTimer timer;
@@ -234,19 +238,19 @@ private SolidColorBrush grayBrush = new SolidColorBrush(Windows.UI.Colors.LightG
 
 下面是其中一些常量和变量所表示的内容
 
- * `SRCLK_PIN`、`SER_PIN`、`RCLK_PIN`、`OE_PIN`、`SRCLR_PIN` 均代表已连接到对应的已命名移位寄存器控制引脚的 RPi2 GPIO 的编号。
+ * `SRCLK_PIN`、`SER_PIN`、`RCLK_PIN`、`OE_PIN`、`SRCLR_PIN` 均代表已连接到对应的已命名移位寄存器控制引脚的 RPi2 或 RPi3 GPIO 引脚编号。
 
- * `shiftRegisterClock`、`serial`、`registerClock`、`outputEnable`、`shiftRegisterClear` 均为 GPIO 对象，用于控制连接到对应的已命名移位寄存器引脚的 RPi2 GPIO 引脚。
+ * `shiftRegisterClock`、`serial`、`registerClock`、`outputEnable`、`shiftRegisterClear` 均为 GPIO 对象，用于控制连接到对应的已命名移位寄存器引脚的 RPi2 或 RPi3 GPIO 引脚。
 
- * `pinMask` 包含我们以一次一个位的方式计时到移位寄存器的数据位。pinMask 中的位表示 LED 的打开/关闭模式。位值为“1”表示 LED 已关闭，位值为“0”表示 LED 已打开。
+ * `pinMask` 包含我们以一次一个位的方式时钟输入到移位寄存器的数据位。pinMask 中的位表示 LED 的打开/关闭模式。位值为“1”表示 LED 已关闭，位值为“0”表示 LED 已打开。
 
 方法 `InitializeSystem()`
 
 `InitializeSystem()` 将执行以下操作：
 
- * 设置可用于控制数据并将其发送到移位寄存器的 RPi2 GPIO
+ * 设置可用于控制数据并将其发送到移位寄存器的 RPi2 或 RPi3 GPIO
 
- * 设置可用于控制 RPi2 向移位寄存器发送一个数据位的频率的计时器
+ * 设置可用于控制 RPi2 或 RPi3 向移位寄存器发送一个数据位的频率的计时器
 
 {% highlight C# %}
 private void InitializeSystem()
@@ -261,33 +265,22 @@ private void InitializeSystem()
         return;
     }
 
-    // setup the RPi2 GPIO that controls the shift register
+    // setup the RPi2 or RPi3 GPIO that controls the shift register
     shiftRegisterClock = gpio.OpenPin(SRCLK_PIN);
     serial = gpio.OpenPin(SER_PIN);
     registerClock = gpio.OpenPin(RCLK_PIN);
     outputEnable = gpio.OpenPin(OE_PIN);
     shiftRegisterClear = gpio.OpenPin(SRCLR_PIN);
 
-    // Show an error if the pin wasn't initialized properly
-    if (shiftRegisterClock == null || serial == null || registerClock == null || outputEnable == null || shiftRegisterClear == null)
-    {
-        GpioStatus.Text = "There were problems initializing the GPIO pin.";
-        return;
-    }
-
     // reset the pins to a known state
     shiftRegisterClock.Write(GpioPinValue.Low);
     shiftRegisterClock.SetDriveMode(GpioPinDriveMode.Output);
-
     serial.Write(GpioPinValue.Low);
     serial.SetDriveMode(GpioPinDriveMode.Output);
-
     registerClock.Write(GpioPinValue.Low);
     registerClock.SetDriveMode(GpioPinDriveMode.Output);
-
     outputEnable.Write(GpioPinValue.Low);
     outputEnable.SetDriveMode(GpioPinDriveMode.Output);
-
     shiftRegisterClear.Write(GpioPinValue.Low);
     shiftRegisterClear.SetDriveMode(GpioPinDriveMode.Output);
 
@@ -321,7 +314,7 @@ private void InitializeSystem()
 
 方法 `SendDataBit()`
 
-在指定的时间间隔过后，计时器将调用 `SendDataBit()`。此方法可针对表示变量 `pinMask` 中最高有效位 \(MSB\) 的一个数据位进行时钟输出操作。该数据位可将时钟输入到移位寄存器的第一个位位置中。如果将 RPi2 的串行时钟引脚切换为在数据位中输入时钟，还会导致移位寄存器中的前八个数据位将一个位位置移位到上一丢失的位位置。在数据位中输入时钟后，`pinMask` 中的所有位都会向左移动一个位位置。是否选中 `pinMask` 的值取决于以下两个因素：LED 照明模式是否已设置为反转，以及“pinMask”的最低有效位 \(LSB\) 已设置为“1”还是“0”。
+在指定的时间间隔过后，计时器将调用 `SendDataBit()`。此方法可针对表示变量 `pinMask` 中最高有效位 \(MSB\) 的一个数据位进行时钟输出操作。该数据位可将时钟输入到移位寄存器的第一个位位置中。如果将 RPi2 或 RPi3 的串行时钟引脚切换在数据位中进行时钟输入，还会导致移位寄存器中的前八个数据位将一个位位置移位到上一丢失的位位置。在数据位中进行时钟输入后，`pinMask` 中的所有位都会向左移动一个位位置。是否选中 `pinMask` 的值取决于以下两个因素：LED 照明模式是否已设置为反转，以及“pinMask”的最低有效位 \(LSB\) 已设置为“1”还是“0”。
 
 {% highlight C# %}
 private void SendDataBit()
@@ -381,21 +374,21 @@ private void ToggleButtonClicked(object sender, RoutedEventArgs e)
 }
 {% endhighlight %}
 
-###生成、部署并运行应用
+### 生成、部署并运行应用
 
-让我们在自己的 Raspberry Pi 2 上生成、部署和运行应用。
+让我们在自己的 Raspberry Pi 2 或 3 上生成、部署和运行应用。
 
 * 如果通过上述代码创建的应用尚未打开，请在 Visual Studio 中打开它。
 
-* 按照[设置远程调试和部署应用]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp)的说明进行操作。
+* 按照[设置远程调试并部署应用]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp)的说明进行操作。
 
-一段时间过后，你将看到已连接到 RPi2 的屏幕出现变化，即，将显示一个滑块、一些文本和一个按钮。LED 将亮起，并将采用“pinMask”中设置的模式。
+一段时间过后，你将看到已连接到 RPi2 或 RPi3 的屏幕出现变化，即，将显示一个滑块、一些文本和一个按钮。LED 将亮起，并将采用“pinMask”中设置的模式。
 
-![ShiftRegister 屏幕截图]({{site.baseurl}}/images/ShiftRegister/ScreenShotA.png)
+![ShiftRegister 屏幕截图]({{site.baseurl}}/Resources/images/ShiftRegister/ScreenShotA.png)
 
-恭喜！ 你已成功将一个采用串行输入和并行输出的 8 位移位寄存器连接到你的 Raspberry Pi 2。
+恭喜！ 你已成功将一个采用串行输入和并行输出的 8 位移位寄存器连接到你的 Raspberry Pi 2 或 3。
 
-###完整的 MainPage.xaml.cs 代码
+### 完整的 MainPage.xaml.cs 代码
 
 {% highlight C# %}
 using System;
@@ -429,23 +422,23 @@ namespace ShiftRegisterSample
         // The 74HC595N has five input pins that are used to control the device.
         // See the datasheet http://www.ti.com/lit/ds/symlink/sn74hc595.pdf for details
         // Shift Register Clock (SRCLK): the clock for the serial input to the shift register
-        private const int SRCLK_PIN = 18; // GPIO 18 is pin 12 on RPI2 header
+        private const int SRCLK_PIN = 18; // GPIO 18 is pin 12 on RPi2 or RPi3 header
         private GpioPin shiftRegisterClock;
 
         // Serial input (SER): the serial data input to the shift register. Use in conjunction with SRCLK.
-        private const int SER_PIN = 4; // GPIO 4 is pin 7 on RPI2 header
+        private const int SER_PIN = 27; // GPIO 27 is pin 13 on RPi2 or RPi3 header
         private GpioPin serial;
 
         // Storage Register Clock (RCLK): the clock for clocking data from the serial input to the parallel output in the shift register
-        private const int RCLK_PIN = 5; // GPIO 5 is pin 29 on RPI2 header
+        private const int RCLK_PIN = 5; // GPIO 5 is pin 29 on RPi2 or RPi3 header
         private GpioPin registerClock;
 
         // Output Enable (OE): When set low, the each of the eight shift register outputs (Q0, Q1,...Q7) are set high/low depending on the binary value in the storage register
-        private const int OE_PIN = 6; // GPIO 6 is pin 31 on RPI2 header
+        private const int OE_PIN = 6; // GPIO 6 is pin 31 on RPi2 or RPi3 header
         private GpioPin outputEnable;
 
         // Storage Register Clock (SRCLK): the clock for clocking the current 8 bits of data from the serial input register to the storage register
-        private const int SRCLR_PIN = 12; // GPIO 12 is pin 32 on RPI2 header
+        private const int SRCLR_PIN = 12; // GPIO 12 is pin 32 on RPi2 or RPi3 header
         private GpioPin shiftRegisterClear;
 
         private DispatcherTimer timer;
@@ -477,33 +470,22 @@ namespace ShiftRegisterSample
                 return;
             }
 
-            // setup the RPi2 GPIO that controls the shift register
+            // setup the RPi2 or RPi3 GPIO that controls the shift register
             shiftRegisterClock = gpio.OpenPin(SRCLK_PIN);
             serial = gpio.OpenPin(SER_PIN);
             registerClock = gpio.OpenPin(RCLK_PIN);
             outputEnable = gpio.OpenPin(OE_PIN);
             shiftRegisterClear = gpio.OpenPin(SRCLR_PIN);
 
-            // Show an error if the pin wasn't initialized properly
-            if (shiftRegisterClock == null || serial == null || registerClock == null || outputEnable == null || shiftRegisterClear == null)
-            {
-                GpioStatus.Text = "There were problems initializing the GPIO pin.";
-                return;
-            }
-
             // reset the pins to a known state
             shiftRegisterClock.Write(GpioPinValue.Low);
             shiftRegisterClock.SetDriveMode(GpioPinDriveMode.Output);
-
             serial.Write(GpioPinValue.Low);
             serial.SetDriveMode(GpioPinDriveMode.Output);
-
             registerClock.Write(GpioPinValue.Low);
             registerClock.SetDriveMode(GpioPinDriveMode.Output);
-
             outputEnable.Write(GpioPinValue.Low);
             outputEnable.SetDriveMode(GpioPinDriveMode.Output);
-
             shiftRegisterClear.Write(GpioPinValue.Low);
             shiftRegisterClear.SetDriveMode(GpioPinDriveMode.Output);
 

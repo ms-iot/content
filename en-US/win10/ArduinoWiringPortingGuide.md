@@ -7,7 +7,7 @@ lang: en-US
 
 # Arduino Wiring Porting Guide
 
-Arduino Wiring sketches and libraries can be copy/pasted into an Arduino Wiring project inside Visual Studio and run on Raspberry Pi 2 or Minnowboard Max. Sometimes there are slight modifications that need to be made to these files in order to make them more compatible with the Windows environment, or the board you are working with. This guide will cover those modifications as well as common issues that you may run into when deploying Arduino Wiring projects!
+Arduino Wiring sketches and libraries can be copy/pasted into an Arduino Wiring project inside Visual Studio and run on Raspberry Pi 2, Raspberry Pi 3 or Minnowboard Max. Sometimes there are slight modifications that need to be made to these files in order to make them more compatible with the Windows environment, or the board you are working with. This guide will cover those modifications as well as common issues that you may run into when deploying Arduino Wiring projects!
 
 ### Missing Something?
 Need more information on [Setting up Arduino Wiring in Visual Studio]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm)?
@@ -36,7 +36,7 @@ It might go without saying, but many sketches and libraries (especially those fo
 
 Arduino Wiring ultimately requires a physical connector pin number for any functions that refer to 'pins'. You can use these numbers directly, but we've also provided some pre-defined pin names which correspond to connector pins on specific boards.
 
-For example, the physical connector pin 29 on a Raspberry Pi 2 is also known as `GPIO_5`. You may set GPIO pin 5 to a HIGH state on a Raspberry Pi 2 by using either of the following commands:
+For example, the physical connector pin 29 on a Raspberry Pi 2 and 3 is also known as `GPIO_5`. You may set GPIO pin 5 to a HIGH state on a Raspberry Pi 2 and 3 by using either of the following commands:
 
 {% highlight C++ %}
 
@@ -56,9 +56,9 @@ digitalWrite( GPIO_5, HIGH );
 
 The pre-defined pin names can be found in `PinNumbers.h` inside any Arduino Wiring project, but since there will be different physical connector pins available depending on the hardware setup you are building for, we've also included a table here to describe which pin names are available for each device.
 
-#### Raspberry Pi 2
+#### Raspberry Pi 2 and 3
 
-[Pinout Diagram]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+[Pinout Diagram]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
 {:.table.table-bordered}
 | Pin Define      | Corresponding Pin Number   |
@@ -79,7 +79,7 @@ The pre-defined pin names can be found in `PinNumbers.h` inside any Arduino Wiri
 
 #### Minnowboard Max
 
-[Pinout Diagram]({{site.baseurl}}/images/PinMappings/MBM_Pinout.png)
+[Pinout Diagram]({{site.baseurl}}/Resources/images/PinMappings/MBM_Pinout.png)
 
 {:.table.table-bordered}
 | Pin Define      | Corresponding Pin Number   |

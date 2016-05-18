@@ -1,24 +1,26 @@
 ---
 layout: default
 title: “推送”按钮示例
-permalink: /zh-CN/win10/samples/PushButton.htm
+permalink: /zh-cn/win10/samples/PushButton.htm
 lang: zh-CN
 ---
 
-##“推送”按钮示例
+# “推送”按钮示例
+
+{% include VerifiedVersion.md %}
 
 [在 GitHub 上查看代码](https://github.com/ms-iot/samples/tree/develop/PushButton/CS){:target="_blank"}
 
-在此示例中，我们将“推送”按钮连接到你的 Raspberry Pi 2/MinnowBoard Max 并将其用于控制 LED。我们使用 GPIO 中断来检测按下该按钮和切换 LED 时的响应。
+在此示例中，我们将“推送”按钮连接到你的 Raspberry Pi 2 或 3、MinnowBoard Max 或 DragonBoard 410c 并将其用于控制 LED。我们使用 GPIO 中断来检测按下该按钮的时间并切换 LED 进行响应。
 
-![“推送”按钮图像]({{site.baseurl}}/images/PushButton/PushButtonSample.png)
+![“推送”按钮图像]({{site.baseurl}}/Resources/images/PushButton/PushButtonSample.png)
 
-这是一个有外设示例，所以请确保你的设备处于有外设模式下，方法为运行以下命令：`setbootoption.exe headed`（更改有外设/无外设状态将需要重新启动）。
+这是一个有外设示例，所以请确保你的设备处于有外设模式下，方法为运行以下命令：`setbootoption.exe headed`（更改有外设/无外设状态需要重新启动）。
 
 另外，还请注意 GPIO API 仅在 Windows IoT 核心版上可用，因此该示例无法在你的桌面上运行。
 
 
-###组件
+### 组件
 
 你将需要以下组件：
 
@@ -28,37 +30,37 @@ lang: zh-CN
 
 * 一个 [330 &\#x2126; 电阻器](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
 
-* 一块试验板以及多根公母头电线
+* 一块试验板以及多根用于 Raspberry Pi 2 或 3 或者 MinnowBoard Max 的公母头连接线或用于 DragonBoard 的双公头连接线
 
-###将电路连接到你的设备
+### 将电路连接到你的设备
 
-我们先来为试验板上的组件布线。根据你的设备，查看以下相应的 **Raspberry Pi 2/MinnowBoard Max** 部分。
+我们先来为试验板上的组件布线。根据你的设备，查看以下相应的 **Raspberry Pi 2 或 3、MinnowBoard Max 或 DragonBoard 410c** 部分。
 
-#### Raspberry Pi 2
+#### Raspberry Pi 2 或 3
 
 | 试验板图 | 示意图 |
 | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| ![试验板连接]({{site.baseurl}}/images/PushButton/RPi2_PushButton_bb.png) | ![电路示意图]({{site.baseurl}}/images/PushButton/RPi2_PushButton_schem.png) |
+| ![试验板连接]({{site.baseurl}}/Resources/images/PushButton/RPi2_PushButton_bb.png) | ![电路示意图]({{site.baseurl}}/Resources/images/PushButton/RPi2_PushButton_schem.png) |
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
-#####连接 LED
+##### 连接 LED
 
-* 将 LED 阴极（较短的阴极引线）连接到 Raspberry Pi 2 的引脚 31 \(GPIO 6\)
+* 将 LED 阴极（较短的阴极引线）连接到 Raspberry Pi 2 或 3 的引脚 31 \(GPIO 6\)
 
 * 将 LED 阳极（较长的阳极引线）连接到 330 &\#x2126; 电阻器中的一条引线
 
-* 将 330 &\#x2126; 电阻器的另一端连接到 Raspberry Pi 2 上的引脚 1 \(3.3V\)
+* 将 330 &\#x2126; 电阻器的另一端连接到 Raspberry Pi 2 或 3 上的引脚 1 \(3.3V\)
 
-#####连接“推送”按钮
+##### 连接“推送”按钮
 
-* 将“推送”按钮中的一个引脚连接到 Raspberry Pi 2 的引脚 29 \(GPIO 5\)
+* 将“推送”按钮中的一个引脚连接到 Raspberry Pi 2 或 3 的引脚 29 \(GPIO 5\)
 
 * 将“推送”按钮中的另一个引脚连接到地线
 
-下面是 RPi2 的引出线：
+下面是 RPi2 和 RPi3 的引出线：
 
-![Raspberry Pi 2 引出线]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+![Raspberry Pi 2 和 3 引出线]({{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
@@ -66,11 +68,11 @@ lang: zh-CN
 
 | 试验板图 | 示意图 |
 | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| ![试验板连接]({{site.baseurl}}/images/PushButton/MBM_PushButton_bb.png) | ![电路示意图]({{site.baseurl}}/images/PushButton/MBM_PushButton_schem.png) |
+| ![试验板连接]({{site.baseurl}}/Resources/images/PushButton/MBM_PushButton_bb.png) | ![电路示意图]({{site.baseurl}}/Resources/images/PushButton/MBM_PushButton_schem.png) |
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
-#####连接 LED
+##### 连接 LED
 
 * 将 LED 阴极（较短的阴极引线）连接到 MinnowBoard Max 的引脚 20 \(GPIO 6\)
 
@@ -78,7 +80,7 @@ lang: zh-CN
 
 * 将 330 &\#x2126; 电阻器的另一端连接到 MinnowBoard Max 上的引脚 4 \(3.3V\)
 
-#####连接“推送”按钮
+##### 连接“推送”按钮
 
 * 将“推送”按钮中的一个引脚连接到 MinnowBoard Max 的引脚 18 \(GPIO 5\)
 
@@ -86,20 +88,53 @@ lang: zh-CN
 
 下面是 MBM 的引出线：
 
-![MinnowBoard Max 引出线]({{site.baseurl}}/images/PinMappings/MBM_Pinout.png)
+![MinnowBoard Max 引出线]({{site.baseurl}}/Resources/images/PinMappings/MBM_Pinout.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
-###生成和运行示例
+#### DragonBoard 410c
+
+作为参考，下图概述了低速扩展连接器的功能
+
+![DragonBoard 低速扩展连接器]({{site.baseurl}}/Resources/images/PinMappings/DB_pinout.png)
+
+执行下列步骤以连接 LED：
+
+* 将 LED 阴极（较短的阴极引线）连接到引脚 25 \(GPIO 13\)
+* 将 LED 阳极（较长的阳极引线）连接到 330 &\#x2126; 电阻器中的一条引线
+* 将 330 &\#x2126; 电阻器的另一端连接到引脚 35 \(1.8V PWR\)
+
+执行以下步骤来连接“推送”按钮：
+
+* 将“推送”按钮中的一个引脚连接到引脚 23 \(GPIO 36\)
+* 将“推送”按钮中的另一个引脚连接到引脚 1 \(GND\)
+
+组装了电路的试验板的可能外观如下所示：
+
+![DragonBoard 推送按钮试验板]({{site.baseurl}}/Resources/images/PushButton/DB_PushButton_bb.png)
+
+电路示意图如下图所示：
+
+![DragonBoard 推送按钮示意图]({{site.baseurl}}/Resources/images/PushButton/DB_PushButton_schem.png)
+
+最后，示例代码的 **MainPage.xml.cs** 文件的 LED\_PIN 和 BUTTON\_PIN 变量需要进行如下修改：
+
+~~~
+private const int LED_PIN = 13;
+private const int BUTTON_PIN = 36;
+~~~
+{: .language-c\#}
+
+### 生成和运行示例
 
 1. 在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载包含我们所有示例的 zip。
 1. 在 Visual Studio 中打开 `samples-develop\PushButton\CS\PushButton.csproj`。
-1. 如果你有 **Raspberry Pi 2**，请为目标体系结构选择 `ARM`。否则，为 **MinnowBoard Max** 选择 `x86`
+1. 如果你有 **Raspberry Pi 2 或 3** 或者 **DragonBoard 410c**，请为目标体系结构选择 `ARM`。否则，为 **MinnowBoard Max** 选择 `x86`
 1. 转到 `Build -> Build Solution`
 1. 从调试目标中选择 `Remote Machine`
-1. 点击 F5 以进行部署和调试。输入你的设备的 IP 地址并为身份验证类型选择 `None`。
+1. 点击 F5 以进行部署和调试。输入你的设备的 IP 地址并为身份验证类型选择 `Universal`。
 
-###我们来看看代码
+### 我们来看看代码
 
 首先，我们打开将使用的 GpioPin 资源。将按钮连接到活动的 LOW 配置中的 GPIO5，这意味着当未按下该按钮时信号值为 HIGH，而当按下该按钮时信号值将变为 LOW。我们将使用已连接到 GPIO6 的 LED（这是在活动的 LOW 配置中连接的），这意味着当该引脚值为 HIGH 时将关闭 LED，而当该引脚值为 LOW 时将打开 LED。
 
@@ -117,7 +152,7 @@ ledPin.Write(GpioPinValue.High);
 ledPin.SetDriveMode(GpioPinDriveMode.Output);
 {% endhighlight %}
 
-接下来，我们将设置按钮引脚。对于 Raspberry Pi 2，我们将充分利用其内置了可激活的上拉式电阻器这一优势。我们使用内置的上拉式电阻器，以便无需在外部提供电阻器。可配置的上拉式电阻器在 MinnowBoard Max 上不可用，因此我们将进行检查以确保此驱动器模式受支持。
+接下来，我们将设置按钮引脚。对于 Raspberry Pi 2 或 3 或者 DragonBoard 410c，我们将充分利用其中内置了可激活的上拉式电阻器这一优势。我们使用内置的上拉式电阻器，这样无需在外部提供电阻器。MinnowBoard Max 具有的 10k&\#x2126; 上拉式电阻器在默认情况下处于打开状态并且不可配置，因此我们将进行检查以确保此驱动器模式受支持。
 
 {% highlight C# %}
 // Check if input pull-up resistors are supported
@@ -127,7 +162,7 @@ else
 	buttonPin.SetDriveMode(GpioPinDriveMode.Input);
 {% endhighlight %}
 
-紧接着，我们将连接 GPIO 中断侦听器。这是每次该引脚状态更改时都会调用的事件。我们还将 DebounceTimeout 属性设置为 50 毫秒，以筛选出由电气噪声引起的虚假事件。按钮属于机械型设备，可在单次按下按钮后多次建立和中断连接。由于我们不希望调用过多的事件，因此我们将筛选出这些虚假事件。
+接下来，我们将连接 GPIO 中断侦听器。这是每次该引脚状态更改时都会调用的事件。我们还将 DebounceTimeout 属性设置为 50 毫秒，以筛选出由电气噪声引起的虚假事件。按钮属于机械型设备，可在单次按下按钮后多次建立和中断连接。由于我们不希望调用过多的事件，因此我们将筛选出这些虚假事件。
 
 {% highlight C# %}
 // Set a debounce timeout to filter out switch bounce noise from a button press

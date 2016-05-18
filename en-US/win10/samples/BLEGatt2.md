@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/BLEGatt2.htm
 lang: en-US
 ---
 
-## Using and Dissecting the Code
+# Using and Dissecting the Code
 Lets start up the sample and then go through the important code bits! Remember all the required code is [here](https://github.com/ms-iot/samples/archive/develop.zip){:target="_blank"}, in the [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} folder.
 
 This is a headed sample. To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
@@ -16,16 +16,16 @@ Download the code [here](https://github.com/ms-iot/samples/archive/develop.zip){
 Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
 
 ### Deploy and run the app
-First we need to select the correct architecture to build for. If you're building for MinnowBoard Max, select `x86` in the architecture dropdown. If you're building for Raspberry Pi 2, select `ARM`.
+First we need to select the correct architecture to build for. If you're building for MinnowBoard Max, select `x86` in the architecture dropdown. If you're building for Raspberry Pi 2 or 3, select `ARM`.
 
 Next, right-click on the **BluetoothGATT** project in **Solution Explorer** and select **"Set as StartUp Project"**.
 Now you should be able to press F5 from Visual Studio: The BluetoothGATT app will deploy and start, and you should see this on the device output:
 
-![BluetoothGatt App]({{site.baseurl}}/images/BLEGatt/app.png)
+![BluetoothGatt App]({{site.baseurl}}/Resources/images/BLEGatt/app.png)
 
 Click on the Start button at the top to connect to the SensorTag and display the sensor data. A popup may appear asking for permission to access the SensorTag service, click yes to continue. After a couple of seconds you should see the data being updated like this:
 
-![BluetoothGatt App Running]({{site.baseurl}}/images/BLEGatt/appRunning.png)
+![BluetoothGatt App Running]({{site.baseurl}}/Resources/images/BLEGatt/appRunning.png)
 
 ### Let's look at the code
 

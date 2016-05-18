@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Hardware Compatibility List
+description: Windows 10 IoT Core supports a variety of peripheral interfaces and protocols, including support for common buses like I2C, UART, USB, and more.
+keyword: windows iot, hardware, compatibility, interfaces
 permalink: /en-US/win10/SupportedInterfaces.htm
 lang: en-US
 ---
@@ -100,7 +102,7 @@ Looking for information about supported hardware platforms? Click [here](https:/
 			Filter lists by board type:
 			<select id="boardSelect" onchange="filterDeviceRows();">
 			  <option value=".">All</option>
-			  <option value="RPI2">RPI2</option>
+			  <option value="RPI2">RPi2/RPi3</option>
 			  <option value="MBM">MBM</option>
 			</select>
 		</div>
@@ -280,9 +282,9 @@ result          | result            | result      | result | result             
 </script>
 
 <!-- Reference Links -->
-[MSVerified]: SupportedInterfaces/checkmark.svg "Microsoft Verified"
+[MSVerified]: {{site.baseurl}}/Resources/images/checkmark.svg "Microsoft Verified"
 [Contribute to this list on GitHub.]: {{site.repositoryurl}}{{ page.path }}
-[RPI2 Pin Mapping]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm#RPi2_I2C
+[RPi2 or RPi3 Pin Mapping]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm#RPi2_I2C
 [MBM Pin Mapping]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm#MBM_I2C
 [ZWave Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/ZWaveTutorial.htm
 [GpioOneWire Sample (DHT11)]: {{site.baseurl}}/{{page.lang}}/win10/samples/GpioOneWire.htm

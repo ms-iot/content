@@ -1,35 +1,35 @@
 ---
 layout: default
 title: GSM Shield
-permalink: /en-US/win8/samples/GSM Shield.htm
+permalink: /en-US/win8/samples/GSM_Sample.htm
 lang: en-US
 ---
 
 <div style="background-color:Silver; color:black; padding:20px;">
 	<h4><u>Support for Windows on Intel Galileo Gen 1 and Gen 2 will end on November 30, 2015</u></h4>
-	<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we’ve made the difficult decision to discontinue Windows support on the Galileo platform. We’ve seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>
+	<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we've made the difficult decision to discontinue Windows support on the Galileo platform. We've seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>
 </div>
 
 # SeedStudio GSM shield
 Learn how to use the SeedStudio GSM shield
 
-![]({{site.baseurl}}/images/GSM.jpg){:width="400"}
+![]({{site.baseurl}}/Resources/images/GSM.jpg){:width="400"}
 
-# Required Components
+## Required Components
 * [Seed Studio GSM shield](http://www.seeedstudio.com/depot/GPRS-Shield-V20-p-1379.html){:target="_blank"}
 
-# Shield setup
+## Shield setup
 * Move the two switches to the rigth (Serial port select as indicates in the image) to select the hardware serial
-![]({{site.baseurl}}/images/GPRS_Shield_interface_function.jpg){:width="400"}
+![]({{site.baseurl}}/Resources/images/GPRS_Shield_interface_function.jpg){:width="400"}
 
-# Create a new project
+## Create a new project
 
 1. Create a new project from the template.
 2. Replace the existing code in main.cpp with the following code:
 3. Add to the project the files GSM.cpp, HWSerial.cpp, SIM900.cpp and sms.cpp
    found in [GSM Library](https://github.com/dacolgit/GSM-GPRS-GPS-Shield){:target="_blank"}
 
-# Code
+## Code
 
 ### Main.cpp
 {% highlight C++ %}

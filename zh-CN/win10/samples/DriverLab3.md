@@ -1,11 +1,11 @@
 ---
 layout: default
 title: 驱动程序实验 - 部署驱动程序并确认安装
-permalink: /zh-CN/win10/samples/DriverLab3.htm
+permalink: /zh-cn/win10/samples/DriverLab3.htm
 lang: zh-CN
 ---
 
-#安装示例驱动程序
+# 安装示例驱动程序
 
 本部分将演示如何手动复制驱动程序并将其安装到 Windows IoT 核心版设备：
  
@@ -24,20 +24,20 @@ lang: zh-CN
 
 * 接下来，在你的开发电脑上，打开“文件资源管理器”窗口，并在地址栏中键入 `\\<TARGET_DEVICE>\C$\`，然后点击 Enter。在此特定情况下，`<TARGET_DEVICE>` 是 Windows 10 IoT 核心版设备的 IP 地址：
 
-    ![使用文件资源管理器的 SMB]({{site.baseurl}}/images/DriverLab/smb1.png)
+    ![使用文件资源管理器的 SMB]({{site.baseurl}}/Resources/images/DriverLab/smb1.png)
 
     如果系统提示你输入用户名和密码，而你未更改过默认的用户名和密码，请使用以下凭据：
 
         User Name: <TARGET_DEVICE>Administrator
         Password:  p@ssw0rd
 
-    ![使用文件资源管理器的 SMB]({{site.baseurl}}/images/DriverLab/cred1.png)
+    ![使用文件资源管理器的 SMB]({{site.baseurl}}/Resources/images/DriverLab/cred1.png)
 
     注意： **强烈建议**你更新默认的管理员帐户密码。请按照在[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)找到的说明进行操作。
 
 * 导航到 SMB 文件资源管理器窗口中的 `\windows\system32\` 文件夹：
 
-    ![使用文件资源管理器的 SMB]({{site.baseurl}}/images/DriverLab/smb2.png)
+    ![使用文件资源管理器的 SMB]({{site.baseurl}}/Resources/images/DriverLab/smb2.png)
 
 * 将以下两个文件（上一部分中在 Visual Studio 中生成驱动程序时所创建）从开发计算机拖放（复制）到 IoT 核心版设备上的 `\windows\system32\` 文件夹：
 
@@ -46,7 +46,7 @@ lang: zh-CN
 
 * 将 `ACPITABL.dat` 文件（上一部分中在生成 ACPI 表时所创建）拖放（复制）到 `\windows\system32\` 文件夹。
 
-* 验证以下文件是否已使用“文件资源管理器”窗口和 **SMB** 成功传输到 IoT 核心版设备中的 `\windows\system32\` 文件夹：
+* 验证以下文件是否已使用“文件资源管理器”窗口和“SMB”成功传输到 IoT 核心版设备中的 `\windows\system32\` 文件夹：
 
         gpiokmdfdemo.inf
         gpiokmdfdemo.sys
@@ -56,11 +56,11 @@ lang: zh-CN
 
 <br/>
 
-##安装示例驱动程序
+## 安装示例驱动程序
 
 * 使用 PowerShell `enter-pssession` 命令连接到目标设备，如[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)所述。
 
-* 通过使用 PowerShell 窗口，导航到目标设备上的 `C:\Windows\System32` 目录：
+* 使用 PowerShell 窗口，导航到目标设备上的 `C:\Windows\System32` 目录：
     
         [192.168.0.243]: PS C:\> cd C:\Windows\System32
 
@@ -70,7 +70,7 @@ lang: zh-CN
 
 <br/>
 
-##重新启动 Windows IoT 核心版设备
+## 重新启动 Windows IoT 核心版设备
 
 从 PowerShell 窗口中，键入以下命令：
 
@@ -80,7 +80,7 @@ lang: zh-CN
 
 <br/>
 
-##检查示例驱动程序的状态
+## 检查示例驱动程序的状态
 
 从 PowerShell 窗口中，键入以下命令：
 
@@ -95,15 +95,15 @@ lang: zh-CN
 
 <br/>
 
-##切换 GPIO
+## 切换 GPIO
 
 按照[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)的说明将电阻器和 LED 连接到你的 Windows IoT 核心版设备。当你切换已连接到 LED 的 GPIO 时，LED 将打开或关闭。
 
-###使用提供的应用程序与驱动程序通信
+### 使用提供的应用程序与驱动程序通信
 
 我们已提供一个称为 BlinkyApp.exe 的预生成二进制应用程序，它可与驱动程序通信来打开/关闭 LED。可以在 `DriverSamples\BlinkyApp\BlinkyApp_<PLATFORM>.exe` 找到应用程序。
 
-对于 MinnowBoard Max，`<PLATFORM>` 将会是 `x86`。对于 Raspberry Pi 2，`<PLATFORM>` 将会是 `ARM`。
+对于 MinnowBoard Max，`<PLATFORM>` 将会是 `x86`。对于 Raspberry Pi 2 或 3，`<PLATFORM>` 将会是 `ARM`。
 
 你将需要使用 SMB 或其他一些方式，将此文件复制到目标设备（Windows IoT 核心版设备）。
 
@@ -122,7 +122,7 @@ lang: zh-CN
       (h)igh 5  : Sets GPIO #5 HIGH.
 
 
-    Raspberry Pi 2 (RPi2) [ARM]: GPIO Pin Mapping and Examples
+    Raspberry Pi 2 or 3 (RPi2 or RPi3) [ARM]: GPIO Pin Mapping and Examples
 
       GPIO No. |      Example       |      Example       | Header
                |     (GPIO low)     |     (GPIO high)    | Pin No.
@@ -140,18 +140,17 @@ lang: zh-CN
       GPIO 26  | BlinkyApp.exe l 26 | BlinkyApp.exe h 26 |   37
       GPIO 27  | BlinkyApp.exe l 27 | BlinkyApp.exe h 27 |   13
 
-如果你在 Raspberry Pi 2 上使用 GPIO \#5，则键入以下命令来打开 LED：
+如果你在 Raspberry Pi 2 或 3 上使用 GPIO \#5，则键入以下命令来打开 LED：
 
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe low 5
 
-###注意：
+### 注意：
 根据[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)所述的连接 LED 的方式，驱动 GPIO 走低会使 LED 点亮。
 
 若要关闭 LED，只需键入：
 
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe high 5
 
-<br/>
-###使用 Visual Studio 部署驱动程序 
-现在你知道了如何手动部署驱动程序，你也可以按照[本页]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab4.htm)上的相关说明使用 Visual 部署驱动程序
+### 使用 Visual Studio 部署驱动程序 
+现在你知道了如何手动部署驱动程序，你也可以按照[本页]({{site.baseurl}}/{{page.lang}}/win10/samples/DriverLab4.htm)上的相关说明使用 Visual 部署驱动程序。
     

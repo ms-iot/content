@@ -1,11 +1,11 @@
 ---
 layout: default
 title: AllJoynCodeGen
-permalink: /zh-CN/win10/AllJoynCodeGen.htm
+permalink: /zh-cn/win10/AllJoynCodeGen.htm
 lang: zh-CN
 ---
 
-##AllJoyn CodeGen 工具
+# AllJoyn CodeGen 工具
 
 我们创建了代码生成工具 AllJoynCodeGen，该工具可使用派生自某种规范或某台设备的一个或多个 AllJoyn 接口的 XML 描述生成完整的 Windows 运行时组件。
 
@@ -13,26 +13,26 @@ lang: zh-CN
 
 **注意** 有关 AllJoyn C API 的更多详细信息，请在 [AllSeen Alliance](http://go.microsoft.com/fwlink/?LinkId=524584) 处下载 AllJoyn 核心 SDK 和相关文档。
 
-###AllJoynCodeGen 是如何工作的？
+## AllJoynCodeGen 是如何工作的？
 
 基本流程如下所示：
 
 1. 以 AllJoyn XML 编写（当前为 DBus 内省格式）、描述服务的 XML 文件会被送入代码生成器工具中。
-2. AllJoynCodeGen 工具将生成结果为 Windows 运行时组件的代码。此生成的代码依赖于 Windows 10 SDK 中的 **MSAJAPI.lib** 和 [Windows.Devices.AllJoyn](https://msdn.microsoft.com/zh-CN/library/windows/apps/xaml/windows.devices.alljoyn.aspx)。
+2. AllJoynCodeGen 工具将生成结果为 Windows 运行时组件的代码。此生成的代码依赖于 Windows 10 SDK 中的 **MSAJAPI.lib** 和 [Windows.Devices.AllJoyn](https://msdn.microsoft.com/zh-cn/library/windows/apps/xaml/windows.devices.alljoyn.aspx)。
 3. 开发人员可生成使用此组件的应用程序。
 4. 运行时，开发人员的应用程序将加载该工具生成的 Windows 运行时组件（例如：foo.dll）以及内置 DLL **MSAJAPI.dll** 和 **Windows.Devices.AllJoyn.dll**。
 
 以下工作流图表说明了这一过程：
 
-![AllJoyn CodeGen 图]({{site.baseurl}}/images/AllJoyn/alljoyncodegen.png)
+![AllJoyn CodeGen 图]({{site.baseurl}}/Resources/images/AllJoyn/alljoyncodegen.png)
 
-###从命令行运行
+## 从命令行运行
 
 AllJoynCodeGen 工具当前作为随 Windows 10 SDK 提供的命令行工具的形式存在。若要运行该工具，请使用以下字符串传递有效的 XML 文件：
 
 	AllJoynCodeGen –i Foo.xml –o c:\users\developer1\documents\Foo\
 
-###查看输出
+## 查看输出
 
 生成的类封装核心 C API 公开的功能。因为生成的代码是一个抽象概念，所以这不是 1 对 1 映射。下表显示了每个生成的代码类封装的核心 C++ API。以下占位符用于该表中生成的名称：
 
@@ -54,13 +54,10 @@ AllJoynCodeGen 工具当前作为随 Windows 10 SDK 提供的命令行工具的�
 | `<Foo>``<Signal>`ReceivedEventArgs | | 传递给 <Foo>Signal 中信号的参数。 | *Message* 类 |
 
 
-###生成指南
+## 生成指南
 
-####创建组件
+#### 创建组件
 
 生成的代码需要包含在与 XML 共享相同接口名称的组件中。例如，如果将某个 toaster 的 XML 定义为 com.microsoft.sample.toaster，我们将创建运行时组件 com.microsoft.sample。
 
-或者，可随意命名组件（例如，fooCodeGenComponent），但必须手动将“项目”属性下的根命名空间更新为与接口名称相同的名称。（请注意：可在 pch.h 文件中找到根命名空间，该文件由 AllJoynCodeGen 工具生成）。
-
-
- 
+或者，可以随意命名组件（例如，fooCodeGenComponent），但必须手动将“项目”属性下的根命名空间更新为与接口名称相同的名称。（请注意：可在 pch.h 文件中找到根命名空间，该文件由 AllJoynCodeGen 工具生成）。

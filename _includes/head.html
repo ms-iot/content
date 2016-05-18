@@ -1,22 +1,29 @@
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{page.title}} - {{ site.data.resources[page.lang].title }}</title>
+﻿<head>{% capture page_lang_lower %}{{page.lang | downcase}}{% endcapture %}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{{page.title}} - {{ site.data.resources[page_lang_lower].title-suffix | default: site.data.resources["en-us"].title-suffix }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{{ site.data.resources[page.lang].description }}">
-    <meta name="keywords" content="{{ site.data.resources[page.lang].keywords }}">
+    <meta name="description" content="{{ page.description | default: site.data.resources[page_lang_lower].description | default: site.data.resources['en-us'].description }}" />
+    <meta name="keywords" content="{{ page.keywords | default: site.data.resources[page_lang_lower].keywords | default: site.data.resources['en-us'].keywords }}" />
+    <meta name="search.product" content="{{ page.search_product }}" />
 
     <link id="linkBaseUrl" href="{{site.baseurl}}" />
 
-    <link rel="icon" type="image/png" href="{{site.url}}/favicon.png">
+    <link rel="icon" type="image/png" href="{{site.url}}/favicon.png" />
     <!--[if IE]><link rel="shortcut icon" href="{{site.url}}/favicon.ico"/><![endif]-->
 
     <!-- Bootstrap core CSS -->
-    <link href="{{site.baseurl}}/css/bootstrap.css" rel="stylesheet" />
-    <link href="{{site.baseurl}}/css/pygments.css" rel="stylesheet" />
-    <link href="{{site.baseurl}}/css/main.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/bootstrap/3.3.0/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://assets.onestore.ms/cdnfiles/external/webcore/4.7.0/stylesheets/WebCore.4.7.0.ltr.light.min.css" />
+    <link href="{{site.baseurl}}/Resources/css/pygments.css" rel="stylesheet" />
+    <link href="{{site.baseurl}}/Resources/css/main.css" rel="stylesheet" />
     {% include css-base.html %}
-    <link href="{{site.baseurl}}/css/nav.css" rel="stylesheet" />
+    <link href="{{site.baseurl}}/Resources/css/nav.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://assets.windowsphone.com/c87b935e-f679-4b69-9640-7afd04586278/custom-min.css" />
+    <!-- feedbacksock minified js -->
+    <script type="text/javascript" src="https://assets.windowsphone.com/26cc6e61-fd0a-41b6-8e56-4bb8cb0c117d/feedbacksock-min.js"></script> 
 
     <script type="text/javascript">
         var appInsights = window.appInsights || function (config) {
@@ -26,7 +33,7 @@
         });
 
         window.appInsights = appInsights;
-        <!-- appInsights.trackPageView(); -->
+        // appInsights.trackPageView();
 		
 		appInsights.trackPageView(null, null, {urlReferrer: document.referrer});
 		

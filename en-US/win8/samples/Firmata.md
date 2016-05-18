@@ -7,7 +7,7 @@ lang: en-US
 
 <div style="background-color:Silver; color:black; padding:20px;">
 	<h4><u>Support for Windows on Intel Galileo Gen 1 and Gen 2 will end on November 30, 2015</u></h4>
-	<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we’ve made the difficult decision to discontinue Windows support on the Galileo platform. We’ve seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>
+	<p><h5>As we continue to focus on providing a great experience for Makers with Windows 10 IoT Core, we've made the difficult decision to discontinue Windows support on the Galileo platform. We've seen some fantastic innovation with the platform, but unfortunately, it does not meet the minimum hardware requirements for Windows 10 IoT Core. Please click <a href="http://go.microsoft.com/fwlink/?LinkId=690091" target="_blank">here</a> to learn more.</h5></p>
 </div>
 
 # Firmata and Cylon
@@ -17,7 +17,7 @@ lang: en-US
 
 In this sample, we will show you how to use these technologies to remotely control and expose a webpage from your Intel Galileo running Windows.
 
-# Firmata
+## Firmata
 The Standard Firmata software will be running in Windows on the Intel Galileo board. This project will use the _NetworkSerial_ implementation - which allows Arduino HardwareSerial to work over a Network Socket instead of a serial port.
 
 First, you'll need to create a new project. Open Visual Studio. Select File -> New Project and Select Templates -> Visual C++ -> Windows for IoT -> Galileo Wiring app.
@@ -33,7 +33,7 @@ _ino_ files require additional headers when compiling on Microsoft Windows. To s
 
 You'll need to edit the project settings - right click on the Project in the Solution Explorer, then select Properties. Under Configuration Properties -> C/C++ -> Preprocessor, add `USE_NETWORKSERIAL;_CRT_SECURE_NO_WARNINGS;INTEL_GALILEO;` to Preprocessor Definitions.
 
-![Preprocessor]({{site.baseurl}}/images/FirmataProjectSettings.png)
+![Preprocessor]({{site.baseurl}}/Resources/images/FirmataProjectSettings.png)
 
 Next, replace the content of main.cpp with the following:
 {% highlight C++ %}
@@ -58,7 +58,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 Finally, build and deploy this app to your board.
 
-# Cylon
+## Cylon
 You'll use Cylon.js through Node.js on your development to communicate with Standard Firmata over a network socket.
 
 * Install [Node.js](http://nodejs.org/){:target="_blank"}.
@@ -102,7 +102,7 @@ robot.start();
 
 {% endhighlight %}
 
-# Run Cylon on your development machine
+## Run Cylon on your development machine
 From the Node.js command prompt, launch your program:
 
 `node main.js`

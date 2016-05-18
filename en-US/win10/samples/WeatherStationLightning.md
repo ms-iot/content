@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/WeatherStationLightning.htm
 lang: en-US
 ---
 
-## Communicate with an I2C sensor using Lightning I2c provider
+# Communicate with an I2C sensor using Lightning I2c provider
 
 {% include VerifiedVersion.md %}
 
@@ -84,4 +84,4 @@ public async void Run(IBackgroundTaskInstance taskInstance)
 
 1. Open the Debug Output pane in Visual Studio (Debug->Windows->Output) and you should be able to watch the sensor data as it's being read by your application.
 
-![Weather Station Debug Output]({{site.baseurl}}/images/Lightning/WeatherStationDebug.png)
+![Weather Station Debug Output]({{site.baseurl}}/Resources/images/Lightning/WeatherStationDebug.png)

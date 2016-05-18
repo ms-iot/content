@@ -1,21 +1,23 @@
 ---
 layout: default
 title: SPI 加速计示例
-permalink: /zh-CN/win10/samples/SPIAccelerometer.htm
+permalink: /zh-cn/win10/samples/SPIAccelerometer.htm
 lang: zh-CN
 ---
 
-##SPI 加速计示例
+# SPI 加速计示例
 
-我们会将 SPI 加速计连接到你的 Raspberry Pi 2/MinnowBoard Max，并创建一个用于从中读取数据的简单应用。我们将分步演示，所以你不需要具备任何 SPI 背景知识。不过，如果你感兴趣的话，Sparkfun 提供了一个出色的[与 SPI 相关的教程](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}。
+{% include VerifiedVersion.md %}
+
+我们会将 SPI 加速计连接到你的 Raspberry Pi 2 或 3、MinnowBoard Max 或 DragonBoard 410c，并创建一个用于从中读取数据的简单应用。我们将分步演示，所以你不需要具备任何 SPI 背景知识。不过，如果你感兴趣的话，Sparkfun 提供了一个出色的[与 SPI 相关的教程](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}。
 
 这是一个有外设示例。若要更好地了解什么是有外设模式以及如何将你的设备配置为有外设，请按照[此处]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm)的说明操作。
 
-###在 Visual Studio 中加载项目
+### 在 Visual Studio 中加载项目
 
 你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\Accelerometer`，查找此示例的源代码。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
-###将 SPI 加速计连接到你的设备
+### 将 SPI 加速计连接到你的设备
 
 你将需要以下几个组件：
 
@@ -23,37 +25,37 @@ lang: zh-CN
 
 * 一块试验板和几根公母头连接线
 
-根据自己所拥有的设备，查看以下 **Raspberry Pi 2/MinnowBoard Max** 部分：
+根据自己所拥有的设备，查看以下 **Raspberry Pi 2 或 3/MinnowBoard Max** 部分：
 
-![电子元件]({{site.baseurl}}/images/SPIAccelerometer/components.png)
+![电子元件]({{site.baseurl}}/Resources/images/SPIAccelerometer/components.png)
 
-####Raspberry Pi 2
-如果你有一个 Raspberry Pi 2，我们需要将电源线、地线和 SPI 线接入加速计。有关 RPi2 IO 引脚的更多详细信息，请参阅 [Raspberry Pi 2 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm)。
+#### Raspberry Pi 2 或 3
+如果你有一个 Raspberry Pi 2 或 3，我们需要将电源、地线和 SPI 线接入加速计。有关 RPi2 和 RPi3 IO 引脚的更多详细信息，请参阅 [Raspberry Pi 2 和 3 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm)。
 
-**注意： 确保在连接电路时关闭 RPi2 电源。若要降低构建期间意外出现短路的几率，这是一个很好的做法。**
+**注意： 确保在连接电路时关闭 RPi2 或 RPi3 电源。若要降低构建期间意外出现短路的几率，这是一个很好的做法。**
 
 ADXL345 试验板上有 8 个 IO 引脚，应按如下方式连接它们：
 
-1. **GND：** 连接到 RPi2 上的地线（引脚 6）
-2. **VCC：** 连接到 RPi2 上的 3.3V（引脚 1）
-3. **CS：** 连接到 RPi2 上的 SPI0 CS0（引脚 24）。这是 SPI 总线的芯片选择线。
+1. **GND：** 连接到 RPi2 或 RPi3 上的地线（引脚 6）
+2. **VCC：** 连接到 RPi2 或 RPi3 上的 3.3V（引脚 1）
+3. **CS：** 连接到 RPi2 或 RPi3 上的 SPI0 CS0（引脚 24）。这是 SPI 总线的芯片选择线。
 4. **INT1：** 保持不连接，我们不会用到此引脚
 5. **INT2：** 保持不连接，我们不会用到此引脚
-6. **SDO：** 连接到 RPi2 上的 SPI0 MISO（引脚 21）
-7. **SDA：** 连接到 RPi2 上的 SPI0 MOSI（引脚 19）
-8. **SCL：** 连接到 RPi2 上的 SPI0 SCLK（引脚 23）。这是 SPI 总线的时钟线。
+6. **SDO：** 连接到 RPi2 或 RPi3 上的 SPI0 MISO（引脚 21）
+7. **SDA：** 连接到 RPi2 或 RPi3 上的 SPI0 MOSI（引脚 19）
+8. **SCL：** 连接到 RPi2 或 RPi3 上的 SPI0 SCLK（引脚 23）。这是 SPI 总线的时钟线。
 
 下面是试验板上所示的连接：
 
-![试验板连接]({{site.baseurl}}/images/SPIAccelerometer/breadboard_assembled_rpi2.png)
+![试验板连接]({{site.baseurl}}/Resources/images/SPIAccelerometer/breadboard_assembled_rpi2.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
 以下是电路原理图：
 
-![加速计示意图]({{site.baseurl}}/images/SPIAccelerometer/schematics_rpi2.png)
+![加速计示意图]({{site.baseurl}}/Resources/images/SPIAccelerometer/schematics_rpi2.png)
 
-####MinnowBoard Max
+#### MinnowBoard Max
 如果你有一个 MinnowBoard Max，我们需要将电源线、地线和 SPI 线接入加速计。有关 MBM IO 引脚的更多详细信息，请参阅 [MBM 引脚映射页面]({{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm)。
 
 **注意： 确保在连接电路时关闭 MBM 电源。若要降低构建期间意外出现短路的几率，这是一个很好的做法。**
@@ -65,21 +67,56 @@ ADXL345 试验板上有 8 个 IO 引脚，应按如下方式连接它们：
 3. **CS：** 连接到 MBM 上的 SPI0 CS0（引脚 5）
 4. **INT1：** 保持不连接，我们不会用到此引脚
 5. **INT2：** 保持不连接，我们不会用到此引脚
-6. **SDO：** 连接到 RPi2 上的 SPI0 MISO（引脚 7）
-7. **SDA：** 连接到 RPi2 上的 SPI0 MOSI（引脚 9）
-8. **SCL：** 连接到 RPi2 上的 SPI0 SCLK（引脚 11）。这是 SPI 总线的时钟线。
+6. **SDO：** 连接到 RPi2 或 RPi3 上的 SPI0 MISO（引脚 7）
+7. **SDA：** 连接到 RPi2 或 RPi3 上的 SPI0 MOSI（引脚 9）
+8. **SCL：** 连接到 RPi2 或 RPi3 上的 SPI0 SCLK（引脚 11）。这是 SPI 总线的时钟线。
 
 下面是试验板上所示的连接：
 
-![试验板连接]({{site.baseurl}}/images/SPIAccelerometer/breadboard_assembled_mbm.png)
+![试验板连接]({{site.baseurl}}/Resources/images/SPIAccelerometer/breadboard_assembled_mbm.png)
 
 <sub>\*使用 [Fritzing](http://fritzing.org/) 制作的图像\*</sub>
 
 以下是电路原理图：
 
-![加速计示意图]({{site.baseurl}}/images/SPIAccelerometer/schematics_mbm.png)
+![加速计示意图]({{site.baseurl}}/Resources/images/SPIAccelerometer/schematics_mbm.png)
 
-###部署和运行应用
+#### DragonBoard 410c
+
+对于 DragonBoard 410c，你将需要[电压级别的转换器突围](https://www.sparkfun.com/products/11771)。需要通过电压级别的转换器建立单板计算机与加速计的电源线、地线和 SPI 线之间的连接。
+
+**注意： 确保在连接电路时关闭 DragonBoard 电源。若要降低构建期间意外出现短路的几率，这是一个很好的做法。**
+
+ADXL345 突围板上有 8 个可连接到电压级别的转换器的 IO 引脚，如下所示：
+
+1.  **GND：** 将地线连接到 GND
+2.  **VCC：** 将电源连接到 VccB
+3.  **CS：** 将芯片选择连接到 B4
+4.  **INT1：** 中断输出 1 _未使用_
+5.  **INT2：** 中断输出 2 _未使用_
+6.  **SDO：** 将串行数据输出连接到 B3
+7.  **SDA：** 将串行数据输入连接到 B2
+8.  **SCL：** 将串行通信时钟连接到 B1
+
+电压级别的转换器突围板引脚按如下方式连接到 DragonBoard：
+
+1.  **GND：** 将地线连接到引脚 40
+2.  **VccA：** 将较低电源连接到引脚 35 \(1.8V\)
+3.  **VccB：** 将较高电源连接到引脚 37 \(5V\)
+4.  **A1** 连接到引脚 8 \(SPI0\_CLK\)
+5.  **A2** 连接到引脚 14\(SPI0\_MOSI\)
+6.  **A3** 连接到引脚 10\(SPI0\_MISO\)
+7.  **A4** 连接到引脚 12\(SPI0\_CS\)
+
+下图显示组装了电路的试验板的可能外观：
+
+![DragonBoard SPI 加速计试验板]({{site.baseurl}}/Resources/images/SPIAccelerometer/breadboard_assembled_db410c.png)
+
+电路示意图如下所示：
+
+![DragonBoard API 加速计示意图]({{site.baseurl}}/Resources/images/SPIAccelerometer/schematics_db410c.png)
+
+### 部署和运行应用
 
 完成所有设置后，重新打开你的设备的电源，然后在 Visual Studio 中打开示例应用。打开文件 **MainPage.xaml.cs** 并将以下行从 **Protocol.NONE** 更改为 **Protocol.SPI**：
 
@@ -94,11 +131,11 @@ public sealed partial class MainPage : Page
 
 按照[设置远程调试并部署应用]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp)的说明进行操作。SPIAccelerometer 应用将部署并启动，并且你应该会看到加速计数据显示在屏幕上。如果你将加速计平放在一个图面上，则 Z 轴所读取的值应接近 1.000G，而 X 和 Y 轴应接近 0.000G。这些值将会小幅度波动，即使设备静止不动也是如此。这是正常现象，这是因振动和电噪音而产生的。如果你倾斜或晃动传感器，你应该能看到响应中的值出现变化。注意，此示例在 4G 模式下配置设备，因此你不可能会看到高于 4G 的 G 读数。
 
-![SPI 加速计运行]({{site.baseurl}}/images/SPIAccelerometer/spiaccelerometer_screenshot.png)
+![SPI 加速计运行]({{site.baseurl}}/Resources/images/SPIAccelerometer/spiaccelerometer_screenshot.png)
 
 恭喜你！ 你已连接了一个 SPI 加速计。
 
-###我们来看看代码
+### 我们来看看代码
 此示例中的代码将执行两个主要任务：
 
 1. 第一，此代码将初始化 SPI 总线和加速计
@@ -107,7 +144,7 @@ public sealed partial class MainPage : Page
 
 让我们从深入了解初始化开始吧。
 
-###初始化 SPI 总线
+### 初始化 SPI 总线
 若要使用加速计，我们需要先初始化 SPI 总线。下面是 C\# 代码。
 
 {% highlight C# %}
@@ -149,7 +186,7 @@ private async void InitSPIAccel()
 
 * 最后，我们从系统 \(**dis\[0\]**\) 上的第一个 SPI 控制器创建新的 **SpiDevice**，然后检查其是否可供使用。
 
-###初始化加速计
+### 初始化加速计
 
 现在我们已有 **SpiDevice** 加速计实例，这表示我们已经完成了 SPI 总线的初始化。现在，我们可以通过 SPI 写入数据，从而启动加速计。我们使用 **Write\(\)** 函数执行此操作。对于这一特定加速计，存在两个内部寄存器，我们需要先配置它们，然后才能开始使用设备： 数据格式寄存器和电源控制寄存器。
 
@@ -189,7 +226,7 @@ private async void InitSPIAccel()
 }
 {% endhighlight %}
 
-###计时器代码
+### 计时器代码
 在所有初始化均完成后，我们将启动一个计时器，以定期从加速计读取相关数据。下面介绍如何将计时器设置为每 100 毫秒触发。
 
 {% highlight C# %}
@@ -222,7 +259,7 @@ private void TimerCallback(object state)
 }
 {% endhighlight %}
 
-###从加速计读取数据
+### 从加速计读取数据
 在 SPI 总线和加速计初始化后，我们可以开始从加速计读取数据。我们的 **ReadAccel\(\)** 函数可由计时器每 100 毫秒调用一次：
 
 {% highlight C# %}
@@ -279,7 +316,7 @@ private Acceleration ReadAccel()
 
 * 接下来，我们将提供一个读取缓冲区大小为 6 的函数，以便我们能通过 SPI（以及填充字节）读取 6 个字节。由于此设备支持多字节读取操作，**且** X、Y 和 Z 数据寄存器紧挨在一起，因此读取 6 个字节能一次性为我们提供所有数据。这还能确保加速度值不会在执行不同的读取操作时出现更改。
 
-* 我们可从读取操作中获得 6 个字节数据。它们分别代表 X、Y 和 Z 数据寄存器中的相关数据。我们将分离出其各自的轴中所对应的数据，并使用 **BitConverter.ToInt16\(\)** 连接字节。
+* 我们可从读取操作中获得 6 个字节数据。它们分别代表 X、Y 和 Z 数据寄存器中的相关数据。我们将数据分离出，然后传入其各自的轴，并使用 **BitConverter.ToInt16\(\)** 连接字节。
 
 * 原始数据采用的格式为 16 位整数，其中包含来自加速计的 10 位数据。它可以采用 -512 到 511 范围之内的值。读数 -512 对应于 -4G，而 511 则对应于 +4G。若要将此格式转换为以 G 为单位，我们需要用分辨率 \(1024\) 除以原尺寸范围的比例 \(8G\)
 

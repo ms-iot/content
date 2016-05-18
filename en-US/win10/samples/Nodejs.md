@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/Nodejs.htm
 lang: en-US
 ---
 
-## MemoryStatus Node.js (Console Application) Sample
+# MemoryStatus Node.js (Console Application) Sample
 
 {% include VerifiedVersion.md %}
 
@@ -15,11 +15,11 @@ Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/{{page.l
 ### Set up your PC
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 
-### Copy Node.js to your Raspberry Pi 2
+### Copy Node.js to your Raspberry Pi 2 or 3
 * Download the zip file with ARM Node.js (ChakraCore) from [here](http://aka.ms/nodecc_arm) to your PC and extract the files (node.exe and chakracore.dll).
 * Use [Windows file sharing]({{site.baseurl}}/{{page.lang}}/win10/samples/SMB.htm), [PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm), 
-or [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to create `C:\Node.js (ChakraCore)` folder on your Raspberry Pi 2.
-* Copy node.exe and chakracore.dll to `C:\Node.js (ChakraCore)` on your Raspberry Pi 2.
+or [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm) to create `C:\Node.js (ChakraCore)` folder on your Raspberry Pi 2 or 3.
+* Copy node.exe and chakracore.dll to `C:\Node.js (ChakraCore)` on your Raspberry Pi 2 or 3.
 
 
 ### Create MemoryStatus Addon
@@ -137,7 +137,7 @@ Allow Node.exe to communicate through the firewall with the following command:
 In PowerShell, run the command `& 'C:\Node.js (ChakraCore)\Node.exe' C:\MemoryStatusSample\server.js` to start the server.
 Open up a browser and enter the address http://&lt;IP address of your device&gt;:1337. The result should look something like the picture below.
 
-![Memory Status Result]({{site.baseurl}}/images/Nodejs/memorystatus-ie.png)
+![Memory Status Result]({{site.baseurl}}/Resources/images/Nodejs/memorystatus-ie.PNG)
 
 
 ### GitHub

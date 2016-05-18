@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Tools
+description: Learn more about the tools for Windows 10 IoT Core that support activities like porting code and command-line configuration. 
+keyword: tools, windows iot, porting, power tools
 permalink: /en-US/win10/Tools.htm
 lang: en-US
 ---
@@ -11,7 +13,7 @@ With Windows 10 IoT Core, we have provided a suite of tools to assist you in eve
 
 ## Did you set up your environment?
 
-We assume you already [set up your environment]({{site.baseurl}}/{{page.lang}}/GetStarted.htm), have a working Visual Studio and have a device running Windows IoT Core (MinnowBoard Max or Raspberry Pi 2).
+We assume you already [set up your environment]({{site.baseurl}}/{{page.lang}}/GetStarted.htm), have a working Visual Studio and have a device running Windows IoT Core (MinnowBoard Max or Raspberry Pi 2 or 3).
 
 ## Questions/Suggestions
 

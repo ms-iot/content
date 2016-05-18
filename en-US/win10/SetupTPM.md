@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Setup TPM on Supported Platforms
+description: Learn how to set up TPM for IoT Core.
+keyword: setup, windows iot, tutorial, tpm
 permalink: /en-US/win10/SetupTPM.htm
 lang: en-US
 ---
@@ -134,9 +136,9 @@ Firmware TPM (fTPM) requires special Processor/SoC support and whence fTPM is no
         C:\>
 
 ## <a name="dTPM"></a>Setup dTPM  
-These instructions are applicable for any dTPM module supported on either MBM or RPi2.
+These instructions are applicable for any dTPM module supported on MBM, RPi2, or RPi3.
 
-1. Get a discrete TPM module and attach it to the MBM/RPi2.
+1. Get a discrete TPM module and attach it to the MBM/RPi2/RPi3.
 2. (Applies to MBM) Disable fTPM by changing the following UEFI settings:
 
         Device Manager -> System Setup -> Security Configuration -> PTT = <Disable>
@@ -146,7 +148,7 @@ These instructions are applicable for any dTPM module supported on either MBM or
         Device Manager -> System Setup -> Security Configuration -> Discrete TPM = <Enable>
 
 4. Based on your discrete TPM module of choice, identify its matching ACPI table [here][3].
-5. Copy that ACPI table to MBM/RPi2 _C:\Windows\System32\ACPITABL.dat_.
+5. Copy that ACPI table to MBM/RPi2/RPi3 _C:\Windows\System32\ACPITABL.dat_.
 6. Enable testsigning on the device:
 
         bcdedit /set {current} integrityservices disable
@@ -287,7 +289,7 @@ Note that **sTPM is intended for development purposes only and does not provide 
         bcdedit /set {current} integrityservices disable
         bcdedit /set testsigning on
 
-4. Copy the ACPI table from [here][4] to MBM/RPi2 _C:\Windows\System32\ACPITABL.dat_.
+4. Copy the ACPI table from [here][4] to MBM/RPi2/RPi3 _C:\Windows\System32\ACPITABL.dat_.
 5. Reboot the device.
 6. Verify you have the right TPM version enabled - run the [TPM 2.0 Tool][1] on the Windows IoT Core device.
 

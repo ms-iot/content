@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/SPIDisplayLightning.htm
 lang: en-US
 ---
 
-## Communicate with SPI Display using Lightning providers
+# Communicate with SPI Display using Lightning providers
 
 {% include VerifiedVersion.md %}
 
@@ -146,4 +146,4 @@ private async Task InitGpio()
 
 1. Same as the original [SPI Display sample]({{site.baseurl}}/{{page.lang}}/win10/samples/SPIDisplay.htm), you can now send text to the SPI display when you enter it using a keyboard attached to the device running the app.
 
-![SPI running]({{site.baseurl}}/images/SPIDisplay/spidisplay_screenshot.png)
+![SPI running]({{site.baseurl}}/Resources/images/SPIDisplay/spidisplay_screenshot.png)

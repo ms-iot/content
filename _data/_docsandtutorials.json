@@ -32,7 +32,7 @@
       {
          "title":"Hardware Pin Mappings",
          "description":"Pinout and interfacing information for GPIO, SPI, and I2C",
-         "link-text":"<a href='samples/PinMappingsRPi2.htm'>Raspberry Pi 2 Pinout</a><br><a href='samples/PinMappingsMBM.htm'>MinnowBoard Max Pinout</a><br><a href='samples/PinMappingsDb.htm'>Dragonboard Pinout</a>",
+         "link-text":"<a href='samples/PinMappingsRPi2.htm'>Raspberry Pi 2 and 3 Pinout</a><br><a href='samples/PinMappingsMBM.htm'>MinnowBoard Max Pinout</a><br><a href='samples/PinMappingsDb.htm'>Dragonboard Pinout</a>",
          "ranking":0,
          "tags":["beginner","hardware"]
       },
@@ -149,10 +149,17 @@
          "tags":["advanced"]
       },
       {
-         "title":"Enabling Secure Boot and BitLocker",
-         "description":"Learn how to secure your IoT device by enabling Secure Boot and BitLocker device encryption on supported IoT Core devices",
-         "link-text":"<a href='SB_BL.htm'>Learn More</a>",
-         "ranking":10,
+         "title": "Enabling Secure Boot and BitLocker",
+         "description": "Learn how to secure your IoT device by enabling Secure Boot and BitLocker device encryption on supported IoT Core devices",
+         "link-text": "<a href='SB_BL.htm'>Learn More</a>",
+         "ranking": 10,
+         "tags": [ "advanced" ]
+      },
+      {
+         "title":"Enabling Internet Connection Sharing",
+         "description":"Learn how to enable Internet Connection Sharing on your IoT Core device by bridging a Software Wi-Fi Access Point and Ethernet adapter",
+         "link-text":"<a href='InternetConnectionSharing.htm'>Learn More</a>",
+         "ranking":20,
          "tags":["advanced"]
       },
       {
@@ -161,6 +168,183 @@
          "link-text":"<a href='NetworkPacketCapture.htm'>Learn More</a>",
          "ranking":6,
          "tags":["intermediate","tool","configuration"]
+      },	  
+      {
+         "title": "Remote display experience for Windows 10 IoT Core",
+         "description": "Learn how to put a display on any displayless device with this new technology.",
+         "link-text": "<a href='RemoteDisplay.htm'>Learn More</a>",
+         "ranking": 20,
+         "tags": [ "advanced" ]
+      },
+      {
+         "title": "Arduino and Windows 10",
+         "description": "Arduino and Windows 10 work together to help you make amazing projects. Our technologies support the Arduino Uno and Mega, as well as the new Arduino 101.",
+         "link-text": "<a href='ArduinoAndWindows10.htm'>Learn More</a>",
+         "ranking": 20,
+         "tags": [ "advanced" ]
+      }   ],
+   "zh-CN-tags":["初级","中级","高级","工具","配置","端口","硬件","AllJoyn","平台","部署","调试","Visual Studio","WiFi","蓝牙","连接性"],
+   "zh-CN":[
+      {
+         "title":"设备上的命令行实用工具",
+         "description":"设备上的一组可用工具，用于帮助你配置大量选项",
+         "link-text":"<a href='tools/CommandLineUtils.htm'>了解详细信息</a>",
+         "ranking":4,
+         "tags":["初级", "工具", "配置"]
+      },
+      {
+         "title":"Windows 10 IoT 核心版移植工具",
+         "description":"用于帮助将现有 Win32 和 Windows CE 应用程序移植到 Windows 10 IoT 核心版的工具",
+         "link-text":"<a href='tools/IoTAPIPortingTool.htm'>了解详细信息</a>",
+         "ranking":5,
+         "tags":["高级", "工具", "端口"]
+      },
+      {
+         "title":"使用 PowerShell",
+         "description":"允许远程管理和配置，以便你可以远程配置和管理任何 Windows IoT 核心版设备",
+         "link-text":"<a href='samples/PowerShell.htm'>了解详细信息</a>",
+         "ranking":6,
+         "tags":["中级","工具","配置"]
+      },
+      {
+         "title":"使用 SSH",
+         "description":"允许通过 SSH 远程管理和配置 Windows IoT 核心版设备",
+         "link-text":"<a href='samples/SSH.htm'>了解详细信息</a>",
+         "ranking":6,
+         "tags":["中级","工具","配置"]
+      },
+      {
+         "title":"硬件引脚映射",
+         "description":"GPIO、SPI 和 I2C 引出线和接口信息",
+         "link-text":"<a href='samples/PinMappingsRPi2.htm'>Raspberry Pi 2 和 3 引出线</a><br><a href='samples/PinMappingsMBM.htm'>MinnowBoard Max 引出线</a><br><a href='samples/PinMappingsDb.htm'>DragonBoard 引出线</a>",
+         "ranking":0,
+         "tags":["初级","硬件"]
+      },
+      {
+         "title":"AllJoyn 连接性",
+         "description":"了解有关 AllJoyn 的详细信息并使用 Windows 10 IoT 核心版探索 AllJoyn 设备系统网桥的功能",
+         "link-text":"<a href='AllJoyn.htm'>了解详细信息</a>",
+         "ranking":20,
+         "tags":["高级","AllJoyn","平台"]
+      },
+      {
+         "title":"不可用的通用 API",
+         "description":"Windows IoT 核心版现处于开发阶段。下面是尚未在我们的平台上实现的 UWP API",
+         "link-text":"<a href='UnavailableApis.htm'>了解详细信息</a>",
+         "ranking":10,
+         "tags":["中级","API"]
+      },
+      {
+         "title":"生态系统兼容性列表",
+         "description":"查找在 Window 10 IoT 核心版设备上受支持的外设、接口和协议的列表",
+         "link-text":"<a href='SupportedInterfaces.htm'>了解详细信息</a>",
+         "ranking":6,
+         "tags":["中级","硬件","平台"]
+      },
+      {
+         "title":"Visual Studio 应用部署",
+         "description":"在 Windows 10 IoT 核心版设备上使用 Visual Studio 部署和调试应用程序",
+         "link-text":"<a href='AppDeployment.htm'>了解详细信息</a>",
+         "ranking":0,
+         "tags":["初级","调试","部署","Visual Studio"]
+      },
+      {
+         "title":"使用 WINDBG",
+         "description":"使用要调试的 WINDBG",
+         "link-text":"<a href='Windbg.htm'>了解详细信息</a>",
+         "ranking":20,
+         "tags":["高级","调试"]
+      },
+      {
+         "title":"术语表",
+         "description":"常用的短语及其含义列表",
+         "link-text":"<a href='Glossary.htm'>了解详细信息</a>",
+         "ranking":5,
+         "tags":["初级"]
+      },
+      {
+         "title":"Windows Device Portal",
+         "description":"连接到、控制、配置计算机并从 Web 获取关于它的高级诊断信息",
+         "link-text":"<a href='tools/DevicePortal.htm'>了解详细信息</a>",
+         "ranking":0,
+         "tags":["初级","配置"]
+      },
+      {
+         "title":"有外设和无外设设备",
+         "description":"Windows IoT 核心版可处于有外设模式下，也可处于无外设模式下。区别在于是否存在任何形式的 UI。",
+         "link-text":"<a href='HeadlessMode.htm'>了解详细信息</a>",
+         "ranking":1,
+         "tags":["初级","部署"]
+      },
+      {
+         "title":"使用 FTP 访问文件",
+         "description":"使用 FTP 访问设备上的文件",
+         "link-text":"<a href='samples/FTP.htm'>了解详细信息</a>",
+         "ranking":6,
+         "tags":["初级"]
+      },
+      {
+         "title":"使用 Windows 文件共享访问文件",
+         "description":"使用 Windows 文件共享访问设备上的文件",
+         "link-text":"<a href='samples/SMB.htm'>了解详细信息</a>",
+         "ranking":6,
+         "tags":["初级"]
+      },
+      {
+         "title":"WiFi 连接性",
+         "description":"在 Windows IoT 核心版设备上设置和配置 WiFi",
+         "link-text":"<a href='SetupWiFi.htm'>了解详细信息</a>",
+         "ranking":6,
+         "tags":["初级","WiFi","连接性"]
+      },
+      {
+         "title":"蓝牙支持",
+         "description":"Windows IoT 核心版蓝牙支持信息",
+         "link-text":"<a href='Bluetooth.htm'>了解详细信息</a>",
+         "ranking":6,
+         "tags":["初级","蓝牙","连接性"]
+      },
+      {
+         "title":"嵌入模式",
+         "description":"在桌面和移动设备上启用嵌入模式",
+         "link-text":"<a href='EmbeddedMode.htm'>了解详细信息</a>",
+         "ranking":7,
+         "tags":["高级"]
+      },
+      {
+         "title":"Windows 10 IoT 核心专业版",
+         "description":"创建 Windows 10 IoT 核心专业版映像",
+         "link-text":"<a href='CreateIoTCorePro.htm'>了解详细信息</a>",
+         "ranking":8,
+         "tags":["高级"]
+      },
+      {
+         "title":"通用写入筛选器",
+         "description":"在操作系统映像上启用写入筛选器",
+         "link-text":"<a href='UWF.htm'>了解详细信息</a>",
+         "ranking":20,
+         "tags":["高级"]
+      },
+      {
+         "title":"使用 TPM 保护 IoT 设备",
+         "description":"了解受信任的平台模块 (TPM) 以及 IoT 核心版上的各种实现和代码示例",
+         "link-text":"<a href='TPM.htm'>了解详细信息</a>",
+         "ranking":20,
+         "tags":["高级"]
+      },
+      {
+         "title":"启用安全启动和 BitLocker",
+         "description":"了解如何通过在受支持的 IoT 核心版设备上启用安全启动和 BitLocker 设备加密来保护 IoT 设备",
+         "link-text":"<a href='SB_BL.htm'>了解详细信息</a>",
+         "ranking":10,
+         "tags":["高级"]
+      },
+	  {
+         "title":"启用 Internet 连接共享",
+         "description":"了解如何通过桥接软件 WLAN 接入点与以太网适配器来启用 IoT 核心版设备上的 Internet 连接共享",
+         "link-text":"<a href='InternetConnectionSharing.htm'>了解详细信息</a>",
+         "ranking":20,
+         "tags":["高级"]
       }
    ]
 }

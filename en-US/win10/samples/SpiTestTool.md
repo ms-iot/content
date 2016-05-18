@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/SpiTestTool.htm
 lang: en-US
 ---
 
-## SpiTestTool Sample
+# SpiTestTool Sample
 
 {% include VerifiedVersion.md %}
 

@@ -5,34 +5,39 @@ permalink: /en-US/win10/MBM.htm
 lang: en-US
 deviceName: MBM
 ---
-<ol class="breadcrumb">
-  <li>
-    <a href="https://dev.windows.com/en-us/iot">IoT Home</a>
-  </li>
-  <li>
-    <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
-  </li>
-  <li class="active">Set up a MinnowBoard MAX</li>
-</ol>
-<h1 class="page-title"> Set up a MinnowBoard MAX </h1>
 <div class="row">
-  <div class="col-md-6 col-sm-12 col-no-padding">
-    <h2 class="subtext">Get your computer ready for the Windows Developer Program for IoT, set up your MinnowBoard MAX and build your first Windows IoT Core app.</h2>
+  <div class="col-xs-24">
+    <ol class="breadcrumb">
+      <li>
+        <a href="https://developer.microsoft.com/en-us/windows/iot">IoT Home</a>
+      </li>
+      <li>
+        <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
+      </li>
+      <li class="active">Set up a MinnowBoard MAX</li>
+    </ol>
+    <header class="page-title-header">
+      <h1 class="page-title">Set up a MinnowBoard MAX </h1>
+      <div class="page-subtitle">Get your computer ready for the Windows Developer Program for IoT, set up your MinnowBoard MAX and build your first Windows IoT Core app.</div>
+    </header>
   </div>
 </div>
 
-<h2>1. Set up your MinnowBoard MAX <span class="pull-right"><a id="setup-content-toggle" class="toggle-button" onClick="hideDiv('setup-content')">Show</a></span></h2>
-<hr>
-<div id="setup-content" class="toggle-section hidden">
-  {% include_relative SetupMBM.htm %}
+<div class="row">
+  <div class="col-xs-24">
+    <h2>1. Set up your MinnowBoard MAX <span class="pull-right"><a id="setup-content-toggle" class="toggle-button" onClick="hideDiv('setup-content')">Show</a></span></h2>
+    <hr/>
+    <div id="setup-content" class="toggle-section hidden">
+      {% include_relative setupMBM.md %}
+    </div>
+  </div>
 </div>
-</ol>
 
-<h2>2. Write your first app: Hello, Blinky!   <span class="pull-right"><a id="app-content-toggle" class="toggle-button" onClick="hideDiv('app-content')">Show</a></span>  </h2>
-<hr>
-  <div id="app-content" class="toggle-section hidden">
-  <div class="row">
-    <div class="col-md-6 col-sm-12">
+<div class="row">
+  <div class="col-xs-24">
+    <h2>2. Write your first app: Hello, Blinky!   <span class="pull-right"><a id="app-content-toggle" class="toggle-button" onClick="hideDiv('app-content')">Show</a></span>  </h2>
+    <hr />
+    <div id="app-content" class="toggle-section hidden">
         <p>In this tutorial, we'll create a simple LED blinking app and connect a LED to your Windows 10 IoT Core device.</p>
         <p>This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions <a href="{{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm"> here.</a></p>
         <p>Also, be aware that the GPIO APIs are only available on Windows 10 IoT Core, so this sample cannot run on your desktop.</p>
@@ -43,23 +48,15 @@ deviceName: MBM
         <p>A 220 &#x2126; resistor</p>
         <p>A breadboard and a couple of connector wires</p>
         <p>An LED (any color you like)</p>
-    </div>
-    <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/images/Blinky/components.png">
-    </div>
-  </div>
-    {% include_relative samples/BlinkyMBMGpio.md %}
-    {% include_relative samples/AppDeploymentCS.md %}
-  <div class="row">
-    <div class="col-md-6 col-sm-12">
-      <p>When everything is set up, you should be able to press F5 from Visual Studio.  If there are any missing packages that you did not install during setup, Visual Studio may prompt you to acquire those now.  The Blinky app will deploy and start on the Windows IoT device, and you should see the LED blink in sync with the simulation on the screen.</p>
-    </div>
-    <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/images/Blinky/blinky-screenshot.png" height="400">
+        <p><img src="{{site.baseurl}}/Resources/images/Blinky/components.png"></p>
+        {% include_relative samples/BlinkyMBMGpio.md %}
+        {% include_relative samples/AppDeploymentCS.md %}
+        <p>When everything is set up, you should be able to press F5 from Visual Studio.  If there are any missing packages that you did not install during setup, Visual Studio may prompt you to acquire those now.  The Blinky app will deploy and start on the Windows IoT device, and you should see the LED blink in sync with the simulation on the screen.</p>
+        <p><img src="{{site.baseurl}}/Resources/images/Blinky/blinky-screenshot.png" height="400"></p>
+        <p>Congratulations! You controlled one of the GPIO pins on your Windows IoT device.</p>
+        {% include_relative samples/BlinkyCodeCS.md%}
     </div>
   </div>
-  <p>Congratulations! You controlled one of the GPIO pins on your Windows IoT device.</p>
-  {% include_relative samples/BlinkyCodeCS.md%}
 </div>
 
 

@@ -9,7 +9,7 @@ lang: en-US
 
 {% include VerifiedVersion.md %}
 
-Learn how to create an Arduino Wiring sketch on Raspberry Pi 2 or Minnowboard Max that controls a stepper motor. The app runs the motor in default forward mode, default reverse mode and small-step forward mode in a loop.
+Learn how to create an Arduino Wiring sketch on Raspberry Pi 2 and 3 or Minnowboard Max that controls a stepper motor. The app runs the motor in default forward mode, default reverse mode and small-step forward mode in a loop.
 
 ## Setup
 
@@ -23,9 +23,9 @@ Follow the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/A
 
 Connect the circuit based on the Fritzing diagram below.
 
-![Stepper Fritzing]({{site.baseurl}}/images/arduino_wiring/StepperMotorFritz.PNG)
+![Stepper Fritzing]({{site.baseurl}}/Resources/images/arduino_wiring/StepperMotorFritz.PNG)
 
-1. Start by hooking up the Raspberry Pi 2 to the Big Easy Driver.
+1. Start by hooking up the Raspberry Pi 2 or 3 to the Big Easy Driver.
    1. Connect the ENABLE pin on the driver to pin 12 (GPIO 18) on the Pi.
    2. Connect the MS1, MS2 and MS3 pins on the driver to pins 36, 38 and 40 respectively. (GPIO 16, GPIO 20 and GPIO 21)
    3. Connect the STEP pin on the driver to pin 10 (GPIO 15) on the Pi.

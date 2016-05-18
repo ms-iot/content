@@ -5,11 +5,11 @@ permalink: /en-US/win10/samples/ConsoleApp.htm
 lang: en-US
 ---
 
-## MemoryStatus Console Application Sample
+# MemoryStatus Console Application Sample
 
 {% include VerifiedVersion.md %}
 
-We'll create a simple console application that can be used to query the memory usage on your Windows IoT Core device (Raspberry Pi 2, MinnowBoard Max, or a DragonBoard). Please note that you need to compile the project for ARM for Raspberry Pi 2 or DragonBoard and x86 for MinnowBoard Max.
+We'll create a simple console application that can be used to query the memory usage on your Windows IoT Core device (Raspberry Pi 2 or 3, MinnowBoard Max, or a DragonBoard). Please note that you need to compile the project for ARM for Raspberry Pi 2 or 3 or DragonBoard and x86 for MinnowBoard Max.
 
 ### Load the project in Visual Studio
 
@@ -21,11 +21,11 @@ You can find the source code for this sample by downloading a zip of all of our 
 Select the template 'Blank Windows IoT Core Console Application'<br/>
 Remember to give a good name to your first app! In this example, we called the project 'MemoryStatus'.
 
-    ![Console Application Template Location]({{site.baseurl}}/images/Console/new_cpp_console_proj.png)
+    ![Console Application Template Location]({{site.baseurl}}/Resources/images/Console/new_cpp_console_proj.png)
 
 * Let's add some content to the console application. From Solution Explorer, select the 'ConsoleApplication.cpp' file.
 
-    ![ConsoleApplication File]({{site.baseurl}}/images/Console/console_application.png)
+    ![ConsoleApplication File]({{site.baseurl}}/Resources/images/Console/console_application.png)
 
 * To add some functionality to our console, add the following memory status query and display code:
 <UL>
@@ -164,23 +164,23 @@ int main(int argc, char **argv)
 
 * Now navigate to the Debugging section of Windows Device Portal and click the Start button under Start Visual Studio Remote Debugger. 
 
-    ![WindowsDevicePortalDebugSettings Target]({{site.baseurl}}/images/Console/device_portal_start_debugger.png)
+    ![WindowsDevicePortalDebugSettings Target]({{site.baseurl}}/Resources/images/Console/device_portal_start_debugger.png)
 
 * This will show pop-up a message box and give you the connection information. 
 
 *  In Visual Studio, you can configure your target by editing your project's properties (be sure to make all of the highlighted changes as appropriate to your board's name or IP address):
 
-    ![RemoteMachineProjectSettings Target]({{site.baseurl}}/images/Console/console_project_settings.png)
+    ![RemoteMachineProjectSettings Target]({{site.baseurl}}/Resources/images/Console/console_project_settings.png)
 
         Note: You can use the IP address instead of the Windows IoT Core device name.
 
 * The project configuration needs to be modified to enable deployment.  To do this, open the Configuration Manager by selecting the Configuration manger from the Solution Configuration drop-down menu on the toolbar.
 
-    ![SolutionConfiguration Target]({{site.baseurl}}/images/Console/configuration_management.png)
+    ![SolutionConfiguration Target]({{site.baseurl}}/Resources/images/Console/configuration_management.png)
 
     From the Configuration Manager, ensure that the Deploy checkbox is selected for your project configuration (if this options is disabled, it is likely that the deployment options have not been fully entered into the Debugging tab of the project properties)
 
-    ![RemoteMachineProjectSettings Target]({{site.baseurl}}/images/Console/deploy_checkbox.png)
+    ![RemoteMachineProjectSettings Target]({{site.baseurl}}/Resources/images/Console/deploy_checkbox.png)
 
 * Now we're ready to deploy to the remote Windows IoT Core device. Simply press F5 (or select Debug \| Start Debugging) to start debugging our app. You can also use Build \| Deploy Solution to simply deploy your application without starting a debug session.
 
@@ -192,7 +192,7 @@ int main(int argc, char **argv)
 
 * You can now run the application as you would any other application.  Simply open a PowerShell/SSH connection (instructions can be found [here for powershell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm) and [here for SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm)) and enter the Remote Command you specified above.
 
-    ![ConsoleOutput Target]({{site.baseurl}}/images/Console/console_output.png)
+    ![ConsoleOutput Target]({{site.baseurl}}/Resources/images/Console/console_output.png)
 
 * Once you are done debugging Console Applications, remember to kill the remote debugger on the Windows IoT Core device. Use powershell/SSH to open a console session and run the following commnand
 

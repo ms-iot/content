@@ -1,11 +1,11 @@
 ---
 layout: default
 title: BLE GATT 示例 - 代码
-permalink: /zh-CN/win10/samples/BLEGatt2.htm
+permalink: /zh-cn/win10/samples/BLEGatt2.htm
 lang: zh-CN
 ---
 
-## 使用和分解代码
+# 使用和分解代码
 让我们先看一下示例，然后再浏览重要的代码位！ 请记住，所需的所有代码都在[此处](https://github.com/ms-iot/samples/archive/develop.zip){:target="_blank"}（即 [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} 文件夹中）。
 
 这是一个有外设示例。若要更好地了解什么是有外设模式以及如何将你的设备配置为有外设，请按照[此处]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm)的说明操作。
@@ -16,15 +16,15 @@ lang: zh-CN
 确保将“远程调试”设置设为指向你的设备。如需指导，请返回基本“Hello World”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm)。
 
 ### 部署和运行应用
-首先，我们需要选择用于进行生成的正确体系结构。如果你要针对 Minnowboard Max 进行生成，请选择体系结构下拉列表中的 `x86`。如果你要针对 Raspberry Pi 2 进行生成，请选择 `ARM`。
+首先，我们需要选择用于进行生成的正确体系结构。如果你要针对 Minnowboard Max 进行生成，请选择体系结构下拉列表中的 `x86`。如果你要针对 Raspberry Pi 2 或 3 进行生成，请选择 `ARM`。
 
-接下来，右键单击“解决方案资源管理器”中的“BluetoothGATT”项目，然后选择“设置为启动项目”。现在，你应该可以在 Visual Studio 中按 F5： BluetoothGATT 应用将部署并启动，随后你应该能在设备输出上看到此应用：
+接下来，右键单击“解决方案资源管理器”中的“BluetoothGATT”项目，然后选择“设为启动项目”。现在，你应该可以在 Visual Studio 中按 F5： BluetoothGATT 应用将部署并启动，随后你应该能在设备输出上看到此应用：
 
-![BluetoothGatt 应用]({{site.baseurl}}/images/BLEGatt/app.png)
+![BluetoothGatt 应用]({{site.baseurl}}/Resources/images/BLEGatt/app.png)
 
 单击顶部的“开始”按钮以连接到 SensorTag，并显示传感器数据。此时，可能会出现一个弹出窗口，提示用户是否允许访问 SensorTag 服务，单击“是”以继续操作。几秒钟后，你应该能看到更新后的数据，如下所示：
 
-![BluetoothGatt 应用运行]({{site.baseurl}}/images/BLEGatt/appRunning.png)
+![BluetoothGatt 应用运行]({{site.baseurl}}/Resources/images/BLEGatt/appRunning.png)
 
 ### 我们来看看代码
 
@@ -44,7 +44,7 @@ using Windows.Storage.Streams;
 using System.Threading.Tasks;
 {% endhighlight %}
 
-此外，你必须在应用清单 \(`Package.appxmanifest`\) 的声明中提供有关设备功能的信息。这使应用可以与设备相关联。在[此处](https://msdn.microsoft.com/zh-CN/library/windows/apps/xaml/dn263090.aspx){:target="_blank"}了解有关蓝牙设备功能的详细信息。
+此外，你必须在应用清单 \(`Package.appxmanifest`\) 的声明中提供有关设备功能的信息。这使应用可以与设备相关联。在[此处](https://msdn.microsoft.com/zh-cn/library/windows/apps/xaml/dn263090.aspx){:target="_blank"}了解有关蓝牙设备功能的详细信息。
 
 {% highlight XML %}
 <Capabilities>
@@ -275,7 +275,7 @@ async void accelChanged(GattCharacteristic sender, GattValueChangedEventArgs eve
 {% endhighlight %}
 
 ### 就这么简单！
-你所需了解的有关如何与 BLE GATT 设备交互的全部信息均在本指南中。有关如何使用蓝牙 API 的更多示例，请参阅[支持蓝牙设备 \(XAML\)](https://msdn.microsoft.com/zh-CN/library/windows/apps/xaml/dn264587.aspx){:target="_blank"}。
+你所需了解的有关如何与 BLE GATT 设备交互的全部信息均在本指南中。有关如何使用蓝牙 API 的更多示例，请参阅[支持蓝牙设备 \(XAML\)](https://msdn.microsoft.com/zh-cn/library/windows/apps/xaml/dn264587.aspx){:target="_blank"}。
 
 #### 以前的页面
 [示例概述]({{site.baseurl}}/{{page.lang}}/win10/samples/BLEGatt.htm) - 了解 BLE、GATT 和 TI CC2541 SensorTag。

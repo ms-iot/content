@@ -1,13 +1,15 @@
 ---
 layout: default
 title: Unavailable Universal APIs
+description: A current list of Windows Runtime APIs that are not functional in Windows 10 IoT Core.
+keyword: windows runtime, windows iot, unsupported apis
 permalink: /en-US/win10/UnavailableApis.htm
 lang: en-US
 ---
 
 <div class="container" markdown= "1">
 
-## Universal APIs not functional in Windows 10 IoT Core at this time
+# Universal APIs not functional in Windows 10 IoT Core at this time
 
     Windows.ApplicationModel.Appointments.Appointment
     Windows.ApplicationModel.Appointments.AppointmentInvitee

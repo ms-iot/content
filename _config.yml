@@ -14,6 +14,27 @@ downloadurl: "http://connect.microsoft.com/windowsembeddedIoT/Downloads/"
 markdown: kramdown
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
 permalink: pretty
-highlighter: pygments
-safe: true
+highlighter: pygments 
+safe: false
 lsi: false
+
+defaults:
+  - # Site global default(s)
+    scope:
+      path: "" # Files under site root
+      type: "pages" # Only files of type page
+    values:
+      search_product: "eADQiWindows 10XVcnh"
+      layout: "default"
+  - # en-US-specific default(s)
+    scope:
+      path: "en-US" # Files under en-US folder
+      type: "pages" # Only files of type page
+    values:
+      lang: "en-US"
+  - # zh-cn-specific default(s)
+    scope:
+      path: "zh-CN" # Files under zh-CN folder
+      type: "pages" # Only files of type page
+    values:
+      lang: "zh-CN"

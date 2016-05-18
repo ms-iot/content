@@ -5,7 +5,7 @@ permalink: /en-US/win10/samples/BLEGattDump.htm
 lang: en-US
 ---
 
-## Example GATT Attribute dump file
+# Example GATT Attribute dump file
 Here is the output from running the Bluetooth GATT Database Viewer (BthGATTDump.exe) with the SensorTag connected to the system.
 
     Microsoft Bluetooth GATT database viewer v1.00 Copyright (c) Microsoft Corp.

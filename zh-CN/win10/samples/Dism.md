@@ -1,13 +1,13 @@
 ---
 layout: default
 title: 使用 DISM 将映像应用到 Windows IoT 核心版设备的 SD 卡
-permalink: /zh-CN/win10/samples/DISM.htm
+permalink: /zh-cn/win10/samples/DISM.htm
 lang: zh-CN
 ---
 
-##使用 DISM 可将微型 SD 卡刷入 Windows IoT 核心版设备
+# 使用 DISM 可将微型 SD 卡刷入 Windows IoT 核心版设备
 
-###WindowsIoTImageHelper 的替代方法
+### WindowsIoTImageHelper 的替代方法
 
 如果你已按照说明来设置 [Raspberry PI]({{site.baseurl}}/{{page.lang}}/win10/SetupRPI.htm) 或 [Minnowboard Max]({{site.baseurl}}/{{page.lang}}/win10/SetupMBM.htm)，则 **Dism.exe** 将安装在“C:\\Program Files \(x86\)\\Microsoft IoT\\Dism”下。
 

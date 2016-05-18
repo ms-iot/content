@@ -1,6 +1,8 @@
 ---
 layout: default
-title: SB_BL
+title: Secure Boot and BitLocker
+description: Learn about enabling Secure Boot and BitLocker encryption on your IoT device.
+keyword: secure boot, windows iot, bitlocker, encryption, security
 permalink: /en-US/win10/SB_BL.htm
 lang: en-US
 ---

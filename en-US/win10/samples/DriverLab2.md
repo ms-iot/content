@@ -11,9 +11,9 @@ A Windows IoT Core driver is made up of one or more files.  Some of these files 
 
 ## On the development computer
 
-* From the Build menu, click `Build Solution(Ctrl+Shift+B)`. Make sure that you are building for `x86` if you are using a MinnowBoard Max, or `ARM` if you are using a Raspberry Pi 2.
+* From the Build menu, click `Build Solution(Ctrl+Shift+B)`. Make sure that you are building for `x86` if you are using a MinnowBoard Max, or `ARM` if you are using a Raspberry Pi 2 or 3.
 
-    ![Driver Settings properties]({{site.baseurl}}/images/DriverLab/driver-build-option.png)
+    ![Driver Settings properties]({{site.baseurl}}/Resources/images/DriverLab/driver-build-option.png)
 
 * You will now have a collection of files that make up the driver. Confirm you have both the **SYS** and **INF** files for your driver under the `DriverSamples\gpiokmdfdemo\Debug\gpiokmdfdemo\` folder.
 
@@ -26,7 +26,7 @@ A Windows IoT Core driver is made up of one or more files.  Some of these files 
 
     The ASL compiler takes as input parameter a file with extension **ASL**.  You will find 2 **ASL** files in the asl directory under `DriverSamples\gpiokmdfdemo\asl\`
 
-    Use `gpiokmdfdemo.asl` if you are deploying to a MinnowBoard Max.  Use `rpi2.asl` if you are deploying to a Raspberry Pi 2.
+    Use `gpiokmdfdemo.asl` if you are deploying to a MinnowBoard Max.  Use `rpi2.asl` if you are deploying to a Raspberry Pi 2 or 3.
 
 * Copy the **ASL** file to the `C:\Program Files (x86)\Windows Kits\10\Tools\x86\ACPIVerify\` directory
 
@@ -38,7 +38,7 @@ A Windows IoT Core driver is made up of one or more files.  Some of these files 
 
         asl.exe gpiokmdfdemo.asl
 
-    If you are using Raspberry Pi 2, type:
+    If you are using Raspberry Pi 2 or 3, type:
 
         asl.exe rpi2.asl
 

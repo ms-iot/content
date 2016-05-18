@@ -1,4 +1,4 @@
----
+--- 
 layout: default
 title: Release Notes
 permalink: /en-US/win10/ReleaseNotesRTM.htm
@@ -38,7 +38,7 @@ You can review linked terms by pasting the forward link into your browser window
 
 The default administrator user name and password are hard coded in the Windows 10 IoT Core image. This is a security risk for the device, and it should not be exposed to an open internet connection until the password has been changed.
 
-The MinnowBoard Max will not boot unless the firmware is version .082 or later. The minimum recommended version of the firmware is “MinnowBoard MAX 0.83 32-Bit”. Firmware updates can be downloaded from [http://go.microsoft.com/fwlink/?LinkId=708613](http://go.microsoft.com/fwlink/?LinkId=708613){:target="_blank"}.
+The MinnowBoard Max will not boot unless the firmware is version .082 or later. The minimum recommended version of the firmware is "MinnowBoard MAX 0.83 32-Bit". Firmware updates can be downloaded from [http://go.microsoft.com/fwlink/?LinkId=708613](http://go.microsoft.com/fwlink/?LinkId=708613){:target="_blank"}.
 
 The Windows 10 IoT Core image included in this drop supports the peripherals that are exposed on the MinnowBoard MAX board. Subsequently, Intel&reg; will provide support of the full feature set of the Baytrail processors including the Intel Celeron&trade; Processors J1900/N2930/N2807 and Intel Atom&trade; Processors E38XX.
 
@@ -52,7 +52,7 @@ With this release of Windows 10 IoT Core for the Raspberry Pi 2, support for cam
 
 Hardware volume controls for USB microphones and speakers which depend on Windows system to change system volume are currently not supported on Windows 10 IoT Core.
 
-Some USB keyboards and mice may not work on the Raspberry PI2. Use a different keyboard or mouse. A list of validated peripheral devices can be found on the documentation at [http://go.microsoft.com/fwlink/?LinkId=619428](http://go.microsoft.com/fwlink/?LinkId=619428){:target="_blank"}.
+Some USB keyboards and mice may not work on the Raspberry PI2. Use a different keyboard or mouse. A list of validated peripheral devices can be found on the [documentation here](({{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm)){:target="_blank"}.
 
 On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to user mode applications in the April Insider Preview release of version of Windows 10 IoT Core, but are no longer available. Attempting to open these pins with Windows::Devices::Gpio::GpioController::OpenPin() will return HRESULT_FROM_WIN32(ERROR_NOT_FOUND). GPIO pins 0 and 1 are reserved on the Raspberry Pi by the HAT specification (https://github.com/raspberrypi/hats) and are under control of VC firmware. For compliance with this specification, these pins should be left unconnected.
 
@@ -60,16 +60,16 @@ On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to user mode a
 ## Known Issues
 
 *	Windows Device Portal may stop working after a day of continuous uptime. (5458435) WORKAROUND: Restart the device.
-*	Setting the orientation to “Portrait” may not be honored in a Universal App (3039042) WORKAROUND: None
+*	Setting the orientation to "Portrait" may not be honored in a Universal App (3039042) WORKAROUND: None
 *	On Raspberry Pi and Dragonboard, switching from a non-default drive mode to a different non-default drive mode may produce a glitch on the GPIO pin. (3890679) WORKAROUND: Set drive mode once at the beginning of the application.
 *	The Default startup app may conflict with itself when it is also deployed from Visual Studio (4266059). WORKAROUND: Change the default startup app to an application other than that you wish to deploy.
-*	BackgroundMediaPlayer.MessageReceivedFromForeground may crash. (2199869) WORKAROUND: The following line of code may crash: “BackgroundMediaPlayer.MessageReceivedFromForeground += OnMessageReceivedFromForeground;”. To prevent the crash, add this code so that it is executed first “var player = BackgroundMediaPlayer.Current;”
+*	BackgroundMediaPlayer.MessageReceivedFromForeground may crash. (2199869) WORKAROUND: The following line of code may crash: "BackgroundMediaPlayer.MessageReceivedFromForeground += OnMessageReceivedFromForeground;". To prevent the crash, add this code so that it is executed first "var player = BackgroundMediaPlayer.Current;"
 *	Data breakpoints have been disabled on the Raspberry Pi2 (4266252). WORKAROUND: None at this time
 *	The Azure Active Directory Authentication Library may not work on Windows 10 IoT Core (4266261). WORKAROUND: Do not use the Azure Active Directory Authentication Library.
 *	A MediaEncodingProfile.CreateWma( Windows.Media.MediaProperties. AudioEncodingQuality.Auto) method call may fail on the Raspberry Pi 2 with the error message No suitable transform was found to encode or decode the content. (Exception from HRESULT: 0xC00D5212). (4510128) WORKAROUND: None.
 *	More.com!PAGER::DisplayString may return INVALID_POINTER_READ exception. (1552523) WORKAROUND: None.
 *	When deploying a Node.JS project BackgroundTaskHost.exe may fail with an error.(4873190) WORKAROUND: None.
-*	The GPIO/I2C/SPI/UART drivers will be disabled when connecting to the DragonBoard with windbg. (4710796) WORKAROUND: None.
+*	On Dragonboard, GPIO/I2C/SPI/UART stop working when COM1 or COM2 is enabled for kernel debugging. (4710796) WORKAROUND: Use USB debug transport.
 *	The Dragonboard BSP has drivers for the headset jack and microphone jack, but it doesn't have either of these jacks on board. (4791855) WORKAROUND: USB headsets cannot be used without manually disabling these devices
 *	The SPI on the Dragonboard will ignore the requested speed and always run at 4.8 Mhz. (5055938) WORKAROUND: None.
 *	If an application or background task enter a bad state the device may blue screen instead of allowing an opportunity to connect through an SSH session and reconfigure the device. (5098713) WORKAROUND: None.
@@ -82,6 +82,7 @@ On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to user mode a
 *   On MinnowBoardMax, FTDI USB-Serial adapters will ignore the requested baud rate and will use 3.8Mhz. (5348073) WORKAROUND: [Workaround for FTDI devices on x86](#ftdiworkaround)
 *	On MinnowBoardMax, a NULL value may be returned by SerialDevice::FromIdAsync() when devices are connected to the top USB port on MinnowBoardMax (2175837) WORKAROUND: Update to firmware version 0.83 or later from Intel's website: [http://firmware.intel.com/projects/minnowboard-max](http://firmware.intel.com/projects/minnowboard-max){:target="_blank"}.
 *   WiFi direct is partially supported on IoT Core using the WinRT WiFi direct APIs. For more details see [WiFi Direct limitations on IoTCore](#wifidirect).
+*   On Raspberry Pi, audio via the 3.5mm jack stops working when the direct memory mapped drivers are enabled. (6678121) WORKAROUND: See [Workaround for audio and direct memory mapped drivers](#dmapaudioworkaround).
 
 ### <a name="ftdiworkaround"></a>Workaround for FTDI devices on x86
 
@@ -117,5 +118,47 @@ Windows Registry Editor Version 5.00
 
 1. The IoTCore device has to be the connecting device – it will not work as the advertising device with another device initiating the connection.  
 2. Advanced pairing must be used.  The sample app demonstrates how to use the advanced pairing API’s to pair the devices prior to connecting.
-3. Not all wireless adapters support WiFi direct. We have tested and validated that the “Realtek RTL8188EU Wireless Lan 802.11n USB 2.0 Network adapter” works, but other adapters may not be supported.
+3. Not all wireless adapters support WiFi direct. We have tested and validated that the "Realtek RTL8188EU Wireless Lan 802.11n USB 2.0 Network adapter" works, but other adapters may not be supported.
  
+=======
+3. Not all wireless adapters support WiFi direct. We have tested and validated that the "Realtek RTL8188EU Wireless Lan 802.11n USB 2.0 Network adapter" works, but other adapters may not be supported.
+
+### <a name="dmapaudioworkaround"></a>Workaround for audio and direct memory mapped drivers
+
+After the direct memory mapped drivers have been enabled, run:
+
+    reg add HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DeviceIds\ACPI\BCM2844 /v dmap.inf /t REG_BINARY /d 02ff0100
+    reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\enum\ACPI\bcm2844\0 /v ConfigFlags /t REG_DWORD /d 0x20
+    devcon restart acpi\bcm2844
+
+Verify that the driver for the PWM device node is `BCM2836 PWM Controller`:
+
+    C:\Data>devcon status acpi\bcm2844
+    ACPI\BCM2844\0
+        Name: BCM2836 PWM Controller
+        Driver is running.
+    1 matching device(s) found.
+
+### <a name="shellcrashes"></a>Shell Management of Application Crashes
+IoT Core’s shell infrastructure monitors APPX-type applications running on the device for crashes, and restarts those applications when crashes occur.  If the restarted applications continue to crash, the shell will employ a __failfast – a system critical process that causes a bugcheck and reboot in an attempt to recover.  Comparable logic and handling is used to background tasks and foreground applications in a headed configuration.   Crash handing and retry logic is captured below:
+
+<pre>
+  Software\Microsoft\Windows NT\CurrentVersion\Winlogon\IoTShellExtension\CBTConfig  (or ForegroundAppConfig for headed)
+    Qword:"FailureResetIntervalMs" – length of time app has to run successfully to reset failures seen to 0. – default is 0x00000000000493E0 == 5 minutes
+    Qword:"BaseRetryDelayMs"  -- wait time coefficient.  Default is 0xa.
+    Dword:"MaxFailureCount". Default is 10
+    DWord:"FallbackExponentNumerator", default is 31.
+    Dword:"FallbackExponentDenominator", default is 20
+
+
+Fallback_exponent = FallbackExponentNumerator / FallbackExponentDenominator; // default is 1.55
+
+When app crash is detected:
+    if time_since_last_crash > failureresetinterval then crashes_seen = 1
+    else ++crashes_seen;
+    
+    if crashes_seen > MaxFailureCount then __failfast;
+    else
+      delay = (dword) ((float)BaseRetryDelayMs * (crashes_seen ** Fallback_exponent))
+      wait for delay and relaunch app
+</pre>

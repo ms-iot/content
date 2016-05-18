@@ -24,20 +24,20 @@ You can also deploy a driver using Visual Studio during driver development by fo
 
 * Next, on your development PC, open up a **File Explorer** window, and in the address bar type `\\<TARGET_DEVICE>\C$\` and then hit enter.  In this particular case, `<TARGET_DEVICE>` is the IP Address of your Windows IoT Core device:
 
-    ![SMB with File Explorer]({{site.baseurl}}/images/DriverLab/smb1.png)
+    ![SMB with File Explorer]({{site.baseurl}}/Resources/images/DriverLab/smb1.png)
 
     If you are prompted for a user name and password, and you have not changed the default user name and password, use the following credentials:
 
         User Name: <TARGET_DEVICE>Administrator
         Password:  p@ssw0rd
 
-    ![SMB with File Explorer]({{site.baseurl}}/images/DriverLab/cred1.png)
+    ![SMB with File Explorer]({{site.baseurl}}/Resources/images/DriverLab/cred1.png)
 
     NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)
 
 * Navigate to the `\windows\system32\` folder in the SMB File Explorer window:
 
-    ![SMB with File Explorer]({{site.baseurl}}/images/DriverLab/smb2.png)
+    ![SMB with File Explorer]({{site.baseurl}}/Resources/images/DriverLab/smb2.png)
 
 * Drag and drop (copy) the following two files (created in the previous section while building the driver in Visual Studio) from the development machine to the `\windows\system32\` folder on your IoT Core device:
 
@@ -104,7 +104,7 @@ Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/samples/Blin
 We have provided a pre-built binary application called BlinkyApp.exe which communicates with the driver to turn on/off the LED.  The application can be found at `DriverSamples\BlinkyApp\BlinkyApp_<PLATFORM>.exe`.
 
 For MinnowBoard Max, `<PLATFORM>` will be `x86`.
-For Raspberry Pi 2, `<PLATFORM>` will be `ARM`.
+For Raspberry Pi 2 or 3, `<PLATFORM>` will be `ARM`.
 
 You will need to copy this file to the target device (Windows IoT Core device) using SMB, or some other means.
 
@@ -123,7 +123,7 @@ You should see a help menu similar to this:
       (h)igh 5  : Sets GPIO #5 HIGH.
 
 
-    Raspberry Pi 2 (RPi2) [ARM]: GPIO Pin Mapping and Examples
+    Raspberry Pi 2 or 3 (RPi2 or RPi3) [ARM]: GPIO Pin Mapping and Examples
 
       GPIO No. |      Example       |      Example       | Header
                |     (GPIO low)     |     (GPIO high)    | Pin No.
@@ -141,7 +141,7 @@ You should see a help menu similar to this:
       GPIO 26  | BlinkyApp.exe l 26 | BlinkyApp.exe h 26 |   37
       GPIO 27  | BlinkyApp.exe l 27 | BlinkyApp.exe h 27 |   13
 
-If you are using GPIO #5 on the Raspberry Pi 2, type the following command to turn the LED on:
+If you are using GPIO #5 on the Raspberry Pi 2 or 3, type the following command to turn the LED on:
 
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe low 5
 

@@ -13,7 +13,7 @@ A DC motor is one of the basic elements of a maker's toolbox. Whether you're dri
 
 You will need:
 
-* 1 Windows 10 IoT Core enabled device, such as Raspberry Pi 2 or Minnowboard Max.
+* 1 Windows 10 IoT Core enabled device, such as Raspberry Pi 2, Raspberry Pi 3 or Minnowboard Max.
 * 1 [PCA9685 16-channel 12-bit PWM controller from Adafruit](http://www.adafruit.com/product/815).
 * 1 330 Ω resistor.
 * 1 1N1407 diode.
@@ -22,7 +22,7 @@ You will need:
 
 ## Hardware Set Up
 
-Motors draw more current than the pins on the Raspberry Pi 2 can safely provide. Therefore, we'll use a transistor to connect the motor to an external power source. Transistors are like switches; when we give it a small amount of current, it can enable the flow of a much larger current. For our motor, we used a 5v DC adapter that supplies at least 1A of current. It is OK to use an adapter with more current capacity than your motor needs; as the adapter should only supply what is needed by the motor.
+Motors draw more current than the pins on the Raspberry Pi 2 or 3 can safely provide. Therefore, we'll use a transistor to connect the motor to an external power source. Transistors are like switches; when we give it a small amount of current, it can enable the flow of a much larger current. For our motor, we used a 5v DC adapter that supplies at least 1A of current. It is OK to use an adapter with more current capacity than your motor needs; as the adapter should only supply what is needed by the motor.
 
 We are also using a diode to protect the PCA9685 board and the Raspberry Pi from backflow current that can damage the hardware. Diodes enable power flow in one direction only.
 
@@ -30,25 +30,25 @@ We highly recommend you use the PCA9685 PWM controller. You can use either the h
 
 Additionally, the controller should not have any I2C hardware address pins set. Below is an image of the I2C pins on the PCA9685 PWM controller, where none of the pins are set (and therefore hardware I2C address is the default 0x40).
 
-![PCA9685 I2c]({{site.baseurl}}/images/arduino_wiring/pca9685_i2c.jpg)
+![PCA9685 I2c]({{site.baseurl}}/Resources/images/arduino_wiring/pca9685_i2c.jpg)
 
 Refer to the fritzing diagram below to hook up your motor and PWM controller.
 
 ### Fritzing Diagram
 
-![RPI Pinouts]({{site.baseurl}}/images/arduino_wiring/dcmotor.png)
+![RPI Pinouts]({{site.baseurl}}/Resources/images/arduino_wiring/dcmotor.png)
 
 ### Pinout Description
 
 The PCA9685 PWM Controller should be connected as follows:
 
-#### Raspberry Pi 2
+#### Raspberry Pi 2 and 3
 
-- VCC - 5V on Raspberry Pi 2 (Pin 2 or 4)
-- SDA - SDA1 pin on Raspberry Pi 2 (Pin 3)
-- SCL - SCL1 pin on Raspberry Pi 2 (Pin 5)
+- VCC - 5V on Raspberry Pi 2 or 3 (Pin 2 or 4)
+- SDA - SDA1 pin on Raspberry Pi 2 or 3 (Pin 3)
+- SCL - SCL1 pin on Raspberry Pi 2 or 3 (Pin 5)
 - OE - *leave disconnected*
-- GND - GND on Raspberry Pi 2 (Pin 14 as shown or any other GND pin)
+- GND - GND on Raspberry Pi 2 or 3 (Pin 14 as shown or any other GND pin)
 
 #### External Power
 

@@ -37,7 +37,7 @@ Acronyms:
   
 IoT Explorer for AllJoyn and its documentation can be found [here]({{site.baseurl}}/en-US/win10/AllJoyn.htm#AllJoynExplorer){:target="_blank"}.
 
-![ZigBeeHardware]({{site.baseurl}}/images/ZigBee/ZigBeeHardware.png)
+![ZigBeeHardware]({{site.baseurl}}/Resources/images/ZigBee/ZigBeeHardware.png)
 
 ## Set up steps
 1. Install the required tools and driver listed in the prerequisites on your Windows 10 desktop
@@ -47,12 +47,12 @@ IoT Explorer for AllJoyn and its documentation can be found [here]({{site.baseur
 4. Set up your Raspberry Pi2 (if you target that device)
 5. Deploy ZigBee adapter
 
->Note that in Windows 10, when a machine has __multiple AllJoyn modern applications__ that __need to interact__ on the same machine, the user must __add a loopback exemption__ for these modern applications. Consequently, if you run both the ZigBee adapter and IoT Explorer for AllJoyn on the same machine you will need to add a loopback exemption for these 2 applications. This isn’t needed for application you run from Visual Studio 2015. Note that when deploying an application from Visual Studio 2015, the loopback exemption is for the lifetime of the installed application. Meaning that you can launch the app directly (not from Visual Studio 2015) afterwards and it will have the loopback exemption.
+>Note that in Windows 10, when a machine has __multiple AllJoyn modern applications__ that __need to interact__ on the same machine, the user must __add a loopback exemption__ for these modern applications. Consequently, if you run both the ZigBee adapter and IoT Explorer for AllJoyn on the same machine you will need to add a loopback exemption for these 2 applications. This isn't needed for application you run from Visual Studio 2015. Note that when deploying an application from Visual Studio 2015, the loopback exemption is for the lifetime of the installed application. Meaning that you can launch the app directly (not from Visual Studio 2015) afterwards and it will have the loopback exemption.
 
 Set up loopback exception: 
  1. Find the installation folder of the modern application for which you want to enable the loopback exemption. It is located at "C:\Users\\*username*\AppData\Local\Packages"
  
- ![LoopBackException]({{site.baseurl}}/images/ZigBee/LoopBackException.png)
+ ![LoopBackException]({{site.baseurl}}/Resources/images/ZigBee/LoopBackException.png)
  2. Copy the installation folder name which is also the application ID.
  3. Run the following command from an elevated command prompt:
 `CheckNetIsolation LoopbackExempt -a -n=installation-folder-name`
@@ -61,16 +61,16 @@ Set up loopback exception:
 ## Configure your XBee ZigBee module using XCTU tool
 Please look at the tool help to get more details about the tool (https://docs.digi.com/display/XCTU/XCTU+Overview){:target="_blank"}.
 
-![XBeeConfig1]({{site.baseurl}}/images/ZigBee/XBeeConfig1.png)
+![XBeeConfig1]({{site.baseurl}}/Resources/images/ZigBee/XBeeConfig1.png)
 
-![XBeeConfig2]({{site.baseurl}}/images/ZigBee/XBeeConfig2.png)
+![XBeeConfig2]({{site.baseurl}}/Resources/images/ZigBee/XBeeConfig2.png)
 
 ## Let ZigBee devices join your ZigBee network
 Once the XBee ZigBee module has been configured you can build your ZigBee network and let your ZigBee devices join. In order to do that you just need to power up your ZigBee devices. ZigBee Light Link (aka ZLL) and Home Automation devices will, by default and if not already part of a ZigBee network, try to join a ZigBee network which permit join is enabled. Since the XBee ZigBee module has been configured to always enable permit join, the ZigBee devices will join your network. 
 
-You can verify that devices have by using “network discovery” feature of XCTU tool.
+You can verify that devices have by using "network discovery" feature of XCTU tool.
 
-![ZigBeeJoinNetVerif]({{site.baseurl}}/images/ZigBee/ZigBeeJoinNetVerif.png)
+![ZigBeeJoinNetVerif]({{site.baseurl}}/Resources/images/ZigBee/ZigBeeJoinNetVerif.png)
 
 ## Set up your Raspberry Pi2
 1. Perform initial set up as instructed [here]({{site.baseurl}}/en-US/win10/SetupRPI.htm){:target="_blank"}
@@ -81,14 +81,14 @@ You can verify that devices have by using “network discovery” feature of XCT
 1. Download a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip).
 2. Open `samples-develop\AllJoyn\Samples\ZigBeeAdapter\ZigBeeAdapter.sln` in Visual Studio.
 3. Select the relevant target (x86, x64 or ARM) and build the solution in Visual Studio.
-Your now ready to launch it, so launch or debug HeadedAdapterApp project on desktop or if the targeted Windows 10 device has a display or launch or debug HeadlessAdapterApp if it doesn’t. 
+Your now ready to launch it, so launch or debug HeadedAdapterApp project on desktop or if the targeted Windows 10 device has a display or launch or debug HeadlessAdapterApp if it doesn't. 
 If needed, see instruction [here]({{site.baseurl}}/en-US/win10/AppDeployment.htm){:target="_blank"} for remote debugging.
  
  
 ### Known limitations of the current version of the ZigBee adapter
 - ZigBee adapter only discovers devices that are directly connected to the XBee module. 
 - ZigBee adapter only support some devices defined in ZigBee Light Link or Home Automation profiles. This means that it only implements the necessary ZCL clusters and ZDO commands to handle them. That said support for new devices and new ZCL clusters can easily be added to ZigBee adapter code.
-- ZigBee adapter doesn’t expose any method to commission ZigBee devices.
+- ZigBee adapter doesn't expose any method to commission ZigBee devices.
 
 ## ZigBee adapter in detail 
 ZigBee adapter is written in C# and exposes ZigBee devices on AllJoyn through BridgeRT interface. ZigBee device is exposed in AllJoyn as follow:
@@ -98,24 +98,24 @@ ZigBee adapter is written in C# and exposes ZigBee devices on AllJoyn through Br
 - Each Attribute of a cluster is exposed as an AllJoyn Property
 - All ZigBee commands of all clusters of an end point are grouped under the main AllJoyn bus object of the AllJoyn Service and exposed as AllJoyn method
 
-![ZigBee2AllJoynMapping]({{site.baseurl}}/images/ZigBee/ZigBee2AllJoynMapping.png)
+![ZigBee2AllJoynMapping]({{site.baseurl}}/Resources/images/ZigBee/ZigBee2AllJoynMapping.png)
 
 ### IoT Explorer for AllJoyn view of Philips Hue light bulb
-Philips Hue light bulb has 1 endpoint which has several clusters: Identify, Scene, Group, OnOff and LevelControl. ZigBee adapter only handles the OnOff and LevelControl clusters hence will only expose them to AllJoyn. Below is IoT Explorer for AllJoyn view of what is exposed on AllJoyn. Path to “On” command is highlighted in green, path to “OnOff” status is highlighted in red.
+Philips Hue light bulb has 1 endpoint which has several clusters: Identify, Scene, Group, OnOff and LevelControl. ZigBee adapter only handles the OnOff and LevelControl clusters hence will only expose them to AllJoyn. Below is IoT Explorer for AllJoyn view of what is exposed on AllJoyn. Path to "On" command is highlighted in green, path to "OnOff" status is highlighted in red.
 
-![AJXPhilipsHue1]({{site.baseurl}}/images/ZigBee/AJXPhilipsHue1.png)
+![AJXPhilipsHue1]({{site.baseurl}}/Resources/images/ZigBee/AJXPhilipsHue1.png)
 
-![AJXPhilipsHue2]({{site.baseurl}}/images/ZigBee/AJXPhilipsHue2.png)
+![AJXPhilipsHue2]({{site.baseurl}}/Resources/images/ZigBee/AJXPhilipsHue2.png)
 
-![AJXPhilipsHue3]({{site.baseurl}}/images/ZigBee/AJXPhilipsHue3.png)
+![AJXPhilipsHue3]({{site.baseurl}}/Resources/images/ZigBee/AJXPhilipsHue3.png)
 
-![AJXPhilipsHue4]({{site.baseurl}}/images/ZigBee/AJXPhilipsHue4.png)
+![AJXPhilipsHue4]({{site.baseurl}}/Resources/images/ZigBee/AJXPhilipsHue4.png)
 
-![AJXPhilipsHue5]({{site.baseurl}}/images/ZigBee/AJXPhilipsHue5.png)
+![AJXPhilipsHue5]({{site.baseurl}}/Resources/images/ZigBee/AJXPhilipsHue5.png)
 
 ### Class overview
 
-![ClassMap]({{site.baseurl}}/images/ZigBee/ClassMap.png)
+![ClassMap]({{site.baseurl}}/Resources/images/ZigBee/ClassMap.png)
 
 The __Adapter__ class is the main class of ZigBee adapter. This class derives from __IAdapter__ (BridgeRT interface) and contains a collection of __ZigBeeDevice__ instances and an instance of the __XBeeModule__ class.
 
@@ -125,7 +125,7 @@ The __ZigBeeDevice__ class represents a ZigBee device. This class has no interfa
 
 The __ZigBeeEndPoint__ class represents an EndPoint of a ZigBee device. This class derives from __IAdapterDevice__ (BridgeRT interface) and contains an instance of the __BasicCluster__ and a collection __ZclCluster__ instance. To be more accurate it contains a collection of cluster classes, e.g.: __OnOffCluster__, which derive from the abstract __ZclCluster__ class.
 
-The cluster classes, e.g.: __BasicCluster__, __OnOffCluster__, represent a ZCL cluster. Each cluster class is a “specific” implementation of the __ZclCluster__ abstract class.
+The cluster classes, e.g.: __BasicCluster__, __OnOffCluster__, represent a ZCL cluster. Each cluster class is a "specific" implementation of the __ZclCluster__ abstract class.
  
 The __ZclCluster__ class is an abstract class that derives from __IAdapterProperty__ (BridgeRT interface) and contains a collection of __ZclAttribute__ instances and a collection of __ZclCommand__ instances. A specific implementation of ZclCluster simply consists in defining the list of ZclAttribute and ZclCommand that should be supported for that specific cluster.
 
@@ -133,7 +133,7 @@ The __ZclAttribute__ class represents an attribute as defined in ZCL standard. T
 
 The __ZclCommand__ class represents a command as defined in ZCL standard. This class derives from __IAdapterMethod__ (BridgeRT interface) and from __ZigBeeCommand__ class. This class contains list of input and output parameters. These parameters are actually __IAdapterValue__ class which is a BridgeRT interface.
 
-The __ZigBeeCommand__ class is an Abstract class that is used to send and receive ZDO or ZCL command. Preparing (or parsing) the ZCL or ZDO payload that XBeeModule will send to XBee module (or receive from XBeeModule) is a shared task between ZigBeeCommand class for its “generic” part and the derived class of ZigBeeCommand for the specific part. 
+The __ZigBeeCommand__ class is an Abstract class that is used to send and receive ZDO or ZCL command. Preparing (or parsing) the ZCL or ZDO payload that XBeeModule will send to XBee module (or receive from XBeeModule) is a shared task between ZigBeeCommand class for its "generic" part and the derived class of ZigBeeCommand for the specific part. 
 
 ZDO command classes such as __ManagementLQI__ class, __ActiveEndPoints__ class… are used to discover the ZigBee network and the ZigBee devices and end points. These classes derive from __ZigBeeCommand__ class.
 
@@ -143,7 +143,7 @@ AT command classes such as __AO_Command__,  __HV_Command__…  are used by XBeeM
 
 ### Sending ZDO or ZCL command and receiving response
 
-![SendZdoZcl]({{site.baseurl}}/images/ZigBee/SendZdoZcl.png)
+![SendZdoZcl]({{site.baseurl}}/Resources/images/ZigBee/SendZdoZcl.png)
 
 1. When ZclAttribute class reads the value of the attribute, it will build the read attribute payload following the ZCL standard and then call SendCommand method of the ZigBeeCommand class.
 2. SendCommand will then call SendZigBeeCommand method of XBeeModule.
@@ -152,17 +152,17 @@ AT command classes such as __AO_Command__,  __HV_Command__…  are used by XBeeM
 5. GetBytesFromModule will parse the XBee part of the frame and check if the response received has a matching command. If so if will call the ParseResponse callback of the relevant command and then signal the reception of the response to that command. 
 
 ### Receiving ZDO or ZCL command 
-ZigBee device can send ZDO or ZCL command to the XBee module, e.g.: device announce ZDO command which is sent when a device wakes up or join the network, report attribute ZCL command when an attribute of a ZCL cluster is reportable… This kind of command are not sent in response to another command and can be seen as “notification” by ZigBee adapter.  
+ZigBee device can send ZDO or ZCL command to the XBee module, e.g.: device announce ZDO command which is sent when a device wakes up or join the network, report attribute ZCL command when an attribute of a ZCL cluster is reportable… This kind of command are not sent in response to another command and can be seen as "notification" by ZigBee adapter.  
 
-![ReceiveZdoZcl]({{site.baseurl}}/images/ZigBee/ReceiveZdoZcl.png)
+![ReceiveZdoZcl]({{site.baseurl}}/Resources/images/ZigBee/ReceiveZdoZcl.png)
 
 1. Adapter class will build a list of notifications it can receive upon initialization. This list contains instances of specific ZigBeeCommand such as DeviceAnnce, ZclReportAttribute.
 2. Upon reception of complete frame from the XBee module, the reception thread of the SerialController will call GetBytesFromModule callback of XBeeModule.
-3. GetBytesFromModule will parse the XBee part of the frame and check if it’s a response to a command that has been sent (see previous section). If not, it will go through the notification list and call the ParseResponse method of each element until one accept the frame or none have accepted. If none have accepted, the frame will be thrown away. 
-4. What ParseResponse does is specific to each implementation of the ZigBeeCommand class. For example, the ParseResponse method of the DeviceAnnce class will get the 64 bit address (aka MAC address) and 16 bit address and may be more information about the signaled device and then send “device arrival” signal to BridgeRT (note that several classes are used to achieve that, see code for more). 
+3. GetBytesFromModule will parse the XBee part of the frame and check if it's a response to a command that has been sent (see previous section). If not, it will go through the notification list and call the ParseResponse method of each element until one accept the frame or none have accepted. If none have accepted, the frame will be thrown away. 
+4. What ParseResponse does is specific to each implementation of the ZigBeeCommand class. For example, the ParseResponse method of the DeviceAnnce class will get the 64 bit address (aka MAC address) and 16 bit address and may be more information about the signaled device and then send "device arrival" signal to BridgeRT (note that several classes are used to achieve that, see code for more). 
 
 ### Creating a new ZCL cluster class
-ZigBee adapter doesn’t implement all clusters defined by ZCL. There will be cases where the ZigBee device you want to interact with won’t be supported by ZigBee adapter. In such a case you will need to add support for the missing clusters. 
+ZigBee adapter doesn't implement all clusters defined by ZCL. There will be cases where the ZigBee device you want to interact with won't be supported by ZigBee adapter. In such a case you will need to add support for the missing clusters. 
 
 How to:
 
@@ -171,27 +171,27 @@ How to:
  - Create a new class that derives from ZclCluster
  - In constructor add attributes and commands
 3. Update ZigBeeProfileLibrary and ZclClusterFactory accordingly
-4. Don’t forget to update ZclHelper if the cluster you added has either attributes or command that use a not yet supported ZigBee type
+4. Don't forget to update ZclHelper if the cluster you added has either attributes or command that use a not yet supported ZigBee type
 
 Example of a new cluster class
 
-![NewClusterClass]({{site.baseurl}}/images/ZigBee/NewClusterClass.png)
+![NewClusterClass]({{site.baseurl}}/Resources/images/ZigBee/NewClusterClass.png)
 
 What needs to be done in ZclClusterFactory class
 
-![ZclFactoryChange]({{site.baseurl}}/images/ZigBee/ZclFactoryChange.png)
+![ZclFactoryChange]({{site.baseurl}}/Resources/images/ZigBee/ZclFactoryChange.png)
 
 ### Quick overview of frame used by XBee API
 Digi provide an API that can be used to interact with its XBee ZigBee module. This API is used to send or receive AT command or ZDO and ZCL command. AT commands are specific to the XBee module and can only be interpreted by the XBee module whereas ZDO or ZCL commands can be interpreted by any ZigBee devices. Frames used to send AT commands are a bit different than frames used to send ZDO or ZCL commands (see XBee ZigBee module documentation for more details).
 
 General frame layout:
 
-![XBeeFrame1]({{site.baseurl}}/images/ZigBee/XBeeFrame1.png)
+![XBeeFrame1]({{site.baseurl}}/Resources/images/ZigBee/XBeeFrame1.png)
 
 Explicit addressing ZigBee Command 
 
-![XBeeFrame2]({{site.baseurl}}/images/ZigBee/XBeeFrame2.png)
+![XBeeFrame2]({{site.baseurl}}/Resources/images/ZigBee/XBeeFrame2.png)
 
 Explicit Rx Indicator
 
-![XBeeFrame3]({{site.baseurl}}/images/ZigBee/XBeeFrame3.png)
+![XBeeFrame3]({{site.baseurl}}/Resources/images/ZigBee/XBeeFrame3.png)
