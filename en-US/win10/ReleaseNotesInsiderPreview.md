@@ -28,7 +28,8 @@ You can review linked terms by pasting the forward link into your browser window
 
 ## Known issues in this build: 
 * The latest Windows SDK (Build greater than 14337) is not compatible with this build, use the SDK included in with Visual Studio update 2
-* Networking on the Raspberry Pi 3 may fail on first boot with slower SD cards
+* Ethernet and WiFi  on the Raspberry Pi 3 may fail on boot a reboot is required to resolve the issue. This issue is more prominent on slower SD cards. 
+
 
 
 
