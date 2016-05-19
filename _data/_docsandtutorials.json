@@ -86,6 +86,13 @@
          "tags":["beginner","configuration"]
       },
       {
+         "title":"Make your 3D Printer Wireless",
+         "description":"Turn your Windows 10 IoT Core device into a print server and connect your 3D Printer to it. You will be able to access your printer wirelessly from other devices.",
+         "link-text":"<a href='samples/3DPrintServer.htm'>Learn More</a>",
+         "ranking":0,
+         "tags":["3d print"]
+      },
+      {
          "title":"Headed and Headless devices",
          "description":"Windows IoT Core can either be in headed or headless mode. The difference is the presence or absence of any form of UI",
          "link-text":"<a href='HeadlessMode.htm'>Learn More</a>",
