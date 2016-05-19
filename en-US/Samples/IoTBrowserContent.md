@@ -14,7 +14,7 @@ The sample is based around the windows
 
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\IoTBrowser`.  The sample code is C#. Make a copy of the folder on your disk and open the project from Visual Studio.
 
-{% include_relative AppDeploymentCS.md %}
+{% include samples/AppDeploymentCS.md %}
 
 When everything is set up, you should be able to press F5 from Visual Studio.  The IoT Browser app will deploy and start on the Windows IoT device.
 

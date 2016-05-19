@@ -46,7 +46,7 @@ You'll need a few components:
 
 ![Electrical Components]({{site.baseurl}}/Resources/images/AdafruitStarterPack/KitBlinkyMaterials.jpg){:.device-images}
 
-{% include_relative BlinkyRPIGpio.md %}
+{% include samples/BlinkyRPIGpio.md %}
 
 <img class="device-images" src="{{site.baseurl}}/Resources/images/Blinky/breadboard_assembled_rpi2_kit.jpg" height="400">
 
@@ -73,7 +73,7 @@ When everything is set up, you should be able to press F5 from Visual Studio to 
 
 Congratulations! You controlled one of the GPIO pins on your Windows IoT device.
 
-{% include_relative BlinkyCodeCS.md%}
+{% include samples/BlinkyCodeCS.md%}
 
 <div class="row lineTop">
   <div class="text-right col-xs-24">
