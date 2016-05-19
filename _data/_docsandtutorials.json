@@ -155,13 +155,20 @@
          "ranking": 10,
          "tags": [ "advanced" ]
       },
-	  {
+      {
          "title":"Enabling Internet Connection Sharing",
          "description":"Learn how to enable Internet Connection Sharing on your IoT Core device by bridging a Software Wi-Fi Access Point and Ethernet adapter",
          "link-text":"<a href='InternetConnectionSharing.htm'>Learn More</a>",
          "ranking":20,
          "tags":["advanced"]
       },	  
+      {
+         "title":"Network Packet Capture",
+         "description":"Use Microsoft Message Analyzer to capture network packets from your Windows 10 IoT Core device",
+         "link-text":"<a href='NetworkPacketCapture.htm'>Learn More</a>",
+         "ranking":6,
+         "tags":["intermediate","tool","configuration"]
+      },
       {
          "title": "Remote display experience for Windows 10 IoT Core",
          "description": "Learn how to put a display on any displayless device with this new technology.",
