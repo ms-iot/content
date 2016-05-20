@@ -11,8 +11,8 @@ With Windows 10's support for using Arduino Wiring to build IoT apps, developers
 
 These two samples show how easy it is to build these components in your Arduino Wiring project and use them from a C# app. This document will walk you through the basics and you can find the complete samples here: 
 
-[Blinky Arduino Library](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryBlinky)
-[LCD Display Arduino Library(https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryLcdDisplay)
+* [Blinky Arduino Library](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryBlinky)
+* [LCD Display Arduino Library](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryLcdDisplay)
 
 ## Step 1: Create a new Arduino Wiring project and add the basic functionality
 
@@ -27,9 +27,9 @@ Now that you've added the basic functionality you want to expose from your compo
 ### Create the component
 Right-click on your project and click "Add->Class". This will pop up the new class Wizzard. Click "Next" on the first page and then choose a class name and click "finish". 
 
-![NewC++Class]({{site.baseurl}}/Resources/images/arduino_wiring/ArduinoWiringComponent/NewC++Class.png) 
+![NewCppClass]({{site.baseurl}}/Resources/images/arduino_wiring/ArduinoWiringComponent/NewCppClass.png) 
 
-![C++ClassWizard]({{site.baseurl}}/Resources/images/arduino_wiring/ArduinoWiringComponent/C++ClassWizzard.png) 
+![CppClassWizard]({{site.baseurl}}/Resources/images/arduino_wiring/ArduinoWiringComponent/CppClassWizard.png) 
 
 ### Update the components header file
 Then you need to open the new header file and make a few changes. 
