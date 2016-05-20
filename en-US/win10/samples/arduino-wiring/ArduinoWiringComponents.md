@@ -12,7 +12,8 @@ With Windows 10's support for using Arduino Wiring to build IoT apps, developers
 These two samples show how easy it is to build these components in your Arduino Wiring project and use them from a C# app. This document will walk you through the basics and you can find the complete samples here: 
 
 [Blinky Arduino Library](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryBlinky)
-[LCD Display Arduino Library(https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryLcdDisplay)
+
+[LCD Display Arduino Library](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryLcdDisplay)
 
 ## Step 1: Create a new Arduino Wiring project and add the basic functionality
 
@@ -27,9 +28,9 @@ Now that you've added the basic functionality you want to expose from your compo
 ### Create the component
 Right-click on your project and click "Add->Class". This will pop up the new class Wizzard. Click "Next" on the first page and then choose a class name and click "finish". 
 
-![NewC++Class]({{site.baseurl}}/Resources/images/arduino_wiring/ArduinoWiringComponent/NewC++Class.png) 
+![NewC++Class]({{site.baseurl}}/Resources/images/arduino_wiring/ArduinoWiringComponent/NewC%2B%2BClass.png) 
 
-![C++ClassWizard]({{site.baseurl}}/Resources/images/arduino_wiring/ArduinoWiringComponent/C++ClassWizzard.png) 
+![C++ClassWizard]({{site.baseurl}}/Resources/images/arduino_wiring/ArduinoWiringComponent/C%2B%2BClassWizzard.png) 
 
 ### Update the components header file
 Then you need to open the new header file and make a few changes. 
@@ -47,7 +48,7 @@ Once you've updated your header file it is time to implement those methods. Open
 
 ![LedOnOffClass]({{site.baseurl}}/Resources/images/arduino_wiring/ArduinoWiringComponent/LedOnOffClass.png) 
 
-## Step 3: Using the Class from C#
+## Step 3: Using the Class from C&#35;
 At this point your component is complete and it is time to use it from your C# application. Create a new C# project and then add a reference to the Arduino Wiring project you just completed. From there you can use that component like you would any other WinRT class. 
 
 ![LedOnOffCS]({{site.baseurl}}/Resources/images/arduino_wiring/ArduinoWiringComponent/LedOnOffCS.png) 
@@ -66,6 +67,6 @@ At this point your code is complete and ready to run. Right-click on your C# pro
 The Arduino Wiring Project is designed to build a standalone application and so includes things not necessary when building a component to be used in another app. If you wish you can delete this. 
 
 * Remove the "loop" method from your .ino file
-* Expand "Package Dependencies" in your Arduino project, right click on "StarupTask.cpp", and click "Remove"
+* Expand "Package Dependencies" in your Arduino project, right click on "StartupTask.cpp", and click "Remove"
 
 ![LedOnOffCleanup]({{site.baseurl}}/Resources/images/arduino_wiring/ArduinoWiringComponent/LedOnOffCleanup.png) 
