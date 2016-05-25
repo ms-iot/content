@@ -754,6 +754,16 @@ div.preview {
     font-weight: 600;
 }
 
+@font-face{
+    font-family: IOTMDL2Font;
+    src: url(https://halcyon-img-int.azurewebsites.net/sites/iot/resources/fonts/IOTMDL2.1.68.tff);
+}
+
+@font-face{
+    font-family: SegMDL2Font;
+    src: url(https://halcyon-img-int.azurewebsites.net/sites/iot/resources/fonts/SegMDL2.1.54.tff);
+}
+
 
 /* [BUGFIXES] */
 
