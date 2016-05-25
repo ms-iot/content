@@ -10,34 +10,28 @@ lang: en-US
     <h1>Community</h1>
     <p>Connect with other developers to share samples, tips, resources and answers to difficult questions.</p>
     <p>Stay connected with Windows IoT to learn about technology, announcements, new product features, launches and more for Windows IoT devices.</p>
-    <a href="{{site.signupurl}}">
-      <h4 class="btn btn-default highlight">Join the Windows Developers Program for IoT</h4>
-    </a>
-
 </div>
 <div class="row section-heading">
   <h3>New on the Window IoT Blog</h3>
-    <div class="col-md-6">
-      <a href="https://blogs.windows.com/buildingapps/2016/04/05/windows-10-iot-build-2016/" target="_blank">
-        <h4>Windows 10 IoT @ //Build 2016</h4>
-      </a>
-      <h4><em>Brett Bentsen<br>Partner Group Program Manager for Windows IoT<br>Apr 5 2016</em></h4>
-    </div>
-    <div class="col-md-6">
-      <a href="http://go.microsoft.com/fwlink/?LinkId=734075" target="_blank">
-        <h4>Windows 10 IoT Core support for Raspberry Pi 3</h4>
-      </a>
-      <h4><em>Billy Anders<br>Director of Program Management<br>Windows IoT<br>Feb 29 2016</em></h4>
-    </div>
-    <div class="col-md-6">
-      <a href="http://blogs.windows.com/buildingapps/2016/02/04/what-is-windows-remote-arduino-and-what-can-it-do/" target="_blank">
-        <h4>What is Windows Remote Arduino and What Can It Do?</h4>
-      </a>
-      <h4><em>Windows Apps Team<br>Feb 4, 2016</em></h4>
-    </div>
+  <div class="col-md-6">
+    <a href="https://blogs.windows.com/buildingapps/2016/04/05/windows-10-iot-build-2016/" target="_blank">
+      <h4>Windows 10 IoT @ //Build 2016</h4>
+    </a>
+    <h4><em>Brett Bentsen<br>Partner Group Program Manager for Windows IoT<br>Apr 5 2016</em></h4>
+  </div>
+  <div class="col-md-6">
+    <a href="http://go.microsoft.com/fwlink/?LinkId=734075" target="_blank">
+      <h4>Windows 10 IoT Core support for Raspberry Pi 3</h4>
+    </a>
+    <h4><em>Billy Anders<br>Director of Program Management<br>Windows IoT<br>Feb 29 2016</em></h4>
+  </div>
+  <div class="col-md-6">
+    <a href="http://blogs.windows.com/buildingapps/2016/02/04/what-is-windows-remote-arduino-and-what-can-it-do/" target="_blank">
+      <h4>What is Windows Remote Arduino and What Can It Do?</h4>
+    </a>
+    <h4><em>Windows Apps Team<br>Feb 4, 2016</em></h4>
+  </div>
 </div>
-
-<a name="contact"></a>
 
 <div class="row section-heading">
   <div class="col-md-6">
@@ -58,7 +52,6 @@ lang: en-US
     </p>
     <p>We also monitor StackOverflow. Please tag your questions with "WindowsIoT".</p>
     <a href="http://stackoverflow.com/questions/tagged/WindowsIoT" target="_blank">Stack Overflow &raquo;</a>
-    </p>
   </div>
   <div class="col-md-6">
     <h3>Social Media</h3>
