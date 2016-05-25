@@ -4,7 +4,9 @@ When creating a new topic, or updating an exisitng one, there are a handful of t
 
 Going forward, we're doing everything we can to stick to .md files.  We know that there are times when we can't rely on the limited formatting of .md, but for those times we'll use a liquid template instead of converting it all to html.  For information on those templates, see below.
 
-There is a sample topic you can use as a starting point - just copy and paste it into your blank document and update it to your liking.  [That template can be found here](Templates/standard-topic.md)
+There is a sample topic you can use as a starting point - just copy and paste it into your blank document and update it to your liking.  [That template can be found here](Templates/standard-topic.md).
+
+For an example page (layout, front matter) see win10/AllJoyn.md.
 
 Here are a few things we need to adhere to - PRs will be denied until they are fixed.
 
@@ -34,4 +36,8 @@ You'll notice our repo structure has changed - we now have a parent folder match
 
 Our build system supports liquid templates (those sections with the % signs in them).  This allows us to include commonly used snippets or insert a bit of html without needing to write it in manually.  The plus side is it allows us to use common things (think nice looking grid layouts or tables) or include a common sample in several different docs without copy/pasting.
 
-These templates need to live within the _includes folder in the root, and are referenced by `{% include redirect-dc.html %}` which will insert whatever that file is at this point in your article.  You can add arguments or content to the include call. TODO: add examples.
+These templates need to live within the _includes folder in the root, and are referenced by `{% include redirect-dc.html %}` which will insert whatever that file is at this point in your article.  You can add arguments or content to the include call. 
+
+Examples on usage of [liquid basics](https://help.shopify.com/themes/liquid/basics) and the [liquid cheatsheet](http://cheat.markdunkley.com/) are a few pages that I find useful to learn about Liquid.
+
+

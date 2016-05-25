@@ -18,7 +18,7 @@ Excited about AllJoyn? Have a look at [this]({{site.baseurl}}/en-US/win10/AllJoy
 
 ## Developer Resources and Tools
 
-__Device System Bridge__
+**Device System Bridge**
 
 AllJoyn [Device System Bridge]({{site.baseurl}}/en-US/win10/AllJoynDSB.htm){:target="_blank"} enables non-AllJoyn devices to interact with the AllJoyn ecosystem using AllJoyn as their common language.
 
@@ -32,7 +32,7 @@ Features:
 More details can be found on the [Device System Bridge page]({{site.baseurl}}/en-US/win10/AllJoynDSB.htm){:target="_blank"}.
 
 
-__AllJoyn Studio__
+**AllJoyn Studio**
 
 [AllJoyn Studio](https://visualstudiogallery.msdn.microsoft.com/064e58a7-fb56-464b-bed5-f85914c89286){:target="_blank"} is an extension to Visual Studio developed by Microsoft that accelerates AllJoyn® development by combining code generation and the WinRT API with automated project management and ready-made application templates. It allows developers to benefit from the power of AllJoyn without the hassle of set-up and configuration.
 
@@ -48,7 +48,7 @@ AllJoyn Studio can be installed through Visual Studio Tools -> Extensions and Up
 
 More detail about how to use AllJoyn Studio are available [here]({{site.baseurl}}/en-US/win10/AllJoynStudio.htm){:target="_blank"}
 
-<a name="AllJoynExplorer"></a>__IoT Explorer for AllJoyn (AllJoyn Explorer)__
+<a name="AllJoynExplorer"></a>**IoT Explorer for AllJoyn (AllJoyn Explorer)**
 
 The IoT Explorer for AllJoyn (previously known as AllJoyn Explorer) is a Windows Universal Application for interacting with AllJoyn devices on the local proximity network. Developers can list all available AllJoyn devices, inspect their interface and object structure, as well as receive signals, set and get properties, and call methods.
 
@@ -64,25 +64,25 @@ The IoT Explorer for AllJoyn (previously known as AllJoyn Explorer) is a Windows
 - [AllJoyn Producer and Authoring AllJoyn Introspection]({{site.baseurl}}/en-US/win10/AllJoynProducer.htm){:target="_blank"}
 - [Troubleshooting AllJoyn with Windows 10]({{site.baseurl}}/en-US/win10/AllJoynTroubleshooting.htm){:target="_blank"}
 
-__Videos__
+**Videos**
 
 - [//build 2015 AllJoyn Technical Session](https://channel9.msdn.com/Events/Build/2015/2-623){:target="_blank"}
 - [WinHEC 2015 AllJoyn Technical Session](https://channel9.msdn.com/Events/WinHEC/2015/IOT200){:target="_blank"}
 
-__Samples__
+**Samples**
 
 - [AllJoyn Producers](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AllJoyn/ProducerExperiences){:target="_blank"}
 - [AllJoyn Consumers](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AllJoyn/ConsumerExperiences){:target="_blank"}
 - [AllJoyn UWP Samples (MSDN)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AllJoyn/ConsumerExperiences){:target="_blank"}
 
-__Reference__
+**Reference**
 
 - [AllJoyn APIs in Windows 10 (MSDN)](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.devices.alljoyn.aspx){:target="_blank"}
 - [AllJoyn Architecture Details (Allseen Alliance)](https://allseenalliance.org/developers/learn/){:target="_blank"}
 - [AllJoyn Developer Resources (Allseen Alliance)](https://allseenalliance.org/developers/develop/){:target="_blank"}
 - [AllJoyn C API Reference Manual (Allseen Alliance)](https://allseenalliance.org/docs/api/c/index.html){:target="_blank"}
 
-___Informational only___
+**Informational only**
 
 - [Deprecated] [Channel 9: Building AllJoyn Apps on Windows 10 (MSDN)](https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview){:target="_blank"}
 - [Deprecated] [AllJoyn CodeGen Tool]({{site.baseurl}}/en-US/win10/AllJoynCodeGen.htm){:target="_blank"}
