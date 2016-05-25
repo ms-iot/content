@@ -23,13 +23,6 @@
          "tags":["beginner","c#","C++","headed"]
       },
       {
-         "title":"Blinky Webserver",
-         "description":"Create a Webserver app that controls an LED on devices running Windows 10 IoT Core",
-         "link-text":"<a href='samples/BlinkyWebServer.htm'>Webserver Blinky (C#)</a><br><a href='samples/PythonBlinkyServer.htm'>Webserver Blinky (Python)</a><br><a href='samples/NodejsWUBlinky.htm'>Webserver Blinky (Node.js)</a>",
-         "ranking":2,
-         "tags":["beginner","Web","Server","c#","Python","node.js"]
-      },
-      {
          "title":"IoT Core Default App",
          "description":"Create a UWP app that provides a device-management experience for Windows 10 IoT Core",
          "link-text":"<a href='samples/IoTDefaultApp.htm'>Iot Core Default App (C#)</a>",
