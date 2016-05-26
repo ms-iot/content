@@ -5,4 +5,4 @@ permalink: /win10/samples/PowerShell.htm
 lang: en-US
 ---
 
-{% include redirect.html %}
+{% include redirect.html /Samples/PowerShell.htm %}
