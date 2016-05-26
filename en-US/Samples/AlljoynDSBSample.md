@@ -13,7 +13,7 @@ You can find the source code for AllJoyn samples by downloading a zip of all of 
 
 ### Prerequisites
 
-1. Install [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/win10/AllJoyn.htm#AllJoynExplorer){:target="_blank"} app.
+1. Install [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/Docs/AllJoyn.htm#AllJoynExplorer){:target="_blank"} app.
 
 ### Step 1: Hardware Setup
 The sample uses a Raspberry Pi 2 that one of its GPIO pins is connected to a photo resistor as shown in the schematic below. If another device issues the pin number in the code has to be changed to match the HW setup.

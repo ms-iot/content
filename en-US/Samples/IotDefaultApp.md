@@ -9,7 +9,7 @@ lang: en-US
 
 We'll create a default app to demonstrate how to create a simple startup app that has some basic device management for your Windows 10 IoT Core device.
 
-This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
+This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm).
 
 ### IoT Core Default App contents
 
@@ -31,7 +31,7 @@ Use the device name and IP address listed here when connecting to you device.
 
 #### Tutorials
 
-A quick set of instructions on how to get your board connected to your PC. If you're on the web, you can find the same set of instructions [here](http://ms-iot.github.io/content/en-US/win10/StartCoding.htm)
+A quick set of instructions on how to get your board connected to your PC. If you're on the web, you can find the same set of instructions [here](http://ms-iot.github.io/content/en-US/Docs/StartCoding.htm)
 
 ![DefaultApp tutorials on Windows 10 IoT Core]({{site.baseurl}}/Resources/images/iotcoredefaultapp/defaultapp_tutorial.png)
 

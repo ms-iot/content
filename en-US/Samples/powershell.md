@@ -97,7 +97,7 @@ Make sure to follow these steps to correctly configure your device running Windo
 
 ### Commonly used utilities
 
-See the [Command Line Utils]({{site.baseurl}}/{{page.lang}}/win10/tools/CommandLineUtils.htm) page for a list of commands and utilities you can use with PowerShell.
+See the [Command Line Utils]({{site.baseurl}}/{{page.lang}}/Docs/tools/CommandLineUtils.htm) page for a list of commands and utilities you can use with PowerShell.
 
 ### Known issues with workarounds
 

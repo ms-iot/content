@@ -23,8 +23,8 @@ lang: en-US
     <p>Download, install and configure your new Windows 10 IoT Core devices.</p>
     <a href="http://go.microsoft.com/fwlink/?LinkID=708576" class="button-blue button-flat"> Get IoT Core Dashboard </a>
     <p> By downloading and using the Windows 10 IoT Core Dashboard you agree to the <a href="http://go.microsoft.com/fwlink/?LinkID=703960&clcid=0x4809"> license terms </a> and <a href="http://go.microsoft.com/fwlink/?LinkId=521839"> privacy statement </a> for Windows 10 IoT Core Dashboard. </p>
-    <p><a href="{{site.baseurl}}/{{page.lang}}/win10/IoTDashboardTroubleshooting.htm"> Need help? Check out the troubleshooting page. </a></p>
-    <p><a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesRTM.htm"> Release notes. </a></p>
+    <p><a href="{{site.baseurl}}/{{page.lang}}/Docs/IoTDashboardTroubleshooting.htm"> Need help? Check out the troubleshooting page. </a></p>
+    <p><a href="{{site.baseurl}}/{{page.lang}}/Docs/ReleaseNotesRTM.htm"> Release notes. </a></p>
   </div>
 </div>
 <div class="row">
@@ -48,7 +48,7 @@ lang: en-US
 		&#42;Please see <a href="http://aka.ms/thirdpartynotices" target="_blank"> third party notice for BSP restrictions </a> for DragonBoard 410c.
     </p>
     <p>
-		<a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesRTM.htm"> Release notes. </a>
+		<a href="{{site.baseurl}}/{{page.lang}}/Docs/ReleaseNotesRTM.htm"> Release notes. </a>
 		</p>
 	</div>
   <div class="col-md-6 col-sm-12">
@@ -69,7 +69,7 @@ lang: en-US
       <a href="https://insider.windows.com/">What is the Windows Insider Program?</a>
 		</p>
     <p>
-      <a href="{{site.baseurl}}/{{page.lang}}/win10/ReleaseNotesInsiderPreview.htm">Release Notes</a>
+      <a href="{{site.baseurl}}/{{page.lang}}/Docs/ReleaseNotesInsiderPreview.htm">Release Notes</a>
     </p>
 	</div>
 </div>

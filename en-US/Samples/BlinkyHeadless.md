@@ -15,7 +15,7 @@ only available on Windows IoT Core, so this sample cannot run on your desktop.
 
 ### Headless mode
 
-This application is designed for a headless device.  To better understand what Headless mode is and how to configure your device to be headless, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
+This application is designed for a headless device.  To better understand what Headless mode is and how to configure your device to be headless, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm).
 
 ### Load the project in Visual Studio
 

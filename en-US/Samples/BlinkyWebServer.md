@@ -196,7 +196,7 @@ public void Run(IBackgroundTaskInstance taskInstance)
 ### Deploy and Run Sample
 To get the Blinky WebServer running, first deploy the Blinky project.  This will start the GUI app and register the app-to-app communication mechanism.  Then deploy and run the HttpServer project.  You can then test it all with the web client as detailed in the next step.
 
-For instructions on how to deploy applications, see the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp).
+For instructions on how to deploy applications, see the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm#csharp).
 
 ### Web Client
 For our sample app, we have hosted a simple client in our HttpServer on the Windows Windows IoT Core device. It can be accessed via the IP address

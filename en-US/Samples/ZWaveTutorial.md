@@ -23,7 +23,7 @@ Z-Wave is a wireless communications protocol designed to allow devices in the ho
 2. <a name="AllJoyn_Z_Wave"></a>Z-Wave devices  Two Aeon Labs Z-Wave devices are needed for this demo:
   * Aeon Labs DSA02203-ZWUS Z-Wave Z-Stick Series 2 USB Dongle
   * Aeon Labs DSC24-ZWUS Smart Switch Z-Wave Appliance Module
-3. PC or Laptop with Windows 10 with installed [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/win10/AllJoyn.htm#AllJoynExplorer){:target="_blank"} app.
+3. PC or Laptop with Windows 10 with installed [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/Docs/AllJoyn.htm#AllJoynExplorer){:target="_blank"} app.
 
 
 ## Setting up the Raspberry Pi2
@@ -38,7 +38,7 @@ Z-Wave is a wireless communications protocol designed to allow devices in the ho
 
 The Z-Wave adapter DSB comes pre-installed for most Windows 10 IOT Core images. In that case, all you need is to launch the sample using SSH or Windows Device Portal. 
 
-1. Using [SSH]({{site.baseurl}}/en-US/Samples/SSH.htm){:target="_blank"} or [Windows Device Portal]({{site.baseurl}}/en-US/win10/tools/DevicePortal.htm){:target="_blank"} run the following command
+1. Using [SSH]({{site.baseurl}}/en-US/Samples/SSH.htm){:target="_blank"} or [Windows Device Portal]({{site.baseurl}}/en-US/Docs/tools/DevicePortal.htm){:target="_blank"} run the following command
    **iotstartup.exe add headless ZWave**
 2. Reboot the device. The Z-Wave adapter application now will be launched on boot.
 
@@ -48,7 +48,7 @@ The Z-Wave adapter DSB comes pre-installed for most Windows 10 IOT Core images. 
 3. Once the solution has been opened in Visual Studio, Navigate to the Solution explorer and right click the ZWaveBackgroundService project. Select "Set as Startup Project". ![set_startup]({{site.baseurl}}/Resources/images/AllJoyn/startup_proj.png)
 
 4.  In the Main menu bar, select "Debug" -> ZWaveBackgroundService properties…"
-5.  Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#cpp)
+5.  Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm#cpp)
 
 ## Pair the Z-Wave device
 

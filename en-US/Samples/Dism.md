@@ -9,7 +9,7 @@ lang: en-US
 
 ### An alternative method to WindowsIoTImageHelper
 
-**Dism.exe** is installed "C:\Program Files (x86)\Microsoft IoT\Dism" if you followed instructions to set up [Raspberry PI]({{site.baseurl}}/{{page.lang}}/win10/SetupRPI.htm) or [Minnowboard Max]({{site.baseurl}}/{{page.lang}}/win10/SetupMBM.htm)
+**Dism.exe** is installed "C:\Program Files (x86)\Microsoft IoT\Dism" if you followed instructions to set up [Raspberry PI]({{site.baseurl}}/{{page.lang}}/Docs/SetupRPI.htm) or [Minnowboard Max]({{site.baseurl}}/{{page.lang}}/Docs/SetupMBM.htm)
 
 * Open an administrator command prompt and navigate to the folder containing your local flash.ffu.
 

@@ -17,7 +17,7 @@ This tutorial shows how to get AllJoyn.JS running as a Windows 10 application.
 
 ## Prerequisties
 
-1. Install [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/win10/AllJoyn.htm#AllJoynExplorer){:target="_blank"} app.
+1. Install [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/Docs/AllJoyn.htm#AllJoynExplorer){:target="_blank"} app.
 
 ## Set up steps
 
@@ -25,7 +25,7 @@ This tutorial shows how to get AllJoyn.JS running as a Windows 10 application.
  (see their respective documentations to figure out how to proceed).
 
 2. Set up your Raspberry Pi2 (if you target that device).
-   See instruction [here]({{site.baseurl}}/en-US/win10/SetupRPI.htm){:target="_blank"}.
+   See instruction [here]({{site.baseurl}}/en-US/Docs/SetupRPI.htm){:target="_blank"}.
 
 3. Deploy AllJoyn.JS
 
@@ -62,7 +62,7 @@ Alternatively, you can download directly from Allseen Alliance by cloning AllJoy
 6. Select the relevant target (x86, x64 or ARM) and build the solution in Visual Studio.
 
 You are now ready to launch it, so launch or debug HeadedAdapterApp project on desktop or if the targeted Windows 10 device has a display or launch or debug HeadlessAdapterApp if it doesn't.
-If needed, see instruction [here]({{site.baseurl}}/en-US/win10/AppDeployment.htm){:target="_blank"} for remote debugging.
+If needed, see instruction [here]({{site.baseurl}}/en-US/Docs/AppDeployment.htm){:target="_blank"} for remote debugging.
 
 ## Deploy script file
 

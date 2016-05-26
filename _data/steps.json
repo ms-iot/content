@@ -1,19 +1,19 @@
 {
    "RPI2":[
-	  "win10/SetupPCRPI.htm",
-      "win10/SetupRPI.htm",
-      "win10/samples/Blinky.htm"
+	  "Docs/SetupPCRPI.htm",
+      "Docs/SetupRPI.htm",
+      "Docs/samples/Blinky.htm"
    ],
    "MBM":[
-      "win10/SetupPCMBM.htm",
-      "win10/SetupMBM.htm",
-      "win10/samples/BlinkyMBM.htm"
+      "Docs/SetupPCMBM.htm",
+      "Docs/SetupMBM.htm",
+      "Docs/samples/BlinkyMBM.htm"
    ],
    "DB410c":[
       "GetStarted.htm",
-	  "win10/SetupPCDB410c.htm",
-      "win10/SetupDB410c.htm",
-      "win10/samples/Blinky.htm"
+	  "Docs/SetupPCDB410c.htm",
+      "Docs/SetupDB410c.htm",
+      "Docs/samples/Blinky.htm"
    ],
    "Galileo":[
       "GetStarted.htm",
@@ -23,14 +23,14 @@
    ],
    "WRA":[
       "GetStarted.htm",
-      "win10/SetupPCWRA.htm",
-      "win10/SetupWRA.htm",
-      "win10/samples/BasicWRA.htm"
+      "Docs/SetupPCWRA.htm",
+      "Docs/SetupWRA.htm",
+      "Docs/samples/BasicWRA.htm"
    ],
    "WVSA":[
       "GetStarted.htm",
-      "win10/SetupPCWVSA.htm",
-      "win10/SetupWVSA.htm",
-      "win10/samples/BlinkyWVSA.htm"
+      "Docs/SetupPCWVSA.htm",
+      "Docs/SetupWVSA.htm",
+      "Docs/samples/BlinkyWVSA.htm"
    ]
 }

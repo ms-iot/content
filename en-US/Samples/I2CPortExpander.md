@@ -408,7 +408,7 @@ Let's build, deploy and run the app on our Raspberry Pi 2 or 3.
 
 * If not already open, open in Visual Studio the app you created with the code above.
 
-* Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp).
+* Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm#csharp).
 
 After several moments, you will see the screen attached to the RPi2 or RPi3 change to show a circle, some text, and a slider. The LED on the breadboard will begin to turn on and off.
 

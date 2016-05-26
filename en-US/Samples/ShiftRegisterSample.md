@@ -388,7 +388,7 @@ Let's build, deploy and run the app on our Raspberry Pi 2 or 3.
 
 * If not already open, open in Visual Studio the app you created with the code above.
 
-* Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp).
+* Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm#csharp).
 
 After several moments, you will see the screen attached to the RPi2 or RPi3 change to show a slider, some text, and a button. The LEDs will light up and follow the pattern set in 'pinMask'.
 

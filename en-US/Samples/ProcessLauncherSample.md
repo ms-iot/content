@@ -9,7 +9,7 @@ lang: en-US
   
 We'll learn how to launch an external process (exe) from a Universal Windows Platform (UWP) app using `Windows.System.ProcessLauncher` API.  
 
-This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).  
+This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm).  
 
 ### Windows IoT Core Fall Update required
 
@@ -19,7 +19,7 @@ The `Windows.System.ProcessLauncher` API is new to Windows IoT Core Fall Update.
 
 To use the `ProcessLauncher` API and other new features of Windows IoT Core Fall Update, a newer version of the Windows SDK is needed as well. Windows SDK 10.0.10586.0 or higher is required and can be downloaded from [here](https://dev.windows.com/en-US/downloads/windows-10-sdk).
 
-For more information on obtaining and setting up the required Windows SDK and other tools, refer to [Setting up your PC Guide]({{site.baseurl}}/{{page.lang}}/win10/SetupPCRPI.htm).
+For more information on obtaining and setting up the required Windows SDK and other tools, refer to [Setting up your PC Guide]({{site.baseurl}}/{{page.lang}}/Docs/SetupPCRPI.htm).
 
 ### Load the project in Visual Studio  
   

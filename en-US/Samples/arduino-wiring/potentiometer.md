@@ -162,15 +162,15 @@ void loop()
 ## Build and deploy
 Press F5 to build and deploy your project.
 
-Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm) for more instructions on how to deploy your app!
+Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide.htm) for more instructions on how to deploy your app!
 
 ## Result
 You will see the LED lit to indicate that power is flowing, and the current value of the potentiometer's wiper pin will be read and displayed in the output console twice per second!
 
 ## Having trouble?
 
-Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.
+Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.
 
 ---
 
-[&laquo; Return to Samples]({{site.baseurl}}/{{page.lang}}/win10/StartCoding.htm){:role="button"}{:class="btn btn-default"}
+[&laquo; Return to Samples]({{site.baseurl}}/{{page.lang}}/Docs/StartCoding.htm){:role="button"}{:class="btn btn-default"}

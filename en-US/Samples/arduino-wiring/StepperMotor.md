@@ -13,7 +13,7 @@ Learn how to create an Arduino Wiring sketch on Raspberry Pi 2 and 3 or Minnowbo
 
 ## Setup
 
-Follow the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm) to create a new wiring project!
+Follow the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide.htm) to create a new wiring project!
 
 ## Required Components
 * [Sparkfun Stepper Motor - 68 oz.in](https://www.sparkfun.com/products/10846)
@@ -110,15 +110,15 @@ void loop() {
 ## Build and deploy
 Press F5 to build and deploy your project.
 
-Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringProjectGuide.htm) for more instructions on how to deploy your app!
+Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide.htm) for more instructions on how to deploy your app!
 
 ## Result
 You should see the Stepper motor infinitely moving forward, then in reverse, and finally in small-step mode before starting all over!
 
 ## Having trouble?
 
-Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/win10/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.
+Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.
 
 ---
 
-[&laquo; Return to Samples]({{site.baseurl}}/{{page.lang}}/win10/StartCoding.htm){:role="button"}{:class="btn btn-default"}
+[&laquo; Return to Samples]({{site.baseurl}}/{{page.lang}}/Docs/StartCoding.htm){:role="button"}{:class="btn btn-default"}

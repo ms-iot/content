@@ -10,7 +10,7 @@ lang: en-US
 
 We'll create a simple LED blinking app and connect a LED to your Windows 10 IoT Core device.
 
-This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
+This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm).
 
 Also, be aware that the GPIO APIs are only available on Windows 10 IoT Core, so this sample cannot run on your desktop.
 
@@ -210,4 +210,4 @@ pin.Write(GpioPinValue.High);
 {% endhighlight %}
 
 Remember that we connected the other end of the LED to the 3.3 Volts power supply, so we need to drive the pin to low to have current flow into the LED.
-<h3><a href="{{site.baseurl}}/{{page.lang}}/win10/StartCoding.htm">Next: Additional tutorials and samples</a></h3>
+<h3><a href="{{site.baseurl}}/{{page.lang}}/Docs/StartCoding.htm">Next: Additional tutorials and samples</a></h3>

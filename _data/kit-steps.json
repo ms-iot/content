@@ -1,9 +1,9 @@
 {
    "RPI2": [
-      "win10/AdafruitWelcome.htm",
-      "win10/AdafruitKitContents.htm",
-      "win10/KitSetupPCRPI.htm",
-      "win10/KitSetupRPI.htm",
-      "win10/samples/KitBlinky.htm"
+      "Docs/AdafruitWelcome.htm",
+      "Docs/AdafruitKitContents.htm",
+      "Docs/KitSetupPCRPI.htm",
+      "Docs/KitSetupRPI.htm",
+      "Docs/samples/KitBlinky.htm"
       ]
 }

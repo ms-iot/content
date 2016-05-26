@@ -26,7 +26,7 @@ The setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl
 
 ### Headless mode
 
-This application is designed for a headless device.  To better understand what Headless mode is and how to configure your device to be headless, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
+This application is designed for a headless device.  To better understand what Headless mode is and how to configure your device to be headless, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm).
 
 ### Load the project in Visual Studio
 
@@ -72,7 +72,7 @@ Remember that we connected the other end of the LED to the 3.3 Volts power suppl
 
 ### Deploy Python app to your Windows 10 IoT Core device
 
-* Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#python).
+* Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm#python).
 
 	**NOTE: For now, use device name in lieu of IP address.  If the device name is not unique, use `setcomputername` tool on the device to reset the device name and reboot.  Documentation for this can be found [here]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm)**
 

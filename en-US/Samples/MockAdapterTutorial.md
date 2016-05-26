@@ -17,7 +17,7 @@ This tutorial demonstrates the function of the AllJoyn Device System Bridge (DSB
 
 1. Raspberry Pi2 running Windows 10 IoT Core build 10240+
 2. PC or Laptop with Windows 10 build 10240+
-3. Install [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/win10/AllJoyn.htm#AllJoynExplorer){:target="_blank"} app.
+3. Install [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/Docs/AllJoyn.htm#AllJoynExplorer){:target="_blank"} app.
 
 ## Setting up the Raspberry Pi2
 
@@ -34,7 +34,7 @@ This tutorial demonstrates the function of the AllJoyn Device System Bridge (DSB
 ![set_startup]({{site.baseurl}}/Resources/images/MockAdapter/mockadapter_vs.png)
 
 4. 	In the Main menu bar, select "Debug" -> HeadlessAdapterApp properties…"
-5.	Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#cpp)
+5.	Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm#cpp)
 
 ## Controlling the Mock Devices via IoT Explorer for Alljoyn
 

@@ -9,7 +9,7 @@ lang: en-US
   
 We'll learn how to find and connect to WiFi networks using a Universal Windows Platform (UWP) app that makes use of the [`Windows.Devices.WiFi.WiFiAdapter`](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.wifi.wifiadapter.aspx){:target="_blank"} API.  
   
-This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).  
+This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm).  
   
 ### Load the project in Visual Studio  
   
@@ -21,7 +21,7 @@ The code for the WiFi Connect sample can be found under: <samples root folder>\W
   
 You'll need:  
   
-* A WiFI adapter such as the official Raspberry Pi WiFi dongle. Or for a list of wifi adapters, check out the [Ecosystem Compatibility List]({{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm){:target="_blank"}
+* A WiFI adapter such as the official Raspberry Pi WiFi dongle. Or for a list of wifi adapters, check out the [Ecosystem Compatibility List]({{site.baseurl}}/{{page.lang}}/Docs/SupportedInterfaces.htm){:target="_blank"}
   
 Connect the WiFi adapter to one of USB ports on the IoT Device  
   

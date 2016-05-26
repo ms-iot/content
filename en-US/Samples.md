@@ -7,4 +7,4 @@ permalink: /en-US/Samples.htm
 lang: en-US
 ---
 
-{% include_relative win10/StartCoding.md %}
+{% include_relative Docs/StartCoding.md %}

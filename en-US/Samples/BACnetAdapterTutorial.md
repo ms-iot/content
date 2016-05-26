@@ -23,7 +23,7 @@ See [BACnet standard](http://www.bacnet.org){:target="_blank"} for more informat
 
 ## Prerequisites
 
-1. PC or Laptop with Windows 10 with installed [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/win10/AllJoyn.htm#AllJoynExplorer){:target="_blank"}.
+1. PC or Laptop with Windows 10 with installed [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/Docs/AllJoyn.htm#AllJoynExplorer){:target="_blank"}.
 2. [Envision for BACtalk](http://alerton.com/en-US/Pages/Product.aspx?category=Management&cat=ECC-Alerton&pid=Envision){:target="_blank"} tool from Alerton which is used to configure the BACnet devices.
 3. Some BACnet devices like
  - [BCM-ETH](http://alerton.com/en-US/Pages/Product.aspx?category=Integration&cat=ECC-Alerton&pid=BCMETH){:target="_blank"} BACnet router and controller from  Alerton
@@ -40,7 +40,7 @@ See [BACnet standard](http://www.bacnet.org){:target="_blank"} for more informat
 2. Configure the BACnet devices using Envision for BACtalk tool. 
 This document will not go into detail about that, please refer to the tool's documentation to understand how BACnet should be configured.
 3. Set up your Raspberry Pi2 (if you target that device)
-See instruction [here]({{site.baseurl}}/en-US/win10/SetupRPI.htm){:target="_blank"}.
+See instruction [here]({{site.baseurl}}/en-US/Docs/SetupRPI.htm){:target="_blank"}.
 5. Deploy BACnet adapter
 
 >Note that in Windows 10, when a machine has __multiple AllJoyn modern applications__ that __need to interact__ on the same machine, the user must __add a loopback exemption__ for these modern applications. Consequently, if you run both the ZigBee adapter and IoT Explorer for AllJoyn on the same machine you will need to add a loopback exemption for these 2 applications. This isn't needed for application you run from Visual Studio 2015. Note that when deploying an application from Visual Studio 2015, the loopback exemption is for the lifetime of the installed application. Meaning that you can launch the app directly (not from Visual Studio 2015) afterwards and it will have the loopback exemption.
@@ -59,7 +59,7 @@ Set up loopback exception:
 2. Open `samples-develop\AllJoyn\Samples\BACnetAdapter\BACnetAdapter.sln` in Visual Studio.
 4. Select the relevant target (x86 or x64) and build the solution in Visual Studio.
 Your now ready to launch it, so launch or debug HeadedAdapterApp project on desktop or if the targeted Windows 10 device has a display or launch or debug HeadlessAdapterApp if it doesn't. 
-If needed, see instruction [here]({{site.baseurl}}/en-US/win10/AppDeployment.htm){:target="_blank"} for remote debugging.
+If needed, see instruction [here]({{site.baseurl}}/en-US/Docs/AppDeployment.htm){:target="_blank"} for remote debugging.
 
 ## BACnet adapter in detail 
 BACnet adapter is written in managed C++. It uses the [open BACnet stack](http://bacnet.sourceforge.net/){:target="_blank"} which is available on sourceforge.net to interact with BACnet device and exposes them on AllJoyn through BridgeRT interface. A BACnet device is exposed in AllJoyn as follow:

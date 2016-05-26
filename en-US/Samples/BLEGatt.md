@@ -11,7 +11,7 @@ lang: en-US
 
 In this sample we will discover how to work with Bluetooth Low Energy devices using the GATT profile and a TI CC2541 SensorTag. You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip){:target="_blank"}, and navigating to the [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} folder.
 
-Information on Bluetooth support for Windows IoT Core devices can be found [here]({{site.baseurl}}/{{page.lang}}/win10/Bluetooth.htm){:target="_blank"}.
+Information on Bluetooth support for Windows IoT Core devices can be found [here]({{site.baseurl}}/{{page.lang}}/Docs/Bluetooth.htm){:target="_blank"}.
 
 This sample is supported on all Windows IoT Core devices. DragonBoard 410c has the added advantage of onboard Bluetooth, meaning you will not need an additional Bluetooth USB dongle to complete this or other Bluetooth samples.
 
@@ -51,7 +51,7 @@ For the sample, we are running firmware version 1.4.1 on the SensorTag. More det
 
 ### Hardware Support
 
-Please find a list of supported Bluetooth dongles [here]({{site.baseurl}}/{{page.lang}}/win10/SupportedInterfaces.htm) (a Bluetooth dongle is not required for the DragonBoard 410c).
+Please find a list of supported Bluetooth dongles [here]({{site.baseurl}}/{{page.lang}}/Docs/SupportedInterfaces.htm) (a Bluetooth dongle is not required for the DragonBoard 410c).
 
 ### What's Next?
 1. [Pairing a BLE Device and GATT Attribute Table Dump Tool]({{site.baseurl}}/{{page.lang}}/Samples/BLEGatt1.htm) --- Learn how to pair the SensorTag with a Windows IoT Core device, and how to retrieve a GATT Attribute Table in Windows.

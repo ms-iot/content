@@ -22,7 +22,7 @@ lang: en-US
 
 
 ### Setup your hardware
-- Follow the [instruction](http://ms-iot.github.io/content/en-US/win10/SetupRPI.htm) to flush your micro-SD cards
+- Follow the [instruction](http://ms-iot.github.io/content/en-US/Docs/SetupRPI.htm) to flush your micro-SD cards
 - Repeat the above to setup the other device
 - Once the two devices both boots up, you should see the device name and device ip on the screen; Be sure to connect two devices to the router, then the router will be connected to Internet.
 - SSH/Telnet/powershell into the device, 
@@ -55,7 +55,7 @@ lang: en-US
 	
 	Basically, the demo works like a phone line. You need to specify the ServerHostName which is where you are going to send data to. That is what 	`Define` is doing here.
 	
-6. Once deployment is done, open the [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/win10/tools/DevicePortal.htm) url which should be something like this: http://yourdeivceipaddress:8080, under App/Installed APP, choose the `speechtranslator` app, 
+6. Once deployment is done, open the [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/Docs/tools/DevicePortal.htm) url which should be something like this: http://yourdeivceipaddress:8080, under App/Installed APP, choose the `speechtranslator` app, 
 	then click start;
 	Do this for the other deivce as well.
 	

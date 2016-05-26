@@ -6,7 +6,7 @@ Going forward, we're doing everything we can to stick to .md files.  We know tha
 
 There is a sample topic you can use as a starting point - just copy and paste it into your blank document and update it to your liking.  [That template can be found here](Templates/standard-topic.md).
 
-For an example page (layout, front matter) see win10/AllJoyn.md.
+For an example page (layout, front matter) see Docs/AllJoyn.md.
 
 Here are a few things we need to adhere to - PRs will be denied until they are fixed.
 

@@ -7,7 +7,7 @@
   <p><img src="{{site.baseurl}}/Resources/images/AppDeployment/cs-remote-machine-debugging.png" /></p>
   </li>
   <li>
-    <p>At this point, Visual Studio will present the <b>Remote Connections</b> dialog. If you previously used <a href="{{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm" target="_blank">Powershell</a> to set a unique name for your device, you can enter it here (in this example, we're using <b>my-device</b>).</p>
+    <p>At this point, Visual Studio will present the <b>Remote Connections</b> dialog. If you previously used <a href="{{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm" target="_blank">Powershell</a> to set a unique name for your device, you can enter it here (in this example, we're using <b>my-device</b>).</p>
     <p>Otherwise, use the IP address of your Windows IoT Core device. After entering the device name/IP select <code>Universal (Unencrypted Protocol)</code> Authentication Mode, then click <b>Select</b>.</p>
     <p><img src="{{site.baseurl}}/Resources/images/AppDeployment/cs-remote-connections.PNG" /></p>
   </li>

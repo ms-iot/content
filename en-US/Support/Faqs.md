@@ -68,10 +68,10 @@ lang: en-US
         <a name="features"></a>
         <h2 class="faq-h2">Features</h2>
         <p class="bold"><em>Is WiFi supported on Windows 10 IoT Core?</em></p>
-        <p>WiFi support for some adapters is now available in the public release of Windows 10 IoT Core. Click <a href="http://ms-iot.github.io/content/en-US/win10/SetupWiFi.htm">here</a> to learn more.</p>
+        <p>WiFi support for some adapters is now available in the public release of Windows 10 IoT Core. Click <a href="http://ms-iot.github.io/content/en-US/Docs/SetupWiFi.htm">here</a> to learn more.</p>
         <br />
         <p class="bold"><em>Is Bluetooth currently supported on Windows 10 IoT Core?</em></p>
-        <p>Bluetooth support for some dongles is now available in the public release of Windows 10 IoT Core. Click <a href="http://ms-iot.github.io/content/en-US/win10/Bluetooth.htm">here</a> to learn more</p>
+        <p>Bluetooth support for some dongles is now available in the public release of Windows 10 IoT Core. Click <a href="http://ms-iot.github.io/content/en-US/Docs/Bluetooth.htm">here</a> to learn more</p>
         <br />
         <a name="commercialization"></a>
         <h2 class="faq-h2">Commercialization</h2>

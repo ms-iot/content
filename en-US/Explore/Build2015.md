@@ -20,7 +20,7 @@ lang: en-US
     <p>Here at Microsoft, we are constantly inspired by the enthusiasm and passion for technology represented by the Maker community. Today we are excited to share what's next for Makers on Windows 10 with Arduino, Raspberry Pi, Intel's Minnowboard Max, and Hackster.IO.</p>
 
 
-    <p>Strong partnerships are part of Microsoft's unique offering to developers. We're excited to also announce our partnership with Arduino today, making Windows 10, the world's first Arduino-certified operating system. As an initial step in this Arduino partnership, we're announcing the availability of <a href="https://developer.microsoft.com/en-us/windows/iot/win10/wra">'Windows Remote Arduino'</a> and <a href="https://developer.microsoft.com/en-us/windows/iot/win10/wvsa">'Windows Virtual Shield for Arduino'</a>, both released as open source libraries today.</p>
+    <p>Strong partnerships are part of Microsoft's unique offering to developers. We're excited to also announce our partnership with Arduino today, making Windows 10, the world's first Arduino-certified operating system. As an initial step in this Arduino partnership, we're announcing the availability of <a href="https://developer.microsoft.com/en-us/windows/iot/Docs/wra">'Windows Remote Arduino'</a> and <a href="https://developer.microsoft.com/en-us/windows/iot/Docs/wvsa">'Windows Virtual Shield for Arduino'</a>, both released as open source libraries today.</p>
   </div>
 </div>
 <div class="row section-heading">
