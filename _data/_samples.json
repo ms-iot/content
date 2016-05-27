@@ -280,6 +280,13 @@
          "link-text":"<a href='samples/DeviceIoControlUwp.htm'>Learn More</a>",
          "ranking":10,
          "tags":["c++","advanced"]
+      },
+      {
+         "title":"HID Injection Driver Sample",
+         "description":"Learn how to build a driver for IoT Core and use HID Injection to inject touch, keyboard or mouse events.",
+         "link-text":"<a href='samples/HidInjection.htm'>Learn More</a>",
+         "ranking":10,
+         "tags":["c++","advanced"]
       }
    ],
    "zh-CN-tags":["初级","中级","高级","c++","接线","无外设","c#","Python","Node.js","有外设", "i2c","spi","alljoyn","commandline","工具","WLAN"],
