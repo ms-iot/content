@@ -4,8 +4,6 @@ title: HID Injection Sample
 permalink: /en-US/win10/samples/HidInjection.htm
 lang: en-US
 ---
-{% include VerifiedVersion.md %}
-
 # HID Injection
 Input injection is needed for many reasons. One of the most requested reasons is to support SPI screens, which have capacitive or resistive touch panels which can be read via I<sup>2</sup>C. 
 How do you translate this touch input from the display panel to something Windows can consume?    
@@ -23,11 +21,14 @@ In order to build this driver you will need the following:
   * [Windows 10 Driver Development Kit](http://go.microsoft.com/fwlink/p/?LinkId=526733).
   * [Windows 10 Assessment and Deployment Kit](https://msdn.microsoft.com/en-us/windows/hardware/dn913721(v=vs8.5).aspx#winADK).
   * Download the [ms-iot Samples repository](https://github.com/ms-iot/samples/archive/develop.zip) from GitHub, then expand it.
-  * [Adafruit USB to TTL Cable](https://www.adafruit.com/products/954) for Kernel Debugging (if you made modifications).
+  * [Adafruit USB to TTL Cable](https://www.adafruit.com/products/954) for Kernel Debugging.
 
 Optional:
 
   * If you have git or the github app installed, you can clone the repository as well.
+
+## Set up the Kernel Debugger
+  1. Set up the Kernel debugger for your device by following the [WinDBG instructions]({{site.baseurl}}/en-US/windows/iot/win10/windbg.htm). 
 
 ## Building and Deploying the HID Injector
   1. Be sure you've installed the Visual Studio update and the Windows 10 Driver Development kit before continuing.
@@ -37,31 +38,33 @@ Optional:
   1. You can now build the solution.
 
 ### Build the Update package
-  1. Open the ```Deployment and Imaging Tools Environment``` from the Start Menu with administrative privledges (Search for the program, then right click on it and select ```Run As Administrator```)
+  1. Open the ```Deployment and Imaging Tools Environment``` from the Start Menu with administrative privileges (Search for the program, then right click on it and select ```Run As Administrator```)
   1. In the command window, cd into your project directory.
   1. cd into the driver directory.
   1. run the script ```CreateDriverPackage.cmd```
   
 ### Copying the HID Injector to your device
-  1. Open a network share on your IoT Core device by opening the Run dialog (Win-R), then entering \\```IP for your IoT Core device\c$```. Enter credentials if prompted.
+  1. Open a network share on your IoT Core device by opening the Run dialog (Win-R), then entering ```\\\\IP for your IoT Core device\\c$```. Enter credentials if prompted.
   1. Create a ```deploy``` folder on your IoT Core device. 
   1. In Visual Studio, Right Click on the HidInjectorKd project, then select ```Open Folder in File Explorer```.
   1. In the File Explorer that opened on your project, Navigate to the driver directory.
   1. Now, copy the Microsoft.HidInjectionSample.HidInjectionSample.cab to the network folder you opened in the first step.
   
 ### Installing the HID Injector
-   1. Use [SSH](/en-us/win10/samples/SSH.htm) or [Powershell](/en-us/win10/samples/PowerShell.htm) to connect to your device. 
+   1. Use [SSH]({{site.baseurl}}/en-US/win10/samples/SSH.htm) or [Powershell]({{site.baseurl}}/en-US/win10/samples/PowerShell.htm) to connect to your device. 
    1. Once connected, change to your deployment direcory by typing ```cd deploy```.
    1. Now prepare the install of the driver by typing ```ApplyUpdate -stage Microsoft.HidInjectionSample.HidInjectionSample.cab```.
    1. Now commit the install by typing ```ApplyUpdate -commit```.
    1. Your IoT Core device will reboot, and apply the update.
    
 ### Verify installation
-If you've installed the driver, verify the install by navigating to the Web management console ```http://<your device ip>:8080/devicemanager.htm``` and looking for the ```HID Injection Sample``` node.
+If you've installed the driver, verify the install by navigating to the Web management console ```http://<your device ip>:8080/devicemanager.htm``` 
+and looking for the ```HID Injection Sample``` node.
    
-## Using the HID Injector
+## HID Injector Sample Application
 Included in the solution is a C++ console application used to demonstrate communication with the Hid injection Driver. The Driver is discovered by class using ```CM_Get_Device_Interface_List```. 
-The sample application will inject Touch, Keyboard and Mouse events by synthesizing a HID block, and calling the driver with that block.
+The sample application will inject Touch, Keyboard and Mouse events by synthesizing a HID block, and calling the driver with that block. The Sample application is C++ 
+which requires the [console app procedures for deploying]({{site.baseurl}}/en-US/win10/samples/ConsoleApp.htm). 
 
 
 
