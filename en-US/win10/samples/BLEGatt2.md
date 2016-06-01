@@ -280,5 +280,3 @@ That is all you will need to know on how to interact with a BLE GATT device. See
 
 #### Previous Pages
 [Sample Overview]({{site.baseurl}}/{{page.lang}}/win10/samples/BLEGatt.htm) --- Learn about BLE, GATT, and the TI CC2541 SensorTag.
-
-[Pairing a BLE Device and GATT Attribute Table Dump Tool]({{site.baseurl}}/{{page.lang}}/win10/samples/BLEGatt1.htm) --- Learn how to pair the SensorTag with a Windows IoT Core device, and how to retrieve a GATT Attribute Table in Windows.
