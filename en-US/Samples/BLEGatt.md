@@ -54,6 +54,5 @@ For the sample, we are running firmware version 1.4.1 on the SensorTag. More det
 Please find a list of supported Bluetooth dongles [here]({{site.baseurl}}/{{page.lang}}/Docs/SupportedInterfaces.htm) (a Bluetooth dongle is not required for the DragonBoard 410c).
 
 ### What's Next?
-1. [Pairing a BLE Device and GATT Attribute Table Dump Tool]({{site.baseurl}}/{{page.lang}}/Samples/BLEGatt1.htm) --- Learn how to pair the SensorTag with a Windows IoT Core device, and how to retrieve a GATT Attribute Table in Windows.
 
-2. [Using and Dissecting the Code]({{site.baseurl}}/{{page.lang}}/Samples/BLEGatt2.htm) --- Learn how to use the sample along with a walkthrough of the code.
+[Using and Dissecting the Code]({{site.baseurl}}/{{page.lang}}/Samples/BLEGatt2.htm) --- Learn how to use the sample along with a walkthrough of the code.
