@@ -17,7 +17,7 @@ only available on Windows IoT Core, so this sample cannot run on your desktop.
 
 * Install Python for Windows (3.*) from [http://www.python.org/downloads](http://www.python.org/downloads){:target="_blank"}
 
-* Download and install PTVS (Python Tools for Visual Studio) **VS 2015** latest release from [here](https://github.com/microsoft/ptvs/releases){:target="_blank"}.
+* Download and install PTVS (Python Tools for Visual Studio) **VS 2015** latest release from [here](https://github.com/Microsoft/PTVS/releases/latest/){:target="_blank"}.
 
 * Download and install the latest Python UWP SDK (pyuwpsdk.vsix) release from [here](https://github.com/ms-iot/python/releases){:target="_blank"}.
 
