@@ -5,4 +5,4 @@ permalink: /win10/samples/DriverLab.htm
 lang: en-US
 ---
 
-{% include redirect.html /Samples/DriverLab.htm %}
+{% include redirect.html url="/Samples/DriverLab.htm" %}
