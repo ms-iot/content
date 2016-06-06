@@ -52,4 +52,5 @@ Voice is, simply put, your writing style in terms of syntax, verbage, verbosity 
 2. **Elaborate on any non-obvious point**.  Picking up from the first point, make sure you explain anything that some of our audience might not understand.  It is much better to over explain something and let those who know it skim over it, than to leave others who are new to the technology in the dark. 
 3. **Maintain a single tense.**  Usually we prefer present tense - this is rarely a concern in our docs.
 4. **Keep a clear logical flow** through your article.  If you must reference something that you don't explain until later, mention so.  Lists are helpful to keep your article flow in line.
+5. **Be as direct as possible**. Shorter, more direct sentences are the best.  Give all the information the user needs, but try not to cover more than is needed to achieve their task.  If needed, provide a link to a related topic and let the audience decide if they want to read about the other topic.
 
