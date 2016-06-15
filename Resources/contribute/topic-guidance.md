@@ -2,6 +2,12 @@
 
 When creating a new topic, or updating an exisitng one, there are a handful of things to keep in mind.
 
+First off, keep these things in mind when authoring content:
+
+* For samples, please be sure to use the template provided to get the standard sample formatting.  Also, please use [Jekyll's Kramdown flavored Markdown](http://jekyllrb.com/docs/home/) to get nice layout when rendered as a webpage.
+* Please do not use HTML, use MD whenever possible.  If you must, use a Liquid template for small sections that need special formatting.  Details below.
+* For samples, please append ```{:target="_blank"}```, so the link opens in a new page
+
 Going forward, we're doing everything we can to stick to .md files.  We know that there are times when we can't rely on the limited formatting of .md, but for those times we'll use a liquid template instead of converting it all to html.  For information on those templates, see below.
 
 There is a sample topic you can use as a starting point - just copy and paste it into your blank document and update it to your liking.  [That template can be found here](Templates/standard-topic.md).
