@@ -7,4 +7,4 @@ permalink: /en-US/win10/StartCoding.htm
 lang: en-US
 ---
 
-{% include redirect.html url="Docs.htm" %}
+{% include redirect.html url="https://developer.microsoft.com/windows/iot/Docs.htm" %}
