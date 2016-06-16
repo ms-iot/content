@@ -3,7 +3,7 @@ layout: default
 title: Docs
 description: Documentation to demonstrate proven concepts and to help you start coding.
 keyword: windows iot, docs, download
-permalink: /en-US/win10/Docs.htm
+permalink: /en-US/Docs.htm
 lang: en-US
 ---
 <div class="row">
