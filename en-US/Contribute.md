@@ -12,7 +12,7 @@ lang: en-US
 Thank you for your interest in contributing to the Windows Developer Program for IoT.
 ___
 
-## Git
+## Git Setup 
 
 In order to contribute, you must first install Git on your machine:
 
@@ -25,7 +25,7 @@ In order to contribute, you must first install Git on your machine:
 
 1. Create a GitHub account 
 2. From GitHub Home, navigate to the repository you'd like to contribute to (e.g. ms-iot/content)
-3. Click ![Fork](../Resources/images/GitHubFork.png) 
+3. Click *Fork* ![Fork](../Resources/images/GitHubFork.png) 
 4. Clone the repository in one of several ways: 
   1. Command line 
   
@@ -44,47 +44,57 @@ In order to contribute, you must first install Git on your machine:
 For clarification, what we mean when we say:
 
 **local repository:**: the cloned repository that you have one on your machine 
+
 **forked repository:**: the fork you made from the main repository. This sits up on GitHub's servers. (Also known as "*origin*") 
+
 **main repository:** the original repository that you forked from. This is the common ms-iot repository hosted on GitHub's servers. (Also known as "*upstream*") 
 
-### Making changes
+## Making changes
 
-1. Before starting, make sure to read [how to contribute](https://github.com/ms-iot/content/tree/develop/Resources/contribute/topic-guidance.md) for topic authoring guidance.
-2. Make your edits, build, and test. Use the repository's readme for any specific editing requirements, build instructions, and testing methods.
-    * <kbd>git add [file]</kbd>
-3. Commit your changes to your local repository.
-    * <kbd>git commit -m "[descriptive message]" </kbd>
+If your repo is really stale, do this to get it up to date:
+
+///
+  `git reset --hard upstream/develop`
+
+1. Read [contributing guidelines](../Resources/contribute/topic-guidance.md).
+  1. Changes that do not follow the guidelines will be rejected
+2. Edit, build, test
+  1. Using cmd.exe, from within the *content* folder start a local server:
+  
+    `jekyll serve --incremental`
+  2. If prompted by the firewall, allow Jekyll to serve content
+  3. Open your web browser and point it to the local server. localhost:4000/content is the default
+  4. 4.	Edit using your favorite text editor. Jekyll will automatically update the content after every save.
+3. Commit changes 
+  1. When ready, add the files you want to to be staged for commit:
+    * `git add [file]`
+  2. Once done, commit your changes:
+    * `git commit -m "[descriptive message]" `
     
-### Verifying your changes
-
-Before going further, it's best to make sure your content renders as you'd expect.  There is a staging site set up that rebuilds hourly, but the easiest way to verify changes is to build the site through Jekyll and view it on your local machine.
-
-Do note, you won't see the correct formatting with a local serve that you will in staging - this is to be expected.  There won't be correct margins, or the header/footer etc, but you can see that links, heading, and internal page formatting are correct.
-
-#### Optional: Iterating on documentation
-1. Using Command Prompt, from within the content folder start a local server:
-```jekyll serve --watch```
-2. If prompted by the firewall, allow Jekyll to serve content
-3. Open your web browser and point it to the local server. localhost:4000 is the default
-4. Now you have your own version of the documentation site!
-5. You can make changes to the pages using your favorite text editor.
-
+**Note:** you won't see the correct formatting with a local server for certain aspects of the website:
+  * Header/footer
+  * Margins
+this is to be expected. We still highly recommend rendering and verifying locally
 
 ### Submitting a Pull Request
 
 When you're ready to submit a PR, make sure you're up to date with our main repository, then submit the PR through GitHub's website.  Steps for doing so are:
 
 1. Fetch upstream
-    * <kbd>git fetch upstream</kbd>
+
+    `git fetch upstream`
+    
 2. Merge upstream/develop (This should now put the main repository's history into your fork)
-    * <kbd>git merge upstream/develop</kbd>
-    * This may highlight conflicts that you will have to hand-merge
+    1. `git merge upstream/develop`
+    2. This may highlight conflicts that you will have to hand-merge
         * You can use your favorite merging tool or even notepad for this.
-    * After hand-merging, you can continue the rebase
-        * <kbd>git add [fileYouHandMerged]</kbd>
-        * Check your repositories status with <kbd>git status</kbd>. You may need to continue the merge to finish.
+    3. After hand-merging, you can continue the rebase
+        * `git add [fileYouHandMerged]`
+        * Check your repositories status with `git status`. You may need to continue the merge to finish.
+        
 4. Push your changes to your forked repository.
-    * <kbd>git push origin develop</kbd>
+    * `git push origin develop`
+    
 5. Now submit your pull request from your forked repository using the GitHub website.
 
 After you submit your first pull request, if you have not already signed a Contribution License Agreement, then our Contribution License Agreement service will request you to sign a Contribution License Agreement. We request you to complete this electronic request. Without completing this step, we unfortunately cannot accept a pull request. You only need to do this once.
