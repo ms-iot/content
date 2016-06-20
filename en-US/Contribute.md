@@ -10,43 +10,18 @@ lang: en-US
 # How to Contribute
 
 Thank you for your interest in contributing to the Windows Developer Program for IoT.
-
-Please read on to learn how to submit PRs, where to fork from, and helpful references for contributing to Windows IoT content!
-
-We're actively accepting work and bug fixes for 
-
-* [Documentation Guide](https://github.com/ms-iot/content) - **develop** branch
-* [Projects](https://microsoft.hackster.io/)
-* [Samples](https://github.com/ms-iot/samples)
-
-To get you started with Git and GitHub, check out the below references, then go ahead and dive in!
 ___
 
-### References
+## Git
 
-1. [GitHub Documentation](https://help.github.com/)
-2. [Git Cheatsheet!](https://github.com/github/training-materials/blob/master/downloads/github-git-cheat-sheet.pdf?raw=true)
-3. [Git Documentation](http://www.git-scm.com/book/en/)
+In order to contribute, you must first install Git on your machine:
 
-___
-
-## Using Git
-
-The basic flow of contributing will look like this:
-
-1. Fork ms-iot/content into your account (create an account if you don't have one!)
-2. Make your updates in your fork, just how you like them
-3. When you're ready, submit a Pull Request (PR).
-4. We'll evaluate your PR, and merge it in!
-
-Keep in mind, we're only accepting PRs on the **develop** branch, so please make your changes in that branch!
-
-How to do each one, and things to be aware of, are explained below.
+// Installing Git 
+// Install Jekyll
 
 ### Fork the repository
 
-1. Create a GitHub account by starting at [GitHub Home](https://github.com/)
-2. Go to [GitHub Home](https://github.com/) and navigate to the repository you'd like to contribute to, then click *Fork*  
+1. Go to [GitHub Home](https://github.com/) and navigate to the repository you'd like to contribute to (https://github.com/ms-iot), then click *Fork*  
   ![Fork]({{site.baseurl}}/Resources/images/GitHubFork.png)
 3. On GitHub, Navigate to your account's fork of the repository
 4. Clone the repository in one of three ways:
@@ -118,3 +93,12 @@ Please do not add binaries to Git including:
 
 Acceptable binaries:
 * PNG, JPG, or other image formats
+
+___
+
+### References
+
+1. [GitHub Documentation](https://help.github.com/)
+2. [Git Cheatsheet!](https://github.com/github/training-materials/blob/master/downloads/github-git-cheat-sheet.pdf?raw=true)
+3. [Git Documentation](http://www.git-scm.com/book/en/)
+
