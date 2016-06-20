@@ -60,3 +60,23 @@ Voice is, simply put, your writing style in terms of syntax, verbage, verbosity 
 4. **Keep a clear logical flow** through your article.  If you must reference something that you don't explain until later, mention so.  Lists are helpful to keep your article flow in line.
 5. **Be as direct as possible**. Shorter, more direct sentences are the best.  Give all the information the user needs, but try not to cover more than is needed to achieve their task.  If needed, provide a link to a related topic and let the audience decide if they want to read about the other topic.
 
+## Best Practices
+
+### Do not check in binaries
+Once a binary is added to the repository, it will be there forever.
+
+Please do not add binaries to Git including:
+* The output from a build (debug/release)
+* SDF file (code database)
+* Nuget package directories
+
+Acceptable binaries:
+* PNG, JPG, or other image formats
+
+___
+
+### References
+
+1. [GitHub Documentation](https://help.github.com/)
+2. [Git Cheatsheet!](https://github.com/github/training-materials/blob/master/downloads/github-git-cheat-sheet.pdf?raw=true)
+3. [Git Documentation](http://www.git-scm.com/book/en/)

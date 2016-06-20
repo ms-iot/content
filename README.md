@@ -1,2 +1,4 @@
 # Contribute
-Please refer to our [contribution page](en-US/Contribute.md) for general guidelines on how to contribute.
+1. [Get set up](Resources/contribute/get-setup.md)
+2. [Making changes](Resources/contribute/making-changes.md) 
+3. [Authoring guidelines and best practices](Resources/contribute/topic-guidance.md)  
