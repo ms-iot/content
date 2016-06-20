@@ -17,26 +17,35 @@ ___
 In order to contribute, you must first install Git on your machine:
 
 // Installing Git 
-// Install Jekyll
+
+#### Setting up Jekyll on Windows
+1. We use this easy to follow [Jekyll on Windows](http://jekyllrb.com/docs/windows/) guide. Rouge is the option for highlighting that seems to work best for most users.
 
 ### Fork the repository
 
-1. Go to [GitHub Home](https://github.com/) and navigate to the repository you'd like to contribute to (https://github.com/ms-iot), then click *Fork*  
-  ![Fork]({{site.baseurl}}/Resources/images/GitHubFork.png)
-3. On GitHub, Navigate to your account's fork of the repository
-4. Clone the repository in one of three ways:
-    1. You can use command line <br/>
-    <kbd>git clone [link to .git] [NameYourLocalFolder]</kbd>
-    2. Or launch the GitHub app by clicking 'Clone in Desktop' on the right hand side of the repository  
-    ![Clone]({{site.baseurl}}/Resources/images/GitHubClone.png)
-    3. Or clone it through the GitHub Desktop application  
-5. Set up your upstream
-    * <kbd>git remote add upstream [link to .git]</kbd>
-    
+1. Create a GitHub account 
+2. From GitHub Home, navigate to the repository you'd like to contribute to (e.g. ms-iot/content)
+3. Click ![Fork](../Resources/images/GitHubFork.png) 
+4. Clone the repository in one of several ways: 
+  1. Command line 
+  
+    `git clone [link to .git] [NameYourLocalFolder] `
+  2. Launch the GitHub app 
+  
+     Click 'Clone in Desktop'
+     
+     ![Clone](../Resources/images/GitHubClone.png)
+  3. Clone using the GitHub Desktop application. 
+  4. Using your own git flow (e.g. sourcetree) 
+5. Set up your upstream 
+
+  `git remote add upstream [link to .git] ` 
+
 For clarification, what we mean when we say:
-**local repository:** the cloned repository that you have one on your machine
-**forked repository:** the fork you made from the main repository. This sits up on github's servers. (Also known as *"origin"*)
-**main repository:** the original repository that you forked from. This is the common ms-iot repository hosted on github's servers. (Also known as *"upstream"*)
+
+**local repository:**: the cloned repository that you have one on your machine 
+**forked repository:**: the fork you made from the main repository. This sits up on GitHub's servers. (Also known as "*origin*") 
+**main repository:** the original repository that you forked from. This is the common ms-iot repository hosted on GitHub's servers. (Also known as "*upstream*") 
 
 ### Making changes
 
@@ -51,9 +60,6 @@ For clarification, what we mean when we say:
 Before going further, it's best to make sure your content renders as you'd expect.  There is a staging site set up that rebuilds hourly, but the easiest way to verify changes is to build the site through Jekyll and view it on your local machine.
 
 Do note, you won't see the correct formatting with a local serve that you will in staging - this is to be expected.  There won't be correct margins, or the header/footer etc, but you can see that links, heading, and internal page formatting are correct.
-
-#### Setting up Jekyll on Windows
-1. We use this easy to follow [Jekyll on Windows](http://jekyllrb.com/docs/windows/) guide. Rouge is the option for highlighting that seems to work best for most users.
 
 #### Optional: Iterating on documentation
 1. Using Command Prompt, from within the content folder start a local server:
