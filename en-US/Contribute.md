@@ -45,6 +45,24 @@ For clarification, what we mean when we say:
     * <kbd>git add [file]</kbd>
 3. Commit your changes to your local repository.
     * <kbd>git commit -m "[descriptive message]" </kbd>
+    
+### Verifying your changes
+
+Before going further, it's best to make sure your content renders as you'd expect.  There is a staging site set up that rebuilds hourly, but the easiest way to verify changes is to build the site through Jekyll and view it on your local machine.
+
+Do note, you won't see the correct formatting with a local serve that you will in staging - this is to be expected.  There won't be correct margins, or the header/footer etc, but you can see that links, heading, and internal page formatting are correct.
+
+#### Setting up Jekyll on Windows
+1. We use this easy to follow [Jekyll on Windows](http://jekyllrb.com/docs/windows/) guide. Rouge is the option for highlighting that seems to work best for most users.
+
+#### Optional: Iterating on documentation
+1. Using Command Prompt, from within the content folder start a local server:
+```jekyll serve --watch```
+2. If prompted by the firewall, allow Jekyll to serve content
+3. Open your web browser and point it to the local server. localhost:4000 is the default
+4. Now you have your own version of the documentation site!
+5. You can make changes to the pages using your favorite text editor.
+
 
 ### Submitting a Pull Request
 
