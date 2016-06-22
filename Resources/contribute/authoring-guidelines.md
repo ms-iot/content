@@ -12,7 +12,7 @@ When creating a new topic, or updating an exisitng one, there are a handful of t
 
   [Documentation template]()
 
-  #### Save your files in the following directories
+2. **Save your files in the following directories**
 
   * Images: `content/Resources/images/<folder name>/<your filename>`
   * Documentation: `content/en-US/Docs`
@@ -24,18 +24,16 @@ When creating a new topic, or updating an exisitng one, there are a handful of t
 
   For example, there is a "Noobs" folder for all the images used in the Noobs topics - it spans multiple articles but has a consolidated use.  If there isn't a folder that fits what your images are for, please create a new folder for your images.
 
-2. Writing in markdown
+2. **Writing in markdown**
 
   For manageability and consistent look and feel, we enforce that our docs and samples be written in [Markdown](https://daringfireball.net/projects/markdown/basics). Complex formatting can be done with Liquid templates - details on those below.
    
   We will make exceptions to use html if needed.
 
-3. Good examples
-
   * For Docs, take a look at content/en-us/docs/Alljoyn.md 
   * For Samples, take a look at content/en-us/samples/helloworld.md
 
-4. Misc guidelines
+3. **Misc guidelines**
 
   * Use only one H1 (#) per topic
     * Very important for SEO
