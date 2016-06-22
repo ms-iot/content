@@ -1,4 +1,7 @@
-# Contribute
+# How to Contribute
+
+Thank you for your interest in contributing to the Windows Developer Program for IoT
+
 1. [Get set up](Resources/contribute/get-setup.md)
 2. [Making changes](Resources/contribute/making-changes.md) 
 3. [Authoring guidelines and best practices](Resources/contribute/topic-guidance.md)  
