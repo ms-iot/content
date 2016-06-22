@@ -8,9 +8,8 @@ When creating a new topic, or updating an exisitng one, there are a handful of t
 
   When creating new content, please start with the following templates:
 
-  [Sample template]()
-
-  [Documentation template]()
+  * [Sample template]()
+  * [Documentation template]()
 
 2. **Save your files in the following directories**
 
@@ -32,8 +31,8 @@ When creating a new topic, or updating an exisitng one, there are a handful of t
   
   Good examples:
 
-  * For Docs, take a look at content/en-us/docs/Alljoyn.md 
-  * For Samples, take a look at content/en-us/samples/helloworld.md
+  * Docs: `content/en-us/docs/Alljoyn.md` 
+  * Samples: `content/en-us/samples/helloworld.md`
 
 3. **Misc guidelines**
 
