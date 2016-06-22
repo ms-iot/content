@@ -2,10 +2,33 @@
 
 When creating a new topic, or updating an exisitng one, there are a handful of things to keep in mind.
 
+### Creating a new topic:
+
+When creating new content, please start with the following templates:
+
+[Sample template]()
+
+[Documentation template]()
+
+Save your files in the following directories:
+
+Images: `content/Resources/images`
+Documentation: `content/en-US/Docs`
+Samples: `content/en-US/Samples`
+
+Writing in markdown:
+
+For manageability and consistent look and feel, we enforce that our docs and samples be written in markdown. Complex formatting can be done with Liquid templates - details on those below.
+ 
+We will make exceptions to use html if needed.
+
+
+
+
 First off, keep these things in mind when authoring content:
 
-* For samples, please be sure to use the template provided to get the standard sample formatting.  Also, please use [Jekyll's Kramdown flavored Markdown](http://jekyllrb.com/docs/home/) to get nice layout when rendered as a webpage.
-* Please do not use HTML, use MD whenever possible.  If you must, use a Liquid template for small sections that need special formatting.  Details below.
+* For samples, please be sure to use the template provided to get the standard sample formatting - found under Templates in this folder.  Also, please use [Jekyll's Kramdown flavored Markdown](http://jekyllrb.com/docs/home/) to get nice layout when rendered as a webpage.
+* Use MD whenever possible.  If you must, use a Liquid template for small sections that need special formatting.  Details below.
 * For samples, please append ```{:target="_blank"}```, so the link opens in a new page
 
 Going forward, we're doing everything we can to stick to .md files.  We know that there are times when we can't rely on the limited formatting of .md, but for those times we'll use a liquid template instead of converting it all to html.  For information on those templates, see below.
@@ -26,7 +49,7 @@ At the top of each file, you'll see a section starting and ending with "---" whe
 
 ### Images, and where to put them
 
-Images should all live under `root/Resources/images/<informative name>/<your filename>`.  You can name your image whatever makes sense to you, but for the informative file name, please use or create a folder that makes sense for the use of your image.  For example, there is a "Noobs" folder for all the images used in the Noobs topics - it spans multiple articles but has a consolidated use.  If there isn't a folder that fits what your images are for, please create a new folder for your images.
+Images should all live under `/Resources/images/<informative name>/<your filename>`.  You can name your image whatever makes sense to you, but for the informative file name, please use or create a folder that makes sense for the use of your image.  For example, there is a "Noobs" folder for all the images used in the Noobs topics - it spans multiple articles but has a consolidated use.  If there isn't a folder that fits what your images are for, please create a new folder for your images.
 
 Do note, images should not be placed in `Resources/images/` without that parent folder.  Images currently there will be moved shortly.
 
@@ -42,7 +65,7 @@ You'll notice our repo structure has changed - we now have a parent folder match
 
 Our build system supports liquid templates (those sections with the % signs in them).  This allows us to include commonly used snippets or insert a bit of html without needing to write it in manually.  The plus side is it allows us to use common things (think nice looking grid layouts or tables) or include a common sample in several different docs without copy/pasting.
 
-These templates need to live within the _includes folder in the root, and are referenced by `{% include redirect-dc.html %}` which will insert whatever that file is at this point in your article.  You can add arguments or content to the include call. 
+These templates need to live within the _includes folder in the root, and are referenced by `{% include redirect.html url="http://www.microsoft.com" %}` which will insert whatever that file is at this point in your article.  You can add arguments or content to the include call. 
 
 Examples on usage of [liquid basics](https://help.shopify.com/themes/liquid/basics) and the [liquid cheatsheet](http://cheat.markdunkley.com/) are a few pages that I find useful to learn about Liquid.
 
