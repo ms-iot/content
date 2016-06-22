@@ -29,6 +29,8 @@ When creating a new topic, or updating an exisitng one, there are a handful of t
   For manageability and consistent look and feel, we enforce that our docs and samples be written in [Markdown](https://daringfireball.net/projects/markdown/basics). Complex formatting can be done with Liquid templates - details on those below.
    
   We will make exceptions to use html if needed.
+  
+  Good examples:
 
   * For Docs, take a look at content/en-us/docs/Alljoyn.md 
   * For Samples, take a look at content/en-us/samples/helloworld.md
