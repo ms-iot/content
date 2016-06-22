@@ -1,8 +1,10 @@
-# Creating a topic
+# Authoring guidelines and best practices
+
+## Guidelines
 
 When creating a new topic, or updating an exisitng one, there are a handful of things to keep in mind.
 
-### Creating a new topic:
+#### Creating a new topic:
 
 When creating new content, please start with the following templates:
 
@@ -18,30 +20,23 @@ Save your files in the following directories:
 
 Writing in markdown:
 
-For manageability and consistent look and feel, we enforce that our docs and samples be written in markdown. Complex formatting can be done with Liquid templates - details on those below.
+For manageability and consistent look and feel, we enforce that our docs and samples be written in [Markdown](https://daringfireball.net/projects/markdown/basics). Complex formatting can be done with Liquid templates - details on those below.
  
 We will make exceptions to use html if needed.
 
 Good examples:
 
-For Docs, take a look at content/en-us/docs/Alljoyn.md 
-For Samples, take a look at content/en-us/samples/helloworld.md
+* For Docs, take a look at content/en-us/docs/Alljoyn.md 
+* For Samples, take a look at content/en-us/samples/helloworld.md
+
+#### Misc guidelines
+
+* Use only one H1 (#) per topic
+  * Very important for SEO
+* H1 and title (in the metadata) should be the same
+  * (e.g. title: AllJoyn and # AllJoyn)
 
 
-First off, keep these things in mind when authoring content:
-
-* For samples, please be sure to use the template provided to get the standard sample formatting - found under Templates in this folder.  Also, please use [Markdown](https://daringfireball.net/projects/markdown/basics) to get nice layout when rendered as a webpage.
-* For samples, please append ```{:target="_blank"}```, so the link opens in a new page
-
-There is a sample topic you can use as a starting point - just copy and paste it into your blank document and update it to your liking.  [That template can be found here](Templates/standard-topic.md).
-
-
-
-Here are a few things we need to adhere to - PRs will be denied until they are fixed.
-
-#### Single H1
-
-For SEO, we need a single H1 (#) per topic.  This should match or at least be very close to the page title - do everything you can to have those match!
 
 #### Fill out metadata
 
