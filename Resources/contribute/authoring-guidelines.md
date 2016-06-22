@@ -21,7 +21,7 @@ When creating a new topic, or updating an exisitng one, there are a handful of t
 
   Try to be as descriptive as possible without making your titles too long (good descriptions makes everyone's life easier) 
 
-  For example, there is a "Noobs" folder for all the images used in the Noobs topics - it spans multiple articles but has a consolidated use.  If there isn't a folder that fits what your images are for, please create a new folder for your images.
+  For an image naming example, there is a "Noobs" folder for all the images used in the Noobs topics - it spans multiple articles but has a consolidated use.  If there isn't a folder that fits what your images are for, please create a new folder for your images.
 
 2. **Writing in markdown**
 
