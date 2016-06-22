@@ -8,7 +8,7 @@ For returning users - Ensure that you are up to date with the ms-iot repo:
   
 **Note**: This will delete all local changes, so be sure this is what you want
 
-1. Read [contributing guidelines](topic-guidance.md).
+1. Read [contributing guidelines](authoring-guidelines.md).
   1. Changes that do not follow the guidelines will be rejected
 2. Edit, build, test
   1. From within the content folder start a local server using *cmd.exe*
@@ -73,4 +73,4 @@ When evaluating PRs, the following guidelines must be met:
 
 1. [Get set up](Resources/contribute/get-setup.md)
 2. **[Making changes](Resources/contribute/making-changes.md)** 
-3. [Authoring guidelines and best practices](Resources/contribute/topic-guidance.md)
+3. [Authoring guidelines and best practices](Resources/contribute/authoring-guidelines.md.md)
