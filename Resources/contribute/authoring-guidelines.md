@@ -44,30 +44,7 @@ We will make exceptions to use html if needed.
 * Fill out metadata
   * At the top of each file, you'll see a section starting and ending with "---" where metadata for that topic lives.  Fill this section with information pertaining to the topic you're working on.
 
-
-#### Liquid templates and common files
-
-Our build system supports liquid templates (those sections with the % signs in them).  This allows us to include commonly used snippets or insert a bit of html without needing to write it in manually.  The plus side is it allows us to use common things (think nice looking grid layouts or tables) or include a common sample in several different docs without copy/pasting.
-
-These templates need to live within the _includes folder in the root, and are referenced by `{% include redirect.html url="http://www.microsoft.com" %}` which will insert whatever that file is at this point in your article.  You can add arguments or content to the include call. 
-
-Examples on usage of [liquid basics](https://help.shopify.com/themes/liquid/basics) and the [liquid cheatsheet](http://cheat.markdunkley.com/) are a few pages that I find useful to learn about Liquid.
-
-### Things to keep in mind while writing
-
-When most of us write, we don't think too much about what we're writing except for the content we're trying to get across.  However, there is much more that goes into a well written article than you'd think!  Below are some suggestions of things to consider when proofreading your article.
-
-#### Voice, and how did you explain it?
-
-Voice is, simply put, your writing style in terms of syntax, verbage, verbosity etc.  When we're writing for the users of Windows IoT, we need to make sure we are presenting a relatively unified voice.  Now this doesn't mean you have to say certain things, but it does mean we have to keep the following in mind:
-
-1. **Write in a supportive and informative way.** Most of all, this means writing in a way that doesn't come off as condescending to your audience - after all, we're trying to teach them about Windows IoT, we don't want them to feel like we're belittling them!
-2. **Elaborate on any non-obvious point**.  Picking up from the first point, make sure you explain anything that some of our audience might not understand.  It is much better to over explain something and let those who know it skim over it, than to leave others who are new to the technology in the dark. 
-3. **Maintain a single tense.**  Usually we prefer present tense - this is rarely a concern in our docs.
-4. **Keep a clear logical flow** through your article.  If you must reference something that you don't explain until later, mention so.  Lists are helpful to keep your article flow in line.
-5. **Be as direct as possible**. Shorter, more direct sentences are the best.  Give all the information the user needs, but try not to cover more than is needed to achieve their task.  If needed, provide a link to a related topic and let the audience decide if they want to read about the other topic.
-
-### Best Practices
+## Best Practices
 
 #### Do not check in binaries
 Once a binary is added to the repository, it will be there forever.
@@ -80,6 +57,27 @@ Please do not add binaries to Git including:
 Acceptable binaries:
 * PNG, JPG, or other image formats
 
+#### Liquid templates and common files
+
+Our build system supports liquid templates (those sections with the % signs in them).  This allows us to include commonly used snippets or insert a bit of html without needing to write it in manually.  The plus side is it allows us to use common things (think nice looking grid layouts or tables) or include a common sample in several different docs without copy/pasting.
+
+These templates need to live within the _includes folder in the root, and are referenced by `{% include redirect.html url="http://www.microsoft.com" %}` which will insert whatever that file is at this point in your article.  You can add arguments or content to the include call. 
+
+Examples on usage of [liquid basics](https://help.shopify.com/themes/liquid/basics) and the [liquid cheatsheet](http://cheat.markdunkley.com/) are a few pages that I find useful to learn about Liquid.
+
+#### Things to keep in mind while writing
+
+When most of us write, we don't think too much about what we're writing except for the content we're trying to get across.  However, there is much more that goes into a well written article than you'd think!  Below are some suggestions of things to consider when proofreading your article.
+
+**Voice, and how did you explain it?**
+
+Voice is, simply put, your writing style in terms of syntax, verbage, verbosity etc.  When we're writing for the users of Windows IoT, we need to make sure we are presenting a relatively unified voice.  Now this doesn't mean you have to say certain things, but it does mean we have to keep the following in mind:
+
+1. **Write in a supportive and informative way.** Most of all, this means writing in a way that doesn't come off as condescending to your audience - after all, we're trying to teach them about Windows IoT, we don't want them to feel like we're belittling them!
+2. **Elaborate on any non-obvious point**.  Picking up from the first point, make sure you explain anything that some of our audience might not understand.  It is much better to over explain something and let those who know it skim over it, than to leave others who are new to the technology in the dark. 
+3. **Maintain a single tense.**  Usually we prefer present tense - this is rarely a concern in our docs.
+4. **Keep a clear logical flow** through your article.  If you must reference something that you don't explain until later, mention so.  Lists are helpful to keep your article flow in line.
+5. **Be as direct as possible**. Shorter, more direct sentences are the best.  Give all the information the user needs, but try not to cover more than is needed to achieve their task.  If needed, provide a link to a related topic and let the audience decide if they want to read about the other topic.
 
 
 1. [Get set up](Resources/contribute/get-setup.md)
