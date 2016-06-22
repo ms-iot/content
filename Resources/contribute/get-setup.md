@@ -41,6 +41,6 @@ ___
 
 ### How to contribute
 
-1. **[Get set up](Resources/contribute/get-setup.md)**
-2. [Making changes](Resources/contribute/making-changes.md) 
-3. [Authoring guidelines and best practices](Resources/contribute/authoring-guidelines.md.md)
+1. **[Get set up](get-setup.md)**
+2. [Making changes](making-changes.md) 
+3. [Authoring guidelines and best practices](authoring-guidelines.md.md)
