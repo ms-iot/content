@@ -2,16 +2,16 @@
 
 In order to contribute, you must first install Git on your machine:
 
-#### Installing Git 
+### Installing Git 
 
 The easiest way to get all the Git tools is to download [GitHub Desktop](https://desktop.github.com/).  This will install Git, Git shell, GitHub Desktop, and keep you up to date.
 
-#### Setting up Jekyll on Windows
+### Setting up Jekyll on Windows
 1. We use this easy to follow [Jekyll on Windows](http://jekyllrb.com/docs/windows/) guide. Rouge is the option for highlighting that seems to work best for most users.
 
 ### Fork the repository
 
-1. Create a GitHub account 
+1. Create a [GitHub](https://github.com/) account 
 2. From GitHub Home, navigate to the repository you'd like to contribute to (e.g. ms-iot/content)
 3. Click *Fork* ![Fork](../images/GitHubFork.png) 
 4. Clone the repository in one of several ways: 
@@ -29,7 +29,7 @@ The easiest way to get all the Git tools is to download [GitHub Desktop](https:/
 
   `git remote add upstream [link to .git] ` 
 
-For clarification, what we mean when we say:
+For clarification:
 
 **local repository:**: the cloned repository that you have one on your machine 
 
@@ -37,4 +37,4 @@ For clarification, what we mean when we say:
 
 **main repository:** the original repository that you forked from. This is the common ms-iot repository hosted on GitHub's servers. (Also known as "*upstream*") 
 
-## [Next Step - Making changes](making-changes.md)
+### [Next Step - Making changes](making-changes.md)
