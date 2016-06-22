@@ -37,6 +37,10 @@ For clarification:
 
 **main repository:** the original repository that you forked from. This is the common ms-iot repository hosted on GitHub's servers. (Also known as "*upstream*") 
 
+___
+
+### How to contribute
+
 1. **[Get set up](Resources/contribute/get-setup.md)**
 2. [Making changes](Resources/contribute/making-changes.md) 
 3. [Authoring guidelines and best practices](Resources/contribute/authoring-guidelines.md.md)

@@ -70,6 +70,9 @@ When evaluating PRs, the following guidelines must be met:
     * If, after you make your changes and submit your PR, you find it cannot be automerged, simply update your fork with the latest from our repo and fix the conflicts - that should make it auto-mergable
 2. Never have duplicate commits
 
+___
+
+### How to contribute
 
 1. [Get set up](Resources/contribute/get-setup.md)
 2. **[Making changes](Resources/contribute/making-changes.md)** 

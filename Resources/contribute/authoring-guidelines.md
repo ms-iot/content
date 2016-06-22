@@ -4,45 +4,45 @@
 
 When creating a new topic, or updating an exisitng one, there are a handful of things to keep in mind.
 
-#### Creating a new topic:
+1. **Creating a new topic:**
 
-When creating new content, please start with the following templates:
+  When creating new content, please start with the following templates:
 
-[Sample template]()
+  [Sample template]()
 
-[Documentation template]()
+  [Documentation template]()
 
-#### Save your files in the following directories
+  #### Save your files in the following directories
 
-* Images: `content/Resources/images/<folder name>/<your filename>`
-* Documentation: `content/en-US/Docs`
-* Samples: `content/en-US/Samples`
+  * Images: `content/Resources/images/<folder name>/<your filename>`
+  * Documentation: `content/en-US/Docs`
+  * Samples: `content/en-US/Samples`
 
-Please use upper camel case (e.g. BackgroundColor) when naming your files. 
+  Please use upper camel case (e.g. BackgroundColor) when naming your files. 
 
-Try to be as descriptive as possible without making your titles too long (good descriptions makes everyone's life easier) 
+  Try to be as descriptive as possible without making your titles too long (good descriptions makes everyone's life easier) 
 
-For example, there is a "Noobs" folder for all the images used in the Noobs topics - it spans multiple articles but has a consolidated use.  If there isn't a folder that fits what your images are for, please create a new folder for your images.
+  For example, there is a "Noobs" folder for all the images used in the Noobs topics - it spans multiple articles but has a consolidated use.  If there isn't a folder that fits what your images are for, please create a new folder for your images.
 
-#### Writing in markdown
+2. Writing in markdown
 
-For manageability and consistent look and feel, we enforce that our docs and samples be written in [Markdown](https://daringfireball.net/projects/markdown/basics). Complex formatting can be done with Liquid templates - details on those below.
- 
-We will make exceptions to use html if needed.
+  For manageability and consistent look and feel, we enforce that our docs and samples be written in [Markdown](https://daringfireball.net/projects/markdown/basics). Complex formatting can be done with Liquid templates - details on those below.
+   
+  We will make exceptions to use html if needed.
 
-#### Good examples
+3. Good examples
 
-* For Docs, take a look at content/en-us/docs/Alljoyn.md 
-* For Samples, take a look at content/en-us/samples/helloworld.md
+  * For Docs, take a look at content/en-us/docs/Alljoyn.md 
+  * For Samples, take a look at content/en-us/samples/helloworld.md
 
-#### Misc guidelines
+4. Misc guidelines
 
-* Use only one H1 (#) per topic
-  * Very important for SEO
-* H1 and title (in the metadata) should be the same
-  * (e.g. title: AllJoyn and # AllJoyn)
-* Fill out metadata
-  * At the top of each file, you'll see a section starting and ending with "---" where metadata for that topic lives.  Fill this section with information pertaining to the topic you're working on.
+  * Use only one H1 (#) per topic
+    * Very important for SEO
+  * H1 and title (in the metadata) should be the same
+    * (e.g. title: AllJoyn and # AllJoyn)
+  * Fill out metadata
+    * At the top of each file, you'll see a section starting and ending with "---" where metadata for that topic lives.  Fill this section with information pertaining to the topic you're working on.
 
 ## Best Practices
 
@@ -79,15 +79,17 @@ Voice is, simply put, your writing style in terms of syntax, verbage, verbosity 
 4. **Keep a clear logical flow** through your article.  If you must reference something that you don't explain until later, mention so.  Lists are helpful to keep your article flow in line.
 5. **Be as direct as possible**. Shorter, more direct sentences are the best.  Give all the information the user needs, but try not to cover more than is needed to achieve their task.  If needed, provide a link to a related topic and let the audience decide if they want to read about the other topic.
 
-
-1. [Get set up](Resources/contribute/get-setup.md)
-2. [Making changes](Resources/contribute/making-changes.md) 
-3. **[Authoring guidelines and best practices](Resources/contribute/authoring-guidelines.md)**
-
-___
-
 ### References
 
 1. [GitHub Documentation](https://help.github.com/)
 2. [Git Cheatsheet!](https://github.com/github/training-materials/blob/master/downloads/github-git-cheat-sheet.pdf?raw=true)
 3. [Git Documentation](http://www.git-scm.com/book/en/)
+
+___
+
+### How to contribute
+
+1. [Get set up](Resources/contribute/get-setup.md)
+2. [Making changes](Resources/contribute/making-changes.md) 
+3. **[Authoring guidelines and best practices](Resources/contribute/authoring-guidelines.md)**
+
