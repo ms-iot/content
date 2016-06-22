@@ -76,4 +76,4 @@ ___
 
 1. [Get set up](get-setup.md)
 2. **[Making changes](making-changes.md)** 
-3. [Authoring guidelines and best practices](authoring-guidelines.md.md)
+3. [Authoring guidelines and best practices](authoring-guidelines.md)
