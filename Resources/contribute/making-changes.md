@@ -1,4 +1,4 @@
-## Making changes
+# Making changes
 
 Once your Git flow is set up, you can make changes to the repository.
 
@@ -71,4 +71,6 @@ When evaluating PRs, the following guidelines must be met:
 2. Never have duplicate commits
 
 
-### [Next Step - Topic guidance and best practices](topic-guidance.md)
+1. [Get set up](Resources/contribute/get-setup.md)
+2. **[Making changes](Resources/contribute/making-changes.md)** 
+3. [Authoring guidelines and best practices](Resources/contribute/topic-guidance.md)

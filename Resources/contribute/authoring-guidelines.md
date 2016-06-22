@@ -96,6 +96,12 @@ Please do not add binaries to Git including:
 Acceptable binaries:
 * PNG, JPG, or other image formats
 
+
+
+1. [Get set up](Resources/contribute/get-setup.md)
+2. [Making changes](Resources/contribute/making-changes.md) 
+3. **[Authoring guidelines and best practices](Resources/contribute/topic-guidance.md)**
+
 ___
 
 ### References
