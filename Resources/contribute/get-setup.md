@@ -1,9 +1,4 @@
-# How to Contribute
-
-Thank you for your interest in contributing to the Windows Developer Program for IoT.
-___
-
-## Git Setup 
+# Get Setup 
 
 In order to contribute, you must first install Git on your machine:
 
