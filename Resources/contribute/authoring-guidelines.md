@@ -12,19 +12,25 @@ When creating new content, please start with the following templates:
 
 [Documentation template]()
 
-Save your files in the following directories:
+#### Save your files in the following directories
 
-* Images: `content/Resources/images`
+* Images: `content/Resources/images/<folder name>/<your filename>`
 * Documentation: `content/en-US/Docs`
 * Samples: `content/en-US/Samples`
 
-Writing in markdown:
+Please use upper camel case (e.g. BackgroundColor) when naming your files. 
+
+Try to be as descriptive as possible without making your titles too long (good descriptions makes everyone's life easier) 
+
+For example, there is a "Noobs" folder for all the images used in the Noobs topics - it spans multiple articles but has a consolidated use.  If there isn't a folder that fits what your images are for, please create a new folder for your images.
+
+#### Writing in markdown
 
 For manageability and consistent look and feel, we enforce that our docs and samples be written in [Markdown](https://daringfireball.net/projects/markdown/basics). Complex formatting can be done with Liquid templates - details on those below.
  
 We will make exceptions to use html if needed.
 
-Good examples:
+#### Good examples
 
 * For Docs, take a look at content/en-us/docs/Alljoyn.md 
 * For Samples, take a look at content/en-us/samples/helloworld.md
@@ -35,26 +41,9 @@ Good examples:
   * Very important for SEO
 * H1 and title (in the metadata) should be the same
   * (e.g. title: AllJoyn and # AllJoyn)
+* Fill out metadata
+  * At the top of each file, you'll see a section starting and ending with "---" where metadata for that topic lives.  Fill this section with information pertaining to the topic you're working on.
 
-
-
-#### Fill out metadata
-
-At the top of each file, you'll see a section starting and ending with "---" where metadata for that topic lives.  Fill this section with information pertaining to the topic you're working on.  What those fields should be can be found in the sample template provided [here](Templates/standard-topic.md).
-
-#### Images, and where to put them
-
-Images should all live under `/Resources/images/<informative name>/<your filename>`.  You can name your image whatever makes sense to you, but for the informative file name, please use or create a folder that makes sense for the use of your image.  For example, there is a "Noobs" folder for all the images used in the Noobs topics - it spans multiple articles but has a consolidated use.  If there isn't a folder that fits what your images are for, please create a new folder for your images.
-
-**Note**, images should not be placed in `Resources/images/` without that parent folder.  Images currently there will be moved shortly.
-
-#### Descriptive file names
-
-When creating a new file, be as descriptive as possible without making your titles too long.  Keep using the upper camel case (e.g. BackgroundColor).
-
-#### Folder architecture and where to put your files
-
-You'll notice our repo structure has changed - we now have a parent folder matching each high level page (Docs, Downloads etc.)  Put your file under the folder that matches the name of the high level page it will be linked from.  For example, if I'm adding information on AllJoyn, it will live under the "Docs" folder.
 
 #### Liquid templates and common files
 
