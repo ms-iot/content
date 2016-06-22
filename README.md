@@ -18,3 +18,7 @@ Please refer to our [contribution page](http://ms-iot.github.io/content/Contribu
 * For README.md files, please use [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/) to get nice formatting on the file browser.
 * Please do not use HTML
 * For samples, please append ```{:target="_blank"}```, so the link opens in a new page
+
+
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments. 
