@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Release Notes
 permalink: /en-US/win10/ReleaseNotesInsiderPreview.htm
@@ -6,7 +6,7 @@ lang: en-US
 ---
 
 # Release Notes for Windows 10 IoT Core
-Build Number 14342. May 2016
+Build Number 14366. June 2016
 
 &copy; 2016 Microsoft Corporation. All rights reserved
 
@@ -21,14 +21,18 @@ The privacy statement for this version of the Windows operating system can be vi
 You can review linked terms by pasting the forward link into your browser window.
 
 ## What's new in this build: 
-* The minimum required storage space for the IoT Core FFUs has been reduced to 4GB. 
-	* With this change it is recommended that all application storage be done on the DATA partition. The MainOS partition should be reserved for the OS use. 
-* Updated OS files including core OS bug fixes
+* Updated OS files including core OS bug fixes. 
+* Issues with the Raspberry Pi boot have been addressed (7720020). 
+* Issues with over the air updates for insiders builds have been addressed (6923773).
 
 
 ## Known issues in this build: 
-* The latest Windows SDK (Build greater than 14337) is not compatible with this build, use the SDK included in with Visual Studio update 2
-* Ethernet and WiFi  on the Raspberry Pi 3 may fail on boot a reboot is required to resolve the issue. This issue is more prominent on slower SD cards. 
+* It is recommended to flash/update Minnow Board Max UEFI/Firmware to 92 or latest to avoid issues during boot up (7813559).Speech Recognition and Speech sample apps are failing in some cases on IoT Core (7591373).
+* The Dragon board packages may fail to produce an image with the RS1 ADK (6973916). 
+* Raspberry Pi fails to boot with SD cards larger than 32GB due to the partition size (7664500).
+* There is a Sensor Driver Conflict in the provided FFUs. The Remote Sensor Framework installs drivers for Compass, Magnetometer, Accelerometer and Gyro. The UWP APIs for accessing these from an application assume just 1 is installed. If you are developing a driver for a physically attached device, the remote driver on the Microsoft provided FFUs will conflict.
+* Resolution: The conflicting driver can be removed by connecting to the device via SSH or Powershell and using the tool devcon.exe to remove the remote sensor driver by typing “devcon.exe remove @”ROOT\REMOTESENSORDRIVER*”. The remote sensor driver does not affect OEM created FFUs.
+
 
 
 
