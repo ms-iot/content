@@ -6,7 +6,7 @@ When creating a new topic, or updating an exisitng one, there are a handful of t
 
 1. **Creating a new topic:**
 
-  When creating new content, please start with the following templates:
+  When creating new content, please start with the following templates (view in *Raw* mode):
 
   * [Sample template](template/sample-template.md)
   * [Documentation template](template/docs-template.md)
