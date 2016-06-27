@@ -15,10 +15,10 @@ For returning users - Ensure that you are up to date with the ms-iot repo:
   
     `jekyll serve --incremental`
   2. If prompted by the firewall, allow Jekyll to serve content
-  3. Open your web browser and point it to the local server. localhost:4000/content/iot.htm is the default page
+  3. Open your web browser and point it to the local server. localhost:4000/content/en-US/iot.htm is the default page
     * **Note:** you won't see the correct formatting with a local server for certain aspects of the website:
         * Header/footer
-        * Margins
+        * Some margins
   
         this is to be expected. We still highly recommend rendering and verifying locally
   4. Edit using your favorite text editor. Jekyll will automatically update the content after every save

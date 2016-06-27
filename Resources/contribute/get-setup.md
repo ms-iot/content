@@ -8,6 +8,7 @@ The easiest way to get all the Git tools is to download [GitHub Desktop](https:/
 
 ### Setting up Jekyll on Windows
 1. We use this easy to follow [Jekyll on Windows](http://jekyllrb.com/docs/windows/) guide. Rouge is the option for highlighting that seems to work best for most users.
+  **Note** Be sure to install the rouge gem during this set up.  See [Julian Thilo's setup docs](http://jekyll-windows.juthilo.com/3-syntax-highlighting/) for more on that.
 
 ### Fork the repository
 

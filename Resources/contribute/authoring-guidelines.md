@@ -8,8 +8,8 @@ When creating a new topic, or updating an exisitng one, there are a handful of t
 
   When creating new content, please start with the following templates:
 
-  * [Sample template]()
-  * [Documentation template]()
+  * [Sample template](template/sample-template.md)
+  * [Documentation template](template/docs-template.md)
 
 2. **Save your files in the following directories**
 
