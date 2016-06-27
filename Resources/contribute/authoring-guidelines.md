@@ -108,7 +108,8 @@ Voice is, simply put, your writing style in terms of syntax, verbage, verbosity 
 * **Use bold for UI entries**. (markdown = `**term**`)
 Example: To start PowerShell as an administrator, right-click **Windows PowerShell**, and then select **Run as administrator**.
 * **To emphasize a word, use italics**, not bold. (markdown = `*term*`)
-* **For notes**, use the following markdown for now (no colon): `**NOTE** Here is the note.`
+* **For notes**, use the following liquid template: `{% include note.html text="This is a note" %}`
+  * The same thing can be done with `tip.html`, and `warning.html`
 
 **Links and cross-references**
 * When you add a cross-reference, use this syntax: **For more information about X, see Y.**
