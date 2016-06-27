@@ -7,9 +7,9 @@ permalink: <URL needs to match filename, and should be descriptive.  Should also
 lang: en-US
 ---
 
-Edit the above information for your topic!
+Edit the above information for you topic!
 
-# Title of the page, that matches title in frontmatter above.  Only one H1 can be used.
+# Title of the page, that matches title in metadata above.  Only one H1 can be used.
 
 ## The rest of the headings
 ___
@@ -18,7 +18,17 @@ ___
 
 #### but do try to keep a logical heirarchy
 
-1. To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. 
-2. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.
+1. You can also use numbering in your document.
+2. This is an example of a two lines of numbered list
 
-![Octocat]({{site.baseurl}}/Resources/images/Octocat.png)
+Below is an image
+
+![This is the alt text for the image]({{site.baseurl}}/Resources/images/Octocat.png)
+
+There are different formatting options for extra emphasis
+
+{% include note.html text="This is a note" %}
+
+{% include warning.html text="This is a warning" %}
+
+{% include tip.html text="This is a tip" %}
