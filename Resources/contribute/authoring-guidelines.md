@@ -10,6 +10,11 @@ When creating a new topic, or updating an exisitng one, there are a handful of t
 
   * [Sample template](template/sample-template.md)
   * [Documentation template](template/docs-template.md)
+  
+  **Be sure to add** your file to the correct index file:
+  
+  * Samples add to [_samples.json](/_data/_samples.json)
+  * Docs add to [_docs-index.json](/_data/_docs-index.json)
 
 2. **Save your files in the following directories**
 
@@ -23,7 +28,7 @@ When creating a new topic, or updating an exisitng one, there are a handful of t
 
   For an image naming example, there is a "Noobs" folder for all the images used in the Noobs topics - it spans multiple articles but has a consolidated use.  If there isn't a folder that fits what your images are for, please create a new folder for your images.
 
-2. **Writing in markdown**
+3. **Writing in markdown**
 
   For manageability and consistent look and feel, we enforce that our docs and samples be written in [Markdown](https://daringfireball.net/projects/markdown/basics). Complex formatting can be done with Liquid templates - details on those below.
    
@@ -34,7 +39,7 @@ When creating a new topic, or updating an exisitng one, there are a handful of t
   * Docs: `content/en-us/docs/Alljoyn.md` 
   * Samples: `content/en-us/samples/helloworld.md`
 
-3. **Misc guidelines**
+4. **Misc guidelines**
 
   * Use only one H1 (#) per topic
     * Very important for SEO
