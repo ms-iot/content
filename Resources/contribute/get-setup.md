@@ -7,13 +7,10 @@ In order to contribute, you must first install Git on your machine:
 The easiest way to get all the Git tools is to download [GitHub Desktop](https://desktop.github.com/).  This will install Git, Git shell, GitHub Desktop, and keep you up to date.
 
 ### Setting up Jekyll on Windows
-1. We use this easy to follow [Jekyll on Windows](http://jekyllrb.com/docs/windows/) guide. Rouge is the option for highlighting that seems to work best for most users.
+1. Follow the [Jekyll on Windows](http://jekyllrb.com/docs/windows/) guide. 
+2. Install Rouge
   
-  * Install rouge without the documentation:
-  
-    `gem install rouge --no-ri`
-    
-    No need to update _config.yml, that's already done.
+  `gem install rouge --no-ri`
 
 ### Fork the repository
 
