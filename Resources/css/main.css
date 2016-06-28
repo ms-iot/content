@@ -869,7 +869,8 @@ body .device-images {
 
 /* Define custom alerts */
 body .alert {
-    padding: 1em;
+    padding-right: 1em;
+	padding-left: 1em;
     margin-top: 0.6em;
     margin-bottom: 1.2em;
     border-width: 1px;
@@ -884,8 +885,7 @@ body .alert {
 
 body .alert h5 {
     font-weight: bolder;
-	font-size: 12px;
-	margin-top: 10px;
+	line-height: 1.2;
 }
 
 
@@ -895,9 +895,8 @@ body .alert-note {
     color: #0070a7;
 }
 
-span.win-icon-tip {
-    margin-right: 15px;
-	margin-bottom: 15px;
+span.win-icon {
+    margin-right: 8px;
 }
 
 body .alert-warning {
@@ -906,19 +905,13 @@ body .alert-warning {
     color: #a94442;
 }
 
-span.win-icon-warning {
-    margin-right: 15px;
-}
-
 body .alert-tip {
     border-color: rgba(0, 0, 0, .05);
     background: #dff0d8;
     color: #3c763d;
 }
 
-span.win-icon-tip {
-    margin-right: 15px;
-}
+
 
 
 

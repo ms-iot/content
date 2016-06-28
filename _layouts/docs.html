@@ -5,8 +5,10 @@
     <!-- Body -->
     <div class="container">
         <div class="row">
-            <div class="col-xs-5">
+            <div class="col-xs-5 side-nav-wrap">
+              <nav role="navigation" class="side-nav">
                 {% include TOC.md %}
+              </nav>
             </div>
             <div class="col-xs-15">
                 {{ content }}
