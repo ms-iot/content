@@ -20,6 +20,8 @@ Note that the Drangonboard Max uses 1.8V logic levels on all IO pins.
 
 ## <a name="DB_GPIO">GPIO Pins
 
+
+### GPIO Pin Table
 The following GPIO pins are accessible through APIs:
 
 {:.table.table-bordered}
@@ -137,8 +139,8 @@ Note that you must add the following capability to the **Package.appxmanifest** 
 
 ## <a name="DB_I2C"></a>I2C Bus
 
-There are two I2C controllers 
-
+#I2C Controllers
+##SPI Pins
 **I2C0** exposed on the pin header with two lines **SDA** and **SCL**
 
 * Pin 17 - **I2C0 SDA**
@@ -149,6 +151,7 @@ There are two I2C controllers
 * Pin 21 - **I2C1 SDA**
 * Pin 19 - **I2C1 SCL**
 
+###SPI Sample
 The example below initializes **I2C0** and writes data to an I2C device with address **0x40**:
 
 {% highlight C# %}
@@ -160,9 +163,7 @@ public async void I2C()
 	var settings = new I2cConnectionSettings(0x40); /* 0x40 is the I2C device address   */
 	settings.BusSpeed = I2cBusSpeed.FastMode;       /* FastMode = 400KHz                */
 
-	string aqs = I2cDevice.GetDeviceSelector("I2C0");                       /* Find the selector string for the I2C bus controller                   */
-	var dis = await DeviceInformation.FindAllAsync(aqs);                    /* Find the I2C bus controller device with our selector string           */
-	I2cDevice Device = await I2cDevice.FromIdAsync(dis[0].Id, settings);    /* Create an I2cDevice with our selected bus controller and I2C settings */
+	I2cDevice Device = await I2cDevice.GetDefault(settings);    /* Create an I2cDevice with the default bus controller (I2C0) and the supplied I2C settings */
 
 	byte[] WriteBuf = new byte[] { 0x01, 0x02, 0x03, 0x04}; /* Some data to write to the device */
 
@@ -173,6 +174,7 @@ public async void I2C()
 
 ## <a name="DB_SPI"></a>SPI Bus
 
+###SPI Pins
 There is one SPI controller **SPI0** available on the DB
 
 * Pin 10 - **SPI0 MOSI**
@@ -183,6 +185,8 @@ There is one SPI controller **SPI0** available on the DB
 ### SPI Issues
 The SPI clock is fixed at 4.8mhz. The requested SPI clock will be ignored. 
 
+
+### SPI Sample
 An example on how to perform a SPI write on bus **SPI0** is shown below:
 {% highlight C# %}
 using Windows.Devices.Enumeration;
@@ -193,9 +197,8 @@ public async void SPI()
 	var settings = new SpiConnectionSettings(0); /* Create SPI initialization settings using chip select line CS0 */
 	settings.ClockFrequency = 10000000;          /* Set clock to 10MHz                                            */
 
-	string spiAqs = SpiDevice.GetDeviceSelector("SPI0");                         /* Find the selector string for the SPI bus controller          */
-	var devicesInfo = await DeviceInformation.FindAllAsync(spiAqs);              /* Find the SPI bus controller device with our selector string  */
-	SpiDevice Device = await SpiDevice.FromIdAsync(devicesInfo[0].Id, settings); /* Create an SpiDevice with our bus controller and SPI settings */
+
+	SpiDevice Device = await SpiDevice.GetDefault(settings); /* Create an SpiDevice with the default controller and the supplied SPI settings */
 
 	byte[] WriteBuf = new byte[] { 0x01, 0x02, 0x03, 0x04 }; /* Some data to write to the device */
 

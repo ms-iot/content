@@ -21,7 +21,7 @@ Hardware interfaces for the Raspberry Pi 2 and Raspberry Pi 3 are exposed throug
 * **8x** - Ground pins
 
 ## <a name="RPi2_GPIO">GPIO Pins
-
+###GPIO Pin Overview
 The following GPIO pins are accessible through APIs:
 
 {:.table.table-bordered}
@@ -56,6 +56,7 @@ The following GPIO pins are accessible through APIs:
 
 \* = Raspberry Pi 2 ONLY. GPIO 35 & 47 are not available on Raspberry Pi 3.
 
+###GPIO Sample
 As an example, the following code opens **GPIO 5** as an output and writes a digital '**1**' out on the pin:
 
 {% highlight C# %}
@@ -110,12 +111,14 @@ var gpio2 = controller.OpenPin(2); // succeeds now that GPIO2 is available
 {% endhighlight %}
 
 ## <a name="RPi2_UART"></a>Serial UART
-
+###Serial UART Overview
 There is one Serial UART available on the RPi2/3: **UART0**
 
 * Pin 8  - **UART0 TX**
 * Pin 10  - **UART0 RX**
 
+
+###Serial UART Sample
 The example below initializes **UART0** and performs a write followed by a read:
 
 
@@ -170,7 +173,7 @@ Note that you must add the following capability to the **Package.appxmanifest** 
 {% endhighlight %}
 
 ## <a name="RPi2_I2C"></a>I2C Bus
-
+###I2C Overview
 There is one I2C controller **I2C1** exposed on the pin header with two lines **SDA** and **SCL**. 1.8K&#x2126; internal pull-up resistors are already installed on the board for this bus.
 
 {:.table.table-bordered}
@@ -187,19 +190,12 @@ using Windows.Devices.I2c;
 
 public async void I2C()
 {
-    // Get a selector string for bus "I2C1"
-    string aqs = I2cDevice.GetDeviceSelector("I2C1");
-
-    // Find the I2C bus controller with our selector string
-    var dis = await DeviceInformation.FindAllAsync(aqs);
-    if (dis.Count == 0)
-        return; // bus not found
 
     // 0x40 is the I2C device address
     var settings = new I2cConnectionSettings(0x40);
 
-    // Create an I2cDevice with our selected bus controller and I2C settings
-    using (I2cDevice device = await I2cDevice.FromIdAsync(dis[0].Id, settings))
+    // Create an I2cDevice with the default controller and specified I2C settings
+    using (I2cDevice device = await I2cDevice.GetDefault(settings))
     {
         byte[] writeBuf = { 0x01, 0x02, 0x03, 0x04 };
         device.Write(writeBuf);
@@ -233,6 +229,8 @@ There are two SPI bus controllers available on the RPi2/3.
 | SCLK        | 40                | 21          |
 | CS0         | 36                | 16          |
 
+
+###SPI Sample
 An example of how to perform a SPI write on bus **SPI0** using chip select 0 is shown below:
 
 {% highlight C# %}
@@ -241,19 +239,12 @@ using Windows.Devices.Spi;
 
 public async void SPI()
 {
-    // Get a selector string for bus "SPI0"
-    string aqs = SpiDevice.GetDeviceSelector("SPI0");
-
-    // Find the SPI bus controller device with our selector string
-    var dis = await DeviceInformation.FindAllAsync(aqs);
-    if (dis.Count == 0);
-        return; // "SPI0" not found on this system
-
+ 
     // Use chip select line CS0
     var settings = new SpiConnectionSettings(0);
 
     // Create an SpiDevice with our bus controller and SPI settings
-    using (SpiDevice device = await SpiDevice.FromIdAsync(dis[0].Id, settings))
+    using (SpiDevice device = await SpiDevice.GetDefault(settings))
     {
         byte[] writeBuf = { 0x01, 0x02, 0x03, 0x04 };
         device.Write(writeBuf);
