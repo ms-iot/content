@@ -4,9 +4,11 @@ Once your Git flow is set up, you can make changes to the repository.
 
 For returning users - Ensure that you are up to date with the ms-iot repo:
 
-  `git reset --hard upstream/develop`
+  `git reset --hard ms-iot/develop`
+
+  `git push origin develop`
   
-**Note**: This will delete all local changes, so be sure this is what you want
+**Note**: This will delete all local changes and push ms-iot to your fork, so be sure this is what you want
 
 1. Read [contributing guidelines](authoring-guidelines.md).
   1. Changes that do not follow the guidelines will be rejected
@@ -15,7 +17,7 @@ For returning users - Ensure that you are up to date with the ms-iot repo:
   
     `jekyll serve --incremental`
   2. If prompted by the firewall, allow Jekyll to serve content
-  3. Open your web browser and point it to the local server. localhost:4000/content/en-US/iot.htm is the default page
+  3. Open your web browser and point it to the local server. http://localhost:4000/content/en-US/iot.htm is the default page
     * **Note:** you won't see the correct formatting with a local server for certain aspects of the website:
         * Header/footer
         * Some margins
