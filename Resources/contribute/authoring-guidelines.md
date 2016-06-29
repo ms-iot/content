@@ -36,7 +36,7 @@ When creating a new topic, or updating an exisitng one, there are a handful of t
   
   Good examples:
 
-  * Docs: `content/en-us/docs/Alljoyn.md` 
+  * Docs: `content/en-us/docs/PowerShell.md` 
   * Samples: `content/en-us/samples/helloworld.md`
 
 4. **Misc guidelines**
