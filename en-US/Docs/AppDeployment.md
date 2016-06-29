@@ -13,22 +13,22 @@ Deploying and debugging your application is straightforward with Visual Studio. 
 * [C++ App Deployment](#cpp)
 * [Python App Deployment](#python)
 
-**NOTE:** In order to use remote debugging, your IoT Core device must first be connected to same local network as your development PC. See the [Connectiong to Device] ({{site.baseurl}}/{{page.lang}}/Docs/ConnectToDevice.htm) instructions.
+**NOTE:** In order to use remote debugging, your IoT Core device must first be connected to same local network as your development PC. See the [Connecting to Device] ({{site.baseurl}}/{{page.lang}}/Docs/ConnectToDevice.htm) instructions.
 
 <a name="csharp"/>
 
-## Deploy a C# app to your Windows IoT Core device 
+## Deploy a C# app to your Windows 10 IoT Core device 
 {% include samples/AppDeploymentCS.md %}
 
-5. Now we're ready to deploy. Simply press F5 (or select Debug \| Start Debugging) to start debugging our app. You should see the app come up in Windows IoT Core device screen.
+5. Now we're ready to deploy. Simply press F5 (or select Debug \| Start Debugging) to start debugging our app. You should see the app come up on your device's screen.
 
-6. Once deployed, you can set breakpoints, see variable values, etc. To stop the app, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
+6. Once deployed, you can set breakpoints, see variable values, etc. To stop the app press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
 
-7. Having successfully deployed and debugged your UWP application, create a Release version by simply changing the Visual Studio toolbar configuration dropdown from `Debug` to `Release`.  You can now build and deploy your app to your device by selecting Build \| Rebuild Solution and Build \| Deploy Solution.
+7. After successfully deploying and debugging your UWP application, create a Release version - change the Visual Studio toolbar configuration dropdown from `Debug` to `Release`.  You can now build and deploy your app to your device by selecting Build \| Rebuild Solution and Build \| Deploy Solution.
 
 <a name="cpp"/>
 
-## Deploy a C++ app to your Windows IoT Core device
+## Deploy a C++ app to your Windows 10 IoT Core device
 
 {% include samples/AppDeploymentCPP.md %}
 
@@ -36,11 +36,11 @@ Deploying and debugging your application is straightforward with Visual Studio. 
 
 6. Once deployed, you can set breakpoints, see variable values, etc. To stop the app, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
 
-7. Having successfully deployed and debugged your UWP application, create a Release version by simply changing the Visual Studio toolbar configuration dropdown from `Debug` to `Release`.  You can now build and deploy your app to your device by selecting Build \| Rebuild Solution and Build \| Deploy Solution.
+7. Having successfully deployed and debugged your UWP application, create a Release version - change the Visual Studio toolbar configuration dropdown from `Debug` to `Release`.  You can now build and deploy your app to your device by selecting Build \| Rebuild Solution and Build \| Deploy Solution.
 
 <a name="python"/>
 
-## Deploy a Python app to your Windows IoT Core device
+## Deploy a Python app to your Windows 10 IoT Core device
 
 {% include samples/AppDeploymentPY.md %}
 
@@ -48,4 +48,4 @@ Deploying and debugging your application is straightforward with Visual Studio. 
 
 6. Once deployed, you can set breakpoints, see variable values, etc. To stop the app, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
 
-7. Having successfully deployed and debugged your UWP application, create a Release version by simply changing the Visual Studio toolbar configuration dropdown from `Debug` to `Release`.  You can now build and deploy your app to your device by selecting Build \| Rebuild Solution and Build \| Deploy Solution.
+7. Having successfully deployed and debugged your UWP application, create a Release version - change the Visual Studio toolbar configuration dropdown from `Debug` to `Release`.  You can now build and deploy your app to your device by selecting Build \| Rebuild Solution and Build \| Deploy Solution.
