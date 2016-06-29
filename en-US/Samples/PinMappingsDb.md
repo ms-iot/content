@@ -58,7 +58,7 @@ public void GPIO()
 {% endhighlight %}
 
 ### GPIO Issues
-* Output doesn't work on GPIO 24, input will work fine
+* Output doesn't work on GPIO 24. Input will work fine
 * Pins are configured as InputPullDown at boot, but will change to Input (floating) the first time they are opened
 * Pins do not revert to their default state when closed
 * Spurious interrupts may be seen when interrupts are enabled on multiple pins
