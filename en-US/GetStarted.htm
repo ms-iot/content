@@ -123,11 +123,6 @@ lang: en-US
         $(button).addClass('win-color-bg-0');
     }
 
-    function scrollToSection(section) {
-        var div = "#" + section;
-        // $('html, body').animate({ scrollTop: $(div).offset().top }, 'slow');
-    }
-
     function boardButtonClick(board) {
         // untoggle all the buttons
         unpressButton('#rpi2Button');
@@ -160,7 +155,6 @@ lang: en-US
                 $('#selectHardwareSection').hide('fast');
                 $('#selectOSSection').hide('fast');
                 $('#getStartedCompletedSection').show('fast');
-                scrollToSection('getStartedCompletedSection');
                 return;
         }
 
@@ -168,7 +162,6 @@ lang: en-US
         $('#selectOSSection').hide('fast');
         $('#getStartedCompletedSection').hide('fast');
         pressButton(pressedButton);
-        scrollToSection('selectHardwareSection');
      }
 
     function hardwareButtonClick(hardware) {
@@ -186,12 +179,10 @@ lang: en-US
             case 'starterPack':
                 $('#selectOSSection').hide('fast');
                 $('#getStartedCompletedSection').show('fast');
-                scrollToSection('getStartedCompletedSection');
                 break;
             case 'noobs':
                 $('#selectOSSection').hide('fast');
                 $('#getStartedCompletedSection').show('fast');
-                scrollToSection('getStartedCompletedSection');
                 break;
             case 'sdcard':
                 $('#selectOSSection').show('fast');
@@ -203,7 +194,6 @@ lang: en-US
                 }
                 
                 $('#getStartedCompletedSection').hide('fast');
-                scrollToSection('selectOSSection');
                 break;
         }
         var pressedButton = '#' + hardware + 'Button';
@@ -219,7 +209,6 @@ lang: en-US
         unpressButton('#stableButton');
         unpressButton('#insiderButton');
         pressButton(pressedButton);
-        scrollToSection('getStartedCompletedSection');
     }
 
     function getStartedNextButtonClick() {
