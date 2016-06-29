@@ -33,3 +33,16 @@ There are different formatting options for extra emphasis
 {% include warning.html text="This is a warning" %}
 
 {% include tip.html text="This is a tip" %}
+
+
+{% highlight CS %}
+This is a code snippet
+
+It can be multiple lines
+
+Also notice the specification of language above - see the following link for more information on what's available
+
+https://jekyllrb.com/docs/templates/#code-snippet-highlighting
+{% endhighlight %}
+
+Also, you can have `inline code snippets`
