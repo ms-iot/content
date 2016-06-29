@@ -102,11 +102,6 @@ lang: en-US
     </ul>
 </div>
 <div id="getStartedCompletedSection" style="display:none">
-    <div class="row spacer-84-top">
-        <div class="col-xs-24">
-            <h2 class="text-base">Get started is complete. Get the tools is next.</h2>
-        </div>
-    </div>
     <div class="row spacer-32-top">
         <div class="col-xs-24">
             <a id="getStartedNextButton" href="#" class="btn btn-primary" onclick="getStartedNextButtonClick()">Next</a>
@@ -130,7 +125,7 @@ lang: en-US
 
     function scrollToSection(section) {
         var div = "#" + section;
-        $('html, body').animate({ scrollTop: $(div).offset().top }, 'fast');
+        // $('html, body').animate({ scrollTop: $(div).offset().top }, 'slow');
     }
 
     function boardButtonClick(board) {
