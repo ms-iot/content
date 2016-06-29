@@ -147,8 +147,6 @@ lang: en-US
     Windows.UI.Core.CoreInput
     Windows.UI.Core.CoreWindowDialog
     Windows.UI.Core.CoreWindowFlyout
-    Windows.UI.Input.Inking.InkManager
-    Windows.UI.Input.Inking.InkRecognizerContainer
     Windows.UI.Popups.MessageDialog
     Windows.UI.ViewManagement.UISettings
     Windows.UI.Xaml.Controls.ListPickerFlyout
