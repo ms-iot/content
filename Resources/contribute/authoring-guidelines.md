@@ -98,9 +98,9 @@ Voice is, simply put, your writing style in terms of syntax, verbage, verbosity 
 * **Use paragraphs** (no bullets or numbers) for text that’s not in a list.
 
 **Terminology and abbreviations**
-* **Use the same term throughout your doc**. Don't go back and forth between terms (such as “machine” and "computer" and "PC") when you are referring to the same thing.
+* **Use the same term throughout your doc**. Don't go back and forth between terms (such as “machine” and "computer" and "PC") when you are referring to the same thing. We have decided on the following terms: "Device" (referring to the Raspberry Pi board), "Peripheral" (for anything hooked up to the device/Raspberry Pi), and "PC" (referring to the computer). 
 * **Do not abbreviate PowerShell** to PS unless it's part of a command. On first mention, use Windows PowerShell.
-* **Do not abbreviate product names** unless there is a legally-approved acronym.
+* **Do not abbreviate product names** unless there is a legally-approved acronym. *Official name of the Redstone 1 update to Windows 10: "Windows 10, version 1607". 
 * **Spell out acronyms on first mention**, and include the acronym in parentheses. Thereafter, you can use the acronym by itself. 
 **Example** – first mention: class identifier (CLSID); second mention: CLSID
 
