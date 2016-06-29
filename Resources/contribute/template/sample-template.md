@@ -26,6 +26,10 @@ Below is an image
 
 ![This is the alt text for the image]({{site.baseurl}}/Resources/images/Octocat.png)
 
+For white images, add a border - be sure to not include the `site.baseurl` when using this:
+
+{% include imageborder.html alt="This is the alt text for the image" link="/Resources/images/MSConnectSignup.png" %}
+
 There are different formatting options for extra emphasis
 
 {% include note.html text="This is a note" %}
@@ -33,7 +37,6 @@ There are different formatting options for extra emphasis
 {% include warning.html text="This is a warning" %}
 
 {% include tip.html text="This is a tip" %}
-
 
 {% highlight CS %}
 This is a code snippet
@@ -46,3 +49,9 @@ https://jekyllrb.com/docs/templates/#code-snippet-highlighting
 {% endhighlight %}
 
 Also, you can have `inline code snippets`
+
+| Here | Is | A  | Table |
+|------|----|----|-------|
+| Here      | Are  | Some  | Table  |
+| Contents  | 1    | 2     | 3      |
+| 4         | 5    | 6     | 7      |   
