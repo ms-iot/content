@@ -20,7 +20,7 @@ The easiest way to get all the Git tools is to download [GitHub Desktop](https:/
 4. Clone the repository in one of several ways: 
   1. Command line 
   
-    `git clone [link to .git] [NameYourLocalFolder] `
+    `git clone [link to forked .git] [NameYourLocalFolder] `
   2. Launch the GitHub app 
   
      Click 'Clone in Desktop'
@@ -28,9 +28,7 @@ The easiest way to get all the Git tools is to download [GitHub Desktop](https:/
      ![Clone](../images/GitHubClone.png)
   3. Clone using the GitHub Desktop application. 
   4. Using your own git flow (e.g. sourcetree) 
-5. Set up your upstream 
-
-  `git remote add upstream [link to .git] ` 
+ 
 
 For clarification:
 
