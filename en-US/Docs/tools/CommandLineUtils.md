@@ -113,3 +113,6 @@ Looking to configure some of the settings on your device? The below tools all co
 
 	To view the list of all the available network adapters, run `GetAdapterInfo` tool. 
 	
+* **Set folder permissions for UWP apps**
+
+	Not all folders on your device are accesible by Universal Windows Apps. To make a folder accesible to a UWP app, you can use `FolderPermissions` tool. For example run `FolderPermissions c:\test -e` to give UWP apps access to `c:\test` folder. Note this will work only with native Win32 apis for eg. CreateFile2 and not with WinRT apis like StorageFolder, StorageFile etc. 
