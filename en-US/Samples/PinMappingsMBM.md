@@ -6,6 +6,7 @@ lang: en-US
 ---
 # MinnowBoard Max Pin Mappings
 
+##Overview
 ![MinnowBoard Max Pin Header]({{site.baseurl}}/Resources/images/PinMappings/MBM_Pinout.png)
 
 <sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
@@ -45,7 +46,8 @@ The following GPIO pins are accessible through APIs:
 **Note:** **GPIO 4** and **GPIO 5** are used by the MinnowBoard Max as bootstrap configuration pins for the BIOS.
  Make sure that attached devices do not drive these GPIO low during boot, as this could prevent the MBM from booting.
  After the MBM has booted past the BIOS, these GPIO can be used normally.
-         
+     
+## GPIO Sample    
 As an example, the following code opens **GPIO 5** as an output and writes a digital '**1**' out on the pin:
          
 {% highlight C# %}
@@ -62,7 +64,7 @@ public void GPIO()
 {% endhighlight %}
 
 ## <a name="MBM_UART"></a>Serial UART
-
+###Overview
 There are two Serial UARTS available on the MBM: **UART1** and **UART2**
 
 **UART1** has the standard **UART1 TX** and **UART1 RX** lines, along with flow control signals **UART1 CTS** and **UART1 RTS**.
@@ -88,6 +90,7 @@ SerialDevice can result in an exception being thrown:
  * IsRequestToSendEnabled
  * Handshake - only SerialHandshake.None is supported
 
+###UART Sample
 The example below initializes **UART2** and performs a write followed by a read:
 
 
@@ -142,12 +145,14 @@ Note that you must add the following capability to the **Package.appxmanifest** 
 {% endhighlight %}
 
 ## <a name="MBM_I2C"></a>I2C Bus
-
+###I2C Overview
 There is one I2C controller **I2C5** exposed on the pin header with two lines **SDA** and **SCL**. 10K&#x2126; internal pull-up resistors are already present on these lines.
 
 * Pin 15 - **I2C5 SDA**
 * Pin 13 - **I2C5 SCL**
 
+
+###I2C Sample
 The example below initializes **I2C5** and writes data to an I2C device with address **0x40**:
 
 {% highlight C# %}
@@ -159,9 +164,8 @@ public async void I2C()
 	var settings = new I2cConnectionSettings(0x40); /* 0x40 is the I2C device address   */
 	settings.BusSpeed = I2cBusSpeed.FastMode;       /* FastMode = 400KHz                */
 
-	string aqs = I2cDevice.GetDeviceSelector("I2C5");                       /* Find the selector string for the I2C bus controller                   */
-	var dis = await DeviceInformation.FindAllAsync(aqs);                    /* Find the I2C bus controller device with our selector string           */
-	I2cDevice Device = await I2cDevice.FromIdAsync(dis[0].Id, settings);    /* Create an I2cDevice with our selected bus controller and I2C settings */
+          */
+	I2cDevice Device = await I2cDevice.GetDefault(settings);    /* Create an I2cDevice with the default controller and the specified I2C settings */
 
 	byte[] WriteBuf = new byte[] { 0x01, 0x02, 0x03, 0x04}; /* Some data to write to the device */
 
@@ -178,7 +182,7 @@ The current workaround is to insert a 100 ohm resistor in series with the I2C SC
 getting a bus response. One device that is known to require this workaround is the HTU21D.
 
 ## <a name="MBM_SPI"></a>SPI Bus
-
+###SPI Overview
 There is one SPI controller **SPI0** available on the MBM:
 
 * Pin 9 - **SPI0 MOSI**
@@ -186,6 +190,8 @@ There is one SPI controller **SPI0** available on the MBM:
 * Pin 11 - **SPI0 SCLK**
 * Pin 5 - **SPI0 CS0**
 
+
+###SPI Sample
 An example on how to perform a SPI write on bus **SPI0** is shown below:
 {% highlight C# %}
 using Windows.Devices.Enumeration;
@@ -196,9 +202,7 @@ public async void SPI()
 	var settings = new SpiConnectionSettings(0); /* Create SPI initialization settings using chip select line CS0 */
 	settings.ClockFrequency = 10000000;          /* Set clock to 10MHz                                            */
 
-	string spiAqs = SpiDevice.GetDeviceSelector("SPI0");                         /* Find the selector string for the SPI bus controller          */
-	var devicesInfo = await DeviceInformation.FindAllAsync(spiAqs);              /* Find the SPI bus controller device with our selector string  */
-	SpiDevice Device = await SpiDevice.FromIdAsync(devicesInfo[0].Id, settings); /* Create an SpiDevice with our bus controller and SPI settings */
+	SpiDevice Device = await SpiDevice.GetDefault(settings); /* Create an SpiDevice with the default controller and specified SPI settings */
 
 	byte[] WriteBuf = new byte[] { 0x01, 0x02, 0x03, 0x04 }; /* Some data to write to the device */
 

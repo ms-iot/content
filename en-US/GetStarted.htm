@@ -102,11 +102,6 @@ lang: en-US
     </ul>
 </div>
 <div id="getStartedCompletedSection" style="display:none">
-    <div class="row spacer-84-top">
-        <div class="col-xs-24">
-            <h2 class="text-base">Get started is complete. Get the tools is next.</h2>
-        </div>
-    </div>
     <div class="row spacer-32-top">
         <div class="col-xs-24">
             <a id="getStartedNextButton" href="#" class="btn btn-primary" onclick="getStartedNextButtonClick()">Next</a>
@@ -126,11 +121,6 @@ lang: en-US
     function unpressButton(button) {
         $(button).removeClass('win-color-bg-20');
         $(button).addClass('win-color-bg-0');
-    }
-
-    function scrollToSection(section) {
-        var div = "#" + section;
-        $('html, body').animate({ scrollTop: $(div).offset().top }, 'fast');
     }
 
     function boardButtonClick(board) {
@@ -165,7 +155,6 @@ lang: en-US
                 $('#selectHardwareSection').hide('fast');
                 $('#selectOSSection').hide('fast');
                 $('#getStartedCompletedSection').show('fast');
-                scrollToSection('getStartedCompletedSection');
                 return;
         }
 
@@ -173,7 +162,6 @@ lang: en-US
         $('#selectOSSection').hide('fast');
         $('#getStartedCompletedSection').hide('fast');
         pressButton(pressedButton);
-        scrollToSection('selectHardwareSection');
      }
 
     function hardwareButtonClick(hardware) {
@@ -191,12 +179,10 @@ lang: en-US
             case 'starterPack':
                 $('#selectOSSection').hide('fast');
                 $('#getStartedCompletedSection').show('fast');
-                scrollToSection('getStartedCompletedSection');
                 break;
             case 'noobs':
                 $('#selectOSSection').hide('fast');
                 $('#getStartedCompletedSection').show('fast');
-                scrollToSection('getStartedCompletedSection');
                 break;
             case 'sdcard':
                 $('#selectOSSection').show('fast');
@@ -208,7 +194,6 @@ lang: en-US
                 }
                 
                 $('#getStartedCompletedSection').hide('fast');
-                scrollToSection('selectOSSection');
                 break;
         }
         var pressedButton = '#' + hardware + 'Button';
@@ -224,7 +209,6 @@ lang: en-US
         unpressButton('#stableButton');
         unpressButton('#insiderButton');
         pressButton(pressedButton);
-        scrollToSection('getStartedCompletedSection');
     }
 
     function getStartedNextButtonClick() {
