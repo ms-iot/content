@@ -10,7 +10,7 @@ lang: en-US
 
 # Windows 10 IoT Core Dashboard 
 
-Windows 10 IoT Core Dashboard is the best way to download, set up and connect your Windows 10 IOT Core devices, all from your PC.
+Windows 10 IoT Core Dashboard is the best way to download, set up and connect your Windows 10 IoT Core devices, all from your PC.
 
 [Download Windows 10 IoT Core Dashboard]({{site.baseurl}}/{{page.lang}}/GetStarted.htm)
 
@@ -37,7 +37,7 @@ Having your IoT Core device connect to the device is essential. Many of the newe
 * Plugging in an ethernet cable
 * Plugging in a monitor to the device. This will show you diagnostic information about your device
 
-{% include note.html text="The official Raspberry pi2 Wi-Fi adapter can be unstable when connecting to Wi-Fi." %}
+{% include note.html text="The official Raspberry Pi 2 Wi-Fi adapter can be unstable when connecting to Wi-Fi." %}
 
 
 ## My Devices
