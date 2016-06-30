@@ -102,15 +102,9 @@ lang: en-US
     </ul>
 </div>
 <div id="getStartedCompletedSection" style="display:none">
-    <div class="row">
-        <div class="col-xs-24">
-            <h2><span class="step" id="lastStep">4</span>Continue</h2>
-            <hr />
-        </div>
-    </div>
     <div class="row spacer-32-top">
         <div style="padding-left:78px" class="col-xs-24">
-            <p> Continue the installation by getting the tools and instructions you'll need to get up and running. </p>
+            <p> Continue the setup process by getting the tools and instructions you'll need to get up and running. </p>
             <a id="getStartedNextButton" href="#" class="btn btn-primary" onclick="getStartedNextButtonClick()">Next</a>
         </div>
     </div>
@@ -159,7 +153,6 @@ lang: en-US
                 pressButton(pressedButton);
                 $('#selectInstallSection').hide('fast');
                 $('#selectOSSection').hide('fast');
-                $('#lastStep').text('2')
                 $('#getStartedCompletedSection').show('fast');
                 return;
         }
@@ -183,7 +176,6 @@ lang: en-US
         {
             case 'noobs':
                 $('#selectOSSection').hide('fast');
-                $('#lastStep').text('3')
                 $('#getStartedCompletedSection').show('fast');                
                 break;
             case 'sdcard':
@@ -199,7 +191,6 @@ lang: en-US
     function osButtonClick(os) {
         selectedOS = os;
         
-        $('#lastStep').text('4')
         $('#getStartedCompletedSection').show('fast');     
         var pressedButton = '#' + os + 'Button';
 
