@@ -37,10 +37,10 @@ A pull request (PR) is a request to the ms-iot team to accept your changes. It m
 
 1. Grab the latest changes from upstream
 
-    `git fetch upstream`
+    `git fetch ms-iot`
     
 2. Merge it into your local repository
-    1. `git merge upstream/develop`
+    1. `git merge ms-iot/develop`
     2. If you run into conflicts, you will have to hand-merge (you can use your favorite merging tool or even notepad for this)
     3. After hand-merging, you can continue the merge
         * `git add [fileYouHandMerged]`

@@ -51,7 +51,7 @@
          "tags":["intermediate","api"]
       },
       {
-         "title":"Ecosystem Compatibility List",
+         "title":"Hardware Compatibility List",
          "description":"Find a list of supported peripherals, interfaces, and protocols on Window 10 IoT Core devices",
          "link-text":"<a href='SupportedInterfaces.htm'>Learn More</a>",
          "ranking":6,
