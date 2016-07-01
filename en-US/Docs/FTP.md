@@ -12,7 +12,7 @@ lang: en-US
 
 ## Starting the FTP server on your device
 ___
-* By default, the FTP server is disabled on your device.  In order to start the FTP server on your device, first you need to connect to your device through [PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm) or [SSH]({{site.baseurl}}/{{page.lang}}/Samples/SSH.htm).
+* By default, the FTP server is disabled on your IoT Core device.  In order to start the FTP server on your device, first you need to connect to your device through [PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm) or [SSH]({{site.baseurl}}/{{page.lang}}/Samples/SSH.htm).
 * Type `start C:\Windows\System32\ftpd.exe`
 * You can check that the server is running by typing `tlist`, which will list all the running processes.  If the FTP server is running, you should see `ftpd.exe` in the list.
 
@@ -20,7 +20,7 @@ ___
 
 ## Stopping the FTP server on your device<a name="stopftp"/>
 ___
-* In order to stop the FTP server on your device, first you need to connect to your device through [Windows PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm) or [SSH]({{site.baseurl}}/{{page.lang}}/Samples/SSH.htm).  
+* In order to stop the FTP server on your IoT Core device, first you need to connect to your device through [PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm) or [SSH]({{site.baseurl}}/{{page.lang}}/Samples/SSH.htm).  
 * If you connected using PowerShell, type `kill -processname ftpd*` to stop the FTP process.
 
     ![FTP PowerShell Stop]({{site.baseurl}}/Resources/images/ftp/ftp_kill_powershell.png)
@@ -31,12 +31,11 @@ ___
 	
 ## Accessing your files over FTP<a name="accessftp"/>
 ___
-* The FTP server on your Windows 10 IoT Core device starts automatically on boot.  In order to connect to it, you need the IP address of your device.  You can find the IP address on the default app that boots when your device starts.
-* The FTP server on your Windows 10 IoT Core device starts automatically on boot.  In order to connect to it, you need the IP address of your device.  You can find the IP address on the default app that boots when your device starts.
+* The FTP server on your IoT Core device starts automatically on boot.  In order to connect to it, you need the IP address of your device.  You can find the IP address on the default app that boots when your device starts.
 
     ![DefaultApp on Windows IoT Core]({{site.baseurl}}/Resources/images/DefaultApp.png)
     
-* Once you have the IP, open up **File Explorer** on your PC and type `ftp://<TARGET_DEVICE>`, where `<TARGET_DEVICE>` is either the name or the IP address of your Windows 10 IoT Core device, then hit Enter.  Enter your administrator username and password if prompted.
+* Once you have the IP, open up **File Explorer** on your PC and type `ftp://<TARGET_DEVICE>`, where `<TARGET_DEVICE>` is either the name or the IP address of your device, then hit Enter.  Enter your administrator username and password if prompted.
 
     ![FTP explorer]({{site.baseurl}}/Resources/images/ftp/ftp_explorer.png)
 
@@ -55,7 +54,7 @@ ___
 
     ![FTP explorer with new root directory]({{site.baseurl}}/Resources/images/ftp/ftp_explorer_parameter.png)
 
-* In order to make this change permanent, you need to edit the script that starts the FTP server when the device turns on.  To do this, open up **File Explorer** and type `\\<TARGET_DEVICE>\c$\Windows\System32`, where `<TARGET_DEVICE>` is either the name or the IP address of your Windows 10 IoT Core device.
+* In order to make this change permanent, you need to edit the script that starts the FTP server when the device turns on.  To do this, open up **File Explorer** and type `\\<TARGET_DEVICE>\c$\Windows\System32`, where `<TARGET_DEVICE>` is either the name or the IP address of your device.
 
     ![FTP explorer edit script]({{site.baseurl}}/Resources/images/ftp/ftp_edit_script.png)
     
