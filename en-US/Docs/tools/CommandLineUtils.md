@@ -95,7 +95,7 @@ Looking to configure some of the settings on your device? The below tools all co
 
 * **Boot configuration:**
 
-	You can make changes to the boot configuration of your Windows IoT Core device using `bcdedit.exe`. For instance, you can enable testsigning with `bcdedit –set testsigning on` command.
+	You can make changes to the boot configuration of your Windows IoT Core device by using `bcdedit.exe`. For instance, you can enable testsigning with `bcdedit –set testsigning on` command.
 
 * **Shutdown/restart device:**
 
@@ -104,3 +104,15 @@ Looking to configure some of the settings on your device? The below tools all co
 * **Set display resolution**
 
 	To adjust the resolution of a display connected to your Windows 10 IoT Core device, run `SetDisplayResolution [width] [height]`. To query the resolution, exclude the `[width]` and `[height]` parameters.
+	
+* **Take screenshot**	
+
+	You can take the screenshot of your Windows IoTCore device by using `ScreenCapture.exe`. For example, run `ScreenCapture c:\folder\screencap.jpg` will take the screenshot and save it in screencap.jpg file.
+	
+* **Get information about Network Adapters**	
+
+	To view the list of all the available network adapters, run `GetAdapterInfo` tool. 
+	
+* **Set folder permissions for UWP apps**
+
+	Not all folders on your device are accesible by Universal Windows Apps. To make a folder accesible to a UWP app, you can use `FolderPermissions` tool. For example run `FolderPermissions c:\test -e` to give UWP apps access to `c:\test` folder. Note this will work only with native Win32 apis for eg. CreateFile2 and not with WinRT apis like StorageFolder, StorageFile etc. 

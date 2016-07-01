@@ -22,7 +22,7 @@
           },
           {
             "title":"Using PowerShell",
-            "link":"{{site.baseurl}}/Samples/PowerShell.htm"
+            "link":"{{site.baseurl}}/Docs/PowerShell.htm"
           },
           {
             "title":"Windows 10 IoT Core Porting Tool",
@@ -47,7 +47,7 @@
           },
           {
             "title":"Using SSH",
-            "link":"{{site.baseurl}}/Samples/SSH.htm"
+            "link":"{{site.baseurl}}/Docs/SSH.htm"
           },
           {
             "title":"Using WINDBG",
@@ -130,7 +130,7 @@
         "children":[
           {
             "title":"AllJoyn connectivity",
-            "link":"{{site.baseurl}}/Docs/Docs/AllJoyn.htm"
+            "link":"{{site.baseurl}}/Docs/AllJoyn.htm"
           },
           {
             "title":"WiFi connectivity",
