@@ -51,7 +51,7 @@ on a device with the hardware TPM, without having to change the app.
 
 To connect your device to Azure, click on the "Connect to Azure" tab:
 
-![](Building_Secure_Apps_for_IoT_Core_Screen01.png)
+![Open Connect to Azure Tab](Building_Secure_Apps_for_IoT_Core_Screen01.png)
 
 You will be asked to log in to your Azure account, pick the desired instance of
 Azure IoT Hub and associate your physical device with it. If you don’t have any
@@ -61,7 +61,7 @@ free instance.
 Once you have selected the IoT Hub and the device ID to associate your device
 with, you can imprint the shared access key of that device on your TPM:
 
-![](Building_Secure_Apps_for_IoT_Core_Screen02.png)
+![Provision Device](Building_Secure_Apps_for_IoT_Core_Screen02.png)
 
 Your device is now ready to connect to Azure in a secure way. Read
 [here](connect_app_to_cloud.htm) about connecting your app to Azure.
