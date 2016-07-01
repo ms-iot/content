@@ -154,6 +154,33 @@
             "link":"{{site.baseurl}}/Docs/CreateIoTCorePro.htm"
           }
         ]
+      },
+      {
+        "parent":"Cloud Introduction",
+        "children":[
+          {
+            "title":"Cloud Programming for IoT Core - an Introduction",
+            "link":"{{site.baseurl}}/Docs/cloud-intro.htm"
+          }
+        ]
+      },
+      {
+        "parent":"Connect App to Cloud",
+        "children":[
+          {
+            "title":"Connect Your App To the Cloud",
+            "link":"{{site.baseurl}}/Docs/connect_app_to_cloud.htm"
+          }
+        ]
+      },
+      {
+        "parent":"Connect Device to Cloud",
+        "children":[
+          {
+            "title":"Connect Your Device To the Cloud",
+            "link":"{{site.baseurl}}/Docs/connect_device_to_cloud.htm"
+          }
+        ]
       }
    ]
 }
