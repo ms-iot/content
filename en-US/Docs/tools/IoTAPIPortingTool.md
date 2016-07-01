@@ -7,7 +7,7 @@ lang: en-US
 
 # Windows 10 IoT Core API Porting Tool
 
-IoT Core only supports a subset of the Win32 and .Net API surface area available on various prior versions of Windows. This tool will scan your binaries and give you a report of the APIs these binaries use that aren't avialable, and give suggestions for possible replacements. This will both help with estimating the cost of a port to IoT Core as well as help you along the way.
+Windows 10 IoT Core only supports a subset of the Win32 and .Net API surface area available on various prior versions of Windows. This tool will scan your binaries and give you a report of the APIs these binaries use that aren't available and give suggestions for possible replacements. This will both help with estimating the cost of a port to IoT Core as well as help you along the way.
 
 
 ## Usage
