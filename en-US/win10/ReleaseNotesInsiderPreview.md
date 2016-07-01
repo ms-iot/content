@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default
 title: Release Notes
 permalink: /en-US/win10/ReleaseNotesInsiderPreview.htm
