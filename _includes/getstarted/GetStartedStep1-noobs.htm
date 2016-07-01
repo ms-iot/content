@@ -34,8 +34,13 @@
               Make sure you are running the public release of Windows 10 (version 10.0.10240 or better).<br/>
               You can find your current build number by clicking the start button, typing "winver", and hitting the Enter key.
             </p>
+            
             <p>
               If you're not running Windows 10 (version 10.0.10240 or better) you can upgrade from <a href="http://www.microsoft.com/en-us/software-download/windows10" target="_blank">here</a>.
+            </p>
+
+            <p>
+              While Windows 10 is not required to install Windows 10 IoT Core using NOOBS, you'll need Windows 10 in order to use the IoT Core Dashboard app. Windows 10 is also needed to use Visual Studio to develop applications on Windows 10 IoT Core.
             </p>
           </div>
         </section>
@@ -46,24 +51,33 @@
       <div class="col-xs-24">
         <section class="section">
           <div class="section-header">
-            <h2 class="section-title"><span class="step">2</span>Download and install Windows 10 IoT Core Dashboard<span class="pull-right"><a id="download-and-install-toggle" class="text-body toggle-button" onClick="hideDiv('download-and-install')">Hide</a></span></h2>
+            <h2 class="section-title"><span class="step">2</span>Get NOOBS<span class="pull-right"><a id="get-noobs-toggle" class="text-body toggle-button" onClick="hideDiv('get-noobs')">Hide</a></span></h2>
           </div>
-          <div class="section-body toggle-section" id="download-and-install">
-            <div class="row">
-              <div class="col-xs-24 col-md-12">
-                <p>By downloading and using the Windows 10 IoT Core Dashboard you agree to the <a href="http://go.microsoft.com/fwlink/?LinkID=703960&clcid=0x4809">license terms</a> and <a href="http://go.microsoft.com/fwlink/?LinkId=521839">privacy statement</a> for Windows 10 IoT Core Dashboard.</p>
-                <div class="btn-group">
-                  <a href="http://go.microsoft.com/fwlink/?LinkID=708576" id="device-center-link" class="btn btn-primary">Download Dashboard</a>
-                </div>
-              </div>
-              <div class="col-xs-24 col-md-11">
-                <img alt="dashboard for windows 10 iot core" src="{{site.baseurl}}/Resources/images/DeviceCenter.png">
-              </div>
-            </div>
+          <div class="section-body toggle-section" id="get-noobs">
+            <p>
+              To install Windows 10 IoT Core onto your Raspberry Pi using NOOBS you need to have a micro SD Card formatted with NOOBS. You may have received a pre-imaged SD Card with NOOBS already installed. If so, continue to the next step.
+              If you don't already have a NOOBS SD card, we recommend you follow the instructions to install Windows onto a blank SD Card. 
+            </p>
+            
+            <ol class='inline-list'>
+              <li>
+              If you'd like to continue using NOOBS, download the latest version of NOOBS from the <a href='https://downloads.raspberrypi.org/NOOBS_lite_latest'> official NOOBS download site </a>.  
+              </li>
+
+              <li> 
+                Once NOOBS has been downloaded, you must copy it onto your SD Card. To do so, you'll need to mount your SD card onto your machine and format it. The <a href='https://www.sdcard.org/downloads/formatter_4/'> SD Formatter 4.0 tool </a> from the SD Association is the suggested tool to use when formatting your SD card for NOOBS.
+              </li>
+
+              <li>
+                Finally, extract the NOOBS archive onto your newly formatted SD card. You can now proceed to step 2.
+              </li>
+            </ol> 
           </div>
         </section>
       </div>
     </div>
+
+    
 
     <div class="row">
       <div class="col-xs-24">

@@ -1,0 +1,140 @@
+<div class="row">
+  <div class="col-xs-4">
+    <section class="section section-top-margin">
+      <div class="section-body">
+        <p class="text-caption">
+          <span class="win-color-fg-secondary">Instructions for:</span><br/>
+          {% include_relative selection-list.inc %}
+          <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Change</a>
+        </p>
+        <br/>
+        <p><a href="GetStartedStep1.htm">1 Get the tools</a></p>
+        <p>2 Set up your device</p>
+        <p><a href="GetStartedStep3.htm">3 Set up Visual Studio</a></p>
+        <p><a href="GetStartedStep4.htm">4 Write your first app</a></p>
+      </div>
+    </section>
+  </div>
+  <div class="col-xs-20">
+    <section class="section">
+      <header class="page-title-header">
+        <h1 class="page-title">Step 2 of 4: Set up your device</h1>
+        <h2 class="page-subtitle">Use NOOBS to install Windows 10 IoT Core.</h2>
+      </header>
+    </section>
+
+    <div class="row">
+      <div class="col-xs-24">
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title"><span class="step">1</span>Setup your device and connect it to the network.<span class="pull-right"><a id="setup-device-toggle" class="text-body toggle-button" onClick="hideDiv('setup-device')">Hide</a></span></h2>
+          </div>
+          <div class="section-body toggle-section" id="setup-device">
+          <ol class='inline-list'>
+            <li>
+              Insert your NOOBS-ready micro SD Card into your Raspberry Pi. Ensure a monitor, keyboard, and mouse are also connected.
+            </li>
+        
+            <li>
+              If you are able to, connect your Raspberry Pi to the Internet by Ethernet cable. Boot your Raspberry Pi. 
+            </li>
+            
+            <li>
+               If you haven't yet connected the device to a network follow the on-screen instructions to connect to your WiFi network.
+            </li>
+          </ol>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-24">
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title"><span class="step">2</span>Follow the instructions to install Windows 10 IoT Core<span class="pull-right"><a id="install-toggle" class="text-body toggle-button" onClick="hideDiv('install')">Hide</a></span></h2>
+          </div>
+          <div class="section-body toggle-section" id="install">
+            <ol style='inline-list'>
+              <li>
+                Select <b>Windows 10 IoT Core</b> from the list of available options, and then click install.
+                <img src='{{site.baseurl}}/Resources/images/noobs/noobs-on-pi2-iot-core.jpg' />
+              </li>
+              <li>
+                NOOBS will ask to confirm you wish to overwrite the contents of the SD Card before installing Windows 10 IoT Core. Unless you have data on the card you wish to save, press yes. <b> Once the installation process starts, it cannot be undone. </b>
+              </li>
+              <li>
+                Select the RTM (official release) of Windows 10 IoT Core, or the latest Windows 10 IoT Core Insider build to install onto your SD Card. Finally, view and accept the license agreement.
+              </li>
+              <li>
+                <b> Optional. </b> If you have selected the Windows 10 IoT Core Insider build, you must log into a valid Microsot Account (MSA) Insider account. If you don't have one, you can sign up within NOOBS, or at <a href='http://insider.windows.com'> the Windows Insider website. </a> 
+                Being a Windows Insider lets you try out new versions of Windows before everyone else, giving you early access to new features and capabilities before everyone else. 
+              </li>
+              
+              <img width=400 src='{{site.baseurl}}/Resources/images/noobs/noobs-downloading.jpg' />
+              <li>
+                Windows 10 IoT Core is now installing. After a few minutes the installation should complete. Presing "OK" will cause your device to reboot into Windows 10 IoT Core!
+                <img width=400 src='{{site.baseurl}}/Resources/images/DefaultAppRpi2.png' />
+              </li>
+            </ol>
+
+            <p>
+              If using WiFi, you'll need to re-configure your WiFi settings after booting into Windows 10 IoT Core. You can either use the <a href='https://developer.microsoft.com/en-us/windows/iot/Downloads.htm'> IoT Core Dashboard </a> or the <a href='https://developer.microsoft.com/en-us/windows/iot/win10/tools/deviceportal'> Windows Device Portal </a> to do this.
+            </p>
+            
+          </div>
+        </section>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-xs-24">
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title"><span class="step">3</span>Try out the Quick-Run samples using the IoT Core Dashboard<span class="pull-right"><a id="quick-run-samples-toggle" class="text-body toggle-button" onClick="hideDiv('quick-run-samples')">Hide</a></span></h2>
+          </div>
+          
+          <div class="section-body toggle-section" id="quick-run-samples">
+            <p>You can download and install the IoT Core Dashboard to interact with and manage your device. By downloading and using the Windows 10 IoT Core Dashboard you agree to the <a href="http://go.microsoft.com/fwlink/?LinkID=703960&clcid=0x4809">license terms</a> and <a href="http://go.microsoft.com/fwlink/?LinkId=521839">privacy statement</a> for Windows 10 IoT Core Dashboard.</p>
+            <div class="btn-group">
+              <a href="http://go.microsoft.com/fwlink/?LinkID=708576" id="device-center-link" class="btn btn-primary">Download Dashboard</a>
+            </div>
+            {% include getstarted/shared/QuickRunSamples.htm %}
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-24">
+        <section class="section">
+          <div class="section-body">
+            <p>
+              <span class="win-color-fg-green">Step 2 of 4: Set up your device is complete.</span>
+              Set up Visual Studio <span class="win-color-fg-secondary">is next.</span>
+            </p> 
+            <div class="btn-group">
+              <a href="GetStartedStep3.htm" class="btn btn-primary">Next</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function hideDiv(div) {
+    var pdiv = "#" + div,
+        button = pdiv + "-toggle"
+
+    if ($(pdiv).css('display') == 'none') {
+      $(pdiv).toggle('slow');
+      $(button).html('Hide');
+    }
+    else {
+      $(pdiv).toggle('slow');
+      $(button).html('Show');
+    }
+  }
+</script>
