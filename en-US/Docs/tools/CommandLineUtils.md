@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: docs
 title: Windows 10 IoT Core Command Line Utils
 permalink: /en-US/Docs/tools/CommandLineUtils.htm
 lang: en-US

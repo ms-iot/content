@@ -5,28 +5,25 @@
   <li><a role="button" data-toggle="collapse" href="#collapseSection{{forloop.index}}" aria-expanded="false" aria-controls="collapseSection{{forloop.index}}">
       {{entry.parent}}
   </a>
-  {% for child in entry.children %}
-    {% assign temp = child.link | split: '/' | last %}
-    {% if currentPage == temp %}
-      {% assign currentUl = 'collapse in' %}
-    {% else %}
-      {% assign currentUl = 'collapse' %}
-    {% endif %}
-  {% endfor %}
-  <ul class="{{ currentUl}}" id="collapseSection{{forloop.index}}">'
-      {% for child in entry.children %}
-        {% assign childPage = child.link | split: '/' | last %}
-        {% if currentPage == childPage %}
-        <li><a href="{{child.link}}"><strong>{{child.title}}</strong></a>
-        {% else %}
-        <li><a href="{{child.link}}">{{child.title}}</a>
-        {% endif %}
-      {% endfor %}
-  </ul>
+    {% assign currentUl = 'collapse' %}
+    {% for child in entry.children %}
+      {% assign temp = child.link | split: '/' | last %}
+      {% if currentPage == temp %}
+        {% assign currentUl = 'collapse in' %}
+      {% endif %}
+    {% endfor %}
+    <ul class="{{ currentUl}}" id="collapseSection{{forloop.index}}">
+        {% for child in entry.children %}
+          {% assign childPage = child.link | split: '/' | last %}
+          {% if currentPage == childPage %}
+          <li><a href="{{child.link}}"><strong>{{child.title}}</strong></a>
+          {% else %}
+          <li><a href="{{child.link}}">{{child.title}}</a>
+          {% endif %}
+        {% endfor %}
+    </ul>
   </li>
 {% endfor %}
-<li>{{ currentList }}</li>
-<li>{{ currentPage }}</li>
 </ul>
 
 

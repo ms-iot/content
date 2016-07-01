@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: HelloWorld
 permalink: /en-US/Samples/HelloWorld.htm
 lang: en-US
