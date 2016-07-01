@@ -7,25 +7,25 @@ permalink: /en-US/Docs/UwpAndIoTCore.htm
 lang: en-US
 ---
 
-#Building Applications for Windows 10 IoT Core
+# Building Applications for Windows 10 IoT Core
 
-##Application Types
+## Application Types
 ___
 
-###Universal Windows Platform (UWP) Apps
+### Universal Windows Platform (UWP) Apps
 IoT Core is a UWP centric OS and UWP apps are its primary app type. 
 
-UWP, or the Universal Windows Platform, is an evolution of Windows Runtime (WinRT), which provides a common app platform available on every devices that runs Windows 10. You can find more information and an overview to UWP on [MSDN](https://msdn.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide). 
+Universal Windows Platform (UWP) is a common app platform across all version of Windows 10, including Windows 10 IoT Core.  UWP is an evolution of Windows Runtime (WinRT). You can find more information and an overview to UWP on [MSDN](https://msdn.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide). 
 
 ###Traditional UWP Apps
-As is the promise with UWP, UWP apps just work on IoT Core, just as they do on other Windows 10 editions. If you simply create a blank Xaml app in Visual Studio, you will be able to deploy it to and IoT Core device just as you would for phones or any other Windows 10 device. All of the standard UWP languages and project templates are fully supported on IoT Core. 
+UWP apps just work on IoT Core, just as they do on other Windows 10 editions. A simple, blank Xaml app in Visual Studio will properly deploy to your IoT Core device just as it would on a phone or Windows 10 PC. All of the standard UWP languages and project templates are fully supported on IoT Core. 
 
-###Background Apps
-In addition to the traditional UI apps, IoT Core has added a new UWP app type called "Background Applications". These applications do not have a UI component, but instead have a class that implements the "IBackgroundTask" interface and register that class as a "StartupTask" to run at system boot. These are still UWP apps which have access to the same set of APIs as all UWP apps and are supported from the same language. The only difference is that there is no UI entry point. 
+### Background Apps
+In addition to the traditional UI apps, IoT Core has added a new UWP app type called "Background Applications". These applications do not have a UI component, but instead have a class that implements the "IBackgroundTask" interface. They then register that class as a "StartupTask" to run at system boot. Since they are still UWP apps, they have access to the same set of APIs and are supported from the same language. The only difference is that there is no UI entry point. 
 
-Each type of IBackgroundTask gets its own resource policy and this is usually restrictive to improve battery life and machine resources on devices where these background apps are secondary components of foreground UI apps. However, on IoT devices, Background Apps are often the primary function of the device and so these StartupTasks get a resource policy that mirrors foreground UI apps on other devices. 
+Each type of IBackgroundTask gets its own resource policy. This is usually restrictive to improve battery life and machine resources on devices where these background apps are secondary components of foreground UI apps. On IoT devices, Background Apps are often the primary function of the device and so these StartupTasks get a resource policy that mirrors foreground UI apps on other devices. 
 
-The following sample shows you all of the code necessary to build a C# Background App that blinks an LED: 
+The following sample shows the code necessary to build a C# Background App that blinks an LED: 
 {% highlight C# %}
 namespace BlinkyHeadlessCS
 {
@@ -60,42 +60,45 @@ namespace BlinkyHeadlessCS
 }
 {% endhighlight %}
 
-###Non-UWP Apps
-While IoT Core does focus on UWP apps, we fully support traditional Win32 app types like Console Apps and NT Services. These apps are buit and run the same way as they do on Windows 10 Desktop and we even have an IoT Core C++ Console project template that makes this very easy to build from VS. 
+### Non-UWP Apps
+We also fully support traditional Win32 app types like Console Apps and NT Services. These apps are buit and run the same way as on Windows 10 Desktop. There is also an IoT Core C++ Console project template to make it easy to build from VS. 
 
 
-There are two main limitations on these non-UWP applications. 
-1. *No Win32 UI Apps:* There is no Win32 UI stack on IoT Core and so no Win32 app will be able to directly display UI. 
+There are two main limitations on these non-UWP applications: 
+1. *No Win32 UI Apps:* Since there is no Win32 UI stack on IoT Core, no Win32 app will be able to directly display UI. 
 2. *C++ Apps Only:* The only .Net Framework supported on IoT Core supports only UWP apps and so native Win32 apps are supported. 
 
-##Programming Languages
+## Programming Languages
 ___
 
-IoT Core supports a wide range of programming languages designed to appeal traditional Windows developers and those who prefer more IoT focused languages. The traditional UWP languages ship with support in Visual Studio by default, while the IoT targeted languages require the download of the "Windows IoT Core Project Templates" from the Visual Studio **Tools->Extensions and Updates** manager. 
+IoT Core supports a wide range of programming languages. 
 
-* In-Box Supported Languages
+### In-Box languages
+Traditional UWP languages ship with support in Visual Studio by default. All of the In-Box languages support both UI and Background Applications
+* Languages
  * C#
  * C++
  * Javascript
  * Visual Basic
-* IoT Focused Languages
+  
+### IoT Focused Languages  
+ The IoT targeted languages require the download of the "Windows IoT Core Project Templates" from the Visual Studio **Tools->Extensions and Updates** manager.  The IoT Focused languages support only Background Applications. You can also build *Windows Runtime Components* using C#, C++, or Visual Basic and then reference those libraries from any other language (except Python). 
+* Languages
  * Arduino Wiring
  * Node.js
  * Python
 
-All of the In-Box languages support both UI and Background Applications, while the IoT Focused languages support only Background Applications. You can also build *Windows Runtime Components* using C#, C++, or Visual Basic and then reference those libraries from any other language (except Python). 
-
 ### C# and Visual Basic (VB)
-C# and VB are both supported as UWP apps and thus have access to the portion of the .Net Framework available to UWP applications. They support UI apps built with Xaml as well as Background Apps. You can also build *Windows Runtime Components* that can be used from other supported languages. 
+C# and VB are both supported as UWP apps and have access to the portion of the .Net Framework available to UWP applications. They support UI apps built with Xaml as well as Background Apps. You can also build *Windows Runtime Components* that can be used from other supported languages. 
 
-There are multiple samples built with these languages, but the samples below provide you with a great primer. 
+Samples:
 
 * [C# Blinky Headless with Full Documentation](https://developer.microsoft.com/en-us/windows/iot/win10/samples/blinkyheadless)
 * [C# Blinky Headless Code Only](https://github.com/ms-iot/samples/tree/develop/BlinkyHeadless/CS)
 * [VB Blinky Headless Code Only](https://github.com/ms-iot/samples/tree/develop/BlinkyHeadless/VB)
 * [C# Blinky UI App](https://developer.microsoft.com/en-us/windows/iot/win10/samples/blinky)
 
-###Javascript
+### Javascript
 You can use Javascript to build both UI and Background Apps. The UI apps work the same way they do on all UWP editions. The Background Apps are new for IoT Core but are very simple. The following sample code shows the output of a the *JS New Project Template*: 
 
 {% highlight JS %}
@@ -109,16 +112,18 @@ You can use Javascript to build both UI and Background Apps. The UI apps work th
 {% endhighlight %}
 
 ###C++ 
-With C++ you can build Xaml or DirectX UI apps, as well as UWP Background projects and *non-UI* Win32 apps. You can find helpful samples below: 
+With C++ you can build Xaml or DirectX UI apps, as well as UWP Background projects and *non-UI* Win32 apps. 
+
+Samples: 
 
 * [Blinky Headless](https://github.com/ms-iot/samples/tree/develop/BlinkyHeadless/CPP)
 * [Blinky Headed](https://github.com/ms-iot/samples/tree/develop/Blinky/Cpp)
 * [Console App](https://developer.microsoft.com/en-us/windows/iot/win10/samples/consoleapp)
 
 ###Arduino Wiring
-With Arduino Wiring support you can build apps using this popular language and make use of the sample code providing in Arduino Wiring for the breadth of components and peripherals popular in the IoT ecosystem. 
+With Arduino Wiring support you can build apps in Arduino Wiring for many popular components and peripherals in the IoT ecosystem. 
 
-Our [Arduino Wiring Project Guide](https://developer.microsoft.com/en-us/windows/iot/win10/arduinowiringprojectguide) provides full instructions and will help you get set up to build these apps. The samples coppied and linked below will help you get started building your own.  You can even [build](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryBlinky) WinRT components in Arduino that can then be used from other languages. This is especially helpful for peripherals that have rich Arduino libraries like [LCD character displays](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryLcdDisplay).
+Our [Arduino Wiring Project Guide](https://developer.microsoft.com/en-us/windows/iot/win10/arduinowiringprojectguide) provides full instructions on how to get set up to build these apps. The samples copied and linked below will help you get started building your own.  You can even [build](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryBlinky) WinRT components in Arduino that can then be used from other languages. This is especially helpful for peripherals that have rich Arduino libraries like [LCD character displays](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryLcdDisplay).
 
 *Blinky Sample Code*
 The full [sample code and docs](https://developer.microsoft.com/en-us/windows/iot/win10/samples/arduino-wiring/helloblinky) are available in our samples page and you can find the full code below. 
@@ -143,7 +148,7 @@ void loop()
 
 {% endhighlight %}
 
-###Node.js
+### Node.js
 With IoT Core's Node.js supports you can build your Background Apps using this popular language and many of its popular libraries and frameworks. There are a variety of Node.js samples avialable on our github site, but the samples below will give you a great introduction.
 
 The [headless blinky](https://github.com/ms-iot/samples/tree/develop/BlinkyHeadless/node.js) sample shows how easy it is to build your first IoT Core Node.js app. 
