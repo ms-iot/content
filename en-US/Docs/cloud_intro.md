@@ -3,7 +3,7 @@ layout: docs
 title: Cloud Programming for IoT Core - an Introduction
 description: Describes why connect to the cloud and the purpose of different applicable Azure services
 keyword: Cloud, Azure
-permalink: cloud-intro.md - /en-US/Docs/cloud-intro.htm
+permalink: /en-US/Docs/cloud-intro.htm
 lang: en-US
 ---
 
