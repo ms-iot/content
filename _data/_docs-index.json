@@ -130,7 +130,7 @@
         "children":[
           {
             "title":"AllJoyn connectivity",
-            "link":"{{site.baseurl}}/Docs/Docs/AllJoyn.htm"
+            "link":"{{site.baseurl}}/Docs/AllJoyn.htm"
           },
           {
             "title":"WiFi connectivity",
