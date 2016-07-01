@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Use Windows PowerShell to connect to a Windows 10 IoT Core device.
-permalink: /en-US/Samples/PowerShell.htm
+permalink: /en-US/Docs/PowerShell.htm
 lang: en-US
 ---
 
