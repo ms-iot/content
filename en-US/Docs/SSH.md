@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Use SSH to connect to a Windows IoT Core device.
-permalink: /en-US/Samples/SSH.htm
+title: Using SSH to connect and configure a Windows 10 IoT Core device.
+permalink: /en-US/Docs/SSH.htm
 lang: en-US
 ---
 
-# Using SSH to connect and configure a device running Windows IoT Core
+# Using SSH to connect and configure a Windows 10 IoT Core device
 
 ### Download a SSH client
 In order to connect to your device using SSH, you'll first need to download a SSH client, such as [PuTTY](http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe).
