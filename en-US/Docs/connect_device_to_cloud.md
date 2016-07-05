@@ -3,7 +3,7 @@ layout: docs
 title: Connect Your App To the Cloud with TPM
 description: Describes how to connect an IoT Core device to the cloud
 keyword: Cloud, Azure, TPM, Security
-permalink: /en-US/Docs/connect_to_cloud.htm
+permalink: /en-US/Docs/connect_device_to_cloud.htm
 lang: en-US
 ---
 
