@@ -43,7 +43,7 @@ Before you start, you will need:
 * Select your 3D Printer model and press the "Deploy and run" button to deploy the app to your IoT Core device 
 
     ![Install 3D Network Printer]({{site.baseurl}}/Resources/images/3dprint/dashboard-app.png){:width="50%" :height="50%"}
-    <sub>[LulzBot TAZ 6 image](http://devel.lulzbot.com/TAZ/Olive/photos/TAZ_6_Angle_v2_Transparent.png){:target="_blank"} by [Aleph Objects, Inc.](https://www.alephobjects.com/){:target="_blank"} is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/){:target="_blank"}</sub>
+    <sub>[LulzBot TAZ 6 image](http://devel.lulzbot.com/TAZ/Olive/photos/TAZ_6_Angle_Rock2pus_transparent.png){:target="_blank"} by [Aleph Objects, Inc.](https://www.alephobjects.com/){:target="_blank"} is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/){:target="_blank"}</sub>
     
 ### 3. Add your 3D Printer
 
