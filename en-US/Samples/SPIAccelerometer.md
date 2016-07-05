@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: SPI Accelerometer Sample
 permalink: /en-US/Samples/SPIAccelerometer.htm
 lang: en-US

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Python Blinky Server Sample
 permalink: /en-US/Samples/PythonBlinkyServer.htm
 lang: en-US

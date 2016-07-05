@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Nodejs Console Blinky
 permalink: /en-US/Samples/nodejs-blinky.htm
 lang: en-US

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Hello Blinky
 permalink: /en-US/Samples/arduino-wiring/HelloBlinky.htm
 lang: en-US

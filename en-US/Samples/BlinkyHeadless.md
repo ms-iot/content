@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Blinky Headless Sample
 permalink: /en-US/Samples/BlinkyHeadless.htm
 lang: en-US

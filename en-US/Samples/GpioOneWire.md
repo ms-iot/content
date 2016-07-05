@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: GpioOneWire
 permalink: /en-US/Samples/GpioOneWire.htm
 lang: en-US

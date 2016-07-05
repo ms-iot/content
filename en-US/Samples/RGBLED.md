@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: RGB LED Sample
 permalink: /en-US/Samples/RGBLED.htm
 lang: en-US

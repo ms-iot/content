@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Shift Register Sample
 permalink: /en-US/Samples/ShiftRegisterSample.htm
 lang: en-US

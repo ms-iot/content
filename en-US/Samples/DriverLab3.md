@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Driver Lab - Deploy the driver and confirm the installation
 permalink: /en-US/Samples/DriverLab3.htm
 lang: en-US

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Nodejs
 permalink: /en-US/Samples/Nodejs.htm
 lang: en-US

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: NodejsWUCylon
 permalink: /en-US/Samples/NodejsWUCylon.htm
 lang: en-US

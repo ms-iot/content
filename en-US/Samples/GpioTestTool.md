@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: GpioTestTool
 permalink: /en-US/Samples/GpioTestTool.htm
 lang: en-US

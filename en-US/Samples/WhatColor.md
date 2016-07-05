@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: What Color Is It?
 permalink: /en-US/Samples/WhatColor.htm
 step: AdafruitKitContents.htm

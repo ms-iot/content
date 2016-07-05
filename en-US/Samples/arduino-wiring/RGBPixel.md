@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: RGBPixel
 permalink: /en-US/Samples/arduino-wiring/RGBPixel.htm
 lang: en-US

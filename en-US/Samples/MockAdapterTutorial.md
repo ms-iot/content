@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Alljoyn Mock Adapter Tutorial
 permalink: /en-US/Samples/MockAdapterTutorial.htm
 lang: en-US

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: App Installation Sample
 permalink: /en-US/Samples/AppInstall.htm
 lang: en-US

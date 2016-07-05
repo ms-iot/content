@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: MinnowBoard Max Pin Mappings
 permalink: /en-US/Samples/PinMappingsMBM.htm
 lang: en-US

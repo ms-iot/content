@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Arduino Wiring Weather Station
 permalink: /en-US/Samples/arduino-wiring/WeatherStation.htm
 lang: en-US

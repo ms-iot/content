@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Python 'Hello, World' sample
 permalink: /en-US/Samples/Python.htm
 lang: en-US

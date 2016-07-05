@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: SPI Display Sample
 permalink: /en-US/Samples/SPIDisplay.htm
 lang: en-US

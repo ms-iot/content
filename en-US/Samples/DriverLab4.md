@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Driver Lab - Use Visual Studio to deploy a driver
 permalink: /en-US/Samples/DriverLab4.htm
 lang: en-US

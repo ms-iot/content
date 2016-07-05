@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: IoT Core Default App
 permalink: /en-US/Samples/IoTDefaultApp.htm
 lang: en-US

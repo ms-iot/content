@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Arduino Wiring Potentiometer Sample
 permalink: /en-US/Samples/arduino-wiring/Potentiometer.htm
 lang: en-US

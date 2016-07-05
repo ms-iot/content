@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Using Windows File Sharing
 permalink: /en-US/Samples/SMB.htm
 lang: en-US

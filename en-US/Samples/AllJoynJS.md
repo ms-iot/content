@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: AllJoyn.JS
 permalink: /en-US/Samples/AllJoynJS.htm
 lang: en-US

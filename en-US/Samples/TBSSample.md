@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: TBS Sample Application
 permalink: /en-US/Samples/TBSSample.htm
 lang: en-US

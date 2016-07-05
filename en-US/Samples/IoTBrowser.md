@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: IoT Browser Sample
 permalink: /en-US/Samples/IoTBrowser.htm
 lang: en-US

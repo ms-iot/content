@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Driver lab
 permalink: /en-US/Samples/DriverLab.htm
 lang: en-US

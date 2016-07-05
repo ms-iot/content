@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: ZWaveTutorial
 permalink: /en-US/Samples/ZWaveTutorial.htm
 lang: en-US

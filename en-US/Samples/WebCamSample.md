@@ -1,5 +1,5 @@
 ---
-layout: default  
+layout: sample  
 title: Web Cam Sample  
 permalink: /en-US/Samples/WebCamSample.htm  
 lang: en-US  

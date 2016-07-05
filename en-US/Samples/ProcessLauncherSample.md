@@ -1,5 +1,5 @@
 ---
-layout: default  
+layout: sample  
 title: ProcessLauncher Sample  
 permalink: /en-US/Samples/ProcessLauncherSample.htm  
 lang: en-US  

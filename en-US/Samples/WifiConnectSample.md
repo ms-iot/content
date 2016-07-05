@@ -1,5 +1,5 @@
 ---
-layout: default  
+layout: sample  
 title: Wifi Connect Sample  
 permalink: /en-US/Samples/WifiConnectSample.htm  
 lang: en-US  

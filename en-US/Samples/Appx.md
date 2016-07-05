@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: AppX Creation and Deployment
 permalink: /en-US/Samples/Appx.htm
 lang: en-US

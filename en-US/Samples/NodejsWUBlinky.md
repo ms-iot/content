@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: NodejsWUBlinky
 permalink: /en-US/Samples/NodejsWUBlinky.htm
 lang: en-US

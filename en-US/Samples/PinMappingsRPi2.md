@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Raspberry Pi2 & 3 Pin Mappings
 permalink: /en-US/Samples/PinMappingsRPi2.htm
 lang: en-US

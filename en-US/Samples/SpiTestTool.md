@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: SpiTestTool
 permalink: /en-US/Samples/SpiTestTool.htm
 lang: en-US
