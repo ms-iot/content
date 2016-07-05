@@ -7,7 +7,7 @@ lang: en-US
 
 # Express Node.js (Windows Universal) Sample
 
-{% include VerifiedVersion.md %}
+
 
 ### Set up your PC
 * Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).

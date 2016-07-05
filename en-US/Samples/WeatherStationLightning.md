@@ -7,7 +7,7 @@ lang: en-US
 
 # Communicate with an I2C sensor using Lightning I2c provider
 
-{% include VerifiedVersion.md %}
+
 
 This sample demonstrates how to communicate with an I2c device using the Micorosot.IoT.Providers.Lightning.I2cProvider
 

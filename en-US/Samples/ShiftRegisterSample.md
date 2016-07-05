@@ -7,7 +7,7 @@ lang: en-US
 
 # Shift Register Sample
 
-{% include VerifiedVersion.md %}
+
 
 ![Shift Register Sample Image]({{site.baseurl}}/Resources/images/ShiftRegister/ShiftRegisterProjectPicture_480.png)
 

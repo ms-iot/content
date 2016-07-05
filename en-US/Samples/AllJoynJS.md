@@ -7,7 +7,7 @@ lang: en-US
 
 # AllJoyn.JS
 
-{% include VerifiedVersion.md %}
+
 
 AllJoyn.JS, by Allseen Alliance, provides an easy and flexible way to develop AllJoyn applications in JavaScript.  AllJoyn.JS is a deep integration between AllJoyn Thin Core Library (ajtcl) and base services with Duktape, an ECMAScript 5.0 compliant compiler and runtime designed for small-footprint embedded microcontrollers.
 

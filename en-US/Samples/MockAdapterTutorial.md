@@ -7,7 +7,7 @@ lang: en-US
 
 # Alljoyn Mock Adapter Sample
 
-{% include VerifiedVersion.md %}
+
 
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\AllJoyn\Samples\MockAdapter`.  The sample code is available in C++. Make a copy of the folder on your disk and open the project from Visual Studio.
 

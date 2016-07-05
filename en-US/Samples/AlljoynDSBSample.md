@@ -7,7 +7,7 @@ lang: en-US
 
 # Alljoyn DSB GPIO Tutorial
 
-{% include VerifiedVersion.md %}
+
 
 You can find the source code for AllJoyn samples by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\AllJoyn`. This tutorial shows how a GPIO Device can be exposed to the AllJoyn Bus using the AllJoyn Device System Bridge.
 

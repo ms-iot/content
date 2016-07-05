@@ -7,7 +7,7 @@ lang: en-US
 
 # RGB LED Sample
 
-{% include VerifiedVersion.md %}
+
 
 [View the code on Github](https://github.com/ms-iot/samples/blob/develop/RGBLED/CS/MainPage.xaml.cs)
 

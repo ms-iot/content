@@ -7,7 +7,7 @@ lang: en-US
 
 # Blinky Headless Sample with Lightning Provider
 
-{% include VerifiedVersion.md %}
+
 
 This sample demonstrates how to communicate with GPIO using the Micorosot.IoT.Providers.Lightning.I2cProvider
 

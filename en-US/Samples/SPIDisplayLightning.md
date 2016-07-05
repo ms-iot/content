@@ -7,7 +7,7 @@ lang: en-US
 
 # Communicate with SPI Display using Lightning providers
 
-{% include VerifiedVersion.md %}
+
 
 This sample demonstrates how to communicate with SPI bus controllers using the Micorosot.IoT.Providers.Lightning.SpiProvider
 

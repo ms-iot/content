@@ -7,7 +7,7 @@ lang: en-US
 
 # Serial Port Sample
 
-{% include VerifiedVersion.md %}
+
 
 We'll create a simple app that allows communication between a desktop and an IoT device over a serial interface.
 

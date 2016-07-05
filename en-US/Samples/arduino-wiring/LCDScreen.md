@@ -7,7 +7,7 @@ lang: en-US
 
 # LCD Text Display
 
-{% include VerifiedVersion.md %}
+
 
 Learn to Deploy and Debug an Arduino Wiring sketch on Raspberry Pi 2 and 3 or Minnowboard Max to control text on an LCD screen!
 

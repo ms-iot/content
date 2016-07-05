@@ -7,7 +7,7 @@ lang: en-US
 
 # Johnny-Five Node.js (Universal Windows) Sample
 
-{% include VerifiedVersion.md %}
+
 
 In this sample, you will use [Johnny-Five](https://www.npmjs.com/package/johnny-five) running on a Raspberry Pi 2 or 3 to control a servo connected to an Arduino (with [Firmata](https://www.npmjs.com/package/firmata) installed).
 
