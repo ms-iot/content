@@ -3,7 +3,7 @@ layout: docs
 title: Connect Your App To the Cloud
 description: Describes how to connect a UWP app to Azure
 keyword: Cloud, Azure, Connected Services
-permalink: /en-US/Docs/connect_to_cloud.htm
+permalink: /en-US/Docs/connect_app_to_cloud.htm
 lang: en-US
 ---
 
