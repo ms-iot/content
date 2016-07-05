@@ -13,6 +13,10 @@
         "parent":"Developer tools",
         "children":[
           {
+            "title": "Building Apps for IoT Core",
+            "link": "{{site.baseurl}}/Docs/BuildingAppsForIoTCore.htm"
+          },
+          {
             "title":"Visual Studio app deployment",
             "link":"{{site.baseurl}}/Docs/AppDeployment.htm"
           },
