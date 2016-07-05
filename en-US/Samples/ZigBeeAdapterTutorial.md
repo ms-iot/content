@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: ZigBeeAdapterTutorial
 permalink: /en-US/Samples/ZigBeeAdapterTutorial.htm
 lang: en-US

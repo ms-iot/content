@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Serial Sample
 permalink: /en-US/Samples/SerialSample.htm
 lang: en-US

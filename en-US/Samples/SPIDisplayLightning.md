@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: SPI Display using Lightning Providers samples
 permalink: /en-US/Samples/SPIDisplayLightning.htm
 lang: en-US

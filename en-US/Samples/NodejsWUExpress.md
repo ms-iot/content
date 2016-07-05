@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: NodejsWU
 permalink: /en-US/Samples/NodejsWUExpress.htm
 lang: en-US

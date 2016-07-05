@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: I2cTestTool
 permalink: /en-US/Samples/I2cTestTool.htm
 lang: en-US

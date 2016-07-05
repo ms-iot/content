@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Dragonboard Pin Mappings
 permalink: /en-US/Samples/PinMappingsDb.htm
 lang: en-US

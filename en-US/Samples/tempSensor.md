@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Potentiometer Sample
 permalink: /en-US/Samples/tempSensor.htm
 lang: en-US

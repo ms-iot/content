@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: NodejsCylon
 permalink: /en-US/Samples/NodejsCylon.htm
 lang: en-US

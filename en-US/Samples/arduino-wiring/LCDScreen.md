@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: LCD Text Display
 permalink: /en-US/Samples/arduino-wiring/LCDScreen.htm
 lang: en-US

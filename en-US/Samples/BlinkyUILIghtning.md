@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Blinky UI using Lightning Providers sample
 permalink: /en-US/Samples/BlinkyUILightning.htm
 lang: en-US

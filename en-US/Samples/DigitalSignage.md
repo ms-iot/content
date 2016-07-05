@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Digital Signage UWP Sample
 permalink: /en-US/Samples/DigitalSignage.htm
 lang: en-US

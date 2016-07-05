@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Push Button Sample
 permalink: /en-US/Samples/PushButton.htm
 lang: en-US

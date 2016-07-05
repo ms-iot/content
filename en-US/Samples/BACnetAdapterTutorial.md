@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: BACnetAdapterTutorial
 permalink: /en-US/Samples/BACnetAdapterTutorial.htm
 lang: en-US

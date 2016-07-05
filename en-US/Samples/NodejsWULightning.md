@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: NodejsWULightning
 permalink: /en-US/Samples/NodejsWULightning.htm
 lang: en-US

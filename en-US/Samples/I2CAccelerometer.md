@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: I2C Accelerometer Sample
 permalink: /en-US/Samples/I2CAccelerometer.htm
 lang: en-US

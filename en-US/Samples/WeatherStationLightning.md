@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: WeatherStation using Lightning Providers sample
 permalink: /en-US/Samples/WeatherStationLightning.htm
 lang: en-US

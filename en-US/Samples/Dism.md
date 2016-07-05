@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Use DISM to image the SD card for Windows IoT Core device
 permalink: /en-US/Samples/DISM.htm
 lang: en-US

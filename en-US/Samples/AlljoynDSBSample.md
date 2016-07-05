@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: AllJoyn DSB Sample
 permalink: /en-US/Samples/AlljoynDSBSample.htm
 lang: en-US

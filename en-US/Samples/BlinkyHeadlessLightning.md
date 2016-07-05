@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Blinky Headless using Lightning Providers sample
 permalink: /en-US/Samples/BlinkyHeadlessLightning.htm
 lang: en-US

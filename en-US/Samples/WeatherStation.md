@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Weather Patterns of Makers
 permalink: /en-US/Samples/WeatherStation.htm
 step: AdafruitKitContents.htm

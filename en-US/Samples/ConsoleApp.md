@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Console App Sample
 permalink: /en-US/Samples/ConsoleApp.htm
 lang: en-US

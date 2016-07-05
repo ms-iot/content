@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: NodejsWU
 permalink: /en-US/Samples/nodejs-wu-azure.htm
 lang: en-US

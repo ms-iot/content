@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: OneNote cloud services
 permalink: /en-US/Samples/arduino-wiring/OneNote.htm
 lang: en-US

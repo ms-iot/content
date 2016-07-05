@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: NodejsWUJ5
 permalink: /en-US/Samples/NodejsWUJ5.htm
 lang: en-US

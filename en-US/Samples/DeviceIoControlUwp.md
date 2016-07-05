@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: DeviceIoControlUwp
 permalink: /en-US/Samples/DeviceIoControlUwp.htm
 lang: en-US

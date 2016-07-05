@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: BLE GATT Sample - Overview
 permalink: /en-US/Samples/BLEGatt.htm
 lang: en-US

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: AllJoyn Managed DSB Gpio Tutorial
 permalink: /en-US/Samples/AlljoynDSBSample_Managed.htm
 lang: en-US

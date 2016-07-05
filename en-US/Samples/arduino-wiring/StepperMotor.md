@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Stepper Motor
 permalink: /en-US/Samples/arduino-wiring/StepperMotor.htm
 lang: en-US

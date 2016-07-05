@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: I2C Port Expander Sample
 permalink: /en-US/Samples/I2CPortExpander.htm
 lang: en-US

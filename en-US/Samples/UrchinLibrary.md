@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Urchin Library
 permalink: /en-US/Samples/UrchinLibrary.htm
 lang: en-US
