@@ -1,13 +1,13 @@
 ---
 layout: docs
-title: Cloud Programming for IoT Core - an Introduction
+title: Cloud programming
 description: Describes why connect to the cloud and the purpose of different applicable Azure services
 keyword: Cloud, Azure
 permalink: /en-US/Docs/cloud-intro.htm
 lang: en-US
 ---
 
-# Cloud Programming for IoT Core - an Introduction
+# Cloud programming
 
 The Internet of Things is built on cloud computing. The ability to communicate
 with the cloud and derive insight from the data is an essential part of any IoT
@@ -27,12 +27,9 @@ transactional protocols such as the two-phase commit.
 
 ## Security
 
-For each message, we must ensure that it comes from (or is received by) a
-trusted device, and is not tampered with. Often, the data can contain
+Security is an essential part of IoT. For each message, we must ensure that it comes from (or is received by) a
+trusted device and is not tampered with. The data can contain
 information that must be encrypted.
-
-Security is an essential part of the IoT and must be designed into the system up
-front.
 
 ## Azure IoT Hub
 
@@ -44,9 +41,9 @@ scale up your solution as its needs grow.
 
 ## Universal Windows Platform
 
-UWP (Universal Windows Platform) is an evolution of Windows application model
+Universal Windows Platform (UWP) is an evolution of Windows application model
 introduced in Windows 8. UWP provides a common app platform available on every
-device that runs Windows 10, including the IoT Core.
+device that runs Windows 10, including IoT Core.
 
 Microsoft offers a set of libraries and tools that allow you to build your
 connected UWP IoT applications that connect to Azure IoT Hub.
