@@ -911,7 +911,9 @@ body .alert-tip {
     color: #3c763d;
 }
 
-
+body .doc-samples-sidebars {
+	margin-top: 20px;
+}
 
 
 
