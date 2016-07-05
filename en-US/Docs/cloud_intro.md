@@ -51,5 +51,5 @@ device that runs Windows 10, including the IoT Core.
 Microsoft offers a set of libraries and tools that allow you to build your
 connected UWP IoT applications that connect to Azure IoT Hub.
 
-Continue to read about connecting your IoT Core device to Azure IoT Hub
-[here](connect_device_to_cloud.htm) and [here](connect_app_to_cloud.htm).
+Continue reading about connecting your IoT Core device to Azure IoT Hub on the
+[connect device to cloud](connect_device_to_cloud.htm) and [connect app to cloud](connect_app_to_cloud.htm) pages.
