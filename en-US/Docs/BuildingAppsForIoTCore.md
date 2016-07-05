@@ -8,7 +8,7 @@ lang: en-US
 ---
 
 # Building Applications for Windows 10 IoT Core
-Learn about the languages supported on IoT Core as well as the UWP and Non UWP app types supported on IoT Core. 
+Learn about the languages supported on IoT Core as well as the UWP and non-UWP app types supported on IoT Core. 
 
 ## Application Types
 ___
