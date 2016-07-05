@@ -43,7 +43,7 @@
           },
           {
             "title":"Access your files using FTP",
-            "link":"{{site.baseurl}}/Samples/FTP.htm"
+            "link":"{{site.baseurl}}/Docs/FTP.htm"
           },
           {
             "title":"Using SSH",
