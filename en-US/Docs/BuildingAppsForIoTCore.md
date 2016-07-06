@@ -213,7 +213,7 @@ while True:
 
 gpio.cleanup()
 
-{% highlight %}
+{% endhighlight %}
 
 *Additional Interesting Samples*
 *[Weather Station](https://github.com/ms-iot/samples/tree/develop/WeatherStation/Python/PythonWeatherStation)
