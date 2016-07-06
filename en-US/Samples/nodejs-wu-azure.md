@@ -6,7 +6,7 @@ lang: en-US
 ---
 
 # Azure Node.js Sample (UWP)
-{% include VerifiedVersion.md %}
+
 
 This sample shows how to send data from a light sensor (photoresistor) to an Azure IoT Hub (and to Azure storage) using a Node.js UWP app.
 

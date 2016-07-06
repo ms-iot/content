@@ -7,7 +7,7 @@ lang: en-US
 
 # Blinky Node.js (Console Application) Sample
 
-{% include VerifiedVersion.md %}
+
 
 This page will take you through the steps to blink an LED from a Node.js console app running on a Raspberry Pi. This sample is similar to the 
 [Node.js (UWP) blinky sample]({{site.baseurl}}/{{page.lang}}/Samples/NodejsWUBlinky.htm). 

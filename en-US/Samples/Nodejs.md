@@ -7,7 +7,7 @@ lang: en-US
 
 # MemoryStatus Node.js (Console Application) Sample
 
-{% include VerifiedVersion.md %}
+
 
 Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/{{page.lang}}/Samples/ConsoleApp.htm)
 
@@ -126,7 +126,7 @@ Create a folder on the device called C:\MemoryStatusSample. Then copy the files 
 * MemoryStatusAddon.node
 * server.js
 
-Connect to the device using PowerShell.  Please follow the instructions found [here]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm)
+Connect to the device using PowerShell.  Please follow the instructions found on the [Powershell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm) page.
 
 Allow Node.exe to communicate through the firewall with the following command:
 

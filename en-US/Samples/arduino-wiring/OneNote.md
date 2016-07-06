@@ -7,7 +7,7 @@ lang: en-US
 
 # OneNote cloud services
 
-{% include VerifiedVersion.md %}
+
 
 Learn how to deploy an Arduino Wiring sketch on Raspberry Pi 2 and 3 or Minnowboard Max and use http messages to Get and Post OneNote pages.
 

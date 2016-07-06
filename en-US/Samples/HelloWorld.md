@@ -7,7 +7,7 @@ lang: en-US
 
 # 'Hello, World!' Sample
 
-{% include VerifiedVersion.md %}
+
 
 In this sample, we will create and deploy the proverbial 1st app, "Hello World" to any device running Windows IoT Core!
 
