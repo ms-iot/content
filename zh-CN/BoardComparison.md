@@ -138,11 +138,11 @@ lang: zh-CN
       </td>
       <td>
         <p>8 个缓冲的 GPIO 引脚</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/win10/MBM.htm">设置 MinnowBoard MAX</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">设置 MinnowBoard MAX</a></p>
       </td>
       <td>
         <p>12 个 GPIO 引脚</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/win10/DB410c.htm">设置 DragonBoard 410c</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">设置 DragonBoard 410c</a></p>
       </td>
     </tr>
 </table>

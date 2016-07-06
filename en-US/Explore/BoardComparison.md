@@ -162,7 +162,7 @@ lang: en-US
         <p>1x SPI bus</p>
         <p>2x I2C buses</p>
         <p>2x Serial UARTs</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/Docs/DB410c.htm">Set up your DragonBoard 410c</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Set up your DragonBoard 410c</a></p>
       </td>
     </tr>
 </table>
