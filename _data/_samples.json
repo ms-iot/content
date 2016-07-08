@@ -4,7 +4,8 @@
       {
          "title":"Hello, World!",
          "description":"Create a 'Hello World' application that runs on devices running Windows 10 IoT Core",
-         "link":["samples/HelloWorld.htm","samples/Python.htm","samples/NodejsWU.htm"],		 "link-text":["Hello World","Hello World","Hello World"],
+         "link":["samples/HelloWorld.htm","samples/Python.htm","samples/NodejsWU.htm"],
+		 "link-text":["Hello World","Hello World","Hello World"],
 		 "lang":["C#","Python","Node.js"],
 		 "ranking":0,
          "tags":["beginner","c#","Python","node.js","headed"]
@@ -41,7 +42,7 @@
          "description":"Create an app leveraging I2C or SPI on devices running Windows 10 IoT Core",
          "link":["samples/I2CAccelerometer.htm","samples/SPIAccelerometer.htm"],
 		 "link-text":["I2C Accelerometer","SPI Accelerometer"],   
-		 "link-text":["C#","C#"],
+		 "lang":["C#","C#"],
          "ranking":3,
          "tags":["beginner","I2C","SPI","c#"]
       },
