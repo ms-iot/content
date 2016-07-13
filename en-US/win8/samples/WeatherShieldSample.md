@@ -17,8 +17,8 @@ Place the weather shield on top of the Galileo board making sure to line the pin
 # Create a new project
 
 1. Create a new project from the template.
-1. Go to [HTU21D Repo](https://github.com/sparkfun/HTU21D_Breakout){:target="_blank"} and download the HTU21D.cpp and HTU21D.h files.
-1. Go to [MPL3115A2 Repo](https://github.com/sparkfun/MPL3115A2_Breakout/){:target="_blank"} and download the MPL3115A2.cpp and MPL3115A2.h files.
+1. Go to [HTU21D Repo](https://github.com/sparkfun/HTU21D_Breakout/tree/master/library/HTU21D_Humidity){:target="_blank"} and download the HTU21D.cpp and HTU21D.h files.
+1. Go to [MPL3115A2 Repo](https://github.com/sparkfun/MPL3115A2_Breakout/tree/master/library/MPL3115A2_Pressure){:target="_blank"} and download the MPL3115A2.cpp and MPL3115A2.h files.
 1. Place the HTU21D and MPL3115A2 library files in your new project.
 1. Replace the existing code in main.cpp with the following code:
 

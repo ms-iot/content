@@ -7,31 +7,29 @@ lang: en-US
 
 ##Deploy the driver and confirm the installation
 
-This exercise demonstrates how to manually copy and install the driver to a Windows IoT Core device. We will first use the **Server Message Block (SMB)** protocol via a **File Explorer** window to transfer files from the development machine to the target device (Windows IoT Core device). We will then use PowerShell to install the driver.
+This exercise demonstrates how to manually copy and install the driver to a Windows IoT Core device. We will first use the File Transfer Protocol (FTP) to transfer files from the development machine to the target device (Windows IoT Core device). We will then use PowerShell to install the driver.
 
-### Use the Server Message Block (SMB) protocol to transfer files from the development machine to the target device (Windows IoT Core device).
+### Use File Transfer Protocol (FTP) to transfer files from the development machine to the target device (Windows IoT Core device).
 
 #### On the target device (this is your Raspberry Pi 2 or your Minnow Board Max)
 * Boot up your Windows IoT Core device and make a note of its name or IP Address as displayed on its attached screen when the device first boots up.
 
 #### On the development computer
 
-* Open up a **File Explorer** window, and in the address bar type `\\<TARGET_DEVICE>\C$\` and then hit enter.  In this particular case, `<TARGET_DEVICE>` is either the name or the IP Address of your Windows IoT Core device:
+* Open up a File Explorer window, and in the address bar type `ftp://<TARGET_DEVICE>`, where `<TARGET_DEVICE>` is either the name or the IP Address of your Windows IoT Core device:
 
-    ![SMB with File Explorer]({{site.baseurl}}/images/DriverLab/smb1.png)
+    ![FTP with File Explorer]({{site.baseurl}}/images/DriverLab/ftp1.png)
 
     If you are prompted for a user name and password, use the following credentials:
 
-        User Name: <TARGET_DEVICE>\Administrator
+        User Name: Administrator
         Password:  p@ssw0rd
 
-    ![SMB with File Explorer]({{site.baseurl}}/images/DriverLab/cred1.png)
-	
     NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)
 
-* Navigate to the `\windows\system32\` folder in the SMB File Explorer window:
+* Navigate to the `\windows\system32\` folder in the FTP File Explorer window:
 
-    ![SMB with File Explorer]({{site.baseurl}}/images/DriverLab/smb2.png)
+    ![FTP with File Explorer]({{site.baseurl}}/images/DriverLab/ftp2.png)
 
 * Drag and drop (copy) the following two files (created in the previous exercise while building the driver in Visual Studio) from the development machine to the `\windows\system32\` folder on your IoT Core device:
 
@@ -40,7 +38,7 @@ This exercise demonstrates how to manually copy and install the driver to a Wind
 
 * Drag and drop (copy) the `ACPITABL.dat` file (created in the previous exercise while building the ACPI table) to the `\windows\system32\` folder.
 
-* Verify that the following files have been successfully transferred to the `\windows\system32\` folder in your IoT Core device using the **File Explorer** window and **SMB**:
+* Verify that the following files have been successfully transferred to the `\windows\system32\` folder in your IoT Core device using FTP:
 
         gpiokmdfdemo.inf
         gpiokmdfdemo.sys
@@ -48,9 +46,22 @@ This exercise demonstrates how to manually copy and install the driver to a Wind
 
 * The next steps involve connecting to the target device using PowerShell as explained [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm)
 
-### Install demo driver
+### Enable test-signing on the target device using BCDEDIT
 
-Connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
+We will use **bcdedit** to enable test-signing on the target, that is, the Windows IoT Core device.
+Run the following command from the elevated PowerShell command window opened in the previous step:
+
+    [192.168.0.243]: PS C:\> bcdedit /store C:\EFIESP\EFI\Microsoft\boot\BCD /set testsigning on
+
+### Reboot the target Windows IoT Core device
+
+From the PowerShell window, type the following command:
+
+    [192.168.0.243]: PS C:\> shutdown /r /t 0
+
+The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
+
+### Install demo driver
 
 Using the PowerShell window, navigate to the `C:\Windows\System32` directory on the target device:
 
@@ -58,7 +69,7 @@ Using the PowerShell window, navigate to the `C:\Windows\System32` directory on 
 
 We will use the `devcon.exe` tool to install our demo driver.  Type the following command in the PowerShell window:
 
-    [192.168.0.243]: PS C:\Windows\System32> devcon.exe install gpiokmdfdemo.inf ACPI\GPOT0001
+    [192.168.0.243]: PS C:\> devcon.exe install gpiokmdfdemo.inf ACPI\GPOT0001
 
 ### Reboot the target Windows IoT Core device
 
@@ -108,7 +119,7 @@ We have provided a pre-built binary application called BlinkyApp.exe which commu
 For MinnowBoard Max, `<PLATFORM>` will be `x86`.
 For Raspberry Pi 2, `<PLATFORM>` will be `ARM`.
 
-You will need to copy this file to the target device (Windows IoT Core device) using SMB, or some other means.
+You will need to copy this file to the target device (Windows IoT Core device) using FTP, or some other means.
 
 In the PowerShell window, navigate to the folder you copied `BlinkyApp_<PLATFORM>.exe` to and type the following command:
 
@@ -158,4 +169,10 @@ Driving the GPIO low will make the LED light-up because of the way the LED is co
 
 To turn the LED off, simply type:
 
+<<<<<<< HEAD
+    .\BlinkyApp_<PLATFORM>.exe high 2
+=======
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe high 2
+
+</div>
+>>>>>>> 1f6f71aec48de89717d3334442f5dd6815c3658c

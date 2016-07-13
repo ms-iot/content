@@ -79,13 +79,13 @@ Make the following connections on the 74HC595N shift register:
 
 * Pin 10 **SRCLR**: Connect to **GPIO 12** (pin 32) on the RPi2 (pin mapping is below)
 
-* Pin 11 **SRCLK**: Connect to **GPIO 18** (pin 12) on the RPi2
+* Pin 11 **SRCLK**: Connect to **GPIO 0** (pin 27) on the RPi2
 
 * Pin 12 **RCLK**: Connect to **GPIO 5** (pin 29) on the RPi2
 
 * Pin 13 **OE**: Connect to **GPIO 6** (pin 31) on the RPi2
 
-* Pin 14 **SER**: Connect to **GPIO 4** (pin 7) on the RPi2
+* Pin 14 **SER**: Connect to **GPIO 1** (pin 28) on the RPi2
 
 * Pin 15 **Q7**: See above.
 
@@ -119,23 +119,23 @@ We need to hook up power, ground, and the I2C lines from on the Raspberry Pi 2 t
 
 * Pin 6 **GND** Connect to the ground rail on the side of the breadboard (blue stripe)
 
-* Pin 12 **GPIO18** If not already connected, connect to **SRCLK** (pin 11) on the shift register
+* Pin 27 **GPIO0** If not already connected, connect to **SRCLK** (pin 11) on the shift register
 
-* Pin 7 **GPIO4** If not already connected, connect to **SER** (pin 14) on the shift register
+* Pin 28 **GPIO1** If not already connected, connect to **SER** (pin 14) on the shift register
 
 * Pin 29 **GPIO5** If not already connected, connect to **RCLK** (pin 12) on the shift register
 
 * Pin 31 **GPIO6** If not already connected, connect to **OE** (pin 13) on the shift register
 
-* Pin 32 **GPIO12** If not already connected, connect to **SRCLR** (pin 10) on the shift register
+* Pin 32 **GPIO12** If not already connected, connect to **SRCLR** (pint 10) on the shift register
 
 ###Create the Sample App
 
-When everything is set up, power your device back on. You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/ShiftRegister){:target="_blank"}, but as an exercise, this tutorial will take you through the complete steps to create this app from scratch.  Open up Visual Studio and create a new C# Windows Universal Blank App (see the 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance on how to create a new app). For this sample, we cleverly named ours **ShiftRegisterSample**.
+When everything is set up, power your device back on. You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/ShiftRegister){:target="_blank"}, but as an excercise, this tutorial will take you through the complete steps to create this app from scratch.  Open up Visual Studio and create a new C# Windows Universal Blank App (see the 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance on how to create a new app). For this sample, we cleverly named ours **ShiftRegisterSample**.
 
 The code in this sample does three things:
 
-1. Initializes the RPi2 GPIO pins and the 74HC595N shift register
+1. Initializes the the RPi2 GPIO pins and the 74HC595N shift register
 
 2. At regular intervals, it clocks in one data bit on the shift register's serial input.
 
@@ -194,7 +194,7 @@ Before we add any code to MainPage.xaml.cs, we need to add a reference to the Wi
 using Windows.Devices.Gpio;
 {% endhighlight %}
 
-With the references added, let's start adding code. The complete code we implemented for MainPage.xaml.cs is located at end of this section. Below are some key parts of the code with explanations
+With the references add, lets start adding code. The complete code we implemented for MainPage.xaml.cs is located at end of this section. Below are some key parts of the code with explanations
 
 Variables and Constants
 
@@ -206,11 +206,11 @@ private const double TIME_DELAY = 1;
 // The 74HC595N has five input pins that are used to control the device.
 // See the datasheet http://www.ti.com/lit/ds/symlink/sn74hc595.pdf for details
 // Shift Register Clock (SRCLK): the clock for the serial input to the shift register
-private const int SRCLK_PIN = 18; // GPIO 18 is pin 12 on RPI2 header
+private const int SRCLK_PIN = 0; // GPIO 0 is pin 27 on RPI2 header
 private GpioPin shiftRegisterClock;
 
 // Serial input (SER): the serial data input to the shift register. Use in conjunction with SRCLK.
-private const int SER_PIN = 4; // GPIO 4 is pin 7 on RPI2 header
+private const int SER_PIN = 1; // GPIO 1 is pin 28 on RPI2 header
 private GpioPin serial;
 
 // Storage Register Clock (RCLK): the clock for clocking data from the serial input to the parallel output in the shift register
@@ -322,7 +322,7 @@ private void InitializeSystem()
 
 The method `SendDataBit()`
 
-`SendDataBit()` is called by the timer when the designated time interval has passed.
+`SendDataBit()` is called by the timer when the designated time interval has pass.
  This method clocks out one bit of data representing the most significant bit (MSB) in the variable `pinMask`. The data bit is clocked into the first bit position
  in the shift register. The toggling of the serial clock pin by the RPi2 to clock in the data bit also causes the previous eight bits of data in the shift register to shift one bit position with the bit in the last position being lost.
  After clocking in the data bit, all bits in `pinMask` are left shifted one bit position. The value of `pinMask` is then checked and, depending on whether the LED lighting pattern is set as inverted, the least significant bit (LSB) of 'pinMask' is set to either a '1' or '0'.
@@ -436,11 +436,11 @@ namespace ShiftRegisterSample
         // The 74HC595N has five input pins that are used to control the device.
         // See the datasheet http://www.ti.com/lit/ds/symlink/sn74hc595.pdf for details
         // Shift Register Clock (SRCLK): the clock for the serial input to the shift register
-        private const int SRCLK_PIN = 18; // GPIO 18 is pin 12 on RPI2 header
+        private const int SRCLK_PIN = 0; // GPIO 0 is pin 27 on RPI2 header
         private GpioPin shiftRegisterClock;
 
         // Serial input (SER): the serial data input to the shift register. Use in conjunction with SRCLK.
-        private const int SER_PIN = 4; // GPIO 4 is pin 7 on RPI2 header
+        private const int SER_PIN = 1; // GPIO 1 is pin 28 on RPI2 header
         private GpioPin serial;
 
         // Storage Register Clock (RCLK): the clock for clocking data from the serial input to the parallel output in the shift register

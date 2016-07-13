@@ -77,9 +77,6 @@ The example below initializes **UART2** and performs a write followed by a read:
 
 
 {% highlight C# %}
-using Windows.Devices.Enumeration;
-using Windows.Devices.SerialCommunication;
-
 public async void Serial()
 {
 	string aqs = SerialDevice.GetDeviceSelector("UART2");                   /* Find the selector string for the serial device   */
