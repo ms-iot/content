@@ -6,6 +6,8 @@ We have created a versions file describing the supported versions of the require
 
 * **Install Visual Studio 2015 Preview** from [here](https://dev.windows.com/en-US/downloads/install-dev-tools-visual-studio-2015){:target="_blank"}.  Choose the Custom option when you kick off the installer, and then select "Universal Windows App Development Tools".  On the next page confirm that "Tools and Windows SDK", and "Emulators for Windows Mobile" options are going to be installed.
 
+* **Install Windows IoT Core Project Templates** from [here](https://visualstudiogallery.msdn.microsoft.com/06507e74-41cf-47b2-b7fe-8a2624202d36).  The templates can be found by searching for `Windows IoT Core Project Templates` in the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/) or directly from Visual Studio in the Extension and Updates dialog (Tools > Extensions and Updates > Online).
+
 * Make sure you've **enabled developer mode** by following [these instructions](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx){:target="_blank"}.
 
 	* Some customers report installation issues with the previous step. As a workaround, please go to the **Windows Developer Tools Preview page** [here](https://dev.windows.com/en-US/downloads/windows-10-developer-tools){:target="_blank"}.
@@ -13,10 +15,8 @@ We have created a versions file describing the supported versions of the require
 	<img class="screen-snippet" src="{{site.baseurl}}/images/SetupPC/download.PNG">
 	Scroll down to the bottom of the page to the "Other download options" section and install "Standalone Windows 10 SDK for Windows 10" and "Microsoft Windows 10 Emulator for Mobile".
 
-* **Install WindowsDeveloperProgramForIoT.msi**.  It can be found **inside any** of the Windows 10 IoT Core Insider Preview **image files** (for example, `Windows 10 IoT Core Insider Preview image for Raspberry Pi 2.zip`) [here]({{site.downloadurl}}).  
-
-	* If you have followed the steps for configuring your Raspberry Pi 2 or MinnowBoard Max, you can find WindowsDeveloperProgramForIoT.msi inside the zip file you have already downloaded.
-
+* If you have followed the steps for configuring your Raspberry Pi 2 or MinnowBoard Max, Windows IoT Core Watcher application is already installed.
+ 
 * At this point, you are ready to develop apps.  Notice that the Windows IoT Core Watcher application automatically starts when you log on.  It can be used to find available Windows 10 IoT Core devices to deploy apps to.
 
     <img class="device-images" src="{{site.baseurl}}/images/IoTCoreWatcher.PNG">

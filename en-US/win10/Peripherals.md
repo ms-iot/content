@@ -16,7 +16,7 @@ Windows 10 IoT Core is compatible with a variety of USB devices. Here are the de
 * Wireless Xbox 360 controller
 * Touchpad (wired & wireless)
 * NumPad (wired)
-* USB ethernet adapter
+* USB Ethernet adapter
 * External USB hard disk
 * USB flash drive
 * USB card reader
