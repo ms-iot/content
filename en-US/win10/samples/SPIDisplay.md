@@ -8,7 +8,7 @@ lang: en-US
 ##SPI Display Sample
 
 In this sample, we interface a SPI based [OLED display](http://www.adafruit.com/product/938){:target="_blank"} to your Raspberry Pi 2/MinnowBoard Max. We then create an app that lets us write lines of text to the display. Step-by-step instructions are provided,
-so no background knowledge of SPI is needed. However, if you want to learn more, SparkFun provides a great [tutorial on SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}.
+so no background knowledge of SPI is needed. However, if you want to learn more, Sparkfun provides a great [tutorial on SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}.
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/win10/HeadlessMode.htm).
 
@@ -86,7 +86,7 @@ Here are the schematics:
 
 ###Deploy and run the app
 
-When everything is set up, power your device back on, and open up the sample app in Visual Studio. If you're building for MinnowBoard Max, select `x86` in the architecture dropdown. If you're building for Raspberry Pi 2, select `ARM`. Next, configure the code depending on which device you are using.
+When everything is set up, power your device back on, and open up the sample app in Visual Studio. If you're building for Minnowboard Max, select `x86` in the architecture dropdown. If you're building for Raspberry Pi 2, select `ARM`. Next, configure the code depending on which device you are using.
 
 {% highlight C# %}
 public sealed partial class MainPage : Page
@@ -296,7 +296,7 @@ These commands turn the display on and put it into a state where it's ready to a
 
 ###Text Display Code
 
-Now that the display is initialized, we can send text to the screen. Previously in the initialization function, we registered **Display_TextBox_TextChanged()** to trigger any time the user changes the textbox.
+Now that the display is initialized, we can send text to the the screen. Previously in the initialization function, we registered **Display_TextBox_TextChanged()** to trigger any time the user changes the textbox.
 This function calls the **DisplayTextBoxContents()** function below which runs through the process of writing text out to the screen:
 
 {% highlight C# %}

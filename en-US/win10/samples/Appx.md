@@ -74,9 +74,9 @@ We'll walk through the steps required to create an Appx Package from your Visual
 
 ### How to Deploy an Appx package to your Windows IoT Core Machine
 
-You can deploy/install an Appx package to your machine running Windows Windows IoT Core by simply following the steps below
+You can deploy/install an Appx package to your machine or VM running Windows Windows IoT Core by simply following the steps below
 
-* Copy the signed package to the machine running Windows IoT Core either by mounting the VHD/FFU or just doing FTP://hostname in any File Explorer window
+* Copy the signed package to the VM or machine running Windows IoT Core either by mounting the VHD/FFU or just doing FTP://hostname in any File Explorer window
 * Telnet to the Windows IoT Core machine by using Username:DefaultAccount and empty password.
 * Run the following command
 

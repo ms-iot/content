@@ -15,12 +15,12 @@ lang: en-US
 
 Web-based device management provides basic configuration and device management capabilities, in addition to advanced diagnostic tools to help you troubleshoot and view the real time performance of your Windows IoT Device. Once connected to your local network, every Windows 10 IoT Core device will allow you to access these tools.
 
-###1. Connect your board to the internet
+###Connect your board to the internet
 
 To get Web-based device management up and running, you first need to connect your device to your network. To do so, connect an Ethernet cable from your board into to your local network.
 
 
-###2. Find your devices IP address
+### Find your devices IP address
 
 You can find your IP address two ways:
 
@@ -32,9 +32,9 @@ You can find your IP address two ways:
 
     ![IotWatcher IP]({{site.baseurl}}/images/IoTCoreWatcher.PNG)
 
-###3. Connect to Web-based device management through your browser
+###Connect to Web-based device management through your browser
 
-1.	Enter the IP address into the address bar. Add :8080 onto the end.
+1.	Using your favorite browser, enter the IP address into the address bar
 
 	![Browser IP]({{site.baseurl}}/images/webb/browser_ip.png)
 
@@ -44,105 +44,54 @@ You can find your IP address two ways:
 
     You can also launch the Web-based device management tool from the Windows IoT Core Watcher by right clicking on your device, and clicking Launch in browser
 
-	
-#Description of Web-based device management functionalities
-
-This tool is still in beta. Some of the features are untested or still being worked on.
-
-###**Top Toolbar**
+###Top Toolbar
 The top toolbar allows you to shutdown, reboot and give feedback.
 
 ![Webb toolbar]({{site.baseurl}}/images/webb/toolbar.png)
 
-* Shutdown - Shuts down the device.
-* Reboot - Reboots the device.
-* Feedback - Opens up the Windows 10 Feedback tool where you can enter any valuable feedback.
-* Help - Takes you to this documentation page.
+* Shutdown - Shuts down the device
+* Reboot - Reboots the device
+* Feedback - Opens up the Windows 10 Feedback tool where you can enter any valuable feedback
+* Help - The help button is currently in progress and will be updated soon
 
     Note: For Rpi2 users, the Shutdown button is not working correctly, and reboots the device. A fix is coming soon
 
-###**Home**
 
-This section is coming soon! Stay tuned
+###Description of Web-based device management functionalities
 
-###**Apps**
-Provides install/uninstall functionality for AppX packages and bundles on your device.
+    This tool is still in beta. Some of the features are untested or still being worked on.
 
-Note that Windows 10 IoT Core only allows you to have one app running in the foreground at a time.
+* ####**Home**
 
-####Installing an app 
-1.	Once you've created your first app, you can remotely install it onto your device. After building from Visual Studio, an output folder will be generated. 
-	<img class = "screen-snippet" src="{{site.baseurl}}/images/webb/installapp0.png">
-	
-2.	In WebB, click browse and find your .appx.
-3.	Click certificate browse, find the .cer file. 
-4.	Add dependencies. If you have more than one, and you will have to add each one by one. 	
-5.	Hit Install. 
-6.	To install another app, hit the Reset button to clear the fields.
+	This section is coming soon! Stay tuned
 
-####Uninstalling an app
-1.	Ensure that your app is not running. 
-2.	If it is, go to 'running apps' and close it. If you attempt to uninstall while the app is running, it will cause issues when trying to re-install the app. 
-3.	Once you're ready, hit Uninstall.
+* ####**Apps**
 
-####Deployment log
+	Provides install/uninstall functionality for AppX packages and bundles on your device.
 
-<img class="screen-snippet" src="{{site.baseurl}}/images/webb/deploymentlog.png">
-The deployment log is a progress checklist indicating how far you are with deploying an app.
+	    Windows 10 IoT Core only allows you to have one app running in the foreground at a time.
 
-###**Processes**
-Much like the Task Manager on your PC, this section allows you to see which processes are currently running as well as the memory usage each are holding.  Clicking the X next to a process terminates it.
+* ####**Processes**
 
-###**Performance**
-Displays real-time diagnostics of CPU and I/O usage, and memory stats.
-<img src="{{site.baseurl}}/images/webb/iograph.png">
+	Much like the Task Manager on your PC, the processes allows you to see which processes are currently running as well as the memory usage each are holding.  Clicking the X next to a process terminates it.
 
-* CPU usage maps the central processing unit's usage.
+* ####**Performance**
 
-<img src="{{site.baseurl}}/images/webb/cpugraph.png">
+	Displays real-time diagnostics of CPU and I/O usage, and memory stats.
 
-* I/O shows disk utilization (i.e reading and writing to the storage)
+* ####**Debugging, ETW Realtime, Perf Tracing**
 
-###**Debugging**
-The debugging section is great for identifying problems within your application.
+	These sections are currently a work in progress. More details are coming soon.
 
-<img src="{{site.baseurl}}/images/webb/debug1.png">
+* ####**Device Manager**
 
-* Any system crashes will automatically be logged and available to view through the web management tool.  You can then download the kernel dump and try to figure out what's going on.
+	Enumerates all peripherals attached to your device.
 
-<img src="{{site.baseurl}}/images/webb/debug2.png">
+* ####**Networking**
 
-* This is similar to Live kernel dumps, but for the user mode processes. 
-* Clicking the download button will cause a 'minidump', and the entire state of that process will be downloaded. This is great for debugging hanging processes.
+	Once your board is connected to the internet, the IP configuration section will allow you to view advanced network diagnostic information, such as your IP address, and the description of the connection.
 
-<img src="{{site.baseurl}}/images/webb/debug3.png">
-
-* When your IoT Core device crashes, your machine attempts to send a report up to the Windows error reporting service. When this happens, a log of the report is stored and becomes available for viewing.
-* The error reports do not contain dump information and are more targeted towards apps and processes. 
-* It also gives a nice history of everything that happened on your device. 
-
-Type: State of the report upload to the windows error reporting service. 
-
-###**ETW**
-Event tracing for Windows.
-
-More coming soon..
-
-###**Perf Tracing**
-
-This section allows you to do record a trace log for CPU, disk usage and memory. 
-
-More details coming soon. 
-
-###**Device Manager**
-
-Enumerates all peripherals attached to your device.
-
-###**Networking**
-
-Once your board is connected to the internet, the IP configuration section will allow you to view advanced network diagnostic information, such as your IP address, and the description of the connection.
-
-Wi-Fi adapters are not currently supported.  This will be coming soon.
+	    Wi-Fi adapters are not currently supported.  This will be coming soon.
 
 
 
