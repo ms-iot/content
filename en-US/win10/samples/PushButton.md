@@ -7,20 +7,18 @@ lang: en-US
 
 ##Push Button Sample
 
-[View the code on Github](https://github.com/ms-iot/samples/tree/develop/PushButton/CS){:target="_blank"}
+[View the code on GitHub](https://github.com/ms-iot/samples/tree/develop/PushButton/CS){:target="_blank"}
 
-In this sample, we will connect a push button to Raspberry Pi 2 and use it
-to control the onboard LED. We will use GPIO interrupts to detect when the
-button is pressed and will toggle the LED each time the button is pressed.
+In this sample, we connect a push button to your Raspberry Pi 2/MinnowBoard Max and use it
+to control an LED. We use GPIO interrupts to detect when the button is pressed and toggle the LED in response.
 
-![Push Button Image]({{site.baseurl}}/images/PushButton/PushbuttonSample.jpg)
+![Push Button Image]({{site.baseurl}}/images/PushButton/PushButtonSample.png)
 
 This is a headed sample, so please ensure that your device is in headed
-mode by running this command: `setbootoption.exe headed` (changing the
-headed/headless state will require a reboot).
+mode by running this command: `setbootoption.exe headed` (changing the headed/headless state will require a reboot).
 
-Also, be aware that the GPIO APIs are only available on Windows IoT Core,
-so this sample cannot run on your desktop.
+Also, be aware that the GPIO APIs are only available on Windows IoT Core, so this sample cannot run on your desktop.
+
 
 ###Components
 
@@ -28,31 +26,81 @@ You will need the following components :
 
 * a [EG1311-ND Tactile Button](http://www.digikey.com/product-detail/en/320.02E11.08BLK/EG1311-ND/101397){:target="_blank"}
 
-* a breadboard and two male-to-female connector wires
+* a [red LED](http://www.digikey.com/product-detail/en/C5SMF-RJS-CT0W0BB1/C5SMF-RJS-CT0W0BB1-ND/2341832){:target="_blank"}
 
-###Connect to your Device
+* a [330 &#x2126; resistor](http://www.digikey.com/product-detail/en/CFR-25JB-52-330R/330QBK-ND/1636){:target="_blank"}
 
-Let's start by wiring up the components on the breadboard as shown in the
-following schematic.
+* a breadboard and several male-to-female wires
 
-* Connect one pin of the tactile button to Pin 29 (GPIO 5) of
-  the Raspberry Pi 2 and one pin to GND.
+###Connect the circuit to your device
 
-![Breadboard layout]({{site.baseurl}}/images/PushButton/PushButton_bb.png)
+Let's start by wiring up the components on a breadboard. Visit the corresponding **Raspberry Pi 2/MinnowBoard Max** sections below depending on your device.
 
-![Circuit Schematic]({{site.baseurl}}/images/PushButton/PushButton_schem.png)
+#### Raspberry Pi 2
 
-*Image made with [Fritzing](http://fritzing.org/)*
+| Breadboard Diagram                                                                        | Schematic                                                                          |
+| ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| ![Breadboard connections]({{site.baseurl}}/images/PushButton/RPi2_PushButton_bb.png)      | ![Circuit Schematic]({{site.baseurl}}/images/PushButton/RPi2_PushButton_schem.png) |
+
+<sub>*Images made with [Fritzing](http://fritzing.org/)*</sub>
+
+#####Connecting the LED
+
+* Connect the cathode (the shorter leg) of the LED to Pin 31 (GPIO 6) of the Raspberry Pi 2
+
+* Connect the anode (the longer leg) of the LED to one lead of the 330 &#x2126; resistor
+
+* Connect the other end of the 330 &#x2126; resistor to Pin 1 (3.3V) on Raspberry Pi 2
+
+#####Connecting the Push Button
+
+* Connect one pin of the push button to Pin 29 (GPIO 5) of the Raspberry Pi 2
+
+* Connect the other pin of the push button to the ground
+
+Here is the pinout of the RPi2:
+
+![Raspberry Pi 2 pinout]({{site.baseurl}}/images/PinMappings/RP2_Pinout.png)
+
+<sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
+
+#### MinnowBoard Max
+
+| Breadboard Diagram                                                                        | Schematic                                                                          |
+| ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| ![Breadboard connections]({{site.baseurl}}/images/PushButton/MBM_PushButton_bb.png)       | ![Circuit Schematic]({{site.baseurl}}/images/PushButton/MBM_PushButton_schem.png)  |
+
+<sub>*Images made with [Fritzing](http://fritzing.org/)*</sub>
+
+#####Connecting the LED
+
+* Connect the cathode (the shorter leg) of the LED to Pin 20 (GPIO 6) of the MinnowBoard Max
+
+* Connect the anode (the longer leg) of the LED to one lead of the 330 &#x2126; resistor
+
+* Connect the other end of the 330 &#x2126; resistor to Pin 4 (3.3V) on MinnowBoard Max
+
+#####Connecting the Push Button
+
+* Connect one pin of the push button to Pin 18 (GPIO 5) of the MinnowBoard Max
+
+* Connect the other pin of the push button to the Pin 2 (Ground)
+
+Here is the pinout of the MBM:
+
+![MinnowBoard Max pinout]({{site.baseurl}}/images/PinMappings/MBM_Pinout.png)
+
+<sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
 
 ###Building and running the sample
 
-1. Clone the [samples](https://github.com/ms-iot/samples)
-   repository to your local machine.
-1. Open `PushButton\CS\PushButton.csproj` in Visual Studio.
-1. Select `ARM` for the target architecture
+1. Download the [samples](https://github.com/ms-iot/samples){:target="_blank"}
+   repository to your local machine
+1. Open `PushButton\CS\PushButton.csproj` in Visual Studio
+1. If you have **Raspberry Pi 2**, Select `ARM` for the target architecture. Otherwise, for **MinnowBoard Max** select `x86`
 1. Go to `Build -> Build Solution`
 1. Select `Remote Machine` from the debug target
-1. Hit F5 to deploy and debug. Enter the IP address of your Raspberry Pi
+1. Hit F5 to deploy and debug. Enter the IP address of your device
    and select `None` for the authentication type.
 
 ###Let's look at the code
@@ -60,34 +108,42 @@ following schematic.
 First, we open the GpioPin resources we'll be using. The button is connected to
 GPIO5 in active LOW configuration, meaning the signal will be HIGH when the
 button is not pressed and the signal will go LOW when the button is pressed.
-We'll be using the onboard LED, connected to GPIO47, which is connected in
-active HIGH configuration, meaning driving the pin HIGH will turn on the LED
-and driving the pin LOW will turn off the LED.
+We'll be using the LED, connected to GPIO6, which is connected in
+active LOW configuration, meaning driving the pin HIGH will turn off the LED
+and driving the pin LOW will turn on the LED.
 
-            buttonPin = gpio.OpenPin(BUTTON_PIN);
-            ledPin = gpio.OpenPin(LED_PIN);
+{% highlight C# %}
+buttonPin = gpio.OpenPin(BUTTON_PIN);
+ledPin = gpio.OpenPin(LED_PIN);
+{% endhighlight %}
 
-We initialize the LED in the OFF state by first latching a LOW value onto the
+We initialize the LED in the OFF state by first latching a HIGH value onto the
 pin. When we change the drive mode to Output, it will immediately drive the
 latched output value onto the pin. The latched output value is undefined when
 we initially open a pin, so we should always set the pin to a known state
-before changing it to an output.
+before changing it to an output. Remember that we connected the other end 
+of the LED to 3.3V, so we need to drive the pin to low to have current flow into the LED.
 
-            ledPin.Write(GpioPinValue.Low);
-            ledPin.SetDriveMode(GpioPinDriveMode.Output);
+{% highlight C# %}
+// Initialize LED to the OFF state by first writing a HIGH value
+// We write HIGH because the LED is wired in a active LOW configuration
+ledPin.Write(GpioPinValue.High); 
+ledPin.SetDriveMode(GpioPinDriveMode.Output);
+{% endhighlight %}
 
-Next, we set up the button pin. We're taking advantage of the fact that
-Raspberry Pi 2 has built-in pull up resistors that we can activate. We use the
+Next, we set up the button pin. For the Raspberry Pi 2, we take advantage of the fact that it has 
+built-in pull up resistors that we can activate. We use the
 built-in pull up resistor so that we don't need to supply a resistor externally.
-Pull up resistors are not available on all hardware, so we insert a check to
-make sure this drive mode is supported before setting it. If you run this sample
-on hardware that does not support InputPullUp, be sure to connect an external
-pull up resistor.
+Configurable pull up resistors are not available on the MinnowBoard Max, so we insert a check to
+make sure this drive mode is supported.
 
-            if (buttonPin.IsDriveModeSupported(GpioPinDriveMode.InputPullUp))
-                buttonPin.SetDriveMode(GpioPinDriveMode.InputPullUp);
-            else
-                buttonPin.SetDriveMode(GpioPinDriveMode.Input);
+{% highlight C# %}
+// Check if input pull-up resistors are supported
+if (buttonPin.IsDriveModeSupported(GpioPinDriveMode.InputPullUp))
+	buttonPin.SetDriveMode(GpioPinDriveMode.InputPullUp);
+else
+	buttonPin.SetDriveMode(GpioPinDriveMode.Input);
+{% endhighlight %}
 
 Next we connect the GPIO interrupt listener. This is an event that will get
 called each time the pin changes state. We also set the DebounceTimeout
@@ -96,44 +152,52 @@ Buttons are mechanical devices and can make and break contact many times on a
 single button press. We don't want to be overwhelmed with events so we filter
 these out.
 
-            buttonPin.DebounceTimeout = TimeSpan.FromMilliseconds(50);
-            buttonPin.ValueChanged += buttonPin_ValueChanged;
+{% highlight C# %}
+// Set a debounce timeout to filter out switch bounce noise from a button press
+buttonPin.DebounceTimeout = TimeSpan.FromMilliseconds(50);
+
+// Register for the ValueChanged event so our buttonPin_ValueChanged 
+// function is called when the button is pressed
+buttonPin.ValueChanged += buttonPin_ValueChanged;
+{% endhighlight %}
 
 In the button interrupt handler, we look at the edge of the GPIO signal to
 determine whether the button was pressed or released. If the button was
 pressed, we flip the state of the LED.
 
-        private void buttonPin_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs e)
-        {
-            // toggle the state of the onboard LED every time the button is pressed
-            if (e.Edge == GpioPinEdge.FallingEdge)
-            {
-                ledPin.Write(ledPinValue);
-                ledPinValue = (ledPinValue == GpioPinValue.Low) ?
-                    GpioPinValue.High : GpioPinValue.Low;
-            }
+{% highlight C# %}
+private void buttonPin_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs e)
+{
+	// toggle the state of the LED every time the button is pressed
+	if (e.Edge == GpioPinEdge.FallingEdge)
+	{
+		ledPinValue = (ledPinValue == GpioPinValue.Low) ?
+			GpioPinValue.High : GpioPinValue.Low;
+		ledPin.Write(ledPinValue);
+	}
+{% endhighlight %}
 
 We also want to update the user interface with the current state of the
 pin, so we invoke an update operation on the UI thread. Capturing the result
 of an async method in a local variable is necessary to suppress a compiler
 warning when we don't want to wait for an asynchronous operation to complete.
 
-            // need to invoke UI updates on the UI thread because this event
-            // handler gets invoked on a separate thread.
-            var task = Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => {
-                if (e.Edge == GpioPinEdge.FallingEdge)
-                {
-                    ledEllipse.Fill = redBrush;
-                    GpioStatus.Text = "Button Pressed";
-                }
-                else
-                {
-                    ledEllipse.Fill = grayBrush;
-                    GpioStatus.Text = "Button Released";
-                }
-            });
-        }
+{% highlight C# %}
+// need to invoke UI updates on the UI thread because this event
+// handler gets invoked on a separate thread.
+var task = Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => {
+	if (e.Edge == GpioPinEdge.FallingEdge)
+	{
+		ledEllipse.Fill = (ledPinValue == GpioPinValue.Low) ? 
+			redBrush : grayBrush;
+		GpioStatus.Text = "Button Pressed";
+	}
+	else
+	{
+		GpioStatus.Text = "Button Released";
+	}
+});
+{% endhighlight %}
 
-That's it! Each time you press the button, you should see the onboard LED change
+That's it! Each time you press the button, you should see the LED change
 state.
-

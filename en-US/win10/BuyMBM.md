@@ -10,7 +10,7 @@ lang: en-US
 You can buy a MinnowBoard Max by following the instructions below.
 
 
-1. Go Avenet.com's [MinnowBoard Max product details page](http://avnetexpress.avnet.com/store/em/EMController?langId=-1&storeId=500201&catalogId=500201&term=msdev&searchType=&advAction=&N=0&Ne=100000&action=products&x=0&y=0){:target="_blank"}.
+1. Go Avnet.com's [MinnowBoard Max product details page](http://avnetexpress.avnet.com/store/em/EMController?langId=-1&storeId=500201&catalogId=500201&term=msdev&searchType=&advAction=&N=0&Ne=100000&action=products&x=0&y=0){:target="_blank"}.
 
 2. You will see an item called "Microsoft Dev Kit" - that is the MinnowBoard Max Dual-Core 2GB.
        ![MinnowBoard Max Item]({{site.baseurl}}/images/buy-mbm/buy-mbm-1.png){:class="img-thumbnail"}

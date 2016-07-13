@@ -68,14 +68,14 @@ For clarification, what we mean when we say:<br/>
 ###Submitting a Pull Request
 1. After you submit your first pull request, if you have not already signed a Contribution License Agreement, then our Contribution License Agreement service will request you to sign a Contribution License Agreement. We request you to complete this electronic request. Without completing this step, we unfortunately cannot accept a pull request. You only need to do this once.
 1. Fetch upstream
-    * <kbd>git fetch \-\-all</kbd>
+    * <kbd>git fetch --all</kbd>
 1. Rebase upstream (This should now put your changes on top of the main repository's history.)
     * <kbd>git rebase -i upstream/develop</kbd>
     * This may highlight conflicts that you will have to hand-merge
         * You can use your favorite merging tool or even notepad for this.
     * After hand-merging, you can continue the rebase
         * <kbd>git add [fileYouHandMerged]</kbd>
-        * <kbd>git rebase \-\-continue</kbd>
+        * <kbd>git rebase --continue</kbd>
 1. Force-push your changes to your forked repository.
     * <kbd>git push -f origin develop</kbd>
 1. Now submit your pull request from your forked repository using the GitHub website.
