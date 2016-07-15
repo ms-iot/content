@@ -11,9 +11,9 @@
       {
          "title":"Hello Blinky (Headless App)",
          "description":"Create an app with no UI that toggles an LED on devices running Windows 10 IoT Core",
-         "link-text":"<a href='win10/samples/BlinkyHeadless.htm'>Blinky (C#)</a><br><a href='win10/samples/PythonBlinky.htm'>Blinky (Python)</a><br><a href='win10/samples/arduino-wiring/HelloBlinky.htm'>Blinky (Wiring)</a>",
+         "link-text":"<a href='win10/samples/BlinkyHeadless.htm'>Blinky (C#)</a><br><a href='win10/samples/PythonBlinky.htm'>Blinky (Python)</a><br><a href='win10/samples/arduino-wiring/HelloBlinky.htm'>Blinky (Wiring)</a><br><a href='win10/samples/NodejsWUBlinky.htm'>Blinky (Node.js)</a>",
          "ranking":0,
-         "tags":["beginner","c#","Python","Wiring","headless"]
+         "tags":["beginner","c#","Python","Wiring","node.js","headless"]
       },
       {
          "title":"UI Blinky App",
