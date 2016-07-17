@@ -39,8 +39,8 @@ The TPM provides cryptographic functions designed to provide trust in the platfo
 _A few words about sTPM, fTPM, dTPM..._
 
 ### Firmware TPM (fTPM)  
-Firmware TPM (fTPM) requires special Processor/SoC support that is not currently implemented on Raspberry Pi 2 or 3. MinnowBoard Max needs firmware version 0.80 or higher. DragonBoard410c provides fTPM capabilities out of the box.  
-Instructions on how to set up fTPM on Windows IoT Core are available [here][1].
+Firmware TPM (fTPM) requires special Processor/SoC support that is not currently implemented on Raspberry Pi 2 or 3. MinnowBoard Max needs firmware version 0.80 or higher. DragonBoard410c provides fTPM capabilities out of the box enabled by default.  
+Instructions on how to set up fTPM on Intel MBM are available [here][1].
 
 ### Discrete TPM (dTPM)  
 Discrete TPM (dTPM) is considered the utmost trustworthy solution by all means.  
@@ -66,7 +66,7 @@ Instructions on how to set up sTPM on Windows IoT Core are available [here][3].
 [2]: {{site.baseurl}}/{{page.lang}}/win10/SetupTPM.htm#dTPM "Discrete TPM"
 [3]: {{site.baseurl}}/{{page.lang}}/win10/SetupTPM.htm#sTPM "TPM Simulator"
 [4]: http://www.infineon.com/cms/en/product/security-ic/trusted-computing/channel.html?channel=db3a30433efacd9a013f10d2a7264daa "Infineon"
-[5]: http://www.trustedcomputinggroup.org/members/nationz_technologies_inc "NationZ"
+[5]: http://www.trustedcomputinggroup.org/nationz-technologies-inc "NationZ"
 [6]: https://www.nuvoton.com/hq/products/cloud-computing/security/trusted-platform-module-tpm "Nuvoton"
 [7]: http://www.st.com/web/en/catalog/mmc/FM143/CL1814/SC1522 "STMicro"
 

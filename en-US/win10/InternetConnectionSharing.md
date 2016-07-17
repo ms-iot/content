@@ -70,7 +70,7 @@ set PUBLIC_INDEX=%2
 set PRIVATE_INDEX=%3
 set PRIVATE_INTERFACE_NAME=%4
 
-if "%4"=="" (
+if not defined PRIVATE_INTERFACE_NAME (
   goto usage
 )
 
