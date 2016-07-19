@@ -13,7 +13,7 @@ Furthermore, in the headed mode, the standard UWP UI stack is available for full
 Devices that don't need UI functionality can be set to **headless** mode. The UI stack is disabled and apps are no longer interactive.  This reduces the amount of system resources used.  Headless mode apps can be thought of as services.
 
 When configured to run in headed mode, a single UI app will launch at boot and there is no mechanism to switch to other applications (other than in development scenarios such as when Visual Studio deploys an app for debugging). In headless mode no UI app will be launched. "Background Apps" (StartupTasks) are apps that do not have UI and launch at startup. Any number of these apps can be installed for both headed and headless devices.
-    NOTE: If you put your device into headless mode, then you can use the Windows 10 IoT Core Dashboard application, described below, to find its' IP address.
+    NOTE: If you put your device into headless mode, then you can use the Windows 10 IoT Core Dashboard application, described below, to find its IP address.
 
 ## Changing the mode
 You can modify the headed/headless state of your device from a PowerShell session.  To review the PowerShell details, look [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).
