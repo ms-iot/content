@@ -116,7 +116,7 @@ Run the following 3 commands from within the remote powershell session to set UE
 Next, in order to complete lock-down of the platform, reboot device using the command `shutdown /r`.  
 **Note:** On an Intel MinnowBoardMax, you may need to manually enable SecureBoot in UEFI. Power up board with a keyboard connected and press F2 to enter UEFI setup. Go to _Device Manager -> Secure Boot Configuration -> Attempt Secure Boot_ and enable this option _<X>_. Press F10 to save changes and proceed with a reboot of the platform.
 
-[11]: {{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm "PowerShell"
+[11]: {{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm "PowerShell"
 
 ### Scheduling BitLocker  
 In order to enable BitLocker, the device encryption task must be scheduled. This device encryption task is set to trigger when the TPM is provisioned and ready, also ensuring that device encryption stays enabled on all subsequent boots (should the volume be decrypted offline at any time). Once Secure Boot has been setup and the device booted up, re-initiate a remote PowerShell session and create a new (or append to existing) file labelled "OEMCustomization.cmd" under c:\windows\system32 using the following command:

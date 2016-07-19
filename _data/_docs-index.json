@@ -43,7 +43,7 @@
           },
           {
             "title":"Access your files using Windows File Sharing",
-            "link":"{{site.baseurl}}/Samples/SMB.htm"
+            "link":"{{site.baseurl}}/Docs/SMB.htm"
           },
           {
             "title":"Access your files using FTP",
@@ -54,7 +54,7 @@
             "link":"{{site.baseurl}}/Docs/SSH.htm"
           },
           {
-            "title":"Using WINDBG",
+            "title":"Using WinDbg",
             "link":"{{site.baseurl}}/Docs/Windbg.htm"
           },
           {

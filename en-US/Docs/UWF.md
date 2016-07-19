@@ -18,7 +18,7 @@ If you do not have IoT Core Kits yet, Download and install [IoT Core Kits from M
 
 ## How to Install UWF on a device running Windows 10 IoT Core
 ---
-* Launch [Powershell](http://ms-iot.github.io/content/en-US/Samples/PowerShell.htm) or [SSH](http://ms-iot.github.io/content/en-US/Samples/SSH.htm) and access your device running Windows 10 IoT Core.
+* Launch [Powershell](http://ms-iot.github.io/content/en-US/Docs/PowerShell.htm) or [SSH](http://ms-iot.github.io/content/en-US/Docs/SSH.htm) and access your device running Windows 10 IoT Core.
 * From Powershell or SSH, do the following:
   * Create a temporary folder on the target machine (e.g. ```C:\UWFTemp```).
   * Based on your device architecture, copy UWF packages ( `Microsoft-IoTUAP-UnifiedWriteFilter-Package.cab` and `Microsoft-IoTUAP-UnifiedWriteFilter-Package_Lang_en-us.cab` ) from your PC (`C:\Program Files (x86)\Windows Kits\10\MSPackages\Retail\<arch>\fre\`) to `C:\UWFTemp`.

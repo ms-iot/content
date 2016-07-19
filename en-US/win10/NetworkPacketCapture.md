@@ -13,8 +13,8 @@ You can use [Microsoft Message Analyzer](http://www.microsoft.com/en-us/download
 
 ### Set up your device
 
-In order to connect to your device using Message Analyzer, you need to first rename your device.  This can be done through [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm){:target="_blank"} or 
-[PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm){:target="_blank"} using the `setcomputername` command.
+In order to connect to your device using Message Analyzer, you need to first rename your device.  This can be done through [SSH]({{site.baseurl}}/{{page.lang}}/win10/Docs/SSH.htm){:target="_blank"} or 
+[PowerShell]({{site.baseurl}}/{{page.lang}}/win10/Docs/PowerShell.htm){:target="_blank"} using the `setcomputername` command.
 
 ![PowerShell Rename Device]({{site.baseurl}}/Resources/images/packetcapture/powershell-rename-device.png)
 
