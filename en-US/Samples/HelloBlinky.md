@@ -1,12 +1,14 @@
 ---
 layout: sample
-title: Blinky Sample
-permalink: /en-US/Samples/Blinky.htm
+title: Hello, blinky! 
+description: A "Hello, world" sample for an led and breadboard
+keyword: Beginner, gpio, xaml, iot core, windows
+permalink: /en-US/Samples/HelloBlinky.htm
+samplelink: https://github.com/ms-iot/samples/tree/develop/Blinky
 lang: en-US
 ---
 
-{: .thin-header}
-# Blinky Sample
+# "Hello, blinky!" 
 
 We'll create a simple LED blinking app and connect a LED to your Windows 10 IoT Core device.
 
@@ -14,11 +16,13 @@ This is a headed sample.  To better understand what headed mode is and how to co
 
 Also, be aware that the GPIO APIs are only available on Windows 10 IoT Core, so this sample cannot run on your desktop.
 
-### Load the project in Visual Studio
+## Load the project in Visual Studio
+___
 
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\Blinky`.  The sample code is available in either C++ or C#, however the documentation here only details the C# variant. Make a copy of the folder on your disk and open the project from Visual Studio.
 
-### Connect the LED to your Windows IoT device
+## Connect the LED to your Windows IoT device
+___
 
 
 You'll need a few components:
@@ -90,7 +94,8 @@ private const int LED_PIN = 12;
 ~~~
 {: .language-c#}
 
-### Deploy your app
+## Deploy your app
+___
 
 1. With the application open in Visual Studio, set the architecture in the toolbar dropdown. If you're building for MinnowBoard Max, select `x86`.  If you're building for Raspberry Pi 2 or 3 or the DragonBoard, select `ARM`.
 
@@ -113,7 +118,8 @@ When everything is set up, you should be able to press F5 from Visual Studio.  I
 
 Congratulations! You controlled one of the GPIO pins on your Windows IoT device.
 
-### Let's look at the code
+## Let's look at the code
+___
 The code for this sample is pretty simple. We use a timer, and each time the 'Tick' event is called, we flip the state of the LED.
 
 
