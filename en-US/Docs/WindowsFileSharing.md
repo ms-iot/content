@@ -1,7 +1,7 @@
 ---
 layout: sample
-title: Using Windows File Sharing
-permalink: /en-US/Samples/SMB.htm
+title: Windows file sharing
+permalink: /en-US/Docs/WindowsFileSharing.htm
 lang: en-US
 ---
 
