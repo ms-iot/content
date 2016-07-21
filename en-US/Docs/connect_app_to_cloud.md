@@ -27,7 +27,7 @@ can install any edition of Visual Studio, including the free Community edition.
 Make sure to select the **Universal Windows App Development Tools**, the
 component required for writing apps Windows 10:
 
-![Universal Windows App Development Tools](install_tools_for_windows10.png)
+![Universal Windows App Development Tools]({{site.baseurl}}/Resources/images/cloud/install_tools_for_windows10.png")
 
 ## Step 3: Install the Connected Srvices for Azure IoT Hub
 
@@ -40,11 +40,11 @@ You can install the extension from the [VS Gallery](https://aka.ms/azure-iot-hub
 
 To create a UWP solution in Visual Studio, on the **File** menu, click **New** then **Project**:
 
-![New Project Creation](new_project_menu.png)
+![New Project Creation]({{site.baseurl}}/Resources/images/cloud/new_project_menu.png)
 
 In the New Project dialog that comes up, select **Blank App (Universal Windows) Visual C#**. Give your project a name (e.x. **MyFirstIoTCoreApp** ):
 
-![New Solution Dialog](new_solution.PNG)
+![New Solution Dialog]({{site.baseurl}}/Resources/images/cloud/new_solution.PNG)
 
 ## Use the Connected Services for Azure IoT Hub to connect to Azure IoT Hub
 
