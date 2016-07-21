@@ -12,7 +12,9 @@ lang: en-US
 
 Windows 10 IoT Core Dashboard is the best way to download, set up and connect your Windows 10 IoT Core devices, all from your PC.
 
-[Download Windows 10 IoT Core Dashboard](http://go.microsoft.com/fwlink/?LinkID=708576)
+<div class="btn-group">
+	<a href="http://go.microsoft.com/fwlink/?LinkID=708576" id="device-center-link" class="btn btn-primary">Download Dashboard</a>
+</div>
 
 ## Set up a new device
 ___
