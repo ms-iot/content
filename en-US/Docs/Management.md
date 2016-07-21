@@ -1,25 +1,25 @@
 ---
 layout: default
 title: Managing Windows 10 IoT Core Devices
-description: <1 to 2 sentence description about this page - used for SEO>
-keyword: <list any keywords not in the title that you want to be used for search>
+description: Device Management for Windows 10 IoT Core is easy with Microsoft. Learn how the Universal Windows Platform makes it easy to use your favorite tools to also manage your IoT devices.
+keyword: Device Management, OMA DM, Azure IoT DM, SCCM, Intune, CSP
 permalink: /en-US/Docs/Management.htm
 lang: en-US
 ---
 
 # Managing Windows 10 IoT Core Devices
 
-MDM policies for Windows 10 IoT Core align with the policies supported in other editions of Windows 10. To learn more about policies, see Configuration service provider reference for Windows 10 at <a href="https://aka.ms/csplist" target="_blank">aka.ms/CSPList</a>. The MDM support in Windows 10 is based on Open Mobile Alliance (OMA) Device Management (DM) protocol 1.2.1 specification.
-
 Windows 10 IoT Core devices can be managed using a traditional OMA DM MDM server that supports certificate based enrollment or using Azure IoT Hub's Device Management (currently in preview).  
  _Learn more about MDM and Windows 10 <a href="https://msdn.microsoft.com/library/windows/hardware/dn914769(v=vs.85).aspx" target="_blank">here</a>._  
  _Learn more about Azure IoT Hub Device Management <a href="https://azure.microsoft.com/en-us/documentation/articles/iot-hub-device-management-overview/" target="_blank">here</a>._  
+
+For devices that are managed using a OMA DM server the MDM policies for Windows 10 IoT Core align with the policies supported in other editions of Windows 10. To learn more about policies, see Configuration service provider reference for Windows 10 at <a href="https://aka.ms/csplist" target="_blank">aka.ms/CSPList</a>. The MDM support in Windows 10 is based on Open Mobile Alliance (OMA) Device Management (DM) protocol 1.2.1 specification.
 
 ## How do I enroll an IoT Core device into a MDM?
 ___
 MDM enrollment of an IoT Core device is accomplished using a Provisioning Package. Provisioning Packages can be created using Windows Image Configuration and Designer (WICD). Let's try enrolling a device into a MDM.
 
-### Microsoft System Center Configuration Manager (Standalone and SCCM+Intune Hybrid)
+### Microsoft System Center Configuration Manager (Standalone or SCCM+Intune Hybrid)
 1. Open the Configuration Manager Management Console (ConfigMgr Console)
 2. Navigate to _Assets and Compliance > Compliance Settings > Company Resource Access > Certificate Profiles_
 ![ConfigMgr-Certificate-Profiles]
