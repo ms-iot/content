@@ -4,6 +4,15 @@
         "parent":"Overview",
         "children":[
           {
+            "title":"Documentation",
+            "link":"/Docs/Documentation.htm"
+          },
+          {
+            /* TODO: need to fix this link */
+            "title":"Supported boards and SoCs",
+            "link":"/Docs/Documentation.htm"
+          },
+          {
             "title":"Glossary",
             "link":"/Docs/Glossary.htm"
           }
@@ -13,7 +22,11 @@
         "parent":"Developer tools",
         "children":[
           {
-            "title": "Building Apps for IoT Core",
+            "title": "IoT Dashboard",
+            "link": "/Docs/IoTDashboard.htm"
+          },
+          {
+            "title": "Building Apps",
             "link": "/Docs/BuildingAppsForIoTCore.htm"
           },
           {
@@ -25,7 +38,7 @@
             "link":"/Docs/tools/DevicePortal.htm"
           },
           {
-            "title":"Using PowerShell",
+            "title":"PowerShell",
             "link":"/Docs/PowerShell.htm"
           },
           {
@@ -42,24 +55,32 @@
             "link":"/Docs/tools/CommandLineUtils.htm"  
           },
           {
-            "title":"Access your files using Windows File Sharing",
+            "title":"Windows File Sharing",
             "link":"/Docs/SMB.htm"
           },
           {
-            "title":"Access your files using FTP",
+            "title":"FTP",
             "link":"/Docs/FTP.htm"
           },
           {
-            "title":"Using SSH",
+            "title":"SSH",
             "link":"/Docs/SSH.htm"
           },
           {
-            "title":"Using WinDbg",
+            "title":"WinDbg",
             "link":"/Docs/Windbg.htm"
+          },
+          {
+            "title":"Installing Packages",
+            "link":"/Docs/InstallPackage.htm"
           },
           {
             "title":"Internet connection sharing",
             "link":"/Docs/InternetConnectionSharing.htm"
+          },
+          {
+            "title": "Remote display",
+            "link":"/Docs/RemoteDisplay.htm"
           }
         ]
       },
@@ -105,10 +126,6 @@
           {
             "title": "Arduino and Windows 10",
             "link":"/Docs/ArduinoAndWindows10.htm"
-          },
-          {
-            "title": "Remote display experience for Windows 10 IoT Core",
-            "link":"/Docs/RemoteDisplay.htm"
           }
         ]
       },
