@@ -7,8 +7,6 @@ lang: en-US
 
 # AllJoyn.JS
 
-
-
 AllJoyn.JS, by Allseen Alliance, provides an easy and flexible way to develop AllJoyn applications in JavaScript.  AllJoyn.JS is a deep integration between AllJoyn Thin Core Library (ajtcl) and base services with Duktape, an ECMAScript 5.0 compliant compiler and runtime designed for small-footprint embedded microcontrollers.
 
 AllJoyn.JS runtime environment includes a ScriptConsole service that provides support for installing new scripts and interacting with a running JavaScript application.  The ScriptConsole service is an AllJoyn service, and like any other AllJoyn service it can be accessed over the network from another device running a corresponding client application.
@@ -17,7 +15,7 @@ This tutorial shows how to get AllJoyn.JS running as a Windows 10 application.
 
 ## Prerequisties
 
-1. Install [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/Docs/AllJoyn.htm#AllJoynExplorer){:target="_blank"} app.
+1. Install [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/Docs/AllJoyn.htm#AllJoynExplorer) app.
 
 ## Set up steps
 
@@ -69,13 +67,16 @@ If needed, see instruction [here]({{site.baseurl}}/en-US/Docs/AppDeployment.htm)
 ScripeConsole service can be used to deploy/install new scripts.  A command line console client is included in AllJoyn.JS source tree (dsb\Samples\AllJoyn.JS\External\allseen\core\alljoyn-js\console).  Pre-built console application can be found [here](https://build.allseenalliance.org/ci/job/alljoyn_js-console-win/){:target="_blank"}.
 
 Sample script **echo.js** that echoes input:  
- `function Echo(val)
+ ```
+ function Echo(val)
  {
     print(val + " " + val);
- }`
+ }
+ ```
 
 Run the console application to deploy echo.js:
 
+```
 > C:\bin>ajs_console.exe echo.js  
 Found script console service: :GdpFgXrQ.86  
 Joined session: 1920857932  
@@ -86,6 +87,7 @@ Echo("Hello");
 Eval compile success  
 PRINT: Hello Hello  
 Eval result=0: undefined
+```
 
 ## General purpose I/O pins
 

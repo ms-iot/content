@@ -149,4 +149,4 @@ If time sync is failing or timing out this may be due to unreachable or a distan
 * You may also make these additions to the registry via a boot script or a custom runtime configuration package included as part of the image creation process if needed.
 	* For more details, see:
 		* https://msdn.microsoft.com/en-us/library/windows/hardware/mt670641(v=vs.85).aspx 
-		* https://blogs.msdn.microsoft.com/iot/2015/12/14/windows-10-iot-core-image-creation/  
+		* https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/iot-core-manufacturing-guide/  
