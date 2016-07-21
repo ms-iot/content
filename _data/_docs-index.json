@@ -5,16 +5,15 @@
         "children":[
           {
             "title":"Documentation",
-            "link":"/Docs/Documentation.htm"
+            "link":"/en-us/Docs/Documentation.htm"
           },
           {
-            /* TODO: need to fix this link */
             "title":"Supported boards and SoCs",
-            "link":"/Docs/Documentation.htm"
+            "link":"/en-us/Docs/ComingSoon.htm"
           },
           {
             "title":"Glossary",
-            "link":"/Docs/Glossary.htm"
+            "link":"/en-us/Docs/Glossary.htm"
           }
         ]
       },
@@ -23,27 +22,27 @@
         "children":[
           {
             "title": "IoT Dashboard",
-            "link": "/Docs/IoTDashboard.htm"
+            "link": "/en-us/Docs/IoTDashboard.htm"
           },
           {
             "title": "Building Apps",
-            "link": "/Docs/BuildingAppsForIoTCore.htm"
+            "link": "/en-us/Docs/BuildingAppsForIoTCore.htm"
           },
           {
             "title":"Visual Studio app deployment",
-            "link":"/Docs/AppDeployment.htm"
+            "link":"/en-us/Docs/AppDeployment.htm"
           },
           {
             "title":"Windows Device Portal",
-            "link":"/Docs/tools/DevicePortal.htm"
+            "link":"/en-us/Docs/tools/DevicePortal.htm"
           },
           {
             "title":"PowerShell",
-            "link":"/Docs/PowerShell.htm"
+            "link":"/en-us/Docs/PowerShell.htm"
           },
           {
             "title":"Windows 10 IoT Core Porting Tool",
-            "link":"/Docs/tools/IoTAPIPortingTool.htm"
+            "link":"/en-us/Docs/tools/IoTAPIPortingTool.htm"
           }
         ]
       },
@@ -52,35 +51,35 @@
         "children":[
           {
             "title":"On-Device command-line utilities",
-            "link":"/Docs/tools/CommandLineUtils.htm"  
+            "link":"/en-us/Docs/tools/CommandLineUtils.htm"  
           },
           {
             "title":"Windows File Sharing",
-            "link":"/Docs/SMB.htm"
+            "link":"/en-us/Docs/SMB.htm"
           },
           {
             "title":"FTP",
-            "link":"/Docs/FTP.htm"
+            "link":"/en-us/Docs/FTP.htm"
           },
           {
             "title":"SSH",
-            "link":"/Docs/SSH.htm"
+            "link":"/en-us/Docs/SSH.htm"
           },
           {
             "title":"WinDbg",
-            "link":"/Docs/Windbg.htm"
+            "link":"/en-us/Docs/Windbg.htm"
           },
           {
             "title":"Installing Packages",
-            "link":"/Docs/InstallPackage.htm"
+            "link":"/en-us/Docs/InstallPackage.htm"
           },
           {
             "title":"Internet connection sharing",
-            "link":"/Docs/InternetConnectionSharing.htm"
+            "link":"/en-us/Docs/InternetConnectionSharing.htm"
           },
           {
             "title": "Remote display",
-            "link":"/Docs/RemoteDisplay.htm"
+            "link":"/en-us/Docs/RemoteDisplay.htm"
           }
         ]
       },
@@ -99,12 +98,12 @@
             "link":"/Samples/PinMappingsDb.htm"
           },        
           {
-            "title":"Ecosystem Compatibility List",
-            "link":"/Docs/SupportedInterfaces.htm"
+            "title":"Hardware compatibility list",
+            "link":"/en-us/Docs/SupportedInterfaces.htm"
           },
           {
             "title":"Headed and Headless devices",
-            "link":"/Docs/HeadlessMode.htm"
+            "link":"/en-us/Docs/HeadlessMode.htm"
           },
           {
             "title":"Make your 3D printer wireless",
@@ -117,15 +116,36 @@
         "children":[
           {
             "title":"Unavailable Universal APIs",
-            "link":"/Docs/UnavailableApis.htm"
+            "link":"/en-us/Docs/UnavailableApis.htm"
           },
           {
             "title":"Embedded mode",
-            "link":"/Docs/EmbeddedMode.htm"
+            "link":"/en-us/Docs/EmbeddedMode.htm"
           },
           {
             "title": "Arduino and Windows 10",
-            "link":"/Docs/ArduinoAndWindows10.htm"
+            "link":"/en-us/Docs/ArduinoAndWindows10.htm"
+          },
+          {
+            "title": "Speech",
+            "link":"/en-us/Docs/Speech.htm"
+          }
+        ]
+      },
+      {
+        "parent":"Azure",
+        "children":[
+          {
+            "title":"Introduction to the cloud",
+            "link":"/en-us/Docs/ComingSoon.htm"
+          },
+          {
+            "title":"Connecting your device to Azure",
+            "link":"/en-us/Docs/ComingSoon.htm"
+          },
+          {
+            "title":"Connecting your app to Azure",
+            "link":"/en-us/Docs/ComingSoon.htm"
           }
         ]
       },
@@ -134,15 +154,19 @@
         "children":[
           {
             "title": "Enabling Secure Boot and BitLocker",
-            "link":"/Docs/SB_BL.htm"
+            "link":"/en-us/Docs/SB_BL.htm"
           },
           {
             "title":"Securing IoT devices with TPMs",
-            "link":"/Docs/TPM.htm"
+            "link":"/en-us/Docs/TPM.htm"
+          },
+          {
+            "title":"Building Secure IoT Devices",
+            "link":"/en-us/Docs/BuildingSecureDevices.htm"
           },
           {
             "title":"Unified write filter",
-            "link":"/Docs/UWF.htm"
+            "link":"/en-us/Docs/UWF.htm"
           }
         ]
       },
@@ -151,19 +175,23 @@
         "children":[
           {
             "title":"AllJoyn connectivity",
-            "link":"/Docs/AllJoyn.htm"
+            "link":"/en-us/Docs/AllJoyn.htm"
           },
           {
             "title":"WiFi connectivity",
-            "link":"/Docs/SetupWiFi.htm"
+            "link":"/en-us/Docs/SetupWiFi.htm"
           },
           {
             "title":"Bluetooth support",
-            "link":"/Docs/Bluetooth.htm"
+            "link":"/en-us/Docs/Bluetooth.htm"
+          },
+          {
+            "title":"mDNS discovery",
+            "link":"/en-us/Docs/ComingSoon.htm"
           },
           {
             "title":"Network packet capture",
-            "link":"/Docs/NetworkPacketCapture.htm"
+            "link":"/en-us/Docs/NetworkPacketCapture.htm"
           }
         ]
       },
@@ -172,7 +200,7 @@
         "children":[
           {
             "title":"Windows 10 IoT Core Pro",
-            "link":"/Docs/CreateIoTCorePro.htm"
+            "link":"/en-us/Docs/CreateIoTCorePro.htm"
           }
         ]
       }

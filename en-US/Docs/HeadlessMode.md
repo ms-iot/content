@@ -1,11 +1,15 @@
 ---
-layout: default
-title: Headed/Headless Mode
+layout: docs
+title: Headed/Headless devices
+description: Configured Windows 10 IoT Core for either headed or headless mode
+keyword: windows iot, headed, headless, boot
 permalink: /en-US/Docs/HeadlessMode.htm
 lang: en-US
 ---
 
-# Headed and Headless mode
+<!-- TODO: clean up the "note" box -->
+
+# Headed and Headless devices
 
 Windows 10 IoT Core can be configured for either *headed* or *headless* mode. 
 
