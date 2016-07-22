@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: docs
 title: Enabling Secure Boot and BitLocker Device Encryption on Windows 10 IoT Core
 description: Learn about enabling Secure Boot and BitLocker encryption on your IoT device.
 keyword: secure boot, windows iot, bitlocker, encryption, security
@@ -8,8 +8,6 @@ lang: en-US
 ---
 
 # Enabling Secure Boot and BitLocker Device Encryption on Windows 10 IoT Core
-Deployment Guide  
-_Revision: 1.1_
 
 ## Introduction  
 UEFI Secure Boot and BitLocker are the keystone features of a locked-down Windows OS that is resilient against offline and boot attacks. UEFI Secure Boot is the first policy enforcement point, located in UEFI. It restricts the system to only allow execution of binaries signed by a specified authority. This feature prevents unknown code from being executed on the platform and potentially weakening the security posture of it. Note that while the limitation to a defined set of publishing authorities excludes all unknown code, it does not necessarily prevent known bad code from being executed (e.g. rollback attack).  

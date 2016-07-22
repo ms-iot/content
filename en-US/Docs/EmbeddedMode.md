@@ -1,13 +1,15 @@
 ---
-layout: default
-title: Embedded Mode
+layout: docs
+title: Embedded mode
+description: How to turn on Embedded mode for Windows desktop and Windows mobile editions
+keyword: windows runtime, windows iot, embedded mode, capabilities
 permalink: /en-US/Docs/EmbeddedMode.htm
 lang: en-US
 ---
 
 # Embedded mode
 
-Windows and Windows Mobile can be configured allow embedded mode. This enables packages to implement background applications.  It also enables applications to declare and use lowLevelDevice and systemManagement capabilities.
+Windows and Windows Mobile can be configured to allow embedded mode. This enables packages to implement background applications.  It also enables applications to declare and use lowLevelDevice and systemManagement capabilities.
 
 Embedded mode is only enabled by default on Window IoT Core and must be enabled on standard Windows and Windows Mobile.
 

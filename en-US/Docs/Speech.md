@@ -12,24 +12,24 @@ lang: en-US
 ## Get started: 
 
 Using recognition and synthesis capabilities provided by windows 10 IoT Core, you could build a complete speech interface for your devices. Here is the list:
+
 * Speech Recognition (SR)
 * Synthesizing Text to Speech (TTS)
 * Continuous Dictation
 
-
 ## Official materials:
 
-* [Quick start speech interaction] (https://msdn.microsoft.com/library/windows/apps/xaml/dn630426.aspx)
+* [Quick start speech interaction](https://msdn.microsoft.com/library/windows/apps/xaml/dn630426.aspx)
 
-* [IoT Core docs/samples] (https://developer.microsoft.com/windows/iot/win10/StartCoding.htm) 
- 
+* [IoT Core docs/samples](https://developer.microsoft.com/windows/iot/win10/StartCoding.htm) 
+
 * [MSFT Github with additional samples](https://github.com/ms-iot/samples)
- 
+
 * [Hackster Projects](https://microsoft.hackster.io)
- 
+
 
 ## Windows 10 speech resources:
- 
+
 * Speech platform, uses simple commands with constrained grammars (TTS, SSML) [Video](https://www.youtube.com/watch?v=GiDvBhfNnjU) and [Code](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis) 
 
 * [Windows 10 IoT Core speech and speech synthesizer demo (phone calls, toggle lights)on RPi2](https://www.youtube.com/watch?v=HstKdcP9XRA)
