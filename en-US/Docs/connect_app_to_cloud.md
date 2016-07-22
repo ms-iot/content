@@ -3,7 +3,7 @@ layout: docs
 title: Connect your app to the cloud
 description: Describes how to connect a UWP app to Azure
 keyword: Cloud, Azure, Connected Services
-permalink: /en-US/Docs/connect_app_to_cloud.htm
+permalink: /en-US/Docs/ConnectAppToCloud.htm
 lang: en-US
 ---
 
@@ -15,8 +15,8 @@ connects to Azure IoT Hub.
 
 ## Step 1: Prepare your device
 
-You can find instructions on how to prepare your device on the [Get Started Page](GetStarted.htm) 
-Make sure you [provision the TPM of your device](connect_device_to_cloud.htm)
+You can find instructions on how to prepare your device on the [Get Started Page]({{site.baseurl}}/GetStarted.htm) 
+Make sure you [provision the TPM of your device](ConnectDeviceToCloud.htm)
 
 ## Step 2: Install Visual Studio 2015 and tools
 
