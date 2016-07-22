@@ -42,8 +42,8 @@
             "link":"/Docs/tools/CommandLineUtils.htm"  
           },
           {
-            "title":"Access your files using Windows File Sharing",
-            "link":"/Samples/SMB.htm"
+            "title":"Windows file sharing",
+            "link":"/Docs/WindowsFileSharing.htm"
           },
           {
             "title":"Access your files using FTP",

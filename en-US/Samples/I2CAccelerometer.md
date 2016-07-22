@@ -1,11 +1,14 @@
 ---
 layout: sample
-title: I2C Accelerometer Sample
+title: I2C Accelerometer
 permalink: /en-US/Samples/I2CAccelerometer.htm
+keyword: Windows 10 IoT Core, beginner, breadboard, i2c, accelerometer
+description: Connect an acceleromter to your device
+samplelink: https://github.com/ms-iot/samples/tree/develop/I2CAccelerometer/CS
 lang: en-US
 ---
 
-# I2C Accelerometer Sample
+# I2C Accelerometer
 
 
 

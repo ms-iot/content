@@ -1,11 +1,11 @@
 ---
 layout: sample
 title: Blinky Headless using Lightning Providers sample
-permalink: /en-US/Samples/BlinkyHeadlessLightning.htm
+permalink: /en-US/Samples/HelloBlinkyLightning.htm
 lang: en-US
 ---
 
-# Blinky Headless Sample with Lightning Provider
+# "Hello, blinky!" background service with the lightning provider
 
 
 
