@@ -3,7 +3,7 @@ layout: docs
 title: Cloud programming
 description: Describes why connect to the cloud and the purpose of different applicable Azure services
 keyword: Cloud, Azure
-permalink: /en-US/Docs/cloud-intro.htm
+permalink: /en-US/Docs/CloudIntro.htm
 lang: en-US
 ---
 
@@ -49,4 +49,4 @@ Microsoft offers a set of libraries and tools that allow you to build your
 connected UWP IoT applications that connect to Azure IoT Hub.
 
 Continue reading about connecting your IoT Core device to Azure IoT Hub on the
-[connect device to cloud](connect_device_to_cloud.htm) and [connect app to cloud](connect_app_to_cloud.htm) pages.
+[connect device to cloud](ConnectDeviceToCloud.htm) and [connect app to cloud](ConnectAppToCloud.htm) pages.
