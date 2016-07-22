@@ -17,7 +17,7 @@ For devices that are managed using a OMA DM server the MDM policies for Windows 
 
 ## How do I enroll an IoT Core device into a MDM?
 ___
-MDM enrollment of an IoT Core device is accomplished using a Provisioning Package. Provisioning Packages can be created using Windows Image Configuration and Designer (WICD). Let's try enrolling a device into a MDM.
+MDM enrollment of an IoT Core device is accomplished using a Provisioning package. Provisioning packages can be created using Windows Image Configuration and Designer (WICD). Let's try enrolling a device into a MDM.
 
 ### Microsoft System Center Configuration Manager (Standalone or SCCM+Intune Hybrid)
 1. Open the Configuration Manager Management Console (ConfigMgr Console)
@@ -28,13 +28,13 @@ MDM enrollment of an IoT Core device is accomplished using a Provisioning Packag
 - Name: ConfigMgr Example Trusted Root Certificate
 - Type of certificate profile: Trusted CA certificate  
 ![ConfigMgr-Certificate-Profiles-Wizard]
-5. Click Next
+5. Click **Next**
 6. Import the certificate file
 7. Select **Computer certificate store - Root** for the **Destination Store**
-8. Click Next
+8. Click **Next**
 9. Choose **Select all** for Supported Platforms
 ![ConfigMgr-Certificate-Profiles-Wizard-Supported-Platforms]
-10. Click Summary, Next, and Close
+10. Click **Summary, Next, and Close**
 
 ### Other MDM Servers
 1. Download and install the Windows Assessment and Deployment Kit (Windows ADK) - <a href="https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit" target="_blank">Get it here</a>
@@ -49,7 +49,7 @@ MDM enrollment of an IoT Core device is accomplished using a Provisioning Packag
 8. In the UPN field enter the account you wish to enroll your device under (i.e. trmck@contoso.co) and click **Add**
 ![WICD-Workplace-Enrollments-UPN-Filled]
 9. For AuthPolicy choose between Username Password based authentication (OnPremises) or Certificate based authentication
-10. Enter the Discovery Service URL for your MDM server _Note: Enrollment Service URL and Policy Service URL are optional_
+10. Enter the Discovery Service URL for your MDM server {% include note.html text="Enrollment Service URL and Policy Service URL are optional" %}
 11. For the Secret enter  
 - OnPremises: The password for the account you're enrolling with  
 - Certificate: The thumbprint of the certificate
