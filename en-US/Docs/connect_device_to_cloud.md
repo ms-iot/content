@@ -3,7 +3,7 @@ layout: docs
 title: Trusted Platform Module
 description: Describes how to connect an IoT Core device to the cloud
 keyword: Cloud, Azure, TPM, Security
-permalink: /en-US/Docs/connect_device_to_cloud.htm
+permalink: /en-US/Docs/ConnectDeviceToCloud.htm
 lang: en-US
 ---
 
@@ -58,4 +58,4 @@ with, you can imprint the shared access key of that device on your TPM:
 
 ![Provision Device]({{site.baseurl}}/Resources/images/cloud/Building_Secure_Apps_for_IoT_Core_Screen02.png)
 
-Your device is now ready to connect to Azure in a secure way. Read about [connecting your app to Azure](connect_app_to_cloud.htm).
+Your device is now ready to connect to Azure in a secure way. Read about [connecting your app to Azure](ConnectAppToCloud.htm).
