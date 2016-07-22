@@ -74,11 +74,11 @@ lang: zh-CN
 
 使用 PKGGEN 工具创建 OEM 程序包以便将设置包打包。
  
-有关使用 PKGGEN 工具创建包含设置包的 OEM 程序包的说明，请访问 [Windows 10 IoT 核心版映像创建](https://blogs.msdn.microsoft.com/iot/2015/12/14/windows-10-iot-core-image-creation)。
+有关使用 PKGGEN 工具创建包含设置包的 OEM 程序包的说明，请访问 [Windows 10 IoT 核心版映像创建](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/iot-core-manufacturing-guide)。
  
 步骤 4： 使用 ICD/Imggen 创建映像
 -------
  
 使用 ICD 创建含有 OEM 程序包的 Windows IoT 核心版映像。
 
-有关使用 ICD 创建含有 OEM 程序包的 Windows IoT 核心版映像的说明，请访问 [Windows 10 IoT 核心版映像创建](https://blogs.msdn.microsoft.com/iot/2015/12/14/windows-10-iot-core-image-creation)。
+有关使用 ICD 创建含有 OEM 程序包的 Windows IoT 核心版映像的说明，请访问 [Windows 10 IoT 核心版映像创建](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/iot-core-manufacturing-guide)。
