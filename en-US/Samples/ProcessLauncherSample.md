@@ -196,7 +196,7 @@ To add an exe to the **allow list**, add to or replace the reg value in the reg 
 
 **Note**, `ProcessLauncher` API launches executables under the current user credentials, or **DefautlAccount**, so apps requiring admin priviliges will fail to run properly.
 
-Go ahead, run the command above on your device, using [SSH]({{site.baseurl}}/{{page.lang}}/Samples/SSH.htm){:target="_blank"} or [PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm){:target="_blank"}. Then, in the sample app (no need to restart) type the command `c:\windows\system32\ipconfig.exe`. You should get an output similar to the one below:
+Go ahead, run the command above on your device, using [SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH.htm){:target="_blank"} or [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm){:target="_blank"}. Then, in the sample app (no need to restart) type the command `c:\windows\system32\ipconfig.exe`. You should get an output similar to the one below:
 
 ![App Started]({{site.baseurl}}/Resources/images/ProcessLauncherSample/ProcessLauncher2.png)
 
@@ -211,7 +211,7 @@ To use the tool:
 * Clone or download a zip of the *Windows 10 IoT Utilities* from [GitHub](https://github.com/ms-iot/iot-utilities){:target="_blank"}
 * Open and build the solution under *ProcessLauncherWhitelist* 
 * Copy the executable to your device using [FTP]({{site.baseurl}}/{{page.lang}}/Samples/FTP.htm){:target="_blank"}
-* Run it on the device using [SSH]({{site.baseurl}}/{{page.lang}}/Samples/SSH.htm){:target="_blank"} or [PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm){:target="_blank"}
+* Run it on the device using [SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH.htm){:target="_blank"} or [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm){:target="_blank"}
 
 ![Proess Launcher Configuration ]({{site.baseurl}}/Resources/images/ProcessLauncherSample/ProcessLauncherWhiteListConfigTool.png)
 

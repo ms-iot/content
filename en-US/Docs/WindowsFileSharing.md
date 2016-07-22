@@ -1,13 +1,17 @@
 ---
 layout: sample
 title: Windows file sharing
+description: Access the files on your device using Windows file sharing
+keyword: windows iot, file sharing
 permalink: /en-US/Docs/WindowsFileSharing.htm
 lang: en-US
 ---
 
-# Using Windows file sharing to transfer files to and from your device
+# Windows file sharing
 
-### Accessing your files using Windows file sharing
+You can use Windows file sharing to transfer files to and from your device.
+
+## Accessing your files using Windows file sharing
 * The file sharing server on your Windows IoT Core device starts automatically on boot.  In order to connect to it, you need the IP address of your device.  You can find the IP address on the default app that boots when your device starts.
 
     ![DefaultApp on Windows IoT Core]({{site.baseurl}}/Resources/images/DefaultApp.png)
@@ -18,7 +22,7 @@ lang: en-US
 
 * Now you can access the files on your device using Windows file sharing.
 
-### Starting and stopping the file sharing server
+## Starting and stopping the file sharing server
 * Connect to your device through [PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm) or [SSH]({{site.baseurl}}/{{page.lang}}/Samples/SSH.htm).
 * By default the file sharing  server is started when the device is booted.
 * To stop the file sharing  server, type `net stop Server /y`
@@ -26,7 +30,7 @@ lang: en-US
 
     ![Server start and stop]({{site.baseurl}}/Resources/images/smb/smb_start_stop.png)
     
-### Disabling and enabling the file sharing server on startup
+## Disabling and enabling the file sharing server on startup
 * Connect to your device through [PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm) or [SSH]({{site.baseurl}}/{{page.lang}}/Samples/SSH.htm).
 * By default the file sharing  server is started when the device is booted.
 * To disable the file sharing  server so that it does not start when the device starts, type `reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\lanmanserver /v Start /t REG_DWORD /d 0x3 /f`

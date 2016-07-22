@@ -1,11 +1,13 @@
 ---
-layout: default
-title: Create a Windows 10 IoT Core Pro Image
+layout: docs
+title: Windows 10 IoT Core Pro
+description: We describe how to create a Windows 10 IoT Core Pro image
+keyword: windows iot, image creation, iot core pro, windows iot
 permalink: /en-US/Docs/CreateIoTCorePro.htm
 lang: en-US
 ---
 
-# Creating a Windows 10 IoT Core Pro Image
+# Windows 10 IoT Core Pro
 
 Here are the steps involved in creating an Enterprise Image
 
@@ -25,13 +27,13 @@ Please install the Windows ADK and ICD.
 Step 2: Create a Provisioning Package with License File using ICD
 -------
 
-**Step 2.1: New Provisioning Pacakge**
+**Step 2.1: New Provisioning Package**
 
 ![New Provisioning Package]({{site.baseurl}}/Resources/images/CreateIoTCorePro/CreatePpkg1.png)
 
-**Step 2.2: Enter Name & Project Folder for Provisioning Pacakge**
+**Step 2.2: Enter Name & Project Folder for Provisioning Package**
 
-![Enter Name & Project Folder for Provisioning Pacakge]({{site.baseurl}}/Resources/images/CreateIoTCorePro/CreatePpkg2.png)
+![Enter Name & Project Folder for Provisioning Package]({{site.baseurl}}/Resources/images/CreateIoTCorePro/CreatePpkg2.png)
 
 **Step 2.3: Select "Windows 10 IoT Core"**
 

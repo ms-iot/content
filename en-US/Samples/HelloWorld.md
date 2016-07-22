@@ -27,7 +27,7 @@ You need to make sure you have installed the Windows 10 IoT Core Project Templat
     Remember to give a good name to your first app! In this example, we called the project 'HelloWorld'.
 
     ![App Template Location]({{site.baseurl}}/Resources/images/HelloWorld/new-cs-project-dialog.PNG)
-    {% include note.html text="If this is the first project you create, Visual Studio will likely prompt you to enable <a href="https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx">developer mode for Windows 10</a>." %}
+    {% include note.html text="If this is the first project you create, Visual Studio will likely prompt you to enable <a href='https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx'>developer mode for Windows 10</a>." %}
      
 
 
@@ -77,9 +77,8 @@ ___
     
     > If you would like to learn more about Universal Windows Platform applications, click [here](https://msdn.microsoft.com/library/windows/apps/dn894631.aspx){:target="_blank"}.
 
-## Deploy the app to your IoT Core device
-___
-1. Of course, we want to deploy our first app to our IoT Core device. It's easy. In the [PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm) documentation, you can find instructions to chose a unique name for your IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in Visual Studio.
+## Deploy the app to your Windows IoT Core device
+1. Of course, we want to deploy our first app to our IoT Core device. It's easy. In the [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm) documentation, you can find instructions to chose a unique name for your IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in Visual Studio.
 
     If you're building for Minnowboard Max, select **x86** in the Visual Studio toolbar architecture dropdown.  If you're building for Raspberry Pi 2 or 3 or the DragonBoard, select **ARM**.
 
