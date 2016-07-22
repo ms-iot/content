@@ -113,15 +113,15 @@
         "children":[
           {
             "title":"Cloud Programming for IoT Core - an Introduction",
-            "link":"{{site.baseurl}}/Docs/cloud-intro.htm"
+            "link":"/Docs/CloudIntro.htm"
           },
           {
             "title":"Connect Your Device To the Cloud",
-            "link":"{{site.baseurl}}/Docs/connect_device_to_cloud.htm"
+            "link":"/Docs/ConnectDeviceToCloud.htm"
           },
           {
             "title":"Connect Your App To the Cloud",
-            "link":"{{site.baseurl}}/Docs/connect_app_to_cloud.htm"
+            "link":"/Docs/ConnectAppToCloud.htm"
           }
         ]
       },
