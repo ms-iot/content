@@ -54,8 +54,8 @@
             "link":"/Docs/tools/CommandLineUtils.htm"  
           },
           {
-            "title":"Windows File Sharing",
-            "link":"/Docs/SMB.htm"
+            "title":"Windows file sharing",
+            "link":"/Docs/WindowsFileSharing.htm"
           },
           {
             "title":"FTP",
