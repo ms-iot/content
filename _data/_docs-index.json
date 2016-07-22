@@ -150,6 +150,23 @@
         ]
       },
       {
+        "parent":"Azure",
+        "children":[
+          {
+            "title":"Cloud Programming for IoT Core - an Introduction",
+            "link":"/Docs/CloudIntro.htm"
+          },
+          {
+            "title":"Connect Your Device To the Cloud",
+            "link":"/Docs/ConnectDeviceToCloud.htm"
+          },
+          {
+            "title":"Connect Your App To the Cloud",
+            "link":"/Docs/ConnectAppToCloud.htm"
+          }
+        ]
+      },
+      {
         "parent":"Security",
         "children":[
           {
