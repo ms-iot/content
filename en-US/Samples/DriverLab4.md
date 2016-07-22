@@ -7,29 +7,34 @@ lang: en-US
 
 # Use Visual Studio to deploy a driver 
 
-In this exercise, you will configure your Visual Studio driver project so that you can compile and deploy a driver for a specific platform during driver development phase.  Note that currently this procedure requires that your target device reboot after the driver is deploy and as a result it may take a couple of minutes for the entire deployment to complete.
+In this exercise, you will configure your Visual Studio driver project so that you can compile and deploy a driver for a specific platform during driver development phase.  Note that currently this procedure requires that your device reboot after the driver is deploy and as a result it may take a couple of minutes for the entire deployment to complete.
 For this exercise you can use the gpiokmdfdemo sample driver found [here](https://github.com/ms-iot/samples/tree/develop/DriverSamples).
 
 ## Step 1 : Setup 
 ---
 
-### On the target device
+### On the device
 
 * Make sure that your device has an IoTCore image installed by following the instructions [here]({{site.baseurl}}/{{page.lang}}/GetStarted.htm).
-* Connect to your target device via Powershell as described in the instructions [here]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm).
+* Connect to your device via Powershell as described in the instructions [here]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm).
 
-### On the development computer
+### On the PC
 
 * Make sure you have installed Visual Studio 2015 Update 2
-* Install the Windows Driver Kit on your development machine by following the instructions [here](https://msdn.microsoft.com/en-US/windows/hardware/dn913721(v=vs.8.5).aspx).  You will need to install the SDK and WDK.
+* Install the Windows Driver Kit on your PC by following the instructions [here](https://msdn.microsoft.com/en-US/windows/hardware/dn913721(v=vs.8.5).aspx).  You will need to install the SDK and WDK.
 
-* Install the certificates so that the driver is signed correctly and can run on your target device.  In later steps, when you sign your driver make sure to use the 'WDKTestCert'. From a elevated command prompt execute the commands listed below:
+* Install the certificates so that the driver is signed correctly and can run on your device. From a elevated command prompt execute the commands listed below:
 
         cd c:\Program Files (x86)\Windows Kits\10\Tools\bin\i386
         Set WPDKContentRoot=c:\Program Files (x86)\Windows Kits\10      
         InstallOEMCerts.cmd
+		
+* Apply fix to enable F5 deployment from VS. In the elevated command prompt, execute the following commands .  
+	1.	`cd %TEMP%` ( will change directory to `c:\users\<usernsme>\Appdata\Local\Temp`)
+	2.	`md “WdkTempFiles”` Manually create a “WdkTempFiles” directory 
+	This is a workaround for a bug in the tooling and requires to be done only once in the PC.
 
-## Step 2 : Provision Device with VS 
+## Step 2 : Provision device with VS 
 ---
 * Open Visual Studio and select Driver > Test > Configure Devices > Add New Device
     * If the Driver Menu option is not shown, check if SDK is installed.
@@ -57,28 +62,29 @@ For this exercise you can use the gpiokmdfdemo sample driver found [here](https:
 * The WDK, through VS, will now provision the IoT device.  TAEF and WDTF will be installed on the device, and the device will be set up for kernel debugging per the settings provided above.
 
 * When complete, the device may be rebooted.  The progress screen on the “Device Configuration” will provide status, and once the IoT device has come back to windows will show “Complete.
- ![Configure Progress]({{site.baseurl}}/Resources/images/DriverLab/confprogress.png)    
-* The device is now provisioned.
+![Configure Progress]({{site.baseurl}}/Resources/images/DriverLab/confprogress.png)
+* The device is now provisioned and the "Device test configuration status" shows "Configured for driver testing"
+![ConfigureDevices]({{site.baseurl}}/Resources/images/DriverLab/ConfigureDevices.png)
 
-## Step 3 : Configure Visual Studio Driver Project
+## Step 3 : Configure Visual Studio driver project
 ---    
-1. Open the Visual studio driver project. 
+1. Launch Visual Studio in the administrator mode and open the visual studio driver project.
 2. Make sure the Target Platform Version matches the SDK installed on your development machine. Select Project Properties from the Solution Explorer window.  Under General Configuration Properties assure that the Target Platform Version matches the SDK installed on your development computer.  You can check the version of the SDK from the "Control Panel > Programs > Programs and Features".
-3. Under "Project Properties > Driver Signing > Test Certificate", select test certificate
-![DriverSigning]({{site.baseurl}}/Resources/images/DriverLab/driver-signing-properties.png)
-4. Set package version number at "Project Properties > PackageGen > Version"
-5. Go to “Driver Install” and select “Deployment”
+3. Under "Project Add New Item > Visual C++ \ Windows Driver, select Package Manifest and Press Add.
+![PackageManifest]({{site.baseurl}}/Resources/images/DriverLab/PackageManifest.png)
+4. Set package version number at "Project Properties > PackageGen > Version". Note that everytime you need to perform a Install/Reinstall of the driver, this version number has to be incremented.
+![PackageVersion]({{site.baseurl}}/Resources/images/DriverLab/PackageVersion.png)
+5. Under "Project Properties > Driver Signing > Test Certificate", select test certificate
+![DriverSigning]({{site.baseurl}}/Resources/images/DriverLab/DriverTestSigning.png)
+6. Go to “Driver Install” and select “Deployment”
 ![InstallOptions]({{site.baseurl}}/Resources/images/DriverLab/installOptions.png)
-    * From the “Target Device Name” dropdown, select the target created above in the “provisioning” process.
-    * Notice the two options for “Install / Reinstall” and “Fast Reinstall”
+
+* From the “Target Device Name” dropdown, select the target created above in the “provisioning” process.
+* Notice the two options for “Install / Reinstall” and “Fast Reinstall”
 
     * **Install / Reinstall** is used for the initial installation of a driver to the target.  This installs the driver package using the Windows update stack and can take several minutes. This must be used every time the INF file is changed.
     Important Note:
     Every time subsequent time this option is used to install a driver after the initial installation, the package version number must be incremented.
-    1.  Open the project settings
-    2.  Select “PackageGen” 
-    3.  In the “Version” Field, increment the version number by 1.
-    4.  Apply the changes and proceed.
     * **Fast Reinstall** can be used once a driver has been installed, and there are no subsequent changes to the drivers INF file which affect the registry.  This method bypasses the install process, shuts down all devnodes associated with the driver, copies the driver over, and restarts the devnode.  This takes a few <20 seconds.
 
     Note! This method is not guaranteed to succeed – If for some reason a devnode cannot be shutdown to release the driver, the operation will fail.  This can be due to faulty hardware, or an initial faulty implementation of the driver.  The Install/Reinstall option must be used in this case.
@@ -90,22 +96,11 @@ For this exercise you can use the gpiokmdfdemo sample driver found [here](https:
 10. Next, if you are using the sample gpiokmdfdemo driver you need to generate ACPI table and copy to your target device.  Follow the steps [here]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab2.htm).
 
 
-## Step 4 : F5 and deployment of the driver to the target
+## Step 4 : Build and deploy driver
 ---
-1.  The “F5” experience does the following steps
-    a.  Builds the driver for the arch of the project
-	
-    b.  Deploys the driver, that is, installs it on the target machine
-	
-    c.  Attaches the VS Kernel debugger to the installed and loaded driver
+This can be done in two ways, using the F5 key and using the Deploy option. In both ways, the driver will be built and deployed (i.e. installs it on device) and the F5 attaches the Visual Studio kernel debugger to the installed and loaded driver. 
 
-2.  The “Deploy” experience is similar, but does not automatically try to attach the kernel debugger. 
- 
-    a.  Builds driver for the arch of the project
-	
-    b.  Deploys the driver to the target
-
-3.  Some users prefer to use the “deploy” functionality and attach a different kernel debugger, such as WinDBG or KD.  This can provide more flexibility than using the VS debugger.
+Some users prefer to use the “deploy” functionality and attach a different kernel debugger, such as WinDBG or KD.  This can provide more flexibility than using the VS debugger.
 
 ### Deploy
 1.  Right-click on the project in the solution explorer
@@ -124,13 +119,6 @@ When Installation completes, the device will reboot again, and the VS Output scr
 3.  The above steps (from deploy) will occur, followed by the debugger connection
 
 * After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm).
-
----
-
-* From the Build menu, click `Build Solution(Ctrl+Shift+B)`. Make sure that you are building for `x86` if you are using a MinnowBoard Max, or `ARM` if you are using a Raspberry Pi 2 or 3.  Visual Studio will build your driver and deploy the driver to your target device.
-
-    ![Driver Settings properties]({{site.baseurl}}/Resources/images/DriverLab/driver-build-option.png)
-
 
 
 * Your driver will now be installed on your target device.
@@ -196,28 +184,3 @@ ftp://<ip address of device>/Data/test/bin/DriverTest/Run/
 </PFRollup>
 </WTT-Logger>
 {% endhighlight %}
-
-### F5 driver deployment failure
-
-A late-breaking change in a component behavior causes the “Debugger attach” process to fail on IoT devices (MinnowBoardMax, RPI2/3) and Mobile.
-
-**Workaround:** From an elevated prompt, manually create the folder in the TEMP directory
-
-1.	`cd %TEMP%` ( will change directory to `c:\users\<usernsme>\Appdata\Local\Temp`)
-
-2.	`Md “WdkTempFiles”` Manually create a “WdkTempFiles” directory 
-
-This fix will persist until the directory is explicitly removed.  This should only ever need to be done once.
-
-**Details:**
-
-*	F5 will build the driver package and attempt to deploy it.  The following message will be displayed in the “Output” window: 
-{% highlight XML %}
-Deploying driver files for project "C:\Users\karlf\Desktop\ToastMonBuggy\toastmon.vcxproj".  
-Deployment may take a few minutes...
-[timestamp]: Gathering kernel debugger settings….
-[timestamp ]: ERROR: Task "Gathering kernel debugger settings" failed to complete successfully. Look at the logs in the driver test group explorer for more details on the failure.
-Gathering kernel debugger settings from the target machine failed.
-{% endhighlight %}
-* Creating the directory manually fixes the above issue.
-
