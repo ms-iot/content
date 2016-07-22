@@ -2,7 +2,7 @@
 layout: docs
 title: Windows 10 IoT Core Pro
 description: We describe how to create a Windows 10 IoT Core Pro image
-keyword: bluetooth, bt, windows iot, device, wireless
+keyword: windows iot, image creation, iot core pro, windows iot
 permalink: /en-US/Docs/CreateIoTCorePro.htm
 lang: en-US
 ---
