@@ -24,6 +24,8 @@ Hardware interfaces for the Raspberry Pi 2 and Raspberry Pi 3 are exposed throug
 
 ## <a name="RPi2_GPIO"></a>GPIO Pins
 
+Let's look at the GPIO available on this device.
+
 ### GPIO Pin Overview
 
 The following GPIO pins are accessible through APIs:
@@ -117,15 +119,10 @@ var gpio2 = controller.OpenPin(2); // succeeds now that GPIO2 is available
 
 ## <a name="RPi2_UART"></a>Serial UART
 
-### Serial UART Overview
-
 There is one Serial UART available on the RPi2/3: **UART0**
 
 * Pin 8  - **UART0 TX**
 * Pin 10  - **UART0 RX**
-
-
-### Serial UART Sample
 
 The example below initializes **UART0** and performs a write followed by a read:
 
@@ -181,6 +178,8 @@ Note that you must add the following capability to the **Package.appxmanifest** 
 {% endhighlight %}
 
 ## <a name="RPi2_I2C"></a>I2C Bus
+
+Let's look at the I2C bus available on this device.
 
 ### I2C Overview
 

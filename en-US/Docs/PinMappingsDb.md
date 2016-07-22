@@ -18,9 +18,11 @@ Hardware interfaces for the Dragonboard are exposed through the 40-pin header on
 * **1x** - 1.8V power pin
 * **4x** - Ground pins
 
-Note that the Drangonboard Max uses 1.8V logic levels on all IO pins. 
+Note that the Dragonboard uses 1.8V logic levels on all IO pins. 
 
 ## <a name="DB_GPIO"></a>GPIO Pins
+
+Let's look at the GPIO available on this device.
 
 ### GPIO Pin Table
 
@@ -142,9 +144,9 @@ Note that you must add the following capability to the **Package.appxmanifest** 
 
 ## <a name="DB_I2C"></a>I2C Bus
 
-#I2C Controllers
+Let's look at the I2C busses available on this device.
 
-##SPI Pins
+### I2C Pins
 
 **I2C0** exposed on the pin header with two lines **SDA** and **SCL**
 
@@ -156,7 +158,7 @@ Note that you must add the following capability to the **Package.appxmanifest** 
 * Pin 21 - **I2C1 SDA**
 * Pin 19 - **I2C1 SCL**
 
-###SPI Sample
+### I2C Sample
 
 The example below initializes **I2C0** and writes data to an I2C device with address **0x40**:
 
@@ -180,7 +182,9 @@ public async void I2C()
 
 ## <a name="DB_SPI"></a>SPI Bus
 
-###SPI Pins
+Let's look at the SPI bus available on this device.
+
+### SPI Pins
 
 There is one SPI controller **SPI0** available on the DB
 

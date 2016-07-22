@@ -136,23 +136,6 @@
         "parent":"Azure",
         "children":[
           {
-            "title":"Introduction to the cloud",
-            "link":"/Docs/ComingSoon.htm"
-          },
-          {
-            "title":"Connecting your device to Azure",
-            "link":"/Docs/ComingSoon.htm"
-          },
-          {
-            "title":"Connecting your app to Azure",
-            "link":"/Docs/ComingSoon.htm"
-          }
-        ]
-      },
-      {
-        "parent":"Azure",
-        "children":[
-          {
             "title":"Cloud Programming for IoT Core - an Introduction",
             "link":"/Docs/CloudIntro.htm"
           },

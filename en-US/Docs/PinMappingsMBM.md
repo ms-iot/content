@@ -69,8 +69,6 @@ public void GPIO()
 
 ## <a name="MBM_UART"></a>Serial UART
 
-### Overview
-
 There are two Serial UARTS available on the MBM: **UART1** and **UART2**
 
 **UART1** has the standard **UART1 TX** and **UART1 RX** lines, along with flow control signals **UART1 CTS** and **UART1 RTS**.
@@ -96,10 +94,7 @@ SerialDevice can result in an exception being thrown:
  * IsRequestToSendEnabled
  * Handshake - only SerialHandshake.None is supported
 
-### UART Sample
-
 The example below initializes **UART2** and performs a write followed by a read:
-
 
 {% highlight C# %}
 using Windows.Storage.Streams;
@@ -153,6 +148,8 @@ Note that you must add the following capability to the **Package.appxmanifest** 
 
 ## <a name="MBM_I2C"></a>I2C Bus
 
+Let's look at the I2C bus available on this device.
+
 ### I2C Overview
 
 There is one I2C controller **I2C5** exposed on the pin header with two lines **SDA** and **SCL**. 10K&#x2126; internal pull-up resistors are already present on these lines.
@@ -191,6 +188,8 @@ The current workaround is to insert a 100 ohm resistor in series with the I2C SC
 getting a bus response. One device that is known to require this workaround is the HTU21D.
 
 ## <a name="MBM_SPI"></a>SPI Bus
+
+Let's look at the SPI bus available on this device.
 
 ### SPI Overview
 
