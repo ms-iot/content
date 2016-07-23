@@ -4,6 +4,14 @@
         "parent":"Overview",
         "children":[
           {
+            "title":"Documentation",
+            "link":"/Docs/Documentation.htm"
+          },
+          {
+            "title":"Supported boards and SoCs",
+            "link":"/Docs/ComingSoon.htm"
+          },
+          {
             "title":"Glossary",
             "link":"/Docs/Glossary.htm"
           }
@@ -13,7 +21,11 @@
         "parent":"Developer tools",
         "children":[
           {
-            "title": "Building Apps for IoT Core",
+            "title": "IoT Dashboard",
+            "link": "/Docs/IoTDashboard.htm"
+          },
+          {
+            "title": "Building Apps",
             "link": "/Docs/BuildingAppsForIoTCore.htm"
           },
           {
@@ -25,7 +37,7 @@
             "link":"/Docs/tools/DevicePortal.htm"
           },
           {
-            "title":"Using PowerShell",
+            "title":"PowerShell",
             "link":"/Docs/PowerShell.htm"
           },
           {
@@ -42,24 +54,32 @@
             "link":"/Docs/tools/CommandLineUtils.htm"  
           },
           {
-            "title":"Access your files using Windows File Sharing",
-            "link":"/Samples/SMB.htm"
+            "title":"Windows file sharing",
+            "link":"/Docs/WindowsFileSharing.htm"
           },
           {
-            "title":"Access your files using FTP",
+            "title":"FTP",
             "link":"/Docs/FTP.htm"
           },
           {
-            "title":"Using SSH",
+            "title":"SSH",
             "link":"/Docs/SSH.htm"
           },
           {
-            "title":"Using WINDBG",
+            "title":"WinDbg",
             "link":"/Docs/Windbg.htm"
+          },
+          {
+            "title":"Installing Packages",
+            "link":"/Docs/InstallPackage.htm"
           },
           {
             "title":"Internet connection sharing",
             "link":"/Docs/InternetConnectionSharing.htm"
+          },
+          {
+            "title": "Remote display",
+            "link":"/Docs/RemoteDisplay.htm"
           }
         ]
       },
@@ -68,17 +88,17 @@
         "children":[
           {
             "title":"Raspberry Pi 2 & 3 pin mappings",
-            "link":"/Samples/PinMappingsRPi2.htm"
+            "link":"/Docs/PinMappingsRPi.htm"
           },
           {
             "title":"Minnowboard Max pin mappings",
-            "link":"/Samples/PinMappingsMBM.htm"
+            "link":"/Docs/PinMappingsMBM.htm"
           },{
             "title":"Dragonboard pin mappings",
-            "link":"/Samples/PinMappingsDb.htm"
+            "link":"/Docs/PinMappingsDb.htm"
           },        
           {
-            "title":"Ecosystem Compatibility List",
+            "title":"Hardware compatibility list",
             "link":"/Docs/SupportedInterfaces.htm"
           },
           {
@@ -87,7 +107,7 @@
           },
           {
             "title":"Make your 3D printer wireless",
-            "link":"/Samples/3DPrintServer.htm"
+            "link":"/Docs/3DPrintServer.htm"
           }
         ]
       },
@@ -107,8 +127,8 @@
             "link":"/Docs/ArduinoAndWindows10.htm"
           },
           {
-            "title": "Remote display experience for Windows 10 IoT Core",
-            "link":"/Docs/RemoteDisplay.htm"
+            "title": "Speech",
+            "link":"/Docs/Speech.htm"
           }
         ]
       },
@@ -141,6 +161,10 @@
             "link":"/Docs/TPM.htm"
           },
           {
+            "title":"Building Secure IoT Devices",
+            "link":"/Docs/BuildingSecureDevices.htm"
+          },
+          {
             "title":"Unified write filter",
             "link":"/Docs/UWF.htm"
           }
@@ -160,6 +184,10 @@
           {
             "title":"Bluetooth support",
             "link":"/Docs/Bluetooth.htm"
+          },
+          {
+            "title":"mDNS discovery",
+            "link":"/Docs/ComingSoon.htm"
           },
           {
             "title":"Network packet capture",

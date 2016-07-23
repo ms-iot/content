@@ -10,7 +10,7 @@
 
 4. Under **UWP Project Settings**, modify the following fields:
 
-	* **Machine Name**: If you previously used [PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm) to set a unique name for your device, you can enter it here (in this example, we're using **my-device**).
+	* **Machine Name**: If you previously used [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm) to set a unique name for your device, you can enter it here (in this example, we're using **my-device**).
 	Otherwise, use the IP address of your Windows IoT Core device.
 	* **Remote Port**: Set to **5678**
 
