@@ -17,8 +17,8 @@ Read [Unified Write Filter](https://msdn.microsoft.com/en-us/windows/hardware/mt
 If you do not have IoT Core Kits yet, Download and install [IoT Core Kits from MSDN Subscriber Downloads](https://msdn.microsoft.com/subscriptions/downloads/#FileId=67415).
 
 ## How to Install UWF on a device running Windows 10 IoT Core
----
-* Launch [Powershell](http://ms-iot.github.io/content/en-US/Samples/PowerShell.htm) or [SSH](http://ms-iot.github.io/content/en-US/Samples/SSH.htm) and access your device running Windows 10 IoT Core.
+___
+* Launch [Powershell](http://ms-iot.github.io/content/en-US/Docs/PowerShell.htm) or [SSH](http://ms-iot.github.io/content/en-US/Docs/SSH.htm) and access your device running Windows 10 IoT Core.
 * From Powershell or SSH, do the following:
   * Create a temporary folder on the target machine (e.g. ```C:\UWFTemp```).
   * Based on your device architecture, copy UWF packages ( `Microsoft-IoTUAP-UnifiedWriteFilter-Package.cab` and `Microsoft-IoTUAP-UnifiedWriteFilter-Package_Lang_en-us.cab` ) from your PC (`C:\Program Files (x86)\Windows Kits\10\MSPackages\Retail\<arch>\fre\`) to `C:\UWFTemp`.
@@ -33,14 +33,14 @@ If you do not have IoT Core Kits yet, Download and install [IoT Core Kits from M
 
 
 ## How to include UWF in Your Custom FFU 
----
+___
 
 *             Add **IOT_UNIFIED_WRITE_FILTER** feature id to the OEM Input file 
 *             Create the image\FFU. Read [Create a basic image](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/create-a-basic-image) for instructions.
 
 
 ## How to Use UWF
----
+___
 
 UWF can be configured using the uwfmgr.exe tool via a Powershell or SSH session.
 Read [`uwfmgr.exe` tool](https://msdn.microsoft.com/en-us/windows/hardware/mt572002) for the available options with an exception of some commands listed below that are not supported in IoT Core.
@@ -61,7 +61,7 @@ UWF can also be configured via MDM channel using [Unified Write Filter CSP](http
 
 
 ## Protecting a Data Volume
----
+___
 
 Data volume in IoT Core can be protected using the GUID for the volume. 
 The GUID for the available volumes can be found through the following command
@@ -95,7 +95,7 @@ For more info on creating exclusion files, see [Unified Write Filter](https://ms
 
 
 ## Servicing UWF protected devices
----
+___
 The following steps are required to service UWF protected devices.
 
 * `uwfmgr.exe filter disable` Disable UWF
@@ -106,7 +106,7 @@ The following steps are required to service UWF protected devices.
 * `shutdown /r /t 0` Reboot device to enable UWF
 
 ## Unsupported uwfmgr.exe Commands
----
+___
 **UWF Servicing Mode** is not supported in IoT Core.
 
 `uwfmgr.exe` on Windows 10 IoT Core does not support commands listed below.

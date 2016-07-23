@@ -1,32 +1,34 @@
 ---
-layout: default
+layout: docs
 title: Use Microsoft Message Analyzer to perform network packet capture
-permalink: /en-US/win10/NetworkPacketCapture.htm
+description: Use Microsoft Message Analyzer to perform network packet capture
+keyword: network, windows iot, Microsoft Message Analyzer
+permalink: /en-US/Docs/NetworkPacketCapture.htm
 lang: en-US
 ---
 
-## Use Microsoft Message Analyzer to capture network packets from your Windows 10 IoT Core device
+# Network packet capture
 
 You can use [Microsoft Message Analyzer](http://www.microsoft.com/en-us/download/details.aspx?id=44226){:target="_blank"} to capture, display, and analyze protocol messaging traffic on your Windows 10 IoT Core device.
 
 ![Message Analyzer]({{site.baseurl}}/Resources/images/packetcapture/message-analyzer.png)
 
-### Set up your device
+## Set up your device
 
-In order to connect to your device using Message Analyzer, you need to first rename your device.  This can be done through [SSH]({{site.baseurl}}/{{page.lang}}/win10/samples/SSH.htm){:target="_blank"} or 
-[PowerShell]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm){:target="_blank"} using the `setcomputername` command.
+In order to connect to your device using Message Analyzer, you need to first rename your device.  This can be done through [SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH.htm){:target="_blank"} or 
+[PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm){:target="_blank"} using the `setcomputername` command.
 
 ![PowerShell Rename Device]({{site.baseurl}}/Resources/images/packetcapture/powershell-rename-device.png)
 
 After you rename your device, reboot the device to apply the name change.
 
-### Turn off the firewall
+## Turn off the firewall
 
 Connect to your device using PowerShell or SSH and run the following command to disable the firewall.
     
     netsh advfirewall set allprofiles state off
     
-### Connect to your device using Message Analyzer
+## Connect to your device using Message Analyzer
 
 Now that your device is set up, let's connect to it using Microsoft Message Analyzer.
 
@@ -60,6 +62,6 @@ Now that your device is set up, let's connect to it using Microsoft Message Anal
 
     ![Message Analyzer]({{site.baseurl}}/Resources/images/packetcapture/message-analyzer.png)
     
-10. After you start the trace through Message Analyzer, you can also view the ETW messages from the packet capture driver in your device's [web interface]({{site.baseurl}}/{{page.lang}}/win10/tools/Webb.htm){:target="_blank"}.  To do this, go to the ETW tab of the web interface, select `Microsoft-Windows-NDIS-PacketCapture` from the `Registered providers` dropdown menu and click the `Enable` button.
+10. After you start the trace through Message Analyzer, you can also view the ETW messages from the packet capture driver in your device's [web interface]({{site.baseurl}}/{{page.lang}}/Docs/tools/Webb.htm){:target="_blank"}.  To do this, go to the ETW tab of the web interface, select `Microsoft-Windows-NDIS-PacketCapture` from the `Registered providers` dropdown menu and click the `Enable` button.
 
     ![Message Analyzer]({{site.baseurl}}/Resources/images/packetcapture/web-etw.png)    

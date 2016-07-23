@@ -1,6 +1,8 @@
 ---
-layout: default
+layout: docs
 title: Windows Device Portal
+description: Connect to, control, configure, and get advanced diagnostics about your machine from the web
+keyword: windows iot, remote, diagnostics
 permalink: /en-US/Docs/tools/DevicePortal.htm
 lang: en-US
 ---
@@ -142,7 +144,7 @@ Wi-Fi adapters are not currently supported.  This will be coming soon.
 ## Additional Information
 
 ### Changing the default port
-1. Launch powershell and [connect to your device.]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm)
+1. Launch powershell and [connect to your device.]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm)
 2. Set the port:
 
     `Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\IoT\webmanagement /v HttpPort /t REG_DWORD /d <your port number>`

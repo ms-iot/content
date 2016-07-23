@@ -3,7 +3,7 @@ layout: docs
 title: Building Applications for Windows 10 IoT Core
 description: Lean about UWP, its support on IoT Core, and other types of apps supported on IoT Core
 keyword: windows runtime, windows iot, uwp
-permalink: /en-US/Docs/UwpAndIoTCore.htm
+permalink: /en-US/Docs/BuildingAppsForIoTCore.htm
 lang: en-US
 ---
 

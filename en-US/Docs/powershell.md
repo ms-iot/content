@@ -1,6 +1,8 @@
 ---
-layout: default
-title: Use Windows PowerShell to connect to a Windows 10 IoT Core device.
+layout: docs
+title: PowerShell and IoT Core devices
+description: Allows Remote Administration and Configuration so that you can remotely configure and manage any Windows IoT Core device
+keyword: windows iot, powershell, remote
 permalink: /en-US/Docs/PowerShell.htm
 lang: en-US
 ---

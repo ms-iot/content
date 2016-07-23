@@ -1,6 +1,8 @@
 ---
-layout: default
+layout: docs
 title: Deploying an App with Visual Studio
+description: Use Visual Studio to deploy and debug applications on your Windows 10 IoT Core device
+keyword: windows iot, visual studio, uwp, debug, deploy
 permalink: /en-US/Docs/AppDeployment.htm
 lang: en-US
 ---

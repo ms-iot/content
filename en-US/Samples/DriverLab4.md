@@ -16,7 +16,7 @@ For this exercise you can use the gpiokmdfdemo sample driver found [here](https:
 ### On the device
 
 * Make sure that your device has an IoTCore image installed by following the instructions [here]({{site.baseurl}}/{{page.lang}}/GetStarted.htm).
-* Connect to your device via Powershell as described in the instructions [here]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm).
+* Connect to your device via Powershell as described in the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm).
 
 ### On the PC
 
@@ -118,7 +118,7 @@ When Installation completes, the device will reboot again, and the VS Output scr
 2.  Press F5.  The target will be built, deployed, and attached to the VS Kernel Debugger.
 3.  The above steps (from deploy) will occur, followed by the debugger connection
 
-* After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm).
+* After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm).
 
 
 * Your driver will now be installed on your target device.

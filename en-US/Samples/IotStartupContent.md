@@ -3,7 +3,7 @@
 
 1. You can set your app to be the 'Startup App' for your Windows IoT Core device, so that when the device reboot, it will start your app automatically. To do so, you'll need to run a command line utility called iotstartup on the Windows IoT Core device. We will do this using PowerShell.
 
-1. Start a PowerShell (PS) session with your Windows IoT Core device as described [here]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm).
+1. Start a PowerShell (PS) session with your Windows IoT Core device as described [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm).
 
 1. From the PS session, type (for simplicity, we will assume the app's name is HelloWorld, **please substitute your app's actual name**):
 

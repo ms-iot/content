@@ -33,7 +33,7 @@ You can also deploy a driver using Visual Studio during driver development by fo
 
     ![SMB with File Explorer]({{site.baseurl}}/Resources/images/DriverLab/cred1.png)
 
-    NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm)
+    NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm)
 
 * Navigate to the `\windows\system32\` folder in the SMB File Explorer window:
 
@@ -52,13 +52,13 @@ You can also deploy a driver using Visual Studio during driver development by fo
         gpiokmdfdemo.sys
         ACPITABL.dat
 
-The next steps involve connecting to the target device using PowerShell as explained [here]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm).  Make sure you have an active PowerShell connection to your Windows 10 IoT Core device.
+The next steps involve connecting to the target device using PowerShell as explained [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm).  Make sure you have an active PowerShell connection to your Windows 10 IoT Core device.
 
 <br/>
 
 ## Installing the sample driver
 
-* Connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm).
+* Connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm).
 
 * Using the PowerShell window, navigate to the `C:\Windows\System32` directory on the target device:
     
@@ -76,7 +76,7 @@ From the PowerShell window, type the following command:
 
     [192.168.0.243]: PS C:\> shutdown /r /t 0
 
-The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm).
+The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm).
 
 <br/>
 
