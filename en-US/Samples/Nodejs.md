@@ -17,8 +17,8 @@ Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/{{page.l
 
 ### Copy Node.js to your Raspberry Pi 2 or 3
 * Download the zip file with ARM Node.js (ChakraCore) from [here](http://aka.ms/nodecc_arm) to your PC and extract the files (node.exe and chakracore.dll).
-* Use [Windows file sharing]({{site.baseurl}}/{{page.lang}}/Samples/SMB.htm), [PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm), 
-or [SSH]({{site.baseurl}}/{{page.lang}}/Samples/SSH.htm) to create `C:\Node.js (ChakraCore)` folder on your Raspberry Pi 2 or 3.
+* Use [Windows file sharing]({{site.baseurl}}/{{page.lang}}/Samples/SMB.htm), [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm), 
+or [SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH.htm) to create `C:\Node.js (ChakraCore)` folder on your Raspberry Pi 2 or 3.
 * Copy node.exe and chakracore.dll to `C:\Node.js (ChakraCore)` on your Raspberry Pi 2 or 3.
 
 
@@ -126,7 +126,7 @@ Create a folder on the device called C:\MemoryStatusSample. Then copy the files 
 * MemoryStatusAddon.node
 * server.js
 
-Connect to the device using PowerShell.  Please follow the instructions found on the [Powershell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm) page.
+Connect to the device using PowerShell.  Please follow the instructions found on the [Powershell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm) page.
 
 Allow Node.exe to communicate through the firewall with the following command:
 

@@ -1,11 +1,13 @@
 ---
-layout: default
-title: Bluetooth Support
+layout: docs
+title: Bluetooth support
+description: Information about Bluetooth support on Windows 10 IoT Core
+keyword: bluetooth, bt, windows iot, device, wireless
 permalink: /en-US/Docs/Bluetooth.htm
 lang: en-US
 ---
 
-# Bluetooth Support
+# Bluetooth support
 Windows IoT Core currently supports Bluetooth 4.0. A list of supported Bluetooth dongles can be found [here]({{site.baseurl}}/{{page.lang}}/Docs/SupportedInterfaces.htm).
 
 ## Supported Bluetooth Profiles

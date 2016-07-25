@@ -156,7 +156,7 @@ int main(int argc, char **argv)
 
 * This application can be run in either headed or headless mode.  To better understand what headed and headless mode are and how to configure your device, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm).
 
-* It is easy to deploy this console application to our Windows IoT Core device. In the [PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm) documentation, you can find instructions to use `setcomputername` to configure a unique name for your Windows IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in VS.
+* It is easy to deploy this console application to our Windows IoT Core device. In the [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm) documentation, you can find instructions to use `setcomputername` to configure a unique name for your Windows IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in VS.
 
 * You will first need to setup the Remote Debugger on your Windows IoT Core device. First follow the steps [here]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm) to deploy a Universal Windows Application on your device. This will copy all the required binaries to your device. 
 
@@ -190,7 +190,7 @@ int main(int argc, char **argv)
 
 * Congratulations! You just deployed your first console application to a device running Windows IoT Core!
 
-* You can now run the application as you would any other application.  Simply open a PowerShell/SSH connection (instructions can be found [here for powershell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm) and [here for SSH]({{site.baseurl}}/{{page.lang}}/Samples/SSH.htm)) and enter the Remote Command you specified above.
+* You can now run the application as you would any other application.  Simply open a PowerShell/SSH connection (instructions can be found [here for powershell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm) and [here for SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH.htm)) and enter the Remote Command you specified above.
 
     ![ConsoleOutput Target]({{site.baseurl}}/Resources/images/Console/console_output.png)
 

@@ -1,7 +1,7 @@
 ---
-layout: default
-title: Using WiFi on your Windows 10 IoT Core device.
-description: Learn how to set up Wifi on your Windows 10 IoT Core device.
+layout: docs
+title: Using WiFi on your Windows 10 IoT Core device
+description: Learn how to set up Wifi on your Windows 10 IoT Core device
 keyword: wifi, windows iot, device, wireless
 permalink: /en-US/Docs/SetupWiFi.htm
 lang: en-US
@@ -10,7 +10,7 @@ lang: en-US
 # Using WiFi on your Windows 10 IoT Core device
 
 WiFi is supported on Windows 10 IoT Core devices through the use of a USB WiFi adapter. Using WiFi provides all the functionality of a wired connection,
-including [SSH]({{site.baseurl}}/{{page.lang}}/Samples/SSH.htm), [Powershell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm), [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/Docs/tools/DevicePortal.htm), and application debugging and deployment.
+including [SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH.htm), [Powershell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm), [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/Docs/tools/DevicePortal.htm), and application debugging and deployment.
 
 	Note: Plugging in a wired Ethernet cable will override WiFi as the default network interface
 
@@ -83,11 +83,11 @@ Setting up WiFi using wireless profiles is supported in Windows 10 IoT Core. See
 
     ![SMB with File Explorer]({{site.baseurl}}/Resources/images/DriverLab/cred1.png)
 
-    NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm)
+    NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm)
 
 3. Copy the exported WiFi profile XML file from the Windows PC to your Windows 10 IoT Core device
 
-4. Connect to your device using [PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm) and add the new WiFi profile to your device by executing the following commands
+4. Connect to your device using [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm) and add the new WiFi profile to your device by executing the following commands
 
     * `netsh wlan add profile filename=<copied XML path>`
 

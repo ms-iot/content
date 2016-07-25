@@ -18,14 +18,14 @@
       {
          "title":"Using PowerShell",
          "description":"Allows Remote Administration and Configuration so that you can remotely configure and manage any Windows IoT Core device",
-         "link-text":"<a href='samples/PowerShell.htm'>Learn More</a>",
+         "link-text":"<a href='Docs/PowerShell.htm'>Learn More</a>",
          "ranking":6,
          "tags":["intermediate","tool","configuration"]
       },
       {
          "title":"Using SSH",
          "description":"Allows Remote Administration and Configuration of your Windows IoT Core device over SSH",
-         "link-text":"<a href='samples/SSH.htm'>Learn More</a>",
+         "link-text":"<a href='Docs/SSH.htm'>Learn More</a>",
          "ranking":6,
          "tags":["intermediate","tool","configuration"]
       },
@@ -209,14 +209,14 @@
       {
          "title":"使用 PowerShell",
          "description":"允许远程管理和配置，以便你可以远程配置和管理任何 Windows IoT 核心版设备",
-         "link-text":"<a href='samples/PowerShell.htm'>了解详细信息</a>",
+         "link-text":"<a href='Docs/PowerShell.htm'>了解详细信息</a>",
          "ranking":6,
          "tags":["中级","工具","配置"]
       },
       {
          "title":"使用 SSH",
          "description":"允许通过 SSH 远程管理和配置 Windows IoT 核心版设备",
-         "link-text":"<a href='samples/SSH.htm'>了解详细信息</a>",
+         "link-text":"<a href='Docs/SSH.htm'>了解详细信息</a>",
          "ranking":6,
          "tags":["中级","工具","配置"]
       },

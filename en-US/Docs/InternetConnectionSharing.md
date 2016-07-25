@@ -1,6 +1,8 @@
 ---
-layout: default
+layout: docs
 title: Internet Connection Sharing Tutorial (TH2)
+description: Learn how to enable Internet Connection Sharing on your IoT Core device by bridging a Software Wi-Fi Access Point and Ethernet adapter
+keyword: ics, windows iot, remote, networking
 permalink: /en-US/Docs/InternetConnectionSharing.htm
 lang: en-US
 ---
@@ -27,7 +29,7 @@ Below are steps to enable Internet Connection Sharing (ICS) on latest Windows 10
 
 	For IoT Onboarding application the SSID will start with "AJ\_SoftAPSsid\_" and can be changed in application's configuration [file](https://github.com/ms-iot/samples/blob/develop/IotOnboarding/IoTOnboardingTask/Config.xml){:target="_blank"}.
 
-3.	Remotely connect to the IoT device [using ssh]({{site.baseurl}}/en-US/Samples/SSH.htm){:target="_blank"}.
+3.	Remotely connect to the IoT device [using ssh]({{site.baseurl}}/en-US/Docs/SSH.htm){:target="_blank"}.
 4.	Collect information about device networks by finding network device indexes and descriptions. This is needed to declare which networks to bridge.
 
 	On device, run **route print** and collect the following data:

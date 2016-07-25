@@ -51,7 +51,7 @@ Optional:
   1. Now, copy the Microsoft.HidInjectionSample.HidInjectionSample.cab to the network folder you opened in the first step.
   
 ### Installing the HID Injector
-   1. Use [SSH]({{site.baseurl}}/en-US/win10/samples/SSH.htm) or [Powershell]({{site.baseurl}}/en-US/win10/samples/PowerShell.htm) to connect to your device. 
+   1. Use [SSH]({{site.baseurl}}/en-US/win10/Docs/SSH.htm) or [Powershell]({{site.baseurl}}/en-US/win10/Docs/PowerShell.htm) to connect to your device. 
    1. Once connected, change to your deployment direcory by typing ```cd deploy```.
    1. Now prepare the install of the driver by typing ```ApplyUpdate -stage Microsoft.HidInjectionSample.HidInjectionSample.cab```.
    1. Now commit the install by typing ```ApplyUpdate -commit```.

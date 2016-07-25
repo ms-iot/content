@@ -64,7 +64,7 @@ Below is an example for specifying files and reg keys.
 
 ### Creating Appx package
 
-Use [`appx2pkg.cmd` tool](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/appx2pkg.cmd) to generate the .pkg.xml file for a given appx file. This tool expects the appx dependencies in the sub directory named "dependencies" in the folder containing the appx file.
+Use [`appx2pkg.cmd` tool](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/appx2pkg.cmd) to generate the .pkg.xml file for a given appx file. This tool expects the appx dependencies in the sub directory named "dependencies" in the folder containing the appx file. If you require the appx to be installed on the boot, you should also include OEMCustomisation.cmd file to invoke the AppInstall command as shown in [Appx Installation sample]({{site.baseurl}}/{{page.lang}}/Samples/AppInstall.htm).
 
 See also
 
@@ -87,7 +87,7 @@ See also
 ## Step 3: Install on device
 ---
 
-* Connect to the device ( [using SSH]({{site.baseurl}}/{{page.lang}}/Samples/SSH.htm) or [using Powershell]({{site.baseurl}}/{{page.lang}}/Samples/powershell.htm) )
+* Connect to the device ( [using SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH.htm) or [using Powershell]({{site.baseurl}}/{{page.lang}}/Docs/powershell.htm) )
 * Copy the <filename>.cab file to the device to a directory say C:\OemInstall
 * Initiate staging of the package using `applyupdate -stage C:\OemInstall\<filename>.cab`. Note that this step is be repeated for each package, when you have multiple packages to install.
 * Commit the packages using `applyupdate -commit`.

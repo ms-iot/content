@@ -74,7 +74,7 @@ Remember that we connected the other end of the LED to the 3.3 Volts power suppl
 
 * Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm#python).
 
-	**NOTE: For now, use device name in lieu of IP address.  If the device name is not unique, use `setcomputername` tool on the device to reset the device name and reboot.  Documentation for this can be found [here]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm)**
+	**NOTE: For now, use device name in lieu of IP address.  If the device name is not unique, use `setcomputername` tool on the device to reset the device name and reboot.  Documentation for this can be found [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm)**
 
 * The Python app will deploy and start on the device.
 
