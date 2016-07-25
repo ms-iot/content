@@ -21,6 +21,7 @@ WinDbg is a very powerful debugger that most Windows developers are familiar wit
 
 
 ## MinnowBoard Max (MBM) 
+___
 
 You can connect WinDbg to the MinnowBoard Max using a network connection.
 
@@ -38,7 +39,7 @@ Using the active PowerShell connection you will modify two BCD settings on the M
 
 Here is the first command you need to run:   
 
-        bcdedit -dbgsettings net hostip:<DEV_PC_IP_ADDRESS> port:<PORT_NUM> key:<KEY> 
+        `bcdedit -dbgsettings net hostip:<DEV_PC_IP_ADDRESS> port:<PORT_NUM> key:<KEY>` 
 
 * This command enables debugging over the network.  Additionally, it specifies the IP address of the PC where WinDbg will be running (DEV_PC_IP_ADDRESS), the network port number to use for the connection (PORT_NUM), and a unique key to be used to differentiate multiple connections (KEY) 
 
@@ -46,7 +47,7 @@ Here is the first command you need to run:
 
 Here is the second command you need to run:
 
-        bcdedit -debug on
+        `bcdedit -debug on`
 
 * This command turns on debugging on the device 
 
@@ -56,7 +57,10 @@ On your development machine, you can start WinDbg with the PORT_NUM and the KEY 
 
         Note: If you have any of the Windows kits installed, you may find WinDbg under "C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\WinDbg.exe" 
 
+* Reboot the IoTCore Device to reconnect to the debugger
+
 ## Raspberry Pi 2 or 3 (RPi2 or RPi3) 
+___
 
 You can connect WinDbg to the Raspberry Pi 2 or 3 using a serial connection.
 
@@ -92,7 +96,7 @@ UART0 will be used on the Raspberry Pi 2 or 3 for the kernel debugging connectio
             Orange : TX  (3.3V)
             Yellow : RX  (3.3V)
             Green  : RTS (NOT USED)
-
+			
 The basic idea for making the correct serial connections is to remember that while one device uses its TX to transmit data, the other device uses its RX to receive the data.  Therefore, the following is how you should connect your RPi2 or RPi3:
 
         If using Adafruit's serial cable:
@@ -111,7 +115,7 @@ Using the active PowerShell or SSH connection to your Raspberry Pi 2 or 3, you w
 
 Here is the first command you need to run:   
     
-        bcdedit -dbgsettings serial 
+        `bcdedit -dbgsettings serial` 
 
 * The above command enables the serial connection for debugging
 
@@ -119,7 +123,7 @@ Here is the first command you need to run:
 
 Here is the second command you need to run:
 
-        bcdedit -debug on
+        `bcdedit -debug on`
 
 * This command turns on debugging on the device 
 
@@ -132,3 +136,8 @@ On your development machine you can start WinDbg as follows:
         Note: If you have any of the Windows kits installed, you may find WinDbg under "C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\WinDbg.exe" 
 
 * Please note that 'PORT' refers to the COM port number your USB-to-TTL cable was assigned in the system and displayed in the Device Manager under "Ports (COM & LPT)".
+
+* Reboot the IoTCore Device to reconnect to the debugger
+
+
+

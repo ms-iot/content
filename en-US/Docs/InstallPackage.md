@@ -64,7 +64,7 @@ Below is an example for specifying files and reg keys.
 
 ### Creating Appx package
 
-Use [`appx2pkg.cmd` tool](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/appx2pkg.cmd) to generate the .pkg.xml file for a given appx file. This tool expects the appx dependencies in the sub directory named "dependencies" in the folder containing the appx file.
+Use [`appx2pkg.cmd` tool](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/appx2pkg.cmd) to generate the .pkg.xml file for a given appx file. This tool expects the appx dependencies in the sub directory named "dependencies" in the folder containing the appx file. If you require the appx to be installed on the boot, you should also include OEMCustomisation.cmd file to invoke the AppInstall command as shown in [Appx Installation sample]({{site.baseurl}}/{{page.lang}}/Samples/AppInstall.htm).
 
 See also
 
