@@ -21,7 +21,7 @@ WinDbg is a very powerful debugger that most Windows developers are familiar wit
 
 
 ## MinnowBoard Max (MBM) 
----
+___
 
 You can connect WinDbg to the MinnowBoard Max using a network connection.
 
@@ -60,7 +60,7 @@ On your development machine, you can start WinDbg with the PORT_NUM and the KEY 
 * Reboot the IoTCore Device to reconnect to the debugger
 
 ## Raspberry Pi 2 or 3 (RPi2 or RPi3) 
----
+___
 
 You can connect WinDbg to the Raspberry Pi 2 or 3 using a serial connection.
 
