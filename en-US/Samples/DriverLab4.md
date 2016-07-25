@@ -24,11 +24,12 @@ ___
 * Install the Windows Driver Kit on your PC by following the instructions [here](https://msdn.microsoft.com/en-US/windows/hardware/dn913721(v=vs.8.5).aspx).  You will need to install the SDK and WDK.
 
 * Install the certificates so that the driver is signed correctly and can run on your device. From an elevated command prompt execute the commands listed below:
-```
+
+	```
         cd c:\Program Files (x86)\Windows Kits\10\Tools\bin\i386
         Set WPDKContentRoot=c:\Program Files (x86)\Windows Kits\10      
         InstallOEMCerts.cmd
-```
+	```
 
 * Apply fix to enable F5 deployment from VS. In the elevated command prompt, execute the following commands .  
 	1.	`cd %TEMP%` ( will change directory to `c:\users\<usernsme>\Appdata\Local\Temp`)
