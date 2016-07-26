@@ -82,7 +82,6 @@ Here's what the code above is doing:
 * In the Solution Explorer, right click on your Node.js project again, select 'Add->Existing Item...'. then add the following files:
   * \<Project Root\>\Microsoft.IoT.Lightning.1.1.0\lib\uap10.0\Microsoft.IoT.Lightning.Providers.winmd
   * \<Project Root\>\Microsoft.IoT.Lightning.1.1.0\runtimes\win10-\<arm|x86|x64\>\native\Microsoft.IoT.Lightning.Providers.dll
-  * \<Project Root\>\Microsoft.IoT.Lightning.1.1.0\runtimes\win10-\<arm|x86|x64\>\native\Lightning.dll
 * Open the Package.appxmanifest file. Add the capabilities below:
 
 <UL>
