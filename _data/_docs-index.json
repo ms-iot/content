@@ -25,10 +25,6 @@
             "link": "/Docs/IoTDashboard.htm"
           },
           {
-            "title": "Building Apps",
-            "link": "/Docs/BuildingAppsForIoTCore.htm"
-          },
-          {
             "title":"Visual Studio app deployment",
             "link":"/Docs/AppDeployment.htm"
           },
@@ -41,7 +37,7 @@
             "link":"/Docs/PowerShell.htm"
           },
           {
-            "title":"Windows 10 IoT Core Porting Tool",
+            "title":"Windows 10 IoT Core porting tool",
             "link":"/Docs/tools/IoTAPIPortingTool.htm"
           }
         ]
@@ -70,7 +66,7 @@
             "link":"/Docs/Windbg.htm"
           },
           {
-            "title":"Installing Packages",
+            "title":"Installing packages",
             "link":"/Docs/InstallPackage.htm"
           },
           {
@@ -102,7 +98,7 @@
             "link":"/Docs/SupportedInterfaces.htm"
           },
           {
-            "title":"Headed and Headless devices",
+            "title":"Headed and headless devices",
             "link":"/Docs/HeadlessMode.htm"
           },
           {
@@ -114,6 +110,10 @@
       {
         "parent":"Writing apps",
         "children":[
+          {
+            "title": "Introduction",
+            "link": "/Docs/BuildingAppsForIoTCore.htm"
+          },
           {
             "title":"Unavailable Universal APIs",
             "link":"/Docs/UnavailableApis.htm"
@@ -136,15 +136,15 @@
         "parent":"Azure",
         "children":[
           {
-            "title":"Cloud Programming for IoT Core - an Introduction",
+            "title":"Introduction",
             "link":"/Docs/CloudIntro.htm"
           },
           {
-            "title":"Connect Your Device To the Cloud",
+            "title":"Connect your device to the cloud",
             "link":"/Docs/ConnectDeviceToCloud.htm"
           },
           {
-            "title":"Connect Your App To the Cloud",
+            "title":"Connect your app to the cloud",
             "link":"/Docs/ConnectAppToCloud.htm"
           }
         ]
@@ -161,7 +161,7 @@
             "link":"/Docs/TPM.htm"
           },
           {
-            "title":"Building Secure IoT Devices",
+            "title":"Building secure IoT devices",
             "link":"/Docs/BuildingSecureDevices.htm"
           },
           {
