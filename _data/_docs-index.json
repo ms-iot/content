@@ -25,10 +25,6 @@
             "link": "/Docs/IoTDashboard.htm"
           },
           {
-            "title":"Visual Studio app deployment",
-            "link":"/Docs/AppDeployment.htm"
-          },
-          {
             "title":"Windows Device Portal",
             "link":"/Docs/tools/DevicePortal.htm"
           },
@@ -117,6 +113,10 @@
           {
             "title":"Unavailable Universal APIs",
             "link":"/Docs/UnavailableApis.htm"
+          },
+          {
+            "title":"App deployment",
+            "link":"/Docs/AppDeployment.htm"
           },
           {
             "title":"Embedded mode",

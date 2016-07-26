@@ -9,7 +9,7 @@ hardwareurl: "http://go.microsoft.com/fwlink/p/?linkID=532948"
 signupurl: "https://www.windowsondevices.com/signup.aspx"
 downloadurl: "http://connect.microsoft.com/windowsembeddedIoT/Downloads/"
 sampleurl: "https://github.com/ms-iot/samples"
-homepageurl: "https://developer.microsoft.com/en-us/windows/iot"
+iotexturl: "/windows/iot"
 exclude: ["Resources/contribute/"]
 
 
