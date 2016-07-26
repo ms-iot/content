@@ -1,7 +1,7 @@
 ---
 layout: default
 title: HID Injection Sample
-permalink: /en-US/win10/samples/HidInjection.htm
+permalink: /en-US/samples/HidInjection.htm
 lang: en-US
 ---
 # HID Injection

@@ -122,8 +122,8 @@
       {
          "title":"Serial UART",
          "description":"Create an app to read and write to UART interfaces on Windows IoT core",
-         "link":"samples/SerialSample.htm",
-		 "link-text":"SerialSample",
+         "link":"samples/SerialUART.htm",
+		 "link-text":"Serial UART",
 		 "lang":"C#/C++",
          "ranking":3,
          "tags":["c#","c++","uart","beginner"]
