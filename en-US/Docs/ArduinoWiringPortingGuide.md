@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Project Setup
+title: Arduino Wiring Porting Guide
 permalink: /en-US/Docs/ArduinoWiringPortingGuide.htm
 lang: en-US
 ---
@@ -9,20 +9,19 @@ lang: en-US
 
 Arduino Wiring sketches and libraries can be copy/pasted into an Arduino Wiring project inside Visual Studio and run on Raspberry Pi 2, Raspberry Pi 3 or Minnowboard Max. Sometimes there are slight modifications that need to be made to these files in order to make them more compatible with the Windows environment, or the board you are working with. This guide will cover those modifications as well as common issues that you may run into when deploying Arduino Wiring projects!
 
-### Missing Something?
-Need more information on [Setting up Arduino Wiring in Visual Studio]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide.htm)?
-
-## Index
-
 ### Porting
 - <a href="#port_pins">Updating Pins</a>
-- <a href="#port_serial">Remove References to "Serial"</a>
 	
 ### Common Problems
 - <a href="#prob_missingiot">Can't find "Arduino Wiring Application" Visual C++ project template in Visual Studio</a>
-- ERROR: <a href="#prob_hardwareserial">unresolved external symbol "class HardwareSerial Serial"</a>
 - ERROR: <a href="#prob_identifier">"identifier not found" when calling a function</a>
 - <a href="#prob_hanging">My solution hangs infinitely when being initialized</a>
+
+### Serial printing
+- <a href="#port_serial">Output using Serial.print() and Serial.println()</a>
+
+### Missing something else?
+Need more information on [Setting up Arduino Wiring in Visual Studio]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide.htm)?
 
 
 
@@ -36,7 +35,7 @@ It might go without saying, but many sketches and libraries (especially those fo
 
 Arduino Wiring ultimately requires a physical connector pin number for any functions that refer to 'pins'. You can use these numbers directly, but we've also provided some pre-defined pin names which correspond to connector pins on specific boards.
 
-For example, the physical connector pin 29 on a Raspberry Pi 2 and 3 is also known as `GPIO_5`. You may set GPIO pin 5 to a HIGH state on a Raspberry Pi 2 and 3 by using either of the following commands:
+For example, the physical connector pin 29 on a Raspberry Pi 2 and 3 is also known as `GPIO5`. You may set GPIO pin 5 to a HIGH state on a Raspberry Pi 2 and 3 by using either of the following commands:
 
 {% highlight C++ %}
 
@@ -49,12 +48,12 @@ or
 
 {% highlight C++ %}
 
-pinMode( GPIO_5, OUTPUT );
-digitalWrite( GPIO_5, HIGH );
+pinMode( GPIO5, OUTPUT );
+digitalWrite( GPIO5, HIGH );
 
 {% endhighlight %}
 
-The pre-defined pin names can be found in `PinNumbers.h` inside any Arduino Wiring project, but since there will be different physical connector pins available depending on the hardware setup you are building for, we've also included a table here to describe which pin names are available for each device.
+The pre-defined pin names can be found in [`pins_arduino.h'](https://github.com/ms-iot/lightning/blob/develop/source/pins_arduino.h) and included in every Arduino Wiring project, but since there will be different physical connector pins available depending on the hardware setup you are building for, we've also included a table here to describe which pin names are available for each device.
 
 #### Raspberry Pi 2 and 3
 
@@ -64,18 +63,18 @@ The pre-defined pin names can be found in `PinNumbers.h` inside any Arduino Wiri
 | Pin Define      | Corresponding Pin Number   |
 | -------------| ------------- |
 | LED_BUILTIN | *onboard LED* |
-| GPIO_* _where * refers to [0, 27]_  | *refer to pinout diagram* |
-| GPIO_GCLK | 7 |
-| GPIO_GEN* _where * refers to [0, 5]_ | *refer to pinout diagram* |
-| I2C_SCL1 | 5 |
-| I2C_SDA1 | 3 |
-| SPI_CS0 | 24 |
-| SPI_CS1 | 26 |
-| SPI_CLK | 23 |
-| SPI_MISO | 21 |
-| SPI_MOSI | 19 |
-| RXD0 | 10 |
-| TXD0 | 8 |
+| GPIO* _where * refers to [0, 27]_  | *refer to pinout diagram* |
+| GCLK | 7 |
+| GEN* _where * refers to [0, 5]_ | *refer to pinout diagram* |
+| SCL1 | 5 |
+| SDA1 | 3 |
+| CS0 (or CE0 or SS) | 24 |
+| CS1 (or CE1) | 26 |
+| SCLK (or SCK) | 23 |
+| MISO | 21 |
+| MOSI | 19 |
+| RXD | 10 |
+| TXD | 8 |
 
 #### Minnowboard Max
 
@@ -84,42 +83,19 @@ The pre-defined pin names can be found in `PinNumbers.h` inside any Arduino Wiri
 {:.table.table-bordered}
 | Pin Define      | Corresponding Pin Number   |
 | -------------| ------------- |
-| GPIO_* _where * refers to [0, 9]_  | *refer to pinout diagram* |
-| I2C_SCL | 13 |
-| I2C_SDA | 15 |
-| SPI_CS0 | 5 |
-| SPI_SCLK | 11 |
-| SPI_MISO |7 |
-| SPI_MOSI | 9 |
-| UARAT1_CTS | 10 |
-| UARAT1_RTS | 12 |
-| UARAT1_RX | 8 |
-| UARAT1_TX | 6 |
-| UARAT2_RX | 19 |
-| UARAT2_TX | 17 |
-
-<a name="port_serial"></a>
-
-### Removing References to "Serial"
-
-Many Arduino sketches use `Serial` to print data to the serial console (if opened) or to write to the serial lines (USB or tx/rx). We've provided a "Log" function which will print a WCHAR* type (ascii strings or wide character strings) to the output console in Visual Studio. If you are copying a sketch built for an Arduino, you'll need to replace any of these Serial references in the Windows IoT version of the sketch.
-
-In the table below, replace the Arduino API Serial reference with the syntax in the Windows IoT column. If an API should be removed entirely, you'll see *remove* in the Windows IoT column.
-
-{:.table.table-bordered}
-| Arduino API syntax      | Windows IoT syntax   |
-| -------------| ------------- |
-| Serial.begin( int )  | *remove* |
-| Serial.write( char* str )     | *remove* *see below     |
-| Serial.print( char* str ) | Log( str )     |
-| Serial.print( int num ) | Log( num.ToString()->Begin() )      |
-| Serial.print( int num, format fmt ) | Log( num.ToString()->Begin() )      |
-
-
-#### Why remove Serial.write()?
-
-Serial.write() is typically used to send raw data over the serial lines. Windows IoT Core does not currently have UART functionality so these types of calls should be avoided.
-
+| GPIO* _where * refers to [0, 9]_  | *refer to pinout diagram* |
+| SCL | 13 |
+| SDA | 15 |
+| CS0 (or CE0 or SS) | 5 |
+| SCLK  (or SCK)| 11 |
+| MISO |7 |
+| MOSI | 9 |
+| CTS1 | 10 |
+| RTS1 | 12 |
+| RX1 | 8 |
+| TX1 | 6 |
+| RX2 | 19 |
+| TX2 | 17 |
 
 
 ## Common Problems
@@ -175,6 +151,7 @@ There are two solutions. First, you may declare the function above any invocatio
 
 {% highlight C++ %}
 
+// Declare function here
 void myFunction();
 
 void setup()
@@ -187,6 +164,7 @@ void loop()
     myFunction();
 }
 
+// And, define the function here
 void myFunction()
 {
     //do something
@@ -194,13 +172,12 @@ void myFunction()
 
 {% endhighlight %}
 
-The other option is to move the entire implementation of the function above any invocations. This has the effect of both declaring and defining the function at the same time.
+Alternatively, you can move the entire implementation of the function above any invocations. This has the effect of both declaring and defining the function at the same time.
 
 {% highlight C++ %}
 
 void setup()
 {
-
 }
 
 void myFunction()
@@ -233,7 +210,7 @@ The execution of this sketch calls a function called `setPinModes()` before the 
 
 bool setPinModes();
 
-int pin = GPIO_5;
+int pin = GPIO5;
 bool initialized = setPinModes();
 
 void setup()
@@ -264,7 +241,7 @@ The solution is below, we've simply moved the execution of `setPinModes()` to th
 
 bool setPinModes();
 
-int pin = GPIO_5;
+int pin = GPIO5;
 bool initialized;
 
 void setup()
@@ -300,7 +277,7 @@ class MyObject
 public:
     MyObject()
     {
-        pinMode( GPIO_5, OUTPUT );
+        pinMode( GPIO5, OUTPUT );
     }
 
     void doSomething()
@@ -313,7 +290,6 @@ MyObject myObject;
 
 void setup()
 {
-
 }
 
 void loop()
@@ -332,7 +308,7 @@ class MyObject
 public:
     MyObject()
     {
-        pinMode( GPIO_5, OUTPUT );
+        pinMode( GPIO5, OUTPUT );
     }
 
     void doSomething()
@@ -354,3 +330,42 @@ void loop()
 }
 
 {% endhighlight %}
+
+<a name="port_serial"></a>
+
+### Output using `Serial.print()` and `Serial.println()`
+
+Many Arduino sketches use `Serial` to print data to the serial console (if opened) or to write to the serial lines (USB or tx/rx). 
+In prior versions of the Lightning SDK, Hardware `Serial` support wasn't included, so we provided a `Log()` function which will print to the debugger output window in Visual Studio. `Serial.print*()` or `Serial.write()` had to be removed.
+
+However, starting with <em>Lightning SDK v1.1.0</em>, we've added `Hardware Serial` support and both `Serial.print*()` or `Serial.write()` functions are fully supported. So, if you are copying a sketch built for an Arduino, you won't need to replace any of these Serial references in the Windows IoT version of the sketch.
+
+Furthermore, we've extended the functionality of `Serial.print()` and `Serial.println()`, to output to the debugger window when a debugger is attached - in addition to writing to the hardware serial pins.
+The debug output printing is set as the default since reading that output is what most users would want when running their sketches. However, that functionality can be disabled as well; e.g. to improve performance, simply call `Serial.enablePrintDebugOutput(false);` to disable it in your sketch. To re-enable it, call `Serial.enablePrintDebugOutput(true);`. Writing to the hardware serial pins is not affected by those calls.
+
+Note, you do NOT need to attach any peripheral to your serial pins such as an FTDI, to get output sent to the debugger window. However, you'll need to make sure the debugger window is open while your application is being debugged.
+
+![Debugger Output]({{site.baseurl}}/Resources/images/arduino_wiring/debugger_output.png)
+
+Finally, Hardware Serial functionality in Windows 10 IoT Core requires some capability declarations added to the AppX manifest. The project templates have been updated on the [Windows IoT Core Project Templates extension page](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec) to include those declarations. But, if your Arduino Wiring application has already been created using an older project template version, you'll need to 1) upgrade your Lightning SDK to v1.1.0 or later and 2) add the `serialcommunication` declaration below manually to your AppxManifest to be able to use `Serial`:
+
+{% highlight Xml %}
+
+<Capabilities>
+  <Capability Name="internetClient" />
+
+  <!-- General Arduino Wiring required capabilities -->
+  <iot:Capability Name="lowLevelDevices" />
+  <DeviceCapability Name="109b86ad-f53d-4b76-aa5f-821e2ddf2141"/>
+
+  <!-- The serialcommunication capability is required to access Hardware Serial. --> 
+  <DeviceCapability Name="serialcommunication">
+    <Device Id="any">
+      <Function Type="name:serialPort"/>
+    </Device>
+  </DeviceCapability>
+
+</Capabilities>
+
+{% endhighlight %}
+
