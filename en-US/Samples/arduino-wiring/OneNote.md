@@ -1,13 +1,14 @@
 ---
 layout: sample
-title: OneNote cloud services
+title:  OneNote cloud services
+description: Get and post OneNote pages using Arduino Wiring
+keyword: Windows 10 IoT Core, intermediate, wiring
 permalink: /en-US/Samples/arduino-wiring/OneNote.htm
+samplelink: N/A
 lang: en-US
 ---
 
 # OneNote cloud services
-
-
 
 Learn how to deploy an Arduino Wiring sketch on Raspberry Pi 2 and 3 or Minnowboard Max and use http messages to Get and Post OneNote pages.
 
