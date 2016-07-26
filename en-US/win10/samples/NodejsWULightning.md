@@ -18,6 +18,7 @@ and shares the same setup steps as well as most of the code. The key difference 
 * Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
 * Install Visual Studio 2015 Update 1.
 * Install the latest Node.js Tools for Windows IoT from [here](http://aka.ms/ntvsiotlatest).
+* Download [nuget.exe](https://docs.nuget.org/consume/installing-nuget) to your machine and add its path the to 'Path' environment variable.
 
 
 ### Set up your hardware
@@ -76,12 +77,12 @@ Here's what the code above is doing:
 * Every 1000 milliseconds (1 second), the value of the LED is checked and then set to the opposite of the current value.
 
 ### Add Microsoft.IoT.Lightning.Providers library to your project
-* Clone the bus provider repository on your PC with `git clone https://github.com/ms-iot/BusProviders`.
-* In the Solution Explorer in your project, right click on the solution node, select 'Add->Existing Project...', then add \<Bus Provider Clone Root\>\Microsoft.IoT.Lightning.Providers\Providers\Microsoft.Iot.Lightning.Providers.vcxproj.
-* Build the solution.
-* In the Solution Explorer, right click on your Node.js project (with server.js), select 'Add->Existing Item...'. then add the following files:
-  * \<Project Root\>\ARM\Debug\Microsoft.Iot.Lightning.Providers\Microsoft.IoT.Lightning.Providers.dll
-  * \<Project Root\>\ARM\Debug\Microsoft.Iot.Lightning.Providers\Microsoft.IoT.Lightning.Providers.winmd
+* In the Solution Explorer in your project, right click on the project node (with server.js), select 'Open Command Prompt Here...'
+* Run `nuget install Microsoft.IoT.Lightning -Pre`
+* In the Solution Explorer, right click on your Node.js project again, select 'Add->Existing Item...'. then add the following files:
+  * \<Project Root\>\Microsoft.IoT.Lightning.1.1.0\lib\uap10.0\Microsoft.IoT.Lightning.Providers.winmd
+  * \<Project Root\>\Microsoft.IoT.Lightning.1.1.0\runtimes\win10-x86\native\Microsoft.IoT.Lightning.Providers.dll
+  * \<Project Root\>\Microsoft.IoT.Lightning.1.1.0\runtimes\win10-x86\native\Lightning.dll
 * Open the Package.appxmanifest file. Add the capabilities below:
 
 <UL>
@@ -98,12 +99,13 @@ Here's what the code above is doing:
     <Extension Category="windows.activatableClass.inProcessServer">
       <InProcessServer>
         <Path>Microsoft.IoT.Lightning.Providers.dll</Path>
-        <ActivatableClass ActivatableClassId="Microsoft.IoT.Lightning.Providers.LightningPwmProvider" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.IoT.Lightning.Providers.LightningGpioProvider" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.IoT.Lightning.Providers.LightningSpiProvider" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.IoT.Lightning.Providers.LightningI2cProvider" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.IoT.Lightning.Providers.LightningProvider" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.IoT.Lightning.Providers.LightningAdcProvider" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.Lightning.Providers.LightningProvider" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.Lightning.Providers.LightningSpiProvider" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.Lightning.Providers.ApiSupport" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.Lightning.Providers.LightningPwmProvider" ThreadingModel="both" />
       </InProcessServer>
     </Extension>
 {% endhighlight %}
