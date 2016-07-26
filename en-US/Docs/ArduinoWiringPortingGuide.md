@@ -14,15 +14,20 @@ Arduino Wiring sketches and libraries can be copy/pasted into an Arduino Wiring 
 	
 ### Common Problems
 - <a href="#prob_missingiot">Can't find "Arduino Wiring Application" Visual C++ project template in Visual Studio</a>
+- ERROR: <a href="#prob_hardwareserial">'unresolved external symbol "class HardwareSerial Serial"'</a>
+- ERROR: <a href="#prob_hardwareserial_declarations">'WinRT information: An error occurred attempting to access the UART.'</a>
 - ERROR: <a href="#prob_identifier">"identifier not found" when calling a function</a>
 - <a href="#prob_hanging">My solution hangs infinitely when being initialized</a>
 
 ### Serial printing
-- <a href="#port_serial">Output using Serial.print() and Serial.println()</a>
+- <a href="#port_serial">Using Serial.print() and Serial.println()</a>
+- <a href="#serial_comm_device_caps">Hardware Serial device capability requirements</a>
+
+### Lightning SDK
+- <a href="#sdk_upgrade">Upgrade your project to the latest Lightning SDK</a>
 
 ### Missing something else?
 Need more information on [Setting up Arduino Wiring in Visual Studio]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide.htm)?
-
 
 
 ## Porting
@@ -106,7 +111,7 @@ The pre-defined pin names can be found in [`pins_arduino.h'](https://github.com/
 
 **Cause**: The Windows IoT Project Templates extension for Visual Studio is not installed.
 
-**Solution**: You must install the Visual Studio Extension for Windows IoT Project Templates before you can create Arduino Wiring projects in Visual Studio. Head over to [Windows IoT Core Project Templates extension page](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec) to download the extension from the Visual Studio Gallery!
+**Solution**: You must install the Visual Studio Extension for Windows IoT Project Templates before you can create Arduino Wiring projects in Visual Studio. Head over to [Windows IoT Core Project Templates extension page](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec){:target="_blank"} to download the extension from the Visual Studio Gallery!
 
 <a name="prob_hardwareserial"></a>
 
@@ -114,7 +119,15 @@ The pre-defined pin names can be found in [`pins_arduino.h'](https://github.com/
 
 **Cause**: This issue occurs when there are `Serial` references in your Arduino Wiring sketches or libraries.
 
-**Solution**: Use the "File" and "Line" fields on this error to locate the reference(s) causing the issue, and then use the <a href="#port_serial">Removing References to "Serial"</a> section of this page to resolve the issue.
+**Solution**: The latest Lightning SDK Nuget package, v1.1.0 or higher, contains the `Serial` class. [Upgrade your Arduino Wiring project to the latest Lightning SDK Nuget package](#sdk_upgrade). Also, add the required `serialcommunication` device capability declarations as described in the <a href="#serial_comm_device_caps">Hardware Serial device capability requirements section</a>.
+
+<a name="prob_hardwareserial"></a>
+
+### ERROR: 'WinRT information: An error occurred attempting to access the UART.'
+
+**Cause**: This issue occurs when there are `Serial` references in your Arduino Wiring sketches or libraries, but you're missing the reuired capability declarations in the AppX manifest to support hardware serial communication.
+
+**Solution**: Add the `serialcommunication` device capability to your AppX manifest. Refer to the <a href="#serial_comm_device_caps">Hardware Serial device capability requirements section</a> for more details on adding the required device capability.
 
 <a name="prob_identifier"></a>
 
@@ -333,7 +346,7 @@ void loop()
 
 <a name="port_serial"></a>
 
-### Output using `Serial.print()` and `Serial.println()`
+### Using `Serial.print()` and `Serial.println()`
 
 Many Arduino sketches use `Serial` to print data to the serial console (if opened) or to write to the serial lines (USB or tx/rx). 
 In prior versions of the Lightning SDK, Hardware `Serial` support wasn't included, so we provided a `Log()` function which will print to the debugger output window in Visual Studio. `Serial.print*()` or `Serial.write()` had to be removed.
@@ -347,7 +360,19 @@ Note, you do NOT need to attach any peripheral to your serial pins such as an FT
 
 ![Debugger Output]({{site.baseurl}}/Resources/images/arduino_wiring/debugger_output.png)
 
-Finally, Hardware Serial functionality in Windows 10 IoT Core requires some capability declarations added to the AppX manifest. The project templates have been updated on the [Windows IoT Core Project Templates extension page](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec) to include those declarations. But, if your Arduino Wiring application has already been created using an older project template version, you'll need to 1) upgrade your Lightning SDK to v1.1.0 or later and 2) add the `serialcommunication` declaration below manually to your AppxManifest to be able to use `Serial`:
+The project templates have been updated on the [Windows IoT Core Project Templates extension page](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec){:target="_blank"} to enable using Hardware `Serial` out of the box. However, if your Arduino Wiring application has already been created using an older project template version, you'll need to 1) <a href="#sdk_upgrade">Upgrade your project to the latest Lightning SDK, v1.1.0 or later,</a> and 2) add the required <a href="#serial_comm_device_caps">Hardware Serial device capability</a> to your AppxManifest to be able to use `Serial`.
+
+<a name="serial_comm_device_caps"></a>
+
+### Hardware Serial device capability requirements
+
+Hardware Serial functionality in Windows 10 IoT Core requires device capability declarations added to the AppX manifest.
+
+Find the file `Package.appxmanifest` in your project, by typing the file name in the solution explorer. Then, right click the file and choose 'Open With...'. Choose 'XML (Text) Editor' and click 'OK'.
+
+![Updating Package.appxmanifest]({{site.baseurl}}/Resources/images/Lightning/appxmanifest_search.png)
+
+In the appx manifest file editor, add the `serialcommunication` DeviceCapability to your project as in the following XML snippet:
 
 {% highlight Xml %}
 
@@ -369,3 +394,16 @@ Finally, Hardware Serial functionality in Windows 10 IoT Core requires some capa
 
 {% endhighlight %}
 
+<a name="sdk_upgrade"></a>
+
+### Upgrade your project to the latest Lightning SDK
+
+The Arduino Wiring projects depend on the [Lightning SDK Nuget package](https://www.nuget.org/packages/Microsoft.IoT.Lightning/){:target="_blank"} to implement the required Arduino Wiring functions and declarations as well as interface with the Lightning driver. The latest Lightning SDK will contain the latest improvements and bug fixes. To upgrade to the latest Lightning SDK, follow these steps:
+
+- In the Solution Explorer, right click on your project and click 'Manage Nuget Packages...'
+- In the NuGet Package Manager, go to the 'Installed' tab. You should see the Microsoft.IoT.Lightning package installed
+- Available versions will be listed inside the 'Version' combobox.
+- Choose the latest version, and click 'Update' to update your package.
+- Notice, to upgrade to a prerelease version, make sure to check the 'Include prerelease' checkbox as well.
+
+![NuGet Package manager]({{site.baseurl}}/Resources/images/Lightning/Nuget_PackageManager.png)
