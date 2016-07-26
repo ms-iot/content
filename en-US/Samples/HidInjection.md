@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: HID Injection Sample
 permalink: /en-US/samples/HidInjection.htm
 lang: en-US
