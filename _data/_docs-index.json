@@ -33,6 +33,10 @@
             "link":"/Docs/AppDeployment.htm"
           },
           {
+            "title":"Visual Studio driver deployment",
+            "link":"/Docs/DriverDeployment.htm"
+          },
+          {
             "title":"Windows Device Portal",
             "link":"/Docs/tools/DevicePortal.htm"
           },

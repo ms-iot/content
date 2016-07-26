@@ -1,44 +1,28 @@
 ---
-layout: sample
-title: Driver Lab - Use Visual Studio to deploy a driver
-permalink: /en-US/Samples/DriverLab4.htm
 lang: en-US
 ---
 
-# Use Visual Studio to deploy a driver 
 
-In this exercise, you will configure your Visual Studio driver project so that you can compile and deploy a driver for a specific platform during driver development phase.  Note that currently this procedure requires that your device reboot after the driver is deploy and as a result it may take a couple of minutes for the entire deployment to complete.
-For this exercise you can use the gpiokmdfdemo sample driver found [here](https://github.com/ms-iot/samples/tree/develop/DriverSamples).
 
 ## Step 1 : Setup 
-___
 
 ### On the device
 
-* Make sure that your device has an IoTCore image installed by following the instructions [here]({{site.baseurl}}/{{page.lang}}/GetStarted.htm).
-* Connect to your device via Powershell as described in the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm).
 
 ### On the PC
 
 * Make sure you have installed Visual Studio 2015 Update 2
-* Install the Windows Driver Kit on your PC by following the instructions [here](https://msdn.microsoft.com/en-US/windows/hardware/dn913721(v=vs.8.5).aspx).  You will need to install the SDK and WDK.
 
-* Install the certificates so that the driver is signed correctly and can run on your device. From an elevated command prompt execute the commands listed below:
+* Install the certificates so that the driver is signed correctly and can run on your device. From a elevated command prompt execute the commands listed below:
 
-	```
         cd c:\Program Files (x86)\Windows Kits\10\Tools\bin\i386
-        Set WPDKContentRoot=c:\Program Files (x86)\Windows Kits\10      
         InstallOEMCerts.cmd
-	```
-
+		
 * Apply fix to enable F5 deployment from VS. In the elevated command prompt, execute the following commands .  
 	1.	`cd %TEMP%` ( will change directory to `c:\users\<usernsme>\Appdata\Local\Temp`)
 	2.	`md “WdkTempFiles”` Manually create a “WdkTempFiles” directory 
-	This is a workaround for a bug in the tooling and requires to be done only once in the PC.
 
 ## Step 2 : Provision device with VS 
-___
-
 * Open Visual Studio and select Driver > Test > Configure Devices > Add New Device
     * If the Driver Menu option is not shown, check if SDK is installed.
 
@@ -56,7 +40,6 @@ ___
        * Select the host IP of the machine running visual studio.  Do not use the autonet (169.xxx) address.
        * Select Next
 	   ![Configure Debug Settings]({{site.baseurl}}/Resources/images/DriverLab/confdbgsettings.png)
-    * The Raspberry Pi cannot use the network for kernel debugging.
        *  Connect the appropriate serial debugging cable to the PI and the host machine
        *  Select “Serial” for the connection type
        *  Fill out the rest of the parameters as appropriate for the Raspberry Pi.
@@ -70,8 +53,6 @@ ___
 ![ConfigureDevices]({{site.baseurl}}/Resources/images/DriverLab/ConfigureDevices.png)
 
 ## Step 3 : Configure Visual Studio driver project
-___
-
 1. Launch Visual Studio in the administrator mode and open the visual studio driver project.
 2. Make sure the Target Platform Version matches the SDK installed on your development machine. Select Project Properties from the Solution Explorer window.  Under General Configuration Properties assure that the Target Platform Version matches the SDK installed on your development computer.  You can check the version of the SDK from the "Control Panel > Programs > Programs and Features".
 3. Under "Project Add New Item > Visual C++ \ Windows Driver, select Package Manifest and Press Add.
@@ -101,8 +82,6 @@ ___
 
 
 ## Step 4 : Build and deploy driver
-___
-
 This can be done in two ways, using the F5 key and using the Deploy option. In both ways, the driver will be built and deployed (i.e. installs it on device) and the F5 attaches the Visual Studio kernel debugger to the installed and loaded driver. 
 
 Some users prefer to use the “deploy” functionality and attach a different kernel debugger, such as WinDBG or KD.  This can provide more flexibility than using the VS debugger.
@@ -131,10 +110,8 @@ When Installation completes, the device will reboot again, and the VS Output scr
 * Please refer to the web site [here](https://msdn.microsoft.com/en-US/windows/hardware/dn913721(v=vs.8.5).aspx) for information on creating driver new driver and using Visual Studio to deploy the driver as discussed on this page.
 
 ## Known Issues
-___
 
 ### Provisioning Error
-
 A race condition during the interaction with MinnowBoardMax can result in a reported failure during provisioning.  In fact, the provisioning most likely succeeded.
  
 **Workaround:** This error can almost certainly be ignored.
