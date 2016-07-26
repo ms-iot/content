@@ -68,7 +68,14 @@ Clicking the **download** button will cause a 'minidump', and the entire state o
 
 
 ### Bluetooth
-ADD TEXT
+This page shows you all the bluetooth paired devices and all the devices which are discoverable. To pair with another Bluetooth device, put the device in pairing mode and wait for it to appear in the available devices list.  
+{% include imageborder.html alt="App list" link="/Resources/images/DevicePortal/Bluetooth.png" %}
+
+Click on **Pair link** to pair the device. If the device requires a PIN for pairing, it will pop-up a message box displaying the PIN. Once the device is paired, it will show up in the Paired devices list. You can un-pair the device by clicking on **Remove**. 
+
+Once you navigate to the Bluetooth page, your device will be discoverable by other devices. You can also find it from your PC/Phone and pair it from there.
+
+More information on bluetooth can be found on the [bluetooth page](https://go.microsoft.com/fwlink/?linkid=823223).
 
 ### IoT Onboarding
 ADD TEXT

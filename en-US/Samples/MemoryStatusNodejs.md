@@ -1,11 +1,11 @@
 ---
 layout: sample
-title: Nodejs
-permalink: /en-US/Samples/Nodejs.htm
+title: Memory status monitor for node.js
+permalink: /en-US/Samples/MemoryStatusNodejs.htm
 lang: en-US
 ---
 
-# MemoryStatus Node.js (Console Application) Sample
+# Memory status monitor for node.js
 
 
 

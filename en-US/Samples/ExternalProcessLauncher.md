@@ -1,11 +1,14 @@
 ---
-layout: sample  
-title: ProcessLauncher Sample  
-permalink: /en-US/Samples/ProcessLauncherSample.htm  
-lang: en-US  
----  
-  
-# ProcessLauncher Sample  
+layout: sample
+title:  External process launcher
+description: Launch an external process (exe) from a Universal Windows Platform (UWP) app
+keyword: Windows 10 IoT Core, process launcher, uwp
+permalink: /en-US/Samples/ExternalProcessLauncher.htm  
+samplelink: https://github.com/ms-iot/samples/tree/develop/ProcessLauncher/CS
+lang: en-US
+---
+
+# External process launcher
   
 We'll learn how to launch an external process (exe) from a Universal Windows Platform (UWP) app using `Windows.System.ProcessLauncher` API.  
 

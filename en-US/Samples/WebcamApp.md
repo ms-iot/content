@@ -1,15 +1,16 @@
 ---
 layout: sample  
-title: Web Cam Sample  
-permalink: /en-US/Samples/WebCamSample.htm  
-lang: en-US  
+title: Basic webcam app  
+description: We’ll create a simple app that initializes a web cam, takes pictures, and records video and audio.
+keyword: Windows 10 IoT Core, wiring, arduino
+permalink: /en-US/Samples/WebcamApp.htm  
+samplelink: https://github.com/ms-iot/samples/tree/develop/WebCamSample/CS
+lang: en-US
 ---  
-  
-# Web Camera Sample  
 
+# Basic webcam app 
 
-
-We'll create a simple app that initializes a web cam, takes pictures, and records video and audio.  
+Initialize a webcam, take pictures, and record video and audio.  
   
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm).  
   
