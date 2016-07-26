@@ -1,11 +1,14 @@
 ---
-layout: sample
-title: Appx Installation Sample
-permalink: /en-US/Samples/AppInstall.htm
+layout: sample  
+title: App installer
+description: Learn how to install AppX's onto your IoT Core device
+keyword: Windows 10 IoT Core, AppX, install
+permalink: /en-US/Samples/AppInstaller.htm
+samplelink: https://github.com/ms-iot/samples/tree/develop/AppInstall
 lang: en-US
----
+---  
 
-# Appx Installation Sample
+# App installer
 
 You can find the source code for this sample on our GitHub [here](https://github.com/ms-iot/samples/tree/develop/AppInstall).
 

@@ -1,13 +1,14 @@
 ---
 layout: sample
-title: LCD Text Display
-permalink: /en-US/Samples/arduino-wiring/LCDScreen.htm
+title:  External process launcher
+description: Deploy and debug an Arduino Wiring sketch to control text on an LCD screen
+keyword: Windows 10 IoT Core, wiring, arduino
+permalink: /en-US/Samples/arduino-wiring/LCDTextDisplay.htm
+samplelink: N/A
 lang: en-US
 ---
 
-# LCD Text Display
-
-
+# LCD text display
 
 Learn to Deploy and Debug an Arduino Wiring sketch on Raspberry Pi 2 and 3 or Minnowboard Max to control text on an LCD screen!
 

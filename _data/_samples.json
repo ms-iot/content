@@ -11,23 +11,24 @@
          "tags":["beginner","c#","Python","node.js","headed"]
       },
       {
-         "title":"Hello Blinky (Headless App)",
-         "description":"Create an app with no UI that toggles an LED on devices running Windows 10 IoT Core",
-         "link":["samples/BlinkyHeadless.htm","samples/PythonBlinky.htm","samples/arduino-wiring/HelloBlinky.htm"],
-		 "link-text":["Blinky","Blinky","Blinky"], 
-		 "lang":["C#","Python","Wiring"], 
-		 "ranking":0,
-         "tags":["beginner","c#","Python","Wiring","headless"]
-      },
-      {
-         "title":"UI Blinky App",
+         "title":"Hello, Blinky!",
          "description":"Create a UI-based app that toggles an LED on devices running Windows 10 IoT Core",
-         "link":"samples/Blinky.htm",
+         "link":"samples/HelloBlinky.htm",
 		 "link-text":"UI Blinky",
 		 "lang":"C#/C++",
          "ranking":0,
          "tags":["beginner","c#","C++","headed"]
       },
+      {
+         "title":"Hello, Blinky! background service",
+         "description":"Create an app with no UI that toggles an LED on devices running Windows 10 IoT Core",
+         "link":["samples/HelloBlinkyBackground.htm","samples/PythonBlinky.htm","samples/arduino-wiring/HelloBlinky.htm"],
+		 "link-text":["Blinky","Blinky","Blinky"], 
+		 "lang":["C#","Python","Wiring"], 
+		 "ranking":0,
+         "tags":["beginner","c#","Python","Wiring","headless"]
+      },
+
       {
          "title":"IoT Core Default App",
          "description":"Create a UWP app that provides a device-management experience for Windows 10 IoT Core",
@@ -56,15 +57,6 @@
          "tags":["beginner","SPI","c#"]
       },
       {
-         "title":"AllJoyn Connectivity",
-         "description":"Learn more about AllJoyn and explore the capabilities of the AllJoyn Device System Bridge with Windows 10 IoT Core",
-         "link":"AllJoyn.htm",
-		 "link-text":"Learn More",
-		 "lang":"N/A",
-         "ranking":20,
-         "tags":["advanced","alljoyn"]
-      },
-      {
          "title":"Driver Sample",
          "description":"Create and interact with a universal driver on devices running Windows 10 IoT Core",
          "link":"samples/DriverLab.htm",
@@ -85,7 +77,7 @@
       {
          "title":"Serial-In, Parallel-Out Shift Register",
          "description":"Create an app that uses the Raspberry Pi 2 to control LEDs using a serial-in, parallel-out shift register.",
-         "link":"samples/ShiftRegisterSample.htm",
+         "link":"samples/ShiftRegister.htm",
 		 "link-text":"Shift Register",
 		 "lang":"C#",
          "ranking":20,
@@ -119,46 +111,19 @@
          "tags":["beginner","c#","led","Wiring","headed"]
       },
       {
-         "title":"GpioTestTool (Console)",
-         "description":"This simple command line utility shows how to use the Gpio WinRT APIs from standard C++.",
-         "link":"samples/GpioTestTool.htm",
-		 "link-text":"GpioTestTool",
-		 "lang":"C++",
-         "ranking":3,
-         "tags":["beginner","commandline","tool","c++"]
-      },
-      {
-         "title":"I2cTestTool (Console)",
-         "description":"This simple utility shows how to use C++/CX in command line programs.",
-         "link":"samples/I2cTestTool.htm",
-		 "link-text":"I2cTestTool",
-		 "lang":"C++",
-         "ranking":3,
-         "tags":["beginner","c++","i2c","commandline","tool"]
-      },
-      {
-         "title":"SpiTestTool (Console)",
-         "description":"Write and read from SPI devices on the command line.",
-         "link":"samples/SpiTestTool.htm",
-		 "link-text":"SpiTestTool",
-		 "lang":"C++",
-         "ranking":3,
-         "tags":["beginner","spi","c++","commandline","tool"]
-      },
-      {
-         "title":"Digital Signage Sample",
-         "description":"Showcases a Digital Sign app running on Windows 10 IoT Core",
-         "link":"samples/DigitalSignage.htm",
-		 "link-text":"DigitalSignageUWP",
+         "title":"Digital Sign",
+         "description":"Showcases a digital sign app running on Windows 10 IoT Core",
+         "link":"samples/DigitalSign.htm",
+		 "link-text":"Digital sign",
 		 "lang":"C#",
          "ranking":10,
          "tags":["intermediate","headed","c#","ui"]
       },
       {
-         "title":"Serial UART Sample (Windows Universal)",
+         "title":"Serial UART",
          "description":"Create an app to read and write to UART interfaces on Windows IoT core",
-         "link":"samples/SerialSample.htm",
-		 "link-text":"SerialSample",
+         "link":"samples/SerialUART.htm",
+		 "link-text":"Serial UART",
 		 "lang":"C#/C++",
          "ranking":3,
          "tags":["c#","c++","uart","beginner"]
@@ -166,9 +131,9 @@
       {
          "title":"USB Web camera Sample (Windows Universal)",
          "description":"Create an app to take photo, record video and audio using a USB Web Camera on Windows IoT core",
-         "link":"samples/WebCamSample.htm",
-		 "link-text":"Learn More",
-		 "lang":"N/A",
+         "link":"samples/WebcamApp.htm",
+		 "link-text":"Webcam App",
+		 "lang":"C#",
          "ranking":0,
          "tags":["intermediate","camera","c#"]
       },
@@ -182,7 +147,7 @@
          "tags":["cylon","node.js","headless","intermediate"]
       },
       {
-         "title":"Azure Node.js Sample (UWP)",
+         "title":"Azure Node.js",
          "description":"Upload sensor data to Azure storage from a Node.js UWP app",
          "link":"samples/nodejs-wu-azure.htm",
 		 "link-text":"Azure",
@@ -191,7 +156,7 @@
          "tags":["intermediate","johnny-five","azure","sensor","node.js"]
       },
       {
-         "title":"Cylon Node.js App (UWP)",
+         "title":"Cylon Node.js App",
          "description":"Control a servo connected to an Arduino using Cylon in a Node.js UWP app",
          "link":"samples/NodejsWUCylon.htm",
 		 "link-text":"Cylon",
@@ -200,7 +165,7 @@
          "tags":["intermediate","cylon","servo","node.js"]
       },
       {
-         "title":"Johnny-Five Node.js App (UWP)",
+         "title":"Johnny-Five Node.js App",
          "description":"Control a servo connected to an Arduino using Johnny-Five in a Node.js UWP app",
          "link":"samples/NodejsWUJ5.htm",
 		 "link-text":"Johnny-Five",
@@ -209,7 +174,7 @@
          "tags":["intermediate","johnny-five","servo","node.js"]
       },
       {
-         "title":"Express Node.js App (UWP)",
+         "title":"Express Node.js App",
          "description":"Create an Express Node.js app that runs on devices running Windows 10 IoT Core",
          "link":"samples/NodejsWUExpress.htm",
 		 "link-text":"Express",
@@ -218,7 +183,7 @@
          "tags":["intermediate","server","node.js","express"]
       },
       {
-         "title":"Bluetooth Low Energy GATT Sample (Windows Universal)",
+         "title":"Bluetooth Low Energy GATT",
          "description":"Learn how to interact with Bluetooth Low Energy devices on Windows 10 IoT core.",
          "link":"samples/BLEGatt.htm",
 		 "link-text":"Bluetooth GATT",
@@ -227,7 +192,7 @@
          "tags":["bluetooth","c#","ble","c#","intermediate"]
       },
       {
-         "title":"IoT Browser Sample (Windows Universal)",
+         "title":"IoT Browser",
          "description":"Learn how to create a simple web browser for Windows 10 IoT core.",
          "link":"samples/IoTBrowser.htm",
 		 "link-text":"IoT Browser",
@@ -236,7 +201,7 @@
          "tags":["beginner","web","browser","headed"]
       },
       {
-         "title":"GPIO OneWire (C++)",
+         "title":"GPIO OneWire",
          "description":"Create an app that uses GPIO to read from the DHT11, a temperature and humidity sensor that uses a single-wire protocol.",
          "link":"samples/GpioOneWire.htm",
 		 "link-text":"GPIO OneWire",
@@ -263,9 +228,9 @@
          "tags":["beginner","rgb","wiring","led"]
       },
       {
-         "title":"LCD Screen",
+         "title":"LCD text display",
          "description":"Learn how to use an LCD Screen in Wiring.",
-         "link":"samples/arduino-wiring/LCDScreen.htm",
+         "link":"samples/arduino-wiring/LCDTextDisplay.htm",
 		 "link-text":"LCD Screen",
 		 "lang":"Wiring",
          "ranking":3,
@@ -290,9 +255,9 @@
          "tags":["beginner","wiring"]
       },
 	  {
-		 "title": "Lightning Providers samples (UWP)",
+		 "title": "Lightning Providers",
 		 "description": "Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
-		 "link":["samples/BlinkyUILightning.htm","samples/BlinkyHeadlessLightning.htm","samples/WeatherStationLightning.htm","samples/SPIDisplayLightning.htm","samples/NodejsWULightning.htm"],
+		 "link":["samples/BlinkyUILightning.htm","samples/HelloBlinkyLightning.htm","samples/WeatherStationLightning.htm","samples/SPIDisplayLightning.htm","samples/NodejsWULightning.htm"],
 		 "link-text":["Blinky UI","Blinky Headless","Weather Station","SPI Display","Blinky Headless"],
 		 "lang":["C#/C++","C#/C++","C#/C++","C#/C++","Node.js"],
 		 "ranking": 0,
@@ -317,45 +282,45 @@
          "tags":["intermediate","wiring","motor"]
       },
       {
-         "title":"Console App",
+         "title":"Memory status monitor",
          "description":"Create a console app that monitors memory usage on devices running Windows 10 IoT Core",
-         "link":["samples/ConsoleApp.htm","samples/Nodejs.htm"],
+         "link":["samples/MemoryStatus.htm","samples/MemoryStatusNodejs.htm"],
 		 "link-text":["Console App","Console App"],
 		 "lang":["C++","Node.js"],
          "ranking":10,
          "tags":["tool","intermediate","node.js","c++","memory"]
       },
       {
-         "title":"Launching an external program",
+         "title":"External process launcher",
          "description":"Learn how to use <code>Windows.System.ProcessLauncher</code> API to launch external executable programs from your UWP app",
-         "link":"samples/ProcessLauncherSample.htm",
+         "link":"samples/ExternalProcessLauncher.htm",
 		 "link-text":"ProcessLauncher API Sample",
 		 "lang":"C#",
          "ranking":10,
          "tags":["c#","intermediate"]
       },
       {
-         "title":"Connecting to a WiFi Network",
+         "title":"Wi-Fi connector",
          "description":"Learn how to discover and connect to a WiFi network from a UWP app using <code>Windows.Devices.WiFi.WiFiAdapter</code> API",
-         "link":"samples/WifiConnectSample.htm",
+         "link":"samples/WiFiConnector.htm",
 		 "link-text":"WiFi Connect Sample",
 		 "lang":"C#",
          "ranking":0,
          "tags":["beginner","wifi","c#"]
       },
       {
-         "title":"App Installation Sample",
+         "title":"App Installer",
          "description":"Learn how to install and deploy an app on Windows IoT Core",
-         "link":"samples/AppInstall.htm",
+         "link":"samples/AppInstaller.htm",
 		 "link-text":"Learn More",
 		 "lang":"N/A",
          "ranking":0,
          "tags":["beginner"]
       },
       {
-         "title":"DeviceIoControlUwp Sample",
+         "title":"Device I/O controller",
          "description":"Learn how to use <code>CreateFile()</code> and <code>DeviceIoControl()</code> to access custom devices from UWP.",
-         "link":"samples/DeviceIoControlUwp.htm",
+         "link":"samples/DeviceIoController.htm",
 		 "link-text":"Learn More",
 		 "lang":"N/A",
          "ranking":10,

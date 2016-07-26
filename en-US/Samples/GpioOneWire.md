@@ -1,13 +1,14 @@
 ---
 layout: sample
-title: GpioOneWire
+title: GPIO OneWire DHT11 reader
+description: read from the DHT11 temperature sensor
+keyword: Windows 10 IoT Core, intermediate, onewire
 permalink: /en-US/Samples/GpioOneWire.htm
+samplelink: https://github.com/ms-iot/samples/tree/develop/GpioOneWire
 lang: en-US
 ---
 
-# GpioOneWire Sample (DHT11)
-
-
+# GPIO OneWire DHT11 reader
 
 [View the code on Github](https://github.com/ms-iot/samples/blob/develop/GpioOneWire)
 
