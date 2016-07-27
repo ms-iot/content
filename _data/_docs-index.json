@@ -35,6 +35,10 @@
           {
             "title":"Windows 10 IoT Core porting tool",
             "link":"/Docs/tools/IoTAPIPortingTool.htm"
+          },
+          {
+            "title":"Event Tracing for Windows",
+            "link":"/Docs/ETW.htm"
           }
         ]
       },
