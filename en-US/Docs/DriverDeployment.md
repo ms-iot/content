@@ -21,13 +21,15 @@ ___
 ### On the PC
 
 * Make sure you have installed Visual Studio 2015 Update 2
-* Install the [Windows Driver Kit](https://msdn.microsoft.com/en-US/windows/hardware/dn913721(v=vs.8.5).aspx).  You will need to install the SDK and WDK.
+* Install the [Windows Driver Kit](https://msdn.microsoft.com/windows/hardware/dn913721(v=vs.8.5).aspx).  You will need to install the SDK and WDK.
 
-* Install the certificates so that the driver is signed correctly and can run on your device. From a elevated command prompt execute the commands listed below:
+* Install the certificates so that the driver is signed correctly and can run on your device. From an elevated command prompt execute the commands listed below:
 
+   ```
         cd c:\Program Files (x86)\Windows Kits\10\Tools\bin\i386
         set WPDKContentRoot=c:\Program Files (x86)\Windows Kits\10      
         InstallOEMCerts.cmd
+   ```		
 		
 * Apply fix to enable F5 deployment from VS. In the elevated command prompt, execute the following commands .  
 	1.	`cd %TEMP%` ( will change directory to `c:\users\<usernsme>\Appdata\Local\Temp`)
@@ -123,7 +125,7 @@ When Installation completes, the device will reboot again, and the VS Output scr
 
 * Your driver will now be installed on your target device.
 * You can check the status of the driver by following the steps [here]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab3.htm).
-* Please refer to the web site [here](https://msdn.microsoft.com/en-US/windows/hardware/dn913721(v=vs.8.5).aspx) for information on creating driver new driver and using Visual Studio to deploy the driver as discussed on this page.
+* Please refer to the web site [here](https://msdn.microsoft.com/windows/hardware/dn913721(v=vs.8.5).aspx) for information on creating driver new driver and using Visual Studio to deploy the driver as discussed on this page.
 
 ## Known Issues
 ___
