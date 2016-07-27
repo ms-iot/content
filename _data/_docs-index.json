@@ -66,6 +66,10 @@
             "link":"/Docs/InstallPackage.htm"
           },
           {
+            "title":"Driver deployment",
+            "link":"/Docs/DriverDeployment.htm"
+          },		  
+          {
             "title":"Internet connection sharing",
             "link":"/Docs/InternetConnectionSharing.htm"
           },
