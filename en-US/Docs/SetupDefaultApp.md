@@ -12,7 +12,7 @@ Here you'll learn the ways to set your application as the default application. T
 
 ## Runtime options
 ___
-During development phases / experimental phases, you can change the default app by following means.
+During development / experimental phases, you can change the default app by following means.
 
 ### Using Windows Device Portal
 
@@ -22,10 +22,13 @@ You can click on **Set as Default App** link next to the app.
 ### Using the shell
 
 Steps to set the default app using the shell 
+
 1. Connect to the device via [Powershell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm)
+
 2. List the applications installed using `iotstartup list`
-3. Note the appid for the application you want to make as default and set it using `iotstartup headed <appid>`
-4. Reboot the device and the device will startup to the selected application
+
+3. Note the appid for the application you want to make as default and set it using `iotstartup add headed <appid>`. For headless app, you should use `iotstartup add headless <appid>`.
+
 
 ## Build time options
 ___
