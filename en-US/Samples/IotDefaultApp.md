@@ -1,11 +1,14 @@
 ---
-layout: sample
+layout: sample  
 title: IoT Core Default App
+description: A full featured sample app - The current IoT Core default application
+keyword: Windows 10 IoT Core, default app, bertha
 permalink: /en-US/Samples/IoTDefaultApp.htm
+samplelink: https://github.com/ms-iot/samples/tree/develop/IoTCoreDefaultApp
 lang: en-US
----
+---  
 
-# IoT Core Default App Sample
+# IoT Core Default App 
 
 We'll create a default app to demonstrate how to create a simple startup app that has some basic device management for your Windows 10 IoT Core device.
 

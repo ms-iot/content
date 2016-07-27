@@ -1,13 +1,14 @@
 ---
 layout: sample
-title: I2C Port Expander Sample
+title: I2C port Expander 
+keyword: Windows 10 IoT Core, i2c
+description: Port expander for i2C
 permalink: /en-US/Samples/I2CPortExpander.htm
+samplelink: https://github.com/ms-iot/samples/tree/develop/I2cPortExpander/CS
 lang: en-US
 ---
 
-# I2C Port Expander Sample
-
-
+# I2C port expander 
 
 ![I2C Port Expander Image]({{site.baseurl}}/Resources/images/I2CPortExpander/PortExpanderProjectPicture_480.png)
 

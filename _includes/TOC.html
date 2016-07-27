@@ -16,9 +16,9 @@
         {% for child in entry.children %}
           {% assign childPage = child.link | split: '/' | last %}
           {% if currentPage == childPage %}
-          <li><a href="{{site.baseurl}}{{child.link}}"><strong>{{child.title}}</strong></a>
+          <li><a href="{{site.baseurl}}{{site.iotexturl}}{{child.link}}"><strong>{{child.title}}</strong></a>
           {% else %}
-          <li><a href="{{site.baseurl}}{{child.link}}">{{child.title}}</a>
+          <li><a href="{{site.baseurl}}{{site.iotexturl}}{{child.link}}">{{child.title}}</a> 
           {% endif %}
         {% endfor %}
     </ul>

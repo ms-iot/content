@@ -1,11 +1,14 @@
 ---
-layout: sample
-title: Digital Signage UWP Sample
-permalink: /en-US/Samples/DigitalSignage.htm
+layout: sample  
+title: Digital sign
+description: Create a basic digital sign
+keyword: Windows 10 IoT Core, digital sign
+permalink: /en-US/Samples/DigitalSign.htm
+samplelink: https://github.com/ms-iot/samples/tree/develop/DigitalSignageUAP
 lang: en-US
----
+---  
 
-# Digital Signage App
+# Digital sign
 
 
 

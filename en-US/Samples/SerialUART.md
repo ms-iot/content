@@ -1,13 +1,14 @@
 ---
 layout: sample
 title: Serial Sample
-permalink: /en-US/Samples/SerialSample.htm
+description: Communicate between a desktop and an IoT device over a serial interface
+keyword: Windows 10 IoT Core, intermediate, UART, serial
+permalink: /en-US/Samples/SerialUART.htm
+samplelink: https://github.com/ms-iot/samples/tree/develop/SerialSample
 lang: en-US
 ---
 
-# Serial Port Sample
-
-
+# Serial UART 
 
 We'll create a simple app that allows communication between a desktop and an IoT device over a serial interface.
 
