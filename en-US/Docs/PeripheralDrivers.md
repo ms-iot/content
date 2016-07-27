@@ -18,15 +18,20 @@ The Step is to get the x86 version of the drivers from PC. For ARM, please conta
 1. Connect the device to the windows PC
 
 2. Install the driver for the device on the PC
+
 3. Go to Device Manager, select this device (listed under Universal Serial Bus controllers) and right click and select Properties.
+
+4. Go to Driver tab in the Properties window, and click on Driver Details. Note the sys files listed there.
+
+5. Copy the sys files from `C:\Windows\system32` and also the related inf file from `C:\Windows\Inf`. You can find the inf file by searcing for the sys file reference in the `.inf` files. You may need to copy additional files listed in the Inf and these will be listed in the inf_filelist.txt file created when using  `inf2pkg.cmd` in the next step.
 
 
 ## Step 2: Create a driver package
----
+___
 
 
-### Creating Driver package
 
+The Driver package contains the references(InfSource)to the Inf file for the driver and also lists all the files referenced in the Inf file. You can author the driver .pkg.xml file manually or use [`inf2pkg.cmd` tool](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/inf2pkg.cmd) that generates package xml based on the input inf file. 
 
 [`inf2cab.cmd` tool](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/inf2cab.cmd) creates the package xml file and also builds the cab file directly by invoking `buildpkg.cmd` internally.
 
