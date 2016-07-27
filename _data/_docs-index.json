@@ -104,6 +104,10 @@
           {
             "title":"Make your 3D printer wireless",
             "link":"/Docs/3DPrintServer.htm"
+          },
+          {
+            "title":"Install usb peripheral drivers",
+            "link":"/Docs/PeripheralDrivers.htm"
           }
         ]
       },
@@ -121,6 +125,10 @@
           {
             "title":"App deployment",
             "link":"/Docs/AppDeployment.htm"
+          },
+          {
+            "title":"Setup default app",
+            "link":"/Docs/SetupDefaultApp.htm"
           },
           {
             "title":"Embedded mode",
