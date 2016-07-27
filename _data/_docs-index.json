@@ -5,7 +5,7 @@
         "children":[
           {
             "title":"Documentation",
-            "link":"/Docs/Documentation.htm"
+            "link":"/Docs.htm"
           },
           {
             "title":"Supported boards and SoCs",
