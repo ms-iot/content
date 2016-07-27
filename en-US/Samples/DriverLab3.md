@@ -14,7 +14,7 @@ This section demonstrates how to manually copy and install the driver to a Windo
 
 <br/>
 
-You can also deploy a driver using Visual Studio during driver development by following the instructions on [this page]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab4.htm)
+You can also deploy a driver using Visual Studio during driver development by following the instructions on [this page]({{site.baseurl}}/{{page.lang}}/Docs/DriverDeployment.htm)
 
 <br/>
 
@@ -153,5 +153,5 @@ To turn the LED off, simply type:
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe high 5
 
 ### Use Visual Studio to deploy a driver 
-Now that you know how to manually deploy a driver, you can also use Visual to deploy a driver by following the instructions on [this page]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab4.htm).
+Now that you know how to manually deploy a driver, you can also use Visual to deploy a driver by following the instructions on [this page]({{site.baseurl}}/{{page.lang}}/Docs/DriverDeployment.htm).
     
