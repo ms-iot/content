@@ -1,4 +1,5 @@
 ---
+
 layout: sample  
 title: Wi-Fi Connector  
 description: Connect your IoT Core device to Wi-Fi
@@ -10,23 +11,22 @@ lang: en-US
 
 # Wi-Fi Connector
   
-We'll learn how to find and connect to WiFi networks using a Universal Windows Platform (UWP) app that makes use of the [`Windows.Devices.WiFi.WiFiAdapter`](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.wifi.wifiadapter.aspx){:target="_blank"} API.  
+We'll learn how to find and connect to Wi-Fi networks using a Universal Windows Platform (UWP) app that makes use of the [`Windows.Devices.WiFi.WiFiAdapter`](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.wifi.wifiadapter.aspx){:target="_blank"} API.  
   
-This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm).  
+This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions on the [Headed and Headless mode]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm) site.  
   
 ### Load the project in Visual Studio  
   
-You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/tree/develop/WebCamSample/CS){:target="_blank"}. Make a copy of the folder on your disk and open the project from Visual Studio.  
+You can find the source code for this sample in our [git repository](https://github.com/ms-iot/samples){:target="_blank"}. Clone the project to your machine and open the project from Visual Studio.  
 
-The code for the WiFi Connect sample can be found under: <samples root folder>\WiFiConnect\CS\WiFiConnect  
+The code for the WiFi Connect sample can be found under: [\WiFiConnect\CS\WiFiConnect](https://github.com/ms-iot/samples/tree/develop/WiFiConnect/CS/WiFiConnect){:target="_blank"}  
 
 ### Connecting your WiFi adapter  
   
 You'll need:  
   
-* A WiFI adapter such as the official Raspberry Pi WiFi dongle. Or for a list of wifi adapters, check out the [Ecosystem Compatibility List]({{site.baseurl}}/{{page.lang}}/Docs/SupportedInterfaces.htm){:target="_blank"}
-  
-Connect the WiFi adapter to one of USB ports on the IoT Device  
+* A Windows 10 IoT Core capable board with onboard WiFi, such as the Raspberry Pi 3 or DragonBoard 410c or
+* A USB WiFi adapter. For a list of supported Wi-Fi adapters see the [Ecosystem Compatibility List]({{site.baseurl}}/{{page.lang}}/Docs/SupportedInterfaces.htm){:target="_blank"}
   
 ### Deploy your app  
   
@@ -41,7 +41,7 @@ The sample app when deployed displays a screen similar to the one below.
 
 ![App Started]({{site.baseurl}}/Resources/images/WiFiConnectSample/WiFiSample0.png)
 
-If you have a WiFi adapter connected to your board, click on the "Scan Available WiFi Networks" button to start scanning and displaying the list of WiFi networks in the vcinity.
+If you have a Wi-Fi adapter connected to your board, click on the "Scan Available WiFi Networks" button to start scanning and displaying the list of Wi-Fi networks in the vcinity.
 
 Each WiFi network is identified by its SSID. Aditionally, some information about the SSID including the signal strength, channel frequency and authentication mode are displayed for each. The connection status is also shown for each.
 
@@ -53,7 +53,7 @@ You can connect to the your SSID by clicking on the one you need. If a security 
 
 A message on the status bar will indicate if the connection has been successful, or if not the reason the connection could not be made.
 
-Finally, because some networks may require additional information that can only be provided through a browser; e.g. WiFi hot spots, the app will open a browser control to enable users to complete a connection as needed. Or, if Internet access is already available, the Bing.com page will be displayed.
+Finally, because some networks may require additional information that can only be provided through a browser; e.g. Wi-Fi hot spots, the app will open a browser control to enable users to complete a connection as needed. Or, if Internet access is already available, the Bing.com page will be displayed.
 
 ![WiFi SSID list]({{site.baseurl}}/Resources/images/WiFiConnectSample/WiFiSample2.png)
   
@@ -66,7 +66,7 @@ The **WiFiAdapter** class can be used to scan, find and connect to both open and
 
 ### Required device capabiity
 
-Accessing the WiFi adapter from your code requires a device capability for WiFi devices added to the manifest. The `wifiControl` DeviceCapability is the one we need. So, we should add it to the AppX manifest, **Package.appxmanifest** file:
+Accessing the Wi-Fi adapter from your code requires a device capability for WiFi devices added to the manifest. The `wifiControl` DeviceCapability is the one we need. So, we should add it to the AppX manifest, **Package.appxmanifest** file:
 
 **NOTE:** While you can add other capabilities directly by double clicking and opening the **Package.appxmanifest** file in the UI editor, the wifiControl can only be added via the XML editor (Right Click on the file -> Open with -> XML (Text) Editor) and adding the device capability below:
  
@@ -87,7 +87,7 @@ The first step to access the device is to request access using the static `WiFiA
 
 **Note**, in a headed app, the method must be called from the UI thread. However, in an IOT headless app (Background Application), which doesn't have a UI thread, the method can be called from any thread.
 
-When access is granted, any of the WiFiAdapter methods can now be used. So, we start by trying to find a WiFi adapter on the current device, using the WiFiAdapter device selector.
+When access is granted, any of the WiFiAdapter methods can now be used. So, we start by trying to find a Wi-Fi adapter on the current device, using the WiFiAdapter device selector.
 
 {% highlight C# %}  
 var access = await WiFiAdapter.RequestAccessAsync();
@@ -129,7 +129,7 @@ if (result.Count >= 1)
 {% endhighlight %} 
 
 
-### Scanning for WiFi networks
+### Scanning for Wi-Fi networks
 
 The next step is to scan for available WiFi networks, this can be achieved using the `WiFiAdapter.ScanAsync()` method.
 
@@ -158,9 +158,9 @@ private void DisplayNetworkReport(WiFiNetworkReport report)
 }
 {% endhighlight %}  
 
-### Connecting to a WiFi network
+### Connecting to a Wi-Fi network
 
-When a WiFi network is selected from the ones displayed, we need to determine if we want to collect the password credential. The WiFi network authentication type is what we need to determine that:
+When a Wi-Fi network is selected from the ones displayed, we need to determine if we want to collect the password credential. The Wi-Fi network authentication type is what we need to determine that:
 
 {% highlight C# %}  
 // Only show the password box if needed
@@ -212,7 +212,7 @@ If you need to disconnect, `WiFiAdapter.Disconnect()` can be used.
   
 ### To summarize:  
   
-* To enable WiFi device access, add the `wifiControl` DeviceCapability to the AppX manifest
+* To enable Wi-Fi device access, add the `wifiControl` DeviceCapability to the AppX manifest
 
 * In the code, first thing is to request access to WiFiAdapter methods using `WiFiAdapter.RequestAccessAsync()`
   
