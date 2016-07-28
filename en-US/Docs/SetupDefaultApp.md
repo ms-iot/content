@@ -55,27 +55,22 @@ To enable this behaviour, the following registry key must be added with the virt
 The virtual key mapping consists of a unique, but descriptively named QWORD registry key with a value that maps a virtual key and its modifier to the “Home” action.  The QWORD value is defined as follows:
 
 	Bit [63-32], [31-20]	: Reserved for future use.  Must be 0.
-	Bit [19 - 16] 		: Modifier Key
-	Bit [15 - 0] 		: Virtual Key Code
+	Bit [19 - 16] 		: Modifier Key. Possible values are 0x0=No Modifier, Alt=0x1, Ctrl=0x2, Shift=0x4
+	Bit [15 - 0] 		: Virtual Key Code.  
+
+See [Virtual Key Code](https://msdn.microsoft.com/library/windows/desktop/dd375731(v=vs.85).aspx) for the key code values.
 
 
-Virtual Key Code: One of the [Virtual Key code values](https://msdn.microsoft.com/library/windows/desktop/dd375731(v=vs.85).aspx).
-
-Modifier Key: One of the Modifier key code values.  `0x0=No Modifier, Alt=0x1, Ctrl=0x2, Shift=0x4`
-
-For example, to make the “Left Windows” key (VK_LWIN) swap back to the Default Application add the following QWORD registry key:
+For example, to make the “Left Windows” key (VK_LWIN) swap back to the default application add the following QWORD registry key:
 
 `HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\IoTShellExtension\HotKeys`
-
 `“VK_LWIN”        QWORD    0x00000000 0000005B`
 
 
 It is also possible to add additional hot keys to perform the same function.  For example, to allow both the Left and Right Windows keys swap back to the default application add two entries to the registry:
 
 `HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\IoTShellExtension\HotKeys`
-
 `“VK_LWIN”        QWORD    0x00000000 0000005B`
-
 `“VK_RWIN”        QWORD    0x00000000 0000005C`
 
 See [Settings.HotKey sample package](https://github.com/parameshbabu/iot-adk-addonkit/blob/develop/Common/Packages/Settings.HotKey/Settings.HotKey.pkg.xml)
