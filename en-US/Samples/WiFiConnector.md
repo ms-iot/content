@@ -1,5 +1,4 @@
 ---
-
 layout: sample  
 title: Wi-Fi Connector  
 description: Connect your IoT Core device to Wi-Fi
