@@ -154,12 +154,12 @@
             "link":"{{site.baseurl}}/Docs/CreateIoTCorePro.htm"
           },
           {
-            "title": "Managing IoT Core Devices",
-            "link": "{{site.baseurl}}/Docs/Management.htm"
+            "title":"Managing IoT Core Devices",
+            "link":"{{site.baseurl}}/Docs/Management.htm"
           },
           {
-            "title": "Installing and Servicing IoT apps",
-            "link": "{{site.baseurl}}/Docs/Store.htm"
+            "title":"Installing and Servicing IoT apps",
+            "link":"{{site.baseurl}}/Docs/Store.htm"
           }
         ]
       }
