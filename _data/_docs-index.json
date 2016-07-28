@@ -212,19 +212,15 @@
         "children":[
           {
             "title":"Windows 10 IoT Core Pro",
-<<<<<<< HEAD
-            "link":"{{site.baseurl}}/Docs/CreateIoTCorePro.htm"
+            "link":"/Docs/CreateIoTCorePro.htm"
           },
           {
             "title":"Managing IoT Core Devices",
-            "link":"{{site.baseurl}}/Docs/Management.htm"
+            "link":"/Docs/Management.htm"
           },
           {
             "title":"Installing and Servicing IoT apps",
-            "link":"{{site.baseurl}}/Docs/Store.htm"
-=======
-            "link":"/Docs/CreateIoTCorePro.htm"
->>>>>>> refs/remotes/ms-iot/develop
+            "link":"/Docs/Store.htm"
           }
         ]
       }
