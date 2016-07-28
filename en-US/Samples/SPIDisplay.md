@@ -1,13 +1,14 @@
 ---
-layout: default
-title: SPI Display Sample
+layout: sample
+title: SPI display
 permalink: /en-US/Samples/SPIDisplay.htm
+keyword: Windows 10 IoT Core, beginner, breadboard, SPI
+description: Write lines of text to an LED display
+samplelink: https://github.com/ms-iot/samples/tree/develop/WeatherStation/CS/WeatherStation
 lang: en-US
 ---
 
-# SPI Display Sample
-
-{% include VerifiedVersion.md %}
+# SPI display
 
 In this sample, we interface a SPI based [OLED display](http://www.adafruit.com/product/938){:target="_blank"} to your Raspberry Pi 2 or 3, MinnowBoard Max, or DragonBoard 410c. We then create an app that lets us write lines of text to the display. Step-by-step instructions are provided,
 so no background knowledge of SPI is needed. However, if you want to learn more, SparkFun provides a great [tutorial on SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}.

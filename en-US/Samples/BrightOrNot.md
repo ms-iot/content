@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Adafruit Is It Bright or Not?
 permalink: /en-US/Samples/BrightOrNot.htm
 step: AdafruitKitContents.htm

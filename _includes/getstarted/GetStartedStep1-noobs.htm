@@ -1,0 +1,113 @@
+<div class="row">
+  <div class="col-xs-4">
+    <section class="section section-top-margin">
+      <div class="section-body">
+        <p class="text-caption">
+          <span class="win-color-fg-secondary">Instructions for:</span><br/>
+          {% include_relative selection-list.inc %}
+          <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Change</a>
+        </p>
+        <br/>
+        <p>1 Get the tools</p>
+        <p><a href="GetStartedStep2.htm">2 Set up your device</a></p>
+        <p><a href="GetStartedStep3.htm">3 Set up Visual Studio</a></p>
+        <p><a href="GetStartedStep4.htm">4 Write your first app</a></p>
+      </div>
+    </section>
+  </div>
+  <div class="col-xs-20">
+    <section class="section">
+      <header class="page-title-header">
+        <h1 class="page-title">Step 1 of 4: Get the tools</h1>
+        <h2 class="page-subtitle">Download the tools and software you need to set up your board, build and explore Windows IoT.</h2>
+      </header>
+    </section>
+
+    <div class="row">
+      <div class="col-xs-24">
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title"><span class="step">1</span>Get Windows 10<span class="pull-right"><a id="get-windows-10-toggle" class="text-body toggle-button" onClick="hideDiv('get-windows-10')">Hide</a></span></h2>
+          </div>
+          <div class="section-body toggle-section" id="get-windows-10">
+            <p>
+              Make sure you are running the public release of Windows 10 (version 10.0.10240 or better).<br/>
+              You can find your current build number by clicking the start button, typing "winver", and hitting the Enter key.
+            </p>
+            
+            <p>
+              If you're not running Windows 10 (version 10.0.10240 or better) you can upgrade from <a href="http://www.microsoft.com/en-us/software-download/windows10" target="_blank">here</a>.
+            </p>
+
+            <p>
+              While Windows 10 is not required to install Windows 10 IoT Core using NOOBS, you'll need Windows 10 in order to use the IoT Core Dashboard app. Windows 10 is also needed to use Visual Studio to develop applications on Windows 10 IoT Core.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-24">
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title"><span class="step">2</span>Get NOOBS<span class="pull-right"><a id="get-noobs-toggle" class="text-body toggle-button" onClick="hideDiv('get-noobs')">Hide</a></span></h2>
+          </div>
+          <div class="section-body toggle-section" id="get-noobs">
+            <p>
+              To install Windows 10 IoT Core onto your Raspberry Pi using NOOBS you need to have a micro SD Card formatted with NOOBS. You may have received a pre-imaged SD Card with NOOBS already installed. If so, continue to the next step.
+              If you don't already have a NOOBS SD card, we recommend you follow the instructions to install Windows onto a blank SD Card. 
+            </p>
+            
+            <ol class='inline-list'>
+              <li>
+              If you'd like to continue using NOOBS, download the latest version of NOOBS from the <a href='https://downloads.raspberrypi.org/NOOBS_lite_latest' target="_blank"> official NOOBS download site </a>.  
+              </li>
+
+              <li> 
+                Once NOOBS has been downloaded, you must copy it onto your SD Card. To do so, you'll need to mount your SD card onto your machine and format it. The <a href='https://www.sdcard.org/downloads/formatter_4/' target="_blank"> SD Formatter 4.0 tool </a> from the SD Association is the suggested tool to use when formatting your SD card for NOOBS.
+              </li>
+
+              <li>
+                Finally, extract the NOOBS archive onto your newly formatted SD card. You can now proceed to step 2.
+              </li>
+            </ol> 
+          </div>
+        </section>
+      </div>
+    </div>
+
+    
+
+    <div class="row">
+      <div class="col-xs-24">
+        <section class="section">
+          <div class="section-body">
+            <p>
+              <span class="win-color-fg-green">Step 1 of 4: Get the tools is complete.</span>
+              Set up your device <span class="win-color-fg-secondary">is next.</span>
+            </p> 
+            <div class="btn-group">
+              <a href="GetStartedStep2.htm" class="btn btn-primary">Next</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function hideDiv(div) {
+    var pdiv = "#" + div,
+        button = pdiv + "-toggle"
+
+    if ($(pdiv).css('display') == 'none') {
+      $(pdiv).toggle('slow');
+      $(button).html('Hide');
+    }
+    else {
+      $(pdiv).toggle('slow');
+      $(button).html('Show');
+    }
+  }
+</script>

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: BLE GATT Sample - SensorTag Example Dump
 permalink: /en-US/Samples/BLEGattDump.htm
 lang: en-US

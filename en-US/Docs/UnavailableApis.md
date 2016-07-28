@@ -1,13 +1,11 @@
 ---
-layout: default
+layout: docs
 title: Unavailable Universal APIs
 description: A current list of Windows Runtime APIs that are not functional in Windows 10 IoT Core.
 keyword: windows runtime, windows iot, unsupported apis
 permalink: /en-US/Docs/UnavailableApis.htm
 lang: en-US
 ---
-
-<div class="container" markdown= "1">
 
 # Universal APIs not functional in Windows 10 IoT Core at this time
 
@@ -147,12 +145,8 @@ lang: en-US
     Windows.UI.Core.CoreInput
     Windows.UI.Core.CoreWindowDialog
     Windows.UI.Core.CoreWindowFlyout
-    Windows.UI.Input.Inking.InkManager
-    Windows.UI.Input.Inking.InkRecognizerContainer
     Windows.UI.Popups.MessageDialog
     Windows.UI.ViewManagement.UISettings
     Windows.UI.Xaml.Controls.ListPickerFlyout
     Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter
     Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter
-
-</div>

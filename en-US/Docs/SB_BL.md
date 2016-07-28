@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Secure Boot and BitLocker
+layout: docs
+title: Enabling Secure Boot and BitLocker Device Encryption on Windows 10 IoT Core
 description: Learn about enabling Secure Boot and BitLocker encryption on your IoT device.
 keyword: secure boot, windows iot, bitlocker, encryption, security
 permalink: /en-US/Docs/SB_BL.htm
@@ -8,8 +8,6 @@ lang: en-US
 ---
 
 # Enabling Secure Boot and BitLocker Device Encryption on Windows 10 IoT Core
-Deployment Guide  
-_Revision: 1.0_
 
 ## Introduction  
 UEFI Secure Boot and BitLocker are the keystone features of a locked-down Windows OS that is resilient against offline and boot attacks. UEFI Secure Boot is the first policy enforcement point, located in UEFI. It restricts the system to only allow execution of binaries signed by a specified authority. This feature prevents unknown code from being executed on the platform and potentially weakening the security posture of it. Note that while the limitation to a defined set of publishing authorities excludes all unknown code, it does not necessarily prevent known bad code from being executed (e.g. rollback attack).  
@@ -75,11 +73,12 @@ For the following steps, we'll assume that you've flashed the latest Windows 10 
   * SetVariable_pk.bin
 2.	Copy the provided device encryption task definition to v:\EFI:
   * DETask.xml
-3.	Additionally, in order to facilitate data recovery once the device is encrypted, open an administrative CMD prompt on your PC and run the following commands:
+3.	Import DRA.pfx to your PC by double clicking on the file to launch the Certificate Import Wizard - follow the prompts, setting 'Store Location' as 'Current User' and the password required as 'dra'. 
+4.	Additionally, in order to facilitate data recovery once the device is encrypted, open an administrative CMD prompt on your PC and run the following commands:
   * `reg load HKLM\IoT v:\Windows\System32\config\SOFTWARE`
   * `reg import DRAStore.reg` (point to your 'DRAStore.reg' file location)
   * `reg unload HKLM\IoT`
-4. Optionally, copy test tool [t2t.exe][9] to v:\windows\system32.
+5. Optionally, copy test tool [t2t.exe][9] to v:\windows\system32.
 
 **Note:** BitLocker functionality on Windows 10 IoT Core allows for automatic encryption of **NTFS-based OS volume** while binding all available **NTFS data volumes** to it. For this, it's necessary to ensure that the EFIESP volume GUID is set correctly. If you're using the **DragonBoard 410c**, you'll need to provide these additional instructions within your administrative CMD window:
 
@@ -115,7 +114,7 @@ Run the following 3 commands from within the remote powershell session to set UE
 Next, in order to complete lock-down of the platform, reboot device using the command `shutdown /r`.  
 **Note:** On an Intel MinnowBoardMax, you may need to manually enable SecureBoot in UEFI. Power up board with a keyboard connected and press F2 to enter UEFI setup. Go to _Device Manager -> Secure Boot Configuration -> Attempt Secure Boot_ and enable this option _<X>_. Press F10 to save changes and proceed with a reboot of the platform.
 
-[11]: {{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm "PowerShell"
+[11]: {{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm "PowerShell"
 
 ### Scheduling BitLocker  
 In order to enable BitLocker, the device encryption task must be scheduled. This device encryption task is set to trigger when the TPM is provisioned and ready, also ensuring that device encryption stays enabled on all subsequent boots (should the volume be decrypted offline at any time). Once Secure Boot has been setup and the device booted up, re-initiate a remote PowerShell session and create a new (or append to existing) file labelled "OEMCustomization.cmd" under c:\windows\system32 using the following command:
@@ -136,5 +135,5 @@ If the contents need to be frequently accessed offline, BitLocker autounlock can
 
 ## Disabling BitLocker  
 Should there arise a need to temporarily disable BitLocker, initate a remote PowerShell session with your IoT device and run the following command: `sectask.exe -disable`.  
-**Note:** Dvice encryption will be re-enabled on subsequent device boot unless the scheduled encryption task is disabled.
+**Note:** Device encryption will be re-enabled on subsequent device boot unless the scheduled encryption task is disabled.
 

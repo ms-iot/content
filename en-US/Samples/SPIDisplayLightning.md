@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: SPI Display using Lightning Providers samples
 permalink: /en-US/Samples/SPIDisplayLightning.htm
 lang: en-US
@@ -7,7 +7,7 @@ lang: en-US
 
 # Communicate with SPI Display using Lightning providers
 
-{% include VerifiedVersion.md %}
+
 
 This sample demonstrates how to communicate with SPI bus controllers using the Micorosot.IoT.Providers.Lightning.SpiProvider
 

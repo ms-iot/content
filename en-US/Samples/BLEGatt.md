@@ -1,13 +1,16 @@
 ---
-layout: default
-title: BLE GATT Sample - Overview
+layout: sample
+title: Bluetooth LE GATT
+description: Bluetooth Low Energy (BLE) Generic Attribute Profile (GATT) Sample Overview
+keyword: Windows 10 IoT Core, Bluetooth, BLE, bluetooth low energy, GATT
 permalink: /en-US/Samples/BLEGatt.htm
+samplelink: https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS
 lang: en-US
 ---
 
-# Bluetooth Low Energy (BLE) Generic Attribute Profile (GATT) Sample Overview
+# Bluetooth LE GATT 
 
-{% include VerifiedVersion.md %}
+Bluetooth Low Energy (BLE) Generic Attribute Profile (GATT) Sample Overview
 
 In this sample we will discover how to work with Bluetooth Low Energy devices using the GATT profile and a TI CC2541 SensorTag. You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip){:target="_blank"}, and navigating to the [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} folder.
 

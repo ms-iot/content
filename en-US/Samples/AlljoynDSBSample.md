@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: AllJoyn DSB Sample
 permalink: /en-US/Samples/AlljoynDSBSample.htm
 lang: en-US
@@ -7,13 +7,11 @@ lang: en-US
 
 # Alljoyn DSB GPIO Tutorial
 
-{% include VerifiedVersion.md %}
-
 You can find the source code for AllJoyn samples by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\AllJoyn`. This tutorial shows how a GPIO Device can be exposed to the AllJoyn Bus using the AllJoyn Device System Bridge.
 
-### Prerequisites
+## Prerequisites
 
-1. Install [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/Docs/AllJoyn.htm#AllJoynExplorer){:target="_blank"} app.
+1. Install [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/Docs/AllJoyn.htm#AllJoynExplorer) app.
 
 ### Step 1: Hardware Setup
 The sample uses a Raspberry Pi 2 that one of its GPIO pins is connected to a photo resistor as shown in the schematic below. If another device issues the pin number in the code has to be changed to match the HW setup.

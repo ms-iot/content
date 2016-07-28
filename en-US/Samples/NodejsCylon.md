@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: NodejsCylon
 permalink: /en-US/Samples/NodejsCylon.htm
 lang: en-US
@@ -7,7 +7,7 @@ lang: en-US
 
 # Cylon Node.js (Console Application) Sample
 
-{% include VerifiedVersion.md %}
+
 
 In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) running on a Raspberry Pi 2 or 3 to blink the LED on an Arduino (with [Firmata](https://www.npmjs.com/package/firmata) installed) once per second.
 
@@ -33,8 +33,8 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 
 ### Copy Node.js to your Raspberry Pi 2 or 3
 * Download the zip file with ARM Node.js (ChakraCore) from [here](http://aka.ms/nodecc_arm) to your PC and extract the files (node.exe and chakracore.dll).
-* Use [Windows file sharing]({{site.baseurl}}/{{page.lang}}/Samples/SMB.htm), [PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm), 
-or [SSH]({{site.baseurl}}/{{page.lang}}/Samples/SSH.htm) to create `C:\Node.js (ChakraCore)` folder on your Raspberry Pi 2 or 3.
+* Use [Windows file sharing]({{site.baseurl}}/{{page.lang}}/Samples/SMB.htm), [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm), 
+or [SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH.htm) to create `C:\Node.js (ChakraCore)` folder on your Raspberry Pi 2 or 3.
 * Copy node.exe and chakracore.dll to `C:\Node.js (ChakraCore)` on your Raspberry Pi 2 or 3.
 
 

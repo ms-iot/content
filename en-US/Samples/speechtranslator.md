@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: SpeechTranslator Sample
 permalink: /en-US/Samples/speechtranslator.htm
 lang: en-US

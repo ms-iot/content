@@ -1,0 +1,29 @@
+<ul>
+{% assign currentPage = page.url | split: '/' | last %}
+{% assign parents = (site.data._docs-index[page.lang] | default: site.data._docs-index[en-US]) %}
+{% for entry in parents %}
+  <li><a role="button" data-toggle="collapse" href="#collapseSection{{forloop.index}}" aria-expanded="false" aria-controls="collapseSection{{forloop.index}}">
+      {{entry.parent}}
+  </a>
+    {% assign currentUl = 'collapse' %}
+    {% for child in entry.children %}
+      {% assign temp = child.link | split: '/' | last %}
+      {% if currentPage == temp %}
+        {% assign currentUl = 'collapse in' %}
+      {% endif %}
+    {% endfor %}
+    <ul class="{{currentUl}}" id="collapseSection{{forloop.index}}">
+        {% for child in entry.children %}
+          {% assign childPage = child.link | split: '/' | last %}
+          {% if currentPage == childPage %}
+          <li><a href="{{site.baseurl}}{{site.iotexturl}}{{child.link}}"><strong>{{child.title}}</strong></a>
+          {% else %}
+          <li><a href="{{site.baseurl}}{{site.iotexturl}}{{child.link}}">{{child.title}}</a> 
+          {% endif %}
+        {% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+</ul>
+
+

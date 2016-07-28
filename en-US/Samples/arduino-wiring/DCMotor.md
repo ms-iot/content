@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Arduino Wiring DC Motor Sample
 permalink: /en-US/Samples/arduino-wiring/DCMotor.htm
 lang: en-US

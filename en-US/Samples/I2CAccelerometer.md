@@ -1,13 +1,16 @@
 ---
-layout: default
-title: I2C Accelerometer Sample
+layout: sample
+title: I2C Accelerometer
 permalink: /en-US/Samples/I2CAccelerometer.htm
+keyword: Windows 10 IoT Core, beginner, breadboard, i2c, accelerometer
+description: Connect an accelerometer to your device
+samplelink: https://github.com/ms-iot/samples/tree/develop/I2CAccelerometer/CS
 lang: en-US
 ---
 
-# I2C Accelerometer Sample
+# I2C Accelerometer
 
-{% include VerifiedVersion.md %}
+
 
 We'll connect an I2C accelerometer to your Raspberry Pi 2 or 3/MinnowBoard Max/DragonBoard and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of I2C is needed.
 However, if you're curious, SparkFun provides a great [tutorial on I2C](https://learn.sparkfun.com/tutorials/i2c){:target="_blank"}.

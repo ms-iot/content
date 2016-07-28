@@ -7,6 +7,7 @@ permalink: /en-US/GetStarted.htm
 lang: en-US
 ---
 
+<<<<<<< HEAD
 <div class="row">
     <div class="col-xs-24">
         <ol class="breadcrumb">
@@ -112,6 +113,92 @@ lang: en-US
             <a id="getStartedNextButton" href="#" class="btn btn-primary" onclick="getStartedNextButtonClick()">Next</a>
         </div>
     </div>
+=======
+<header class="page-title-header">
+  <h1 class="page-title">Get Started</h1>
+</header>
+<h2 class="subtext">The setup and installation steps are different based on what hardware you have. </h2>
+<h2 class="text-base">Choose your hardware, installation media, and OS version.</h2>
+<div class="sequence">
+  <div class="step">
+    <section id="selectBoardSection" class="section">
+      <header class="section-header">
+        <h2>Select your hardware</h2>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/Explore/BoardComparison.htm">Help me choose a device</a></p>
+      </header>          
+      <div class="section-body">
+        <ul class="iot-getstarted-list">
+          <li id="starterPackButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('starterPack')">
+              <img style="max-width:50%;" src="{{site.baseurl}}/Resources/images/product.png">
+              <p class="text-caption" style="padding-top:25px">Raspberry Pi 2 Starter Pack</p>
+          </li>
+          <li id="rpi2Button" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('rpi2')">
+              <img style="max-width:40%; padding-top:10px" src="{{site.baseurl}}/Resources/images/RaspberryPiIcon.png">
+              <p class="text-caption" style="padding-top:25px">Raspberry Pi 2</p>
+          </li>
+          <li id="rpi3Button" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('rpi3')">
+              <img style="max-width:40%; padding-top:10px" src="{{site.baseurl}}/Resources/images/RaspberryPiIcon.png">
+              <p class="text-caption" style="padding-top:25px">Raspberry Pi 3</p>
+          </li>
+          <li id="dragonboardButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('dragonboard')">
+              <img style="max-width:70%;" src="{{site.baseurl}}/Resources/images/DragonBoardIcon.png">
+              <p class="text-caption" style="padding-top:25px">Dragonboard 410c</p>
+          </li>
+          <li id="mbmButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('mbm')">
+              <img style="max-width:75%;" src="{{site.baseurl}}/Resources/images/minnowboard-max.png">
+              <p class="text-caption">Minnowboard Max</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <div id="selectInstallSection" style="display:none" class="step">
+    <section class="section">
+      <header class="section-header">
+        <h2 style=" margin-top:0px">Select your installation media</h2>
+      </header>
+      <div class="section-body">
+        <ul class="iot-getstarted-list">
+          <li id="sdcardButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="hardwareButtonClick('sdcard')">
+              <img style="max-width:40%;" src="{{site.baseurl}}/Resources/images/sdcard.png">
+              <p class="text-caption" style="padding-top:15px">Install onto my blank microSD card</p>
+          </li>
+          <li id="noobsButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="hardwareButtonClick('noobs')">
+              <img style="max-width:50%;" src="{{site.baseurl}}/Resources/images/noobs.png">
+              <p class="text-caption" style="padding-top:25px">Install with NOOBS</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <div id="selectOSSection" style="display:none;" class="step">
+    <section class="section">
+      <header class="section-header">
+        <h2 style=" margin-top:0px">Select your OS version</h2>
+      </header>
+      <div class="section-body">
+        <ul class="iot-getstarted-list">
+          <li id="stableButton" class="win-color-border-20 win-color-bg-0  iot-getstarted-buttons" onclick="osButtonClick('stable')">
+            <img style="max-width:60%;" src="{{site.baseurl}}/Resources/images/windows.png">
+            <p class="text-caption" >Windows 10 IoT Core Anniversary Update</p>
+          </li>
+          <li id="insiderButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="osButtonClick('insider')">
+            <img style="max-width:60%;" src="{{site.baseurl}}/Resources/images/windows.png">
+            <p class="text-caption" >Windows 10 IoT Core Insider Preview</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <div id="getStartedCompletedSection" style="display:none" class="step">
+    <section class="section">
+      <div class="section-body">
+        <p> Continue the setup process by getting the tools and instructions you'll need to get up and running. </p>
+        <a id="getStartedNextButton" href="#" class="btn btn-primary" onclick="getStartedNextButtonClick()">Next</a>
+      </div>
+    </section>
+  </div>
+>>>>>>> ms-iot/develop
 </div>
 <script>
     var selectedBoard;
@@ -128,11 +215,6 @@ lang: en-US
         $(button).addClass('win-color-bg-0');
     }
 
-    function scrollToSection(section) {
-        var div = "#" + section;
-        $('html, body').animate({ scrollTop: $(div).offset().top }, 'fast');
-    }
-
     function boardButtonClick(board) {
         // untoggle all the buttons
         unpressButton('#rpi2Button');
@@ -147,40 +229,35 @@ lang: en-US
         switch (selectedBoard) {
             case 'rpi2':
                 $('#noobsButton').show();
-                $('#starterPackButton').show();
                 $('#sdcardButton').show();
                 break;
             case 'rpi3':
-                $('#starterPackButton').hide();
                 $('#noobsButton').show();
                 $('#sdcardButton').show();
                 break;
             case 'mbm':
                 $('#sdcardButton').show();
                 $('#noobsButton').hide();
-                $('#starterPackButton').hide();
                 break;
-            case 'dragonboard':
+            case 'dragonboard':            
+            case 'starterPack':
                 pressButton(pressedButton);
-                $('#selectHardwareSection').hide('fast');
+                $('#selectInstallSection').hide('fast');
                 $('#selectOSSection').hide('fast');
                 $('#getStartedCompletedSection').show('fast');
-                scrollToSection('getStartedCompletedSection');
                 return;
         }
 
-        $('#selectHardwareSection').show('fast');
+        $('#selectInstallSection').show('fast');
         $('#selectOSSection').hide('fast');
         $('#getStartedCompletedSection').hide('fast');
         pressButton(pressedButton);
-        scrollToSection('selectHardwareSection');
      }
 
     function hardwareButtonClick(hardware) {
         selectedHardware = hardware;
 
         //untoggle all the buttons
-        unpressButton('#starterPackButton');
         unpressButton('#sdcardButton');
         unpressButton('#noobsButton');
         unpressButton('#stableButton');
@@ -188,27 +265,14 @@ lang: en-US
 
         switch(selectedHardware)
         {
-            case 'starterPack':
-                $('#selectOSSection').hide('fast');
-                $('#getStartedCompletedSection').show('fast');
-                scrollToSection('getStartedCompletedSection');
-                break;
             case 'noobs':
                 $('#selectOSSection').hide('fast');
-                $('#getStartedCompletedSection').show('fast');
-                scrollToSection('getStartedCompletedSection');
+                $('#getStartedCompletedSection').show('fast');                
                 break;
             case 'sdcard':
                 $('#selectOSSection').show('fast');
-
-                if (selectedBoard == 'rpi3') {
-                  $('#stableButton').hide('fast');
-                } else {
-                  $('#stableButton').show('fast');
-                }
-                
+                $('#stableButton').show('fast');                
                 $('#getStartedCompletedSection').hide('fast');
-                scrollToSection('selectOSSection');
                 break;
         }
         var pressedButton = '#' + hardware + 'Button';
@@ -217,14 +281,14 @@ lang: en-US
 
     function osButtonClick(os) {
         selectedOS = os;
-        $('#getStartedCompletedSection').show('fast');
+        
+        $('#getStartedCompletedSection').show('fast');     
         var pressedButton = '#' + os + 'Button';
 
         //untoggle all the buttons
         unpressButton('#stableButton');
         unpressButton('#insiderButton');
         pressButton(pressedButton);
-        scrollToSection('getStartedCompletedSection');
     }
 
     function getStartedNextButtonClick() {
@@ -232,7 +296,12 @@ lang: en-US
       
       switch (selectedBoard) {
         case 'dragonboard':
-          window.location.href = 'Docs/DB410c.htm';
+          // Dragonboard is a special case. go directly to the dragonboard page
+          window.location.href = 'Docs/GetStarted/dragonboard/GetStartedStep1.htm';
+          return;
+        case 'starterPack':
+          // the kit is a special case. go directly to the dragonboard page
+          window.location.href = 'Docs/AdafruitMakerKit.htm';
           return;
         case 'rpi2':
         case 'rpi3':
@@ -245,11 +314,9 @@ lang: en-US
       
       switch(selectedHardware)
       {
-        case 'starterPack':
-          window.location.href = 'Docs/AdafruitMakerKit.htm';
-          return;
         case 'noobs':
-          window.location.href = 'Docs/Noobs.htm';
+          // noobs is a special case. go directly to the noobs page
+          window.location.href = 'Docs/GetStarted/noobs/GetStartedStep1.htm';
           return;
         case 'sdcard':
           href += selectedHardware + '/';

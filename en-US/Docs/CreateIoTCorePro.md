@@ -1,11 +1,13 @@
 ---
-layout: default
-title: Create a Windows 10 IoT Core Pro Image
+layout: docs
+title: Windows 10 IoT Core Pro
+description: We describe how to create a Windows 10 IoT Core Pro image
+keyword: windows iot, image creation, iot core pro, windows iot
 permalink: /en-US/Docs/CreateIoTCorePro.htm
 lang: en-US
 ---
 
-# Creating a Windows 10 IoT Core Pro Image
+# Windows 10 IoT Core Pro
 
 Here are the steps involved in creating an Enterprise Image
 
@@ -25,13 +27,13 @@ Please install the Windows ADK and ICD.
 Step 2: Create a Provisioning Package with License File using ICD
 -------
 
-**Step 2.1: New Provisioning Pacakge**
+**Step 2.1: New Provisioning Package**
 
 ![New Provisioning Package]({{site.baseurl}}/Resources/images/CreateIoTCorePro/CreatePpkg1.png)
 
-**Step 2.2: Enter Name & Project Folder for Provisioning Pacakge**
+**Step 2.2: Enter Name & Project Folder for Provisioning Package**
 
-![Enter Name & Project Folder for Provisioning Pacakge]({{site.baseurl}}/Resources/images/CreateIoTCorePro/CreatePpkg2.png)
+![Enter Name & Project Folder for Provisioning Package]({{site.baseurl}}/Resources/images/CreateIoTCorePro/CreatePpkg2.png)
 
 **Step 2.3: Select "Windows 10 IoT Core"**
 
@@ -74,11 +76,11 @@ Step 3: Wrap the Provisioning Package in an OEM Package
 
 Create a OEM Package to wrap the Provisioning Package using PKGGEN tool.
  
-Please visit [Windows 10 IoT Core Image Creation](https://blogs.msdn.microsoft.com/iot/2015/12/14/windows-10-iot-core-image-creation) for instructions regarding creating an OEM Package that contains your Provisioning Package using PKGGEN tool.
+Please visit [Windows 10 IoT Core Image Creation](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/iot-core-manufacturing-guide) for instructions regarding creating an OEM Package that contains your Provisioning Package using PKGGEN tool.
  
 Step 4: Create the Image with ICD/Imggen
 -------
  
 Use ICD to create a Windows IoT Core Image with your OEM Package.
 
-Please visit [Windows 10 IoT Core Image Creation](https://blogs.msdn.microsoft.com/iot/2015/12/14/windows-10-iot-core-image-creation) for instructions regarding using ICD to create a Windows IoT Core Image with your OEM Package.
+Please visit [Windows 10 IoT Core Image Creation](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/iot-core-manufacturing-guide) for instructions regarding using ICD to create a Windows IoT Core Image with your OEM Package.

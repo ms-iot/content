@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Blinky UI using Lightning Providers sample
 permalink: /en-US/Samples/BlinkyUILightning.htm
 lang: en-US
@@ -8,7 +8,7 @@ deviceName: RPI2
 
 # Blinky UI Sample with Lightning Provider
 
-{% include VerifiedVersion.md %}
+
 
 This sample demonstrates how to communicate with GPIO using the Micorosot.IoT.Providers.Lightning.I2cProvider
 

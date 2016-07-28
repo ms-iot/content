@@ -44,7 +44,13 @@
     <div class="col-md-6" style="min-height: 275px;">
         <h3>{{entry.title}}</h3>
         <p>{{entry.description}}</p>
-        {{entry.link-text}}
+        {% if entry.link.first %}
+          {% for item in entry.link %}
+          <a href="{{item}}">{{entry.link-text[forloop.index0]}} ({{entry.lang[forloop.index0]}})</a>{% if forloop.rindex0 != 0 %}<br/>{% endif %}
+          {% endfor %}
+        {% else %}
+          <a href="{{entry.link}}">{{entry.link-text}}{% if entry.lang != 'N/A' %} ({{entry.lang}}){% endif %}</a>
+        {% endif %}        
         <span style="display: none;" class="tagBox">
             {% for tag in entry.tags %}
                 {% assign index = forloop.index0 %}

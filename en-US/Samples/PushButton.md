@@ -1,13 +1,14 @@
 ---
-layout: default
-title: Push Button Sample
+layout: sample
+title: Push button
+keyword: Windows 10 IoT Core, beginner, led, push button, breadboard
+description: Make an LED blink with the push of a button
 permalink: /en-US/Samples/PushButton.htm
+samplelink: https://github.com/ms-iot/samples/tree/develop/PushButton/CS
 lang: en-US
 ---
 
-# Push Button Sample
-
-{% include VerifiedVersion.md %}
+# Push button
 
 [View the code on GitHub](https://github.com/ms-iot/samples/tree/develop/PushButton/CS){:target="_blank"}
 

@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Using the Unified Write Filter for Windows 10 IoT Core
+layout: docs
+title: Using the Unified Write Filter on Windows 10 IoT Core
 description: Learn how to improve the reliability and stability of the physical storage on your Windows 10 IoT Core device using the Unified Write Filter.
 keyword: unified write filter, windows iot, uwf, protected volume
 permalink: /en-US/Docs/UWF.htm
@@ -10,85 +10,113 @@ lang: en-US
 
 The Unified Write Filter (UWF) is a feature to protect physical storage media from data writes. UWF intercepts all write attempts to a protected volume and redirects those write attempts to a virtual overlay. This improves the reliability and stability of your device and reduces the wear on write-sensitive media, such as flash memory media like solid-state drives.
 
-More information on UWF is available [here](https://msdn.microsoft.com/en-us/windows/hardware/mt572001).
+Read [Unified Write Filter](https://msdn.microsoft.com/en-us/windows/hardware/mt572001) for more information.
 
-## How to Install UWF on a System Running Windows 10 IoT Core
-*             On your development system, download the [UWF Installation package](http://go.microsoft.com/fwlink/?LinkId=708427).
-*             Double click on `UWF.MSI`. When the installation is complete, the x86 and ARM packages will be extracted to `C:\Program Files (x86)\Microsoft IoT\UWF`. Launch [Powershell](http://ms-iot.github.io/content/en-US/Samples/PowerShell.htm) or [ssh](http://ms-iot.github.io/content/en-US/Samples/SSH.htm) and access your device running Windows 10 IoT Core.
-* From Powershell or ssh, do the following:
-  *           Create a temporary folder on the target machine (e.g. ```C:\UWFTemp```).
-  *           Based on your target machine architecture, copy either the x86 or ARM UWF packages (including the lang pack) from your developer machine to `C:\UWFTemp`.
-  *           Run these commands to install the packages to your IoT device system image:
-    * `ApplyUpdate –stage C:\UWFTemp\Microsoft-IoTUAP-UnifiedWriteFilter-Package.cab`
-    * `ApplyUpdate –stage C:\UWFTemp\Microsoft-IoTUAP-UnifiedWriteFilter-Package_Lang_en-us.cab`
-    * `ApplyUpdate –commit`
-*             The Device will boot to the Update OS, install UWF features, and reboot to the MainOS.
-*             Once the device comes back to the MainOS, the UWF feature is ready and available to use. This can be verified by typing ```uwfmgr.exe``` into your Powershell or SSH window.
+{% include note.html text="You'll need an MSDN subscription or an account as a registered Microsoft OEM to get IoT Core Kits from MSDN Subscriber Downloads." %}
+
+If you do not have IoT Core Kits yet, Download and install [IoT Core Kits from MSDN Subscriber Downloads](https://msdn.microsoft.com/subscriptions/downloads/#FileId=67415).
+
+## How to Install UWF on a device running Windows 10 IoT Core
+___
+* Launch [Powershell](http://ms-iot.github.io/content/en-US/Docs/PowerShell.htm) or [SSH](http://ms-iot.github.io/content/en-US/Docs/SSH.htm) and access your device running Windows 10 IoT Core.
+* From Powershell or SSH, do the following:
+  * Create a temporary folder on the target machine (e.g. ```C:\UWFTemp```).
+  * Based on your device architecture, copy UWF packages ( `Microsoft-IoTUAP-UnifiedWriteFilter-Package.cab` and `Microsoft-IoTUAP-UnifiedWriteFilter-Package_Lang_en-us.cab` ) from your PC (`C:\Program Files (x86)\Windows Kits\10\MSPackages\Retail\<arch>\fre\`) to `C:\UWFTemp`.
+  * Run these commands to install the packages to your IoT device system image:
+    * `applyupdate –stage C:\UWFTemp\Microsoft-IoTUAP-UnifiedWriteFilter-Package.cab`
+    * `applyupdate –stage C:\UWFTemp\Microsoft-IoTUAP-UnifiedWriteFilter-Package_Lang_en-us.cab`
+    * `applyupdate –commit`
+* The device will boot to the Update OS, install UWF features, and reboot to the MainOS.
+* Once the device comes back to the MainOS, the UWF feature is ready and available to use. This can be verified by typing ```uwfmgr.exe``` into your Powershell or SSH window.
 
   ![uwfmgr.exe on Windows 10 IoT Core]({{site.baseurl}}/Resources/images/uwfmgr.png)
 
 
 ## How to include UWF in Your Custom FFU 
-**NOTE:** This process is for OEMs and developers who have the ability to create a custom FFU for their Windows 10 IoT Core device. This assumes that you have installed the OS packages on your development machine and the `FMFiles` and `OEMInputSamples` folders are available under `C:\Program Files(x86)\Windows Kits\10`.
+___
 
-*             On your development system, download the [UWF Installation package](http://go.microsoft.com/fwlink/?LinkId=708427).
-*             Double click on `UWF.MSI`. When the installation is complete, the x86 and ARM packages will be extracted to `C:\Program Files (x86)\Microsoft IoT\UWF`.
-*             Copy `UWF Microsoft-IoTUAP-UnifiedWriteFilter-Package.cab` and `Microsoft-IoTUAP-UnifiedWriteFilter-Package_Lang_en-us.cab` from `C:\Program Files (x86)\Microsoft IoT\UWF\<arch>` to `C:\Program Files (x86)\Windows Kits\10\MSPackages\Retail\<arch>\fre\`.
-*             Create a UWF feature manifest and put it in `C:\Program Files (x86)\Windows Kits\10\FMFiles\<arch>\UWFFM.xml`.
-
-{% highlight XML %}
-<?xml version="1.0" encoding="utf-8"?>
-<FeatureManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/embedded/2004/10/ImageUpdate">
-  <BasePackages>
-     <PackageFile Path="$(mspackageroot)\Retail\$(cputype)\$(buildtype)" Name="Microsoft-IoTUAP-UnifiedWriteFilter-Package.cab" Language="*" />
-  </BasePackages>
-  
-  <Features>
-    <Microsoft />
-    <MSFeatureGroups />
-    <OEM />     
-    <OEMFeatureGroups />
-  </Features>
-</FeatureManifest>
-
-{% endhighlight %}
-
-*             Open `C:\Program Files (x86)\Windows Kits\10\OEMInputSamples\MBM(or)RPi2(or)DragonBoard\RetailOEMInput\ProductionOEMInput.xml` and add `%AKROOT%\FMFiles\x86\UWFFM.xml` under `AdditionalFMs`.
-*             Create the image\FFU using [ICD imagegen](http://ms-iot.github.io/content/en-US/Docs/CreateIoTCorePro.htm).
+*             Add **IOT_UNIFIED_WRITE_FILTER** feature id to the OEM Input file 
+*             Create the image\FFU. Read [Create a basic image](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/create-a-basic-image) for instructions.
 
 
 ## How to Use UWF
+___
+
 UWF can be configured using the uwfmgr.exe tool via a Powershell or SSH session.
+Read [`uwfmgr.exe` tool](https://msdn.microsoft.com/en-us/windows/hardware/mt572002) for the available options with an exception of some commands listed below that are not supported in IoT Core.
+Review the default settings of the Overlay configurations and adapt them per your requirements.
+
+UWF can also be configured via MDM channel using [Unified Write Filter CSP](https://msdn.microsoft.com/en-us/library/windows/hardware/dn904976(v=vs.85).aspx).
+
+
 * For example, the following combination of commands enable uwfmgr and configure to protect the C drive
 
-  `uwfmgr.exe filter enable`
+  `uwfmgr.exe filter enable`      Enables the write filter
   <br>
-  `uwfmgr.exe volume protect c:`
+  `uwfmgr.exe volume protect c:`  Protects the Volume C
+  <br>
+  `shutdown /r /t 0`              Restarts the device to make the write filter settings effective
 
-**NOTE:** The device needs to be rebooted to apply any changes to the UWF configuration. 
-* With the exception of some commands listed below, the full list of uwfmgr.exe options is available [here](https://msdn.microsoft.com/en-us/windows/hardware/mt572002). Review the default settings of the Overlay configurations and adapt them per your requirements.
+*Reboot* is required to make all the uwfmgr settings effective. 
+
 
 ## Protecting a Data Volume
+___
+
 Data volume in IoT Core can be protected using the GUID for the volume. 
 The GUID for the available volumes can be found through the following command
 
-  `C:\dir /AL`
+  `dir /AL`
   <br>
   `uwfmgr.exe volume protect \\?\Volume {GUID}`
 
 
   ![Protecting Volume on Windows 10 IoT Core]({{site.baseurl}}/Resources/images/uwfmgr_protect.png)
 
+### Recommended Exclusions
+When protecting the data volume, we recommend that you add exceptions for the servicing and logging folders that are accessed by Windows OS Services.
+
+Create an exclusion file (example, `C:\exclusions.txt`) that lists the folders below. 
+{% highlight XML %}
+C:\Data\Users\System\AppData\Local\UpdateStagingRoot
+C:\Data\SharedData\DuShared
+C:\Data\SystemData\temp
+C:\Data\users\defaultaccount\appdata\local\temp
+C:\Data\Programdata\softwaredistribution
+C:\Data\systemdata\nonetwlogs
+{% endhighlight %}
+
+To add the exclusions:
+  `uwfmgr.exe file Add-Exclusion C:\exclusions.txt`
+
+{% include warning.html text="We recommend disabling Windows Update when enabling UWF. Enabling UWF without disabling Windows Update may result in system instability." %}
+
+For more info on creating exclusion files, see [Unified Write Filter](https://msdn.microsoft.com/windows/hardware/mt572001).
+
+
+## Servicing UWF protected devices
+___
+The following steps are required to service UWF protected devices.
+
+* `uwfmgr.exe filter disable` Disable UWF
+* `shutdown /r /t 0` Reboot device to disable UWF
+* Enable Servicing ( using provisioning package or MDM to set Update policy )
+   * Note that the device will automatically reboot to perform the servicing updates
+* `uwfmgr.exe filter enable` Enable UWF
+* `shutdown /r /t 0` Reboot device to enable UWF
+
 ## Unsupported uwfmgr.exe Commands
-Note uwfmgr.exe on Windows 10 IoT Core does not support commands listed below.
+___
+**UWF Servicing Mode** is not supported in IoT Core.
+
+`uwfmgr.exe` on Windows 10 IoT Core does not support commands listed below.
 
 {% highlight XML %}
-    Filter 
-        Shutdown 
-        Restart 
-
-    Servicing 
-        Enable 
-        Disable 
-        Update-Windows
+Filter 
+    Shutdown 
+    Restart 
+Servicing 
+    Enable 
+    Disable 
+    Update-Windows
 {% endhighlight %}

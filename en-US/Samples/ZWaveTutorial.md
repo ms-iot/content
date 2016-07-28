@@ -1,13 +1,11 @@
 ---
-layout: default
+layout: sample
 title: ZWaveTutorial
 permalink: /en-US/Samples/ZWaveTutorial.htm
 lang: en-US
 ---
 
 # Z-Wave Sample
-
-{% include VerifiedVersion.md %}
 
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\AllJoyn\Samples\ZWaveAdapter`.  The sample code is available in C++. Make a copy of the folder on your disk and open the project from Visual Studio.
 
@@ -38,7 +36,7 @@ Z-Wave is a wireless communications protocol designed to allow devices in the ho
 
 The Z-Wave adapter DSB comes pre-installed for most Windows 10 IOT Core images. In that case, all you need is to launch the sample using SSH or Windows Device Portal. 
 
-1. Using [SSH]({{site.baseurl}}/en-US/Samples/SSH.htm){:target="_blank"} or [Windows Device Portal]({{site.baseurl}}/en-US/Docs/tools/DevicePortal.htm){:target="_blank"} run the following command
+1. Using [SSH]({{site.baseurl}}/en-US/Docs/SSH.htm){:target="_blank"} or [Windows Device Portal]({{site.baseurl}}/en-US/Docs/tools/DevicePortal.htm){:target="_blank"} run the following command
    **iotstartup.exe add headless ZWave**
 2. Reboot the device. The Z-Wave adapter application now will be launched on boot.
 

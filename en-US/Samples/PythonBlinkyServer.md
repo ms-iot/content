@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Python Blinky Server Sample
 permalink: /en-US/Samples/PythonBlinkyServer.htm
 lang: en-US
@@ -7,7 +7,7 @@ lang: en-US
 
 ## Python Blinky Server Sample
 
-{% include VerifiedVersion.md %}
+
 
 We'll create a simple Python Blinky Web Server app and connect a LED to your Windows 10 IoT Core device (Raspberry Pi 2 or 3 or MinnowBoard Max).  Be aware that the GPIO APIs are
 only available on Windows IoT Core, so this sample cannot run on your desktop.
@@ -85,7 +85,7 @@ Remember that we connected the other end of the LED to the 3.3 Volts power suppl
 
 * Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm#python).
 
-	**NOTE: For now, use device name in lieu of IP address.  If the device name is not unique, use `setcomputername` tool on the device to reset the device name and reboot.  Documentation for this can be found [here]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm)**
+	**NOTE: For now, use device name in lieu of IP address.  If the device name is not unique, use `setcomputername` tool on the device to reset the device name and reboot.  Documentation for this can be found [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm)**
 
 * The Python app will deploy and start on the device.
 

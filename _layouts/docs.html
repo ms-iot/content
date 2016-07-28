@@ -5,15 +5,15 @@
     <!-- Body -->
     <div class="container">
         <div class="row">
-            <div class="col-xs-5 side-nav-wrap">
+            <div class="col-xs-5 side-nav-wrap doc-samples-sidebars">
               <nav role="navigation" class="side-nav">
-                {% include TOC.md %}
+                {% include TOC.html %}
               </nav>
             </div>
             <div class="col-xs-15">
                 {{ content }}
             </div>
-            <div class="col-xs-4"> <!-- This is for the sidebar -->
+            <div class="col-xs-4 doc-samples-sidebars"> <!-- This is for the sidebar -->
               <p><a href="https://github.com/"><span class="win-icon win-icon-Edit"></span>Edit this page on GitHub</a></p>
             </div>
         </div>
