@@ -216,4 +216,3 @@ pin.Write(GpioPinValue.High);
 {% endhighlight %}
 
 Remember that we connected the other end of the LED to the 3.3 Volts power supply, so we need to drive the pin to low to have current flow into the LED.
-<h3><a href="{{site.baseurl}}/{{page.lang}}/Docs/StartCoding.htm">Next: Additional tutorials and samples</a></h3>
