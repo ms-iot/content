@@ -14,7 +14,7 @@ Microsoft makes it easy for developers to install and service UWP apps on Window
 Developers who wish to build apps and service them through the Universal Store are required to join the Windows Store OEM Preinstall Program. For details on getting enrolled please contact your Microsoft Channel Partner or email [partnerops@microsoft.com](mailto:partnerops@microsoft.com)
 
 ## Publishing UWP to Universal Store
-
+___
 Members of the Windows Store OEM Preinstall program have special permissions in their Windows Dev Center account that allows a store signed version of an app to be downloaded. It is important to first be enrolled in the program before creating any app submissions. The publishing process following the additional permission is the same as other Windows 10 devices. The first step is to [create an app submission](https://msdn.microsoft.com/en-us/windows/uwp/publish/app-submissions). 
 
 ### Special Instructions for Headless Apps 
@@ -38,16 +38,17 @@ ___
 4. Submit the submission to being the certification process. The certification process usually will take 24-48hrs after which the app will either be immediately published or available to publish based on the publishing option chosen when creating your submission. 
 
 ## Preinstalling an App
-
+___
 Now that an app has been published to the Universal Store the app has a store signed version that can be used to preinstall the app on devices.
 
 1. In the Windows Dev Center account click App Management > Current Packages on the left hand navigation bar
 2. Under the most recent App submission click "Dowland Windows 10 package". This will download a zip file containing the app package, the dependency packages, and the license files
 3. There are two methods available to install an app to a device
-#### Method 1
+
+### Method 1
 The first method is adding the app to the image during the imaging process. Check out the [Adding an App to your image](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/deploy-your-app-with-a-standard-board) guide on MSDN. 
 
-#### Method 2
+### Method 2
 The second method is using Windows Imaging and Configuration Designer (WICD) to create a provisioning package. The provisioning package will install the app upon boot. This method is more common to devices that have already been deployed.
 
 1. Launch Windows Imaging and Configuration Designer (WICD)
@@ -65,7 +66,7 @@ The second method is using Windows Imaging and Configuration Designer (WICD) to 
 12. Alternatively you can include the .ppkg file in your image when building. Check out the [Add a provisioning package to an image](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/add-a-provisioning-package-to-an-image) guide on MSDN.
 
 ## Updating an App
-
+___
 Updating apps on IoT Core are very simple.
 
 1. In the Windows Dev Center create a new App Submission for the app to be updated
