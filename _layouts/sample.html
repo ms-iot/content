@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+<body>
+    <!-- Body -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-18">
+              {{ content }}
+            </div>
+            <div class="col-xs-6"> <!-- This is for the sidebar -->
+              {% include samplesSidebar.html %}
+            </div>
+        </div>
+    </div>
+    {% include footer.html %}
+    {% include script.html %}
+    {% include sock.html %}
+</body>
+</html>

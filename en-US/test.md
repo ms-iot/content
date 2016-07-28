@@ -1,29 +1,27 @@
 ---
-layout: default
+layout: sample
 title: TestPage
 description: Code samples to demonstrate proven concepts and to help you start coding.
 keyword: windows iot, samples, download
 permalink: /en-US/Testpage.htm
+samplelink: https://github.com/ms-iot/samples/Accelerometer
 lang: en-US
 ---
-<div class="row section-heading">
-  <div class="col-md-12">    
-    <p>Download code samples to get started with Windows on Devices.</p>
-    <br/>
-    <h4>Did you set up your environment?</h4>
-    <p>We assume you already <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">set up your environment</a>, have a working Visual Studio and have a device running Windows IoT Core (Raspberry Pi 2 or 3, or MinnowBoard Max, or DragonBoard).</p>
-    <br/>
-    <h4>Questions/Suggestions</h4>
-    <p>Remember, you can always <a href="{{site.baseurl}}/{{page.lang}}/Community.htm#contact">contact us</a> for help and suggestions!</p>
-    <br/>
-    <h4>How To Download These Samples</h4>
-    <p>The easiest way to download these samples is to navigate to the GitHub repo ms-iot/samples by clicking <a href="https://github.com/ms-iot/samples">here</a>, and then click on the Download ZIP button on the right-hand menu.  Once you download and unzip the file locally, you will be able to see all the samples.</p>
-  </div>
-  <div class="col-md-12">
-    <img src="{{site.baseurl}}/Resources/images/DevelopmentBoards.PNG" alt="Development Boards" class="img-responsive">
-  </div>
-</div>
 
-<div class="section">
-  {% include _samples.html %}
-</div>
+# Hello World!
+
+##### Ivor Berry | Last updated: 4/28/2016
+
+Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.
+
+## Deploy a C# app to your Windows IoT Core device
+___
+
+#### Set up
+
+1. To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. 
+2. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.
+
+![AllJoyn CodeGen Diagram]({{site.baseurl}}/Resources/images/AllJoyn/alljoyncodegen.png)
+
+

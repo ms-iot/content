@@ -1,0 +1,159 @@
+{
+   "en-US":[
+      {
+        "parent":"Overview",
+        "children":[
+          {
+            "title":"Glossary",
+            "link":"{{site.baseurl}}/Docs/Glossary.htm"
+          }
+        ]
+      },
+      {
+        "parent":"Developer tools",
+        "children":[
+          {
+            "title":"Visual Studio app deployment",
+            "link":"{{site.baseurl}}/Docs/AppDeployment.htm"
+          },
+          {
+            "title":"Windows Device Portal",
+            "link":"{{site.baseurl}}/Docs/tools/DevicePortal.htm"
+          },
+          {
+            "title":"Using PowerShell",
+            "link":"{{site.baseurl}}/Docs/PowerShell.htm"
+          },
+          {
+            "title":"Windows 10 IoT Core Porting Tool",
+            "link":"{{site.baseurl}}/Docs/tools/IoTAPIPortingTool.htm"
+          }
+        ]
+      },
+      {
+        "parent":"Connecting to your device",
+        "children":[
+          {
+            "title":"On-Device command-line utilities",
+            "link":"{{site.baseurl}}/Docs/tools/CommandLineUtils.htm"  
+          },
+          {
+            "title":"Access your files using Windows File Sharing",
+            "link":"{{site.baseurl}}/Samples/SMB.htm"
+          },
+          {
+            "title":"Access your files using FTP",
+            "link":"{{site.baseurl}}/Samples/FTP.htm"
+          },
+          {
+            "title":"Using SSH",
+            "link":"{{site.baseurl}}/Docs/SSH.htm"
+          },
+          {
+            "title":"Using WINDBG",
+            "link":"{{site.baseurl}}/Docs/Windbg.htm"
+          },
+          {
+            "title":"Internet connection sharing",
+            "link":"{{site.baseurl}}/Docs/InternetConnectionSharing.htm"
+          }
+        ]
+      },
+      {
+        "parent":"Working with hardware",
+        "children":[
+          {
+            "title":"Raspberry Pi 2 & 3 pin mappings",
+            "link":"{{site.baseurl}}/Samples/PinMappingsRPi2.htm"
+          },
+          {
+            "title":"Minnowboard Max pin mappings",
+            "link":"{{site.baseurl}}/Samples/PinMappingsMBM.htm"
+          },{
+            "title":"Dragonboard pin mappings",
+            "link":"{{site.baseurl}}/Samples/PinMappingsDb.htm"
+          },        
+          {
+            "title":"Ecosystem Compatibility List",
+            "link":"{{site.baseurl}}/Docs/SupportedInterfaces.htm"
+          },
+          {
+            "title":"Headed and Headless devices",
+            "link":"{{site.baseurl}}/Docs/HeadlessMode.htm"
+          },
+          {
+            "title":"Make your 3D printer wireless",
+            "link":"{{site.baseurl}}/Samples/3DPrintServer.htm"
+          }
+        ]
+      },
+      {
+        "parent":"Writing apps",
+        "children":[
+          {
+            "title":"Unavailable Universal APIs",
+            "link":"{{site.baseurl}}/Docs/UnavailableApis.htm"
+          },
+          {
+            "title":"Embedded mode",
+            "link":"{{site.baseurl}}/Docs/EmbeddedMode.htm"
+          },
+          {
+            "title": "Arduino and Windows 10",
+            "link":"{{site.baseurl}}/Docs/ArduinoAndWindows10.htm"
+          },
+          {
+            "title": "Remote display experience for Windows 10 IoT Core",
+            "link":"{{site.baseurl}}/Docs/RemoteDisplay.htm"
+          }
+        ]
+      },
+      {
+        "parent":"Security",
+        "children":[
+          {
+            "title": "Enabling Secure Boot and BitLocker",
+            "link":"{{site.baseurl}}/Docs/SB_BL.htm"
+          },
+          {
+            "title":"Securing IoT devices with TPMs",
+            "link":"{{site.baseurl}}/Docs/TPM.htm"
+          },
+          {
+            "title":"Unified write filter",
+            "link":"{{site.baseurl}}/Docs/UWF.htm"
+          }
+        ]
+      },
+      {
+        "parent":"Connectivity",
+        "children":[
+          {
+            "title":"AllJoyn connectivity",
+            "link":"{{site.baseurl}}/Docs/AllJoyn.htm"
+          },
+          {
+            "title":"WiFi connectivity",
+            "link":"{{site.baseurl}}/Docs/SetupWiFi.htm"
+          },
+          {
+            "title":"Bluetooth support",
+            "link":"{{site.baseurl}}/Docs/Bluetooth.htm"
+          },
+          {
+            "title":"Network packet capture",
+            "link":"{{site.baseurl}}/Docs/NetworkPacketCapture.htm"
+          }
+        ]
+      },
+      {
+        "parent":"Commercialize",
+        "children":[
+          {
+            "title":"Windows 10 IoT Core Pro",
+            "link":"{{site.baseurl}}/Docs/CreateIoTCorePro.htm"
+          }
+        ]
+      }
+   ]
+}

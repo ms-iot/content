@@ -8,6 +8,7 @@ hacksterurl: "http://microsoft.hackster.io"
 hardwareurl: "http://go.microsoft.com/fwlink/p/?linkID=532948"
 signupurl: "https://www.windowsondevices.com/signup.aspx"
 downloadurl: "http://connect.microsoft.com/windowsembeddedIoT/Downloads/"
+sampleurl: "https://github.com/ms-iot/samples"
 exclude: ["Resources/contribute/"]
 
 

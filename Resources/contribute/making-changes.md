@@ -4,9 +4,11 @@ Once your Git flow is set up, you can make changes to the repository.
 
 For returning users - Ensure that you are up to date with the ms-iot repo:
 
-  `git reset --hard upstream/develop`
+  `git reset --hard ms-iot/develop`
+
+  `git push origin develop`
   
-**Note**: This will delete all local changes, so be sure this is what you want
+**Note**: This will delete all local changes and push ms-iot to your fork, so be sure this is what you want
 
 1. Read [contributing guidelines](authoring-guidelines.md).
   1. Changes that do not follow the guidelines will be rejected
@@ -15,10 +17,10 @@ For returning users - Ensure that you are up to date with the ms-iot repo:
   
     `jekyll serve --incremental`
   2. If prompted by the firewall, allow Jekyll to serve content
-  3. Open your web browser and point it to the local server. localhost:4000/content/iot.htm is the default page
+  3. Open your web browser and point it to the local server. http://localhost:4000/content/en-US/iot.htm is the default page
     * **Note:** you won't see the correct formatting with a local server for certain aspects of the website:
         * Header/footer
-        * Margins
+        * Some margins
   
         this is to be expected. We still highly recommend rendering and verifying locally
   4. Edit using your favorite text editor. Jekyll will automatically update the content after every save
@@ -35,10 +37,10 @@ A pull request (PR) is a request to the ms-iot team to accept your changes. It m
 
 1. Grab the latest changes from upstream
 
-    `git fetch upstream`
+    `git fetch ms-iot`
     
 2. Merge it into your local repository
-    1. `git merge upstream/develop`
+    1. `git merge ms-iot/develop`
     2. If you run into conflicts, you will have to hand-merge (you can use your favorite merging tool or even notepad for this)
     3. After hand-merging, you can continue the merge
         * `git add [fileYouHandMerged]`

@@ -867,6 +867,54 @@ body .device-images {
     max-width: 600px;
 }
 
+/* Define custom alerts */
+body .alert {
+    padding-right: 1em;
+	padding-left: 1em;
+    margin-top: 0.6em;
+    margin-bottom: 1.2em;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    font-size: 0.9em;
+    line-height: 1.6em;
+    border-color: rgba(0, 0, 0, .05);
+    background: #f5f5f5;
+    color: #333;
+}
+
+body .alert h5 {
+    font-weight: bolder;
+	line-height: 1.2;
+}
+
+
+body .alert-note {
+    border-color: rgba(0, 0, 0, .05);
+    background: #f3fbff;
+    color: #0070a7;
+}
+
+span.win-icon {
+    margin-right: 8px;
+}
+
+body .alert-warning {
+    border-color: rgba(0, 0, 0, .05);
+    background: #f2dede;
+    color: #a94442;
+}
+
+body .alert-tip {
+    border-color: rgba(0, 0, 0, .05);
+    background: #dff0d8;
+    color: #3c763d;
+}
+
+
+
+
+
 
 /* Bug #5781464: hackthehome page fixes */
 .hth-header {

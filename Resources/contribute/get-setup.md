@@ -7,7 +7,10 @@ In order to contribute, you must first install Git on your machine:
 The easiest way to get all the Git tools is to download [GitHub Desktop](https://desktop.github.com/).  This will install Git, Git shell, GitHub Desktop, and keep you up to date.
 
 ### Setting up Jekyll on Windows
-1. We use this easy to follow [Jekyll on Windows](http://jekyllrb.com/docs/windows/) guide. Rouge is the option for highlighting that seems to work best for most users.
+1. Follow the [Jekyll on Windows](http://jekyllrb.com/docs/windows/) guide. 
+2. Install Rouge
+  
+  `gem install rouge --no-ri`
 
 ### Fork the repository
 
@@ -17,7 +20,7 @@ The easiest way to get all the Git tools is to download [GitHub Desktop](https:/
 4. Clone the repository in one of several ways: 
   1. Command line 
   
-    `git clone [link to .git] [NameYourLocalFolder] `
+    `git clone [link to forked .git] [NameYourLocalFolder] `
   2. Launch the GitHub app 
   
      Click 'Clone in Desktop'
@@ -25,9 +28,7 @@ The easiest way to get all the Git tools is to download [GitHub Desktop](https:/
      ![Clone](../images/GitHubClone.png)
   3. Clone using the GitHub Desktop application. 
   4. Using your own git flow (e.g. sourcetree) 
-5. Set up your upstream 
-
-  `git remote add upstream [link to .git] ` 
+ 
 
 For clarification:
 
@@ -43,4 +44,4 @@ ___
 
 1. **[Get set up](get-setup.md)**
 2. [Making changes](making-changes.md) 
-3. [Authoring guidelines and best practices](authoring-guidelines.md.md)
+3. [Authoring guidelines and best practices](authoring-guidelines.md)

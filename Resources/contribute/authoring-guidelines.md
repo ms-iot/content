@@ -6,10 +6,15 @@ When creating a new topic, or updating an exisitng one, there are a handful of t
 
 1. **Creating a new topic:**
 
-  When creating new content, please start with the following templates:
+  When creating new content, please start with the following templates (view in *Raw* mode):
 
-  * [Sample template]()
-  * [Documentation template]()
+  * [Sample template](template/sample-template.md)
+  * [Documentation template](template/docs-template.md)
+  
+  **Be sure to add** your file to the correct index file:
+  
+  * Samples add to [_samples.json](/_data/_samples.json)
+  * Docs add to [_docs-index.json](/_data/_docs-index.json)
 
 2. **Save your files in the following directories**
 
@@ -23,7 +28,7 @@ When creating a new topic, or updating an exisitng one, there are a handful of t
 
   For an image naming example, there is a "Noobs" folder for all the images used in the Noobs topics - it spans multiple articles but has a consolidated use.  If there isn't a folder that fits what your images are for, please create a new folder for your images.
 
-2. **Writing in markdown**
+3. **Writing in markdown**
 
   For manageability and consistent look and feel, we enforce that our docs and samples be written in [Markdown](https://daringfireball.net/projects/markdown/basics). Complex formatting can be done with Liquid templates - details on those below.
    
@@ -31,10 +36,10 @@ When creating a new topic, or updating an exisitng one, there are a handful of t
   
   Good examples:
 
-  * Docs: `content/en-us/docs/Alljoyn.md` 
+  * Docs: `content/en-us/docs/PowerShell.md` 
   * Samples: `content/en-us/samples/helloworld.md`
 
-3. **Misc guidelines**
+4. **Misc guidelines**
 
   * Use only one H1 (#) per topic
     * Very important for SEO
@@ -93,9 +98,9 @@ Voice is, simply put, your writing style in terms of syntax, verbage, verbosity 
 * **Use paragraphs** (no bullets or numbers) for text that’s not in a list.
 
 **Terminology and abbreviations**
-* **Use the same term throughout your doc**. Don't go back and forth between terms (such as “machine” and "computer" and "PC") when you are referring to the same thing.
+* **Use the same term throughout your doc**. Don't go back and forth between terms (such as “machine” and "computer" and "PC") when you are referring to the same thing. We have decided on the following terms: "Device" (referring to the Raspberry Pi board), "Peripheral" (for anything hooked up to the device/Raspberry Pi), and "PC" (referring to the computer). 
 * **Do not abbreviate PowerShell** to PS unless it's part of a command. On first mention, use Windows PowerShell.
-* **Do not abbreviate product names** unless there is a legally-approved acronym.
+* **Do not abbreviate product names** unless there is a legally-approved acronym. *Official name of the Redstone 1 update to Windows 10: "Windows 10, version 1607". 
 * **Spell out acronyms on first mention**, and include the acronym in parentheses. Thereafter, you can use the acronym by itself. 
 **Example** – first mention: class identifier (CLSID); second mention: CLSID
 
@@ -103,7 +108,8 @@ Voice is, simply put, your writing style in terms of syntax, verbage, verbosity 
 * **Use bold for UI entries**. (markdown = `**term**`)
 Example: To start PowerShell as an administrator, right-click **Windows PowerShell**, and then select **Run as administrator**.
 * **To emphasize a word, use italics**, not bold. (markdown = `*term*`)
-* **For notes**, use the following markdown for now (no colon): `**NOTE** Here is the note.`
+* **For notes**, use the following liquid template: `{% include note.html text="This is a note" %}`
+  * The same thing can be done with `tip.html`, and `warning.html`
 
 **Links and cross-references**
 * When you add a cross-reference, use this syntax: **For more information about X, see Y.**

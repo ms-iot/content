@@ -4,8 +4,10 @@
       "description":"Get Windows and development tools to easily build and manage the next generation of Internet of Things solutions on multiple platforms.",
       "keywords":"setup windows 10 raspberry pi 2, setup windows 10 dragonboard, setup windows 10 minnowboard max, windows 10 developer program, windows 10 iot core, internet of things, iot, download windows 10 iot core",
       "footer-header":"Questions/Suggestions",
-      "footer-p-text":"As always, for questions or feedback, ",
-      "footer-a-text":"contact us",
+      "footer-community-text":"Ask the ",
+      "footer-community-link-text":"community",
+      "footer-feedback-text":" (Windows 10 required for this tool)",
+      "footer-feedback-link-text":"give us feedback",
       "github-edit-text":"Edit this page on GitHub"
    },
    "zh-cn":{
