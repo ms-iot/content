@@ -8,13 +8,13 @@ samplelink: https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS
 lang: en-US
 ---
 
-# Bluetooth LE GATT code overview
-Lets start up the sample and then go through the important code bits! Remember all the required code is [here](https://github.com/ms-iot/samples/archive/develop.zip){:target="_blank"}, in the [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} folder.
+# Using and Dissecting the Code
+Lets start up the sample and then go through the important code bits! You can find the source code in our [git repository](https://github.com/ms-iot/samples){:target="_blank"}, in the [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} folder.
 
-This is a headed sample. To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm).
+This is a headed sample. To better understand what headed mode is and how to configure your device to be headed, follow the instructions [Headed and Headless mode]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm) site.
 
 ### Load the project in Visual Studio
-Download the code [here](https://github.com/ms-iot/samples/archive/develop.zip){:target="_blank"}. Make a copy of the [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} folder on your disk and open the project from Visual Studio.
+Download the code from our [git repository](https://github.com/ms-iot/samples){:target="_blank"}. Make a copy of the [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} folder on your disk and open the project from Visual Studio.
 
 Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloWorld.htm) if you need guidance.
 
@@ -69,7 +69,7 @@ For each GATT service the sample:
 1. Retrieves a list of `DeviceInformation` objects with the desired service GUID.
 2. Retrieves a list of `GattDeviceService` objects using the id field of the desired `DeviceInformation` object.
 
-Note the use of `async` and `await` in the code, this is so that the OS can still be responsive while waiting for the functions to finish. Learn more about these features [here](http://blogs.msdn.com/b/pfxteam/archive/2012/04/12/10293335.aspx){:target="_blank"}.
+Note the use of `async` and `await` in the code, this is so that the OS can still be responsive while waiting for the functions to finish. Learn more about these features in the [Parallel Programming with .NET](http://blogs.msdn.com/b/pfxteam/archive/2012/04/12/10293335.aspx){:target="_blank"} blog.
 
 {% highlight C# %}
 // Setup
