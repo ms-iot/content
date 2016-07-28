@@ -6,21 +6,60 @@ lang: en-US
 ---
 
 # Microsoft.IoT.Lightning.Providers library and sample code
-Microsoft.IoT.Lightning.Providers library contains a set of providers to interface with the GPIO, SPI and I2C buses through the Lightning direct memory access driver.
+Microsoft.IoT.Lightning.Providers library contains a set of providers to interface with the on board controller buses through the Lightning direct memory mapped driver (DMAP).
 
-The library as well as sample code can be obtained in source format from [GitHub](https://github.com/ms-iot/BusProviders/tree/develop/Microsoft.IoT.Lightning.Providers){:target="_blank"}.
 
-## Using the library
+## About the direct memory mapped driver (DMAP)
 
-The Microsoft.IoT.Lightning.Providers library includes a set of Windows.Devices.*Providers WinRT APIs enabling UWP apps to make use of the Lightning driver to communicate with and control GPIO, I2C and SPI devices.
+The DMAP driver is an in-developement driver that provides GPIO performance improvements over the default inbox driver. to lean more about these performance improvements visit the [Lightning Performance Testing](LightningPerformance.htm) page.
 
-The current version of library includes this set of providers:
+While DMAP driver offer GPIO performance improvements over the Inbox driver, controller commands are sent to the DMAP driver through user-mode memory mapped addresses for each of the controllers. An app that only uses the Lightning provider APIs, Microsoft.IoT.Lightning.Providers.*, or an [Arduino Wiring sketch]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiring.htm) will be safe to use. However, a malicious app would be able to write directly to that memory and cause hardware/security issues. On a machine with only trusted apps, the DMAP is generally safe to use.   
 
-* `Microsoft.IoT.Lightning.Providers.Lightning.Adc.Provider`
-* `Microsoft.IoT.Lightning.Providers.Lightning.Gpio.Provider`
-* `Microsoft.IoT.Lightning.Providers.Lightning.I2c.Provider`
-* `Microsoft.IoT.Lightning.Providers.Lightning.Pwm.Provider`
-* `Microsoft.IoT.Lightning.Providers.Lightning.Spi.Provider`
+## Obtaining the library
+
+The library is provided as part of the [Lightning SDK Nuget package](https://www.nuget.org/packages/Microsoft.IoT.Lightning){:target="_blank"} with source code available on [GitHub ms-iot/Lightning repository](https://github.com/ms-iot/lightning/){:target="_blank"}.
+
+Additonally, samples showing how to use the different providers are available on [GitHub ms-iot/BusProviders repository](https://github.com/ms-iot/BusProviders/tree/develop/Microsoft.IoT.Lightning.Providers){:target="_blank"}.
+
+## Adding the library to your application
+
+### Option 1: Starting from an existing sample
+A quick way to start coding using the Lightning providers is to start with one of the samples in the [GitHub ms-iot/BusProviders repository](https://github.com/ms-iot/BusProviders/tree/develop/Microsoft.IoT.Lightning.Providers){:target="_blank"}.
+
+Each of the samples references the Lightning SDK and is configured properly to use the Lightning providers library.
+
+**Note**, To run the samples, the DMAP driver need to be enabled using the Windows Devices Web Portal. Refer to the [Lightning Setup Guide]({{site.baseurl}}/{{page.lang}}/Docs/LightningSetup.htm) for detailed information on how to enable it.
+
+### Option 2: Referencing the library
+
+Additionally, it's straightforward to add the required Lightning providers Nuget reference and support to a new or existing application. Follow the steps below:
+
+1. In your application, right click the project and click the "Manage NuGet Packages..." menu item
+![UWP Project]({{site.baseurl}}/Resources/images/Lightning/manage-nuget-project.png)
+
+2. The NuGet Package Manager will open. In the Browse tab, search for the "Lightning SDK", making sure to check the "Include prerelease" checkbox.
+
+3. Select the latest version, and click "Install" to add the Ligthning SDK to your project. 
+![NuGet Package Manager]({{site.baseurl}}/Resources/images/Lightning/nuget-package-manager.png)
+
+4. Follow any on-screen instructions if needed. When installation is complete, a reference to the Lightning SDK will be added to your project.
+![Lightning SDK reference]({{site.baseurl}}/Resources/images/Lightning/lightning-sdk-added-to-solution.png)
+
+5. Add the code below to your manifest file, Package.appxmanifest.
+
+{% highlight XML %}
+<iot:Capability Name="lowLevelDevices" />
+<DeviceCapability Name="109b86ad-f53d-4b76-aa5f-821e2ddf2141"/>
+{% endhighlight %}
+
+* The first is a capability that will enable the application to access custom devices.
+* The second is the device guid id for the Lightning interface
+
+Both capabilities must be added to the AppX manifest of your project under the `<Capabilities>` node. Also, make sure to add the required namespaces to your manifest if needed.
+
+![AppX Manifest Capabailities]({{site.baseurl}}/Resources/images/Lightning/package-manifest-updates.png)
+
+## Updating your code to use the Lightning providers
 
 ### Checking for the Lightning (DMAP) driver
 
@@ -112,21 +151,7 @@ The following samples demonstrate using the Lightning providers with supported b
 
 ## Build Requirements
 
-### Update Application Package manifest
 
-Also, you need to manually update the Application Package manifest manually to reference the Lightning device interface:
-
-{% highlight XML %}
-<iot:Capability Name="lowLevelDevices" />
-<DeviceCapability Name="109b86ad-f53d-4b76-aa5f-821e2ddf2141"/>
-{% endhighlight %}
-
-* The first is a capability that will enable the application to access custom devices.
-* The second is the device guid id for the Lightning interface
-
-Both capabilities must be added to the AppX manifest of your project under the `<Capabilities>` node.
-
-![AppX Manifest Capabailities]({{site.baseurl}}/Resources/images/Lightning/update_manifest.png)
 
 ### Windows SDK Update
 
@@ -160,7 +185,7 @@ You can download a Windows 10 IoT Core image from our [downloads page]({{site.ba
 
 ### Direct Memory Mapped driver must be enabled
  
-The APIs in the Lightning Provider library require the Lightning Direct Memory Mapped driver to be enabled on the target device. Both Raspberry Pi2 and MinnowBoard Max have the driver available, but not enabled by default.
+The APIs in the Lightning Provider library require the Lightning Direct Memory Mapped driver to be enabled on the target device. Both Raspberry Pi 2/3 and MinnowBoard Max have the driver available, but not enabled by default.
 
 The driver can be enabled using the Windows Devices Web Portal. Refer to the [Lightning Setup Guide]({{site.baseurl}}/{{page.lang}}/Docs/LightningSetup.htm) for detailed information on how to enable the Lightning driver.
 

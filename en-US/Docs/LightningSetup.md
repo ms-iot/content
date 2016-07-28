@@ -7,7 +7,7 @@ lang: en-US
 
 # Lightning Setup Guide
 
-This guide will walk you through the steps of changing the default controller driver to the Lightning driver on a Windows IoT Core device. This will allow the use of Lightning-enabled applications on that device.
+This guide will walk you through the steps needed to change the default controller driver to the Lightning direct memory access mapped (DMAP) driver on a Windows IoT Core device. This will allow the use of Lightning-enabled applications on that device.
 
 ### Change the Default Controller Driver
 

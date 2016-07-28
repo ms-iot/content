@@ -35,6 +35,10 @@
           {
             "title":"Windows 10 IoT Core porting tool",
             "link":"/Docs/tools/IoTAPIPortingTool.htm"
+          },
+          {
+            "title":"Event Tracing for Windows",
+            "link":"/Docs/ETW.htm"
           }
         ]
       },
@@ -213,6 +217,14 @@
           {
             "title":"Windows 10 IoT Core Pro",
             "link":"/Docs/CreateIoTCorePro.htm"
+          },
+          {
+            "title":"Managing IoT Core Devices",
+            "link":"/Docs/Management.htm"
+          },
+          {
+            "title":"Installing and Servicing IoT apps",
+            "link":"/Docs/Store.htm"
           }
         ]
       }
