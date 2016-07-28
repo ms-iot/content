@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Driver Lab - Use Visual Studio to build a driver
 permalink: /en-US/Samples/DriverLab2.htm
 lang: en-US
@@ -15,7 +15,7 @@ A Windows IoT Core driver is made up of one or more files.  Some of these files 
 
     ![Driver Settings properties]({{site.baseurl}}/Resources/images/DriverLab/driver-build-option.png)
 
-* You will now have a collection of files that make up the driver. Confirm you have both the **SYS** and **INF** files for your driver under the `DriverSamples\gpiokmdfdemo\Debug\gpiokmdfdemo\` folder.
+* You will now have a collection of files that make up the driver. Confirm you have both the **SYS** and **INF** files for your driver under the `DriverSamples\gpiokmdfdemo\Debug\gpiokmdfdemo\` folder (for ARM it is `DriverSamples\gpiokmdfdemo\ARM\Debug\gpiokmdfdemo\`).
 
         gpiokmdfdemo.inf
         gpiokmdfdemo.sys

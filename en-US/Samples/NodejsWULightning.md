@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: NodejsWULightning
 permalink: /en-US/Samples/NodejsWULightning.htm
 lang: en-US
@@ -7,7 +7,7 @@ lang: en-US
 
 # Blinky Node.js (Windows Universal) Sample with Lightning
 
-{% include VerifiedVersion.md %}
+
 
 In this sample, we will use the [Lightning GPIO provider]({{site.baseurl}}/{{page.lang}}/Docs/LightningProviders.htm) to blink an LED attached to a Raspberry Pi 2. 
 It also includes steps to reference a custom winmd file in your Node.js project. This sample is based on the [Blinky sample]({{site.baseurl}}/{{page.lang}}/Samples/NodejsWUBlinky.htm) 

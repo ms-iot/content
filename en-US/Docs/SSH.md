@@ -1,6 +1,8 @@
 ---
-layout: default
+layout: docs
 title: Using SSH to connect and configure a Windows 10 IoT Core device.
+description: Allows Remote Administration and Configuration of your Windows IoT Core device over SSH
+keyword: SSH, windows iot, remote, putty
 permalink: /en-US/Docs/SSH.htm
 lang: en-US
 ---

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Picture the Weather
 permalink: /en-US/Samples/PictureTheWeather.htm
 lang: en-US

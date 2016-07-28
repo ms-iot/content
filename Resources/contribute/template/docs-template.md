@@ -25,6 +25,8 @@ Below is an image
 
 ![This is the alt text for the image]({{site.baseurl}}/Resources/images/Octocat.png)
 
+[This is the text for a link]({{site.baseurl}}/Docs/AllJoyn.htm)
+
 For white images, add a border - be sure to not include the `site.baseurl` when using this:
 
 {% include imageborder.html alt="This is the alt text for the image" link="/Resources/images/MSConnectSignup.png" %}

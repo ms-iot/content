@@ -4,6 +4,8 @@ Once your Git flow is set up, you can make changes to the repository.
 
 For returning users - Ensure that you are up to date with the ms-iot repo:
 
+  `git fetch ms-iot`
+
   `git reset --hard ms-iot/develop`
 
   `git push origin develop`

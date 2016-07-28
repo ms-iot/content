@@ -1,11 +1,14 @@
 ---
-layout: default
-title: BLE GATT Sample - Code
+layout: sample
+title: Bluetooth LE GATT code overview
+description: Bluetooth Low Energy (BLE) Generic Attribute Profile (GATT) Sample Overview
+keyword: Windows 10 IoT Core, Bluetooth, BLE, bluetooth low energy, GATT
 permalink: /en-US/Samples/BLEGatt2.htm
+samplelink: https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS
 lang: en-US
 ---
 
-# Using and Dissecting the Code
+# Bluetooth LE GATT code overview
 Lets start up the sample and then go through the important code bits! Remember all the required code is [here](https://github.com/ms-iot/samples/archive/develop.zip){:target="_blank"}, in the [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} folder.
 
 This is a headed sample. To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm).

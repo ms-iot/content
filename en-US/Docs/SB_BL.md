@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: docs
 title: Enabling Secure Boot and BitLocker Device Encryption on Windows 10 IoT Core
 description: Learn about enabling Secure Boot and BitLocker encryption on your IoT device.
 keyword: secure boot, windows iot, bitlocker, encryption, security
@@ -8,8 +8,6 @@ lang: en-US
 ---
 
 # Enabling Secure Boot and BitLocker Device Encryption on Windows 10 IoT Core
-Deployment Guide  
-_Revision: 1.1_
 
 ## Introduction  
 UEFI Secure Boot and BitLocker are the keystone features of a locked-down Windows OS that is resilient against offline and boot attacks. UEFI Secure Boot is the first policy enforcement point, located in UEFI. It restricts the system to only allow execution of binaries signed by a specified authority. This feature prevents unknown code from being executed on the platform and potentially weakening the security posture of it. Note that while the limitation to a defined set of publishing authorities excludes all unknown code, it does not necessarily prevent known bad code from being executed (e.g. rollback attack).  
@@ -116,7 +114,7 @@ Run the following 3 commands from within the remote powershell session to set UE
 Next, in order to complete lock-down of the platform, reboot device using the command `shutdown /r`.  
 **Note:** On an Intel MinnowBoardMax, you may need to manually enable SecureBoot in UEFI. Power up board with a keyboard connected and press F2 to enter UEFI setup. Go to _Device Manager -> Secure Boot Configuration -> Attempt Secure Boot_ and enable this option _<X>_. Press F10 to save changes and proceed with a reboot of the platform.
 
-[11]: {{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm "PowerShell"
+[11]: {{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm "PowerShell"
 
 ### Scheduling BitLocker  
 In order to enable BitLocker, the device encryption task must be scheduled. This device encryption task is set to trigger when the TPM is provisioned and ready, also ensuring that device encryption stays enabled on all subsequent boots (should the volume be decrypted offline at any time). Once Secure Boot has been setup and the device booted up, re-initiate a remote PowerShell session and create a new (or append to existing) file labelled "OEMCustomization.cmd" under c:\windows\system32 using the following command:

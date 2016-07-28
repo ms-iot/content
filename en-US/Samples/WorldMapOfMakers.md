@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: World Map Of Makers
 permalink: /en-US/Samples/WorldMapOfMakers.htm
 lang: en-US

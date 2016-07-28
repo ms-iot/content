@@ -1,17 +1,18 @@
 ---
-layout: default
-title: WeatherStation using Lightning Providers sample
+layout: sample
+title: Weather station
 permalink: /en-US/Samples/WeatherStationLightning.htm
+keyword: Windows 10 IoT Core, beginner, breadboard, potentiometer, sensor, weather station
+description: Communicate with an I2C sensor using Lightning I2c provider
+samplelink: https://github.com/ms-iot/samples/tree/develop/WeatherStation/CS/WeatherStation
 lang: en-US
 ---
 
-# Communicate with an I2C sensor using Lightning I2c provider
-
-{% include VerifiedVersion.md %}
+# Weather station
 
 This sample demonstrates how to communicate with an I2c device using the Micorosot.IoT.Providers.Lightning.I2cProvider
 
-It's based on the WeatherShield sample shared on [Github](https://github.com/ms-iot/samples/tree/develop/WeatherStation/CS/WeatherStation). And shares the same setup steps and most of the code. The only difference is how the sensor device is initialized in each.
+It's based on the WeatherShield sample shared on [GitHub](https://github.com/ms-iot/samples/tree/develop/WeatherStation/CS/WeatherStation) and shares the same setup steps and most of the code. The only difference is how the sensor device is initialized in each.
 
 ### Using Lightning Provider
 

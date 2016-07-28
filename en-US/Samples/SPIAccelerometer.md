@@ -1,13 +1,15 @@
 ---
-layout: default
-title: SPI Accelerometer Sample
+layout: sample
+title: SPI Accelerometer
+keyword: Windows 10 IoT Core, beginner, breadboard, i2c, accelerometer
+description: Connect an accelerometer to your device
 permalink: /en-US/Samples/SPIAccelerometer.htm
+samplelink: https://github.com/ms-iot/samples/tree/develop/Accelerometer
 lang: en-US
 ---
 
-# SPI Accelerometer Sample
 
-{% include VerifiedVersion.md %}
+# SPI Accelerometer
 
 We'll connect an SPI accelerometer to your Raspberry Pi 2 or 3, MinnowBoard Max, or DragonBoard 410c and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of SPI is needed.
 However, if you're curious, SparkFun provides a great [tutorial on SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}.

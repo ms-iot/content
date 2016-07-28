@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: Nodejs Console Blinky
 permalink: /en-US/Samples/nodejs-blinky.htm
 lang: en-US
@@ -7,7 +7,7 @@ lang: en-US
 
 # Blinky Node.js (Console Application) Sample
 
-{% include VerifiedVersion.md %}
+
 
 This page will take you through the steps to blink an LED from a Node.js console app running on a Raspberry Pi. This sample is similar to the 
 [Node.js (UWP) blinky sample]({{site.baseurl}}/{{page.lang}}/Samples/NodejsWUBlinky.htm). 
@@ -73,7 +73,7 @@ Here's what the code above is doing:
 
 
 ### Run the app!
-* Connect to the device using [SSH]({{site.baseurl}}/{{page.lang}}/Samples/SSH.htm) or [PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm).
+* Connect to the device using [SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH.htm) or [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm).
 * Run the command `C:\NodejsChakra\Node.exe C:\MyNodejsBlinky\app.js` to start the app.
 
 

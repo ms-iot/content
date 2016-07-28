@@ -1,13 +1,11 @@
 ---
-layout: default
+layout: sample
 title: ZigBeeAdapterTutorial
 permalink: /en-US/Samples/ZigBeeAdapterTutorial.htm
 lang: en-US
 ---
 
 # ZigBee Adapter sample
-
-{% include VerifiedVersion.md %}
 
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\AllJoyn\Samples\ZigBeeAdapter`.  The sample code is available in C#. Make a copy of the folder on your disk and open the project from Visual Studio.
 
@@ -33,7 +31,7 @@ Acronyms:
  - [Philips Hue](http://www2.meethue.com/en-US){:target="_blank"} light bulb
  - [Dresden Elektronik](https://www.dresden-elektronik.de){:target="_blank"} ballast FLS-PP-IP that control a colored LED band 
 
-> Note that it is very important that the __ZigBee devices__ you will use __are not__ already __part of a ZigBee network__ otherwise they will not join your ZigBee network. Consequently, it is safer to buy single Philips Hue light bulb instead of a set of bulbs bundled with Philips Hue gateway because in that case bulbs will be part of the ZigBee network controlled by the gateway. 
+> Note that it is very important that the **ZigBee devices** you will use **are not already part of a ZigBee network** otherwise they will not join your ZigBee network. Consequently, it is safer to buy single Philips Hue light bulb instead of a set of bulbs bundled with Philips Hue gateway because in that case bulbs will be part of the ZigBee network controlled by the gateway. 
   
 IoT Explorer for AllJoyn and its documentation can be found [here]({{site.baseurl}}/en-US/Docs/AllJoyn.htm#AllJoynExplorer){:target="_blank"}.
 
@@ -47,7 +45,7 @@ IoT Explorer for AllJoyn and its documentation can be found [here]({{site.baseur
 4. Set up your Raspberry Pi2 (if you target that device)
 5. Deploy ZigBee adapter
 
->Note that in Windows 10, when a machine has __multiple AllJoyn modern applications__ that __need to interact__ on the same machine, the user must __add a loopback exemption__ for these modern applications. Consequently, if you run both the ZigBee adapter and IoT Explorer for AllJoyn on the same machine you will need to add a loopback exemption for these 2 applications. This isn't needed for application you run from Visual Studio 2015. Note that when deploying an application from Visual Studio 2015, the loopback exemption is for the lifetime of the installed application. Meaning that you can launch the app directly (not from Visual Studio 2015) afterwards and it will have the loopback exemption.
+>Note that in Windows 10, when a machine has **multiple AllJoyn modern applications** that **need to interact** on the same machine, the user must **add a loopback exemption** for these modern applications. Consequently, if you run both the ZigBee adapter and IoT Explorer for AllJoyn on the same machine you will need to add a loopback exemption for these 2 applications. This isn't needed for application you run from Visual Studio 2015. Note that when deploying an application from Visual Studio 2015, the loopback exemption is for the lifetime of the installed application. Meaning that you can launch the app directly (not from Visual Studio 2015) afterwards and it will have the loopback exemption.
 
 Set up loopback exception: 
  1. Find the installation folder of the modern application for which you want to enable the loopback exemption. It is located at "C:\Users\\*username*\AppData\Local\Packages"
@@ -117,29 +115,29 @@ Philips Hue light bulb has 1 endpoint which has several clusters: Identify, Scen
 
 ![ClassMap]({{site.baseurl}}/Resources/images/ZigBee/ClassMap.png)
 
-The __Adapter__ class is the main class of ZigBee adapter. This class derives from __IAdapter__ (BridgeRT interface) and contains a collection of __ZigBeeDevice__ instances and an instance of the __XBeeModule__ class.
+The **Adapter** class is the main class of ZigBee adapter. This class derives from **IAdapter** (BridgeRT interface) and contains a collection of **ZigBeeDevice** instances and an instance of the **XBeeModule** class.
 
-The __XBeeModule__ class handles the interactions with the XBee module and has methods to build and parse XBee frames. See [XBee ZigBee module documentation](http://www.digi.com) for more detail about its API and its frame layout. XBeeModule class uses the __SerialController__ class that handles communication over a serial port. 
+The **XBeeModule** class handles the interactions with the XBee module and has methods to build and parse XBee frames. See [XBee ZigBee module documentation](http://www.digi.com) for more detail about its API and its frame layout. XBeeModule class uses the **SerialController** class that handles communication over a serial port. 
 
-The __ZigBeeDevice__ class represents a ZigBee device. This class has no interface with BridgeRT since only EndPoints of a ZigBee device are exposed to AllJoyn. __ZigBeeDevice__ class contains a collection of __ZigBeeEndPoint__ instances.
+The **ZigBeeDevice** class represents a ZigBee device. This class has no interface with BridgeRT since only EndPoints of a ZigBee device are exposed to AllJoyn. **ZigBeeDevice** class contains a collection of **ZigBeeEndPoint** instances.
 
-The __ZigBeeEndPoint__ class represents an EndPoint of a ZigBee device. This class derives from __IAdapterDevice__ (BridgeRT interface) and contains an instance of the __BasicCluster__ and a collection __ZclCluster__ instance. To be more accurate it contains a collection of cluster classes, e.g.: __OnOffCluster__, which derive from the abstract __ZclCluster__ class.
+The **ZigBeeEndPoint** class represents an EndPoint of a ZigBee device. This class derives from **IAdapterDevice** (BridgeRT interface) and contains an instance of the **BasicCluster** and a collection **ZclCluster** instance. To be more accurate it contains a collection of cluster classes, e.g.: **OnOffCluster**, which derive from the abstract **ZclCluster** class.
 
-The cluster classes, e.g.: __BasicCluster__, __OnOffCluster__, represent a ZCL cluster. Each cluster class is a "specific" implementation of the __ZclCluster__ abstract class.
+The cluster classes, e.g.: **BasicCluster**, **OnOffCluster**, represent a ZCL cluster. Each cluster class is a "specific" implementation of the **ZclCluster** abstract class.
  
-The __ZclCluster__ class is an abstract class that derives from __IAdapterProperty__ (BridgeRT interface) and contains a collection of __ZclAttribute__ instances and a collection of __ZclCommand__ instances. A specific implementation of ZclCluster simply consists in defining the list of ZclAttribute and ZclCommand that should be supported for that specific cluster.
+The **ZclCluster** class is an abstract class that derives from **IAdapterProperty** (BridgeRT interface) and contains a collection of **ZclAttribute** instances and a collection of **ZclCommand** instances. A specific implementation of ZclCluster simply consists in defining the list of ZclAttribute and ZclCommand that should be supported for that specific cluster.
 
-The __ZclAttribute__ class represents an attribute as defined in ZCL standard. This class derives from __IAdapterAttribute__ (BridgeRT interface) and from __ZigBeeCommand__ class. This class contains an instance of __IAdapterValue__ class which is a BridgeRT interface. For information, reading or writing an attribute consist in sending a specific ZCL command.
+The **ZclAttribute** class represents an attribute as defined in ZCL standard. This class derives from **IAdapterAttribute** (BridgeRT interface) and from **ZigBeeCommand** class. This class contains an instance of **IAdapterValue** class which is a BridgeRT interface. For information, reading or writing an attribute consist in sending a specific ZCL command.
 
-The __ZclCommand__ class represents a command as defined in ZCL standard. This class derives from __IAdapterMethod__ (BridgeRT interface) and from __ZigBeeCommand__ class. This class contains list of input and output parameters. These parameters are actually __IAdapterValue__ class which is a BridgeRT interface.
+The **ZclCommand** class represents a command as defined in ZCL standard. This class derives from **IAdapterMethod** (BridgeRT interface) and from **ZigBeeCommand** class. This class contains list of input and output parameters. These parameters are actually **IAdapterValue** class which is a BridgeRT interface.
 
-The __ZigBeeCommand__ class is an Abstract class that is used to send and receive ZDO or ZCL command. Preparing (or parsing) the ZCL or ZDO payload that XBeeModule will send to XBee module (or receive from XBeeModule) is a shared task between ZigBeeCommand class for its "generic" part and the derived class of ZigBeeCommand for the specific part. 
+The **ZigBeeCommand** class is an Abstract class that is used to send and receive ZDO or ZCL command. Preparing (or parsing) the ZCL or ZDO payload that XBeeModule will send to XBee module (or receive from XBeeModule) is a shared task between ZigBeeCommand class for its "generic" part and the derived class of ZigBeeCommand for the specific part. 
 
-ZDO command classes such as __ManagementLQI__ class, __ActiveEndPoints__ class… are used to discover the ZigBee network and the ZigBee devices and end points. These classes derive from __ZigBeeCommand__ class.
+ZDO command classes such as **ManagementLQI** class, **ActiveEndPoints** class… are used to discover the ZigBee network and the ZigBee devices and end points. These classes derive from **ZigBeeCommand** class.
 
-The __ZclClusterFactory__ class is used to create instances of a specific cluster class. This class is used by the adapter class to create the relevant clusters when it discovers a new ZigBee device. Note that Adapter class create a ZigBeeDevice instance only if that device has at least one end point that has a ZCL cluster listed in the supported cluster list of the ZclClusterFactory.
+The **ZclClusterFactory** class is used to create instances of a specific cluster class. This class is used by the adapter class to create the relevant clusters when it discovers a new ZigBee device. Note that Adapter class create a ZigBeeDevice instance only if that device has at least one end point that has a ZCL cluster listed in the supported cluster list of the ZclClusterFactory.
 
-AT command classes such as __AO_Command__,  __HV_Command__…  are used by XBeeModule upon its initialization to get information about the XBee module it uses. These classes derive from the __XBeeATCommand__ abstract class. See [XBee ZigBee module documentation](http://www.digi.com) for more detail about AT commands.
+AT command classes such as **AO_Command**,  **HV_Command**…  are used by XBeeModule upon its initialization to get information about the XBee module it uses. These classes derive from the **XBeeATCommand** abstract class. See [XBee ZigBee module documentation](http://www.digi.com) for more detail about AT commands.
 
 ### Sending ZDO or ZCL command and receiving response
 

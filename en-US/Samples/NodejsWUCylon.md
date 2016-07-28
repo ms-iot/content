@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sample
 title: NodejsWUCylon
 permalink: /en-US/Samples/NodejsWUCylon.htm
 lang: en-US
@@ -7,7 +7,7 @@ lang: en-US
 
 # Cylon Node.js (Universal Windows) Sample
 
-{% include VerifiedVersion.md %}
+
 
 In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) running on a Raspberry Pi 2 or 3 to control a servo connected to an Arduino (with [Firmata](https://www.npmjs.com/package/firmata) installed).
 
