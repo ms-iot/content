@@ -89,19 +89,19 @@ lang: en-US
     <a href="http://firmware.intel.com/projects/minnowboard-max" target="_blank">Learn More</a>
   </div>
   <div class="col-md-6">
-    <h3>Intel Drivers</h3>
-    <p>Download the graphics and processor drivers for Intel based systems</p>
-    <a href="https://downloadcenter.intel.com/product/83422/Embedded-Processors" target="_blank">Learn More</a>
+    <h3>Visual Studio 2015</h3>
+    <p>State of the art IDE, tools and services that you can use to create great IoT apps</p>
+    <a href="https://www.visualstudio.com/vs-2015-product-editions" target="_blank">Learn More</a>
   </div>
   <div class="col-md-6">
-    <h3>Qualcomm Drivers</h3>
-    <p>Contact Qualcomm to request access to the Board Support Package for Snapdragon processors</p>
-    <a href="mailto:pahwang@qti.qualcomm.com" target="_blank">Learn More</a>
+    <h3>Windows Driver Kit 2015</h3>
+    <p>Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 10</p>
+    <a href="https://msdn.microsoft.com/en-US/windows/hardware/hh852365.aspx" target="_blank">Learn More</a>
   </div>
   <div class="col-md-6">
-    <h3>Broadcom Drivers</h3>
-    <p>Access the source for the Board Support Package for the Raspberry Pi 2 and Raspberry Pi 3 platforms</p>
-    <a href="https://github.com/ms-iot/bsp" target="_blank">Learn More</a>
+    <h3>Windows Developer Tools for Visual Studio</h3>
+    <p>Tools that integrate with Visual Studio 2015 and are required for developing for the Universal Windows App Platform.</p>
+    <a href="https://dev.windows.com/en-us/downloads" target="_blank">Learn More</a>
   </div>
 </div>
 <div class="row">
@@ -114,23 +114,6 @@ lang: en-US
     <h3>PTVS</h3>
     <p>PTVS (Python Tools for Visual Studio) includes an extension to support running Python on Windows 10 IoT Core</p>
     <a href="https://github.com/microsoft/ptvs/releases" target="_blank">Learn More</a>
-  </div>
-    <div class="col-md-6">
-    <h3>Visual Studio 2015</h3>
-    <p>State of the art IDE, tools and services that you can use to create great IoT apps</p>
-    <a href="https://www.visualstudio.com/vs-2015-product-editions" target="_blank">Learn More</a>
-  </div>
-  <div class="col-md-6">
-    <h3>Windows Driver Kit 2015</h3>
-    <p>Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 10</p>
-    <a href="https://msdn.microsoft.com/en-US/windows/hardware/hh852365.aspx" target="_blank">Learn More</a>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-6">
-    <h3>Windows Developer Tools for Visual Studio</h3>
-    <p>Tools that integrate with Visual Studio 2015 and are required for developing for the Universal Windows App Platform.</p>
-    <a href="https://dev.windows.com/en-us/downloads" target="_blank">Learn More</a>
   </div>
 </div>
 <div class="row">
