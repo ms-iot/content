@@ -1,20 +1,22 @@
 ---
 layout: sample
 title: Bluetooth LE GATT
-description: Bluetooth Low Energy (BLE) Generic Attribute Profile (GATT) Sample Overview
+description: Bluetooth LE GATT
 keyword: Windows 10 IoT Core, Bluetooth, BLE, bluetooth low energy, GATT
 permalink: /en-US/Samples/BLEGatt.htm
 samplelink: https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS
 lang: en-US
 ---
 
+
 # Bluetooth LE GATT 
+
 
 Bluetooth Low Energy (BLE) Generic Attribute Profile (GATT) Sample Overview
 
-In this sample we will discover how to work with Bluetooth Low Energy devices using the GATT profile and a TI CC2541 SensorTag. You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip){:target="_blank"}, and navigating to the [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} folder.
+In this sample we will discover how to work with Bluetooth Low Energy devices using the GATT profile and a TI CC2541 SensorTag. You can find the source code in our [git repository](https://github.com/ms-iot/samples){:target="_blank"}, and navigating to the [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} folder.
 
-Information on Bluetooth support for Windows IoT Core devices can be found [here]({{site.baseurl}}/{{page.lang}}/Docs/Bluetooth.htm){:target="_blank"}.
+Information on Bluetooth support for Windows IoT Core devices can be found on the [Bluetooth]({{site.baseurl}}/{{page.lang}}/Docs/Bluetooth.htm){:target="_blank"} site.
 
 This sample is supported on all Windows IoT Core devices. DragonBoard 410c has the added advantage of onboard Bluetooth, meaning you will not need an additional Bluetooth USB dongle to complete this or other Bluetooth samples.
 
@@ -48,13 +50,13 @@ In this sample we will be pairing and connecting a Windows IoT Core device with 
 
 This sample needs Visual Studio Update 1 with SDK version 10586 to build and run on the latest version of IoT Core OS on the device.
 
-For the sample, we are running firmware version 1.4.1 on the SensorTag. More detailed information about the SensorTag can be found [here](http://processors.wiki.ti.com/index.php/SensorTag_User_Guide){:target="_blank"}.
+For the sample, we are running firmware version 1.4.1 on the SensorTag. More detailed information about the SensorTag can be found at the [TI SensorTag](http://processors.wiki.ti.com/index.php/SensorTag_User_Guide){:target="_blank"} site.
 
 [Click here to order a SensorTag from Texas Instruments.](http://www.ti.com/tool/cc2650stk#buy){:target="__blank"}
 
 ### Hardware Support
 
-Please find a list of supported Bluetooth dongles [here]({{site.baseurl}}/{{page.lang}}/Docs/SupportedInterfaces.htm) (a Bluetooth dongle is not required for the DragonBoard 410c).
+Please find a list of supported Bluetooth dongles in the [Hardware Compatibility List]({{site.baseurl}}/{{page.lang}}/Docs/SupportedInterfaces.htm#Bluetooth-Dongles). Note: a Bluetooth dongle is not required for the DragonBoard 410c and the Raspberry 3 board.
 
 ### What's Next?
 
