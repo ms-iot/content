@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Embedded mode
-description: How to turn on Embedded mode for Windows desktop and Windows mobile editions
+description: How to turn on Embedded Mode for Windows desktop and Windows Mobile editions
 keyword: windows runtime, windows iot, embedded mode, capabilities
 permalink: /en-US/Docs/EmbeddedMode.htm
 lang: en-US
@@ -9,11 +9,44 @@ lang: en-US
 
 # Embedded mode
 
-Windows and Windows Mobile can be configured to allow embedded mode. This enables packages to implement background applications.  It also enables applications to declare and use lowLevelDevice and systemManagement capabilities.
+Windows and Windows Mobile can be configured to allow embedded mode. Embedded Mode enables
+
+* Background Applications
+* Use of the lowLevelDevice capability
+* Use of systemManagement capability
 
 Embedded mode is only enabled by default on Window IoT Core and must be enabled on standard Windows and Windows Mobile.
 
+## Background Applications
+
+Background Applications are created using the Background Application (IoT) template in Visual Studio.  For more information about the Background Application (IoT) template see [Windows IoT Core Project Templates](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec).  
+
+Background applications run without stopping and have no resource limits enforced by resource manager. Also, if the background application stops for some reason and embedded mode is enabled the background application will be restarted by the system.  
+
+While the system will automatically restart background applications, system lockdown features must be enabled to prevent users from stopping or interfering with the operation of Background Applications. 
+
+## lowLevelDevice Capability
+
+The lowLevelDevice Capability (only on IoT Core) gives access to low-level hardware interfaces like GPIO, SPI, and I2C. 
+
+* [Blinky Sample(GPIO)]({{site.baseurl}}/{{page.lang}}/Samples/Blinky.htm)
+* [SPI Accelerometer Sample]({{site.baseurl}}/{{page.lang}}/Samples/SPIAccelerometer.htm)
+* [I2C Accelerometer Sample]({{site.baseurl}}/{{page.lang}}/Samples/I2CAccelerometer.htm) 
+
+## systemManagment Capability
+
+When you enable the systemManagment capabilities for your appliction this is the set of APIs that gets unlocked:   
+
+* [Windows.System.ProcessLauncher](https://msdn.microsoft.com/library/windows/apps/windows.system.processlauncher.aspx)
+* [Windows.System.TimeZoneSettings](https://msdn.microsoft.com/library/windows/apps/windows.system.timezonesettings.aspx)
+* [Windows.System.ShutdownManager](https://msdn.microsoft.com/library/windows/apps/windows.system.shutdownmanager.aspx)
+* [Windows.Globalization.Language.TrySetInputMethodLanguageTag](https://msdn.microsoft.com/library/windows/apps/windows.globalization.language.trysetinputmethodlanguagetag.aspx)
+* [AllJoyn loopback]({{site.baseurl}}/en-US/Docs/AllJoynTroubleshooting.htm)
+
+## Debugging Background Applications 
+
 If you are debugging on a device that is not running Windows IoT Core and you see either of the following error messages you need to ensure AllowEmbeddedMode is enabled on the device and that the Embedded Mode service is running:
+
 * There are no more endpoints available from the endpoint mapper.
 * This program is blocked by group policy. For more information, contact your system administrator.
 

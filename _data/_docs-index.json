@@ -5,7 +5,7 @@
         "children":[
           {
             "title":"Documentation",
-            "link":"/Docs/Documentation.htm"
+            "link":"/Docs.htm"
           },
           {
             "title":"Supported boards and SoCs",
@@ -25,14 +25,6 @@
             "link": "/Docs/IoTDashboard.htm"
           },
           {
-            "title": "Building Apps",
-            "link": "/Docs/BuildingAppsForIoTCore.htm"
-          },
-          {
-            "title":"Visual Studio app deployment",
-            "link":"/Docs/AppDeployment.htm"
-          },
-          {
             "title":"Windows Device Portal",
             "link":"/Docs/tools/DevicePortal.htm"
           },
@@ -41,8 +33,12 @@
             "link":"/Docs/PowerShell.htm"
           },
           {
-            "title":"Windows 10 IoT Core Porting Tool",
+            "title":"Windows 10 IoT Core porting tool",
             "link":"/Docs/tools/IoTAPIPortingTool.htm"
+          },
+          {
+            "title":"Event Tracing for Windows",
+            "link":"/Docs/ETW.htm"
           }
         ]
       },
@@ -70,9 +66,13 @@
             "link":"/Docs/Windbg.htm"
           },
           {
-            "title":"Installing Packages",
+            "title":"Installing packages",
             "link":"/Docs/InstallPackage.htm"
           },
+          {
+            "title":"Driver deployment",
+            "link":"/Docs/DriverDeployment.htm"
+          },		  
           {
             "title":"Internet connection sharing",
             "link":"/Docs/InternetConnectionSharing.htm"
@@ -102,12 +102,16 @@
             "link":"/Docs/SupportedInterfaces.htm"
           },
           {
-            "title":"Headed and Headless devices",
+            "title":"Headed and headless devices",
             "link":"/Docs/HeadlessMode.htm"
           },
           {
             "title":"Make your 3D printer wireless",
             "link":"/Docs/3DPrintServer.htm"
+          },
+          {
+            "title":"Install usb peripheral drivers",
+            "link":"/Docs/PeripheralDrivers.htm"
           }
         ]
       },
@@ -115,8 +119,20 @@
         "parent":"Writing apps",
         "children":[
           {
+            "title": "Introduction",
+            "link": "/Docs/BuildingAppsForIoTCore.htm"
+          },
+          {
             "title":"Unavailable Universal APIs",
             "link":"/Docs/UnavailableApis.htm"
+          },
+          {
+            "title":"App deployment",
+            "link":"/Docs/AppDeployment.htm"
+          },
+          {
+            "title":"Setup default app",
+            "link":"/Docs/SetupDefaultApp.htm"
           },
           {
             "title":"Embedded mode",
@@ -136,15 +152,15 @@
         "parent":"Azure",
         "children":[
           {
-            "title":"Cloud Programming for IoT Core - an Introduction",
+            "title":"Introduction",
             "link":"/Docs/CloudIntro.htm"
           },
           {
-            "title":"Connect Your Device To the Cloud",
+            "title":"Connect your device to the cloud",
             "link":"/Docs/ConnectDeviceToCloud.htm"
           },
           {
-            "title":"Connect Your App To the Cloud",
+            "title":"Connect your app to the cloud",
             "link":"/Docs/ConnectAppToCloud.htm"
           }
         ]
@@ -161,7 +177,7 @@
             "link":"/Docs/TPM.htm"
           },
           {
-            "title":"Building Secure IoT Devices",
+            "title":"Building secure IoT devices",
             "link":"/Docs/BuildingSecureDevices.htm"
           },
           {
@@ -201,6 +217,14 @@
           {
             "title":"Windows 10 IoT Core Pro",
             "link":"/Docs/CreateIoTCorePro.htm"
+          },
+          {
+            "title":"Managing IoT Core Devices",
+            "link":"/Docs/Management.htm"
+          },
+          {
+            "title":"Installing and Servicing IoT apps",
+            "link":"/Docs/Store.htm"
           }
         ]
       }
