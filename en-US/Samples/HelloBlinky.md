@@ -89,10 +89,9 @@ Here is an illustration of what your breadboard might look like with the circuit
 
 Finally, the LED_PIN variable of _MainPage.xaml.cs_ file of the sample code will need the following modification:
 
-~~~
+{% highlight c# %}
 private const int LED_PIN = 12;
-~~~
-{: .language-c#}
+{% endhighlight %}
 
 ## Deploy your app
 ___
@@ -125,6 +124,7 @@ The code for this sample is pretty simple. We use a timer, and each time the 'Ti
 
 ### Timer code
 Here is how you set up the timer in C#:
+
 {% highlight C# %}
 public MainPage()
 {
@@ -160,6 +160,7 @@ private void Timer_Tick(object sender, object e)
 {% endhighlight %}
 
 ### Initialize the GPIO pin
+
 To drive the GPIO pin, first we need to initialize it. Here is the C# code (notice how we leverage the new WinRT classes in the Windows.Devices.Gpio namespace):
 
 {% highlight C# %}
@@ -216,4 +217,5 @@ pin.Write(GpioPinValue.High);
 {% endhighlight %}
 
 Remember that we connected the other end of the LED to the 3.3 Volts power supply, so we need to drive the pin to low to have current flow into the LED.
+
 <h3><a href="{{site.baseurl}}/{{page.lang}}/Docs/StartCoding.htm">Next: Additional tutorials and samples</a></h3>
