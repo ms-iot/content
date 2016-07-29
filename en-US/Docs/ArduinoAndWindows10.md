@@ -10,16 +10,16 @@ lang: en-US
 # Arduino and Windows 10
 Arduino and Windows 10 work together to help you make amazing projects - get started by clicking one of the links below. Our technologies support the Arduino Uno and Mega, as well as the new Arduino 101.
 
-## Arduino Wiring and UWP Lightning Providers
+## Arduino Wiring for Windows 10 IoT Core Devices
 
 <div class="row">
 <div class="col-md-12 col-xs-24" markdown="1">
-[![arduino wiring]({{site.baseurl}}/Resources/images/devices/Lighning_0.png)]({{site.baseurl}}/{{page.lang}}/Docs/Lightning.htm)
+[![Arduino Wiring]({{site.baseurl}}/Resources/images/devices/Lighning_0.png)]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiring.htm)
 </div>
 <div class="col-md-12 col-xs-24" markdown="1">
-To enable the use of existing Arduino Wiring sketches on IoT Core devices, a project template for Arduino Wiring can now be used in Visual Studio. These projects make use of a direct memory mapped driver that offers high performance. Additionally, based on the same driver, a set of controller providers can be used in UWP apps to access GPIO, I2C and SPI controllers that offer high performance.
-
-[Get started using Arduino Wiring]({{site.baseurl}}/{{page.lang}}/Docs/Lightning.htm)
+To enable the use of the familiar <a href="https://www.arduino.cc/en/Reference/HomePage" target="_blank">Arduino Wiring</a> language on IoT Core devices, a Visual Studio project template for Arduino Wiring is provided.<br/>The Arduino Wiring project template enables developing, deploying and debugging Arduino Wiring sketches on supported IoT Core devices.
+	
+[Get started using Arduino Wiring]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiring.htm)   
 </div>
 </div>
 
