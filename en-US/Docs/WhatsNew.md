@@ -1,64 +1,70 @@
 ---
 layout: default
-title: What's New for IoT Core on Raspberry Pi 3
-description: Learn what's new for Windows 10 IoT Core on Raspberry Pi 3, the most advanced Raspberry Pi available.
-keyword: raspberry pi 3, raspberry pi, windows iot, iot core, insider preview
+title: What's new for Windows 10 IoT Core - The Anniversary Update
+description: Raspberry Pi 3, performance improvements, DMAP and more
+keyword: raspberry pi 3, raspberry pi, windows iot, iot core, insider preview, anniversary update
 permalink: /en-US/Docs/WhatsNew.htm
 lang: en-US
 ---
-<h1 id="whats-new-for-windows-iot-core-insider-preview-for-raspberry-pi-3-users">What’s New for Windows IoT Core Insider Preview for Raspberry Pi 3</h1>
 
-<p>© 2016 Microsoft Corporation. All rights reserved</p>
+# What’s new for Windows 10 IoT Core - The Anniversary Update
 
-<p align="center"><a href="http://www.microsoftstore.com/RaspberryPi3" target="_blank"><img src="{{site.baseurl}}/Resources/images/devices/pi3withbox_web.jpg" alt="Raspberry Pi 3" class="img-responsive"><br>Click to see all Raspberry Pi 3 products at the Microsoft Store</a></p>
+One year after the official release of Windows 10 IoT Core comes the Windows 10 Anniversary Update.
+Huge improvements to both performance, supporting apps, installation experience and features have been made.
 
-<p>We are excited to announce that you can immediately download Windows IoT Core for use on your Raspberry Pi 3 that offers the following benefits:</p>
-<ul>
-  <li>
-    <p>Functional parity with RPi2, including Windows as a service updating and flighting model and a single FFU for RPi2 and RPi3</p>
-  </li>
-  <li>
-    <p>Open sourcing Pi BSP to encourage community innovation/speed and support commercialization efforts</p>
-  </li>
-  <li>
-    <p>Onboard WiFi drivers are now enabled for the Raspberry Pi 3</p>
-  </li>
-  <li>
-    <p>UART/Serial (miniUART) driver for the Raspberry PI 3 onboard serial is now enabled for the Raspberry Pi 3</p>
-  </li>
-  <li>
-    <p>Pin muxing support, increasing the number of available GPIO pins from 17 to 24.</p>
-  </li>
-  <li>
-    <p>An additional SPI bus (SPI1).</p>
-  </li>
-  <li>
-    <p>Increased UART baud rate support (was 115200, now 921600).</p>
-  </li>
-  <li>
-    <p>20% increase in GPIO performance.</p>
-  </li>
-</ul>
+## New Hardware 
+___
 
-<!-- 
-<div class="btn-group">
-  <a href="{{site.baseurl}}/{{page.lang}}/GetStarted0.htm" class="btn btn-primary">Get Started</a>
-</div>
-!-->
+### Raspberry Pi 3
+![Raspberry Pi 3 image]({{site.baseurl}}/Resources/images/677423-highlight.jpg)
+IoT Core is now officially released for the Raspberry Pi 3 to the public.
 
-<h2 id="coming-soon-in-a-future-release-of-windows-iot-core-insider-preview">Coming Soon in a future release of Windows IoT Core Insider Preview</h2>
-<ul>
-  <li>
-    <p>Onboard Bluetooth, but in the meantime you can still use <a href="/content/en-US/Docs/SupportedInterfaces.htm">a compatible USB Bluetooth dongle</a>.</p>
-  </li>
-</ul>
+* Easy set up with a new getting started experience
+* Functional parity with RPi2, including Windows as a service updating and flighting model and a single FFU for RPi2 and RPi3
 
-<h2 id="whats-different">What’s different?</h2>
-<p>Change is inevitable, so it is worth noting that GPIO pins 35 &amp; 47 as well as the onboard LED have been removed from the Raspberry Pi 3. Any projects you’ve built using this will only work with the Raspberry Pi 2.</p>
+### New Adafruit IoT Starter Pack for Raspberry Pi 3
+![Adafruit starter pack]({{site.baseurl}}/Resources/images/AdafruitStarterPack/AdafruitMakerKitClosedSmall.jpg) 
+Adafruit has updated their starter pack to now include Raspberry Pi 3 and Windows 10 IoT Core.
 
-<h2 id="learn-more">Learn More</h2>
-<p><a href="/content/en-US/Docs/ReleaseNotesInsiderPreview.htm">Release Notes</a></p>
+### Seeed kit
+An easy to use getting starting kit from SEEED
 
-<h2 id="privacy-statement">Privacy Statement</h2>
+## New major features
+___ 
+* Windows IoT Remote Client - remote into your IoT device to control and view what is displayed on your IoT device from your desktop or phone
+* Store integration - connect Windows 10 IoT Core to the store to service applications 
+* NOOBS - 8GB cards now supported 
+* Better Azure IoT Hub connectivity - provision your device with a device identity in the cloud 
+* [Shell capabilities](https://github.com/ms-iot/samples/tree/develop/IoTHomeAppSample) - multiple foreground app support
+* [IoTivity AllJoyn Device System Bridge](https://github.com/ms-iot/samples/tree/develop/AllJoyn/Samples/OICAdapter)
+* Arduino INO integration - work better with Arduino hardware with this command line toolkit
 
-<p>The privacy statement for this version of the Windows operating system can be <a href="http://go.microsoft.com/fwlink/?LinkId=506737" target="_blank">viewed here</a></p>
+### Improved documentation
+* Updated samples page - new tagging system to sort through different samples 
+* Updated documentation page - added a table of contents (finally) and new documentation
+
+### Getting started
+* New [getting started](https://developer.microsoft.com/en-us/windows/iot/GetStarted) flow  
+* Automatically set up your Wi-Fi connection through the IoT Dashboard
+ 
+### For commercial builders
+* Retail signing with cross certs - cross sign your own drivers and be compatible with secure boot 
+* Trusted Platform Module (TPM) support - provision your azure key into a virtual or physical TPM 
+* A new [OEM manufacturing guide](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/iot-core-manufacturing-guide) - build your own .FFU
+
+
+## Also check out
+___
+* [IoT Core Default app](https://github.com/ms-iot/samples/tree/develop/IoTCoreDefaultApp) - added an on device command line 
+* Blockly - now available in the IoT Dashboard as sample using node.js and sense hat
+* [Wireless 3D printer project](https://developer.microsoft-int.com/en-us/windows/iot/docs/3dprintserver) - make your 3D printer by connecting an IoT Core device to it 
+* [PID wheel demo](https://www.hackster.io/windows-iot/closed-loop-control-remote-sensors-and-remote-ux-on-rpi3-ef3ed0?ref=part&ref_id=9417&offset=19) - monitor a wheel's speed and consistently reach the desired RPM under any friction level
+* [System center configuration manager](https://developer.microsoft.com/en-us/windows/iot/docs/management) - enroll your IoT Core device under SCCM management
+
+## Additional Resources
+___ 
+
+[Release Notes]({{site.baseurl}}//content/en-US/Docs/ReleaseNotesInsiderPreview.htm)
+
+[Privacy Statement](http://go.microsoft.com/fwlink/?LinkId=506737)
+
