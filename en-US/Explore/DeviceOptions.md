@@ -7,19 +7,6 @@ permalink: /en-US/Explore/DeviceOptions.htm
 lang: en-US
 ---
 <style>
-.MsVerified 
-{
-	margin: 0 auto;
-  display: block;
-  width: 45px;
-  height: 40px;
-}
-a {cursor:pointer}
-h2 
-{
-	border-bottom: 1px solid #AAAAAA;
-	padding-bottom: 10px;
-}
 .sectionControls
 {
 	font-size:15px;
@@ -34,27 +21,6 @@ h2
 .section {
 	padding-left: 10px;
 }
-.searchbox
-{
-	background-color: #f2f2f2;
-	width: 600px;
-	padding: 15px;
-}
-
-.searchbox a
-{
-	padding-left: 20px;
-}
-
-.searchbox a:hover
-{
-	text-decoration: underline;
-}
-
-.searchbox div
-{
-	margin: 10px;
-}
 </style>
 
 <ol class="breadcrumb">
@@ -66,11 +32,11 @@ h2
   </li>
   <li class="active">Device Options</li>
 </ol>
-# {{page.title}}
+
+<h1 class="page-title">{{page.title}}</h1>
 
 <h3>Windows 10 IoT Core Development Devices</h3>
 <hr>
-
 <p>Windows 10 IoT Core works with <a href="{{site.baseurl}}/{{page.lang}}/explore/SoC.md">several leading SoCs</a> that are utilized in hundreds of devices. Below you can find suggested devices to <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">get started</a> quickly, additional devices that provide more silicon and form factor choices, as well as community devices that have been enabled independt of Microsoft involvement. </p>
 
 <h2> <a onClick="toggleSection('SuggestedDevices');return false;">Suggested Devices </a>
@@ -81,7 +47,7 @@ h2
 <div class="SuggestedDevices section" markdown="1">
 {% include_relative SuggestedDevices.md %}
 </div>
-
+<hr>
 <h2> <a onClick="toggleSection('AdditionalDevices');return false;">Additional Devices </a>
 	<div class="sectionControls">
 		<a class="sectionToggle" onClick="toggleSection('AdditionalDevices');return false;">Show/Hide</a>
@@ -90,7 +56,7 @@ h2
 <div class="AdditionalDevices section" markdown="1">
 {% include_relative AdditionalDevices.md %}
 </div>
-
+<hr>
 <h2> <a onClick="toggleSection('CommunityDevices');return false;">Community Devices </a>
 	<div class="sectionControls">
 		<a class="sectionToggle" onClick="toggleSection('CommunityDevices');return false;">Show/Hide</a>
@@ -99,7 +65,7 @@ h2
 <div class="CommunityDevices section" markdown="1">
 {% include_relative CommunityDevices.md %}
 </div>
-
+<hr>
 
 <script>
 		function toggleSection(section) {
