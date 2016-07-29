@@ -73,4 +73,4 @@ It is also possible to add additional hot keys to perform the same function.  Fo
 `“VK_LWIN”        QWORD    0x00000000 0000005B`
 `“VK_RWIN”        QWORD    0x00000000 0000005C`
 
-See [Settings.HotKey sample package](https://github.com/parameshbabu/iot-adk-addonkit/blob/develop/Common/Packages/Settings.HotKey/Settings.HotKey.pkg.xml)
+See [Settings.HotKey sample package](https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Common/Packages/Settings.HotKey/Settings.HotKey.pkg.xml)
