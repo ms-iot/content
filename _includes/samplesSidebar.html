@@ -13,15 +13,16 @@
         <p><a href="{{ site.repositoryurl }}{{ page.path }}" target="_blank">
           <span class="win-icon win-icon-Edit"></span>{{ site.data.resources[page_lang_lower].github-edit-text | default: site.data.resources["en-us"].github-edit-text }}
         </a></p>
-        <p><strong>Language:</strong> {{entry.lang[forloop.index0]}}</p>
+        <p><strong>Language:</strong> {% if entry.lang.first %}{{entry.lang[forloop.index0]}}{% else %}{{entry.lang}}{%endif%}</p>
         <p><strong>Tags:</strong> {% for tag in entry.tags %}{{tag}}{% if forloop.rindex0 != 0 %},{% endif %} {% endfor %}</p>    
         <strong>Verified to work with:</strong> 
-        <div><a href="http://go.microsoft.com/fwlink/?LinkId=715696">Windows 10 IoT Core: Version 10.0.10586.0</a>
-        <br/>
-        <a href="http://go.microsoft.com/fwlink/?LinkId=715695">Visual Studio 2015 update 2</a>
-        <br/>
-        <a href="http://go.microsoft.com/fwlink/?LinkId=715693">Windows SDK: Version 10586</a><br/><span class="win-color-fg-secondary">(Included with Visual Studio Update 2)</span>
-        </p>
+        <div>
+          <a href="http://go.microsoft.com/fwlink/?LinkId=715696">Windows 10 IoT Core: Version 10.0.10586.0</a>
+          <br/>
+          <a href="http://go.microsoft.com/fwlink/?LinkId=715695">Visual Studio 2015 update 2</a>
+          <br/>
+          <a href="http://go.microsoft.com/fwlink/?LinkId=715693">Windows SDK: Version 10586</a><br/><span class="win-color-fg-secondary">(Included with Visual Studio Update 2)</span>
+        </div>
       {% endif %}
     {% endfor %}
 {% endfor %}

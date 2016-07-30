@@ -7,130 +7,119 @@ permalink: /en-US/Samples2.htm
 lang: en-US
 ---
 
-<div class="row">
-  <div class="col-xs-24">
-
-    <section class="section">
-      <header class="page-title-header remove-top-margin">
-        <h1 class="page-title">Code samples</h1>
-        <h2 class="page-subtitle">
-          Learn how to build great apps for Windows by experimenting with our samples.</br>
-          These samples show you how features work and help you jumpstart your own apps.
-        </h2>
-      </header>
-    </section>
-
+<section class="section">
+  <header class="page-title-header remove-top-margin">
+    <h1 class="page-title">Code samples</h1>
+    <h2 class="page-subtitle">
+      Learn how to build great apps for Windows by experimenting with our samples.</br>
+      These samples show you how features work and help you jumpstart your own apps.
+    </h2>
     <p>
       Our sample code lives on <a href="https://github.com/ms-iot/samples" target="_blank">GitHub</a>
     </p>
+  </header>
+</section>
 
-    <div class="row spacer-84-top">
-      <div class="col-xs-24">
 
-        <section class="section spacer-20-bottom">
-          <div class="section-header">
-            <h2 class="section-title">New Samples</h2>
-          </div>
-          <div class="section-body">
-            <div class="row">
-              {% assign sortedInfo = (site.data._samples[page.lang] | sort: 'ranking') %}
-              {% for entry in sortedInfo %}
-                {% if entry.new %}
-                  <div class="col-md-6" style="min-height: 320px;">
-                    <p>{{entry.title}}</p>
-                    <p>{{entry.description}}</p>
-                    <p>
-                      {% if entry.link.first %}
-                        {% for item in entry.link %}
-                          <a href="{{item}}">{{entry.lang[forloop.index0]}}</a>{% if forloop.rindex0 != 0 %}<br/>{% endif %}
-                        {% endfor %}
-                      {% else %}
-                        <a href="{{entry.link}}">{% if entry.lang != 'N/A' %}{{entry.lang}}{% else %}{{entry.link-text}}{% endif %}</a>
-                      {% endif %}
-                    </p>
-                    <p class="win-color-fg-secondary">
-                      tags:
-                      {% for item in entry.tags %}
-                        {{item}}{% if forloop.rindex0 != 0 %}, {% endif %}
-                      {% endfor %}
-                    </p>
-                  </div>
-                {% endif %}
+<section class="section spacer-20-bottom">
+  <div class="section-header">
+    <h2 class="section-title">New Samples</h2>
+  </div>
+  <div class="section-body">
+    <div class="row">
+      {% assign sortedInfo = (site.data._samples[page.lang] | sort: 'ranking') %}
+      {% for entry in sortedInfo %}
+        {% if entry.new %}
+          <div class="col-md-6" style="min-height: 320px;">
+            <p>{{entry.title}}</p>
+            <p>{{entry.description}}</p>
+            <p>
+              {% if entry.link.first %}
+                {% for item in entry.link %}
+                  <a href="{{item}}">{{entry.lang[forloop.index0]}}</a>{% if forloop.rindex0 != 0 %}<br/>{% endif %}
+                {% endfor %}
+              {% else %}
+                <a href="{{entry.link}}">{% if entry.lang != 'N/A' %}{{entry.lang}}{% else %}{{entry.link-text}}{% endif %}</a>
+              {% endif %}
+            </p>
+            <p class="win-color-fg-secondary">
+              tags:
+              {% for item in entry.tags %}
+                {{item}}{% if forloop.rindex0 != 0 %}, {% endif %}
               {% endfor %}
-            </div>
+            </p>
           </div>
-        </section>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
-        <section class="section">
-          <div class="section-header">
-            <h2 class="section-title">All Samples</h2>
-          </div>
-          <div class="section-body">
-            <div class="row">
-              <div class="col-xs-24">
-                <div class="win-color-bg-10" style="padding: 16px">
-                  <div class="row">
-                    <div class="col-xs-24 col-md-4">
-                      <h3>Filter by tags</h3>
-                      <div class="btn-group">
-                        <button style="min-width: 0;" onclick="selectAllTags()">all</button>
-                        <button style="min-width: 0;" onclick="deselectAllTags()">none</button>
-                      </div>
-                    </div>
-                    <div class="col-xs-24 col-md-20">
-                      <div class="row">
-                        {% assign tagsCategories = site.data._samples["en-US-cat-tags"] %}
-                        {% for cat in tagsCategories %}
-                          <div class="col-xs-24 col-md-12">
-                            <span style="display: inline-block; min-width: 100px;">{{cat.name}}</span>
-                            {% for item in cat.tags %}
-                              <button id="{{item | downcase | replace: 'c++', 'cxx' | slugify }}" style="min-width: 0;" class="btn tagBtn active" data-toggle="button" aria-pressed="true" autocomplete="off" onclick="toggleTag('{{item | downcase | replace: 'c++', 'cxx' | slugify}}')">{{item}}</button>
-                            {% endfor %}
-                          </div>
-                        {% endfor %}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+<section class="section">
+  <div class="section-header">
+    <h2 class="section-title">All Samples</h2>
+  </div>
+  <div class="section-body">
+    <div class="row">
+      <div class="col-xs-24">
+        <div class="win-color-bg-10" style="padding: 16px">
+          <div class="row">
+            <div class="col-xs-24 col-md-4">
+              <h3>Filter by tags</h3>
+              <div class="btn-group">
+                <button style="min-width: 0;" onclick="selectAllTags()">all</button>
+                <button style="min-width: 0;" onclick="deselectAllTags()">none</button>
               </div>
             </div>
-            <div class="row spacer-32-top">
-              {% assign sortedInfo = (site.data._samples[page.lang] | sort: 'ranking') %}
-              {% for entry in sortedInfo %}
-                <div class="col-md-6" style="min-height: 320px;">
-                  <h3>{{entry.title}}</h3>
-                  <p>{{entry.description}}</p>
-                  <p>
-                    {% if entry.link.first %}
-                      {% for item in entry.link %}
-                        <a href="{{item}}">{{entry.lang[forloop.index0]}}</a>{% if forloop.rindex0 != 0 %}<br/>{% endif %}
-                      {% endfor %}
-                    {% else %}
-                      <a href="{{entry.link}}">{% if entry.lang != 'N/A' %}{{entry.lang}}{% else %}{{entry.link-text}}{% endif %}</a>
-                    {% endif %}
-                  </p>
-                  <p class="win-color-fg-secondary">
-                    tags:
-                    {% for item in entry.tags %}
-                      {{item | downcase}}{% if forloop.rindex0 != 0 %}, {% endif %}
+            <div class="col-xs-24 col-md-20">
+              <div class="row">
+                {% assign tagsCategories = site.data._samples["en-US-cat-tags"] %}
+                {% for cat in tagsCategories %}
+                  <div class="col-xs-24 col-md-12">
+                    <span style="display: inline-block; min-width: 100px;">{{cat.name}}</span>
+                    {% for item in cat.tags %}
+                      <button id="{{item | downcase | replace: 'c++', 'cxx' | slugify }}" style="min-width: 0;" class="btn tagBtn active" data-toggle="button" aria-pressed="true" autocomplete="off" onclick="toggleTag('{{item | downcase | replace: 'c++', 'cxx' | slugify}}')">{{item}}</button>
                     {% endfor %}
-                  </p>
-                  <span style="display: none;" class="tagBox">
-                    {% for tag in entry.tags %}
-                      {{tag | downcase | replace: 'c++', 'cxx'' | slugify}},
-                    {% endfor %}
-                  </span>
-                </div>
-              {% endfor %}
+                  </div>
+                {% endfor %}
+              </div>
             </div>
           </div>
-        </section>
-
+        </div>
       </div>
     </div>
-
+    <div class="row spacer-32-top">
+      {% assign sortedInfo = (site.data._samples[page.lang] | sort: 'ranking') %}
+      {% for entry in sortedInfo %}
+        <div class="col-md-6" style="min-height: 320px;">
+          <h3>{{entry.title}}</h3>
+          <p>{{entry.description}}</p>
+          <p>
+            {% if entry.link.first %}
+              {% for item in entry.link %}
+                <a href="{{item}}">{{entry.lang[forloop.index0]}}</a>{% if forloop.rindex0 != 0 %}<br/>{% endif %}
+              {% endfor %}
+            {% else %}
+              <a href="{{entry.link}}">{% if entry.lang != 'N/A' %}{{entry.lang}}{% else %}{{entry.link-text}}{% endif %}</a>
+            {% endif %}
+          </p>
+          <p class="win-color-fg-secondary">
+            tags:
+            {% for item in entry.tags %}
+              {{item | downcase}}{% if forloop.rindex0 != 0 %}, {% endif %}
+            {% endfor %}
+          </p>
+          <span style="display: none;" class="tagBox">
+            {% for tag in entry.tags %}
+              {{tag | downcase | replace: 'c++', 'cxx'' | slugify}},
+            {% endfor %}
+          </span>
+        </div>
+      {% endfor %}
+    </div>
   </div>
-</div>
+</section>
+
 
 <script>
   function toggleTag(tagname) {
