@@ -42,7 +42,7 @@ See also
 * [Sample Driver Package](https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Source-arm/BSP/CustomRpi2/Packages/CustomRPi2.GPIO/CustomRPi2.GPIO.pkg.xml) 
 
 ## Step 3: Install on device
----
+___
 
 * Connect to the device ( [using SSH]({{site.baseurl}}/{{page.lang}}/Samples/SSH.htm) or [using Powershell]({{site.baseurl}}/{{page.lang}}/Samples/powershell.htm) )
 * Copy the <filename>.cab file to the device to a directory say C:\OemInstall
@@ -51,3 +51,12 @@ See also
 
 The device will reboot into the update OS (showing gears) to install the packages and will reboot again to main OS. This process can take a few minutes.
 
+## Step 4: Check status of driver
+___
+
+* Launch the [Powershell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm)
+* You can get the status of the installed drivers using the following Powershell commandlets
+
+	* [Get-PnpDevice](https://technet.microsoft.com/en-us/library/mt130248.aspx)
+	* [Get-PnpDeviceProperty](https://technet.microsoft.com/en-us/library/mt130249.aspx)
+	
