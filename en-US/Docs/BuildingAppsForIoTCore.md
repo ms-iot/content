@@ -128,7 +128,7 @@ With Arduino Wiring support you can build apps in Arduino Wiring for many popula
 Our [Arduino Wiring Project Guide](https://developer.microsoft.com/en-us/windows/iot/win10/arduinowiringprojectguide) provides full instructions on how to get set up to build these apps. The samples copied and linked below will help you get started building your own.  You can even [build](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryBlinky) WinRT components in Arduino that can then be used from other languages. This is especially helpful for peripherals that have rich Arduino libraries like [LCD character displays](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryLcdDisplay).
 
 *Blinky Sample Code*
-The full [sample code and docs](https://developer.microsoft.com/en-us/windows/iot/win10/samples/arduino-wiring/helloblinky) are available in our samples page and you can find the full code below. 
+The full [sample code and docs](https://developer.microsoft.com/en-us/windows/iot/win10/samples/arduino-wiring/HelloBlinkyWiring) are available in our samples page and you can find the full code below. 
 
 {% highlight C++ %}
 void setup()
