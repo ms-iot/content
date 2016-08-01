@@ -28,14 +28,20 @@ ___
 2. Find your device's IP address
 
     If your device is connected to a monitor, your IP address is listed on the front page. If you do not see an IP address, your board is not properly connected to your network. ![DefaultApp IP]({{site.baseurl}}/Resources/images/DevicePortal/defaultapp_ip.png)
-    
-    {% include note.html text="Windows 10 IoT Core Dashboard can also be used to find your device's IP address within <strong>My devices</strong>."%}   
+  
+    <div class="alert alert-note">
+      <h5><span class="win-icon win-icon-Page"></span>
+        NOTE
+      </h5>
+      <p>Windows 10 IoT Core Dashboard can also be used to find your device's IP address within <strong>My devices</strong>.</p>
+    </div>
     
 3. Connect to WDP through your browser
 
     Enter the IP address into the address bar. Add :8080 onto the end.![Browser IP]({{site.baseurl}}/Resources/images/DevicePortal/browser_ip.png)
     Unless changed, the default credentials are: Username: `Administrator` Password: `p@ssw0rd`
-    {% include note.html text="You can also launch WDP directly from the Windows 10 IoT Core Dashboard - right click on your device and select <strong>Open in Device Portal</strong>" %}   
+    
+{% include note.html text="You can also launch WDP directly from the Windows 10 IoT Core Dashboard - right click on your device and select <strong>Open in Device Portal</strong>" %}   
     
 
 ## IoT specific features
@@ -100,9 +106,7 @@ ___
 1. Launch powershell and [connect to your device.]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm)
 2. Set the port:
 
-    {% highlight CS %}
-    Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\IoT\webmanagement /v HttpPort /t REG_DWORD /d <your port number>
-    {% endhighlight %}   
+    `Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\IoT\webmanagement /v HttpPort /t REG_DWORD /d <your port number>`
 	
 3. If you want to set the https port
 

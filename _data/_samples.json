@@ -106,8 +106,8 @@
       "title": "'Hello, blinky!'",
       "description": "A 'Hello, world' sample to control an LED from a breadboard",
       "link": "samples/HelloBlinky.htm",
-      "link-text": "UI Blinky",
-      "lang": "C#/C++", 
+      "link-text": "UI Blinky",
+      "lang": "C#/C++", 
       "ranking": 0,
       "new": "yes",
       "tags": [

@@ -78,18 +78,15 @@ IoT Dashboard has some quick-run samples that you can try on your board.
 ### Network 3D Printer
 Use the Network 3D Printer sample to connect your 3D Printer to your board can make it discoverable over your home network. See the  [3D printer server sample]({{site.baseurl}}/{{page.lang}}/win10/samples/3DPrintServer.htm) for more details. 
 
-![IoTDashboard Network 3D Printer]({{site.baseurl}}/Resources/images/IoTDashboard/IoTDashboard_3DPrinter.PNG)
+{% include imageborder.html alt="IoTDashboard Network 3D Printer" link="/Resources/images/IoTDashboard/IoTDashboard_3DPrinter.PNG" %}
 
 ### Internet radio
 Turn your Windows 10 IoT Core device into an internet radio that can be controlled from anywhere in your home.
 
-![IoTDashboard Internet radio]({{site.baseurl}}/Resources/images/IoTDashboard/IoTDashboard_InternetRadio.PNG)
+{% include imageborder.html alt="IoTDashboard Internet radio" link="/Resources/images/IoTDashboard/IoTDashboard_InternetRadio.PNG" %}
 
 ### IoT Core Blockly
 IoT Core Blockly sample lets your program a Raspberry Pi2 or 3 and a Raspberry Pi Sense hat using a "block" editor from your browser.
 
-![IoTDashboard Blockly]({{site.baseurl}}/Resources/images/IoTDashboard/IoTDashboard_Blockly.PNG)
-
-
-
+{% include imageborder.html alt="IoTDashboard Blockly" link="/Resources/images/IoTDashboard/IoTDashboard_Blockly.PNG" %}
 
