@@ -106,8 +106,8 @@
       "title": "'Hello, blinky!'",
       "description": "Create a UI-based app that toggles an LED on devices running Windows 10 IoT Core",
       "link": "samples/HelloBlinky.htm",
-      "link-text": "UI Blinky",
-      "lang": "C#/C++", 
+      "link-text": "UI Blinky",
+      "lang": "C#/C++", 
       "ranking": 0,
       "new": "yes",
       "tags": [
