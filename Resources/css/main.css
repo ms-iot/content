@@ -793,6 +793,7 @@ body p {
 
 body h1 {
     margin-bottom: 32px;
+	margin-top: 44px;
 }
 
 body h2 {
@@ -912,7 +913,7 @@ body .alert-tip {
 }
 
 body .doc-samples-sidebars {
-	margin-top: 44px;
+	margin-top: 54px;
 }
 
 

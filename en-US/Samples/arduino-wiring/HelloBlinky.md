@@ -1,7 +1,7 @@
 ---
 layout: sample
 title: Hello Blinky Arduino Wiring sketch
-permalink: /en-US/Samples/arduino-wiring/HelloBlinky.htm
+permalink: /en-US/Samples/arduino-wiring/HelloBlinkyWiring.htm
 lang: en-US
 ---
 

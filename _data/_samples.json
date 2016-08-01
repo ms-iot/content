@@ -124,7 +124,7 @@
       "link": [
         "samples/HelloBlinkyBackground.htm",
         "samples/PythonBlinky.htm",
-        "samples/arduino-wiring/HelloBlinky.htm"
+        "samples/arduino-wiring/HelloBlinkyWiring.htm"
       ],
       "link-text": [
         "Blinky",
