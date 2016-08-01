@@ -1,6 +1,6 @@
 ---
 layout: sample
-title: I2C port Expander 
+title: I2C port expander 
 keyword: Windows 10 IoT Core, i2c
 description: Port expander for i2C
 permalink: /en-US/Samples/I2CPortExpander.htm

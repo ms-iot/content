@@ -1,15 +1,16 @@
 ---
 layout: sample
-title: NodejsWUCylon
-permalink: /en-US/Samples/NodejsWUCylon.htm
+title: Johnny-Five servo controller
+description: Upload sensor data to Azure storage from a Node.js UWP app
+keywords: Windows 10 IoT Core, johnny-five, node.js
+permalink: /en-US/Samples/J5ServoController.htm
+samplelink: N/A
 lang: en-US
 ---
 
-# Cylon Node.js (Universal Windows) Sample
+# Johnny-Five servo controller
 
-
-
-In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) running on a Raspberry Pi 2 or 3 to control a servo connected to an Arduino (with [Firmata](https://www.npmjs.com/package/firmata) installed).
+In this sample, you will use [Johnny-Five](https://www.npmjs.com/package/johnny-five) running on a Raspberry Pi 2 or 3 to control a servo connected to an Arduino (with [Firmata](https://www.npmjs.com/package/firmata) installed).
 
 
 ### Hardware required
@@ -25,7 +26,7 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 * Install the latest Node.js Tools for Windows IoT from [here](http://aka.ms/ntvsiotlatest).
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 * Install Arduino software from [here](https://www.arduino.cc/en/Main/Software).
-* Install [Git for Windows](http://git-scm.com/download/win). Ensure that Git is included in your 'PATH' environment variable.
+* Install [Git for Windows](http://git-scm.com/download/win). Ensure that Git is included in your ‘PATH’ environment variable.
 
 
 ### Upload Firmata to your Arduino
@@ -37,19 +38,19 @@ In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) runnin
 * Click the upload button to upload the sketch to the Arduino board. You should see a "Done uploading" message when the upload is complete.
 
 
-### Create a new Cylon (Universal Windows) project
+### Create a new Johnny-Five (Universal Windows) project
 Start Visual Studio 2015 and create a new project (File \| New Project...). In the `New Project` dialog, navigate to `Node.js` as shown below (in the left pane in the dialog: Templates \| JavaScript \| Node.js).
 
-Select the `Basic Node.js Cylon Application (Universal Windows)` template (shown below), enter a name for your project, then press OK.
+Select the `Basic Node.js Johnny-Five Application (Universal Windows)` template (shown below), enter a name for your project, then press OK.
 
-![Node.js Cylon Project Dialog]({{site.baseurl}}/Resources/images/Nodejs/nodejswucylon-newprojectdialog.png)
+![Node.js Johnny-Five Project Dialog]({{site.baseurl}}/Resources/images/Nodejs/nodejswuj5-newprojectdialog.png)
 
-Wait for the Cylon package and its dependencies to complete downloading. This will be indicated by the message below in the npm output window.
+Wait for the Johnny-Five package and its dependencies to complete downloading. This will be indicated by the message below in the npm output window.
 
 ![Node.js Output Window]({{site.baseurl}}/Resources/images/Nodejs/npm-output-window.png)
 
 Right-click on the npm node in the Solution Explorer (shown below) and select Update npm Packages.
-This step will run npm dedupe and update [serialport](https://www.npmjs.com/package/serialport) (a Cylon dependency) with a [version](https://github.com/ms-iot/node-serialport/tree/uwp) that works with Node.js UWP.
+This step will run npm dedupe and update [serialport](https://www.npmjs.com/package/serialport) (a Johnny-Five dependency) with a [version](https://github.com/ms-iot/node-serialport/tree/uwp) that works with Node.js UWP.
 
 ![Node.js Npm Menu]({{site.baseurl}}/Resources/images/Nodejs/npm-update-menu.png)
 
@@ -60,42 +61,21 @@ you should see the device getting recognized as shown in the image below (the na
 
 ![Arduino Uno Start Screen]({{site.baseurl}}/Resources/images/Nodejs/arduino-uno-startscreen.png)
 
-Now we need to get the string that identifies the Arduino and will be used in sample code. Follow these steps to do this:
 
-* In a PowerShell window connected to the Raspberry Pi 2 or 3, run `devcon status usb*`. When you do this, you should see a device similar to the one below:
-
-   USB\VID_2341&PID_0043\85436323631351311141  
-   Name: USB Serial Device  
-   Driver is running.
-* Replace the code in app.js with the code shown below. If using a USB device ID, be sure to add extra \ after both \\ characters
-  E.g. in the example above, the final string in the code should be "USB\\\VID_2341&PID_0043\\\85436323631351311141".
+* Replace the code in app.js with the code shown below.
   
 <UL>
 {% highlight JavaScript %}
-var Cylon = require('cylon');
+var five = require("johnny-five");
+var board = new five.Board();
 
-Cylon.robot({
-    connections: {
-        arduino: { adaptor: 'firmata', port: 'USB\\VID_2341&PID_0043\\85436323631351311141' }
-    },
-
-    devices: {
-        servo: { driver: 'servo', pin: 3 }
-    },
-
-    // The "work" will move the servo from angle 45 to 90 to 135.
-    work: function (my) {
-        var angle = 45;
-        my.servo.angle(angle);
-        every((1).second(), function () {
-            angle = angle + 45;
-            if (angle > 135) {
-                angle = 45
-            }
-            my.servo.angle(angle);
-        });
-    }
-}).start();
+board.on("ready", function () {
+    
+    var servo = new five.Servo(3);
+    
+    // Sweep from 0-180 and repeat.
+    servo.sweep();
+});
 {% endhighlight %}
 </UL>
 
@@ -111,5 +91,4 @@ Cylon.robot({
 
 
 ### GitHub
-* Node.js (Chakra) source code: [https://github.com/Microsoft/node](https://github.com/Microsoft/node)
 * NTVS IoT Extension source code: [https://github.com/ms-iot/ntvsiot](https://github.com/ms-iot/ntvsiot)
