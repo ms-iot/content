@@ -15,7 +15,8 @@
     "alljoyn",
     "commandline",
     "tool",
-    "wifi"
+    "wifi",
+    "lightning"
   ],
   "en-US-cat-tags": [
     {
@@ -54,7 +55,8 @@
       "name": "I/O",
       "tags": [
         "i2c",
-        "spi"
+        "spi",
+        "lightning"
       ]
     },
     {
