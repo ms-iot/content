@@ -27,7 +27,7 @@ lang: en-US
   </div>
   <div class="section-body">
     <div class="row">
-      {% assign sortedInfo = (site.data._samples[page.lang] | sort: 'ranking') %}
+      {% assign sortedInfo = (site.data._samples[page.lang] | sort: 'title') %}
       {% for entry in sortedInfo %}
         {% if entry.new %}
           <div class="col-md-6" style="min-height: 320px;">
@@ -89,7 +89,7 @@ lang: en-US
       </div>
     </div>
     <div class="row spacer-32-top">
-      {% assign sortedInfo = (site.data._samples[page.lang] | sort: 'ranking') %}
+      {% assign sortedInfo = (site.data._samples[page.lang] | sort: 'title') %}
       {% for entry in sortedInfo %}
         <div class="col-md-6" style="min-height: 320px;">
           <h3>{{entry.title}}</h3>
