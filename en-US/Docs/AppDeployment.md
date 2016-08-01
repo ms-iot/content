@@ -15,11 +15,13 @@ Deploying and debugging your application is straightforward with Visual Studio. 
 * [C++ App Deployment](#cpp)
 * [Python App Deployment](#python)
 
-**NOTE:** In order to use remote debugging, your IoT Core device must first be connected to same local network as your development PC. See the [Connecting to Device] ({{site.baseurl}}/{{page.lang}}/Docs/ConnectToDevice.htm) instructions.
+{% include note.html text='In order to use remote debugging, your IoT Core device must first be connected to same local network as your development PC.  See the <a href="https://developer.microsoft.com/en-us/windows/iot/Docs/ConnectToDevice.htm">Connecting to device</a> instructions.'  %}
 
 <a name="csharp"/>
 
 ## Deploy a C# app to your Windows 10 IoT Core device 
+___
+
 {% include samples/AppDeploymentCS.md %}
 
 5. Now we're ready to deploy. Simply press F5 (or select Debug \| Start Debugging) to start debugging our app. You should see the app come up on your device's screen.
