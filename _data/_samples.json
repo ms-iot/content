@@ -15,7 +15,8 @@
     "alljoyn",
     "commandline",
     "tool",
-    "wifi"
+    "wifi",
+    "lightning"
   ],
   "en-US-cat-tags": [
     {
@@ -54,7 +55,8 @@
       "name": "I/O",
       "tags": [
         "i2c",
-        "spi"
+        "spi",
+        "lightning"
       ]
     },
     {
@@ -158,24 +160,27 @@
       ]
     },
     {
-      "title": "I2C/SPI Accelerometer",
-      "description": "Create an app leveraging I2C or SPI on devices running Windows 10 IoT Core",
-      "link": [
-        "samples/I2CAccelerometer.htm",
-        "samples/SPIAccelerometer.htm"
-      ],
-      "link-text": [
-        "I2C Accelerometer",
-        "SPI Accelerometer"
-      ],
-      "lang": [
-        "C#",
-        "C#"
-      ],
+      "title": "I2C Accelerometer",
+      "description": "Create an app leveraging I2C on devices running Windows 10 IoT Core",
+      "link": "samples/I2CAccelerometer.htm",
+      "link-text": "I2C Accelerometer",
+      "lang": "C#",
       "ranking": 3,
       "tags": [
         "beginner",
         "I2C",
+        "c#"
+      ]
+    },
+    {
+      "title": "SPI Accelerometer",
+      "description": "Create an app leveraging SPI on devices running Windows 10 IoT Core",
+      "link": "samples/SPIAccelerometer.htm",
+      "link-text": "SPI Accelerometer",
+      "lang": "C#",
+      "ranking": 3,
+      "tags": [
+        "beginner",
         "SPI",
         "c#"
       ]
@@ -504,26 +509,17 @@
       ]
     },
     {
-      "title": "Lightning Providers",
+      "title": "Lightning Providers (Blinky Headless)",
       "description": "Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
       "link": [
-        "samples/BlinkyUILightning.htm",
         "samples/HelloBlinkyLightning.htm",
-        "samples/WeatherStationLightning.htm",
-        "samples/SPIDisplayLightning.htm",
         "samples/NodejsWULightning.htm"
       ],
       "link-text": [
-        "Blinky UI",
         "Blinky Headless",
-        "Weather Station",
-        "SPI Display",
         "Blinky Headless"
       ],
       "lang": [
-        "C#/C++",
-        "C#/C++",
-        "C#/C++",
         "C#/C++",
         "Node.js"
       ],
@@ -534,6 +530,48 @@
         "c++",
         "lightning",
         "node.js"
+      ]
+    },
+    {
+      "title": "Lightning Providers (Blinky)",
+      "description": "Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
+      "link": "samples/BlinkyUILightning.htm",
+      "link-text": "Blinky UI",
+      "lang": "C#/C++",
+      "ranking": 0,
+      "tags": [
+        "intermediate",
+        "c#",
+        "c++",
+        "lightning"
+      ]
+    },
+    {
+      "title": "Lightning Providers (Weather Station)",
+      "description": "Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
+      "link": "samples/WeatherStationLightning.htm",
+      "link-text": "Weather Station",
+      "lang": "C#/C++",
+      "ranking": 0,
+      "tags": [
+        "intermediate",
+        "c#",
+        "c++",
+        "lightning"
+      ]
+    },
+    {
+      "title": "Lightning Providers (SPI Display)",
+      "description": "Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
+      "link": "samples/SPIDisplayLightning.htm",
+      "link-text": "SPI Display",
+      "lang": "C#/C++",
+      "ranking": 0,
+      "tags": [
+        "intermediate",
+        "c#",
+        "c++",
+        "lightning"
       ]
     },
     {
