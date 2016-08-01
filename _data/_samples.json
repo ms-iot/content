@@ -3,20 +3,23 @@
     "beginner",
     "intermediate",
     "advanced",
-    "c++",
-    "Wiring",
-    "headless",
     "c#",
-    "Python",
-    "Node.js",
-    "headed",
+    "c++",
+    "node.js",
+    "python",
+    "wiring",
+    "alljoyn",
+    "azure",
+    "wi-fi",
+    "foreground",
+    "background",
+    "gpio",
     "i2c",
     "spi",
-    "alljoyn",
-    "commandline",
-    "tool",
-    "wifi",
-    "lightning"
+    "lightning",
+    "o/s",
+    "app",
+    "driver"
   ],
   "en-US-cat-tags": [
     {
@@ -32,28 +35,30 @@
       "tags": [
         "C#",
         "C++",
-        "Node.js",
+        "node.js",
         "python",
-        "Wiring"
+        "wiring"
       ]
     },
     {
       "name": "Connectivity",
       "tags": [
         "alljoyn",
-        "wifi"
+        "azure",
+        "wi-fi"
       ]
     },
     {
-      "name": "Type",
+      "name": "App type",
       "tags": [
-        "headed",
-        "headless"
+        "foreground",
+        "background"
       ]
     },
     {
       "name": "I/O",
       "tags": [
+        "gpio",
         "i2c",
         "spi",
         "lightning"
@@ -62,15 +67,16 @@
     {
       "name": "Other",
       "tags": [
-        "tool",
-        "commandline"
+        "o/s",
+        "driver"
+
       ]
     }
   ],
   "en-US": [
     {
-      "title": "Hello, World!",
-      "description": "Create a 'Hello World' application that runs on devices running Windows 10 IoT Core",
+      "title": "'Hello, world!'",
+      "description": "Create a 'Hello world' application that runs on devices running Windows 10 IoT Core",
       "link": [
         "samples/HelloWorld.htm",
         "samples/Python.htm",
@@ -89,39 +95,31 @@
       "ranking": 0,
       "new": "yes",
       "tags": [
-        "beginner",
         "c#",
         "python",
         "node.js",
-        "headed"
+        "beginner",
+        "foreground"
       ]
     },
     {
-      "title": "Hello, Blinky!",
+      "title": "'Hello, blinky!'",
       "description": "Create a UI-based app that toggles an LED on devices running Windows 10 IoT Core",
-      "link": [
-        "samples/HelloBlinky.htm",
-        "samples/HelloBlinky.htm"
-      ],
-      "link-text": [
-        "UI Blinky",
-        "UI Blinky"
-      ],
-      "lang": [
-        "C#",
-        "C++"
-      ],
+      "link": "samples/HelloBlinky.htm",
+      "link-text": "UI Blinky",
+      "lang": "C#/C++", 
       "ranking": 0,
       "new": "yes",
       "tags": [
-        "beginner",
         "c#",
         "c++",
-        "headed"
+        "beginner",
+        "foreground",
+        "gpio"
       ]
     },
     {
-      "title": "Hello, Blinky! background service",
+      "title": "'Hello, blinky!' background service",
       "description": "Create an app with no UI that toggles an LED on devices running Windows 10 IoT Core",
       "link": [
         "samples/HelloBlinkyBackground.htm",
@@ -140,11 +138,12 @@
       ],
       "ranking": 0,
       "tags": [
-        "beginner",
         "c#",
         "python",
-        "Wiring",
-        "headless"
+        "wiring",
+        "beginner",
+        "background",
+        "gpio"
       ]
     },
     {
@@ -155,12 +154,14 @@
       "lang": "C#",
       "ranking": 1,
       "tags": [
-        "beginner",
-        "c#"
+        "c#",
+        "intermediate",
+        "foreground",
+        "o/s"
       ]
     },
     {
-      "title": "I2C Accelerometer",
+      "title": "I2C accelerometer",
       "description": "Create an app leveraging I2C on devices running Windows 10 IoT Core",
       "link": "samples/I2CAccelerometer.htm",
       "link-text": "I2C Accelerometer",
@@ -173,7 +174,7 @@
       ]
     },
     {
-      "title": "SPI Accelerometer",
+      "title": "SPI accelerometer",
       "description": "Create an app leveraging SPI on devices running Windows 10 IoT Core",
       "link": "samples/SPIAccelerometer.htm",
       "link-text": "SPI Accelerometer",
@@ -186,7 +187,7 @@
       ]
     },
     {
-      "title": "SPI Display",
+      "title": "SPI display",
       "description": "Create an app using SPI on devices running Windows 10 IoT Core",
       "link": "samples/SPIDisplay.htm",
       "link-text": "SPI Display",
@@ -199,7 +200,7 @@
       ]
     },
     {
-      "title": "Driver Sample",
+      "title": "Driver sample",
       "description": "Create and interact with a universal driver on devices running Windows 10 IoT Core",
       "link": "samples/DriverLab.htm",
       "link-text": "Driver Sample",
@@ -212,7 +213,7 @@
       ]
     },
     {
-      "title": "I2C Port Expander",
+      "title": "I2C port expander",
       "description": "Create an app that uses the Raspberry Pi 2 I2C bus to communicate with a port expander.",
       "link": "samples/I2CPortExpander.htm",
       "link-text": "I2C Port Expander",
@@ -221,11 +222,12 @@
       "tags": [
         "advanced",
         "i2c",
+        "gpio",
         "c#"
       ]
     },
     {
-      "title": "Serial-In, Parallel-Out Shift Register",
+      "title": "Shift register",
       "description": "Create an app that uses the Raspberry Pi 2 to control LEDs using a serial-in, parallel-out shift register.",
       "link": "samples/ShiftRegister.htm",
       "link-text": "Shift Register",
@@ -245,12 +247,12 @@
       "ranking": 3,
       "tags": [
         "beginner",
-        "led",
+        "gpio",
         "c#"
       ]
     },
     {
-      "title": "Push Button",
+      "title": "Push button",
       "description": "Create an app that uses the Raspberry Pi 2 to read the status of a Push Button and control an LED.",
       "link": "samples/PushButton.htm",
       "link-text": "Push Button",
@@ -258,12 +260,12 @@
       "ranking": 1,
       "tags": [
         "beginner",
-        "led",
+        "gpio",
         "c#"
       ]
     },
     {
-      "title": "Potentiometer Sensor Sample",
+      "title": "Potentiometer sensor",
       "description": "A analog sensor is connected to Raspberry Pi through ADC converter and digital output data is displayed through Monitor and LED.",
       "link": [
         "samples/Potentiometer.htm",
@@ -281,13 +283,13 @@
       "tags": [
         "beginner",
         "c#",
-        "led",
+        "gpio",
         "Wiring",
-        "headed"
+        "foreground"
       ]
     },
     {
-      "title": "Digital Sign",
+      "title": "Digital sign",
       "description": "Showcases a digital sign app running on Windows 10 IoT Core",
       "link": "samples/DigitalSign.htm",
       "link-text": "Digital sign",
@@ -295,9 +297,8 @@
       "ranking": 10,
       "tags": [
         "intermediate",
-        "headed",
-        "c#",
-        "ui"
+        "foreground",
+        "c#"
       ]
     },
     {
@@ -315,7 +316,7 @@
       ]
     },
     {
-      "title": "USB Web camera Sample (Windows Universal)",
+      "title": "Webcam app",
       "description": "Create an app to take photo, record video and audio using a USB Web Camera on Windows IoT core",
       "link": "samples/WebcamApp.htm",
       "link-text": "Webcam App",
@@ -323,12 +324,12 @@
       "ranking": 0,
       "tags": [
         "intermediate",
-        "camera",
+        "foreground",
         "c#"
       ]
     },
     {
-      "title": "Cylon Node.js App (Console)",
+      "title": "Cylon servo controller",
       "description": "Control an Arduino with a Cylon Node.js app running on a Raspberry Pi 2 with Windows 10 IoT Core",
       "link": "samples/NodejsCylon.htm",
       "link-text": "Cylon",
@@ -337,12 +338,12 @@
       "tags": [
         "cylon",
         "node.js",
-        "headless",
+        "background",
         "intermediate"
       ]
     },
     {
-      "title": "Azure Node.js",
+      "title": "Azure data uploader",
       "description": "Upload sensor data to Azure storage from a Node.js UWP app",
       "link": "samples/nodejs-wu-azure.htm",
       "link-text": "Azure",
@@ -352,12 +353,11 @@
         "intermediate",
         "johnny-five",
         "azure",
-        "sensor",
         "node.js"
       ]
     },
     {
-      "title": "Cylon Node.js App",
+      "title": "Cylon LED controller",
       "description": "Control a servo connected to an Arduino using Cylon in a Node.js UWP app",
       "link": "samples/NodejsWUCylon.htm",
       "link-text": "Cylon",
@@ -365,13 +365,11 @@
       "ranking": 0,
       "tags": [
         "intermediate",
-        "cylon",
-        "servo",
         "node.js"
       ]
     },
     {
-      "title": "Johnny-Five Node.js App",
+      "title": "Johnny-Five servo controller",
       "description": "Control a servo connected to an Arduino using Johnny-Five in a Node.js UWP app",
       "link": "samples/NodejsWUJ5.htm",
       "link-text": "Johnny-Five",
@@ -386,7 +384,7 @@
       ]
     },
     {
-      "title": "Express Node.js App",
+      "title": "Express Node.js app",
       "description": "Create an Express Node.js app that runs on devices running Windows 10 IoT Core",
       "link": "samples/NodejsWUExpress.htm",
       "link-text": "Express",
@@ -400,7 +398,7 @@
       ]
     },
     {
-      "title": "Bluetooth Low Energy GATT",
+      "title": "Bluetooth low energy GATT",
       "description": "Learn how to interact with Bluetooth Low Energy devices on Windows 10 IoT core.",
       "link": "samples/BLEGatt.htm",
       "link-text": "Bluetooth GATT",
@@ -416,17 +414,17 @@
       ]
     },
     {
-      "title": "IoT Browser",
+      "title": "IoT browser",
       "description": "Learn how to create a simple web browser for Windows 10 IoT core.",
       "link": "samples/IoTBrowser.htm",
       "link-text": "IoT Browser",
       "lang": "C#",
       "ranking": 2,
       "tags": [
+        "c#",
         "beginner",
-        "web",
-        "browser",
-        "headed"
+        "foreground",
+        "o/s"
       ]
     },
     {
@@ -437,14 +435,13 @@
       "lang": "C++",
       "ranking": 3,
       "tags": [
-        "beginner",
         "c++",
-        "gpio",
-        "single-wire"
+        "intermediate",
+        "gpio"
       ]
     },
     {
-      "title": "OneNote API",
+      "title": "OneNote cloud services",
       "description": "Learn how to use http messages to GET and POST OneNote pages in Wiring.",
       "link": "samples/arduino-wiring/OneNote.htm",
       "link-text": "OneNote API",
@@ -457,17 +454,17 @@
       ]
     },
     {
-      "title": "RGB Pixel Strip",
-      "description": "Learn how to use an RGB Pixel Strip in Wiring.",
+      "title": "RGB pixel strip",
+      "description": "Learn how to use an RGB pixel strip in Wiring.",
       "link": "samples/arduino-wiring/RGBPixel.htm",
       "link-text": "RGB Pixel",
       "lang": "Wiring",
       "ranking": 3,
       "tags": [
-        "beginner",
-        "rgb",
         "wiring",
-        "led"
+        "beginner",
+        "gpio",
+        "lightning"
       ]
     },
     {
@@ -478,38 +475,38 @@
       "lang": "Wiring",
       "ranking": 3,
       "tags": [
-        "beginner",
         "wiring",
-        "lcd"
+        "beginner"
       ]
     },
     {
-      "title": "Stepper Motor",
+      "title": "Stepper motor",
       "description": "Learn how to use a Stepper Motor in Wiring.",
       "link": "samples/arduino-wiring/StepperMotor.htm",
       "link-text": "Stepper Motor",
       "lang": "Wiring",
       "ranking": 3,
       "tags": [
-        "beginner",
         "wiring",
-        "motor"
+        "beginner",
+        "gpio"
       ]
     },
     {
-      "title": "Weather Station",
+      "title": "Weather station",
       "description": "Learn how to create a Weather Station in Wiring.",
       "link": "samples/arduino-wiring/WeatherStation.htm",
       "link-text": "Weather Station",
       "lang": "Wiring",
       "ranking": 3,
       "tags": [
+        "wiring",
         "beginner",
-        "wiring"
+        "I2C"
       ]
     },
     {
-      "title": "Lightning Providers (Blinky Headless)",
+      "title": "Lightning.Providers - Blinky background service",
       "description": "Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
       "link": [
         "samples/HelloBlinkyLightning.htm",
@@ -533,73 +530,76 @@
       ]
     },
     {
-      "title": "Lightning Providers (Blinky)",
+      "title": "Lightning.Providers - Blinky",
       "description": "Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
       "link": "samples/BlinkyUILightning.htm",
       "link-text": "Blinky UI",
       "lang": "C#/C++",
       "ranking": 0,
       "tags": [
-        "intermediate",
         "c#",
         "c++",
+        "intermediate",
+        "gpio",
         "lightning"
       ]
     },
     {
-      "title": "Lightning Providers (Weather Station)",
+      "title": "Lightning.Providers - Weather station ",
       "description": "Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
       "link": "samples/WeatherStationLightning.htm",
       "link-text": "Weather Station",
       "lang": "C#/C++",
       "ranking": 0,
       "tags": [
-        "intermediate",
         "c#",
         "c++",
-        "lightning"
+        "intermediate",
+        "lightning",
+        "i2c"
       ]
     },
     {
-      "title": "Lightning Providers (SPI Display)",
+      "title": "Lightning.Providers - SPI display ",
       "description": "Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
       "link": "samples/SPIDisplayLightning.htm",
       "link-text": "SPI Display",
       "lang": "C#/C++",
       "ranking": 0,
       "tags": [
-        "intermediate",
         "c#",
         "c++",
-        "lightning"
+        "intermediate",
+        "lightning",
+        "spi"
       ]
     },
     {
-      "title": "Arduino Wiring Libraries (UWP)",
+      "title": "Arduino Wiring libraries",
       "description": "Demonstrating how to build Arduino Wiring libraries that can be called from other languages like C# and Node.js",
       "link": "samples/arduino-wiring/ArduinoWiringComponents.htm",
       "link-text": "Blinky UI",
       "lang": "C#/C++",
       "ranking": 0,
       "tags": [
-        "intermediate",
         "c#",
         "c++",
-        "lightning",
         "node.js",
-        "wiring"
+        "wiring",
+        "intermediate",
+        "lightning"        
       ]
     },
     {
-      "title": "Controlling DC Motors",
+      "title": "DC motor controller",
       "description": "Learn to control DC motors using a Windows IoT Core enabled device!",
       "link": "samples/arduino-wiring/DCMotor.htm",
       "link-text": "DC Motors",
       "lang": "Wiring",
       "ranking": 10,
       "tags": [
-        "intermediate",
         "wiring",
+        "beginner",
         "motor"
       ]
     },
@@ -620,11 +620,10 @@
       ],
       "ranking": 10,
       "tags": [
-        "tool",
-        "intermediate",
-        "node.js",
         "c++",
-        "memory"
+        "node.js",
+        "intermediate",
+        "o/s"
       ]
     },
     {
@@ -636,7 +635,8 @@
       "ranking": 10,
       "tags": [
         "c#",
-        "intermediate"
+        "intermediate",
+        "o/s"
       ]
     },
     {
@@ -647,20 +647,21 @@
       "lang": "C#",
       "ranking": 0,
       "tags": [
+        "c#",
         "beginner",
-        "wifi",
-        "c#"
+        "wi-fi"
       ]
     },
     {
-      "title": "App Installer",
+      "title": "App installer",
       "description": "Learn how to install and deploy an app on Windows IoT Core",
       "link": "samples/AppInstaller.htm",
       "link-text": "Learn More",
       "lang": "N/A",
       "ranking": 0,
       "tags": [
-        "beginner"
+        "intermediate",
+        "o/s"
       ]
     },
     {
@@ -672,11 +673,12 @@
       "ranking": 10,
       "tags": [
         "c++",
-        "advanced"
+        "advanced",
+        "driver"
       ]
     },
     {
-      "title": "HID Injection Driver Sample",
+      "title": "HID Injection driver",
       "description": "Learn how to build a driver for IoT Core and use HID Injection to inject touch, keyboard or mouse events.",
       "link": "samples/HidInjection.htm",
       "link-text": "Learn More",
@@ -684,7 +686,8 @@
       "ranking": 10,
       "tags": [
         "c++",
-        "advanced"
+        "advanced",
+        "driver"
       ]
     }
   ],
