@@ -28,9 +28,9 @@ Locate file titled <Name of your project>.exe
 Copy the file to the directory of your headless app project
 4. Include the newly added file to the Visual Studio project and set to "Copy Always"
 5. Open the Package.appxmanifest in Code mode (right-click and choose View Code) for the headless app and modify the following:  
->  * Add the attribute _Executable="\<Filename of .exe copied to project>.exe"_ to the element _Application_
->  * Add the attribute _EntryPoint="\<Namespace of Blank XAML project>.App"_ to the element _Application_
->  * Remove the AppListEntry attribute from the element _uap:VisualElements_
+  * Add the attribute _Executable="\<Filename of .exe copied to project>.exe"_ to the element _Application_
+  * Add the attribute _EntryPoint="\<Namespace of Blank XAML project>.App"_ to the element _Application_
+  * Remove the AppListEntry attribute from the element _uap:VisualElements_
 
 ___
 3. With the app submission created the next step is to [package the UWP app](https://msdn.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps) and upload to the app submission in Windows Dev Center. For IoT Core it is important to set  **Generate app bundle** to **Never**. This will allow the Windows Dev Center to generate the correct package for preinstall on IoT Core.
@@ -58,7 +58,7 @@ The second method is using Windows Imaging and Configuration Designer (WICD) to 
 5. Skip the provisioning package import
 6. On the left hand side expand Runtime Settings and click on Universal App Install > User Context App
 7. Enter the Package Family Name of your app and click Add  
->_Note: The PFN can be found in the Windows Dev Center under App Management > App Identity_
+_Note: The PFN can be found in the Windows Dev Center under App Management > App Identity_
 8. Under the newly added PFN add the Appx and its dependencies
 9. Set the DeploymentOptions to "Force target application shutdown"
 10. Export the package
@@ -70,7 +70,8 @@ ___
 Updating apps on IoT Core are very simple.
 
 1. In the Windows Dev Center create a new App Submission for the app to be updated
-2. In Visual Studio package the app as done earlier in Step 3 in the _Publishing UWP to Universal Store_ section. _Note: Be sure to increment the version number for each new package_
+2. In Visual Studio package the app as done earlier in Step 3 in the _Publishing UWP to Universal Store_ section.   
+_Note: Be sure to increment the version number for each new package_
 3. Upload the package to Windows Dev Center under the new submission and submit
 4. Following the app certification process devices will update the app to the latest version.  
->_Note: App updates on devices can take up to 24 hours to receive latest version_
+_Note: App updates on devices can take up to 24 hours to receive latest version_
