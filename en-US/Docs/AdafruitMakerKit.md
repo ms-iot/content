@@ -9,7 +9,7 @@ kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 ---
 <div class="row">
   <div class="col-xs-24">
-    <header class="page-title-header">
+    <header class="page-title-header remove-top-margin">
       <h1 class="page-title">{{page.kit}}</h1>
     </header>
   </div>

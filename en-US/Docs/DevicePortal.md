@@ -84,11 +84,24 @@ Once you navigate to the Bluetooth page, your device will be discoverable by oth
 More information on bluetooth can be found on the [bluetooth page](https://go.microsoft.com/fwlink/?linkid=823223).
 
 ### IoT Onboarding
-ADD TEXT
+
+IoT Onboarding provides support for configuring an IoT device's Wi-Fi connectivity options.
+
+** Internet Connection Sharing (ICS) **
+Internet Connection Sharing allows you to share the Internet access of your device with other devices connected to your device over the Wi-Fi SoftAP.  
+To use this feature, your Windows 10 IoT Device needs to have access to the internet (e.g. through a wired LAN connection), an *Access Point Adapter* must be chosen (e.g. a Wi-Fi Adapter) and the SoftAP needs to be enabled.   You also need to start shared access.  Once started, connect a separate Wi-Fi enabled device to the SoftAP on your Windows 10 IoT device.  After a connection is established your separate Wi-Fi enabled device will be able to connect to the internet through your Windows 10 IoT device.
+
+** SoftAP Settings **
+The SoftAP Settings allow you to control whether or not your device's SoftAP is enabled.  It also provides a means for configuring your SoftAP's SSID and the WPA2-PSK key which are necessary to connect the SoftAP from another device.
+
+** AllJoyn Onboarding Settings **
+The AllJoyn Onboarding Settings allow you to control whether or not your device's Wi-Fi connection can configured through your device's AllJoyn Onboarding Producer.  When a separate device running an AllJoyn Onboarding Consumer application connects to your Windows 10 IoT SoftAP, the AllJoyn Onboarding Consumer application can be used to configure your IoT device's Wi-Fi adapter.  When enabled, the AllJoyn Onboarding Producer app (IoTOnboarding) uses the ECDHE_NULL authentication method.
+
+{% include note.html text="To use the AllJoyn Onboarding Settings, this requires an update to the <strong>IotOnboarding</strong> sample which may be <a href="https://github.com/ms-iot/samples">downloaded here</a>.
+
 {% include imageborder.html alt="App list" link="/Resources/images/DevicePortal/OnboardingAllJoyn.png" %}
 {% include imageborder.html alt="App list" link="/Resources/images/DevicePortal/OnboardingICS.png" %}
 {% include imageborder.html alt="App list" link="/Resources/images/DevicePortal/OnboardingSoftAP.png" %}
-
 
 
 ### TPM configuration

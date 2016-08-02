@@ -14,7 +14,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
       <li><a href="{{site.baseurl}}/{{page.lang}}/Docs/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
       <li class="active">Set up your Raspberry Pi 2</li>
     </ol>
-    <header class="page-title-header">
+    <header class="page-title-header remove-top-margin">
       <h1 class="page-title">Lesson 1: Introduction and Setup</h1>
     </header>
   </div>
