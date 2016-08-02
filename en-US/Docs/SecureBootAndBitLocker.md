@@ -24,6 +24,14 @@ Notes:
 
 * For Intel's MinnowBoard Max, firmware version must be 0.82 or higher. For the current release, only 32-bit Windows 10 IoT Core is supported so be sure to download the [latest 32-bit firmware][2] from Intel and flash it to your board.
 * For Qualcomm's DragonBoard 410c, in order to enable Secure Boot, it may be necessary to provision RPMB. Once the eMMC has been flashed with Windows 10 IoT Core (as per instructions [here][3]), press [Power] + [Vol+] + [Vol-] simultaneously on the device when powering up and select "Provision RPMB" from the BDS menu. *Please note that this is an irreversible step.*
+* For Qualcomm's DragonBoard 410c, in order to enable USB mass storage mode
+ * disconnect everything from DragonBoard
+ * be sure the dip switches are all on default (off) position
+ * connect Dragonboard's USB OTG Connector to your PC
+ * press S2 [power] and S4 [vol-] on your DragonBoard
+ * connect Power to your DragonBoard
+ * after ~ 10 sec you can release S2 and S4 (or as soon as the next step has begun)
+ * Windows should now have recognized an additional mass storage device and mounted a new drive
 
 [1]: {{site.baseurl}}/{{page.lang}}/GetStarted.htm "Windows 10 IoT Core supported platforms"
 [2]: https://firmware.intel.com/projects/minnowboard-max "MinnowBoard MAX firmware"
@@ -54,7 +62,7 @@ Download the zip from [here][7], unpack and proceed with the following steps:
 
 Note that the included script also provides the information required to secure the DRA key by binding it to the TPM of the platform or create it securely on a SmartCard.
 
-[4]: {{site.baseurl}}/{{page.lang}}/Docs/SB_BL.htm#Certificates "Pre-generated Certificates"
+[4]: {{site.baseurl}}/{{page.lang}}/Docs/SecureBootAndBitLocker.htm#Certificates "Pre-generated Certificates"
 [5]: https://technet.microsoft.com/en-us/library/dn747883.aspx "Secure Boot Key Creation and Management Guidance"
 [6]: https://msdn.microsoft.com/en-us/windows/hardware/gg454513.aspx "Download kits and tools for Windows"
 [7]: https://github.com/ms-iot/security/tree/master/CertGen "CertGen.zip"
@@ -122,7 +130,7 @@ In order to enable BitLocker, the device encryption task must be scheduled. This
 * `new-item c:\windows\system32\OEMCustomization.cmd -type file -value 'schtasks /Create /TN "\Microsoft\Windows\IoT\DeviceEncryption" /XML c:\efi\DETask.xml /f'`
 
 ## Unlocking Encrypted Drives  
-When attempting to read contents from an encrypted device offline (e.g. SD card for MinnowBoardMax or DragonBoard's eMMC through USB mass storage mode), 'diskpart' may be used to assign a drive letter to MainOS and Data volume (let's assume v: for MainOS and w: for Data).  
+When attempting to read contents from an encrypted device offline (e.g. SD card for MinnowBoardMax or DragonBoard's eMMC through USB mass storage mode), 'diskpart' may be used to assign a drive letter to MainOS and Data volume (let's assume v: for MainOS and w: for Data).
 The volumes will appear locked and need to be manually unlocked. This can be done on any machine that has the BitLockerDRA.pfx certificate package installed (included in attachment above). Install the PFX and then run the following commands from an administrative CMD prompt:
 
 * `manage-bde -unlock v: -cert -cf BitLockerDRA.cer`
