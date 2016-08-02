@@ -8,6 +8,10 @@ lang: en-US
 ---
 # Dragonboard Pin Mappings
 
+![Dragonboard Pin Header]({{site.baseurl}}/Resources/images/PinMappings/DB_Pinout.png)
+
+<sub>*Image made with [Fritzing](http://fritzing.org/)*</sub>
+
 Hardware interfaces for the Dragonboard are exposed through the 40-pin header on the board. Functionality includes:
 
 * **11x** - GPIO pins
@@ -29,24 +33,24 @@ Let's look at the GPIO available on this device.
 The following GPIO pins are accessible through APIs:
 
 {:.table.table-bordered}
-| GPIO# | Header Pin         |Header Name|
-|-------|--------------------|-----------|
-| 36    | 23                 | A         |
-| 12    | 24                 | B         |
-| 13    | 25                 | C         |
-| 69    | 26                 | D         |
-| 115   | 27                 | E         |
-| N/A   | 28                 | F         |
-| 24    | 29                 | G         |
-| 25    | 30                 | H         |
-| 35    | 31                 | I         |
-| 34    | 32                 | J         |
-| 28    | 33                 | K         |
-| 33    | 34                 | L         |
-| 21    |                    |USER_LED_1 |
+| GPIO# | Header Pin         |
+|-------|--------------------|
+| 36    | 23                 |
+| 12    | 24                 |
+| 13    | 25                 |
+| 69    | 26                 |
+| 115   | 27                 |
+| 24    | 29                 |
+| 25    | 30                 |
+| 35    | 31                 |
+| 34    | 32                 |
+| 28    | 33                 |
+| 33    | 34                 |
+| 21    | User LED 1         | 
+| 120   | User LED 2         |         
 
 
-As an example, the following code opens **GPIO 36** as an output and writes a digital '**1**' out on the pin:
+As an example, the following code opens **GPIO 35** as an output and writes a digital '**1**' out on the pin:
          
 {% highlight C# %}
 using Windows.Devices.Gpio;
@@ -55,7 +59,7 @@ public void GPIO()
 {
 	GpioController Controller = GpioController.GetDefault(); /* Get the default GPIO controller on the system */
 
-	GpioPin Pin = Controller.OpenPin(21);        /* Open GPIO 21                      */
+	GpioPin Pin = Controller.OpenPin(35);       /* Open GPIO 35                      */
 	Pin.SetDriveMode(GpioPinDriveMode.Output);  /* Set the IO direction as output   */
 	Pin.Write(GpioPinValue.High);               /* Output a digital '1'             */
 }
@@ -63,7 +67,7 @@ public void GPIO()
 
 ### GPIO Issues
 
-* Output doesn't work on GPIO 24. Input will work fine
+* Output doesn't work on GPIO 24. Input works fine.
 * Pins are configured as InputPullDown at boot, but will change to Input (floating) the first time they are opened
 * Pins do not revert to their default state when closed
 * Spurious interrupts may be seen when interrupts are enabled on multiple pins
@@ -75,17 +79,17 @@ There are two Serial UARTS available on the Dragonboard **UART0** and **UART1**
 
 **UART0** has the standard **UART0 TX** and **UART0 RX** lines, along with flow control signals **UART0 CTS** and **UART0 RTS**.
 
-* Pin 5  - **UART1 TX**
-* Pin 7  - **UART1 RX**
-* Pin 3 - **UART1 CTS**
-* Pin 9 - **UART1 RTS**
+* Pin 5  - **UART0 TX**
+* Pin 7  - **UART0 RX**
+* Pin 3 - **UART0 CTS**
+* Pin 9 - **UART0 RTS**
 
 
 
 **UART1** includes just the **UART1 TX** and **UART1 RX** lines.
 
-* Pin 11  - **UART2 TX**
-* Pin 13  - **UART2 RX**
+* Pin 11  - **UART1 TX**
+* Pin 13  - **UART1 RX**
 
 
 

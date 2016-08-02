@@ -54,60 +54,77 @@ This step will run npm dedupe and update [serialport](https://www.npmjs.com/pack
 ![Node.js Npm Menu]({{site.baseurl}}/Resources/images/Nodejs/npm-update-menu.png)
 
 
-### Set up the connection between your Arduino and Raspberry Pi 2 or 3
+### Connect your Arduino to your Raspberry Pi 2 or 3
 Connect your Arduino and Raspberry Pi 2 or 3 with the USB cable. If your Raspberry Pi 2 or 3 is connected to a monitor, 
-you should see the device getting recognized as shown in the image below (the name of the device may be "Arduino Uno" instead of "USB Serial Device"):
+you should see the device getting recognized as shown in the image below (the name of the device may be something like "Arduino Uno" instead of "USB Serial Device"):
 
 ![Arduino Uno Start Screen]({{site.baseurl}}/Resources/images/Nodejs/arduino-uno-startscreen.png)
 
-Now we need to get the string that identifies the Arduino and will be used in sample code. Follow these steps to do this:
 
-* In a PowerShell window connected to the Raspberry Pi 2 or 3, run `devcon status usb*`. When you do this, you should see a device similar to the one below:
+### Get the port name of the Arduino
+* Let's get the device ID that is associated with your Arduino (we will need this later in the Cylon code). To do that replace the code in app.js with the code shown below.
 
-   USB\VID_2341&PID_0043\85436323631351311141  
-   Name: USB Serial Device  
-   Driver is running.
-* Replace the code in app.js with the code shown below. If using a USB device ID, be sure to add extra \ after both \\ characters
-  E.g. in the example above, the final string in the code should be "USB\\\VID_2341&PID_0043\\\85436323631351311141".
+<UL>
+{% highlight JavaScript %}
+var SerialPort = require('serialport');
+SerialPort.list(function (err, ports) {
+  ports.forEach(function(port) {
+    console.log(port.comName);
+  });
+});
+{% endhighlight %}
+</UL>
+
+* Go to the Project menu and select '&lt;Your project name&gt; Properties' (You could also right-click on the project node in solution explorer to access Properties). 
+  Enter the IP Address in the Remote Machine text box. Since you're building for Raspberry Pi 2 or 3, select `ARM` in the dropdown menu.
+
+* Press F5 (or select Debug \| Start Debugging) to deploy and start the app. When the app runs, it will output the names of ports that are attached to your
+  Raspberry Pi (see image below). Make a note of the ID (value of 'port.comName' in the code above) for the Arduino since we'll use it in the next step.
+  
+  ![Serial port list]({{site.baseurl}}/Resources/images/Nodejs/nodejs-serialportlist.png)
+
+### Deploy and start your Cylon app
+* Replace the code in app.js with the Cylon code shown below. Also replace the port value with the ID of your device. 
+  Be sure to double the backslashes in the string. e.g. `\\?\` should be `\\\\?\\`.
   
 <UL>
 {% highlight JavaScript %}
 var Cylon = require('cylon');
 
 Cylon.robot({
-    connections: {
-        arduino: { adaptor: 'firmata', port: 'USB\\VID_2341&PID_0043\\85436323631351311141' }
-    },
+  connections: {
+    arduino: { 
+	  adaptor: 'firmata', 
+	  port: '\\\\?\\USB#VID_2341&PID_8036&MI_00#6&35ca7e90&0&0000#{86e0d1e0-8089-11d0-9ce4-08003e301f73}' 
+	}
+  },
 
-    devices: {
-        servo: { driver: 'servo', pin: 3 }
-    },
+  devices: {
+    servo: { driver: 'servo', pin: 3 }
+  },
 
-    // The "work" will move the servo from angle 45 to 90 to 135.
-    work: function (my) {
-        var angle = 45;
-        my.servo.angle(angle);
-        every((1).second(), function () {
-            angle = angle + 45;
-            if (angle > 135) {
-                angle = 45
-            }
-            my.servo.angle(angle);
-        });
-    }
+  // The "work" will move the servo from angle 45 to 90 to 135.
+  work: function (my) {
+    var angle = 45;
+    my.servo.angle(angle);
+    every((1).second(), function () {
+      angle = angle + 45;
+      if (angle > 135) {
+        angle = 45
+      }
+      my.servo.angle(angle);
+    });
+  }
 }).start();
 {% endhighlight %}
 </UL>
 
-* Attach the servo to the the arduino board using pin 3 (you can also change the pin number in app.js). In the setup shown below, the signal wire is connected to pin 3 and the power source is the Raspberry Pi 2 or 3.
+* Attach the servo to the the arduino board using pin 3 (you can also change the pin number in app.js). In the setup shown below, 
+  the signal wire is connected to pin 3 and the power source is the Raspberry Pi.
 
-![Arduino Servo RPi2]({{site.baseurl}}/Resources/images/Nodejs/arduino-servo-rpi2.png)
+  ![Arduino Servo RPi2]({{site.baseurl}}/Resources/images/Nodejs/arduino-servo-rpi2.png)
 
-
-### Deploy the app to your Raspberry Pi 2 or 3
-* Go to the Project menu and select '&lt;Your project name&gt; Properties' (You could also right-click on the project node in solution explorer to access Properties). Enter the IP Address in the Remote Machine text box. Since you're building for Raspberry Pi 2 or 3, select `ARM` in the dropdown menu.
-
-* Now we're ready to deploy the app to the Raspberry Pi 2 or 3. Simply press F5 (or select Debug \| Start Debugging) to start debugging the app. This step will also start rotating the motor on the servo.
+* Press F5 (or select Debug \| Start Debugging) to deploy and start the app. This step will also start rotating the motor on the servo.
 
 
 ### GitHub

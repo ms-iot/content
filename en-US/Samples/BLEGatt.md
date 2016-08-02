@@ -60,4 +60,4 @@ Please find a list of supported Bluetooth dongles in the [Hardware Compatibility
 
 ### What's Next?
 
-[Using and Dissecting the Code]({{site.baseurl}}/{{page.lang}}/Samples/BLEGatt2.htm) --- Learn how to use the sample along with a walkthrough of the code.
+[Using and Dissecting the Code]({{site.baseurl}}/Samples/BLEGatt2.htm) --- Learn how to use the sample along with a walkthrough of the code.
