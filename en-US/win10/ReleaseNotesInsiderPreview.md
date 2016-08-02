@@ -6,7 +6,7 @@ lang: en-US
 ---
 
 # Release Notes for Windows 10 IoT Core
-Build Number 14376. July 2016
+Build Number 14393. August 2016
 
 &copy; 2016 Microsoft Corporation. All rights reserved
 
@@ -22,17 +22,30 @@ You can review linked terms by pasting the forward link into your browser window
 
 ## What's new in this build: 
 * Updated OS files including core OS bug fixes.
-* In headless mode, the OS should no longer display the boot logo after loading.
-* Devices should no longer report as virtual in the dashboard.
-* Updates to the RPi3 Serial driver to address stability issues with BT.
-
+* Issues with Windows Device Portal/WEBB not showing apps, processes and issues with Bluetooth pairing have been addressed.
+* Issues with speech recognition on the Raspberry Pi have been addressed.
+* Issues with the display on an MBM not displaying after a disconnect/reconnect event have been addressed.
+* An issue with passwords for default accounts resetting during updates when using the provided FFUs has been addressed.
 
 ## Known issues in this build:
-* Portions of the Windows Device Portal/WEBB are not functional including Apps, Processes and Bluetooth Pairing.
-* It is required to flash/update Minnow Board Max UEFI/Firmware to .92 or latest to avoid issues during boot.
-* Speech Recognition and Speech sample apps are failing in some cases when using the Raspberry Pi on IoT Core. 
+* The Raspberry Pi3 built-in Bluetooth driver currently only supports low bandwidth devices.
+* Pin.Read is failing when using GPIO on the MBM with the DMAP/Lightning Providers due to issues in the Lightning Nuget.
+* In some cases, the mouse pointer is not visible after deploying or debugging apps with Visual Studio.
+* When using the SoftAP clients will not be able to access content exposed by UAP apps. See Server Application with SoftAP below for details.
 
 ## Release Notes
+
+#### Server Applications with SoftAP  
+When using the SoftAP clients will not be able to access content exposed by UAP apps.
+To expose UAP applications via SoftAP the following changes must be made from the console on the device:
+
+reg add hklm\system\currentcontrolset\services\mpssvc\parameters /v IoTInboundLoopbackPolicy /t REG_DWORD /d 1 
+checknetisolation loopbackexempt -a -n=<AppID for SoftAP App> 
+checknetisolation loopbackexempt -a -n=<AppID for Additional App>  
+
+For example:  checknetisolation loopbackexempt -a -n=IoTOnboardingTask-uwp_1w720vyc4ccym 
+Reboot 
+
 
 #### Sensor Driver conflict in pre-built FFUs
 There is a Sensor Driver Conflict in the provided FFUs. The Remote Sensor Framework installs drivers for Compass, Magnetometer, Accelerometer and Gyro. The UWP APIs for accessing these from an application assume just 1 is installed. If you are developing a driver for a physically attached device, the remote driver on the Microsoft provided FFUs will conflict. 
