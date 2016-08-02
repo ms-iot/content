@@ -13,7 +13,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
       <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
       <li class="active">World Map of Makers</li>
     </ol>
-    <header class="page-title-header">
+    <header class="page-title-header remove-top-margin">
       <h1 class="page-title">World Map of Makers</h1>
       <div class="page-subtitle">Create a simple internet connected application to query the status of a web API and use that information to toggle an LED.</div>
     </header>
