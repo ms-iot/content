@@ -1,13 +1,14 @@
 ---
 layout: docs
-title: Using WinDbg to debug
+title: WinDbg
 description: Debug your Windows 10 IoT Core device using the powerful Windows debugger, WinDbg.
 keyword: debug, windbg, windows iot
 permalink: /en-US/Docs/Windbg.htm
 lang: en-US
 ---
 
-# Debugging Windows 10 IoT Core Devices Using WinDbg
+# WinDbg
+Debug your Windows 10 IoT Core device using the powerful Windows debugger, WinDbg.
 
 The following sections describe how to successfully connect with WinDbg to a Windows 10 IoT Core device for debugging purposes.  This includes a description of the necessary software settings on the device as well as the physical hardware connections.  
 

@@ -34,10 +34,10 @@
           },
           {
             "title":"Windows 10 IoT Core porting tool",
-            "link":"/Docs/tools/IoTAPIPortingTool.htm"
+            "link":"/Docs/IoTCorePortingTool.htm"
           },
           {
-            "title":"Event Tracing for Windows",
+            "title":"Event Tracing",
             "link":"/Docs/ETW.htm"
           }
         ]
@@ -46,7 +46,7 @@
         "parent":"Connecting to your device",
         "children":[
           {
-            "title":"On-Device command-line utilities",
+            "title":"On-device command-line utilities",
             "link":"/Docs/tools/CommandLineUtils.htm"  
           },
           {

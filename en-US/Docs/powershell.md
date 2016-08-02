@@ -1,27 +1,28 @@
 ---
 layout: docs
-title: PowerShell and IoT Core devices
-description: Allows Remote Administration and Configuration so that you can remotely configure and manage any Windows IoT Core device
+title: PowerShell
+description: Use powerShell to connect and configure a device running Windows 10 IoT Core
 keyword: windows iot, powershell, remote
 permalink: /en-US/Docs/PowerShell.htm
 lang: en-US
 ---
 
-# Using PowerShell to connect and configure a device running Windows 10 IoT Core
+# PowerShell
 
-## Remote administration and configuration
-You can remotely configure and manage any Windows 10 IoT Core device by using Windows PowerShell. PowerShell is a task-based command-line shell and scripting language, designed especially for system administration.
+Remotely configure and manage any Windows 10 IoT Core device by using Windows PowerShell.
+PowerShell is a task-based command-line shell and scripting language, designed especially for system administration.
 
 Make sure to follow these steps to correctly configure your device running Windows 10 IoT Core to work well with Visual Studio 2015.
 
-### Initiating a PowerShell session
+## Initiating a PowerShell session
+___
 1. To start a PowerShell session with your Windows 10 IoT Core device, you'll first need to create a trust relationship between your host PC and your device. After starting your Windows IoT Core device, an IP address will be shown on the screen attached to the device.
 
     ![DefaultApp on Windows 10 IoT Core]({{site.baseurl}}/Resources/images/DefaultApp.png)
 
-   You can find the same information on the Windows 10 IoT Core Dashboard utility.
+   You can find the same information on the Windows 10 IoT Core Dashboard.
 
-2. Open an administrator PowerShell console on your local PC. The easiest way to do this is to type **powershell** in the **Search the web and Windows** box near the Windows Start menu. Windows will find PowerShell on your PC.
+2. Open an administrator PowerShell console on your local PC. Type **powershell** in the **Search the web and Windows** box near the Windows Start menu. Windows will find PowerShell on your PC.
 
     ![Find PowerShell]({{site.baseurl}}/Resources/images/powershell/start-ps.png)
 
@@ -43,7 +44,7 @@ Make sure to follow these steps to correctly configure your device running Windo
 
 6. Enter `Y` to confirm the change.
 
-	**NOTE** If you want to connect multiple devices, you can use commas and quotation marks to separate each device.
+        {% include note.html text="If you want to connect multiple devices, you can use commas and quotation marks to separate each device." %}
         
         Set-Item WSMan:\localhost\Client\TrustedHosts -Value "<machine1-name or IP Address>,<machine2-name or IP Address>"
 	
@@ -53,7 +54,7 @@ Make sure to follow these steps to correctly configure your device running Windo
 
 8. In the credential dialog, enter the following default password: `p@ssw0rd`
     
-  	**NOTE** The connection process is not immediate and can take up to 30 seconds.
+        {% include note.html text="The connection process is not immediate and can take up to 30 seconds." %}
 
     If you successfully connected to the device, you should see the IP address of your device before the prompt.
 
@@ -73,7 +74,7 @@ Make sure to follow these steps to correctly configure your device running Windo
 	```
 
 ## Troubleshooting Visual Studio Remote Debugger
-
+___
 To be able to deploy applications from Visual Studio 2015, you will need to make sure that the Visual Studio Remote Debugger is running on your Windows IoT Core device. The remote debugger should open automatically when you start your computer. To double check, use the `tlist` command to list all the running processes from PowerShell. There should be two instances of msvsmon.exe running on the device.
 
 It is possible for the Visual Studio Remote Debugger to time out after long periods of inactivity. If Visual Studio cannot connect to your Windows IoT Core device, try restarting the device.

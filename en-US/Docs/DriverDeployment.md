@@ -1,13 +1,18 @@
 ---
 layout: docs
-title: Deploying a driver with Visual Studio
+title: Driver deployment
+description: Deploy a driver on Windows 10 IoT Core with Visual Studio 
+keyword: windows 10 IoT Core, driver deployment
 permalink: /en-US/Docs/DriverDeployment.htm
 lang: en-US
 ---
 
-# Deploying a driver with Visual Studio 
+# Driver deployment
 
-In this exercise, you will configure your Visual Studio driver project so that you can compile and deploy a driver for a specific platform during driver development phase.  Note that this procedure requires that your device reboot after the driver is deploy and as a result it may take a couple of minutes for the entire deployment to complete.
+Deploy a driver on Windows 10 IoT Core with Visual Studio. 
+
+Configure your Visual Studio driver project so that you can compile and deploy a driver for a specific platform during driver development phase. 
+{% include note.html text="this procedure requires that your device reboot after the driver is deploy and as a result it may take a couple of minutes for the entire deployment to complete." %}
 For this exercise you can use the [gpiokmdfdemo sample driver](https://github.com/ms-iot/samples/tree/develop/DriverSamples).
 
 ## Step 1 : Setup 
@@ -15,7 +20,7 @@ ___
 
 ### On the device
 
-* Make sure that your device has an IoTCore image installed by following the [GetStarted instructions]({{site.baseurl}}/{{page.lang}}/GetStarted.htm).
+* Make sure that your device has an IoTCore image installed by following the [Get Started instructions]({{site.baseurl}}/{{page.lang}}/GetStarted.htm).
 * Connect to your device via [Powershell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm).
 
 ### On the PC
@@ -23,7 +28,7 @@ ___
 * Make sure you have installed Visual Studio 2015 Update 2
 * Install the [Windows Driver Kit](https://msdn.microsoft.com/windows/hardware/dn913721(v=vs.8.5).aspx).  You will need to install the SDK and WDK.
 
-* Install the certificates so that the driver is signed correctly and can run on your device. From an elevated command prompt execute the commands listed below:
+* Install the certificates so that the driver is signed correctly and can run on your device. From an elevated command prompt, execute the commands listed below:
 
    ```
         cd c:\Program Files (x86)\Windows Kits\10\Tools\bin\i386
@@ -31,7 +36,7 @@ ___
         InstallOEMCerts.cmd
    ```		
 		
-* Apply fix to enable F5 deployment from VS. In the elevated command prompt, execute the following commands .  
+* Apply a fix to enable F5 deployment from VS. In the elevated command prompt, execute the following commands .  
 	1.	`cd %TEMP%` ( will change directory to `c:\users\<usernsme>\Appdata\Local\Temp`)
 	2.	`md “WdkTempFiles”` Manually create a “WdkTempFiles” directory 
 	This is a workaround for a bug in the tooling and requires to be done *only once* in the PC.
