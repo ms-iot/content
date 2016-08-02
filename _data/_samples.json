@@ -76,7 +76,7 @@
   "en-US": [
     {
       "title": "'Hello, world!'",
-      "description": "Create a 'Hello world' application that runs on devices running Windows 10 IoT Core",
+      "description": "Create and deploy your first Windows 10 IoT Core app",
       "link": [
         "samples/HelloWorld.htm",
         "samples/Python.htm",
@@ -104,7 +104,7 @@
     },
     {
       "title": "'Hello, blinky!'",
-      "description": "Create a UI-based app that toggles an LED on devices running Windows 10 IoT Core",
+      "description": "A 'Hello, world' sample to control an LED from a breadboard",
       "link": "samples/HelloBlinky.htm",
       "link-text": "UI Blinky",
       "lang": "C#/C++", 
@@ -162,7 +162,7 @@
     },
     {
       "title": "I2C accelerometer",
-      "description": "Create an app leveraging I2C on devices running Windows 10 IoT Core",
+      "description": "Connect an accelerometer to your device and read data from it",
       "link": "samples/I2CAccelerometer.htm",
       "link-text": "I2C Accelerometer",
       "lang": "C#",
@@ -175,7 +175,7 @@
     },
     {
       "title": "SPI accelerometer",
-      "description": "Create an app leveraging SPI on devices running Windows 10 IoT Core",
+      "description": "Connect an accelerometer to your device and read data from it",
       "link": "samples/SPIAccelerometer.htm",
       "link-text": "SPI Accelerometer",
       "lang": "C#",
@@ -188,7 +188,7 @@
     },
     {
       "title": "SPI display",
-      "description": "Create an app using SPI on devices running Windows 10 IoT Core",
+      "description": "Write lines of text to an LED display",
       "link": "samples/SPIDisplay.htm",
       "link-text": "SPI Display",
       "lang": "C#",
@@ -214,7 +214,7 @@
     },
     {
       "title": "I2C port expander",
-      "description": "Create an app that uses the Raspberry Pi 2 I2C bus to communicate with a port expander.",
+      "description": "Connect a port expander to read the status of a tactile switch and control an LED",
       "link": "samples/I2CPortExpander.htm",
       "link-text": "I2C Port Expander",
       "lang": "C#",
@@ -228,7 +228,7 @@
     },
     {
       "title": "Shift register",
-      "description": "Create an app that uses the Raspberry Pi 2 to control LEDs using a serial-in, parallel-out shift register.",
+      "description": "Connect an 8-bit serial-in, parallel-out shift register to your device to toggle eight LED's",
       "link": "samples/ShiftRegister.htm",
       "link-text": "Shift Register",
       "lang": "C#",
@@ -253,7 +253,7 @@
     },
     {
       "title": "Push button",
-      "description": "Create an app that uses the Raspberry Pi 2 to read the status of a Push Button and control an LED.",
+      "description": "Make an LED blink with the push of a button",
       "link": "samples/PushButton.htm",
       "link-text": "Push Button",
       "lang": "C#",
@@ -266,7 +266,7 @@
     },
     {
       "title": "Potentiometer sensor",
-      "description": "A analog sensor is connected to Raspberry Pi through ADC converter and digital output data is displayed through Monitor and LED.",
+      "description": "Read values from a rotary potentiometer and output data to an LED",
       "link": [
         "samples/Potentiometer.htm",
         "samples/arduino-wiring/Potentiometer.htm"
@@ -290,7 +290,7 @@
     },
     {
       "title": "Digital sign",
-      "description": "Showcases a digital sign app running on Windows 10 IoT Core",
+      "description": "Create a basic digital sign and learn how to work with multimedia",
       "link": "samples/DigitalSign.htm",
       "link-text": "Digital sign",
       "lang": "C#",
@@ -303,7 +303,7 @@
     },
     {
       "title": "Serial UART",
-      "description": "Create an app to read and write to UART interfaces on Windows IoT core",
+      "description": "Communicate between a desktop and an IoT device over a serial interface",
       "link": "samples/SerialUART.htm",
       "link-text": "Serial UART",
       "lang": "C#/C++",
@@ -317,7 +317,7 @@
     },
     {
       "title": "Webcam app",
-      "description": "Create an app to take photo, record video and audio using a USB Web Camera on Windows IoT core",
+      "description": "Create an app that initializes a web cam, takes pictures, and records video and audio.",
       "link": "samples/WebcamApp.htm",
       "link-text": "Webcam App",
       "lang": "C#",
@@ -330,8 +330,8 @@
     },
     {
       "title": "Cylon servo controller",
-      "description": "Control an Arduino with a Cylon Node.js app running on a Raspberry Pi 2 with Windows 10 IoT Core",
-      "link": "samples/NodejsCylon.htm",
+      "description": "Use Cylon to blink an LED on an Arduino from a Windows 10 IoT Core device",
+      "link": "samples/CylonServo.htm",
       "link-text": "Cylon",
       "lang": "Node.js",
       "ranking": 0,
@@ -345,7 +345,7 @@
     {
       "title": "Azure data uploader",
       "description": "Upload sensor data to Azure storage from a Node.js UWP app",
-      "link": "samples/nodejs-wu-azure.htm",
+      "link": "samples/AzureDataUploader.htm",
       "link-text": "Azure",
       "lang": "Node.js",
       "ranking": 0,
@@ -359,7 +359,7 @@
     {
       "title": "Cylon LED controller",
       "description": "Control a servo connected to an Arduino using Cylon in a Node.js UWP app",
-      "link": "samples/NodejsWUCylon.htm",
+      "link": "samples/CylonLED.htm",
       "link-text": "Cylon",
       "lang": "Node.js",
       "ranking": 0,
@@ -371,7 +371,7 @@
     {
       "title": "Johnny-Five servo controller",
       "description": "Control a servo connected to an Arduino using Johnny-Five in a Node.js UWP app",
-      "link": "samples/NodejsWUJ5.htm",
+      "link": "samples/J5ServoController.htm",
       "link-text": "Johnny-Five",
       "lang": "Node.js",
       "ranking": 0,
@@ -385,7 +385,7 @@
     },
     {
       "title": "Express Node.js app",
-      "description": "Create an Express Node.js app that runs on devices running Windows 10 IoT Core",
+      "description": "Create a new Express Node.js app",
       "link": "samples/NodejsWUExpress.htm",
       "link-text": "Express",
       "lang": "Node.js",
@@ -399,7 +399,7 @@
     },
     {
       "title": "Bluetooth low energy GATT",
-      "description": "Learn how to interact with Bluetooth Low Energy devices on Windows 10 IoT core.",
+      "description": "Learn how to work with Bluetooth Low Energy devices using the GATT profile and a TI CC2541 SensorTag",
       "link": "samples/BLEGatt.htm",
       "link-text": "Bluetooth GATT",
       "lang": "C#",
@@ -415,7 +415,7 @@
     },
     {
       "title": "IoT browser",
-      "description": "Learn how to create a simple web browser for Windows 10 IoT core.",
+      "description": "Create a simple web browser",
       "link": "samples/IoTBrowser.htm",
       "link-text": "IoT Browser",
       "lang": "C#",
@@ -429,7 +429,7 @@
     },
     {
       "title": "GPIO OneWire",
-      "description": "Create an app that uses GPIO to read from the DHT11, a temperature and humidity sensor that uses a single-wire protocol.",
+      "description": "Create an app that uses GPIO to read from the DHT11, a temperature and humidity sensor that uses a single-wire protocol",
       "link": "samples/GpioOneWire.htm",
       "link-text": "GPIO OneWire",
       "lang": "C++",
@@ -442,7 +442,7 @@
     },
     {
       "title": "OneNote cloud services",
-      "description": "Learn how to use http messages to GET and POST OneNote pages in Wiring.",
+      "description": "Learn how to use http messages to GET and POST OneNote pages in Wiring",
       "link": "samples/arduino-wiring/OneNote.htm",
       "link-text": "OneNote API",
       "lang": "Wiring",
@@ -455,7 +455,7 @@
     },
     {
       "title": "RGB pixel strip",
-      "description": "Learn how to use an RGB pixel strip in Wiring.",
+      "description": "Learn how to use an RGB pixel strip in Wiring",
       "link": "samples/arduino-wiring/RGBPixel.htm",
       "link-text": "RGB Pixel",
       "lang": "Wiring",
@@ -469,7 +469,7 @@
     },
     {
       "title": "LCD text display",
-      "description": "Learn how to use an LCD Screen in Wiring.",
+      "description": "Deploy and debug an Arduino Wiring sketch to control text on an LCD screen",
       "link": "samples/arduino-wiring/LCDTextDisplay.htm",
       "link-text": "LCD Screen",
       "lang": "Wiring",
@@ -481,7 +481,7 @@
     },
     {
       "title": "Stepper motor",
-      "description": "Learn how to use a Stepper Motor in Wiring.",
+      "description": "Deploy and debug an Arduino Wiring sketch to control a stepper motor",
       "link": "samples/arduino-wiring/StepperMotor.htm",
       "link-text": "Stepper Motor",
       "lang": "Wiring",
@@ -493,8 +493,8 @@
       ]
     },
     {
-      "title": "Weather station",
-      "description": "Learn how to create a Weather Station in Wiring.",
+      "title": "Arduino Wiring weather station",
+      "description": "Set up a weather station using Arduino Wiring.",
       "link": "samples/arduino-wiring/WeatherStation.htm",
       "link-text": "Weather Station",
       "lang": "Wiring",
@@ -509,7 +509,7 @@
       "title": "Lightning.Providers - Blinky background service",
       "description": "Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
       "link": [
-        "samples/HelloBlinkyLightning.htm",
+        "samples/HelloBlinkyBackgroundLightning.htm",
         "samples/NodejsWULightning.htm"
       ],
       "link-text": [
@@ -532,7 +532,7 @@
     {
       "title": "Lightning.Providers - Blinky",
       "description": "Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
-      "link": "samples/BlinkyUILightning.htm",
+      "link": "samples/HelloBlinkyLightning.htm",
       "link-text": "Blinky UI",
       "lang": "C#/C++",
       "ranking": 0,
@@ -576,7 +576,7 @@
     },
     {
       "title": "Arduino Wiring libraries",
-      "description": "Demonstrating how to build Arduino Wiring libraries that can be called from other languages like C# and Node.js",
+      "description": "Build Arduino Wiring libraries that can be called from other languages like C# and Node.js",
       "link": "samples/arduino-wiring/ArduinoWiringComponents.htm",
       "link-text": "Blinky UI",
       "lang": "C#/C++",
@@ -592,7 +592,7 @@
     },
     {
       "title": "DC motor controller",
-      "description": "Learn to control DC motors using a Windows IoT Core enabled device!",
+      "description": "Control DC motors using a Windows IoT Core enabled device!",
       "link": "samples/arduino-wiring/DCMotor.htm",
       "link-text": "DC Motors",
       "lang": "Wiring",
@@ -628,7 +628,7 @@
     },
     {
       "title": "External process launcher",
-      "description": "Learn how to use <code>Windows.System.ProcessLauncher</code> API to launch external executable programs from your UWP app",
+      "description": "Use <code>Windows.System.ProcessLauncher</code> API to launch external executable programs from your UWP app",
       "link": "samples/ExternalProcessLauncher.htm",
       "link-text": "ProcessLauncher API Sample",
       "lang": "C#",
@@ -641,7 +641,7 @@
     },
     {
       "title": "Wi-Fi connector",
-      "description": "Learn how to discover and connect to a WiFi network from a UWP app using <code>Windows.Devices.WiFi.WiFiAdapter</code> API",
+      "description": "Discover and connect to a WiFi network from a UWP app using <code>Windows.Devices.WiFi.WiFiAdapter</code> API",
       "link": "samples/WiFiConnector.htm",
       "link-text": "WiFi Connect Sample",
       "lang": "C#",
@@ -654,7 +654,7 @@
     },
     {
       "title": "App installer",
-      "description": "Learn how to install and deploy an app on Windows IoT Core",
+      "description": "Install and deploy an app on Windows IoT Core",
       "link": "samples/AppInstaller.htm",
       "link-text": "Learn More",
       "lang": "N/A",
@@ -666,7 +666,7 @@
     },
     {
       "title": "Device I/O controller",
-      "description": "Learn how to use <code>CreateFile()</code> and <code>DeviceIoControl()</code> to access custom devices from UWP.",
+      "description": "Use <code>CreateFile()</code> and <code>DeviceIoControl()</code> to access custom devices from UWP.",
       "link": "samples/DeviceIoController.htm",
       "link-text": "Learn More",
       "lang": "N/A",
@@ -679,7 +679,7 @@
     },
     {
       "title": "HID Injection driver",
-      "description": "Learn how to build a driver for IoT Core and use HID Injection to inject touch, keyboard or mouse events.",
+      "description": "Build a driver for IoT Core and use HID Injection to inject touch, keyboard or mouse events.",
       "link": "samples/HidInjection.htm",
       "link-text": "Learn More",
       "lang": "N/A",

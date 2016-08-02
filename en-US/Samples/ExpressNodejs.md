@@ -1,11 +1,14 @@
 ---
 layout: sample
-title: NodejsWU
-permalink: /en-US/Samples/NodejsWUExpress.htm
+title: Express Node.js app
+description: Create a new Express Node.js app
+keywords: Windows 10 IoT Core, express, nodejs
+permalink: /en-US/Samples/ExpressNodejs.htm
+samplelink: N/A
 lang: en-US
 ---
 
-# Express Node.js (Windows Universal) Sample
+# Express Node.js app
 
 
 

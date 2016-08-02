@@ -1,51 +1,53 @@
 ---
 layout: sample
-title: Blinky Headless using Lightning Providers sample
+title: Hello, blinky! using Lightning.Providers
+description: communicate with GPIO using the Micorosot.IoT.Lightning.Providers.I2cProvider
+keywords: Windows 10 IoT Core, lightning, gpio
 permalink: /en-US/Samples/HelloBlinkyLightning.htm
+samplelink: N/A
 lang: en-US
 ---
 
-# "Hello, blinky!" background service with the lightning provider
+# 'Hello, blinky!' using Lightning.Providers
 
+This sample demonstrates how to communicate with GPIO using the Micorosot.IoT.Lightning.Providers.I2cProvider
 
-
-This sample demonstrates how to communicate with GPIO using the Micorosot.IoT.Providers.Lightning.I2cProvider
-
-It's based on the [BlinkyHeadless sample]({{site.baseurl}}/{{page.lang}}/Samples/BlinkyHeadless.htm). And shares the same setup steps as well as most of the code. The only difference is setting the Lightning provider as the default controllers provider.
+It's based on the [Blinky UI sample]({{site.baseurl}}/{{page.lang}}/Samples/Blinky.htm) and shares the same setup steps. The main difference is setting the Lightning provider as the default controllers provider.
 
 ### Using Lightning Provider
 
-The original code of the Blinky Headless sample used the default GPIO provider for obtaining the GPIO controller:
+The original code of the Blinky sample used the default GPIO provider for obtaining the GPIO controller:
 
 {% highlight C# %}
 
-// Original Blinky Headless sample code
+// Original Blinky UI sample code
 
 using Windows.Devices.Gpio;
 
-private async void InitGPIO()
+private void InitGPIO()
 {
     var gpio = GpioController.GetDefault();
 
+    // Show an error if there is no GPIO controller
     if (gpio == null)
     {
         pin = null;
+        GpioStatus.Text = "There is no GPIO controller on this device.";
         return;
     }
 
     pin = gpio.OpenPin(LED_PIN);
-
-    if (pin == null)
-    {
-        return;
-    }
-
-    pin.Write(GpioPinValue.High);
+    pinValue = GpioPinValue.High;
+    pin.Write(pinValue);
     pin.SetDriveMode(GpioPinDriveMode.Output);
+
+    GpioStatus.Text = "GPIO pin initialized correctly.";
+
 }
 {% endhighlight %}
 
-To enable the use of the Lightning provider, the GPIO controller initialization code needs to be modified to set the Lightning provider as the default provider.
+
+To enable the use of the Lightning provider, the GPIO controller initialization code needs to be modified to set the Lightning provider as the default provider.<br/>
 In the initialization code below, if the Lightning driver is enabled on the target device, the Lightning provider will be used. Otherwise, the app falls back to using the default provider.
 
 {% highlight C# %}
@@ -62,24 +64,13 @@ private async void InitGPIO()
 
     // Remaining initialization code works the same regardless of the current default provider
 
-    var gpio = GpioController.GetDefault();
-
-    if (gpio == null)
-    {
-        pin = null;
-        return;
-    }
-
-    pin = gpio.OpenPin(LED_PIN);
-
-    if (pin == null)
-    {
-        return;
-    }
-
-    pin.SetDriveMode(GpioPinDriveMode.Output);
-    pin.Write(GpioPinValue.High);
+        gpioController = await GpioController.GetDefaultAsync(); /* Get the default GPIO controller on the system */
+        if (gpioController == null)
+        {
+            // ...
+        }
 }
+
 {% endhighlight %}
 
 
@@ -89,14 +80,14 @@ private async void InitGPIO()
 
 1. Ensure the correct version of the Windows SDK is installed on your development machine. The required Windows SDK can be installed from [here](https://dev.windows.com/en-us/downloads/windows-10-developer-preview).
 
-1. Clone the source for the Blinky Background (Headless) sample for Lightning from [Github](https://github.com/ms-iot/BusProviders/tree/develop/Microsoft.IoT.Lightning.Providers) to a local folder.
+1. Clone the source for the Blinky sample for Lightning from [Github](https://github.com/ms-iot/BusProviders/tree/develop/Microsoft.IoT.Lightning.Providers) to a local folder.
 
-1. To setup the LED connectons, refer to the [original BlinkyHeadless sample]({{site.baseurl}}/{{page.lang}}/Samples/BlinkyHeadless.htm).
+1. To setup the LED connectons, refer to the [original Blinky sample]({{site.baseurl}}/{{page.lang}}/Samples/Blinky.htm).
 
 1. Load the solution in Visual Studio.
 
 1. Build the app.
 
-1. Deploy and run the app on your device.<br/>
-   You can use the [Deploying an App with Visual Studio]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm) for guidance.
+1. Deploy and run the app on your device.  You can use the [Deploying an App with Visual Studio]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm) for guidance.
 
+![Blinky Output]({{site.baseurl}}/Resources/images/Lightning/BlinkyUI.png)

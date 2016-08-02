@@ -20,7 +20,7 @@ Windows 10 IoT Core Dashboard is the best way to download, set up and connect yo
 ___
 The IoT Dashboard makes it easy to set up a new device. For detailed instructions on how to get started, see the [Get Started]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) page.
 
-![IoTDashboard Setup Page]({{site.baseurl}}/Resources/images/IoTDashboard/IoTDashboard_SetupPage.PNG)
+{% include imageborder.html alt="IoT Dashboard Setup Page" link="/Resources/images/IoTDashboard/IoTDashboard_SetupPage.PNG" %}
 
 ### SD card 
 The type, make and model of the SD card greatly affects both the performance and the quality of IoT Core. 
@@ -58,7 +58,7 @@ After your device is connected to the internet, the IoT Dashboard will automatic
 To find your device, go to **My Devices**. If your device is not listed, try rebooting the device. Also make sure that if there are more than one devices on the network, they each have a unique name.
 
 ### Connect to your device
-Right click and select **Open in Device Portal**. This will launch the [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/Docs/Tools/DevicePortal.htm) page.) and is the best way to interact and manage your device.
+Right click and select **Open in Device Portal**. This will launch the [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/Docs/Tools/DevicePortal.htm) page and is the best way to interact and manage your device.
 
 ![IoTDashboard View Devices]({{site.baseurl}}/Resources/images/IoTDashboard/IoTDashboard_RightClickMenu.PNG)
 
@@ -73,7 +73,7 @@ IoT Dashboard lets you provision IoT Core devices with Azure IoT Hub. You can re
 ## Quick Run Samples
 ___
 
-IoT Dashboard has some quick-run samples that you can try on your board. 
+Quick run samples do not require and code compilation, Visual studio installation or SDK download. They are great for quickly checking out what IoT Core can do.
 
 ### Network 3D Printer
 Use the Network 3D Printer sample to connect your 3D Printer to your board can make it discoverable over your home network. See the  [3D printer server sample]({{site.baseurl}}/{{page.lang}}/win10/samples/3DPrintServer.htm) for more details. 

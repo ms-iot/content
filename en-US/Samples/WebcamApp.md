@@ -1,7 +1,7 @@
 ---
 layout: sample  
 title: Basic webcam app  
-description: We’ll create a simple app that initializes a web cam, takes pictures, and records video and audio.
+description: Create an app that initializes a web cam, takes pictures, and records video and audio.
 keyword: Windows 10 IoT Core, wiring, arduino
 permalink: /en-US/Samples/WebcamApp.htm  
 samplelink: https://github.com/ms-iot/samples/tree/develop/WebCamSample/CS

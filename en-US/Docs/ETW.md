@@ -1,13 +1,13 @@
 ---
 layout: docs
-title: Using Event Tracing for Windows
+title: Event Tracing for Windows 10 IoT Core
 description: Using Event Tracing for Windows (ETW) on a Windows 10 IoT Core device
 keyword: ETW, Windows 10 IoT Core, Event Tracing for Windows
 permalink: /en-US/Docs/ETW.htm
 lang: en-US
 ---
 
-# Using Event Tracing for Windows (ETW) on a Windows 10 IoT Core device
+# Event Tracing for Windows 10 IoT Core
 
 Event Tracing for Windows (ETW) provides developers the ability to start and stop event tracing sessions, instrument an application to provide trace events, and consume trace events.
 ETW on Windows IoT Core devices supports both manifest-based and classic events, and is no different than other Windows 10 devices. 

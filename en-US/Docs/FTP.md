@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Using FTP
+title: File Transfer Protocol
 description: Using FTP to transfer files to and from your Windows 10 IoT Core device
 keyword: FTP, windows iot, remote
 permalink: /en-US/Docs/FTP.htm
@@ -8,7 +8,8 @@ lang: en-US
 ---
 
 
-# Using FTP to transfer files to and from your Windows 10 IoT Core device
+# File Transfer Protocol
+The File Transfer Protol (FTP) allows you to transfer files to and from your Windows 10 IoT Core device
 
 ## Starting the FTP server on your device
 ___

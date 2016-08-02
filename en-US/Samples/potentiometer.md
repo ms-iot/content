@@ -1,6 +1,6 @@
 ---
 layout: sample
-title: Potentiometer Sensor
+title: Potentiometer sensor
 keyword: Windows 10 IoT Core, beginner, breadboard, potentiometer, sensor
 description: Connect a rotary potentiometer and LED to your IoT Core device
 permalink: /en-US/Samples/Potentiometer.htm
@@ -8,7 +8,7 @@ samplelink: https://github.com/ms-iot/samples/tree/develop/PotentiometerSensor/C
 lang: en-US
 ---
 
-# Potentiometer Sensor
+# Potentiometer sensor
 
 
 This sample shows how to connect a rotary potentiometer and LED to a Raspberry Pi 2 or 3 or a DragonBoard 410c. We use a SPI-based ADC (Analog to Digital Converter) to read values from the potentiometer 
