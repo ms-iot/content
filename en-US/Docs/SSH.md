@@ -1,13 +1,14 @@
 ---
 layout: docs
-title: Using SSH to connect and configure a Windows 10 IoT Core device.
-description: Allows Remote Administration and Configuration of your Windows IoT Core device over SSH
+title: SSH
+description: Remotely administer and configure your Windows IoT Core device over SSH
 keyword: SSH, windows iot, remote, putty
 permalink: /en-US/Docs/SSH.htm
 lang: en-US
 ---
 
-# Using SSH to connect and configure a Windows 10 IoT Core device
+# SSH
+Secure Shell (SSH) allows you to remotely administer and configure your Windows IoT Core device
 
 ### Download a SSH client
 In order to connect to your device using SSH, you'll first need to download a SSH client, such as [PuTTY](http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe).

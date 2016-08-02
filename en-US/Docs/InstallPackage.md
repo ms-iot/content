@@ -10,15 +10,15 @@ lang: en-US
 # Create and install a package
 [Packages](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/iot/iot-core-manufacturing-guide#Packages) are the logical building blocks of IoT Core. From device drivers to system files, every component must be contained in a package. This is the smallest servicable unit on the device.
 
-## Step 1: Install required tools
----
+## Step 1: Get set up
+___
 
-For package creation you will need to install the following tools
+### Install the tools
 
 1. [Windows Assessment and Deployment Kit(Windows ADK)](http://go.microsoft.com/fwlink/?LinkId=526803)
 2. [IoT Core ADK Add-Ons](https://github.com/ms-iot/iot-adk-addonkit/)
 
-### Setup your environment
+### Set up your environment
 
 * Edit `\IoT-ADK-AddonKit\Tools\setOEM.cmd` to set the OEM_NAME
 * Launch `IoTCoreShell.cmd` ( this one launches in the elevated prompt )
@@ -27,13 +27,14 @@ For package creation you will need to install the following tools
 
 To create your own image (FFU), [get the tools needed to customize Windows IoT Core](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/iot/set-up-your-pc-to-customize-iot-core)
 
-## Step 2: Create new package
----
-1. Create a **package definition xml file** (.pkg.xml file), and specify the files and reg keys you want to add. Learn more at [Specifying components in a package](https://msdn.microsoft.com/en-us/library/dn789218) and [Elements and Attributes of a package](https://msdn.microsoft.com/en-us/library/dn756796)
+## Step 2: Create a new package
+___
+1. Create a **package definition xml file** (.pkg.xml file), and specify the files and reg keys you want to add. 
+      Learn more at [Specifying components in a package](https://msdn.microsoft.com/en-us/library/dn789218) and [Elements and Attributes of a package](https://msdn.microsoft.com/en-us/library/dn756796)
 
 2. Build the package: `buildpkg.cmd filename.pkg.xml`. The .cab file will be created in the build directory `\IoT-ADK-AddonKit\Build\<arch>\pkgs`.
 
-### Creating a package with files, reg keys
+### Create a package with files and reg keys
 Below is an example for specifying files and reg keys.
  
 {% highlight XML %}
@@ -62,9 +63,11 @@ Below is an example for specifying files and reg keys.
 </Package>
 {% endhighlight %}
 
-### Creating Appx package
+### Create an Appx package
 
-Use [`appx2pkg.cmd` tool](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/appx2pkg.cmd) to generate the .pkg.xml file for a given appx file. This tool expects the appx dependencies in the sub directory named "dependencies" in the folder containing the appx file. If you require the appx to be installed on the boot, you should also include OEMCustomisation.cmd file to invoke the AppInstall command as shown in [Appx Installation sample]({{site.baseurl}}/{{page.lang}}/Samples/AppInstall.htm).
+Use [appx2pkg.cmd tool](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/appx2pkg.cmd) to generate the .pkg.xml file for a given appx file. 
+
+This tool expects the appx dependencies in the sub directory named "dependencies" in the folder containing the appx file. If you require the appx to be installed on the boot, you should also include OEMCustomisation.cmd file to invoke the AppInstall command as shown in [Appx Installation sample]({{site.baseurl}}/{{page.lang}}/Samples/AppInstall.htm).
 
 See also
 
@@ -72,9 +75,9 @@ See also
 * [Lab 1b: Add an app to your image](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/iot/deploy-your-app-with-a-standard-board)
 
 
-### Creating Driver package
+### Create a driver package
 
-The Driver package contains the references(InfSource)to the Inf file for the driver and also lists all the files referenced in the Inf file. You can author the driver .pkg.xml file manually or use [`inf2pkg.cmd` tool](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/inf2pkg.cmd) that generates package xml based on the input inf file.
+The driver package contains the references (InfSource) to the Inf file for the driver and also lists all the files referenced in the Inf file. You can author the driver .pkg.xml file manually or use [inf2pkg.cmd tool](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/inf2pkg.cmd) that generates package xml based on the input inf file.
 
 [`inf2cab.cmd` tool](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/inf2cab.cmd) creates the package xml file and also builds the cab file directly by invoking `buildpkg.cmd` internally.
 

@@ -1,13 +1,14 @@
 ---
 layout: sample
-title: NodejsWUJ5
-permalink: /en-US/Samples/NodejsWUJ5.htm
+title: Johnny-Five servo controller
+description: Upload sensor data to Azure storage from a Node.js UWP app
+keywords: Windows 10 IoT Core, johnny-five, node.js
+permalink: /en-US/Samples/J5ServoController.htm
+samplelink: N/A
 lang: en-US
 ---
 
-# Johnny-Five Node.js (Universal Windows) Sample
-
-
+# Johnny-Five servo controller
 
 In this sample, you will use [Johnny-Five](https://www.npmjs.com/package/johnny-five) running on a Raspberry Pi 2 or 3 to control a servo connected to an Arduino (with [Firmata](https://www.npmjs.com/package/firmata) installed).
 
