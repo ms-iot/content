@@ -13,7 +13,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
       <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
       <li class="active">Bright or Not?</li>
     </ol>
-    <header class="page-title-header">
+    <header class="page-title-header remove-top-margin">
       <h1 class="page-title">Bright or Not?</h1>
     </header>
   </div>

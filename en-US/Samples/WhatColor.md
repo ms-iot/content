@@ -14,7 +14,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
       <li><a href="{{site.baseurl}}/{{page.lang}}/Docs/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
       <li class="active">What Color Is It?</li>
     </ol>
-    <header class="page-title-header">
+    <header class="page-title-header remove-top-margin">
       <h1 class="page-title">What color is it?</h1>
       <div class="page-subtitle">Learn how to use GPIO as input, how to talk to an I2C sensor, and get a chance to try the useful text to speech features of Windows 10 IoT Core.</div>
     </header>
