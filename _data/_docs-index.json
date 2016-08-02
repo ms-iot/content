@@ -29,16 +29,8 @@
             "link":"/Docs/DevicePortal.htm"
           },
           {
-            "title":"PowerShell",
-            "link":"/Docs/PowerShell.htm"
-          },
-          {
             "title":"Windows 10 IoT Core porting tool",
             "link":"/Docs/IoTCorePortingTool.htm"
-          },
-          {
-            "title":"Event Tracing",
-            "link":"/Docs/ETW.htm"
           }
         ]
       },
@@ -46,12 +38,8 @@
         "parent":"Connecting to your device",
         "children":[
           {
-            "title":"On-device command-line utilities",
-            "link":"/Docs/tools/CommandLineUtils.htm"  
-          },
-          {
-            "title":"Windows file sharing",
-            "link":"/Docs/WindowsFileSharing.htm"
+            "title":"PowerShell",
+            "link":"/Docs/PowerShell.htm"
           },
           {
             "title":"FTP",
@@ -61,18 +49,11 @@
             "title":"SSH",
             "link":"/Docs/SSH.htm"
           },
+  
           {
-            "title":"WinDbg",
-            "link":"/Docs/Windbg.htm"
+            "title":"Windows file sharing",
+            "link":"/Docs/WindowsFileSharing.htm"
           },
-          {
-            "title":"Installing packages",
-            "link":"/Docs/InstallPackage.htm"
-          },
-          {
-            "title":"Driver deployment",
-            "link":"/Docs/DriverDeployment.htm"
-          },		  
           {
             "title":"Internet connection sharing",
             "link":"/Docs/InternetConnectionSharing.htm"
@@ -80,6 +61,10 @@
           {
             "title": "Remote display",
             "link":"/Docs/RemoteDisplay.htm"
+          },
+          {
+            "title":"On-device command-line utilities",
+            "link":"/Docs/CommandLineUtils.htm"  
           }
         ]
       },
@@ -87,14 +72,14 @@
         "parent":"Working with hardware",
         "children":[
           {
-            "title":"Ping mappings - Raspberry Pi 2 & 3 ",
+            "title":"Pin mappings - Raspberry Pi 2 & 3 ",
             "link":"/Docs/PinMappingsRPi.htm"
           },
           {
-            "title":"Ping mappings - Minnowboard Max",
+            "title":"Pin mappings - Minnowboard Max",
             "link":"/Docs/PinMappingsMBM.htm"
           },{
-            "title":"Ping mappings - Dragonboard",
+            "title":"Pin mappings - Dragonboard",
             "link":"/Docs/PinMappingsDb.htm"
           },        
           {
@@ -123,20 +108,28 @@
             "link": "/Docs/BuildingAppsForIoTCore.htm"
           },
           {
-            "title":"Unavailable Universal APIs",
-            "link":"/Docs/UnavailableApis.htm"
-          },
-          {
             "title":"App deployment",
             "link":"/Docs/AppDeployment.htm"
           },
           {
-            "title":"Setup default app",
+            "title":"Setup a default app",
             "link":"/Docs/SetupDefaultApp.htm"
+          },
+          {
+            "title":"WinDbg",
+            "link":"/Docs/Windbg.htm"
+          },
+          {
+            "title":"Event Tracing",
+            "link":"/Docs/ETW.htm"
           },
           {
             "title":"Embedded mode",
             "link":"/Docs/EmbeddedMode.htm"
+          },
+          {
+            "title":"Unavailable Universal APIs",
+            "link":"/Docs/UnavailableApis.htm"
           },
           {
             "title": "Arduino and Windows 10",
@@ -169,16 +162,16 @@
         "parent":"Security",
         "children":[
           {
-            "title": "Enabling Secure Boot and BitLocker",
-            "link":"/Docs/SB_BL.htm"
-          },
-          {
-            "title":"Securing IoT devices with TPMs",
-            "link":"/Docs/TPM.htm"
-          },
-          {
             "title":"Building secure IoT devices",
             "link":"/Docs/BuildingSecureDevices.htm"
+          },
+          {
+            "title": "Secure Boot and BitLocker",
+            "link":"/Docs/SecureBootAndBitLocker.htm"
+          },
+          {
+            "title":"TPM",
+            "link":"/Docs/TPM.htm"
           },
           {
             "title":"Unified write filter",
@@ -190,25 +183,27 @@
         "parent":"Connectivity",
         "children":[
           {
-            "title":"AllJoyn connectivity",
+            "title":"AllJoyn",
             "link":"/Docs/AllJoyn.htm"
           },
           {
-            "title":"WiFi connectivity",
-            "link":"/Docs/SetupWiFi.htm"
-          },
-          {
-            "title":"Bluetooth support",
+            "title":"Bluetooth",
             "link":"/Docs/Bluetooth.htm"
           },
           {
-            "title":"mDNS discovery",
+            "title":"mDNS",
             "link":"/Docs/ComingSoon.htm"
           },
           {
             "title":"Network packet capture",
             "link":"/Docs/NetworkPacketCapture.htm"
+          },
+          {
+            "title":"Wi-Fi",
+            "link":"/Docs/SetupWiFi.htm"
           }
+
+         
         ]
       },
       {
@@ -225,7 +220,15 @@
           {
             "title":"Installing and Servicing IoT apps",
             "link":"/Docs/Store.htm"
-          }
+          },
+          {
+            "title":"Installing packages",
+            "link":"/Docs/InstallPackage.htm"
+          },
+          {
+            "title":"Driver deployment",
+            "link":"/Docs/DriverDeployment.htm"
+          }	
         ]
       }
    ]
