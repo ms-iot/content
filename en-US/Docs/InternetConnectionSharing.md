@@ -12,7 +12,7 @@ This document describes how internet connection sharing (ICS) can be enabled on 
 When using one of the [Windows 10 IoT Core Release Image](https://developer.microsoft.com/en-us/windows/iot/downloads){:target="_blank"} ICS can also be configured using the devcie portal.
 
 ## Configuring ICS using the devcie portal
-Windows Device Portal (WDP) provides all settings needed to enable ICS. In WDP navigate to the **IoT Onboarding** tab to find these settings. The devcie needs at least one Wi-Fi adpater that supprots a software access point (SoftAP) configuration and one adapter that provides that Internet connation that will be shared.
+Windows Device Portal (WDP) provides all settings needed to enable ICS. In WDP navigate to the **IoT Onboarding** tab to find these settings. The device needs at least one Wi-Fi adpater that supprots a software access point (SoftAP) configuration and one adapter that provides that Internet connation that will be shared.
 
 1. **Start** and **Stop** shared access
 2. **Adapter configuration** to select the network adapters used in the ICS setup.

@@ -87,19 +87,19 @@
         "parent":"Working with hardware",
         "children":[
           {
-            "title":"Raspberry Pi 2 & 3 pin mappings",
+            "title":"Ping mappings - Raspberry Pi 2 & 3 ",
             "link":"/Docs/PinMappingsRPi.htm"
           },
           {
-            "title":"Minnowboard Max pin mappings",
+            "title":"Ping mappings - Minnowboard Max",
             "link":"/Docs/PinMappingsMBM.htm"
           },{
-            "title":"Dragonboard pin mappings",
+            "title":"Ping mappings -Dragonboard",
             "link":"/Docs/PinMappingsDb.htm"
           },        
           {
             "title":"Hardware compatibility list",
-            "link":"/Docs/SupportedInterfaces.htm"
+            "link":"/Docs/HardwareCompatList.htm"
           },
           {
             "title":"Headed and headless devices",

@@ -15,7 +15,6 @@ PowerShell is a task-based command-line shell and scripting language, designed e
 Make sure to follow these steps to correctly configure your device running Windows 10 IoT Core to work well with Visual Studio 2015.
 
 ## Initiating a PowerShell session
-___
 1. To start a PowerShell session with your Windows 10 IoT Core device, you'll first need to create a trust relationship between your host PC and your device. After starting your Windows IoT Core device, an IP address will be shown on the screen attached to the device.
 
     ![DefaultApp on Windows 10 IoT Core]({{site.baseurl}}/Resources/images/DefaultApp.png)
