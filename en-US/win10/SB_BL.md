@@ -32,7 +32,7 @@ Notes:
  * connect Dragonboard's USB OTG Connector to your PC
  * press S2 [power] and S4 [vol-] on your DragonBoard
  * connect Power to your DragonBoard
- * after ~ 10 sec you can release S2 and S4 (or as soon as the next step had entered
+ * after ~ 10 sec you can release S2 and S4 (or as soon as the next step has begun)
  * Windows should now have recognized an additional mass storage device and mounted a new drive
 
 [1]: {{site.baseurl}}/{{page.lang}}/GetStarted.htm "Windows 10 IoT Core supported platforms"
