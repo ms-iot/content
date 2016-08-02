@@ -60,7 +60,7 @@ MDM enrollment of an IoT Core device is accomplished using a Provisioning packag
 ![WICD-Workplace-Enrollments-UPN-Details-Filled-OnPremise]  
 12. At the top of WICD window click **Export > Provisioning package**
 13. Provide a name and version for your package and click **Next**.   
->_Note: Be sure to increment the version number to ensure an updated package is executed_
+_Note: Be sure to increment the version number to ensure an updated package is executed_
 14. Click **Next** on the **security details page**
 15. Choose the location where the package is to be exported on the local machine and click **Next**
 16. Click **Build** and then **Finish** to exit the wizard
