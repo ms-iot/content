@@ -15,7 +15,7 @@ connects to Azure IoT Hub.
 
 ## Step 1: Prepare your device
 
-You can find instructions on how to prepare your device on the [Get Started Page]({{site.baseurl}}/GetStarted.htm) 
+You can find instructions on how to prepare your device on the [Get Started Page]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) 
 Make sure you [provision the TPM of your device](ConnectDeviceToCloud.htm)
 
 ## Step 2: Install Visual Studio 2015 and tools
