@@ -27,7 +27,7 @@ can install any edition of Visual Studio, including the free Community edition.
 Make sure to select the **Universal Windows App Development Tools**, the
 component required for writing apps Windows 10:
 
-![Universal Windows App Development Tools]({{site.baseurl}}/Resources/images/cloud/install_tools_for_windows10.png")
+![Universal Windows App Development Tools]({{site.baseurl}}/Resources/images/cloud/install_tools_for_windows10.png)
 
 ## Step 3: Install the Connected Srvices for Azure IoT Hub
 
