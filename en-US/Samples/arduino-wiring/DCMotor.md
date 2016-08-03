@@ -157,4 +157,4 @@ Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/Docs/
 
 ---
 
-[&laquo; Return to Samples]({{site.baseurl}}/{{page.lang}}/Docs/StartCoding.htm){:role="button"}{:class="btn btn-default"}
+[&laquo; Return to Samples]({{site.baseurl}}/{{page.lang}}/Samples.htm){:role="button"}{:class="btn btn-default"}
