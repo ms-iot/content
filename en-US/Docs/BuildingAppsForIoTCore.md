@@ -94,10 +94,10 @@ C# and VB are both supported as UWP apps and have access to the portion of the .
 
 Samples:
 
-* [C# Blinky Headless with Full Documentation](https://developer.microsoft.com/en-us/windows/iot/win10/samples/blinkyheadless)
+* [C# Blinky Headless with Full Documentation](https://developer.microsoft.com/en-us/windows/iot/samples/blinkyheadless)
 * [C# Blinky Headless Code Only](https://github.com/ms-iot/samples/tree/develop/BlinkyHeadless/CS)
 * [VB Blinky Headless Code Only](https://github.com/ms-iot/samples/tree/develop/BlinkyHeadless/VB)
-* [C# Blinky UI App]({{site.baseurl}}/samples/HelloBlinky.htm)
+* [C# Blinky UI App]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky.htm)
     
 
 ### Javascript
@@ -120,16 +120,16 @@ Samples:
 
 * [Blinky Headless](https://github.com/ms-iot/samples/tree/develop/BlinkyHeadless/CPP)
 * [Blinky Headed](https://github.com/ms-iot/samples/tree/develop/Blinky/Cpp)
-* [Console App]({{site.baseurl}}/samples/MemoryStatus.htm)
+* [Console App]({{site.baseurl}}/{{page.lang}}/Samples/MemoryStatus.htm)
 
 
 ### Arduino Wiring
 With Arduino Wiring support you can build apps in Arduino Wiring for many popular components and peripherals in the IoT ecosystem. 
 
-Our [Arduino Wiring Project Guide]({{site.baseurl}}/Docs/ArduinoWiringProjectGuide) provides full instructions on how to get set up to build these apps. The samples copied and linked below will help you get started building your own.  You can even [build](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryBlinky) WinRT components in Arduino that can then be used from other languages. This is especially helpful for peripherals that have rich Arduino libraries like [LCD character displays](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryLcdDisplay).
+Our [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide) provides full instructions on how to get set up to build these apps. The samples copied and linked below will help you get started building your own.  You can even [build](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryBlinky) WinRT components in Arduino that can then be used from other languages. This is especially helpful for peripherals that have rich Arduino libraries like [LCD character displays](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryLcdDisplay).
 
 *Blinky Sample Code*
-The full [sample code and docs]({{site.baseurl}}/samples/arduino-wiring/HelloBlinkyWiring.htm) are available in our samples page and you can find the full code below. 
+The full [sample code and docs]({{site.baseurl}}/{{page.lang}}/Samples/arduino-wiring/HelloBlinkyWiring.htm) are available in our samples page and you can find the full code below. 
 
 {% highlight C++ %}
 void setup()
@@ -183,14 +183,14 @@ function flipLed(){
 
 *Additional Helpful Samples*
 * [Weather Station Web Server](https://github.com/ms-iot/samples/tree/develop/WeatherStation/Node.js)
-* [Johnny-Five App]({{site.baseurl}}/samples/J5ServoController.htm)
-* [Cylon App](({{site.baseurl}}/samples/CylonLED.htm)
-* [Express App]({{site.baseurl}}/samples/ExpressNodejs.htm)
+* [Johnny-Five App]({{site.baseurl}}/{{page.lang}}/Samples/J5ServoController.htm)
+* [Cylon App](({{site.baseurl}}/{{page.lang}}/Samples/CylonLED.htm)
+* [Express App]({{site.baseurl}}/{{page.lang}}/Samples/ExpressNodejs.htm)
 
 ### Python
 IoT Core also supports building Background Apps with Python. Support for the python languages and libaries is fully there, but the python language itself does not support calling UWP APIs and so we provide python libraries to call into critical platform features like GPIO, I2C, PWM, ...
 
-This [app]({{site.baseurl}}/samples/PythonBlinky.htm) shows how to build a basic Python Background App that blinks an LED. 
+This [app]({{site.baseurl}}/{{page.lang}}/Samples/PythonBlinky.htm) shows how to build a basic Python Background App that blinks an LED. 
 
 
 {% highlight Python %}
