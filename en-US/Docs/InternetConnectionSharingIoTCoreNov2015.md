@@ -11,7 +11,7 @@ This document describes the steps to enable Internet Connection Sharing (ICS) on
 ## Prerequisites
 
 - Device running Windows 10 IoT Core November 2015 Release.
-- Wi-Fi USB device capable of starting a SoftAP. Please refer to the [Hardware Compatibility List]({{site.baseurl}}/en-US/Docs/SupportedInterfaces.htm#WiFi-Dongles){:target="_blank"} for supported Wi-Fi USB devices.
+- Wi-Fi USB device capable of starting a SoftAP. Please refer to the [Hardware Compatibility List]({{site.baseurl}}/en-US/Docs/HardwareCompatList.htm#WiFi-Dongles){:target="_blank"} for supported Wi-Fi USB devices.
 - Ethernet connection with Internet Access.
 
 

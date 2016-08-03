@@ -56,7 +56,7 @@ For the sample, we are running firmware version 1.4.1 on the SensorTag. More det
 
 ### Hardware Support
 
-Please find a list of supported Bluetooth dongles in the [Hardware Compatibility List]({{site.baseurl}}/{{page.lang}}/Docs/SupportedInterfaces.htm#Bluetooth-Dongles). Note: a Bluetooth dongle is not required for the DragonBoard 410c and the Raspberry 3 board.
+Please find a list of supported Bluetooth dongles in the [Hardware Compatibility List]({{site.baseurl}}/{{page.lang}}/Docs/HardwareCompatList.htm#Bluetooth-Dongles). Note: a Bluetooth dongle is not required for the DragonBoard 410c and the Raspberry 3 board.
 
 ### What's Next?
 
