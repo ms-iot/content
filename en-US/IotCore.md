@@ -7,4 +7,4 @@ permalink: /en-US/IoTCore.htm
 lang: en-US
 ---
 
-{% include redirect.html url="/Explore/IoTCore.htm" %}
+{% include redirect.html url="/windows/iot/Explore/IoTCore.htm" %}

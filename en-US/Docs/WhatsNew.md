@@ -64,7 +64,7 @@ ___
 ## Additional Resources
 ___ 
 
-[Release Notes]({{site.baseurl}}//content/en-US/Docs/ReleaseNotesInsiderPreview.htm)
+[Release Notes]({{site.baseurl}}/{{page.lang}}/Docs/ReleaseNotesInsiderPreview.htm)
 
 [Privacy Statement](http://go.microsoft.com/fwlink/?LinkId=506737)
 

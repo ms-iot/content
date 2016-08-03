@@ -1,13 +1,13 @@
 {% if include.url %}
 
     {% capture url %}
-    {{iotexturl}}{{include.url}}
+    {{include.url}}
     {% endcapture %}
 
 {% else %}
 
     {% capture url %}
-    {{site.baseurl}}/{{iotexturl}}{{page.url}}
+    {{site.baseurl}}/{{page.url}}
     {% endcapture %}
 
 {% endif %}

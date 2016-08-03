@@ -7,4 +7,4 @@ permalink: /en-US/win10/Whatsnew.htm
 lang: en-US
 ---
 
-{% include redirect.html url="/Docs/WhatsNew.htm" %}
+{% include redirect.html url="/windows/iot/Docs/WhatsNew.htm" %}
