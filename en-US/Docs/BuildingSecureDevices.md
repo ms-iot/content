@@ -35,7 +35,7 @@ In order to protect data at rest (i.e. date stored on a device), Microsoft broug
 BitLocker uses a Trusted Platform Module (TPM) to provide enhanced protection for your data and to assure early boot component integrity. This helps protect your data from theft or unauthorized viewing by encrypting the entire Windows volume and any data partitions that might be present on your device.
 For additional instructions on how to enable BitLocker on Windows 10 IoT Core, follow the steps outlined [here][2].
 
-[2]: {{site.baseurl}}/{{page.lang}}/Docs/SB_BL.htm "Enabling Secure Boot and BitLocker"
+[2]: {{site.baseurl}}/{{page.lang}}/Docs/SecureBootAndBitLocker.htm "Enabling Secure Boot and BitLocker"
 
 ## Onboard Storage Options
 Development boards, like the popular Raspberry Pi 3, offer flexibility and allow developers to easily boot any platform via a removable SD card.  For most industry IoT devices, such flexibility is not desirable and can make such devices an easy target for attacks. Instead, when designing your hardware, consider using an eMMC storage for your smaller, low cost IoT devices.  Embedded storage makes it significantly more difficult to separate the content from the device and in turn, reduces the potential of introducing malware onto the device or data theft. 

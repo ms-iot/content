@@ -98,5 +98,5 @@ ___
 * Trusted Platform Module (TPM) Specifications - [http://www.trustedcomputinggroup.org/developers/trusted_platform_module](http://www.trustedcomputinggroup.org/developers/trusted_platform_module){:target="_blank"}
 * TCG TPM 2.0 Library Specification - [http://www.trustedcomputinggroup.org/resources/tpm_library_specification](http://www.trustedcomputinggroup.org/resources/tpm_library_specification){:target="_blank"}
 * TPM Base Services - [https://msdn.microsoft.com/en-us/library/windows/desktop/aa446796(v=vs.85).aspx](https://msdn.microsoft.com/en-us/library/windows/desktop/aa446796(v=vs.85).aspx){:target="_blank"}
-* Enabling Secure Boot and BitLocker - [{{site.baseurl}}/{{page.lang}}/Docs/SB_BL.htm]({{site.baseurl}}/{{page.lang}}/Docs/SB_BL.htm){:target="_blank"}
+* Enabling Secure Boot and BitLocker - [{{site.baseurl}}/{{page.lang}}/Docs/SecureBootAndBitLocker.htm]({{site.baseurl}}/{{page.lang}}/Docs/SecureBootAndBitLocker.htm){:target="_blank"}
 

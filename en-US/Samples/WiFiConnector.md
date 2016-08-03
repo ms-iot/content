@@ -25,7 +25,7 @@ The code for the WiFi Connect sample can be found under: [\WiFiConnect\CS\WiFiCo
 You'll need:  
   
 * A Windows 10 IoT Core capable board with onboard WiFi, such as the Raspberry Pi 3 or DragonBoard 410c or
-* A USB WiFi adapter. For a list of supported Wi-Fi adapters see the [Ecosystem Compatibility List]({{site.baseurl}}/{{page.lang}}/Docs/SupportedInterfaces.htm){:target="_blank"}
+* A USB WiFi adapter. For a list of supported Wi-Fi adapters see the [Ecosystem Compatibility List]({{site.baseurl}}/{{page.lang}}/Docs/HardwareCompatList.htm){:target="_blank"}
   
 ### Deploy your app  
   

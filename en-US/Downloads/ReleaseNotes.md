@@ -46,7 +46,7 @@ With this release of Windows 10 IoT Core for the Raspberry Pi 2, support for cam
 
 Hardware volume controls for USB microphones and speakers which depend on Windows system to change system volume are currently not supported on Windows 10 IoT Core.
 
-Some USB keyboards and mice may not work on the Raspberry PI2. Use a different keyboard or mouse. A list of validated peripheral devices can be found on the [documentation here](({{site.baseurl}}/{{page.lang}}/Docs/SupportedInterfaces.htm)){:target="_blank"}.
+Some USB keyboards and mice may not work on the Raspberry PI2. Use a different keyboard or mouse. A list of validated peripheral devices can be found on the [documentation here](({{site.baseurl}}/{{page.lang}}/Docs/HardwareCompatList.htm)){:target="_blank"}.
 
 On the Raspberry Pi2 the GPIO pin 0 and GPIO pin 1 were available to user mode applications in the April release of version of Windows 10 IoT Core, but are no longer available. Attempting to open these pins with Windows::Devices::Gpio::GpioController::OpenPin() will return HRESULT_FROM_WIN32(ERROR_NOT_FOUND). GPIO pins 0 and 1 are reserved on the Raspberry Pi by the HAT specification [https://github.com/raspberrypi/hats](https://github.com/raspberrypi/hats) and are under control of VC firmware. For compliance with this specification, these pins should be left unconnected.
 

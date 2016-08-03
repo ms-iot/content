@@ -15,7 +15,7 @@ including [SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH.htm), [Powershell]({{sit
 	Note: Plugging in a wired Ethernet cable will override WiFi as the default network interface
 
 ### <a name="WiFi_Devices"></a>Supported Adapters
-A list of WiFi adapters that have been tested on Windows 10 IoT Core can be found on our [Supported Hardware]({{site.baseurl}}/{{page.lang}}/Docs/SupportedInterfaces.htm#WiFi-Dongles){:target="_blank"} page
+A list of WiFi adapters that have been tested on Windows 10 IoT Core can be found on our [Supported Hardware]({{site.baseurl}}/{{page.lang}}/Docs/HardwareCompatList.htm#WiFi-Dongles){:target="_blank"} page
 
 ### Configuring WiFi
 To use WiFi, you'll need to provide Windows 10 IoT core with the WiFi network credentials. There are a few different options for doing so:
