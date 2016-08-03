@@ -37,7 +37,7 @@ lang: en-US
 
 <h3>Windows 10 IoT Core Development Devices</h3>
 <hr>
-<p>Windows 10 IoT Core works with <a href="{{site.baseurl}}/{{page.lang}}/explore/SoC.md">several leading SoCs</a> that are utilized in hundreds of devices. Below you can find suggested devices to <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">get started</a> quickly, additional devices that provide more silicon and form factor choices, as well as community devices that have been enabled independt of Microsoft involvement. </p>
+<p>Windows 10 IoT Core works with <a href="{{site.baseurl}}/{{page.lang}}/explore/SoC.htm">several leading SoCs</a> that are utilized in hundreds of devices. Below you can find suggested devices to <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">get started</a> quickly, additional devices that provide more silicon and form factor choices, as well as community devices that have been enabled independt of Microsoft involvement. </p>
 
 <h2> <a onClick="toggleSection('SuggestedDevices');return false;">Suggested Devices </a>
 	<div class="sectionControls">
