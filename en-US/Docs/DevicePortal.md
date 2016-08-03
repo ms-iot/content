@@ -95,7 +95,7 @@ The SoftAP Settings allow you to control whether or not your device's SoftAP is 
 ** AllJoyn Onboarding Settings **
 The AllJoyn Onboarding Settings allow you to control whether or not your device's Wi-Fi connection can configured through your device's AllJoyn Onboarding Producer.  When a separate device running an AllJoyn Onboarding Consumer application connects to your Windows 10 IoT SoftAP, the AllJoyn Onboarding Consumer application can be used to configure your IoT device's Wi-Fi adapter.  When enabled, the AllJoyn Onboarding Producer app (IoTOnboarding) uses the ECDHE_NULL authentication method.
 
-{% include note.html text="To use the AllJoyn Onboarding Settings, this requires an update to the <strong>IotOnboarding</strong> sample which may be <a href="https://github.com/ms-iot/samples">downloaded here</a>.
+{% include note.html text='To use the AllJoyn Onboarding Settings, this requires an update to the <strong>IotOnboarding</strong> sample which may be <a href="https://github.com/ms-iot/samples">downloaded here</a>.' %}
 
 {% include imageborder.html alt="App list" link="/Resources/images/DevicePortal/OnboardingAllJoyn.png" %}
 {% include imageborder.html alt="App list" link="/Resources/images/DevicePortal/OnboardingICS.png" %}

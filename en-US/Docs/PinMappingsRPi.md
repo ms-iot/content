@@ -40,9 +40,9 @@ The following GPIO pins are accessible through APIs:
 | 6     | PullUp        |                     | 31                 |
 | 7     | PullUp        | SPI0 CS1            | 26                 |
 | 8     | PullUp        | SPI0 CS0            | 24                 |
-| 9     | PullUp        | SPI0 MISO           | 21                 |
-| 10    | PullUp        | SPI0 MOSI           | 19                 |
-| 11    | PullUp        | SPI0 SCLK           | 23                 |
+| 9     | PullDown      | SPI0 MISO           | 21                 |
+| 10    | PullDown      | SPI0 MOSI           | 19                 |
+| 11    | PullDown      | SPI0 SCLK           | 23                 |
 | 12    | PullDown      |                     | 32                 |
 | 13    | PullDown      |                     | 33                 |
 | 16    | PullDown      | SPI1 CS0            | 36                 |

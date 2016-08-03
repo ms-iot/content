@@ -6,7 +6,7 @@ lang: en-US
 ---
 
 # Release Notes for Windows 10 IoT Core
-Build Number 14342. May 2016
+Build Number 14393. August 2016
 
 &copy; 2016 Microsoft Corporation. All rights reserved
 
@@ -21,19 +21,35 @@ The privacy statement for this version of the Windows operating system can be vi
 You can review linked terms by pasting the forward link into your browser window.
 
 ## What's new in this build: 
-* The minimum required storage space for the IoT Core FFUs has been reduced to 4GB. 
-	* With this change it is recommended that all application storage be done on the DATA partition. The MainOS partition should be reserved for the OS use. 
-* Updated OS files including core OS bug fixes
+* Updated OS files including core OS bug fixes.
+* Issues with Windows Device Portal/WEBB not showing apps, processes and issues with Bluetooth pairing have been addressed.
+* Issues with speech recognition on the Raspberry Pi have been addressed.
+* Issues with the display on an MBM not displaying after a disconnect/reconnect event have been addressed.
+* An issue with passwords for default accounts resetting during updates when using the provided FFUs has been addressed.
 
-
-## Known issues in this build: 
-* The latest Windows SDK (Build greater than 14337) is not compatible with this build, use the SDK included in with Visual Studio update 2
-* Ethernet and WiFi  on the Raspberry Pi 3 may fail on boot a reboot is required to resolve the issue. This issue is more prominent on slower SD cards. 
-
-
-
+## Known issues in this build:
+* The Raspberry Pi3 built-in Bluetooth driver currently only supports low bandwidth devices.
+* Pin.Read is failing when using GPIO on the MBM with the DMAP/Lightning Providers due to issues in the Lightning Nuget.
+* In some cases, the mouse pointer is not visible after deploying or debugging apps with Visual Studio.
+* When using the SoftAP clients will not be able to access content exposed by UAP apps. See Server Application with SoftAP below for details.
 
 ## Release Notes
+
+#### Server Applications with SoftAP  
+When using the SoftAP clients will not be able to access content exposed by UAP apps.
+To expose UAP applications via SoftAP the following changes must be made from the console on the device:
+
+reg add hklm\system\currentcontrolset\services\mpssvc\parameters /v IoTInboundLoopbackPolicy /t REG_DWORD /d 1 
+checknetisolation loopbackexempt -a -n=<AppID for SoftAP App> 
+checknetisolation loopbackexempt -a -n=<AppID for Additional App>  
+
+For example:  checknetisolation loopbackexempt -a -n=IoTOnboardingTask-uwp_1w720vyc4ccym 
+Reboot 
+
+
+#### Sensor Driver conflict in pre-built FFUs
+There is a Sensor Driver Conflict in the provided FFUs. The Remote Sensor Framework installs drivers for Compass, Magnetometer, Accelerometer and Gyro. The UWP APIs for accessing these from an application assume just 1 is installed. If you are developing a driver for a physically attached device, the remote driver on the Microsoft provided FFUs will conflict. 
+Resolution: The conflicting driver can be removed by connecting to the device via SSH or Powershell and using the tool devcon.exe to remove the remote sensor driver by typing “devcon.exe remove @”ROOT\REMOTESENSORDRIVER*”. The remote sensor driver does not affect OEM created FFUs.
 
 #### Minnowboard Max Boot and Firmware Update
 The MinnowBoard Max will not boot unless the firmware is version .082 or later. The minimum recommended version of the firmware is "MinnowBoard MAX 0.83 32-Bit". Firmware updates can be downloaded from [http://go.microsoft.com/fwlink/?LinkId=708613](http://go.microsoft.com/fwlink/?LinkId=708613){:target="_blank"}.
@@ -57,7 +73,7 @@ With this release of Windows 10 IoT Core for the Raspberry Pi 2, support for cam
 Hardware volume controls for USB microphones and speakers which depend on Windows system to change system volume are currently not supported on Windows 10 IoT Core.
 
 #### USB Keyboards 
-Some USB keyboards and mice may not work on IoT Core. Use a different keyboard or mouse. A list of validated peripheral devices can be found on the [documentation here](({{site.baseurl}}/{{page.lang}}/Docs/SupportedInterfaces.htm){:target="_blank"}.
+Some USB keyboards and mice may not work on IoT Core. Use a different keyboard or mouse. A list of validated peripheral devices can be found on the [documentation here](({{site.baseurl}}/Docs/SupportedInterfaces.htm).
 
 #### Screen Orientation
 Setting the orientation to "Portrait" may not be honored in a Universal App
@@ -75,28 +91,28 @@ bcdedit /set debug off
 2. Advanced pairing must be used.  The sample app demonstrates how to use the advanced pairing API’s to pair the devices prior to connecting.
 3. Not all wireless adapters support WiFi direct. We have tested and validated that the "Realtek RTL8188EU Wireless Lan 802.11n USB 2.0 Network adapter" works, but other adapters may not be supported.
  
-#### Non-default drive mode (3890679)
+#### Non-default drive mode 
 On Raspberry Pi and Dragonboard, switching from a non-default drive mode to a different non-default drive mode may produce a glitch on the GPIO pin. WORKAROUND: Set drive mode once at the beginning of the application.
 
-#### Application already running (1244550)
+#### Application already running 
 The Default startup app may conflict with itself when it is also deployed from Visual Studio. WORKAROUND: Change the default startup app to an application other than that you wish to deploy.
 
-#### BackgroundMediaPlayer.MessageReceivedFromForeground may crash (2199869)
+#### BackgroundMediaPlayer.MessageReceivedFromForeground may crash 
 The following line of code may crash: "BackgroundMediaPlayer.MessageReceivedFromForeground += OnMessageReceivedFromForeground;". To prevent the crash, add this code so that it is executed first "var player = BackgroundMediaPlayer.Current;"
 
-#### Data breakpoints have been disabled on the Raspberry Pi2 (4266252). 
+#### Data breakpoints have been disabled on the Raspberry Pi2  
 No workaround at this time
 
-#### Azure Active Directory Authentication Support (4266261)
+#### Azure Active Directory Authentication Support 
 The Azure Active Directory Authentication Library does not work on Windows 10 IoT Core. 
 
-#### Dragon Board and windbg (4710796)
+#### Dragon Board and windbg 
 The GPIO/I2C/SPI/UART drivers will be disabled when connecting to the DragonBoard with windbg. 
 
-#### Dragon Board headset & microphone jack (4791855)
+#### Dragon Board headset & microphone jack 
 The Dragonboard BSP has drivers for the headset jack and microphone jack, but it doesn't have either of these jacks on board. 
 
-#### Dragonboard SPI runs at 4.8Mhz (5055938)
+#### Dragonboard SPI runs at 4.8Mhz 
 The SPI on the Dragonboard will ignore the requested speed and always run at 4.8 Mhz. 
 
 #### <a name="shellcrashes"></a>Shell Management of Application Crashes
@@ -123,7 +139,7 @@ When app crash is detected:
       wait for delay and relaunch app
 </pre>
 
-#### Raspberry Pi audio and direct memory mapped drivers (6678121)
+#### Raspberry Pi audio and direct memory mapped drivers
 
 On Raspberry Pi, audio via the 3.5mm jack stops working when the direct memory mapped drivers are enabled.
 
@@ -149,4 +165,15 @@ If time sync is failing or timing out this may be due to unreachable or a distan
 * You may also make these additions to the registry via a boot script or a custom runtime configuration package included as part of the image creation process if needed.
 	* For more details, see:
 		* https://msdn.microsoft.com/en-us/library/windows/hardware/mt670641(v=vs.85).aspx 
-		* https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/iot-core-manufacturing-guide/  
+		* https://blogs.msdn.microsoft.com/iot/2015/12/14/windows-10-iot-core-image-creation/  
+
+#### Starting the FTP Server 
+The FTP Server no longer runs by default at start-up 
+
+* To run once: 
+	Login with SSH\PS and run this command to start FTP: start ftpd.exe 
+
+* To run on every boot Users should create a scheduler task: 
+	Login with SSH\PS and create a scheduler task:       
+	schtasks /create /tn "IoTFTPD" /tr ftpd.exe /ru system /sc onstart 
+	Schtasks /run /tn “IoTFTPD”
