@@ -185,7 +185,7 @@ function flipLed(){
 * [Weather Station Web Server](https://github.com/ms-iot/samples/tree/develop/WeatherStation/Node.js)
 * [Johnny-Five App]({{site.baseurl}}/samples/J5ServoController.htm)
 * [Cylon App](({{site.baseurl}}/samples/CylonLED.htm)
-* [Express App]({{site.baseurl}}/samples/NodejsWUExpress.htm)
+* [Express App]({{site.baseurl}}/samples/ExpressNodejs.htm)
 
 ### Python
 IoT Core also supports building Background Apps with Python. Support for the python languages and libaries is fully there, but the python language itself does not support calling UWP APIs and so we provide python libraries to call into critical platform features like GPIO, I2C, PWM, ...

@@ -21,6 +21,6 @@ Remember, you can always send [contact us]({{site.baseurl}}/{{page.lang}}/Commun
 
 ## Tools
 
-1. [Windows 10 IoT Core Porting Tool]({{site.baseurl}}/{{page.lang}}/Docs/tools/IoTAPIPortingTool.htm) --- A tool for helping you port your existing Win32 and Windows CE applications to Windows 10 IoT Core.
+1. [Windows 10 IoT Core Porting Tool]({{site.baseurl}}/{{page.lang}}/Docs/IoTAPIPortingTool.htm) --- A tool for helping you port your existing Win32 and Windows CE applications to Windows 10 IoT Core.
 
-2. [On Device Command Line Utiltiies]({{site.baseurl}}/{{page.lang}}/Docs/tools/CommandLineUtils.htm) --- A set of tools available on your device to help you configure a slew of options.
+2. [On Device Command Line Utiltiies]({{site.baseurl}}/{{page.lang}}/Docs/CommandLineUtils.htm) --- A set of tools available on your device to help you configure a slew of options.
