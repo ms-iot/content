@@ -43,7 +43,12 @@ Make sure to follow these steps to correctly configure your device running Windo
 
 6. Enter `Y` to confirm the change.
 
-        {% include note.html text="If you want to connect multiple devices, you can use commas and quotation marks to separate each device." %}
+        <div class="alert alert-note">
+          <h5><span class="win-icon win-icon-Page"></span>
+            NOTE
+          </h5>
+          <p>If you want to connect multiple devices, you can use commas and quotation marks to separate each device.</p>
+        </div>
         
         Set-Item WSMan:\localhost\Client\TrustedHosts -Value "<machine1-name or IP Address>,<machine2-name or IP Address>"
 	
@@ -53,8 +58,13 @@ Make sure to follow these steps to correctly configure your device running Windo
 
 8. In the credential dialog, enter the following default password: `p@ssw0rd`
     
-        {% include note.html text="The connection process is not immediate and can take up to 30 seconds." %}
-
+    <div class="alert alert-note">
+      <h5><span class="win-icon win-icon-Page"></span>
+        NOTE
+      </h5>
+      <p>The connection process is not immediate and can take up to 30 seconds.</p>
+    </div>    
+    
     If you successfully connected to the device, you should see the IP address of your device before the prompt.
 
     ![PowerShell console]({{site.baseurl}}/Resources/images/powershell/ps_device.png)
