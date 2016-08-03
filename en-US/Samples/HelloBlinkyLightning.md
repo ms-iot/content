@@ -3,7 +3,7 @@ layout: sample
 title: Hello, blinky! using Lightning.Providers
 description: communicate with GPIO using the Micorosot.IoT.Lightning.Providers.I2cProvider
 keywords: Windows 10 IoT Core, lightning, gpio
-permalink: /en-US/Samples/HelloBlinkyLightning.htm
+permalink: /en-US/samples/HelloBlinkyBackgroundLightning.htm
 samplelink: N/A
 lang: en-US
 ---
