@@ -141,7 +141,7 @@ if (LightningProvider.IsLightningEnabled)
 
 The following samples demonstrate using the Lightning providers with supported bus types:
 
-* [Blinky (UI) with Lightning Provider]({{site.baseurl}}/{{page.lang}}/Samples/BlinkyUILightning.htm) demonstrates GPIO with Lightning Provider in a foreground application
+* [Blinky (UI) with Lightning Provider]({{site.baseurl}}/{{page.lang}}/samples/HelloBlinkyLightning.htm) demonstrates GPIO with Lightning Provider in a foreground application
 
 * [BlinkyHeadless with Lightning Provider]({{site.baseurl}}/{{page.lang}}/Samples/BlinkyHeadlessLightning.htm) demonstrates GPIO with Lightning Provider in a headless application
 
