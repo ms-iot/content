@@ -1,5 +1,5 @@
 ---
-layout: sample
+layout: docs
 title: Windows file sharing
 description: Access the files on your device using Windows file sharing
 keyword: windows iot, file sharing
