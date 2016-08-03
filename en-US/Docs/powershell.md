@@ -43,12 +43,12 @@ Make sure to follow these steps to correctly configure your device running Windo
 
 6. Enter `Y` to confirm the change.
 
-        <div class="alert alert-note">
-          <h5><span class="win-icon win-icon-Page"></span>
-            NOTE
-          </h5>
-          <p>If you want to connect multiple devices, you can use commas and quotation marks to separate each device.</p>
-        </div>
+    <div class="alert alert-note">
+      <h5><span class="win-icon win-icon-Page"></span>
+        NOTE
+      </h5>
+      <p>If you want to connect multiple devices, you can use commas and quotation marks to separate each device.</p>
+    </div>
         
         Set-Item WSMan:\localhost\Client\TrustedHosts -Value "<machine1-name or IP Address>,<machine2-name or IP Address>"
 	
