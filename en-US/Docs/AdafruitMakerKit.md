@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
+title: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2 or Pi 3
 description: See what this Windows 10 IoT Core package offers and learn how to set it up.
 keyword: adafruit, windows iot, raspberry pi, adafruit pack
 permalink: /en-US/Docs/AdafruitMakerKit.htm
 lang: en-US
-kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
+kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi 2 or Pi 3
 ---
 <div class="row">
   <div class="col-xs-24">
@@ -49,8 +49,8 @@ kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
         <td>Download Windows 10 and Visual Studio</td>
       </tr>
       <tr>
-        <td><a href="{{site.baseurl}}/{{page.lang}}/Docs/KitSetupRPI.htm">Setting up your Raspberry Pi 2 Board</a></td>
-        <td>Connect and program your Raspberry Pi 2 board</td>
+        <td><a href="{{site.baseurl}}/{{page.lang}}/Docs/KitSetupRPI.htm">Setting up your Raspberry Pi 2 or Pi 3 Board</a></td>
+        <td>Connect and program your Raspberry Pi 2 or Pi 3 board</td>
       </tr>
       <tr>
         <td><a href="{{site.baseurl}}/{{page.lang}}/Samples/KitBlinky.htm">Make your first project: Hello Blinky</a></td>
