@@ -20,7 +20,10 @@ kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
     <center>
       <h2 class="thin-header floatTop">Welcome! Let's get started.</h2>
       <br/>
-      If you don't have one, you can order one <a target="_blank" href="http://adafruit.com/windows10iotpi2"> here.</a>
+      If you don't have one, you can order one <a target="_blank" href="https://www.microsoftstore.com/store/msusa/en_US/pdp/productID.334851400"> here.</a>
+      <!-- this link is not working -> http://adafruit.com/windows10iotpi2 
+          not sure about this new one -> https://www.adafruit.com/products/3058
+      -->
     </center>
   </div>
   <div class="col-md-12 col-xs-24">
