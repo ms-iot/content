@@ -48,7 +48,7 @@ Prior to the Pi3 kit the sd card included with the kit came preloaded with Windo
 ## Boot Windows 10 IoT Core
 1. Windows 10 IoT Core will boot automatically after connecting the power supply. Allow the Pi about five minutes for the first boot.
 2. Find your device on the IoT Dashboard application. When run, the application automatically finds all Windows IoT Core devices on the local network and displays device information such as the name, device type, IP address, and more.  Select the My Devices tab to view the current devices on the network.
-        ![Windows IoT Dashboard]({{site.baseurl}}/Resources/images/HeadlessMode/IoTDashboard.png)
+        ![Windows IoT Dashboard]({{site.baseurl}}/Resources/images/IoTDashboard.png)
 
 ## Configure your Raspberry Pi 2 or Pi 3
 
