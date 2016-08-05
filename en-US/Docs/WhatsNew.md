@@ -22,6 +22,17 @@ IoT Core is now officially released for the Raspberry Pi 3 to the public.
 * Easy set up with a new getting started experience
 * Functional parity with RPi2, including Windows as a service updating and flighting model and a single FFU for RPi2 and RPi3
 
+### Microsoft IoT Grove Kit
+![Grove kit]({{site.baseurl}}/Resources/images/GroveKit/grovekitcontents.jpg)
+
+The new Microsoft IoT Grove Kit is an easy to use solution for Makers, as well as a powerful prototyping platform for IoT Startups and Enterprise Innovators. You can pre-order today at [Seeed Studio Bazaar](https://www.seeedstudio.com/Microsoft-IoT-Grove-Kit-p-2694.html) and [Digi-Key](http://www.digikey.com/en/product-highlight/s/seeed/microsoft-iot-grove-kit?WT.z_cid=sp_1597_MIot).
+
+### Refreshed Adafruit IoT Starter Pack for Raspberry Pi 3
+![Adafruit starter pack]({{site.baseurl}}/Resources/images/AdafruitStarterPack/AdafruitMakerKitClosedSmall.jpg) 
+
+Adafruit has updated their starter pack to now include Raspberry Pi 3 and Windows 10 IoT Core.
+
+
 ## New major features
 ___ 
 * Windows IoT Remote Client - remote into your IoT device to control and view what is displayed on your IoT device from your desktop or phone
