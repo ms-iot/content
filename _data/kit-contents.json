@@ -23,7 +23,7 @@
           "quantity": "1"
         },
         {
-          "name": "USB WiFi Module",
+          "name": "USB WiFi Module (only in Pi2 kits)",
           "link": "https://www.adafruit.com/products/2638",
           "quantity": "1"
         },
@@ -123,7 +123,7 @@
             "quantity": "1"
           },
           {
-            "name": "USB WiFi 模块",
+            "name": "USB WiFi 模块 (Pi 2)",
             "link": "https://www.adafruit.com/products/2638",
             "quantity": "1"
           },
