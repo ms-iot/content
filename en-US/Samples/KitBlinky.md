@@ -1,5 +1,5 @@
 ---
-layout: sample
+layout: default
 title: Blinky Sample
 permalink: /en-US/Samples/KitBlinky.htm
 step: Samples/KitBlinky.htm
