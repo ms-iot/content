@@ -14,7 +14,7 @@ lang: en-US
       Get the tools you need to build with Windows 10 IoT Core
     </h2>
     <p>
-      For new users, make sure to check out the <a href="{{site.baseurl}}/GetStarted.htm">Get Started</a> section.
+      For new users, make sure to check out the <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a> section.
     </p>
   </header>
 </section>

@@ -20,7 +20,9 @@ ___
 MDM enrollment of an IoT Core device is accomplished using a Provisioning package. Provisioning packages can be created using Windows Image Configuration and Designer (WICD). Let's try enrolling a device into a MDM.
 
 ### Creating a Provisioning package
+
 #### Microsoft System Center Configuration Manager (Standalone or SCCM+Intune Hybrid)
+
 1. Open the Configuration Manager Management Console (ConfigMgr Console)
 2. Navigate to _Assets and Compliance > Compliance Settings > Company Resource Access > Certificate Profiles_
 ![ConfigMgr-Certificate-Profiles]

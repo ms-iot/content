@@ -34,7 +34,7 @@ Use the device name and IP address listed here when connecting to you device.
 
 #### Tutorials
 
-A quick set of instructions on how to get your board connected to your PC. If you're on the web, you can find the same set of instructions [here](http://ms-iot.github.io/content/en-US/Docs/StartCoding.htm)
+A quick set of instructions on how to get your board connected to your PC. If you're on the web, you can find the same set of instructions [here]({{site.baseurl}}/{{page.lang}}/GetStarted.htm)
 
 ![DefaultApp tutorials on Windows 10 IoT Core]({{site.baseurl}}/Resources/images/iotcoredefaultapp/defaultapp_tutorial.png)
 
