@@ -85,6 +85,12 @@ lang: en-US
       <div class="section-body">
         <div class="row">
           <div class="col-md-6">
+            <h3>IoT Core for Dragonboard 410c</h3>
+            <p>Download Windows 10 IoT Core for the Dragonboard 410c board from Qualcomm</p>
+            <a href="http://go.microsoft.com/fwlink/?LinkId=824154" target="_blank">Download</a>
+          </div>
+
+          <div class="col-md-6">
             <h3>Firmware Update</h3>
             <p>Download firmware components and updates for the MinnowBoard MAX reference board from Intel</p>
             <a href="http://firmware.intel.com/projects/minnowboard-max" target="_blank">Learn More</a>
