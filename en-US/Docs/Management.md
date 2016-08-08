@@ -55,14 +55,15 @@ MDM enrollment of an IoT Core device is accomplished using a Provisioning packag
 8. In the UPN field enter the account you wish to enroll your device under (i.e. trmck@contoso.co) and click **Add**
 ![WICD-Workplace-Enrollments-UPN-Filled]
 9. For AuthPolicy choose between Username Password based authentication (OnPremises) or Certificate based authentication
-10. Enter the Discovery Service URL for your MDM server {% include note.html text="Enrollment Service URL and Policy Service URL are optional" %}
+10. Enter the Discovery Service URL for your MDM server   
+{% include note.html text="Enrollment Service URL and Policy Service URL are optional" %}
 11. For the Secret enter  
 - OnPremises: The password for the account you're enrolling with  
 - Certificate: The thumbprint of the certificate
 ![WICD-Workplace-Enrollments-UPN-Details-Filled-OnPremise]  
 12. At the top of WICD window click **Export > Provisioning package**
 13. Provide a name and version for your package and click **Next**.   
-_Note: Be sure to increment the version number to ensure an updated package is executed_
+{% include note.html text="Be sure to increment the version number to ensure an updated package is executed" %}
 14. Click **Next** on the **security details page**
 15. Choose the location where the package is to be exported on the local machine and click **Next**
 16. Click **Build** and then **Finish** to exit the wizard
