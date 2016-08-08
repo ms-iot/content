@@ -1,13 +1,13 @@
 ---
 layout: docs
-title: Setup DefaultApp
+title: Setup a default app
 description: Learn how to setup defaultapp in Windows IoT Core
 keyword: package, driver install
 permalink: /en-US/Docs/SetupDefaultApp.htm
 lang: en-US
 ---
 
-# Setup DefaultApp
+# Setup a default app
 Here you'll learn the ways to set your application as the default application. The default application is the one that is launched when the system boots.  
 
 ## Runtime options
@@ -64,13 +64,16 @@ See [Virtual Key Code](https://msdn.microsoft.com/library/windows/desktop/dd3757
 For example, to make the “Left Windows” key (VK_LWIN) swap back to the default application add the following QWORD registry key:
 
 `HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\IoTShellExtension\HotKeys`
+
 `“VK_LWIN”        QWORD    0x00000000 0000005B`
 
 
 It is also possible to add additional hot keys to perform the same function.  For example, to allow both the Left and Right Windows keys swap back to the default application add two entries to the registry:
 
 `HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\IoTShellExtension\HotKeys`
+
 `“VK_LWIN”        QWORD    0x00000000 0000005B`
+
 `“VK_RWIN”        QWORD    0x00000000 0000005C`
 
-See [Settings.HotKey sample package](https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Common/Packages/Settings.HotKey/Settings.HotKey.pkg.xml)
+See [Settings.HotKey sample package](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Common/Packages/Settings.HotKey/Settings.HotKey.pkg.xml)
