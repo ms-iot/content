@@ -17,9 +17,9 @@ ___
 
 ### Raspberry Pi 3
 ![Raspberry Pi 3 image]({{site.baseurl}}/Resources/images/677423-highlight.jpg)
-[IoT Core](../Explore/IoTCore) is now officially released for the Raspberry Pi 3 to the public.
+[IoT Core](../Explore/IoTCore.htm) is now officially released for the Raspberry Pi 3 to the public.
 
-* Easy set up with a [new getting started experience](../GetStarted)
+* Easy set up with a [new getting started experience](../GetStarted.htm)
 * Functional parity with RPi2, including Windows as a service updating and flighting model and a single FFU for RPi2 and RPi3
 
 ### Microsoft IoT Grove Kit
