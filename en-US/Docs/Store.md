@@ -9,9 +9,9 @@ lang: en-US
 
 # Installing and Servicing apps on Windows 10 IoT Core
 
-Microsoft makes it easy for developers to install and service UWP apps on Windows 10 IoT Core through the Universal Store. All store signed apps on Windows 10 devices are capable of receiving updates directly from the store. 
+Microsoft makes it easy for OEMs to install and service UWP apps on Windows 10 IoT Core through the Universal Store. All store signed apps on Windows 10 devices are capable of receiving updates directly from the store. 
 
-Developers who wish to build apps and service them through the Universal Store are required to join the Windows Store OEM Preinstall Program. For details on getting enrolled please contact your Microsoft Channel Partner or email [partnerops@microsoft.com](mailto:partnerops@microsoft.com)
+{% include note.html text="Preinstall and servicing of store signed apps is only available to Windows 10 IoT Core Pro customers. If you are an OEM wishing to preinstall apps on your IoT devices please visit our [Commercialization](https://www.windowsforiotdevices.com) page to get started. If you are developer wishing to preinstall apps for IoT you must seek sponsorship from an OEM enrolled in the program." %}
 
 ## Publishing UWP to Universal Store
 ___
