@@ -30,7 +30,7 @@ The new Microsoft IoT Grove Kit is an easy to use solution for Makers, as well a
 ### Refreshed Adafruit IoT Starter Pack for Raspberry Pi 3
 ![Adafruit starter pack]({{site.baseurl}}/Resources/images/AdafruitStarterPack/AdafruitMakerKitClosedSmall.jpg) 
 
-Adafruit has updated their starter pack to now include Raspberry Pi 3 and Windows 10 IoT Core.
+Adafruit has [updated their starter pack](https://www.adafruit.com/product/2733) to now include Raspberry Pi 3 and Windows 10 IoT Core.
 
 
 ## New major features
