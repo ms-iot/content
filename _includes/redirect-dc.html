@@ -3,7 +3,9 @@
 {% endcapture %}
 
 {% if page.rdlink %}
-  {% assign url = page.rdlink %}
+  {% capture url %}
+    {{site.devcenterurl}}/{{page.rdlink}}
+  {% endcapture %}
 {% else %}
   {% capture initurl %}
     {{site.devcenterurl}}/{{page.url | remove_first: "en-US/" | remove_first: "zh-CN/" }}
