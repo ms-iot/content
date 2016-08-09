@@ -1,11 +1,19 @@
-{% capture initurl %}
-{{site.devcenterurl}}/{{page.url | remove_first: "en-US/" | remove_first: "zh-CN/" }}
+{% capture redirectlink %}
+  {{page.rdlink}}
 {% endcapture %}
 
-{% if initurl contains 'samples' %}
-  {% assign url = initurl | remove_first: 'win10/'' %}
+{% if page.rdlink %}
+  {% assign url = page.rdlink %}
 {% else %}
-  {% assign url = initurl | replace: 'win10','docs' %}
+  {% capture initurl %}
+    {{site.devcenterurl}}/{{page.url | remove_first: "en-US/" | remove_first: "zh-CN/" }}
+  {% endcapture %}
+  
+  {% if initurl contains 'samples' %}
+    {% assign url = initurl | remove_first: 'win10/' %}
+  {% else %}
+    {% assign url = initurl | replace: 'win10','docs' %}
+  {% endif %}
 {% endif %}
 
 

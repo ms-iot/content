@@ -3,6 +3,7 @@ layout: default
 title: Serial Sample
 permalink: /en-US/win10/samples/SerialSample.htm
 lang: en-US
+rdlink: /Samples/SerialUART.htm
 ---
 
 # Serial Port Sample
