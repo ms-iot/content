@@ -1,14 +1,14 @@
 ---
 layout: sample
-title: Cylon LED controller
+title: Cylon servo controller
 description: Upload sensor data to Azure storage from a Node.js UWP app
 keywords: Windows 10 IoT Core, azure, uploader, data
-permalink: /en-US/Samples/CylonLED.htm
+permalink: /en-US/Samples/CylonServoWU.htm
 samplelink: N/A
 lang: en-US
 ---
 
-# Cylon LED controller
+# Cylon servo controller
 
 In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) running on a Raspberry Pi 2 or 3 to control a servo connected to an Arduino (with [Firmata](https://www.npmjs.com/package/firmata) installed).
 
