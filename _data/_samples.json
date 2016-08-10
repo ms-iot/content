@@ -125,7 +125,7 @@
         "samples/HelloBlinkyBackground.htm",
         "samples/PythonBlinky.htm",
         "samples/arduino-wiring/HelloBlinkyWiring.htm",
-        "samples/arduino-wiring/NodejsWUBlinky.htm"
+        "samples/NodejsWUBlinky.htm"
       ],
       "link-text": [
         "Blinky",
