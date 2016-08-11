@@ -1,11 +1,14 @@
 ---
 layout: sample
-title: Potentiometer Sample
-permalink: /en-US/Samples/tempSensor.htm
+title: Temperature and force sensor
+description: Control a basic temperature and force sensor
+keyword: Windows 10 IoT Core, Beginner, SPI, force
+permalink: /en-US/Samples/TempForceSensor.htm
+samplelink: https://github.com/ms-iot/samples/tree/develop/TempForceSensor
 lang: en-US
 ---
 
-# Temperature/Force Sensor Sample
+# Temperature and force sensor
 This sample uses SPI communication.
 A temperature/force sensor is connected to an ADC, the ADC is connected to the Raspberry Pi 2 or 3 through SPI Pins. The ADC converts the analog sensor output to a digital value that is then read by the Raspberry Pi 2 or 3 using SPI. The value read from the ADC is displayed on the screen attached to the Raspberry Pi 2 or 3.
 This is basically a simplified version of Potentiometer sensor sample, which has an LED light as an extra output.

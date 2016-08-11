@@ -67,7 +67,7 @@ This tutorial, based on the demo at the Build 2015 conference, shows how to use 
 This tutorial demonstrates how to use the AllJoyn Device System Bridge template to create a sample C++ app that exercises the device GPIO.
 - [AllJoyn DSB GPIO Adapter Tutorial C#]({{site.baseurl}}/en-US/Samples/AlljoynDSBSample_Managed.htm){:target="_blank"}
 This tutorial demonstrates how to use the AllJoyn Device System Bridge template to create a sample managed app that exercises the device GPIO.
-- [AllJoyn DSB ZigBee Adapter Tutorial and Sample]({{site.baseurl}}/en-US/Samples/ZigBeeAdapterTutorial.htm){:target="_blank"}
+- [AllJoyn DSB ZigBee Adapter Tutorial and Sample]({{site.baseurl}}/en-US/Samples/ZigBeeAdapter.htm){:target="_blank"}
  This tutorial shows how to use the Device System Bridge app to connect your IoT Core devices to ZigBee devices.
 - [AllJoyn DSB BACnet Adapter Tutorial and Sample]({{site.baseurl}}/en-US/Samples/BACnetAdapterTutorial.htm){:target="_blank"}
 This tutorial shows how to use the Device System Bridge app to connect your IoT Core devices to BACnet devices.

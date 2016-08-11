@@ -740,6 +740,33 @@
       ]
     },
     {
+      "title": "Speech translator",
+      "description": "Translate your speech to different languages.",
+      "link": "samples/SpeechTranslator.htm",
+      "link-text": "Learn More",
+      "lang": "C#",
+      "ranking": 10,
+      "tags": [
+        "c#",
+        "beginner"
+      ]
+    },
+    {
+      "title": "Temperature and force sensor",
+      "description": "Control a basic temperature and force sensor.",
+      "link": "samples/TempForceSensor.htm",
+      "link-text": "Learn More",
+      "lang": "C#",
+      "ranking": 10,
+      "tags": [
+        "c#",
+        "intermediate",
+        "gpio",
+        "i2c"
+      ]
+    },
+
+    {
       "title": "Z-Wave adapter",
       "description": "Expose and controlg Z-Wave devices.",
       "link": "samples/ZWaveAdapter.htm",
@@ -751,8 +778,49 @@
         "intermediate",
         "alljoyn"
       ]
+    },
+        {
+      "title": "ZigBee adapter",
+      "description": "Set up the ZigBee adapter for Device System Bridge (DSB)",
+      "link": "samples/ZigBeeAdapter.htm",
+      "link-text": "Learn More",
+      "lang": "C++",
+      "ranking": 10,
+      "tags": [
+        "c++",
+        "intermediate",
+        "alljoyn"
+      ]
     }
   ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   "zh-CN-tags": [
     "初级",
     "中级",

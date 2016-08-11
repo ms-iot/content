@@ -1,7 +1,7 @@
 ---
 layout: default
-title: ZigBeeAdapterTutorial
-permalink: /zh-cn/win10/samples/ZigBeeAdapterTutorial.htm
+title: ZigBeeAdapter
+permalink: /zh-cn/win10/samples/ZigBeeAdapter.htm
 lang: zh-CN
 ---
 
