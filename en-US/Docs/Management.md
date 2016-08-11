@@ -23,6 +23,7 @@ MDM enrollment of an IoT Core device is accomplished using a Provisioning packag
 
 #### Microsoft System Center Configuration Manager (Standalone or SCCM+Intune Hybrid)
 
+<<<<<<< HEAD
 1.  Open the Configuration Manager Management Console (ConfigMgr Console)
 
 2.  Navigate to _Assets and Compliance > Compliance Settings > Company Resource Access > Certificate Profiles_
@@ -45,6 +46,32 @@ MDM enrollment of an IoT Core device is accomplished using a Provisioning packag
 
 9.  Choose **Select all** for Supported Platforms
     ![ConfigMgr-Certificate-Profiles-Wizard-Supported-Platforms]
+=======
+1. Open the Configuration Manager Management Console (ConfigMgr Console)
+
+2. Navigate to _Assets and Compliance > Compliance Settings > Company Resource Access > Certificate Profiles_
+![ConfigMgr-Certificate-Profiles]
+
+3. Click **Create Certificate Profile**
+
+4. Provide a name and description for the profile
+
+    - Name: ConfigMgr Example Trusted Root Certificate
+
+    - Type of certificate profile: Trusted CA certificate  
+      ![ConfigMgr-Certificate-Profiles-Wizard]
+
+5. Click **Next**
+
+6. Import the certificate file
+
+7. Select **Computer certificate store - Root** for the **Destination Store**
+
+8. Click **Next**
+
+9. Choose **Select all** for Supported Platforms
+![ConfigMgr-Certificate-Profiles-Wizard-Supported-Platforms]
+>>>>>>> e43ee97511a18879f49e3996ed725f9f00d185ad
 
 10. Click **Summary, Next, and Close** to exit the wizard
 
@@ -55,6 +82,7 @@ MDM enrollment of an IoT Core device is accomplished using a Provisioning packag
 13. Click **Export** and click **OK** to exit the wizard
 
 #### Other MDM Servers
+<<<<<<< HEAD
 
 1.  Download and install the Windows Assessment and Deployment Kit (Windows ADK) - <a href="https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit" target="_blank">Get it here</a>
 
@@ -83,11 +111,47 @@ MDM enrollment of an IoT Core device is accomplished using a Provisioning packag
     - OnPremises: The password for the account you're enrolling with  
     - Certificate: The thumbprint of the certificate
     ![WICD-Workplace-Enrollments-UPN-Details-Filled-OnPremise]  
+=======
+1. Download and install the Windows Assessment and Deployment Kit (Windows ADK) - <a href="https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit" target="_blank">Get it here</a>
+
+2. Open Windows Imaging and Configuration Designer (WICD)
+![WICD-Start-Page]
+
+3. Choose **Advanced Provisioning**
+
+4. Set a name for your package
+
+5. Choose settings common to Windows 10 IoT Core
+
+6. Skip the Import Package step
+![WICD-New-Project-Details] ![WICD-New-Project-Editions] ![WICD-New-Project-Import]
+
+7. Navigate to Workplace -> Enrollments
+
+8. In the UPN field enter the account you wish to enroll your device under (i.e. trmck@contoso.co) and click **Add**
+![WICD-Workplace-Enrollments-UPN-Filled]
+
+9. For AuthPolicy choose between Username Password based authentication (OnPremises) or Certificate based authentication
+
+10. Enter the Discovery Service URL for your MDM server   
+{% include note.html text="Enrollment Service URL and Policy Service URL are optional" %}
+
+11. For the Secret enter  
+
+- OnPremises: The password for the account you're enrolling with  
+
+- Certificate: The thumbprint of the certificate
+![WICD-Workplace-Enrollments-UPN-Details-Filled-OnPremise]  
+>>>>>>> e43ee97511a18879f49e3996ed725f9f00d185ad
 
 12. At the top of WICD window click **Export > Provisioning package**
 
 13. Provide a name and version for your package and click **Next**.   
+<<<<<<< HEAD
     _Note: Be sure to increment the version number to ensure an updated package is executed_
+=======
+{% include note.html text="Be sure to increment the version number to ensure an updated package is executed" %}
+>>>>>>> e43ee97511a18879f49e3996ed725f9f00d185ad
 
 14. Click **Next** on the **security details page**
 

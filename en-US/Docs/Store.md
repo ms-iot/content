@@ -9,9 +9,9 @@ lang: en-US
 
 # Installing and Servicing apps on Windows 10 IoT Core
 
-Microsoft makes it easy for developers to install and service UWP apps on Windows 10 IoT Core through the Universal Store. All store signed apps on Windows 10 devices are capable of receiving updates directly from the store. 
+Microsoft makes it easy for OEMs to install and service UWP apps on Windows 10 IoT Core through the Universal Store. All store signed apps on Windows 10 devices are capable of receiving updates directly from the store. 
 
-Developers who wish to build apps and service them through the Universal Store are required to join the Windows Store OEM Preinstall Program. For details on getting enrolled please contact your Microsoft Channel Partner or email [partnerops@microsoft.com](mailto:partnerops@microsoft.com)
+{% include note.html text="Preinstall and servicing of store signed apps is only available to Windows 10 IoT Core Pro customers. If you are an OEM wishing to preinstall apps on your IoT devices please visit our [Commercialization](https://www.windowsforiotdevices.com) page to get started. If you are developer wishing to preinstall apps for IoT you must seek sponsorship from an OEM enrolled in the program." %}
 
 ## Publishing UWP to Universal Store
 ___
@@ -58,7 +58,7 @@ The second method is using Windows Imaging and Configuration Designer (WICD) to 
 5. Skip the provisioning package import
 6. On the left hand side expand Runtime Settings and click on Universal App Install > User Context App
 7. Enter the Package Family Name of your app and click Add  
-_Note: The PFN can be found in the Windows Dev Center under App Management > App Identity_
+{% include note.html text="The PFN can be found in the Windows Dev Center under App Management > App Identity" %}
 8. Under the newly added PFN add the Appx and its dependencies
 9. Set the DeploymentOptions to "Force target application shutdown"
 10. Export the package
@@ -74,4 +74,4 @@ Updating apps on IoT Core are very simple.
 _Note: Be sure to increment the version number for each new package_
 3. Upload the package to Windows Dev Center under the new submission and submit
 4. Following the app certification process devices will update the app to the latest version.  
-_Note: App updates on devices can take up to 24 hours to receive latest version_
+{% include note.html text="App updates on devices can take up to 24 hours to receive latest version" %}
