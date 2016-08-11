@@ -58,7 +58,7 @@ __Visual Studio DSB 模板__
 __示例 DSB__
 
 - [AllJoyn DSB Mock 适配器教程和示例]({{site.baseurl}}/zh-cn/win10/samples/MockAdapterTutorial.htm){:target="_blank"}。此教程介绍如何使用设备系统网桥应用将 IoT 核心版设备连接到模拟 BACnet 设备。
-- [AllJoyn DSB Z-Wave 适配器教程和示例]({{site.baseurl}}/zh-cn/win10/samples/ZWaveTutorial.htm){:target="_blank"}。基于 Build 2015 大会的演示，此教程介绍如何使用设备系统网桥应用将 IoT 核心版设备连接到 Z-Wave 设备。
+- [AllJoyn DSB Z-Wave 适配器教程和示例]({{site.baseurl}}/zh-cn/win10/samples/ZWaveAdapter.htm){:target="_blank"}。基于 Build 2015 大会的演示，此教程介绍如何使用设备系统网桥应用将 IoT 核心版设备连接到 Z-Wave 设备。
 - [AllJoyn DSB GPIO 适配器教程 C++]({{site.baseurl}}/zh-cn/win10/samples/AlljoynDSB_GpioTutorial.htm){:target="_blank"} 此教程演示如何使用 AllJoyn 设备系统网桥模板创建可操作设备 GPIO 的示例 C++ 应用。
 - [AllJoyn DSB GPIO 适配器教程 C\#]({{site.baseurl}}/zh-cn/win10/samples/AlljoynDSB_ManagedGpioTutorial.htm){:target="_blank"} 此教程演示如何使用 AllJoyn 设备系统网桥模板创建可操作设备 GPIO 的示例托管应用。
 - [AllJoyn DSB ZigBee 适配器教程和示例]({{site.baseurl}}/zh-cn/win10/samples/ZigBeeAdapterTutorial.htm){:target="_blank"} 此教程介绍如何使用设备系统网桥应用将 IoT 核心版设备连接到 ZigBee 设备。

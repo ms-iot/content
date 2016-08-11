@@ -2,7 +2,7 @@
 layout: sample
 title: Hello, blinky! background service
 description: A "Hello, world!" sample that lights up a small LED on your breadboard
-keyword: Beginner, gpio, headless
+keyword: Windows 10 IoT Core, Beginner, gpio, headless
 permalink: /en-US/Samples/HelloBlinkyBackground.htm
 samplelink: https://github.com/ms-iot/samples/tree/develop/HelloBlinkyBackground
 lang: en-US

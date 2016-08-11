@@ -1,11 +1,14 @@
 ---
 layout: sample
-title: ZWaveTutorial
-permalink: /en-US/Samples/ZWaveTutorial.htm
+title:  Z-Wave adapter
+description: Expose and controlg Z-Wave devices
+keyword: Windows 10 IoT Core, zwave, alljoyn, intermediate
+permalink: /en-US/Samples/ZWaveAdapter.htm
+samplelink: https://github.com/ms-iot/samples/tree/develop/AllJoyn/Samples/ZWaveAdapter
 lang: en-US
 ---
 
-# Z-Wave Sample
+# Z-Wave adapter
 
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\AllJoyn\Samples\ZWaveAdapter`.  The sample code is available in C++. Make a copy of the folder on your disk and open the project from Visual Studio.
 

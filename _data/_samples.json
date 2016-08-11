@@ -171,6 +171,20 @@
       ]
     },
     {
+      "title": "AllJoyn.Js",
+      "description": "Get AllJoyn.JS running as a Windows 10 application.",
+      "link": "samples/AllJoynJS.htm",
+      "link-text": "AllJoynJS",
+      "lang": "C#",
+      "ranking": 1,
+      "tags": [
+        "c#",
+        "intermediate",
+        "foreground",
+        "alljoyn"
+      ]
+    },
+    {
       "title": "IoT Core Default App",
       "description": "Create a UWP app that provides a device-management experience for Windows 10 IoT Core",
       "link": "samples/IoTDefaultApp.htm",
@@ -515,6 +529,19 @@
       ]
     },
     {
+      "title": "Bluetooth RFCOMM",
+      "description": "Deploy and debug an Arduino Wiring sketch to control a stepper motor",
+      "link": "samples/arduino-wiring/StepperMotor.htm",
+      "link-text": "Stepper Motor",
+      "lang": "Wiring",
+      "ranking": 3,
+      "tags": [
+        "wiring",
+        "beginner",
+        "gpio"
+      ]
+    },
+    {
       "title": "Arduino Wiring weather station",
       "description": "Set up a weather station using Arduino Wiring.",
       "link": "samples/arduino-wiring/WeatherStation.htm",
@@ -710,6 +737,19 @@
         "c++",
         "advanced",
         "driver"
+      ]
+    },
+    {
+      "title": "Z-Wave adapter",
+      "description": "Expose and controlg Z-Wave devices.",
+      "link": "samples/ZWaveAdapter.htm",
+      "link-text": "Learn More",
+      "lang": "C++",
+      "ranking": 10,
+      "tags": [
+        "c++",
+        "intermediate",
+        "alljoyn"
       ]
     }
   ],
