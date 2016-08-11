@@ -10,7 +10,7 @@ lang: en-US
 
 
 This page will take you through the steps to blink an LED from a Node.js console app running on a Raspberry Pi. This sample is similar to the 
-[Node.js (UWP) blinky sample]({{site.baseurl}}/{{page.lang}}/Samples/NodejsWUBlinky.htm). 
+[Node.js (UWP) blinky sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloWorldNodeBlinky.htm). 
 The difference is that we'll be using the win32 console version of Node.js (Chakra) and running it via command line.
 
 

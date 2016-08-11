@@ -28,7 +28,7 @@ Arduino 接线应用支持当前仅包含在适用于 Windows IoT 核心版的 I
 <A name="develop"></a>
 
 ## 开发
-完成[示例页]({{site.baseurl}}/{{page.lang}}/win10/StartCoding.htm)上的许多“接线”示例之一，或生成你自己的项目！ 将列出我们创建的任何使用 Arduino 接线编写的示例，如下所示： [Blinky（接线）]({{site.baseurl}}/{{page.lang}}/win10/samples/arduino-wiring/HelloBlinky.htm)。适用于 IoT 项目的经典“Hello World”项目 Blinky 是适合作为你的第一个项目的良好起点！
+完成[示例页]({{site.baseurl}}/{{page.lang}}/win10/StartCoding.htm)上的许多“接线”示例之一，或生成你自己的项目！ 将列出我们创建的任何使用 Arduino 接线编写的示例，如下所示： [Blinky（接线）]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloBlinkyWiring.htm)。适用于 IoT 项目的经典“Hello World”项目 Blinky 是适合作为你的第一个项目的良好起点！
 
 ### 移植
 

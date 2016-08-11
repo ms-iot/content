@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Arduino 接线电位计示例
-permalink: /zh-cn/win10/samples/arduino-wiring/Potentiometer.htm
+permalink: /zh-cn/win10/samples/PotentiometerWiring.htm
 lang: zh-CN
 ---
 

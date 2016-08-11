@@ -109,7 +109,7 @@
       "link-text": "UI Blinky",
       "lang": "C#/C++", 
       "ranking": 0,
-      "new": "yes",
+      "new": "no",
       "tags": [
         "c#",
         "c++",
@@ -118,14 +118,29 @@
         "gpio"
       ]
     },
+        {
+      "title": "'Hello, blinky!' server",
+      "description": "Create a simple 'Hello, world!' web server app that controls an LED",
+      "link": "samples/HelloBlinkyServer.htm",
+      "link-text": "Blinky",
+      "lang": "Python", 
+      "ranking": 0,
+      "new": "yes",
+      "tags": [
+        "python",
+        "beginner",
+        "background",
+        "gpio"
+      ]
+    },
     {
       "title": "'Hello, blinky!' background service",
       "description": "Create an app with no UI that toggles an LED on devices running Windows 10 IoT Core",
       "link": [
         "samples/HelloBlinkyBackground.htm",
-        "samples/PythonBlinky.htm",
-        "samples/arduino-wiring/HelloBlinkyWiring.htm",
-        "samples/NodejsWUBlinky.htm"
+        "samples/HelloBlinkyBackgroundPython.htm",
+        "samples/HelloBlinkyBackgroundWiring.htm",
+        "samples/HelloBlinkyBackgroundNode.htm"
       ],
       "link-text": [
         "Blinky",
@@ -179,9 +194,15 @@
     {
       "title": "SPI accelerometer",
       "description": "Connect an accelerometer to your device and read data from it",
-      "link": "samples/SPIAccelerometer.htm",
+      "link":[
+         "samples/SPIAccelerometer.htm",
+         "samples/SPIAccelerometer.htm"
+      ],
       "link-text": "SPI Accelerometer",
-      "lang": "C#",
+      "lang": [
+        "C#",
+        "Python"
+      ],
       "ranking": 3,
       "tags": [
         "beginner",
@@ -272,7 +293,7 @@
       "description": "Read values from a rotary potentiometer and output data to an LED",
       "link": [
         "samples/Potentiometer.htm",
-        "samples/arduino-wiring/Potentiometer.htm"
+        "samples/PotentiometerWiring.htm"
       ],
       "link-text": [
         "Potentiometer Sensor Sample",
@@ -685,7 +706,7 @@
       "description": "Build a driver for IoT Core and use HID Injection to inject touch, keyboard or mouse events.",
       "link": "samples/HidInjection.htm",
       "link-text": "Learn More",
-      "lang": "N/A",
+      "lang": "C++",
       "ranking": 10,
       "tags": [
         "c++",
@@ -729,7 +750,7 @@
     {
       "title": "Hello Blinky（无外设应用）",
       "description": "创建不带 UI 的应用，该应用可在运行 Windows 10 IoT 核心版的设备上切换 LED 灯",
-      "link-text": "<a href='samples/BlinkyHeadless.htm'>Blinky (C#)</a><br><a href='samples/PythonBlinky.htm'>Blinky (Python)</a><br><a href='samples/arduino-wiring/HelloBlinky.htm'>Blinky（接线）</a>",
+      "link-text": "<a href='samples/BlinkyHeadless.htm'>Blinky (C#)</a><br><a href='samples/PythonBlinky.htm'>Blinky (Python)</a><br><a href='samples/HelloBlinkyWiring.htm'>Blinky（接线）</a>",
       "ranking": 0,
       "tags": [
         "初级",
@@ -865,7 +886,7 @@
     {
       "title": "电位计传感器示例",
       "description": "通过 ADC 转换器将模拟传感器连接到 Raspberry Pi 以及通过监视器和 LED 灯显示数字输出数据。",
-      "link-text": "<a href='samples/Potentiometer.htm'>电位计传感器示例 (C#)</a><a href='samples/arduino-wiring/Potentiometer.htm'>电位计传感器示例（接线）</a>",
+      "link-text": "<a href='samples/Potentiometer.htm'>电位计传感器示例 (C#)</a><a href='samples/PotentiometerWiring.htm'>电位计传感器示例（接线）</a>",
       "ranking": 3,
       "tags": [
         "初级",

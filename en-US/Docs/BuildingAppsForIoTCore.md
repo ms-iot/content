@@ -129,7 +129,7 @@ With Arduino Wiring support you can build apps in Arduino Wiring for many popula
 Our [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide) provides full instructions on how to get set up to build these apps. The samples copied and linked below will help you get started building your own.  You can even [build](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryBlinky) WinRT components in Arduino that can then be used from other languages. This is especially helpful for peripherals that have rich Arduino libraries like [LCD character displays](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryLcdDisplay).
 
 *Blinky Sample Code*
-The full [sample code and docs]({{site.baseurl}}/{{page.lang}}/Samples/arduino-wiring/HelloBlinkyWiring.htm) are available in our samples page and you can find the full code below.
+The full [sample code and docs]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinkyWiringWiring.htm) are available in our samples page and you can find the full code below.
 
 {% highlight C++ %}
 void setup()
@@ -191,7 +191,7 @@ function flipLed(){
 ### Python
 IoT Core also supports building Background Apps with Python. Support for the python languages and libaries is fully there, but the python language itself does not support calling UWP APIs and so we provide python libraries to call into critical platform features like GPIO, I2C, PWM, ...
 
-This [app]({{site.baseurl}}/{{page.lang}}/Samples/PythonBlinky.htm) shows how to build a basic Python Background App that blinks an LED.
+This [app]({{site.baseurl}}/{{page.lang}}/Samples/HelloWorldPythonBlinky.htm) shows how to build a basic Python Background App that blinks an LED.
 
 
 {% highlight Python %}

@@ -4,7 +4,7 @@ title: Digital sign
 description: Create a basic digital sign
 keyword: Windows 10 IoT Core, digital sign
 permalink: /en-US/Samples/DigitalSign.htm
-samplelink: https://github.com/ms-iot/samples/tree/develop/DigitalSignageUAP
+samplelink: https://github.com/ms-iot/samples/tree/develop/DigitalSign
 lang: en-US
 ---  
 

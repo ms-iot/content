@@ -1,13 +1,15 @@
 ---
 layout: sample
 title: Python 'Hello, World' sample
-permalink: /en-US/Samples/Python.htm
+description: Create and deploy your first IoT Core app
+permalink: /en-US/Samples/HelloWorldPython.htm
+samplelink: N/A
 lang: en-US
 ---
 
-# Python 'Hello, World' Sample
+# 'Hello, world!'
 
-
+In this sample, we will create and deploy the proverbial 1st app, "Hello, world!" to any device running Windows 10 IoT Core.
 
 ### Set up your PC
 

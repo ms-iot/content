@@ -1,7 +1,7 @@
 ---
 layout: sample
 title: NodejsWULightning
-permalink: /en-US/Samples/NodejsWULightning.htm
+permalink: /en-US/Samples/HelloWorldNodeLightning.htm
 lang: en-US
 ---
 
@@ -10,7 +10,7 @@ lang: en-US
 
 
 In this sample, we will use the [Lightning GPIO provider]({{site.baseurl}}/{{page.lang}}/Docs/LightningProviders.htm) to blink an LED attached to a Raspberry Pi 2. 
-It also includes steps to reference a custom winmd file in your Node.js project. This sample is based on the [Blinky sample]({{site.baseurl}}/{{page.lang}}/Samples/NodejsWUBlinky.htm) 
+It also includes steps to reference a custom winmd file in your Node.js project. This sample is based on the [Blinky sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloWorldNodeBlinky.htm) 
 and shares the same setup steps as well as most of the code. The key difference is setting the Lightning provider as the default controllers provider.
 
 

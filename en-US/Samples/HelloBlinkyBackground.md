@@ -4,7 +4,7 @@ title: Hello, blinky! background service
 description: A "Hello, world!" sample that lights up a small LED on your breadboard
 keyword: Beginner, gpio, headless
 permalink: /en-US/Samples/HelloBlinkyBackground.htm
-samplelink: https://github.com/ms-iot/samples/tree/develop/BlinkyHeadless
+samplelink: https://github.com/ms-iot/samples/tree/develop/HelloBlinkyBackground
 lang: en-US
 ---
 
@@ -23,7 +23,7 @@ ___
 
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\BlinkyHeadless`.  The sample code is available in either C++ or C#, however the documentation here only details the C# variant. Make a copy of the folder on your disk and open the project from Visual Studio.
 
-Make sure you connect the LED to your board. Go back to the basic 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/Samples/Blinky.htm) if you need guidance.
+Make sure you connect the LED to your board. Go back to the basic 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky.htm) if you need guidance.
 
 Note that the app will not run successfully if it cannot find any available GPIO ports.
 

@@ -4,7 +4,7 @@ title: SPI Accelerometer
 keyword: Windows 10 IoT Core, beginner, breadboard, i2c, accelerometer
 description: Connect an accelerometer to your device
 permalink: /en-US/Samples/SPIAccelerometer.htm
-samplelink: https://github.com/ms-iot/samples/tree/develop/Accelerometer
+samplelink: https://github.com/ms-iot/samples/tree/develop/SPIAccelerometer
 lang: en-US
 ---
 

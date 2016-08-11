@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Python Blinky 示例
-permalink: /zh-cn/win10/samples/PythonBlinky.htm
+permalink: /zh-cn/win10/HelloWorldPythonBlinky.htm
 lang: zh-CN
 ---
 

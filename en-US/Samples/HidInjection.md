@@ -2,6 +2,7 @@
 layout: sample
 title: HID Injection Sample
 permalink: /en-US/samples/HidInjection.htm
+samplelink: https://github.com/ms-iot/samples/tree/develop/HIDInjection
 lang: en-US
 ---
 # HID Injection

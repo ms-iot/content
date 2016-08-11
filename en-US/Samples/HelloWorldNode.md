@@ -1,13 +1,15 @@
 ---
 layout: sample
-title: NodejsWU
-permalink: /en-US/Samples/NodejsWU.htm
+title: Hello, world!
+description: Create and deploy your first IoT Core app
+permalink: /en-US/Samples/HelloWorldNode.htm
+samplelink: N/A
 lang: en-US
 ---
 
-# 'Hello, World' Node.js (Windows Universal) Sample
+# 'Hello, world' 
 
-
+In this sample, we will create and deploy the proverbial 1st app, "Hello, world!" to any device running Windows 10 IoT Core.
 
 ### Set up your PC
 * Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
