@@ -105,9 +105,15 @@
     {
       "title": "'Hello, blinky!'",
       "description": "A 'Hello, world' sample to control an LED from a breadboard",
-      "link": "samples/HelloBlinky.htm",
+      "link": [
+        "samples/HelloBlinky.htm",
+        "samples/HelloBlinkyNode"
+      ],
       "link-text": "UI Blinky",
-      "lang": "C#/C++", 
+      "lang": [
+        "C#/C++",
+        "node.js"
+      ], 
       "ranking": 0,
       "new": "no",
       "tags": [
@@ -353,20 +359,6 @@
       ]
     },
     {
-      "title": "Cylon servo controller",
-      "description": "Use Cylon to blink an LED on an Arduino from a Windows 10 IoT Core device",
-      "link": "samples/CylonServo.htm",
-      "link-text": "Cylon",
-      "lang": "Node.js",
-      "ranking": 0,
-      "tags": [
-        "cylon",
-        "node.js",
-        "background",
-        "intermediate"
-      ]
-    },
-    {
       "title": "Azure data uploader",
       "description": "Upload sensor data to Azure storage from a Node.js UWP app",
       "link": "samples/AzureDataUploader.htm",
@@ -382,10 +374,16 @@
     },
     {
       "title": "Cylon servo controller",
-      "description": "Control a servo connected to an Arduino using Cylon in a Node.js UWP app",
-      "link": "samples/CylonServoWU.htm",
+      "description": "Control a servo to control a blinking LED",
+      "link": [
+        "Samples/CylonServoNode.htm",
+        "Samples/CylonServoWiring.htm"
+      ],
       "link-text": "Cylon",
-      "lang": "Node.js",
+      "lang": [
+      "node.js",
+      "Wiring"
+      ],
       "ranking": 0,
       "tags": [
         "intermediate",
@@ -763,7 +761,7 @@
     {
       "title": "UI Blinky 应用",
       "description": "创建基于 UI 的应用，该应用可在运行 Windows 10 IoT 核心版的设备上切换 LED 灯",
-      "link-text": "<a href='samples/Blinky.htm'>UI Blinky (C#/C++)</a>",
+      "link-text": "<a href='Samples/HelloBlinky.htm'>UI Blinky (C#/C++)</a>",
       "ranking": 0,
       "tags": [
         "初级",

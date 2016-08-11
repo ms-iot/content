@@ -23,7 +23,7 @@ only available on Windows IoT Core, so this sample cannot run on your desktop.
 * Download and install the latest Python UWP SDK (pyuwpsdk.vsix) release from [here](https://github.com/ms-iot/python/releases){:target="_blank"}.
 
 ### Set up your hardware
-The setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/Samples/Blinky.htm).
+The setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky.htm).
 
 ### Headless mode
 
@@ -35,7 +35,7 @@ You can find the source code for this sample by downloading a zip of all of our 
 
 If you're building for MinnowBoard Max, select `x86` in the architecture drop down.  If you're building for Raspberry Pi 2 or 3, select `ARM`.
 
-Make sure you connect the LED to your board. Go back to the basic 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/Samples/Blinky.htm) if you need guidance.
+Make sure you connect the LED to your board. Go back to the basic 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky.htm) if you need guidance.
 
 Note that the app will not run successfully if it cannot find any available GPIO ports.
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Blinky 示例
-permalink: /zh-cn/win10/samples/Blinky.htm
+permalink: /zh-cn/win10/Samples/HelloBlinky.htm
 lang: zh-CN
 ---
 

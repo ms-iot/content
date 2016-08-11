@@ -12,7 +12,7 @@ lang: en-US
 
 This sample demonstrates how to communicate with GPIO using the Micorosot.IoT.Lightning.Providers.I2cProvider
 
-It's based on the [Blinky UI sample]({{site.baseurl}}/{{page.lang}}/Samples/Blinky.htm) and shares the same setup steps. The main difference is setting the Lightning provider as the default controllers provider.
+It's based on the [Blinky UI sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky.htm) and shares the same setup steps. The main difference is setting the Lightning provider as the default controllers provider.
 
 ### Using Lightning Provider
 
@@ -82,7 +82,7 @@ private async void InitGPIO()
 
 1. Clone the source for the Blinky sample for Lightning from [Github](https://github.com/ms-iot/BusProviders/tree/develop/Microsoft.IoT.Lightning.Providers) to a local folder.
 
-1. To setup the LED connectons, refer to the [original Blinky sample]({{site.baseurl}}/{{page.lang}}/Samples/Blinky.htm).
+1. To setup the LED connectons, refer to the [original Blinky sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky.htm).
 
 1. Load the solution in Visual Studio.
 

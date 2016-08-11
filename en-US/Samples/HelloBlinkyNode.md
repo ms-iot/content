@@ -1,21 +1,22 @@
 ---
-layout: sample
-title: Nodejs Console Blinky
-permalink: /en-US/Samples/nodejs-blinky.htm
+title: Hello, blinky! 
+description: A "Hello, world" sample for an LED and breadboard
+keyword: Beginner, gpio, xaml, iot core, windows
+permalink: /en-US/Samples/HelloBlinkyNode.htm
+samples: N/A
 lang: en-US
 ---
 
-# Blinky Node.js (Console Application) Sample
-
+# 'Hello, blinky!'
 
 
 This page will take you through the steps to blink an LED from a Node.js console app running on a Raspberry Pi. This sample is similar to the 
-[Node.js (UWP) blinky sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloWorldNodeBlinky.htm). 
+[Hello blinky background service]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinkyBackgroundNode.htm). 
 The difference is that we'll be using the win32 console version of Node.js (Chakra) and running it via command line.
 
 
 ### Set up your hardware
-The hardware setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/Samples/Blinky.htm).
+The hardware setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky.htm).
 
 
 ### Set up your PC
