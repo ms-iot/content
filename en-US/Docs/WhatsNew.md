@@ -10,7 +10,7 @@ lang: en-US
 # What’s new for Windows 10 IoT Core - The Anniversary Update
 
 One year after the official release of Windows 10 IoT Core comes the Windows 10 Anniversary Update.
-Huge improvements to both performance, supporting apps, installation experience and features have been made.
+Huge improvements have been made to performance, app support, the installation experience... plus lots of new features. [Download the Windows 10 IoT Core Dashboard and take a look for yourself!](http://go.microsoft.com/fwlink/?LinkID=708576)
 
 ## New Hardware 
 ___
@@ -27,10 +27,10 @@ ___
 
 The new Microsoft IoT Grove Kit is an easy to use solution for Makers, as well as a powerful prototyping platform for IoT Startups and Enterprise Innovators. You can pre-order today at [Seeed Studio Bazaar](https://www.seeedstudio.com/Microsoft-IoT-Grove-Kit-p-2694.html) and [Digi-Key](http://www.digikey.com/en/product-highlight/s/seeed/microsoft-iot-grove-kit?WT.z_cid=sp_1597_MIot).
 
-### [Refreshed Adafruit IoT Starter Pack for Raspberry Pi 3]({{site.baseurl}}/{{page.lang}}/Docs/AdafruitWelcome.htm)
+### Refreshed Adafruit IoT Starter Pack for Raspberry Pi 3
 ![Adafruit starter pack]({{site.baseurl}}/Resources/images/AdafruitStarterPack/AdafruitMakerKitClosedSmall.jpg) 
 
-Adafruit has [updated their starter pack](https://www.adafruit.com/product/2733) to now include Raspberry Pi 3 and Windows 10 IoT Core.
+Adafruit has [updated their starter pack]({{site.baseurl}}/{{page.lang}}/Docs/AdafruitWelcome.htm)  to now include Raspberry Pi 3 and Windows 10 IoT Core.
 
 
 ## New major features
@@ -43,16 +43,16 @@ ___
 * [IoTivity AllJoyn Device System Bridge](https://github.com/ms-iot/samples/tree/develop/AllJoyn/Samples/OICAdapter)
 * [Arduino INO integration](http://inotool.org/) - work better with Arduino hardware with this command line toolkit
 
-### [Improved documentation]({{site.baseurl}}/{{page.lang}}/Docs.htm)
+### Improved documentation
 * Updated [samples page]({{site.baseurl}}/{{page.lang}}/Samples.htm) - new tagging system to sort through different samples 
 * Updated [documentation page]({{site.baseurl}}/{{page.lang}}/Docs.htm) - added a table of contents and new documentation
 
-### [Getting started]({{site.baseurl}}/{{page.lang}}/Explore/GetStarted.htm)
+### Getting started
 * New [getting started]({{site.baseurl}}/{{page.lang}}/Explore/GetStarted.htm) flow  
 * Automatically set up your Wi-Fi connection through the [IoT Dashboard]({{site.baseurl}}/{{page.lang}}/Docs/IoTDashboard.htm)
  
-### For [commercial builders]({{site.baseurl}}/{{page.lang}}/Docs/CreateIoTCorePro.htm)
-* Retail signing with cross certs - cross sign your own [drivers]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab.htm) and be compatible with secure boot 
+### For commercial builders
+* [Windows 10 IoT Core Pro]({{site.baseurl}}/{{page.lang}}/Docs/CreateIoTCorePro.htm) now offers retail signing with cross certs - cross sign your own [drivers]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab.htm) and be compatible with secure boot 
 * [Trusted Platform Module (TPM) support]({{site.baseurl}}/{{page.lang}}/Docs/TPM.htm) - provision your azure key into a virtual or physical TPM 
 * A new [OEM manufacturing guide](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/iot-core-manufacturing-guide) - build your own .FFU
 
@@ -71,4 +71,3 @@ ___
 [Release Notes]({{site.baseurl}}/{{page.lang}}/Docs/ReleaseNotesInsiderPreview.htm)
 
 [Privacy Statement](http://go.microsoft.com/fwlink/?LinkId=506737)
-
