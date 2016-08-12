@@ -48,7 +48,7 @@ ___
 * Updated [documentation page]({{site.baseurl}}/{{page.lang}}/Docs.htm) - added a table of contents and new documentation
 
 ### Getting started
-* New [getting started]({{site.baseurl}}/{{page.lang}}/Explore/GetStarted.htm) flow  
+* New [getting started]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) flow  
 * Automatically set up your Wi-Fi connection through the [IoT Dashboard]({{site.baseurl}}/{{page.lang}}/Docs/IoTDashboard.htm)
  
 ### For commercial builders
@@ -61,7 +61,7 @@ ___
 ___
 * [IoT Core Default app](https://github.com/ms-iot/samples/tree/develop/IoTCoreDefaultApp) - added an on device command line 
 * Blockly - now available in the IoT Dashboard as sample using node.js and sense hat
-* [Wireless 3D printer project](https://developer.microsoft-int.com/en-us/windows/iot/docs/3dprintserver) - make your 3D printer by connecting an IoT Core device to it 
+* [Wireless 3D printer project]({{site.baseurl}}/{{page.lang}}/Docs/3dprintserver.htm) - make your 3D printer by connecting an IoT Core device to it 
 * [PID wheel demo](https://www.hackster.io/windows-iot/closed-loop-control-remote-sensors-and-remote-ux-on-rpi3-ef3ed0?ref=part&ref_id=9417&offset=19) - monitor a wheel's speed and consistently reach the desired RPM under any friction level
 * [System center configuration manager](https://developer.microsoft.com/en-us/windows/iot/docs/management) - enroll your IoT Core device under SCCM management
 
