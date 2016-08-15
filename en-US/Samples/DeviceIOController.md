@@ -1,10 +1,10 @@
 ---
 layout: sample
-title: Device I/O Controller
+title: Device IO Controller
+description: Learn how to control input output
+keyword: Windows 10 IoT Core, io 
 permalink: /en-US/Samples/DeviceIOController.htm
 samplelink: https://github.com/ms-iot/samples/tree/develop/DeviceIOController
-keyword: Windows 10 IoT Core, io
-description: Learn how to control input output 
 lang: en-US
 ---
 

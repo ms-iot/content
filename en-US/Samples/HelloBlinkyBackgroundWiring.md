@@ -3,7 +3,7 @@ layout: sample
 title: Hello, blinky! background service - Arduino Wiring sketch
 description: A "Hello, world!" sample that lights up a small LED on your breadboard
 keyword: Beginner, gpio, headless
-permalink: /en-US/Samples/HelloBlinkyBackground.htm
+permalink: /en-US/Samples/HelloBlinkyBackgroundWiring.htm
 samplelink: N/A
 lang: en-US
 ---

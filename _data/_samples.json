@@ -79,8 +79,8 @@
       "description": "Create and deploy your first Windows 10 IoT Core app",
       "link": [
         "samples/HelloWorld.htm",
-        "samples/Python.htm",
-        "samples/NodejsWU.htm"
+        "samples/HelloBlinkyBackgroundPython.htm",
+        "samples/HelloBlinkyBackgroundNode.htm"
       ],
       "link-text": [
         "Hello World",
@@ -107,7 +107,7 @@
       "description": "A 'Hello, world' sample to control an LED from a breadboard",
       "link": [
         "samples/HelloBlinky.htm",
-        "samples/HelloBlinkyNode"
+        "samples/HelloBlinkyNode.htm"
       ],
       "link-text": "UI Blinky",
       "lang": [
@@ -185,6 +185,187 @@
       ]
     },
     {
+      "title": "Arduino Wiring weather station",
+      "description": "Set up a weather station using Arduino Wiring.",
+      "link": "samples/arduino-wiring/WeatherStation.htm",
+      "link-text": "Weather Station",
+      "lang": "Wiring",
+      "ranking": 3,
+      "tags": [
+        "wiring",
+        "beginner",
+        "I2C"
+      ]
+    },
+{
+      "title": "App installer",
+      "description": "Install and deploy an app on Windows IoT Core",
+      "link": "samples/AppInstaller.htm",
+      "link-text": "Learn More",
+      "lang": "N/A",
+      "ranking": 0,
+      "tags": [
+        "intermediate",
+        "o/s"
+      ]
+    },
+    {
+      "title": "Arduino Wiring libraries",
+      "description": "Build Arduino Wiring libraries that can be called from other languages like C# and Node.js",
+      "link": "samples/arduino-wiring/ArduinoWiringComponents.htm",
+      "link-text": "Blinky UI",
+      "lang": "C#/C++",
+      "ranking": 0,
+      "tags": [
+        "c#",
+        "c++",
+        "node.js",
+        "wiring",
+        "intermediate",
+        "lightning"        
+      ]
+    },    
+    {
+      "title": "Azure data uploader",
+      "description": "Upload sensor data to Azure storage from a Node.js UWP app",
+      "link": "samples/AzureDataUploader.htm",
+      "link-text": "Azure",
+      "lang": "Node.js",
+      "ranking": 0,
+      "tags": [
+        "intermediate",
+        "johnny-five",
+        "azure",
+        "node.js"
+      ]
+    },
+    {
+      "title": "Bluetooth low energy GATT",
+      "description": "Learn how to work with Bluetooth Low Energy devices using the GATT profile and a TI CC2541 SensorTag",
+      "link": "samples/BLEGatt.htm",
+      "link-text": "Bluetooth GATT",
+      "lang": "C#",
+      "ranking": 0,
+      "new": "yes",
+      "tags": [
+        "bluetooth",
+        "c#",
+        "ble",
+        "c#",
+        "intermediate"
+      ]
+    },
+    {
+      "title": "Bluetooth RFCOMM",
+      "description": "Deploy and debug an Arduino Wiring sketch to control a stepper motor",
+      "link": "samples/arduino-wiring/StepperMotor.htm",
+      "link-text": "Stepper Motor",
+      "lang": "Wiring",
+      "ranking": 3,
+      "tags": [
+        "wiring",
+        "beginner",
+        "gpio"
+      ]
+    },    
+    {
+      "title": "Cylon servo controller",
+      "description": "Control a servo to control a blinking LED",
+      "link": [
+        "Samples/CylonServoNode.htm",
+        "Samples/CylonServoWiring.htm"
+      ],
+      "link-text": "Cylon",
+      "lang": [
+      "node.js",
+      "Wiring"
+      ],
+      "ranking": 0,
+      "tags": [
+        "intermediate",
+        "node.js"
+      ]
+    },
+    {
+      "title": "Device I/O controller",
+      "description": "Use <code>CreateFile()</code> and <code>DeviceIoControl()</code> to access custom devices from UWP.",
+      "link": "samples/DeviceIoController.htm",
+      "link-text": "Learn More",
+      "lang": "C++",
+      "ranking": 10,
+      "tags": [
+        "c++",
+        "advanced",
+        "driver"
+      ]
+    },        
+    {
+      "title": "Digital sign",
+      "description": "Create a basic digital sign and learn how to work with multimedia",
+      "link": "samples/DigitalSign.htm",
+      "link-text": "Digital sign",
+      "lang": "C#",
+      "ranking": 10,
+      "tags": [
+        "intermediate",
+        "foreground",
+        "c#"
+      ]
+    },    
+    {
+      "title": "Driver sample",
+      "description": "Create and interact with a universal driver on devices running Windows 10 IoT Core",
+      "link": "samples/DriverLab.htm",
+      "link-text": "Driver Sample",
+      "lang": "C++",
+      "ranking": 20,
+      "tags": [
+        "advanced",
+        "driver",
+        "c#"
+      ]
+    },  
+    {
+      "title": "Express Node.js app",
+      "description": "Create a new Express Node.js app",
+      "link": "samples/ExpressNodejs.htm",
+      "link-text": "Express",
+      "lang": "Node.js",
+      "ranking": 10,
+      "tags": [
+        "intermediate",
+        "server",
+        "node.js",
+        "express"
+      ]
+    }, 
+    {
+      "title": "External process launcher",
+      "description": "Use <code>Windows.System.ProcessLauncher</code> API to launch external executable programs from your UWP app",
+      "link": "samples/ExternalProcessLauncher.htm",
+      "link-text": "ProcessLauncher API Sample",
+      "lang": "C#",
+      "ranking": 10,
+      "tags": [
+        "c#",
+        "intermediate",
+        "o/s"
+      ]
+    },      
+    {
+      "title": "GPIO OneWire",
+      "description": "Create an app that uses GPIO to read from the DHT11, a temperature and humidity sensor that uses a single-wire protocol",
+      "link": "samples/GpioOneWire.htm",
+      "link-text": "GPIO OneWire",
+      "lang": "C++",
+      "ranking": 3,
+      "tags": [
+        "c++",
+        "intermediate",
+        "gpio"
+      ]
+    },       
+    {
       "title": "IoT Core Default App",
       "description": "Create a UWP app that provides a device-management experience for Windows 10 IoT Core",
       "link": "samples/IoTDefaultApp.htm",
@@ -211,6 +392,98 @@
         "c#"
       ]
     },
+    {
+      "title": "I2C port expander",
+      "description": "Connect a port expander to read the status of a tactile switch and control an LED",
+      "link": "samples/I2CPortExpander.htm",
+      "link-text": "I2C Port Expander",
+      "lang": "C#",
+      "ranking": 20,
+      "tags": [
+        "advanced",
+        "i2c",
+        "gpio",
+        "c#"
+      ]
+    },  
+    {
+      "title": "IoT browser",
+      "description": "Create a simple web browser",
+      "link": "samples/IoTBrowser.htm",
+      "link-text": "IoT Browser",
+      "lang": "C#",
+      "ranking": 2,
+      "tags": [
+        "c#",
+        "beginner",
+        "foreground",
+        "o/s"
+      ]
+    },
+    {
+      "title": "Johnny-Five servo controller",
+      "description": "Control a servo connected to an Arduino using Johnny-Five in a Node.js UWP app",
+      "link": "samples/J5ServoController.htm",
+      "link-text": "Johnny-Five",
+      "lang": "Node.js",
+      "ranking": 0,
+      "tags": [
+        "intermediate",
+        "johnny-five",
+        "servo",
+        "node.js"
+      ]
+    },        
+    {
+      "title": "Push button",
+      "description": "Make an LED blink with the push of a button",
+      "link": "samples/PushButton.htm",
+      "link-text": "Push Button",
+      "lang": "C#",
+      "ranking": 1,
+      "tags": [
+        "beginner",
+        "gpio",
+        "c#"
+      ]
+    },  
+     {
+      "title": "Potentiometer sensor",
+      "description": "Read values from a rotary potentiometer and output data to an LED",
+      "link": [
+        "samples/Potentiometer.htm",
+        "samples/PotentiometerWiring.htm"
+      ],
+      "link-text": [
+        "Potentiometer Sensor Sample",
+        "Potentiometer Sensor Sample"
+      ],
+      "lang": [
+        "C#",
+        "Wiring"
+      ],
+      "ranking": 3,
+      "tags": [
+        "beginner",
+        "c#",
+        "gpio",
+        "Wiring",
+        "foreground"
+      ]
+    },    
+    {
+      "title": "RGB LED",
+      "description": "Create an app that uses the Raspberry Pi 2 to toggle an RGB LED.",
+      "link": "samples/RGBLED.htm",
+      "link-text": "RGB LED",
+      "lang": "C#",
+      "ranking": 3,
+      "tags": [
+        "beginner",
+        "gpio",
+        "c#"
+      ]
+    },      
     {
       "title": "SPI accelerometer",
       "description": "Connect an accelerometer to your device and read data from it",
@@ -244,33 +517,6 @@
       ]
     },
     {
-      "title": "Driver sample",
-      "description": "Create and interact with a universal driver on devices running Windows 10 IoT Core",
-      "link": "samples/DriverLab.htm",
-      "link-text": "Driver Sample",
-      "lang": "C++",
-      "ranking": 20,
-      "tags": [
-        "advanced",
-        "driver",
-        "c#"
-      ]
-    },
-    {
-      "title": "I2C port expander",
-      "description": "Connect a port expander to read the status of a tactile switch and control an LED",
-      "link": "samples/I2CPortExpander.htm",
-      "link-text": "I2C Port Expander",
-      "lang": "C#",
-      "ranking": 20,
-      "tags": [
-        "advanced",
-        "i2c",
-        "gpio",
-        "c#"
-      ]
-    },
-    {
       "title": "Shift register",
       "description": "Connect an 8-bit serial-in, parallel-out shift register to your device to toggle eight LED's",
       "link": "samples/ShiftRegister.htm",
@@ -279,69 +525,6 @@
       "ranking": 20,
       "tags": [
         "advanced",
-        "c#"
-      ]
-    },
-    {
-      "title": "RGB LED",
-      "description": "Create an app that uses the Raspberry Pi 2 to toggle an RGB LED.",
-      "link": "samples/RGBLED.htm",
-      "link-text": "RGB LED",
-      "lang": "C#",
-      "ranking": 3,
-      "tags": [
-        "beginner",
-        "gpio",
-        "c#"
-      ]
-    },
-    {
-      "title": "Push button",
-      "description": "Make an LED blink with the push of a button",
-      "link": "samples/PushButton.htm",
-      "link-text": "Push Button",
-      "lang": "C#",
-      "ranking": 1,
-      "tags": [
-        "beginner",
-        "gpio",
-        "c#"
-      ]
-    },
-    {
-      "title": "Potentiometer sensor",
-      "description": "Read values from a rotary potentiometer and output data to an LED",
-      "link": [
-        "samples/Potentiometer.htm",
-        "samples/PotentiometerWiring.htm"
-      ],
-      "link-text": [
-        "Potentiometer Sensor Sample",
-        "Potentiometer Sensor Sample"
-      ],
-      "lang": [
-        "C#",
-        "Wiring"
-      ],
-      "ranking": 3,
-      "tags": [
-        "beginner",
-        "c#",
-        "gpio",
-        "Wiring",
-        "foreground"
-      ]
-    },
-    {
-      "title": "Digital sign",
-      "description": "Create a basic digital sign and learn how to work with multimedia",
-      "link": "samples/DigitalSign.htm",
-      "link-text": "Digital sign",
-      "lang": "C#",
-      "ranking": 10,
-      "tags": [
-        "intermediate",
-        "foreground",
         "c#"
       ]
     },
@@ -372,110 +555,7 @@
         "c#"
       ]
     },
-    {
-      "title": "Azure data uploader",
-      "description": "Upload sensor data to Azure storage from a Node.js UWP app",
-      "link": "samples/AzureDataUploader.htm",
-      "link-text": "Azure",
-      "lang": "Node.js",
-      "ranking": 0,
-      "tags": [
-        "intermediate",
-        "johnny-five",
-        "azure",
-        "node.js"
-      ]
-    },
-    {
-      "title": "Cylon servo controller",
-      "description": "Control a servo to control a blinking LED",
-      "link": [
-        "Samples/CylonServoNode.htm",
-        "Samples/CylonServoWiring.htm"
-      ],
-      "link-text": "Cylon",
-      "lang": [
-      "node.js",
-      "Wiring"
-      ],
-      "ranking": 0,
-      "tags": [
-        "intermediate",
-        "node.js"
-      ]
-    },
-    {
-      "title": "Johnny-Five servo controller",
-      "description": "Control a servo connected to an Arduino using Johnny-Five in a Node.js UWP app",
-      "link": "samples/J5ServoController.htm",
-      "link-text": "Johnny-Five",
-      "lang": "Node.js",
-      "ranking": 0,
-      "new": "yes",
-      "tags": [
-        "intermediate",
-        "johnny-five",
-        "servo",
-        "node.js"
-      ]
-    },
-    {
-      "title": "Express Node.js app",
-      "description": "Create a new Express Node.js app",
-      "link": "samples/ExpressNodejs.htm",
-      "link-text": "Express",
-      "lang": "Node.js",
-      "ranking": 10,
-      "tags": [
-        "intermediate",
-        "server",
-        "node.js",
-        "express"
-      ]
-    },
-    {
-      "title": "Bluetooth low energy GATT",
-      "description": "Learn how to work with Bluetooth Low Energy devices using the GATT profile and a TI CC2541 SensorTag",
-      "link": "samples/BLEGatt.htm",
-      "link-text": "Bluetooth GATT",
-      "lang": "C#",
-      "ranking": 0,
-      "new": "yes",
-      "tags": [
-        "bluetooth",
-        "c#",
-        "ble",
-        "c#",
-        "intermediate"
-      ]
-    },
-    {
-      "title": "IoT browser",
-      "description": "Create a simple web browser",
-      "link": "samples/IoTBrowser.htm",
-      "link-text": "IoT Browser",
-      "lang": "C#",
-      "ranking": 2,
-      "tags": [
-        "c#",
-        "beginner",
-        "foreground",
-        "o/s"
-      ]
-    },
-    {
-      "title": "GPIO OneWire",
-      "description": "Create an app that uses GPIO to read from the DHT11, a temperature and humidity sensor that uses a single-wire protocol",
-      "link": "samples/GpioOneWire.htm",
-      "link-text": "GPIO OneWire",
-      "lang": "C++",
-      "ranking": 3,
-      "tags": [
-        "c++",
-        "intermediate",
-        "gpio"
-      ]
-    },
+
     {
       "title": "OneNote cloud services",
       "description": "Learn how to use http messages to GET and POST OneNote pages in Wiring",
@@ -528,38 +608,13 @@
         "gpio"
       ]
     },
-    {
-      "title": "Bluetooth RFCOMM",
-      "description": "Deploy and debug an Arduino Wiring sketch to control a stepper motor",
-      "link": "samples/arduino-wiring/StepperMotor.htm",
-      "link-text": "Stepper Motor",
-      "lang": "Wiring",
-      "ranking": 3,
-      "tags": [
-        "wiring",
-        "beginner",
-        "gpio"
-      ]
-    },
-    {
-      "title": "Arduino Wiring weather station",
-      "description": "Set up a weather station using Arduino Wiring.",
-      "link": "samples/arduino-wiring/WeatherStation.htm",
-      "link-text": "Weather Station",
-      "lang": "Wiring",
-      "ranking": 3,
-      "tags": [
-        "wiring",
-        "beginner",
-        "I2C"
-      ]
-    },
+
     {
       "title": "Lightning.Providers - Blinky background service",
       "description": "Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
       "link": [
         "samples/HelloBlinkyBackgroundLightning.htm",
-        "samples/NodejsWULightning.htm"
+        "samples/HelloBlinkyBackgroundNode.htm"
       ],
       "link-text": [
         "Blinky Headless",
@@ -624,22 +679,6 @@
       ]
     },
     {
-      "title": "Arduino Wiring libraries",
-      "description": "Build Arduino Wiring libraries that can be called from other languages like C# and Node.js",
-      "link": "samples/arduino-wiring/ArduinoWiringComponents.htm",
-      "link-text": "Blinky UI",
-      "lang": "C#/C++",
-      "ranking": 0,
-      "tags": [
-        "c#",
-        "c++",
-        "node.js",
-        "wiring",
-        "intermediate",
-        "lightning"        
-      ]
-    },
-    {
       "title": "DC motor controller",
       "description": "Control DC motors using a Windows IoT Core enabled device!",
       "link": "samples/arduino-wiring/DCMotor.htm",
@@ -675,19 +714,7 @@
         "o/s"
       ]
     },
-    {
-      "title": "External process launcher",
-      "description": "Use <code>Windows.System.ProcessLauncher</code> API to launch external executable programs from your UWP app",
-      "link": "samples/ExternalProcessLauncher.htm",
-      "link-text": "ProcessLauncher API Sample",
-      "lang": "C#",
-      "ranking": 10,
-      "tags": [
-        "c#",
-        "intermediate",
-        "o/s"
-      ]
-    },
+
     {
       "title": "Wi-Fi connector",
       "description": "Discover and connect to a WiFi network from a UWP app using <code>Windows.Devices.WiFi.WiFiAdapter</code> API",
@@ -699,31 +726,6 @@
         "c#",
         "beginner",
         "wi-fi"
-      ]
-    },
-    {
-      "title": "App installer",
-      "description": "Install and deploy an app on Windows IoT Core",
-      "link": "samples/AppInstaller.htm",
-      "link-text": "Learn More",
-      "lang": "N/A",
-      "ranking": 0,
-      "tags": [
-        "intermediate",
-        "o/s"
-      ]
-    },
-    {
-      "title": "Device I/O controller",
-      "description": "Use <code>CreateFile()</code> and <code>DeviceIoControl()</code> to access custom devices from UWP.",
-      "link": "samples/DeviceIoController.htm",
-      "link-text": "Learn More",
-      "lang": "N/A",
-      "ranking": 10,
-      "tags": [
-        "c++",
-        "advanced",
-        "driver"
       ]
     },
     {
@@ -1231,7 +1233,7 @@
     {
       "title": "Lightning 提供程序示例 (UWP)",
       "description": "演示如何在 UWP 应用中使用 Microsoft.IoT.Lightning.Providers",
-      "link-text": "<a href='samples/BlinkyUILightning.htm'>Blinky UI (C#/C++)</a><br><a href='samples/BlinkyHeadlessLightning.htm'>无外设的 Blinky (C#/C++)</a><br><a href='samples/WeatherStationLightning.htm'>气象站 (C#/C++)</a><br><a href='samples/SPIDisplayLightning.htm'>SPI 显示器 (C#/C++)</a><br><a href='samples/NodejsWULightning.htm'>无外设的 Blinky (Node.js)</a>",
+      "link-text": "<a href='samples/BlinkyUILightning.htm'>Blinky UI (C#/C++)</a><br><a href='samples/BlinkyHeadlessLightning.htm'>无外设的 Blinky (C#/C++)</a><br><a href='samples/WeatherStationLightning.htm'>气象站 (C#/C++)</a><br><a href='samples/SPIDisplayLightning.htm'>SPI 显示器 (C#/C++)</a><br><a href='samples/HelloBlinkyBackgroundNode.htm'>无外设的 Blinky (Node.js)</a>",
       "ranking": 0,
       "tags": [
         "中级",
