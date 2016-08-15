@@ -21,7 +21,7 @@ If you are not very familiar with Windows universal drivers yet, we strongly enc
 
 * Instructions on how to set up your development environment with Visual Studio 2015 can be found [here]({{site.baseurl}}/{{page.lang}}/Docs/SetupPCRPI.htm)
 
-* Additionally, you will need to install the Windows Driver Kit (WDK) which you can download from [here](https://msdn.microsoft.com/en-us/windows/hardware/dn913721) 
+* Additionally, you will need to install the Windows Driver Kit (WDK) which you can download from [here](https://developer.microsoft.com/en-us/windows/hardware/windows-driver-kit) 
 
 <br/>
 

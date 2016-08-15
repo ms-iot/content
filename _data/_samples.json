@@ -124,7 +124,8 @@
       "link": [
         "samples/HelloBlinkyBackground.htm",
         "samples/PythonBlinky.htm",
-        "samples/arduino-wiring/HelloBlinkyWiring.htm"
+        "samples/arduino-wiring/HelloBlinkyWiring.htm",
+        "samples/NodejsWUBlinky.htm"
       ],
       "link-text": [
         "Blinky",
@@ -134,7 +135,8 @@
       "lang": [
         "C#",
         "Python",
-        "Wiring"
+        "Wiring",
+        "Node.js"
       ],
       "ranking": 0,
       "tags": [
@@ -143,7 +145,8 @@
         "wiring",
         "beginner",
         "background",
-        "gpio"
+        "gpio",
+        "node.js"
       ]
     },
     {
@@ -357,9 +360,9 @@
       ]
     },
     {
-      "title": "Cylon LED controller",
+      "title": "Cylon servo controller",
       "description": "Control a servo connected to an Arduino using Cylon in a Node.js UWP app",
-      "link": "samples/CylonLED.htm",
+      "link": "samples/CylonServoWU.htm",
       "link-text": "Cylon",
       "lang": "Node.js",
       "ranking": 0,
