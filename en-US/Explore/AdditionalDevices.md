@@ -14,7 +14,12 @@
     </tr>
     <tr>
       <td><a href="https://www.element14.com/community/docs/DOC-76955/l/raspberry-pi-customization-service">Element 14/Raspberry Pi Customization Service</a></td>
-      <td><a href="http://iotsolutionsalliance.intel.com/solutions-directory/processors_list/782">Intel based devices</a></td>
+      <td><a href="http://iotsolutionsalliance.intel.com/solutions-directory/processors_list/782">Intel commercialization devices</a></td>
       <td><a href="https://developer.qualcomm.com/hardware/snapdragon-410">Qualcomm based devices</a></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><a href="http://www.intel.com/joule">Intel innovation devices</a></td>
+      <td></td>
     </tr>
 </table>
