@@ -4,7 +4,7 @@ title: Serial Sample
 description: Communicate between a desktop and an IoT device over a serial interface
 keyword: Windows 10 IoT Core, intermediate, UART, serial
 permalink: /en-US/Samples/SerialUART.htm
-samplelink: https://github.com/ms-iot/samples/tree/develop/SerialSample
+samplelink: https://github.com/ms-iot/samples/tree/develop/SerialUART
 lang: en-US
 ---
 
@@ -16,7 +16,7 @@ This is a headed sample.  To better understand what headed mode is and how to co
 
 ### Load the project in Visual Studio
 
-You can find the C# and C++ versions of this sample [here](https://github.com/ms-iot/samples/tree/develop/SerialSample/){:target="_blank"}.  Make a copy of the folder on your disk and open the project from Visual Studio.
+Make a copy of the folder on your disk and open the project from Visual Studio.
 
 This app is a Universal Windows app and will run on both the PC and your IoT device.
 

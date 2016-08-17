@@ -1,7 +1,7 @@
 ---
 layout: default
 title: ZWaveTutorial
-permalink: /zh-cn/win10/samples/ZWaveTutorial.htm
+permalink: /zh-cn/win10/samples/ZWaveAdapter.htm
 lang: zh-CN
 ---
 

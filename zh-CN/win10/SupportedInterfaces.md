@@ -286,7 +286,7 @@ Windows 10 IoT 核心版支持各种外设接口和协议，包括对诸如 I2C�
 \[在 GitHub 上生成此列表\]：{{site.repositoryurl}}{{ page.path }}
 [RPi2 or RPi3 Pin Mapping]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsRPi2.htm#RPi2_I2C
 [MBM Pin Mapping]: {{site.baseurl}}/{{page.lang}}/win10/samples/PinMappingsMBM.htm#MBM_I2C
-[ZWave Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/ZWaveTutorial.htm
+[ZWave Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/ZWaveAdapter.htm
 [GpioOneWire Sample (DHT11)]: {{site.baseurl}}/{{page.lang}}/win10/samples/GpioOneWire.htm
 [I2C Accelerometer Sample]: {{site.baseurl}}/{{page.lang}}/win10/samples/I2CAccelerometer.htm#I2C_Accelerometer
 [I2C Port Explander Sample]: https://www.hackster.io/4803/i2c-port-expander-sample

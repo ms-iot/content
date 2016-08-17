@@ -1,9 +1,13 @@
 ---
 layout: sample
 title: HID Injection Sample
+description: Learn how to inject a HID driver
+keyword: Windows 10 IoT Core, driver 
 permalink: /en-US/samples/HidInjection.htm
+samplelink: https://github.com/ms-iot/samples/tree/develop/HIDInjection
 lang: en-US
 ---
+
 # HID Injection
 Input injection is needed for many reasons. One of the most requested reasons is to support SPI screens, which have capacitive or resistive touch panels which can be read via I<sup>2</sup>C. 
 How do you translate this touch input from the display panel to something Windows can consume?    

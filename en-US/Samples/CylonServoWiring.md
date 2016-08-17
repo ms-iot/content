@@ -3,7 +3,7 @@ layout: sample
 title: Cylon servo controller
 description: Use Cylon to blink an LED on an Arduino from a Windows 10 IoT Core device
 keywords: Windows 10 IoT Core, wiring, arduino
-permalink: /en-US/Samples/CylonServo.htm
+permalink: /en-US/Samples/CylonServoWiring.htm
 samplelink: N/A
 lang: en-US
 ---

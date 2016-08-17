@@ -20,7 +20,7 @@ MinnowBoard Max 的硬件接口通过开发板上的 26 排针 **JP1** 公开。
 * **1x** - 3.3V 电源引脚
 * **2x** - 接地引脚
 
-请注意，MinnowBoard Max 在所有 IO 引脚上使用 3.3V 逻辑级别。此外所有引脚由 [TXS0104E](http://www.ti.com/product/txs0104e){:target="_blank"} 电平转换器缓冲，电源和接地引脚除外。这些电平转换器显示为开放收集器输出，并带有 **10K&\#x2126; 电阻式上拉，无论 IO 设置为输入还是输出该上拉都存在。** 电平转换器的开放收集器性质意味着引脚可以强输出“０”，但只能弱输出“１”。在连接从引脚（例如 LED）消耗电流的设备时记住这一点很重要。有关将 LED 接入到 MinnowBoard Max 的正确方法，请参阅 [Blinky 示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)。
+请注意，MinnowBoard Max 在所有 IO 引脚上使用 3.3V 逻辑级别。此外所有引脚由 [TXS0104E](http://www.ti.com/product/txs0104e){:target="_blank"} 电平转换器缓冲，电源和接地引脚除外。这些电平转换器显示为开放收集器输出，并带有 **10K&\#x2126; 电阻式上拉，无论 IO 设置为输入还是输出该上拉都存在。** 电平转换器的开放收集器性质意味着引脚可以强输出“０”，但只能弱输出“１”。在连接从引脚（例如 LED）消耗电流的设备时记住这一点很重要。有关将 LED 接入到 MinnowBoard Max 的正确方法，请参阅 [Blinky 示例]({{site.baseurl}}/{{page.lang}}/win10/Samples/HelloBlinky.htm)。
 
 ## <a name="MBM_GPIO">GPIO 引脚
 

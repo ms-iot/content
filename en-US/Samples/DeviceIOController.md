@@ -1,15 +1,14 @@
 ---
 layout: sample
-title: Device I/O Controller
+title: Device IO Controller
+description: Learn how to control input output
+keyword: Windows 10 IoT Core, io 
 permalink: /en-US/Samples/DeviceIOController.htm
-samplelink: https://github.com/ms-iot/samples/tree/develop/DeviceIoControlUwp
-keyword: Windows 10 IoT Core, io
-description: Learn how to control input output 
+samplelink: https://github.com/ms-iot/samples/tree/develop/DeviceIOController
 lang: en-US
 ---
 
 # Device I/O Controller
-[View the code on Github](https://github.com/ms-iot/samples/blob/develop/DeviceIoControlUwp)
 
 This sample shows how to access devices from UWP applications using familiar win32 APIs like CreateFile(), ReadFile(), WriteFile(), and DeviceIoControl(). Some reasons you may want to do this are:
 

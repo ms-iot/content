@@ -286,7 +286,7 @@ result          | result            | result      | result | result             
 [Contribute to this list on GitHub.]: {{site.repositoryurl}}{{ page.path }}
 [RPi2 or RPi3 Pin Mapping]: {{site.baseurl}}/{{page.lang}}/Samples/PinMappingsRPi2.htm#RPi2_I2C
 [MBM Pin Mapping]: {{site.baseurl}}/{{page.lang}}/Samples/PinMappingsMBM.htm#MBM_I2C
-[ZWave Sample]: {{site.baseurl}}/{{page.lang}}/Samples/ZWaveTutorial.htm
+[ZWave Sample]: {{site.baseurl}}/{{page.lang}}/samples/ZWaveAdapter.htm
 [GpioOneWire Sample (DHT11)]: {{site.baseurl}}/{{page.lang}}/Samples/GpioOneWire.htm
 [I2C Accelerometer Sample]: {{site.baseurl}}/{{page.lang}}/Samples/I2CAccelerometer.htm#I2C_Accelerometer
 [I2C Port Explander Sample]: https://www.hackster.io/4803/i2c-port-expander-sample

@@ -1,10 +1,12 @@
 ---
 layout: sample
-title: AllJoyn.JS
+title:  AllJoyn.JS
+description: Get AllJoyn.JS running as a Windows 10 application.
+keyword: Windows 10 IoT Core, Beginner, AllJoyn 
 permalink: /en-US/Samples/AllJoynJS.htm
+samplelink: https://github.com/ms-iot/samples/tree/develop/AllJoyn/Samples/AllJoyn.JS
 lang: en-US
 ---
-
 # AllJoyn.JS
 
 AllJoyn.JS, by Allseen Alliance, provides an easy and flexible way to develop AllJoyn applications in JavaScript.  AllJoyn.JS is a deep integration between AllJoyn Thin Core Library (ajtcl) and base services with Duktape, an ECMAScript 5.0 compliant compiler and runtime designed for small-footprint embedded microcontrollers.

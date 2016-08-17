@@ -1,12 +1,16 @@
 ---
 layout: sample
-title: NodejsWUBlinky
-permalink: /en-US/Samples/NodejsWUBlinky.htm
+title: Hello, blinky! background service - Arduino Wiring sketch
+description: A "Hello, world!" sample that lights up a small LED on your breadboard
+keyword: Beginner, gpio, headless
+permalink: /en-US/Samples/HelloBlinkyBackgroundNode.htm
+samplelink: https://github.com/ms-iot/samples/tree/develop/HelloBlinkyBackground
 lang: en-US
 ---
 
-# Blinky Node.js Server Sample (Windows Universal)
+# Hello, blinky! background service
 
+Create a blinky Node.js server that blinks an LED. 
 
 
 ### Set up your PC
@@ -16,7 +20,7 @@ lang: en-US
 
 
 ### Set up your hardware
-The setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/Samples/Blinky.htm).
+The setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky.htm).
 
 
 ### Create a new Node.js (Windows Universal) project

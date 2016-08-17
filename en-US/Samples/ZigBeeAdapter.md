@@ -1,11 +1,14 @@
 ---
 layout: sample
-title: ZigBeeAdapterTutorial
-permalink: /en-US/Samples/ZigBeeAdapterTutorial.htm
+title: ZigBeeAdapter
+description: Set up the ZigBee adapter for Device System Bridge (DSB) on Windows 10
+keyword: Windows 10 IoT Core, alljoyn, connectivity
+permalink: /en-US/Samples/ZigBeeAdapter.htm
+samplelink: https://github.com/ms-iot/samples/tree/develop/AllJoyn/Samples/ZigBeeAdapter
 lang: en-US
 ---
 
-# ZigBee Adapter sample
+# ZigBee Adapter
 
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\AllJoyn\Samples\ZigBeeAdapter`.  The sample code is available in C#. Make a copy of the folder on your disk and open the project from Visual Studio.
 

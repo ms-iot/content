@@ -25,7 +25,7 @@ You will need to be running the Direct Memory Mapped Driver to write Arduino Wir
 <a name="develop"></a>
 
 ## Develop
-Complete one of the "Wiring" samples on the [Samples Page]({{site.baseurl}}/{{page.lang}}/Samples.htm), or build your own project! Any of the samples we've created that are written using Arduino Wiring will be listed like so: [Blinky (Wiring)]({{site.baseurl}}/{{page.lang}}/Samples/arduino-wiring/HelloBlinkyWiring.htm). Blinky, the cononical "Hello World" project for IoT projects, is a great place to start for your first project!
+Complete one of the "Wiring" samples on the [Samples Page]({{site.baseurl}}/{{page.lang}}/Samples.htm), or build your own project! Any of the samples we've created that are written using Arduino Wiring will be listed like so: [Blinky (Wiring)]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinkyWiring.htm). Blinky, the cononical "Hello World" project for IoT projects, is a great place to start for your first project!
 
 ### Create a new Project
 Open Visual Studio. Select File -> New Project -> Visual C++ -> Windows -> Windows IoT Core -> Arduino Wiring Application for Windows IoT Core
