@@ -46,7 +46,7 @@ ___
 * Better [Azure IoT Hub]({{site.baseurl}}/{{page.lang}}/Docs/cloudintro.htm) connectivity - provision your device with a device identity in the cloud 
 * [Shell capabilities](https://github.com/ms-iot/samples/tree/develop/IoTHomeAppSample) - multiple foreground app support
 * [IoTivity AllJoyn Device System Bridge](https://github.com/ms-iot/samples/tree/develop/AllJoyn/Samples/OICAdapter)
-* [Arduino INO integration](http://inotool.org/) - work better with Arduino hardware with this command line toolkit
+* [Arduino INO integration](https://developer.microsoft.com/en-us/windows/iot/IotCoreAppDeployment_ArduinoIde.htm) - work better with Arduino hardware with this command line toolkit
 
 ### Improved documentation
 * Updated [samples page]({{site.baseurl}}/{{page.lang}}/Samples.htm) - new tagging system to sort through different samples 
