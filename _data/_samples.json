@@ -79,8 +79,8 @@
       "description": "Create and deploy your first Windows 10 IoT Core app",
       "link": [
         "samples/HelloWorld.htm",
-        "samples/HelloBlinkyBackgroundPython.htm",
-        "samples/HelloBlinkyBackgroundNode.htm"
+        "samples/HelloWorldPython.htm",
+        "samples/HelloWorldNode.htm"
       ],
       "link-text": [
         "Hello World",
@@ -112,7 +112,7 @@
       "link-text": "UI Blinky",
       "lang": [
         "C#/C++",
-        "node.js"
+        "Bode.js"
       ], 
       "ranking": 0,
       "new": "no",
@@ -731,7 +731,7 @@
     {
       "title": "HID Injection driver",
       "description": "Build a driver for IoT Core and use HID Injection to inject touch, keyboard or mouse events.",
-      "link": "samples/HidInjection.htm",
+      "link": "samples/HidInjector.htm",
       "link-text": "Learn More",
       "lang": "C++",
       "ranking": 10,
