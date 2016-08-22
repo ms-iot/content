@@ -25,7 +25,7 @@ Acronyms:
 - ZCL: ZigBee Cluster Library
 
 ## Prerequisites
-1. XBee ZigBee module from [Digi](http://www.digi.com){:target="_blank"}, e.g.: XB24 Z7PIT-004
+1. XBee ZigBee module from [Digi](http://www.digi.com){:target="_blank"}, e.g.: XB24CZ7PIT-004
 2. XBee Explorer USB dongle from [SparkFun](https://www.sparkfun.com/products/11697){:target="_blank"}
 3. [XCTU](http://www.digi.com/products/xbee-rf-solutions/xctu-software/xctu){:target="_blank"} tool from Digi
 4. Windows 10 desktop with Visual Studio 2015 and [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/Docs/AllJoyn.htm){:target="_blank"} app.
