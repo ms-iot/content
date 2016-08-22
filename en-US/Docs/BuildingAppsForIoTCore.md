@@ -76,7 +76,8 @@ IoT Core supports a wide range of programming languages.
 
 ### In-Box languages
 Traditional UWP languages ship with support in Visual Studio by default. All of the In-Box languages support both UI and Background Applications
-* Languages
+ 
+ * Languages
  * C#
  * C++
  * Javascript
