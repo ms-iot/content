@@ -93,7 +93,6 @@
         "Node.js"
       ],
       "ranking": 0,
-      "new": "yes",
       "tags": [
         "c#",
         "python",
@@ -115,7 +114,6 @@
         "Node.js"
       ], 
       "ranking": 0,
-      "new": "no",
       "tags": [
         "c#",
         "c++",
@@ -185,6 +183,46 @@
       ]
     },
     {
+      "title": "AllJoyn Device System Bridge",
+      "description": "Create an AllJoyn Device System Bridge App project.",
+       "link": [
+        "samples/AllJoynDSB.htm",
+        "samples/AllJoynDSBCS.htm"
+      ],
+      "link-text": [
+        "AllJoynDSB",
+        "AllJoynDSB"
+      ],
+      "lang": [
+        "C#",
+        "C++"
+      ],
+      "ranking": 1,
+      "new": "yes",      
+      "tags": [
+        "intermediate",
+        "c#",
+        "c++",
+        "foreground",
+        "alljoyn"
+      ]
+    },
+        {
+      "title": "AllJoyn mock adapter",
+      "description": "Expose and control mock AllJoyn devices.",
+      "link": "samples/AllJoynMockAdapter.htm",
+      "link-text": "AllJoynMockAdapter",
+      "lang": "C++",
+      "ranking": 1,
+      "new": "yes",
+      "tags": [
+        "c++",
+        "intermediate",
+        "foreground",
+        "alljoyn"
+      ]
+    },
+    {
       "title": "Arduino Wiring weather station",
       "description": "Set up a weather station using Arduino Wiring.",
       "link": "samples/arduino-wiring/WeatherStation.htm",
@@ -239,6 +277,20 @@
         "node.js"
       ]
     },
+     {
+      "title": "BACnet adapter",
+      "description": "Set up a BACnet adapter for Device System Bridge on Windows 10",
+      "link": "samples/BACnetAdapter.htm",
+      "link-text": "BACnet adapter",
+      "lang": "C++",
+      "ranking": 0,
+      "new": "yes",
+      "tags": [
+        "intermediate",
+        "alljoyn",
+        "c++"
+      ]
+    },
     {
       "title": "Bluetooth low energy GATT",
       "description": "Learn how to work with Bluetooth Low Energy devices using the GATT profile and a TI CC2541 SensorTag",
@@ -246,10 +298,8 @@
       "link-text": "Bluetooth GATT",
       "lang": "C#",
       "ranking": 0,
-      "new": "yes",
       "tags": [
         "bluetooth",
-        "c#",
         "ble",
         "c#",
         "intermediate"
