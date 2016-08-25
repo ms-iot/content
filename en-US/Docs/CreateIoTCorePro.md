@@ -76,11 +76,11 @@ Step 3: Wrap the Provisioning Package in an OEM Package
 
 Create a OEM Package to wrap the Provisioning Package using PKGGEN tool.
  
-Please visit [Windows 10 IoT Core Image Creation](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/iot-core-manufacturing-guide) for instructions regarding creating an OEM Package that contains your Provisioning Package using PKGGEN tool.
+Please visit [Windows 10 IoT Core Image Creation](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/iot/iot-core-manufacturing-guide) for instructions regarding creating an OEM Package that contains your Provisioning Package using PKGGEN tool.
  
 Step 4: Create the Image with ICD/Imggen
 -------
  
 Use ICD to create a Windows IoT Core Image with your OEM Package.
 
-Please visit [Windows 10 IoT Core Image Creation](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/iot-core-manufacturing-guide) for instructions regarding using ICD to create a Windows IoT Core Image with your OEM Package.
+Please visit [Windows 10 IoT Core Image Creation](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/iot/iot-core-manufacturing-guide) for instructions regarding using ICD to create a Windows IoT Core Image with your OEM Package.
