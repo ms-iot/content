@@ -21,12 +21,12 @@ Make sure your device is running and set up and you have Visual Studio installed
 
 You will need your device's IP address when connecting to it remotely.
 
-1.  Start Visual Studio 2015.
-2.  Create a new project with **(File \| New Project...)**.
+1.  Start Visual Studio 2015
+2.  Create a new project with **(File \| New Project...)**
 
     In the **New Project** dialog, navigate to **Universal** as shown below (in the left pane in the dialog: Templates \| Visual C# \| Windows \| Universal).
 
-3.  Select the template **Blank App (Windows Universal)**.
+3.  Select the template **Blank App (Windows Universal)**
 
     Note that we call the app CogntiveServicesExample. You can name it something different, but you will have to adjust sample code that references CognitiveServicesExample as well.
 
@@ -43,17 +43,17 @@ Since the IoT extension SDK is not added to projects by default, we'll need to a
 
 ## Add the NuGet Packages
 ___
-1.  Open the NuGet Package Manager.
+1.  Open the NuGet Package Manager
 
-    In Solution Explorer, right click your project and then click "Manage NuGet Packages"
+    In Solution Explorer, right click your project and then click "Manage NuGet Packages".
 
-2.  Install the Packages.
+2.  Install the Packages
 
     In the NuGet Package Manager window, select nuget.org as your Package Source and search for **Newtonsoft.Json, Microsoft.ProjectOxford.Common, and Microsoft.ProjectOxford.Emotion,**. Install all three packages. When using a Cognitive Services API, you need to add the corresponding NuGet package.
 
 ## Set up the User Interface
 ___
-1.  Add in the XAML.
+1.  Add in the XAML
 
     Open MainPage.xaml and replace the existing code with the following code to create the window UI:
 
@@ -96,10 +96,10 @@ ___
   </Page>
   {% endhighlight %}
 
-To view the entire UI, change the dropdown in the top left corner from '5\" Phone' to '12\" Tablet'
+To view the entire UI, change the dropdown in the top left corner from '5\" Phone' to '12\" Tablet'.
 
 
-2.  Generate the button event handler.
+2.  Generate the button event handler
 
     In the UI mock up, double click on the "Detect Emotions" button. You will see a "Click="button_Clicked" added into the button in your XAML code. You will also be redirected to the .xaml.cs file with a new function called "button_Clicked()" created for you. This function will handle the Cognitive Services calls after a user presses the button.
 
@@ -107,11 +107,11 @@ To view the entire UI, change the dropdown in the top left corner from '5\" Phon
 
 ## Register for Cognitive Services
 ___
-1.  Sign in to Cognitive Services.
+1.  Sign in to Cognitive Services
 
     Visit the [sign in page](https://www.microsoft.com/cognitive-services/en-us/sign-up) and use your Microsoft account to sign in.
 
-2.  Get the product key.
+2.  Get the product key
 
     Click on the keys you would like to receive. For this application, we only need the Emotion API. Click Emotion - Preview and then click "Subscribe" at the bottom of the page. The next page should contain two keys for the Emotion API. Copy one of them to your clipboard.
 
@@ -122,7 +122,7 @@ ___
 ___
 1.  Add in the namespaces
 
-    Open MainPage.xaml.cs. At the top of the , directly under the "using" statements and before the "namespace CognitiveServicesExample" line, add the following Cognitive Services namespaces
+    Open MainPage.xaml.cs. At the top of the , directly under the "using" statements and before the "namespace CognitiveServicesExample" line, add the following Cognitive Services namespaces.
 
 {% highlight C# %}
 using Windows.Graphics.Imaging;
@@ -138,7 +138,7 @@ using Windows.UI.Popups;
 using Windows.Storage.Streams;
 {% endhighlight %}
 
-These allow us to use the Cognitive Services APIs in our code, along with some other necessary imaging libraries
+These allow us to use the Cognitive Services APIs in our code, along with some other necessary imaging libraries.
 
 2.  Add in Global Variables
 
@@ -193,11 +193,11 @@ The subscriptionKey allows your application to call the Emotion API on Cognitive
   }
   {% endhighlight %}
 
-This function instantiates an instance of the Emotion API and attempts to open the URL passed as an argument (hopefully an image), scanning it for faces. It scans the faces it finds for emotions and returns the resulting Emotion objects. These contain quite detailed results, including the likelihood of each emotion, the bounding box of the face, and more. See the [documentation](#) for more details.
+This function instantiates an instance of the Emotion API and attempts to open the URL passed as an argument (hopefully an image), scanning it for faces. It scans the faces it finds for emotions and returns the resulting Emotion objects. These contain detailed results, including the likelihood of each emotion and the bounding box of the face. See the [documentation](#) for more details.
 
 4.  Add in the button event handler code
 
-    First, add the **async** keyword to the button_Clicked method Visual Studio created for you. Then, add the following code to that function:
+    Add the **async** keyword to the button_Clicked method Visual Studio created for you. Then, add the following code to that function:
 
   {% highlight C# %}
   public sealed partial class MainPage : Page
@@ -256,7 +256,7 @@ This code reads the string from the text input box on the form and makes sure it
 
 5.  Add in the helper functions
 
-    You'll notice that the above code has errors, since we have not added those helper functions yet. So, let's add them in:
+    You'll notice that the above code has errors, since we have not added those helper functions yet. Let's add them in:
 
   {% highlight C# %}
   public sealed partial class MainPage : Page
@@ -400,7 +400,7 @@ This code reads the string from the text input box on the form and makes sure it
 
 The first method outputs the score for all emotions Cognitive Services can detect. Each score falls between 0 and 1 and represents the probability that the face detected is expressing that emotion.
 
-The second and third method determine, for each face detected, which emotion is most prevalent. It then outputs these results as a string to a Panel next to the image.
+The second and third method determines which emotion is most prevalent. It then outputs these results as a string to a Panel next to the image.
 
 The fourth method draws a rectangle around each face detected in the image. Well, that's not quite accurate since UWP does not support drawing simple shapes yet. So it uses a blue rectangle in the Assets folder with a transparent background instead. It places it at the starting coordinates of the Rectangle provided by Cognitive Services and scales it to the approximate size of the Cognitive Services rectangle.
 
@@ -414,26 +414,26 @@ The fourth method draws a rectangle around each face detected in the image. Well
 ___
 1.  Make sure the app builds correctly by invoking the **Build \| Build** Solution menu command.
 
-2.  Since this is a Universal Windows Platform (UWP) application, you can test the app on your Visual Studio machine as well: Just press F5, and the app will run inside your machine.
+2.  Since this is a Universal Windows Platform (UWP) application, you can test the app on your Visual Studio machine as well: Press F5, and the app will run inside your machine.
 
-Change the URL for a different image, or just click "Detect Emotion" to run the Emotion Recognizer with the default image. After a few seconds, the results should appear in your app window as expected: the image with rectangles on it on the left, and more detailed emotion output for each face on the right.
+Change the URL for a different image, or just click "Detect Emotion" to run the Emotion Recognizer with the default image. After a few seconds, the results should appear in your app window as expected: the image with rectangles on it on the left and more detailed emotion output for each face on the right.
 
 ![HelloWorld Running]({{site.baseurl}}/Resources/images/cogserv/running_app.PNG)
 
 
-Generally, the order is based on depth: **faces closer to the front will be first, and faces farther away will be last in the list.**
+The order is based on depth: **faces closer to the front will be first, and faces farther away will be last in the list.**
 
 Close your app after you're done validating it
 
-## Deploy the app to your Windows IoT Core device
+## Deploy the app to your Windows 10 IoT Core device
 ___
-1.  Of course, we want to deploy our app to our IoT Core device. It's easy. In the [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm) documentation, you can find instructions to chose a unique name for your IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in Visual Studio.
+1.  We want to deploy our app to our IoT Core device. It's easy. In the [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm) documentation, you can find instructions to chose a unique name for your IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in Visual Studio.
 
     If you're building for Minnowboard Max, select **x86** in the Visual Studio toolbar architecture dropdown.  If you're building for Raspberry Pi 2 or 3 or the DragonBoard, select **ARM**.
 
-    Next, in the Visual Studio toolbar, click on the **Local Machine** dropdown and select **Remote Machine**<br/>
+    In the Visual Studio toolbar, click on the **Local Machine** dropdown and select **Remote Machine**<br/>
 
-2.  At this point, Visual Studio will present the 'Remote Connections' dialog. Put the IP address or name of your IoT Core device (in this example, we're using 'my-device') and select **Universal (Unencrypted Protocol)** for Authentication Mode. Then click **Select**.
+2.  At this point, Visual Studio will present the 'Remote Connections' dialog. Put the IP address or name of your IoT Core device (in this example, we're using 'my-device') and select **Universal (Unencrypted Protocol)** for Authentication Mode. Click **Select**.
 
     ![Remote Machine Debugging]({{site.baseurl}}/Resources/images/cogserv/remote_connection.PNG)
 
@@ -445,6 +445,6 @@ ___
     >
     > ![Project Properties Debug Tab]({{site.baseurl}}/Resources/images/HelloWorld/cs-debug-project-properties.PNG)
 
-3.  Now we're ready to deploy to the remote IoT Core device. Simply press F5 (or select **Debug \| Start Debugging**) to start debugging our app. You should see the app come up in IoT Core device screen, and you should be able to perform the same functions you did locally. To stop the app, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
+3.  Now you're ready to deploy to the remote IoT Core device. Simply press F5 (or select **Debug \| Start Debugging**) to start debugging our app. You should see the app come up in IoT Core device screen, and you should be able to perform the same functions you did locally. To stop the app, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
 
 4.  Congratulations! Your app should now be working!
