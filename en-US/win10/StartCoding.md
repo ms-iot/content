@@ -3,6 +3,7 @@ layout: default
 title: Start Coding
 permalink: /en-US/win10/StartCoding.htm
 lang: en-US
+rdlink: /GetStarted.htm
 ---
 
 
