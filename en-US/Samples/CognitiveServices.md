@@ -11,13 +11,13 @@ lang: en-US
 
 # Cognitive Services
 
-In this sample, we will use Microsoft's Cognitive Services API within a UWP app to identify faces in a photo and determine the emotions in those photos.
+Create a UWP app that identifies faces in a photo and determine the emotions in those photos using Microsoft's Cognitive Services API.
 
 ## Create a new UWP App
 ___
 All of the sample code is available to download, but as an exercise, this tutorial will take you through the complete steps to create this app from scratch.
 
-Make sure your device is running and set up and you have Visual Studio installed. See our [guide](https://developer.microsoft.com/en-us/windows/iot/getstarted) if you have not set up your device yet.
+Make sure your device is running and set up and you have Visual Studio installed. See our [Get started page](https://developer.microsoft.com/en-us/windows/iot/getstarted) to set up your device.
 
 You will need your device's IP address when connecting to it remotely.
 
@@ -39,23 +39,23 @@ You will need your device's IP address when connecting to it remotely.
 
 ## Add a reference to the Windows IoT extension SDK
 ___
-Since the IoT extension SDK is not added to projects by default, we'll need to add a reference so that namespaces like **Windows.Devices.Gpio** will be available in the project.  To do so, just right-click on the References entry under the project, Select "Add Reference" then navigate the resulting dialog to **Universal Windows->Extensions->Windows IoT Extensions for the UWP**, check the box, and click OK.
+Since the IoT extension SDK is not added to projects by default, we'll need to add a reference so that namespaces like **Windows.Devices.Gpio** will be available in the project.  To do so, right-click on the References entry under the project, select "Add Reference" then navigate the resulting dialog to **Universal Windows->Extensions->Windows IoT Extensions for the UWP**. Check the box and click OK.
 
 ## Add the NuGet Packages
 ___
-1.  Open the NuGet Package Manager
+1.  Open the NuGet Package Manager.
 
-    Locate the Solution Explorer, right click your project and then click "Manage NuGet Packages"
+    In Solution Explorer, right click your project and then click "Manage NuGet Packages"
 
-2.  Install the Packages
+2.  Install the Packages.
 
-    In the NuGet Package Manager window, select nuget.org as your Package Source, search for **Newtonsoft.Json, Microsoft.ProjectOxford.Common, and Microsoft.ProjectOxford.Emotion,** and install all three packages. In general, when you want to use a Cognitive Services API, you need to add the corresponding NuGet package.
+    In the NuGet Package Manager window, select nuget.org as your Package Source and search for **Newtonsoft.Json, Microsoft.ProjectOxford.Common, and Microsoft.ProjectOxford.Emotion,**. Install all three packages. When using a Cognitive Services API, you need to add the corresponding NuGet package.
 
 ## Set up the User Interface
 ___
-1.  Add in the XAML
+1.  Add in the XAML.
 
-    Open MainPage.xaml, and replace the existing code with the following code to create the window UI:
+    Open MainPage.xaml and replace the existing code with the following code to create the window UI:
 
   {% highlight XML %}
   <Page
@@ -99,7 +99,7 @@ ___
 To view the entire UI, change the dropdown in the top left corner from '5\" Phone' to '12\" Tablet'
 
 
-2.  Generate the button event handler
+2.  Generate the button event handler.
 
     In the UI mock up, double click on the "Detect Emotions" button. You will see a "Click="button_Clicked" added into the button in your XAML code. You will also be redirected to the .xaml.cs file with a new function called "button_Clicked()" created for you. This function will handle the Cognitive Services calls after a user presses the button.
 
@@ -107,13 +107,13 @@ To view the entire UI, change the dropdown in the top left corner from '5\" Phon
 
 ## Register for Cognitive Services
 ___
-1.  Sign in to Cognitive Services
+1.  Sign in to Cognitive Services.
 
     Visit the [sign in page](https://www.microsoft.com/cognitive-services/en-us/sign-up) and use your Microsoft account to sign in.
 
-2.  Get the product key
+2.  Get the product key.
 
-    Click on the keys you would like to receive. For this application, we only need the Emotion API, so click Emotion - Preview, then click "Subscribe" at the bottom of the page. The next page should contain two keys for the Emotion API. Copy one of them to your clipboard.
+    Click on the keys you would like to receive. For this application, we only need the Emotion API. Click Emotion - Preview and then click "Subscribe" at the bottom of the page. The next page should contain two keys for the Emotion API. Copy one of them to your clipboard.
 
     ![Add Button Event Handler]({{site.baseurl}}/Resources/images/cogserv/cogserv_signup.png)
 
