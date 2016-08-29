@@ -402,7 +402,7 @@ The first method outputs the score for all emotions Cognitive Services can detec
 
 The second and third method determines which emotion is most prevalent. It then outputs these results as a string to a Panel next to the image.
 
-The fourth method draws a rectangle around each face detected in the image. Well, that's not quite accurate since UWP does not support drawing simple shapes yet. So it uses a blue rectangle in the Assets folder with a transparent background instead. It places it at the starting coordinates of the Rectangle provided by Cognitive Services and scales it to the approximate size of the Cognitive Services rectangle.
+The fourth method places a rectangle around each face detected in the image. Since UWP does not allow apps to draw shapes yet, it uses a blue rectangle in the Assets folder with a transparent background instead. The app places each rectangle image at the starting coordinates of the Rectangle provided by Cognitive Services and scales it to the approximate size of the Cognitive Services rectangle.
 
 6.  Add in the rectangle resource
 
@@ -421,13 +421,13 @@ Change the URL for a different image, or just click "Detect Emotion" to run the 
 ![HelloWorld Running]({{site.baseurl}}/Resources/images/cogserv/running_app.PNG)
 
 
-The order is based on depth: **faces closer to the front will be first, and faces farther away will be last in the list.**
+In this case, the order is based on depth: **faces closer to the front will be first, and faces farther away will be last in the list.**
 
 Close your app after you're done validating it
 
 ## Deploy the app to your Windows 10 IoT Core device
 ___
-1.  We want to deploy our app to our IoT Core device. It's easy. In the [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm) documentation, you can find instructions to chose a unique name for your IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in Visual Studio.
+1.  To deploy our app to our IoT Code device, you need to provide an inentifier for your device. In the [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm) documentation, you can find instructions to chose a unique name for your IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in Visual Studio.
 
     If you're building for Minnowboard Max, select **x86** in the Visual Studio toolbar architecture dropdown.  If you're building for Raspberry Pi 2 or 3 or the DragonBoard, select **ARM**.
 
@@ -445,6 +445,6 @@ ___
     >
     > ![Project Properties Debug Tab]({{site.baseurl}}/Resources/images/HelloWorld/cs-debug-project-properties.PNG)
 
-3.  Now you're ready to deploy to the remote IoT Core device. Simply press F5 (or select **Debug \| Start Debugging**) to start debugging our app. You should see the app come up in IoT Core device screen, and you should be able to perform the same functions you did locally. To stop the app, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
+3.  Now you're ready to deploy to the remote IoT Core device. Press F5 (or select **Debug \| Start Debugging**) to start debugging our app. You should see the app come up in IoT Core device screen, and you should be able to perform the same functions you did locally. To stop the app, press on the 'Stop Debugging' button (or select Debug \| Stop Debugging).
 
 4.  Congratulations! Your app should now be working!
