@@ -290,7 +290,7 @@ result          | result            | result      | result | result             
 [GpioOneWire Sample (DHT11)]: {{site.baseurl}}/{{page.lang}}/Samples/GpioOneWire.htm
 [I2C Accelerometer Sample]: {{site.baseurl}}/{{page.lang}}/Samples/I2CAccelerometer.htm#I2C_Accelerometer
 [I2C Port Explander Sample]: https://www.hackster.io/4803/i2c-port-expander-sample
-[Adafruit Starter Pack]: {{site.baseurl}}/{{page.lang}}/win10/AdafruitKitContents.htm
+[Adafruit Starter Pack]: {{site.baseurl}}/{{page.lang}}/Docs/AdafruitKitContents.htm
 [//build 2014 - Piano]: https://www.hackster.io/windowsiot/build-2014-piano
 [SPI Display Sample]: {{site.baseurl}}/{{page.lang}}/Samples/SPIDisplay.htm
 [Shift Register Sample]: {{site.baseurl}}/{{page.lang}}/Samples/ShiftRegisterSample.htm
