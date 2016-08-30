@@ -19,8 +19,7 @@
     "lightning",
     "o/s",
     "app",
-    "driver",
-    "vision"
+    "driver"
   ],
   "en-US-cat-tags": [
     {
@@ -62,8 +61,7 @@
         "gpio",
         "i2c",
         "spi",
-        "lightning",
-        "vision"
+        "lightning"
       ]
     },
     {
@@ -279,8 +277,7 @@
       "ranking": 0,
       "tags": [
         "c#",
-        "beginner",
-        "vision"
+        "beginner"
       ]
     },
     {

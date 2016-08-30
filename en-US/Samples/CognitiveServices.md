@@ -17,7 +17,7 @@ Create a UWP app that identifies faces in a photo and determine the emotions in 
 ___
 All of the sample code is available to download, but as an exercise, this tutorial will take you through the complete steps to create this app from scratch.
 
-Make sure your device is running and set up and you have Visual Studio installed. See our [Get started page](https://developer.microsoft.com/en-us/windows/iot/getstarted) to set up your device.
+Make sure your device is running and set up and you have Visual Studio installed. See our [get started page]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) to set up your device.
 
 You will need your device's IP address when connecting to it remotely.
 
@@ -32,7 +32,7 @@ You will need your device's IP address when connecting to it remotely.
 
     ![App Template Location]({{site.baseurl}}/Resources/images/cogserv/new_project.PNG)
 
-    If this is the first project you create, Visual Studio will likely prompt you to enable [eveloper mode for Windows 10](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx)
+    If this is the first project you create, Visual Studio will likely prompt you to enable [developer mode for Windows 10](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx)
 
     ![Add Extension SDK]({{site.baseurl}}/Resources/images/cogserv/add_reference.png)
 
@@ -193,7 +193,7 @@ The subscriptionKey allows your application to call the Emotion API on Cognitive
   }
   {% endhighlight %}
 
-This function instantiates an instance of the Emotion API and attempts to open the URL passed as an argument (hopefully an image), scanning it for faces. It scans the faces it finds for emotions and returns the resulting Emotion objects. These contain detailed results, including the likelihood of each emotion and the bounding box of the face. See the [documentation](#) for more details.
+This function instantiates an instance of the Emotion API and attempts to open the URL passed as an argument (an image URL), scanning it for faces. It searches the faces it finds for emotions and returns the resulting Emotion objects. These contain detailed results, including the likelihood of each emotion and the bounding box of the face. See the [documentation](https://www.microsoft.com/cognitive-services/en-us/emotion-api) for more details.
 
 4.  Add in the button event handler code
 
