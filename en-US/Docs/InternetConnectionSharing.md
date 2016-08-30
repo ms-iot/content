@@ -11,7 +11,7 @@ lang: en-US
 This document describes how internet connection sharing (ICS) can be enabled on Windows 10 IoT Core. Developers can use the NetworkTetheringManager API to configure ICS programmatically. The API is described in the [NetworkOperatorTetheringManager](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.networkoperators.networkoperatortetheringmanager.aspx){:target="_blank"} class.
 When using one of the [Windows 10 IoT Core Release Image](https://developer.microsoft.com/en-us/windows/iot/downloads){:target="_blank"} ICS can also be configured using the devcie portal.
 
-## Configuring ICS using the devcie portal
+## Configuring ICS using the device portal
 Windows Device Portal (WDP) provides all settings needed to enable ICS. In WDP navigate to the **IoT Onboarding** tab to find these settings. The device needs at least one Wi-Fi adpater that supprots a software access point (SoftAP) configuration and one adapter that provides that Internet connation that will be shared.
 
 1. **Start** and **Stop** shared access
