@@ -16,7 +16,7 @@ Windows Device Portal (WDP) provides all settings needed to enable ICS. In WDP n
 
 1. **Start** and **Stop** shared access
 2. **Adapter configuration** to select the network adapters used in the ICS setup.
-3. **SoftAP settings** to set the SSID and password that devcies will use to conenct to the SoftAP that is exposed by the Windows IoT Core device.
+3. **SoftAP settings** to set the SSID and password that devices will use to connect to the SoftAP that is exposed by the Windows IoT Core device.
 4. **AllJoyn onboarding settings** can be enabled to use an AllJoyn application to connect the device to a Wi-Fi network. Through this capability the device can be onboarded later to a Wi-Fi network if no other form of configuration is availabe.
 
 	
@@ -55,4 +55,4 @@ if (ethernetConnectionProfile != null && targetNetworkAdapter != null)
 }
 {% endhighlight %}
 
-If you using the Windows IoT Core November 2015 Release you need to follow the instructions decribed in the Internet [Connection Sharing Tutorial (Windows IoT Core November 2015 Release)]({{site.baseurl}}/{{page.lang}}/Docs/InternetConnectionSharingIoTCoreNov2015.htm) document.
+If you using the Windows IoT Core November 2015 Release you need to follow the instructions described in the Internet [Connection Sharing Tutorial (Windows IoT Core November 2015 Release)]({{site.baseurl}}/{{page.lang}}/Docs/InternetConnectionSharingIoTCoreNov2015.htm) document.
