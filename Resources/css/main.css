@@ -768,8 +768,13 @@ div.preview {
 /* [BUGFIXES] */
 
 /* From bootstrap  - this broad style will be overridden by more specific styles below in some cases */
-body h1, body h2, body h3 {
+body h1, body h3 {
     margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+body h2 {
+    margin-top: 45px;
     margin-bottom: 10px;
 }
 
@@ -797,10 +802,6 @@ body h1 {
 }
 
 body h2 {
-}
-
-body h3 {
-    margin-bottom: 20px;
 }
 
 body h4, body h5, body h6 {

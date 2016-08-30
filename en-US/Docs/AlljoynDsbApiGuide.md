@@ -15,14 +15,17 @@ To expose your device(s) as an AllJoyn service, it is necessary to implement a c
 
 Your adapter will appear on the AllJoyn bus as an AllJoyn service advertised with the following name: 
 
-	{ExposedAdapterPrefix}.DeviceSystemBridge.{AdapterName} 
+```
+<ExposedAdapterPrefix>.DeviceSystemBridge.<AdapterName> 
+```
 
-Each adapter exposes two com.microsoft.alljoynmanagement.config interfaces that support bridge and adapter configuration: 
+Each adapter exposes two `com.microsoft.alljoynmanagement.config` interfaces that support bridge and adapter configuration: 
 
- 	/AdapterConfig 
+```
+/AdapterConfig 
 
-	/BusConfig
-
+/BusConfig
+```
 The IAdapter interface declares certain properties that must be implemented.  The following table describes those properties and how they map to AllJoyn:
 
 | IAdapter Property | Description | Bridge Mapping |
