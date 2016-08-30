@@ -46,9 +46,9 @@ The Z-Wave adapter DSB comes pre-installed for most Windows 10 IOT Core images. 
 ### To run from source
 1. Download a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip).
 2. Open `samples-develop\AllJoyn\Samples\ZWaveAdapter\ZWaveAdapter.sln` in Visual Studio.
-3. Once the solution has been opened in Visual Studio, Navigate to the Solution explorer and right click the ZWaveBackgroundService project. Select "Set as Startup Project". ![set_startup]({{site.baseurl}}/Resources/images/AllJoyn/startup_proj.png)
+3. Once the solution has been opened in Visual Studio, Navigate to the Solution explorer and right click the HeadlessAdapterApp project. Select "Set as Startup Project". ![set_startup]({{site.baseurl}}/Resources/images/AllJoyn/startup_proj.png)
 
-4.  In the Main menu bar, select "Debug" -> ZWaveBackgroundService properties…"
+4.  In the Main menu bar, select "Debug" -> HeadlessAdapterApp properties…"
 5.  Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm#cpp)
 
 ## Pair the Z-Wave device
