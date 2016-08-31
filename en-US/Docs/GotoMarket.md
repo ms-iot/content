@@ -9,9 +9,12 @@ lang: en-US
 
 
 ## Understand licensing requirements
+___
+
 * See [Windows 10 IoT Core Commercialization](https://www.windowsforiotdevices.com/) to understand the licensing requirements.
 
 ## Create a retail image
+___
 
 * Learn how to create a custom image at [Windows 10 IoT Core manufacturing guide](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/iot/iot-core-manufacturing-guide) to create custom image 
 * Learn how to lockdown your device at [Building Secure Devices]({{site.baseurl}}/{{page.lang}}/Docs/BuildingSecureDevices.htm)
@@ -19,6 +22,7 @@ lang: en-US
 
 
 ## Arrange for device manufacturing  
+___
 
 Get contact info for parts suppliers (SVs/IHVs/ODMs). Contact the supplier directly and follow their process to get components and licenses as necessary. Work directly with your SoC partner to locate an appropriate manufacturer.
 
