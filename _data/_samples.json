@@ -447,6 +447,18 @@
       ]
     },
     {
+      "title": "OpenCV",
+      "description": "Build and use OpenCV inside a C++ UWP App",
+      "link": "samples/OpenCV.htm",
+      "link-text": "OpenCV",
+      "lang": "C++",
+      "ranking": 0,
+      "tags": [
+        "c++",
+        "beginner"
+      ]
+    },
+    {
       "title": "Push button",
       "description": "Make an LED blink with the push of a button",
       "link": "samples/PushButton.htm",
