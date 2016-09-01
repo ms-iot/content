@@ -11,7 +11,7 @@ lang: en-US
 
 # OpenCV
 
-In this sample, we will build the OpenCV library for Windows and add it to a UWP C++ app which will run facial and body recognition on a photo.
+In this sample, we will build the OpenCV library for Windows and add it to a UWP C++ app, which will run facial and body recognition on a photo.
 
 ## Create a new UWP C++ project
 ___
@@ -126,7 +126,7 @@ ___
 
     opencv_core300.lib;opencv_imgproc300.lib;opencv_imgcodecs300.lib;opencv_objdetect300.lib;opencv_ml300.lib;
 
-    For each new DLL you want to add, add the appropriate LIB in this field as well
+    For each new DLL you want to add, add the appropriate LIB in this field as well.
 
     ![Modify Linker Dependencies]({{site.baseurl}}/Resources/images/opencv/add_libs3.png)
 
@@ -376,19 +376,19 @@ This function loads the previously-defined classifiers, re-reads the image (the 
 
 2. Press F5 to run the program on your machine.
 
-    Press the "Test Image" button to see the test image
+    Press the "Test Image" button to see the test image.
 
     ![View Test Image]({{site.baseurl}}/Resources/images/opencv/sample_app_1.png)
 
-    Press the "Canny" button to see the Canny edges on the test image
+    Press the "Canny" button to see the Canny edges on the test image.
 
     ![View Canny Results]({{site.baseurl}}/Resources/images/opencv/sample_app_2.png)
 
-    Press the "Detect" button to see the detected faces and bodies in the image indicated by rectangles
+    Press the "Detect" button to see the detected faces and bodies in the image indicated by rectangles.
 
     ![View Detection Results]({{site.baseurl}}/Resources/images/opencv/sample_app_3.png)
 
-    Close the app once you're done validating its correct operation
+    Close the app once you're done validating its correct operation.
 
 ## Deploy the app to your Windows 10 IoT Core Device
 
