@@ -211,9 +211,12 @@ The header file stablishes the functions we're going to declar in the main .cpp 
 using namespace Windows::UI::Xaml::Media::Imaging;
 using namespace Windows::Storage::Streams;
 using namespace Microsoft::WRL;
+
+const cv::String face_cascade_name = "Assets/haarcascade_frontalface_alt.xml";
+const cv::String body_cascade_name = "Assets/haarcascade_fullbody.xml";
 {% endhighlight %}
 
-These lines allow us to use OpenCV library functions, along with some necessary default classes as well.
+These lines allow us to use OpenCV library functions, along with some necessary default classes as well. We also define the locations of the features classifiers we'll use later.
 
 3. Add the UpdateImage function
 
@@ -272,7 +275,7 @@ This function opens an image and uploads a default image to the *StoredImage* UI
     Add the following function right after the last handler:
 
 {% highlight C++ %}
-// run a Canny filter on the image contained in \_stored_image, display the results to the image pane
+// run a Canny filter on the image contained in _stored_image, display the results to the image pane
 void OpenCVExample::MainPage::cannyEdgesButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
     cv::Mat result;
@@ -294,13 +297,7 @@ This function applies [Canny Edge detection](http://docs.opencv.org/2.4/doc/tuto
     Add the following lines and function right after the last handler:
 
 {% highlight C++ %}
-cv::String face_cascade_name = "Assets/haarcascade_frontalface_alt.xml";
-cv::CascadeClassifier face_cascade;
-
-cv::String body_cascade_name = "Assets/haarcascade_fullbody.xml";
-cv::CascadeClassifier body_cascade;
-// takes an image (inputImg), runs face and body classifiers on it, and stores the results in objectVector and objectVectorBodies, respectively
-void InternalDetectObjects(cv::Mat& inputImg, std::vector<cv::Rect> & objectVector, std::vector<cv::Rect> & objectVectorBodies)
+void InternalDetectObjects(cv::Mat& inputImg, std::vector<cv::Rect> & objectVector, std::vector<cv::Rect> & objectVectorBodies, cv::CascadeClassifier& face_cascade, cv::CascadeClassifier& body_cascade)
 {
     cv::Mat frame_gray;
 
@@ -314,7 +311,7 @@ void InternalDetectObjects(cv::Mat& inputImg, std::vector<cv::Rect> & objectVect
 }
 {% endhighlight %}
 
-This function uses [Cascade classification](http://docs.opencv.org/2.4/doc/tutorials/objdetect/cascade_classifier/cascade_classifier.html) to classify and detect bodies and faces in a video stream (or image) using two Haar classifiers (xml files we will provide for you). It's a method of classification involving machine learning, as explained on OpenCV's [Website](http://docs.opencv.org/2.4/modules/objdetect/doc/cascade_classification.html).
+This function uses [cascade classification](http://docs.opencv.org/2.4/doc/tutorials/objdetect/cascade_classifier/cascade_classifier.html) to classify and detect bodies and faces in a video stream (or image) using two Haar classifiers, face\_cascade and body\_cascade, stored in the xml files we provided for you. It's a method of classification involving machine learning, as explained on OpenCV's [website](http://docs.opencv.org/2.4/modules/objdetect/doc/cascade_classification.html).
 
 7. Add the "Detect Faces and Bodies" button (detectFeaturesButton) event handler
 
@@ -324,6 +321,9 @@ This function uses [Cascade classification](http://docs.opencv.org/2.4/doc/tutor
 // run the object detection function on the image and draw rectangles around the results
 void OpenCVExample::MainPage::detectFeaturesButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
+    cv::CascadeClassifier face_cascade;
+    cv::CascadeClassifier body_cascade;
+
     if (!face_cascade.load(face_cascade_name)) {
         printf("Couldnt load Face detector '%s'\n", face_cascade_name);
         exit(1);
@@ -358,7 +358,7 @@ void OpenCVExample::MainPage::detectFeaturesButton_Click(Platform::Object^ sende
 }
 {% endhighlight %}
 
-This function loads the previously-defined classifiers, re-reads the image (the classification doesn't work on a Canny image in case the user clicked that button first), finds the faces and bodies using the helper function from the last step, and draws rectangles around the results: red for the faces, black for the bodies. It then pushes the updated image to the container.
+This function loads the classifiers, re-reads the image (the classification doesn't work on a Canny image in case the user clicked that button first), finds the faces and bodies using the helper function from the last step, and draws rectangles around the results: red for the faces, black for the bodies. It then pushes the updated image to the container.
 
 7. Add in the Resources
 
