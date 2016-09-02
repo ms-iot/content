@@ -145,14 +145,13 @@ Open MainPage.xaml and replace the existing code with the following code to crea
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="btn1" Content="Test Image" HorizontalAlignment="Left" Height="31" Margin="19,72,0,0" VerticalAlignment="Top" Width="102" Click="btn1_Click"/>
-        <Image x:Name="img1" HorizontalAlignment="Left" Height="505" Margin="180,10,0,0" VerticalAlignment="Top" Width="955" Stretch="None"/>
-        <Button x:Name="btn2" Content="Canny" HorizontalAlignment="Left" Height="31" Margin="19,146,0,0" VerticalAlignment="Top" Width="102" Click="btn2_Click"/>
-        <Button x:Name="btn3" Content="Detect" HorizontalAlignment="Left" Height="31" Margin="19,221,0,0" VerticalAlignment="Top" Width="102" Click="btn3_Click"/>
+        <Button x:Name="loadImageButton" Content="Test Image" HorizontalAlignment="Left" Height="31" Margin="19,72,0,0" VerticalAlignment="Top" Width="102" Click="loadImageButton_Click"/>
+        <Image x:Name="storedImage" HorizontalAlignment="Left" Height="505" Margin="180,10,0,0" VerticalAlignment="Top" Width="955" Stretch="None"/>
+        <Button x:Name="cannyEdgesButton" Content="Canny" HorizontalAlignment="Left" Height="31" Margin="19,146,0,0" VerticalAlignment="Top" Width="102" Click="cannyEdgesButton_Click"/>
+        <Button x:Name="detectFeaturesButton" Content="Detect" HorizontalAlignment="Left" Height="31" Margin="19,221,0,0" VerticalAlignment="Top" Width="102" Click="detectFeaturesButton_Click"/>
 
     </Grid>
 </Page>
-
 {% endhighlight %}
 
 To view the entire UI, change the dropdown in the top left corner from '5" Phone' to '12" Tablet'.
@@ -184,17 +183,18 @@ namespace OpenCVExample
     public:
         MainPage();
     private:
-        cv::Mat Lena;
+        cv::Mat _stored_image;
         void UpdateImage(const cv::Mat& image);
     private:
-        void btn1_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
-        void btn2_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
-        void btn3_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+        void loadImageButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+        void cannyEdgesButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+        void detectFeaturesButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
     };
 }
+
 {% endhighlight %}
 
-The header file stablishes the functions we're going to declar in the main .cpp file, as well as a private variable (*Lena*) which stores the content of the *img1* Image object file once we upload it.
+The header file stablishes the functions we're going to declar in the main .cpp file, as well as a private variable (*_stored_image*) which stores the content of the *storedImage* XAML Image element once we upload it.
 
 2. Add the Includes and Namespaces to the .cpp file
 
@@ -227,7 +227,7 @@ void  OpenCVExample::MainPage::UpdateImage(const cv::Mat& image)
 
     // Get access to the pixels
     IBuffer^ buffer = bitmap->PixelBuffer;
-    unsigned char* dstPixels;
+    unsigned char* dstPixels = nullptr;
 
     // Obtain IBufferByteAccess
     ComPtr<IBufferByteAccess> pBufferByteAccess;
@@ -235,46 +235,53 @@ void  OpenCVExample::MainPage::UpdateImage(const cv::Mat& image)
     pBuffer.As(&pBufferByteAccess);
 
     // Get pointer to pixel bytes
-    pBufferByteAccess->Buffer(&dstPixels);
-    memcpy(dstPixels, image.data, image.step.buf[1] * image.cols*image.rows);
+    HRESULT get_bytes = pBufferByteAccess->Buffer(&dstPixels);
+    if (get_bytes == S_OK) {
+        memcpy(dstPixels, image.data, image.step.buf[1] * image.cols*image.rows);
 
-    // Set the bitmap to the Image element
-    img1->Source = bitmap;
+        // Set the bitmap to the Image element
+        storedImage->Source = bitmap;
+    }
+    else {
+        printf("Error loading image into buffer\n");
+    }
 }
 {% endhighlight %}
 
-This function changes the image contained in the "img1" XAML UI element to the contents of the "image" argument.
+This function changes the image contained in the "storedImage" XAML Image element to the contents of the "image" argument.
 
-4. Add the Upload Button (btn1) handler
+4. Add the Upload Button (loadImageButton) handler
 
     Add the following function right after the UpdateImage function
 
 {% highlight C++ %}
-// replace the image pane with an image in the "assets" folder, grpPC1.jpg
-void OpenCVExample::MainPage::btn1_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+void OpenCVExample::MainPage::loadImageButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
     cv::Mat image = cv::imread("Assets/grpPC1.jpg");
-    Lena = cv::Mat(image.rows, image.cols, CV_8UC4);
-    cv::cvtColor(image, Lena, CV_BGR2BGRA);
-    UpdateImage(Lena);
+    _stored_image = cv::Mat(image.rows, image.cols, CV_8UC4);
+    cv::cvtColor(image, _stored_image, CV_BGR2BGRA);
+    UpdateImage(_stored_image);
 
 }
 {% endhighlight %}
 
-This function opens an image and uploads a default image to the *img1* UI element.
+This function opens an image and uploads a default image to the *StoredImage* UI element.
 
-5. Add the Canny Edge Button (btn2) handler
+5. Add the Canny Edge Button (cannyEdgesButton) handler
 
     Add the following function right after the last handler:
 
 {% highlight C++ %}
-// run a Canny filter on the image contained in "Lena", display the results to the image pane
-void OpenCVExample::MainPage::btn2_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+// run a Canny filter on the image contained in \_stored_image, display the results to the image pane
+void OpenCVExample::MainPage::cannyEdgesButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-    //Canny filter
     cv::Mat result;
     cv::Mat intermediateMat;
-    cv::Canny(Lena, intermediateMat, 80, 90);
+    // Calculates if each pixel is part of an edge based on the gradient at that pixel
+    // If a pixel gradient is higher than 90, the pixel is accepted as an edge
+    // If a pixel gradient value is below 80, it is rejected.
+    // If the pixel gradient is between 80 and 90, it will be accepted only if it is connected to a pixel with a gradient above 90.
+    cv::Canny(_stored_image, intermediateMat, 80, 90);
     cv::cvtColor(intermediateMat, result, CV_GRAY2BGRA);
     UpdateImage(result);
 }
@@ -293,7 +300,7 @@ cv::CascadeClassifier face_cascade;
 cv::String body_cascade_name = "Assets/haarcascade_fullbody.xml";
 cv::CascadeClassifier body_cascade;
 // takes an image (inputImg), runs face and body classifiers on it, and stores the results in objectVector and objectVectorBodies, respectively
-void internalDetectObjects(cv::Mat& inputImg, std::vector<cv::Rect> & objectVector, std::vector<cv::Rect> & objectVectorBodies)
+void InternalDetectObjects(cv::Mat& inputImg, std::vector<cv::Rect> & objectVector, std::vector<cv::Rect> & objectVectorBodies)
 {
     cv::Mat frame_gray;
 
@@ -305,18 +312,17 @@ void internalDetectObjects(cv::Mat& inputImg, std::vector<cv::Rect> & objectVect
     //detect bodies
     body_cascade.detectMultiScale(frame_gray, objectVectorBodies, 1.1, 2, 0 | CV_HAAR_SCALE_IMAGE, cv::Size(30, 300));
 }
-
 {% endhighlight %}
 
 This function uses [Cascade classification](http://docs.opencv.org/2.4/doc/tutorials/objdetect/cascade_classifier/cascade_classifier.html) to classify and detect bodies and faces in a video stream (or image) using two Haar classifiers (xml files we will provide for you). It's a method of classification involving machine learning, as explained on OpenCV's [Website](http://docs.opencv.org/2.4/modules/objdetect/doc/cascade_classification.html).
 
-7. Add the "Detect Faces and Bodies" button (btn3) event handler
+7. Add the "Detect Faces and Bodies" button (detectFeaturesButton) event handler
 
     Add the following lines and function right after the last helper function:
 
 {% highlight C++ %}
 // run the object detection function on the image and draw rectangles around the results
-void OpenCVExample::MainPage::btn3_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+void OpenCVExample::MainPage::detectFeaturesButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
     if (!face_cascade.load(face_cascade_name)) {
         printf("Couldnt load Face detector '%s'\n", face_cascade_name);
@@ -336,27 +342,19 @@ void OpenCVExample::MainPage::btn3_Click(Platform::Object^ sender, Windows::UI::
     std::vector<cv::Rect> faces;
     std::vector<cv::Rect> bodies;
     // run object detection
-    internalDetectObjects(frame, faces, bodies);
+    InternalDetectObjects(frame, faces, bodies);
     // draw red rectangles around detected faces
     for (unsigned int i = 0; i < faces.size(); i++)
     {
-        auto face = faces[i];
-
-        cv::rectangle(Lena, face, cv::Scalar(0, 0, 255, 255), 5);
-
+        cv::rectangle(_stored_image, faces[i], cv::Scalar(0, 0, 255, 255), 5);
     }
     // draw black rectangles around detected bodies
     for (unsigned int i = 0; i < bodies.size(); i++)
     {
-        auto body = bodies[i];
-
-        cv::rectangle(Lena, body, cv::Scalar(0, 0, 0, 255), 5);
-
+        cv::rectangle(_stored_image, bodies[i], cv::Scalar(0, 0, 0, 255), 5);
     }
     // draw the image in the pane
-    UpdateImage(Lena);
-
-
+    UpdateImage(_stored_image);
 }
 {% endhighlight %}
 
