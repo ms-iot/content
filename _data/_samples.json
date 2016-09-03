@@ -448,14 +448,15 @@
     },
     {
       "title": "OpenCV",
-      "description": "Build and use OpenCV inside a C++ UWP App",
+      "description": "Use OpenCV to run facial and body recognition on a photo",
       "link": "samples/OpenCV.htm",
       "link-text": "OpenCV",
       "lang": "C++",
       "ranking": 0,
       "tags": [
         "c++",
-        "beginner"
+        "beginner",
+        "foreground"
       ]
     },
     {

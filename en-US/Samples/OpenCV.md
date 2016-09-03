@@ -15,15 +15,17 @@ In this sample, we will build the OpenCV library for Windows and add it to a UWP
 
 ## Create a new UWP C++ project
 ___
-All of the sample code is available to download, but as an exercise, this tutorial will take you through the complete steps to create this app from scratch. You still have to compile the OpenCV libraries and add the DLLs to your project, though, so be sure to follow the corresponding steps below.
+The sample code is available to download, but as an exercise, we will create this app from scratch.
 
-Make sure your device is running and set up and you have Visual Studio installed. See our [guide]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) if you have not set up your device yet.
+Even if you download the sample, code, you'll need to follow the steps in **Compile the OpenCV Libraries** and **Add the Libraries to your Project** below.
 
-You will need your device's IP address when connecting to it remotely. Also make sure you have the C++ components for Visual Studio.
+* Make sure your device is running and set up and you have Visual Studio installed. See our [guide]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) if you have not set up your device yet.
 
-To check, open the Start Menu, type in **Add or remove programs**. Hit enter and naviage to Visual Studio. Click **Modify** and check to make sure you have the below components selected. If not, select them and update your installation.
+* You will need your device's IP address when connecting to it remotely.
 
-![C++ Components]({{site.baseurl}}/Resources/images/opencv/get_cpp.png)
+* Make sure you have the C++ components for Visual Studio. To check, open the Start Menu, type in **Add or remove programs**. Hit enter and naviage to Visual Studio. Click **Modify** and check to make sure you have the below components selected. If not, select them and update your installation.
+
+    ![C++ Components]({{site.baseurl}}/Resources/images/opencv/get_cpp.png)
 
 1. Start Visual Studio 2015.
 2. Create a new project with **(File \| New Project...)**.
