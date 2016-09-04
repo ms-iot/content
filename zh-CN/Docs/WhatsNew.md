@@ -14,17 +14,17 @@ Windows just keeps getting better. During Intel’s Developer Forum, Intel’s C
 ## 周年更新
 ___
 
-在官方发布 Windows 10 IoT Core 一年之后 Windows 10 迎来了周年更新。
-Huge improvements have been made to performance, 应用支持, the installation experience... plus lots of new features. [自行下载 Windows 10 IoT Core Dashboard](http://go.microsoft.com/fwlink/?LinkID=708576)
+在官方发布 Windows 10 物联网核(Windows 10 IoT Core) 一年之后 Windows 10 迎来了周年更新。
+革命性的改变！无论是在性能、应用支持、安装经验等方面，并且还有很多新特性。 [自行下载 Windows 10 IoT Core Dashboard](http://go.microsoft.com/fwlink/?LinkID=708576)
 
 ## 新硬件 
 ___
 
 ### 树莓派3
 ![图片:树莓派3]({{site.baseurl}}/Resources/images/677423-highlight.jpg)
-[IoT Core]({{site.baseurl}}/{{page.lang}}/Explore/IotCore.htm) is now officially released for the [Raspberry Pi 3](https://www.microsoftstore.com/store/msusa/en_US/pdp/Raspberry-Pi-3-Board-and-16GB-10class-with-NOOBS/productID.334851400) to the public.
+[物联网核]({{site.baseurl}}/{{page.lang}}/Explore/IotCore.htm) 现在正式面向公众发布 [树莓派3](https://www.microsoftstore.com/store/msusa/en_US/pdp/Raspberry-Pi-3-Board-and-16GB-10class-with-NOOBS/productID.334851400)。
 
-* Easy set up with a [new getting started experience]({{site.baseurl}}/{{page.lang}}/GetStarted.htm)
+* 从一个简单设置 [开始新体验]({{site.baseurl}}/{{page.lang}}/GetStarted.htm)
 * Functional parity with RPi2, including Windows as a service updating and flighting model and a single FFU for RPi2 and RPi3
 
 ### Microsoft IoT Grove Kit
