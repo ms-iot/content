@@ -1,27 +1,27 @@
 ---
 layout: default
-title: What's new for Windows 10 IoT Core - The Anniversary Update
-description: Raspberry Pi 3, performance improvements, DMAP and more
-keyword: raspberry pi 3, raspberry pi, windows iot, iot core, insider preview, anniversary update
-permalink: /en-US/Docs/WhatsNew.htm
-lang: en-US
+title: Windows 10 IoT Core的新玩意儿 - 周年更新
+description: 树莓派3, 性能改进, DMAP 等等
+keyword: 树莓派3, 树莓派, windows iot, iot core, insider preview, anniversary update
+permalink: /zh-CN/Docs/WhatsNew.htm
+lang: zh-CN
 ---
 
-# What’s new for Windows 10 IoT Core - Support for Intel® Joule™  
+# Windows 10 IoT Core的新玩意儿 - Intel® Joule™  支持  
 
 Windows just keeps getting better. During Intel’s Developer Forum, Intel’s CEO announced a new innovator platform, [Intel Joule](https://newsroom.intel.com/chip-shots/make-amazing-things-happen-iot-entrepreneurship-intel-joule/), with support for Windows 10 IoT Core. Combined with the power of the Universal Windows Platform, Visual Studio, and Azure IoT, the Intel® Joule™ module is exceptionally well suited to help developers and entrepreneurs go from concept to prototype to production in a fraction of the time of traditional system development. Please come back soon to [Get Started]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) with Windows 10 IoT Core.  
 
-## The Anniversary Update
+## 周年更新
 ___
 
-One year after the official release of Windows 10 IoT Core comes the Windows 10 Anniversary Update.
-Huge improvements have been made to performance, app support, the installation experience... plus lots of new features. [Download the Windows 10 IoT Core Dashboard and take a look for yourself!](http://go.microsoft.com/fwlink/?LinkID=708576)
+在官方发布 Windows 10 IoT Core 一年之后 Windows 10 迎来了周年更新。
+Huge improvements have been made to performance, 应用支持, the installation experience... plus lots of new features. [自行下载 Windows 10 IoT Core Dashboard](http://go.microsoft.com/fwlink/?LinkID=708576)
 
-## New Hardware 
+## 新硬件 
 ___
 
-### Raspberry Pi 3
-![Raspberry Pi 3 image]({{site.baseurl}}/Resources/images/677423-highlight.jpg)
+### 树莓派3
+![图片:树莓派3]({{site.baseurl}}/Resources/images/677423-highlight.jpg)
 [IoT Core]({{site.baseurl}}/{{page.lang}}/Explore/IotCore.htm) is now officially released for the [Raspberry Pi 3](https://www.microsoftstore.com/store/msusa/en_US/pdp/Raspberry-Pi-3-Board-and-16GB-10class-with-NOOBS/productID.334851400) to the public.
 
 * Easy set up with a [new getting started experience]({{site.baseurl}}/{{page.lang}}/GetStarted.htm)
@@ -49,8 +49,8 @@ ___
 * [Arduino INO integration](https://developer.microsoft.com/en-us/windows/iot/IotCoreAppDeployment_ArduinoIde.htm) - work better with Arduino hardware with this command line toolkit
 
 ### Improved documentation
-* Updated [samples page]({{site.baseurl}}/{{page.lang}}/Samples.htm) - new tagging system to sort through different samples 
-* Updated [documentation page]({{site.baseurl}}/{{page.lang}}/Docs.htm) - added a table of contents and new documentation
+* 更新 [样例页面]({{site.baseurl}}/{{page.lang}}/Samples.htm) - new tagging system to sort through different samples 
+* 更新 [文档页面]({{site.baseurl}}/{{page.lang}}/Docs.htm) - added a table of contents and new documentation
 
 ### Getting started
 * New [getting started]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) flow  
