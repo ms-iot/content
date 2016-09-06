@@ -447,6 +447,19 @@
       ]
     },
     {
+      "title": "OpenCV",
+      "description": "Use OpenCV to run facial and body recognition on a photo",
+      "link": "samples/OpenCV.htm",
+      "link-text": "OpenCV",
+      "lang": "C++",
+      "ranking": 0,
+      "tags": [
+        "c++",
+        "beginner",
+        "foreground"
+      ]
+    },
+    {
       "title": "Push button",
       "description": "Make an LED blink with the push of a button",
       "link": "samples/PushButton.htm",
