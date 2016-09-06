@@ -366,7 +366,7 @@ This function loads the classifiers, re-reads the image (the classification does
 
     ![Add Assets, part 1]({{site.baseurl}}/Resources/images/opencv/add_assets.png)
 
-    Download the [picture]({{site.baseurl}}/Resources/images/opencv/grpPC1.png), [face classifier]({{site.baseurl}}/Resources/images/opencv/haarcascade_frontalface_alt.xml), and [body classifier]({{site.baseurl}}/Resources/images/opencv/haarcascade_fullbody.xml) and add them to your Assets folder within your project.
+    Download the [picture]({{site.baseurl}}/Resources/images/opencv/grpPC1.png), [face classifier]({{site.baseurl}}/Resources/data_models/opencv/haarcascade_frontalface_alt.xml), and [body classifier]({{site.baseurl}}/Resources/data_models/opencv/haarcascade_fullbody.xml) and add them to your Assets folder within your project.
 
     ![Add Assets, part 2]({{site.baseurl}}/Resources/images/opencv/add_assets2.png)
 
