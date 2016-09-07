@@ -18,20 +18,21 @@ Here are the steps involved in creating Windows 10 IoT Core Pro device
 To begin, setup your develop PC by following the steps in [Step 1: Get set up]({{site.baseurl}}/{{page.lang}}/Docs/InstallPackage.htm).
 
 
-## Step 1: Download Windows 10 IoT Core Pro License File 
+## Step 1: Download Windows 10 IoT Core Pro license file 
 ___
 
 Please go to [Windows 10 IoT Core Commericialization](http://go.microsoft.com/fwlink/?LinkID=614849) and select Windows 10 IoT Core Pro to find a distributor near you and download the Windows 10 IoT Core Pro License File.
 
 
-## Step 2: Create a Provisioning Package with License File 
+## Step 2: Create a provisioning package with license file 
 ___
+Provisioning package can be created by two ways detailed below.
 
 ### Create using sample template
 
 * See [Provisioning.ProSKU](https://github.com/ms-iot/iot-adk-addonkit/tree/develop/Common/Packages/Provisioning.ProSKU) sample. 
 * You will need to uncomment the EditionUpgrade tag in [customizations.xml](https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Common/Packages/Provisioning.ProSKU/customizations.xml) file to point to the downloaded license file.
-* You can create the provisioning package using 'buildprovpkg Provisioning.ProSKU' in the IoTADKAddon shell.
+* You can create the provisioning package using `buildprovpkg Provisioning.ProSKU` in the IoTADKAddon shell.
 
 ### Create using ICD
 
@@ -88,11 +89,9 @@ There are two ways to deploy the provisioning package to the device.
 ### Deploying at runtime
 
 * Connect to the device ( [using SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH.htm) or [using Powershell]({{site.baseurl}}/{{page.lang}}/Docs/powershell.htm) )
-* Copy the provisioning package (say 'ProSKU.ppkg') to `C:\OemInstall\` folder
-* Call 'provtool ProSKU.ppkg' to provision the device with this provisioning package.
+* Copy the provisioning package (say `ProSKU.ppkg`) to `C:\OemInstall\` folder
+* Call `provtool ProSKU.ppkg` to provision the device with this provisioning package.
 
 ### Deploying at image time
 
 Follow the steps detailed in [Lab1d: Add a provisioning package to an image](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/iot/add-a-provisioning-package-to-an-image) to include this provisioning package into the image.
- 
- 
