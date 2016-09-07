@@ -10,11 +10,11 @@ lang: en-US
 
 The Unified Write Filter (UWF) is a feature to protect physical storage media from data writes. UWF intercepts all write attempts to a protected volume and redirects those write attempts to a virtual overlay. This improves the reliability and stability of your device and reduces the wear on write-sensitive media, such as flash memory media like solid-state drives.
 
-Read [Unified Write Filter](https://msdn.microsoft.com/en-us/windows/hardware/mt572001) for more information.
+Read [Unified Write Filter](https://msdn.microsoft.com/windows/hardware/mt572001) for more information.
 
 {% include note.html text="You'll need an MSDN subscription or an account as a registered Microsoft OEM to get IoT Core Kits from MSDN Subscriber Downloads." %}
 
-If you do not have IoT Core Kits yet, Download and install [IoT Core Kits from MSDN Subscriber Downloads](https://msdn.microsoft.com/subscriptions/downloads/#FileId=67415).
+If you do not have IoT Core Kits yet, Download and install [IoT Core Kits from MSDN Subscriber Downloads](https://msdn.microsoft.com/subscriptions/downloads/#FileId=70177).
 
 ## How to Install UWF on a device running Windows 10 IoT Core
 ___
@@ -36,17 +36,17 @@ ___
 ___
 
 *             Add **IOT_UNIFIED_WRITE_FILTER** feature id to the OEM Input file 
-*             Create the image\FFU. Read [Create a basic image](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/create-a-basic-image) for instructions.
+*             Create the image\FFU. Read [Create a basic image](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/iot/create-a-basic-image) for instructions.
 
 
 ## How to Use UWF
 ___
 
 UWF can be configured using the uwfmgr.exe tool via a Powershell or SSH session.
-Read [`uwfmgr.exe` tool](https://msdn.microsoft.com/en-us/windows/hardware/mt572002) for the available options with an exception of some commands listed below that are not supported in IoT Core.
+Read [`uwfmgr.exe` tool](https://msdn.microsoft.com/windows/hardware/mt572002) for the available options with an exception of some commands listed below that are not supported in IoT Core.
 Review the default settings of the Overlay configurations and adapt them per your requirements.
 
-UWF can also be configured via MDM channel using [Unified Write Filter CSP](https://msdn.microsoft.com/en-us/library/windows/hardware/dn904976(v=vs.85).aspx).
+UWF can also be configured via MDM channel using [Unified Write Filter CSP](https://msdn.microsoft.com/library/windows/hardware/dn904976(v=vs.85).aspx).
 
 
 * For example, the following combination of commands enable uwfmgr and configure to protect the C drive
