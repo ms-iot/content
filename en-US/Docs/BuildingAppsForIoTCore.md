@@ -95,9 +95,9 @@ C# and VB are both supported as UWP apps and have access to the portion of the .
 
 Samples:
 
-* [C# Blinky Headless with Full Documentation](https://developer.microsoft.com/en-us/windows/iot/samples/blinkyheadless)
-* [C# Blinky Headless Code Only](https://github.com/ms-iot/samples/tree/develop/BlinkyHeadless/CS)
-* [VB Blinky Headless Code Only](https://github.com/ms-iot/samples/tree/develop/BlinkyHeadless/VB)
+* [C# Blinky Headless with Full Documentation]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinkyBackground.htm)
+* [C# Blinky Headless Code Only](https://github.com/ms-iot/samples/tree/develop/HelloBlinkyBackground/CS)
+* [VB Blinky Headless Code Only](https://github.com/ms-iot/samples/tree/develop/HelloBlinkyBackground/VB)
 * [C# Blinky UI App]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky.htm)
 
 
@@ -119,8 +119,8 @@ With C++ you can build Xaml or DirectX UI apps, as well as UWP Background projec
 
 Samples:
 
-* [Blinky Headless](https://github.com/ms-iot/samples/tree/develop/BlinkyHeadless/CPP)
-* [Blinky Headed](https://github.com/ms-iot/samples/tree/develop/Blinky/Cpp)
+* [Blinky Headless](https://github.com/ms-iot/samples/tree/develop/HelloBlinkyBackground/CPP)
+* [Blinky Headed](https://github.com/ms-iot/samples/tree/develop/HelloBlinky/Cpp)
 * [Console App]({{site.baseurl}}/{{page.lang}}/Samples/MemoryStatus.htm)
 
 
@@ -130,7 +130,7 @@ With Arduino Wiring support you can build apps in Arduino Wiring for many popula
 Our [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide) provides full instructions on how to get set up to build these apps. The samples copied and linked below will help you get started building your own.  You can even [build](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryBlinky) WinRT components in Arduino that can then be used from other languages. This is especially helpful for peripherals that have rich Arduino libraries like [LCD character displays](https://github.com/ms-iot/samples/tree/develop/ArduinoLibraryLcdDisplay).
 
 *Blinky Sample Code*
-The full [sample code and docs]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinkyWiringWiring.htm) are available in our samples page and you can find the full code below.
+The full [sample code and docs]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinkyBackgroundWiring.htm) are available in our samples page and you can find the full code below.
 
 {% highlight C++ %}
 void setup()
@@ -155,7 +155,7 @@ void loop()
 ### Node.js
 With IoT Core's Node.js supports you can build your Background Apps using this popular language and many of its popular libraries and frameworks. There are a variety of Node.js samples avialable on our github site, but the samples below will give you a great introduction.
 
-The [headless blinky](https://github.com/ms-iot/samples/tree/develop/BlinkyHeadless/node.js) sample shows how easy it is to build your first IoT Core Node.js app.
+The [headless blinky](https://github.com/ms-iot/samples/tree/develop/HelloBlinkyBackground/node.js) sample shows how easy it is to build your first IoT Core Node.js app.
 {% highlight JS %}
 var http = require('http');
 
@@ -186,13 +186,13 @@ function flipLed(){
 
  * [Weather Station Web Server](https://github.com/ms-iot/samples/tree/develop/WeatherStation/Node.js)
  * [Johnny-Five App]({{site.baseurl}}/{{page.lang}}/Samples/J5ServoController.htm)
- * [Cylon App]({{site.baseurl}}/{{page.lang}}/Samples/CylonLED.htm)
+ * [Cylon App]({{site.baseurl}}/{{page.lang}}/Samples/CylonServoNode.htm)
  * [Express App]({{site.baseurl}}/{{page.lang}}/Samples/ExpressNodejs.htm)
 
 ### Python
 IoT Core also supports building Background Apps with Python. Support for the python languages and libaries is fully there, but the python language itself does not support calling UWP APIs and so we provide python libraries to call into critical platform features like GPIO, I2C, PWM, ...
 
-This [app]({{site.baseurl}}/{{page.lang}}/Samples/HelloWorldPythonBlinky.htm) shows how to build a basic Python Background App that blinks an LED.
+This [app]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinkyBackgroundPython.htm) shows how to build a basic Python Background App that blinks an LED.
 
 
 {% highlight Python %}
