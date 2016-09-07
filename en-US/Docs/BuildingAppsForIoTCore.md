@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Building Applications for Windows 10 IoT Core
+title: Writing apps
 description: Lean about UWP, its support on IoT Core, and other types of apps supported on IoT Core
 keyword: windows runtime, windows iot, uwp
 permalink: /en-US/Docs/BuildingAppsForIoTCore.htm
 lang: en-US
 ---
 
-# Building Applications for Windows 10 IoT Core
-Learn about the languages supported on IoT Core as well as the UWP and non-UWP app types supported on IoT Core.
+# Writing apps
+Learn about the languages supported on Windows 10 IoT Core as well as the UWP and non-UWP app types supported on IoT Core.
 
 ## Application Types
 ___
@@ -94,6 +94,7 @@ Traditional UWP languages ship with support in Visual Studio by default. All of 
 C# and VB are both supported as UWP apps and have access to the portion of the .Net Framework available to UWP applications. They support UI apps built with Xaml as well as Background Apps. You can also build *Windows Runtime Components* that can be used from other supported languages.
 
 Samples:
+
 
 * [C# Blinky Headless with Full Documentation]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinkyBackground.htm)
 * [C# Blinky Headless Code Only](https://github.com/ms-iot/samples/tree/develop/HelloBlinkyBackground/CS)
