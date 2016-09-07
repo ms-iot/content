@@ -756,7 +756,7 @@
     {
       "title": "HID Injection driver",
       "description": "Build a driver for IoT Core and use HID Injection to inject touch, keyboard or mouse events.",
-      "link": "samples/HidInjector.htm",
+      "link": "samples/HidInjection.htm",
       "link-text": "Learn More",
       "lang": "C++",
       "ranking": 10,
