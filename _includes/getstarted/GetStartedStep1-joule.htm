@@ -32,7 +32,7 @@
           <div class="section-body toggle-section" id="get-windows-10">
             <p>
               Make sure you are running the public release of Windows 10 (version 10.0.10240 or better).<br/>
-              You can find your current build number by clicking the start button, typing "winver", and hitting the Enter key.
+              You can find your current build number by clicking the <b>start</b> button, typing <b>"winver"</b>, and pressing the <b>Enter</b> key.
             </p>
             <p>
               If you're not running Windows 10 (version 10.0.10240 or better) you can upgrade from <a href="http://www.microsoft.com/en-us/software-download/windows10" target="_blank">here</a>.
@@ -65,10 +65,10 @@
                       <li>Type: 'exit'</li>
                       </ol>
                   </li>
-                  <li>Download the <a href="">JouleAutoInstaller</a> to your PC (NOTE: Link will be updated soon). This is a WinPE image that you will use later to flash Windows 10 IoT Core to the eMMC storage on the board.</li>
+                  <li>Download the <a href="">JouleAutoInstaller</a> to your PC. This is a WinPE image that you will use later to flash Windows 10 IoT Core to the eMMC storage on the board. {% include note.html text="The download for this file will be available soon." %}</li>
                   <li>Right click on the downloaded zip file and select extract all. This will create a new folder with the same name as the downloaded zip file.</li>
                   <li>Copy the files you extracted to the USB drive.</li>
-                  <li>Download the <a href="">ACPITABL.dat</a> (NOTE: Link will be updated soon) and copy it to the root of the USB drive.
+                  <li>Download the <a href="">ACPITABL.dat</a> and copy it to the root of the USB drive. {% include note.html text="The download for this file will be available soon." %}</li>
                 </ol>
                 <p><img alt="USB flash drive contents" class="image-border" src="{{site.baseurl}}/Resources/images/SetupJoule/joule_USB_contents.JPG" /></p>
             </div>
@@ -85,7 +85,7 @@
           </div>
           <div class="section-body toggle-section" id="get-windows-iotcore">
             <ol class="inline-list">
-                  <li>Download Windows 10 IoT Core image from here. Note: A public download will be available soon.</li>
+                  <li>Download Windows 10 IoT Core image from here. {% include note.html text="The download for this file will be available soon." %}</li>
                   <li>Double click the downloaded ISO file. This will automatically mount the ISO as a new virtual CD-drive. (Look for a new CD-ROM drive)</li>
                   <li>
                     <p>The mounted virtual drive contains an installer file "Windows_10_IoT_Core_for_Broxton.msi". Double click the file to start the installation.</p>
