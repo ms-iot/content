@@ -88,10 +88,8 @@ There are two ways to deploy the provisioning package to the device.
 ### Deploying at runtime
 
 * Connect to the device ( [using SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH.htm) or [using Powershell]({{site.baseurl}}/{{page.lang}}/Docs/powershell.htm) )
-* Copy the provisioning package to `C:\windows\provisioning\` folder
-* Restart the device
-
-On boot, the provisioning package will be processed and the device will be stepped up to PRO SKU. 
+* Copy the provisioning package (say 'ProSKU.ppkg') to `C:\OemInstall\` folder
+* Call 'provtool ProSKU.ppkg' to provision the device with this provisioning package.
 
 ### Deploying at image time
 
