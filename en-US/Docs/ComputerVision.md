@@ -38,7 +38,7 @@ Each API subscription comes with a set of free transactions every month (300 to 
 More details about Cognitive Services pricing is found on their [website](https://www.microsoft.com/cognitive-services/en-us/pricing).
 
 #### Get Started
-To use Cognitive Services, dsusers must connect to their servers using API keys. Users sign up on the website to receive these keys. After providing an API key, users can call the APIs within the limitations mentioned in the "Pricing" section.
+To use Cognitive Services, users must connect to their servers using API keys. Users sign up on the website to receive these keys. After providing an API key, users can call the APIs within the limitations mentioned in the "Pricing" section.
 
 Documentation for each API can be found on the Cognitive Services [website](https://www.microsoft.com/cognitive-services/en-us/documentation).
 
