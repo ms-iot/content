@@ -9,23 +9,33 @@ lang: en-US
 
 # Windows 10 IoT Core Pro
 
-Here are the steps involved in creating an Enterprise Image
+Here are the steps involved in creating Windows 10 IoT Core Pro device
 
 * Download Windows 10 IoT Core Pro License File and ICD.
 * Create a Provisioning Package with License File.
-* Wrap the Provisioning Package in a OEM Package.
-* Create an Image with ICD/Imggen.
+* Apply the provisioning package to the device
+
+To begin, setup your develop PC by following the steps in [Step 1: Get set up]({{site.baseurl}}/{{page.lang}}/Docs/InstallPackage.htm).
 
 
-Step 1: Download Windows 10 IoT Core Pro License File and ICD.
--------
+## Step 1: Download Windows 10 IoT Core Pro License File 
+___
 
 Please go to [Windows 10 IoT Core Commericialization](http://go.microsoft.com/fwlink/?LinkID=614849) and select Windows 10 IoT Core Pro to find a distributor near you and download the Windows 10 IoT Core Pro License File.
 
-Please install the Windows ADK and ICD.
 
-Step 2: Create a Provisioning Package with License File using ICD
--------
+## Step 2: Create a Provisioning Package with License File 
+___
+
+### Create using sample template
+
+* See [Provisioning.ProSKU](https://github.com/ms-iot/iot-adk-addonkit/tree/develop/Common/Packages/Provisioning.ProSKU) sample. 
+* You will need to uncomment the EditionUpgrade tag in [customizations.xml](https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Common/Packages/Provisioning.ProSKU/customizations.xml) file to point to the downloaded license file.
+* You can create the provisioning package using 'buildprovpkg Provisioning.ProSKU' in the IoTADKAddon shell.
+
+### Create using ICD
+
+The below steps show you the means to create the provisioning package using ICD.
 
 **Step 2.1: New Provisioning Package**
 
@@ -71,16 +81,20 @@ Step 2: Create a Provisioning Package with License File using ICD
 
 ![Provisioning Package is successfully created]({{site.baseurl}}/Resources/images/CreateIoTCorePro/CreatePpkg11.png)
 
-Step 3: Wrap the Provisioning Package in an OEM Package
--------
+## Step 3: Apply provisioning package to the device
+___
+There are two ways to deploy the provisioning package to the device.
 
-Create a OEM Package to wrap the Provisioning Package using PKGGEN tool.
- 
-Please visit [Windows 10 IoT Core Image Creation](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/iot/iot-core-manufacturing-guide) for instructions regarding creating an OEM Package that contains your Provisioning Package using PKGGEN tool.
- 
-Step 4: Create the Image with ICD/Imggen
--------
- 
-Use ICD to create a Windows IoT Core Image with your OEM Package.
+### Deploying at runtime
 
-Please visit [Windows 10 IoT Core Image Creation](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/iot/iot-core-manufacturing-guide) for instructions regarding using ICD to create a Windows IoT Core Image with your OEM Package.
+* Connect to the device ( [using SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH.htm) or [using Powershell]({{site.baseurl}}/{{page.lang}}/Docs/powershell.htm) )
+* Copy the provisioning package to `C:\windows\provisioning\` folder
+* Restart the device
+
+On boot, the provisioning package will be processed and the device will be stepped up to PRO SKU. 
+
+### Deploying at image time
+
+Follow the steps detailed in [Lab1d: Add a provisioning package to an image](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/iot/add-a-provisioning-package-to-an-image) to include this provisioning package into the image.
+ 
+ 
