@@ -26,7 +26,7 @@ ___
 
 You can connect WinDbg to the MinnowBoard Max using a network connection.
 
-### MinnowBoard Max (MBM) & WinDbg via a Network Connection
+### MinnowBoard Max (MBM) & WinDbg via a network connection
 
 In order to enable kernel debugging with WinDbg over a network, please make sure that:
 
@@ -65,7 +65,7 @@ ___
 
 You can connect WinDbg to the Raspberry Pi 2 or 3 using a serial connection.
 
-### Raspberry Pi 2 or 3 (RPi2 or RPi3) & Windbg via a Serial Connection
+### Raspberry Pi 2 or 3 (RPi2 or RPi3) & Windbg via a serial connection
 
 In order to enable kernel debugging with WinDbg over a serial connection, please make sure that:
 
@@ -122,9 +122,9 @@ Here is the first command you need to run:
 
 * The baud-rate for the Raspberry Pi 2 or 3 is hard-coded to 921600, so you don't have to specify it
 
-  Here is the second command you need to run:
+Here is the second command you need to run:
 
-  `bcdedit -debug on`
+`bcdedit -debug on`
 
 * This command turns on debugging on the device 
 
@@ -141,6 +141,33 @@ Note: If you have any of the Windows kits installed, you may find WinDbg under "
 * Please note that 'PORT' refers to the COM port number your USB-to-TTL cable was assigned in the system and displayed in the Device Manager under "Ports (COM & LPT)".
 
 * Reboot the IoTCore Device to reconnect to the debugger
+
+
+## DragonBoard (DB) 
+___
+
+You can connect WinDbg to the DragonBoard using a serial or USB connection.
+
+### DragonBoard & Windbg via USB connection
+By default the USB debugger settings are configured in the test images. 
+Using the active PowerShell or SSH connection to your DragonBoard, you will modify one BCD settings to enable debugging over the USB connection.
+
+`bcdedit /store c:\EFIESP\EFI\Microsoft\Boot\BCD /debug {default} ON`
+
+{% include note.html text="Once USB kernel debugger is on then USB ports on the DragonBoard device might not work (i.e. keyboard, usb Ethernet might not work)." %}
+
+### DragonBoard & Windbg via serial connection
+
+Using the active PowerShell or SSH connection to your DragonBoard, you will modify two BCD settings to enable debugging over the serial connection.
+
+`bcdedit /store c:\EFIESP\EFI\Microsoft\Boot\BCD /debug {default} ON`
+
+* This command enables the kernel debugger
+
+`bcdedit /store c:\EFIESP\EFI\Microsoft\Boot\BCD /dbgsettings  Serial debugport:1 baudrate:115200`
+
+* This command configures the serial port for kernel debugging.
+
 
 
 
