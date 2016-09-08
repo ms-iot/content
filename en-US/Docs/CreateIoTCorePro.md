@@ -21,7 +21,7 @@ Here are the steps involved in creating Windows 10 IoT Core Pro device
 To begin, setup your develop PC by following the steps in [Step 1: Get set up]({{site.baseurl}}/{{page.lang}}/Docs/InstallPackage.htm).
 
 
-## Step 1: Download Windows 10 IoT Core Pro license file 
+## Step 1: Download the Windows 10 IoT Core Pro license file 
 ___
 
 Please go to [Windows 10 IoT Core Commericialization](http://go.microsoft.com/fwlink/?LinkID=614849) and select Windows 10 IoT Core Pro to find a distributor near you and download the Windows 10 IoT Core Pro License File.
@@ -85,7 +85,7 @@ The below steps show you the means to create the provisioning package using ICD.
 
 ![Provisioning Package is successfully created]({{site.baseurl}}/Resources/images/CreateIoTCorePro/CreatePpkg11.png)
 
-## Step 3: Apply provisioning package to the device
+## Step 3: Apply the provisioning package to the device
 ___
 There are two ways to deploy the provisioning package to the device.
 
