@@ -211,7 +211,7 @@
         ]
       },
       {
-        "parent":"Commercialize",
+        "parent":"Productization",
         "children":[
           {
             "title":"Windows 10 IoT Core Pro",
@@ -232,7 +232,12 @@
           {
             "title":"Driver deployment",
             "link":"/Docs/DriverDeployment.htm"
-          }
+          },
+          {
+            "title":"Go to market",
+            "link":"/Docs/GotoMarket.htm"
+          },
+
         ]
       }
    ]

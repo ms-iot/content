@@ -112,7 +112,7 @@ Here's what the code above is doing:
 
 
 ### Enable the Lightning Direct Memory Mapped driver on your Windows IoT Core device
-Go to [this link](https://developer.microsoft.com/en-us/windows/iot/win10/lightningproviders#runtime-requirements) to see how to enable your device to use Lightning.
+Go to [this link]({{site.baseurl}}/{{page.lang}}/Docs/lightningproviders#runtime-requirements) to see how to enable your device to use Lightning.
 
 
 ### Deploy the server to your Windows IoT Core device

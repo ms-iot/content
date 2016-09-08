@@ -262,12 +262,14 @@ a:hover {
 }
 
 .highlight {
-    background-color: #9E9E9E;
-    color: #fff;
-    padding: 10px;
+    color: #000;
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 0;
+}
+
+.code-snippet , pre{
+	background-color: #f2f2f2
 }
 
 .inactive {
@@ -768,8 +770,13 @@ div.preview {
 /* [BUGFIXES] */
 
 /* From bootstrap  - this broad style will be overridden by more specific styles below in some cases */
-body h1, body h2, body h3 {
+body h1, body h3 {
     margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+body h2 {
+    margin-top: 45px;
     margin-bottom: 10px;
 }
 
@@ -797,10 +804,6 @@ body h1 {
 }
 
 body h2 {
-}
-
-body h3 {
-    margin-bottom: 20px;
 }
 
 body h4, body h5, body h6 {
@@ -832,9 +835,9 @@ body ul {
 
 /* <code> override */
 body code {
-    color: #c7254e;
-    background-color: #f9f2f4;
-    font-size: 90%;
+    color: #000;
+    background-color: #f2f2f2;
+    font-size: 95%;
 }
 
 /* Bug #5779524: Issue 2 */
