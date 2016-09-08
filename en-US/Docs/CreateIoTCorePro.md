@@ -9,6 +9,9 @@ lang: en-US
 
 # Windows 10 IoT Core Pro
 
+Windows 10 IoT Core Pro SKU provides the capability to control and schedule the windows update. This enables the policies related to Update such as [Update/AllowAutoUpdate](https://msdn.microsoft.com/library/windows/hardware/dn904962(v=vs.85).aspx#Update_AllowAutoUpdate), [Update/ScheduledInstallDay](https://msdn.microsoft.com/library/windows/hardware/dn904962(v=vs.85).aspx#Update_ScheduledInstallDay), [Update/ScheduledInstallTime](https://msdn.microsoft.com/library/windows/hardware/dn904962(v=vs.85).aspx#Update_ScheduledInstallTime), [Update/UpdateServiceUrl](https://msdn.microsoft.com/library/windows/hardware/dn904962(v=vs.85).aspx#Update_UpdateServiceUrl).
+
+
 Here are the steps involved in creating Windows 10 IoT Core Pro device
 
 * Download Windows 10 IoT Core Pro License File and ICD.
