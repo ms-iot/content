@@ -44,7 +44,7 @@ A Windows IoT Core driver is made up of one or more files.  Some of these files 
 
 * An `ACPITABL.dat` file will be generated in the same directory(`C:\Program Files (x86)\Windows Kits\10\Tools\x86\ACPIVerify\`). Verify that this file has been generated.
 
-{% include note.html text="You can update the ACPITABL.dat only in the test images currently and this will not work on retail signed images" %}
+{% include note.html text="You can only update the ACPITABL.dat in the test images currently and this will not work on retail signed images" %}
 
 In the next section you will use these files (**ACPITABL.dat**, **gpiokmdfdemo.inf**, and **gpiokmdfdemo.sys**) to install the driver on the Windows IoT Core device.
 

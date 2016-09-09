@@ -21,25 +21,25 @@ Here are the steps involved in creating Windows 10 IoT Core Pro device
 To begin, setup your develop PC by following the steps in [Step 1: Get set up]({{site.baseurl}}/{{page.lang}}/Docs/InstallPackage.htm).
 
 
-## Step 1: Download the Windows 10 IoT Core Pro license file 
+## Step 1: Get the Windows 10 IoT Core Pro license file 
 ___
 
-Please go to [Windows 10 IoT Core Commericialization](http://go.microsoft.com/fwlink/?LinkID=614849) and select Windows 10 IoT Core Pro to find a distributor near you and download the Windows 10 IoT Core Pro License File.
+Go to [Windows 10 IoT Core Commericialization](http://go.microsoft.com/fwlink/?LinkID=614849) and select **Windows 10 IoT Core Pro** to find a distributor near you to get the Windows 10 IoT Core Pro license file.
 
 
 ## Step 2: Create a provisioning package with license file 
 ___
-Provisioning package can be created by two ways detailed below.
+A Provisioning package can be created by two ways detailed below.
 
-### Create using sample template
+### Create using a sample template
 
 * See [Provisioning.ProSKU](https://github.com/ms-iot/iot-adk-addonkit/tree/develop/Common/Packages/Provisioning.ProSKU) sample. 
-* You will need to uncomment the EditionUpgrade tag in [customizations.xml](https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Common/Packages/Provisioning.ProSKU/customizations.xml) file to point to the downloaded license file.
+* You will need to uncomment the **EditionUpgrade** tag in [customizations.xml](https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Common/Packages/Provisioning.ProSKU/customizations.xml) file to point to the downloaded license file.
 * You can create the provisioning package using `buildprovpkg Provisioning.ProSKU` in the IoTADKAddon shell.
 
-### Create using ICD
+### Create using Windows Imaging and Configuration Designer(ICD)
 
-The below steps show you the means to create the provisioning package using ICD.
+The below steps show you the means to create the provisioning package using [Windows Imaging and Configuration Designer(ICD)](https://msdn.microsoft.com/library/windows/hardware/dn916113(v=vs.85).aspx).
 
 **Step 2.1: New Provisioning Package**
 
