@@ -6,7 +6,7 @@ lang: en-US
 ---
 
 # Go to market with Windows 10 IoT Core 
-
+On this page we will review the key items that needs to be considered in the **Go to market** process. 
 
 ## Understand licensing requirements
 ___
