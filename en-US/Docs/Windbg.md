@@ -51,7 +51,7 @@ Using the active PowerShell connection, execute the following commands on the Mi
 * On the developer PC, start WinDbg with the PORT_NUM and the KEY values provided in the previous steps as follows:
   `"c:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k net:port=<PORT_NUM>,key=<KEY>`
 
-{% include note.html text="If you have any of the Windows kits installed, you may find WinDbg under \"C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\WinDbg.exe\" " %}
+{% include note.html text="If you have any of the Windows kits installed, you may find WinDbg under <code>C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\WinDbg.exe</code> " %}
 
 * Reboot the IoTCore device to reconnect to the debugger
 
@@ -123,7 +123,7 @@ On the developer PC, get the COM port number PORT assigned in the system for the
 	* Start WinDbg with the PORT number
  	
 
-{% include note.html text="If you have any of the Windows kits installed, you may find WinDbg under \"C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\WinDbg.exe\" " %}
+{% include note.html text="If you have any of the Windows kits installed, you may find WinDbg under <code>C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\WinDbg.exe</code> " %}
 
 * Reboot the IoTCore device to reconnect to the debugger
 
