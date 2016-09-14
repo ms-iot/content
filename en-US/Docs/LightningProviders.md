@@ -39,7 +39,7 @@ Additionally, it's straightforward to add the required Lightning providers Nuget
 
 2. The NuGet Package Manager will open. In the Browse tab, search for the "Lightning SDK", making sure to check the "Include prerelease" checkbox.
 
-3. Select the latest version, and click "Install" to add the Ligthning SDK to your project. 
+3. Select the latest version, and click "Install" to add the Lightning SDK to your project. 
 ![NuGet Package Manager]({{site.baseurl}}/Resources/images/Lightning/nuget-package-manager.png)
 
 4. Follow any on-screen instructions if needed. When installation is complete, a reference to the Lightning SDK will be added to your project.
