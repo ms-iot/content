@@ -80,7 +80,7 @@ ___
 
 
 ## Add the Libraries to your Project
-
+___
 1. Add the DLLs directly
 
     Return to your project's Visual Studio window. Right click on the project in the window and navigate to **Add \| Existing Items**
@@ -133,7 +133,7 @@ ___
     ![Modify Linker Dependencies]({{site.baseurl}}/Resources/images/opencv/add_libs3.png)
 
 ## Set up the User Interface
-
+___
 Open MainPage.xaml and replace the existing code with the following code to create the window UI:
 
 {% highlight XML %}
@@ -159,6 +159,7 @@ Open MainPage.xaml and replace the existing code with the following code to crea
 To view the entire UI, change the dropdown in the top left corner from '5" Phone' to '12" Tablet'.
 
 ## Modify the actual C++ Files
+___
 
 ### Modify the Header File
 
@@ -393,6 +394,7 @@ ___
     Close the app once you're done validating its correct operation.
 
 ## Deploy the app to your Windows 10 IoT Core Device
+___
 
 1. Click on the dropdown next to the **Local Machine** label and click on **Remote Machine**. Make sure the dropdown just to the left says your device's architecture, either **x86**, **x64**, or **ARM**. The **Remote Machine** click should open a dialog. Enter your device's IP address (or unique name) into the field labeled *Address*, then press **Select.**
 
