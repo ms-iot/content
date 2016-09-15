@@ -23,7 +23,7 @@ Background Applications are created using the Background Application (IoT) templ
 
 Background applications run without stopping and have no resource limits enforced by resource manager. Also, if the background application stops for some reason and embedded mode is enabled the background application will be restarted by the system.  
 
-While the system will automatically restart background applications, system lockdown features must be enabled to prevent users from stopping or interfering with the operation of Background Applications. 
+While the system will automatically restart background applications, system lockdown features must be enabled to prevent users from stopping or interfering with the operation of Background Applications.
 
 ## lowLevelDevice Capability
 
@@ -56,26 +56,23 @@ To enable embedded mode you will need to create a provisioning package in Imagin
 * <a href="http://go.microsoft.com/fwlink/p/?LinkId=526740">Download the Windows ADK for Windows 10</a>
 * <a href="https://msdn.microsoft.com/library/windows/hardware/dn927348(v=vs.85).aspx">Learn about what's new in the Windows ADK for Windows 10</a>
 
-1. When installing the ADK select the four checkboxes shown below.
-
-    ![ADK Install]({{site.baseurl}}/Resources/images/EmbeddedMode/ICD.png)
-
+1. When installing the ADK select **Imaging and Configuration Designer (ICD)**
 2. After installation is complete run Windows Imaging and Configuration Designer (WICD).
     ![WICD Icon]({{site.baseurl}}/Resources/images/EmbeddedMode/WICD_Icon.png)
 
-3. Create new provisioning package
+3. Click **Advanced provisioning**.  Name the project **AllowEmbeddedMode** and click **Next**.
     ![Step3]({{site.baseurl}}/Resources/images/EmbeddedMode/Step3.png)
 
-4. Choose "Common to all Windows editions" then "Next"
+4. Choose **Common to all Windows editions** then **Next**
     ![Step4]({{site.baseurl}}/Resources/images/EmbeddedMode/Step4.png)
 
-5. Click "Finish"
+5. Click **Finish**
     ![Step5]({{site.baseurl}}/Resources/images/EmbeddedMode/Step5.png)
 
-6. In the search box type "EmbeddedMode" and then click on AllowEmbeddedMode
+6. In the search box type **EmbeddedMode** and then click on **AllowEmbeddedMode**
     ![Step6]({{site.baseurl}}/Resources/images/EmbeddedMode/Step6.png)
 
-7. In the center pane set the value of AllowEmbeddedMode to 1
+7. In the center pane set the value of **AllowEmbeddedMode** to **Yes**
     ![Step7]({{site.baseurl}}/Resources/images/EmbeddedMode/Step7.png)
 
 8. Click Export>Provisioning Package
@@ -90,7 +87,7 @@ To enable embedded mode you will need to create a provisioning package in Imagin
 11. Click Next
     ![Step11]({{site.baseurl}}/Resources/images/EmbeddedMode/Step11.png)
 
-12. Click Build
+12. Click Build.
     ![Step12]({{site.baseurl}}/Resources/images/EmbeddedMode/Step12.png)
 
 13. Install the provisioning package (PPKG).
@@ -98,8 +95,41 @@ To enable embedded mode you will need to create a provisioning package in Imagin
     * If enabling embedded mode on mobile drag the PPKG and drop it on the windows phone icon in explorer.
     ![Step13]({{site.baseurl}}/Resources/images/EmbeddedMode/Step13.png)
 
-14. Click "Yes, add it"
-    * On standard windows click yes on the LUA dialog if it appears, and the click "Yes, add it" on the dialog.
+14. Click **Yes, add it**
+    * On standard windows click yes on the LUA dialog if it appears, and the click **Yes, add it** on the dialog.
     ![Step14Standard]({{site.baseurl}}/Resources/images/EmbeddedMode/Step14Standard.png)
-    * On mobile look at your phone and on the phone press the "Yes, add it" button.
+    * On mobile look at your phone and on the phone press the **Yes, add it** button.
     ![Step14Mobile]({{site.baseurl}}/Resources/images/EmbeddedMode/Step14Mobile.png)
+
+
+## Configuring a Background Application to Run automatically
+1. To configure a Background Application to automatically run you will need to follow the directions to [create an MinnowBoardMax SD Card]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) and copy D:\windows\system32\iotstartup.exe (where D: is your SD Card).
+
+2. To get a list of installed Background Applications type:
+
+        C:\> iotstartup list BackgroundApplication1
+
+3. The output should include the full name of each installed Background Application, which will look like this:
+
+        Headless : BackgroundApplication1-uwp_1.0.0.0_x86__cqewk5knvpvee
+
+5. To configure this app to run at boot type:
+
+        C:\> iotstartup add headless BackgroundApplication1
+
+6. If the Background Application has been successfully added to the startup list you should see this:
+
+        Added Headless: BackgroundApplication1-uwp_1.0.0.0_x86__cqewk5knvpveeplication1
+
+7. Restart the embedded mode device:
+
+8. Once the device has restarted, your Background Application will start automatically.  The Embedded Mode service which manages Background Applications can take a few minutes to start.  The embedded mode service will monitor Background Applications on the startup list and make sure they get restarted if they stops.  If a Background Application stops several times in a short period of time it will no longer be restarted.
+
+9. To remove your Background Application from the startup list type:
+
+        C:\> iotstartup remove headless BackgroundApplication1
+
+10. If the Background Application is removed from the startup list the output will look like this:
+
+        Removed headless: BackgroundApplication1-uwp_1.0.0.0_x86__cqewk5knvpvee
+
