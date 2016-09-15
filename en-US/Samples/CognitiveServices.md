@@ -53,57 +53,57 @@ ___
 
 ## Set up the User Interface
 ___
-1.  Add in the XAML
+#### Add in the XAML
 
-    Open MainPage.xaml and replace the existing code with the following code to create the window UI:
+Open MainPage.xaml and replace the existing code with the following code to create the window UI:
 
-  {% highlight XML %}
-  <Page
-    x:Class="CognitiveServicesExample.MainPage"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:CognitiveServicesExample"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+{% highlight XML %}
+<Page
+  x:Class="CognitiveServicesExample.MainPage"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:local="using:CognitiveServicesExample"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" BorderThickness="5" Margin="50" >
+  <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" BorderThickness="5" Margin="50" >
 
-      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="*" />
-        <ColumnDefinition Width="*" />
-      </Grid.ColumnDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
 
 
-      <StackPanel Grid.Column="0" VerticalAlignment="Center">
+    <StackPanel Grid.Column="0" VerticalAlignment="Center">
 
-        <Border BorderBrush="Black" BorderThickness="1" Margin="20" Width="600" Height="600">
-          <Canvas x:Name="ImageCanvas" Width="598" Height="598"/>
-          <!-- <Image x:Name="SampleImage" Stretch="Uniform" Width="600" Height="550" Margin="10"/> -->
-        </Border>
-        <TextBlock Grid.Row="1" x:Name="detectionStatus" Width="600" HorizontalAlignment="Center" Margin="10"/>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="600" Margin="10">
-          <TextBox x:Name="ImageURL" Width="440" HorizontalAlignment="Left" Margin="0,0,10,0" Text="http://blogs.cdc.gov/genomics/files/2015/11/ThinkstockPhotos-177826416.jpg"/>
-          <Button Content="Detect Emotions" Width="140" HorizontalAlignment="Left" Click="button_Clicked"/>
-        </StackPanel>
+      <Border BorderBrush="Black" BorderThickness="1" Margin="20" Width="600" Height="600">
+        <Canvas x:Name="ImageCanvas" Width="598" Height="598"/>
+        <!-- <Image x:Name="SampleImage" Stretch="Uniform" Width="600" Height="550" Margin="10"/> -->
+      </Border>
+      <TextBlock Grid.Row="1" x:Name="detectionStatus" Width="600" HorizontalAlignment="Center" Margin="10"/>
+      <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="600" Margin="10">
+        <TextBox x:Name="ImageURL" Width="440" HorizontalAlignment="Left" Margin="0,0,10,0" Text="http://blogs.cdc.gov/genomics/files/2015/11/ThinkstockPhotos-177826416.jpg"/>
+        <Button Content="Detect Emotions" Width="140" HorizontalAlignment="Left" Click="button_Clicked"/>
       </StackPanel>
+    </StackPanel>
 
-      <Grid Grid.Column="1" VerticalAlignment="Center">
-        <ListBox x:Name="ResultBox" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-      </Grid>
-
+    <Grid Grid.Column="1" VerticalAlignment="Center">
+      <ListBox x:Name="ResultBox" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
     </Grid>
-  </Page>
-  {% endhighlight %}
+
+  </Grid>
+</Page>
+{% endhighlight %}
 
 To view the entire UI, change the dropdown in the top left corner from '5\" Phone' to '12\" Tablet'.
 
 
-2.  Generate the button event handler
+#### Generate the button event handler
 
-    In the UI mock up, double click on the "Detect Emotions" button. You will see a "Click="button_Clicked" added into the button in your XAML code. You will also be redirected to the .xaml.cs file with a new function called "button_Clicked()" created for you. This function will handle the Cognitive Services calls after a user presses the button.
+In the UI mock up, double click on the "Detect Emotions" button. You will see a "Click="button_Clicked" added into the button in your XAML code. You will also be redirected to the .xaml.cs file with a new function called "button_Clicked()" created for you. This function will handle the Cognitive Services calls after a user presses the button.
 
-    ![Add Button Event Handler]({{site.baseurl}}/Resources/images/cogserv/event_handler1.png)
+![Add Button Event Handler]({{site.baseurl}}/Resources/images/cogserv/event_handler1.png)
 
 ## Register for Cognitive Services
 ___
@@ -120,9 +120,9 @@ ___
 
 ## Add the C# Code
 ___
-1.  Add in the namespaces
+### Add in the namespaces
 
-    Open MainPage.xaml.cs. At the top of the , directly under the "using" statements and before the "namespace CognitiveServicesExample" line, add the following Cognitive Services namespaces.
+Open MainPage.xaml.cs. At the top of the , directly under the "using" statements and before the "namespace CognitiveServicesExample" line, add the following Cognitive Services namespaces.
 
 {% highlight C# %}
 using Windows.Graphics.Imaging;
@@ -140,14 +140,14 @@ using Windows.Storage.Streams;
 
 These allow us to use the Cognitive Services APIs in our code, along with some other necessary imaging libraries.
 
-2.  Add in Global Variables
+### Add in Global Variables
 
-    Add the following global variables to the MainPage class (as below)
+Add the following global variables to the MainPage class (as below)
 
 {% highlight C# %}
 public sealed partial class MainPage : Page
 {
-  // add these in after the above statemet
+  // add these in after the above statement
   private string _subscriptionKey = "your_key_here";
   BitmapImage bitMapImage;
   //...
@@ -156,247 +156,247 @@ public sealed partial class MainPage : Page
 
 The subscriptionKey allows your application to call the Emotion API on Cognitive Services, and the BitmapImage stores the image that your application will upload.
 
-3.  Add in the API-calling method
+### Add in the API-calling method
 
-    Add the following method to the same class:
+Add the following method to the same class:
 
-  {% highlight C# %}
-  public sealed partial class MainPage : Page
+{% highlight C# %}
+public sealed partial class MainPage : Page
+{
+  //...
+  private async Task<Emotion[]> UploadAndDetectEmotions(string url)
   {
-    //...
-    private async Task<Emotion[]> UploadAndDetectEmotions(string url)
+    Debug.WriteLine("EmotionServiceClient is created");
+
+    //
+    // Create Project Oxford Emotion API Service client
+    //
+    EmotionServiceClient emotionServiceClient = new EmotionServiceClient(_subscriptionKey);
+
+    Debug.WriteLine("Calling EmotionServiceClient.RecognizeAsync()...");
+    try
     {
-      Debug.WriteLine("EmotionServiceClient is created");
-
       //
-      // Create Project Oxford Emotion API Service client
+      // Detect the emotions in the URL
       //
-      EmotionServiceClient emotionServiceClient = new EmotionServiceClient(_subscriptionKey);
-
-      Debug.WriteLine("Calling EmotionServiceClient.RecognizeAsync()...");
-      try
-      {
-        //
-        // Detect the emotions in the URL
-        //
-        Emotion[] emotionResult = await emotionServiceClient.RecognizeAsync(url);
-        return emotionResult;
-      }
-      catch (Exception exception)
-      {
-        Debug.WriteLine("Detection failed. Please make sure that you have the right subscription key and proper URL to detect.");
-        Debug.WriteLine(exception.ToString());
-        return null;
-      }
+      Emotion[] emotionResult = await emotionServiceClient.RecognizeAsync(url);
+      return emotionResult;
     }
-    //...
+    catch (Exception exception)
+    {
+      Debug.WriteLine("Detection failed. Please make sure that you have the right subscription key and proper URL to detect.");
+      Debug.WriteLine(exception.ToString());
+      return null;
+    }
   }
-  {% endhighlight %}
+  //...
+}
+{% endhighlight %}
 
 This function instantiates an instance of the Emotion API and attempts to open the URL passed as an argument (an image URL), scanning it for faces. It searches the faces it finds for emotions and returns the resulting Emotion objects. These contain detailed results, including the likelihood of each emotion and the bounding box of the face. See the [documentation](https://www.microsoft.com/cognitive-services/en-us/emotion-api) for more details.
 
-4.  Add in the button event handler code
+### Add in the button event handler code
 
-    Add the **async** keyword to the button_Clicked method Visual Studio created for you. Then, add the following code to that function:
+Add the **async** keyword to the button_Clicked method Visual Studio created for you. Then, add the following code to that function:
 
-  {% highlight C# %}
-  public sealed partial class MainPage : Page
+{% highlight C# %}
+public sealed partial class MainPage : Page
+{
+  //...
+  private async void button_Clicked(object sender, RoutedEventArgs e)
   {
-    //...
-    private async void button_Clicked(object sender, RoutedEventArgs e)
+
+    ImageCanvas.Children.Clear();
+
+    string urlString = ImageURL.Text;
+    Uri uri;
+    try
     {
-
-      ImageCanvas.Children.Clear();
-
-      string urlString = ImageURL.Text;
-      Uri uri;
-      try
-      {
-        uri = new Uri(urlString, UriKind.Absolute);
-      }
-      catch (UriFormatException ex)
-      {
-        Debug.WriteLine(ex.Message);
-
-        var dialog = new MessageDialog("URL is not correct");
-
-        await dialog.ShowAsync();
-
-        return;
-      }
-
-      //Load image from URL
-      bitMapImage = new BitmapImage();
-      bitMapImage.UriSource = uri;
-
-      ImageBrush imageBrush = new ImageBrush();
-      imageBrush.ImageSource = bitMapImage;
-
-      //Load image to UI
-      ImageCanvas.Background = imageBrush;
-
-      detectionStatus.Text = "Detecting...";
-
-      //urlString = "http://blogs.cdc.gov/genomics/files/2015/11/ThinkstockPhotos-177826416.jpg"
-
-      Emotion[] emotionResult = await UploadAndDetectEmotions(urlString);
-
-      detectionStatus.Text = "Detection Done";
-
-      displayParsedResults(emotionResult);
-      displayAllResults(emotionResult);
-      DrawFaceRectangle(emotionResult, bitMapImage, urlString);
-
+      uri = new Uri(urlString, UriKind.Absolute);
     }
-    //...
+    catch (UriFormatException ex)
+    {
+      Debug.WriteLine(ex.Message);
+
+      var dialog = new MessageDialog("URL is not correct");
+
+      await dialog.ShowAsync();
+
+      return;
+    }
+
+    //Load image from URL
+    bitMapImage = new BitmapImage();
+    bitMapImage.UriSource = uri;
+
+    ImageBrush imageBrush = new ImageBrush();
+    imageBrush.ImageSource = bitMapImage;
+
+    //Load image to UI
+    ImageCanvas.Background = imageBrush;
+
+    detectionStatus.Text = "Detecting...";
+
+    //urlString = "http://blogs.cdc.gov/genomics/files/2015/11/ThinkstockPhotos-177826416.jpg"
+
+    Emotion[] emotionResult = await UploadAndDetectEmotions(urlString);
+
+    detectionStatus.Text = "Detection Done";
+
+    displayParsedResults(emotionResult);
+    displayAllResults(emotionResult);
+    DrawFaceRectangle(emotionResult, bitMapImage, urlString);
+
   }
-  {% endhighlight %}
+  //...
+}
+{% endhighlight %}
 
 This code reads the string from the text input box on the form and makes sure it's a URL. It retrieves the image from that URL, pastes it in the canvas, and gets the detected emotions from the image using the UploadAndDetectEmotions method defined previously. It then calls a few helper functions to output the results of the Cognitive Services analysis.
 
-5.  Add in the helper functions
+### Add in the helper functions
 
-    You'll notice that the above code has errors, since we have not added those helper functions yet. Let's add them in:
+You'll notice that the above code has errors, since we have not added those helper functions yet. Let's add them in:
 
-  {% highlight C# %}
-  public sealed partial class MainPage : Page
+{% highlight C# %}
+public sealed partial class MainPage : Page
+{
+  //...
+  private void displayAllResults(Emotion[] resultList)
   {
-    //...
-    private void displayAllResults(Emotion[] resultList)
+    int index = 0;
+    foreach (Emotion emotion in resultList)
     {
-      int index = 0;
-      foreach (Emotion emotion in resultList)
-      {
-        ResultBox.Items.Add("\nFace #" + index
-        + "\nAnger: " + emotion.Scores.Anger
-        + "\nContempt: " + emotion.Scores.Contempt
-        + "\nDisgust: " + emotion.Scores.Disgust
-        + "\nFear: " + emotion.Scores.Fear
-        + "\nHappiness: " + emotion.Scores.Happiness
-        + "\nSurprise: " + emotion.Scores.Surprise);
+      ResultBox.Items.Add("\nFace #" + index
+      + "\nAnger: " + emotion.Scores.Anger
+      + "\nContempt: " + emotion.Scores.Contempt
+      + "\nDisgust: " + emotion.Scores.Disgust
+      + "\nFear: " + emotion.Scores.Fear
+      + "\nHappiness: " + emotion.Scores.Happiness
+      + "\nSurprise: " + emotion.Scores.Surprise);
 
-        index++;
-      }
+      index++;
     }
-
-    private async void displayParsedResults(Emotion[] resultList)
-    {
-      int index = 0;
-      string textToDisplay = "";
-      foreach (Emotion emotion in resultList)
-      {
-        string emotionString = parseResults(emotion);
-        textToDisplay += "Person number " + index.ToString() + " " + emotionString + "\n";
-        index++;
-      }
-      ResultBox.Items.Add(textToDisplay);
-    }
-
-    private string parseResults(Emotion emotion)
-    {
-      float topScore = 0.0f;
-      string topEmotion = "";
-      string retString = "";
-      //anger
-      topScore = emotion.Scores.Anger;
-      topEmotion = "Anger";
-      // contempt
-      if (topScore < emotion.Scores.Contempt)
-      {
-        topScore = emotion.Scores.Contempt;
-        topEmotion = "Contempt";
-      }
-      // disgust
-      if (topScore < emotion.Scores.Disgust)
-      {
-        topScore = emotion.Scores.Disgust;
-        topEmotion = "Disgust";
-      }
-      // fear
-      if (topScore < emotion.Scores.Fear)
-      {
-        topScore = emotion.Scores.Fear;
-        topEmotion = "Fear";
-      }
-      // happiness
-      if (topScore < emotion.Scores.Happiness)
-      {
-        topScore = emotion.Scores.Happiness;
-        topEmotion = "Happiness";
-      }
-      // surprise
-      if (topScore < emotion.Scores.Surprise)
-      {
-        topScore = emotion.Scores.Surprise;
-        topEmotion = "Surprise";
-      }
-
-      retString = "is expressing " + topEmotion + " with " + topScore.ToString() + " certainty.";
-      return retString;
-    }
-
-
-    public async void DrawFaceRectangle(Emotion[] emotionResult, BitmapImage bitMapImage, String urlString)
-    {
-
-
-      if (emotionResult != null && emotionResult.Length > 0)
-      {
-        Windows.Storage.Streams.IRandomAccessStream stream = await Windows.Storage.Streams.RandomAccessStreamReference.CreateFromUri(new Uri(urlString)).OpenReadAsync();
-
-
-        BitmapDecoder decoder = await BitmapDecoder.CreateAsync(stream);
-
-
-        double resizeFactorH = ImageCanvas.Height / decoder.PixelHeight;
-        double resizeFactorW = ImageCanvas.Width / decoder.PixelWidth;
-
-
-        foreach (var emotion in emotionResult)
-        {
-
-          Microsoft.ProjectOxford.Common.Rectangle faceRect = emotion.FaceRectangle;
-
-          Image Img = new Image();
-          BitmapImage BitImg = new BitmapImage();
-          // open the rectangle image, this will be our face box
-          Windows.Storage.Streams.IRandomAccessStream box = await Windows.Storage.Streams.RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/rectangle.png", UriKind.Absolute)).OpenReadAsync();
-
-          BitImg.SetSource(box);
-
-          //rescale each facebox based on the API's face rectangle
-          var maxWidth = faceRect.Width * resizeFactorW;
-          var maxHeight = faceRect.Height * resizeFactorH;
-
-          var origHeight = BitImg.PixelHeight;
-          var origWidth = BitImg.PixelWidth;
-
-
-          var ratioX = maxWidth / (float)origWidth;
-          var ratioY = maxHeight / (float)origHeight;
-          var ratio = Math.Min(ratioX, ratioY);
-          var newHeight = (int)(origHeight * ratio);
-          var newWidth = (int)(origWidth * ratio);
-
-          BitImg.DecodePixelWidth = newWidth;
-          BitImg.DecodePixelHeight = newHeight;
-
-          // set the starting x and y coordiantes for each face box
-          Thickness margin = Img.Margin;
-
-          margin.Left = faceRect.Left * resizeFactorW;
-          margin.Top = faceRect.Top * resizeFactorH;
-
-          Img.Margin = margin;
-
-          Img.Source = BitImg;
-          ImageCanvas.Children.Add(Img);
-        }
-      }
-    }
-    //...
   }
-  {% endhighlight %}
+
+  private async void displayParsedResults(Emotion[] resultList)
+  {
+    int index = 0;
+    string textToDisplay = "";
+    foreach (Emotion emotion in resultList)
+    {
+      string emotionString = parseResults(emotion);
+      textToDisplay += "Person number " + index.ToString() + " " + emotionString + "\n";
+      index++;
+    }
+    ResultBox.Items.Add(textToDisplay);
+  }
+
+  private string parseResults(Emotion emotion)
+  {
+    float topScore = 0.0f;
+    string topEmotion = "";
+    string retString = "";
+    //anger
+    topScore = emotion.Scores.Anger;
+    topEmotion = "Anger";
+    // contempt
+    if (topScore < emotion.Scores.Contempt)
+    {
+      topScore = emotion.Scores.Contempt;
+      topEmotion = "Contempt";
+    }
+    // disgust
+    if (topScore < emotion.Scores.Disgust)
+    {
+      topScore = emotion.Scores.Disgust;
+      topEmotion = "Disgust";
+    }
+    // fear
+    if (topScore < emotion.Scores.Fear)
+    {
+      topScore = emotion.Scores.Fear;
+      topEmotion = "Fear";
+    }
+    // happiness
+    if (topScore < emotion.Scores.Happiness)
+    {
+      topScore = emotion.Scores.Happiness;
+      topEmotion = "Happiness";
+    }
+    // surprise
+    if (topScore < emotion.Scores.Surprise)
+    {
+      topScore = emotion.Scores.Surprise;
+      topEmotion = "Surprise";
+    }
+
+    retString = "is expressing " + topEmotion + " with " + topScore.ToString() + " certainty.";
+    return retString;
+  }
+
+
+  public async void DrawFaceRectangle(Emotion[] emotionResult, BitmapImage bitMapImage, String urlString)
+  {
+
+
+    if (emotionResult != null && emotionResult.Length > 0)
+    {
+      Windows.Storage.Streams.IRandomAccessStream stream = await Windows.Storage.Streams.RandomAccessStreamReference.CreateFromUri(new Uri(urlString)).OpenReadAsync();
+
+
+      BitmapDecoder decoder = await BitmapDecoder.CreateAsync(stream);
+
+
+      double resizeFactorH = ImageCanvas.Height / decoder.PixelHeight;
+      double resizeFactorW = ImageCanvas.Width / decoder.PixelWidth;
+
+
+      foreach (var emotion in emotionResult)
+      {
+
+        Microsoft.ProjectOxford.Common.Rectangle faceRect = emotion.FaceRectangle;
+
+        Image Img = new Image();
+        BitmapImage BitImg = new BitmapImage();
+        // open the rectangle image, this will be our face box
+        Windows.Storage.Streams.IRandomAccessStream box = await Windows.Storage.Streams.RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/rectangle.png", UriKind.Absolute)).OpenReadAsync();
+
+        BitImg.SetSource(box);
+
+        //rescale each facebox based on the API's face rectangle
+        var maxWidth = faceRect.Width * resizeFactorW;
+        var maxHeight = faceRect.Height * resizeFactorH;
+
+        var origHeight = BitImg.PixelHeight;
+        var origWidth = BitImg.PixelWidth;
+
+
+        var ratioX = maxWidth / (float)origWidth;
+        var ratioY = maxHeight / (float)origHeight;
+        var ratio = Math.Min(ratioX, ratioY);
+        var newHeight = (int)(origHeight * ratio);
+        var newWidth = (int)(origWidth * ratio);
+
+        BitImg.DecodePixelWidth = newWidth;
+        BitImg.DecodePixelHeight = newHeight;
+
+        // set the starting x and y coordiantes for each face box
+        Thickness margin = Img.Margin;
+
+        margin.Left = faceRect.Left * resizeFactorW;
+        margin.Top = faceRect.Top * resizeFactorH;
+
+        Img.Margin = margin;
+
+        Img.Source = BitImg;
+        ImageCanvas.Children.Add(Img);
+      }
+    }
+  }
+  //...
+}
+{% endhighlight %}
 
 The first method outputs the score for all emotions Cognitive Services can detect. Each score falls between 0 and 1 and represents the probability that the face detected is expressing that emotion.
 
@@ -404,11 +404,11 @@ The second and third method determines which emotion is most prevalent. It then 
 
 The fourth method places a rectangle around each face detected in the image. Since UWP does not allow apps to draw shapes yet, it uses a blue rectangle in the Assets folder with a transparent background instead. The app places each rectangle image at the starting coordinates of the Rectangle provided by Cognitive Services and scales it to the approximate size of the Cognitive Services rectangle.
 
-6.  Add in the rectangle resource
+### Add in the rectangle resource
 
-    Download the [face rectangle]({{site.baseurl}}/Resources/images/cogserv/rectangle.png) and add it to your Assets folder within your project
+Download the [face rectangle]({{site.baseurl}}/Resources/images/cogserv/rectangle.png) and add it to your Assets folder within your project
 
-    ![Add Rectangle]({{site.baseurl}}/Resources/images/cogserv/add_rectangle.png)
+![Add Rectangle]({{site.baseurl}}/Resources/images/cogserv/add_rectangle.png)
 
 ## Build and Test your app locally
 ___
