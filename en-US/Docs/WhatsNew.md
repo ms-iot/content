@@ -75,4 +75,6 @@ ___
 
 [Release Notes]({{site.baseurl}}/{{page.lang}}/Docs/ReleaseNotesInsiderPreview.htm)
 
+[Downloads]({{site.baseurl}}/{{page.lang}}/Downloads.htm)
+
 [Privacy Statement](http://go.microsoft.com/fwlink/?LinkId=506737)
