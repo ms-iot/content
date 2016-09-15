@@ -99,7 +99,7 @@ Open MainPage.xaml and replace the existing code with the following code to crea
 To view the entire UI, change the dropdown in the top left corner from '5\" Phone' to '12\" Tablet'.
 
 
-#### Generate the button event handler
+### Generate the button event handler
 
 In the UI mock up, double click on the "Detect Emotions" button. You will see a "Click="button_Clicked" added into the button in your XAML code. You will also be redirected to the .xaml.cs file with a new function called "button_Clicked()" created for you. This function will handle the Cognitive Services calls after a user presses the button.
 
