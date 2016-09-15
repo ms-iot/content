@@ -372,6 +372,7 @@ Download the [picture]({{site.baseurl}}/Resources/images/opencv/grpPC1.png), [fa
 ![Add Assets, part 2]({{site.baseurl}}/Resources/images/opencv/add_assets2.png)
 
 ## Optional: Build and test your app locally
+___
 
 1. If you've built the x86 version of OpenCV, you can test the program on your local machine.  Make sure the app builds correctly by invoking the **Build \| Build Solution** menu command.
 

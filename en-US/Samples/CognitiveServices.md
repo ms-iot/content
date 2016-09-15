@@ -53,7 +53,8 @@ ___
 
 ## Set up the User Interface
 ___
-#### Add in the XAML
+
+### Add in the XAML
 
 Open MainPage.xaml and replace the existing code with the following code to create the window UI:
 
@@ -120,6 +121,7 @@ ___
 
 ## Add the C# Code
 ___
+
 ### Add in the namespaces
 
 Open MainPage.xaml.cs. At the top of the , directly under the "using" statements and before the "namespace CognitiveServicesExample" line, add the following Cognitive Services namespaces.
