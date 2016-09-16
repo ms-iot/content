@@ -80,7 +80,7 @@ ___
 
 
 ## Add the Libraries to your Project
-
+___
 1. Add the DLLs directly
 
     Return to your project's Visual Studio window. Right click on the project in the window and navigate to **Add \| Existing Items**
@@ -133,7 +133,7 @@ ___
     ![Modify Linker Dependencies]({{site.baseurl}}/Resources/images/opencv/add_libs3.png)
 
 ## Set up the User Interface
-
+___
 Open MainPage.xaml and replace the existing code with the following code to create the window UI:
 
 {% highlight XML %}
@@ -159,10 +159,11 @@ Open MainPage.xaml and replace the existing code with the following code to crea
 To view the entire UI, change the dropdown in the top left corner from '5" Phone' to '12" Tablet'.
 
 ## Modify the actual C++ Files
+___
 
-1. Modify the Header File
+### Modify the Header File
 
-    Open MainPage.xaml.h. Replace the contents with the following code:
+Open MainPage.xaml.h. Replace the contents with the following code:
 
 {% highlight C++ %}
 //
@@ -198,9 +199,10 @@ namespace OpenCVExample
 
 The header file stablishes the functions we're going to declar in the main .cpp file, as well as a private variable (*_stored_image*) which stores the content of the *storedImage* XAML Image element once we upload it.
 
-2. Add the Includes and Namespaces to the .cpp file
+### Add the Includes and Namespaces to the .cpp file
 
-    Add the following header files to the top of your code, right after the #include "MainPage.xaml.h" line:
+Add the following header files to the top of your code, right after the #include "MainPage.xaml.h" line:
+
 {% highlight C++ %}
 
 #include <opencv2\imgproc\types_c.h>
@@ -220,9 +222,9 @@ const cv::String body_cascade_name = "Assets/haarcascade_fullbody.xml";
 
 These lines allow us to use OpenCV library functions, along with some necessary default classes as well. We also define the locations of the features classifiers we'll use later.
 
-3. Add the UpdateImage function
+### Add the UpdateImage function
 
-    Add the following function right after the MainPage Constructor
+Add the following function right after the MainPage Constructor
 
 {% highlight C++ %}
 void  OpenCVExample::MainPage::UpdateImage(const cv::Mat& image)
@@ -255,9 +257,9 @@ void  OpenCVExample::MainPage::UpdateImage(const cv::Mat& image)
 
 This function changes the image contained in the "storedImage" XAML Image element to the contents of the "image" argument.
 
-4. Add the Upload Button (loadImageButton) handler
+### Add the Upload Button (loadImageButton) handler
 
-    Add the following function right after the UpdateImage function
+Add the following function right after the UpdateImage function
 
 {% highlight C++ %}
 void OpenCVExample::MainPage::loadImageButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
@@ -272,9 +274,9 @@ void OpenCVExample::MainPage::loadImageButton_Click(Platform::Object^ sender, Wi
 
 This function opens an image and uploads a default image to the *StoredImage* UI element.
 
-5. Add the Canny Edge Button (cannyEdgesButton) handler
+### Add the Canny Edge Button (cannyEdgesButton) handler
 
-    Add the following function right after the last handler:
+Add the following function right after the last handler:
 
 {% highlight C++ %}
 // run a Canny filter on the image contained in _stored_image, display the results to the image pane
@@ -294,9 +296,9 @@ void OpenCVExample::MainPage::cannyEdgesButton_Click(Platform::Object^ sender, W
 
 This function applies [Canny Edge detection](http://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/canny_detector/canny_detector.html) to the image and updates the image container with the results.
 
-6. Add the face and body classifiers
+### Add the face and body classifiers
 
-    Add the following lines and function right after the last handler:
+Add the following lines and function right after the last handler:
 
 {% highlight C++ %}
 void InternalDetectObjects(cv::Mat& inputImg, std::vector<cv::Rect> & objectVector, std::vector<cv::Rect> & objectVectorBodies, cv::CascadeClassifier& face_cascade, cv::CascadeClassifier& body_cascade)
@@ -315,9 +317,9 @@ void InternalDetectObjects(cv::Mat& inputImg, std::vector<cv::Rect> & objectVect
 
 This function uses [cascade classification](http://docs.opencv.org/2.4/doc/tutorials/objdetect/cascade_classifier/cascade_classifier.html) to classify and detect bodies and faces in a video stream (or image) using two Haar classifiers, face\_cascade and body\_cascade, stored in the xml files we provided for you. It's a method of classification involving machine learning, as explained on OpenCV's [website](http://docs.opencv.org/2.4/modules/objdetect/doc/cascade_classification.html).
 
-7. Add the "Detect Faces and Bodies" button (detectFeaturesButton) event handler
+### Add the "Detect Faces and Bodies" button (detectFeaturesButton) event handler
 
-    Add the following lines and function right after the last helper function:
+Add the following lines and function right after the last helper function:
 
 {% highlight C++ %}
 // run the object detection function on the image and draw rectangles around the results
@@ -362,15 +364,16 @@ void OpenCVExample::MainPage::detectFeaturesButton_Click(Platform::Object^ sende
 
 This function loads the classifiers, re-reads the image (the classification doesn't work on a Canny image in case the user clicked that button first), finds the faces and bodies using the helper function from the last step, and draws rectangles around the results: red for the faces, black for the bodies. It then pushes the updated image to the container.
 
-7. Add in the Resources
+### Add in the Resources
 
-    ![Add Assets, part 1]({{site.baseurl}}/Resources/images/opencv/add_assets.png)
+![Add Assets, part 1]({{site.baseurl}}/Resources/images/opencv/add_assets.png)
 
-    Download the [picture]({{site.baseurl}}/Resources/images/opencv/grpPC1.png), [face classifier]({{site.baseurl}}/Resources/data_models/opencv/haarcascade_frontalface_alt.xml), and [body classifier]({{site.baseurl}}/Resources/data_models/opencv/haarcascade_fullbody.xml) and add them to your Assets folder within your project.
+Download the [picture]({{site.baseurl}}/Resources/images/opencv/grpPC1.png), [face classifier]({{site.baseurl}}/Resources/data_models/opencv/haarcascade_frontalface_alt.xml), and [body classifier]({{site.baseurl}}/Resources/data_models/opencv/haarcascade_fullbody.xml) and add them to your Assets folder within your project.
 
-    ![Add Assets, part 2]({{site.baseurl}}/Resources/images/opencv/add_assets2.png)
+![Add Assets, part 2]({{site.baseurl}}/Resources/images/opencv/add_assets2.png)
 
 ## Optional: Build and test your app locally
+___
 
 1. If you've built the x86 version of OpenCV, you can test the program on your local machine.  Make sure the app builds correctly by invoking the **Build \| Build Solution** menu command.
 
@@ -391,6 +394,7 @@ This function loads the classifiers, re-reads the image (the classification does
     Close the app once you're done validating its correct operation.
 
 ## Deploy the app to your Windows 10 IoT Core Device
+___
 
 1. Click on the dropdown next to the **Local Machine** label and click on **Remote Machine**. Make sure the dropdown just to the left says your device's architecture, either **x86**, **x64**, or **ARM**. The **Remote Machine** click should open a dialog. Enter your device's IP address (or unique name) into the field labeled *Address*, then press **Select.**
 
