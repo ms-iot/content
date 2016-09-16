@@ -49,7 +49,7 @@
             "title":"SSH",
             "link":"/Docs/SSH.htm"
           },
-  
+
           {
             "title":"Windows file sharing",
             "link":"/Docs/WindowsFileSharing.htm"
@@ -64,7 +64,7 @@
           },
           {
             "title":"On-device command-line utilities",
-            "link":"/Docs/CommandLineUtils.htm"  
+            "link":"/Docs/CommandLineUtils.htm"
           }
         ]
       },
@@ -81,7 +81,7 @@
           },{
             "title":"Pin mappings - Dragonboard",
             "link":"/Docs/PinMappingsDb.htm"
-          },        
+          },
           {
             "title":"Hardware compatibility list",
             "link":"/Docs/HardwareCompatList.htm"
@@ -138,6 +138,10 @@
           {
             "title": "Speech",
             "link":"/Docs/Speech.htm"
+          },
+          {
+            "title": "Computer Vision",
+            "link": "/Docs/ComputerVision.htm"
           }
         ]
       },
@@ -203,11 +207,11 @@
             "link":"/Docs/SetupWiFi.htm"
           }
 
-         
+
         ]
       },
       {
-        "parent":"Commercialize",
+        "parent":"Productization",
         "children":[
           {
             "title":"Windows 10 IoT Core Pro",
@@ -228,7 +232,12 @@
           {
             "title":"Driver deployment",
             "link":"/Docs/DriverDeployment.htm"
-          }	
+          },
+          {
+            "title":"Go to market",
+            "link":"/Docs/GotoMarket.htm"
+          },
+
         ]
       }
    ]

@@ -43,7 +43,7 @@ lang: en-US
               <p class="text-caption" style="padding-top:25px">Dragonboard 410c</p>
           </li>
           <li id="jouleButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('joule')">
-              <img style="max-width:70%;" src="{{site.baseurl}}/Resources/images/JouleIcon.png">
+              <img style="max-width:70%;" src="{{site.baseurl}}/Resources/images/jouleIcon.png">
               <p class="text-caption" style="padding-top:25px">Intel Joule</p>
           </li>
           <li id="mbmButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('mbm')">
@@ -148,14 +148,8 @@ lang: en-US
                 $('#sdcardButton').show();
                 $('#noobsButton').hide();
                 break;
+            case 'dragonboard':
             case 'joule':
-                pressButton(pressedButton);
-                $('#selectInstallSection').hide('fast');
-                $('#selectOSSection').hide('fast');
-                $('#getStartedCompletedSection').hide('fast');
-                $('#comingSoonSection').show('fast');
-                return;
-            case 'dragonboard':            
             case 'starterPack':
                 pressButton(pressedButton);
                 $('#selectInstallSection').hide('fast');
@@ -215,15 +209,16 @@ lang: en-US
       var href = 'Docs/GetStarted/';
       
       switch (selectedBoard) {
-        case 'joule':
-          //not ready yet
-          return;
         case 'dragonboard':
           // Dragonboard is a special case. go directly to the dragonboard page
           window.location.href = 'Docs/GetStarted/dragonboard/GetStartedStep1.htm';
           return;
+        case 'joule':
+          // Joule is a special case. go directly to the joule page
+          window.location.href = 'Docs/GetStarted/joule/GetStartedStep1.htm';
+          return;
         case 'starterPack':
-          // the kit is a special case. go directly to the dragonboard page
+          // the kit is a special case. go directly to the Adafruit page
           window.location.href = 'Docs/AdafruitMakerKit.htm';
           return;
         case 'rpi2':
