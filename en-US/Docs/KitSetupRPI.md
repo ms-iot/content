@@ -12,7 +12,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2 or PI3
     <ol class="breadcrumb">
       <li><a href="https://developer.microsoft.com/en-us/windows/iot">IoT Home</a></li>
       <li><a href="{{site.baseurl}}/{{page.lang}}/Docs/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
-      <li class="active">Set up your Raspberry Pi 2</li>
+      <li class="active">Set up your Raspberry Pi 2 or 3</li>
     </ol>
     <header class="page-title-header remove-top-margin">
       <h1 class="page-title">Lesson 1: Introduction and Setup</h1>
@@ -43,7 +43,7 @@ The IoT Dashboard tool displays all the Windows 10 IoT Core devices on your netw
 By downloading and using the Windows 10 IoT Core Dashboard you agree to the [license terms](http://go.microsoft.com/fwlink/?LinkID=703960&clcid=0x4809) and [privacy statement](http://go.microsoft.com/fwlink/?LinkId=521839) for Windows 10 IoT Core Dashboard. 
 
 ## Boot NOOBS and install Windows 10 IoT Core
-Prior to the Pi3 kit the sd card included with the kit came preloaded with Windows 10 IoT Core  installed.  Begining with the Windows Annaversery release the card comes with NOOBS installation technology.  Please follow the directions at [NOOBS](https://developer.microsoft.com/en-us/windows/iot/win10/noobs) for selecting and installing the os.
+Prior to the Pi3 kit the sd card included with the kit came preloaded with Windows 10 IoT Core  installed.  Begining with the Windows Annaversery release the card comes with NOOBS installation technology.  Please follow the directions at [NOOBS]({{site.baseurl}}/{{page.lang}}/docs/noobs) for selecting and installing the os.
 
 ## Boot Windows 10 IoT Core
 1. Windows 10 IoT Core will boot automatically after connecting the power supply. Allow the Pi about five minutes for the first boot.

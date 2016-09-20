@@ -17,13 +17,13 @@
     </tr>
     <tr>
       <td><a href="http://www.banana-pi.org/m64.html">Banana Pi M64</a></td>
-      <td><a href="http://www.allwinnertech.com/en/clq/processora/6053.html">Allwinner A64</a></td>
+      <td><a href="http://www.allwinnertech.com/index.php?c=product&a=index&id=9">Allwinner A64</a></td>
       <td><a href="https://drive.google.com/file/d/0B3MbPTuhOYt7NkRIU3pqeEFfbUk/view">Get started</a></td>
       <td><a href="mailto:jasonye@banana-pi.com">More information</a></td>
     </tr>
     <tr>
       <td><a href="https://www.pine64.com/">Pine 64</a></td>
-      <td><a href="http://www.allwinnertech.com/en/clq/processora/6053.html">Allwinner A64</a></td>
+      <td><a href="http://www.allwinnertech.com/index.php?c=product&a=index&id=9">Allwinner A64</a></td>
       <td><a href="http://files.pine64.org/os/win10-iot/Windows10IoT_Pine64.ffu">Get started</a></td>
       <td><a href="mailto:support@pine64.org">More information</a></td>
     </tr>

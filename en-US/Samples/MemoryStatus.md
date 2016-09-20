@@ -159,7 +159,7 @@ int main(int argc, char **argv)
 
 * It is easy to deploy this console application to our Windows IoT Core device. In the [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm) documentation, you can find instructions to use `setcomputername` to configure a unique name for your Windows IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in VS.
 
-* You will first need to setup the Remote Debugger on your Windows IoT Core device. First follow the steps [here]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm) to deploy a Universal Windows Application on your device. This will copy all the required binaries to your device. 
+* You will first need to setup the Remote Debugger on your Windows IoT Core device. First follow the steps [here]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm) to deploy any other Universal Windows Application on your device (try the HelloWorld project). This will copy all the required binaries to your device. 
 
 * To start remote debugger on your device, open a Web Browser on your PC and point it to `http://<device name/IP address>:8080` to launch [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/Docs/tools/DevicePortal.htm). In the credentials dialog, use the default username and password: `Administrator`, `p@ssw0rd`. Windows Device Management should launch and display the web management home screen.
 

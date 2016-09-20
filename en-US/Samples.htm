@@ -30,7 +30,7 @@ lang: en-US
       {% for entry in sortedInfo %}
         {% if entry.new %}
           <div class="col-md-6" style="min-height: 320px;">
-            <p>{{entry.title}}</p>
+            <p><span class="text-base">{{entry.title}}</span></p>
             <p>{{entry.description}}</p>
             <p>
               {% if entry.link.first %}
@@ -90,8 +90,8 @@ lang: en-US
     <div class="row spacer-32-top">
       {% assign sortedInfo = (site.data._samples[page.lang] | sort: 'title') %}
       {% for entry in sortedInfo %}
-        <div class="col-md-6" style="min-height: 320px;">
-          <h3>{{entry.title}}</h3>
+        <div class="col-md-6" style="min-height: 400px;">
+          <p><span class="text-base">{{entry.title}}</span></p>
           <p>{{entry.description}}</p>
           <p>
             {% if entry.link.first %}

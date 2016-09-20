@@ -14,12 +14,13 @@
                 {{ content }}
             </div>
             <div class="col-xs-4 doc-samples-sidebars"> <!-- This is for the sidebar -->
-              <p><a href="https://github.com/"><span class="win-icon win-icon-Edit"></span>Edit this page on GitHub</a></p>
+              {% include docsSidebar.html %}
             </div>
         </div>
     </div>
     {% include footer.html %}
     {% include script.html %}
     {% include sock.html %}
+    {% include css-base.html %}
 </body>
 </html>

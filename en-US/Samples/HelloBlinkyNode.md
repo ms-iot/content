@@ -1,9 +1,10 @@
 ---
+layout: sample
 title: Hello, blinky! 
 description: A "Hello, world" sample for an LED and breadboard
 keyword: Beginner, gpio, xaml, iot core, windows
 permalink: /en-US/Samples/HelloBlinkyNode.htm
-samples: N/A
+samplelink: N/A
 lang: en-US
 ---
 

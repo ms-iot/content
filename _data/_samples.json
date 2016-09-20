@@ -112,7 +112,7 @@
       "lang": [
         "C#/C++",
         "Node.js"
-      ], 
+      ],
       "ranking": 0,
       "tags": [
         "c#",
@@ -127,7 +127,7 @@
       "description": "Create a simple 'Hello, world!' web server app that controls an LED",
       "link": "samples/HelloBlinkyServer.htm",
       "link-text": "Blinky",
-      "lang": "Python", 
+      "lang": "Python",
       "ranking": 0,
       "new": "yes",
       "tags": [
@@ -260,9 +260,9 @@
         "node.js",
         "wiring",
         "intermediate",
-        "lightning"        
+        "lightning"
       ]
-    },    
+    },
     {
       "title": "Azure data uploader",
       "description": "Upload sensor data to Azure storage from a Node.js UWP app",
@@ -317,7 +317,19 @@
         "beginner",
         "gpio"
       ]
-    },    
+    },
+    {
+      "title": "Cognitive Services",
+      "description": "Access and use the Cognitive Services API inside a C# UWP App",
+      "link": "samples/CognitiveServices.htm",
+      "link-text": "Cognitive Services",
+      "lang": "C#",
+      "ranking": 0,
+      "tags": [
+        "c#",
+        "beginner"
+      ]
+    },
     {
       "title": "Cylon servo controller",
       "description": "Control a servo to control a blinking LED",
@@ -348,7 +360,7 @@
         "advanced",
         "driver"
       ]
-    },        
+    },
     {
       "title": "Digital sign",
       "description": "Create a basic digital sign and learn how to work with multimedia",
@@ -361,7 +373,7 @@
         "foreground",
         "c#"
       ]
-    },    
+    },
     {
       "title": "Driver sample",
       "description": "Create and interact with a universal driver on devices running Windows 10 IoT Core",
@@ -374,7 +386,7 @@
         "driver",
         "c#"
       ]
-    },  
+    },
     {
       "title": "Express Node.js app",
       "description": "Create a new Express Node.js app",
@@ -388,7 +400,7 @@
         "node.js",
         "express"
       ]
-    }, 
+    },
     {
       "title": "External process launcher",
       "description": "Use <code>Windows.System.ProcessLauncher</code> API to launch external executable programs from your UWP app",
@@ -401,7 +413,7 @@
         "intermediate",
         "o/s"
       ]
-    },      
+    },
     {
       "title": "GPIO OneWire",
       "description": "Create an app that uses GPIO to read from the DHT11, a temperature and humidity sensor that uses a single-wire protocol",
@@ -414,7 +426,7 @@
         "intermediate",
         "gpio"
       ]
-    },       
+    },
     {
       "title": "IoT Core Default App",
       "description": "Create a UWP app that provides a device-management experience for Windows 10 IoT Core",
@@ -455,7 +467,7 @@
         "gpio",
         "c#"
       ]
-    },  
+    },
     {
       "title": "IoT browser",
       "description": "Create a simple web browser",
@@ -483,7 +495,20 @@
         "servo",
         "node.js"
       ]
-    },        
+    },
+    {
+      "title": "OpenCV",
+      "description": "Use OpenCV to run facial and body recognition on a photo",
+      "link": "samples/OpenCV.htm",
+      "link-text": "OpenCV",
+      "lang": "C++",
+      "ranking": 0,
+      "tags": [
+        "c++",
+        "beginner",
+        "foreground"
+      ]
+    },
     {
       "title": "Push button",
       "description": "Make an LED blink with the push of a button",
@@ -496,7 +521,7 @@
         "gpio",
         "c#"
       ]
-    },  
+    },
      {
       "title": "Potentiometer sensor",
       "description": "Read values from a rotary potentiometer and output data to an LED",
@@ -520,7 +545,7 @@
         "Wiring",
         "foreground"
       ]
-    },    
+    },
     {
       "title": "RGB LED",
       "description": "Create an app that uses the Raspberry Pi 2 to toggle an RGB LED.",
@@ -533,7 +558,7 @@
         "gpio",
         "c#"
       ]
-    },      
+    },
     {
       "title": "SPI accelerometer",
       "description": "Connect an accelerometer to your device and read data from it",
@@ -781,7 +806,7 @@
     {
       "title": "HID Injection driver",
       "description": "Build a driver for IoT Core and use HID Injection to inject touch, keyboard or mouse events.",
-      "link": "samples/HidInjector.htm",
+      "link": "samples/HidInjection.htm",
       "link-text": "Learn More",
       "lang": "C++",
       "ranking": 10,

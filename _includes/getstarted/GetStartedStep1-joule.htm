@@ -1,0 +1,136 @@
+<div class="row">
+  <div class="col-xs-4">
+    <section class="section section-top-margin">
+      <div class="section-body">
+        <p class="text-caption">
+          <span class="win-color-fg-secondary">Instructions for:</span><br/>
+          {% include_relative selection-list.inc %}
+          <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Change</a>
+        </p>
+        <br/>
+        <p>1 Get the tools</p>
+        <p><a href="GetStartedStep2.htm">2 Set up your device</a></p>
+        <p><a href="GetStartedStep3.htm">3 Set up Visual Studio</a></p>
+        <p><a href="GetStartedStep4.htm">4 Write your first app</a></p>
+      </div>
+    </section>
+  </div>
+  <div class="col-xs-20">
+    <section class="section">
+      <header class="page-title-header">
+        <h1 class="page-title">Step 1 of 4: Get the tools</h1>
+        <h2 class="page-subtitle">Download the tools and software you need to set up your board, build and explore Windows IoT.</h2>
+      </header>
+    </section>
+
+    <div class="row">
+      <div class="col-xs-24">
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title"><span class="step">1</span>Get Windows 10<span class="pull-right"><a id="get-windows-10-toggle" class="text-body toggle-button" onClick="hideDiv('get-windows-10')">Hide</a></span></h2>
+          </div>
+          <div class="section-body toggle-section" id="get-windows-10">
+            <p>
+              Make sure you are running the public release of Windows 10 (version 10.0.10240 or better).<br/>
+              You can find your current build number by clicking the <b>start</b> button, typing <b>"winver"</b>, and pressing the <b>Enter</b> key.
+            </p>
+            <p>
+              If you're not running Windows 10 (version 10.0.10240 or better) you can upgrade from <a href="http://www.microsoft.com/en-us/software-download/windows10" target="_blank">here</a>.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-24">
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title"><span class="step">2</span>Configure a USB flash drive<span class="pull-right"><a id="configure-toggle" class="text-body toggle-button" onClick="hideDiv('configure')">Hide</a></span></h2>
+          </div>
+          <div class="section-body toggle-section" id="configure">
+            <div class="row">
+              <div class="col-xs-24 col-md-12">
+                <ol class="inline-list">
+                  <li>Insert a USB flash drive into your PC. All content from this drive will be erased, so be sure to backup any data.</li>
+                  <li>Prepare the USB drive as follows:
+                    <ol>
+                      <li>Click <b>Start</b> and type: 'diskpart'</li>
+                      <li>Type: 'list disk'.<br>This will provide a listing of all the storage devices connected to your PC.</li>
+                      <li>Identify the disk number of the USB drive you installed and type: 'select disk (disk number)'</li>
+                      <li>Type: 'clean'</li>
+                      <li>Type: 'create partition primary'</li>
+                      <li>Type: 'format quick fs=fat32 label="Windows PE"'</li>
+                      <li>Type: 'assign letter=d' {% include note.html text="You may need to use another drive letter depending on what drive letters are already in use on your computer" %}</li>
+                      <li>Type: 'exit'</li>
+                      </ol>
+                  </li>
+                  <li>Download the <a href="">JouleAutoInstaller</a> to your PC. This is a WinPE image that you will use later to flash Windows 10 IoT Core to the eMMC storage on the board. {% include note.html text="The download for this file will be available soon." %}</li>
+                  <li>Right click on the downloaded zip file and select extract all. This will create a new folder with the same name as the downloaded zip file.</li>
+                  <li>Copy the files you extracted to the USB drive.</li>
+                  <li>Download the <a href="">ACPITABL.dat</a> and copy it to the root of the USB drive. {% include note.html text="The download for this file will be available soon." %}</li>
+                </ol>
+                <p><img alt="USB flash drive contents" class="image-border" src="{{site.baseurl}}/Resources/images/SetupJoule/joule_USB_contents.JPG" /></p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+     <div class="row">
+      <div class="col-xs-24">
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title"><span class="step">3</span>Download the Windows 10 IoT Core image for Joule<span class="pull-right"><a id="get-windows-iotcore-toggle" class="text-body toggle-button" onClick="hideDiv('get-windows-iotcore')">Hide</a></span></h2>
+          </div>
+          <div class="section-body toggle-section" id="get-windows-iotcore">
+            <ol class="inline-list">
+                  <li>Download Windows 10 IoT Core image from here. {% include note.html text="The download for this file will be available soon." %}</li>
+                  <li>Double click the downloaded ISO file. This will automatically mount the ISO as a new virtual CD-drive. (Look for a new CD-ROM drive)</li>
+                  <li>
+                    <p>The mounted virtual drive contains an installer file "Windows_10_IoT_Core_for_Broxton.msi". Double click the file to start the installation.</p>
+                    <p><img alt="windows installer for joule" class="image-border" src="{{site.baseurl}}/Resources/images/SetupJoule/joule_WindowsInstaller.JPG" /></p>
+                    <p>The installer creates a new directory: C:\Program Files (x86)\Microsoft IoT\FFU\Broxton\ which contains the Joule image file "flash.ffu".</p>
+                    <p><img alt="ffu for windows 10 iot core for joule" class="image-border" src="{{site.baseurl}}/Resources/images/SetupJoule/joule_FlashFile_FFU.JPG" /></p>
+                    <p>We will apply this FFU to the on-board eMMC on the next page.</p>
+                  </li>
+                  <li>Eject the virtual CD-drive when done.</li>
+                </ol>
+          </div>
+        </section>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-xs-24">
+        <section class="section">
+          <div class="section-body">
+            <p>
+              <span class="win-color-fg-green">Step 1 of 4: Get the tools is complete.</span>
+              Set up your device <span class="win-color-fg-secondary">is next.</span>
+            </p> 
+            <div class="btn-group">
+              <a href="GetStartedStep2.htm" class="btn btn-primary">Next</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function hideDiv(div) {
+    var pdiv = "#" + div,
+        button = pdiv + "-toggle"
+
+    if ($(pdiv).css('display') == 'none') {
+      $(pdiv).toggle('slow');
+      $(button).html('Hide');
+    }
+    else {
+      $(pdiv).toggle('slow');
+      $(button).html('Show');
+    }
+  }
+</script>

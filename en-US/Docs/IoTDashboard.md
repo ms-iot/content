@@ -76,7 +76,7 @@ ___
 Quick run samples do not require and code compilation, Visual studio installation or SDK download. They are great for quickly checking out what IoT Core can do.
 
 ### Network 3D Printer
-Use the Network 3D Printer sample to connect your 3D Printer to your board can make it discoverable over your home network. See the  [3D printer server sample]({{site.baseurl}}/{{page.lang}}/win10/samples/3DPrintServer.htm) for more details.
+Use the Network 3D Printer sample to connect your 3D Printer to your board can make it discoverable over your home network. See the  [3D printer server sample]({{site.baseurl}}/{{page.lang}}/Docs/3DPrintServer) for more details.
 
 {% include imageborder.html alt="IoTDashboard Network 3D Printer" link="/Resources/images/IoTDashboard/IoTDashboard_3DPrinter.PNG" %}
 
