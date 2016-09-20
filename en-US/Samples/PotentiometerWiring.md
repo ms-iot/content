@@ -1,11 +1,14 @@
 ---
 layout: sample
-title: Arduino Wiring Potentiometer Sample
-permalink: /en-US/Samples/arduino-wiring/Potentiometer.htm
+title: Potentiometer sensor for Arduino
+keyword: Windows 10 IoT Core, beginner, breadboard, potentiometer, sensor
+description: Connect a rotary potentiometer and LED to your IoT Core device
+permalink: /en-US/Samples/PotentiometerWiring.htm
+samplelink: N/A
 lang: en-US
 ---
 
-# Arduino Wiring Potentiometer Sample
+# Potentiometer sensor for Arduino
 This sample shows how to connect a rotary potentiometer and LED to a Raspberry Pi 2 and 3 or a MinnowBoard Max using Arduino Wiring. We use a SPI-based ADC (Analog to Digital Converter) to read values from the potentiometer and control an LED based on the knob position.
 
 This sample is similar to the [C# Potentiometer Sample]({{site.baseurl}}/{{page.lang}}/Samples/Potentiometer.htm), but uses Arduino Wiring instead of C#. The wiring and hardware configuration will be nearly identical. However, DragonBoard 410c does not currently support Arduino Wiring.

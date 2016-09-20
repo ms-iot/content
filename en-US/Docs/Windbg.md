@@ -115,16 +115,16 @@ When you connect the USB end of the serial cable to your development PC (where W
 Using the active PowerShell or SSH connection to your Raspberry Pi 2 or 3, you will modify two BCD settings to enable debugging over the serial connection.
 
 Here is the first command you need to run:   
-    
-        `bcdedit -dbgsettings serial` 
+
+`bcdedit -dbgsettings serial` 
 
 * The above command enables the serial connection for debugging
 
 * The baud-rate for the Raspberry Pi 2 or 3 is hard-coded to 921600, so you don't have to specify it
 
-Here is the second command you need to run:
+  Here is the second command you need to run:
 
-        `bcdedit -debug on`
+  `bcdedit -debug on`
 
 * This command turns on debugging on the device 
 
@@ -132,9 +132,11 @@ As suggested earlier, use the Device Manager on your development PC to find out 
 
 On your development machine you can start WinDbg as follows:
 
-        "C:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k com:port=<PORT>,baud=921600
+```
+"C:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k com:port=<PORT>,baud=921600
+```
 
-        Note: If you have any of the Windows kits installed, you may find WinDbg under "C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\WinDbg.exe" 
+Note: If you have any of the Windows kits installed, you may find WinDbg under "C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\WinDbg.exe" 
 
 * Please note that 'PORT' refers to the COM port number your USB-to-TTL cable was assigned in the system and displayed in the Device Manager under "Ports (COM & LPT)".
 

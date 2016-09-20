@@ -9,7 +9,7 @@ lang: en-US
 
 # Trusted Platform Module
 
-A [Trusted Platform Module](https://en.wikipedia.org/wiki/Trusted_Platform_Module) (TPM) device is a microcontroller that can store data and perform computations. It can be either a discrete chip soldiered to a computer's
+A [Trusted Platform Module](https://en.wikipedia.org/wiki/Trusted_Platform_Module) (TPM) device is a microcontroller that can store data and perform computations. It can be either a discrete chip soldered to a computer's
 motherboard or a module integrated into the system on a chip (SoC) by the manufacturer. 
 
 Storing secure information such as a password or a certificate on a device could
@@ -37,7 +37,7 @@ Dashboard and can be downloaded from the [the downloads page](http://go.microsof
 
 The dashboard produces an image of the OS and securely connects your device to
 Azure. This is done by associating the physical device with the device ID in the Azure IoT Hub
-and imprinting the device-specific shared access key to the devices' TPM. 
+and imprinting the device-specific shared access key to the device's TPM. 
 
 For devices that don’t have a TPM chip, the tool can install a software-emulated
 TPM. This does not provide security but allows you to develop your app

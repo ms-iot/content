@@ -97,7 +97,7 @@ lang: zh-CN
 
 ## 切换 GPIO
 
-按照[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)的说明将电阻器和 LED 连接到你的 Windows IoT 核心版设备。当你切换已连接到 LED 的 GPIO 时，LED 将打开或关闭。
+按照[此处]({{site.baseurl}}/{{page.lang}}/win10/Samples/HelloBlinky.htm)的说明将电阻器和 LED 连接到你的 Windows IoT 核心版设备。当你切换已连接到 LED 的 GPIO 时，LED 将打开或关闭。
 
 ### 使用提供的应用程序与驱动程序通信
 
@@ -145,7 +145,7 @@ lang: zh-CN
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe low 5
 
 ### 注意：
-根据[此处]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)所述的连接 LED 的方式，驱动 GPIO 走低会使 LED 点亮。
+根据[此处]({{site.baseurl}}/{{page.lang}}/win10/Samples/HelloBlinky.htm)所述的连接 LED 的方式，驱动 GPIO 走低会使 LED 点亮。
 
 若要关闭 LED，只需键入：
 

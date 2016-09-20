@@ -2,7 +2,7 @@
    "RPI2":[
 	  "Docs/SetupPCRPI.htm",
       "Docs/SetupRPI.htm",
-      "Docs/samples/Blinky.htm"
+      "Docs/Samples/HelloBlinky.htm"
    ],
    "MBM":[
       "Docs/SetupPCMBM.htm",
@@ -13,7 +13,7 @@
       "GetStarted.htm",
 	  "Docs/SetupPCDB410c.htm",
       "Docs/SetupDB410c.htm",
-      "Docs/samples/Blinky.htm"
+      "Docs/Samples/HelloBlinky.htm"
    ],
    "Galileo":[
       "GetStarted.htm",

@@ -16,7 +16,7 @@ lang: zh-CN
 
 你可以通过在[此处](https://github.com/ms-iot/samples/archive/develop.zip)下载所有示例的 zip 并导航到 `samples-develop\App2App WebServer`，查找此示例的源代码。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。
 
-确保将 LED 连接到开发板。如需指导，请返回基本“Blinky”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)。
+确保将 LED 连接到开发板。如需指导，请返回基本“Blinky”[示例]({{site.baseurl}}/{{page.lang}}/win10/Samples/HelloBlinky.htm)。
 
 请注意，如果应用找不到任何可用 GPIO 端口，则该应用将无法成功运行。
 
@@ -31,7 +31,7 @@ lang: zh-CN
 
 ### BlinkyApp
 
-客户端应用与 Blinky [示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)十分相似。此处补充的主要内容是，我们允许使用 Web 服务器来配置 LED 的开/关状态。
+客户端应用与 Blinky [示例]({{site.baseurl}}/{{page.lang}}/win10/Samples/HelloBlinky.htm)十分相似。此处补充的主要内容是，我们允许使用 Web 服务器来配置 LED 的开/关状态。
 
 为了使其他应用可以与 BlinkyApp 进行通信，我们需要在 Package.appxmanifest 中添加一些特殊配置。具体而言，我们需要添加“windows.appService”扩展。此扩展需要两部分信息：
 

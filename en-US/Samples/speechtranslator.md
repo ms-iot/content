@@ -1,10 +1,11 @@
 ---
 layout: sample
-title: SpeechTranslator Sample
-permalink: /en-US/Samples/speechtranslator.htm
-lang: en-US
+title: Speech translator
+description: Translate your speech to different languages
+keyword: Windows 10 IoT Core, Beginner, speech
+permalink: /en-US/Samples/SpeechTranslator.htm
+samplelink: https://github.com/ms-iot/samples/tree/develop/SpeechTranslator
 ---
-
 # Build the SpeechTranslator Project
 
 ### Component Lists:

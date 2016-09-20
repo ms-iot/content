@@ -97,7 +97,7 @@ You should see the following output:
 
 ## Toggle The GPIOs
 
-Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Samples/Blinky.htm) to connect a resistor and an LED to your Windows IoT Core device.  When you toggle the GPIO connected to the LED, the LED will turn on or off. 
+Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky.htm) to connect a resistor and an LED to your Windows IoT Core device.  When you toggle the GPIO connected to the LED, the LED will turn on or off. 
 
 ### Use the application provided to communicate with the driver
 
@@ -146,7 +146,7 @@ If you are using GPIO #5 on the Raspberry Pi 2 or 3, type the following command 
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe low 5
 
 ### Note:
-Driving the GPIO low will make the LED light-up because of the way the LED is connected as described [here]({{site.baseurl}}/{{page.lang}}/Samples/Blinky.htm).
+Driving the GPIO low will make the LED light-up because of the way the LED is connected as described [here]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky.htm).
 
 To turn the LED off, simply type:
 

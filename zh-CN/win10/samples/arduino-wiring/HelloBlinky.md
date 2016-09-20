@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 你好，Blinky
-permalink: /zh-cn/win10/samples/arduino-wiring/HelloBlinky.htm
+permalink: /zh-cn/win10/samples/HelloBlinkyWiring.htm
 lang: zh-CN
 ---
 

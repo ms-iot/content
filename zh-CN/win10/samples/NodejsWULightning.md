@@ -19,7 +19,7 @@ lang: zh-CN
 
 
 ### 设置你的硬件
-* 此示例的设置与 C\#“Blinky”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)相同。
+* 此示例的设置与 C\#“Blinky”[示例]({{site.baseurl}}/{{page.lang}}/win10/Samples/HelloBlinky.htm)相同。
 * 按照[此页面]({{site.baseurl}}/{{page.lang}}/win10/LightningSetup.htm)中的步骤在 Raspberry Pi 2 上设置 Lightning。
 
 

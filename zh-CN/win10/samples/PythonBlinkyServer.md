@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Python Blinky 服务器示例
-permalink: /zh-cn/win10/samples/PythonBlinkyServer.htm
+permalink: /zh-cn/win10/HelloWorldPythonBlinkyServer.htm
 lang: zh-CN
 ---
 
@@ -21,7 +21,7 @@ lang: zh-CN
 * 从[此处](https://github.com/ms-iot/python/releases){:target="_blank"}下载并安装 Python UWP SDK \(pyuwpsdk.vsix\) 最新版本。
 
 ### 设置你的硬件
-此示例的设置与 C\#“Blinky”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)相同。
+此示例的设置与 C\#“Blinky”[示例]({{site.baseurl}}/{{page.lang}}/win10/Samples/HelloBlinky.htm)相同。
 
 ### 无外设模式
 
@@ -33,7 +33,7 @@ lang: zh-CN
 
 如果你要针对 MinnowBoard Max 进行生成，请选择体系结构下拉列表中的 `x86`。如果你要针对 Raspberry Pi 2 或 3 进行生成，请选择 `ARM`。
 
-确保将 LED 连接到开发板。如需指导，请返回基本“Blinky”[示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)。
+确保将 LED 连接到开发板。如需指导，请返回基本“Blinky”[示例]({{site.baseurl}}/{{page.lang}}/win10/Samples/HelloBlinky.htm)。
 
 请注意，如果应用找不到任何可用 GPIO 端口，则该应用将无法成功运行。
 

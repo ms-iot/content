@@ -1,16 +1,16 @@
 ---
 layout: sample
 title: Memory status monitor for node.js
+description: A simple console application that can be used to query the memory usage on your device
+keyword: Windows 10 IoT Core 
 permalink: /en-US/Samples/MemoryStatusNodejs.htm
+samplelink: N/A
 lang: en-US
 ---
 
-# Memory status monitor for node.js
-
-
+# Memory status monitor
 
 Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/{{page.lang}}/Samples/ConsoleApp.htm)
-
 
 ### Set up your PC
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.

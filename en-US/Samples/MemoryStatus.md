@@ -1,6 +1,6 @@
 ---
 layout: sample  
-title: Memory status reporter
+title: Memory status monitor
 description: A simple console application that can be used to query the memory usage on your device
 keyword: Windows 10 IoT Core 
 permalink: /en-US/Samples/MemoryStatus.htm
@@ -8,7 +8,7 @@ samplelink: https://github.com/ms-iot/samples/tree/develop/MemoryStatus/MemorySt
 lang: en-US
 ---  
 
-# Memory status reporter
+# Memory status monitor
 
 We'll create a simple console application that can be used to query the memory usage on your Windows IoT Core device (Raspberry Pi 2 or 3, MinnowBoard Max, or a DragonBoard). Please note that you need to compile the project for ARM for Raspberry Pi 2 or 3 or DragonBoard and x86 for MinnowBoard Max.
 

@@ -1,11 +1,14 @@
 ---
 layout: sample
-title: Hello Blinky Arduino Wiring sketch
-permalink: /en-US/Samples/arduino-wiring/HelloBlinkyWiring.htm
+title: Hello, blinky! background service - Arduino Wiring sketch
+description: A "Hello, world!" sample that lights up a small LED on your breadboard
+keyword: Beginner, gpio, headless
+permalink: /en-US/Samples/HelloBlinkyBackgroundWiring.htm
+samplelink: N/A
 lang: en-US
 ---
 
-# Hello Blinky
+# Hello, blinky! background service
 Learn to Deploy and Debug an Arduino Wiring sketch on Raspberry Pi 2 and 3 or Minnowboard Max to blink an LED!
 
 ## Setup

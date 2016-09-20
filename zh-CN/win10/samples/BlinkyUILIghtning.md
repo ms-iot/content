@@ -12,7 +12,7 @@ deviceName: RPI2
 
 本示例演示如何使用 Micorosot.IoT.Providers.Lightning.I2cProvider 与 GPIO 通信
 
-它基于 [Blinky UI 示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)，并且共享相同的设置步骤。主要区别是将 Lightning 提供程序设置为默认控制器提供程序。
+它基于 [Blinky UI 示例]({{site.baseurl}}/{{page.lang}}/win10/Samples/HelloBlinky.htm)，并且共享相同的设置步骤。主要区别是将 Lightning 提供程序设置为默认控制器提供程序。
 
 ### 使用 Lightning 提供程序
 
@@ -81,7 +81,7 @@ private async void InitGPIO()
 
 1. 将用于 Lightning 的 Blinky 示例的源从 [Github](https://github.com/ms-iot/BusProviders/tree/develop/Microsoft.IoT.Lightning.Providers) 复制到本地文件夹。
 
-1. 若要设置 LED 连接，请参考[原始 Blinky 示例]({{site.baseurl}}/{{page.lang}}/win10/samples/Blinky.htm)。
+1. 若要设置 LED 连接，请参考[原始 Blinky 示例]({{site.baseurl}}/{{page.lang}}/win10/Samples/HelloBlinky.htm)。
 
 1. 在 Visual Studio 中加载解决方案。
 
