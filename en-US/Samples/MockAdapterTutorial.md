@@ -5,4 +5,4 @@ permalink: /en-US/Samples/MockAdapterTutorial.htm
 lang: en-US
 ---
 
-{% include redirect.html url="/windows/iot/Samples.htm" %}
+{% include redirect.html url="/windows/iot/AllJoynMockAdapter.htm" %}

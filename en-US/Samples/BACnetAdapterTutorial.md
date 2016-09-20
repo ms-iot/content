@@ -5,4 +5,4 @@ permalink: /en-US/Samples/BACnetAdapterTutorial.htm
 lang: en-US
 ---
 
-{% include redirect.html url="/windows/iot/Samples.htm" %}
+{% include redirect.html url="/windows/iot/BACnetAdapter.htm" %}
