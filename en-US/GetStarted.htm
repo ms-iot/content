@@ -100,10 +100,10 @@ lang: en-US
       </div>
     </section>
   </div>
-  <div id="commingSoonSection" style="display:none" class="step">
+  <div id="comingSoonSection" style="display:none" class="step">
     <section class="section">
       <div class="section-body">
-        <p>The software for this device is comming soon. Thanks for your patience.</p>
+        <p>The software for this device is coming soon. Thanks for your patience.</p>
       </div>
     </section>
   </div>
@@ -155,14 +155,14 @@ lang: en-US
                 $('#selectInstallSection').hide('fast');
                 $('#selectOSSection').hide('fast');
                 $('#getStartedCompletedSection').show('fast');
-                $('#commingSoonSection').hide('fast');
+                $('#comingSoonSection').hide('fast');
                 return;
         }
 
         $('#selectInstallSection').show('fast');
         $('#selectOSSection').hide('fast');
         $('#getStartedCompletedSection').hide('fast');
-        $('#commingSoonSection').hide('fast');
+        $('#comingSoonSection').hide('fast');
         pressButton(pressedButton);
      }
 
@@ -180,13 +180,13 @@ lang: en-US
             case 'noobs':
                 $('#selectOSSection').hide('fast');
                 $('#getStartedCompletedSection').show('fast');
-                $('#commingSoonSection').hide('fast');                
+                $('#comingSoonSection').hide('fast');                
                 break;
             case 'sdcard':
                 $('#selectOSSection').show('fast');
                 $('#stableButton').show('fast');                
                 $('#getStartedCompletedSection').hide('fast');
-                $('#commingSoonSection').hide('fast');
+                $('#comingSoonSection').hide('fast');
                 break;
         }
         var pressedButton = '#' + hardware + 'Button';
@@ -209,7 +209,7 @@ lang: en-US
       var href = 'Docs/GetStarted/';
       
       switch (selectedBoard) {
-                case 'dragonboard':
+        case 'dragonboard':
           // Dragonboard is a special case. go directly to the dragonboard page
           window.location.href = 'Docs/GetStarted/dragonboard/GetStartedStep1.htm';
           return;

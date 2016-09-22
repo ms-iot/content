@@ -74,6 +74,13 @@ When evaluating PRs, the following guidelines must be met:
     * If, after you make your changes and submit your PR, you find it cannot be automerged, simply update your fork with the latest from our repo and fix the conflicts - that should make it auto-mergable
 2. Never have duplicate commits
 
+### Publishing timelines
+
+If there is a specific date or time that content needs publishing or if there is a pressing bug fix that needs merging ASAP, please email IOT-WOD@microsoft.com.
+
+PRs submitted to our public repo will be evaluated and merged individually, usually within a few days of them being submitted.  Assume that once the PR is submitted, that content can go live anytime.
+
+WOD moderators will take care of merging private content to public, usually in the middle of the month.  Specific date releases of private content must be communicated to stakeholders ahead of time, and give at least a **week** lead time to verify all parties are on board and verification can happen.
 ___
 
 ### How to contribute

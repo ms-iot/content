@@ -50,6 +50,23 @@ When creating a new topic, or updating an exisitng one, there are a handful of t
 
 ## Best Practices
 
+### Renaming or moving files, how to redirect pages
+If you need to move or rename a file (or more specifically, the permalink - however the filename and permalink should always match) please follow these steps:
+
+1. Create new file at desired location, and copy all content in (be sure to update permalink etc. to what you want it to be).
+2. Leave the existing file in it's old location, with the old permalink
+3. Change the layout to "redirect" and delete all content under the metadata (section contained in ---) and place the following code in:
+
+  {% include redirect.html url="/windows/iot/<newURL>.htm" %}
+  
+  This will create a client side redirect to the new page for any external links or bookmarks our users have
+
+4. Search the entire repo for references to the old page, and update those to the new page
+5. Submit a single PR that contains all of the above changes together
+6. Once that is all done, email the Halcyon owners (Ivor and Stephen) a mapping of the old urls to the new urls, so we can put a permanent server redirect in place to clean up search results.
+
+  For an example, look under en-US/win10/Docs.md
+
 ### Do not check in binaries
 Once a binary is added to the repository, it will be there forever.
 
