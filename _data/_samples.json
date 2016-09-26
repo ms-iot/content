@@ -105,13 +105,9 @@
     {
       "title": "'Hello, blinky!'",
       "description": "A 'Hello, world' sample to control an LED from a breadboard",
-      "link": [
-        "samples/HelloBlinky.htm"
-      ],
+      "link": "samples/HelloBlinky.htm",
       "link-text": "UI Blinky",
-      "lang": [
-        "C#/C++"
-      ],
+      "lang": "C#/C++",
       "ranking": 0,
       "tags": [
         "c#",
@@ -332,13 +328,9 @@
     {
       "title": "Cylon servo controller",
       "description": "Control a servo connected to an Arduino using Cylon in a Node.js UWP app",
-      "link": [
-        "Samples/CylonServoNode.htm"
-      ],
+      "link": "Samples/CylonServoNode.htm",
       "link-text": "Cylon",
-      "lang": [
-      "Node.js"
-      ],
+      "lang": "Node.js",
       "ranking": 0,
       "tags": [
         "intermediate",
@@ -348,13 +340,9 @@
     {
       "title": "Cylon LED controller",
       "description": "Blink an Arduino LED using Cylon in a Node.js console app",
-      "link": [
-        "Samples/CylonLEDNode.htm"
-      ],
+      "link": "Samples/CylonLEDNode.htm",
       "link-text": "Cylon",
-      "lang": [
-      "Node.js"
-      ],
+      "lang": "Node.js",
       "ranking": 0,
       "tags": [
         "intermediate",
@@ -807,13 +795,9 @@
     {
       "title": "'Hello, blinky!' console app",
       "description": "Create a 'Hello, world' console app to control an LED",
-      "link": [
-        "samples/HelloBlinkyNode.htm"
-      ],
+      "link": "samples/HelloBlinkyNode.htm",
       "link-text": "Console Blinky",
-      "lang": [
-        "Node.js"
-      ],
+      "lang": "Node.js",
       "ranking": 0,
       "tags": [
         "node.js",
