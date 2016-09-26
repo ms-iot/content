@@ -76,7 +76,7 @@ Here's what the code above is doing:
 
 ### Run the app!
 * Connect to the device using [SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH.htm) or [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm).
-* Run the command `C:\NodejsChakra\Node.exe C:\MyNodejsBlinky\app.js` to start the app.
+* Run the command `C:\NodejsChakra\Node.exe C:\MyNodejsBlinky\blinky.js` to start the app.
 
 
 ### Notes

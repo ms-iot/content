@@ -1,14 +1,14 @@
 ---
 layout: sample
-title: Cylon servo controller
-description: Use Cylon to blink an LED on an Arduino from a Windows 10 IoT Core device
-keywords: Windows 10 IoT Core, wiring, arduino
-permalink: /en-US/Samples/CylonServoWiring.htm
+title: Cylon LED controller
+description: Blink an Arduino LED using Cylon in a Node.js console app
+keywords: Windows 10 IoT Core, arduino
+permalink: /en-US/Samples/CylonLEDNode.htm
 samplelink: N/A
 lang: en-US
 ---
 
-# Cylon servo controller
+# Cylon LED controller
 
 In this sample, you will use [Cylon](https://www.npmjs.com/package/cylon) running on a Raspberry Pi 2 or 3 to blink the LED on an Arduino (with [Firmata](https://www.npmjs.com/package/firmata) installed) once per second.
 

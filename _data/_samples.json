@@ -52,7 +52,8 @@
       "name": "App type",
       "tags": [
         "foreground",
-        "background"
+        "background",
+        "console"
       ]
     },
     {
@@ -105,13 +106,11 @@
       "title": "'Hello, blinky!'",
       "description": "A 'Hello, world' sample to control an LED from a breadboard",
       "link": [
-        "samples/HelloBlinky.htm",
-        "samples/HelloBlinkyNode.htm"
+        "samples/HelloBlinky.htm"
       ],
       "link-text": "UI Blinky",
       "lang": [
-        "C#/C++",
-        "Node.js"
+        "C#/C++"
       ],
       "ranking": 0,
       "tags": [
@@ -122,7 +121,7 @@
         "gpio"
       ]
     },
-        {
+    {
       "title": "'Hello, blinky!' server",
       "description": "Create a simple 'Hello, world!' web server app that controls an LED",
       "link": "samples/HelloBlinkyServer.htm",
@@ -332,20 +331,35 @@
     },
     {
       "title": "Cylon servo controller",
-      "description": "Control a servo to control a blinking LED",
+      "description": "Control a servo connected to an Arduino using Cylon in a Node.js UWP app",
       "link": [
-        "Samples/CylonServoNode.htm",
-        "Samples/CylonServoWiring.htm"
+        "Samples/CylonServoNode.htm"
       ],
       "link-text": "Cylon",
       "lang": [
-      "Node.js",
-      "Wiring"
+      "Node.js"
       ],
       "ranking": 0,
       "tags": [
         "intermediate",
         "node.js"
+      ]
+    },
+    {
+      "title": "Cylon LED controller",
+      "description": "Blink an Arduino LED using Cylon in a Node.js console app",
+      "link": [
+        "Samples/CylonLEDNode.htm"
+      ],
+      "link-text": "Cylon",
+      "lang": [
+      "Node.js"
+      ],
+      "ranking": 0,
+      "tags": [
+        "intermediate",
+        "node.js",
+        "console"
       ]
     },
     {
@@ -689,7 +703,7 @@
       "description": "Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
       "link": [
         "samples/HelloBlinkyBackgroundLightning.htm",
-        "samples/HelloBlinkyBackgroundNode.htm"
+        "samples/HelloBlinkyNodeLightning.htm"
       ],
       "link-text": [
         "Blinky Headless",
@@ -786,10 +800,28 @@
         "c++",
         "node.js",
         "intermediate",
+        "console",
         "o/s"
       ]
     },
-
+    {
+      "title": "'Hello, blinky!' console app",
+      "description": "Create a 'Hello, world' console app to control an LED",
+      "link": [
+        "samples/HelloBlinkyNode.htm"
+      ],
+      "link-text": "Console Blinky",
+      "lang": [
+        "Node.js"
+      ],
+      "ranking": 0,
+      "tags": [
+        "node.js",
+        "beginner",
+        "console",
+        "gpio"
+      ]
+    },
     {
       "title": "Wi-Fi connector",
       "description": "Discover and connect to a WiFi network from a UWP app using <code>Windows.Devices.WiFi.WiFiAdapter</code> API",

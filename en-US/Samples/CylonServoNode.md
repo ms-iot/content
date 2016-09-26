@@ -1,7 +1,7 @@
 ---
 layout: sample
 title: Cylon servo controller
-description: Upload sensor data to Azure storage from a Node.js UWP app
+description: Control a servo connected to an Arduino using Cylon in a Node.js UWP app
 keywords: Windows 10 IoT Core, azure, uploader, data
 permalink: /en-US/Samples/CylonServoNode.htm
 samplelink: N/A
