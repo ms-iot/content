@@ -6,4 +6,4 @@ permalink: /en-US/Samples/CylonServoWiring.htm
 lang: en-US
 ---
 
-{% include redirect.html url="/content/en-US/Samples/CylonLEDNode.htm" %}
+{% include redirect.html url="/windows/iot/Samples/CylonLEDNode.htm" %}
