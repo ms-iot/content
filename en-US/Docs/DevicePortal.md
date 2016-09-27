@@ -25,7 +25,7 @@ ___
 
     To get WDP up and running, you first need to connect your device to your network. See the [Get Started]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) page for full instructions.
 
-2. Find your device in IoT Dashboard and connect
+2. Find your device in IoT Dashboard and connect.
    Right click and select **Open in Device Portal**.
 
    ![IoTDashboard View Devices]({{site.baseurl}}/Resources/images/IoTDashboard/IoTDashboard_RightClickMenu.PNG)
