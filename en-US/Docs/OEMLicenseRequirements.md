@@ -19,6 +19,11 @@ System firmware should implement the support for SMBIOS that complies with the [
 {% include note.html text="If you are re-using the BIOS/Firmware/UEFI, make sure make sure to update the entries." %}
 
 
+## Compliance with minimum hardware requirements
+___
+
+Review the IoTCore sections of [Minimum hardware requirements](https://msdn.microsoft.com/en-us/library/windows/hardware/dn915086(v=vs.85).aspx)
+
 ## Board Support Package (BSP) information
 ___
 
@@ -48,13 +53,13 @@ In addition to this, OEM may also provide the following information to be stored
 <?xml version="1.0" encoding="utf-8"?>
 <Package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-         Owner="$(OEMNAME)" Component="BSP" SubComponent="DeviceTargetingInfo"
+         Owner="$(OEMNAME)" Component="BSP" SubComponent="DeviceInfo"
          OwnerType="OEM" ReleaseType="Production" Platform="Any"
          xmlns="urn:Microsoft.WindowsPhone/PackageSchema.v8.00">
   <Components>
     <OSComponent>
         <RegKeys>
-            <RegKey KeyName="$(hklm.system)\Platform\DeviceTargetingInfo">
+            <RegKey KeyName="$(hklm.system)\Platform\DeviceInfo">
                 <RegValue Name="OneCoreManufacturer" Type="REG_SZ"
                     Value="Contoso"/>
                 <RegValue Name="OneCoreManufacturerModelName" Type="REG_SZ"
