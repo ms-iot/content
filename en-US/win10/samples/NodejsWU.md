@@ -3,6 +3,7 @@ layout: default
 title: NodejsWU
 permalink: /en-US/win10/samples/NodejsWU.htm
 lang: en-US
+rdlink: /samples/helloworldnode.htm
 ---
 
 ## 'Hello, World' Node.js (Windows Universal) Sample
