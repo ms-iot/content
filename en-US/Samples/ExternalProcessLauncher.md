@@ -22,7 +22,7 @@ The `Windows.System.ProcessLauncher` API is new to Windows IoT Core Fall Update.
 
 To use the `ProcessLauncher` API and other new features of Windows IoT Core Fall Update, a newer version of the Windows SDK is needed as well. Windows SDK 10.0.10586.0 or higher is required and can be downloaded from [here](https://dev.windows.com/en-US/downloads/windows-10-sdk).
 
-For more information on obtaining and setting up the required Windows SDK and other tools, refer to [Setting up your PC Guide]({{site.baseurl}}/{{page.lang}}/Docs/SetupPCRPI.htm).
+For more information on setting everything up, refer to [our get started guide.]({{site.baseurl}}/{{page.lang}}/GetStarted.htm).
 
 ### Load the project in Visual Studio  
   
