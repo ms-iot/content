@@ -8,9 +8,9 @@
           <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Change</a>
         </p>
         <br/>
-        <p>1 Get the tools</p>
-        <p><a href="GetStartedStep2.htm">2 Set up your device</a></p>
-        <p><a href="GetStartedStep3.htm">3 Set up Visual Studio</a></p>
+        <p>1 Get Windows installed</p>
+        <p><a href="GetStartedStep2.htm">2 Setup your device</a></p>
+        <p><a href="GetStartedStep3.htm">3 Setup Visual Studio</a></p>
         <p><a href="GetStartedStep4.htm">4 Write your first app</a></p>
       </div>
     </section>
@@ -18,8 +18,8 @@
   <div class="col-xs-20">
     <section class="section">
       <header class="page-title-header">
-        <h1 class="page-title">Step 1 of 4: Get the tools</h1>
-        <h2 class="page-subtitle">Download the tools and software you need to set up your board, build and explore Windows IoT.</h2>
+        <h1 class="page-title">Step 1 of 4: Get Windows installed</h1>
+        <h2 class="page-subtitle">Download the tools and software you need to set up your board and install Windows IoT.</h2>
       </header>
     </section>
 
@@ -31,11 +31,11 @@
           </div>
           <div class="section-body toggle-section" id="get-windows-10">
             <p>
-              Make sure you are running the public release of Windows 10 (version 10.0.10240 or better).<br/>
+              Make sure you are running the public release of Windows 10 (version 1607 or better).<br/>
               You can find your current build number by clicking the <b>start</b> button, typing <b>"winver"</b>, and pressing the <b>Enter</b> key.
             </p>
             <p>
-              If you're not running Windows 10 (version 10.0.10240 or better) you can upgrade from <a href="http://www.microsoft.com/en-us/software-download/windows10" target="_blank">here</a>.
+              If you're not running Windows 10 (version 1607 or better) you can upgrade from <a href="http://www.microsoft.com/en-us/software-download/windows10" target="_blank">here</a>.
             </p>
           </div>
         </section>
@@ -52,25 +52,12 @@
             <div class="row">
               <div class="col-xs-24 col-md-12">
                 <ol class="inline-list">
-                  <li>Insert a USB flash drive into your PC. All content from this drive will be erased, so be sure to backup any data.</li>
-                  <li>Prepare the USB drive as follows:
-                    <ol>
-                      <li>Click <b>Start</b> and type: 'diskpart'</li>
-                      <li>Type: 'list disk'.<br>This will provide a listing of all the storage devices connected to your PC.</li>
-                      <li>Identify the disk number of the USB drive you installed and type: 'select disk (disk number)'</li>
-                      <li>Type: 'clean'</li>
-                      <li>Type: 'create partition primary'</li>
-                      <li>Type: 'format quick fs=fat32 label="Windows PE"'</li>
-                      <li>Type: 'assign letter=d' {% include note.html text="You may need to use another drive letter depending on what drive letters are already in use on your computer" %}</li>
-                      <li>Type: 'exit'</li>
-                      </ol>
-                  </li>
-                  <li>Download the <a href="">JouleAutoInstaller</a> to your PC. This is a WinPE image that you will use later to flash Windows 10 IoT Core to the eMMC storage on the board. {% include note.html text="The download for this file will be available soon." %}</li>
-                  <li>Right click on the downloaded zip file and select extract all. This will create a new folder with the same name as the downloaded zip file.</li>
-                  <li>Copy the files you extracted to the USB drive.</li>
-                  <li>Download the <a href="">ACPITABL.dat</a> and copy it to the root of the USB drive. {% include note.html text="The download for this file will be available soon." %}</li>
+                  <li>Download and install the <a href="https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit" target="_blank">Windows Assessment and Deployment Kit</a> that matches the Windows 10 version you noted at the top of this page.</li>
+                  <li>Note the path where the kit is intalled. Normally, it is C:\Program Files (x86)\Windows Kits\10\. The Deployment Tools and Windows Preinstallation Environment features are required, the rest are optional.</li>
+                  <li>Create a USB Bootable WinPE image by following <a href="https://technet.microsoft.com/en-us/library/hh825109.aspx" target="_blank">these instructions</a>. When necessary, use the amd64 option.</li>
+                  <li>Download <a href="" target="_blank">JouleInstaller.zip</a> from the Intel website, unzip the file, and copy the JouleInstaller.cmd to the root of the USB drive you created in step 3. {% include note.html text="The download for this file will be available soon." %}</li>
                 </ol>
-                <p><img alt="USB flash drive contents" class="image-border" src="{{site.baseurl}}/Resources/images/SetupJoule/joule_USB_contents.JPG" /></p>
+                <!--<p><img alt="USB flash drive contents" class="image-border" src="{{site.baseurl}}/Resources/images/SetupJoule/joule_USB_contents.JPG" /></p>-->
             </div>
           </div>
         </section>
@@ -92,7 +79,7 @@
                     <p><img alt="windows installer for joule" class="image-border" src="{{site.baseurl}}/Resources/images/SetupJoule/joule_WindowsInstaller.JPG" /></p>
                     <p>The installer creates a new directory: C:\Program Files (x86)\Microsoft IoT\FFU\Broxton\ which contains the Joule image file "flash.ffu".</p>
                     <p><img alt="ffu for windows 10 iot core for joule" class="image-border" src="{{site.baseurl}}/Resources/images/SetupJoule/joule_FlashFile_FFU.JPG" /></p>
-                    <p>We will apply this FFU to the on-board eMMC on the next page.</p>
+                    <p>Copy flash.ffu to the WinPE USB drive you created in step 2 above. You will use this USB drive in the next step to install Windows IoT.</p>
                   </li>
                   <li>Eject the virtual CD-drive when done.</li>
                 </ol>
@@ -101,14 +88,59 @@
       </div>
     </div>
 
+    <div class="row">
+      <div class="col-xs-24">
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title"><span class="step">4</span>Install Windows IoT on Joule<span class="pull-right"><a id="configure-toggle" class="text-body toggle-button" onClick="hideDiv('configure')">Hide</a></span></h2>
+          </div>
+          <div class="section-body toggle-section" id="configure">
+            <div class="row">
+              <div class="col-xs-24 col-md-12">
+                <h4> What you need </h4>
+                  <p>
+                  <ul>
+                    <li>The USB drive you finished creating in step 3 above.
+                    <li>Joule Development Platform </li>
+                    <li>12V, 3A power adapter (power adapter must be Listed LPS or Class 2 output rated, 12Vdc, 3A minimum) with barrel jack for powering the expansion board. The barrel dimensions are 5.5mm outer diameter, and 2.1mm inner diameter. The barrel length is ~9-10mm. The plug is positive center.</li>
+                    <li>Micro HDMI cable and monitor </li>
+                    <li><b>POWERED</b> USB 3.0 hub. The development platform has only one Type A USB port. The Type B and C ports should not be used unless directed. </li>
+                    <li>USB keyboard and Mouse </li>
+                    <li>Other cords and peripherals as <a href="https://software.intel.com/en-us/getting-started-on-joule" target="_blank">documented by Intel.</a></li>
+                  </ul>
+                  </p>
+                <h4>Update the Joule firmware</h4>
+                  <ol class="setup-content-list">
+                    <li>Follow the process on <a href="https://software.intel.com/en-us/flashing-the-bios-on-joule" target="_blank">Intel's website</a> to download and install the latest firmware for Joule.</li>
+                    <li>If you haven't already, through the USB hub, connect the USB drive you created, attach a USB keyboard, and a USB mouse.</li>
+                    <li>After you've flashed the device, power it up. When you see the Intel logo splash screen, immediately press F2 to enter the firmware setup. If you miss the prompt, reboot and try again.</li>
+                    <li>Confirm the firmware has been updated. It should read GTPP120A.X64.0143.B30.1609121842</li>
+                    <li>From the firmware setup screen, go to Device Manager -> System Setup -> Boot and set "OS Selection" to Windows.</li>
+                    <li>Save the changes with F4 and allow the system to restart.</li>
+                    <li>Press F2 to enter the firmware again.</li>
+                    <li>From the firmware setup screen, Select Boot Manager -> EFI USB Device. Press Enter. The system will restart and boot WinPE from the USB drive.</li>
+                  </ol>
+                <h4>Install Windows IoT</h4>
+                  <ol class="setup-content-list">
+                    <li>When the system reboots, you will see the WinPE command prompt. Switch the WinPE promot to the USB drive. Normally, this is "C:" or "D:", but you may need to try other drive letters.</li>
+                    <li>Type: "JouleInstaller" to install the Flash.ffu file from the USB drive to the eMMC storage on Joule.</li>
+                    <li>When promoted, press any key to continue. This will take you the WinPE prompt.</li>
+                    <li>From the WinPE prompt, type: "wpeutil reboot"</li>
+                    <li>The system will boot to Windows 10 IoT Core, start the configuration process, and load the <a href="{{site.baseurl}}/{{page.lang}}/samples/iotdefaultapp.htm" target="_blank">default app</a>. You may remove the USB flash drive. You will no longer need it.</li>
+                  </ol>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
 
     <div class="row">
       <div class="col-xs-24">
         <section class="section">
           <div class="section-body">
             <p>
-              <span class="win-color-fg-green">Step 1 of 4: Get the tools is complete.</span>
-              Set up your device <span class="win-color-fg-secondary">is next.</span>
+              <span class="win-color-fg-green">Step 1 of 4: Windows IoT is installed.</span>
+              Setup your device <span class="win-color-fg-secondary">is next.</span>
             </p> 
             <div class="btn-group">
               <a href="GetStartedStep2.htm" class="btn btn-primary">Next</a>
