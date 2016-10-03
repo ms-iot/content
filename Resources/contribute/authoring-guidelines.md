@@ -22,11 +22,22 @@ When creating a new topic, or updating an exisitng one, there are a handful of t
   * Documentation: `content/en-US/Docs`
   * Samples: `content/en-US/Samples`
 
-  Please use upper camel case (e.g. BackgroundColor) when naming your files. 
+**File naming rules**
+  - Use upper camel case (e.g. BackgroundColor) when naming your files. Don't use hyphens or underscores in file names.
+  - Use descriptive keywords that add context, relevance, and are human readable.
+  - Do not use a trailing slash or special characters or spaces.
+  - Do not use more than 80 characters - this is a publishing system limit.
 
-  Try to be as descriptive as possible without making your titles too long (good descriptions makes everyone's life easier) 
-
-  For an image naming example, there is a "Noobs" folder for all the images used in the Noobs topics - it spans multiple articles but has a consolidated use.  If there isn't a folder that fits what your images are for, please create a new folder for your images.
+**Changing file names, moving files, and redirects**
+If you need to change a file name, be sure to:
+- Change the .md file name and permalink. The filename and permalink should always match.
+- Update the TOC.
+- Update any links to the changed page. Be sure to search the entire repo for references to the old page location that need to be updated.
+- When moving a file: Leave the existing file in it's old location, with the original permalink. Change the layout to "redirect" and delete all content under the metadata (section contained between ---) and place the following code in:
+  `{% include redirect.html url="/windows/iot/<newURL>" %}`
+This will create a client side redirect to the new page for any external links or bookmarks our users have. 
+- Add a line of text that says something like, "This page has been redirected to Topic Name." Use whatever text you like as long as the viewer is sent to the updated content. Removing the content and adding this message informs anyone who sees the old page in the repo/database that it's a redirected topic. When you commit your changes, add "Redirected page" or something similar in the commit changes title so that it's obvious in the file list that this is a redirected page.
+- Ideally, submit a single Pull Request (PR) that contains all of the above commit changes together. Once the PR is submitted, email the [IoT Docs Site Managers](mailto:IOT-WOD@microsoft.com) a mapping of the old urls to the new urls, so we can put a permanent server redirect in place to clean up search results. (For an example, see this [redirected Docs page](https://github.com/ms-iot/content/blob/develop/en-US/win10/Docs.md)).
 
 3. **Writing in markdown**
 
@@ -41,31 +52,16 @@ When creating a new topic, or updating an exisitng one, there are a handful of t
 
 4. **Misc guidelines**
 
-  * Use only one H1 (#) per topic
+  * Use only one H1 (#) per topic / file
     * Very important for SEO
   * H1 and title (in the metadata) should be the same
-    * (e.g. title: AllJoyn and # AllJoyn)
+    * (e.g. title: AllJoyn and `#AllJoyn`)
   * Fill out metadata
     * At the top of each file, you'll see a section starting and ending with "---" where metadata for that topic lives.  Fill this section with information pertaining to the topic you're working on.
 
 ## Best Practices
 
-### Renaming or moving files, how to redirect pages
-If you need to move or rename a file (or more specifically, the permalink - however the filename and permalink should always match) please follow these steps:
 
-1. Create new file at desired location, and copy all content in (be sure to update permalink etc. to what you want it to be).
-2. Leave the existing file in it's old location, with the old permalink
-3. Change the layout to "redirect" and delete all content under the metadata (section contained in ---) and place the following code in:
-
-  {% include redirect.html url="/windows/iot/<newURL>.htm" %}
-  
-  This will create a client side redirect to the new page for any external links or bookmarks our users have
-
-4. Search the entire repo for references to the old page, and update those to the new page
-5. Submit a single PR that contains all of the above changes together
-6. Once that is all done, email the Halcyon owners (Ivor and Stephen) a mapping of the old urls to the new urls, so we can put a permanent server redirect in place to clean up search results.
-
-  For an example, look under en-US/win10/Docs.md
 
 ### Do not check in binaries
 Once a binary is added to the repository, it will be there forever.
@@ -92,14 +88,12 @@ There is much more that goes into a well written article than you'd think! Below
 
 **Voice**
 
-Voice is, simply put, your writing style in terms of syntax, verbage, verbosity etc. When we're writing for the users of Windows IoT, we always try to present our information in a relatively unified voice. Try to keep the following in mind:
+Voice is, simply put, your writing style in terms of syntax, verbage, verbosity etc. When we're writing for the users of Windows IoT, we should align with the Windows Devices Group (WDG) [unified voice principles](https://worldready.cloudapp.net/StyleGuide/Read?id=2547). 
 
-* **Write in a supportive and informative way.** Try not to write in a way that could be interpreted as condescending - no one wants to feel belittled (even if unintentionally) when they're trying to learn something new.
-* **Elaborate on any non-obvious point.** Make sure you explain anything that some of your audience might not understand. It is much better to over explain something and let those who know it skim over it. We want everyone to feel included when using IoT Core.
-* **Maintain a single tense**. Usually we prefer present tense - this is rarely a concern in our docs.
-* **Keep a clear logical flow through your article.** If you must reference something that you don't explain until later, mention so. Lists are helpful to keep your article flow in line.
-* **Be as direct as possible.** Shorter, more direct sentences are the best. Give all the information the user needs, but try not to cover more than is needed to achieve their task. If needed, provide a link to a related topic and let the audience decide if they want to read about the other topic.
-* **Proof read.** Take a quick break from writing and review it with fresh eyes. You may find obvious mistakes that were not so obvious before.
+- **Warm and relaxed** We're natural. Less formal, more grounded in everyday conversations. Occasionally, we're fun (we know when to celebrate).
+- **Crisp and clear** We're to the point. We write for scanning first, reading second. We make it simple above all.
+- **Ready to lend a hand** We show customers we're on their side. We anticipate their real needs and offer great information at just the right time.
+Also, please remember to **proof read.** Take a quick break from writing and review it with fresh eyes. You may find obvious mistakes that were not so obvious before.
 
 **Title and headings** 
 
@@ -129,11 +123,12 @@ Example: To start PowerShell as an administrator, right-click **Windows PowerShe
   * The same thing can be done with `tip.html`, and `warning.html`
 
 **Links and cross-references**
-* When you add a cross-reference, use this syntax: **For more information about X, see Y.**
-Example: For a list of commands and utilities that you can use with PowerShell, see the [Command Line Utils]() page.
+* When you add a cross-reference, use this syntax: `For more information about *Foo*, see *Bar*.`
+*Example:* "For a list of commands and utilities that you can use with PowerShell, see the [Command Line Utils]() page."
 * **Format links** using the display name, not the URL, between the brackets: `[Display Name](URL)`.
 * **Do not say, “Click here” or “Go here.”** Use the title of the page you’re pointing to.
 * **Remove "en-us"** from TechNet and MSDN URLs (try them first). 
+* **Remove ".htm"** from the any URL links. Do not use `https://developer.microsoft.com/en-us/windows/iot/docs/buildingappsforiotcore.htm`, instead use `https://developer.microsoft.com/en-us/windows/iot/docs/buildingappsforiotcore`. 
 * **Add a "Related topics"** section (for topics in your repo) or "See also" or "Additional resources" section (for topics outside your repo) at the end of the page that at a minimum links back to your parent topic (to help users navigate).
 
 **Images**
