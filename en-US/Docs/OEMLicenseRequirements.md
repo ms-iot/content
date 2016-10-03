@@ -9,12 +9,27 @@ lang: en-US
 
 # OEM license requirements
 
-As part of signing the Windows 10 IoT Core OEM license agreement, you are required to meet these system requirements for the Windows 10 IoTCore device.
+The process of licensing Windows 10 IoTCore product and the OEM license agreement is provided at [Windows 10 IoT Core Commercialization](https://www.windowsforiotdevices.com/).
+
+As  part of signing the Windows 10 IoT Core OEM license agreement, you are required to meet these system requirements for the Windows 10 IoTCore device.
 
 ## SMBIOS Support
 ___
 
-System firmware should implement the support for SMBIOS that complies with the [SMBIOS Specification](https://msdn.microsoft.com/library/windows/hardware/dn932824(v=vs.85).aspx#system_fundamentals_smbios_smbiosspecification).
+The system firmware must implement support for SMBIOS that complies with System Management BIOS Reference Specification, Version 2.4 or later. The SMBIOS implementation must follow all conventions and include all required structures and fields as indicated in the SMBIOS Specification, Section 3.2, and follow all conformance requirements as indicated in Section 4. Bit 2 in the BIOS Characteristics Extension Byte 2 field must be set (Section 3.3.1.2.2 of the specification). The length of the Type 1 (System Information) table must be at least 1Bh bytes (includes SKU Number and Family fields from Version 2.4 of the specification).
+
+The following are the minimum required fields in SMBIOS for IoTCore 
+
+* (Table 1, offset 04h) System Manufacturer
+* (Table 1, offset 05h) System Product Name
+* (Table 1, offset 19h) System SKU
+* (Table 1, offset 1Bh) System Family
+
+These fields gain prominence as fields which will be used for identifying unique system configurations for telemetry and servicing. The Manufacturer, Product Name, SKU Number and Family fields must not be longer than 64 characters in length. Avoid leading or trailing spaces or other invisible characters.
+
+Design Notes: SKU Number has been moved to a required field in order to improve telemetry reporting. We encourage the OEM to be careful to fill in Manufacturer consistently and to fill in SKU Number with a value that can identify what the OEM considers a unique system configuration for telemetry and servicing.
+
+See [SMBIOS Specification](https://msdn.microsoft.com/library/windows/hardware/dn932824(v=vs.85).aspx#system_fundamentals_smbios_smbiosspecification) for more information.
 
 {% include note.html text="If you are re-using the BIOS/Firmware/UEFI, make sure make sure to update the entries." %}
 
@@ -22,63 +37,4 @@ System firmware should implement the support for SMBIOS that complies with the [
 ## Compliance with minimum hardware requirements
 ___
 
-Review the IoTCore sections of [Minimum hardware requirements](https://msdn.microsoft.com/en-us/library/windows/hardware/dn915086(v=vs.85).aspx)
-
-## Board Support Package (BSP) information
-___
-
-The following information is recommended to be updated on every BSP update, to enable proper telemetry reporting.
-
-* **BSP Version** : Create and update the following registry keys on the device that represents the current installed BSP package version.
-
-        HKLM\SYSTEM\Platform\DeviceTargetingInfo\PhoneFirmwareRevision
-        HKLM\SYSTEM\Platform\DeviceTargetingInfo\OneCoreFwV 
-		
-In addition to this, OEM may also provide the following information to be stored in the OS registry ( in addition to the FW provided above)
-
-* **Manufacturer Name** : Create the following registry keys on the device to store the Manufacturer Name.
-
-        HKLM\SYSTEM\Platform\DeviceTargetingInfo\PhoneManufacturer
-        HKLM\SYSTEM\Platform\DeviceTargetingInfo\OneCoreManufacturer
-
-* **Model Name** : Create the following registry keys on the device to store the Model Name - this can be a concatenated string of Product Name and SKU.
-
-        HKLM\SYSTEM\Platform\DeviceTargetingInfo\PhoneFirmwareRevision
-		HKLM\SYSTEM\Platform\DeviceTargetingInfo\OneCoreManufacturerModelName 
-
-### 1. Steps to add this info to image
-
-* Edit the sample package definition file provided below with the appropriate values
-{% highlight XML %}
-<?xml version="1.0" encoding="utf-8"?>
-<Package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-         Owner="$(OEMNAME)" Component="BSP" SubComponent="DeviceInfo"
-         OwnerType="OEM" ReleaseType="Production" Platform="Any"
-         xmlns="urn:Microsoft.WindowsPhone/PackageSchema.v8.00">
-  <Components>
-    <OSComponent>
-        <RegKeys>
-            <RegKey KeyName="$(hklm.system)\Platform\DeviceInfo">
-                <RegValue Name="OneCoreManufacturer" Type="REG_SZ"
-                    Value="Contoso"/>
-                <RegValue Name="OneCoreManufacturerModelName" Type="REG_SZ"
-                    Value="ProductA SKU1"/>
-                <RegValue Name="OneCoreFwV" Type="REG_SZ"
-                    Value="10.0.1.0"/>
-                <RegValue Name="PhoneManufacturer" Type="REG_SZ"
-                    Value="Contoso"/>
-                <RegValue Name="PhoneManufacturerModelName" Type="REG_SZ"
-                    Value="ProductA SKU1"/>
-                <RegValue Name="PhoneFirmwareRevision" Type="REG_SZ"
-                    Value="10.0.1.0"/>
-            </RegKey>
-         </RegKeys> 
-    </OSComponent>
-  </Components>
-</Package>
-{% endhighlight %}
-
-* Create the package using `buildpkg.cmd` 
-* Include this package in the image creation, see [Windows 10 IoT Core manufacturing guide](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/iot/iot-core-manufacturing-guide) for instructions.
-
+Review the IoTCore sections of [Minimum hardware requirements](https://msdn.microsoft.com/library/windows/hardware/dn915086(v=vs.85).aspx)
