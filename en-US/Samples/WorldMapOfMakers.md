@@ -10,7 +10,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 <div class="row">
   <div class="col-xs-24">
     <ol class="breadcrumb">
-      <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit.htm">Overview of Starter Pack</a></li>
+      <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit">Overview of Starter Pack</a></li>
       <li class="active">World Map of Makers</li>
     </ol>
     <header class="page-title-header remove-top-margin">
@@ -44,6 +44,6 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi 2
 </div>
 <div class="row lineTop">
   <div class="col-md-12 col-md-offset-12 col-xs-24 text-right">
-    <h2 class="thin-header">...or <a href="{{site.baseurl}}/{{page.lang}}/Samples/BrightOrNot.htm"> continue to the next project.</a></h2>
+    <h2 class="thin-header">...or <a href="{{site.baseurl}}/{{page.lang}}/Samples/BrightOrNot"> continue to the next project.</a></h2>
   </div>
 </div>

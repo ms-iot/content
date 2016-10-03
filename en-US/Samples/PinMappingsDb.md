@@ -5,4 +5,4 @@ permalink: /en-US/Samples/PinMappingsDb.htm
 lang: en-US
 ---
 
-{% include redirect.html url="/windows/iot/Docs/PinMappingsDb.htm" %}
+{% include redirect.html url="/windows/iot/Docs/PinMappingsDb" %}

@@ -23,7 +23,7 @@ You can use Windows file sharing to transfer files to and from your device.
 * Now you can access the files on your device using Windows file sharing.
 
 ## Starting and stopping the file sharing server
-* Connect to your device through [PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm) or [SSH]({{site.baseurl}}/{{page.lang}}/Samples/SSH.htm).
+* Connect to your device through [PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell) or [SSH]({{site.baseurl}}/{{page.lang}}/Samples/SSH).
 * By default the file sharing  server is started when the device is booted.
 * To stop the file sharing  server, type `net stop Server /y`
 * To start the file sharing  server, type `net start Server`
@@ -31,7 +31,7 @@ You can use Windows file sharing to transfer files to and from your device.
     ![Server start and stop]({{site.baseurl}}/Resources/images/smb/smb_start_stop.png)
     
 ## Disabling and enabling the file sharing server on startup
-* Connect to your device through [PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell.htm) or [SSH]({{site.baseurl}}/{{page.lang}}/Samples/SSH.htm).
+* Connect to your device through [PowerShell]({{site.baseurl}}/{{page.lang}}/Samples/PowerShell) or [SSH]({{site.baseurl}}/{{page.lang}}/Samples/SSH).
 * By default the file sharing  server is started when the device is booted.
 * To disable the file sharing  server so that it does not start when the device starts, type `reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\lanmanserver /v Start /t REG_DWORD /d 0x3 /f`
 * To enable the file sharing  server so that starts when the device starts, type `reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\lanmanserver /v Start /t REG_DWORD /d 0x2 /f`

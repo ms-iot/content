@@ -13,7 +13,7 @@ In this sample, we will create and deploy the proverbial 1st app, "Hello, world!
 
 ### Set up your PC
 
-* Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) to setup your device and PC.
+* Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/GetStarted) to setup your device and PC.
 
 * Install Python for Windows (3.*) from [http://www.python.org/downloads](http://www.python.org/downloads){:target="_blank"}
 
@@ -37,7 +37,7 @@ print("Hello, World from IoT!")
 
 * Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm#python).
 
-	**NOTE: For now, use device name in lieu of IP address.  If the device name is not unique, use `setcomputername` tool on the device to reset the device name and reboot.  Documentation for this can be found [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm)**
+	**NOTE: For now, use device name in lieu of IP address.  If the device name is not unique, use `setcomputername` tool on the device to reset the device name and reboot.  Documentation for this can be found [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell)**
 
 * The Python app will deploy and start on the device.
 
@@ -67,4 +67,4 @@ print("Hello, World from IoT!")
 
 ### Questions/Suggestions
 
-Please refer to the [FAQ]({{site.baseurl}}/{{page.lang}}/Support/Faqs.htm) for issues.
+Please refer to the [FAQ]({{site.baseurl}}/{{page.lang}}/Support/Faqs) for issues.

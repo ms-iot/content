@@ -14,7 +14,7 @@ lang: en-US
 We'll connect an SPI accelerometer to your Raspberry Pi 2 or 3, MinnowBoard Max, or DragonBoard 410c and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of SPI is needed.
 However, if you're curious, SparkFun provides a great [tutorial on SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}.
 
-This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm).
+This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode).
 
 ### Load the project in Visual Studio
 
@@ -34,7 +34,7 @@ Visit the **Raspberry Pi 2 or 3/MinnowBoard Max** sections below depending on wh
 
 #### Raspberry Pi 2 or 3
 If you have a Raspberry Pi 2 or 3, we need to hook up power, ground, and the SPI lines to the accelerometer.
- See the [Raspberry Pi 2 and 3 pin mapping page]({{site.baseurl}}/{{page.lang}}/Samples/PinMappingsRPi2.htm) for more details on the RPi2 and RPi3 IO pins.
+ See the [Raspberry Pi 2 and 3 pin mapping page]({{site.baseurl}}/{{page.lang}}/Samples/PinMappingsRPi2) for more details on the RPi2 and RPi3 IO pins.
 
 **Note: Make sure to power off the RPi2 or RPi3 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
 
@@ -61,7 +61,7 @@ Here are the schematics:
 
 #### MinnowBoard Max
 If you have a MinnowBoard Max, we need to hook up power, ground, and the SPI lines to the accelerometer.
- See the [MBM pin mapping page]({{site.baseurl}}/{{page.lang}}/Samples/PinMappingsMBM.htm) for more details on the MBM IO pins.
+ See the [MBM pin mapping page]({{site.baseurl}}/{{page.lang}}/Samples/PinMappingsMBM) for more details on the MBM IO pins.
 
 **Note: Make sure to power off the MBM when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
 

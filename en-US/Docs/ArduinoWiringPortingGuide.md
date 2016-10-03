@@ -27,7 +27,7 @@ Arduino Wiring sketches and libraries can be copy/pasted into an Arduino Wiring 
 - <a href="#sdk_upgrade">Upgrade your project to the latest Lightning SDK</a>
 
 ### Missing something else?
-Need more information on [Setting up Arduino Wiring in Visual Studio]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide.htm)?
+Need more information on [Setting up Arduino Wiring in Visual Studio]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide)?
 
 
 ## Porting

@@ -11,7 +11,7 @@ lang: en-US
 
 This sample demonstrates how to communicate with SPI bus controllers using the Micorosot.IoT.Providers.Lightning.SpiProvider
 
-It's based on the SPI Display sample shared on [SPI Display sample]({{site.baseurl}}/{{page.lang}}/Samples/SPIDisplay.htm). And shares the same setup steps and most of the code. The only difference is setting the Lightning provider as the default controllers provider.
+It's based on the SPI Display sample shared on [SPI Display sample]({{site.baseurl}}/{{page.lang}}/Samples/SPIDisplay). And shares the same setup steps and most of the code. The only difference is setting the Lightning provider as the default controllers provider.
 
 ### Using Lightning Provider
 
@@ -129,21 +129,21 @@ private async Task InitGpio()
 
 ### Building and deploying the sample
 
-1. Enable Lightning on your Raspberry Pi2 or MBM device using the the steps outlined in the [Lightning Setup Guide]({{site.baseurl}}/{{page.lang}}/Docs/LightningSetup.htm).
+1. Enable Lightning on your Raspberry Pi2 or MBM device using the the steps outlined in the [Lightning Setup Guide]({{site.baseurl}}/{{page.lang}}/Docs/LightningSetup).
 
 1. Ensure the correct version of the Windows SDK is installed on your development machine. The required Windows SDK can be installed from [here](https://dev.windows.com/en-us/downloads/windows-10-developer-preview).
 
 1. Clone the source for the SPI Display sample for Lightning from [Github](https://github.com/ms-iot/BusProviders/tree/develop/Microsoft.IoT.Lightning.Providers) to a local folder.
 
-1. To setup the connections between the device and the SPI display, refer to the [original SPI Display sample page]({{site.baseurl}}/{{page.lang}}/Samples/SPIDisplay.htm).
+1. To setup the connections between the device and the SPI display, refer to the [original SPI Display sample page]({{site.baseurl}}/{{page.lang}}/Samples/SPIDisplay).
 
 1. Load the solution in Visual Studio.
 
 1. Build the app.
 
 1. Deploy and run the app on your device.<br/>
-   You can use the [Deploying an App with Visual Studio]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm) for guidance.
+   You can use the [Deploying an App with Visual Studio]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment) for guidance.
 
-1. Same as the original [SPI Display sample]({{site.baseurl}}/{{page.lang}}/Samples/SPIDisplay.htm), you can now send text to the SPI display when you enter it using a keyboard attached to the device running the app.
+1. Same as the original [SPI Display sample]({{site.baseurl}}/{{page.lang}}/Samples/SPIDisplay), you can now send text to the SPI display when you enter it using a keyboard attached to the device running the app.
 
 ![SPI running]({{site.baseurl}}/Resources/images/SPIDisplay/spidisplay_screenshot.png)

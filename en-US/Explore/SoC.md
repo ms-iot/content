@@ -11,13 +11,13 @@ lang: en-US
     <a href="https://developer.microsoft.com/en-us/windows/iot">IoT Home</a>
   </li>
   <li>
-    <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
+    <a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Get Started</a>
   </li>
   <li class="active">SoC Options</li>
 </ol>
 <h1 class="page-title">Microsoft enabled SoCs</h1>
 
-<p>Microsoft works alongside Broadcom, Intel, and Qualcomm to verify support for Windows 10 IoT Core on several of the silicon vendors' System on Chips (SoC). These IoT Core powered SoCs are used in hundreds of different devices that you can use to prototype and commercialize your idea with. Learn more about the SoC families that are enabled or find the <a href="{{site.baseurl}}/{{page.lang}}/Explore/DeviceOptions.htm">perfect device</a> to make your idea a reality.</p>
+<p>Microsoft works alongside Broadcom, Intel, and Qualcomm to verify support for Windows 10 IoT Core on several of the silicon vendors' System on Chips (SoC). These IoT Core powered SoCs are used in hundreds of different devices that you can use to prototype and commercialize your idea with. Learn more about the SoC families that are enabled or find the <a href="{{site.baseurl}}/{{page.lang}}/Explore/DeviceOptions">perfect device</a> to make your idea a reality.</p>
 <table class="table table-striped maker-kit">
     <tr></tr>
     <tr>

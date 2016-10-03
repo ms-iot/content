@@ -44,7 +44,7 @@ Documentation for each API can be found on the Cognitive Services [website](http
 
 All Cognitive Services APIs can be implemented on any hardware platform using C# or Python.
 
-Want to run Cognitive Services on your IoT Device? Visit our [tutorial]({{site.baseurl}}/{{page.lang}}/Samples/CognitiveServices.htm) to get started.
+Want to run Cognitive Services on your IoT Device? Visit our [tutorial]({{site.baseurl}}/{{page.lang}}/Samples/CognitiveServices) to get started.
 
 ### OpenCV
 
@@ -68,7 +68,7 @@ This is currently a work in progress, so keep checking WindowsOnDevices.com for 
 
 In the meantime, to build the library from source for ARM, visit the [GitHub repository](https://github.com/Microsoft/opencv/tree/vs2015-samples-ARM).
 
-Want to run OpenCV on your IoT Core device? Visit our [tutorial]({{site.baseurl}}/{{page.lang}}/Samples/OpenCV.htm) to get started.
+Want to run OpenCV on your IoT Core device? Visit our [tutorial]({{site.baseurl}}/{{page.lang}}/Samples/OpenCV) to get started.
 
 ## Comparing OpenCV and Cognitive Services
 
@@ -157,11 +157,11 @@ Want to run OpenCV on your IoT Core device? Visit our [tutorial]({{site.baseurl}
         Links
       </td>
       <td>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/Samples/CognitiveServices.htm">Sample Program</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/Samples/CognitiveServices">Sample Program</a></p>
         <p><a href="https://www.microsoft.com/cognitive-services">Cognitive Services Website</a></p>
       </td>
       <td>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/Samples/OpenCV.htm">Sample Program</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/Samples/OpenCV">Sample Program</a></p>
         <p><a href="http://opencv.org/">OpenCV Website</a></p>
       </td>
     </tr>

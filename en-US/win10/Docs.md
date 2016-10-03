@@ -6,4 +6,4 @@ permalink: /en-US/win10/Docs.htm
 lang: en-US
 ---
 
-{% include redirect.html url="/windows/iot/Docs.htm" %}
+{% include redirect.html url="/windows/iot/Docs" %}

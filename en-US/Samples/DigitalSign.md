@@ -14,7 +14,7 @@ lang: en-US
 
 This sample showcases a Digital Sign UWP running on Windows IoT Core. Here we will demonstrate how the app receives content in different multimedia forms - e.g. video, audio, image, slideshow - from an XML file stored online and displays this content to the user. The digital sign in this sample is interactive and allows web browsing as well as allowing for touch input. 
 
-This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm).
+This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode).
 
 ### Prerequisites
 
@@ -28,7 +28,7 @@ This is a headed sample.  To better understand what headed mode is and how to co
 
 You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\DigitalSignageUAP`.  Make a copy of the DigitalSignageUAP folder on your disk and open the project from Visual Studio.
 
-Make sure you set the 'Remote Debugging' setting to point to your Windows IoT device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloWorld.htm) if you need guidance.
+Make sure you set the 'Remote Debugging' setting to point to your Windows IoT device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloWorld) if you need guidance.
 
 ## Deploy your app
 

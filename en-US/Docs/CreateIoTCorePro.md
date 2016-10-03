@@ -18,7 +18,7 @@ Here are the steps involved in creating Windows 10 IoT Core Pro device
 * Create a Provisioning Package with Update Control File.
 * Apply the provisioning package to the device
 
-To begin, setup your develop PC by following the steps in [Step 1: Get set up]({{site.baseurl}}/{{page.lang}}/Docs/InstallPackage.htm).
+To begin, setup your develop PC by following the steps in [Step 1: Get set up]({{site.baseurl}}/{{page.lang}}/Docs/InstallPackage).
 
 
 ## Step 1: Get the Windows 10 IoT Core Pro Update Control file 
@@ -93,7 +93,7 @@ There are two ways to deploy the provisioning package to the device.
 
 ### Deploying at runtime
 
-* Connect to the device ( [using SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH.htm) or [using Powershell]({{site.baseurl}}/{{page.lang}}/Docs/powershell.htm) )
+* Connect to the device ( [using SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH) or [using Powershell]({{site.baseurl}}/{{page.lang}}/Docs/powershell) )
 * Copy the provisioning package (say `ProSKU.ppkg`) to `C:\OemInstall\` folder
 * Call `provtool ProSKU.ppkg` to provision the device with this provisioning package.
 

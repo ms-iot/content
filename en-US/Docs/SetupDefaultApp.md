@@ -23,7 +23,7 @@ You can click on **Set as Default App** link next to the app.
 
 Steps to set the default app using the shell 
 
-1. Connect to the device via [Powershell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm)
+1. Connect to the device via [Powershell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell)
 
 2. List the applications installed using `iotstartup list`
 
@@ -36,7 +36,7 @@ For large deployments, you can follow one of the below options
 
 ### Using install script
 When you deploy your app using the update package, you can set the launchapp variable (`set launchapp=1`) in the AppxConfig.cmd.
-See [App Installer]({{site.baseurl}}/{{page.lang}}/Samples/AppInstaller.htm) for more details.
+See [App Installer]({{site.baseurl}}/{{page.lang}}/Samples/AppInstaller) for more details.
 
 ### Using provisioning package
 You can specify the LaunchAppAtLogin setting in the ICD during the provisioning package creation.

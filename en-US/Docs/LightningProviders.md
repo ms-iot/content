@@ -11,9 +11,9 @@ Microsoft.IoT.Lightning.Providers library contains a set of providers to interfa
 
 ## About the direct memory mapped driver (DMAP)
 
-The DMAP driver is an in-developement driver that provides GPIO performance improvements over the default inbox driver. to lean more about these performance improvements visit the [Lightning Performance Testing](LightningPerformance.htm) page.
+The DMAP driver is an in-developement driver that provides GPIO performance improvements over the default inbox driver. to lean more about these performance improvements visit the [Lightning Performance Testing](LightningPerformance) page.
 
-While DMAP driver offer GPIO performance improvements over the Inbox driver, controller commands are sent to the DMAP driver through user-mode memory mapped addresses for each of the controllers. An app that only uses the Lightning provider APIs, Microsoft.IoT.Lightning.Providers.*, or an [Arduino Wiring sketch]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiring.htm) will be safe to use. However, a malicious app would be able to write directly to that memory and cause hardware/security issues. On a machine with only trusted apps, the DMAP is generally safe to use.   
+While DMAP driver offer GPIO performance improvements over the Inbox driver, controller commands are sent to the DMAP driver through user-mode memory mapped addresses for each of the controllers. An app that only uses the Lightning provider APIs, Microsoft.IoT.Lightning.Providers.*, or an [Arduino Wiring sketch]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiring) will be safe to use. However, a malicious app would be able to write directly to that memory and cause hardware/security issues. On a machine with only trusted apps, the DMAP is generally safe to use.   
 
 ## Obtaining the library
 
@@ -28,7 +28,7 @@ A quick way to start coding using the Lightning providers is to start with one o
 
 Each of the samples references the Lightning SDK and is configured properly to use the Lightning providers library.
 
-**Note**, To run the samples, the DMAP driver need to be enabled using the Windows Devices Web Portal. Refer to the [Lightning Setup Guide]({{site.baseurl}}/{{page.lang}}/Docs/LightningSetup.htm) for detailed information on how to enable it.
+**Note**, To run the samples, the DMAP driver need to be enabled using the Windows Devices Web Portal. Refer to the [Lightning Setup Guide]({{site.baseurl}}/{{page.lang}}/Docs/LightningSetup) for detailed information on how to enable it.
 
 ### Option 2: Referencing the library
 
@@ -141,13 +141,13 @@ if (LightningProvider.IsLightningEnabled)
 
 The following samples demonstrate using the Lightning providers with supported bus types:
 
-* [Blinky (UI) with Lightning Provider]({{site.baseurl}}/{{page.lang}}/samples/HelloBlinkyLightning.htm) demonstrates GPIO with Lightning Provider in a foreground application
+* [Blinky (UI) with Lightning Provider]({{site.baseurl}}/{{page.lang}}/samples/HelloBlinkyLightning) demonstrates GPIO with Lightning Provider in a foreground application
 
-* [BlinkyHeadless with Lightning Provider]({{site.baseurl}}/{{page.lang}}/Samples/BlinkyHeadlessLightning.htm) demonstrates GPIO with Lightning Provider in a headless application
+* [BlinkyHeadless with Lightning Provider]({{site.baseurl}}/{{page.lang}}/Samples/BlinkyHeadlessLightning) demonstrates GPIO with Lightning Provider in a headless application
 
-* [SPIDisplay with Lightning Provider]({{site.baseurl}}/{{page.lang}}/Samples/SPIDisplayLightning.htm) demonstrates the usage of the API to control a device using SPI with Lightning Provider
+* [SPIDisplay with Lightning Provider]({{site.baseurl}}/{{page.lang}}/Samples/SPIDisplayLightning) demonstrates the usage of the API to control a device using SPI with Lightning Provider
 
-* [WeatherStation with Lightning Provider]({{site.baseurl}}/{{page.lang}}/Samples/WeatherStationLightning.htm) demonstrates interacting with a device using I2C with Lightning Provider
+* [WeatherStation with Lightning Provider]({{site.baseurl}}/{{page.lang}}/Samples/WeatherStationLightning) demonstrates interacting with a device using I2C with Lightning Provider
 
 ## Build Requirements
 
@@ -157,7 +157,7 @@ The following samples demonstrate using the Lightning providers with supported b
 
 Windows SDK required for building and using the library is 10.0.10586.0 or higher which can be downloaded from [here](https://dev.windows.com/en-US/downloads/windows-10-sdk).
 
-For more information on obtaining and setting up the required Windows SDK and other tools, refer to [Setting up your PC Guide]({{site.baseurl}}/{{page.lang}}/Docs/SetupPCRPI.htm).
+For more information on obtaining and setting up the required Windows SDK and other tools, refer to [Setting up your PC Guide]({{site.baseurl}}/{{page.lang}}/Docs/SetupPCRPI).
 
 ### Nuget Package Dependencies
 
@@ -181,13 +181,13 @@ In order to install prerelease (current) version of Microsoft.IoT.Lightning Nuge
 
 ### Windows IoT Core Fall Update required
 Lightning providers support is currently included in the Fall Update builds for Windows IoT Core.
-You can download a Windows 10 IoT Core image from our [downloads page]({{site.baseurl}}/{{page.lang}}/Downloads.htm ). Click on "Download Insider Preview" for your device type.
+You can download a Windows 10 IoT Core image from our [downloads page]({{site.baseurl}}/{{page.lang}}/Downloads). Click on "Download Insider Preview" for your device type.
 
 ### Direct Memory Mapped driver must be enabled
  
 The APIs in the Lightning Provider library require the Lightning Direct Memory Mapped driver to be enabled on the target device. Both Raspberry Pi 2/3 and MinnowBoard Max have the driver available, but not enabled by default.
 
-The driver can be enabled using the Windows Devices Web Portal. Refer to the [Lightning Setup Guide]({{site.baseurl}}/{{page.lang}}/Docs/LightningSetup.htm) for detailed information on how to enable the Lightning driver.
+The driver can be enabled using the Windows Devices Web Portal. Refer to the [Lightning Setup Guide]({{site.baseurl}}/{{page.lang}}/Docs/LightningSetup) for detailed information on how to enable the Lightning driver.
 
 ![Devices Page]({{site.baseurl}}/Resources/images/Lightning/dmap4.png)
 
