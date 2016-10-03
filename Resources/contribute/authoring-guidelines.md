@@ -135,8 +135,6 @@ Example: To start PowerShell as an administrator, right-click **Windows PowerShe
 * **Resize your images** if they appear too big on stage or live.
 * **Limit the number of your images** to only those you absolutely need to guide the user. Each image adds to page load time.
 
-For more information, see the Windows Open Publishing Guide at http://aka.ms/windows-op-guide.
-
 **SEO and Metadata**
 Good metadata is an important factor in achieving good search results. The metadata for your .md markdown file should be located in a YAML block header at the top of the file.
 ```
@@ -151,7 +149,7 @@ lang: en-US
 ```
 
 Each topic, or markdown file, should have the properties, or metadata fields, listed above. The `title` and `description` fields are what appear in search results, so they should contain relevant keywords to help users find your content. 
-  - **layout** Defines the page structure. Layout options can be found in the [`_layouts`](./_layouts) folder.
+  - **layout** Defines the page structure. Layout options can be found in the [`_layouts`](../../_layouts) folder.
   - **`title`** Usually the same as your topic title (H1); however, the two can be different if you'd like to add additional keywords here to aid in search. 
     - Be concise, descriptive, and include the relevant target keywords. 
     - Use sentence-case capitalization. 
@@ -176,6 +174,7 @@ The YAML block renders into a table in markdown preview that you can view on the
 - For the H1 (not in YAML block), only include the page title. Do not include metadata values (such as `msassetid`).
 - The H1 must follow the YAML block with no other text between them; otherwise, the page may not render properly.
 
+For more information, see the Windows Open Publishing Guide at http://aka.ms/windows-op-guide.
 
 ### References
 
