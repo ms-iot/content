@@ -12,7 +12,7 @@ lang: en-US
 
 This sample demonstrates how to communicate with an I2c device using the Micorosot.IoT.Providers.Lightning.I2cProvider.
 
-It is based on the Weather Station sample discussed [here](https://developer.microsoft.com/en-us/windows/iot/samples/arduino-wiring/weatherstation) and shares the same setup steps and most of the code. 
+It is based on the Weather Station sample discussed [here]({{site.baseurl}}/{{page.lang}}/samples/arduino-wiring/WeatherStation.htm) and shares the same setup steps and most of the code. 
 
 ### Using Default Provider
 
@@ -78,7 +78,7 @@ public async void Run(IBackgroundTaskInstance taskInstance)
 
 1. Clone the source for the WeatherStation sample for Lightning from [Github](https://github.com/ms-iot/BusProviders/tree/develop/Microsoft.IoT.Lightning.Providers) to a local folder.
 
-1. To setup the connections between the device and the weather shield, refer to the original [sample](https://developer.microsoft.com/en-us/windows/iot/samples/arduino-wiring/weatherstation).
+1. To setup the connections between the device and the weather shield, refer to the original [sample]({{site.baseurl}}/{{page.lang}}/samples/arduino-wiring/WeatherStation.htm).
 
 1. Load the solution in Visual Studio.
 
