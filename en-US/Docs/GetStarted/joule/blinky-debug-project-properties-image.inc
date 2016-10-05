@@ -1,0 +1,1 @@
+<p><img alt="Project Properties Debug Tab" src="{{site.baseurl}}/Resources/images/AppDeployment/cs-debug-project-properties-x64.PNG"></p>
