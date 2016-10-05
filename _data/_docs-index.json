@@ -218,6 +218,10 @@
             "link":"/Docs/CreateIoTCorePro.htm"
           },
           {
+            "title":"OEM license requirements",
+            "link":"/Docs/OEMLicenseRequirements.htm"
+          },		  
+          {
             "title":"Managing IoT Core Devices",
             "link":"/Docs/Management.htm"
           },
