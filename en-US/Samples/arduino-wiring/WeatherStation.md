@@ -44,54 +44,70 @@ _______
 
         GPIO6--------(blue)-------D7 
     
+  <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+	  height: 100%;
+      margin: auto;
+  }
+  </style>
  <div class="container-fluid">
-    <div id="carousel" data-interval="false" class="carousel slide" data-ride="carousel">
+    <div id="my-carousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
-        <li data-target="#carousel" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel" data-slide-to="1"></li>
-        <li data-target="#carousel" data-slide-to="2"></li>
-        <li data-target="#carousel" data-slide-to="3"></li>
-        <li data-target="#carousel" data-slide-to="4"></li>
+        <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#my-carousel" data-slide-to="1"></li>
+        <li data-target="#my-carousel" data-slide-to="2"></li>
+        <li data-target="#my-carousel" data-slide-to="3"></li>
+        <li data-target="#my-carousel" data-slide-to="4"></li>
       </ol>
 
       <div class="carousel-inner" role="listbox">
 		<div class="item active">
-			<img src="{{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png">       
-		 </div>
+			<img src="{{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png"> 
+			<div class="carousel-caption">
+			Raspberry Pi 2 Pinout Diagram
+			</div>      
+		</div>
+
         <div class="item">
-          <img src="{{site.baseurl}}/Resources/images/Lightning/Wiring_RasPi2_inside.jpeg">
-			  <div class="carousel-caption">
-				Raspberry Pi 2 or 3 Wiring Diagram (Inside)
-			  </div>
+           <img src="{{site.baseurl}}/Resources/images/Lightning/Wiring_RasPi2_inside.jpeg">
+			<div class="carousel-caption">
+			Raspberry Pi 2 or 3 Wiring Diagram (Inside)
+			</div>
         </div>
+
         <div class="item">
-          <img src="{{site.baseurl}}/Resources/images/Lightning/Wiring_RasPi2_outside.jpeg">
-			  <div class="carousel-caption ">
-				Raspberry Pi 2 or 3 Wiring Diagram (Outside)
-			  </div>
+           <img src="{{site.baseurl}}/Resources/images/Lightning/Wiring_RasPi2_outside.jpeg">
+			<div class="carousel-caption">
+			Raspberry Pi 2 or 3 Wiring Diagram (Outside)
+			</div>
         </div>
-        <div class="item">
+        
+		<div class="item">
           <img src="{{site.baseurl}}/Resources/images/Lightning/Wiring_WeatherShield_LeftRail.jpeg" >
           <div class="carousel-caption">
             Weather Shield (Light Rail)
           </div>
         </div>
-        <div class="item">
+        
+		<div class="item">
           <img src="{{site.baseurl}}/Resources/images/Lightning/Wiring_WeatherShield_RightRail.jpeg" >
-          <div class="carousel-caption ">
+          <div class="carousel-caption">
             Weather Shield (Right Rail)
           </div>
         </div>
       </div>
 
-      <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+      <a class="left carousel-control" href="#my-carousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+      <a class="right carousel-control" href="#my-carousel" role="button" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
+
     </div>
   </div>
 
