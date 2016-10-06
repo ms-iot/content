@@ -46,28 +46,19 @@
       <div class="col-xs-24">
         <section class="section">
           <div class="section-header">
-            <h2 class="section-title"><span class="step">2</span>Connect the LED to your Windows IoT device<span class="pull-right"><a id="connect-LED-toggle" class="text-body toggle-button" onClick="hideDiv('connect-LED')">Hide</a></span></h2>
+            <h2 class="section-title"><span class="step">2</span>Control an LED on Joule with Windows IoT<span class="pull-right"><a id="connect-LED-toggle" class="text-body toggle-button" onClick="hideDiv('connect-LED')">Hide</a></span></h2>
           </div>
           <div class="section-body toggle-section" id="connect-LED">
             <div class="row">
               <div class="col-xs-24 col-md-12">
-                <p>You'll need a few components:</p>
-                <ul>
-                  <li>a LED (any color you like)</li>
-                  <li>a {% include_relative blinky-resistor.inc %} &#x2126; resistor</li>
-                  <li>a breadboard and a couple of connector wires</li>
-                </ul>
+                  <p>Set the LED_PIN variable in the file titled _MainPage.xaml.cs_ in the sample code.</p>
+                  {% highlight C# %}
+                  private const int LED_PIN = 1;
+                  {% endhighlight %}
+                  <p>Becasue we are using a LED already on the Joule carrier board, we don't need to connect any components to the Joule breakout headers. However, you can view the complete <a href="http://www.intel.com/content/www/us/en/support/boards-and-kits/000022494.html" target="_blank">pin mappings for Joule</a> on the Intel website.
               </div>
               <div class="col-xs-24 col-md-11">
-                <p><img alt="Electrical Components" src="{{site.baseurl}}/Resources/images/Blinky/components.png"></p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-24 col-md-12">
-                {% include_relative blinky-connections.inc %}
-              </div>
-              <div class="col-xs-24 col-md-11">
-                {% include_relative blinky-connections-images.inc %}
+              <!--  {% include_relative blinky-connections-images.inc %} -->
               </div>
             </div>
           </div>
@@ -85,7 +76,7 @@
             <div class="row">
               <div class="col-xs-24 col-md-12">
                 <ol>
-                  <li value="1">With the application open in Visual Studio, set the architecture (<code>{% include_relative board-arch.inc %}</code>) in the toolbar dropdown.</li>
+                  <li value="1">With the application open in Visual Studio, set the architecture (<code>x64</code>) in the toolbar dropdown.</li>
                 </ol>
               </div>
             </div>
@@ -96,7 +87,7 @@
                 </ol>
               </div>
               <div class="col-xs-24 col-md-11">
-                <p><img alt="Remote Machine Target" src="{{site.baseurl}}/Resources/images/AppDeployment/cs-remote-machine-debugging.png"></p>
+                <p><img alt="Remote Machine Target" src="{{site.baseurl}}/Resources/images/AppDeployment/cs-remote-machine-debugging-x64.png"></p>
               </div>
             </div>
             <div class="row">
@@ -122,7 +113,7 @@
                 </ol>
               </div>
               <div class="col-xs-24 col-md-11">
-                <p><img alt="Project Properties Debug Tab" src="{{site.baseurl}}/Resources/images/AppDeployment/cs-debug-project-properties.PNG"></p>
+                <p><img alt="Project Properties Debug Tab" src="{{site.baseurl}}/Resources/images/AppDeployment/cs-debug-project-properties-x64.PNG"></p>
               </div>
             </div>
             <div class="row">

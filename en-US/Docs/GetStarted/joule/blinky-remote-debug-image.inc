@@ -1,1 +1,0 @@
-<p><img alt="Remote Machine Target" src="{{site.baseurl}}/Resources/images/AppDeployment/cs-remote-machine-debugging-x64.png"></p>
