@@ -193,7 +193,7 @@
         "C++"
       ],
       "ranking": 1,
-      "new": "yes",      
+      "new": "yes",
       "tags": [
         "intermediate",
         "c#",
@@ -430,6 +430,20 @@
       ]
     },
     {
+      "title": "GpioTestTool",
+      "description": "A command line utility to access GPIO.",
+      "link": "samples/GpioTestTool.htm",
+      "link-text": "GpioTestTool",
+      "lang": "C++",
+      "ranking": 3,
+      "tags": [
+        "c++",
+        "intermediate",
+        "gpio",
+        "win32"
+      ]
+    },
+    {
       "title": "IoT Core Default App",
       "description": "Create a UWP app that provides a device-management experience for Windows 10 IoT Core",
       "link": "samples/IoTDefaultApp.htm",
@@ -468,6 +482,20 @@
         "i2c",
         "gpio",
         "c#"
+      ]
+    },
+    {
+      "title": "I2cTestTool",
+      "description": "A command line utility to access I2C.",
+      "link": "samples/I2cTestTool.htm",
+      "link-text": "I2cTestTool",
+      "lang": "C++/CX",
+      "ranking": 3,
+      "tags": [
+        "c++",
+        "intermediate",
+        "i2c",
+        "win32"
       ]
     },
     {
@@ -591,6 +619,20 @@
         "beginner",
         "SPI",
         "c#"
+      ]
+    },
+    {
+      "title": "SpiTestTool",
+      "description": "A command line utility to access SPI.",
+      "link": "samples/SpiTestTool.htm",
+      "link-text": "SpiTestTool",
+      "lang": "C++/CX",
+      "ranking": 3,
+      "tags": [
+        "c++",
+        "intermediate",
+        "spi",
+        "win32"
       ]
     },
     {

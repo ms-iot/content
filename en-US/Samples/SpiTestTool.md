@@ -1,21 +1,20 @@
 ---
 layout: sample
 title: SpiTestTool
+description: Command line utility for SPI access.
+keyword: spi, command line, win32, winrt
 permalink: /en-US/Samples/SpiTestTool.htm
+samplelink: https://github.com/ms-iot/samples/spitesttool
 lang: en-US
 ---
 
-# SpiTestTool Sample
-
-
-
-[View the code on Github](https://github.com/ms-iot/samples/blob/develop/SpiTestTool/main.cpp)
+# SpiTestTool
 
 SpiTestTool is a utility for interacting with SPI devices on the command
 line. SpiTestTool is written in C++/CX and shows how to consume WinRT components
 from command line applications. The resulting tool is a useful debugging aid.
 
-### Usage
+## Usage
 
     SpiTestTool: Command line SPI testing utility
     Usage: SpiTestTool.exe [-list] [-n FriendlyName] [-c ChipSelectLine] [-m Mode] [-d DataBitLength] [-f ClockFrequency]
@@ -76,7 +75,7 @@ Example session:
        0 aa b7 99
       > q
 
-### Building and running the sample
+## Building and running the sample
 
 1. Clone the [samples](https://github.com/ms-iot/samples)
    repository to your local machine.
