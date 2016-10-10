@@ -76,7 +76,6 @@ The GUID for the available volumes can be found through the following command
 ### Recommended Exclusions
 When protecting the data volume, we recommend that you add exceptions for the servicing and logging folders that are accessed by Windows OS Services.
 
-Create an exclusion file (example, `C:\exclusions.txt`) that lists the folders below. 
 {% highlight XML %}
 C:\Data\Users\System\AppData\Local\UpdateStagingRoot
 C:\Data\SharedData\DuShared
@@ -87,12 +86,9 @@ C:\Data\systemdata\nonetwlogs
 {% endhighlight %}
 
 To add the exclusions:
-  `uwfmgr.exe file Add-Exclusion C:\exclusions.txt`
-
+  `uwfmgr.exe file Add-Exclusion <file/folder name>`
+  
 {% include warning.html text="We recommend disabling Windows Update when enabling UWF. Enabling UWF without disabling Windows Update may result in system instability." %}
-
-For more info on creating exclusion files, see [Unified Write Filter](https://msdn.microsoft.com/windows/hardware/mt572001).
-
 
 ## Servicing UWF protected devices
 ___
