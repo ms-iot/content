@@ -105,7 +105,7 @@ Depending on your device, you may need to ensure that firmware settings are upda
 
 ### Intel MinnowBoardMax  
 * Firmware must be 32-bit and version 0.82 or higher (get the [latest 32-bit firmware][2])
-* To enable TPM capabilities, power up board with a keyboard & display attached and press F2 to enter UEFI setup. Go to _Device Manager -> System Setup -> Security Configuration -> PTT_ and set it to _<Enable>_. Press F10 to save changes and proceed with a reboot of the platform.
+* To enable TPM capabilities, power up board with a keyboard & display attached and press F2 to enter UEFI setup. Go to _Device Manager -> System Setup -> Security Configuration -> PTT_ and set it to _&lt;Enable&gt;_. Press F10 to save changes and proceed with a reboot of the platform.
 
 ### Qualcomm DragonBoard 410c  
 * In order to enable Secure Boot, it may be necessary to provision RPMB. Once the image has been prepared as mentioned in the section above, with a display attached to the device, press [Power] + [Vol+] + [Vol-] simultaneously on the device before powering up and select "Provision RPMB" from the BDS menu. **Please note that this is an irreversible step.**
@@ -120,8 +120,7 @@ Run the following 3 commands from within the remote powershell session to set UE
 * `FWVar.exe put efiglobal:PK c:\efi\SetVariable_pk.bin NV BS RT TA`
 
 Next, in order to complete lock-down of the platform, reboot device using the command `shutdown /r`.  
-**Note:** On an Intel MinnowBoardMax, you may need to manually enable SecureBoot in UEFI. Power up board with a keyboard connected and press F2 to enter UEFI setup. Go to _Device Manager -> Secure Boot Configuration -> Attempt Secure Boot_ and enable this option _<X>_. Press F10 to save changes and proceed with a reboot of the platform.
-
+**Note:** On an Intel MinnowBoardMax, you may need to manually enable SecureBoot in UEFI. Power up board with a keyboard connected and press F2 to enter UEFI setup. Go to _Device Manager -> Secure Boot Configuration -> Attempt Secure Boot_ and enable this option _&lt;X&gt;_. Press F10 to save changes and proceed with a reboot of the platform.
 [11]: {{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm "PowerShell"
 
 ### Scheduling BitLocker  
