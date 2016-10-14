@@ -24,14 +24,14 @@ Notes:
 
 * For Intel's MinnowBoard Max, firmware version must be 0.82 or higher. For the current release, only 32-bit Windows 10 IoT Core is supported so be sure to download the [latest 32-bit firmware][2] from Intel and flash it to your board.
 * For Qualcomm's DragonBoard 410c, in order to enable Secure Boot, it may be necessary to provision RPMB. Once the eMMC has been flashed with Windows 10 IoT Core (as per instructions [here][3]), press [Power] + [Vol+] + [Vol-] simultaneously on the device when powering up and select "Provision RPMB" from the BDS menu. *Please note that this is an irreversible step.*
-* For Qualcomm's DragonBoard 410c, in order to enable USB mass storage mode
- * disconnect everything from DragonBoard
- * be sure the dip switches are all on default (off) position
- * connect Dragonboard's USB OTG Connector to your PC
- * press S2 [power] and S4 [vol-] on your DragonBoard
- * connect Power to your DragonBoard
- * after ~ 10 sec you can release S2 and S4 (or as soon as the next step has begun)
- * Windows should now have recognized an additional mass storage device and mounted a new drive
+* For Qualcomm's DragonBoard 410c, in order to enable USB mass storage mode:
+  * disconnect everything from DragonBoard
+  * be sure the dip switches are all on default (off) position
+  * connect Dragonboard's USB OTG Connector to your PC
+  * press S2 [power] and S4 [vol-] on your DragonBoard
+  * connect Power to your DragonBoard
+  * after ~ 10 sec you can release S2 and S4 (or as soon as the next step has begun)
+  * Windows should now have recognized an additional mass storage device and mounted a new drive
 
 [1]: {{site.baseurl}}/{{page.lang}}/GetStarted.htm "Windows 10 IoT Core supported platforms"
 [2]: https://firmware.intel.com/projects/minnowboard-max "MinnowBoard MAX firmware"
