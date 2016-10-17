@@ -10,7 +10,7 @@ lang: en-US
 # Event Tracing for Windows 10 IoT Core
 
 Event Tracing for Windows (ETW) provides developers the ability to start and stop event tracing sessions, instrument an application to provide trace events, and consume trace events.
-ETW on Windows IoT Core devices supports both manifest-based and classic events, and is no different than other Windows 10 devices. 
+ETW on Windows IoT Core devices supports both manifest-based and classic events, and is no different than other Windows 10 devices.
 
 This section will provide useful links on the basics of writing and consuming events. Find more detailed information from the [Windows Event Tracing page](https://msdn.microsoft.com/library/windows/desktop/bb968803(v=vs.85).aspx){:target="_blank"}.
 
@@ -35,7 +35,8 @@ Windows Assessment and Deployment Kit includes 3 tools to help capture and analy
 
 2. **Xperf command line tool** captures real-time events and writes them to an ETL file.
     This tool is already installed on Windows IoT Core devices, just run the following commands on the devices:
-    
+
+    {% highlight c %}
     ```
     // Start capturing events from specific GUID and save them to an ETL file
     xperf -start <Session Name> -f <ETL File> -on <GUID>
@@ -43,13 +44,16 @@ Windows Assessment and Deployment Kit includes 3 tools to help capture and analy
     // Stop capturing events with the specified session name
     xperf -stop <Session Name>
     ```
+    {% endhighlight %}
 
 3. **Tracerpt command line tool** converts ETL files into xml files.
 
+    {% highlight c %}
     ```
     // Generate dumpfile.xml from ETL file
     tracerpt <ETL File>
     ```
+    {% endhighlight %}
 
 ## Use Device Portal
 
