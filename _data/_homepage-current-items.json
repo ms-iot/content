@@ -1,0 +1,47 @@
+{
+   "announcements":[
+      {
+        "title":"New and updated Microsoft IoT Kits",
+        "link":"https://blogs.windows.com/buildingapps/2016/10/18/new-and-updated-microsoft-iot-kits/",
+        "date":"Oct 18, 2016",
+        "author":"Steve Teixeira"
+      },{
+        "title":"Device to Device Communication with Azure IoT Hub",
+        "link":"https://blogs.windows.com/buildingapps/2016/09/08/device-to-device-communication-with-azure-iot-hub/",
+        "date":"Sep 8, 2016",
+        "author":"Divya Mahadevan"
+      },
+      {
+        "title":"Windows IoT Core Extension for Visual Studio Code",
+        "link":"http://blogs.windows.com/buildingapps/2016/09/08/windows-iot-core-extension-for-visual-studio-code/",
+        "date":"Sep 8, 2016",
+        "author":"Paul Monson"
+      },
+      {
+        "title":"Introducing Arduino Wiring on Windows 10 IoT Core",
+        "link":"http://blogs.windows.com/buildingapps/2016/09/07/introducing-arduino-wiring-on-windows-10-iot-core/",
+        "date":"Sep 7, 2016",
+        "author":"Mahmoud Saleh"
+      },
+      {
+        "title":"Windows 10 IoT Core Blockly",
+        "link":"http://blogs.windows.com/buildingapps/2016/09/06/windows-10-iot-core-blockly/",
+        "date":"Sep 6, 2016",
+        "author":"Ale Contenti"
+      }
+   ],
+   "events":[
+     {
+        "title":"Maker Faire Shenzhen",
+        "link":"http://shenzhenmakerfaire.com/",
+        "date":"Oct 21-23, 2016",
+        "location":"Shenzhen, China"
+      },
+      {
+        "title":"Maker Faire Bay Area",
+        "link":"http://makerfaire.com/",
+        "date":"May 2017",
+        "location":"San Francisco, California"
+      }
+   ]
+}

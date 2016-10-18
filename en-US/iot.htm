@@ -263,50 +263,63 @@ layout: default_nowrapper
                         <div class="section-title">Events</div>
                     </div>
                     <div class="section-body">
-                        <!--<ul id="events-body" data-data-src="{cdn}/devcenter/en-us/devcenter_v3/data/iot-events.js" class="eventlist" data-bind="template: { name: 'event-template', foreach: secondaryEvents }"></ul>-->
+                        {% assign count = 0 %} 
+                        {% assign allevents = site.data._homepage-current-items["events"] %}
+                        {% assign allannounce = site.data._homepage-current-items["announcements"] %}
                         <ul id="events-body" class="eventsList list-unstyled">
-                            <!-- #1 -->
+                          {% for event in allevents %}
                             <li class="event">
                                 <div class="event-info">
                                     <div class="event-list">
-                                        <!--<a href="http://www.makerfairerome.eu/en/">--><div class="name">Raspberry Pi 3 announce</div><!--</a>-->
+                                      {% if event.link %}
+                                      <a href="{{event.link}}"><div class="name">{{event.title}}</div></a>
+                                      {% else %}
+                                      <div class="name">{{event.parent}}</div>  
+                                      {% endif %}
                                     </div>
+                                    {% assign datearray = event.date | split: ' ' %}
                                     <div class="date">
-                                        <span class="month">Feb</span>
-                                        <span class="day">29</span>
-                                        <span class="year">2016</span> -
-                                        <span class="loc">London</span>
+                                        <span class="month">{{datearray.first}}</span>
+                                        {% if datearray.size > 2 %}
+                                        <span class="day">{{datearray[1]}}</span>
+                                        {% endif %}
+                                        <span class="year">{{datearray.last}}</span> |
+                                        <span class="loc">{{event.location}}</span>
                                     </div>
                                 </div>
                             </li>
-                            <!-- #2 -->
+                            {% assign count = count | plus: 1 %}
+                            {% if forloop.index >= 3 %}   
+                              {% break %}
+                            {% endif %}
+                          {% endfor %}
+                        </ul>
+                    </div>
+                </section>
+              </div>
+              <div class="section-body">
+                <section class="section item-section">
+                    <div class="section-header">
+                        <div class="section-title">Announcements</div>
+                    </div>
+                    <div class="section-body">
+                        <ul id="events-body" class="eventsList list-unstyled">
+                          {% for announce in allannounce %}
                             <li class="event">
                                 <div class="event-info">
                                     <div class="event-list">
-                                        <!--<a href="http://ignite.microsoft.com/">--><div class="name">Raspberry Pi 3 Birthday</div><!--</a>-->
+                                      <a href="{{announce.link}}"><div class="name">{{announce.title}}</div></a>  
                                     </div>
                                     <div class="date">
-                                        <span class="month">Mar</span>
-                                        <span class="day">07</span>
-                                        <span class="year">2016</span> -
-                                        <span class="loc">London</span>
+                                      <p>{{announce.date}} | {{announce.author}}</p>
                                     </div>
                                 </div>
                             </li>
-                            <!-- #3 -->
-                            <li class="event">
-                                <div class="event-info">
-                                    <div class="event-list">
-                                        <a href="http://build.microsoft.com/"><div class="name">Build 2016</div></a>
-                                    </div>
-                                    <div class="date">
-                                        <span class="month">Mar</span>
-                                        <span class="day">30</span>
-                                        <span class="year">2016</span> -
-                                        <span class="loc">San Francisco</span>
-                                    </div>
-                                </div>
-                            </li>
+                            {% assign count = count | plus: 1 %}
+                            {% if count >= 6 %}
+                              {% break %}
+                            {% endif %}
+                          {% endfor %}
                         </ul>
                     </div>
                 </section>
