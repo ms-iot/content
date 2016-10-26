@@ -19,7 +19,7 @@ If you are not very familiar with Windows universal drivers yet, we strongly enc
 
 ## Did you set up your development environment yet?
 
-* Instructions on how to set up your development environment with Visual Studio 2015 can be found [here]({{site.baseurl}}/{{page.lang}}/GetStarted.htm)
+* Instructions on how to set up your development environment with Visual Studio 2015 can be found [here]({{site.baseurl}}/{{page.lang}}/GetStarted)
 
 * Additionally, you will need to install the Windows Driver Kit (WDK) which you can download from [here](https://developer.microsoft.com/en-us/windows/hardware/windows-driver-kit) 
 
@@ -58,8 +58,8 @@ You can find the source code for this sample by downloading a zip of all of our 
 
 ## Next Steps:
 
-1. [Open the project for the sample driver]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab1.htm) --- In this section you will open the sample driver to see the basic structure of a driver.
+1. [Open the project for the sample driver]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab1) --- In this section you will open the sample driver to see the basic structure of a driver.
 
-2. [Use Visual Studio and the WDK to build a universal driver]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab2.htm) --- In this section you will use Visual Studio and the WDK to compile a universal driver for a specific device architecture.
+2. [Use Visual Studio and the WDK to build a universal driver]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab2) --- In this section you will use Visual Studio and the WDK to compile a universal driver for a specific device architecture.
 
-3. [Deploy the sample driver and confirm successful  installation]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab3.htm) --- This section demonstrates a way to install the sample driver on a Windows IoT Core device.
+3. [Deploy the sample driver and confirm successful  installation]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab3) --- This section demonstrates a way to install the sample driver on a Windows IoT Core device.

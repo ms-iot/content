@@ -14,7 +14,7 @@ This section demonstrates how to manually copy and install the driver to a Windo
 
 <br/>
 
-You can also deploy a driver using Visual Studio during driver development by following the instructions on [this page]({{site.baseurl}}/{{page.lang}}/Docs/DriverDeployment.htm)
+You can also deploy a driver using Visual Studio during driver development by following the instructions on [this page]({{site.baseurl}}/{{page.lang}}/Docs/DriverDeployment)
 
 <br/>
 
@@ -33,7 +33,7 @@ You can also deploy a driver using Visual Studio during driver development by fo
 
     ![SMB with File Explorer]({{site.baseurl}}/Resources/images/DriverLab/cred1.png)
 
-    NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm)
+    NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell)
 
 * Navigate to the `\windows\system32\` folder in the SMB File Explorer window:
 
@@ -52,13 +52,13 @@ You can also deploy a driver using Visual Studio during driver development by fo
         gpiokmdfdemo.sys
         ACPITABL.dat
 
-The next steps involve connecting to the target device using PowerShell as explained [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm).  Make sure you have an active PowerShell connection to your Windows 10 IoT Core device.
+The next steps involve connecting to the target device using PowerShell as explained [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell).  Make sure you have an active PowerShell connection to your Windows 10 IoT Core device.
 
 <br/>
 
 ## Installing the sample driver
 
-* Connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm).
+* Connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell).
 
 * Using the PowerShell window, navigate to the `C:\Windows\System32` directory on the target device:
     
@@ -76,7 +76,7 @@ From the PowerShell window, type the following command:
 
     [192.168.0.243]: PS C:\> shutdown /r /t 0
 
-The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm).
+The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell).
 
 <br/>
 
@@ -97,7 +97,7 @@ You should see the following output:
 
 ## Toggle The GPIOs
 
-Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky.htm) to connect a resistor and an LED to your Windows IoT Core device.  When you toggle the GPIO connected to the LED, the LED will turn on or off. 
+Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Samples/helloblinky) to connect a resistor and an LED to your Windows IoT Core device.  When you toggle the GPIO connected to the LED, the LED will turn on or off. 
 
 ### Use the application provided to communicate with the driver
 
@@ -146,12 +146,12 @@ If you are using GPIO #5 on the Raspberry Pi 2 or 3, type the following command 
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe low 5
 
 ### Note:
-Driving the GPIO low will make the LED light-up because of the way the LED is connected as described [here]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky.htm).
+Driving the GPIO low will make the LED light-up because of the way the LED is connected as described [here]({{site.baseurl}}/{{page.lang}}/Samples/helloblinky).
 
 To turn the LED off, simply type:
 
     [192.168.0.243]: PS C:\> .\BlinkyApp_<PLATFORM>.exe high 5
 
 ### Use Visual Studio to deploy a driver 
-Now that you know how to manually deploy a driver, you can also use Visual to deploy a driver by following the instructions on [this page]({{site.baseurl}}/{{page.lang}}/Docs/DriverDeployment.htm).
+Now that you know how to manually deploy a driver, you can also use Visual to deploy a driver by following the instructions on [this page]({{site.baseurl}}/{{page.lang}}/Docs/DriverDeployment).
     

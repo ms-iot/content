@@ -28,8 +28,8 @@ Acronyms:
 1. XBee ZigBee module from [Digi](http://www.digi.com){:target="_blank"}, e.g.: XB24CZ7PIT-004
 2. XBee Explorer USB dongle from [SparkFun](https://www.sparkfun.com/products/11697){:target="_blank"}
 3. [XCTU](http://www.digi.com/products/xbee-rf-solutions/xctu-software/xctu){:target="_blank"} tool from Digi
-4. Windows 10 desktop with Visual Studio 2015 and [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/Docs/AllJoyn.htm){:target="_blank"} app.
-5. [FTDI driver](http://www.ftdichip.com/Drivers/D2XX.htm){:target="_blank"} for Windows 10 which is required by the XBee Explorer USB dongle.
+4. Windows 10 desktop with Visual Studio 2015 and [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/Docs/AllJoyn){:target="_blank"} app.
+5. [FTDI driver](http://www.ftdichip.com/Drivers/D2XX){:target="_blank"} for Windows 10 which is required by the XBee Explorer USB dongle.
 6. Some ZigBee devices like
  - [Philips Hue](http://www2.meethue.com/en-US){:target="_blank"} light bulb
  - [Dresden Elektronik](https://www.dresden-elektronik.de){:target="_blank"} ballast FLS-PP-IP that control a colored LED band 
@@ -74,7 +74,7 @@ You can verify that devices have by using "network discovery" feature of XCTU to
 ![ZigBeeJoinNetVerif]({{site.baseurl}}/Resources/images/ZigBee/ZigBeeJoinNetVerif.png)
 
 ## Set up your Raspberry Pi2
-1. Perform initial set up as instructed [here]({{site.baseurl}}/en-US/Docs/SetupRPI.htm){:target="_blank"}
+1. Perform initial set up as instructed [here]({{site.baseurl}}/en-US/Docs/SetupRPI){:target="_blank"}
 2. Plug the XBee USB dongle into the Raspberry Pi2
 
 ## Deploy the ZigBee adapter on your Windows 10 machine
@@ -83,7 +83,7 @@ You can verify that devices have by using "network discovery" feature of XCTU to
 2. Open `samples-develop\AllJoyn\Samples\ZigBeeAdapter\ZigBeeAdapter.sln` in Visual Studio.
 3. Select the relevant target (x86, x64 or ARM) and build the solution in Visual Studio.
 Your now ready to launch it, so launch or debug HeadedAdapterApp project on desktop or if the targeted Windows 10 device has a display or launch or debug HeadlessAdapterApp if it doesn't. 
-If needed, see instruction [here]({{site.baseurl}}/en-US/Docs/AppDeployment.htm){:target="_blank"} for remote debugging.
+If needed, see instruction [here]({{site.baseurl}}/en-US/Docs/AppDeployment){:target="_blank"} for remote debugging.
  
  
 ### Known limitations of the current version of the ZigBee adapter

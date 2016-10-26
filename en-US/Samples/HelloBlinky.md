@@ -12,7 +12,7 @@ lang: en-US
 
 We'll create a simple LED blinking app and connect a LED to your Windows 10 IoT Core device.
 
-This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm).
+This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode).
 
 Also, be aware that the GPIO APIs are only available on Windows 10 IoT Core, so this sample cannot run on your desktop.
 
@@ -102,7 +102,7 @@ ___
 
     ![RemoteMachine Target]({{site.baseurl}}/Resources/images/AppDeployment/cs-remote-machine-debugging.png)
 
-3. At this point, Visual Studio will present the **Remote Connections** dialog. If you previously used [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm) to set a unique name for your device, you can enter it here (in this example, we're using **my-device**).
+3. At this point, Visual Studio will present the **Remote Connections** dialog. If you previously used [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell) to set a unique name for your device, you can enter it here (in this example, we're using **my-device**).
 Otherwise, use the IP address of your Windows IoT Core device. After entering the device name/IP select `Universal` for Windows Authentication, then click **Select**.
 
     ![Remote Machine Debugging]({{site.baseurl}}/Resources/images/AppDeployment/cs-remote-connections.PNG)

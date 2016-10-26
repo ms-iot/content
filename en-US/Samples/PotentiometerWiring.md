@@ -11,7 +11,7 @@ lang: en-US
 # Potentiometer sensor for Arduino
 This sample shows how to connect a rotary potentiometer and LED to a Raspberry Pi 2 and 3 or a MinnowBoard Max using Arduino Wiring. We use a SPI-based ADC (Analog to Digital Converter) to read values from the potentiometer and control an LED based on the knob position.
 
-This sample is similar to the [C# Potentiometer Sample]({{site.baseurl}}/{{page.lang}}/Samples/Potentiometer.htm), but uses Arduino Wiring instead of C#. The wiring and hardware configuration will be nearly identical. However, DragonBoard 410c does not currently support Arduino Wiring.
+This sample is similar to the [C# Potentiometer Sample]({{site.baseurl}}/{{page.lang}}/Samples/Potentiometer), but uses Arduino Wiring instead of C#. The wiring and hardware configuration will be nearly identical. However, DragonBoard 410c does not currently support Arduino Wiring.
 
 ## Hardware
 - Board - one of the following only
@@ -165,15 +165,15 @@ void loop()
 ## Build and deploy
 Press F5 to build and deploy your project.
 
-Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide.htm) for more instructions on how to deploy your app!
+Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide) for more instructions on how to deploy your app!
 
 ## Result
 You will see the LED lit to indicate that power is flowing, and the current value of the potentiometer's wiper pin will be read and displayed in the output console twice per second!
 
 ## Having trouble?
 
-Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.
+Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringPortingGuide) for common issues and concerns when working with Arduino Wiring sketches.
 
 ---
 
-[&laquo; Return to Samples]({{site.baseurl}}/{{page.lang}}/Samples.htm){:role="button"}{:class="btn btn-default"}
+[&laquo; Return to Samples]({{site.baseurl}}/{{page.lang}}/Samples){:role="button"}{:class="btn btn-default"}

@@ -19,7 +19,7 @@ The sample code is available to download, but as an exercise, we will create thi
 
 Even if you download the sample, code, you'll need to follow the steps in **Compile the OpenCV Libraries** and **Add the Libraries to your Project** below.
 
-* Make sure your device is running and set up and you have Visual Studio installed. See our [guide]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) if you have not set up your device yet.
+* Make sure your device is running and set up and you have Visual Studio installed. See our [guide]({{site.baseurl}}/{{page.lang}}/GetStarted) if you have not set up your device yet.
 
 * You will need your device's IP address when connecting to it remotely.
 

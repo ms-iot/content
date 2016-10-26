@@ -21,4 +21,4 @@ This section will walk you through the process of downloading the source code fo
 * In Visual Studio, switch to the Solution Explorer. Expand the Header files and Source files nodes and examine the contents of the generated files. You should find a driver project that implements the skeleton code required by most drivers.
 
 ## Next Step
-[Build the driver using Visual Studio]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab2.htm)
+[Build the driver using Visual Studio]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab2)

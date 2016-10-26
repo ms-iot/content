@@ -50,4 +50,4 @@ In the next section you will use these files (**ACPITABL.dat**, **gpiokmdfdemo.i
 
 ## Next Step
 
-[Deploy the driver and confirm successful installation]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab3.htm)
+[Deploy the driver and confirm successful installation]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab3)

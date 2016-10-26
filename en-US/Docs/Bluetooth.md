@@ -17,7 +17,7 @@ IoT Core supports the following Bluetooth profiles:
 
 2.  Radio Frequency Communication [RFCOMM](https://github.com/ms-iot/remote-wiring)
 
-3.  Generic Attribute Profile [GATT]({{site.baseurl}}/{{page.lang}}/Samples/BLEGatt.htm)
+3.  Generic Attribute Profile [GATT]({{site.baseurl}}/{{page.lang}}/Samples/BLEGatt)
 
 ## Connecting Bluetooth devices using the device portal
 When using one of the [Windows 10 IoT Core Release Image](https://developer.microsoft.com/en-us/windows/iot/downloads){:target="_blank"} Bluetooth devices can be paired with the Windows IoT Core device using the device portal. When navigating to the Bluetooth tab the device will look for Bluetooth devices and will also be discoverable to other Bluetooth devices. The picture below shows an incoming pairing request. 

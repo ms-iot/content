@@ -15,7 +15,7 @@ Turn your Windows 10 IoT Core device into a print server and connect your 3D Pri
 ___
 Before you start, you will need:
 
-* A board with the latest version of Windows 10 IoT Core Insider Preview installed. Follow the [Get Started guide]({{site.baseurl}}/{{page.lang}}/GetStarted.htm){:target="_blank"} to get the IoT Dashboard app and install Windows 10 IoT Core.
+* A board with the latest version of Windows 10 IoT Core Insider Preview installed. Follow the [Get Started guide]({{site.baseurl}}/{{page.lang}}/GetStarted){:target="_blank"} to get the IoT Dashboard app and install Windows 10 IoT Core.
 * A 3D Printer compatible with our Network 3D Printer app:
 
     * Lulzbot Taz 6

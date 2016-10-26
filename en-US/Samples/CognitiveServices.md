@@ -17,7 +17,7 @@ Create a UWP app that identifies faces in a photo and determine the emotions in 
 ___
 All of the sample code is available to download, but as an exercise, this tutorial will take you through the complete steps to create this app from scratch.
 
-Make sure your device is running and set up and you have Visual Studio installed. See our [get started page]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) to set up your device.
+Make sure your device is running and set up and you have Visual Studio installed. See our [get started page]({{site.baseurl}}/{{page.lang}}/GetStarted) to set up your device.
 
 You will need your device's IP address when connecting to it remotely.
 
@@ -429,7 +429,7 @@ Close your app after you're done validating it
 
 ## Deploy the app to your Windows 10 IoT Core device
 ___
-1.  To deploy our app to our IoT Core device, you need to provide your machine with the device's identifier. In the [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm) documentation, you can find instructions to chose a unique name for your IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in Visual Studio.
+1.  To deploy our app to our IoT Core device, you need to provide your machine with the device's identifier. In the [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell) documentation, you can find instructions to chose a unique name for your IoT Core device. In this sample, we'll use that name (though you can use your IP address as well) in the 'Remote Machine Debugging' settings in Visual Studio.
 
     If you're building for Minnowboard Max, select **x86** in the Visual Studio toolbar architecture dropdown.  If you're building for Raspberry Pi 2 or 3 or the DragonBoard, select **ARM**.
 

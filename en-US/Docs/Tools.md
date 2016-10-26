@@ -13,7 +13,7 @@ With Windows 10 IoT Core, we have provided a suite of tools to assist you in eve
 
 ## Did you set up your environment?
 
-We assume you already [set up your environment]({{site.baseurl}}/{{page.lang}}/GetStarted.htm), have a working Visual Studio and have a device running Windows IoT Core (MinnowBoard Max or Raspberry Pi 2 or 3).
+We assume you already [set up your environment]({{site.baseurl}}/{{page.lang}}/GetStarted), have a working Visual Studio and have a device running Windows IoT Core (MinnowBoard Max or Raspberry Pi 2 or 3).
 
 ## Questions/Suggestions
 
@@ -21,6 +21,6 @@ Remember, you can always send [contact us]({{site.baseurl}}/{{page.lang}}/Commun
 
 ## Tools
 
-1. [Windows 10 IoT Core Porting Tool]({{site.baseurl}}/{{page.lang}}/Docs/IoTAPIPortingTool.htm) --- A tool for helping you port your existing Win32 and Windows CE applications to Windows 10 IoT Core.
+1. [Windows 10 IoT Core Porting Tool]({{site.baseurl}}/{{page.lang}}/Docs/IoTAPIPortingTool) --- A tool for helping you port your existing Win32 and Windows CE applications to Windows 10 IoT Core.
 
-2. [On Device Command Line Utiltiies]({{site.baseurl}}/{{page.lang}}/Docs/CommandLineUtils.htm) --- A set of tools available on your device to help you configure a slew of options.
+2. [On Device Command Line Utiltiies]({{site.baseurl}}/{{page.lang}}/Docs/CommandLineUtils) --- A set of tools available on your device to help you configure a slew of options.

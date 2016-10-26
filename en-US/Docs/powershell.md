@@ -108,7 +108,7 @@ Your Windows IoT Core device should now be properly configured and ready to use!
 
 ### Commonly used utilities
 
-For a list of commands and utilities that you can use with PowerShell, see the [Command Line Utils]({{site.baseurl}}/{{page.lang}}/Docs/CommandLineUtils.htm) page.
+For a list of commands and utilities that you can use with PowerShell, see the [Command Line Utils]({{site.baseurl}}/{{page.lang}}/Docs/CommandLineUtils) page.
 
 ## Known issues and workarounds
 
