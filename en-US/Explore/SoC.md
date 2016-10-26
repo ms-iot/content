@@ -32,19 +32,34 @@ lang: en-US
       </th>
     </tr>
     <tr>
-      <td>BCM2836</td>
+      <td>BCM2837</td>
       <td><a href="http://www.intel.com/joule">Intel® Joule™</a></td>
       <td><a href="https://www.qualcomm.com/products/snapdragon/processors/212">Snapdragon 212 (APQ8009)</a></td>
     </tr>
     <tr>
-      <td>BCM2837</td>
-      <td><a href="http://ark.intel.com/products/codename/55844/#@Embedded">Intel® Atom™ Processor E3800 Product Family (Bay Trail-I)</a></td>
+      <td>BCM2836</td>
+      <td><a href="http://ark.intel.com/products/codename/80644/">Intel® Atom™ processor E3900 series (Apollo Lake)</a></td>
       <td><a href="https://www.qualcomm.com/products/snapdragon/processors/410">Snapdragon 410 (APQ8016)</a></td>
     </tr>
     <tr>
       <td></td>
-      <td><a href="http://ark.intel.com/products/codename/55844/">Intel® Celeron® Processor N and J Series (Bay Trail-M/D)</a></td>
+      <td><a href="http://ark.intel.com/products/codename/80644/">Intel® Celeron® processor N3350 (Apollo Lake)</a></td>
       <td><a href="https://www.qualcomm.com/products/snapdragon/processors/617">Snapdragon 617 (APQ8052)</a></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><a href="http://ark.intel.com/products/codename/80644/">Intel® Pentium® processor N4200 platform (Apollo Lake)</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><a href="http://ark.intel.com/products/codename/55844/#@Embedded">Intel® Atom™ Processor E3800 Product Family (Bay Trail-I)</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><a href="http://ark.intel.com/products/codename/55844/">Intel® Celeron® Processor N and J Series (Bay Trail-M/D)</a></td>
+      <td></td>
     </tr>
 	<tr>
       <td></td>
