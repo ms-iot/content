@@ -8,11 +8,17 @@ samplelink: https://github.com/turkycat/Weather_Shield
 lang: en-US
 ---
 
-# Weather Station (Arduino Wiring) + Lightning Provider 
+# Weather Station (Arduino Wiring) + Lightning.Providers 
 
 Learn how to create an Arduino Wiring sketch on Raspberry Pi 2 or 3 and set up your own Weather Station using the power of Lightning. 
 
-Gathering weather data from your surroundings is as easy as connecting a [Sparkfun Weather Shield](https://www.sparkfun.com/products/12081) to your Raspberry Pi 2 or 3 and deploying a UWP app. This shield mainly utilizes two sensors, the [HTU21D Humidity and Temperature Sensor](https://www.sparkfun.com/products/12064) and the [MPL3115A2 Altitude/Pressure Sensor](https://www.sparkfun.com/products/11084), but is also expandable to read wind and rain levels.
+The [Sparkfun Weather Shield](https://www.sparkfun.com/products/12081) lets you collect weather data from your surroundings when connected to your Raspberry Pi2 2 or 3. 
+
+The shield utilizes two sensors:
+1. [HTU21D Humidity and Temperature Sensor](https://www.sparkfun.com/products/12064) 
+2. [MPL3115A2 Altitude/Pressure Sensor](https://www.sparkfun.com/products/11084)
+
+and can also be expanded to read wind and rain levels.
 
 You can replicate this entire project with the shield itself or with the individual sensors.
 
@@ -20,9 +26,9 @@ Read on to get started!
 
 ## Hardware Set Up
 
-The first step is to hook your Raspberry Pi 2 or 3 up to the Sparkfun Weather Shield.  Use the wiring diagram and photos in the carousel below for reference. 
+Hook your Raspberry Pi 2 or 3 up to the Sparkfun Weather Shield.  Use the wiring diagram and photos in the carousel below for reference. 
 
-<i> Note: This feature requires JavaScript.  If you are experiencing problems with the carousel, make sure that JavaScript is enabled on your browser. </i> 
+{% include note.html text="This feature requires JavaScript. If you are experiencing problems with the carousel, make sure that JavaScript is enabled on your browser." %}
 
 You can also refer to the fritzing diagram below the reference images.
   

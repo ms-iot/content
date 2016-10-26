@@ -1,6 +1,6 @@
 ---
 layout: sample
-title: Weather station Lightning Sample
+title: Weather station (using Lightning Providers)
 permalink: /en-US/Samples/WeatherStationLightning.htm
 keyword: Windows 10 IoT Core, beginner, breadboard, potentiometer, sensor, weather station
 description: Communicate with an I2C sensor using Lightning I2c provider
@@ -8,13 +8,13 @@ samplelink: https://github.com/ms-iot/BusProviders/tree/develop/Microsoft.IoT.Li
 lang: en-US
 ---
 
-# Weather station using Lightning Providers
+# Weather station (using Lightning Providers)
 
 This sample demonstrates how to communicate with an I2c device using the Micorosot.IoT.Providers.Lightning.I2cProvider.
 
-It is based on the Weather Station sample discussed [here]({{site.baseurl}}/{{page.lang}}/samples/arduino-wiring/WeatherStation.htm) and shares the same setup steps and most of the code. 
+It is based on the [Weather Station sample]({{site.baseurl}}/{{page.lang}}/samples/arduino-wiring/WeatherStation.htm) and shares the same setup steps and most of the code. 
 
-### Using Default Provider
+### Using Default Provider (Default Controller Driver/Inbox Driver)
 
 The original sample used the default I2C provider for obtaining the I2C sensor device as follows:
 
@@ -37,9 +37,9 @@ public async void Run(IBackgroundTaskInstance taskInstance)
 }
 {% endhighlight %}
 
-The sample code using the default I2C provider can be found [here](https://github.com/ms-iot/samples/tree/develop/WeatherStation).
+The sample code using the default I2C provider, [Weather Station sample](https://github.com/ms-iot/samples/tree/develop/WeatherStation).
 
-### Using Lightning Provider
+### Using the Lightning provider
 
 Now, to enable the use of the Lightning provider, the I2C initialization code needs to be modified to set the Lightning provider as the default provider.
 
