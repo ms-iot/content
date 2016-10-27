@@ -12,7 +12,7 @@ lang: en-US
 
 We'll create a simple app that allows communication between a desktop and an IoT device over a serial interface.
 
-This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm){:target="_blank"}.
+This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode){:target="_blank"}.
 
 ### Load the project in Visual Studio
 
@@ -29,7 +29,7 @@ You have two options for wiring up your board:
 
 #### <a name="MBM_UART"></a>On-board UART (MinnowBoard Max)
 
-The MinnowBoard Max has two on-board UARTs. See the [MBM pin mapping page]({{site.baseurl}}/{{page.lang}}/Samples/PinMappingsMBM.htm) for more details on the MBM GPIO pins. 
+The MinnowBoard Max has two on-board UARTs. See the [MBM pin mapping page]({{site.baseurl}}/{{page.lang}}/Samples/PinMappingsMBM) for more details on the MBM GPIO pins. 
 
 * UART1 uses GPIO pins 6, 8, 10, and 12. 
 * UART2 uses GPIO pins 17 and 19. 
@@ -49,7 +49,7 @@ Make the following connections:
 
 #### <a name="RPi2_UART"></a>On-board UART (Rasperry Pi2)
 
-The Rasperry Pi 2 or 3 has one on-board UART. See the [Raspberry Pi 2 Pin Mappings page]({{site.baseurl}}/{{page.lang}}/Samples/PinMappingsRPi2.htm) for more details on the GPIO pins. 
+The Rasperry Pi 2 or 3 has one on-board UART. See the [Raspberry Pi 2 Pin Mappings page]({{site.baseurl}}/{{page.lang}}/Samples/PinMappingsRPi2) for more details on the GPIO pins. 
 
 * UART0 uses GPIO pins 6 (GND), 8 (TX) and 10 (RX). 
 

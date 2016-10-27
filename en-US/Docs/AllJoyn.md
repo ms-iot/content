@@ -13,14 +13,14 @@ AllJoyn empowers the Internet of Things. AllJoyn defines a common protocol for d
 
 Microsoft joined the AllSeen Alliance in 2014 and added AllJoyn as a core component in Windows 10. With the built-in [AllJoyn APIs](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.alljoyn.aspx){:target="_blank"}, developers are free to write AllJoyn capable applications that run on any of the Windows 10 devices including PCs, tablets, phones, Xbox as well as devices using Windows IoT Core. In addition to the platform support for AllJoyn, Microsoft released [AllJoyn Studio](https://visualstudiogallery.msdn.microsoft.com/064e58a7-fb56-464b-bed5-f85914c89286){:target="_blank"}, a Visual Studio extension that accelerates AllJoyn development by combining code generation with ready-made application templates. AllJoyn Studio allows developers to benefit from the power of AllJoyn without the hassle of set-up and configuration.
 
-Excited about AllJoyn? Have a look at [this]({{site.baseurl}}/en-US/Docs/AllJoynStudio.htm){:target="_blank"} blog post on how to get started with AllJoyn on Windows.
+Excited about AllJoyn? Have a look at [this]({{site.baseurl}}/en-US/Docs/AllJoynStudio){:target="_blank"} blog post on how to get started with AllJoyn on Windows.
 
 
 ## Developer Resources and Tools
 
 **Device System Bridge**
 
-AllJoyn [Device System Bridge]({{site.baseurl}}/en-US/Docs/AllJoynDSB.htm){:target="_blank"} enables non-AllJoyn devices to interact with the AllJoyn ecosystem using AllJoyn as their common language.
+AllJoyn [Device System Bridge]({{site.baseurl}}/en-US/Docs/AllJoynDSB){:target="_blank"} enables non-AllJoyn devices to interact with the AllJoyn ecosystem using AllJoyn as their common language.
 
 Features:
 - Creates virtual devices for each non-AllJoyn device exposed by Adapter
@@ -29,7 +29,7 @@ Features:
 - Universal app templates (C#, C++), for Desktop UI applications and Windows IoT startup tasks
 - Available as open source
 
-More details can be found on the [Device System Bridge page]({{site.baseurl}}/en-US/Docs/AllJoynDSB.htm){:target="_blank"}.
+More details can be found on the [Device System Bridge page]({{site.baseurl}}/en-US/Docs/AllJoynDSB){:target="_blank"}.
 
 
 **AllJoyn Studio**
@@ -46,7 +46,7 @@ Features:
 
 AllJoyn Studio can be installed through Visual Studio Tools -> Extensions and Updates … -> Online -> In the "Search" field type "AllJoyn"
 
-More detail about how to use AllJoyn Studio are available [here]({{site.baseurl}}/en-US/Docs/AllJoynStudio.htm){:target="_blank"}
+More detail about how to use AllJoyn Studio are available [here]({{site.baseurl}}/en-US/Docs/AllJoynStudio){:target="_blank"}
 
 <a name="AllJoynExplorer"></a>**IoT Explorer for AllJoyn (AllJoyn Explorer)**
 
@@ -60,9 +60,9 @@ The IoT Explorer for AllJoyn (previously known as AllJoyn Explorer) is a Windows
 
 ### Additional Resources
 
-- [Using the AllJoyn Studio extension]({{site.baseurl}}/en-US/Docs/AllJoynStudio.htm){:target="_blank"}
-- [AllJoyn Producer and Authoring AllJoyn Introspection]({{site.baseurl}}/en-US/Docs/AllJoynProducer.htm){:target="_blank"}
-- [Troubleshooting AllJoyn with Windows 10]({{site.baseurl}}/en-US/Docs/AllJoynTroubleshooting.htm){:target="_blank"}
+- [Using the AllJoyn Studio extension]({{site.baseurl}}/en-US/Docs/AllJoynStudio){:target="_blank"}
+- [AllJoyn Producer and Authoring AllJoyn Introspection]({{site.baseurl}}/en-US/Docs/AllJoynProducer){:target="_blank"}
+- [Troubleshooting AllJoyn with Windows 10]({{site.baseurl}}/en-US/Docs/AllJoynTroubleshooting){:target="_blank"}
 
 **Videos**
 
@@ -85,4 +85,4 @@ The IoT Explorer for AllJoyn (previously known as AllJoyn Explorer) is a Windows
 **Informational only**
 
 - [Deprecated] [Channel 9: Building AllJoyn Apps on Windows 10 (MSDN)](https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview){:target="_blank"}
-- [Deprecated] [AllJoyn CodeGen Tool]({{site.baseurl}}/en-US/Docs/AllJoynCodeGen.htm){:target="_blank"}
+- [Deprecated] [AllJoyn CodeGen Tool]({{site.baseurl}}/en-US/Docs/AllJoynCodeGen){:target="_blank"}

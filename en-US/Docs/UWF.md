@@ -18,7 +18,7 @@ If you do not have IoT Core Kits yet, Download and install [IoT Core Kits from M
 
 ## How to Install UWF on a device running Windows 10 IoT Core
 ___
-* Launch [Powershell](http://ms-iot.github.io/content/en-US/Docs/PowerShell.htm) or [SSH](http://ms-iot.github.io/content/en-US/Docs/SSH.htm) and access your device running Windows 10 IoT Core.
+* Launch [Powershell](http://ms-iot.github.io/content/en-US/Docs/PowerShell) or [SSH](http://ms-iot.github.io/content/en-US/Docs/SSH) and access your device running Windows 10 IoT Core.
 * From Powershell or SSH, do the following:
   * Create a temporary folder on the target machine (e.g. ```C:\UWFTemp```).
   * Based on your device architecture, copy UWF packages ( `Microsoft-IoTUAP-UnifiedWriteFilter-Package.cab` and `Microsoft-IoTUAP-UnifiedWriteFilter-Package_Lang_en-us.cab` ) from your PC (`C:\Program Files (x86)\Windows Kits\10\MSPackages\Retail\<arch>\fre\`) to `C:\UWFTemp`.
@@ -76,7 +76,6 @@ The GUID for the available volumes can be found through the following command
 ### Recommended Exclusions
 When protecting the data volume, we recommend that you add exceptions for the servicing and logging folders that are accessed by Windows OS Services.
 
-Create an exclusion file (example, `C:\exclusions.txt`) that lists the folders below. 
 {% highlight XML %}
 C:\Data\Users\System\AppData\Local\UpdateStagingRoot
 C:\Data\SharedData\DuShared
@@ -87,12 +86,9 @@ C:\Data\systemdata\nonetwlogs
 {% endhighlight %}
 
 To add the exclusions:
-  `uwfmgr.exe file Add-Exclusion C:\exclusions.txt`
-
+  `uwfmgr.exe file Add-Exclusion <file/folder name>`
+  
 {% include warning.html text="We recommend disabling Windows Update when enabling UWF. Enabling UWF without disabling Windows Update may result in system instability." %}
-
-For more info on creating exclusion files, see [Unified Write Filter](https://msdn.microsoft.com/windows/hardware/mt572001).
-
 
 ## Servicing UWF protected devices
 ___

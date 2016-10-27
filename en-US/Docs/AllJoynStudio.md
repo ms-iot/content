@@ -57,7 +57,7 @@ There are three ways that you can obtain the AllJoyn interface  definitions that
 2. Obtain the Introspection XML from documentation ; example: [Lighting Service Framework (LSF) documentation](https://wiki.allseenalliance.org/_media/compliance/alljoyn_lamp_service_14.06_interface_definition.pdf) from the AllSeen Alliance.
 3. Create your own Introspection XML that is compliant with the AllJoyn/[D-Bus introspection](http://dbus.freedesktop.org/doc/dbus-specification.html) format.
 
-This article covers the first two ways - AllJoyn® Studio natively supports querying the network for AllJoyn producers and extracting their XML as well as uploading Introspection XML files.  Learn how to create your own [here]({{site.baseurl}}/en-US/Docs/AllJoynProducer.htm).
+This article covers the first two ways - AllJoyn® Studio natively supports querying the network for AllJoyn producers and extracting their XML as well as uploading Introspection XML files.  Learn how to create your own [here]({{site.baseurl}}/en-US/Docs/AllJoynProducer).
 
 At //build/ 2015, an AllJoyn-enabled toaster device was shown which will serve as the example for this post. This toaster exposes controls for starting and stopping the toasting sequence, setting the "darkness", and notifications when the toast is burnt.
 
@@ -112,7 +112,7 @@ Immediately after selecting an AllJoyn App Template, Visual Studio will ask you 
 
 __Extracting interfaces from a device on the network__
 
-If you cannot find your AllJoyn device or interface on the network, follow [this guide]({{site.baseurl}}/en-US/Docs/AllJoynTroubleshooting.htm) to troubleshoot. 
+If you cannot find your AllJoyn device or interface on the network, follow [this guide]({{site.baseurl}}/en-US/Docs/AllJoynTroubleshooting) to troubleshoot. 
 
 ![AJ_Studio_FindDevices]({{site.baseurl}}/Resources/images/AllJoyn/AJ_Studio_FindDevices.png)
 

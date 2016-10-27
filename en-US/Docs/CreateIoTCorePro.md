@@ -14,27 +14,29 @@ Windows 10 IoT Core Pro SKU provides the capability to control and schedule the 
 
 Here are the steps involved in creating Windows 10 IoT Core Pro device
 
-* Download Windows 10 IoT Core Pro License File and ICD.
-* Create a Provisioning Package with License File.
+* Download Windows 10 IoT Core Pro Update Control File.
+* Create a Provisioning Package with Update Control File.
 * Apply the provisioning package to the device
 
-To begin, setup your develop PC by following the steps in [Step 1: Get set up]({{site.baseurl}}/{{page.lang}}/Docs/InstallPackage.htm).
+To begin, setup your develop PC by following the steps in [Step 1: Get set up]({{site.baseurl}}/{{page.lang}}/Docs/InstallPackage).
 
 
-## Step 1: Get the Windows 10 IoT Core Pro license file 
+## Step 1: Get the Windows 10 IoT Core Pro Update Control file 
 ___
 
-Go to [Windows 10 IoT Core Commericialization](http://go.microsoft.com/fwlink/?LinkID=614849) and select **Windows 10 IoT Core Pro** to find a distributor near you to get the Windows 10 IoT Core Pro license file.
+From *Windows 10 IoTCore 1607 version*, IoT Core is **free**. 
+
+Go to [Windows 10 IoT Core Commericialization](http://go.microsoft.com/fwlink/?LinkID=614849) and sign in with your Microsoft account (formerly Windows Live ID) to register and download [Windows 10 IoT Core Pro Update Control File](https://www.microsoft.com/download/details.aspx?id=53899). 
 
 
-## Step 2: Create a provisioning package with license file 
+## Step 2: Create a provisioning package with Update Control file 
 ___
 A Provisioning package can be created by two ways detailed below.
 
 ### Create using a sample template
 
 * See [Provisioning.ProSKU](https://github.com/ms-iot/iot-adk-addonkit/tree/develop/Common/Packages/Provisioning.ProSKU) sample. 
-* You will need to uncomment the **EditionUpgrade** tag in [customizations.xml](https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Common/Packages/Provisioning.ProSKU/customizations.xml) file to point to the downloaded license file.
+* You will need to uncomment the **EditionUpgrade** tag in [customizations.xml](https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Common/Packages/Provisioning.ProSKU/customizations.xml) file to point to the downloaded Update Control file.
 * You can create the provisioning package using `buildprovpkg Provisioning.ProSKU` in the IoTADKAddon shell.
 
 ### Create using Windows Imaging and Configuration Designer(ICD)
@@ -57,9 +59,9 @@ The below steps show you the means to create the provisioning package using [Win
 
 ![Select Finish]({{site.baseurl}}/Resources/images/CreateIoTCorePro/CreatePpkg4.png)
 
-**Step 2.5: Add the Setting EditionUpgrade->UpgradeEditionWithLicense and provide the License File as Input**
+**Step 2.5: Add the Setting EditionUpgrade->UpgradeEditionWithLicense and provide the Update Control File as Input**
 
-![Provide the License File as Input]({{site.baseurl}}/Resources/images/CreateIoTCorePro/CreatePpkg5.png)
+![Provide the Update Control File as Input]({{site.baseurl}}/Resources/images/CreateIoTCorePro/CreatePpkg5.png)
 
 **Step 2.6: Select Export->Provisioning Package**
 
@@ -91,7 +93,7 @@ There are two ways to deploy the provisioning package to the device.
 
 ### Deploying at runtime
 
-* Connect to the device ( [using SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH.htm) or [using Powershell]({{site.baseurl}}/{{page.lang}}/Docs/powershell.htm) )
+* Connect to the device ( [using SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH) or [using Powershell]({{site.baseurl}}/{{page.lang}}/Docs/powershell) )
 * Copy the provisioning package (say `ProSKU.ppkg`) to `C:\OemInstall\` folder
 * Call `provtool ProSKU.ppkg` to provision the device with this provisioning package.
 

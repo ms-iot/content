@@ -5,4 +5,4 @@ permalink: /en-US/Samples/PinMappingsRPi2.htm
 lang: en-US
 ---
 
-{% include redirect.html url="/windows/iot/Docs/PinMappingsRPi.htm" %}
+{% include redirect.html url="/windows/iot/Docs/PinMappingsRPi" %}

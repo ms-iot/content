@@ -7,8 +7,8 @@ lang: en-US
 
 # Blinky Node.js (Windows Universal) Sample with Lightning
 
-In this sample, we will use the [Lightning GPIO provider]({{site.baseurl}}/{{page.lang}}/Docs/LightningProviders.htm) to blink an LED attached to a Raspberry Pi 2. 
-It also includes steps to reference a custom winmd file in your Node.js project. This sample is based on the [Blinky sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinkyNode.htm) 
+In this sample, we will use the [Lightning GPIO provider]({{site.baseurl}}/{{page.lang}}/Docs/LightningProviders) to blink an LED attached to a Raspberry Pi 2. 
+It also includes steps to reference a custom winmd file in your Node.js project. This sample is based on the [Blinky sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinkyNode) 
 and shares the same setup steps as well as most of the code. The key difference is setting the Lightning provider as the default controllers provider.
 
 
@@ -20,8 +20,8 @@ and shares the same setup steps as well as most of the code. The key difference 
 
 
 ### Set up your hardware
-* The setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky.htm).
-* Follow the steps on [this page]({{site.baseurl}}/{{page.lang}}/Docs/LightningSetup.htm) to set up Lightning on your Raspberry Pi 2.
+* The setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/Samples/helloblinky).
+* Follow the steps on [this page]({{site.baseurl}}/{{page.lang}}/Docs/LightningSetup) to set up Lightning on your Raspberry Pi 2.
 
 
 ### Create a new Node.js (Windows Universal) project

@@ -20,8 +20,8 @@ ___
 
 ### On the device
 
-* Make sure that your device has an IoTCore image installed by following the [Get Started instructions]({{site.baseurl}}/{{page.lang}}/GetStarted.htm).
-* Connect to your device via [Powershell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm).
+* Make sure that your device has an IoTCore image installed by following the [Get Started instructions]({{site.baseurl}}/{{page.lang}}/GetStarted).
+* Connect to your device via [Powershell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell).
 
 ### On the PC
 
@@ -98,7 +98,7 @@ ___
 {% include note.html text="This method is not guaranteed to succeed – If for some reason a devnode cannot be shutdown to release the driver, the operation will fail.  This can be due to faulty hardware, or an initial faulty implementation of the driver.  The Install/Reinstall option must be used in this case." %}
 
 
-Your Visual Studio project is now ready to build and deploy a driver to your target device. If you are using the sample gpiokmdfdemo driver you need to generate ACPI table and copy to your target device, then follow the steps in [building the driver in Visual Studio]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab2.htm).
+Your Visual Studio project is now ready to build and deploy a driver to your target device. If you are using the sample gpiokmdfdemo driver you need to generate ACPI table and copy to your target device, then follow the steps in [building the driver in Visual Studio]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab2).
 
 
 ## Step 4 : Build and deploy driver
@@ -122,7 +122,7 @@ When Installation completes, the device will reboot again, and the VS Output scr
 1.  From the build window, make sure that the configurations are correct – the current build arch is the same as the target device arch.  This is where having the arch in the target name is valuable.  The target will be displayed in the view box on the menu bar in VS on the top-middle-right.
 2.  Press **F5**.  The target will be built, deployed, and attached to the VS Kernel Debugger.
 
-* After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the [PowerShell `enter-pssession` command]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm).
+* After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the [PowerShell `enter-pssession` command]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell).
 
 
 ## Known Issues

@@ -85,9 +85,9 @@ Instructions on how to set up sTPM on Windows IoT Core are available [here][3].
  
 ## Samples  
 ___
-* [TBSSample project C++]({{site.baseurl}}/{{page.lang}}/Samples/TBSSample.htm){:target="_blank"}  
+* [TBSSample project C++]({{site.baseurl}}/{{page.lang}}/Samples/TBSSample){:target="_blank"}  
   This tutorial demonstrates how to create a basic C++ application that uses TBS to poll the TPM.  
-* [Urchin Library Sample]({{site.baseurl}}/{{page.lang}}/Samples/UrchinLibrary.htm){:target="_blank"}  
+* [Urchin Library Sample]({{site.baseurl}}/{{page.lang}}/Samples/UrchinLibrary){:target="_blank"}  
   This tutorial demonstrates how to create a sample C++ application that exercises the TPM functionality using the [Urchin library][8].  
   Urchin is a spec-compliant library derived from the TPM 2.0 reference implementation. It provides to the client the functionality to marshal/unmarshal all data structures, properly calculate authorizations, perform parameter encryption and do auditing.
   
@@ -98,5 +98,5 @@ ___
 * Trusted Platform Module (TPM) Specifications - [http://www.trustedcomputinggroup.org/developers/trusted_platform_module](http://www.trustedcomputinggroup.org/developers/trusted_platform_module){:target="_blank"}
 * TCG TPM 2.0 Library Specification - [http://www.trustedcomputinggroup.org/resources/tpm_library_specification](http://www.trustedcomputinggroup.org/resources/tpm_library_specification){:target="_blank"}
 * TPM Base Services - [https://msdn.microsoft.com/en-us/library/windows/desktop/aa446796(v=vs.85).aspx](https://msdn.microsoft.com/en-us/library/windows/desktop/aa446796(v=vs.85).aspx){:target="_blank"}
-* Enabling Secure Boot and BitLocker - [{{site.baseurl}}/{{page.lang}}/Docs/SecureBootAndBitLocker.htm]({{site.baseurl}}/{{page.lang}}/Docs/SecureBootAndBitLocker.htm){:target="_blank"}
+* Enabling Secure Boot and BitLocker - [{{site.baseurl}}/{{page.lang}}/Docs/SecureBootAndBitLocker.htm]({{site.baseurl}}/{{page.lang}}/Docs/SecureBootAndBitLocker){:target="_blank"}
 

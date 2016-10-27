@@ -11,12 +11,12 @@ lang: en-US
 # Using and Dissecting the Code
 Lets start up the sample and then go through the important code bits! You can find the source code in our [git repository](https://github.com/ms-iot/samples){:target="_blank"}, in the [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} folder.
 
-This is a headed sample. To better understand what headed mode is and how to configure your device to be headed, follow the instructions [Headed and Headless mode]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm) site.
+This is a headed sample. To better understand what headed mode is and how to configure your device to be headed, follow the instructions [Headed and Headless mode]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode) site.
 
 ### Load the project in Visual Studio
 Download the code from our [git repository](https://github.com/ms-iot/samples){:target="_blank"}. Make a copy of the [`BluetoothGATT/CS`](https://github.com/ms-iot/samples/tree/develop/BluetoothGATT/CS){:target="_blank"} folder on your disk and open the project from Visual Studio.
 
-Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloWorld.htm) if you need guidance.
+Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloWorld) if you need guidance.
 
 ### Deploy and run the app
 First we need to select the correct architecture to build for. If you're building for MinnowBoard Max, select `x86` in the architecture dropdown. If you're building for Raspberry Pi 2 or 3, select `ARM`.
@@ -282,4 +282,4 @@ async void accelChanged(GattCharacteristic sender, GattValueChangedEventArgs eve
 That is all you will need to know on how to interact with a BLE GATT device. See [Supporting Bluetooth Devices (XAML)](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn264587.aspx){:target="_blank"} for more examples on how to use the Bluetooth APIs. 
 
 #### Previous Pages
-[Sample Overview]({{site.baseurl}}/{{page.lang}}/Samples/BLEGatt.htm) --- Learn about BLE, GATT, and the TI CC2541 SensorTag.
+[Sample Overview]({{site.baseurl}}/{{page.lang}}/Samples/BLEGatt) --- Learn about BLE, GATT, and the TI CC2541 SensorTag.

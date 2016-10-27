@@ -59,7 +59,7 @@ deferral.Complete();
 
 {% endhighlight %}
 
-Between the Background Application's start and eventual end, most Universal Windows Platform (UWP) APIs are be available for use (to be aware of the exceptions, please see our list of [Unavailable APIs]({{site.baseurl}}/{{page.lang}}/Docs/UnavailableApis.htm)).
+Between the Background Application's start and eventual end, most Universal Windows Platform (UWP) APIs are be available for use (to be aware of the exceptions, please see our list of [Unavailable APIs]({{site.baseurl}}/{{page.lang}}/Docs/UnavailableApis)).
 
 ## How do Background Applications start?
 
@@ -81,7 +81,7 @@ To invoke a Background Application, you can either:
 
 * For a Background Application that has been deployed to an IoT device, you can use the iotstartup.exe utility to configure your Background Application to start when the device boots.  To specify your Background Application as a Startup App, follow these instructions (**substitute your app's name** for `BackgroundApplication1` below):
 
-    1. Start a PowerShell (PS) session with your Windows IoT Core device as described [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm).
+    1. Start a PowerShell (PS) session with your Windows IoT Core device as described [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell).
 
     2. From the PS session, type:
 

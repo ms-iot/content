@@ -13,7 +13,7 @@ lang: en-US
 In this sample, we interface a SPI based [OLED display](http://www.adafruit.com/product/938){:target="_blank"} to your Raspberry Pi 2 or 3, MinnowBoard Max, or DragonBoard 410c. We then create an app that lets us write lines of text to the display. Step-by-step instructions are provided,
 so no background knowledge of SPI is needed. However, if you want to learn more, SparkFun provides a great [tutorial on SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}.
 
-This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm).
+This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode).
 
 ### Load the project in Visual Studio
 
@@ -35,7 +35,7 @@ Visit the **Raspberry Pi 2 or 3, MinnowBoard Max, or DragonBoard 410c** sections
 ![Electrical Components]({{site.baseurl}}/Resources/images/SPIDisplay/components.png)
 
 #### Raspberry Pi 2 or 3
-For the Raspberry Pi 2 or 3, we need to hook up power, ground, SPI, and a few GPIO pins to the OLED display. For additional information on the Raspberry Pi 2 or 3 pins, visit the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/{{page.lang}}/Samples/PinMappingsRPi2.htm)
+For the Raspberry Pi 2 or 3, we need to hook up power, ground, SPI, and a few GPIO pins to the OLED display. For additional information on the Raspberry Pi 2 or 3 pins, visit the [Raspberry Pi 2 pin mapping page]({{site.baseurl}}/{{page.lang}}/Samples/PinMappingsRPi2)
 
 **Note: Make sure to power off the RPi2 or RPi3 when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
 
@@ -61,7 +61,7 @@ Here are the schematics:
 ![SPI schematics]({{site.baseurl}}/Resources/images/SPIDisplay/schematics_rpi2.png)
 
 #### MinnowBoard Max
-For the MinnowBoard Max, we need to hook up power, ground, SPI, and a few GPIO pins to the OLED display. See the [MBM pin mapping page]({{site.baseurl}}/{{page.lang}}/Samples/PinMappingsMBM.htm) for more details on the MBM IO pins.
+For the MinnowBoard Max, we need to hook up power, ground, SPI, and a few GPIO pins to the OLED display. See the [MBM pin mapping page]({{site.baseurl}}/{{page.lang}}/Samples/PinMappingsMBM) for more details on the MBM IO pins.
 
 **Note: Make sure to power off the MBM when connecting your circuit. This is good practice to reduce the chance of an accidental short circuit during construction.**
 

@@ -137,7 +137,7 @@ There are two ways to go about seting up the software.
 <p>If you'd prefer to set up your solution manually, follow these steps:</p>
 
 <ol>
-    <li>Create a new project by following the <a href="{{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide.htm" target="_blank">Arduino Wiring Project Setup Guide</a>.</li>
+    <li>Create a new project by following the <a href="{{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide" target="_blank">Arduino Wiring Project Setup Guide</a>.</li>
     <li>Clone the following libraries from GitHub into the WeatherShield folder(at the same level as your .vcxproj file): <a target="_blank" href="https://github.com/sparkfun/MPL3115A2_Breakout/">MPL3115A2 Breakout</a> and <a target="_blank" href="https://github.com/sparkfun/HTU21D_Breakout">HTU21D Breakout</a>.</li>
     <li>Replace the existing code in your main .ino file ({yourProject}.ino, where {yourProject} is whatever you named the project when you created it) with the following code:
       {% highlight C++ %}
@@ -294,7 +294,7 @@ Pay special attention to this line near the top of the sketch file: `bool barome
 ## Build and Deploy Your App
 
 <p>Press F5 to build and deploy your project.
-Refer to the <a href="{{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide.htm">Arduino Wiring Project Guide</a> for more instructions on how to deploy your app!
+Refer to the <a href="{{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide">Arduino Wiring Project Guide</a> for more instructions on how to deploy your app!
 </p>
 <p>
 Once your project is deployed, you will see data appear in the output console while the program is running.
@@ -306,8 +306,8 @@ Watch your Output window in Visual Studio. The sketch will start reporting the d
 
 ## Having trouble?
 
-Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.
+Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringPortingGuide) for common issues and concerns when working with Arduino Wiring sketches.
 
 ---
 
-[&laquo; Return to Samples]({{site.baseurl}}/{{page.lang}}/Samples.htm){:role="button"}{:class="btn btn-default"}
+[&laquo; Return to Samples]({{site.baseurl}}/{{page.lang}}/Samples){:role="button"}{:class="btn btn-default"}

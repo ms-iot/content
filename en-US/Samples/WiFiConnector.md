@@ -12,7 +12,7 @@ lang: en-US
   
 We'll learn how to find and connect to Wi-Fi networks using a Universal Windows Platform (UWP) app that makes use of the [`Windows.Devices.WiFi.WiFiAdapter`](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.wifi.wifiadapter.aspx){:target="_blank"} API.  
   
-This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions on the [Headed and Headless mode]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm) site.  
+This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions on the [Headed and Headless mode]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode) site.  
   
 ### Load the project in Visual Studio  
   
@@ -25,14 +25,14 @@ The code for the WiFi Connect sample can be found under: [\WiFiConnect\CS\WiFiCo
 You'll need:  
   
 * A Windows 10 IoT Core capable board with onboard WiFi, such as the Raspberry Pi 3 or DragonBoard 410c or
-* A USB WiFi adapter. For a list of supported Wi-Fi adapters see the [Ecosystem Compatibility List]({{site.baseurl}}/{{page.lang}}/Docs/HardwareCompatList.htm){:target="_blank"}
+* A USB WiFi adapter. For a list of supported Wi-Fi adapters see the [Ecosystem Compatibility List]({{site.baseurl}}/{{page.lang}}/Docs/HardwareCompatList){:target="_blank"}
   
 ### Deploy your app  
   
 If you're building for Minnowboard Max, select `x86` as the architecture. If you're building for Raspberry Pi 2 or 3 or DragonBoard , select `ARM`.  
 
 
-Select **Remote Machine** to point to IoT device and hit F5 to deploy to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloWorld.htm){:target="_blank"}. if you need guidance   
+Select **Remote Machine** to point to IoT device and hit F5 to deploy to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloWorld){:target="_blank"}. if you need guidance   
   
 ### Test your app   
   

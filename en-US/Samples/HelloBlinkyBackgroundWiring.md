@@ -13,7 +13,7 @@ Learn to Deploy and Debug an Arduino Wiring sketch on Raspberry Pi 2 and 3 or Mi
 
 ## Setup
 
-Follow the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide.htm) to create a new wiring project!
+Follow the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide) to create a new wiring project!
 
 ## Code
 
@@ -70,15 +70,15 @@ Here is a pinout diagram of the Raspberry Pi 2:
 ## Build and deploy
 Press F5 to build and deploy your project.
 
-Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide.htm) for more instructions on how to deploy your app!
+Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide) for more instructions on how to deploy your app!
 
 ## Result
 You should see the LED blinking on and off, spending about a half second in each state. If it isn't blinking, try reversing the LED leads.
 
 ## Having trouble?
 
-Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.
+Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringPortingGuide) for common issues and concerns when working with Arduino Wiring sketches.
 
 ---
 
-[&laquo; Return to Samples]({{site.baseurl}}/{{page.lang}}/Samples.htm){:role="button"}{:class="btn btn-default"}
+[&laquo; Return to Samples]({{site.baseurl}}/{{page.lang}}/Samples){:role="button"}{:class="btn btn-default"}

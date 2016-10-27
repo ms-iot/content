@@ -1,6 +1,6 @@
 ---
 title: Windows 10 IoT Core | Official Site
-description: Get Windows 10 IoT Core, Visual Studio and other tools to easily build the next generation of Internet of Things solutions on Raspberry Pi 3 and Arduino.
+description: A version of Windows 10 built for the Internet of Things. Runs on Raspberry Pi 2 and 3, Intel Joule, and more
 permalink: /en-US/iot.htm
 lang: en-US
 layout: default_nowrapper
@@ -45,11 +45,11 @@ layout: default_nowrapper
   <div class="container">
     <div class="row">
       <div class="col-xs-24">
-        <ul>
-          <li><a href="{{site.baseurl}}/GetStarted">Choose a board</a></li>
+        <ul style="padding-left: 0px; list-style-type: none">
+          <li><a href="{{site.baseurl}}/Explore/deviceoptions">Choose a board</a></li>
           <li><a href="{{site.baseurl}}/GetStarted">Get started</a></li>
-          <li><a href="{{site.baseurl}}/Docs">Write apps</a></li>
-          <li><a href="{{site.baseurl}}/Docs/Commercialization">Commercialize</a></li>
+          <li><a href="{{site.baseurl}}/Docs/appdeployment">Write apps</a></li>
+          <li><a href="https://www.windowsforiotdevices.com/">Commercialize</a></li>
         </ul>
       </div>
     </div>
@@ -62,16 +62,16 @@ layout: default_nowrapper
       <section class="section remove-header-rule spacer-32-bottom">
         <div class="row">
           <div class="col-xs-24 col-md-12 col-lg-6">
-            <a href="{{site.baseurl}}/Docs/Whatsnew.htm">
-              <img class="img-responsive win-color-border-30" style="min-width: 100%;" alt="intel joule board" src="{{site.baseurl}}/Resources/images/rpi2.jpg">
+            <a href="{{site.baseurl}}/Docs/Whatsnew">
+              <img class="img-responsive win-color-border-30" style="min-width: 100%;" alt="intel joule board" src="{{site.baseurl}}/Resources/images/homepage/joule.png">
             </a>
-            <p class="spacer-16-top"><a href="{{site.baseurl}}/Docs/Whatsnew.htm">Announcing support for Intel Joule</a></p>
+            <p class="spacer-16-top"><a href="{{site.baseurl}}/Docs/Whatsnew">Announcing support for Intel Joule</a></p>
           </div>
           <div class="col-xs-24 col-md-12 col-lg-6">
-            <a href="{{site.baseurl}}/Docs/Whatsnew.htm">
+            <a href="{{site.baseurl}}/Docs/Whatsnew">
               <img class="img-responsive win-color-border-30" style="min-width: 100%;" alt="anniversary update image" src="{{site.baseurl}}/Resources/images/rpi2.jpg">
             </a>
-            <p class="spacer-16-top"><a href="{{site.baseurl}}/Docs/Whatsnew.htm">Windows 10 IoT Core Anniversary Update</a></p>
+            <p class="spacer-16-top"><a href="{{site.baseurl}}/Docs/Whatsnew">Windows 10 IoT Core Anniversary Update</a></p>
           </div>
           <div class="col-xs-24 col-md-12 col-lg-6">
             <a href="https://channel9.msdn.com/Blogs/One-Dev-Minute/Develop-for-IoT-Core  ">
@@ -95,15 +95,15 @@ layout: default_nowrapper
   <div class="container">
     <div class="row">
       <div class="image-col col-xs-24 col-md-12 col-md-push-12">
-        <div class="image-container">
-            <img class="jumbotron-image" alt="Windows 10 Start menu displayed in a phone, tablet, and laptop" src="{{site.baseurl}}/Resources/images/Homepage/iotcore.png">
+        <div class="image-container video-player embed-responsive-16by9 remove-top-margin remove-bottom-margin">
+            <img class="video-img img-responsive jumbotron-image " alt="Windows 10 Start menu displayed in a phone, tablet, and laptop" src="{{site.baseurl}}/Resources/images/Videos/iotcore.png" data-cn="Getting started with IoT Core Connectivity" data-fallback="Your browser does not support the video tag." data-video="//sec.ch9.ms/ch9/e12f/7ab66717-4132-4ca8-9576-1e4c8b3be12f/IoTCore.mp4">
         </div>
       </div>
       <div class="content-col col-xs-24 col-md-12 col-md-pull-12">
         <div class="jumbotron-content">
           <h2 class="jumbotron-highlight-band-header">What is Windows 10 IoT Core?</h2>
           <p class="jumbotron-highlight-band-subheader">The Internet of Things (IoT) brings together devices, sensors, data and the cloud. Unlike a computer or tablet, IoT devices can access specific hardware like lights, sensors and motors.  This lets you build both fun projects or professional devices.</p>
-          <p><a href="{{site.baseurl}}/Explore/IoTCore.htm">Learn more</a></p>
+          <p><a href="{{site.baseurl}}/Explore/IoTCore">Learn more</a></p>
         </div>
       </div>
     </div>
@@ -231,7 +231,7 @@ layout: default_nowrapper
                           </div>
                       </div>
                   </div>
-                  <a class="header-action nowrap" href="">More videos</a>
+                  <a class="header-action nowrap" href="https://www.youtube.com/channel/UCL7wy-iy_V76xxPnrIzGOZQ">More videos</a>
               </header>
               <div class="section-body">
                 <div class="video-player remove-top-margin">
@@ -263,50 +263,63 @@ layout: default_nowrapper
                         <div class="section-title">Events</div>
                     </div>
                     <div class="section-body">
-                        <!--<ul id="events-body" data-data-src="{cdn}/devcenter/en-us/devcenter_v3/data/iot-events.js" class="eventlist" data-bind="template: { name: 'event-template', foreach: secondaryEvents }"></ul>-->
+                        {% assign count = 0 %} 
+                        {% assign allevents = site.data._homepage-current-items["events"] %}
+                        {% assign allannounce = site.data._homepage-current-items["announcements"] %}
                         <ul id="events-body" class="eventsList list-unstyled">
-                            <!-- #1 -->
+                          {% for event in allevents %}
                             <li class="event">
                                 <div class="event-info">
                                     <div class="event-list">
-                                        <!--<a href="http://www.makerfairerome.eu/en/">--><div class="name">Raspberry Pi 3 announce</div><!--</a>-->
+                                      {% if event.link %}
+                                      <a href="{{event.link}}"><div class="name">{{event.title}}</div></a>
+                                      {% else %}
+                                      <div class="name">{{event.parent}}</div>  
+                                      {% endif %}
                                     </div>
+                                    {% assign datearray = event.date | split: ' ' %}
                                     <div class="date">
-                                        <span class="month">Feb</span>
-                                        <span class="day">29</span>
-                                        <span class="year">2016</span> -
-                                        <span class="loc">London</span>
+                                        <span class="month">{{datearray.first}}</span>
+                                        {% if datearray.size > 2 %}
+                                        <span class="day">{{datearray[1]}}</span>
+                                        {% endif %}
+                                        <span class="year">{{datearray.last}}</span> |
+                                        <span class="loc">{{event.location}}</span>
                                     </div>
                                 </div>
                             </li>
-                            <!-- #2 -->
+                            {% assign count = count | plus: 1 %}
+                            {% if forloop.index >= 3 %}   
+                              {% break %}
+                            {% endif %}
+                          {% endfor %}
+                        </ul>
+                    </div>
+                </section>
+              </div>
+              <div class="section-body">
+                <section class="section item-section">
+                    <div class="section-header">
+                        <div class="section-title">Blog posts</div>
+                    </div>
+                    <div class="section-body">
+                        <ul id="events-body" class="eventsList list-unstyled">
+                          {% for announce in allannounce %}
                             <li class="event">
                                 <div class="event-info">
                                     <div class="event-list">
-                                        <!--<a href="http://ignite.microsoft.com/">--><div class="name">Raspberry Pi 3 Birthday</div><!--</a>-->
+                                      <a href="{{announce.link}}"><div class="name">{{announce.title}}</div></a>  
                                     </div>
                                     <div class="date">
-                                        <span class="month">Mar</span>
-                                        <span class="day">07</span>
-                                        <span class="year">2016</span> -
-                                        <span class="loc">London</span>
+                                      <p>{{announce.date}} | {{announce.author}}</p>
                                     </div>
                                 </div>
                             </li>
-                            <!-- #3 -->
-                            <li class="event">
-                                <div class="event-info">
-                                    <div class="event-list">
-                                        <a href="http://build.microsoft.com/"><div class="name">Build 2016</div></a>
-                                    </div>
-                                    <div class="date">
-                                        <span class="month">Mar</span>
-                                        <span class="day">30</span>
-                                        <span class="year">2016</span> -
-                                        <span class="loc">San Francisco</span>
-                                    </div>
-                                </div>
-                            </li>
+                            {% assign count = count | plus: 1 %}
+                            {% if count >= 6 %}
+                              {% break %}
+                            {% endif %}
+                          {% endfor %}
                         </ul>
                     </div>
                 </section>
@@ -375,4 +388,5 @@ layout: default_nowrapper
     window.appInsights = appInsights;
     appInsights.trackPageView(null, null, { urlReferrer: document.referrer });
 </script>
+<script src="https://previewassets.windowsphone.com/3d15c79c-07a0-4088-b5cf-13fa98fe97d5/common-min_InvariantCulture_Default.js"></script>
 <noscript><img alt="" width="1" height="1" src="http://c.microsoft.com/trans_pixel.aspx" /></noscript>

@@ -18,7 +18,7 @@ Windows 10 IoT Core Dashboard is the best way to download, set up and connect yo
 
 ## Set up a new device
 ___
-The IoT Dashboard makes it easy to set up a new device. For detailed instructions on how to get started, see the [Get Started]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) page.
+The IoT Dashboard makes it easy to set up a new device. For detailed instructions on how to get started, see the [Get Started]({{site.baseurl}}/{{page.lang}}/GetStarted) page.
 
 {% include imageborder.html alt="IoT Dashboard Setup Page" link="/Resources/images/IoTDashboard/IoTDashboard_SetupPage.PNG" %}
 
@@ -58,7 +58,7 @@ After your device is connected to the internet, the IoT Dashboard will automatic
 To find your device, go to **My Devices**. If your device is not listed, try rebooting the device. Also make sure that if there are more than one devices on the network, they each have a unique name.
 
 ### Connect to your device
-Right click and select **Open in Device Portal**. This will launch the [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/Docs/Tools/DevicePortal.htm) page and is the best way to interact and manage your device.
+Right click and select **Open in Device Portal**. This will launch the [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/Docs/Tools/DevicePortal) page and is the best way to interact and manage your device.
 
 ![IoTDashboard View Devices]({{site.baseurl}}/Resources/images/IoTDashboard/IoTDashboard_RightClickMenu.PNG)
 
