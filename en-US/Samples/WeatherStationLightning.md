@@ -1,22 +1,22 @@
 ---
 layout: sample
-title: Weather station
+title: Weather station (using Lightning Providers)
 permalink: /en-US/Samples/WeatherStationLightning.htm
 keyword: Windows 10 IoT Core, beginner, breadboard, potentiometer, sensor, weather station
 description: Communicate with an I2C sensor using Lightning I2c provider
-samplelink: https://github.com/ms-iot/samples/tree/develop/WeatherStation/CS/WeatherStation
+samplelink: https://github.com/ms-iot/BusProviders/tree/develop/Microsoft.IoT.Lightning.Providers
 lang: en-US
 ---
 
-# Weather station
+# Weather station (using Lightning Providers)
 
-This sample demonstrates how to communicate with an I2c device using the Micorosot.IoT.Providers.Lightning.I2cProvider
+This sample demonstrates how to communicate with an I2c device using the Micorosot.IoT.Providers.Lightning.I2cProvider.
 
-It's based on the WeatherShield sample shared on [GitHub](https://github.com/ms-iot/samples/tree/develop/WeatherStation/CS/WeatherStation) and shares the same setup steps and most of the code. The only difference is how the sensor device is initialized in each.
+It is based on the [Weather Station sample]({{site.baseurl}}/{{page.lang}}/samples/arduino-wiring/WeatherStation.htm) and shares the same setup steps and most of the code. 
 
-### Using Lightning Provider
+### Using Default Provider (Default Controller Driver/Inbox Driver)
 
-The original sample used the default I2C provider for obtaining the I2C sensor device follows:
+The original sample used the default I2C provider for obtaining the I2C sensor device as follows:
 
 {% highlight C# %}
 
@@ -36,6 +36,10 @@ public async void Run(IBackgroundTaskInstance taskInstance)
     timer = ThreadPoolTimer.CreatePeriodicTimer(Timer_Tick, TimeSpan.FromMilliseconds(1000));
 }
 {% endhighlight %}
+
+The sample code using the default I2C provider, [Weather Station sample](https://github.com/ms-iot/samples/tree/develop/WeatherStation).
+
+### Using the Lightning provider
 
 Now, to enable the use of the Lightning provider, the I2C initialization code needs to be modified to set the Lightning provider as the default provider.
 
@@ -74,9 +78,11 @@ public async void Run(IBackgroundTaskInstance taskInstance)
 
 1. Clone the source for the WeatherStation sample for Lightning from [Github](https://github.com/ms-iot/BusProviders/tree/develop/Microsoft.IoT.Lightning.Providers) to a local folder.
 
-1. To setup the connections between the device and the weather shield, refer to the original [build lab](https://www.hackster.io/windowsiot/build-hands-on-lab-iot-weather-station-using-windows-10).
+1. To setup the connections between the device and the weather shield, refer to the original [sample]({{site.baseurl}}/{{page.lang}}/samples/arduino-wiring/WeatherStation.htm).
 
 1. Load the solution in Visual Studio.
+
+1. Select "Weather Station (Universal Windows)" as the Startup Project.
 
 1. Build the app.
 

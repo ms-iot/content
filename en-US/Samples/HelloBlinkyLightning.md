@@ -86,6 +86,8 @@ private async void InitGPIO()
 
 1. Load the solution in Visual Studio.
 
+1. Select "Blinky (Univeral Windows)" as the startup project.
+
 1. Build the app.
 
 1. Deploy and run the app on your device.  You can use the [Deploying an App with Visual Studio]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment) for guidance.
