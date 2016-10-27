@@ -6,3 +6,4 @@
     $("a[href*='" + filename + "'] h3").toggleClass('active');
     
 });
+>patch
