@@ -14,7 +14,7 @@ lang: en-US
       Get the tools you need to build with Windows 10 IoT Core
     </h2>
     <p>
-      For new users, make sure to check out the <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a> section.
+      For new users, make sure to check out the <a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Get Started</a> section.
     </p>
   </header>
 </section>
@@ -31,7 +31,7 @@ lang: en-US
           The IoT Dashboard is essential for all users wanting to get started.</p>
           <a class="btn btn-primary" href="http://go.microsoft.com/fwlink/?LinkID=708576"> Get Windows 10 IoT Core Dashboard </a>
           <p><span class="win-color-fg-secondary">By downloading and using the Windows 10 IoT Core Dashboard you agree to the <a href="http://go.microsoft.com/fwlink/?LinkID=703960&amp;clcid=0x4809"> license terms </a> and <a href="http://go.microsoft.com/fwlink/?LinkId=521839"> privacy statement </a> for Windows 10 IoT Core Dashboard.</span></p>
-          <p><a href="/content/en-US/Docs/ReleaseNotesRTM.htm"> Release notes </a></p>
+          <p><a href="/content/en-US/Docs/ReleaseNotesRTM"> Release notes </a></p>
         </div>
         <div class="col-md-12 col-xs-24">
           <img alt="iot core dashboard" src="{{site.baseurl}}/Resources/images/IotDashboard/IoTDashboard_WelcomePage.PNG" />
@@ -56,7 +56,7 @@ lang: en-US
         <div class="col-md-12 col-xs-24">
           <p><a href="http://windows.microsoft.com/en-US/windows-live/sign-in-what-is-microsoft-account">What is a Microsoft Account?</a></p>
           <p><a href="https://insider.windows.com/">What is the Windows Insider Program?</a></p>
-          <p><a href="{{site.baseurl}}/{{page.lang}}/Docs/ReleaseNotesInsiderPreview.htm">Release Notes</a></p>
+          <p><a href="{{site.baseurl}}/{{page.lang}}/Docs/ReleaseNotesInsiderPreview">Release Notes</a></p>
         </div>
       </div>
     </section>

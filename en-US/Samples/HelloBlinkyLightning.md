@@ -12,7 +12,7 @@ lang: en-US
 
 This sample demonstrates how to communicate with GPIO using the Micorosot.IoT.Lightning.Providers.I2cProvider
 
-It's based on the [Blinky UI sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky.htm) and shares the same setup steps. The main difference is setting the Lightning provider as the default controllers provider.
+It's based on the [Blinky UI sample]({{site.baseurl}}/{{page.lang}}/Samples/helloblinky) and shares the same setup steps. The main difference is setting the Lightning provider as the default controllers provider.
 
 ### Using Lightning Provider
 
@@ -76,18 +76,20 @@ private async void InitGPIO()
 
 ### Building and deploying the sample
 
-1. Enable Lightning on your Raspberry Pi2 or MBM device using the the steps outlined in the [Lightning Setup Guide]({{site.baseurl}}/{{page.lang}}/Docs/LightningSetup.htm).
+1. Enable Lightning on your Raspberry Pi2 or MBM device using the the steps outlined in the [Lightning Setup Guide]({{site.baseurl}}/{{page.lang}}/Docs/LightningSetup).
 
 1. Ensure the correct version of the Windows SDK is installed on your development machine. The required Windows SDK can be installed from [here](https://dev.windows.com/en-us/downloads/windows-10-developer-preview).
 
 1. Clone the source for the Blinky sample for Lightning from [Github](https://github.com/ms-iot/BusProviders/tree/develop/Microsoft.IoT.Lightning.Providers) to a local folder.
 
-1. To setup the LED connectons, refer to the [original Blinky sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky.htm).
+1. To setup the LED connectons, refer to the [original Blinky sample]({{site.baseurl}}/{{page.lang}}/Samples/helloblinky).
 
 1. Load the solution in Visual Studio.
 
+1. Select "Blinky (Univeral Windows)" as the startup project.
+
 1. Build the app.
 
-1. Deploy and run the app on your device.  You can use the [Deploying an App with Visual Studio]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm) for guidance.
+1. Deploy and run the app on your device.  You can use the [Deploying an App with Visual Studio]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment) for guidance.
 
 ![Blinky Output]({{site.baseurl}}/Resources/images/Lightning/BlinkyUI.png)

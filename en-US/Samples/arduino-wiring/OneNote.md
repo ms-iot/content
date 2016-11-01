@@ -14,7 +14,7 @@ Learn how to deploy an Arduino Wiring sketch on Raspberry Pi 2 and 3 or Minnowbo
 
 ## Create a new project
 
-1. Create a new project from the template. More information can be found in the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide.htm).
+1. Create a new project from the template. More information can be found in the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide).
 2. Replace the existing code in main.cpp with the following code. Make modifications for multiple action buttons as needed.
 3. Add the following files to the project, MinHttpGP.cpp/.h, and OneNoteHelper.cpp/.h,
    found [on GitHub](https://github.com/ms-iot/sample-todo).
@@ -133,7 +133,7 @@ There are a few ways to do this, and the Windows Live APIs can give you more inf
 ### Build and deploy
 Press F5 to build and deploy your project.
 
-Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide.htm) for more instructions on how to deploy your app!
+Refer to the [Arduino Wiring Project Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide) for more instructions on how to deploy your app!
 
 
 ## Result
@@ -144,8 +144,8 @@ If you also hook up a button to pin 29 (GPIO pin 5) and a simple POS printer, yo
 
 ### Having trouble?
 
-Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringPortingGuide.htm) for common issues and concerns when working with Arduino Wiring sketches.
+Refer to the [Arduino Wiring Porting Guide]({{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringPortingGuide) for common issues and concerns when working with Arduino Wiring sketches.
 
 ---
 
-[&laquo; Return to Samples]({{site.baseurl}}/{{page.lang}}/Samples.htm){:role="button"}{:class="btn btn-default"}
+[&laquo; Return to Samples]({{site.baseurl}}/{{page.lang}}/Samples){:role="button"}{:class="btn btn-default"}

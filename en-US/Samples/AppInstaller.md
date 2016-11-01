@@ -4,29 +4,30 @@ title: App installer
 description: Learn how to install AppX's onto your IoT Core device
 keyword: Windows 10 IoT Core, AppX, install
 permalink: /en-US/Samples/AppInstaller.htm
-samplelink: https://github.com/ms-iot/samples/tree/develop/AppInstall
 lang: en-US
 ---  
 
 # App installer
 
-You can find the source code for this sample on our GitHub [here](https://github.com/ms-iot/samples/tree/develop/AppInstall).
+## Install the app using Windows Device Portal
+___
 
-To install your appx on device please do the following:
+To install your application on the device please do the following:
 
-1. Edit `AppxConfig.cmd`
-	- `set AppxName =` your appx's file name (Name only. No need for .appx extension)
-	- `set certslist =` your appx's certificate's name. (Name only. No need for .cer extension. You can delimit mutliple certificates with a space.)
-	- `set dependencylist =` your appx's dependency names. (Name only. No need for .cer extension. You can delimit mutliple certificates with a space.)
-	- `set forceinstall=` **0** if you want to install only newer versions and **1** if you want to force install (uninstalls existing version and installs). Default is **0**
-    - `set launchapp=` **1** if you want to set the app as default app and launch , **0** if you just want to install only. Default is **1**	
+1. Open the Windows Device Portal for your IoT device. Instructions for the same are found on the [Windows Device Portal page](https://developer.microsoft.com/en-us/windows/iot/docs/deviceportal).
 
-3. Place your files in the following directories:
-	- `c:\AppInstall`: Your Appx, Dependency Appx(s), Certificate(s), all .cmd files in this directory except OEMCustomization.cmd
-	- `c:\windows\system32`: OemCustomization.cmd
-		
-    You can do this by either:    
-    - Wrapping the binaries in an OEM Package and include it when you create the image with ICD/Imggen. See .pkg.xml file.
-	- Manually copy the files over to disk.
-    
-4. Restart the device and your appx will be automatically installed on boot.
+2. In the <strong>Apps</strong> menu add your Appx, Certificate(s) and Dependency Appx(s).
+ ![Install App]({{site.baseurl}}/Resources/images/AppInstaller/InstallApp.png)
+
+3. Deploy the app.
+
+4. The application will now be visible on the list of applications on your device.
+ ![App List]({{site.baseurl}}/Resources/images/DevicePortal/AppList.png)
+
+
+## Install the app as a part of the IoT core image   
+___
+
+To add the Application as a part of your device image follow the instructions outlined in the [manufacturing guide](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/deploy-your-app-with-a-standard-board).
+
+A Sample Appx Package can be found in our [GitHub repo](https://github.com/ms-iot/iot-adk-addonkit/tree/develop/Source-arm/Packages/Appx.Main).

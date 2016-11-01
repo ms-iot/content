@@ -15,8 +15,8 @@ You can use [Microsoft Message Analyzer](http://www.microsoft.com/en-us/download
 
 ## Set up your device
 
-In order to connect to your device using Message Analyzer, you need to first rename your device.  This can be done through [SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH.htm){:target="_blank"} or 
-[PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm){:target="_blank"} using the `setcomputername` command.
+In order to connect to your device using Message Analyzer, you need to first rename your device.  This can be done through [SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH){:target="_blank"} or 
+[PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell){:target="_blank"} using the `setcomputername` command.
 
 ![PowerShell Rename Device]({{site.baseurl}}/Resources/images/packetcapture/powershell-rename-device.png)
 
@@ -47,5 +47,5 @@ Now that your device is set up, let's connect to it using Microsoft Message Anal
 8. Click the `Start` button.
 9. You should start to see the messages going through the network interfaces on your device.
     ![Message Analyzer]({{site.baseurl}}/Resources/images/packetcapture/message-analyzer.png)
-10. After you start the trace through Message Analyzer, you can also view the ETW messages from the packet capture driver in your device's [web interface]({{site.baseurl}}/{{page.lang}}/Docs/DevicePortal.htm){:target="_blank"}.  To do this, go to the ETW tab of the web interface, select `Microsoft-Windows-NDIS-PacketCapture` from the `Registered providers` dropdown menu and click the `Enable` button.
+10. After you start the trace through Message Analyzer, you can also view the ETW messages from the packet capture driver in your device's [web interface]({{site.baseurl}}/{{page.lang}}/Docs/DevicePortal){:target="_blank"}.  To do this, go to the ETW tab of the web interface, select `Microsoft-Windows-NDIS-PacketCapture` from the `Registered providers` dropdown menu and click the `Enable` button.
     ![Message Analyzer]({{site.baseurl}}/Resources/images/packetcapture/web-etw.png)    

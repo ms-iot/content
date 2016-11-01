@@ -1,7 +1,7 @@
 <div class="col-md-12 col-xs-24 col-no-padding">
   <p>To set up Windows 10 IoT Core, you need to use the Windows 10 IoT Core Dashboard.</p>
   <ol class="inline-list">
-    <li><b>Launch Windows 10 IoT Core Dashboard</b>. If you haven't already, <a href="http://ms-iot.github.io/content/en-US/GetStarted.htm" target="_blank">install Windows 10 IoT Core Dashboard</a>. Note that you must have Windows 10 or better.</li>
+    <li><b>Launch Windows 10 IoT Core Dashboard</b>. If you haven't already, <a href="http://ms-iot.github.io/content/en-US/GetStarted" target="_blank">install Windows 10 IoT Core Dashboard</a>. Note that you must have Windows 10 or better.</li>
     <li><b>Click "Set up a new device"</b>.</li>
     <li><b>Select your device type from the dropdown</b>. Each board has its own specialized image that differs per board.</li>
     <li><b>Make sure your SD card is compliant</b>. We require that the SD card be at least 8 GB in size. Slower and older cards have a tendency to be inconsistent when flashing and may fail to work.

@@ -15,7 +15,7 @@ Deploying and debugging your application is straightforward with Visual Studio. 
 * [C++ App Deployment](#cpp)
 * [Python App Deployment](#python)
 
-{% include note.html text='In order to use remote debugging, your IoT Core device must first be connected to same local network as your development PC.  See the <a href="https://developer.microsoft.com/en-us/windows/iot/Docs/ConnectToDevice.htm">Connecting to device</a> instructions.'  %}
+{% include note.html text='In order to use remote debugging, your IoT Core device must first be connected to same local network as your development PC.  See the <a href="https://developer.microsoft.com/en-us/windows/iot/Docs/ConnectToDevice">Connecting to device</a> instructions.'  %}
 
 <a name="csharp"/>
 

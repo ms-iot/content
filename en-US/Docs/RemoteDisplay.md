@@ -27,14 +27,14 @@ The functionality is easy-to-use, and is included out-of-box on the latest Insid
 
 ## Setup
 ___
-To get started, you'll need to set up a Windows 10 IoT Core device with the latest Insider build of Windows 10 (OS Version 10.0.14295.1000) - visit the <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a> page to set up your board.
+To get started, you'll need to set up a Windows 10 IoT Core device with the latest Insider build of Windows 10 (OS Version 10.0.14295.1000) - visit the <a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Get Started</a> page to set up your board.
 
 Setup is quick and easy - follow the three steps below to use the remote display technology.
 
 1. Turn on the remote display functionality on your Windows 10 IoT Core device.
   
     Connect your device to the Internet and connect to Windows Device Portal.
-    For detailed instructions on how to get connected, see the [Get Started]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) page.
+    For detailed instructions on how to get connected, see the [Get Started]({{site.baseurl}}/{{page.lang}}/GetStarted) page.
   
 	  Choose the page "Remote" from the options on the left, and mark the check box labeled "Enable Window IoT Remote Server".  Your device is now enabled for remote display experience.
   <img alt="Enable remote display experience" src="{{site.baseurl}}/Resources/images/enable-remote.png">

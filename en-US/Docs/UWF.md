@@ -10,15 +10,15 @@ lang: en-US
 
 The Unified Write Filter (UWF) is a feature to protect physical storage media from data writes. UWF intercepts all write attempts to a protected volume and redirects those write attempts to a virtual overlay. This improves the reliability and stability of your device and reduces the wear on write-sensitive media, such as flash memory media like solid-state drives.
 
-Read [Unified Write Filter](https://msdn.microsoft.com/en-us/windows/hardware/mt572001) for more information.
+Read [Unified Write Filter](https://msdn.microsoft.com/windows/hardware/mt572001) for more information.
 
 {% include note.html text="You'll need an MSDN subscription or an account as a registered Microsoft OEM to get IoT Core Kits from MSDN Subscriber Downloads." %}
 
-If you do not have IoT Core Kits yet, Download and install [IoT Core Kits from MSDN Subscriber Downloads](https://msdn.microsoft.com/subscriptions/downloads/#FileId=67415).
+If you do not have IoT Core Kits yet, Download and install [IoT Core Kits from MSDN Subscriber Downloads](https://msdn.microsoft.com/subscriptions/downloads/#FileId=70177).
 
 ## How to Install UWF on a device running Windows 10 IoT Core
 ___
-* Launch [Powershell](http://ms-iot.github.io/content/en-US/Docs/PowerShell.htm) or [SSH](http://ms-iot.github.io/content/en-US/Docs/SSH.htm) and access your device running Windows 10 IoT Core.
+* Launch [Powershell](http://ms-iot.github.io/content/en-US/Docs/PowerShell) or [SSH](http://ms-iot.github.io/content/en-US/Docs/SSH) and access your device running Windows 10 IoT Core.
 * From Powershell or SSH, do the following:
   * Create a temporary folder on the target machine (e.g. ```C:\UWFTemp```).
   * Based on your device architecture, copy UWF packages ( `Microsoft-IoTUAP-UnifiedWriteFilter-Package.cab` and `Microsoft-IoTUAP-UnifiedWriteFilter-Package_Lang_en-us.cab` ) from your PC (`C:\Program Files (x86)\Windows Kits\10\MSPackages\Retail\<arch>\fre\`) to `C:\UWFTemp`.
@@ -36,17 +36,17 @@ ___
 ___
 
 *             Add **IOT_UNIFIED_WRITE_FILTER** feature id to the OEM Input file 
-*             Create the image\FFU. Read [Create a basic image](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/create-a-basic-image) for instructions.
+*             Create the image\FFU. Read [Create a basic image](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/iot/create-a-basic-image) for instructions.
 
 
 ## How to Use UWF
 ___
 
 UWF can be configured using the uwfmgr.exe tool via a Powershell or SSH session.
-Read [`uwfmgr.exe` tool](https://msdn.microsoft.com/en-us/windows/hardware/mt572002) for the available options with an exception of some commands listed below that are not supported in IoT Core.
+Read [`uwfmgr.exe` tool](https://msdn.microsoft.com/windows/hardware/mt572002) for the available options with an exception of some commands listed below that are not supported in IoT Core.
 Review the default settings of the Overlay configurations and adapt them per your requirements.
 
-UWF can also be configured via MDM channel using [Unified Write Filter CSP](https://msdn.microsoft.com/en-us/library/windows/hardware/dn904976(v=vs.85).aspx).
+UWF can also be configured via MDM channel using [Unified Write Filter CSP](https://msdn.microsoft.com/library/windows/hardware/dn904976(v=vs.85).aspx).
 
 
 * For example, the following combination of commands enable uwfmgr and configure to protect the C drive
@@ -76,7 +76,6 @@ The GUID for the available volumes can be found through the following command
 ### Recommended Exclusions
 When protecting the data volume, we recommend that you add exceptions for the servicing and logging folders that are accessed by Windows OS Services.
 
-Create an exclusion file (example, `C:\exclusions.txt`) that lists the folders below. 
 {% highlight XML %}
 C:\Data\Users\System\AppData\Local\UpdateStagingRoot
 C:\Data\SharedData\DuShared
@@ -87,12 +86,9 @@ C:\Data\systemdata\nonetwlogs
 {% endhighlight %}
 
 To add the exclusions:
-  `uwfmgr.exe file Add-Exclusion C:\exclusions.txt`
-
+  `uwfmgr.exe file Add-Exclusion <file/folder name>`
+  
 {% include warning.html text="We recommend disabling Windows Update when enabling UWF. Enabling UWF without disabling Windows Update may result in system instability." %}
-
-For more info on creating exclusion files, see [Unified Write Filter](https://msdn.microsoft.com/windows/hardware/mt572001).
-
 
 ## Servicing UWF protected devices
 ___

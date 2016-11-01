@@ -1,9 +1,10 @@
 ---
+layout: sample
 title: Hello, blinky! 
 description: A "Hello, world" sample for an LED and breadboard
 keyword: Beginner, gpio, xaml, iot core, windows
 permalink: /en-US/Samples/HelloBlinkyNode.htm
-samples: N/A
+samplelink: N/A
 lang: en-US
 ---
 
@@ -11,12 +12,12 @@ lang: en-US
 
 
 This page will take you through the steps to blink an LED from a Node.js console app running on a Raspberry Pi. This sample is similar to the 
-[Hello blinky background service]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinkyBackgroundNode.htm). 
+[Hello blinky background service]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinkyBackgroundNode). 
 The difference is that we'll be using the win32 console version of Node.js (Chakra) and running it via command line.
 
 
 ### Set up your hardware
-The hardware setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky.htm).
+The hardware setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/Samples/helloblinky).
 
 
 ### Set up your PC
@@ -74,8 +75,8 @@ Here's what the code above is doing:
 
 
 ### Run the app!
-* Connect to the device using [SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH.htm) or [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm).
-* Run the command `C:\NodejsChakra\Node.exe C:\MyNodejsBlinky\app.js` to start the app.
+* Connect to the device using [SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH) or [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell).
+* Run the command `C:\NodejsChakra\Node.exe C:\MyNodejsBlinky\blinky.js` to start the app.
 
 
 ### Notes
@@ -87,5 +88,5 @@ Here's what the code above is doing:
   * Run `setx APPDATA c:\Users\Default\AppData\Roaming /M` to set the APPDATA environment variable permanantly.
   * Run `shutdown /r /t 0` to restart your device. When the device has booted you can now run `c:\NodejsChakra\npm.cmd`
 * If you get an error/crash when using a native addon with Node.js (Chakra), one of the reasons may be that the addon is using an API that's not supported on IoT Core.
-  You can use the [API Porting Tool]({{site.baseurl}}/{{page.lang}}/Docs/IoTAPIPortingTool.htm) to find out.
+  You can use the [API Porting Tool]({{site.baseurl}}/{{page.lang}}/Docs/IoTAPIPortingTool) to find out.
 * While Node.js (Chakra) supports using the uwp npm package, the open source [Node.js (ChakraCore)](https://github.com/nodejs/node-chakracore) does not.  

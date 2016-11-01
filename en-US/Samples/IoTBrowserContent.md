@@ -4,7 +4,7 @@
 
 We'll create a simple web browser application for your your Windows 10 IoT Core device.
 
-This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm).
+This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode).
 
 As this sample uses just standard windows UWP features it can also run on your desktop.
 

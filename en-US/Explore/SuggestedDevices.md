@@ -1,5 +1,5 @@
 <p>
-  The publicly available boards below are some of the same devices Microsoft uses as part of our operating system engineering efforts. We support an easy process for you to <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">get started</a> with these devices right away. Learn more about the features of each device below, and check out the <a href="http://go.microsoft.com/fwlink/p/?linkID=532948">supported hardware peripherals</a> for each board to decide what device is right for you. If you don't see a device below that works to prototype or commercialize your idea, please check the Additional Devices or Community Devices.
+  The publicly available boards below are some of the same devices Microsoft uses as part of our operating system engineering efforts. We support an easy process for you to <a href="{{site.baseurl}}/{{page.lang}}/GetStarted">get started</a> with these devices right away. Learn more about the features of each device below, and check out the <a href="http://go.microsoft.com/fwlink/p/?linkID=532948">supported hardware peripherals</a> for each board to decide what device is right for you. If you don't see a device below that works to prototype or commercialize your idea, please check the Additional Devices or Community Devices.
 {% include note.html text="Hardware features listed below may not be fully supported in all configurations." %}</p>
 <table class="table table-striped maker-kit">
     <tr></tr>
@@ -116,7 +116,7 @@
         <p>1x SPI bus</p>
         <p>1x I2C bus</p>
         <p>1x Serial UART</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Set up your Raspberry Pi 3</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Set up your Raspberry Pi 3</a></p>
         <p><a href="https://www.element14.com/community/docs/DOC-76955/l/raspberry-pi-customization-service">Pi Customization Service</a></p>
       </td>   
       <td>
@@ -124,7 +124,7 @@
         <p>1x SPI bus</p>
         <p>1x I2C bus</p>
         <p>1x Serial UART</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Set up your Raspberry Pi 2</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Set up your Raspberry Pi 2</a></p>
         <p><a href="https://www.element14.com/community/docs/DOC-76955/l/raspberry-pi-customization-service">Pi Customization Service</a></p>
       </td>
       <td>
@@ -132,7 +132,7 @@
         <p>1x SPI bus</p>
         <p>1x I2C bus</p>
         <p>2x Serial UARTs</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Set up your MinnowBoard MAX</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Set up your MinnowBoard MAX</a></p>
         <p><a href="http://iotsolutionsalliance.intel.com/solutions-directory/processors_list/782">Other device options</a></p>
       </td>
       <td>
@@ -140,7 +140,7 @@
         <p>1x SPI bus</p>
         <p>2x I2C buses</p>
         <p>2x Serial UARTs</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/Docs/DB410c.htm">Set up your DragonBoard 410c</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/Docs/DB410c">Set up your DragonBoard 410c</a></p>
         <p><a href="https://developer.qualcomm.com/hardware/snapdragon-410">Other device options</a></p>
       </td>
     </tr>

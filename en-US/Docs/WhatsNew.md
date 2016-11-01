@@ -9,7 +9,7 @@ lang: en-US
 
 # What’s new for Windows 10 IoT Core - Support for Intel® Joule™  
 
-Windows just keeps getting better. During Intel’s Developer Forum, Intel’s CEO announced a new innovator platform, [Intel Joule](https://newsroom.intel.com/chip-shots/make-amazing-things-happen-iot-entrepreneurship-intel-joule/), with support for Windows 10 IoT Core. Combined with the power of the Universal Windows Platform, Visual Studio, and Azure IoT, the Intel® Joule™ module is exceptionally well suited to help developers and entrepreneurs go from concept to prototype to production in a fraction of the time of traditional system development. Please come back soon to [Get Started]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) with Windows 10 IoT Core.  
+Windows just keeps getting better. During Intel’s Developer Forum, Intel’s CEO announced a new innovator platform, [Intel Joule](https://newsroom.intel.com/chip-shots/make-amazing-things-happen-iot-entrepreneurship-intel-joule/), with support for Windows 10 IoT Core. Combined with the power of the Universal Windows Platform, Visual Studio, and Azure IoT, the Intel® Joule™ module is exceptionally well suited to help developers and entrepreneurs go from concept to prototype to production in a fraction of the time of traditional system development. Please come back soon to [Get Started]({{site.baseurl}}/{{page.lang}}/GetStarted) with Windows 10 IoT Core.  
 
 ## The Anniversary Update
 ___
@@ -22,9 +22,9 @@ ___
 
 ### Raspberry Pi 3
 ![Raspberry Pi 3 image]({{site.baseurl}}/Resources/images/677423-highlight.jpg)
-[IoT Core]({{site.baseurl}}/{{page.lang}}/Explore/IotCore.htm) is now officially released for the [Raspberry Pi 3](https://www.microsoftstore.com/store/msusa/en_US/pdp/Raspberry-Pi-3-Board-and-16GB-10class-with-NOOBS/productID.334851400) to the public.
+[IoT Core]({{site.baseurl}}/{{page.lang}}/Explore/IotCore) is now officially released for the [Raspberry Pi 3](https://www.microsoftstore.com/store/msusa/en_US/pdp/Raspberry-Pi-3-Board-and-16GB-10class-with-NOOBS/productID.334851400) to the public.
 
-* Easy set up with a [new getting started experience]({{site.baseurl}}/{{page.lang}}/GetStarted.htm)
+* Easy set up with a [new getting started experience]({{site.baseurl}}/{{page.lang}}/GetStarted)
 * Functional parity with RPi2, including Windows as a service updating and flighting model and a single FFU for RPi2 and RPi3
 
 ### Microsoft IoT Grove Kit
@@ -35,30 +35,30 @@ The new Microsoft IoT Grove Kit is an easy to use solution for Makers, as well a
 ### Refreshed Adafruit IoT Starter Pack for Raspberry Pi 3
 ![Adafruit starter pack]({{site.baseurl}}/Resources/images/AdafruitStarterPack/AdafruitMakerKitClosedSmall.jpg) 
 
-Adafruit has [updated their starter pack]({{site.baseurl}}/{{page.lang}}/Docs/AdafruitWelcome.htm)  to now include Raspberry Pi 3 and Windows 10 IoT Core.
+Adafruit has [updated their starter pack]({{site.baseurl}}/{{page.lang}}/Docs/AdafruitWelcome)  to now include Raspberry Pi 3 and Windows 10 IoT Core.
 
 
 ## New major features
 ___ 
-* [Windows IoT Remote Client]({{site.baseurl}}/{{page.lang}}/Docs/RemoteDisplay.htm) - remote into your IoT device to control and view what is displayed on your IoT device from your desktop or phone
-* [Store integration]({{site.baseurl}}/{{page.lang}}/Docs/Store.htm) - connect Windows 10 IoT Core to the store to service applications 
-* [NOOBS]({{site.baseurl}}/{{page.lang}}/Docs/GetStarted/noobs/getstartedstep2.htm) - 8GB cards now supported 
-* Better [Azure IoT Hub]({{site.baseurl}}/{{page.lang}}/Docs/cloudintro.htm) connectivity - provision your device with a device identity in the cloud 
+* [Windows IoT Remote Client]({{site.baseurl}}/{{page.lang}}/Docs/RemoteDisplay) - remote into your IoT device to control and view what is displayed on your IoT device from your desktop or phone
+* [Store integration]({{site.baseurl}}/{{page.lang}}/Docs/Store) - connect Windows 10 IoT Core to the store to service applications 
+* [NOOBS]({{site.baseurl}}/{{page.lang}}/Docs/GetStarted/noobs/getstartedstep2) - 8GB cards now supported 
+* Better [Azure IoT Hub]({{site.baseurl}}/{{page.lang}}/Docs/cloudintro) connectivity - provision your device with a device identity in the cloud 
 * [Shell capabilities](https://github.com/ms-iot/samples/tree/develop/IoTHomeAppSample) - multiple foreground app support
 * [IoTivity AllJoyn Device System Bridge](https://github.com/ms-iot/samples/tree/develop/AllJoyn/Samples/OICAdapter)
-* [Arduino INO integration](https://developer.microsoft.com/en-us/windows/iot/IotCoreAppDeployment_ArduinoIde.htm) - work better with Arduino hardware with this command line toolkit
+* [Arduino INO integration](https://developer.microsoft.com/en-us/windows/iot/IotCoreAppDeployment_ArduinoIde) - work better with Arduino hardware with this command line toolkit
 
 ### Improved documentation
-* Updated [samples page]({{site.baseurl}}/{{page.lang}}/Samples.htm) - new tagging system to sort through different samples 
-* Updated [documentation page]({{site.baseurl}}/{{page.lang}}/Docs.htm) - added a table of contents and new documentation
+* Updated [samples page]({{site.baseurl}}/{{page.lang}}/Samples) - new tagging system to sort through different samples 
+* Updated [documentation page]({{site.baseurl}}/{{page.lang}}/Docs) - added a table of contents and new documentation
 
 ### Getting started
-* New [getting started]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) flow  
-* Automatically set up your Wi-Fi connection through the [IoT Dashboard]({{site.baseurl}}/{{page.lang}}/Docs/IoTDashboard.htm)
+* New [getting started]({{site.baseurl}}/{{page.lang}}/GetStarted) flow  
+* Automatically set up your Wi-Fi connection through the [IoT Dashboard]({{site.baseurl}}/{{page.lang}}/Docs/IoTDashboard)
  
 ### For commercial builders
-* [Windows 10 IoT Core Pro]({{site.baseurl}}/{{page.lang}}/Docs/CreateIoTCorePro.htm) now offers retail signing with cross certs - cross sign your own [drivers]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab.htm) and be compatible with secure boot 
-* [Trusted Platform Module (TPM) support]({{site.baseurl}}/{{page.lang}}/Docs/TPM.htm) - provision your azure key into a virtual or physical TPM 
+* [Windows 10 IoT Core Pro]({{site.baseurl}}/{{page.lang}}/Docs/CreateIoTCorePro) now offers retail signing with cross certs - cross sign your own [drivers]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab) and be compatible with secure boot 
+* [Trusted Platform Module (TPM) support]({{site.baseurl}}/{{page.lang}}/Docs/TPM) - provision your azure key into a virtual or physical TPM 
 * A new [OEM manufacturing guide](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/iot-core-manufacturing-guide) - build your own .FFU
 
 
@@ -66,13 +66,15 @@ ___
 ___
 * [IoT Core Default app](https://github.com/ms-iot/samples/tree/develop/IoTCoreDefaultApp) - added an on device command line 
 * Blockly - now available in the IoT Dashboard as sample using node.js and sense hat
-* [Wireless 3D printer project]({{site.baseurl}}/{{page.lang}}/Docs/3dprintserver.htm) - make your 3D printer by connecting an IoT Core device to it 
+* [Wireless 3D printer project]({{site.baseurl}}/{{page.lang}}/Docs/3dprintserver) - make your 3D printer by connecting an IoT Core device to it 
 * [PID wheel demo](https://www.hackster.io/windows-iot/closed-loop-control-remote-sensors-and-remote-ux-on-rpi3-ef3ed0?ref=part&ref_id=9417&offset=19) - monitor a wheel's speed and consistently reach the desired RPM under any friction level
 * [System center configuration manager](https://developer.microsoft.com/windows/iot/docs/management) - enroll your IoT Core device under SCCM management
 
 ## Additional Resources
 ___ 
 
-[Release Notes]({{site.baseurl}}/{{page.lang}}/Docs/ReleaseNotesInsiderPreview.htm)
+[Release Notes]({{site.baseurl}}/{{page.lang}}/Docs/ReleaseNotesInsiderPreview)
+
+[Downloads]({{site.baseurl}}/{{page.lang}}/Downloads)
 
 [Privacy Statement](http://go.microsoft.com/fwlink/?LinkId=506737)

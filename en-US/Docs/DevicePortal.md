@@ -23,9 +23,9 @@ The rest of the documentation below will be IoT specific.
 ___
 1. Connect your board to the internet
 
-    To get WDP up and running, you first need to connect your device to your network. See the [Get Started]({{site.baseurl}}/{{page.lang}}/GetStarted.htm) page for full instructions.
+    To get WDP up and running, you first need to connect your device to your network. See the [Get Started]({{site.baseurl}}/{{page.lang}}/GetStarted) page for full instructions.
 
-2. Find your device in IoT Dashboard and connect
+2. Find your device in IoT Dashboard and connect.
    Right click and select **Open in Device Portal**.
 
    ![IoTDashboard View Devices]({{site.baseurl}}/Resources/images/IoTDashboard/IoTDashboard_RightClickMenu.PNG)
@@ -103,7 +103,7 @@ The AllJoyn Onboarding Settings allow you to control whether or not your device'
 
 
 ### TPM configuration
-The Trusted Platform Module (TPM) is a cryptographic coprocessor including capabilities for random number generation, secure generation of cryptographic keys and limitation of their use. It also includes capabilities such as remote attestation and sealed storage. To learn about the TPM and security on IoT Core, visit the [Building secure devices]({{site.baseurl}}/en-US/Docs/BuildingSecureDevices.htm) page and the [TPM]({{site.baseurl}}/en-US/Docs/TPM.htm) page.
+The Trusted Platform Module (TPM) is a cryptographic coprocessor including capabilities for random number generation, secure generation of cryptographic keys and limitation of their use. It also includes capabilities such as remote attestation and sealed storage. To learn about the TPM and security on IoT Core, visit the [Building secure devices]({{site.baseurl}}/en-US/Docs/BuildingSecureDevices) page and the [TPM]({{site.baseurl}}/en-US/Docs/TPM) page.
 
 ### Remote
 The Windows IoT Remote Server allows users to see what their device is displaying without connecting a physical monitor to the keyboard.
@@ -114,7 +114,7 @@ The Windows IoT Remote Server allows users to see what their device is displayin
 ___
 
 ### Changing the default port
-1. Launch powershell and [connect to your device.]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell.htm)
+1. Launch powershell and [connect to your device.]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell)
 2. Set the port:
 
     `Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\IoT\webmanagement /v HttpPort /t REG_DWORD /d <your port number>`

@@ -9,15 +9,15 @@ lang: en-US
 # Internet connection sharing
 
 This document describes how internet connection sharing (ICS) can be enabled on Windows 10 IoT Core. Developers can use the NetworkTetheringManager API to configure ICS programmatically. The API is described in the [NetworkOperatorTetheringManager](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.networkoperators.networkoperatortetheringmanager.aspx){:target="_blank"} class.
-When using one of the [Windows 10 IoT Core Release Image](https://developer.microsoft.com/en-us/windows/iot/downloads){:target="_blank"} ICS can also be configured using the devcie portal.
+When using one of the [Windows 10 IoT Core Release Image](https://developer.microsoft.com/en-us/windows/iot/downloads){:target="_blank"} ICS can also be configured using the device portal.
 
-## Configuring ICS using the devcie portal
-Windows Device Portal (WDP) provides all settings needed to enable ICS. In WDP navigate to the **IoT Onboarding** tab to find these settings. The device needs at least one Wi-Fi adpater that supprots a software access point (SoftAP) configuration and one adapter that provides that Internet connation that will be shared.
+## Configuring ICS using the device portal
+Windows Device Portal (WDP) provides all settings needed to enable ICS. In WDP navigate to the **IoT Onboarding** tab to find these settings. The device needs at least one Wi-Fi adpater that supports a software access point (SoftAP) configuration and one adapter that provides that Internet connection that will be shared.
 
 1. **Start** and **Stop** shared access
 2. **Adapter configuration** to select the network adapters used in the ICS setup.
-3. **SoftAP settings** to set the SSID and password that devcies will use to conenct to the SoftAP that is exposed by the Windows IoT Core device.
-4. **AllJoyn onboarding settings** can be enableld to use an AllJoyn application to connect the devcie to a Wi-Fi network. through this capability the devcie can be onboarded later to a Wi-Fi network if no other form of configuration is availabe.
+3. **SoftAP settings** to set the SSID and password that devices will use to connect to the SoftAP that is exposed by the Windows IoT Core device.
+4. **AllJoyn onboarding settings** can be enabled to use an AllJoyn application to connect the device to a Wi-Fi network. Through this capability the device can be onboarded later to a Wi-Fi network if no other form of configuration is availabe.
 
 	
 ![ICS Configuration]({{site.baseurl}}/Resources/images/InternetConnectionSharing/Portal_ICS_1.png)
@@ -55,4 +55,4 @@ if (ethernetConnectionProfile != null && targetNetworkAdapter != null)
 }
 {% endhighlight %}
 
-If you using the Windows IoT Core November 2015 Release you need to follow the instructions decribed in the Internet [Connection Sharing Tutorial (Windows IoT Core November 2015 Release)]({{site.baseurl}}/{{page.lang}}/Docs/InternetConnectionSharingIoTCoreNov2015.htm) document.
+If you using the Windows IoT Core November 2015 Release you need to follow the instructions described in the Internet [Connection Sharing Tutorial (Windows IoT Core November 2015 Release)]({{site.baseurl}}/{{page.lang}}/Docs/InternetConnectionSharingIoTCoreNov2015) document.

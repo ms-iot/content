@@ -276,5 +276,12 @@ function InsertValue(value) {
 
   ![Azure Data]({{site.baseurl}}/Resources/images/Nodejs/azure-storagedata.png)
 
+
 ### GitHub
 * NTVS IoT Extension source code: [https://github.com/ms-iot/ntvsiot](https://github.com/ms-iot/ntvsiot)
+
+
+### Known Issues
+* If deployment fails due to paths that are too long, use the workaround [here](https://github.com/ms-iot/ntvsiot/issues/80).
+* Deployment can take several minutes to complete. This issue is tracked [here](https://github.com/ms-iot/ntvsiot/issues/113).
+

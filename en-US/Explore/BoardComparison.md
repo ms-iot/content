@@ -11,7 +11,7 @@ lang: en-US
     <a href="https://developer.microsoft.com/en-us/windows/iot">IoT Home</a>
   </li>
   <li>
-    <a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
+    <a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Get Started</a>
   </li>
   <li class="active">Choose a Board</li>
 </ol>
@@ -141,28 +141,28 @@ lang: en-US
         <p>1x SPI bus</p>
         <p>1x I2C bus</p>
         <p>1x Serial UART</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Set up your Raspberry Pi 3</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Set up your Raspberry Pi 3</a></p>
       </td>   
       <td>
         <p>17x GPIO pins</p>
         <p>1x SPI bus</p>
         <p>1x I2C bus</p>
         <p>1x Serial UART</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Set up your Raspberry Pi 2</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Set up your Raspberry Pi 2</a></p>
       </td>
       <td>
         <p>17x GPIO pins</p>
         <p>1x SPI bus</p>
         <p>1x I2C bus</p>
         <p>2x Serial UARTs</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Set up your MinnowBoard MAX</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Set up your MinnowBoard MAX</a></p>
       </td>
       <td>
         <p>11x GPIO pins</p>
         <p>1x SPI bus</p>
         <p>2x I2C buses</p>
         <p>2x Serial UARTs</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Set up your DragonBoard 410c</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Set up your DragonBoard 410c</a></p>
       </td>
     </tr>
 </table>

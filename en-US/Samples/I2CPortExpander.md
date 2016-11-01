@@ -136,7 +136,7 @@ We need to hook up power, ground, and the I2C lines from on the Raspberry Pi 2 o
 * Pin 6 **GND** Connect to the ground rail on the side of the breadboard (blue stripe)
 
 The I2C bus requires pull-up resistors on the SDA and SCL lines. However, the Raspberry Pi 2 and 3 SDA and SCL pins we are using in this sample already have pull-up resistors connected on the RPi2 or RPi3, so we don't need to add any additional external pull-ups.
- See the [Raspberry Pi 2 or 3 pin mapping page]({{site.baseurl}}/{{page.lang}}/Samples/PinMappingsRPi2.htm) for more details on the RPi2 and RPi3 IO pins.
+ See the [Raspberry Pi 2 or 3 pin mapping page]({{site.baseurl}}/{{page.lang}}/Samples/PinMappingsRPi2) for more details on the RPi2 and RPi3 IO pins.
 
 ### Create the sample app
 

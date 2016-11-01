@@ -12,7 +12,7 @@ lang: en-US
 
 Initialize a webcam, take pictures, and record video and audio.  
   
-This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode.htm).  
+This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode).  
   
 ### Load the project in Visual Studio  
   
@@ -40,7 +40,7 @@ devcon remove AUDD\QCOM2451
 devcon remove ADCM\QCOM242E 
 {% endhighlight %}  
   
-Select **Remote Machine** to point to IoT device and hit F5 to deploy to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloWorld.htm){:target="_blank"}. if you need guidance   
+Select **Remote Machine** to point to IoT device and hit F5 to deploy to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloWorld){:target="_blank"}. if you need guidance   
   
 ### Test your app   
   

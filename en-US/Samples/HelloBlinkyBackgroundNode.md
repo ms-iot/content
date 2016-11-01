@@ -20,7 +20,7 @@ Create a blinky Node.js server that blinks an LED.
 
 
 ### Set up your hardware
-The setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky.htm).
+The setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/Samples/helloblinky).
 
 
 ### Create a new Node.js (Windows Universal) project

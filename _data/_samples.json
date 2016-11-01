@@ -52,7 +52,8 @@
       "name": "App type",
       "tags": [
         "foreground",
-        "background"
+        "background",
+        "console"
       ]
     },
     {
@@ -93,7 +94,6 @@
         "Node.js"
       ],
       "ranking": 0,
-      "new": "yes",
       "tags": [
         "c#",
         "python",
@@ -105,17 +105,10 @@
     {
       "title": "'Hello, blinky!'",
       "description": "A 'Hello, world' sample to control an LED from a breadboard",
-      "link": [
-        "samples/HelloBlinky.htm",
-        "samples/HelloBlinkyNode.htm"
-      ],
+      "link": "samples/HelloBlinky.htm",
       "link-text": "UI Blinky",
-      "lang": [
-        "C#/C++",
-        "Node.js"
-      ], 
+      "lang": "C#/C++",
       "ranking": 0,
-      "new": "no",
       "tags": [
         "c#",
         "c++",
@@ -124,12 +117,12 @@
         "gpio"
       ]
     },
-        {
+    {
       "title": "'Hello, blinky!' server",
       "description": "Create a simple 'Hello, world!' web server app that controls an LED",
       "link": "samples/HelloBlinkyServer.htm",
       "link-text": "Blinky",
-      "lang": "Python", 
+      "lang": "Python",
       "ranking": 0,
       "new": "yes",
       "tags": [
@@ -185,6 +178,46 @@
       ]
     },
     {
+      "title": "AllJoyn Device System Bridge",
+      "description": "Create an AllJoyn Device System Bridge App project.",
+       "link": [
+        "samples/AllJoynDSB.htm",
+        "samples/AllJoynDSBCS.htm"
+      ],
+      "link-text": [
+        "AllJoynDSB",
+        "AllJoynDSB"
+      ],
+      "lang": [
+        "C#",
+        "C++"
+      ],
+      "ranking": 1,
+      "new": "yes",
+      "tags": [
+        "intermediate",
+        "c#",
+        "c++",
+        "foreground",
+        "alljoyn"
+      ]
+    },
+        {
+      "title": "AllJoyn mock adapter",
+      "description": "Expose and control mock AllJoyn devices.",
+      "link": "samples/AllJoynMockAdapter.htm",
+      "link-text": "AllJoynMockAdapter",
+      "lang": "C++",
+      "ranking": 1,
+      "new": "yes",
+      "tags": [
+        "c++",
+        "intermediate",
+        "foreground",
+        "alljoyn"
+      ]
+    },
+    {
       "title": "Arduino Wiring weather station",
       "description": "Set up a weather station using Arduino Wiring.",
       "link": "samples/arduino-wiring/WeatherStation.htm",
@@ -222,9 +255,9 @@
         "node.js",
         "wiring",
         "intermediate",
-        "lightning"        
+        "lightning"
       ]
-    },    
+    },
     {
       "title": "Azure data uploader",
       "description": "Upload sensor data to Azure storage from a Node.js UWP app",
@@ -239,6 +272,20 @@
         "node.js"
       ]
     },
+     {
+      "title": "BACnet adapter",
+      "description": "Set up a BACnet adapter for Device System Bridge on Windows 10",
+      "link": "samples/BACnetAdapter.htm",
+      "link-text": "BACnet adapter",
+      "lang": "C++",
+      "ranking": 0,
+      "new": "yes",
+      "tags": [
+        "intermediate",
+        "alljoyn",
+        "c++"
+      ]
+    },
     {
       "title": "Bluetooth low energy GATT",
       "description": "Learn how to work with Bluetooth Low Energy devices using the GATT profile and a TI CC2541 SensorTag",
@@ -246,10 +293,8 @@
       "link-text": "Bluetooth GATT",
       "lang": "C#",
       "ranking": 0,
-      "new": "yes",
       "tags": [
         "bluetooth",
-        "c#",
         "ble",
         "c#",
         "intermediate"
@@ -267,23 +312,42 @@
         "beginner",
         "gpio"
       ]
-    },    
+    },
+    {
+      "title": "Cognitive Services",
+      "description": "Access and use the Cognitive Services API inside a C# UWP App",
+      "link": "samples/CognitiveServices.htm",
+      "link-text": "Cognitive Services",
+      "lang": "C#",
+      "ranking": 0,
+      "tags": [
+        "c#",
+        "beginner"
+      ]
+    },
     {
       "title": "Cylon servo controller",
-      "description": "Control a servo to control a blinking LED",
-      "link": [
-        "Samples/CylonServoNode.htm",
-        "Samples/CylonServoWiring.htm"
-      ],
+      "description": "Control a servo connected to an Arduino using Cylon in a Node.js UWP app",
+      "link": "Samples/CylonServoNode.htm",
       "link-text": "Cylon",
-      "lang": [
-      "Node.js",
-      "Wiring"
-      ],
+      "lang": "Node.js",
       "ranking": 0,
       "tags": [
         "intermediate",
         "node.js"
+      ]
+    },
+    {
+      "title": "Cylon LED controller",
+      "description": "Blink an Arduino LED using Cylon in a Node.js console app",
+      "link": "Samples/CylonLEDNode.htm",
+      "link-text": "Cylon",
+      "lang": "Node.js",
+      "ranking": 0,
+      "tags": [
+        "intermediate",
+        "node.js",
+        "console"
       ]
     },
     {
@@ -298,7 +362,7 @@
         "advanced",
         "driver"
       ]
-    },        
+    },
     {
       "title": "Digital sign",
       "description": "Create a basic digital sign and learn how to work with multimedia",
@@ -311,7 +375,7 @@
         "foreground",
         "c#"
       ]
-    },    
+    },
     {
       "title": "Driver sample",
       "description": "Create and interact with a universal driver on devices running Windows 10 IoT Core",
@@ -322,9 +386,9 @@
       "tags": [
         "advanced",
         "driver",
-        "c#"
+        "c++"
       ]
-    },  
+    },
     {
       "title": "Express Node.js app",
       "description": "Create a new Express Node.js app",
@@ -338,7 +402,7 @@
         "node.js",
         "express"
       ]
-    }, 
+    },
     {
       "title": "External process launcher",
       "description": "Use <code>Windows.System.ProcessLauncher</code> API to launch external executable programs from your UWP app",
@@ -351,7 +415,7 @@
         "intermediate",
         "o/s"
       ]
-    },      
+    },
     {
       "title": "GPIO OneWire",
       "description": "Create an app that uses GPIO to read from the DHT11, a temperature and humidity sensor that uses a single-wire protocol",
@@ -364,7 +428,21 @@
         "intermediate",
         "gpio"
       ]
-    },       
+    },
+    {
+      "title": "GpioTestTool",
+      "description": "A command line utility to access GPIO.",
+      "link": "samples/GpioTestTool.htm",
+      "link-text": "GpioTestTool",
+      "lang": "C++",
+      "ranking": 3,
+      "tags": [
+        "c++",
+        "intermediate",
+        "gpio",
+        "win32"
+      ]
+    },
     {
       "title": "IoT Core Default App",
       "description": "Create a UWP app that provides a device-management experience for Windows 10 IoT Core",
@@ -405,7 +483,21 @@
         "gpio",
         "c#"
       ]
-    },  
+    },
+    {
+      "title": "I2cTestTool",
+      "description": "A command line utility to access I2C.",
+      "link": "samples/I2cTestTool.htm",
+      "link-text": "I2cTestTool",
+      "lang": "C++/CX",
+      "ranking": 3,
+      "tags": [
+        "c++",
+        "intermediate",
+        "i2c",
+        "win32"
+      ]
+    },
     {
       "title": "IoT browser",
       "description": "Create a simple web browser",
@@ -433,7 +525,20 @@
         "servo",
         "node.js"
       ]
-    },        
+    },
+    {
+      "title": "OpenCV",
+      "description": "Use OpenCV to run facial and body recognition on a photo",
+      "link": "samples/OpenCV.htm",
+      "link-text": "OpenCV",
+      "lang": "C++",
+      "ranking": 0,
+      "tags": [
+        "c++",
+        "beginner",
+        "foreground"
+      ]
+    },
     {
       "title": "Push button",
       "description": "Make an LED blink with the push of a button",
@@ -446,7 +551,7 @@
         "gpio",
         "c#"
       ]
-    },  
+    },
      {
       "title": "Potentiometer sensor",
       "description": "Read values from a rotary potentiometer and output data to an LED",
@@ -470,7 +575,7 @@
         "Wiring",
         "foreground"
       ]
-    },    
+    },
     {
       "title": "RGB LED",
       "description": "Create an app that uses the Raspberry Pi 2 to toggle an RGB LED.",
@@ -483,7 +588,7 @@
         "gpio",
         "c#"
       ]
-    },      
+    },
     {
       "title": "SPI accelerometer",
       "description": "Connect an accelerometer to your device and read data from it",
@@ -514,6 +619,20 @@
         "beginner",
         "SPI",
         "c#"
+      ]
+    },
+    {
+      "title": "SpiTestTool",
+      "description": "A command line utility to access SPI.",
+      "link": "samples/SpiTestTool.htm",
+      "link-text": "SpiTestTool",
+      "lang": "C++/CX",
+      "ranking": 3,
+      "tags": [
+        "c++",
+        "intermediate",
+        "spi",
+        "win32"
       ]
     },
     {
@@ -614,7 +733,7 @@
       "description": "Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
       "link": [
         "samples/HelloBlinkyBackgroundLightning.htm",
-        "samples/HelloBlinkyBackgroundNode.htm"
+        "samples/HelloBlinkyNodeLightning.htm"
       ],
       "link-text": [
         "Blinky Headless",
@@ -711,10 +830,24 @@
         "c++",
         "node.js",
         "intermediate",
+        "console",
         "o/s"
       ]
     },
-
+    {
+      "title": "'Hello, blinky!' console app",
+      "description": "Create a 'Hello, world' console app to control an LED",
+      "link": "samples/HelloBlinkyNode.htm",
+      "link-text": "Console Blinky",
+      "lang": "Node.js",
+      "ranking": 0,
+      "tags": [
+        "node.js",
+        "beginner",
+        "console",
+        "gpio"
+      ]
+    },
     {
       "title": "Wi-Fi connector",
       "description": "Discover and connect to a WiFi network from a UWP app using <code>Windows.Devices.WiFi.WiFiAdapter</code> API",
@@ -731,7 +864,7 @@
     {
       "title": "HID Injection driver",
       "description": "Build a driver for IoT Core and use HID Injection to inject touch, keyboard or mouse events.",
-      "link": "samples/HidInjector.htm",
+      "link": "samples/HidInjection.htm",
       "link-text": "Learn More",
       "lang": "C++",
       "ranking": 10,

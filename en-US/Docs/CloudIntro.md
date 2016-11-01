@@ -49,4 +49,4 @@ Microsoft offers a set of libraries and tools that allow you to build your
 connected UWP IoT applications that connect to Azure IoT Hub.
 
 Continue reading about connecting your IoT Core device to Azure IoT Hub on the
-[connect device to cloud](ConnectDeviceToCloud.htm) and [connect app to cloud](ConnectAppToCloud.htm) pages.
+[connect device to cloud](ConnectDeviceToCloud) and [connect app to cloud](ConnectAppToCloud) pages.
