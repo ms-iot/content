@@ -33,27 +33,20 @@ Windows Assessment and Deployment Kit includes 3 tools to help capture and analy
 
 1. **Windows Performance Analyzer** visualizes ETL files on desktop, with a step by step guide [here](https://msdn.microsoft.com/library/windows/hardware/dn927319(v=vs.85).aspx){:target="_blank"}.
 
-2. **Xperf command line tool** captures real-time events and writes them to an ETL file.
-    This tool is already installed on Windows IoT Core devices, just run the following commands on the devices:
+2. **Xperf command line tool** captures real-time events and writes them to an ETL file. This tool is already installed on Windows IoT Core devices, just run the following commands on the devices:
 
-    {% highlight c %}
-    ```
-    // Start capturing events from specific GUID and save them to an ETL file
-    xperf -start <Session Name> -f <ETL File> -on <GUID>
+        // Start capturing events from specific GUID and save them to an ETL file
+        xperf -start <Session Name> -f <ETL File> -on <GUID>
 
-    // Stop capturing events with the specified session name
-    xperf -stop <Session Name>
-    ```
-    {% endhighlight %}
+        // Stop capturing events with the specified session name
+        xperf -stop <Session Name>
+
 
 3. **Tracerpt command line tool** converts ETL files into xml files.
 
-    {% highlight c %}
-    ```
-    // Generate dumpfile.xml from ETL file
-    tracerpt <ETL File>
-    ```
-    {% endhighlight %}
+        // Generate dumpfile.xml from ETL file
+        tracerpt <ETL File>
+
 
 ## Use Device Portal
 
