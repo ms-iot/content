@@ -3,6 +3,7 @@ layout: default
 title: Windows Device Portal
 permalink: /en-US/win10/tools/DevicePortal.htm
 lang: en-US
+rdlink: /docs/deviceportal
 ---
 
 <div class="container" markdown="1">
