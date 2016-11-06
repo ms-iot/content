@@ -17,7 +17,7 @@ Windows 10 IoT Core can be configured for either *headed* or *headless* mode.
 Headed mode is defined by the prescence of UI. In *headed* mode a single UI app will be launched at system boot and there can additionally be 0 or more "Background Apps"(StartupTasks). 
 
 ### Headless mode
-Headelss mode has no UI.  Devices that don't need UI functionality can be set to *headless* mode. The UI stack is disabled and UI apps will not launch. This reduces the amount of system resources used. If you attach a monitor to your device, the screen will be black.
+Headless mode has no UI.  Devices that don't need UI functionality can be set to *headless* mode. The UI stack is disabled and UI apps will not launch. This reduces the amount of system resources used. If you attach a monitor to your device, the screen will be black.
 
     NOTE: If you put your device into headless mode, then you can use the Windows 10 IoT Core Dashboard application, described below, to find its IP address.
 
