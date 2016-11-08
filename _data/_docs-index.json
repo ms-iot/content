@@ -205,9 +205,11 @@
           {
             "title":"Wi-Fi",
             "link":"/Docs/SetupWiFi.htm"
+          },
+          {
+            "title":"Wi-Fi Direct",
+            "link":"/Docs/SetupWiFiDirect.htm"
           }
-
-
         ]
       },
       {
@@ -240,8 +242,7 @@
           {
             "title":"Go to market",
             "link":"/Docs/GotoMarket.htm"
-          },
-
+          }
         ]
       }
    ]
