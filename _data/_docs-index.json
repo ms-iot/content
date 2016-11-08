@@ -31,6 +31,10 @@
           {
             "title":"Windows 10 IoT Core porting tool",
             "link":"/Docs/IoTCorePortingTool.htm"
+          },
+		  {
+            "title":"DISM",
+            "link":"/Docs/Dism.htm"
           }
         ]
       },
