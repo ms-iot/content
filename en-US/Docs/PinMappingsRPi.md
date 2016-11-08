@@ -204,9 +204,9 @@ public async void I2C()
     var settings = new I2cConnectionSettings(0x40);
 
     // Create an I2cDevice with the specified I2C settings
-    var dis = await DeviceInformation.FindAllAsync(I2cDevice.GetDeviceSelector());
+    var controller = await I2cController.GetDefaultAsync();
 
-    using (I2cDevice device = await I2cDevice.FromIdAsync(dis[0].Id, settings))
+    using (I2cDevice device = controller.GetDevice(settings))
     {
         byte[] writeBuf = { 0x01, 0x02, 0x03, 0x04 };
         device.Write(writeBuf);
@@ -256,9 +256,9 @@ public async void SPI()
     var settings = new SpiConnectionSettings(0);
 
     // Create an SpiDevice with the specified Spi settings
-    var dis = await DeviceInformation.FindAllAsync(SpiDevice.GetDeviceSelector());
+    var controller = await SpiController.GetDefaultAsync();
 
-    using (SpiDevice device = await SpiDevice.FromIdAsync(dis[0].Id, settings))
+    using (SpiDevice device = controller.GetDevice(new SpiConnectionSettings(0)))
     {
         byte[] writeBuf = { 0x01, 0x02, 0x03, 0x04 };
         device.Write(writeBuf);
