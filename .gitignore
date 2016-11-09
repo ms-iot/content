@@ -7,3 +7,4 @@ _site
 Gemfile.lock
 _config.dev.yml
 .jekyll-metadata
+_redirect
