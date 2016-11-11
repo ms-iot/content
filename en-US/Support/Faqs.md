@@ -26,7 +26,7 @@ lang: en-US
         <a href="#dragonboard"><h4>DragonBoard</h4></a>
     </div>
 
-    <div class="col-md-16 col-md-offset-2 col-xs-8 col-xs-offset-4 section-heading">
+    <div class="col-md-16 col-md-offset-6 col-xs-8 col-xs-offset-12 section-heading">
         <a name="rpi2"></a>
         <h2 class="faq-h2">Setting up Raspberry Pi</h2>
         <p class="bold"><em>Why does my screen appear cropped or stretched?</em></p>
