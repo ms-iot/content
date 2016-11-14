@@ -6,6 +6,7 @@ keyword: windows runtime, windows iot, unsupported apis
 permalink: /en-US/Docs/UnavailableApis.htm
 lang: en-US
 ---
+This document was last updated 11/14/2016
 
 # Universal APIs not functional in Windows 10 IoT Core at this time
 
@@ -69,6 +70,7 @@ lang: en-US
     Windows.ApplicationModel.Contacts.FullContactCardOptions
     Windows.ApplicationModel.Contacts.KnownContactField
     Windows.ApplicationModel.Core.HolographicApplication
+    Windows.ApplicationModel.DataTransfer.DataTransferManager
     Windows.ApplicationModel.Email.EmailAttachment
     Windows.ApplicationModel.Email.EmailFetchOptions
     Windows.ApplicationModel.Email.EmailIrmTemplate
@@ -80,6 +82,7 @@ lang: en-US
     Windows.ApplicationModel.Search.Core.SearchSuggestionManager
     Windows.ApplicationModel.Search.LocalContentSuggestionSettings
     Windows.ApplicationModel.Search.SearchQueryLinguisticDetails
+    Windows.ApplicationModel.Store.CurrentApp
     Windows.ApplicationModel.Sync.Office365SyncConfiguration
     Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager
     Windows.ApplicationModel.VoiceCommands
@@ -90,6 +93,7 @@ lang: en-US
     Windows.Graphics.Holographic.HolographicSpace
     Windows.Graphics.Printing.Print3DManager
     Windows.Graphics.Printing.Print3DModelPackage
+    Windows.Graphics.Printing.PrintManager
     Windows.Management.Deployment.PackageVolume
     Windows.Media.Casting.CastingDevicePicker
     Windows.Media.ContentRestrictions.RatedContentDescription
@@ -98,6 +102,7 @@ lang: en-US
     Windows.Media.DialProtocol.DialDevicePicker
     Windows.Media.MixedRealityCapture.MixedRealityCaptureAudioEffectDefinition
     Windows.Media.MixedRealityCapture.MixedRealityCaptureVideoEffectDefinition
+    Windows.Media.Ocr.OcrEngine
     Windows.Media.Playback.BackgroundMediaPlayer
     Windows.Media.Playback.PlaybackMediaMarker
     Windows.Media.Playback.PlaybackMediaMarkerSequence
@@ -140,13 +145,19 @@ lang: en-US
     Windows.System.Profile.KnownRetailInfoProperties
     Windows.System.Profile.RetailInfo
     Windows.System.Profile.SystemManufacturers.SmbiosInformation
+    Windows.System.RemoteSystems.RemoteSystem
+    Windows.System.User
     Windows.System.UserProfile.AdvertisingManager
+    Windows.System.UserProfile.UserProfilePersonlizationSettings
     Windows.UI.Composition.Compositor
     Windows.UI.Core.CoreInput
     Windows.UI.Core.CoreWindowDialog
     Windows.UI.Core.CoreWindowFlyout
+    Windows.UI.Input.RadialController
     Windows.UI.Popups.MessageDialog
     Windows.UI.ViewManagement.UISettings
+    Windows.UI.ViewManagement.InputPane
     Windows.UI.Xaml.Controls.ListPickerFlyout
     Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter
     Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter
+    Windows.UI.Xaml.Controls.SearchBox
