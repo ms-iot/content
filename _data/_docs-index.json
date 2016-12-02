@@ -80,11 +80,16 @@
             "link":"/Docs/PinMappingsRPi.htm"
           },
           {
-            "title":"Pin mappings - Minnowboard Max",
-            "link":"/Docs/PinMappingsMBM.htm"
-          },{
-            "title":"Pin mappings - Dragonboard",
-            "link":"/Docs/PinMappingsDb.htm"
+            "title": "Pin mappings - Minnowboard Max",
+            "link": "/Docs/PinMappingsMBM.htm"
+          },
+          {
+            "title": "Pin mappings - Dragonboard",
+            "link": "/Docs/PinMappingsDb.htm"
+          },
+          {
+            "title":"Bus Providers",
+            "link":"/Docs/BusProviders.htm"
           },
           {
             "title":"Hardware compatibility list",
