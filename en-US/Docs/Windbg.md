@@ -52,7 +52,6 @@ Using the active PowerShell connection, execute the following commands on the Mi
   `"c:\Program Files (x86)\Debugging Tools for Windows (x86)\windbg.exe" -k net:port=<PORT_NUM>,key=<KEY>`
 
 {% include note.html text="If you have any of the Windows kits installed, you may find WinDbg under <code>C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\WinDbg.exe</code> " %}
-
 * Reboot the IoTCore device to reconnect to the debugger
 
 ## Raspberry Pi 2 or 3 (RPi2 or RPi3) 
@@ -63,7 +62,6 @@ You can connect WinDbg to the Raspberry Pi 2 or 3 using a serial connection.
 ### Setup serial connection
 
 In order to enable kernel debugging with WinDbg over a serial connection, ensure that:
-
 * You have a debug cable such as the USB-to-TTL Serial Cable from [Adafruit](https://www.adafruit.com/product/954) or [FTDI](http://shop.clickandbuild.com/cnb/shop/ftdichip?productID=53&op=catalogue-product_info-null&prodCategoryID=105). 
 
 * An Ethernet cable or active WiFi connecting your Raspberry Pi 2 or 3 device to your network (for IP connections like SSH or PowerShell)
@@ -74,8 +72,7 @@ In order to enable kernel debugging with WinDbg over a serial connection, ensure
 
 UART0 will be used on the Raspberry Pi 2 or 3 device for the kernel debugging connection.  The following shows the pin mappings for the Raspberry Pi 2 or 3 as well as the serial cables: 
 
-        Raspberry Pi 2 or 3 pins:
-            Pin #6 : GND
+        Raspberry Pi 2 or 3 pins:            Pin #6 : GND
             Pin #8 : UART0 TX (3.3V)
             pin #10: UART0 RX (3.3V)
 
@@ -135,7 +132,7 @@ You can connect WinDbg to the DragonBoard using a serial or USB connection.
 
 Using the active PowerShell or SSH connection to your DragonBoard, execute the following commands to enable debugging.
 
-* `bcdedit /store c:\EFIESP\EFI\Microsoft\Boot\BCD /debug {default} ON`
+* `bcdedit /store c:\EFIESP\EFI\Microsoft\Boot\BCD /debug ON`
 	* Enables the debugger
 
 ### Setup USB connection
