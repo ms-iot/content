@@ -96,10 +96,10 @@ IoT Core supports a wide range of programming languages.
 Traditional UWP languages ship with support in Visual Studio by default. All of the In-Box languages support both UI and Background Applications
  
  * Languages
- * C#
- * C++
- * Javascript
- * Visual Basic
+  * C#
+  * C++
+  * Javascript
+  * Visual Basic
 
 ### IoT Focused Languages
  The IoT targeted languages require the download of the "Windows IoT Core Project Templates" from the Visual Studio **Tools->Extensions and Updates** manager.  The IoT Focused languages support only Background Applications. You can also build *Windows Runtime Components* using C#, C++, or Visual Basic and then reference those libraries from any other language (except Python).
