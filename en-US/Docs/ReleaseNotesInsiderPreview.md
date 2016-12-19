@@ -6,7 +6,7 @@ lang: en-US
 ---
 
 # Release Notes for Windows 10 IoT Core
-Build Number 14931. September 2016
+Build Number 14986. December 2016
 
 &copy; 2016 Microsoft Corporation. All rights reserved
 
@@ -23,34 +23,52 @@ You can review linked terms by pasting the forward link into your browser window
 
 ## What's new in this build: 
 * Updated OS files including core OS bug fixes.
+* Changes were made to the Windows Devices Portal (WDP/Web Management) to ensure that the “Restart Now” option is properly displayed when updates are available.  
+* The Class Extensions for Hardware Notification (hwnclx) and USB Function (usbfnclx) have been added to the default IoT Core images.
+
 
 ## Known issues in this build:
-* Remote Display may fail with the Dragon Board.
+* GattDeviceService.GetCharacteristics may throw an unexpected System.ArgumentException.
+* Default applications may fail to start when using the store signed packages after a servicing update is applied if the License.xml is not present. A work around exists of adding the License.xml file to the application directory.
+* The package version for some inbox applications may not match the installed version.
+* Store applications are not being serviced when in use or set as the default application.
+* NanoRDP does not render correctly and may not connect on this build.
+* When multiple audio devices are present on the board audio routing changes may not persist across boots.
+* The MinnowBoard Max firmware 0.93 has a known issue which can lead to network connectivity failure.  
+* Due to the signing of this build the date of the firmware and hardware real-time-clock on the device must be after 8/30/2016.
+* Currently the MBM does not have a released firmware that meets the minimum requirements for this build. 
+* Boards such as the Joule that do not have a battery backup for the clock will lose their time when the power is pulled and must be reset in the UEFI prior to boot. 
+
 
 ## IoT Core general known issues and work arounds
 
 ### For Raspberry Pi
 
 #### Raspberry Pi Display Resolution if monitor is disconnected 
-The Raspberry Pi may not maintain Display Resolution if monitor is disconnected. The EDID of the monitor is used to set the resolution of the system when one is connected.
-When disconnected, the Raspberry Pi firmware defaults to what is in the config.txt in the root of the SD card.
+The Raspberry Pi may not maintain Display Resolution if monitor is disconnected. The EDID of the monitor is used to set the resolution of the system when one is connected.  
+When disconnected, the Raspberry Pi firmware defaults to what is in the config.txt in the root of the SD card. 
 
-#### Raspberry Pi Video Performance
-Video playback performance on the Raspberry Pi platform is not optimized.  Animated user elements including XAML-based dropdown menus may exhibit less than optimal performance. 
+#### Raspberry Pi Video Performance 
+Video playback performance on the Raspberry Pi platform is not optimized.  Animated user elements including XAML-based dropdown menus may exhibit less than optimal performance. 
+ 
+#### Raspberry Pi Camera Support 
+Support for camera peripheral devices is limited. The PiCam device directly connected to the onboard camera bus is not supported due to limitations in the platform to support D3D Modern USB webcams produce data streams that are very demanding on the USB Host controller.  Even when used with low resolution settings webcams will require additional USB fine tuning and specialized control logic. 
 
-#### Raspberry Pi Camera Support
-Support for camera peripheral devices is limited. The PiCam device directly connected to the onboard camera bus is not supported due to limitations in the platform to support D3D Modern USB webcams produce data streams that are very demanding on the USB Host controller.  Even when used with low resolution settings webcams will require additional USB fine tuning and specialized control logic.
+#### Raspberry Pi3 Bluetooth support 
+The Raspberry Pi3 built-in Bluetooth driver only supports low bandwidth devices (7910553) 
 
-#### Raspberry Pi3 Bluetooth support
-The Raspberry Pi3 built-in Bluetooth driver currently only supports low bandwidth devices.
-
-#### Serial Port Usage and Access on RPi2
-Raspberry Pi 2 supports the serial transport for communication through the PL011 UART.  This is set by default in kernel debugging scenarios.  An application or device driver can use the PL011 UART to send and receive data with the PL011 device driver turning off the debugger using the following command:
-
+#### Serial Port Usage and Access on RPi2 
+Raspberry Pi 2 supports the serial transport for communication through the PL011 UART.  This is set by default in kernel debugging scenarios.  An application or device driver can use the PL011 UART to send and receive data with the PL011 device driver turning off the debugger using the following command:
 bcedit /set debug off 
 
 #### Data breakpoints have been disabled on the Raspberry Pi2
 No workaround at this time.
+
+#### Disabling the onboard adapters for Raspberry Pi 3
+The Raspberry Pi 3 has onboard Bluetooth which must be disabled to use a different dongle to disable to onboard Bluetooth, open a telnet/ssh session and run: 
+reg add hklm\system\controlset001\services\BtwSerialH5Bus /v Start /t REG_DWORD /d 4 
+You may disable WiFi with the following command: 
+reg add hklm\system\controlset001\services\bcmsdh43xx /v Start /t REG_DWORD /d 4 
  
 
 ### For Dragon Board
@@ -74,6 +92,14 @@ HKLM\System\Controlset001\Control\Power\CsEnabled=DWORD:1
 
 Note that not all platforms have support for CS.  This may not work on all platforms.    
 
+
+
+### For Joule 
+#### Firmware Update Required 
+The Intel Joule requires a firmware update to properly load Windows IoT Core. Please follow the install process detailed at https://developer.microsoft.com/en-us/windows/iot/Docs/GetStarted/joule/GetStartedStep1.htm to use IoT Core with Joule. 
+
+#### Graphics Support Limited 
+A graphics driver to enable hardware acceleration is not included in the Joule image. The system will use software rendering which will impact performance and CPU utilization. 
 
 ### For MinnowBoard
 #### Minnowboard Max Boot and Firmware Update 
@@ -190,6 +216,6 @@ Login with SSH\PS and run this command to start FTP:
 start ftpd.exe 
 
 To run on every boot Users should create a scheduler task: 
-Login with SSH\PS and create a scheduler task:       
+Login with SSH\PS and create a scheduler task: 
 schtasks /create /tn "IoTFTPD" /tr ftpd.exe /ru system /sc onstart 
 Schtasks /run /tn “IoTFTPD”
