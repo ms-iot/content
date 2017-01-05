@@ -31,7 +31,6 @@ We will now be walking you through the process of creating and installing a devi
 <br/>
 
 ## Description
-// update
 The name of the driver in this sample is `virtualaudiomicarray`.  
 
 <br/>
