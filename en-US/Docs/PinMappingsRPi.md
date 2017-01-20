@@ -258,7 +258,7 @@ public async void SPI()
     // Create an SpiDevice with the specified Spi settings
     var controller = await SpiController.GetDefaultAsync();
 
-    using (SpiDevice device = controller.GetDevice(new SpiConnectionSettings(0)))
+    using (SpiDevice device = controller.GetDevice(settings))
     {
         byte[] writeBuf = { 0x01, 0x02, 0x03, 0x04 };
         device.Write(writeBuf);
