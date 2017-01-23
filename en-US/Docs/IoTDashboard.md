@@ -73,7 +73,7 @@ IoT Dashboard lets you provision IoT Core devices with Azure IoT Hub. You can re
 ## Quick Run Samples
 ___
 
-Quick run samples do not require and code compilation, Visual studio installation or SDK download. They are great for quickly checking out what IoT Core can do.
+Quick run samples do not require any code compilation, Visual studio installation or SDK download. They are great for quickly checking out what IoT Core can do.
 
 ### Network 3D Printer
 Use the Network 3D Printer sample to connect your 3D Printer to your board can make it discoverable over your home network. See the  [3D printer server sample]({{site.baseurl}}/{{page.lang}}/Docs/3DPrintServer) for more details.
