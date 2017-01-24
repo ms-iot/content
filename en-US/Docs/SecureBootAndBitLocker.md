@@ -35,7 +35,7 @@ Notes:
 
 [1]: {{site.baseurl}}/{{page.lang}}/GetStarted.htm "Windows 10 IoT Core supported platforms"
 [2]: https://firmware.intel.com/projects/minnowboard-max "MinnowBoard MAX firmware"
-[3]: {{site.baseurl}}/{{page.lang}}/Docs/SetupPCDB410c.htm "Setup DragonBoard 410c"
+[3]: {{site.baseurl}}/{{page.lang}}/Docs/GetStarted/dragonboard/GetStartedStep1.htm "Setup DragonBoard 410c"
 
 ## Certificate Generation  
 This section is pertinent if you are a hardware device manufacturer or developer that wants to create your own UEFI Secure Boot and BitLocker data recovery certificates in order to lock down the platform.  
