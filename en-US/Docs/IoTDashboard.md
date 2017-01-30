@@ -56,13 +56,13 @@ Having your IoT Core device connect to the internet is essential. Many of the ne
 ## My Devices
 ___
 After your device is connected to the internet, the IoT Dashboard will automatically detect your device.
-To find your device, go to **My Devices**. If your device is not listed, try rebooting the device. Also make sure that if there are more than one devices on the network, they each have a unique name. Also make sure that your Windows Firewall settings allow **windows10iotcoredashboard.exe** as follows:
+To find your device, go to **My Devices**. If your device is not listed, try rebooting the device. Make sure that if there are more than one devices on the network, they each have a unique name. Also make sure that your **windows10iotcoredashboard.exe** is allowed to communicate through Windows Firewall by following the steps below:
 
-1. Open **Network and Sharing Center** and then see which type in Domain, Private or Public of the network your device is connected belongs to.
+1. Open **Network and Sharing Center** and then find the type of network (Domain/Private/Public) your PC is connected to.
 2. Open **Control Panel** and click **System and Security**.
 3. Click **Allow an app through Windows Firewall** under **Windows Firewall**.
 4. Click **Change settings**.
-5. Find **windows10iotcoredashboard.exe** in **Allowed apps and features** and then enable the appropriate network check box (i.e. the network type of Domain, Private or Public you can find in the step 1).
+5. Find **windows10iotcoredashboard.exe** in **Allowed apps and features** and then enable the appropriate network check box (i.e. the network type you found in step 1).
 
 
 ### Connect to your device
