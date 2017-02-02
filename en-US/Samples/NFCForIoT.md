@@ -25,6 +25,7 @@ In order to build and test this sample, you will need the following:
 
 
 ## Set up a Raspberry Pi
+
   1. Before powering on your Raspberry Pi, assemble the NXP Explore-NFC kit, and attach to the Rasberry Pi.
   1. Use the [Getting Started Guide](https://developer.microsoft.com/en-us/windows/iot/GetStarted) to set up a Raspberry Pi with Windows Build 15007 or later. 
 
@@ -39,6 +40,7 @@ needs to be compiled in order to apply it to your Raspberry PI.
   1. You can type ```start .``` to open an explore window here, which you will use in the next step.
 
 ## Setup the NFC Hardware
+
   1. In the IoT Dashboard, find your Raspberry Pi, then right click and select ```Open Network Share```, Enter credentials if prompted.
   1. Once the network share opens, navigate to ```windows\system32```.
   1. Copy the ```ACPITABL.dat``` from the explorer window you opened in the previous section, and copy it to the folder in on the network share you opened in the previous step.
@@ -58,6 +60,7 @@ In order to minimize the number of resources used by IoT Core, the NFC Service d
   1. Run the command ```sc start SEMgrSvc``` to start it for this session
   
 ## Running the NFC Sample
+
    1. In the Samples folder you downloaded from Github, open NFCForIoT.sln.
    1. Build and deploy the application to your Raspberry Pi.
    1. Use the NTAG21x of your choice to see information about it and optionally configure it.
