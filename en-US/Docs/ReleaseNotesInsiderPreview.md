@@ -6,9 +6,9 @@ lang: en-US
 ---
 
 # Release Notes for Windows 10 IoT Core
-Build Number 14986. December 2016
+Build Number 15026. February 2017
 
-&copy; 2016 Microsoft Corporation. All rights reserved
+&copy; 2017 Microsoft Corporation. All rights reserved
 
 This document provides late-breaking or other information that supplements the documentation included with the Windows 10 IoT Core.
 
@@ -22,23 +22,56 @@ The privacy statement for this version of the Windows operating system can be vi
 You can review linked terms by pasting the forward link into your browser window.
 
 ## What's new in this build: 
-* Updated OS files including core OS bug fixes.
-* Changes were made to the Windows Devices Portal (WDP/Web Management) to ensure that the “Restart Now” option is properly displayed when updates are available.  
-* The Class Extensions for Hardware Notification (hwnclx) and USB Function (usbfnclx) have been added to the default IoT Core images.
+* Updated OS files including core OS bug fixes
+* Cortana feature has been enabled. See the Cortana section below for more details
+* WEBB Tutorial has been added
+* Extended keys and other improvements to the on-screen keyboard were added
+* Universal Write Filter (UWF) has been added as an option to the Windows Imaging and Configuration Designer (ICD)
+* The BluetoothLE stack has been updated to address the issues seen when calling GattDeviceService.GetCharacteristics
+* Issues with NanoRDP connecting have been addressed
+* New branding for the windows device portal
+* Joule BSP update
+* Better language support for IOT On Screen Keyboard (OSK)
+* Localization fixes in Bertha
+* RPI BSP packages were removed from the ADK
+
 
 
 ## Known issues in this build:
-* GattDeviceService.GetCharacteristics may throw an unexpected System.ArgumentException.
-* Default applications may fail to start when using the store signed packages after a servicing update is applied if the License.xml is not present. A work around exists of adding the License.xml file to the application directory.
-* The package version for some inbox applications may not match the installed version.
-* Store applications are not being serviced when in use or set as the default application.
-* NanoRDP does not render correctly and may not connect on this build.
-* When multiple audio devices are present on the board audio routing changes may not persist across boots.
-* The MinnowBoard Max firmware 0.93 has a known issue which can lead to network connectivity failure.  
-* Due to the signing of this build the date of the firmware and hardware real-time-clock on the device must be after 8/30/2016.
-* Currently the MBM does not have a released firmware that meets the minimum requirements for this build. 
-* Boards such as the Joule that do not have a battery backup for the clock will lose their time when the power is pulled and must be reset in the UEFI prior to boot. 
+* The MinnowBoard Max firmware 0.93 has a known issue which can lead to network connectivity failure
+* BluetoothLE paired devices may throw and exception and fail to function properly
+* Raspberry PI images may crash on their first boot. Consecutive boots start up correctly
 
+
+## Cortana Instructions and Known Issues 
+### To try Cortana: 
+* Please check “Start Cortana on Boot” on Device Settings of Windows Device Portal and restart the device.  
+* Navigate to Device Settings on top right of default application, click ‘Cortana & Search Settings’, this will launch the consent page for Cortana. After you click ‘sure’ to accept the consent, you are all set for Cortana. 
+* When you want to check your reminder, or traffic near you, you will be prompted to sign in with MSA. Please sign in so that you will have full experience Cortana.  
+
+### You need to get one microphone and one speaker connected with your device.  
+* On the Device Settings page of Windows Device Portal, check if your microphone and speaker is the one displayed against Speakers and Microphone. Click the Refresh button and make sure the correct peripherals are displayed.  
+* Adjust the volume for both to be in the range 40-70%. (Please make sure Microphone is not 0.0)  
+* Please sign in with your MSA credentials when it is prompted. MSA is what you use to sign in to Microsoft services such as Windows, Office, Outlook.com, OneDrive, Skype, Xbox, Cortana and more. An MSA enables Cortana to be a smart and personal assistant, and leverages user information to provide a compelling and useful experience. 
+
+### Here is the hardware that we recommend:  
+* Microphone: Microsoft LifeCam HD 3000, Blue Snowball iCE Condenser Microphone, Cardioid, Sound Tech CM-1000USB Table Top Conference Meeting Microphone 
+* Speaker: Logitech S150 USB Speakers 
+
+### Questions you can ask: 
+* What is the traffic to my home? 
+* What song is this? 
+* How’s the weather? 
+* Tell me a joke. 
+ 
+### How to exit Cortana 
+* Say “Hey, Cortana” and then say “Cancel” 
+
+### Not supported in IoT Cortana: 
+* Music playback 
+* Calendar 
+* Alarm 
+* Timer 
 
 ## IoT Core general known issues and work arounds
 
