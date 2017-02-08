@@ -50,6 +50,10 @@ lang: en-US
               <img style="max-width:75%;" src="{{site.baseurl}}/Resources/images/minnowboard-max.png">
               <p class="text-caption">Minnowboard Max</p>
           </li>
+           <li id="computeStickButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('computeStick')">
+              <img style="max-width:100%;" src="{{site.baseurl}}/Resources/images/IntelComputeStick.png">
+              <p class="text-caption" style="padding-top:15px">Intel Compute Stick</p>
+          </li>
         </ul>
       </div>
     </section>
@@ -129,6 +133,7 @@ lang: en-US
         unpressButton('#rpi3Button');
         unpressButton('#dragonboardButton');
         unpressButton('#jouleButton');
+        unpressButton('#computeStickButton');
         unpressButton('#mbmButton');
         unpressButton('#starterPackButton');
         unpressButton('#sdcardButton');
@@ -150,13 +155,15 @@ lang: en-US
                 break;
             case 'dragonboard':
             case 'joule':
-            case 'starterPack':
+            case 'computeStick':
+            case 'starterPack':  
                 pressButton(pressedButton);
                 $('#selectInstallSection').hide('fast');
                 $('#selectOSSection').hide('fast');
                 $('#getStartedCompletedSection').show('fast');
                 $('#comingSoonSection').hide('fast');
                 return;
+            
         }
 
         $('#selectInstallSection').show('fast');
@@ -220,6 +227,10 @@ lang: en-US
         case 'starterPack':
           // the kit is a special case. go directly to the Adafruit page
           window.location.href = 'Docs/AdafruitMakerKit.htm';
+          return;
+        case 'computeStick':
+          // Intel Compute Stick is a special case. Go directly to the Intel Compute Stick page
+          window.location.href = 'Docs/GetStarted/IntelComputeStick/GetStartedStep1.htm';
           return;
         case 'rpi2':
         case 'rpi3':
