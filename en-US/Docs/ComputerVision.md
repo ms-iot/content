@@ -120,12 +120,12 @@ Want to run OpenCV on your IoT Core device? Visit our [tutorial]({{site.baseurl}
     </tr>
     <tr>
       <td>Community</td>
-      <td>Cognitive Services has many users but is still relatively new</td>
+      <td>Cognitive Services has many active users across multiple industries and a few popular websites, including how-old.net and celebslike.me</td>
       <td>OpenCV is a very popular Open Source project; thousands of people have contributed to it and maintain it</td>
     </tr>
     <tr>
       <td>Documentation</td>
-      <td>Cognitive Services has overall clear and extensive documentation written by one group</td>
+      <td>Cognitive Services has overall clear and extensive documentation</td>
       <td>There are many samples available online, but each sample is written by a different person and as a result can be inconsistent at times</td>
     </tr>
     <tr>
@@ -135,7 +135,7 @@ Want to run OpenCV on your IoT Core device? Visit our [tutorial]({{site.baseurl}
     </tr>
     <tr>
       <td>Performance</td>
-      <td>All operations and API calls require accessing data in the cloud, which slows down calculations</td>
+      <td>All operations and API calls require accessing data in the cloud</td>
       <td>All algorithms are optimized and local, and using C++ rather than Python increases speeds even further</td>
     </tr>
     <tr>

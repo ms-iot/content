@@ -63,6 +63,21 @@ ___
 
     ![FTP explorer right-click]({{site.baseurl}}/Resources/images/ftp/ftp_right_click.png)
     
+* If a "Access is denied." dialog pops up right click it, and click **Properties**.
+
+  - Select the Security tab
+  - click Advanced *"Advanced Security Settings for IoTStartupOnBoot.cmd" dialog pops up*
+  - note the Owner **TrustedInstaller**
+  - click Change near Owner *"Select User or Group" dialog pops up*
+  - enter **Administrators**
+  - click Check Names
+  - click OK
+  - note the Owner **Administrators (yourdevicename\Administrators)**
+  - click Apply
+  - close both dialogs with OK
+
+  now the file can be edited
+
 * If a security dialog pops up, just click **Run**.
 
     ![FTP security dialog]({{site.baseurl}}/Resources/images/ftp/ftp_security_warning.png)

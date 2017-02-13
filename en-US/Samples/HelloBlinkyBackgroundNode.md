@@ -68,6 +68,7 @@ Here's what the code above is doing:
 * Now we're ready to deploy to the remote Windows IoT Core device. Simply press F5 (or select Debug \| Start Debugging) to start debugging the server.
 
 * When the server is running, open up a browser and enter the address http://&lt;IP address of your device&gt;:1337. Refreshing the page will turn toggle the on/off state of the LED.
+  Note: If you are using Microsoft Edge or Google Chrome, two requests may be sent for each refresh which will keep the LED from changing.
 
 ### GitHub
 * NTVS IoT Extension source code: [https://github.com/ms-iot/ntvsiot](https://github.com/ms-iot/ntvsiot)

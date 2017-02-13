@@ -16,6 +16,7 @@ TP-LINK TL_WN725N                               | RPi2/RPi3, MBM         | TP-LI
 NET-DYN USB Wifi Adapter                        | MBM               | Wifi USB Adapter NET-DYN                                                                                       |       |                              |![Verified][MSVerified]{:.MsVerified}
 Realtek 8191 USB Wireless WIFI                  | RPi2/RPi3, MBM         | Realtek 8191 300Mbps 802.11n/g/b USB Wireless WIFI LAN Network Card Adapter                                    |       |                              |![Verified][MSVerified]{:.MsVerified}
 Realtek 8192 USB Wireless WIFI                  | RPi2/RPi3, MBM         | Realtek Single-Chip IEEE 802.11b/g/n 2T2R WLAN Controller with USB 2.0 Interface                               |       |                              |![Verified][MSVerified]{:.MsVerified}
+CanaKit USB Wireless WIFI                       | MBM                    | Chipset Ralink 5370                               | Not supported on RPi2/Rpi3 (even if the product is called "Raspberry Pi WiFi Adapter"); WiFiDirect supported on MBM      |                              |![Verified][MSVerified]{:.MsVerified}
 
 ### Bluetooth Dongles {#Bluetooth-Dongles}
 

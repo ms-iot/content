@@ -1,15 +1,19 @@
 ---
 layout: default
-title: What's new for Windows 10 IoT Core - The Anniversary Update
-description: Raspberry Pi 3, performance improvements, DMAP and more
-keyword: raspberry pi 3, raspberry pi, windows iot, iot core, insider preview, anniversary update
+title: What's new for Windows 10 IoT Core - Support for Intel Apollo Lake
+description: Apollo Lake, Joule, Raspberry Pi 3, performance improvements, DMAP and more
+keyword: joule, Apollo Lake, raspberry pi 3, raspberry pi, windows iot, iot core, insider preview, anniversary update
 permalink: /en-US/Docs/WhatsNew.htm
 lang: en-US
 ---
+# What’s new for Windows 10 IoT Core - Support for Intel® Apollo Lake  
 
-# What’s new for Windows 10 IoT Core - Support for Intel® Joule™  
+Recently, Intel announced the commercial availability  for their latest compact, low power offering codenamed [Apollo Lake](http://www.intel.com/content/www/us/en/embedded/products/apollo-lake/overview.html) with support for Windows 10 IoT Core. Solutions incorporating Windows 10 IoT Core can now be upgraded to support the rapidly advancing needs in IoT. Whether in digital surveillance, advanced industrial automation, or retail, there are [dozens of devices and boards available](https://solutionsdirectory.intel.com/solutions-directory/processors_list/278/processors_list/1344) that are capable of leveraging the security, manageability, and robustness of Windows 10 IoT Core for your IoT solution.
 
-Windows just keeps getting better. During Intel’s Developer Forum, Intel’s CEO announced a new innovator platform, [Intel Joule](https://newsroom.intel.com/chip-shots/make-amazing-things-happen-iot-entrepreneurship-intel-joule/), with support for Windows 10 IoT Core. Combined with the power of the Universal Windows Platform, Visual Studio, and Azure IoT, the Intel® Joule™ module is exceptionally well suited to help developers and entrepreneurs go from concept to prototype to production in a fraction of the time of traditional system development. Please come back soon to [Get Started]({{site.baseurl}}/{{page.lang}}/GetStarted) with Windows 10 IoT Core.  
+## Support for Intel® Joule™  
+___
+
+Windows just keeps getting better. During Intel’s Developer Forum, Intel’s CEO announced a new innovator platform, [Intel Joule](https://newsroom.intel.com/chip-shots/make-amazing-things-happen-iot-entrepreneurship-intel-joule/), with support for Windows 10 IoT Core. Combined with the power of the Universal Windows Platform, Visual Studio, and Azure IoT, the Intel® Joule™ module is exceptionally well suited to help developers and entrepreneurs go from concept to prototype to production in a fraction of the time of traditional system development. Please [get started]({{site.baseurl}}/{{page.lang}}/GetStarted) with Windows 10 IoT Core on Joule.
 
 ## The Anniversary Update
 ___

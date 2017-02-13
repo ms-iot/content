@@ -23,7 +23,7 @@
       <p><img alt="set first boot switch on board to usb boot" class="image-border" src="{{site.baseurl}}/Resources/images/SetupDB410c/dragonboard_usbboot.png" /></p>
       <p>The first of the four switches is set to ON, and the other 3 switches are set to OFF.</p>
     </li>
-    <li>Connect a USB cable to the Dragonboard’s microUSB port and connect the other end to an empty USB port on the Host PC.</li>
+    <li>Connect a USB cable to the Dragonboard’s micro-USB port and connect the other end to an empty USB port on the Host PC.</li>
     <li>Connect the Dragonboard to the Power supply.</li>
 
   </ol>
@@ -39,13 +39,16 @@
     <p>Click the "Program" Button and wait for the image to be downloaded to the board.</p>
     <p>NOTE: The download will overwrite any previous content of the eMMC memory.</p>
   </li>
-  <li>Once the download is complete, disconnect the power supply from the board and change the boot switches back to the OFF position.</li>
+  <li>Once the download is complete, disconnect the power supply and micro-USB cable from the board and change the boot switches back to the OFF position.</li>
   <li>The DragonBoard is now ready to boot into Win10 IoT Core OS.</li>
 </ol>
 
 <h4> First Boot </h4>
   <ol class="setup-content-list">
-    <li>Connect Mouse, Keyboard and Display to the DragonBoard and plug in the power supply.</li>
+    <li>
+	  <p>Connect Mouse, Keyboard and Display to the DragonBoard and plug in the power supply.</p>
+	  <p>NOTE: Make sure that the micro-USB cable is not plugged-in, otherwise the USB devices will not be detected.</p>
+	</li>
     <li>
       <p>After a few seconds you should see the Win10 IoT boot-logo and shortly after you should see the Win10 IoT Core default application:</p>
       <p><img alt="defaultapp at boot up for dragonboard 410c" class="image-border" src="{{site.baseurl}}/Resources/images/SetupDB410c/DB410c_DefaultApp.jpg" height="200" /></p>

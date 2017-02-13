@@ -54,6 +54,7 @@
                 <ol class="inline-list">
                   <li>Download and install the <a href="https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit" target="_blank">Windows Assessment and Deployment Kit</a> that matches the Windows 10 version you noted at the top of this page.</li>
                   <li>Note the path where the kit is installed. Normally it is C:\Program Files (x86)\Windows Kits\10\. The Deployment Tools and Windows Preinstallation Environment features are required, the rest are optional.</li>
+                  <li>Reboot your machine after the installation is complete.</li>
                   <li>Create a USB Bootable WinPE image by following <a href="https://technet.microsoft.com/en-us/library/hh825109.aspx" target="_blank">these instructions</a>. When necessary, use the amd64 option.</li>
                   <li>Download <a href="https://downloadcenter.intel.com/download/26320/Windows-10-IoT-Core-install-script-for-Intel-Joule-" target="_blank">JouleInstaller.zip</a> from the Intel website, unzip the file, and copy the JouleInstaller.cmd to the root of the USB drive you created in step 3.</li>
                 </ol>
@@ -115,7 +116,6 @@
                     <li>If installed, remove the SD card from the Joule.
                     <li>If you haven't already, through the USB hub, connect the USB drive you created, attach a USB keyboard, and a USB mouse.</li>
                     <li>After you've flashed the device, power it up. The first boot after flashing will take longer than normal. When you see the Intel logo splash screen, immediately press F2 to enter the firmware setup. If you miss the prompt, reboot and try again.</li>
-                    <li>Confirm the firmware has been updated. It should read GTPP131A.X64.0143.B30.1609232056</li>
                     <li>From the firmware setup screen, go to Device Manager -> System Setup -> Boot and set "OS Selection" to Windows.</li>
                     <li>Save the changes with F4 and allow the system to restart.</li>
                     <li>Press F2 to enter the firmware again.</li>
@@ -127,7 +127,9 @@
                     <li>Run JouleInstaller.cmd to install the Flash.ffu file from the USB drive to the eMMC storage on Joule.</li>
                     <li>When prompted, press any key to continue. This will take you the WinPE prompt.</li>
                     <li>From the WinPE prompt, run "wpeutil reboot"</li>
-                    <li>The system will boot to Windows 10 IoT Core, start the configuration process, and load the <a href="{{site.baseurl}}/{{page.lang}}/samples/iotdefaultapp.htm" target="_blank">default app</a>. You may remove the USB flash drive. You will no longer need it.</li>
+                    <li>The system will boot to Windows 10 IoT Core, start the configuration process, and load the <a href="{{site.baseurl}}/{{page.lang}}/samples/iotdefaultapp.htm" target="_blank">default app</a>. You may remove the USB flash drive. You will no longer need it.
+                        <p>If the platform fails to boot due to an ACPI BIOS ERROR, return to WinPE and rerun the JouleInstaller.cmd. As part of the script, it should remove the file c:\windows\system32\ACPITABL.dat. If rerunning JouleInstaller.cmd does not resolve the issue, remove the file manually.</p>
+                    </li>
                   </ol>
             </div>
           </div>

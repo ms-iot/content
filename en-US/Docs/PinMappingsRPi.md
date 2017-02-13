@@ -203,8 +203,10 @@ public async void I2C()
     // 0x40 is the I2C device address
     var settings = new I2cConnectionSettings(0x40);
 
-    // Create an I2cDevice with the default controller and specified I2C settings
-    using (I2cDevice device = await I2cDevice.GetDefault(settings))
+    // Create an I2cDevice with the specified I2C settings
+    var controller = await I2cController.GetDefaultAsync();
+
+    using (I2cDevice device = controller.GetDevice(settings))
     {
         byte[] writeBuf = { 0x01, 0x02, 0x03, 0x04 };
         device.Write(writeBuf);
@@ -253,8 +255,10 @@ public async void SPI()
     // Use chip select line CS0
     var settings = new SpiConnectionSettings(0);
 
-    // Create an SpiDevice with our bus controller and SPI settings
-    using (SpiDevice device = await SpiDevice.GetDefault(settings))
+    // Create an SpiDevice with the specified Spi settings
+    var controller = await SpiController.GetDefaultAsync();
+
+    using (SpiDevice device = controller.GetDevice(settings))
     {
         byte[] writeBuf = { 0x01, 0x02, 0x03, 0x04 };
         device.Write(writeBuf);

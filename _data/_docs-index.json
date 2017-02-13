@@ -31,6 +31,10 @@
           {
             "title":"Windows 10 IoT Core porting tool",
             "link":"/Docs/IoTCorePortingTool.htm"
+          },
+		  {
+            "title":"DISM",
+            "link":"/Docs/Dism.htm"
           }
         ]
       },
@@ -76,11 +80,16 @@
             "link":"/Docs/PinMappingsRPi.htm"
           },
           {
-            "title":"Pin mappings - Minnowboard Max",
-            "link":"/Docs/PinMappingsMBM.htm"
-          },{
-            "title":"Pin mappings - Dragonboard",
-            "link":"/Docs/PinMappingsDb.htm"
+            "title": "Pin mappings - Minnowboard Max",
+            "link": "/Docs/PinMappingsMBM.htm"
+          },
+          {
+            "title": "Pin mappings - Dragonboard",
+            "link": "/Docs/PinMappingsDb.htm"
+          },
+          {
+            "title":"Bus Providers",
+            "link":"/Docs/BusProviders.htm"
           },
           {
             "title":"Hardware compatibility list",
@@ -205,9 +214,11 @@
           {
             "title":"Wi-Fi",
             "link":"/Docs/SetupWiFi.htm"
+          },
+          {
+            "title":"Wi-Fi Direct",
+            "link":"/Docs/SetupWiFiDirect.htm"
           }
-
-
         ]
       },
       {
@@ -240,8 +251,7 @@
           {
             "title":"Go to market",
             "link":"/Docs/GotoMarket.htm"
-          },
-
+          }
         ]
       }
    ]

@@ -6,9 +6,9 @@ lang: en-US
 ---
 
 # Release Notes for Windows 10 IoT Core
-Build Number 14931. September 2016
+Build Number 15026. February 2017
 
-&copy; 2016 Microsoft Corporation. All rights reserved
+&copy; 2017 Microsoft Corporation. All rights reserved
 
 This document provides late-breaking or other information that supplements the documentation included with the Windows 10 IoT Core.
 
@@ -22,35 +22,86 @@ The privacy statement for this version of the Windows operating system can be vi
 You can review linked terms by pasting the forward link into your browser window.
 
 ## What's new in this build: 
-* Updated OS files including core OS bug fixes.
+* Updated OS files including core OS bug fixes
+* Cortana feature has been enabled. See the Cortana section below for more details
+* WEBB Tutorial has been added
+* Extended keys and other improvements to the on-screen keyboard were added
+* Universal Write Filter (UWF) has been added as an option to the Windows Imaging and Configuration Designer (ICD)
+* The BluetoothLE stack has been updated to address the issues seen when calling GattDeviceService.GetCharacteristics
+* Issues with NanoRDP connecting have been addressed
+* New branding for the windows device portal
+* Joule BSP update
+* Better language support for IOT On Screen Keyboard (OSK)
+* Localization fixes in Bertha
+* RPI BSP packages were removed from the ADK
+
+
 
 ## Known issues in this build:
-* Remote Display may fail with the Dragon Board.
+* The MinnowBoard Max firmware 0.93 has a known issue which can lead to network connectivity failure
+* BluetoothLE paired devices may throw and exception and fail to function properly
+* Raspberry PI images may crash on their first boot. Consecutive boots start up correctly
+
+
+## Cortana Instructions and Known Issues 
+### To try Cortana: 
+* Please check “Start Cortana on Boot” on Device Settings of Windows Device Portal and restart the device.  
+* Navigate to Device Settings on top right of default application, click ‘Cortana & Search Settings’, this will launch the consent page for Cortana. After you click ‘sure’ to accept the consent, you are all set for Cortana. 
+* When you want to check your reminder, or traffic near you, you will be prompted to sign in with MSA. Please sign in so that you will have full experience Cortana.  
+
+### You need to get one microphone and one speaker connected with your device.  
+* On the Device Settings page of Windows Device Portal, check if your microphone and speaker is the one displayed against Speakers and Microphone. Click the Refresh button and make sure the correct peripherals are displayed.  
+* Adjust the volume for both to be in the range 40-70%. (Please make sure Microphone is not 0.0)  
+* Please sign in with your MSA credentials when it is prompted. MSA is what you use to sign in to Microsoft services such as Windows, Office, Outlook.com, OneDrive, Skype, Xbox, Cortana and more. An MSA enables Cortana to be a smart and personal assistant, and leverages user information to provide a compelling and useful experience. 
+
+### Here is the hardware that we recommend:  
+* Microphone: Microsoft LifeCam HD 3000, Blue Snowball iCE Condenser Microphone, Cardioid, Sound Tech CM-1000USB Table Top Conference Meeting Microphone 
+* Speaker: Logitech S150 USB Speakers 
+
+### Questions you can ask: 
+* What is the traffic to my home? 
+* What song is this? 
+* How’s the weather? 
+* Tell me a joke. 
+ 
+### How to exit Cortana 
+* Say “Hey, Cortana” and then say “Cancel” 
+
+### Not supported in IoT Cortana: 
+* Music playback 
+* Calendar 
+* Alarm 
+* Timer 
 
 ## IoT Core general known issues and work arounds
 
 ### For Raspberry Pi
 
 #### Raspberry Pi Display Resolution if monitor is disconnected 
-The Raspberry Pi may not maintain Display Resolution if monitor is disconnected. The EDID of the monitor is used to set the resolution of the system when one is connected.
-When disconnected, the Raspberry Pi firmware defaults to what is in the config.txt in the root of the SD card.
+The Raspberry Pi may not maintain Display Resolution if monitor is disconnected. The EDID of the monitor is used to set the resolution of the system when one is connected.  
+When disconnected, the Raspberry Pi firmware defaults to what is in the config.txt in the root of the SD card. 
 
-#### Raspberry Pi Video Performance
-Video playback performance on the Raspberry Pi platform is not optimized.  Animated user elements including XAML-based dropdown menus may exhibit less than optimal performance. 
+#### Raspberry Pi Video Performance 
+Video playback performance on the Raspberry Pi platform is not optimized.  Animated user elements including XAML-based dropdown menus may exhibit less than optimal performance. 
+ 
+#### Raspberry Pi Camera Support 
+Support for camera peripheral devices is limited. The PiCam device directly connected to the onboard camera bus is not supported due to limitations in the platform to support D3D Modern USB webcams produce data streams that are very demanding on the USB Host controller.  Even when used with low resolution settings webcams will require additional USB fine tuning and specialized control logic. 
 
-#### Raspberry Pi Camera Support
-Support for camera peripheral devices is limited. The PiCam device directly connected to the onboard camera bus is not supported due to limitations in the platform to support D3D Modern USB webcams produce data streams that are very demanding on the USB Host controller.  Even when used with low resolution settings webcams will require additional USB fine tuning and specialized control logic.
+#### Raspberry Pi3 Bluetooth support 
+The Raspberry Pi3 built-in Bluetooth driver only supports low bandwidth devices (7910553) 
 
-#### Raspberry Pi3 Bluetooth support
-The Raspberry Pi3 built-in Bluetooth driver currently only supports low bandwidth devices.
-
-#### Serial Port Usage and Access on RPi2
-Raspberry Pi 2 supports the serial transport for communication through the PL011 UART.  This is set by default in kernel debugging scenarios.  An application or device driver can use the PL011 UART to send and receive data with the PL011 device driver turning off the debugger using the following command:
-
+#### Serial Port Usage and Access on RPi2 
+Raspberry Pi 2 supports the serial transport for communication through the PL011 UART.  This is set by default in kernel debugging scenarios.  An application or device driver can use the PL011 UART to send and receive data with the PL011 device driver turning off the debugger using the following command:
 bcedit /set debug off 
 
 #### Data breakpoints have been disabled on the Raspberry Pi2
 No workaround at this time.
+
+#### Disabling the onboard adapters for Raspberry Pi 3
+The Raspberry Pi 3 has onboard Bluetooth which must be disabled to use a different dongle to disable to onboard Bluetooth, open a telnet/ssh session and run: 
+reg add hklm\system\controlset001\services\BtwSerialH5Bus /v Start /t REG_DWORD /d 4 
+You may disable WiFi with the following command: 
+reg add hklm\system\controlset001\services\bcmsdh43xx /v Start /t REG_DWORD /d 4 
  
 
 ### For Dragon Board
@@ -74,6 +125,14 @@ HKLM\System\Controlset001\Control\Power\CsEnabled=DWORD:1
 
 Note that not all platforms have support for CS.  This may not work on all platforms.    
 
+
+
+### For Joule 
+#### Firmware Update Required 
+The Intel Joule requires a firmware update to properly load Windows IoT Core. Please follow the install process detailed at https://developer.microsoft.com/en-us/windows/iot/Docs/GetStarted/joule/GetStartedStep1.htm to use IoT Core with Joule. 
+
+#### Graphics Support Limited 
+A graphics driver to enable hardware acceleration is not included in the Joule image. The system will use software rendering which will impact performance and CPU utilization. 
 
 ### For MinnowBoard
 #### Minnowboard Max Boot and Firmware Update 
@@ -190,6 +249,6 @@ Login with SSH\PS and run this command to start FTP:
 start ftpd.exe 
 
 To run on every boot Users should create a scheduler task: 
-Login with SSH\PS and create a scheduler task:       
+Login with SSH\PS and create a scheduler task: 
 schtasks /create /tn "IoTFTPD" /tr ftpd.exe /ru system /sc onstart 
 Schtasks /run /tn “IoTFTPD”

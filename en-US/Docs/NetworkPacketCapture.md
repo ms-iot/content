@@ -13,6 +13,10 @@ You can use [Microsoft Message Analyzer](http://www.microsoft.com/en-us/download
 
 ![Message Analyzer]({{site.baseurl}}/Resources/images/packetcapture/message-analyzer.png)
 
+## Prerequisites
+
+Working PowerShell Connection (Step 1 to 8 described at [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell){:target="_blank"})
+
 ## Set up your device
 
 In order to connect to your device using Message Analyzer, you need to first rename your device.  This can be done through [SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH){:target="_blank"} or 

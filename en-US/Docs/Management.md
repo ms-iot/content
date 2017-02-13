@@ -9,7 +9,7 @@ lang: en-US
 
 # Managing Windows 10 IoT Core Devices
 
-Windows 10 IoT Core devices can be managed using a traditional OMA DM MDM server that supports certificate based enrollment or using Azure IoT Hub's Device Management (currently in preview).  
+Windows 10 IoT Core devices can be managed using a traditional OMA DM MDM server that supports certificate based enrollment or using Azure IoT Hub's Device Management.  
  _Learn more about MDM and Windows 10 <a href="https://msdn.microsoft.com/library/windows/hardware/dn914769(v=vs.85).aspx" target="_blank">here</a>._  
  _Learn more about Azure IoT Hub Device Management <a href="https://azure.microsoft.com/en-us/documentation/articles/iot-hub-device-management-overview/" target="_blank">here</a>._  
 

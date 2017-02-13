@@ -45,7 +45,7 @@ Even if you download the sample, code, you'll need to follow the steps in **Comp
 ___
 1. Download and open the OpenCV Solution
 
-    Download the working OpenCV library for ARM from [GitHub](ttps://github.com/Microsoft/opencv/tree/vs2015-sample). Unzip it to a plce you can remember it, and **copy the folder's path (i.e. C:/path/to/opencv/)** for the next step.
+    Download the working OpenCV library from [GitHub](https://github.com/Microsoft/opencv/tree/vs2015-samples). Unzip it to a place you can remember it, and **copy the folder's path (i.e. C:/path/to/opencv/)** for the next step.
 
 2. Create the OpenCV environment variable
 
