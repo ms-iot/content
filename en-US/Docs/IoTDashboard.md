@@ -20,6 +20,7 @@ Windows 10 IoT Core Dashboard is the best way to download, set up and connect yo
 ___
 The IoT Dashboard makes it easy to set up a new device. For detailed instructions on how to get started, see the [Get Started]({{site.baseurl}}/{{page.lang}}/GetStarted) page.
 
+
 {% include imageborder.html alt="IoT Dashboard Setup Page" link="/Resources/images/IoTDashboard/IoTDashboard_SetupPage.PNG" %}
 
 ### SD card
@@ -55,7 +56,14 @@ Having your IoT Core device connect to the internet is essential. Many of the ne
 ## My Devices
 ___
 After your device is connected to the internet, the IoT Dashboard will automatically detect your device.
-To find your device, go to **My Devices**. If your device is not listed, try rebooting the device. Also make sure that if there are more than one devices on the network, they each have a unique name.
+To find your device, go to **My Devices**. If your device is not listed, try rebooting the device. Make sure that if there are more than one devices on the network, they each have a unique name. Also make sure that your **windows10iotcoredashboard.exe** is allowed to communicate through Windows Firewall by following the steps below:
+
+1. Open **Network and Sharing Center** and then find the type of network (Domain/Private/Public) your PC is connected to.
+2. Open **Control Panel** and click **System and Security**.
+3. Click **Allow an app through Windows Firewall** under **Windows Firewall**.
+4. Click **Change settings**.
+5. Find **windows10iotcoredashboard.exe** in **Allowed apps and features** and then enable the appropriate network check box (i.e. the network type you found in step 1).
+
 
 ### Connect to your device
 Right click and select **Open in Device Portal**. This will launch the [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/Docs/Tools/DevicePortal) page and is the best way to interact and manage your device.
@@ -73,7 +81,7 @@ IoT Dashboard lets you provision IoT Core devices with Azure IoT Hub. You can re
 ## Quick Run Samples
 ___
 
-Quick run samples do not require and code compilation, Visual studio installation or SDK download. They are great for quickly checking out what IoT Core can do.
+Quick run samples do not require any code compilation, Visual studio installation or SDK download. They are great for quickly checking out what IoT Core can do.
 
 ### Network 3D Printer
 Use the Network 3D Printer sample to connect your 3D Printer to your board can make it discoverable over your home network. See the  [3D printer server sample]({{site.baseurl}}/{{page.lang}}/Docs/3DPrintServer) for more details.
