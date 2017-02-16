@@ -43,14 +43,13 @@
       <td>
         2GB
       </td>
-      <td>1GB</td>
-    </tr>
+      <td>1GB</td>    </tr>
     <tr>
       <td>GPU</td>
-      <td>Broadcom Video Core IV @ 400MHz</td>
-      <td>Broadcom Video Core IV @ 250MHz</td>
+      <td>Broadcom Video Core IV @ 400MHz (no DirectX / Hardware Acceleration support)</td>
+      <td>Broadcom Video Core IV @ 250MHz (no DirectX / Hardware Acceleration support)</td>
       <td>Intel HD Graphics</td>
-      <td>Qualcomm Adreno 306 @ 400MHz</td>
+      <td>Qualcomm Adreno 306 @ 400MHz (only 720p / 1280 x 720 supported)</td>
     </tr>
     <tr>
       <td>USB</td>
@@ -81,7 +80,7 @@
       <td>HDMI, DSI</td>
       <td>HDMI, DSI</td>
       <td>Micro HDMI</td>
-      <td>HDMI (16:9 @ 1280x720 recommended)</td>
+      <td>HDMI, DSI</td>
     </tr>
     <tr>
       <td>Audio Output</td>
