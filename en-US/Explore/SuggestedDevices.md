@@ -118,7 +118,7 @@
         <p>1x Serial UART</p>
         <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Set up your Raspberry Pi 3</a></p>
         <p><a href="https://www.element14.com/community/docs/DOC-76955/l/raspberry-pi-customization-service">Pi Customization Service</a></p>
-      </td>   
+      </td>
       <td>
         <p>17x GPIO pins</p>
         <p>1x SPI bus</p>
@@ -140,7 +140,7 @@
         <p>1x SPI bus</p>
         <p>2x I2C buses</p>
         <p>2x Serial UARTs</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/Docs/DB410c">Set up your DragonBoard 410c</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Set up your DragonBoard 410c</a></p>
         <p><a href="https://developer.qualcomm.com/hardware/snapdragon-410">Other device options</a></p>
       </td>
     </tr>
