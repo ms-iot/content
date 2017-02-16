@@ -51,7 +51,7 @@ These tools are available within the [Windows developer kits][6], which are gene
 Download the zip from [here][7], unpack and proceed with the following steps:
 
 1. Run the attached MakeSB.ps1 script in an Administrative PowerShell console to generate a custom set of SecureBoot certificates (this example uses certs under the 'db' location)
-  * You can click the **None** button in all UI boxes that will show up to write the private keys without a password to disk. 
+  * You can click the **None** button in all UI boxes that will show up to write the private keys without a password to disk.
 2. As a final step, you can export the DRA as PFX for backup purposes using _certmgr.msc_. Start _certmgr.msc_, find the cert issued to 'PFXBitLockerDRA' under _Certificates -> Current User -> Personal -> Certificates_, right click on it select _All Tasks -> Export..._. The dialog will lead through the export process that will produce the BitLockerDRA.pfx file:
   * Export with private Key
   * Personal Information Exchange – PKCS #12 (.pfx)
@@ -81,7 +81,7 @@ For the following steps, we'll assume that you've flashed the latest Windows 10 
   * SetVariable_pk.bin
 2.	Copy the provided device encryption task definition to v:\EFI:
   * DETask.xml
-3.	Import DRA.pfx to your PC by double clicking on the file to launch the Certificate Import Wizard - follow the prompts, setting 'Store Location' as 'Current User' and the password required as 'dra'. 
+3.	Import DRA.pfx to your PC by double clicking on the file to launch the Certificate Import Wizard - follow the prompts, setting 'Store Location' as 'Current User' and the password required as 'dra'.
 4.	Additionally, in order to facilitate data recovery once the device is encrypted, open an administrative CMD prompt on your PC and run the following commands:
   * `reg load HKLM\IoT v:\Windows\System32\config\SOFTWARE`
   * `reg import DRAStore.reg` (point to your 'DRAStore.reg' file location)
@@ -92,7 +92,7 @@ For the following steps, we'll assume that you've flashed the latest Windows 10 
 
 * `diskpart`
 * `sel disk n` (n for disk number that maps to the DragonBoard under USB Mass Storage Mode)
-* `sel parition m` (partition # for EFIESP partition - '28' for DragonBoard410c under Windows 10 IoT Core)
+* `sel partition m` (partition # for EFIESP partition - '28' for DragonBoard410c under Windows 10 IoT Core)
 * `set id=C12A7328-F81F-11D2-BA4B-00A0C93EC93B`
 
 **Note:** OEMs and device builders may need to setup Secure Boot and enable BitLocker on their IoT devices at scale. Please refer to the [OEM preparation and deployment guidance documentation][10] to learn more on how to build an OS image with custom files and settings.
@@ -109,7 +109,7 @@ Depending on your device, you may need to ensure that firmware settings are upda
 
 ### Qualcomm DragonBoard 410c  
 * In order to enable Secure Boot, it may be necessary to provision RPMB. Once the image has been prepared as mentioned in the section above, with a display attached to the device, press [Power] + [Vol+] + [Vol-] simultaneously on the device before powering up and select "Provision RPMB" from the BDS menu. **Please note that this is an irreversible step.**
- 
+
 ## Enabling UEFI Secure Boot and BitLocker  
 ### UEFI Secure Boot  
 Once the device is set and the image prepared, boot the device into Windows and connect to the device from your Windows 10 PC through a remote PowerShell session (instructions on how to connect via PowerShell are availale [here][11]).  
@@ -143,4 +143,3 @@ If the contents need to be frequently accessed offline, BitLocker autounlock can
 ## Disabling BitLocker  
 Should there arise a need to temporarily disable BitLocker, initate a remote PowerShell session with your IoT device and run the following command: `sectask.exe -disable`.  
 **Note:** Device encryption will be re-enabled on subsequent device boot unless the scheduled encryption task is disabled.
-

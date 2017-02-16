@@ -875,6 +875,19 @@
       ]
     },
     {
+      "title": "NFC for IoT",
+      "description": "How to use the NFC APIs on IoT Core.",
+      "link": "samples/NFCForIoT.htm",
+      "link-text": "Learn More",
+      "lang": "C#",
+      "ranking": 10,
+      "tags": [
+        "c#",
+        "advanced",
+        "driver"
+      ]
+    },
+    {
       "title": "Speech translator",
       "description": "Translate your speech to different languages.",
       "link": "samples/SpeechTranslator.htm",
