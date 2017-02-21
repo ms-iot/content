@@ -199,9 +199,10 @@ using Windows.Devices.I2c;
 
 public async void I2C()
 {
-
     // 0x40 is the I2C device address
     var settings = new I2cConnectionSettings(0x40);
+    // FastMode = 400KHz
+    settings.BusSpeed = I2cBusSpeed.FastMode;
 
     // Create an I2cDevice with the specified I2C settings
     var controller = await I2cController.GetDefaultAsync();
@@ -251,9 +252,10 @@ using Windows.Devices.Spi;
 
 public async void SPI()
 {
- 
     // Use chip select line CS0
     var settings = new SpiConnectionSettings(0);
+    // Set clock to 10MHz 
+    settings.ClockFrequency = 10000000;
 
     // Create an SpiDevice with the specified Spi settings
     var controller = await SpiController.GetDefaultAsync();
