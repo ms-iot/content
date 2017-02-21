@@ -172,14 +172,19 @@ using Windows.Devices.I2c;
 
 public async void I2C()
 {
-	var settings = new I2cConnectionSettings(0x40); /* 0x40 is the I2C device address   */
-	settings.BusSpeed = I2cBusSpeed.FastMode;       /* FastMode = 400KHz                */
+    // 0x40 is the I2C device address
+    var settings = new I2cConnectionSettings(0x40);
+    // FastMode = 400KHz
+    settings.BusSpeed = I2cBusSpeed.FastMode;
 
-	I2cDevice Device = await I2cDevice.GetDefault(settings);    /* Create an I2cDevice with the default bus controller (I2C0) and the supplied I2C settings */
+    // Create an I2cDevice with the specified I2C settings
+    var controller = await I2cController.GetDefaultAsync();
 
-	byte[] WriteBuf = new byte[] { 0x01, 0x02, 0x03, 0x04}; /* Some data to write to the device */
-
-	Device.Write(WriteBuf);
+    using (I2cDevice device = controller.GetDevice(settings))
+    {
+        byte[] writeBuf = { 0x01, 0x02, 0x03, 0x04 };
+        device.Write(writeBuf);
+    }
 }
 {% endhighlight %}
 
@@ -192,8 +197,8 @@ Let's look at the SPI bus available on this device.
 
 There is one SPI controller **SPI0** available on the DB
 
-* Pin 10 - **SPI0 MOSI**
-* Pin 14 - **SPI0 MISO**
+* Pin 10 - **SPI0 MISO**
+* Pin 14 - **SPI0 MOSI**
 * Pin 8 - **SPI0 SCLK**
 * Pin 12 - **SPI0 CS0**
 
@@ -211,14 +216,16 @@ using Windows.Devices.Spi;
 
 public async void SPI()
 {
-	var settings = new SpiConnectionSettings(0); /* Create SPI initialization settings using chip select line CS0 */
-	settings.ClockFrequency = 10000000;          /* Set clock to 10MHz                                            */
+    // Use chip select line CS0
+    var settings = new SpiConnectionSettings(0);
 
+    // Create an SpiDevice with the specified Spi settings
+    var controller = await SpiController.GetDefaultAsync();
 
-	SpiDevice Device = await SpiDevice.GetDefault(settings); /* Create an SpiDevice with the default controller and the supplied SPI settings */
-
-	byte[] WriteBuf = new byte[] { 0x01, 0x02, 0x03, 0x04 }; /* Some data to write to the device */
-
-	Device.Write(WriteBuf);
+    using (SpiDevice device = controller.GetDevice(settings))
+    {
+        byte[] writeBuf = { 0x01, 0x02, 0x03, 0x04 };
+        device.Write(writeBuf);
+    }
 }
 {% endhighlight %}
