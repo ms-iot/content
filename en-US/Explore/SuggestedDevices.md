@@ -140,7 +140,7 @@
         <p>1x SPI bus</p>
         <p>2x I2C buses</p>
         <p>2x Serial UARTs</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted/dragonboard/GetStartedStep1.htm">Set up your DragonBoard 410c</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/Docs/GetStarted/dragonboard/GetStartedStep1.htm">Set up your DragonBoard 410c</a></p>
         <p><a href="https://developer.qualcomm.com/hardware/snapdragon-410">Other device options</a></p>
       </td>
     </tr>
