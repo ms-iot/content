@@ -181,8 +181,8 @@
       "title": "AllJoyn Device System Bridge",
       "description": "Create an AllJoyn Device System Bridge App project.",
        "link": [
-        "samples/AllJoynDSB.htm",
-        "samples/AllJoynDSBCS.htm"
+        "samples/AllJoynDSBCS.htm",
+        "samples/AllJoynDSB.htm"
       ],
       "link-text": [
         "AllJoynDSB",
