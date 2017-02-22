@@ -23,7 +23,7 @@ Even if you download the sample, code, you'll need to follow the steps in **Comp
 
 * You will need your device's IP address when connecting to it remotely.
 
-* Make sure you have the C++ components for Visual Studio. To check, open the Start Menu, type in **Add or remove programs**. Hit enter and naviage to Visual Studio. Click **Modify** and check to make sure you have the below components selected. If not, select them and update your installation.
+* Make sure you have the C++ components for Visual Studio. To check, open the Start Menu, type in **Add or remove programs**. Hit enter and navigate to Visual Studio. Click **Modify** and check to make sure you have the below components selected. If not, select them and update your installation.
 
     ![C++ Components]({{site.baseurl}}/Resources/images/opencv/get_cpp.png)
 

@@ -32,7 +32,11 @@
           <div class="section-body toggle-section" id="load-project">
             <p>
               You can find the source code for this sample by downloading a zip of all of our samples <a href="https://github.com/ms-iot/samples/archive/develop.zip">here</a> and navigating to the <code>samples-develop\HelloBlinky</code>.
-              The sample code is available in either C++ or C#, however the documentation here only details the C# variant. Make a copy of the folder on your disk and open the project from Visual Studio.
+              The sample code is available in either C++ or C#, however the documentation here only details the C# variant. Open the project in Visual Studio as follows:
+              <ul>
+                <li>Copy the folder to somewhere on your PC's disk (for example, C:\Users\username\Documents)</li>
+                <li>In the copied location, navigate to HelloBlinky/CS and double-click on the Visual Studio Solution file called Blinky (Blinky.sln)</li>
+              </ul>
             </p>
             <p>
               Be aware that the GPIO APIs are only available on Windows 10 IoT Core, so this sample cannot run on your desktop.
@@ -92,7 +96,7 @@
             <div class="row">
               <div class="col-xs-24 col-md-12">
                 <ol>
-                  <li value="2">Next, in the Visual Studio toolbar, click on the <code>Local Machine</code> dropdown and select <code>Remote Machine</code>.</li>
+                  <li value="2">Next, click on the dropdown directly to the right of the archictecture dropdown and select <code>Remote Machine</code>.</li>
                 </ol>
               </div>
               <div class="col-xs-24 col-md-11">
@@ -117,7 +121,7 @@
                 <ol>
                   <li value="4">
                     You can verify or modify these values by navigating to the project properties
-                    (select <b>Properties</b> in the Solution Explorer) and choosing the <code>Debug</code> tab on the left.
+                    (double-click <b>Properties</b> in the Solution Explorer) and choosing the <code>Debug</code> tab on the left.
                   </li>
                 </ol>
               </div>
@@ -129,9 +133,12 @@
               <div class="col-xs-24 col-md-12">
                 <ol>
                   <li value="5">
-                    When everything is set up, you should be able to press F5 from Visual Studio.
-                    If there are any missing packages that you did not install during setup, Visual Studio may prompt you to acquire those now.
-                    The Blinky app will deploy and start on the Windows IoT device, and you should see the LED blink in sync with the simulation on the screen.
+                    <p>When everything is set up, you should be able to press F5 (or hit the "|> Remote Machine" button) from Visual Studio. A few notes here:</p>
+                    <ul>
+                      <li>If there are any missing packages that you did not install during setup, Visual Studio may prompt you to acquire those now.</li>
+                      <li>If you set up a pin for debugging earlier, you may see a dialog that says "A PIN is required to establish a remote connection to the device."</li>
+                    </ul>
+                    <p>The Blinky app will deploy and start on the Windows IoT device, and you should see the LED blink in sync with the simulation on the screen.</p>
                   </li>
                 </ol>
               </div>
@@ -160,7 +167,7 @@
           <div class="section-body toggle-section" id="timer-code">
             <div class="row">
               <div class="col-xs-24">
-                <p>The code for this sample is pretty simple. We use a timer, and each time the 'Tick' event is called, we flip the state of the LED.</p>
+                <p>THe code for this sample is listed below. We use a timer, and each time the 'Tick' event is called, we flip the state of the LED. For more details on how the timer works, see this <a href="http://www.wpf-tutorial.com/misc/dispatchertimer/">tutorial</a> and the associated <a href="https://msdn.microsoft.com/en-us/library/system.windows.threading.dispatchertimer(v=vs.110).aspx">DispatcherTimer</a> and <a href="https://msdn.microsoft.com/en-us/library/system.timers.timer(v=vs.110).aspx">Timer</a> documentation.</p>
                 <p>Here is how you set up the timer in C#:</p>
 {% highlight C# %}
 public MainPage()

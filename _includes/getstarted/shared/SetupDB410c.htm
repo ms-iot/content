@@ -6,16 +6,16 @@
         <li> 12V power supply with at least 1.0A current.  If you plan on using several power-hungry USB peripherals, use a higher current power supply instead (>2.0A) </li>
         <li> HDMI cable and monitor (HDMI monitors with a native resolution of 16:9 at 1280x720 are recommended) </li>
         <li> USB keyboard and Mouse - <a href="{{site.baseurl}}/{{page.lang}}/Support/Faqs.htm#dragonboard" target="_blank"> Having issues with USB? </a> </li>
-        <li> 
+        <li>
             Logic-level shifter - recommended - Many peripheral devices require 3.3v or 5v logic level voltages. The DragonBoard 410c supplies 1.8v logic and therefore may require a logic level shifter when connecting your DragonBoard to these types of peripheral devices. Some example shifters include: <a href="https://www.adafruit.com/products/395" target="_blank">Adafruit 8-channel Logic Level Converter</a> and <a href="https://www.sparkfun.com/products/11771" target="_blank">SparkFun 4-channel Voltage-Level Translator</a>.
-            
+
             We will show you how to use these shifters in any of our samples that require them for DragonBoard. To see an example of one such sample, refer to the DragonBoard section of the <a href="{{site.baseurl}}/{{page.lang}}/Samples/SPIAccelerometer.htm" target="_blank">SPI Accelerometer Sample</a>.  You may also refer to <a href="https://learn.sparkfun.com/tutorials/txb0104-level-shifter-hookup-guide?_ga=1.63563695.1225669924.1446058808" target="_blank"> SparkFun's Hookup Guide</a>. You will not require this device in order to get started with the DragonBoard.<br />
         </li>
     </ul>
 
 <h4> Note: </h4>
   <p>Unlike the Raspberry Pi 2 or 3 and Minnowboard Max, you <em> do not </em> need an SD card to load the Windows IoT Core image to your DragonBoard. The image will be directly uploaded to the board!</p>
-  
+
 <h4> Connect the DragonBoard to the Host PC</h4>
   <ol class="setup-content-list">
     <li>
@@ -23,8 +23,11 @@
       <p><img alt="set first boot switch on board to usb boot" class="image-border" src="{{site.baseurl}}/Resources/images/SetupDB410c/dragonboard_usbboot.png" /></p>
       <p>The first of the four switches is set to ON, and the other 3 switches are set to OFF.</p>
     </li>
-    <li>Connect a USB cable to the Dragonboard’s micro-USB port and connect the other end to an empty USB port on the Host PC.</li>
-    <li>Connect the Dragonboard to the Power supply.</li>
+    <li>
+      <p>Connect a USB cable to the DragonBoard’s micro USB port and connect the other end to an empty USB port on the Host PC, as shown below.</p>
+      <p><img src="{{site.baseurl}}/Resources/images/SetupDB410c/usb_connection.jpg" class="image-border" alt="connect a usb cable to your DragonBoard" /></p>
+    </li>
+    <li>Connect the DragonBoard to the Power supply.</li>
 
   </ol>
 <h4>Download the Windows 10 IoT Core Image to the DragonBoard</h4>
