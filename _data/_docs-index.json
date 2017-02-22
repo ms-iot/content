@@ -225,8 +225,8 @@
         "parent":"Productization",
         "children":[
           {
-            "title":"Windows 10 IoT Core Pro",
-            "link":"/Docs/CreateIoTCorePro.htm"
+            "title":"Insider Lab",
+            "link":"/Docs/InsiderLab"
           },
           {
             "title":"OEM license requirements",
