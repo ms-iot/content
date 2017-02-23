@@ -257,10 +257,14 @@ public async void SPI()
     // Set clock to 10MHz 
     settings.ClockFrequency = 10000000;
 
-    // Create an SpiDevice with the specified Spi settings
-    var controller = await SpiController.GetDefaultAsync();
-
-    using (SpiDevice device = controller.GetDevice(settings))
+    // Get a selector string that will return our wanted SPI controller
+    string aqs = SpiDevice.GetDeviceSelector("SPI0");
+    
+    // Find the SPI bus controller devices with our selector string
+    var dis = await DeviceInformation.FindAllAsync(aqs);
+    
+    // Create an SpiDevice with our selected bus controller and Spi settings
+    using (SpiDevice device = await SpiDevice.FromIdAsync(dis[0].Id, settings))
     {
         byte[] writeBuf = { 0x01, 0x02, 0x03, 0x04 };
         device.Write(writeBuf);
