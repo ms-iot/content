@@ -177,10 +177,14 @@ public async void I2C()
     // FastMode = 400KHz
     settings.BusSpeed = I2cBusSpeed.FastMode;
 
-    // Create an I2cDevice with the specified I2C settings
-    var controller = await I2cController.GetDefaultAsync();
+    // Get a selector string that will return our wanted I2C controller
+    string aqs = I2cDevice.GetDeviceSelector("I2C0");
+    
+    // Find the I2C bus controller devices with our selector string
+    var dis = await DeviceInformation.FindAllAsync(aqs);
 
-    using (I2cDevice device = controller.GetDevice(settings))
+    // Create an I2cDevice with our selected bus controller and I2C settings 
+    using (I2cDevice device = await I2cDevice.FromIdAsync(dis[0].Id, settings))
     {
         byte[] writeBuf = { 0x01, 0x02, 0x03, 0x04 };
         device.Write(writeBuf);
