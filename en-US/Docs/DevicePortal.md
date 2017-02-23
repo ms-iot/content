@@ -99,9 +99,9 @@ The AllJoyn Onboarding Settings allow you to control whether or not your device'
 
 {% include imageborder.html alt="App list" link="/Resources/images/DevicePortal/OnboardingAllJoyn.png" %}
 {% include imageborder.html alt="App list" link="/Resources/images/DevicePortal/OnboardingICS.png" %}
-{% include note.html text='Access point adapter is the WiFi adapter that act as a WiFi access point (it usually has an IP address like 192.168.137.1).<br>Shared network adapter is the adapter the connects to Internet (e.g.: Ethernet adapter).' %}
+{% include note.html text='Access point adapter is the WiFi adapter that act as a WiFi access point (it usually has an IP address like 192.168.137.1).<br>Shared network adapter is the adapter that connects to Internet (e.g.: Ethernet adapter).' %}
 {% include imageborder.html alt="App list" link="/Resources/images/DevicePortal/OnboardingSoftAP.png" %}
-{% include note.html text='SoftAP SSID will be automatically prefixed by "AJ_" if AllJoyn onboarding is enabled and postfixed by the MAC address of the Wifi adapter.<br>SoftAP password must be at least 8 characters long.' %}
+{% include note.html text='SoftAP SSID will be automatically prefixed by "AJ_" if AllJoyn onboarding is enabled and postfixed with the MAC address of the Wifi adapter.<br>The SoftAP passphrase must be between 8 and 63 ASCII characters.' %}
 
 
 ### TPM configuration
