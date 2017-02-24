@@ -11,6 +11,10 @@
             "title":"Supported boards and SoCs",
             "link":"/Explore/Deviceoptions.htm"
           },
+           {
+            "title":"Cortona on IoT",
+            "link":"/Docs/CortonaOnIoTCore.htm"
+          },
           {
             "title":"Glossary",
             "link":"/Docs/Glossary.htm"
