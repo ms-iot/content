@@ -24,7 +24,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 
 <hr>
 
-{% include_relative GetStarted/SetupPCContent.md %}
+{% include_relative SetupPCContent.md %}
 
 {% include kit-nextsteps.html device=page.deviceName %}
 

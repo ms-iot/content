@@ -12,7 +12,7 @@ Learn how to get your computer ready for Windows Developer Program for IoT.
 
 {% include steps.html device=page.deviceName %}
 
-{% include_relative GetStarted/SetupPCContent.md %}
+{% include_relative SetupPCContent.md %}
 
 {% include nextsteps.html device=page.deviceName %}
 
