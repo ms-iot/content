@@ -17,7 +17,7 @@ In this sample, we will demonstrate how to set up the NXP NFC SBC Kit and how to
 # Prerequisites 
 In order to build and test this sample, you will need the following:
 
-  * [Visual Studio 2017 Update 3](http://go.microsoft.com/fwlink/?LinkId=691129) or later.
+  * [Visual Studio 2017 Update 1](http://go.microsoft.com/fwlink/?LinkId=691129) or later.
   * [NXP Explore-NFC Kit](http://www.digikey.com/products/en?mpart=OM5577&v=568).
   * Download the [ms-iot Samples repository](https://github.com/ms-iot/samples/archive/develop.zip) from GitHub, then expand it.
   * [BullsEye NFC NTAG216 Sticker](https://dangerousthings.com/shop/bullseye/) or [xNTi NFC Implant Kit](https://dangerousthings.com/shop/xnti/)

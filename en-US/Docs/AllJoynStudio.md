@@ -9,7 +9,7 @@ lang: en-US
 
 The [AllSeen Alliance](https://allseenalliance.org/) created AllJoyn to empower the Internet of Things. Windows 10 has AllJoyn built natively into its platform, allowing developers to easily take advantage of AllJoyn to "IoT-enable" your Windows 10 apps. This article will outline the steps required to build apps for Windows 10 using the Universal Windows Platform (UWP) AllJoyn APIs and the Visual Studio 2017 [AllJoyn Studio](https://visualstudiogallery.msdn.microsoft.com/064e58a7-fb56-464b-bed5-f85914c89286) Extension.
 
-This article is a fulfillment of the promises made in the AllJoyn session presented at //build/ 2015:
+Check this video out: 
 
 [AllJoyn: Building Universal Windows Apps that Discover, Connect, and Interact with Other Devices and Cloud Services Using AllJoyn](https://channel9.msdn.com/Events/Build/2015/2-623)
 
@@ -59,7 +59,7 @@ There are three ways that you can obtain the AllJoyn interface  definitions that
 
 This article covers the first two ways - AllJoyn® Studio natively supports querying the network for AllJoyn producers and extracting their XML as well as uploading Introspection XML files.  Learn how to create your own [here]({{site.baseurl}}/en-US/Docs/AllJoynProducer).
 
-At //build/ 2015, an AllJoyn-enabled toaster device was shown which will serve as the example for this post. This toaster exposes controls for starting and stopping the toasting sequence, setting the "darkness", and notifications when the toast is burnt.
+An AllJoyn-enabled toaster device will serve as the example for this post. This toaster exposes controls for starting and stopping the toasting sequence, setting the "darkness", and notifications when the toast is burnt.
 
 ![AJ_toaster]({{site.baseurl}}/Resources/images/AllJoyn/AJ_toaster.jpg)
 
@@ -247,7 +247,7 @@ If you've completed all of the instructions in this document correctly, you are 
 
 For reference, please look to the AllJoyn Universal Windows Apps samples on the Microsoft Sample GitHub for [AllJoyn Producers](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AllJoyn/ProducerExperiences) and [AllJoyn Consumers](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AllJoyn/ConsumerExperiences).
 
-For a detailed walkthrough of how to create an AllJoyn app, please watch the AllJoyn session 623 from //build 2015:
+For a detailed walkthrough of how to create an AllJoyn app, please watch the AllJoyn session 623 :
 
 ["AllJoyn:  Building Windows apps that discover, connect and interact with other devices and cloud services using AllJoyn"](https://channel9.msdn.com/Events/Build/2015/2-623).
 

@@ -22,7 +22,7 @@ This sample shows how to send data from a light sensor (photoresistor) to an Azu
 
 ### Set up your PC
 * Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
-* Install Visual Studio 2017 Update 3.
+* Install Visual Studio 2017 Update 1.
 * Install the latest Node.js Tools for Windows IoT from [here](http://aka.ms/ntvsiotlatest).
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 * Install Arduino software from [here](https://www.arduino.cc/en/Main/Software).

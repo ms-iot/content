@@ -16,7 +16,7 @@ The Trusted Platform Module (TPM) Base Services (TBS) feature centralizes TPM ac
 The TBS feature runs as a system service in Windows and provides services as an API exposed through remote procedure calls (RPC).
 
 ## Prerequisites  
-* Microsoft Visual Studio 2017, version 14.0.23107.10 or above  
+* Microsoft Visual Studio 2017
 * SDK, version 10.0.10240 or above
 
 ## Device Setup  

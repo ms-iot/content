@@ -25,7 +25,7 @@ ___
 
 ### On the PC
 
-* Make sure you have installed Visual Studio 2017 Update 2 or higher version
+* Make sure you have installed Visual Studio 2017 Update 1 or higher version
 * Install the [Windows Driver Kit](https://msdn.microsoft.com/windows/hardware/dn913721(v=vs.8.5).aspx).  You will need to install the SDK and WDK.
 * Install the certificates so that the driver is signed correctly and can run on your device. From an elevated command prompt execute the commands listed below:
     1.  `cd c:\Program Files (x86)\Windows Kits\10\Tools\bin\i386` 
