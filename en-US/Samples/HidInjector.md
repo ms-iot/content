@@ -21,7 +21,7 @@ The HID Injection sample leverages the [Virtual HID Framework](https://msdn.micr
 # Prerequisites 
 In order to build this driver you will need the following:
 
-  * [Visual Studio 2015 Update 2](http://go.microsoft.com/fwlink/?LinkId=691129) or later.
+  * [Visual Studio 2017 Update 2](http://go.microsoft.com/fwlink/?LinkId=691129) or later.
   * [Windows 10 Driver Development Kit](http://go.microsoft.com/fwlink/p/?LinkId=526733).
   * [Windows 10 Assessment and Deployment Kit](https://msdn.microsoft.com/en-us/windows/hardware/dn913721(v=vs8.5).aspx#winADK).
   * Download the [ms-iot Samples repository](https://github.com/ms-iot/samples/archive/develop.zip) from GitHub, then expand it.

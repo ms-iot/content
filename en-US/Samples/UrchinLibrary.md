@@ -18,7 +18,7 @@ This is a spec-compliant library derived from the TPM 2.0 reference implementati
 ## <a name="NewProjectUrchin"></a>Create a project using the Urchin library  
 **Prerequisites:**
 
-* Microsoft Visual Studio 2015, version 14.0.23107.10 or above  
+* Microsoft Visual Studio 2017, version 14.0.23107.10 or above  
 * SDK, version 10.0.10240 or above
 
 **Create a new C++ project.**  

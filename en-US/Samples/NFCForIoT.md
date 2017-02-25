@@ -17,7 +17,7 @@ In this sample, we will demonstrate how to set up the NXP NFC SBC Kit and how to
 # Prerequisites 
 In order to build and test this sample, you will need the following:
 
-  * [Visual Studio 2015 Update 3](http://go.microsoft.com/fwlink/?LinkId=691129) or later.
+  * [Visual Studio 2017 Update 3](http://go.microsoft.com/fwlink/?LinkId=691129) or later.
   * [NXP Explore-NFC Kit](http://www.digikey.com/products/en?mpart=OM5577&v=568).
   * Download the [ms-iot Samples repository](https://github.com/ms-iot/samples/archive/develop.zip) from GitHub, then expand it.
   * [BullsEye NFC NTAG216 Sticker](https://dangerousthings.com/shop/bullseye/) or [xNTi NFC Implant Kit](https://dangerousthings.com/shop/xnti/)
@@ -33,7 +33,7 @@ In order to build and test this sample, you will need the following:
 In order to assocate the NXP Explore-NFC hardware with the driver, resources need to be allocated for it in the ACPI Table. Included in the sample is a file ```pn71x0.asl```, which 
 needs to be compiled in order to apply it to your Raspberry PI.
 
-  1. Open a ```VS2015 x64 Native Tools Command Prompt```
+  1. Open a ```VS2017 x64 Native Tools Command Prompt```
   1. Within the command prompt change directory to the NFCOnIoT sample.
   1. Within the command prompt run ```"C:\Program Files (x86)\Windows Kits\10\Tools\x64\ACPIVerify\asl.exe" pn71x0.asl```. NOTE: you will get a warning; this is benign.
   1. This command will have generated a file called ```ACPITABL.dat``` which will be copied to your pi in the next section.

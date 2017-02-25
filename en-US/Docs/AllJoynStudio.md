@@ -7,7 +7,7 @@ lang: en-US
 
 # Using the AllJoyn Studio Extension
 
-The [AllSeen Alliance](https://allseenalliance.org/) created AllJoyn to empower the Internet of Things. Windows 10 has AllJoyn built natively into its platform, allowing developers to easily take advantage of AllJoyn to "IoT-enable" your Windows 10 apps. This article will outline the steps required to build apps for Windows 10 using the Universal Windows Platform (UWP) AllJoyn APIs and the Visual Studio 2015 [AllJoyn Studio](https://visualstudiogallery.msdn.microsoft.com/064e58a7-fb56-464b-bed5-f85914c89286) Extension.
+The [AllSeen Alliance](https://allseenalliance.org/) created AllJoyn to empower the Internet of Things. Windows 10 has AllJoyn built natively into its platform, allowing developers to easily take advantage of AllJoyn to "IoT-enable" your Windows 10 apps. This article will outline the steps required to build apps for Windows 10 using the Universal Windows Platform (UWP) AllJoyn APIs and the Visual Studio 2017 [AllJoyn Studio](https://visualstudiogallery.msdn.microsoft.com/064e58a7-fb56-464b-bed5-f85914c89286) Extension.
 
 This article is a fulfillment of the promises made in the AllJoyn session presented at //build/ 2015:
 
@@ -45,7 +45,7 @@ The Windows 10 build and related tools include all of the resources that you'll 
 Here's what you'll need to do before you get started writing code:
 
 - Install [Windows 10](https://www.microsoft.com/windows/) on a PC
-- Install [Visual Studio 2015](https://www.visualstudio.com/downloads/download-visual-studio-vs) (do NOT use an  Express edition)
+- Install [Visual Studio 2017](https://www.visualstudio.com/downloads/download-visual-studio-vs) (do NOT use an  Express edition)
 - Download the [AllJoyn® Studio](https://visualstudiogallery.msdn.microsoft.com/064e58a7-fb56-464b-bed5-f85914c89286) Extension from the Visual Studio Gallery. 
 
 
