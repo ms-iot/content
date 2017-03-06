@@ -96,6 +96,14 @@
             "link":"/Docs/BusProviders.htm"
           },
           {
+            "title":"Lightning Providers",
+            "link":"/Docs/LightningProviders.htm"
+          },
+          {
+            "title":"Lightning Performance",
+            "link":"/Docs/LightningPerformance.htm"
+          },
+          {
             "title":"Hardware compatibility list",
             "link":"/Docs/HardwareCompatList.htm"
           },
