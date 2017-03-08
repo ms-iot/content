@@ -1,5 +1,5 @@
 <p>
-  The publicly available boards below are some of the same devices Microsoft uses as part of our operating system engineering efforts. We support an easy process for you to <a href="{{site.baseurl}}/{{page.lang}}/GetStarted">get started</a> with these devices right away. Learn more about the features of each device below, and check out the <a href="http://go.microsoft.com/fwlink/p/?linkID=532948">supported hardware peripherals</a> for each board to decide what device is right for you. If you don't see a device below that works to prototype or commercialize your idea, please check the Additional Devices or Community Devices.
+  The publicly available boards below are some of the same devices Microsoft uses as part of our operating system engineering efforts. These are also the devices Microsoft requires reported OS issues to reproduce on for engineering support. We provide an easy process for you to <a href="{{site.baseurl}}/{{page.lang}}/GetStarted">get started</a> with these devices right away. Learn more about the features of each device below, and check out the <a href="http://go.microsoft.com/fwlink/p/?linkID=532948">supported hardware peripherals</a> for each board to decide what device is right for you. If you don't see a device below that works to prototype or commercialize your idea, please check the Additional Devices or Community Devices.
 {% include note.html text="Hardware features listed below may not be fully supported in all configurations." %}</p>
 <table class="table table-striped maker-kit">
     <tr></tr>
@@ -11,7 +11,7 @@
       </th>
       <th style="width:20%">
         <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/RPi2_0.png">
-        <h4>Raspberry Pi 2</h4>
+        <h4>Raspberry Pi 2<br>v1.1 boards and earlier</h4>
       </th>
       <th style="width:20%">
         <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/MBM_0.png">
