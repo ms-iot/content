@@ -27,7 +27,7 @@ Even if you download the sample, code, you'll need to follow the steps in **Comp
 
     ![C++ Components]({{site.baseurl}}/Resources/images/opencv/get_cpp.png)
 
-1. Start Visual Studio 2015.
+1. Start Visual Studio 2017.
 2. Create a new project with **(File \| New Project...)**.
 
     In the **New Project** dialog, navigate to **Universal** as shown below (in the left pane in the dialog: Templates \| Visual C++ \| Windows \| Universal).

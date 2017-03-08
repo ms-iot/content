@@ -18,7 +18,7 @@ This blog post will help you configure your AllJoyn network and devices, and als
 If you are writing UWP apps for Windows 10, you should make sure that:
 
 1. You've declared the 'allJoyn' capability in your app's manifest (note casing).
-2. You've selected the specific architecture that you'll be targeting. (Required in some cases because Windows Runtime Components cannot be built using 'Any CPU', a known issue with some Visual Studio 2015 builds).
+2. You've selected the specific architecture that you'll be targeting. (Required in some cases because Windows Runtime Components cannot be built using 'Any CPU', a known issue with some Visual Studio 2017 builds).
 
 If you are writing an app or device software that is not a UWP-based application for Windows 10, you should review the following checklist to ensure compatibility with AllJoyn in Windows 10:
 

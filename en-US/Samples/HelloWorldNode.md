@@ -13,12 +13,12 @@ In this sample, we will create and deploy the proverbial 1st app, "Hello, world!
 
 ### Set up your PC
 * Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
-* Install Visual Studio 2015 Update 3.
+* Install Visual Studio 2017 Update 1.
 * Install the latest Node.js Tools for Windows IoT from [here](http://aka.ms/ntvsiotlatest).
 
 
 ### Create a new Node.js (Windows Universal) project
-Start Visual Studio 2015 and create a new project (File \| New Project...). In the `New Project` dialog, navigate to `Node.js` as shown below (in the left pane in the dialog: Templates \| JavaScript \| Node.js).
+Start Visual Studio 2017 and create a new project (File \| New Project...). In the `New Project` dialog, navigate to `Node.js` as shown below (in the left pane in the dialog: Templates \| JavaScript \| Node.js).
 
 Select the template `Basic Node.js Web Server (Windows Universal)`
 

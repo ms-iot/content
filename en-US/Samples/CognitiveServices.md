@@ -21,7 +21,7 @@ Make sure your device is running and set up and you have Visual Studio installed
 
 You will need your device's IP address when connecting to it remotely.
 
-1.  Start Visual Studio 2015
+1.  Start Visual Studio 2017
 2.  Create a new project with **(File \| New Project...)**
 
     In the **New Project** dialog, navigate to **Universal** as shown below (in the left pane in the dialog: Templates \| Visual C# \| Windows \| Universal).

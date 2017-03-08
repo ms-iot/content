@@ -44,7 +44,7 @@ The diagram below show the classes developers will use in the Microsoft DSB temp
 
 ## Special Handlers
 
-AllJoyn specifies several base services and standard interfaces frameworks such as LSF, HAE or Control Panel. The DSB can exposes those with special handlers. The current (11/2015) release of the DSB template contains implementations of the LSF and Control Panel interfaces. Developers will connect their code to the callback functions for LSF and Control Panel interfaces in the bridge.
+AllJoyn specifies several base services and standard interfaces frameworks such as LSF, HAE or Control Panel. The DSB can exposes those with special handlers. The current release of the DSB template contains implementations of the LSF and Control Panel interfaces. Developers will connect their code to the callback functions for LSF and Control Panel interfaces in the bridge.
 ![AJ_Docu_DSB_Special_Handlers]({{site.baseurl}}/Resources/images/AllJoyn/AJ_Docu_DSB_Special_Handlers.png)
 
 ## DSB Resources
@@ -62,7 +62,7 @@ __Sample DSBs__
 - [AllJoyn DSB Mock Adapter Tutorial and Sample]({{site.baseurl}}/en-US/Samples/AllJoynMockAdapter){:target="_blank"}.
 This tutorial shows how to use the Device System Bridge app to connect your  IoT Core devices to mock BACnet devices.
 - [AllJoyn DSB Z-Wave Adapter Tutorial and Sample]({{site.baseurl}}/en-US/samples/ZWaveAdapter){:target="_blank"}.
-This tutorial, based on the demo at the Build 2015 conference, shows how to use the Device System Bridge app to connect your  IoT Core devices to Z-Wave devices.
+This tutorial shows how to use the Device System Bridge app to connect your  IoT Core devices to Z-Wave devices.
 - [AllJoyn DSB GPIO Adapter Tutorial C++]({{site.baseurl}}/en-US/Samples/AllJoynDSB){:target="_blank"}
 This tutorial demonstrates how to use the AllJoyn Device System Bridge template to create a sample C++ app that exercises the device GPIO.
 - [AllJoyn DSB GPIO Adapter Tutorial C#]({{site.baseurl}}/en-US/Samples/AlljoynDSBCS){:target="_blank"}

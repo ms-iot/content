@@ -27,9 +27,9 @@ You can easily test the WiFi Direct functionality with the WiFi Direct UWP [samp
 * MinnowBoardMax (MBM) running Windows 10 IoT Core (see instructions here), with a CanaKit WiFi dongle
 * Connect monitor, keyboard and mouse to the MBM
 * A Windows 10 PC running the latest Windows 10 Anniversary Update. The PC (or laptop) will need to have WiFi Direct support (e.g. a Microsoft Surface)
-* Install Visual Studio 2015 on your Windows 10 PC
+* Install Visual Studio 2017 on your Windows 10 PC
 * Clone or download the WiFi Direct UWP [sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WiFiDirect){:target="_blank"} (root of the GitHub repo is [here](https://github.com/Microsoft/Windows-universal-samples){:target="_blank"})
-* Load the C# version of the WiFi Direct UWP sample in Visual Studio 2015
+* Load the C# version of the WiFi Direct UWP sample in Visual Studio 2017
 
 #### Run the sample on the two devices
 * Compile the sample and deploy/run it on the MBM:

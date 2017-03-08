@@ -3,7 +3,7 @@ layout: docs
 title: Cortana on IoT Core
 description: How to use Cortana on IoT Core and how to build product with Cortana
 keyword: windows iot, Cortana, KWS, MSA
-permalink: /en-US/Docs/CortanaOnIoT_Core.htm
+permalink: /en-US/Docs/CortanaOnIoTCore.htm
 lang: en-US
 ---
 

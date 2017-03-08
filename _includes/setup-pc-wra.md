@@ -20,7 +20,7 @@
 
 <h2 id="option-2">Option 2: Add the Windows Remote Arduino projects to a Visual Studio solution</h2>
 <h3 id="install-vs">Step 1: Install Visual Studio</h3>
-<p>We recommend <a href="http://go.microsoft.com/fwlink/?LinkID=534599" target="_blank">Visual Studio Community Edition</a>, but Visual Studio Professional 2015 and Visual Studio Enterprise 2015 will work as well (available <a href="https://www.visualstudio.com/vs-2015-product-editions" target="_blank"> here </a>). If you already have Visual Studio installed, you can proceed directly to the next step.</p>
+<p>We recommend <a href="http://go.microsoft.com/fwlink/?LinkID=534599" target="_blank">Visual Studio Community Edition</a>, but Visual Studio Professional 2017 and Visual Studio Enterprise 2017 will work as well (available <a href="https://www.visualstudio.com/vs-2015-product-editions" target="_blank"> here </a>). If you already have Visual Studio installed, you can proceed directly to the next step.</p>
 <h3 id="new-project">Step 2: Create a new project</h3>
 <ol class="setup-content-list">
   <li>
@@ -118,7 +118,7 @@ xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest"
 <h2>Enabling USB Capabilities</h2>
 <p>In order to invoke the USB capabilities of a WinRT application, you must add the relevant DeviceCapability tags below inside the &lt;Capabilities&gt; tag of the <b>Package.appxmanifest</b> file.</p>
 
-    Visual Studio 2015 has a known bug in the Manifest Designer (the visual editor for appxmanifest files) that affects the serialcommunication capability.  If
+    Visual Studio 2017 had a known bug in the Manifest Designer (the visual editor for appxmanifest files) that affects the serialcommunication capability.  If
     your appxmanifest adds the serialcommunication capability, modifying your appxmanifest with the designer will corrupt your appxmanifest (the Device xml child
     will be lost).  You can workaround this problem by hand editting the appxmanifest by right-clicking your appxmanifest and selecting View Code from the
     context menu.
