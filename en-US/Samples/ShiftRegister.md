@@ -230,7 +230,7 @@ private GpioPin registerClock;
 private const int OE_PIN = 6; // GPIO 6 is pin 31 on RPi2 or RPi3 header
 private GpioPin outputEnable;
 
-// Storage Register Clock (SRCLK): the clock for clocking the current 8 bits of data from the serial input register to the storage register
+// Storage Register Clear (SRCLR): Input pin for clearing shift register values that stored previously.
 private const int SRCLR_PIN = 12; // GPIO 12 is pin 32 on RPi2 or RPi3 header
 private GpioPin shiftRegisterClear;
 
