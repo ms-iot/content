@@ -25,8 +25,7 @@
     <tr>
       <td>SoC</td>
       <td>Broadcom BCM2837</td>
-      <td>Broadcom BCM2836</td>
-      <td><a href="http://ark.intel.com/products/78474/Intel-Atom-Processor-E3825-1M-Cache-1_33-GHz">Intel Atom Processor E3825</a></td>
+      <td>Broadcom BCM2836</td>      <td><a href="http://ark.intel.com/products/78474/Intel-Atom-Processor-E3825-1M-Cache-1_33-GHz">Intel Atom Processor E3825</a></td>
       <td><a href="https://www.qualcomm.com/products/snapdragon/processors/410">Qualcomm Snapdragon 410</a></td>
     </tr>
     <tr>
@@ -43,14 +42,13 @@
       <td>
         2GB
       </td>
-      <td>1GB</td>
-    </tr>
+      <td>1GB</td>    </tr>
     <tr>
       <td>GPU</td>
-      <td>Broadcom Video Core IV @ 400MHz</td>
-      <td>Broadcom Video Core IV @ 250MHz</td>
+      <td>Broadcom Video Core IV @ 400MHz (no DirectX or Hardware Acceleration support)</td>
+      <td>Broadcom Video Core IV @ 250MHz (no DirectX or Hardware Acceleration support)</td>
       <td>Intel HD Graphics</td>
-      <td>Qualcomm Adreno 306 @ 400MHz</td>
+      <td>Qualcomm Adreno 306 @ 400MHz (only 720p / 1280 x 720 supported)</td>
     </tr>
     <tr>
       <td>USB</td>
@@ -81,7 +79,7 @@
       <td>HDMI, DSI</td>
       <td>HDMI, DSI</td>
       <td>Micro HDMI</td>
-      <td>HDMI (16:9 @ 1280x720 recommended)</td>
+      <td>HDMI, DSI</td>
     </tr>
     <tr>
       <td>Audio Output</td>
