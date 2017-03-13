@@ -1,3 +1,4 @@
+
 ---
 layout: docs
 title: Raspberry Pi2 & 3 Pin Mappings
@@ -16,6 +17,7 @@ lang: en-US
 Hardware interfaces for the Raspberry Pi 2 and Raspberry Pi 3 are exposed through the 40-pin header **J8** on the board. Functionality includes:
 
 * **24x** - GPIO pins
+* **1x** - Serial UARTs (RPi3 only includes mini UART)
 * **2x** - SPI bus
 * **1x** - I2C bus
 * **2x** - 5V power pins
@@ -141,9 +143,9 @@ public async void Serial()
     /* Configure serial settings */
     SerialPort.WriteTimeout = TimeSpan.FromMilliseconds(1000);
     SerialPort.ReadTimeout = TimeSpan.FromMilliseconds(1000);
-    SerialPort.BaudRate = 9600;
-    SerialPort.Parity = SerialParity.None;
-    SerialPort.StopBits = SerialStopBitCount.One;
+    SerialPort.BaudRate = 9600;                                             /* mini UART: only standard baudrates */
+    SerialPort.Parity = SerialParity.None;                                  /* mini UART: no parities */  
+    SerialPort.StopBits = SerialStopBitCount.One;                           /* mini UART: 1 stop bit */
     SerialPort.DataBits = 8;
 
     /* Write a string out over serial */
