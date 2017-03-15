@@ -913,7 +913,6 @@
         "i2c"
       ]
     },
-
     {
       "title": "OIC adapter",
       "description": "Exposes and controls the OIC/IoTivity devices and resources",

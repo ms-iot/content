@@ -18,7 +18,7 @@ This document demonstrates the function of the AllJoyn Device System Bridge (DSB
 ### What is OCF and IoTivity?
 Formerly known as Open Interconnect Consortium (OIC), Open Connectivity Foundation (OCF)  is an industry group established with the mission of developing connectivity standards and certification for devices to address the emerging needs of the Internet of Things (IoT).
 
-IoTivity is an open source software framework and the reference implementation for the OCF specifications. More information is available on the [OCF Website](http://https://openconnectivity.org/)
+IoTivity is an open source software framework and the reference implementation for the OCF specifications. More information is available on the [OCF Website](https://openconnectivity.org/){:target="_blank"}.
 
 ## Prerequisites
 
@@ -35,14 +35,14 @@ IoTivity is an open source software framework and the reference implementation f
 
 1. Download a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip).
 2. Open `samples-develop\AllJoyn\Samples\OICAdapter\OICAdapter.sln` in Visual Studio.
-3. Once the solution has been opened in Visual Studio, Navigate to the Solution explorer and right click the HeadlessAdapterApp project. Select "Set as Startup Project". ![set_startup]({{site.baseurl}}/Resources/images/AllJoyn/oic_startup_proj.png)
+3. Once the solution has been opened in Visual Studio, Navigate to the Solution explorer and right click the HeadlessAdapterApp project. Select "Set as Startup Project". ![Set HeadlessAdapterApp as startup project]({{site.baseurl}}/Resources/images/AllJoyn/oic_startup_proj.png)
 
-4.  In the Main menu bar, select "Debug" -> HeadlessAdapterApp properties…"
-5.  Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm#cpp)
+4. In the Main menu bar, select "Debug" -> HeadlessAdapterApp properties…"
+5. Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm#cpp){:target="_blank"}.
 
 ## IoTivity Simulator
 
-OCF devices and resources can be simulated through the simulator developed by the IoTivity team. The instructions for installing and using the simulator tool is available [here](https://wiki.iotivity.org/iotivity_tool_guide).
+OCF devices and resources can be simulated through the simulator developed by the IoTivity team. The instructions for installing and using the simulator tool is available [here](https://wiki.iotivity.org/iotivity_tool_guide){:target="_blank"}.
 
-One can then use [IoT Explorer for AllJoyn](https://www.microsoft.com/store/apps/9nblggh6gpxl) to enumerate and control the OIC devices.
+One can then use [IoT Explorer for AllJoyn](https://www.microsoft.com/store/apps/9nblggh6gpxl){:target="_blank"} to enumerate and control the OIC devices.
 
