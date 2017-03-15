@@ -42,7 +42,7 @@ ___
 Now that an app has been published to the Universal Store the app has a store signed version that can be used to preinstall the app on devices.
 
 1. In the Windows Dev Center account click App Management > Current Packages on the left hand navigation bar
-2. Under the most recent App submission click "Dowland Windows 10 package". This will download a zip file containing the app package, the dependency packages, and the license files
+2. Under the most recent App submission click "Download Windows 10 package". This will download a zip file containing the app package, the dependency packages, and the license files
 3. There are two methods available to install an app to a device
 
 ### Method 1
