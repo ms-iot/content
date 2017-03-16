@@ -1,4 +1,3 @@
-
 ---
 layout: docs
 title: Raspberry Pi2 & 3 Pin Mappings
