@@ -91,7 +91,7 @@ public void GPIO()
 
 When you open a pin, it will be in its power-on state, which may include a pull resistor. To disconnect the pull resistors and get a high-impedance input, set the drive mode to GpioPinDriveMode.Input:
 
-    pin.SetDriveMode(GpioDriveMode.Input);
+    pin.SetDriveMode(GpioPinDriveMode.Input);
 
 When a pin is closed, it reverts to its power-on state.
 
