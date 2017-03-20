@@ -314,6 +314,20 @@
       ]
     },
     {
+      "title": "Bluetooth Serial",
+      "description": "Send and receive messages over Bluetooth serial",
+      "link": "samples/BTSerial.htm",
+      "link-text": "Bluetooth serial",
+      "lang": "C#",
+      "ranking": 0,
+      "tags": [
+        "bluetooth",
+        "RFCOMM",
+        "c#",
+        "beginner"
+      ]
+    },
+    {
       "title": "Cognitive Services",
       "description": "Access and use the Cognitive Services API inside a C# UWP App",
       "link": "samples/CognitiveServices.htm",
@@ -943,15 +957,15 @@
         "alljoyn"
       ]
     },
-        {
+    {
       "title": "ZigBee adapter",
       "description": "Set up the ZigBee adapter for Device System Bridge (DSB)",
       "link": "samples/ZigBeeAdapter.htm",
       "link-text": "Learn More",
-      "lang": "C++",
+      "lang": "C#",
       "ranking": 10,
       "tags": [
-        "c++",
+        "c#",
         "intermediate",
         "alljoyn"
       ]
