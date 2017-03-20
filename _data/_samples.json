@@ -513,6 +513,22 @@
       ]
     },
     {
+      "title": "IoT Onboarding with AllJoyn",
+      "description": "Remotely connect an IoT Device to a Wi-Fi network using AllJoyn",
+      "link": "samples/IotOnboarding.htm",
+      "link-text": "IoT Onboarding",
+      "lang": "C#",
+      "ranking": 2,
+      "tags": [
+        "c#",
+        "intermediate",
+        "AllJoyn",
+        "Onboarding",
+        "Wi-Fi",
+        "Soft AP"
+      ]
+    },
+    {
       "title": "Johnny-Five servo controller",
       "description": "Control a servo connected to an Arduino using Johnny-Five in a Node.js UWP app",
       "link": "samples/J5ServoController.htm",
