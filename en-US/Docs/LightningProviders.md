@@ -146,7 +146,7 @@ The following samples demonstrate using the Lightning providers with supported b
 * [BlinkyHeadless with Lightning Provider]({{site.baseurl}}/{{page.lang}}/Samples/BlinkyHeadlessLightning) demonstrates GPIO with Lightning Provider in a headless application
 
 * [SPIDisplay with Lightning Provider]({{site.baseurl}}/{{page.lang}}/Samples/SPIDisplayLightning) demonstrates the usage of the API to control a device using SPI with Lightning Provider
-
+ 
 * [WeatherStation with Lightning Provider]({{site.baseurl}}/{{page.lang}}/Samples/WeatherStationLightning) demonstrates interacting with a device using I2C with Lightning Provider
 
 ## Build Requirements
@@ -191,3 +191,11 @@ The driver can be enabled using the Windows Devices Web Portal. Refer to the [Li
 
 ![Devices Page]({{site.baseurl}}/Resources/images/Lightning/dmap4.png)
 
+The driver can also be enabled with the DmapUtil command:
+
+DmapUtil: Utility to turn the DMAP direct memory mapper driver on or off
+Usage: dmaputil.exe status|enable|disable
+  status [-v]   Print out whether dmap is currently enabled. Pass the -v flag
+                for detailed configuration information.
+  enable        Enable dmap on next boot.
+  disable       Disable dmap on next boot.
