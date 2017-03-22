@@ -73,3 +73,5 @@ This tutorial demonstrates how to use the AllJoyn Device System Bridge template 
 This tutorial shows how to use the Device System Bridge app to connect your IoT Core devices to BACnet devices.
 - [AllJoyn.JS Tutorial]({{site.baseurl}}/en-US/Samples/AllJoynJS){:target="_blank"}
 This tutorial shows how to run AllJoyn.JS application developed by Allseen Alliance as a Windows 10 application. AllJoyn.JS allows you to write JavaScript to create, monitor and control AllJoyn devices.
+- [AllJoyn DSB OIC Adapter Tutorial and Sample]({{site.baseurl}}/en-US/Samples/OICAdapter){:target="_blank"}.
+This tutorial shows how to use the Device System Bridge app to connect your  IoT Core devices to IoTivity devices.
