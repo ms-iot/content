@@ -123,6 +123,8 @@ This document was last updated 11/14/2016
     Windows.Networking.NetworkOperators.WellKnownSimFilePaths
     Windows.Networking.NetworkOperators.WellKnownUSimFilePaths
     Windows.Networking.Vpn.VpnProfile
+    Windows.Security.Authentication.Web.WebAuthenticationBroker.AuthenticateAsync
+    Windows.Security.Authentication.Web.WebAuthenticationBroker.AuthenticateAndContinue
     Windows.Security.Credentials.UI.CredentialPicker
     Windows.Security.Credentials.UI.CredentialPickerOptions
     Windows.Security.Credentials.UI.UserConsentVerifier
