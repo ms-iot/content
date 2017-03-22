@@ -154,6 +154,12 @@ lang: en-US
                 $('#noobsButton').hide();
                 break;
             case 'dragonboard':
+              pressButton(pressedButton);
+              $('#selectInstallSection').hide('fast');
+              $('#selectOSSection').show('fast');
+              $('#getStartedCompletedSection').hide('fast');
+              $('#comingSoonSection').hide('fast');             
+              return;
             case 'joule':
             case 'computeStick':
             case 'starterPack':  
@@ -215,11 +221,7 @@ lang: en-US
     function getStartedNextButtonClick() {
       var href = 'Docs/GetStarted/';
       
-      switch (selectedBoard) {
-        case 'dragonboard':
-          // Dragonboard is a special case. go directly to the dragonboard page
-          window.location.href = 'Docs/GetStarted/dragonboard/GetStartedStep1.htm';
-          return;
+      switch (selectedBoard) {      
         case 'joule':
           // Joule is a special case. go directly to the joule page
           window.location.href = 'Docs/GetStarted/joule/GetStartedStep1.htm';
@@ -235,6 +237,7 @@ lang: en-US
         case 'rpi2':
         case 'rpi3':
         case 'mbm':
+        case 'dragonboard':
           href += selectedBoard + '/';
           break;
         default:
@@ -251,6 +254,10 @@ lang: en-US
           href += selectedHardware + '/';
           break;
         default:
+          if(selectedBoard == "dragonboard")
+          {
+            break;
+          }
           return;
       }
 
