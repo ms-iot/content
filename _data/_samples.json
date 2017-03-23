@@ -943,7 +943,19 @@
         "i2c"
       ]
     },
-
+    {
+      "title": "OIC adapter",
+      "description": "Exposes and controls the OIC/IoTivity devices and resources",
+      "link": "samples/OICAdapter.htm",
+      "link-text": "Learn More",
+      "lang": "C++",
+      "ranking": 10,
+      "tags": [
+        "c++",
+        "intermediate",
+        "alljoyn"
+      ]
+    },
     {
       "title": "Z-Wave adapter",
       "description": "Expose and controlg Z-Wave devices.",
