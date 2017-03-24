@@ -49,11 +49,15 @@ AllJoyn specifies several base services and standard interfaces frameworks such 
 
 ## DSB Resources
 
-__Visual Studio DSB Template__
+<a name="DSBTemplate"></a>__Visual Studio DSB Template__
 
-[Visual Studio DSB Template](https://visualstudiogallery.msdn.microsoft.com/aea0b437-ef07-42e3-bd88-8c7f906d5da8){:target="_blank"} is an extension to Visual Studio that lets you easily create new DSB projects. The project will create all the necessary components such as the Bridge, a shell project for the adapter and all solution files to build the DSB as headed or headless device. This Visual Studio extension contains both the Native and Managed AllJoyn Device System Bridge templates.
+Visual Studio DSB Template is an extension to Visual Studio that lets you easily create new DSB projects. The project will create all the necessary components such as the Bridge, a shell project for the adapter and all solution files to build the DSB as headed or headless device. This Visual Studio extension contains both the Native and Managed AllJoyn Device System Bridge templates.
 
-The template can be installed through Visual Studio Tools -> Extensions and Updates … -> Online -> In the "Search" field type "DSB"
+Download DSB Template from these locations:
+
+- [DSB Template for Visual Studio 2015](https://visualstudiogallery.msdn.microsoft.com/aea0b437-ef07-42e3-bd88-8c7f906d5da8){:target="_blank"}.
+- [DSB Template for Visual Studio 2017](https://marketplace.visualstudio.com/vsgallery/c5f52768-8df7-42ff-b84e-d66d3d22fb50){:target="_blank"}.
+- DSB Template can also be installed through Visual Studio Tools -> Extensions and Updates … -> Online -> In the "Search" field type "DSB".
 
 The [Mapping DSB Objects to AllJoyn]({{site.baseurl}}/en-US/Docs/AlljoynDsbApiGuide){:target="_blank"}  document describes the key interfaces and methods used to build the Alljoyn System Bridge.
 

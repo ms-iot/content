@@ -692,6 +692,19 @@
       ]
     },
     {
+      "title": "Video Capture",
+      "description": "Create an app that records video to file, plays video from file.",
+      "link": "samples/VideoCapture.htm",
+      "link-text": "Video Capture",
+      "lang": "C#",
+      "ranking": 0,
+      "tags": [
+        "intermediate",
+        "foreground",
+        "c#"
+      ]
+    },
+    {
       "title": "Webcam app",
       "description": "Create an app that initializes a web cam, takes pictures, and records video and audio.",
       "link": "samples/WebcamApp.htm",
@@ -704,7 +717,6 @@
         "c#"
       ]
     },
-
     {
       "title": "OneNote cloud services",
       "description": "Learn how to use http messages to GET and POST OneNote pages in Wiring",
