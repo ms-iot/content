@@ -693,7 +693,7 @@
     },
     {
       "title": "Video Capture",
-      "description": "Create an app that initializes a web cam, takes pictures, and records video and audio.",
+      "description": "Create an app that records video to file, plays video from file.",
       "link": "samples/VideoCapture.htm",
       "link-text": "Video Capture",
       "lang": "C#",
