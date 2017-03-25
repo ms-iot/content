@@ -6,21 +6,25 @@
     <tr>
       <th style="width:20%"></th>
       <th style="width:20%">
-              <img src="{{site.baseurl}}/Resources/images/devices/RPi3_0.png">
-        <h4>Raspberry Pi 3</h4>
+        <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/RPi3_0.png">
       </th>
       <th style="width:20%">
         <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/RPi2_0.png">
-        <h4>Raspberry Pi 2</h4>
       </th>
       <th style="width:20%">
         <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/MBM_0.png">
-        <h4>MinnowBoard MAX</h4>
       </th>
       <th style="width:20%">
         <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/DB410c.png">
-        <h4>DragonBoard 410c</h4>
       </th>
+    </tr>
+    <tr></tr>
+    <tr>
+      <td></td>
+      <td><h4>Raspberry Pi 3</h4></td>
+      <td><h4>Raspberry Pi 2</h4></td>
+      <td><h4>MinnowBoard MAX</h4></td>
+      <td><h4>DragonBoard 410c</h4></td>
     </tr>
     <tr>
       <td>SoC</td>
