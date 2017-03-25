@@ -453,7 +453,8 @@ iframe.maker-kit {
 }
 
 .comparison-picture {
-    width: 320px;
+    width: 270px;
+    text-align: left;
 }
 
 .subtext {
