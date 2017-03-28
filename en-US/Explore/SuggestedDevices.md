@@ -88,13 +88,9 @@
     <tr>
       <td>Audio Output</td>
       <td>
-        Digital via HDMI
-        <br>
         Analog via 3.5 mm jack
       </td>
       <td>
-        Digital via HDMI
-        <br>
         Analog via 3.5 mm jack
       </td>
       <td>
