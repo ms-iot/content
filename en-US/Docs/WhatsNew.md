@@ -61,18 +61,8 @@ ___
 * Automatically set up your Wi-Fi connection through the [IoT Dashboard]({{site.baseurl}}/{{page.lang}}/Docs/IoTDashboard)
  
 ### For commercial builders
-* [Windows 10 IoT Core Pro]({{site.baseurl}}/{{page.lang}}/Docs/CreateIoTCorePro) now offers retail signing with cross certs - cross sign your own [drivers]({{site.baseurl}}/{{page.lang}}/Samples/DriverLab) and be compatible with secure boot 
 * [Trusted Platform Module (TPM) support]({{site.baseurl}}/{{page.lang}}/Docs/TPM) - provision your azure key into a virtual or physical TPM 
 * A new [OEM manufacturing guide](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/iot-core-manufacturing-guide) - build your own .FFU
-
-
-## Also check out
-___
-* [IoT Core Default app](https://github.com/ms-iot/samples/tree/develop/IoTCoreDefaultApp) - added an on device command line 
-* Blockly - now available in the IoT Dashboard as sample using node.js and sense hat
-* [Wireless 3D printer project]({{site.baseurl}}/{{page.lang}}/Docs/3dprintserver) - make your 3D printer by connecting an IoT Core device to it 
-* [PID wheel demo](https://www.hackster.io/windows-iot/closed-loop-control-remote-sensors-and-remote-ux-on-rpi3-ef3ed0?ref=part&ref_id=9417&offset=19) - monitor a wheel's speed and consistently reach the desired RPM under any friction level
-* [System center configuration manager](https://developer.microsoft.com/windows/iot/docs/management) - enroll your IoT Core device under SCCM management
 
 ## Additional Resources
 ___ 

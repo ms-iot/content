@@ -180,6 +180,10 @@
           {
             "title":"Connect your app to the cloud",
             "link":"/Docs/ConnectAppToCloud.htm"
+          },
+          {
+            "title":"Azure IoT Device Management",
+            "link":"/Docs/AzureDM.htm"
           }
         ]
       },
@@ -263,7 +267,15 @@
           {
             "title":"Go to market",
             "link":"/Docs/GotoMarket.htm"
-          }
+          },
+           {
+            "title":"BSPs",
+            "link":"/Docs/BSP.htm"
+          },
+          {
+            "title":"Recovery",
+            "link":"/Docs/Recovery.htm"
+          },		 
         ]
       }
    ]
