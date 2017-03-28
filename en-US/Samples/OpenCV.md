@@ -23,7 +23,7 @@ Even if you download the sample, code, you'll need to follow the steps in **Comp
 
 * You will need your device's IP address when connecting to it remotely.
 
-* Make sure you have the C++ components for Visual Studio. To check, open the Start Menu, type in **Add or remove programs**. Hit enter and navigate to Visual Studio. Click **Modify** and check to make sure you have the below components selected. If not, select them and update your installation.
+* Make sure you have the C++ components for Visual Studio. To check, open the Start Menu, type in **Visual Studio Installer** and hit enter. Once the Visual Studio Installer opens, click **Modify** under your installed version of Visual Studio. Check to make sure you have the below components selected. If not, select them and update your installation.
 
     ![C++ Components]({{site.baseurl}}/Resources/images/opencv/get_cpp.png)
 
@@ -43,9 +43,9 @@ Even if you download the sample, code, you'll need to follow the steps in **Comp
 
 ## Compile the OpenCV Libraries
 ___
-1. Download and open the OpenCV Solution
+1. Download the Microsoft fork of OpenCV from GitHub
 
-    Download the working OpenCV library from [GitHub](https://github.com/Microsoft/opencv/tree/vs2015-samples). Unzip it to a place you can remember it, and **copy the folder's path (i.e. C:/path/to/opencv/)** for the next step.
+    Download Microsoft's fork of the OpenCV library from [GitHub](https://github.com/Microsoft/opencv/tree/vs2015-samples). Unzip it to a place you can remember it, and **copy the folder's path (i.e. C:/path/to/opencv/)** for the next step.
 
 2. Create the OpenCV environment variable
 
