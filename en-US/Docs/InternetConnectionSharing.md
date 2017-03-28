@@ -12,22 +12,13 @@ This document describes how internet connection sharing (ICS) can be enabled on 
 When using one of the [Windows 10 IoT Core Release Image](https://developer.microsoft.com/en-us/windows/iot/downloads){:target="_blank"} ICS can also be configured using the device portal.
 
 ## Configuring ICS using the device portal
-Windows Device Portal (WDP) provides all settings needed to enable ICS. The device needs at least one Wi-Fi adpater that supports a software access point (SoftAP) configuration and one adapter that provides that Internet connection that will be shared.
-
-1. **Start** and **Stop** shared access
-2. **Adapter configuration** to select the network adapters used in the ICS setup.
-3. **SoftAP settings** to set the SSID and password that devices will use to connect to the SoftAP that is exposed by the Windows IoT Core device.
-4. **AllJoyn onboarding settings** can be enabled to use an AllJoyn application to connect the device to a Wi-Fi network. Through this capability the device can be onboarded later to a Wi-Fi network if no other form of configuration is availabe.
-
-{% include imageborder.html alt="ICS Configuration" link="/Resources/images/InternetConnectionSharing/ICS.png" %}
-
-{% include imageborder.html alt="ICS Configuration" link="/Resources/images/InternetConnectionSharing/onboarding.png" %}		
+See [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/Docs/deviceportal) (WDP).
 
 ## ICS code sample
 The code sample below demonstrates how the [NetworkOperatorTetheringManager](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.networkoperators.networkoperatortetheringmanager.aspx){:target="_blank"} API is used to start sharing an Ethernet connection over Wi-Fi. The CreateFromConnectionProfile method accepts arguments that specifies the public and private interface. In any cases of misconfiguration, such as the Wi-Fi radio is turned off, or Ethernet has limited connectivity, then the attempt to start internet sharing conveys an appropriate error code pertaining to this scenario.
 
 
-{% highlight console %}
+{% highlight C# %}
 using Windows.Networking.NetworkOperators;
 using Windows.Networking.Connectivity; 
 

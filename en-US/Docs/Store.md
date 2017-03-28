@@ -57,8 +57,7 @@ The second method is using Windows Imaging and Configuration Designer (WICD) to 
 4. Choose Windows 10 IoT Core for the project settings
 5. Skip the provisioning package import
 6. On the left hand side expand Runtime Settings and click on Universal App Install > User Context App
-7. Enter the Package Family Name of your app and click Add  
-{% include note.html text="The PFN can be found in the Windows Dev Center under App Management > App Identity" %}
+7. Enter the Package Family Name of your app and click Add  (**Note:** The PFN can be found in the Windows Dev Center under App Management > App Identity)
 8. Under the newly added PFN add the Appx and its dependencies
 9. Set the DeploymentOptions to "Force target application shutdown"
 10. Export the package
@@ -70,8 +69,6 @@ ___
 Updating apps on IoT Core are very simple.
 
 1. In the Windows Dev Center create a new App Submission for the app to be updated
-2. In Visual Studio package the app as done earlier in Step 3 in the _Publishing UWP to Universal Store_ section.   
-{% include note.html text="Note: Be sure to increment the version number for each new package" %}
+2. In Visual Studio package the app as done earlier in Step 3 in the _Publishing UWP to Universal Store_ section. (**Note:** Be sure to increment the version number for each new package)
 3. Upload the package to Windows Dev Center under the new submission and submit
-4. Following the app certification process devices will update the app to the latest version.  
-{% include note.html text="App updates on devices can take up to 24 hours to receive latest version" %}
+4. Following the app certification process devices will update the app to the latest version. (**Note:** App updates on devices can take up to 24 hours to receive latest version)

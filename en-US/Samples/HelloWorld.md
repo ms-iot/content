@@ -27,7 +27,8 @@ You need to make sure you have installed the Windows 10 IoT Core Project Templat
     Remember to give a good name to your first app! In this example, we called the project 'HelloWorld'.
 
     ![App Template Location]({{site.baseurl}}/Resources/images/HelloWorld/new-cs-project-dialog.PNG)
-    {% include note.html text="If this is the first project you create, Visual Studio will likely prompt you to enable <a href='https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx'>developer mode for Windows 10</a>." %}
+
+{% include note.html text="If this is the first project you create, Visual Studio will likely prompt you to enable <a href='https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx'>developer mode for Windows 10</a>." %}
      
 
 

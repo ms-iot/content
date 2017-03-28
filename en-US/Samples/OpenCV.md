@@ -37,9 +37,8 @@ Even if you download the sample, code, you'll need to follow the steps in **Comp
     Note that we call the app OpenCVExample. You can name it something different, but you will have to adjust sample code that references OpenCVExample as well.
 
     ![App Template Location]({{site.baseurl}}/Resources/images/opencv/new_vcpp.PNG)
-    {% include note.html text="If this is the first project you create, Visual Studio will likely prompt you to enable <a href='https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx'>developer mode for Windows 10</a>." %}
 
-
+{% include note.html text="If this is the first project you create, Visual Studio will likely prompt you to enable <a href='https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx'>developer mode for Windows 10</a>." %}
 
 ## Compile the OpenCV Libraries
 ___
