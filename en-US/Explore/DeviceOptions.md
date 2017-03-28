@@ -74,20 +74,17 @@ lang: en-US
 
 		function contribute(section) {			
 			var pagePath="{{site.repositoryurl}}{{page.path}}";
-			
 			var url = pagePath.replace("Explore", "Explore/" + section); 
-			
-	  	var win = window.open(url, '_blank');
-  		win.focus();
+		  	var win = window.open(url, '_blank');
+  			win.focus();
 		}
 
-		window.onload = function() {
-      $(".section").hide();
-      $(".javascriptWarn").hide();
-      $(".searchTools").show();
-      if(window.location.hash) {
-			  $(location.hash).parent().show();
-			  window.scrollTo(0, $(location.hash).offset().top);
-			} 
-    }
+		window.onload = function() { 
+			$(".javascriptWarn").hide();
+			$(".searchTools").show();
+      		if(window.location.hash) {
+				$(location.hash).parent().show();
+				window.scrollTo(0, $(location.hash).offset().top);
+			  }
+		}
 </script>

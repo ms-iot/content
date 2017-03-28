@@ -6,27 +6,30 @@
     <tr>
       <th style="width:20%"></th>
       <th style="width:20%">
-              <img src="{{site.baseurl}}/Resources/images/devices/RPi3_0.png">
-        <h4>Raspberry Pi 3</h4>
+        <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/RPi3_0.png">
       </th>
       <th style="width:20%">
         <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/RPi2_0.png">
-        <h4>Raspberry Pi 2<br>v1.1 boards and earlier</h4>
       </th>
       <th style="width:20%">
         <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/MBM_0.png">
-        <h4>MinnowBoard MAX</h4>
       </th>
       <th style="width:20%">
         <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/DB410c.png">
-        <h4>DragonBoard 410c</h4>
       </th>
+    </tr>
+    <tr></tr>
+    <tr>
+      <td></td>
+      <td><h4>Raspberry Pi 3</h4></td>
+      <td><h4>Raspberry Pi 2<br>v1.1 boards and earlier</h4></td>
+      <td><h4>MinnowBoard MAX</h4></td>
+      <td><h4>DragonBoard 410c</h4></td>
     </tr>
     <tr>
       <td>SoC</td>
       <td>Broadcom BCM2837</td>
-      <td>Broadcom BCM2836</td>
-      <td><a href="http://ark.intel.com/products/78474/Intel-Atom-Processor-E3825-1M-Cache-1_33-GHz">Intel Atom Processor E3825</a></td>
+      <td>Broadcom BCM2836</td>      <td><a href="http://ark.intel.com/products/78474/Intel-Atom-Processor-E3825-1M-Cache-1_33-GHz">Intel Atom Processor E3825</a></td>
       <td><a href="https://www.qualcomm.com/products/snapdragon/processors/410">Qualcomm Snapdragon 410</a></td>
     </tr>
     <tr>
@@ -43,14 +46,13 @@
       <td>
         2GB
       </td>
-      <td>1GB</td>
-    </tr>
+      <td>1GB</td>    </tr>
     <tr>
       <td>GPU</td>
-      <td>Broadcom Video Core IV @ 400MHz</td>
-      <td>Broadcom Video Core IV @ 250MHz</td>
+      <td>Broadcom Video Core IV @ 400MHz (no DirectX or Hardware Acceleration support)</td>
+      <td>Broadcom Video Core IV @ 250MHz (no DirectX or Hardware Acceleration support)</td>
       <td>Intel HD Graphics</td>
-      <td>Qualcomm Adreno 306 @ 400MHz</td>
+      <td>Qualcomm Adreno 306 @ 400MHz (only 720p / 1280 x 720 supported)</td>
     </tr>
     <tr>
       <td>USB</td>
@@ -81,7 +83,7 @@
       <td>HDMI, DSI</td>
       <td>HDMI, DSI</td>
       <td>Micro HDMI</td>
-      <td>HDMI (16:9 @ 1280x720 recommended)</td>
+      <td>HDMI, DSI</td>
     </tr>
     <tr>
       <td>Audio Output</td>
@@ -140,7 +142,7 @@
         <p>1x SPI bus</p>
         <p>2x I2C buses</p>
         <p>2x Serial UARTs</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Set up your DragonBoard 410c</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/Docs/GetStarted/dragonboard/GetStartedStep1.htm">Set up your DragonBoard 410c</a></p>
         <p><a href="https://developer.qualcomm.com/hardware/snapdragon-410">Other device options</a></p>
       </td>
     </tr>

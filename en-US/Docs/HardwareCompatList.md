@@ -284,8 +284,9 @@ result          | result            | result      | result | result             
 <!-- Reference Links -->
 [MSVerified]: {{site.baseurl}}/Resources/images/checkmark.svg "Microsoft Verified"
 [Contribute to this list on GitHub.]: {{site.repositoryurl}}{{ page.path }}
-[RPi2 or RPi3 Pin Mapping]: {{site.baseurl}}/{{page.lang}}/Samples/PinMappingsRPi2.htm#RPi2_I2C
-[MBM Pin Mapping]: {{site.baseurl}}/{{page.lang}}/Samples/PinMappingsMBM.htm#MBM_I2C
+[RPi2/RPi3 Pin Mapping]: {{site.baseurl}}/{{page.lang}}/Samples/PinMappingsRPi2.htm
+[DB Pin Mapping]: {{site.baseurl}}/{{page.lang}}/Samples/PinMappingsDB.htm
+[MBM Pin Mapping]: {{site.baseurl}}/{{page.lang}}/Samples/PinMappingsMBM.htm
 [ZWave Sample]: {{site.baseurl}}/{{page.lang}}/samples/ZWaveAdapter.htm
 [GpioOneWire Sample (DHT11)]: {{site.baseurl}}/{{page.lang}}/Samples/GpioOneWire.htm
 [I2C Accelerometer Sample]: {{site.baseurl}}/{{page.lang}}/Samples/I2CAccelerometer.htm#I2C_Accelerometer

@@ -85,21 +85,24 @@ More information on bluetooth can be found on the [bluetooth page](https://go.mi
 
 IoT Onboarding provides support for configuring an IoT device's Wi-Fi connectivity options.
 
-** Internet Connection Sharing (ICS) **
-Internet Connection Sharing allows you to share the Internet access of your device with other devices connected to your device over the Wi-Fi SoftAP.  
+**Internet Connection Sharing (ICS)**
+Internet Connection Sharing allows you to share the Internet access of your device with other devices connected to your device over the Wi-Fi SoftAP.
 To use this feature, your Windows 10 IoT Device needs to have access to the internet (e.g. through a wired LAN connection), an *Access Point Adapter* must be chosen (e.g. a Wi-Fi Adapter) and the SoftAP needs to be enabled.   You also need to start shared access.  Once started, connect a separate Wi-Fi enabled device to the SoftAP on your Windows 10 IoT device.  After a connection is established your separate Wi-Fi enabled device will be able to connect to the internet through your Windows 10 IoT device.
+{% include note.html text='ICS is disabled when a Wi-Fi profile exists on the device. For example, ICS will be disabled if you connect to a Wi-Fi access point and check “Create profile (auto re-connect)”.' %}
 
-** SoftAP Settings **
+**SoftAP Settings**
 The SoftAP Settings allow you to control whether or not your device's SoftAP is enabled.  It also provides a means for configuring your SoftAP's SSID and the WPA2-PSK key which are necessary to connect the SoftAP from another device.
 
-** AllJoyn Onboarding Settings **
-The AllJoyn Onboarding Settings allow you to control whether or not your device's Wi-Fi connection can configured through your device's AllJoyn Onboarding Producer.  When a separate device running an AllJoyn Onboarding Consumer application connects to your Windows 10 IoT SoftAP, the AllJoyn Onboarding Consumer application can be used to configure your IoT device's Wi-Fi adapter.  When enabled, the AllJoyn Onboarding Producer app (IoTOnboarding) uses the ECDHE_NULL authentication method.
+**AllJoyn Onboarding Settings**
+The AllJoyn Onboarding Settings allow you to control whether or not your device's Wi-Fi connection can configured through your device's AllJoyn Onboarding Producer.  When a separate device running an AllJoyn Onboarding Consumer application connects to your Windows 10 IoT SoftAP, the AllJoyn Onboarding Consumer application can be used to configure your IoT device's Wi-Fi adapter.  When enabled, the AllJoyn Onboarding Producer app (IoTOnboarding) uses the ECDHE_NULL authentication method.  Refer to the [IoTOnboarding Sample]({{site.baseurl}}/{{page.lang}}/Samples/IotOnboarding.htm) for additional information.
 
-{% include note.html text='To use the AllJoyn Onboarding Settings, this requires an update to the <strong>IotOnboarding</strong> sample which may be <a href="https://github.com/ms-iot/samples">downloaded here</a>.' %}
+{% include note.html text='To use AllJoyn Onboarding with Windows 10 IoT builds 10.0.14393 or earlier requires an update to the <strong>IotOnboarding</strong> sample which may be <a href="https://github.com/ms-iot/samples">downloaded here</a>.' %}
 
 {% include imageborder.html alt="App list" link="/Resources/images/DevicePortal/OnboardingAllJoyn.png" %}
 {% include imageborder.html alt="App list" link="/Resources/images/DevicePortal/OnboardingICS.png" %}
+{% include note.html text='Access point adapter is the WiFi adapter that act as a WiFi access point (it usually has an IP address like 192.168.137.1).<br>Shared network adapter is the adapter that connects to Internet (e.g.: Ethernet adapter).' %}
 {% include imageborder.html alt="App list" link="/Resources/images/DevicePortal/OnboardingSoftAP.png" %}
+{% include note.html text='SoftAP SSID will be automatically prefixed by "AJ_" if AllJoyn onboarding is enabled and postfixed with the MAC address of the Wifi adapter.<br>The SoftAP passphrase must be between 8 and 63 ASCII characters.' %}
 
 
 ### TPM configuration

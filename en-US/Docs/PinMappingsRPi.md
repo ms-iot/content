@@ -16,6 +16,7 @@ lang: en-US
 Hardware interfaces for the Raspberry Pi 2 and Raspberry Pi 3 are exposed through the 40-pin header **J8** on the board. Functionality includes:
 
 * **24x** - GPIO pins
+* **1x** - Serial UARTs (RPi3 only includes mini UART)
 * **2x** - SPI bus
 * **1x** - I2C bus
 * **2x** - 5V power pins
@@ -91,7 +92,7 @@ public void GPIO()
 
 When you open a pin, it will be in its power-on state, which may include a pull resistor. To disconnect the pull resistors and get a high-impedance input, set the drive mode to GpioPinDriveMode.Input:
 
-    pin.SetDriveMode(GpioDriveMode.Input);
+    pin.SetDriveMode(GpioPinDriveMode.Input);
 
 When a pin is closed, it reverts to its power-on state.
 
@@ -141,9 +142,9 @@ public async void Serial()
     /* Configure serial settings */
     SerialPort.WriteTimeout = TimeSpan.FromMilliseconds(1000);
     SerialPort.ReadTimeout = TimeSpan.FromMilliseconds(1000);
-    SerialPort.BaudRate = 9600;
-    SerialPort.Parity = SerialParity.None;
-    SerialPort.StopBits = SerialStopBitCount.One;
+    SerialPort.BaudRate = 9600;                                             /* mini UART: only standard baudrates */
+    SerialPort.Parity = SerialParity.None;                                  /* mini UART: no parities */  
+    SerialPort.StopBits = SerialStopBitCount.One;                           /* mini UART: 1 stop bit */
     SerialPort.DataBits = 8;
 
     /* Write a string out over serial */
@@ -199,9 +200,10 @@ using Windows.Devices.I2c;
 
 public async void I2C()
 {
-
     // 0x40 is the I2C device address
     var settings = new I2cConnectionSettings(0x40);
+    // FastMode = 400KHz
+    settings.BusSpeed = I2cBusSpeed.FastMode;
 
     // Create an I2cDevice with the specified I2C settings
     var controller = await I2cController.GetDefaultAsync();
@@ -251,14 +253,19 @@ using Windows.Devices.Spi;
 
 public async void SPI()
 {
- 
     // Use chip select line CS0
     var settings = new SpiConnectionSettings(0);
+    // Set clock to 10MHz 
+    settings.ClockFrequency = 10000000;
 
-    // Create an SpiDevice with the specified Spi settings
-    var controller = await SpiController.GetDefaultAsync();
-
-    using (SpiDevice device = controller.GetDevice(settings))
+    // Get a selector string that will return our wanted SPI controller
+    string aqs = SpiDevice.GetDeviceSelector("SPI0");
+    
+    // Find the SPI bus controller devices with our selector string
+    var dis = await DeviceInformation.FindAllAsync(aqs);
+    
+    // Create an SpiDevice with our selected bus controller and Spi settings
+    using (SpiDevice device = await SpiDevice.FromIdAsync(dis[0].Id, settings))
     {
         byte[] writeBuf = { 0x01, 0x02, 0x03, 0x04 };
         device.Write(writeBuf);

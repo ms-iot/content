@@ -6,17 +6,15 @@ We'll create a simple web browser application for your your Windows 10 IoT Core 
 
 This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode).
 
-As this sample uses just standard windows UWP features it can also run on your desktop.
-
-The sample is based around the windows
+As this sample uses just standard Windows UWP features, it can also run on your desktop.
 
 ### Load the project in Visual Studio
 
-You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\IoTBrowser`.  The sample code is C#. Make a copy of the folder on your disk and open the project from Visual Studio.
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\IoTBrowser`. The sample code is C#. Make a copy of the folder on your disk and open the project from Visual Studio.
 
 {% include samples/AppDeploymentCS.md %}
 
-When everything is set up, you should be able to press F5 from Visual Studio.  The IoT Browser app will deploy and start on the Windows IoT device.
+When everything is set up, you should be able to press F5 from Visual Studio. The IoT Browser app will deploy and start on the Windows IoT device.
 
 ### Let's look at the code
 The code for this sample is pretty simple:
@@ -27,7 +25,7 @@ The code for this sample is pretty simple:
 <li>And three favorites buttons</li>
 </ul>
 
-When the go button is pressed we call a web navigation helper method to do the actual navigation.
+When the go button is pressed, we call a web navigation helper method to do the actual navigation.
 
 ### UX code
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">

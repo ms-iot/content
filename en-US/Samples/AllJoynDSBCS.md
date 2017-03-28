@@ -14,7 +14,7 @@ You can find the source code for AllJoyn samples by downloading a zip of all of 
 
 ## Prerequisites
 
-1. Install [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/Docs/AllJoyn.htm#AllJoynExplorer) app.
+Install [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/Docs/AllJoyn.htm#AllJoynExplorer) app.
 
 ### Step 1: Hardware Setup  
 The sample uses a Raspberry Pi 2 that one of its GPIO pins is connected to a photo resistor as shown in the schematic below. If another device is sues the pin number in the code has to be changed to match the HW setup.
@@ -25,8 +25,7 @@ The sample uses a Raspberry Pi 2 that one of its GPIO pins is connected to a pho
 
 The AllJoyn Device System Bridge Template is a Visual Studio extension that enables developers to create an AllJoyn Device System Bridge App project.
 
-1. Download the Alljoyn DSB VSIX template from Visual Studio Online [here](https://visualstudiogallery.msdn.microsoft.com/aea0b437-ef07-42e3-bd88-8c7f906d5da8){:target="_blank"}.
-2. After the download, double-click on the DeviceSystemBridgeTemplate.vsix file to install the extension. 
+Download and install the Alljoyn Visual Studio DSB template from Visual Studio Online [here]({{site.baseurl}}/en-US/Docs/AllJoynDSB.htm#DSBTemplate){:target="_blank"}.
 
 ### Step 3: Create an AllJoyn Device System Bridge App Project 
 

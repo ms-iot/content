@@ -181,8 +181,8 @@
       "title": "AllJoyn Device System Bridge",
       "description": "Create an AllJoyn Device System Bridge App project.",
        "link": [
-        "samples/AllJoynDSB.htm",
-        "samples/AllJoynDSBCS.htm"
+        "samples/AllJoynDSBCS.htm",
+        "samples/AllJoynDSB.htm"
       ],
       "link-text": [
         "AllJoynDSB",
@@ -311,6 +311,20 @@
         "wiring",
         "beginner",
         "gpio"
+      ]
+    },
+    {
+      "title": "Bluetooth Serial",
+      "description": "Send and receive messages over Bluetooth serial",
+      "link": "samples/BTSerial.htm",
+      "link-text": "Bluetooth serial",
+      "lang": "C#",
+      "ranking": 0,
+      "tags": [
+        "bluetooth",
+        "RFCOMM",
+        "c#",
+        "beginner"
       ]
     },
     {
@@ -513,6 +527,22 @@
       ]
     },
     {
+      "title": "IoT Onboarding with AllJoyn",
+      "description": "Remotely connect an IoT Device to a Wi-Fi network using AllJoyn",
+      "link": "samples/IotOnboarding.htm",
+      "link-text": "IoT Onboarding",
+      "lang": "C#",
+      "ranking": 2,
+      "tags": [
+        "c#",
+        "intermediate",
+        "AllJoyn",
+        "Onboarding",
+        "Wi-Fi",
+        "Soft AP"
+      ]
+    },
+    {
       "title": "Johnny-Five servo controller",
       "description": "Control a servo connected to an Arduino using Johnny-Five in a Node.js UWP app",
       "link": "samples/J5ServoController.htm",
@@ -662,6 +692,19 @@
       ]
     },
     {
+      "title": "Video Capture",
+      "description": "Create an app that records video to file, plays video from file.",
+      "link": "samples/VideoCapture.htm",
+      "link-text": "Video Capture",
+      "lang": "C#",
+      "ranking": 0,
+      "tags": [
+        "intermediate",
+        "foreground",
+        "c#"
+      ]
+    },
+    {
       "title": "Webcam app",
       "description": "Create an app that initializes a web cam, takes pictures, and records video and audio.",
       "link": "samples/WebcamApp.htm",
@@ -674,7 +717,6 @@
         "c#"
       ]
     },
-
     {
       "title": "OneNote cloud services",
       "description": "Learn how to use http messages to GET and POST OneNote pages in Wiring",
@@ -913,7 +955,19 @@
         "i2c"
       ]
     },
-
+    {
+      "title": "OIC adapter",
+      "description": "Exposes and controls the OIC/IoTivity devices and resources",
+      "link": "samples/OICAdapter.htm",
+      "link-text": "Learn More",
+      "lang": "C++",
+      "ranking": 10,
+      "tags": [
+        "c++",
+        "intermediate",
+        "alljoyn"
+      ]
+    },
     {
       "title": "Z-Wave adapter",
       "description": "Expose and controlg Z-Wave devices.",
@@ -927,15 +981,15 @@
         "alljoyn"
       ]
     },
-        {
+    {
       "title": "ZigBee adapter",
       "description": "Set up the ZigBee adapter for Device System Bridge (DSB)",
       "link": "samples/ZigBeeAdapter.htm",
       "link-text": "Learn More",
-      "lang": "C++",
+      "lang": "C#",
       "ranking": 10,
       "tags": [
-        "c++",
+        "c#",
         "intermediate",
         "alljoyn"
       ]

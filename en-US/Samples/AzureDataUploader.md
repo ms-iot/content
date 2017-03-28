@@ -105,10 +105,10 @@ registry.create(device, function (err, deviceInfo, res) {
   function printDeviceInfo(err, deviceInfo, res) {
     if (deviceInfo) {
       console.log('Device id: ' + deviceInfo.deviceId);
-      console.log('Device key: ' + deviceInfo.authentication.SymmetricKey.primaryKey);
+      console.log('Device key: ' + deviceInfo.authentication.symmetricKey.primaryKey);
       
       // Replace the value of HostName with the value in connectionString
-      var deviceConnectionString = 'HostName=XYZ;DeviceId=' + myDeviceId + ';SharedAccessKey=' + deviceInfo.authentication.SymmetricKey.primaryKey;
+      var deviceConnectionString = 'HostName=XYZ;DeviceId=' + myDeviceId + ';SharedAccessKey=' + deviceInfo.authentication.symmetricKey.primaryKey;
       client = Client.fromConnectionString(deviceConnectionString, Mqtt);
       client.open(connectCallback);
     }
@@ -188,7 +188,7 @@ function InitializeBoard() {
 
 * You can then view the data sent in real-time with [iothub-explorer](https://www.npmjs.com/package/iothub-explorer).
   * In a cmd window on your PC run `npm install -g iothub-explorer@latest`
-  * Then run `iothub-explorer <Your IoT Hub connection string> monitor-events myRPi2`. After running the command you should then see your data being received:
+  * Then run `iothub-explorer monitor-events myRPi2 --login <Your IoT Hub connection string> `. After running the command you should then see your data being received:
 
     ![Azure Data]({{site.baseurl}}/Resources/images/Nodejs/azure-hubdata.png)
 
