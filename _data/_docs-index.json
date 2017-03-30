@@ -195,8 +195,8 @@
             "link":"/Docs/BuildingSecureDevices.htm"
           },
           {
-            "title": "Secure Boot and BitLocker",
-            "link":"/Docs/SecureBootAndBitLocker.htm"
+            "title": "Secure Boot, BitLocker & Device Guard",
+            "link":"/Docs/TurnkeySecurity.htm"
           },
           {
             "title":"TPM",
@@ -219,6 +219,10 @@
             "title":"Bluetooth",
             "link":"/Docs/Bluetooth.htm"
           },
+	  {
+	    "title":"Fiddler",
+	    "link":"/Docs/Fiddler.htm"
+	  },  
           {
             "title":"mDNS",
             "link":"/Docs/ComingSoon.htm"
