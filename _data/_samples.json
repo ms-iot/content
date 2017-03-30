@@ -472,6 +472,34 @@
       ]
     },
     {
+      "title": "IoT Home App",
+      "description": "Create a UWP app to demonstrate navigation between multiple app using protocol uri scheme",
+      "link": "samples/IoTHomeApp.htm",
+      "link-text": "Iot Home App",
+      "lang": "C++",
+      "ranking": 1,
+      "tags": [
+        "c++",
+        "intermediate",
+        "foreground",
+        "o/s"
+      ]
+    },
+    {
+      "title": "IoT Startup App",
+      "description": "Create a UWP Startup app to list and launch apps installed on the IoT Core System",
+      "link": "samples/IoTStartApp.htm",
+      "link-text": "Iot Startup App",
+      "lang": "C++",
+      "ranking": 1,
+      "tags": [
+        "c++",
+        "intermediate",
+        "foreground",
+        "o/s"
+      ]
+    },
+    {
       "title": "I2C accelerometer",
       "description": "Connect an accelerometer to your device and read data from it",
       "link": "samples/I2CAccelerometer.htm",
@@ -582,7 +610,7 @@
         "c#"
       ]
     },
-     {
+    {
       "title": "Potentiometer sensor",
       "description": "Read values from a rotary potentiometer and output data to an LED",
       "link": [
