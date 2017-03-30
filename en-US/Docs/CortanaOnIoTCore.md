@@ -10,67 +10,36 @@ lang: en-US
 Cortana Overview
 ================
 
-Cortana is a personal digital assistant working across all your devices
-to help you in your daily life. She learns about you; helps you get
-things done by completing tasks; interacts with you using natural
-language in a consistent, contextual way; and always looks out for you.
-Cortana has a consistent visual identity, personality, and voice.
+Cortana is a personal digital assistant working across all your devices to help you in your daily life. She learns about you; helps you get things done by completing tasks; interacts with you using natural language in a consistent, contextual way; and always looks out for you. Cortana has a consistent visual identity, personality, and voice.
 
-IoT Core is an edition of Windows 10, and is optimized for small
-footprint and low cost IoT devices. Cortana is enabled on IoT Core in
-the Windows 10 Creators Update.
+IoT Core is an edition of Windows 10, and is optimized for small footprint and low cost IoT devices. Cortana is enabled on IoT Core in the Windows 10 Creators Update.
 
 To use Cortana:
 
 -   The device must have internet connection.
 
 -   The user must have a Microsoft account (MSA) which is in the form of
-    [alias@outlook.com,
-    alias@hotmail.com](mailto:alias@outlook.com,%20alias@hotmail.com),
-    or <alias@live.com>.
+    [alias@outlook.com, alias@hotmail.com](mailto:alias@outlook.com,%20alias@hotmail.com) or <alias@live.com>.
 
--   The user is required to sign in using their MSA on the device to
-    utilize Cortana.
+-   The user is required to sign in using their MSA on the device to utilize Cortana.
 
 -   The device must have a display.
 
--   A microphone and speaker are required for speech interaction with
-    Cortana.
+-   A microphone and speaker are required for speech interaction with Cortana.
 
--   An OEM must follow the guidance provided for the design and
-    development of audio input devices outlined in the [Microsoft Speech
-    Platform](https://msdn.microsoft.com/en-us/library/windows/hardware/dn915051(v=vs.85).aspx)
-    Specification.
-
-This document describes how to enable and utilize Cortana on IoT Core.
-Makers and OEMs can now leverage the capabilities of Cortana to build
-even smarter, connected IoT devices.
+-   An OEM must follow the guidance provided for the design and development of audio input devices outlined in the [Microsoft Speech Platform](https://msdn.microsoft.com/en-us/library/windows/hardware/dn915051(v=vs.85).aspx) Specification.
 
 Use Cortana Function on IoT Core
 ================================
-
-As a maker or a developer, if you want to use Cortana function with
-supported IoT devices, please follow the instructions below.
+This document describes how to enable and utilize Cortana on IoT Core. Makers and OEMs can now leverage the capabilities of Cortana to build even smarter, connected IoT devices.
 
  Hardware List
 --------------
 
-Windows 10 IoT Core can be run on the following IoT devices, please go
-to
-[WindowsIoTDeveloper](https://developer.microsoft.com/en-us/windows/iot/getstarted)
-to get more information.
+Windows 10 IoT Core can be run on a [list of IoT devices]({{site.baseurl}}/{{page.lang}}/Explore/DeviceOptions).
 
--   Raspberry Pi 3
-
--   Minnowboard Max
-
--   Dragonboard 410c
-
--   Intel Joule
-
-Generally, the microphone and speaker you select to use with the your
-IoT devices should work with Cortana. For better speech recognition
-quality, here is recommended hardware that has been tried and true.
+Any microphone and speaker you select to use with the your IoT devices should work with Cortana. For better speech recognition
+quality, here is a recommended list of hardware that has been tested.
 
 Microphone
 
@@ -93,25 +62,18 @@ USB Hub
 Getting Started
 ---------------
 
-To get started with Cortana on Windows 10 IoT Core, a few additional set
-up steps are necessary. Please go through all the steps below.
+To get started with Cortana on Windows 10 IoT Core, a few additional set up steps are necessary.
 
-Please install **Windows 10 IoT Core Dashboard** from
-[here](https://developer.microsoft.com/en-us/windows/iot/Downloads).
+### Install [Windows 10 IoT Core Dashboard](https://developer.microsoft.com/en-us/windows/iot/Downloads).
 
 ###  Flash the IoT Device
 
-To begin, first flash your IoT Core device with correct image. To do
-this, Go to [www.WindowsOnDevices.com](http://www.windowsondevices.com/)
-and click on **Get Started**. If you have trouble finding the image for
-your IoT device, please go to [Windows Insider Preview
-Downloads](https://www.microsoft.com/en-us/software-download/windowsiot)
-page.
+[Flash your IoT Core device]({{site.baseurl}}/{{page.lang}}/GetStarted) with the correct image. If you have trouble finding the image for
+your IoT device, please go to [Windows Insider Preview Downloads](https://www.microsoft.com/en-us/software-download/windowsiot) page.
 
 ### Install Update
 
-Once the image boots up, please open Device Portal for your device and
-install updates. To do this, enter **http://*&lt;device
+Once the image boots up, please open Device Portal for your device and install updates. To do this, enter **http://*&lt;device
 IP&gt;*:8080/\#Windows%20Update** in a browser and click on **Check for
 Updates**. Apply any updates if they are available. The update process
 will take approximately 30-40 minutes. Once the updates have been
@@ -220,7 +182,7 @@ question.
 
 ![MSA Sign in]({{site.baseurl}}/Resources/images/cortona/MSASignin.png)
 
-###  Sign out MSA
+####  Sign out MSA
 
 If you want to sign out your MSA, please go to Device Settings under
 Device Portal, click ‘About Me’, then the account icon at the bottom to
@@ -270,7 +232,7 @@ the instructions below.
 
 Use the IoTSettings tool to change region, user language or speech
 language. This is a command line tool that can be invoked from an
-application using the ProcessLauncher API.
+application using the ProcessLauncher API. These commands must be run as default account, not administrator.
 
 IoTSettings.exe \[Command\]
 
@@ -348,7 +310,7 @@ OEM has the flexibility to decide when to enable KWS. For example, OEM
 wants to enable KWS only when proximity sensor detects someone is
 nearby. *Here is the MSDN link (TBD)*
 
-[]{#_Toc469910042 .anchor}OEM will be able to set whether Cortana can be
+OEM will be able to set whether Cortana can be
 activated by voice (listen to “Hey Cortana”). These API will only be
 available in Embedded Mode to UWP applications.
 
@@ -429,9 +391,9 @@ else if
 Cortana on Windows 10 IoT Core Capabilities
 ===========================================
 
-[]{#_Toc467436052 .anchor}Cortana on IoT Core offers reactive
+Cortana on IoT Core offers reactive
 experiences in the Windows 10 Creators Update. A reactive experience
-occurs when the user initiates commands to cut through multiple steps tocomplete a task. Reactive information is provided in response to a
+occurs when the user initiates commands to cut through multiple steps to complete a task. Reactive information is provided in response to a
 query.
 
 Cortana is extensible. In addition to the native skills supported by the

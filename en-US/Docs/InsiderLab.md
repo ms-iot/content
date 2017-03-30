@@ -11,7 +11,7 @@ If your organization is developing an IoT solution, you might be able to leverag
  <div class="container">
     <div class="row">
         <div class="image-container video-player embed-responsive-16by9 remove-top-margin remove-bottom-margin">
-            <img class="video-img img-responsive jumbotron-image " alt="Windows 10 Start menu displayed in a phone, tablet, and laptop" src="{{site.baseurl}}/Resources/images/Videos/InsiderLab.png" data-cn="Getting started with IoT Core Connectivity" data-fallback="Your browser does not support the video tag." data-video="https://iotlabportalcms.azureedge.net/112419_iot_lab_master_mixedaudio_-16lkfs_1280x720_5mbps.mp4?sfvrsn=2 ">
+            <img class="video-img img-responsive jumbotron-image " alt="Two individuals discussing the IoT Insider Lab" src="{{site.baseurl}}/Resources/images/Videos/InsiderLab.png" data-cn="Information about the IoT and AI Insider Lab" data-fallback="Your browser does not support the video tag." data-video="https://iotlabportalcms.azureedge.net/112419_iot_lab_master_mixedaudio_-16lkfs_1280x720_5mbps.mp4?sfvrsn=2 ">
         </div>
     </div>
   </div>
@@ -52,7 +52,7 @@ ___
     function onReady() {
         player.addEventListener('onStateChange', function (e) {
             if (e.data === 1) {
-                MscomCustomEvent("ms.InteractionType", "100", "ms.video.completionrate", "0", "cn", "Windows IoT Core: Opening Doors with Facial Recognition");
+                MscomCustomEvent("ms.InteractionType", "100", "ms.video.completionrate", "0", "cn", "Windows IoT Core: Insider Lab");
             }
         });
     }
