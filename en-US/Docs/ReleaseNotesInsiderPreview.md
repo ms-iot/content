@@ -6,7 +6,7 @@ lang: en-US
 ---
 
 # Release Notes for Windows 10 IoT Core
-Build Number 15026. February 2017
+Build Number 15051. March 2017
 
 &copy; 2017 Microsoft Corporation. All rights reserved
 
@@ -22,25 +22,18 @@ The privacy statement for this version of the Windows operating system can be vi
 You can review linked terms by pasting the forward link into your browser window.
 
 ## What's new in this build: 
-* Updated OS files including core OS bug fixes
-* Cortana feature has been enabled. See the Cortana section below for more details
-* WEBB Tutorial has been added
-* Extended keys and other improvements to the on-screen keyboard were added
-* Universal Write Filter (UWF) has been added as an option to the Windows Imaging and Configuration Designer (ICD)
-* The BluetoothLE stack has been updated to address the issues seen when calling GattDeviceService.GetCharacteristics
-* Issues with NanoRDP connecting have been addressed
-* New branding for the windows device portal
-* Joule BSP update
-* Better language support for IOT On Screen Keyboard (OSK)
-* Localization fixes in Bertha
-* RPI BSP packages were removed from the ADK
-
+* Fixes to improve reliability
+* Fix issue that prevented the kernel debugger from attaching to RPI devices.
 
 
 ## Known issues in this build:
-* The MinnowBoard Max firmware 0.93 has a known issue which can lead to network connectivity failure
 * BluetoothLE paired devices may throw and exception and fail to function properly
 * Raspberry PI images may crash on their first boot. Consecutive boots start up correctly
+* When updating the IoT Default App may be uninstalled
+* Network connectivity failures in MinnowBoard Max (MBM) firmware version 0.93. (Fixed in firmware version 0.94.) 
+* F5 driver deployment from Visual Studio does not work on IoT Core
+* Joule - Debugger will time out on a breakpoint when using C++.
+
 
 
 ## Cortana Instructions and Known Issues 
