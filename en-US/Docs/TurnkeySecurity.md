@@ -10,7 +10,7 @@ lang: en-US
 # Enabling Secure Boot, BitLocker and Device Guard on Windows 10 IoT Core
 
 ## Introduction  
-With the release of Creators Update, Windows 10 IoT Core improves its security feature offerings to include UEFI Secure Boot, BitLocker Device Encryption and Device Guard.  These will allow device builders in creating fully locked-down Windows IoT devices that are resilient to many different types of attacks.  Together, these features provide the optimal protection that ensures that a platform will launch in a defined way, while locking out unknown binaries and protecting user data through the use of device encryption.  
+With the release of Creators Update, Windows 10 IoT Core improves its security feature offerings to include UEFI Secure Boot, BitLocker Device Encryption and Device Guard.  These will allow device builders in creating fully locked down Windows IoT devices that are resilient to many different types of attacks.  Together, these features provide the optimal protection that ensures that a platform will launch in a defined way, while locking out unknown binaries and protecting user data through the use of device encryption.  
 
 ### Secure Boot
 UEFI Secure Boot is the first policy enforcement point, located in UEFI.  It restricts the system to only allow execution of binaries signed by a specified authority. This feature prevents unknown code from being executed on the platform and potentially weakening the security posture of it. 
@@ -23,7 +23,7 @@ Most IoT devices are built as fixed-function devices.  This implies that device 
 
 
 ## Locking-down IoT Devices
-In order to lock-down a Windows IoT device, the following considerations must be made.
+In order to lockdown a Windows IoT device, the following considerations must be made.
  
 ### UEFI Platform & Secure Boot
 In order to leverage Device Guard capabilities, it is necessary to ensure that the boot binaries and UEFI firmware are signed and cannot be tampered with.  UEFI Secure Boot is the first policy enforcement point, located in UEFI.  It prevents tampering by restricting the system to only allow execution of boot binaries signed by a specified authority. Additional details on Secure Boot, along with key creation and management guidance, is available [here][1].
@@ -37,7 +37,7 @@ Configurable Code Integrity (CCI) is a feature in Windows 10 that allows device 
 
 To learn more about deploying code integrity policies, auditing and enforcement, check out the latest technet documentation [here][2].
 
-[2]: https://technet.microsoft.com/en-us/library/dn747883.aspx "Code Integrity"
+[2]: https://technet.microsoft.com/en-us/itpro/windows/keep-secure/deploy-code-integrity-policies-steps "Code Integrity"
 
 
 ## Turnkey Security on IoT Core
@@ -58,12 +58,12 @@ To facilitate easy enablement of key secrutiy features on IoT Core devices, Micr
 [5]: https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit "Windows 10 ADK"
 
 
-###Development IoT Devices 
+### Development IoT Devices 
 Windows 10 IoT Core works with [several leading SoCs][6] that are utilized in hundreds of devices. Of the [suggested IoT development devices][7], the following provide firmware TPM functionality out of the box, along with Secure Boot, Measured Boot, BitLocker and Device Guard capabilities:
 * Qualcomm DragonBoard 410c
 * Intel MinnowBoardMax 
 
-Notes:
+**Notes:**
 * For Qualcomm's DragonBoard 410c, in order to enable Secure Boot, it may be necessary to provision RPMB. Once the eMMC has been flashed with Windows 10 IoT Core (as per instructions [here][8]), press [Power] + [Vol+] + [Vol-] simultaneously on the device when powering up and select "Provision RPMB" from the BDS menu. *Please note that this is an irreversible step.*
 * For Intel's MinnowBoard Max, firmware version must be 0.82 or higher (get the [latest firmware][9]). To enable TPM capabilities, power up board with a keyboard & display attached and press F2 to enter UEFI setup. Go to _Device Manager -> System Setup -> Security Configuration -> PTT_ and set it to _&lt;Enable&gt;_. Press F10 to save changes and proceed with a reboot of the platform.
 * For Qualcomm's DragonBoard 410c, in order to enable USB mass storage mode (if required):
@@ -86,33 +86,33 @@ Notes:
 ### Generating Necessary Lockdown Packages
 First, download the [DeviceLockDown Script][10] package, which contains all of the additional tools and scripts required for configuring and locking down devices
 
-**Note:** The _settings.xml_ file contained in this package will allow you to configure various options.  Here, you can specify which keys to use for Secure Boot, specify a certificate for BitLocker data recovery as well as generate and specify signing keys for user-mode and kernel-mode applications and drivers. In order to assist with testing during the initial development cycle, Microsoft has provided pre-generated keys and certificates where appropriate.  This implies that Microsoft Test, Development and Pre-Release binaries are considered trusted.  During final product creation and image generation, be sure to remove these certifcates to ensure a fully locked-down device.
+**Note:** The _settings.xml_ file contained in this package will allow you to configure various options.  Here, you can specify which keys to use for Secure Boot, specify a certificate for BitLocker data recovery as well as generate and specify signing keys for user-mode and kernel-mode applications and drivers. In order to assist with testing during the initial development cycle, Microsoft has provided pre-generated keys and certificates where appropriate.  This implies that Microsoft Test, Development and Pre-Release binaries are considered trusted.  During final product creation and image generation, be sure to remove these certifcates to ensure a fully locked down device.
 
-1. Start an Administrative PowerShell (PS) console on your Windows 10 PC
+1. Start an Administrative PowerShell (PS) console on your Windows 10 PC and navigate to the location of the downloaded script 
 2. If using pre-generated keys (for development/testing), skip to #3 below.  If generating your own keys:
   * Update _GenerateKeys.ps1_ script <optional>
   * Issue the following cmd within the PS console:
-  * `.\GenerateKeys.ps1 -OemName '<your oem name>' -outputPath '<output directory>'`
+   `.\GenerateKeys.ps1 -OemName '<your oem name>' -outputPath '<output directory>'`
   * Modify _settings.xml_ to match the newly generated keys
 3. Mount your reference hardware platform to your PC, through any appropriate means, including network share or via USB mass storage mode (if available)
-4. Update the necessary parameters in _settings.xml_:
+4. Update the necessary parameters in _settings.xml:_
   * Mounted path via _Settings -> SIPolicy -> ScanPath_ to path from Step 3
   * Architecture of device via _Settings -> Packaging -> Architecture_ 
   * (Optional) Update package output directory via _Settings -> General -> PackageOutputDirectory_
   * (Optional) Update ownership via _Settings -> Packaging -> OEMName_
-  * (Optional) Package signing settings via _Settings -> Packaging -> SignToolOEMSign_ (Additional details available here) 
+  * (Optional) Package signing settings via _Settings -> Packaging -> SignToolOEMSign_ (Additional details available [here][11]) 
 5. Execute the following commands to generate required packages:
-  * `Import-Module IotDeviceGuardPackage.psm1`
+  * `Import-Module .\IotDeviceGuardPackage.psm1`
   * `New-IotDeviceGuardPackage -ConfigFileName .\settings.xml`
     Note: For testing on the Qualcomm DragonBoard 410c with pre-generated keys, you can use 'QCDB_settings.xml' file.
 
-[10]: https://github.com/ms-iot/security/tree/master/TurnKeySecurity "Turnkey Security"
+[10]: https://github.com/ms-iot/security/tree/master/TurnkeySecurity "Turnkey Security"
 [11]: https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/build-retail-image "Signing for Commercialization"
 
 
 ### Installing Lockdown Packages
 Once the packages are generated, they can be installed with the final image creation process.  Visit the [IoT Commercialization][12] page to learn how to add packages to an IoT image. For testing and validation efforts, install the generated packages by doing the following:
-1. Copy the .cab files to the device under a directory e.g. C:\OemInstall
+1. Copy the .cab files to the device under a directory e.g. c:\OemInstall
   * OEM.Custom.Cmd.cab
   * OEM.DeviceGuard.BitLocker.cab
   * OEM.DeviceGuard.SecureBoot.cab
@@ -126,7 +126,7 @@ Once the packages are generated, they can be installed with the final image crea
 4. Finally, commit the packages via: 
   * `applyupdate -commit`
 
-The device will reboot into the update OS (showing gears) to install the packages and will reboot again to main OS.  Once the device reboots back into MainOS, Secure Boot will be enabled and SIPolicy should be engaged.  Since BitLocker requires Secure Boot provisioning to be completed and the feature to be active, reboot once more to activate BitLocker encryption.  
+The device will reboot into update OS (showing gears) to install the packages and will reboot again to main OS.  Once the device reboots back into MainOS, Secure Boot will be enabled and SIPolicy should be engaged.  Since BitLocker requires Secure Boot provisioning to be completed and the feature to be active, reboot once more to activate BitLocker encryption.  
 
 [12]: https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/add-a-provisioning-package-to-an-image "Packaging for Commercialization"
 [13]: {{site.baseurl}}/{{page.lang}}/Docs/ssh.htm "SSH"
@@ -151,4 +151,3 @@ If the contents need to be frequently accessed offline, BitLocker autounlock can
 ### Disabling BitLocker  
 Should there arise a need to temporarily disable BitLocker, initate a remote PowerShell session with your IoT device and run the following command: `sectask.exe -disable`.  
 **Note:** Device encryption will be re-enabled on subsequent device boot unless the scheduled encryption task is disabled.
-

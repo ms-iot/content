@@ -7,4 +7,4 @@ permalink: /en-US/Docs/SecureBootAndBitLocker.htm
 lang: en-US
 ---
 
-{% include redirect.html url="/windows/iot/en-US/Docs/TurnkeySecurity.htm" %}
+{% include redirect.html url="/windows/iot/Docs/TurnkeySecurity.htm" %}
