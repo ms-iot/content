@@ -912,7 +912,11 @@
       "ranking": 10,
       "tags": [
         "c#",
-        "beginner"
+        "intermediate",
+        "Azure",
+        "CognitiveServices",
+        "ADK",
+        "Speech Language Packs"
       ]
     },
     {
