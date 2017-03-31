@@ -12,7 +12,7 @@
             "link":"/Explore/Deviceoptions.htm"
           },
            {
-            "title":"Cortona on IoT",
+            "title":"Cortana on IoT",
             "link":"/Docs/CortanaOnIoTCore.htm"
           },
           {
@@ -219,10 +219,10 @@
             "title":"Bluetooth",
             "link":"/Docs/Bluetooth.htm"
           },
-	  {
-	    "title":"Fiddler",
-	    "link":"/Docs/Fiddler.htm"
-	  },  
+          {
+            "title":"Fiddler",
+            "link":"/Docs/Fiddler.htm"
+      	  },  
           {
             "title":"mDNS",
             "link":"/Docs/ComingSoon.htm"
@@ -246,7 +246,7 @@
         "children":[
           {
             "title":"Insider Lab",
-            "link":"/Docs/InsiderLab"
+            "link":"/Docs/InsiderLab.htm"
           },
           {
             "title":"OEM license requirements",
@@ -271,15 +271,7 @@
           {
             "title":"Go to market",
             "link":"/Docs/GotoMarket.htm"
-          },
-           {
-            "title":"BSPs",
-            "link":"/Docs/BSP.htm"
-          },
-          {
-            "title":"Recovery",
-            "link":"/Docs/Recovery.htm"
-          },		 
+          }
         ]
       }
    ]

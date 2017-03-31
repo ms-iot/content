@@ -11,7 +11,7 @@ lang: en-US
 ## The Creators Update
 ___
 
-Huge improvements have been made to developer tools, APIs, samples.....  plus lots of new features. Download the [Windows 10 IoT Core Dashboard](http://go.microsoft.com/fwlink/?LinkID=708576) and take a look for yourself!
+We have made huge improvements in Windows 10 IoT Core as part of the Creators Update, including improved developer tools, additional APIs, new code samples, and more. Download the newest [Windows 10 IoT Core Dashboard](http://go.microsoft.com/fwlink/?LinkID=708576) and see for yourself!
 
 ## New Hardware 
 ___

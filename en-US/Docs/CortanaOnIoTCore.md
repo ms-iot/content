@@ -79,11 +79,11 @@ Updates**. Apply any updates if they are available. The update process
 will take approximately 30-40 minutes. Once the updates have been
 downloaded and installed, click on **Restart Now**.
 
-{% include imageborder.html alt="Install Update" link="/Resources/images/cortona/InstallUpdate1.png" %}
+{% include imageborder.html alt="Install Update" link="/Resources/images/cortana/InstallUpdate1.png" %}
 
-{% include imageborder.html alt="Install Update" link="/Resources/images/cortona/InstallUpdate2.png" %}
+{% include imageborder.html alt="Install Update" link="/Resources/images/cortana/InstallUpdate2.png" %}
 
-{% include imageborder.html alt="Install Update" link="/Resources/images/cortona/InstallUpdate3.png" %}
+{% include imageborder.html alt="Install Update" link="/Resources/images/cortana/InstallUpdate3.png" %}
 
 ### Set Up the Peripherals
 
@@ -103,7 +103,7 @@ Adjust the volume settings for both to be within the range of 40-70%
 (Double-check that the Microphone setting is not 0.0)
 
 
-{% include imageborder.html alt="Audio Setup" link="/Resources/images/cortona/AudioSetup.png" %}
+{% include imageborder.html alt="Audio Setup" link="/Resources/images/cortana/AudioSetup.png" %}
 
 ####  Dragonboard Only : Disable Audio Driver
 
@@ -124,7 +124,7 @@ pop up to ask for permission. **If you deny consent, Cortana will not
 work.** To accept, click **Sure**, Cortana will be launched when you say
 “Hey Cortana”.
 
-![Consent]({{site.baseurl}}/Resources/images/cortona/Consent.png)
+![Consent]({{site.baseurl}}/Resources/images/cortana/Consent.png)
 
 If you skip the acceptance, you need to go to Device Portal to enable
 Cortana later.
@@ -146,7 +146,7 @@ it is not checked. Restart the device (top right corner of the browser
 has a Power button with Restart option)
 
 
-{% include imageborder.html alt="Start Cortana" link="/Resources/images/cortona/StartCortana.png" %}
+{% include imageborder.html alt="Start Cortana" link="/Resources/images/cortana/StartCortana.png" %}
 
 #### Grant Consent
 
@@ -160,12 +160,12 @@ If it's your very first time launching Cortana, it will ask for consent.
 **If you deny consent, Cortana will not work.** To accept, click
 **Sure**:
 
-![Consent]({{site.baseurl}}/Resources/images/cortona/Consent2.png)
+![Consent]({{site.baseurl}}/Resources/images/cortana/Consent2.png)
 
 If you deny consent at first and want to use Cortana later, you could go
 to Device Settings under Device Portal to turn on Cortana.
 
-![Enable KWS]({{site.baseurl}}/Resources/images/cortona/EnableKws.png)
+![Enable KWS]({{site.baseurl}}/Resources/images/cortana/EnableKws.png)
 
 #### Sign in with MSA
 
@@ -180,7 +180,7 @@ do any personal information related action. If you click ‘Maybe later’,
 it will be popped up next time when you ask personal information related
 question.
 
-![MSA Sign in]({{site.baseurl}}/Resources/images/cortona/MSASignin.png)
+![MSA Sign in]({{site.baseurl}}/Resources/images/cortana/MSASignin.png)
 
 ####  Sign out MSA
 
@@ -188,7 +188,7 @@ If you want to sign out your MSA, please go to Device Settings under
 Device Portal, click ‘About Me’, then the account icon at the bottom to
 sign out.
 
-![MSA Sign out]({{site.baseurl}}/Resources/images/cortona/MSASignout.png)
+![MSA Sign out]({{site.baseurl}}/Resources/images/cortana/MSASignout.png)
 
 Invoking and Stopping Cortana
 -----------------------------
@@ -266,22 +266,13 @@ language = en-CA.
 Cortana Feature ID
 ------------------
 
-There is one feature ID for Cortana,
-&lt;Feature&gt;IOT\_CORTANA&lt;/Feature&gt;, OEM needs to add this
-feature ID in their OEMInput XML. Please go to this site for more
-information.
+There is one [feature ID](<https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/iot-core-feature-list>) for Cortana, &lt;Feature&gt;IOT\_CORTANA&lt;/Feature&gt;, OEM needs to add this feature ID in their OEMInput XML. 
 
-<https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/iot-core-feature-list>
 
 Enable ‘Start Cortana on Boot’ in Image
 ---------------------------------------
 
-The registry key name for ‘Start Cortana on Boot’ is
-CortanaObscureLaunchEnabled.
-
-reg add "HKLM\\SOFTWARE\\Microsoft\\Windows
-NT\\CurrentVersion\\Winlogon\\IoTShellExtension" /t REG\_DWORD /v
-CortanaObscureLaunchEnabled /d 1
+Add &lt;Feature&gt;IOT\_CORTANA\_OBSCURELAUNCH&lt;Feature&gt; in OEMInput XML.
 
 Cortana Consent
 ---------------
@@ -308,7 +299,7 @@ user says “Hey, Cortana” .
 
 OEM has the flexibility to decide when to enable KWS. For example, OEM
 wants to enable KWS only when proximity sensor detects someone is
-nearby. *Here is the MSDN link (TBD)*
+nearby. 
 
 OEM will be able to set whether Cortana can be
 activated by voice (listen to “Hey Cortana”). These API will only be
@@ -406,27 +397,15 @@ Cortana to do more.
     -   Cortana skills sample list	   - Reminder, To-do list, Traffic/Restuarant, Chit Chat, Dictionary, Finance, Health,News, Reference, Show Times, Calculator, Weather, Entity look up, Events, Sports,Time zone, etc.
 
 
--   Catered to devices with small- or medium-sized screens (e.g.
-    thermostat or refrigerator), provide a voice response with optimized
-    visual content.
+-   Catered to devices with small- or medium-sized screens (e.g. thermostat or refrigerator), provide a voice response with optimized visual content.
 
--   Leverages the audio pipeline provided in the Windows 10 operating
-    system which supports linear microphone arrays. Audio input devices
-    should conform to the guidance outlined in the [Microsoft Speech
-    Platform](https://msdn.microsoft.com/en-us/library/windows/hardware/dn915051(v=vs.85).aspx).
+-   Leverages the audio pipeline provided in the Windows 10 operating system which supports linear microphone arrays. Audio input devices should conform to the guidance outlined in the[Microsoft Speech Platform](https://msdn.microsoft.com/en-us/library/windows/hardware/dn915051(v=vs.85).aspx).
 
--   To wake-up Cortana the user says “Hey, Cortana.” Keyword Spotting
-    (KWS) runs locally to receive the voice input and complete the
-    analysis. The audio is only sent to the cloud once the keyword is
-    spotted. User consent is needed before enabling KWS. The KWS is
-    optimized by the Windows Speech Platform and supports multiple
+-   To wake-up Cortana the user says “Hey, Cortana.” Keyword Spotting (KWS) runs locally to receive the voice input and complete the analysis. The audio is only sent to the cloud once the keyword is spotted. User consent is needed before enabling KWS. The KWS is optimized by the Windows Speech Platform and supports multiple
     languages and regions.
 
--   Will support the following [regions and
-    languages](https://support.microsoft.com/en-us/instantanswers/557b5e0e-0eb0-44db-87d6-5e5db6f9c5b0/cortana-s-regions-and-languages)
-    (14 total).
-
-   
+-   Will support the following [regions and languages](https://support.microsoft.com/en-us/instantanswers/557b5e0e-0eb0-44db-87d6-5e5db6f9c5b0/cortana-s-regions-and-languages) (14 total).
+  
 |Language/Locale||KWS |
 |------|-----|----|
 | EN-US ||Hey Cortana|
@@ -444,18 +423,13 @@ Cortana to do more.
 | PT-BR || Ei Cortana| 
 | JA-JP || コルタナさん (Korutana-san)|
 
-
 Cortana Extensibility
 =====================
 
-Cortana custom skill provides the extensible capability for Cortana. The
-experts control the end-to-end experience, while Cortana brokers to
-relevant applications, websites, services and bots. Custom skills are
-created by developers, for example, OEM partners or ISVs.
+Cortana custom skill provides the extensible capability for Cortana. The experts control the end-to-end experience, while Cortana brokers to relevant applications, websites, services and bots. Custom skills are created by developers, for example, OEM partners or ISVs.
 
-Please visit
-[https://developer.microsoft.com/en-us/cortana/dashboard\#/home](https://developer.microsoft.com/en-us/cortana/dashboard)
-to understand and learn how to create your own skill.
+OEMs can write a [Voice Command Definition application](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CortanaVoiceCommand) that allows to add local commands to Cortana.
+
 
 
 
