@@ -25,23 +25,23 @@ lang: en-US
     <tr>
       <th style="width:20%"></th>
       <th style="width:20%">
-              <img src="{{site.baseurl}}/Resources/images/devices/RPi3_0.png">
         <h4>Raspberry Pi 3</h4>
+        <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/RPi3_0.png">
         <p>The Raspberry Pi 3 is a low cost, credit-card sized computer that plugs into a computer monitor or TV, and uses an optional standard keyboard and mouse.  The Raspberry Pi 3 runs Windows 10 IoT Core.</p>
       </th>
       <th style="width:20%">
-        <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/RPi2_0.png">
         <h4>Raspberry Pi 2</h4>
+        <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/RPi2_0.png">
         <p>The Raspberry Pi 2 is a low cost, credit-card sized computer that plugs into a computer monitor or TV, and uses an optional standard keyboard and mouse.  The Raspberry Pi 2 runs Windows 10 IoT Core.</p>
       </th>
       <th style="width:20%">
-        <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/MBM_0.png">
         <h4>MinnowBoard MAX</h4>
+        <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/MBM_0.png">
         <p>MinnowBoard MAX is an open hardware embedded board with the Intel Atom E38XX series SOC at its core. MinnowBoard MAX supports Windows 10 IoT Core.</p>
       </th>
       <th style="width:20%">
-        <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/DB410c.png">
         <h4>DragonBoard 410c</h4>
+        <img class="comparison-picture" src="{{site.baseurl}}/Resources/images/devices/DB410c.png">
         <p>The DragonBoard™ 410c based on Linaro 96Boards™ specification features the Qualcomm® Snapdragon™ 410 processor, a Quad-core ARM® Cortex™ A53 at up to 1.2GHz clock speed per core, capable of 32-bit and 64-bit operation. WLAN, Bluetooth, and GPS, all packed into a board the size of a credit card.</p>
       </th>
     </tr>

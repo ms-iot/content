@@ -314,6 +314,20 @@
       ]
     },
     {
+      "title": "Bluetooth Serial",
+      "description": "Send and receive messages over Bluetooth serial",
+      "link": "samples/BTSerial.htm",
+      "link-text": "Bluetooth serial",
+      "lang": "C#",
+      "ranking": 0,
+      "tags": [
+        "bluetooth",
+        "RFCOMM",
+        "c#",
+        "beginner"
+      ]
+    },
+    {
       "title": "Cognitive Services",
       "description": "Access and use the Cognitive Services API inside a C# UWP App",
       "link": "samples/CognitiveServices.htm",
@@ -458,6 +472,34 @@
       ]
     },
     {
+      "title": "IoT Home App",
+      "description": "Create a UWP app to demonstrate navigation between multiple app using protocol uri scheme",
+      "link": "samples/IoTHomeApp.htm",
+      "link-text": "Iot Home App",
+      "lang": "C++",
+      "ranking": 1,
+      "tags": [
+        "c++",
+        "intermediate",
+        "foreground",
+        "o/s"
+      ]
+    },
+    {
+      "title": "IoT Startup App",
+      "description": "Create a UWP Startup app to list and launch apps installed on the IoT Core System",
+      "link": "samples/IoTStartApp.htm",
+      "link-text": "Iot Startup App",
+      "lang": "C++",
+      "ranking": 1,
+      "tags": [
+        "c++",
+        "intermediate",
+        "foreground",
+        "o/s"
+      ]
+    },
+    {
       "title": "I2C accelerometer",
       "description": "Connect an accelerometer to your device and read data from it",
       "link": "samples/I2CAccelerometer.htm",
@@ -568,7 +610,7 @@
         "c#"
       ]
     },
-     {
+    {
       "title": "Potentiometer sensor",
       "description": "Read values from a rotary potentiometer and output data to an LED",
       "link": [
@@ -678,6 +720,19 @@
       ]
     },
     {
+      "title": "Video Capture",
+      "description": "Create an app that records video to file, plays video from file.",
+      "link": "samples/VideoCapture.htm",
+      "link-text": "Video Capture",
+      "lang": "C#",
+      "ranking": 0,
+      "tags": [
+        "intermediate",
+        "foreground",
+        "c#"
+      ]
+    },
+    {
       "title": "Webcam app",
       "description": "Create an app that initializes a web cam, takes pictures, and records video and audio.",
       "link": "samples/WebcamApp.htm",
@@ -690,7 +745,6 @@
         "c#"
       ]
     },
-
     {
       "title": "OneNote cloud services",
       "description": "Learn how to use http messages to GET and POST OneNote pages in Wiring",
@@ -933,7 +987,19 @@
         "i2c"
       ]
     },
-
+    {
+      "title": "OIC adapter",
+      "description": "Exposes and controls the OIC/IoTivity devices and resources",
+      "link": "samples/OICAdapter.htm",
+      "link-text": "Learn More",
+      "lang": "C++",
+      "ranking": 10,
+      "tags": [
+        "c++",
+        "intermediate",
+        "alljoyn"
+      ]
+    },
     {
       "title": "Z-Wave adapter",
       "description": "Expose and controlg Z-Wave devices.",
@@ -947,15 +1013,15 @@
         "alljoyn"
       ]
     },
-        {
+    {
       "title": "ZigBee adapter",
       "description": "Set up the ZigBee adapter for Device System Bridge (DSB)",
       "link": "samples/ZigBeeAdapter.htm",
       "link-text": "Learn More",
-      "lang": "C++",
+      "lang": "C#",
       "ranking": 10,
       "tags": [
-        "c++",
+        "c#",
         "intermediate",
         "alljoyn"
       ]
