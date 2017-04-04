@@ -55,6 +55,7 @@ You can review linked terms by pasting the forward link into your browser window
 * Pin.Read is failing when using GPIO on the MBM with the DMAP/Lightning Providers due to issues in the Lightning Nuget.
 * In some cases, the mouse pointer is not visible after deploying or debugging apps with Visual Studio.
 * When using the SoftAP clients will not be able to access content exposed by UAP apps. See Server Application with SoftAP below for details.
+* LCD_Rotate=2 for Pi3 7" Touch Screen in the Config.txt file gets overwritten during Update
 
 
 ## Release Notes
