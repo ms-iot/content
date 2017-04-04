@@ -22,7 +22,7 @@
     <tr>
       <td></td>
       <td><h4>Raspberry Pi 3</h4></td>
-      <td><h4>Raspberry Pi 2</h4></td>
+      <td><h4>Raspberry Pi 2 (until v1.1)</h4></td>
       <td><h4>MinnowBoard MAX</h4></td>
       <td><h4>DragonBoard 410c</h4></td>
     </tr>
