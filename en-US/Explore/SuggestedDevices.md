@@ -110,34 +110,34 @@
         Peripherals
       </td>
       <td>
-        <p>17x GPIO pins</p>
-        <p>1x SPI bus</p>
+        <p>24x GPIO pins</p>
+        <p>1x Serial mini UART</p>
+        <p>2x SPI bus</p>
         <p>1x I2C bus</p>
-        <p>1x Serial UART</p>
         <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Set up your Raspberry Pi 3</a></p>
         <p><a href="https://www.element14.com/community/docs/DOC-76955/l/raspberry-pi-customization-service">Pi Customization Service</a></p>
       </td>
       <td>
-        <p>17x GPIO pins</p>
-        <p>1x SPI bus</p>
-        <p>1x I2C bus</p>
+        <p>24x GPIO pins</p>
         <p>1x Serial UART</p>
+        <p>2x SPI bus</p>
+        <p>1x I2C bus</p>
         <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Set up your Raspberry Pi 2</a></p>
         <p><a href="https://www.element14.com/community/docs/DOC-76955/l/raspberry-pi-customization-service">Pi Customization Service</a></p>
       </td>
       <td>
-        <p>17x GPIO pins</p>
+        <p>10x GPIO pins</p>
+        <p>2x Serial UARTs</p>
         <p>1x SPI bus</p>
         <p>1x I2C bus</p>
-        <p>2x Serial UARTs</p>
         <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Set up your MinnowBoard MAX</a></p>
         <p><a href="http://iotsolutionsalliance.intel.com/solutions-directory/processors_list/782">Other device options</a></p>
       </td>
       <td>
         <p>11x GPIO pins</p>
-        <p>1x SPI bus</p>
-        <p>2x I2C buses</p>
         <p>2x Serial UARTs</p>
+        <p>1x SPI bus</p>
+        <p>2x I2C bus</p>
         <p><a href="{{site.baseurl}}/{{page.lang}}/Docs/GetStarted/dragonboard/GetStartedStep1.htm">Set up your DragonBoard 410c</a></p>
         <p><a href="https://developer.qualcomm.com/hardware/snapdragon-410">Other device options</a></p>
       </td>
