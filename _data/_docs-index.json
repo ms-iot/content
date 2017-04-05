@@ -271,7 +271,15 @@
           {
             "title":"Go to market",
             "link":"/Docs/GotoMarket.htm"
-          }
+          },
+            {
+             "title":"BSP",
+             "link":"/Docs/BSP.htm"
+           },
+           {
+             "title":"Recovery",
+             "link":"/Docs/Recovery.htm"
+           }	
         ]
       }
    ]
