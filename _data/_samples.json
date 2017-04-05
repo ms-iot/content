@@ -174,7 +174,8 @@
         "c#",
         "beginner",
         "azure",
-        "foreground"
+        "foreground",
+        "background"
       ]
     },
     {
@@ -736,7 +737,7 @@
     {
       "title": "TPM Device Test",
       "description": "Write an app that can authenticate to Azure while protecting the security-sensitive information on the device",
-      "link": "samples/TPMDeviceTest.htm",
+      "link": "samples/TpmDeviceTest.htm",
       "link-text": "TPMDeviceTeset",
       "lang": "C#",
       "ranking": 0,
