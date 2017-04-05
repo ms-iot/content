@@ -734,6 +734,20 @@
       ]
     },
     {
+      "title": "TPM Device Test",
+      "description": "Write an app that can authenticate to Azure while protecting the security-sensitive information on the device",
+      "link": "samples/TPMDeviceTest.htm",
+      "link-text": "TPMDeviceTeset",
+      "lang": "C#",
+      "ranking": 0,
+      "tags": [
+        "c#",
+        "beginner",
+        "azure",
+        "foreground"
+      ]
+    },
+    {
       "title": "Video Capture",
       "description": "Create an app that records video to file, plays video from file.",
       "link": "samples/VideoCapture.htm",
