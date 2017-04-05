@@ -287,6 +287,20 @@
         "node.js"
       ]
     },
+    {
+      "title": "Azure weather station",
+      "description": "Build a weather station application to demonstrate the capabilities of Power BI and Azure Active Directory",
+      "link": "samples/AzureWeatherStation.htm",
+      "link-text": "Weather station",
+      "lang": "C#",
+      "ranking": 0,
+      "tags": [
+        "c#",
+        "beginner",
+        "foreground",
+        "azure"
+      ]
+    },
      {
       "title": "BACnet adapter",
       "description": "Set up a BACnet adapter for Device System Bridge on Windows 10",
