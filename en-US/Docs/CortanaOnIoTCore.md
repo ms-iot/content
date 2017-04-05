@@ -163,7 +163,7 @@ If it's your very first time launching Cortana, it will ask for consent.
 ![Consent]({{site.baseurl}}/Resources/images/cortana/Consent2.png)
 
 If you deny consent at first and want to use Cortana later, you could go
-to Device Settings under Device Portal to turn on Cortana.
+to Device Settings in the IoTCoreDefaultApp to turn on Cortana.
 
 ![Enable KWS]({{site.baseurl}}/Resources/images/cortana/EnableKws.png)
 
@@ -184,8 +184,7 @@ question.
 
 ####  Sign out MSA
 
-If you want to sign out your MSA, please go to Device Settings under
-Device Portal, click ‘About Me’, then the account icon at the bottom to
+If you want to sign out your MSA, please go to Device Settings in the IoTCoreDefaultApp, click ‘About Me’, then the account icon at the bottom to
 sign out.
 
 ![MSA Sign out]({{site.baseurl}}/Resources/images/cortana/MSASignout.png)
