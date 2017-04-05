@@ -22,13 +22,13 @@ ___
 ## New major features
 ___ 
 * [Discovering Your Remote Devices ](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/discover-remote-devices) - No special software is needed to discover your devices that are signed in with your Microsoft Account.
-* [Cortana on Windows IoT Core]({{site.baseurl}}/{{page.lang}}/Docs/CortanaOnIoTCore) - Cortana is now avaliable on Windows 10 IoT Core. Ask Cortana a question.
+* [Cortana on Windows IoT Core]({{site.baseurl}}/{{page.lang}}/Docs/CortanaOnIoTCore) - Cortana is now available on Windows 10 IoT Core. Ask Cortana a question.
 * [Azure Device Management Support]({{site.baseurl}}/{{page.lang}}/Docs/AzureDM) - Device Management of Azure IoT hub using Windows 10 IoT Core. 
 * [Adafruit class library for Windows IoT Core](https://learn.adafruit.com/adafruit-class-library-for-windows-iot-core) - Adafruit Class Library is a special [library package](https://github.com/adafruit/AdafruitClassLibrary) containing Windows IoT Core driver software for a variety of Adafruit products.
 * [IoT and AI Insider Lab]({{site.baseurl}}/{{page.lang}}/Docs/InsiderLab) - Leverage Microsoft's IoT and AI Insider Lab to accelerate bringing your IoT products to market.
 * New UWP APIs And Controls for Vibration, Brightness, Modern Connected Standby, Power Management, Battery Charge  and NFC (w/o HCE). 
-* New busses and capabilities for ARM PCIe, USB Function Mode, WiFi Direct and  GPIO Interrupt counting API. 
-* New Embedded features on Reset/Recovery, On-Soc PWM and Automatic USB provisioning 
+* New busses and capabilities for ARM PCIe, USB Function Mode, Wi-Fi Direct and  GPIO Interrupt counting API. 
+* New Embedded features on Reset/Recovery, On-SOC PWM and Automatic USB provisioning 
 * A variety of new update policies have been added to Windows 10 IoT Core. 
 
 ## Getting started
