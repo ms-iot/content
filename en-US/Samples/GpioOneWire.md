@@ -50,7 +50,7 @@ Connect the components as shown in the following diagram:
 ### Running the Demo
 
  1. Clone the [ms-iot/samples git repository](https://github.com/ms-iot/samples/blob/develop/GpioOneWire)
-    and open GpioOneWire/GpioOneWire.vcxproj in Visual Studio 2015.
+    and open GpioOneWire/GpioOneWire.vcxproj in Visual Studio 2017.
  1. Right click on the project in the solution explorer, and click `Properties`.
  1. In the project properties dialog, select the `Debugging` tab.
  1. Enter the IP address of your device in the `Machine Name` field.

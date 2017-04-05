@@ -25,7 +25,7 @@ ___
 
 ### On the PC
 
-* Make sure you have installed Visual Studio 2015 Update 2 or higher version
+* Make sure you have installed Visual Studio 2017.
 * Install the [Windows Driver Kit](https://msdn.microsoft.com/windows/hardware/dn913721(v=vs.8.5).aspx).  You will need to install the SDK and WDK.
 * Install the certificates so that the driver is signed correctly and can run on your device. From an elevated command prompt execute the commands listed below:
     1.  `cd c:\Program Files (x86)\Windows Kits\10\Tools\bin\i386` 
@@ -128,10 +128,15 @@ When Installation completes, the device will reboot again, and the VS Output scr
 ## Known Issues
 ___
 
-### Provisioning Error
+### Provisioning Errors
 A race condition during the interaction with MinnowBoardMax can result in a reported failure during provisioning.  In fact, the provisioning most likely succeeded.
+
+**List of Errors:**
  
-**Workaround:** This error can almost certainly be ignored.
+* ERROR: Task "Registering WDTF" failed to complete successfully.
+* ERROR: Task "Configuring kernel debugger settings (possible reboot)" failed to complete successfully
+
+**Workaround:** These error can almost certainly be ignored.
 
 **Details:**
 
@@ -147,7 +152,7 @@ Registering TAEF Test Service
 Starting TAEF Test Service
     Task "Starting TAEF Test Service" completed successfully
 Registering WDTF
-    Task "Registering WDTF" completed successfully
+    Task "Registering WDTF" completed successfully 
 Configuring TAEF test service to start automatically
     Task "Configuring TAEF test service to start automatically" completed successfully
 Configuring kernel debugger settings (possible reboot)

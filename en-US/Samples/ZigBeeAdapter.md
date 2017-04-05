@@ -28,7 +28,7 @@ Acronyms:
 1. XBee ZigBee module from [Digi](http://www.digi.com){:target="_blank"}, e.g.: XB24CZ7PIT-004
 2. XBee Explorer USB dongle from [SparkFun](https://www.sparkfun.com/products/11697){:target="_blank"}
 3. [XCTU](http://www.digi.com/products/xbee-rf-solutions/xctu-software/xctu){:target="_blank"} tool from Digi
-4. Windows 10 desktop with Visual Studio 2015 and [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/Docs/AllJoyn){:target="_blank"} app.
+4. Windows 10 desktop with Visual Studio 2017 and [IoT Explorer for AllJoyn]({{site.baseurl}}/en-US/Docs/AllJoyn){:target="_blank"} app.
 5. [FTDI driver](http://www.ftdichip.com/Drivers/D2XX){:target="_blank"} for Windows 10 which is required by the XBee Explorer USB dongle.
 6. Some ZigBee devices like
  - [Philips Hue](http://www2.meethue.com/en-US){:target="_blank"} light bulb
@@ -48,7 +48,7 @@ IoT Explorer for AllJoyn and its documentation can be found [here]({{site.baseur
 4. Set up your Raspberry Pi2 (if you target that device)
 5. Deploy ZigBee adapter
 
->Note that in Windows 10, when a machine has **multiple AllJoyn modern applications** that **need to interact** on the same machine, the user must **add a loopback exemption** for these modern applications. Consequently, if you run both the ZigBee adapter and IoT Explorer for AllJoyn on the same machine you will need to add a loopback exemption for these 2 applications. This isn't needed for application you run from Visual Studio 2015. Note that when deploying an application from Visual Studio 2015, the loopback exemption is for the lifetime of the installed application. Meaning that you can launch the app directly (not from Visual Studio 2015) afterwards and it will have the loopback exemption.
+>Note that in Windows 10, when a machine has **multiple AllJoyn modern applications** that **need to interact** on the same machine, the user must **add a loopback exemption** for these modern applications. Consequently, if you run both the ZigBee adapter and IoT Explorer for AllJoyn on the same machine you will need to add a loopback exemption for these 2 applications. This isn't needed for application you run from Visual Studio 2017. Note that when deploying an application from Visual Studio 2017, the loopback exemption is for the lifetime of the installed application. Meaning that you can launch the app directly (not from Visual Studio 2017) afterwards and it will have the loopback exemption.
 
 Set up loopback exception: 
  1. Find the installation folder of the modern application for which you want to enable the loopback exemption. It is located at "C:\Users\\*username*\AppData\Local\Packages"

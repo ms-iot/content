@@ -18,10 +18,10 @@ connects to Azure IoT Hub.
 You can find instructions on how to prepare your device on the [Get Started Page]({{site.baseurl}}/{{page.lang}}/GetStarted) 
 Make sure you [provision the TPM of your device](ConnectDeviceToCloud)
 
-## Step 2: Install Visual Studio 2015 and tools
+## Step 2: Install Visual Studio 2017 and tools
 
 Install [Visual Studio
-2015](https://www.visualstudio.com/products/vs-2015-product-editions.aspx). You
+2017](https://go.microsoft.com/fwlink/?linkid=845271). You
 can install any edition of Visual Studio, including the free Community edition.
 
 Make sure to select the **Universal Windows App Development Tools**, the

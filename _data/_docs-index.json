@@ -11,6 +11,10 @@
             "title":"Supported boards and SoCs",
             "link":"/Explore/Deviceoptions.htm"
           },
+           {
+            "title":"Cortana on IoT",
+            "link":"/Docs/CortanaOnIoTCore.htm"
+          },
           {
             "title":"Glossary",
             "link":"/Docs/Glossary.htm"
@@ -92,6 +96,14 @@
             "link":"/Docs/BusProviders.htm"
           },
           {
+            "title":"Lightning Providers",
+            "link":"/Docs/LightningProviders.htm"
+          },
+          {
+            "title":"Lightning Performance",
+            "link":"/Docs/LightningPerformance.htm"
+          },
+          {
             "title":"Hardware compatibility list",
             "link":"/Docs/HardwareCompatList.htm"
           },
@@ -168,6 +180,10 @@
           {
             "title":"Connect your app to the cloud",
             "link":"/Docs/ConnectAppToCloud.htm"
+          },
+          {
+            "title":"Azure IoT Device Management",
+            "link":"/Docs/AzureDM.htm"
           }
         ]
       },
@@ -179,8 +195,8 @@
             "link":"/Docs/BuildingSecureDevices.htm"
           },
           {
-            "title": "Secure Boot and BitLocker",
-            "link":"/Docs/SecureBootAndBitLocker.htm"
+            "title": "Secure Boot, BitLocker & Device Guard",
+            "link":"/Docs/TurnkeySecurity.htm"
           },
           {
             "title":"TPM",
@@ -204,6 +220,10 @@
             "link":"/Docs/Bluetooth.htm"
           },
           {
+            "title":"Fiddler",
+            "link":"/Docs/Fiddler.htm"
+      	  },  
+          {
             "title":"mDNS",
             "link":"/Docs/ComingSoon.htm"
           },
@@ -225,8 +245,8 @@
         "parent":"Productization",
         "children":[
           {
-            "title":"Windows 10 IoT Core Pro",
-            "link":"/Docs/CreateIoTCorePro.htm"
+            "title":"Insider Lab",
+            "link":"/Docs/InsiderLab.htm"
           },
           {
             "title":"OEM license requirements",

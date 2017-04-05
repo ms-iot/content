@@ -112,11 +112,11 @@ Below is an image of our USB-to-TTL module connected to a USB port in our RPi2 o
 
 Now that our PC and RPi2, RPi3 or MBM are connected, let's setup and deploy the app. If you are not familiar with how to set the target device and target architecture in Visual Studio see [this section]({{site.baseurl}}/{{page.lang}}/Samples/HelloWorld.htm#deploy-the-app-to-your-windows-iot-core-device) for details.
 
-1. Download the Visual Studio 2015 [SerialSample source project](https://github.com/ms-iot/samples/tree/develop/SerialUART/){:target="_blank"}. 
+1. Download the Visual Studio 2017 [SerialSample source project](https://github.com/ms-iot/samples/tree/develop/SerialUART/){:target="_blank"}. 
 
 2. Make two separate copies of the app. We'll refer to them as the 'Device copy' and 'PC copy'.
 
-3. Open two instances of Visual Studio 2015 on your PC. We'll refer to these as 'Instance A' and 'Instance B'.
+3. Open two instances of Visual Studio 2017 on your PC. We'll refer to these as 'Instance A' and 'Instance B'.
 
 4. Open the Device copy of the SerialSample app in VS Instance A.
 
@@ -197,7 +197,7 @@ For accessing the serial port, you must add the **DeviceCapability** to the **Pa
 
 You can add this by opening the **Package.appxmanifest** file in an XML editor (Right Click on the file -> Open with -> XML (Text) Editor) and adding the capabilities as shown below:
 
-    Visual Studio 2015 has a known bug in the Manifest Designer (the visual editor for appxmanifest files) that affects the serialcommunication capability. If your appxmanifest adds the serialcommunication capability, modifying your appxmanifest with the designer will corrupt your appxmanifest (the Device xml child will be lost). You can workaround this problem by hand editing the appxmanifest by right-clicking your appxmanifest and selecting View Code from the context menu.
+    Visual Studio 2017 has a known bug in the Manifest Designer (the visual editor for appxmanifest files) that affects the serialcommunication capability. If your appxmanifest adds the serialcommunication capability, modifying your appxmanifest with the designer will corrupt your appxmanifest (the Device xml child will be lost). You can workaround this problem by hand editing the appxmanifest by right-clicking your appxmanifest and selecting View Code from the context menu.
 
 {% highlight xml %}
   <Capabilities>

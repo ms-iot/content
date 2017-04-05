@@ -21,12 +21,12 @@ Make sure your device is running and set up and you have Visual Studio installed
 
 You will need your device's IP address when connecting to it remotely.
 
-1.  Start Visual Studio 2015
+1.  Start Visual Studio 2017
 2.  Create a new project with **(File \| New Project...)**
 
-    In the **New Project** dialog, navigate to **Universal** as shown below (in the left pane in the dialog: Templates \| Visual C# \| Windows \| Universal).
+    In the **New Project** dialog, navigate to **Universal** as shown below (in the left pane in the dialog: Templates \| Visual C# \| Windows Universal).
 
-3.  Select the template **Blank App (Windows Universal)**
+3.  Select the template **Blank App (Universal Windows)**
 
     Note that we call the app CogntiveServicesExample. You can name it something different, but you will have to adjust sample code that references CognitiveServicesExample as well.
 
@@ -130,7 +130,6 @@ Open MainPage.xaml.cs. At the top of the , directly under the "using" statements
 using Windows.Graphics.Imaging;
 using Microsoft.ProjectOxford.Emotion;
 using Microsoft.ProjectOxford.Emotion.Contract;
-using Microsoft.ProjectOxford.Common.Contract;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using Windows.UI.Xaml.Media.Imaging;

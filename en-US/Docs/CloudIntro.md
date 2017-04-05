@@ -50,3 +50,10 @@ connected UWP IoT applications that connect to Azure IoT Hub.
 
 Continue reading about connecting your IoT Core device to Azure IoT Hub on the
 [connect device to cloud](ConnectDeviceToCloud) and [connect app to cloud](ConnectAppToCloud) pages.
+
+
+## Additional Resources
+___
+
+1.  [Cloud and Security Whitepaper]({{site.baseurl}}/Resources/documents/Windows10IoTCoreAzureConnectivityandSecurity.pdf)
+

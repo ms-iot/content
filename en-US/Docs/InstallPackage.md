@@ -66,13 +66,19 @@ Below is an example for specifying files and reg keys.
 
 ### Create an Appx package
 
-Use [appx2pkg.cmd tool](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/appx2pkg.cmd) to generate the .pkg.xml file for a given appx file. 
+Use [appx2pkg.cmd tool](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/appx2pkg.cmd) to generate the .pkg.xml file for a given appx file. This tool expects the appx dependencies in the sub directory named "dependencies" in the folder containing the appx file. 
 
-This tool expects the appx dependencies in the sub directory named "dependencies" in the folder containing the appx file. If you require the appx to be installed on the boot, you should also include OEMCustomisation.cmd file to invoke the AppInstall command as shown in [Appx Installation sample]({{site.baseurl}}/{{page.lang}}/Samples/AppInstaller.htm).
+You can also create the Appx component directly in the IoTCoreShell, using the following steps
+
+    > newappxpkg HelloWorld.appx fga Appx.HelloWorld
+    > buildpkg Appx.HelloWorld
+
+`fga` sets the appx as the foreground startup app, `bgt` sets the appx as the background task and `none` skips startup configuration.
+
+See [Appx.IoTCoreDefaultApp](https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Source-arm/Packages/Appx.IoTCoreDefaultApp/) as an example. 
 
 See also
 
-* [Sample Appx package](https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Source-arm/Packages/Appx.Main/Appx.Main.pkg.xml) 
 * [Lab 1b: Add an app to your image](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/iot/deploy-your-app-with-a-standard-board)
 
 

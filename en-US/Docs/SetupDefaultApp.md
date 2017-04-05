@@ -16,7 +16,7 @@ During development / experimental phases, you can change the default app by foll
 
 ### Using Windows Device Portal
 
-You can click on **Set as Default App** link next to the app.
+You can click on **Startup** column corresponding to the app.
 ![SetupDefaultAppWDP]({{site.baseurl}}/Resources/images/SetupDefaultApp/DefaultAppWDP.png)
 
 ### Using the shell
@@ -30,18 +30,14 @@ Steps to set the default app using the shell
 3. Note the appid for the application you want to make as default and set it using `iotstartup add headed <appid>`. For headless app, you should use `iotstartup add headless <appid>`.
 
 
-## Build time options
+## Build time option
 ___
-For large deployments, you can follow one of the below options
+For large deployments, you can achieve this using provisioning package
 
-### Using install script
-When you deploy your app using the update package, you can set the launchapp variable (`set launchapp=1`) in the AppxConfig.cmd.
-See [App Installer]({{site.baseurl}}/{{page.lang}}/Samples/AppInstaller) for more details.
-
-### Using provisioning package
-You can specify the LaunchAppAtLogin setting in the ICD during the provisioning package creation.
+You can specify the StartupApp/Default setting in the WCD during the provisioning package creation.
 ![SetupDefaultAppICD]({{site.baseurl}}/Resources/images/SetupDefaultApp/DefaultAppICD.png)
 
+See [Appx.IoTCoreDefaultApp](https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Source-arm/Packages/Appx.IoTCoreDefaultApp/customizations.xml) as an example. You can get the Application User Model ID (AUMID) of an appx using [GetAppxInfo tool](https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Tools/GetAppxInfo.exe).
 
 ## How to configure "Home" key
 ___

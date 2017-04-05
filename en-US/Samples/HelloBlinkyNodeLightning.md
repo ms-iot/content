@@ -14,7 +14,7 @@ and shares the same setup steps as well as most of the code. The key difference 
 
 ### Set up your PC
 * Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
-* Install Visual Studio 2015 Update 3.
+* Install Visual Studio 2017.
 * Install the latest Node.js Tools for Windows IoT from [here](http://aka.ms/ntvsiotlatest).
 * Download [nuget.exe](https://docs.nuget.org/consume/installing-nuget) to your machine and add its path the to 'Path' environment variable.
 
@@ -25,7 +25,7 @@ and shares the same setup steps as well as most of the code. The key difference 
 
 
 ### Create a new Node.js (Windows Universal) project
-Start Visual Studio 2015 and create a new project (File \| New Project...). In the `New Project` dialog, navigate to `Node.js` as shown below (in the left pane in the dialog: Templates \| JavaScript \| Node.js).
+Start Visual Studio 2017 and create a new project (File \| New Project...). In the `New Project` dialog, navigate to `Node.js` as shown below (in the left pane in the dialog: Templates \| JavaScript \| Node.js).
 Use the `Basic Node.js Web Server (Windows Universal)` template.
 
 When the project has been created, open up server.js and replace the existing code with the code shown below:

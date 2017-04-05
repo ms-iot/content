@@ -12,7 +12,7 @@ lang: en-US
 Remotely configure and manage any Windows 10 IoT Core device by using Windows PowerShell.
 PowerShell is a task-based command-line shell and scripting language, designed especially for system administration.
 
-Make sure to follow these steps to correctly configure your device running Windows 10 IoT Core to work well with Visual Studio 2015.
+Make sure to follow these steps to correctly configure your device running Windows 10 IoT Core to work well with Visual Studio 2017.
 
 ## Initiating a PowerShell session
 1. To start a PowerShell session with your Windows 10 IoT Core device, you'll first need to create a trust relationship between your host PC and your device. After starting your Windows IoT Core device, an IP address will be shown on the screen attached to the device.
@@ -84,7 +84,7 @@ Make sure to follow these steps to correctly configure your device running Windo
 
 ## Troubleshooting Visual Studio Remote Debugger
 ___
-To be able to deploy applications from Visual Studio 2015, you will need to make sure that the Visual Studio Remote Debugger is running on your Windows IoT Core device. The remote debugger should open automatically when you start your computer. To double check, use the `tlist` command to list all the running processes from PowerShell. There should be two instances of msvsmon.exe running on the device.
+To be able to deploy applications from Visual Studio 2017, you will need to make sure that the Visual Studio Remote Debugger is running on your Windows IoT Core device. The remote debugger should open automatically when you start your computer. To double check, use the `tlist` command to list all the running processes from PowerShell. There should be two instances of msvsmon.exe running on the device.
 
 It is possible for the Visual Studio Remote Debugger to time out after long periods of inactivity. If Visual Studio cannot connect to your Windows IoT Core device, try restarting the device.
 

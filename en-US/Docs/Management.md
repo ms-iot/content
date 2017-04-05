@@ -77,7 +77,7 @@ MDM enrollment of an IoT Core device is accomplished using a Provisioning packag
 
 9. For AuthPolicy choose between Username Password based authentication (OnPremises) or Certificate based authentication
 
-10. Enter the Discovery Service URL for your MDM server {% include note.html text="Enrollment Service URL and Policy Service URL are optional" %}
+10. Enter the Discovery Service URL for your MDM server (**Note:** Enrollment Service URL and Policy Service URL are optional)
 
 11. For the Secret enter  
     - OnPremises: The password for the account you're enrolling with  
@@ -86,8 +86,7 @@ MDM enrollment of an IoT Core device is accomplished using a Provisioning packag
 
 12. At the top of WICD window click **Export > Provisioning package**
 
-13. Provide a name and version for your package and click **Next**.   
-{% include note.html text="Be sure to increment the version number to ensure an updated package is executed" %}
+13. Provide a name and version for your package and click **Next**. (**Note:** Be sure to increment the version number to ensure an updated package is executed)
 
 14. Click **Next** on the **security details page**
 

@@ -243,6 +243,33 @@
       ]
     },
     {
+      "title": "App Service Blinky",
+      "description": "Sample app service that allows one background application to control an LED as an app service, and the other background application to blink the LED.",
+      "link": "samples/AppServiceBlinky.htm",
+      "link-text": "App Service Blinky",
+      "lang": "C#",
+      "ranking": 0,
+      "tags": [
+        "c#",
+        "background",
+        "beginner",
+        "gpio"
+      ]
+    },
+    {
+      "title": "App Service Shared Notepad",
+      "description": "Sample app service with 2 clients.  One client writes notepad messages.  The other client reads notepad messages and displays them.",
+      "link": "samples/AppServiceSharedNotepad.htm",
+      "link-text": "App Service Shared Notepad",
+      "lang": "C#",
+      "ranking": 0,
+      "tags": [
+        "c#",
+        "background",
+        "beginner"
+      ]
+    },
+    {
       "title": "Arduino Wiring libraries",
       "description": "Build Arduino Wiring libraries that can be called from other languages like C# and Node.js",
       "link": "samples/arduino-wiring/ArduinoWiringComponents.htm",

@@ -1,5 +1,5 @@
 <p>
-  The publicly available boards below are some of the same devices Microsoft uses as part of our operating system engineering efforts. We support an easy process for you to <a href="{{site.baseurl}}/{{page.lang}}/GetStarted">get started</a> with these devices right away. Learn more about the features of each device below, and check out the <a href="http://go.microsoft.com/fwlink/p/?linkID=532948">supported hardware peripherals</a> for each board to decide what device is right for you. If you don't see a device below that works to prototype or commercialize your idea, please check the Additional Devices or Community Devices.
+  The publicly available boards below are some of the same devices Microsoft uses as part of our operating system engineering efforts. These are also the devices Microsoft requires reported OS issues to reproduce on for engineering support. We provide an easy process for you to <a href="{{site.baseurl}}/{{page.lang}}/GetStarted">get started</a> with these devices right away. Learn more about the features of each device below, and check out the <a href="http://go.microsoft.com/fwlink/p/?linkID=532948">supported hardware peripherals</a> for each board to decide what device is right for you. If you don't see a device below that works to prototype or commercialize your idea, please check the Additional Devices or Community Devices.
 {% include note.html text="Hardware features listed below may not be fully supported in all configurations." %}</p>
 <table class="table table-striped maker-kit">
     <tr></tr>
@@ -22,7 +22,7 @@
     <tr>
       <td></td>
       <td><h4>Raspberry Pi 3</h4></td>
-      <td><h4>Raspberry Pi 2</h4></td>
+      <td><h4>Raspberry Pi 2<br>v1.1 boards and earlier</h4></td>
       <td><h4>MinnowBoard MAX</h4></td>
       <td><h4>DragonBoard 410c</h4></td>
     </tr>
@@ -114,6 +114,7 @@
         <p>1x Serial mini UART</p>
         <p>2x SPI bus</p>
         <p>1x I2C bus</p>
+        <p>1x Serial Mini UART</p>
         <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Set up your Raspberry Pi 3</a></p>
         <p><a href="https://www.element14.com/community/docs/DOC-76955/l/raspberry-pi-customization-service">Pi Customization Service</a></p>
       </td>

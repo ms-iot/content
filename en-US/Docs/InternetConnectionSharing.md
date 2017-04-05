@@ -18,7 +18,7 @@ See [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/Docs/deviceportal) (W
 The code sample below demonstrates how the [NetworkOperatorTetheringManager](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.networkoperators.networkoperatortetheringmanager.aspx){:target="_blank"} API is used to start sharing an Ethernet connection over Wi-Fi. The CreateFromConnectionProfile method accepts arguments that specifies the public and private interface. In any cases of misconfiguration, such as the Wi-Fi radio is turned off, or Ethernet has limited connectivity, then the attempt to start internet sharing conveys an appropriate error code pertaining to this scenario.
 
 
-{% highlight console %}
+{% highlight C# %}
 using Windows.Networking.NetworkOperators;
 using Windows.Networking.Connectivity; 
 

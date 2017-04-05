@@ -44,7 +44,7 @@ To do this, enter the following command in the PuTTY console, replacing `[new pa
     net user Administrator [new password]
     
 ### Configure your Windows IoT Core device
-* To be able to deploy applications from Visual Studio 2015, you will need to make sure the Visual Studio Remote Debugger is running on your Windows IoT Core device. The remote debugger should launch automatically at machine boot time. To double check, use the tlist command to list all the running processes from powershell. There should be two instances of msvsmon.exe running on the device.
+* To be able to deploy applications from Visual Studio 2017, you will need to make sure the Visual Studio Remote Debugger is running on your Windows IoT Core device. The remote debugger should launch automatically at machine boot time. To double check, use the tlist command to list all the running processes from powershell. There should be two instances of msvsmon.exe running on the device.
 
 * It is possible for the Visual Studio Remote Debugger to time out after long periods of inactivity. If Visual Studio cannot connect to your Windows IoT Core device, try rebooting the device.
 

@@ -23,11 +23,11 @@ Even if you download the sample, code, you'll need to follow the steps in **Comp
 
 * You will need your device's IP address when connecting to it remotely.
 
-* Make sure you have the C++ components for Visual Studio. To check, open the Start Menu, type in **Add or remove programs**. Hit enter and navigate to Visual Studio. Click **Modify** and check to make sure you have the below components selected. If not, select them and update your installation.
+* Make sure you have the C++ components for Visual Studio. To check, open the Start Menu, type in **Visual Studio Installer** and hit enter. Once the Visual Studio Installer opens, click **Modify** under your installed version of Visual Studio. Check to make sure you have the below components selected. If not, select them and update your installation.
 
     ![C++ Components]({{site.baseurl}}/Resources/images/opencv/get_cpp.png)
 
-1. Start Visual Studio 2015.
+1. Start Visual Studio 2017.
 2. Create a new project with **(File \| New Project...)**.
 
     In the **New Project** dialog, navigate to **Universal** as shown below (in the left pane in the dialog: Templates \| Visual C++ \| Windows \| Universal).
@@ -37,9 +37,8 @@ Even if you download the sample, code, you'll need to follow the steps in **Comp
     Note that we call the app OpenCVExample. You can name it something different, but you will have to adjust sample code that references OpenCVExample as well.
 
     ![App Template Location]({{site.baseurl}}/Resources/images/opencv/new_vcpp.PNG)
-    {% include note.html text="If this is the first project you create, Visual Studio will likely prompt you to enable <a href='https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx'>developer mode for Windows 10</a>." %}
 
-
+{% include note.html text="If this is the first project you create, Visual Studio will likely prompt you to enable <a href='https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx'>developer mode for Windows 10</a>." %}
 
 ## Compile the OpenCV Libraries
 ___

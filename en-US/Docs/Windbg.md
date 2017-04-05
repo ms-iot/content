@@ -107,12 +107,12 @@ The basic idea for making the correct serial connections is to remember that whi
 
 Using the active PowerShell connection, execute the following commands on the Raspberry Pi 2 or 3 device to enable debugging over the serial connection.
 
-* `bcdedit -dbgsettings serial` 
+* `bcdedit /store c:\EFIESP\EFI\Microsoft\Boot\BCD -dbgsettings serial` 
 
 	* The above command enables the serial connection for debugging
 	* The baud-rate for the Raspberry Pi 2 or 3 is hard-coded to 921600, so you don't have to specify it
 
-* `bcdedit -debug on`
+* `bcdedit /store c:\EFIESP\EFI\Microsoft\Boot\BCD -debug on`
 
 	* This command turns on debugging on the device 
 

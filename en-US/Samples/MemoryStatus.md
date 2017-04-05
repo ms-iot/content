@@ -163,25 +163,25 @@ int main(int argc, char **argv)
 
 * To start remote debugger on your device, open a Web Browser on your PC and point it to `http://<device name/IP address>:8080` to launch [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/Docs/tools/DevicePortal). In the credentials dialog, use the default username and password: `Administrator`, `p@ssw0rd`. Windows Device Management should launch and display the web management home screen.
 
-* Now navigate to the Debugging section of Windows Device Portal and click the Start button under Start Visual Studio Remote Debugger. 
+* Now navigate to the Debug settings section of Windows Device Portal and click the Start button under Start Visual Studio Remote Debugger. 
 
-    ![WindowsDevicePortalDebugSettings Target]({{site.baseurl}}/Resources/images/Console/device_portal_start_debugger.png)
+    ![WindowsDevicePortalDebugSettings Start remote debugger]({{site.baseurl}}/Resources/images/Console/device_portal_start_debugger.png)
 
 * This will show pop-up a message box and give you the connection information. 
 
 *  In Visual Studio, you can configure your target by editing your project's properties (be sure to make all of the highlighted changes as appropriate to your board's name or IP address):
 
-    ![RemoteMachineProjectSettings Target]({{site.baseurl}}/Resources/images/Console/console_project_settings.png)
+    ![ConsoleApplication Remote Machine Project Settings]({{site.baseurl}}/Resources/images/Console/console_project_settings.png)
 
         Note: You can use the IP address instead of the Windows IoT Core device name.
 
 * The project configuration needs to be modified to enable deployment.  To do this, open the Configuration Manager by selecting the Configuration manger from the Solution Configuration drop-down menu on the toolbar.
 
-    ![SolutionConfiguration Target]({{site.baseurl}}/Resources/images/Console/configuration_management.png)
+    ![ConsoleApplication SolutionConfiguration]({{site.baseurl}}/Resources/images/Console/configuration_management.png)
 
     From the Configuration Manager, ensure that the Deploy checkbox is selected for your project configuration (if this options is disabled, it is likely that the deployment options have not been fully entered into the Debugging tab of the project properties)
 
-    ![RemoteMachineProjectSettings Target]({{site.baseurl}}/Resources/images/Console/deploy_checkbox.png)
+    ![ConsoleApplication Remote Machine Project Settings]({{site.baseurl}}/Resources/images/Console/deploy_checkbox.png)
 
 * Now we're ready to deploy to the remote Windows IoT Core device. Simply press F5 (or select Debug \| Start Debugging) to start debugging our app. You can also use Build \| Deploy Solution to simply deploy your application without starting a debug session.
 
@@ -193,11 +193,16 @@ int main(int argc, char **argv)
 
 * You can now run the application as you would any other application.  Simply open a PowerShell/SSH connection (instructions can be found [here for powershell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell) and [here for SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH)) and enter the Remote Command you specified above.
 
-    ![ConsoleOutput Target]({{site.baseurl}}/Resources/images/Console/console_output.png)
+    ![ConsoleApplication Output]({{site.baseurl}}/Resources/images/Console/console_output.png)
 
-* Once you are done debugging Console Applications, remember to kill the remote debugger on the Windows IoT Core device. Use powershell/SSH to open a console session and run the following commnand
+* Once you are done debugging Console Applications, remember to stop the remote debugger on the Windows IoT Core device. You can do this by navigating to Debug settings section of Windows Device Portal and clicking on the Stop Remote Debugger button.
 
-    `kill msvsmon.exe`
+    ![WindowsDevicePortalDebugSettings Stop remote debugger]({{site.baseurl}}/Resources/images/Console/device_portal_stop_debugger.png)
+
+
+
+
+
 
 
 

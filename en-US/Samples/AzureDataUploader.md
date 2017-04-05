@@ -22,7 +22,7 @@ This sample shows how to send data from a light sensor (photoresistor) to an Azu
 
 ### Set up your PC
 * Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
-* Install Visual Studio 2015 Update 3.
+* Install Visual Studio 2017.
 * Install the latest Node.js Tools for Windows IoT from [here](http://aka.ms/ntvsiotlatest).
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 * Install Arduino software from [here](https://www.arduino.cc/en/Main/Software).
@@ -48,7 +48,7 @@ For this sample you will only need to get the connection string (see below) for 
 
 
 ### Create a new Johnny-Five (Universal Windows) project
-* Start Visual Studio 2015 and create a new project (File \| New Project...). In the `New Project` dialog, navigate to `Node.js` as shown below (in the left pane in the dialog: Templates \| JavaScript \| Node.js).
+* Start Visual Studio 2017 and create a new project (File \| New Project...). In the `New Project` dialog, navigate to `Node.js` as shown below (in the left pane in the dialog: Templates \| JavaScript \| Node.js).
   Select the `Basic Node.js Johnny-Five Application (Universal Windows)` template (shown below), enter a name for your project, then press OK.
 
   ![Node.js Johnny-Five Project Dialog]({{site.baseurl}}/Resources/images/Nodejs/nodejswuj5-newprojectdialog.png)
