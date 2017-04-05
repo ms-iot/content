@@ -164,6 +164,20 @@
       ]
     },
     {
+      "title": "'Hello, Cloud!'",
+      "description": "Create an app to talk to the Azure cloud using Azure IoT Hub",
+      "link": "samples/HelloCloud.htm",
+      "link-text": "HelloCloud",
+      "lang": "C#",
+      "ranking": 0,
+      "tags": [
+        "c#",
+        "beginner",
+        "azure",
+        "foreground"
+      ]
+    },
+    {
       "title": "AllJoyn.Js",
       "description": "Get AllJoyn.JS running as a Windows 10 application.",
       "link": "samples/AllJoynJS.htm",
