@@ -77,7 +77,7 @@ lang: en-US
                   <div class="col-xs-24 col-md-12">
                     <span style="display: inline-block; min-width: 100px;">{{cat.name}}</span>
                     {% for item in cat.tags %}
-                      <button id="{{item | downcase | replace: 'c++', 'cxx' | slugify }}" style="min-width: 0;" class="btn tagBtn active" data-toggle="button" aria-pressed="true" autocomplete="off" onclick="toggleTag('{{item | downcase | replace: 'c++', 'cxx' | slugify}}')">{{item}}</button>
+                      <button id="{{item | downcase | replace: 'c++', 'cxx' | slugify }}" style="min-width: 0; margin: 1px 1px 1px 0px;" class="btn tagBtn active" data-toggle="button" aria-pressed="true" autocomplete="off" onclick="toggleTag('{{item | downcase | replace: 'c++', 'cxx' | slugify}}')">{{item}}</button>
                     {% endfor %}
                   </div>
                 {% endfor %}
