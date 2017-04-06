@@ -27,7 +27,7 @@ The functionality is easy-to-use, and is included out-of-box on the latest Insid
 
 ## Setup
 ___
-To get started, you'll need to set up a Windows 10 IoT Core device with the latest Insider build of Windows 10 (OS Version 10.0.14295.1000) - visit the <a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Get Started</a> page to set up your board.
+To get started, you'll need to set up a Windows 10 IoT Core device with the latest Insider build of Windows 10 (OS Version 10.0.15063.1000) - visit the <a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Get Started</a> page to set up your board.
 
 Setup is quick and easy - follow the three steps below to use the remote display technology.
 
@@ -37,7 +37,7 @@ Setup is quick and easy - follow the three steps below to use the remote display
     For detailed instructions on how to get connected, see the [Get Started]({{site.baseurl}}/{{page.lang}}/GetStarted) page.
   
 	  Choose the page "Remote" from the options on the left, and mark the check box labeled "Enable Window IoT Remote Server".  Your device is now enabled for remote display experience.
-  <img alt="Enable remote display experience" src="{{site.baseurl}}/Resources/images/enable-remote.png">
+  <img alt="Enable remote display experience" src="{{site.baseurl}}/Resources/images/DevicePortal/enable-remote.png">
 
 2. Install the Windows IoT Remote Client on your companion Windows 10 device.
   
@@ -73,7 +73,7 @@ View this <a href="https://www.hackster.io/windows-iot/closed-loop-control-remot
 
 ## Compatibility and scope
 ___
-The remote display experience currently works on Raspberry Pi 2 and 3, Minnowboard Max, and Dragonboard.  These boards must be running the latest Insider build of Windows 10 IoT Core (OS Version 10.0.14295.1000).
+The remote display experience currently works on Raspberry Pi 2 and 3, Minnowboard Max, and Dragonboard.  These boards must be running the latest Insider build of Windows 10 IoT Core (OS Version 10.0.https://iottools.blob.core.windows.net/iotdashboardpreview/setup.exe .1000).
 The remote display and sensor capability is an "alpha" or "Insider" technology. It is still in an early state, but it serves as a useful tool for putting a display on any displayless device.
 <img alt="Compatible boards" src="{{site.baseurl}}/Resources/images/compatible-boards.png">
     

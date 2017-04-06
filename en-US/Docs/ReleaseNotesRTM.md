@@ -22,7 +22,6 @@ The privacy statement for this version of the Windows operating system can be vi
 
 ## What's New
 * Windows 10 IoT Core Public Release. Please visit [What's New]({{site.baseurl}}/{{page.lang}}/docs/WhatsNew) for detailed information
-   * Cortana on Windows IoT Core - Cortana is now available on Windows 10 IoT Core. Ask Cortana a question.
    * Additional Silicon Support
       * Verified support for Windows 10 IoT Core on Intel Joule, Intel Pentium N4200, Intel Celeron N3350, upcoming Atom x5-E39xx processors (formerly Apollo Lake) and Raspberry Pi 3 SOMs.
       * Toradex has enabled support for their Colibri T30 SOM using the NVIDIA Tegra 3. 
@@ -32,6 +31,7 @@ The privacy statement for this version of the Windows operating system can be vi
    * New busses and capabilities for ARM PCIe, USB function mode, Wi-Fi Direct and  GPIO interrupt counting API. 
    * New Embedded features on Reset/Recovery, On-SOC PWM and Automatic USB provisioning 
    * Improved Tools - VS Code, improved Node.js and Python support, New Windows Device Portal and IoT Dashboard features, VS 2017 support.
+   * Cortana on Windows IoT Core - Cortana is now available on Windows 10 IoT Core. Ask Cortana a question.
    * IoT Dashboard Improvements - New features and stability bug fixes
       * Windows Insider Preview builds for Raspberry Pi and Minnowboard 
       * Connecting device using Windows IoT Remote Client 

@@ -52,7 +52,7 @@ In **Windows 10 IoT Core Dashboard**, *Click* on the **Open in Device Portal** i
 <!-- This content is replicated at en-US/Docs/KitSetupRPI.md -->
 
 1. Enter **Administrator** for the username, and supply your password (p@ssw0rd by default)
-2. Click on **Networking** in the left-hand pane
+2. Click on **Network** in the left-hand pane
 3. Under **Available networks**, select network you would like to connect to and supply the connection credentials. Click **Connect** to initiate the connection
 
 ![Web Based WiFi Configuration]({{site.baseurl}}/Resources/images/SetupWiFi/WebBWiFiConfig.png)
