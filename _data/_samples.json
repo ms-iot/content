@@ -164,6 +164,21 @@
       ]
     },
     {
+      "title": "'Hello, Cloud!'",
+      "description": "Create an app to talk to the Azure cloud using Azure IoT Hub",
+      "link": "samples/HelloCloud.htm",
+      "link-text": "HelloCloud",
+      "lang": "C#",
+      "ranking": 0,
+      "tags": [
+        "c#",
+        "beginner",
+        "azure",
+        "foreground",
+        "background"
+      ]
+    },
+    {
       "title": "AllJoyn.Js",
       "description": "Get AllJoyn.JS running as a Windows 10 application.",
       "link": "samples/AllJoynJS.htm",
@@ -297,6 +312,20 @@
         "johnny-five",
         "azure",
         "node.js"
+      ]
+    },
+    {
+      "title": "Azure weather station",
+      "description": "Build a weather station application to demonstrate the capabilities of Power BI and Azure Active Directory",
+      "link": "samples/AzureWeatherStation.htm",
+      "link-text": "Weather station",
+      "lang": "C#",
+      "ranking": 0,
+      "tags": [
+        "c#",
+        "beginner",
+        "foreground",
+        "azure"
       ]
     },
      {
@@ -744,6 +773,20 @@
         "c++",
         "uart",
         "beginner"
+      ]
+    },
+    {
+      "title": "TPM Device Test",
+      "description": "Write an app that can authenticate to Azure while protecting the security-sensitive information on the device",
+      "link": "samples/TpmDeviceTest.htm",
+      "link-text": "TPMDeviceTeset",
+      "lang": "C#",
+      "ranking": 0,
+      "tags": [
+        "c#",
+        "beginner",
+        "azure",
+        "foreground"
       ]
     },
     {
