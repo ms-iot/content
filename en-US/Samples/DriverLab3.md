@@ -12,11 +12,7 @@ This section demonstrates how to manually copy and install the driver to a Windo
 * We will first use the **Server Message Block (SMB)** protocol via a **File Explorer** window to transfer files from the development PC to the target Windwos 10 IoT Core device.  
 * We will then use PowerShell to run a few **devcon.exe** commands to install the driver.
 
-<br/>
-
 You can also deploy a driver using Visual Studio during driver development by following the instructions on [this page]({{site.baseurl}}/{{page.lang}}/Docs/DriverDeployment)
-
-<br/>
 
 ## Transferring Driver Files Using SMB 
 
@@ -54,8 +50,6 @@ You can also deploy a driver using Visual Studio during driver development by fo
 
 The next steps involve connecting to the target device using PowerShell as explained [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell).  Make sure you have an active PowerShell connection to your Windows 10 IoT Core device.
 
-<br/>
-
 ## Installing the sample driver
 
 * Connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell).
@@ -68,8 +62,6 @@ The next steps involve connecting to the target device using PowerShell as expla
 
         [192.168.0.243]: PS C:\Windows\System32> devcon.exe dp_add gpiokmdfdemo.inf 
 
-<br/>
-
 ## Reboot The Windows IoT Core device
 
 From the PowerShell window, type the following command:
@@ -77,8 +69,6 @@ From the PowerShell window, type the following command:
     [192.168.0.243]: PS C:\> shutdown /r /t 0
 
 The target device will reboot.  After the reboot, make sure PowerShell is still connected to it, otherwise, re-connect to the target device using the PowerShell `enter-pssession` command as described [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell).
-
-<br/>
 
 ## Check The Status Of The Sample Driver
 
@@ -92,8 +82,6 @@ You should see the following output:
         Name: GPIO KMDF Demo Device
         Driver is running.
     1 matching device(s) found.
-
-<br/>
 
 ## Toggle The GPIOs
 
