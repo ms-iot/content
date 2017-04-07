@@ -27,7 +27,7 @@ The functionality is easy-to-use, and is included out-of-box on the latest Insid
 
 ## Setup
 ___
-To get started, you'll need to set up a Windows 10 IoT Core device with the latest Insider build of Windows 10 (OS Version 15063) - visit the <a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Get Started</a> page to set up your board.
+To get started, you'll need to set up a Windows 10 IoT Core device with the latest build of Windows 10 (Creators Update) - visit the <a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Get Started</a> page to set up your board.
 
 Setup is quick and easy - follow the three steps below to use the remote display technology.
 
@@ -73,7 +73,7 @@ View this <a href="https://www.hackster.io/windows-iot/closed-loop-control-remot
 
 ## Compatibility and scope
 ___
-The remote display experience currently works on Raspberry Pi 2 and 3, Minnowboard Max, and Dragonboard.  These boards must be running the latest Insider build of Windows 10 IoT Core (OS Version 15063).
+The remote display experience currently works on Raspberry Pi 2 and 3, Minnowboard Max, and Dragonboard.  These boards must be running the latest build of Windows 10 IoT Core (Creators Update).
 The remote display and sensor capability is an "alpha" or "Insider" technology. It is still in an early state, but it serves as a useful tool for putting a display on any displayless device.
 <img alt="Compatible boards" src="{{site.baseurl}}/Resources/images/compatible-boards.png">
     
