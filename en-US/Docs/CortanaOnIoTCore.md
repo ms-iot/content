@@ -403,24 +403,7 @@ Cortana to do more.
 -   To wake-up Cortana the user says “Hey, Cortana.” Keyword Spotting (KWS) runs locally to receive the voice input and complete the analysis. The audio is only sent to the cloud once the keyword is spotted. User consent is needed before enabling KWS. The KWS is optimized by the Windows Speech Platform and supports multiple
     languages and regions.
 
--   Will support the following [regions and languages](https://support.microsoft.com/en-us/instantanswers/557b5e0e-0eb0-44db-87d6-5e5db6f9c5b0/cortana-s-regions-and-languages) (14 total).
-  
-|Language/Locale||KWS |
-|------|-----|----|
-| EN-US ||Hey Cortana|
-| EN-GB || Hey Cortana|
-| EN-AU || Hey Cortana|  
-| EN-CA || Hey Cortana|
-| EN-IN || Hey Cortana|
-| ZH-CN || 你好小娜 (ni hao xiao na)|  
-| FR-FR || Hey Cortana|
-| FR-CA || Hé Cortana|
-| IT-IT || Ehi Cortana|  
-| DE-DE || Hey Cortana|  
-| ES-ES || Hola Cortana|
-| ES-MX || Hola Cortana|
-| PT-BR || Ei Cortana| 
-| JA-JP || コルタナさん (Korutana-san)|
+-   Will support en-US only.
 
 Cortana Extensibility
 =====================

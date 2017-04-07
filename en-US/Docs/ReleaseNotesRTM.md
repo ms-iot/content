@@ -22,7 +22,7 @@ The privacy statement for this version of the Windows operating system can be vi
 
 ## What's New
 * Windows 10 IoT Core Public Release. Please visit [What's New]({{site.baseurl}}/{{page.lang}}/docs/WhatsNew) for detailed information
-   * Cortana on Windows IoT Core - Cortana is now available on Windows 10 IoT Core. Ask Cortana a question.
+   * Azure Device Management Support - OEMs can use the Windows IoT Azure DM client library to add device management capabilities to their Azure IoT hub connected devices.
    * Additional Silicon Support
       * Verified support for Windows 10 IoT Core on Intel Joule, Intel Pentium N4200, Intel Celeron N3350, upcoming Atom x5-E39xx processors (formerly Apollo Lake) and Raspberry Pi 3 SOMs.
       * Toradex has enabled support for their Colibri T30 SOM using the NVIDIA Tegra 3. 
@@ -32,13 +32,13 @@ The privacy statement for this version of the Windows operating system can be vi
    * New busses and capabilities for ARM PCIe, USB function mode, Wi-Fi Direct and  GPIO interrupt counting API. 
    * New Embedded features on Reset/Recovery, On-SOC PWM and Automatic USB provisioning 
    * Improved Tools - VS Code, improved Node.js and Python support, New Windows Device Portal and IoT Dashboard features, VS 2017 support.
+   * Cortana on Windows IoT Core - Cortana is now available on Windows 10 IoT Core. Ask Cortana a question.
    * IoT Dashboard Improvements - New features and stability bug fixes
       * Windows Insider Preview builds for Raspberry Pi and Minnowboard 
       * Connecting device using Windows IoT Remote Client 
       * Ipv6 addresses in discovering devices 
       * Uploading device logs while submitting feedback
    *  New high precision GPIO APIs -  New APIs (Windows.Devices.Gpio.GpioInterruptBuffer) for precise and efficient measurement of pulse widths using GPIO interrupts.  GPIO providers include new Interrupt Buffer interface to allow for high precision interrupt timing for applications like rotary encoders and distance measuring devices
-   * Azure Device Management Support - OEMs can use the Windows IoT Azure DM client library to add device management capabilities to their Azure IoT hub connected devices.
    * Device Guard for IoT - Device builders can now fully lock down IoT devices and get advanced malware protection against new and unknown malware variants.  This can be done by specifying signing authorities for permissible applications and drivers that run on the device while disallowing execution of unknown or untrusted code.  This means improved security against malware and zero day attacks. 
    * Other updates include: 
       * Improved Update Support 
@@ -149,12 +149,6 @@ Setting the orientation to “Portrait” may not be honored in a Universal App�
  
 #### Referencing Adapters with AllJoyn Templates 
 Attempting to add references to AllJoyn adapter projects may result in errors when using specific SDK versions.  To resolve these errors, change Visual Studio’s target platform to match the current SDK version, then reload the project. 
- 
-#### Wi-Fi Direct limitations on IoT Core 
- * The IoT Core device must be the connecting device – it will not work as the advertising device with another device initiating the connection.   
- * Advanced pairing must be used.  The sample app demonstrates how to use the advanced pairing API’s to pair the devices prior to connecting. 
- * Not all wireless adapters support Wi-Fi Direct. We have tested and validated that the “Realtek RTL8188EU Wireless Lan 802.11n USB 2.0 Network adapter” works, but other adapters may not be supported. 
-
 
 #### Non-default drive mode  
 On Raspberry Pi and Dragonboard, switching from a non-default drive mode to a different non-default drive mode may produce a glitch on the GPIO pin. WORKAROUND: Set drive mode once at the beginning of the application. 
