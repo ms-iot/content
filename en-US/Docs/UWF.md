@@ -12,7 +12,7 @@ The Unified Write Filter (UWF) is a feature to protect physical storage media fr
 
 Read [Unified Write Filter](https://msdn.microsoft.com/windows/hardware/mt572001) for more information.
 
-If you do not have IoT Core Kits yet, Download and install [IoT Core Kits](https://www.microsoft.com/en-us/download/details.aspx?id=53898).
+If you do not have IoT Core Kits yet, Download and install [IoT Core Kits](https://www.microsoft.com/en-us/download/details.aspx?id=55031).
 
 ## How to Install UWF on a device running Windows 10 IoT Core
 ___
