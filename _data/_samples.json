@@ -423,14 +423,14 @@
     {
       "title": "Device I/O controller",
       "description": "Use <code>CreateFile()</code> and <code>DeviceIoControl()</code> to access custom devices from UWP.",
-      "link": "samples/DeviceIoController.htm",
+      "link": "samples/CustomDeviceAccessor.htm",
       "link-text": "Learn More",
       "lang": "C++",
       "ranking": 10,
       "tags": [
+        "driver",
         "c++",
-        "advanced",
-        "driver"
+        "advanced"
       ]
     },
     {
@@ -454,8 +454,8 @@
       "lang": "C++",
       "ranking": 20,
       "tags": [
+        "driver",        
         "advanced",
-        "driver",
         "c++"
       ]
     },
@@ -1009,9 +1009,9 @@
       "lang": "C++",
       "ranking": 10,
       "tags": [
+        "driver",
         "c++",
-        "advanced",
-        "driver"
+        "advanced"
       ]
     },
     {
@@ -1022,9 +1022,9 @@
       "lang": "C#",
       "ranking": 10,
       "tags": [
+        "driver",        
         "c#",
-        "advanced",
-        "driver"
+        "advanced"
       ]
     },
     {
