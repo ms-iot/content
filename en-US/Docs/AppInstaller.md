@@ -16,7 +16,7 @@ To install your application on the device please do the following:
 
 1. Open the [Windows Device Portal](https://developer.microsoft.com/en-us/windows/iot/docs/deviceportal) for your IoT device.
 
-2. In the <strong>Apps</strong> menu add your UWP App Package , Certificate(s) and Dependency App Packages(s).
+2. In the <strong>Apps</strong> menu add your UWP App Package, Certificate(s) and Dependency App Packages(s).
  ![Install App]({{site.baseurl}}/Resources/images/AppInstaller/InstallApp.png)
 
 3. Deploy the app.
