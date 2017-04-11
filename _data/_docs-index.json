@@ -137,6 +137,10 @@
             "link":"/Docs/SetupDefaultApp.htm"
           },
           {
+            "title":"App Installer",
+            "link":"/Docs/AppInstaller.htm"
+          },
+          {
             "title":"WinDbg",
             "link":"/Docs/Windbg.htm"
           },
