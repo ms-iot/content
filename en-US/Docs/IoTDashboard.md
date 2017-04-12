@@ -66,7 +66,7 @@ To find your device, go to **My Devices**. If your device is not listed, try reb
 
 
 ### Connect to your device
-Right click and select **Open in Device Portal**. This will launch the [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/Docs/Tools/DevicePortal) page and is the best way to interact and manage your device.
+Right click and select **Open in Device Portal**. This will launch the [Windows Device Portal]({{site.baseurl}}/{{page.lang}}/Docs/DevicePortal) page and is the best way to interact and manage your device.
 
 ![IoTDashboard View Devices]({{site.baseurl}}/Resources/images/IoTDashboard/IoTDashboard_RightClickMenu.PNG)
 
