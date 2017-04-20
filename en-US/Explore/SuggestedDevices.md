@@ -29,7 +29,8 @@
     <tr>
       <td>SoC</td>
       <td>Broadcom BCM2837</td>
-      <td>Broadcom BCM2836</td>      <td><a href="http://ark.intel.com/products/78474/Intel-Atom-Processor-E3825-1M-Cache-1_33-GHz">Intel Atom Processor E3825</a></td>
+      <td>Broadcom BCM2836</td>
+      <td><a href="http://ark.intel.com/products/78474/Intel-Atom-Processor-E3825-1M-Cache-1_33-GHz">Intel Atom Processor E3825</a></td>
       <td><a href="https://www.qualcomm.com/products/snapdragon/processors/410">Qualcomm Snapdragon 410</a></td>
     </tr>
     <tr>
@@ -139,7 +140,7 @@
         <p>2x Serial UARTs</p>
         <p>1x SPI bus</p>
         <p>2x I2C bus</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/Docs/GetStarted/dragonboard/GetStartedStep1.htm">Set up your DragonBoard 410c</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/Docs/GetStarted/dragonboard/stable/GetStartedStep1.htm">Set up your DragonBoard 410c</a></p>
         <p><a href="https://developer.qualcomm.com/hardware/snapdragon-410">Other device options</a></p>
       </td>
     </tr>
