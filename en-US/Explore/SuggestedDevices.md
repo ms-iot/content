@@ -116,7 +116,7 @@
         <p>2x SPI bus</p>
         <p>1x I2C bus</p>
         <p>1x Serial Mini UART</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Set up your Raspberry Pi 3</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/Docs/GetStarted/rpi3/sdcard/stable/GetStartedStep1.htm">Set up your Raspberry Pi 3</a></p>
         <p><a href="https://www.element14.com/community/docs/DOC-76955/l/raspberry-pi-customization-service">Pi Customization Service</a></p>
       </td>
       <td>
@@ -124,7 +124,7 @@
         <p>1x Serial UART</p>
         <p>2x SPI bus</p>
         <p>1x I2C bus</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Set up your Raspberry Pi 2</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/Docs/GetStarted/rpi2/sdcard/stable/GetStartedStep1.htm">Set up your Raspberry Pi 2</a></p>
         <p><a href="https://www.element14.com/community/docs/DOC-76955/l/raspberry-pi-customization-service">Pi Customization Service</a></p>
       </td>
       <td>
@@ -132,7 +132,7 @@
         <p>2x Serial UARTs</p>
         <p>1x SPI bus</p>
         <p>1x I2C bus</p>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/GetStarted">Set up your MinnowBoard MAX</a></p>
+        <p><a href="{{site.baseurl}}/{{page.lang}}/Docs/GetStarted/mbm/sdcard/stable/GetStartedStep1.htm">Set up your MinnowBoard MAX</a></p>
         <p><a href="http://iotsolutionsalliance.intel.com/solutions-directory/processors_list/782">Other device options</a></p>
       </td>
       <td>
