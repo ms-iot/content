@@ -15,7 +15,7 @@ Arduino Wiring projects utilize the familiar, easy to use Arduino Wiring API wit
 
 We've provided a Visual Studio extension which will automatically install a VS template for the Arduino Wiring projects as well as other Microsoft IoT project types. 
 
-- Head over to [Windows IoT Core Project Templates extension page](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec) to download the extension from the Visual Studio Gallery!
+- Head over to [Windows IoT Core Project Templates extension page](https://go.microsoft.com/fwlink/?linkid=847472) to download the extension from the Visual Studio Gallery!
 - Install the extension and restart Visual Studio if it was already open
 
 ## Change the Default Controller Driver
