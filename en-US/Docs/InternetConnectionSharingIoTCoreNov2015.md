@@ -130,7 +130,7 @@ ECHO e.g. %0 start 1 2 "Ethernet"
 This script will do everything but start/stop SharedAccess service, and does not send service command. For those tasks it calls to SharedAccessUtility.exe, which needs to be created.
 
 #### Build the SharedAccessUtility application
-In Visual Studio with [Windows IoT Core Project Templates extensions](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec){:target="_blank"} installed, create a new “Blank Windows IoT Core Console Application” Visual C++ project, named **SharedAccessUtility**.
+In Visual Studio with [Windows IoT Core Project Templates extensions](https://go.microsoft.com/fwlink/?linkid=847472){:target="_blank"} installed, create a new “Blank Windows IoT Core Console Application” Visual C++ project, named **SharedAccessUtility**.
 
 ![VS new project]({{site.baseurl}}/Resources/images/InternetConnectionSharing/internetconnectionsharing_vs.png)
 

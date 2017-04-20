@@ -111,7 +111,7 @@ The pre-defined pin names can be found in [`pins_arduino.h'](https://github.com/
 
 **Cause**: The Windows IoT Project Templates extension for Visual Studio is not installed.
 
-**Solution**: You must install the Visual Studio Extension for Windows IoT Project Templates before you can create Arduino Wiring projects in Visual Studio. Head over to [Windows IoT Core Project Templates extension page](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec){:target="_blank"} to download the extension from the Visual Studio Gallery!
+**Solution**: You must install the Visual Studio Extension for Windows IoT Project Templates before you can create Arduino Wiring projects in Visual Studio. Head over to [Windows IoT Core Project Templates extension page](https://go.microsoft.com/fwlink/?linkid=847472){:target="_blank"} to download the extension from the Visual Studio Gallery!
 
 <a name="prob_hardwareserial"></a>
 
@@ -360,7 +360,7 @@ Note, you do NOT need to attach any peripheral to your serial pins such as an FT
 
 ![Debugger Output]({{site.baseurl}}/Resources/images/arduino_wiring/debugger_output.png)
 
-The project templates have been updated on the [Windows IoT Core Project Templates extension page](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec){:target="_blank"} to enable using Hardware `Serial` out of the box. However, if your Arduino Wiring application has already been created using an older project template version, you'll need to 1) <a href="#sdk_upgrade">Upgrade your project to the latest Lightning SDK, v1.1.0 or later,</a> and 2) add the required <a href="#serial_comm_device_caps">Hardware Serial device capability</a> to your AppxManifest to be able to use `Serial`.
+The project templates have been updated on the [Windows IoT Core Project Templates extension page](https://go.microsoft.com/fwlink/?linkid=847472){:target="_blank"} to enable using Hardware `Serial` out of the box. However, if your Arduino Wiring application has already been created using an older project template version, you'll need to 1) <a href="#sdk_upgrade">Upgrade your project to the latest Lightning SDK, v1.1.0 or later,</a> and 2) add the required <a href="#serial_comm_device_caps">Hardware Serial device capability</a> to your AppxManifest to be able to use `Serial`.
 
 <a name="serial_comm_device_caps"></a>
 
