@@ -29,7 +29,8 @@
     <tr>
       <td>SoC</td>
       <td>Broadcom BCM2837</td>
-      <td>Broadcom BCM2836</td>      <td><a href="http://ark.intel.com/products/78474/Intel-Atom-Processor-E3825-1M-Cache-1_33-GHz">Intel Atom Processor E3825</a></td>
+      <td>Broadcom BCM2836</td>
+      <td><a href="http://ark.intel.com/products/78474/Intel-Atom-Processor-E3825-1M-Cache-1_33-GHz">Intel Atom Processor E3825</a></td>
       <td><a href="https://www.qualcomm.com/products/snapdragon/processors/410">Qualcomm Snapdragon 410</a></td>
     </tr>
     <tr>
