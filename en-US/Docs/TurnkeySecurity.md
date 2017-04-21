@@ -79,7 +79,7 @@ Windows 10 IoT Core works with [several leading SoCs][6] that are utilized in hu
   
 [6]: {{site.baseurl}}/{{page.lang}}/explore/SoC "Windows 10 IoT SOCs"
 [7]: {{site.baseurl}}/{{page.lang}}/explore/deviceoptions "Windows 10 IoT Core Devices"
-[8]: {{site.baseurl}}/{{page.lang}}/Docs/GetStarted/dragonboard/GetStartedStep1.htm "Setup DragonBoard 410c" 
+[8]: {{site.baseurl}}/{{page.lang}}/Docs/GetStarted/dragonboard/stable/GetStartedStep1.htm "Setup DragonBoard 410c" 
 [9]: https://firmware.intel.com/projects/minnowboard-max "MinnowBoard MAX firmware"
 
 
