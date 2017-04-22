@@ -49,13 +49,11 @@ To facilitate easy enablement of key secrutiy features on IoT Core devices, Micr
 ### Pre-requisites:
 * A PC running Windows 10 Enterprise
 * [Windows 10 SDK][3] - Required for Certificate Generation 
-* [Windows 8.1 SDK][4] - Required for Signing
-* [Windows 10 ADK][5] - Required for CAB generation
+* [Windows 10 ADK][4] - Required for CAB generation
 * Reference platform - release hardware with shipping firmware, OS, drivers and applications will be required for final lockdown
 
 [3]: https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk "Windows 10 SDK"
-[4]: https://developer.microsoft.com/en-us/windows/downloads/windows-8-1-sdk "Windows 8.1 SDK"
-[5]: https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit "Windows 10 ADK"
+[4]: https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit "Windows 10 ADK"
 
 
 ### Development IoT Devices 
