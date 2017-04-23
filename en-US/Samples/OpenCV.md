@@ -345,7 +345,7 @@ void OpenCVExample::MainPage::detectFeaturesButton_Click(Platform::Object^ sende
     std::vector<cv::Rect> faces;
     std::vector<cv::Rect> bodies;
     // run object detection
-    InternalDetectObjects(frame, faces, bodies);
+    InternalDetectObjects(frame, faces, bodies, face_cascade, body_cascade);
     // draw red rectangles around detected faces
     for (unsigned int i = 0; i < faces.size(); i++)
     {
