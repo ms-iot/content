@@ -112,15 +112,15 @@ First, download the [DeviceLockDown Script][10] package, which contains all of t
 Once the packages are generated, they can be installed with the final image creation process.  Visit the [IoT Commercialization][12] page to learn how to add packages to an IoT image. For testing and validation efforts, install the generated packages by doing the following:
 1. Copy the .cab files to the device under a directory e.g. c:\OemInstall
   * OEM.Custom.Cmd.cab
-  * OEM.DeviceGuard.BitLocker.cab
-  * OEM.DeviceGuard.SecureBoot.cab
-  * OEM.DeviceGuard.SIPolicy.cab
+  * OEM.Security.BitLocker.cab
+  * OEM.Security.SecureBoot.cab
+  * OEM.Security.DeviceGuard.cab
 2. Connect to the device ([using SSH][13] or using [Powershell][14] )
 3. Initiate staging of the generated packages by issueing the following commands:
   * `applyupdate -stage c:\OemInstall\OEM.Custom.Cmd.cab`
-  * `applyupdate -stage c:\OemInstall\OEM.DeviceGuard.BitLocker.cab`
-  * `applyupdate -stage c:\OemInstall\OEM.DeviceGuard.SecureBoot.cab`
-  * `applyupdate -stage c:\OemInstall\OEM.DeviceGuard.SIPolicy.cab`
+  * `applyupdate -stage c:\OemInstall\OEM.Security.BitLocker.cab`
+  * `applyupdate -stage c:\OemInstall\OEM.Security.SecureBoot.cab`
+  * `applyupdate -stage c:\OemInstall\OEM.Security.DeviceGuard.cab`
 4. Finally, commit the packages via: 
   * `applyupdate -commit`
 
