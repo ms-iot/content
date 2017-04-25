@@ -46,7 +46,7 @@
     <p><img src="{{site.baseurl}}/Resources/images/remote-wiring/compile_00.png" /></p>
   </li>
   <li>
-    <p>We need to add three projects - <b>Microsoft.Maker.Firmata</b>, <b>Microsoft.Maker.RemoteWiring</b>, and <b>Microsoft.Maker.Serial</b> - to the project solution.  Let's start with the Serial project (Microsoft.Maker.Serial). Open this directory.</p>
+    <p>We need to add three projects - <b>Microsoft.Maker.Firmata</b>, <b>Microsoft.Maker.RemoteWiring</b>, and <b>Microsoft.Maker.Serial</b> - to the project solution.  Let's start with the Serial project (Microsoft.Maker.Serial). Open the <b>source\Serial\Microsoft.Maker.Serial.win10</b> folder and add Microsoft Microsoft.Maker.Serial.vcxproj to the solution.</p>
     <p><img src="{{site.baseurl}}/Resources/images/remote-wiring/project_01.png" /></p>
   </li>
   <li>
