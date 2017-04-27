@@ -53,29 +53,18 @@ needs to be compiled in order to apply it to your Raspberry PI.
 
   
 ## Configure the NFC Service to start automatically
-In order to minimize the number of resources used by IoT Core, the NFC Service does not start by default. 
+In order to minimize the number of resources used by IoT Core, the NFC Service does not start by default. To make it start automatically, use [SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH) to connect to the device and then
 
-  1. Use [SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH) or [Powershell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell) to connect to your device. 
-  1. Run the command ```sc config SEMgrSvc start=auto``` to set this service to autostart on boot.
-  1. Run the command ```sc start SEMgrSvc``` to start it for this session
+  1. Run ```sc config SEMgrSvc start=auto``` to set this service to autostart on boot.
+  1. Run ```sc start SEMgrSvc``` to start it for this session.
+  
+If you prefer [Powershell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell) to connect to your device, run the following commands in PowerShell.
+
+  1. ```Set-Service SEMgrSvc -StartupType "Automatic"``` to set this service to autostart on boot.
+  1. ```Start-Service SEMgrSvc``` to start it for this session. 
   
 ## Running the NFC Sample
 
    1. In the Samples folder you downloaded from Github, open NFCForIoT.sln.
    1. Build and deploy the application to your Raspberry Pi.
    1. Use the NTAG21x of your choice to see information about it and optionally configure it.
-   
-
-
-
- 
-
- 
-    
-  
-
-
-
-
-
-  
