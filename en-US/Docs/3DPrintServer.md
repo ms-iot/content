@@ -25,6 +25,10 @@ Before you start, you will need:
     * Ultimaker Original and Original+
     * Ultimaker 2 and 2+
     * Ultimaker 2 Extended and Extended+
+    * CraftBot 2
+    * CraftBot PLUS
+    * LulzBot Mini
+    * Velleman K8200
 
 ## 2. Connect your 3D Printer to your device
 ___
