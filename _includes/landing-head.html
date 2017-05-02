@@ -1,0 +1,47 @@
+<head>{% capture page_lang_lower %}{{page.lang | downcase}}{% endcapture %}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{{page.title}} | {{ site.data.resources[page_lang_lower].title-suffix | default: site.data.resources["en-us"].title-suffix }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{ page.description | default: site.data.resources[page_lang_lower].description | default: site.data.resources['en-us'].description }}" />
+    <meta name="keywords" content="{{ page.keywords | default: site.data.resources[page_lang_lower].keywords | default: site.data.resources['en-us'].keywords }}" />
+    <meta name="search.product" content="{{ page.search_product }}" />
+
+    <link id="linkBaseUrl" href="{{site.baseurl}}" />
+
+    <link rel="icon" type="image/png" href="{{site.url}}/favicon.png" />
+    <!--[if IE]><link rel="shortcut icon" href="{{site.url}}/favicon.ico"/><![endif]-->
+
+    
+    <!-- Bootstrap core CSS -->
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/bootstrap/3.3.0/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://assets.onestore.ms/cdnfiles/external/mwf/long/v1/v1.20.0/css/mwf-west-european-default.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://c.s-microsoft.com/en-us/CMSStyles/style.csx?k=8d9b793a-3c1f-a5b0-7bf9-5948a76bffcb_e11916d7-4291-1cef-887f-44c4421ff236_df67bad0-31b4-889f-806a-1f095597a73d_94ac7fad-dd8d-7c5a-9dde-9d049d063240_15c9fedd-cbfb-dec4-910c-4b5f562210bc_a9c38724-89d4-cdd6-62e2-884befe24160_a8f32f3b-6c1c-9490-19d4-1567847c8c1a_a1a81813-8516-3263-7270-c010c1829b5d_4a0a2cb2-d3a9-5b7a-ff24-018069ccd4ba" />
+ 
+  <link rel="stylesheet" type="text/css" href="https://assets.onestore.ms/cdnfiles/external/webcore/4.13.1/stylesheets/WebCore.4.13.1.ltr.light.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://assets.windowsphone.com/c87b935e-f679-4b69-9640-7afd04586278/custom-min.css" />
+    <!-- feedbacksock minified js -->
+    <script type="text/javascript" src="https://assets.windowsphone.com/26cc6e61-fd0a-41b6-8e56-4bb8cb0c117d/feedbacksock-min.js"></script> 
+
+    <script src="https://assets.onestore.ms/cdnfiles/external/mwf/long/v1/v1.20.0/scripts/mwf-auto-init-main.var.min.js" defer></script>
+    <script id="video-javascript" src="http://assets.onestore.ms/cdnfiles/external/mwf/long/v1/v1.20.0/scripts/mwf-video-player-main.var.min.js" defer="" async=""></script>
+
+    <script type="text/javascript">
+        var appInsights = window.appInsights || function (config) {
+            function s(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, r = document, f = window, e = "script", o = r.createElement(e), i, u; for (o.src = config.url || "//az416426.vo.msecnd.net/scripts/a/ai.0.js", r.getElementsByTagName(e)[0].parentNode.appendChild(o), t.cookie = r.cookie, t.queue = [], i = ["Event", "Exception", "Metric", "PageView", "Trace"]; i.length;) s("track" + i.pop()); return config.disableExceptionTracking || (i = "onerror", s("_" + i), u = f[i], f[i] = function (config, r, f, e, o) { var s = u && u(config, r, f, e, o); return s !== !0 && t["_" + i](config, r, f, e, o), s }), t
+        }({
+            instrumentationKey: "e38fbe82-9f06-4e70-a70e-86e018b1cbdf"
+        });
+
+        window.appInsights = appInsights;
+        // appInsights.trackPageView();
+		
+		appInsights.trackPageView(null, null, {urlReferrer: document.referrer});
+		
+    </script>
+
+
+</head>
