@@ -18,7 +18,7 @@
     <tr>
       <td><a href="http://www.banana-pi.org/m64.html">Banana Pi M64</a></td>
       <td><a href="http://www.allwinnertech.com/index.php?c=product&a=index&id=9">Allwinner A64</a></td>
-      <td><a href="https://drive.google.com/file/d/0B3MbPTuhOYt7NkRIU3pqeEFfbUk/view">Get started</a></td>
+      <td><a href="http://forum.banana-pi.org/c/BPI-M64/Win-10-IoT">Get started</a></td>
       <td><a href="mailto:jasonye@banana-pi.com">More information</a></td>
     </tr>
     <tr>
