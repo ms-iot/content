@@ -21,7 +21,7 @@ ___
 
 ## New major features
 ___ 
-* [Discovering Your Remote Devices ](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/discover-remote-devices) - No special software is needed to discover your devices that are signed in with your Microsoft Account.
+* [Project "Rome"](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/connected-apps-and-devices) Support for Projet Rome which enables communication with an application service on a remote device.
 * [Cortana on Windows IoT Core]({{site.baseurl}}/{{page.lang}}/Docs/CortanaOnIoTCore) - Cortana is now available on Windows 10 IoT Core. Ask Cortana a question.
 * [Azure Device Management Support]({{site.baseurl}}/{{page.lang}}/Docs/AzureDM) - Device Management of Azure IoT hub using Windows 10 IoT Core. 
 * [Adafruit class library for Windows IoT Core](https://learn.adafruit.com/adafruit-class-library-for-windows-iot-core) - Adafruit Class Library is a special [library package](https://github.com/adafruit/AdafruitClassLibrary) containing Windows IoT Core driver software for a variety of Adafruit products.
