@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+{% include landing-head.html %}
+<body>
+    <!-- Accessibility requirement --> 
+    <a class="m-skip-to-main" href="#mainContent" tabindex="0">Skip to main content</a>
+
+    <!-- Universal header -->
+    <!-- Main page content should be wrapped with semantically meaningful html elements (e.g.: article, main) whenever possible. A div element can be used as long as it also contains a role="main" for Accessibility. -->
+    <main id="mainContent" data-grid="container">
+        <div id="mwf_home_page">
+             {{ content }}   
+        </div>
+    </main>   
+    {% include landing-footer.html %}
+    {% include script.html %}
+    {% include sock.html %}
+</body>
+</html>
