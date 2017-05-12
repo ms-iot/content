@@ -19,6 +19,7 @@ Hardware interfaces for the Raspberry Pi 2 and Raspberry Pi 3 are exposed throug
 * **1x** - Serial UARTs (RPi3 only includes mini UART)
 * **2x** - SPI bus
 * **1x** - I2C bus
+* **1x** - UART
 * **2x** - 5V power pins
 * **2x** - 3.3V power pins
 * **8x** - Ground pins
@@ -46,6 +47,8 @@ The following GPIO pins are accessible through APIs:
 | 11    | PullDown      | SPI0 SCLK           | 23                 |
 | 12    | PullDown      |                     | 32                 |
 | 13    | PullDown      |                     | 33                 |
+| 14    | PullUp        | UART0 TXD           | 8                  |
+| 15    | PullUp        | UART0 RXD           | 10                 |
 | 16    | PullDown      | SPI1 CS0            | 36                 |
 | 17    | PullDown      |                     | 11                 |
 | 18    | PullDown      |                     | 12                 |
