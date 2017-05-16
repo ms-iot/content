@@ -53,17 +53,27 @@ lang: en-US
     </tr>
     <tr>
       <td></td>
+      <td><a href="http://ark.intel.com/products/codename/66094/#@embedded">Intel® Pentium® and Celeron® Processor N3000 Series (Braswell)</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><a href="http://ark.intel.com/products/codename/66094/#@embedded">Intel® Atom® x5-E8000 Processor (Braswell)</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><a href="http://ark.intel.com/products/87383/Intel-Atom-x5-Z8300-Processor-2M-Cache-up-to-1_84-GHz">Intel® Atom® x5-Z8300 Processor (Cherry Trail)</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
       <td><a href="http://ark.intel.com/products/codename/55844/#@Embedded">Intel® Atom™ Processor E3800 Product Family (Bay Trail-I)</a></td>
       <td></td>
     </tr>
     <tr>
       <td></td>
-      <td><a href="http://ark.intel.com/products/codename/55844/">Intel® Celeron® Processor N and J Series (Bay Trail-M/D)</a></td>
-      <td></td>
-    </tr>
-	<tr>
-      <td></td>
-      <td><a href="http://ark.intel.com/products/codename/55844/">Intel® Pentium® Processor N and J Series (Bay Trail-M/D)</a></td>
+      <td><a href="http://ark.intel.com/products/codename/55844/">Intel® Pentium® and Celeron® Processor N and J Series (Bay Trail-M/D)</a></td>
       <td></td>
     </tr>
 </table>
