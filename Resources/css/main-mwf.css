@@ -1,0 +1,100 @@
+.c-video iframe#iframe-video,
+.c-dialog iframe#iframe-video {
+    min-height: 600px;
+    width:100%;
+    height:100%
+}
+@media screen and (max-width: 1399px) and (min-width: 1084px) {
+    .c-video iframe#iframe-video,
+    .c-dialog iframe#iframe-video {
+        min-height: 500px
+    }
+}
+@media screen and (max-width: 767px) {
+    .c-video iframe#iframe-video,
+    .c-dialog iframe#iframe-video {
+        min-height: 200px
+    }
+}
+@media only screen and (max-width: 1083px) and (min-width: 540px) {
+    .c-video iframe#iframe-video,
+    .c-dialog iframe#iframe-video {
+        min-height: 300px
+    }
+}
+@media only screen and (min-width: 540px) and (max-width: 1083px) {
+    .c-feature.f-align-left>div,
+    .c-feature.f-align-right>div {
+        width: 490px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        top: 0;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateY(0);
+        margin-top: 20px
+    }
+}
+@media screen and (max-width: 1083px) {
+    .c-feature.f-align-right>div,
+    .c-feature.f-align-right.f-image-priority>div {
+        left: 0
+    }
+    .c-feature .c-video,
+    .c-feature picture,
+    .c-feature.f-align-left picture,
+    .c-feature.f-align-right picture {
+        display: block;
+        width: 100%;
+        max-width: 100%
+    }
+    img {
+    border: 0 !important
+    }
+
+    img.c-image, picture.c-image img{
+        margin: 0 auto
+    }
+
+    .c-feature.f-align-left .c-video,
+    .c-feature.f-align-left picture,
+    .c-feature.f-align-right .c-video,
+    .c-feature.f-align-right picture {
+        float: none
+    }
+    .c-feature.f-align-right>div,
+    .c-feature.f-align-right.f-image-priority>div {
+        left: 0
+    }
+    .c-feature .c-pivot>header {
+        display: inline-block;
+        margin-top: 20px
+    }
+}
+@media only screen and (min-width: 1027px) and (max-width: 1083px) {
+    .c-feature picture img,
+    .c-carousel li>picture.c-image img {
+        width: 100%
+    }
+}
+.pad-thin {
+    margin-top: 40px
+}
+.pad-medium {
+    margin-top: 50px
+}
+
+.c-call-to-action.c-glyph,
+.mscom-link.c-call-to-action {
+    text-transform: uppercase;
+    white-space: wrap
+}
+a.mscom-link.c-call-to-action.c-glyph {
+    font-weight: 700
+}
+
+#getStarted-action{
+    color:white; 
+    font-size:18px
+}
