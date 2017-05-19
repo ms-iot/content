@@ -6,7 +6,7 @@ lang: en-US
 ---
 
 # Release Notes for Windows 10 IoT Core
-Build Number 15051. March 2017
+Build Number 16193. May 2017
 
 &copy; 2017 Microsoft Corporation. All rights reserved
 
@@ -22,17 +22,28 @@ The privacy statement for this version of the Windows operating system can be vi
 You can review linked terms by pasting the forward link into your browser window.
 
 ## What's new in this build: 
-* Fixes to improve reliability
-* Fix issue that prevented the kernel debugger from attaching to RPI devices.
+* General bug fixes 
+* We have removed the Z-Wave adapter for images built by Microsoft. 
+* Enable secureboot to boot with cross signed drivers. 
+* Enable Azure active directory   
+* Fixed an issue to reenable launching background tasks from visual studio.  
+* There are two changes that impact building images with kits: 
+** Provisioning versioning number is now a four part number ( earlier it was two part , treated as a single long number) 
+** The <ApplicationManagement> tag is now under <Policies> - earlier this was under root.  
+*** Customizations.xml under appx folder needs to change, see the sample at [https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Source-arm/Packages/Appx.IoTCoreDefaultApp/customizations.xml].
+***Customizations.xml under product folder needs to change, see the sample at [https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Source-arm/Products/SecureSample/prov/customizations.xml].
+
+
+## Additional Information
+* The BSP version used for our Dragon Board image is 2112.0.0.0 
 
 
 ## Known issues in this build:
-* BluetoothLE paired devices may throw and exception and fail to function properly
-* Raspberry PI images may crash on their first boot. Consecutive boots start up correctly
-* When updating the IoT Default App may be uninstalled
 * Network connectivity failures in MinnowBoard Max (MBM) firmware version 0.93. (Fixed in firmware version 0.94.) 
-* F5 driver deployment from Visual Studio does not work on IoT Core
-* Joule - Debugger will time out on a breakpoint when using C++.
+* BluetoothLE devices may fail to fully connect.
+* F5 driver deployment from Visual Studio does not work on IoT Core. 
+* The power button is missing from Device Portal.
+* Joule may become unstable after 30-60 minutes due to an issue with the graphics driver.
 
 
 
