@@ -130,6 +130,7 @@ lang: en-US
     function boardButtonClick(board) {
         // untoggle all the buttons
         unpressButton('#rpi2Button');
+      unpressButton('#discordButton');
         unpressButton('#rpi3Button');
         unpressButton('#dragonboardButton');
         unpressButton('#jouleButton');
@@ -137,7 +138,8 @@ lang: en-US
         unpressButton('#mbmButton');
         unpressButton('#starterPackButton');
         unpressButton('#sdcardButton');
-        unpressButton('#noobsButton');
+        unpressButton('#noobsButton
+                      unpressButton('#windows7');
         selectedBoard = board;
         var pressedButton = '#' + board + 'Button';
         switch (selectedBoard) {
