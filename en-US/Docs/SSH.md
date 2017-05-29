@@ -27,7 +27,7 @@ In order to connect to your device using SSH, you'll first need to download a SS
     ![PuTTY Security Alert]({{site.baseurl}}/Resources/images/ssh/putty_security_prompt.png)
 
 * If the connection was successful, you should see `login as:` on the screen, prompting you to login.  
-    Enter `Administrator` and press enter.  Then enter the default password `p@ssw0rd` as the password and press enter.
+    Enter `Administrator` and press enter.  Then enter the default password `P@ssw0rd` as the password and press enter.
 
     ![PuTTY Login]({{site.baseurl}}/Resources/images/ssh/putty_login.png)
 
