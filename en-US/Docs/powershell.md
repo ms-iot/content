@@ -76,11 +76,10 @@ Make sure to follow these steps to correctly configure your device running Windo
 	        net user Administrator [new password]
 	        
 	b. Next, establish a new PowerShell session using `Exit-PSSession` and `Enter-PSSession` with the new credentials.
-	```
-	    	Exit-PSSession
-	    	
-	    	Enter-PSSession -ComputerName <machine-name or IP Address> -Credential <machine-name or IP Address or localhost>\Administrator
-	```
+	
+	        Exit-PSSession
+	        
+	        Enter-PSSession -ComputerName <machine-name or IP Address> -Credential <machine-name or IP Address or localhost>\Administrator
 
 ## Troubleshooting Visual Studio Remote Debugger
 ___
