@@ -25,10 +25,11 @@ In order for headless apps to meet store compliance there needs to be a "head" a
 2. Build the new project under release configuration
 3. Navigate to \<New Project Folder>/bin/Release/<Architecture>/
 Locate file titled <Name of your project>.exe
-Copy the file to the directory of your headless app project
+Create a subdirectory in your project. In this sample we call it "exe".
+Copy the file to the "exe" directory of your headless app project
 4. Include the newly added file to the Visual Studio project and set to "Copy Always"
 5. Open the Package.appxmanifest in Code mode (right-click and choose View Code) for the headless app and modify the following:  
-  * Add the attribute _Executable="\<Filename of .exe copied to project>.exe"_ to the element _Application_
+  * Add the attribute _Executable="exe\\<Filename of .exe copied to project>.exe"_ to the element _Application_
   * Add the attribute _EntryPoint="\<Namespace of Blank XAML project>.App"_ to the element _Application_
   * Remove the AppListEntry attribute from the element _uap:VisualElements_
 
