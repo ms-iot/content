@@ -110,7 +110,30 @@ The Trusted Platform Module (TPM) is a cryptographic coprocessor including capab
 
 ### Remote
 The Windows IoT Remote Server allows users to see what their device is displaying without connecting a physical monitor to the keyboard.
+
+
+## Additional Information 
+___ 
+
+### Changing the default port 
  
+1. Launch powershell and [connect to your device.]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell)  
+2. Download [TakeRegistryOwnership](https://github.com/ms-iot/iot-utilities/tree/master/TakeRegistryOwnership), build it, and copy it to your device. 
+3. Take ownership of the registry key for the service:
+
+`.\TakeRegistryOwnership.exe MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\webmanagement\service`
+
+4. Set the port: 
+
+`Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\webmanagement\service /v HttpPort /t REG_DWORD /d <your port number>` 
+
+5. If you want to set the https port  
+
+`Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\webmanagement\service /v UseHttps /t REG_DWORD /d 1 /f` 
+
+`Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\webmanagement\service /v HttpsPort /t REG_DWORD /d <your port number> /f` 
+ 
+6. Restart the process by restarting service (```net stop webmanagement & net start webmanagement```) it or rebooting the device. 
 
 ## Additional Resources
 ___ 
