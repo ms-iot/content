@@ -17,6 +17,8 @@ Microsoft makes it easy for OEMs to install and service UWP apps on Windows 10 I
 ___
 Members of the Windows Store OEM Preinstall program have special permissions in their Windows Dev Center account that allows a store signed version of an app to be downloaded. It is important to first be enrolled in the program before creating any app submissions. The publishing process following the additional permission is the same as other Windows 10 devices. The first step is to [create an app submission](https://msdn.microsoft.com/en-us/windows/uwp/publish/app-submissions). 
 
+{% include note.html text="TargetDeviceFamily should be set to Windows.Universal to be able to publish the IoT UWP apps to Universal Store. Both Windows.IoT and Windows.IoTHeadless are not yet allowed for store publishing." %}
+
 ### Special Instructions for Headless Apps 
 ___
 In order for headless apps to meet store compliance there needs to be a "head" associated with the app. In order to add this "head" to our headless app we need to 
