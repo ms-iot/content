@@ -115,25 +115,29 @@ The Windows IoT Remote Server allows users to see what their device is displayin
 ## Additional Information 
 ___ 
 
-### Changing the default port 
+### Changing the default port
  
-1. Launch powershell and [connect to your device.]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell)  
-2. Download [TakeRegistryOwnership](https://github.com/ms-iot/iot-utilities/tree/master/TakeRegistryOwnership), build it, and copy it to your device. 
-3. Take ownership of the registry key for the service:
+1. Launch powershell and [connect to your device.]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell)
+2. Download [TakeRegistryOwnership](https://github.com/ms-iot/iot-utilities/tree/master/TakeRegistryOwnership) tool, build it, and copy it to your device. 
+3. Take ownership of the registry key for the service by running
 
-`.\TakeRegistryOwnership.exe MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\webmanagement\service`
+        .\TakeRegistryOwnership.exe MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\webmanagement\service
 
-4. Set the port: 
+4. Set the desired port by modifying the registry settings 
 
-`Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\webmanagement\service /v HttpPort /t REG_DWORD /d <your port number>` 
+        reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\webmanagement\service /v HttpPort /t REG_DWORD /d <your port number>
+        
+5. Restart the WebManagement sevice by running following or by restarting the device
 
-5. If you want to set the https port  
+        net stop webmanagement ; net start webmanagement
 
-`Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\webmanagement\service /v UseHttps /t REG_DWORD /d 1 /f` 
+### Using HTTPS 
 
-`Reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\webmanagement\service /v HttpsPort /t REG_DWORD /d <your port number> /f` 
- 
-6. Restart the process by restarting service (```net stop webmanagement & net start webmanagement```) it or rebooting the device. 
+If you want to use HTTPS, first take the ownership of the registry key as described in previous section and set the HttpsPort and EncryptionMode registry keys as below and then restart the webmanagement service
+
+        reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\webmanagement\service /v EncryptionMode /t REG_DWORD /d 0x3 /f
+        reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\webmanagement\service /v HttpsPort /t REG_DWORD /d <your port number> /f
+        net stop webmanagement ; net start webmanagement
 
 ## Additional Resources
 ___ 
