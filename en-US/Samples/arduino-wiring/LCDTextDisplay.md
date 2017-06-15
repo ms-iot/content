@@ -64,10 +64,6 @@ There is a fritzing diagram below, as well as a table of the exact pinouts we us
 |:-----------:|:----------------------:|
 | ![LCD Display]({{site.baseurl}}/Resources/images/arduino_wiring/lcd_16pins.jpg) | ![RPI Pinouts]({{site.baseurl}}/Resources/images/arduino_wiring/pi2_pinouts.png) |
 
-## Required Library
-
-You'll need the LiquidCrystal library, which is included in the Arduino SDK! You can copy the two files `LiquidCrystal.h` and `LiquidCrystal.cpp` from the Arduino libraries folder (typically C:\Program Files (x86)\Arduino\libraries\LiquidCrystal\src\) and paste them into your solution directory! Then, drag the two files from your solution directory into your project (via Solution Explorer) in Visual Studio.
-
 
 ## Code
 
