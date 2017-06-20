@@ -8,7 +8,7 @@ lang: en-US
 ---
 <style>
   a.downloadLink:hover, a.downloadLink:hover h3  {
-    text-decoration: underline;
+    color: #0067B7;
   }
 </style> 
 
@@ -55,19 +55,19 @@ lang: en-US
       <div class="section-body">
         <div class="row">
           <div class="col-md-6">
-                <a class="downloadLink" href="https://go.microsoft.com/fwlink/?LinkId=846058" style="color:black;text-decoration: none;">
+                <a class="downloadLink win-color-fg-primary" href="https://go.microsoft.com/fwlink/?LinkId=846058" >
                 <h3>IoT Core for Raspberry Pi 2 &amp; 3</h3>
                 <p>Download Windows 10 IoT Core Creators Update ISO for Raspberry Pi 2 &amp; 3.</p></a>
                 <a href="https://go.microsoft.com/fwlink/?LinkId=846058" class="downloadLink"><span>Download</span></a>       
           </div>
           <div class="col-md-6">
-            <a class="downloadLink" href="https://go.microsoft.com/fwlink/?LinkId=846059" style="color:black;text-decoration: none;">
+            <a class="downloadLink win-color-fg-primary" href="https://go.microsoft.com/fwlink/?LinkId=846059">
                 <h3>IoT Core for Dragonboard 410c</h3>
                 <p>Download Windows 10 IoT Core Creators Update ISO for Dragonboard 410c board.</p></a>
                 <a href="https://go.microsoft.com/fwlink/?LinkId=846059" class="downloadLink"><span>Download</span></a>   
           </div>                  
           <div class="col-md-6">
-               <a class="downloadLink" href="https://go.microsoft.com/fwlink/?linkid=846057" style="color:black;text-decoration: none;">
+               <a class="downloadLink win-color-fg-primary" href="https://go.microsoft.com/fwlink/?linkid=846057">
                 <h3>IoT Core for MinnowBoard MAX</h3>
                 <p>Download Windows 10 IoT Core Creators Update ISO for MinnowBoard MAX</p></a>
                 <a href="https://go.microsoft.com/fwlink/?linkid=846057" class="downloadLink"><span>Download</span></a>   
