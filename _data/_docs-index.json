@@ -129,6 +129,10 @@
             "link": "/Docs/BuildingAppsForIoTCore.htm"
           },
           {
+            "title": "Remote app debugging",
+            "link": "/Docs/RemoteDebugging.htm"
+          },
+          {
             "title":"App deployment",
             "link":"/Docs/AppDeployment.htm"
           },
