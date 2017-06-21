@@ -56,20 +56,20 @@ lang: en-US
         <div class="row">
           <div class="col-md-6">
                 <a class="downloadLink win-color-fg-primary" href="https://go.microsoft.com/fwlink/?LinkId=846058" >
-                <h3>IoT Core for Raspberry Pi 2 &amp; 3</h3>
-                <p>Download Windows 10 IoT Core Creators Update ISO for Raspberry Pi 2 &amp; 3.</p></a>
+                <h3>IoT Core for Raspberry Pi 2 &amp; 3</h3></a>
+                <p>Download Windows 10 IoT Core Creators Update ISO for Raspberry Pi 2 &amp; 3.</p>
                 <a href="https://go.microsoft.com/fwlink/?LinkId=846058" class="downloadLink"><span>Download</span></a>       
           </div>
           <div class="col-md-6">
             <a class="downloadLink win-color-fg-primary" href="https://go.microsoft.com/fwlink/?LinkId=846059">
-                <h3>IoT Core for Dragonboard 410c</h3>
-                <p>Download Windows 10 IoT Core Creators Update ISO for Dragonboard 410c board.</p></a>
+                <h3>IoT Core for Dragonboard 410c</h3></a>
+                <p>Download Windows 10 IoT Core Creators Update ISO for Dragonboard 410c board.</p>
                 <a href="https://go.microsoft.com/fwlink/?LinkId=846059" class="downloadLink"><span>Download</span></a>   
           </div>                  
           <div class="col-md-6">
                <a class="downloadLink win-color-fg-primary" href="https://go.microsoft.com/fwlink/?linkid=846057">
-                <h3>IoT Core for MinnowBoard MAX</h3>
-                <p>Download Windows 10 IoT Core Creators Update ISO for MinnowBoard MAX</p></a>
+                <h3>IoT Core for MinnowBoard MAX</h3></a>
+                <p>Download Windows 10 IoT Core Creators Update ISO for MinnowBoard MAX</p>
                 <a href="https://go.microsoft.com/fwlink/?linkid=846057" class="downloadLink"><span>Download</span></a>   
           </div>
         </div>
