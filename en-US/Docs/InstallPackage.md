@@ -30,14 +30,14 @@ To create your own image (FFU), [get the tools needed to customize Windows IoT C
 
 ## Step 2: Create a new package
 ___
-1. Create a **package definition xml file** (.pkg.xml file), and specify the files and reg keys you want to add. 
+1. Create a **package definition xml file** (.pkg.xml file), and specify the files and reg keys you want to add.
       Learn more at [Specifying components in a package](https://msdn.microsoft.com/en-us/library/dn789218) and [Elements and Attributes of a package](https://msdn.microsoft.com/en-us/library/dn756796)
 
 2. Build the package: `buildpkg.cmd filename.pkg.xml`. The .cab file will be created in the build directory `\IoT-ADK-AddonKit\Build\<arch>\pkgs`.
 
 ### Create a package with files and reg keys
 Below is an example for specifying files and reg keys.
- 
+
 {% highlight XML %}
 <?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="urn:Microsoft.WindowsPhone/PackageSchema.v8.00"
@@ -66,7 +66,7 @@ Below is an example for specifying files and reg keys.
 
 ### Create an Appx package
 
-Use [appx2pkg.cmd tool](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/appx2pkg.cmd) to generate the .pkg.xml file for a given appx file. This tool expects the appx dependencies in the sub directory named "dependencies" in the folder containing the appx file. 
+Use [appx2pkg.cmd tool](https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/appx2pkg.cmd) to generate the .pkg.xml file for a given appx file. This tool expects the appx dependencies in the sub directory named "dependencies" in the folder containing the appx file.
 
 You can also create the Appx component directly in the IoTCoreShell, using the following steps
 
@@ -75,7 +75,11 @@ You can also create the Appx component directly in the IoTCoreShell, using the f
 
 `fga` sets the appx as the foreground startup app, `bgt` sets the appx as the background task and `none` skips startup configuration.
 
-See [Appx.IoTCoreDefaultApp](https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Source-arm/Packages/Appx.IoTCoreDefaultApp/) as an example. 
+See [Appx.IoTCoreDefaultApp](https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Source-arm/Packages/Appx.IoTCoreDefaultApp/) as an example.
+
+When you have to install multiple applications signed with same certificate, you can add the certificate along with one app and for the remaining apps, you can skip adding the certificate using the skipcert flag.
+
+    > newappxpkg AnotherApp.appx none Appx.AnotherApp skipcert
 
 See also
 
@@ -92,7 +96,7 @@ The driver package contains the references (InfSource) to the Inf file for the d
 
 See also
 
-* [Sample Driver Package](https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Source-arm/BSP/CustomRpi2/Packages/CustomRPi2.GPIO/CustomRPi2.GPIO.pkg.xml) 
+* [Sample Driver Package](https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Source-arm/BSP/CustomRpi2/Packages/CustomRPi2.GPIO/CustomRPi2.GPIO.pkg.xml)
 
 ## Step 3: Install on device
 ---
