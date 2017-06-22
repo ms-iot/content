@@ -153,10 +153,6 @@
             "link":"/Docs/EmbeddedMode.htm"
           },
           {
-            "title":"Unavailable Universal APIs",
-            "link":"/Docs/UnavailableApis.htm"
-          },
-          {
             "title": "Arduino and Windows 10",
             "link":"/Docs/ArduinoAndWindows10.htm"
           },
