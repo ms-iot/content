@@ -10,6 +10,14 @@ lang: en-US
 Cortana Overview
 ================
 
+ <div class="container">
+    <div class="row">
+        <div class="image-container video-player embed-responsive-16by9 remove-top-margin remove-bottom-margin">
+           <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Cortana-on-Windows-10-IoT-Core/player" width="890" height="540" allowFullScreen frameBorder="0"></iframe>
+        </div>
+    </div>
+  </div>
+<br>
 Cortana is a personal digital assistant working across all your devices to help you in your daily life. She learns about you; helps you get things done by completing tasks; interacts with you using natural language in a consistent, contextual way; and always looks out for you. Cortana has a consistent visual identity, personality, and voice.
 
 IoT Core is an edition of Windows 10, and is optimized for small footprint and low cost IoT devices. Cortana is enabled on IoT Core in the Windows 10 Creators Update.
