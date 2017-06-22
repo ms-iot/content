@@ -19,13 +19,14 @@ Steps to create the drivers :
 
 1. Check out ms-iot/bsp project
 2. Build the bcm2386 solution (Release or Debug)
-    * You can also download the prebuilt binaries from [rpibsp.zip](https://github.com/ms-iot/iot-adk-addonkit/releases/download/RPiBSP/rpibsp.zip)
+    * You can also download the prebuilt binaries from [rpibsp.zip](https://github.com/ms-iot/iot-adk-addonkit/releases/download/RPiBSP/rpibsp.zip) 
 3. Launch [IoTCoreShell](https://github.com/ms-iot/iot-adk-addonkit), select arm
 
-    * In ms-iot/bsp project folder, run `tools\binexport.cmd Release (or) Debug C:\RPiBSP` to export the binaries to `C:\RPiBSP` folder
+    * In ms-iot/bsp project folder, run `tools\binexport.cmd Release (or) Debug C:\RPiBSP` to export the binaries to `C:\RPiBSP` folder. If you are using prebuilt binaries, you can skip this step and unzip the binaries to `C:\RPiBSP`.
     * Run `C:\RPiBSP\build.cmd` to create the cabs in the build output folder (`iot-adk-addonkit\Build\arm\pkgs`)
     * Run `buildpkg all` to process all cab files
 
+{% include note.html text="To build a retail image, you will need to rerun the build.cmd to sign the bsp driver binaries with cross certificates. See IoT Core Manufacturing Guide for detailed instructions." %}
 
 ## Intel BSPs
 
@@ -63,7 +64,7 @@ You can also recreate the cab files with the below script, the cab files will be
 
 ### Apollo Lake
 
-Apollo Lake drivers are available at [Apollo Lake BSP](http://www.intel.com/content/www/us/en/embedded/products/apollo-lake/mr2-best-known-configuration.html)
+[Apollo Lake](https://ark.intel.com/products/codename/80644/Apollo-Lake#@embedded) drivers are available at [Apollo Lake BSP](https://www.intel.com/content/www/us/en/embedded/products/apollo-lake/technical-library.html#grouping=3)
 
 ### Joule
 
@@ -86,3 +87,11 @@ The files will be available in the build output folder (`iot-adk-addonkit\Build\
 Contact [Qualcomm](mailto:pahwang@qti.qualcomm.com) for the BSPs.
 
 {% include note.html text="You can copy the BSP cab files to a different folder, say C:\MyBSPs\, and set BSPPKG_DIR=C:\MyBSPs\ in the IoTCoreShell to use these files. You can also modify this setting in the setenv.cmd file" %}
+
+## See also
+
+* [IoT Core Manufacturing Guide](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/iot/iot-core-manufacturing-guide)
+* [Windows ADK IoT Core Add-Ons Overview](https://go.microsoft.com/fwlink/p/?LinkId=735029)
+* [IoT Core Add-Ons command-line options](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/iot/iot-core-adk-addons-command-line-options)
+* [IoT Core feature list](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/iot/iot-core-feature-list)
+* [Channel9 Video on Manufacturing Guide](https://channel9.msdn.com/events/Build/2017/B8085)
