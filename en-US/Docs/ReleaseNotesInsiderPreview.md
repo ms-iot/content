@@ -6,7 +6,7 @@ lang: en-US
 ---
 
 # Release Notes for Windows 10 IoT Core
-Build Number 16193. May 2017
+Build Number 16226. June 2017
 
 &copy; 2017 Microsoft Corporation. All rights reserved
 
@@ -23,15 +23,11 @@ You can review linked terms by pasting the forward link into your browser window
 
 ## What's new in this build: 
 * General bug fixes 
-* We have removed the Z-Wave adapter for images built by Microsoft. 
-* Enable secureboot to boot with cross signed drivers. 
-* Enable Azure active directory   
-* Fixed an issue to reenable launching background tasks from visual studio.  
-* There are two changes that impact building images with kits: 
-** Provisioning versioning number is now a four part number ( earlier it was two part , treated as a single long number) 
-** The <ApplicationManagement> tag is now under <Policies> - earlier this was under root.  
-*** Customizations.xml under appx folder needs to change, see the sample at [https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Source-arm/Packages/Appx.IoTCoreDefaultApp/customizations.xml].
-***Customizations.xml under product folder needs to change, see the sample at [https://github.com/ms-iot/iot-adk-addonkit/blob/develop/Source-arm/Products/SecureSample/prov/customizations.xml].
+* Support for Universal BSP (wm.xml) is available now. Use the current iot-adk-addonkit (develop branch) with the current version of the ADK. In IoTCoreShell, set UNIVERSAL_BSP=1 to enable this feature.
+* Add SMSC network driver to all architectures of IOT core 
+* Enable exclusive mode audio for IoT Core   
+* Add an API for system time 
+* Support memory-mapped 16550 UART (subtype 0x12) in EMS, boot and kernel debugger.
 
 
 ## Additional Information
@@ -44,6 +40,7 @@ You can review linked terms by pasting the forward link into your browser window
 * F5 driver deployment from Visual Studio does not work on IoT Core. 
 * The power button is missing from Device Portal.
 * Joule may become unstable after 30-60 minutes due to an issue with the graphics driver.
+* Mouse clicks do not always work.
 
 
 
