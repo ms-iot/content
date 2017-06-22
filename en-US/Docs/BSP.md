@@ -32,7 +32,7 @@ Steps to create the drivers :
 
 ### Bay Trail
 
-Bay Trail drivers are available at [IO Drivers](https://downloadcenter.intel.com/download/25618), [Graphics drivers](https://downloadcenter.intel.com/download/25606)
+[Bay Trail](https://www.intel.com/content/www/us/en/embedded/products/bay-trail/overview.html) drivers are available at [IO Drivers](https://downloadcenter.intel.com/download/25618), [Graphics drivers](https://downloadcenter.intel.com/download/25606)
 
 Steps to create the drivers :
 
@@ -64,7 +64,7 @@ You can also recreate the cab files with the below script, the cab files will be
 
 ### Apollo Lake
 
-[Apollo Lake](https://ark.intel.com/products/codename/80644/Apollo-Lake#@embedded) drivers are available at [Apollo Lake BSP](https://www.intel.com/content/www/us/en/embedded/products/apollo-lake/technical-library.html#grouping=3)
+[Apollo Lake](https://www.intel.com/content/www/us/en/embedded/products/apollo-lake/overview.html) drivers are available at [Apollo Lake BSP](https://www.intel.com/content/www/us/en/embedded/products/apollo-lake/technical-library.html#grouping=3)
 
 ### Joule
 
