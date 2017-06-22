@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Remote Debugging
-description: How to debug an app remotely on IoT Core
+title: Remote Console App Debugging
+description: How to debug a console app remotely on IoT Core
 permalink: /en-US/Docs/RemoteDebugging.htm
 lang: en-US
 ---
 
-# Remote Debugging
+# Remote Console App Debugging
 
-Here's how to debug your IoT Core application remotely in Visual Studio:
+Here's how to debug your IoT Core console application remotely in Visual Studio:
 
 * You will first need to setup the Remote Debugger on your Windows IoT Core device. First follow the steps [here]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment) to deploy any other Universal Windows Application on your device (try the HelloWorld project). This will copy all the required binaries to your device. 
 
