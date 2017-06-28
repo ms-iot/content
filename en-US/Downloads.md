@@ -1,8 +1,8 @@
 ---
 layout: default
-title: IoT Core Dashboard and Raspberry Pi Downloads | Windows IoT 
+title: Downloads | Windows 10 IoT Core for Raspberry Pi 2 / 3 | IoT Core Dashboard
 description : Download Windows for IoT, Visual Studio, Software Development Kits or any of the other tools available on this page to get started developing for the Internet of Things today! 
-keywords : setup windows 10 raspberry pi, setup windows 10 dragonboard, setup windows 10 minnowboard max, windows 10 developer program, windows 10 iot core, internet of things, iot, download windows 10 iot core 
+keywords : setup windows 10 raspberry pi, download windows 10 raspberry pi 2, download windows 10 raspberry pi 3, setup windows 10 dragonboard, setup windows 10 minnowboard max, windows 10 developer program, windows 10 iot core, internet of things, iot, download windows 10 iot core 
 permalink: /en-US/Downloads.htm
 lang: en-US
 ---
@@ -56,19 +56,19 @@ lang: en-US
         <div class="row">
           <div class="col-md-6">
                 <a class="downloadLink win-color-fg-primary" href="https://go.microsoft.com/fwlink/?LinkId=846058" >
-                <h3>IoT Core for Raspberry Pi 2 &amp; 3</h3></a>
+                <h3>Windows 10 IoT Core for Raspberry Pi 2 &amp; 3</h3></a>
                 <p>Download Windows 10 IoT Core Creators Update ISO for Raspberry Pi 2 &amp; 3.</p>
                 <a href="https://go.microsoft.com/fwlink/?LinkId=846058" class="downloadLink"><span>Download</span></a>       
           </div>
           <div class="col-md-6">
             <a class="downloadLink win-color-fg-primary" href="https://go.microsoft.com/fwlink/?LinkId=846059">
-                <h3>IoT Core for Dragonboard 410c</h3></a>
+                <h3>Windows 10 IoT Core for Dragonboard 410c</h3></a>
                 <p>Download Windows 10 IoT Core Creators Update ISO for Dragonboard 410c board.</p>
                 <a href="https://go.microsoft.com/fwlink/?LinkId=846059" class="downloadLink"><span>Download</span></a>   
-          </div>                  
+          </div>
           <div class="col-md-6">
                <a class="downloadLink win-color-fg-primary" href="https://go.microsoft.com/fwlink/?linkid=846057">
-                <h3>IoT Core for MinnowBoard MAX</h3></a>
+                <h3>Windows 10 IoT Core for MinnowBoard MAX</h3></a>
                 <p>Download Windows 10 IoT Core Creators Update ISO for MinnowBoard MAX</p>
                 <a href="https://go.microsoft.com/fwlink/?linkid=846057" class="downloadLink"><span>Download</span></a>   
           </div>
