@@ -64,9 +64,12 @@ The second method is using Windows Imaging and Configuration Designer (WICD) to 
 7. Enter the Package Family Name of your app and click Add  (**Note:** The PFN can be found in the Windows Dev Center under App Management > App Identity)
 8. Under the newly added PFN add the Appx and its dependencies
 9. Set the DeploymentOptions to "Force target application shutdown"
-10. Export the package
-11. Copy the exported .ppkg file to _C:\Windows\Provisioning\Packages_ on the IoT device you wish to install the app on and reboot.
-12. Alternatively you can include the .ppkg file in your image when building. Check out the [Add a provisioning package to an image](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/add-a-provisioning-package-to-an-image) guide on MSDN.
+10. Set the LicenseProductID under UserContextAppLicense to the LicenseID found in the XML file ending with license1.xml.
+11. Rename the license file found in previous steps changing its extension to .ms-windows-store-license.
+12. Select your License Product ID on the left hand side and browse your license file to assign LicenseInstall field.
+13. Export the package
+14. Copy the exported .ppkg file to _C:\Windows\Provisioning\Packages_ on the IoT device you wish to install the app on and reboot.
+15. Alternatively you can include the .ppkg file in your image when building. Check out the [Add a provisioning package to an image](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/iot/add-a-provisioning-package-to-an-image) guide on MSDN.
 
 ## Updating an App
 ___
