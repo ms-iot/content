@@ -7,4 +7,4 @@ permalink: /en-US/Kits.htm
 lang: en-US
 ---
 
-{% include redirect.html url="/windows/iot/Docs/AdafruitMakerKit.htm" %}
+{% include redirect.html url="https://github.com/ms-iot/adafruitsample/blob/master/README.md" %}
