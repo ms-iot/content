@@ -27,12 +27,10 @@ To enable the use of the familiar <a href="https://www.arduino.cc/en/Reference/H
 
 <div class="row">
 <div class="col-md-12 col-xs-24" markdown="1">
-[![windows remote arduino]({{site.baseurl}}/Resources/images/devices/WindowsPhone_0.png)]({{site.baseurl}}/{{page.lang}}/Docs/WRA)
+[![windows remote arduino]({{site.baseurl}}/Resources/images/devices/WindowsPhone_0.png)](https://github.com/ms-iot/remote-wiring){:target="_blank"}
 </div>
 <div class="col-md-12 col-xs-24" markdown="1">
 Windows Remote Arduino is an open-source Windows Runtime library which allows Makers to control an Arduino through a Bluetooth, USB, Wi-Fi, or Ethernet connection. It enables developers to include Arduino sensors in their Windows projects, or even offload computationally expensive work from an Arduino to Windows. The Windows Remote Arduino library can be used with any WinRT languages (C++/CX, C# and JavaScript).
-
-[Get started using Windows Remote Arduino]({{site.baseurl}}/{{page.lang}}/Docs/WRALanding)
 
 [View Windows Remote Arduino on GitHub](https://github.com/ms-iot/remote-wiring){:target="_blank"}
 
