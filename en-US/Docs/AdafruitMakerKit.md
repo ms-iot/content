@@ -30,7 +30,7 @@ kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi 2 or Pi 3
 
 <div class="row">
   <div class="col-xs-24">
-    <h3 class="thin-header">Lesson 1: Introduction and Setup</h3>
+    <h3 class="thin-header">Introduction and Setup</h3>
     <table class="table table-striped maker-kit">
       <tr>
         <th class="standardTH">Topic</th>
@@ -57,31 +57,15 @@ kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi 2 or Pi 3
         <td>Test to make sure your setup is ready</td>
       </tr>
     </table>
-
-    <h3 id="lessonTwo" class="thin-header">Lesson 2: Starter Projects</h3>
-    <table class="table table-striped maker-kit">
-      <tr>
-        <th class="standardTH">Project</th>
-        <th class="standardTH">Description</th>
-      </tr>
-      <tr>
-        <td><a target="_blank" href="{{site.baseurl}}/{{page.lang}}/Samples/WorldMapOfMakers">World Map of Makers</a></td>
-        <td>
-          Create a simple internet connected application to query the status of a web API and use that information to toggle an LED
-        </td>
-      </tr>
-      <tr>
-        <td><a target="_blank" href="{{site.baseurl}}/{{page.lang}}/Samples/BrightOrNot">Bright or Not?</a></td>
-        <td>Communicate with an analog photocell sensor using ADC to measure light intensity</td>
-      </tr>
-      <tr>
-        <td><a target="_blank" href="{{site.baseurl}}/{{page.lang}}/Samples/WeatherStation">Weather Station</a></td>
-        <td>Communicate with an I2C/SPI based temperature and pressure sensor</td>
-      </tr>
-      <tr>
-        <td><a target="_blank" href="{{site.baseurl}}/{{page.lang}}/Samples/WhatColor">What Color Is It?</a></td>
-        <td>Use GPIO as input, talk to an I2C sensor, and use the text to speech features of Windows 10 IoT Core</td>
-      </tr>
-    </table>
   </div>
 </div>
+
+<div class="row">
+  <div class="col-xs-24">
+    <h3 class="thin-header">More Samples</h3>
+      <br/>
+      For more advanced samples, check out our GitHub sample repository <a target="_blank" href="https://github.com/ms-iot/adafruitsample/blob/master/README.md"> here.</a>
+  </div>
+</div>
+
+
