@@ -14,8 +14,9 @@ Windows and Windows Mobile can be configured to allow embedded mode. Embedded Mo
 * Background Applications
 * Use of the lowLevelDevice capability
 * Use of systemManagement capability
+* Soft-AP support
 
-Embedded mode is only enabled by default on Window IoT Core and must be enabled on standard Windows and Windows Mobile.
+Embedded mode is enabled by default only on Window IoT Core and needs to be enabled on standard Windows and Windows Mobile.
 
 ## Background Applications
 
@@ -42,6 +43,14 @@ When you enable the systemManagment capabilities for your appliction this is the
 * [Windows.System.ShutdownManager](https://msdn.microsoft.com/library/windows/apps/windows.system.shutdownmanager.aspx)
 * [Windows.Globalization.Language.TrySetInputMethodLanguageTag](https://msdn.microsoft.com/library/windows/apps/windows.globalization.language.trysetinputmethodlanguagetag.aspx)
 * [AllJoyn loopback]({{site.baseurl}}/en-US/Docs/AllJoynTroubleshooting)
+
+## Soft-AP Support
+
+The below interface can be used in the embedded mode to support Soft-AP creation in Open/None Authentication mode. Note that not all hardware may support this functionality.
+
+* [Windows.Devices.WiFiDirect.WiFiDirectLegacySettings](https://docs.microsoft.com/uwp/api/windows.devices.wifidirect.wifidirectlegacysettings)
+
+See [IoTOnBoarding](https://developer.microsoft.com/windows/iot/samples/iotonboarding) sample.
 
 ## Debugging Background Applications 
 
