@@ -40,7 +40,7 @@ Since the IoT extension SDK is not added to projects by default, we'll need to a
 
 ### Add content to MainPage.xaml
 ___
-Let's add some content to the MainPage. From Solution Explorer, select the **MainPage.xaml** file. We want to add a TextBox and a Button, to show some interaction. So we will edit the XAML file to add these elements. Locate the **<Grid>** tag in the XAML section of the designer, and add the following markup.  
+Let's add some content to the MainPage. From Solution Explorer, select the **MainPage.xaml** file. We want to add a TextBox and a Button, to show some interaction. So we will edit the XAML file to add these elements. Locate the **&lt;Grid&gt;** tag in the XAML section of the designer, and add the following markup.  
 
 {% highlight XML %}
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
