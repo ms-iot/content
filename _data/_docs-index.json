@@ -171,6 +171,10 @@
           {
             "title": "Computer Vision",
             "link": "/Docs/ComputerVision.htm"
+          },
+          {
+            "title":"Localhost loopback",
+            "link":"/Docs/Loopback.htm"
           }
         ]
       },
