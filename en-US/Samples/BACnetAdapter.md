@@ -43,7 +43,7 @@ See [BACnet standard](http://www.bacnet.org){:target="_blank"} for more informat
 2. Configure the BACnet devices using Envision for BACtalk tool. 
 This document will not go into detail about that, please refer to the tool's documentation to understand how BACnet should be configured.
 3. Set up your Raspberry Pi2 (if you target that device)
-See instruction [here]({{site.baseurl}}/en-US/Docs/SetupRPI.htm){:target="_blank"}.
+See instruction [here]({{site.baseurl}}/{{page.lang}}/GetStarted){:target="_blank"}.
 5. Deploy BACnet adapter
 
 >Note that in Windows 10, when a machine has __multiple AllJoyn modern applications__ that __need to interact__ on the same machine, the user must __add a loopback exemption__ for these modern applications. Consequently, if you run both the ZigBee adapter and IoT Explorer for AllJoyn on the same machine you will need to add a loopback exemption for these 2 applications. This isn't needed for application you run from Visual Studio 2017. Note that when deploying an application from Visual Studio 2017, the loopback exemption is for the lifetime of the installed application. Meaning that you can launch the app directly (not from Visual Studio 2017) afterwards and it will have the loopback exemption.

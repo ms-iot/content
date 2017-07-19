@@ -25,7 +25,7 @@ This tutorial shows how to get AllJoyn.JS running as a Windows 10 application.
  (see their respective documentations to figure out how to proceed).
 
 2. Set up your Raspberry Pi2 (if you target that device).
-   See instruction [here]({{site.baseurl}}/en-US/Docs/SetupRPI){:target="_blank"}.
+   See instruction [here]({{site.baseurl}}/{{page.lang}}/GetStarted){:target="_blank"}.
 
 3. Deploy AllJoyn.JS
 
