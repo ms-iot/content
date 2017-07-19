@@ -84,7 +84,10 @@ The files will be available in the build output folder (`iot-adk-addonkit\Build\
 
 ## Qualcomm BSPs
 
-Contact [Qualcomm](mailto:pahwang@qti.qualcomm.com) for the BSPs.
+### DragonBoard 410C
+
+DragonBoard drivers are available at [DragonBoard 410C Software](https://developer.qualcomm.com/hardware/dragonboard-410c/software) under *Windows 10 IoT Core* section.
+
 
 {% include note.html text="You can copy the BSP cab files to a different folder, say C:\MyBSPs\, and set BSPPKG_DIR=C:\MyBSPs\ in the IoTCoreShell to use these files. You can also modify this setting in the setenv.cmd file" %}
 
