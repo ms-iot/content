@@ -2,7 +2,7 @@
 
 ## Guidelines
 
-When creating a new topic, or updating an exisitng one, there are a handful of things to keep in mind.
+When creating a new topic, or updating an existing one, there are a handful of things to keep in mind.
 
 1. **Creating a new topic:**
 
