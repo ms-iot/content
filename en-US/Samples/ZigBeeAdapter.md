@@ -74,7 +74,7 @@ You can verify that devices have by using "network discovery" feature of XCTU to
 ![ZigBeeJoinNetVerif]({{site.baseurl}}/Resources/images/ZigBee/ZigBeeJoinNetVerif.png)
 
 ## Set up your Raspberry Pi2
-1. Perform initial set up as instructed [here]({{site.baseurl}}/en-US/Docs/SetupRPI){:target="_blank"}
+1. Perform initial set up as instructed [here]({{site.baseurl}}/{{page.lang}}/GetStarted){:target="_blank"}
 2. Plug the XBee USB dongle into the Raspberry Pi2
 
 ## Deploy the ZigBee adapter on your Windows 10 machine
