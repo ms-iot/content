@@ -88,5 +88,5 @@ Here's what the code above is doing:
   * Run `setx APPDATA c:\Users\Default\AppData\Roaming /M` to set the APPDATA environment variable permanantly.
   * Run `shutdown /r /t 0` to restart your device. When the device has booted you can now run `c:\NodejsChakra\npm.cmd`
 * If you get an error/crash when using a native addon with Node.js (Chakra), one of the reasons may be that the addon is using an API that's not supported on IoT Core.
-  You can use the [API Porting Tool]({{site.baseurl}}/{{page.lang}}/Docs/IoTAPIPortingTool) to find out.
+  You can use the [API Porting Tool]({{site.baseurl}}/{{page.lang}}/Docs/IoTCorePortingTool.htm) to find out.
 * While Node.js (Chakra) supports using the uwp npm package, the open source [Node.js (ChakraCore)](https://github.com/nodejs/node-chakracore) does not.  

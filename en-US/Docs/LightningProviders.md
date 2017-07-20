@@ -143,7 +143,7 @@ The following samples demonstrate using the Lightning providers with supported b
 
 * [Blinky (UI) with Lightning Provider]({{site.baseurl}}/{{page.lang}}/samples/HelloBlinkyLightning) demonstrates GPIO with Lightning Provider in a foreground application
 
-* [BlinkyHeadless with Lightning Provider]({{site.baseurl}}/{{page.lang}}/Samples/BlinkyHeadlessLightning) demonstrates GPIO with Lightning Provider in a headless application
+* [BlinkyHeadless with Lightning Provider]({{site.baseurl}}/{{page.lang}}/Samples/helloblinkybackgroundlightning) demonstrates GPIO with Lightning Provider in a headless application
 
 * [SPIDisplay with Lightning Provider]({{site.baseurl}}/{{page.lang}}/Samples/SPIDisplayLightning) demonstrates the usage of the API to control a device using SPI with Lightning Provider
  
