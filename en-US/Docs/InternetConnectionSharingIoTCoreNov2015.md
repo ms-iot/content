@@ -26,7 +26,7 @@ This document describes the steps to enable Internet Connection Sharing (ICS) on
 
 	Record the SSID of the SoftAP network. You will need it later to connect to your IoT Core device via Wi-Fi. For IoT Onboarding application the SSID will start with "AJ\_SoftAPSsid\_" and can be changed in application's configuration [file](https://github.com/ms-iot/samples/blob/develop/IotOnboarding/IoTOnboardingTask/Config.xml){:target="_blank"}.
 
-3.	Remotely connect to the IoT Core device [using ssh]({{site.baseurl}}/en-US/Samples/SSH){:target="_blank"}.
+3.	Remotely connect to the IoT Core device [using ssh]({{site.baseurl}}/en-US/docs/ssh){:target="_blank"}.
 4.	Collect information about device networks by finding network device indexes and descriptions. This is needed to declare which networks to bridge.
 
 	On device, run **route print** and collect the following data:

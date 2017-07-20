@@ -294,14 +294,14 @@ result          | result            | result      | result | result             
 [Adafruit Starter Pack]: {{site.baseurl}}/{{page.lang}}/Docs/AdafruitKitContents.htm
 [//build 2014 - Piano]: https://www.hackster.io/windowsiot/build-2014-piano
 [SPI Display Sample]: {{site.baseurl}}/{{page.lang}}/Samples/SPIDisplay.htm
-[Shift Register Sample]: {{site.baseurl}}/{{page.lang}}/Samples/ShiftRegisterSample.htm
-[Serial Port Sample]: {{site.baseurl}}/{{page.lang}}/Samples/SerialSample.htm
+[Shift Register Sample]: {{site.baseurl}}/{{page.lang}}/Samples/shiftregister
+[Serial Port Sample]: {{site.baseurl}}/{{page.lang}}/Samples/serialuart
 [Potentiometer Sensor Sample]: {{site.baseurl}}/{{page.lang}}/Samples/Potentiometer.htm
 [ADC Bus Providers]: {{site.msiotorgurl}}/BusProviders/tree/develop/ADC
 [PWM Bus Providers]: {{site.msiotorgurl}}/BusProviders/tree/develop/PWM
-[Alljoyn DSB Gpio C# Sample]: {{site.baseurl}}/{{page.lang}}/Samples/AlljoynDSB_ManagedGpioTutorial.htm
+[Alljoyn DSB Gpio C# Sample]: {{site.baseurl}}/{{page.lang}}/Samples/alljoyndsbcs
 [Wiring API]: {{site.baseurl}}/{{page.lang}}/Docs/ArduinoWiringProjectGuide.htm
 [Weather Station Sample]: {{site.baseurl}}/{{page.lang}}/Samples/arduino-wiring/WeatherStation.htm
 [RGB Pixel Sample]: {{site.baseurl}}/{{page.lang}}/Samples/arduino-wiring/RGBPixel.htm
-[Home Security Camera Project]: {{site.baseurl}}/{{page.lang}}/Samples/WebCamSample.htm
+[Home Security Camera Project]: {{site.baseurl}}/{{page.lang}}/Samples/WebcamApp.htm
 
