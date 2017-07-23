@@ -12,6 +12,12 @@ lang: en-US
 
 [View the code on Github](https://github.com/ms-iot/samples/blob/develop/GpioOneWire)
 
+Note what follows below is a bit out of date-  the latest version on Github is a 2 wire operation requiring pin4 as input and pin 5 as output. Read the link above to GITHUB Code and the readme 
+https://github.com/ms-iot/samples/blob/develop/GpioOneWire/README.md
+and look at the NEW Schematic schematic.png which requires an extra MOSFET
+
+
+
 This sample shows how to read from the [DHT11](https://www.adafruit.com/product/386)
 from a Universal Windows Application. The DHT11 is a low cost temperature and
 humidity sensor that uses a single wire to interface to the host controller.
