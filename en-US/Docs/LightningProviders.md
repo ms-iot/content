@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: docs
 title: Using Microsoft.IoT.Lightning.Providers library and sample code
 permalink: /en-US/Docs/LightningProviders.htm
 lang: en-US
