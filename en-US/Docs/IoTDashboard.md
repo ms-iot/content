@@ -23,6 +23,8 @@ The IoT Dashboard makes it easy to set up a new device. For detailed instruction
 
 {% include imageborder.html alt="IoT Dashboard Setup Page" link="/Resources/images/IoTDashboard/IoTDashboard_SetupPage.PNG" %}
 
+{% include note.html text="There is currently a known issue where SD card-based platforms receive a 'Format card' pop up. If formatted, the OS will not be updated. While we investigate this issue, please close the pop-up and do not click 'format.'" %}
+
 ### SD card
 The type, make and model of the SD card greatly affects both the performance and the quality of IoT Core.
 A slow card can take up to five times longer to boot than our [recommended cards]({{site.baseurl}}/{{page.lang}}/Docs/hardwarecompatlist#Storage).
