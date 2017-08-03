@@ -1,8 +1,13 @@
 <div class="row">
   <div class="col-xs-24 col-md-12">
     <ol class="inline-list">
-      {% include note.html text="There is currently a known issue where SD card-based platforms receive a 'Format card' pop up. 
-      If formatted, the OS will not be updated. While we investigate this issue, please close the pop-up and do not click 'format.'" %}
+      
+      {% include note.html text="There is currently a known issue where the OS goes through the partitions on the SD card
+      and prompts a 'Format ..' message for a specific data partition that does not contain any file system. Please
+      dismiss this prompt by pressing cancel. While we work on a solution, we recommend that if you click on 'Format now,' 
+      you reflash the SD card with the FFU image again as the format action impacts the update process and the device will 
+      fail to update.'" %}
+
       <li>
         <p><b>Open the Windows 10 IoT Core Dashboard</b> you downloaded and installed from the <a href="GetStartedStep1.htm">Get the tools</a> page.</p>
       </li>
