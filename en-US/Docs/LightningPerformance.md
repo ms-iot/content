@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: docs
 title: Performance Report
 permalink: /en-US/Docs/LightningPerformance.htm
 lang: en-US
