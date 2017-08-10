@@ -9,4 +9,4 @@ lang: en-US
 
 # Coming Soon
 
-We're working on this topic and we plan to publish it soon. Stay tuned!
+We're working on this topic and we plan to publish it soon. 
