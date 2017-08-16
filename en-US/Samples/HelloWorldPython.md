@@ -19,6 +19,8 @@ In this sample, we will create and deploy the proverbial 1st app, "Hello, world!
 
 * Download and install PTVS (Python Tools for Visual Studio) **VS 2015** latest release from [here](https://github.com/Microsoft/PTVS/releases/latest){:target="_blank"}.
 
+* In VS 2017 use Visual Studio Installer to ensure that you have Python IoT support installed.
+
 * Download and install the latest Python UWP SDK (pyuwpsdk.vsix) release from [here](https://github.com/ms-iot/python/releases){:target="_blank"}.
 
 ### Create new Python project

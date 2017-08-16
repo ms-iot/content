@@ -6,7 +6,7 @@ lang: en-US
 ---
 
 # Release Notes for Windows 10 IoT Core
-Build Number 16226. June 2017
+Build Number 16257. August 2017
 
 &copy; 2017 Microsoft Corporation. All rights reserved
 
@@ -23,11 +23,11 @@ You can review linked terms by pasting the forward link into your browser window
 
 ## What's new in this build: 
 * General bug fixes 
-* Support for Universal BSP (wm.xml) is available now. Use the current iot-adk-addonkit (develop branch) with the current version of the ADK. In IoTCoreShell, set UNIVERSAL_BSP=1 to enable this feature.
-* Add SMSC network driver to all architectures of IOT core 
-* Enable exclusive mode audio for IoT Core   
-* Add an API for system time 
-* Support memory-mapped 16550 UART (subtype 0x12) in EMS, boot and kernel debugger.
+* Fix a bug that blocked Cortana from enabling voice recognition
+* Multi-Lang packages are now available. You can create FFUs supporting multiple languages, see <a href="https://github.com/ms-iot/iot-adk-addonkit/tree/develop/Source-arm/Products/MultiLangSample">MultiLangSample</a> and <a href="https://github.com/ms-iot/iot-adk-addonkit/tree/develop/Source-arm/Products/SingleLangSample">SingleLangSample</a> for more information
+* You can change the system language using IoTSettings.exe. More information is available <a href="https://developer.microsoft.com/en-us/windows/iot/docs/cortanaoniotcore">here</a> in the Language Configuration section.
+* Enable the ability to create a WIFI AP without a password
+* Enable hardware keyword detection (HWKWS). 
 
 
 ## Additional Information
@@ -36,11 +36,10 @@ You can review linked terms by pasting the forward link into your browser window
 
 ## Known issues in this build:
 * Network connectivity failures in MinnowBoard Max (MBM) firmware version 0.93. (Fixed in firmware version 0.94.) 
-* BluetoothLE devices may fail to fully connect.
 * F5 driver deployment from Visual Studio does not work on IoT Core. 
-* The power button is missing from Device Portal.
-* Joule may become unstable after 30-60 minutes due to an issue with the graphics driver.
-* Mouse clicks do not always work.
+* Joule may become unstable after 30-60 minutes due to an issue with the graphics driver. 
+* Image creation may fail due to InstallOemCerts.cmd command errors (13038321). 
+* Background tasks do not appear in the Apps Manager view in Windows Device Portal (WDP) (13037606). 
 
 
 
