@@ -149,6 +149,10 @@
             "link":"/Docs/AppInstaller.htm"
           },
           {
+            "title": "IoT Shell",
+            "link":"/Docs/IoTCoreShell"
+          },
+          {
             "title":"WinDbg",
             "link":"/Docs/Windbg.htm"
           },
