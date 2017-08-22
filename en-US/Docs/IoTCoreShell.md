@@ -13,13 +13,10 @@ This document covers the IoT Core Shell, foreground and background applications,
 
 ## IoT Shell, Foreground, and Background Apps
 
-The **IoT Shell** (iotshell.exe) is the part of IoT Core responsible for launching UI, bringing up foreground applications and continuous background applications on your device, sequencing operations like provisioning and OOBE events, monitoring applications for servicing events, and orchestrating certain other services. It's launched by the Shell Infrastructure Host service (sihost.exe) through a registry-configured IoT plugin (IoTShellExt.dll). Both the IoT Shell and the Host service are system critical, which means IoT Core will bluescreen if either one of these processes fails outside of a clean shutdown / reset.
+Your IoT Core device runs the IoT Shell. It has many responsibilities, but its primary job is to make sure registered startup apps are launched. It has two modes: Headed and Headless. 
+In Headed mode, the IoT Shell will launch a single registered startup app that will show its UI in full screen (also known as a Headed app). Headed mode assumes you have a screen connected and shows UI, while Headless mode does not include a UI.
 
-The below image shows an architectural diagram of the IoT Shell
-
-![IoT Shell Architecture]({{site.baseurl}}/Resources/images/IoTCoreShell/IoTShell_exe.png)
-
-Initializing the shell is different depending on if the device is configured as headed or headless (explained in detail [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode)). In Headed mode, IoTShell prepares CoreUI (IoT Core's UI stack) and launches any registered foreground applications. In Headless mode, there is no need for CoreUI and related instances; the shell launches continuous background tasks only.
+Initializing the shell is different depending on if the device is configured as headed or headless (explained in detail [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode)). In Headed mode, the IoT Shell launches any registered foreground applications. In Headless mode, there is no UI; the IoT Shell launches continuous background tasks only.
 
 Herein lie the main differences between foreground and background applications:
 
@@ -38,6 +35,12 @@ The **IoT Startup App** ([sample]({{site.baseurl}}/{{page.lang}}/Samples/iotstar
 Use either one of these apps as a starting point for your multi-app experience as you see fit.
 
 ## Switching between apps with HID Injection Keys
+
+The below instructions show you how to turn on Hotkey support through entries to the registry. If you are building your own image and want to support hotkeys without needing to access the registry, you can include an optional feature package that handles these steps for you.
+
+The feature package to look for is called: **Microsoft-OneCore-IoTUAP-Shell-HotKeys-Feature-Package.cab** and the feature is called **IOT_SHELL_HOTKEY_SUPPORT**
+
+The rest of this document covers how to implement this feature manually.
 
 ### Return Home
 
@@ -60,8 +63,8 @@ Alternatively, if you want to switch between your foreground apps, you can set u
 
 ``
 “HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\IoTShellExtension\HotKeys”
-	“PREV”        QWORD       0x00010000 00010009 
-    “NEXT”        QWORD    0x00020000 00050009 
+“PREV” QWORD 0x00010000 00010009 
+“NEXT” QWORD 0x00020000 00050009 
 ``
 
 As a REG file, this looks as follows:
