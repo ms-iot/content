@@ -14,7 +14,7 @@ This document covers the IoT Core Shell, foreground and background applications,
 ## IoT Shell, Foreground, and Background Apps
 
 Your IoT Core device runs the IoT Shell. It has many responsibilities, but its primary job is to make sure registered startup apps are launched. It has two modes: Headed and Headless. 
-In Headed mode, the IoT Shell will launch a single registered startup app that will show its UI in full screen (also known as a Headed app). Headed mode assumes you have a screen connected and shows UI. In Headless mode (explained in detail [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode)), there is no UI; the IoT Shell launches continuous background tasks only.
+In Headed mode, the IoT Shell will launch a single registered startup app that will show its UI in full screen (also known as a Headed app). Headed mode assumes you have a screen connected and shows UI. In Headless mode (explained in detail [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode)), there is no UI; the IoT Shell launches background applications only.
 
 Herein lie the main differences between foreground and background applications:
 
