@@ -35,7 +35,6 @@ You can review linked terms by pasting the forward link into your browser window
 
 ## Known issues in this build:
 * Store published apps aren't able to invoke an exe through Windows.System.ProcessLauncher unless it is signed by Microsoft
-* Cortana on Hummingboard board is showing black screen
 * Visual Studio debugging for Java Script apps is not working.  Apps can be deployed and started without the debugger from Visual Studio.  Apps can also be deployed from Visual Studio and started from the Device Portal or iotstartup.exe
 * Network connectivity failures in MinnowBoard Max (MBM) firmware version 0.93. (Fixed in firmware version 0.94.) 
 * F5 driver deployment from Visual Studio does not work on IoT Core. 
