@@ -23,7 +23,7 @@ The following are the minimum required fields in SMBIOS for IoTCore
 * (Table 1, offset 04h) System Manufacturer
 * (Table 1, offset 05h) System Product Name
 * (Table 1, offset 19h) System SKU
-* (Table 1, offset 1Bh) System Family
+* (Table 1, offset 1Ah) System Family
 
 These fields gain prominence as fields which will be used for identifying unique system configurations for telemetry and servicing. The Manufacturer, Product Name, SKU Number and Family fields must not be longer than 64 characters in length. Avoid leading or trailing spaces or other invisible characters.
 
