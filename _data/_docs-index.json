@@ -173,6 +173,10 @@
             "link":"/Docs/Speech.htm"
           },
           {
+            "title":"Language Support",
+            "link":"/Docs/MultiLang.htm"
+          },
+          {
             "title": "Computer Vision",
             "link": "/Docs/ComputerVision.htm"
           },
