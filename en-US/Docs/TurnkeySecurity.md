@@ -62,7 +62,7 @@ Windows 10 IoT Core works with [several leading SoCs][6] that are utilized in hu
 * Intel MinnowBoardMax 
 
 **Notes:**
-* For Qualcomm's DragonBoard 410c, in order to enable Secure Boot, it may be necessary to provision RPMB. Once the eMMC has been flashed with Windows 10 IoT Core (as per instructions [here][8]), press [Power] + [Vol+] + [Vol-] simultaneously on the device when powering up and select "Provision RPMB" from the BDS menu. *Please note that this is an irreversible step.*
+* For Qualcomm's DragonBoard 410c, in order to enable Secure Boot, it may be necessary to provision RPMB. Once the eMMC has been flashed with Windows 10 IoT Core (as per instructions [here][8]), press [Power] + [Vol+] + [Vol-] simultaneously on the device when powering up and select "Provision RPMB" from the BDS menu. *Please note that this is an irreversible step. (physical fuses on the DragonBoard are blown)*
 * For Intel's MinnowBoard Max, firmware version must be 0.82 or higher (get the [latest firmware][9]). To enable TPM capabilities, power up board with a keyboard & display attached and press F2 to enter UEFI setup. Go to _Device Manager -> System Setup -> Security Configuration -> PTT_ and set it to _&lt;Enable&gt;_. Press F10 to save changes and proceed with a reboot of the platform.
 * For Qualcomm's DragonBoard 410c, in order to enable USB mass storage mode (if required):
   * disconnect everything from DragonBoard
