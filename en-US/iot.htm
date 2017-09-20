@@ -28,19 +28,20 @@ lang: en-US
             <p class="c-subheading-1 x-type-center">The operating system built for your Internet of Things</p>
         </div>
         <div id="videoImage" data-grid="col-12" class="m-feature m-video-trigger f-mask-40">
-        <picture>
-            <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width: 1779px)">
-            <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:1400px)">
-            <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:1084px)">
-            <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:768px)">
-            <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:540px)">
-            <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:0)">
-            <img srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" src="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" alt="Windows IoT Core video">
-        </picture>
-    <div>
-       <button type="button" class="c-glyph glyph-play" id="playVideo" aria-label="Play IoT video"></button>
-    </div>
-    </div>    
+            <picture>
+                <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width: 1779px)">
+                <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:1400px)">
+                <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:1084px)">
+                <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:768px)">
+                <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:540px)">
+                <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:0)">
+                <img srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" src="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" alt="Windows IoT Core video">
+            </picture>
+            <div>
+                <!-- min-width set to 0 to overwrite web-core style -->
+            <button style="min-width: 0;" type="button" class="c-glyph glyph-play" id="playVideo" aria-label="Play IoT video"></button>
+            </div>
+        </div>    
         <div data-grid="col-12" class="pad-thin x-type-center">
             <a id="getStarted-action" class="mscom-link c-call-to-action c-glyph" aria-label="Get started with Windows 10 IoT Core" ms.title="get started" href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
         </div>
