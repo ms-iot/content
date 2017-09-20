@@ -6,18 +6,42 @@ keyword: Windows IoT, Get Started, Home Page, IoT
 permalink: /en-US/iot.htm
 lang: en-US
 ---
+
+<script>
+    $(document).ready(function(){
+        $("#playVideo").click(function(){
+            var div = '<div class="m-feature" data-grid="col-12">';
+            var sec = '<section class="c-feature f-align-center c-video">';
+            var span = ' <span aria-hidden="true" itemprop="name">View the video "What is Windows 10 IoT Core"</span>';
+            var iframe = '<iframe id="iframe-video" src="https://www.youtube.com/embed/PV785U-g_KM?showinfo=0&amp;rel=0&amp;enablejsapi=1&autoplay=1" frameborder="0" allowfullscreen="true" }"></iframe>'
+           var close = ' </section></div>';
+           var final = div + sec + span + iframe + close;  
+            $("#videoImage").remove();
+            $("#heading").after(final);
+        });
+    });
+</script>
 <section>
     <div data-vg="mwf-wfb-feature-centeralign-with-Video-VG1" data-grid="container">
-        <div>
+        <div id="heading">
             <h1 class="c-heading-1 x-type-center">Windows 10 IoT Core</h1>
             <p class="c-subheading-1 x-type-center">The operating system built for your Internet of Things</p>
         </div>
-        <div class="m-feature" data-grid="col-12">
-            <section class="c-feature f-align-center c-video">
-                <span aria-hidden="true" itemprop="name">View the video "What is Windows 10 IoT Core"</span>
-                <iframe id="iframe-video" src="https://www.youtube.com/embed/PV785U-g_KM?showinfo=0&amp;rel=0&amp;enablejsapi=1" frameborder="0" allowfullscreen="true" htmlcustomattributes="{'aria-label':'View the Windows 10 IoT Core video'}"></iframe>
-            </section>
-        </div>
+        <div id="videoImage" data-grid="col-12" class="m-feature m-video-trigger f-mask-40">
+            <picture>
+                <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width: 1779px)">
+                <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:1400px)">
+                <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:1084px)">
+                <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:768px)">
+                <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:540px)">
+                <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:0)">
+                <img srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" src="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" alt="Windows IoT Core video">
+            </picture>
+            <div>
+                <!-- min-width set to 0 to overwrite web-core style -->
+            <button style="min-width: 0;" type="button" class="c-glyph glyph-play" id="playVideo" aria-label="Play IoT video"></button>
+            </div>
+        </div>    
         <div data-grid="col-12" class="pad-thin x-type-center">
             <a id="getStarted-action" class="mscom-link c-call-to-action c-glyph" aria-label="Get started with Windows 10 IoT Core" ms.title="get started" href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
         </div>

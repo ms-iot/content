@@ -7,10 +7,10 @@ function telemetry(){
         var Route="13202";
         document.write("<script type='text/javascript' src='" + (window.location.protocol) + "//c.microsoft.com/ms.js" + "'><\/script>");
 }
-if (typeof(mscc) === ‘undefined’ || mscc.hasConsent()) {
+if (typeof(mscc) === "undefined" || mscc.hasConsent()) {
              telemetry(); 
         } else {
-                mscc.on(‘consent’, telemetry); 
+                mscc.on("consent", telemetry); 
                 }        
 </script>
 <script type="text/javascript" src="https://assets.windowsphone.com/26cc6e61-fd0a-41b6-8e56-4bb8cb0c117d/feedbacksock-min.js"></script>
