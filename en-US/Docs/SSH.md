@@ -6,4 +6,4 @@ keyword: SSH, windows iot, remote, putty
 permalink: /en-US/Docs/SSH.htm
 lang: en-US
 ---
-{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/manage-your-device/SSH" %}
+{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/connect-your-device/SSH" %}
