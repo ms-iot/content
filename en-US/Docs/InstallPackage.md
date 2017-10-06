@@ -6,4 +6,4 @@ keyword: package, driver install
 permalink: /en-US/Docs/InstallPackage.htm
 lang: en-US
 ---
-{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/commercialize-your-device/InstallingPackages " %}
+{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/build-your-image/CreateInstallPackage" %}
