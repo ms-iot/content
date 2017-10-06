@@ -6,4 +6,4 @@ keyword: windows iot, image creation, bsp, windows iot
 permalink: /en-US/Docs/BSP.htm
 lang: en-US
 ---
-{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/commercialize-your-device/CreateBSP " %}
+{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/build-your-image/CreateBSP" %}

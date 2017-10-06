@@ -6,4 +6,4 @@ keyword: windows runtime, windows iot, embedded mode, capabilities
 permalink: /en-US/Docs/EmbeddedMode.htm
 lang: en-US
 ---
-{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/manage-your-device/EmbeddedMode " %}
+{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/EmbeddedMode" %}
