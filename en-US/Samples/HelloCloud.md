@@ -39,7 +39,7 @@ You’re now ready to start sending data to the cloud.
 
 In Visual Studio 2017, go to File | New | Project menu, select the Blank App UWP application and call it ‘HelloCloud’:
 
-![Visual Studio 2017](../../Resources/images/NewProject_VS2017.png)
+![Visual Studio 2017]({{site.baseurl}}/Resources/images/NewProject_VS2017.png)
 
 You will use the Microsoft.Azure.Devices.Client library to connect to Azure, so go ahead and install it from the NuGet gallery. (And if you’re curious to know what’s in this library, you can check it out on GitHub: github.com/azure/azure-iot-sdks)
 
