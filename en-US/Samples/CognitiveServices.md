@@ -123,7 +123,7 @@ ___
     After it deploys, click on the **"Show access keys..."** link under the "Essentials" window to see your access keys.
 
 
-    ![]({{site.baseurl/Resources/images/cogserv/azure_cogserv_create.png}})
+    ![Create Cognitive Services resource]({{site.baseurl/Resources/images/cogserv/azure_cogserv_create.png}})
 
 
 ## Add the C# Code
