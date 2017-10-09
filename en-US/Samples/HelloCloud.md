@@ -1,7 +1,7 @@
 ---
 layout: sample
 title: Hello, Cloud!
-description: Create an app to talk to the Azure cloud using Azure IoT Hub
+description: Create an app to talk to the Azure cloud using Azure IoT Hub.
 keywords: azure, Windows 10 IoT Core
 permalink: /en-US/Samples/HelloCloud.htm
 lang: en-US
@@ -37,9 +37,9 @@ The tool also allows you to list and delete existing devices, as well as listen 
 
 You’re now ready to start sending data to the cloud.
 
-In Visual Studio 2015, go to File | New | Project menu, select the Blank App UWP application and call it ‘HelloCloud’:
+In Visual Studio 2017, go to File | New | Project menu, select the Blank App UWP application and call it ‘HelloCloud’:
 
-![Visual Studio 2015](https://winblogs.azureedge.net/win/2015/12/1_projectWindow.png)
+![Visual Studio 2017](https://winblogs.azureedge.net/win/2015/12/1_projectWindow.png)
 
 You will use the Microsoft.Azure.Devices.Client library to connect to Azure, so go ahead and install it from the NuGet gallery. (And if you’re curious to know what’s in this library, you can check it out on GitHub: github.com/azure/azure-iot-sdks)
 
