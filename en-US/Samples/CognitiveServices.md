@@ -106,17 +106,24 @@ In the UI mock up, double click on the "Detect Emotions" button. You will see a 
 
 ![Add Button Event Handler]({{site.baseurl}}/Resources/images/cogserv/event_handler1.png)
 
-## Register for Cognitive Services
+## Get the Emotion API Key
 ___
-1.  Sign in to Cognitive Services
+1.  Free Trial
+    
+    Visit the [Azure Cognitive Services Page](https://azure.microsoft.com/en-us/try/cognitive-services/?api=computer-vision) and click on "Get API Key" next to the Emotion API label; use your Microsoft account to sign in. 
 
-    Visit the [sign in page](https://www.microsoft.com/cognitive-services/en-us/sign-up) and use your Microsoft account to sign in.
+    You should now see two API keys available for use for 30 days.
+    
+    ![Emotion API Product Keys]({{site.baseurl}}/Resources/images/cogserv/cogserv_signup.png)
 
-2.  Get the product key
+2.  Azure Subscription
 
-    Click on the keys you would like to receive. For this application, we only need the Emotion API. Click Emotion - Preview and then click "Subscribe" at the bottom of the page. The next page should contain two keys for the Emotion API. Copy one of them to your clipboard.
+    If you already used the Emotion API's free trial, you can still use the APIs for free with an Azure account. [Sign up for one](https://portal.azure.com/), then head to the [Azure Portal](https://portal.azure.com/) and create a new Cognitive Services Resource with the fields as shown below. 
+    
+    After it deploys, click on the **"Show access keys..."** link under the "Essentials" window to see your access keys.
 
-    ![Add Button Event Handler]({{site.baseurl}}/Resources/images/cogserv/cogserv_signup.png)
+
+    ![Create Cognitive Services resource]({{site.baseurl/Resources/images/cogserv/azure_cogserv_create.png}})
 
 
 ## Add the C# Code
