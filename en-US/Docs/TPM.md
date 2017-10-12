@@ -6,4 +6,4 @@ keyword: TPM, trusted platform module, windows iot, cryptographic
 permalink: /en-US/Docs/TPM.htm
 lang: en-US
 ---
-{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/secure-your-device/TPM " %}
+{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/secure-your-device/TPM" %}

@@ -6,4 +6,4 @@ keyword: secure boot, windows iot, bitlocker, encryption, security
 permalink: /en-US/Docs/SecureBootAndBitLocker.htm
 lang: en-US
 ---
-{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/secure-your-device/SecureBootAndBitLocker " %}
+{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/secure-your-device/SecureBootAndBitLocker" %}

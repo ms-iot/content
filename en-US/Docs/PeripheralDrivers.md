@@ -6,4 +6,4 @@ keyword: package, driver install
 permalink: /en-US/Docs/PeripheralDrivers.htm
 lang: en-US
 ---
-{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/learn-about-hardware/PeripheralDrivers " %}
+{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/learn-about-hardware/PeripheralDrivers" %}

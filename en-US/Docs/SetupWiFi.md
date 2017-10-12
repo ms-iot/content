@@ -6,4 +6,4 @@ keyword: wifi, windows iot, device, wireless
 permalink: /en-US/Docs/SetupWiFi.htm
 lang: en-US
 ---
-{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/connect-your-device/SetupWifi " %}
+{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/connect-your-device/SetupWifi" %}

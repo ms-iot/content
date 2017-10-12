@@ -6,4 +6,4 @@ keyword: windows iot, image creation, language, windows iot
 permalink: /en-US/Docs/MultiLang.htm
 lang: en-US
 ---
-{% include redirect.html url="?https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/MultiLang" %}
+{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/MultiLang" %}

@@ -6,4 +6,4 @@ keyword: dashboard, Windows 10 IoT Core, download, install, configure
 permalink: /en-US/Docs/IoTDashboard.htm
 lang: en-US
 ---
-{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/connect-your-device/IoTDashboard " %}
+{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/connect-your-device/IoTDashboard" %}

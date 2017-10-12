@@ -6,4 +6,4 @@ keyword: secure IoT devices, TPM, trusted platform module, BitLocker, encryption
 permalink: /en-US/Docs/BuildingSecureDevices.htm
 lang: en-US
 ---
-{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/secure-your-device/BuildingSecureDevices " %}
+{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/secure-your-device/BuildingSecureDevices" %}

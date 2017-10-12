@@ -7,4 +7,4 @@ permalink: /en-US/Docs/WVSA.htm
 lang: en-US
 deviceName: WVSA
 ---
-{% include redirect.html url="?https://docs.microsoft.com/en-us/windows/iot-core/archive/wvsa" %}
+{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/archive/wvsa" %}

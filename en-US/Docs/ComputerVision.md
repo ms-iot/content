@@ -6,4 +6,4 @@ keyword: computer vision, opencv, cognitive services, windows hello, realsense, 
 permalink: /en-US/Docs/ComputerVision.htm
 lang: en-US
 ---
-{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/extend-your-app/ComputerVision " %}
+{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/extend-your-app/ComputerVision" %}
