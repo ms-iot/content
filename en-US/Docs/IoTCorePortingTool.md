@@ -6,4 +6,4 @@ keyword: windows iot, win32, uwp, porting
 permalink: /en-US/Docs/IoTCorePortingTool.htm
 lang: en-US
 ---
-{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/learn-about-hardware/IoTCorePortingTool " %}
+{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/learn-about-hardware/IoTCorePortingTool" %}

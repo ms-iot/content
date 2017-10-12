@@ -6,4 +6,4 @@ keyword: Cloud, Azure, TPM, Security
 permalink: /en-US/Docs/ConnectDeviceToCloud.htm
 lang: en-US
 ---
-{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/manage-your-device/ConnectDeviceToCloud " %}
+{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/manage-your-device/ConnectDeviceToCloud" %}
