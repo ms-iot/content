@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Using WiFi on your Windows 10 IoT Core device
 description: Learn how to set up Wifi on your Windows 10 IoT Core device
 keyword: wifi, windows iot, device, wireless

@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Using the AllJoyn Studio Extension
 permalink: /en-US/Docs/AllJoynStudio.htm
 lang: en-US

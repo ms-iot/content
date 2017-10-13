@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Computer Vision
 description: Lern about the Computer Vision solutions IoT Core supports and how to implement them in your projects.
 keyword: computer vision, opencv, cognitive services, windows hello, realsense, windows runtime, windows iot, uwp

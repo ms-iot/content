@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: MinnowBoard Max Pin Mappings
 description: Pin mappings of the hardware interfaces for MinnowBoard Max
 keyword: pin, pin mappings, windows iot, MBM, MinnowBoard Max

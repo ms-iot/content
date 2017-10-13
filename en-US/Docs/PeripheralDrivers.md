@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Install USB peripheral drivers
 description: Learn how to create and install USB Peripheral drivers in Windows IoT Core
 keyword: package, driver install

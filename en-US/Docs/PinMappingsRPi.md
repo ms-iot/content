@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Raspberry Pi2 & 3 Pin Mappings
 description: Pin mappings of the hardware interfaces for the Raspberry Pi 2 and Raspberry Pi 3
 keyword: pin, pin mappings, windows iot, Raspberry Pi 2, Raspberry Pi 3

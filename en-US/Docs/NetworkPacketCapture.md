@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Use Microsoft Message Analyzer to perform network packet capture
 description: Use Microsoft Message Analyzer to perform network packet capture
 keyword: network, windows iot, Microsoft Message Analyzer

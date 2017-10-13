@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Azure IoT Device Management
 description: Describes device management through Azure IoT Hub 
 keyword: Azure, IoT, Device Management

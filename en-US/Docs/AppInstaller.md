@@ -1,5 +1,5 @@
 ---
-layout: docs 
+layout: default 
 title: App installer
 description: Learn how to install UWP App Packages on your IoT Core device
 keyword: Windows 10 IoT Core, UWP App Package, install

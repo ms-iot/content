@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Windows 10 IoT Core BSP
 description: We describe how to get BSPs for IoT Core
 keyword: windows iot, image creation, bsp, windows iot

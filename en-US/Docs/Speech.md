@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Speech resources
 description: Provide speech resources and sample links, introduce the speech capability of Windows 10 IoT Core
 keyword: speech, windows iot, Cortana, speech recognition, text to speech

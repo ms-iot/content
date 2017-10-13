@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Bluetooth support
 description: Information about Bluetooth support on Windows 10 IoT Core
 keyword: bluetooth, bt, windows iot, device, wireless

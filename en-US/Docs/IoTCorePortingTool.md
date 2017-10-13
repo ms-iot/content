@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Windows 10 IoT Core API Porting Tool
 description: A tool for helping you port your existing Win32 and Windows CE applications to Windows 10 IoT Core
 keyword: windows iot, win32, uwp, porting
