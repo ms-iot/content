@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Insider Lab
 description: IoT and AI Insider lab where you can leverage Microsft's support in bringing your product to market.
 keyword: windows iot, insider lab
@@ -8,6 +8,7 @@ lang: en-US
 ---
 
 # Internet of Things Insider Lab 
+
 If your organization is developing an IoT solution, you might be able to leverage [Microsoft's Insider Labs](https://www.microsoft.com/en-us/iotinsider) to help accelerate bringing your product to market. 
 
  <div class="container">

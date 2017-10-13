@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: TPM on Windows 10 IoT Core
 description: Learn more about the cryptographic capabilities that are available for Windows IoT Core.
 keyword: TPM, trusted platform module, windows iot, cryptographic

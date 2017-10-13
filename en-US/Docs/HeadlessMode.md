@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Headed/Headless devices
 description: Configured Windows 10 IoT Core for either headed or headless mode
 keyword: windows iot, headed, headless, boot

@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Create and install a package
 description: Learn how to create and install package in Windows IoT Core
 keyword: package, driver install

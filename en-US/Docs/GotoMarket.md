@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Go to market
 permalink: /en-US/Docs/GotoMarket.htm
 lang: en-US

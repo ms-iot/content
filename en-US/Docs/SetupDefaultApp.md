@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Setup a default app
 description: Learn how to setup defaultapp in Windows IoT Core
 keyword: package, driver install

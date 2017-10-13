@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: OEM license requirements
 description: System requirements for OEMs
 keyword: OEM, windows 10 iot core

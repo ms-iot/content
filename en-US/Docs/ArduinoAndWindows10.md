@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Arduino and Windows 10
 description: Learn how to make amazing projects with Arduino and Windows 10.
 keyword: arduino, windows iot

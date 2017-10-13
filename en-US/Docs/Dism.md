@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Use DISM to image the SD card for Windows IoT Core device
 keyword: windows iot, dism, flash, sd card, install
 permalink: /en-US/Docs/Dism.htm

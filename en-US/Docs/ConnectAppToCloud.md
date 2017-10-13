@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Connect your app to the cloud
 description: Describes how to connect a UWP app to Azure
 keyword: Cloud, Azure, Connected Services

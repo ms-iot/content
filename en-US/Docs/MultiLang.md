@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Windows 10 IoT Core Multiple Language Support
 description: We describe how to add multiple language support 
 keyword: windows iot, image creation, language, windows iot

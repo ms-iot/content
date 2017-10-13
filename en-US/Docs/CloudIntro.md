@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Cloud programming
 description: Describes why connect to the cloud and the purpose of different applicable Azure services
 keyword: Cloud, Azure

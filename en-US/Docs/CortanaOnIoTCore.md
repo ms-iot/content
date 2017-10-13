@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Cortana on IoT Core
 description: How to use Cortana on IoT Core and how to build product with Cortana
 keyword: windows iot, Cortana, KWS, MSA

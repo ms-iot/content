@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Remote Console App Debugging
 description: How to debug a console app remotely on IoT Core
 permalink: /en-US/Docs/RemoteDebugging.htm

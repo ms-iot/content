@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Windows 10 IoT Core Recovery
 description: We describe how to recover IoT Core devices
 keyword: windows iot, image creation, recovery, windows iot

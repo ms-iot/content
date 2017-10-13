@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Windows Device Portal
 description: Connect to, control, configure, and get advanced diagnostics about your machine from the web
 keyword: windows iot, remote, diagnostics

@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: File Transfer Protocol
 description: Using FTP to transfer files to and from your Windows 10 IoT Core device
 keyword: FTP, windows iot, remote

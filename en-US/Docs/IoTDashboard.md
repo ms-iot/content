@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Windows 10 IoT Core Dashboard
 description: The best way to download, install and configure Windows 10 IoT Core
 keyword: dashboard, Windows 10 IoT Core, download, install, configure
