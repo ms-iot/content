@@ -7,13 +7,15 @@ permalink: /en-US/Samples/HelloCloud.htm
 lang: en-US
 ---
 
-# Getting started
+# Hello, Cloud!
+
+## Getting started
 
 First, to deploy applications on Windows IoT Core, you’ll need to have Microsoft Visual Studio 2015 (or download the free Community edition here). You’ll also need an active Azure subscription (you can start with a free trial subscription), and then choose a free version of the Azure IoT Hub service.
 
 To set up an instance of the IoT Hub, log on to the Azure Portal and click “New” on the jumpbar on the left, then “Internet of Things,” then “IoT Hub.” (The process is straightforward, but if you want additional pointers, there are great tips in this article). Be sure to choose “F1 –Free” pricing and scale tier. The free option provides one IoT Hub per subscription, which includes 10 devices and 3000 messages per day.
 
-# Creating a device ID
+## Creating a device ID
 
 Once you’ve set up your instance of IoT Hub, the first thing you need is to create the identity for your device. Every device must have a key that uniquely identifies it to the service. This way the IoT Hub can securely associate the data with the device that sent it.
 
@@ -33,7 +35,7 @@ Remember to use your actual connection string in the above command. The tool wil
 
 The tool also allows you to list and delete existing devices, as well as listen to the messages coming into the IoT Hub. It might be worth taking a few minutes to explore the tool. Type ‘iothub-explorer help’ to learn about the other commands.
 
-# Hello, Cloud!
+## Hello, Cloud!
 
 You’re now ready to start sending data to the cloud.
 
