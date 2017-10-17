@@ -34,7 +34,7 @@ ___
 ## Additional Resources
 ___ 
 
-[Release Notes](https://docs.microsoft.com/en-us/windows/iot-core/release-notes/commercial/)
+[Release Notes](https://docs.microsoft.com/en-us/windows/iot-core/release-notes/commercial/fallcreatorsupdate)
 
 [Downloads]({{site.baseurl}}/{{page.lang}}/Downloads)
 

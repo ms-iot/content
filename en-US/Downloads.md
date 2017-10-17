@@ -40,7 +40,7 @@ lang: en-US
           <p><a href="/content/en-US/Docs/ReleaseNotesRTM"> Release notes </a></p>
         </div>
         <div class="col-md-12 col-xs-24">
-          <img alt="iot core dashboard" src="{{site.baseurl}}/Resources/images/IotDashboard/IoTDashboard_WelcomePage.PNG" />
+          <img class="img-responsive" alt="iot core dashboard" src="{{site.baseurl}}/Resources/images/IotDashboard/IoTDashboard_WelcomePage.PNG" />
         </div>
       </div>
     </section>
