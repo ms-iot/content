@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Dragonboard Pin Mappings
 description: Pin mappings of the hardware interfaces for Dragonboard
 keyword: pin, pin mappings, windows iot, Dragonboard

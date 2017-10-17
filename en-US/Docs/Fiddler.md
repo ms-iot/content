@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Capturing Fiddler Traces on Windows IoT Core
 description: Learn how to use Fiddler to capture network traffic from your IoT device.
 keyword: fiddler, proxy, web debugging

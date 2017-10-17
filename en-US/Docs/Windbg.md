@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: WinDbg
 description: Debug your Windows 10 IoT Core device using the powerful Windows debugger, WinDbg.
 keyword: debug, windbg, windows iot

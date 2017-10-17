@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Device Options
 description: Review and compare the numerous compatible Windows 10 IoT Core development boards
 keyword: community, iot, boards, windows iot, comparison

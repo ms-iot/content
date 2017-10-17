@@ -54,11 +54,10 @@ Optional:
   1. Now, copy the Microsoft.HidInjectionSample.HidInjectionSample.cab to the network folder you opened in the first step.
   
 ### Installing the HID Injector
-   1. Use [SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH) or [Powershell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell) to connect to your device. 
-   1. Once connected, change to your deployment direcory by typing ```cd deploy```.
-   1. Now prepare the install of the driver by typing ```ApplyUpdate -stage Microsoft.HidInjectionSample.HidInjectionSample.cab```.
-   1. Now commit the install by typing ```ApplyUpdate -commit```.
-   1. Your IoT Core device will reboot, and apply the update.
+
+   Use the [Windows device portal]({{site.baseurl}}/{{page.lang}}/Docs/DevicePortal.htm) to install the Microsoft.HidInjectionSample.HidInjectionSample.cab file. 
+   
+   ![Install CAB]({{site.baseurl}}/Resources/\images\DevicePortal\cabInstall.PNG)
    
 ### Verify installation
 If you've installed the driver, verify the install by navigating to the Web management console ```http://<your device ip>:8080/devicemanager.htm``` 
@@ -66,8 +65,7 @@ and looking for the ```HID Injection Sample``` node.
    
 ## HID Injector Sample Application
 Included in the solution is a C++ console application used to demonstrate communication with the Hid injection Driver. The Driver is discovered by class using ```CM_Get_Device_Interface_List```. 
-The sample application will inject Touch, Keyboard and Mouse events by synthesizing a HID block, and calling the driver with that block. The Sample application is C++ 
-which requires the [console app procedures for deploying]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment). 
+The sample application will inject Touch, Keyboard and Mouse events by synthesizing a HID block, and calling the driver with that block. The Sample application is C+ which requires the [console app procedures for deploying]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment). 
 
 
 
