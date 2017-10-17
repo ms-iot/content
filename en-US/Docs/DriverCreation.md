@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Driver Creation
 description: Create a Universal Driver for your Windows 10 IoT Core device
 permalink: /en-US/Docs/DriverCreation.htm

@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Windows 10 IoT Core Pro
 description: We describe how to create a Windows 10 IoT Core Pro image
 keyword: windows iot, image creation, iot core pro, windows iot

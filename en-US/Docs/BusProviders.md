@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Bus Providers
 description: Bus Providers Enable Support for Off-SOC from Inbox APIs
 keyword: busses, gpio, pwm, i2c, spi, adc

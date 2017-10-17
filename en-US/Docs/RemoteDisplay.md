@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Remote Display Experience
 description: View and control your Windows 10 IoT Core applications remotely, from a Windows 10 desktop PC, tablet, or phone
 keyword: windows iot, remote, rdp, remote display

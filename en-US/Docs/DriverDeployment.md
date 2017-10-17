@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Driver deployment
 description: Deploy a driver on Windows 10 IoT Core with Visual Studio 
 keyword: windows 10 IoT Core, driver deployment

@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: Glossary
 description: A list of commonly used concepts, phrases, acronyms and their meanings
 keyword: windows iot

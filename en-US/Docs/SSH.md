@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: default
 title: SSH
 description: Remotely administer and configure your Windows IoT Core device over SSH
 keyword: SSH, windows iot, remote, putty
