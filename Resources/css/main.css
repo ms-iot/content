@@ -960,8 +960,3 @@ body .doc-samples-sidebars {
     }
 
 /* [/BUGFIXES] */
-
-img{
-    max-width:100%;
-    height:auto;
-}
