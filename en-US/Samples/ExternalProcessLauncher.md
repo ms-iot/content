@@ -26,9 +26,9 @@ For more information on setting everything up, refer to [our get started guide.]
 
 ### Load the project in Visual Studio  
   
-You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/tree/develop/WebCamSample/CS){:target="_blank"}. Make a copy of the folder on your disk and open the project from Visual Studio.  
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/tree/develop/WebcamApp/CS){:target="_blank"}. Make a copy of the folder on your disk and open the project from Visual Studio.  
 
-The code for the ProcessLauncher sample can be found under: <samples root folder>\ProcessLauncher\CS  
+The code for the ExternalProcessLauncher sample can be found under: <samples root folder>\ExternalProcessLauncher\CS  
  
 ### Deploy your app  
  
