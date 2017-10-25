@@ -11,6 +11,8 @@ In this sample, we will use the [Lightning GPIO provider]({{site.baseurl}}/{{pag
 It also includes steps to reference a custom winmd file in your Node.js project. This sample is based on the [Blinky sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinkyNode) 
 and shares the same setup steps as well as most of the code. The key difference is setting the Lightning provider as the default controllers provider.
 
+{% include note.html text="This sample only works with the Windows 10 IoT Core Anniversary Update (Build 14393) release with Visual Studio 2015 and does not currently work with any newer Windows releases or Visual Studio 2017. We are looking into adding Node.js support to UWP in a future release of Windows 10 IoT Core." %}
+
 
 ### Set up your PC
 * Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
