@@ -1,4 +1,4 @@
-in---
+---
 layout: sample
 title: Bluetooth RFCOMM Sample
 permalink: /en-US/Samples/BTSerial.htm
