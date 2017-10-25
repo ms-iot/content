@@ -12,6 +12,8 @@ lang: en-US
 
 Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/{{page.lang}}/Samples/memorystatus)
 
+{% include note.html text="This sample only works with the Windows 10 IoT Core Anniversary Update (Build 14393) release with Visual Studio 2015 and does not currently work with any newer Windows releases or Visual Studio 2017. We are looking into adding Node.js support to UWP in a future release of Windows 10 IoT Core." %}
+
 ### Set up your PC
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 

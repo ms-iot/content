@@ -12,6 +12,8 @@ lang: en-US
 
 In this sample, you will use [Johnny-Five](https://www.npmjs.com/package/johnny-five) running on a Raspberry Pi 2 or 3 to control a servo connected to an Arduino (with [Firmata](https://www.npmjs.com/package/firmata) installed).
 
+{% include note.html text="This sample only works with the Windows 10 IoT Core Anniversary Update (Build 14393) release with Visual Studio 2015 and does not currently work with any newer Windows releases or Visual Studio 2017. We are looking into adding Node.js support to UWP in a future release of Windows 10 IoT Core." %}
+
 
 ### Hardware required
 * Raspberry Pi 2 or 3.

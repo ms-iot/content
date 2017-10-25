@@ -15,6 +15,7 @@ This page will take you through the steps to blink an LED from a Node.js console
 [Hello blinky background service]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinkyBackgroundNode). 
 The difference is that we'll be using the win32 console version of Node.js (Chakra) and running it via command line.
 
+{% include note.html text="This sample only works with the Windows 10 IoT Core Anniversary Update (Build 14393) release with Visual Studio 2015 and does not currently work with any newer Windows releases or Visual Studio 2017. We are looking into adding Node.js support to UWP in a future release of Windows 10 IoT Core." %}
 
 ### Set up your hardware
 The hardware setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/Samples/helloblinky).
