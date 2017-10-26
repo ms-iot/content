@@ -1,0 +1,23 @@
+---
+layout: getstarted-steps-commercialize
+title: Windows 10 IoT Core Official Website | Developer Resource
+description: Windows 10 IoT Core for your Internet of Things. 
+keyword: windows iot, get started, home page, iot
+permalink: /en-US/GetStarted/Commercialize/RegisterDevice.htm
+lang: en-US
+---
+
+<header>
+    <h1  class="c-subheading-1">Register your device</h1>
+    <p class="c-paragraph-3">To register your device for commercialization, ensure that your device includes support for SMBIOS so that it complies with the SMBIOS Reference Specification.</p>
+</header>
+<section>
+    <p class="c-paragraph-3">Here are the fields you will need to set:</p>
+    <ol class="c-list">
+        <li>Bit 2 in the BIOS Characteristics Extension Byte 2 field</li>
+        <li>The length of the Type 1 (System Information) table must be at least 1 Bh bytes</li>
+        <li>(Table 1, offset 04h) System Manufacturer, (Table 1, offset 05h) System Product Name, (Table 1, offset 19h) System SKU, and (Table 1, offset 1Bh) System Family Fields must be filled out in the SMBIOS (at a minimum).</li>
+    </ol>
+    <img class="c-image" src="{{site.baseurl}}/Resources/images/get-started/commercialize/registerDevice.png" alt="Register device to commercialize">  
+    <p class="c-paragraph-3">For more details, please read our documentation on <a href="https://docs.microsoft.com/en-us/windows/iot-core/commercialize-your-device/oemlicenserequirements" class="c-hyperlink">OEM license requirements</a>.</p>
+</section>

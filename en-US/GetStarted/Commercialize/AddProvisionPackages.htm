@@ -1,0 +1,92 @@
+---
+layout: getstarted-steps-commercialize
+title: Windows 10 IoT Core Official Website | Developer Resource
+description: Windows 10 IoT Core for your Internet of Things. 
+keyword: windows iot, get started, home page, iot
+permalink: /en-US/GetStarted/Commercialize/AddProvisionPackages.htm
+lang: en-US
+---
+
+<header>
+    <h1  class="c-subheading-1">Add provisioning packages</h1>
+    <p class="c-paragraph-3">We'll create a provisioning package that contains some sample Wi-Fi settings. You can use Windows Configuration Designer to create provisioning packages that add apps, drivers, features, or modify many common settings, such as IT device management and policy settings.</p>
+    <p class="c-paragraph-3">For this lab, we'll use the ProductB that includes the default app (Bertha), which shows network status.</p>
+    <blockquote class="c-blockquote">
+        <p class="c-paragraph">Note: To test Wi-Fi, your board will need Wi-Fi support. You can use a Wi-Fi adapter/dongle, or use a board like the Raspberry Pi 3 that has Wi-Fi built-in.</p>
+    </blockquote>
+</header>
+<section>
+    <h3 class="c-subheading-3">Create your provisioning package in Windows Configuration Designer</h3>
+    <ol class="c-list">
+        <li>Start Windows Imaging and Configuration Designer.</li>
+        <li>Click File > New project.</li>
+        <li>For this example, use the name "ProductBProv" for the product name, accept the defaults, and click Next.</li>
+        <li>Select Provisioning package > Windows 10 IoT Core.</li>
+        <li>At the <b>Import a provisioning package (optional)</b> page, click <b>Finish</b>.</li>
+        <li>Add a sample setting by expanding <b>settings > Connectivity Profiles > WLAN > WLANSettings > SSID</b></li>
+        <li>Type in the name of a Wi-Fi network name and click <b>Add</b>.</li>
+        <li>Expand <b>SSID > WLANXmlSettings > SecurityType</b> and choose a setting such as <b>Open</b>.</li>
+        <li>Expand <b>SSID > WLANXmlSettings > AutoConnect</b> and choose a setting such as True</b>.</li>
+        <li>Export the provisioning package. By clicking <b>Export > Provisioning Package > Next > (Uncheck the Encrypt Package box) > Next > Build</b>. To learn more, see the <a href="https://docs.microsoft.com/en-us/windows/configuration/provisioning-packages/provisioning-create-package" class="c-hyperlink">Export a provisioning package</a> documentation.
+            <blockquote class="c-blockquote">
+                <p class="c-paragraph">Important: When making any changes to a provisioning packages, Windows Configuration Designer increments the version number in the provisioning file (customizations.xml). The version number is a number with a decimal point, such as 1.19.</p>
+            </blockquote>
+        </li> 
+        <li>At the <b>All done</b> page, click the link to the <b> Output location </b>.</li>
+    </ol>
+</section>
+<section>
+    <h3 class="c-subheading-3">Copy customizations.xml into your product's prov folder</h3>
+    <p class="c-paragraph-3">Copy customizations.xml to `C:\IoT-ADK-AddonKit\Source-<arch>\Products\ProductB\prov`. You can also update this file with any other desired changes.</p>
+</section>
+<section class="pad-thin">
+    <h3 class="c-subheading-3">Add the auto-provisioning scripts to the feature manifest and product configuration file</h3>
+    <ol class="c-list">
+        <li>Review the package definition file: 
+            <blockquote class="c-blockquote">
+                    <p class="c-paragraph">Provisioning.Auto.pkg.xml: C:\IoT-ADK-AddonKit\Common\Packages\Provisioning.Auto\Provisioning.Auto.pkg.xml</p>
+            </blockquote>
+        </li>
+        <li>Make sure the file source resolves correctly, where Prov.ppkg resolves to 
+            <blockquote class="c-blockquote">
+                    <p class="c-paragraph">C:\IoT-ADK-AddonKit\Source-<arch>\Products\ProductB\prov\ProductBProv.ppkg</p>
+            </blockquote>
+            <strong class="c-badge f-small f-highlight">ADD CODE</strong>
+        </li>
+        <li>Make sure that the package definition file <b>%OEM_NAME%.Provisioning.Auto.cab</b> and the feature ID:OEM_ProvAuto are referenced In the common feature manifest, C:\IoT-ADK-AddonKit\Common\Packages\OEMCommonFM.xml.
+            <strong class="c-badge f-small f-highlight">ADD CODE</strong>
+        </li>
+        <li>Update the test configuration file 
+            <blockquote class="c-blockquote">
+                    <p class="c-paragraph">C:\IoT-ADK-AddonKit\Source-<ach>\Products\ProductB\TestOEMInput.xml</p>
+            </blockquote>
+        </li>
+        <li>Make sure the common feature manifest: OEMCommonFM.xml is included.
+            <strong class="c-badge f-small f-highlight">ADD CODE</strong>
+        </li>
+        <li>Make sure the feature OEM_ProvAuto is included. 
+            <strong class="c-badge f-small f-highlight">ADD CODE</strong>
+        </li>
+    </ol>
+</section>
+<section>
+    <h3 class="c-subheading-3">Build and test the image</h3>
+    <ol class="c-list">
+        <li>Build and flash the image and after a short while, you should see the <a href="https://developer.microsoft.com/en-us/windows/iot/samples/iotdefaultapp" class="c-hyperlink">IoT Test (Bertha) app</a> which shows basic information about the image.</li>
+        <li>To see if your provisioning settings were applied, unplug any network cables from your IoT device and select the defaults. Skip the <b>Let's get connected</b> screen.</li>
+        <li>If your wireless network is in range, this screen should show the network successfully connected, and show an IP address for the network. </li>
+        <li>To test your network connection and upload aps, connect both your technician PC and device to the same network. </li>
+        <li>On your technician PC, open Internet Explorer and type in the device's IP address with an http:// prefix and :8080 suffix.</li>
+        <li>When prompted, enter your device's default username and password. This opens the Windows Device Portal. From here, you can upload app packages, see what apps are installed, and switch between them.</li>
+        <li>Click <b> Networking > Profiles </b> and you should see the Wi-Fi profile you created. </li>
+    </ol>
+</section>
+<section>
+    <h3 class="c-subheading-3">Troubleshooting</h3>
+    <ol class="c-list">
+        <li><b>Check your Wi-Fi broadcast frequency</b>. Some wi-fi adapters, such as the built-in wi-fi adapter on the Raspberry Pi 3, only support 2.4 GHz Wi-Fi networks. 
+        <li><b>Confirm that the provisioning package settings work on your network by using a laptop PC to test</b>. Install the provisioning package by double-clicking ProductAProv.ppkg. The wireless network should connect automatically.
+        <li>Check to see if the profile has been added to the device. Connect using an ethernet connection to the device and connect using a SSH client such as PuTTY. When connected, check to see what profiles have been installed: `netsh wlan show profiles` and the network should appear in the list of user profiles.
+        <li><b>Use a different device name for each device</b>. This can help prevent network conflicts. Set this name while creating media for the device.
+    </ol>
+</section>

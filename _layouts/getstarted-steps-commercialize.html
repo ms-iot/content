@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    {% include default-head.html %}
+<body >
+    <!-- Body -->
+   <div>
+     
+     <main id="mainContent">
+      <section class="m-typographic-intro f-background-accent f-transparent">
+        <div>
+          <div>
+            <h1 class="c-subheading-1">Commercialize your prototype</h1>
+          </div>
+        </div>
+      </section>
+      <div data-grid="container" id="mainContent">     
+        {% include getStarted-sideNav.html %}
+        <section class="m-style-wrapper" data-grid="col-9">
+          {{ content }}  
+        </div>    
+        </section>
+    </main>
+     
+    
+    <section data-grid="col-12 pad-12x stack-4" class="pad-medium" style="padding-bottom:20px;">
+    <div data-vg="mwf-hrule-VG" data-grid="container">
+    <hr class="c-divider" />
+    </div>
+</section>
+    </div> 
+     {% include landing-footer.html %}
+</body>
+</html>

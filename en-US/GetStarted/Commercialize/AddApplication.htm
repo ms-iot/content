@@ -1,0 +1,71 @@
+---
+layout: getstarted-steps-commercialize
+title: Windows 10 IoT Core Official Website | Developer Resource
+description: Windows 10 IoT Core for your Internet of Things. 
+keyword: windows iot, get started, home page, iot
+permalink: /en-US/GetStarted/Commercialize/AddApplication.htm
+lang: en-US
+---
+
+<header>
+    <h1  class="c-subheading-1">Add your application</h1>
+    <p class="c-paragraph-3">We're now going to take your app, package it up, and create a new image you can load onto new devices.</p>
+</header>
+<section class="pad-thin">
+    <h3 class="c-subheading-3">Create an Appx package</h3>
+    <p class="c-paragraph-3">For background apps, use the same method to install and run them. You can skip these steps if you've already created and tested your app.</p>
+    <ol class="c-list">
+        <li>Create a UWP app. This can be any app designed for IoT Core saved as an Appx package. For our example, we are using the <a href="https://github.com/ms-iot/samples/tree/develop/IoTCoreDefaultApp" class="c-hyperlink">IoT Core Default App</a>.</li>
+        <li>In Visual Studio, to save the IoT Core Default app as an Appx package, click <b>Project > Store > Create App Packages > No > Next</b></li>
+        <li>Select <b>Output location: C:\DefaultApp</b> (or any other path that doesn't include spaces)</li>
+        <li>Select <b>Generate app bundle: Never</b></li>
+        <li>Click <b>Create</b>. Visual Studio will create the Appx file into `C:\DefaultApp\IoTCoreDefaultApp_1.2.0.0_ARM_Debug_Test`. You can also optionally test the app as well.</li>
+    </ol>   
+</section>
+<section>
+    <h3 class="c-subheading-3">Create a package for the app</h3>
+    <ol class="c-list">
+            <li>Launch the IoT Core Shell and create a new package for the app. For example:
+                <blockquote class="c-blockquote">
+                    <p class="c-paragraph">newAppxPkg "C:\DefaultApp\IoTCoreDefaultApp_1.2.0.0_ARM_Debug_Test\IoTCoreDefaultApp_1.2.0.0_ARM_Debug_Test.appx" fga Appx.MyUWPApp</p>
+                </blockquote>
+                This creates a new folder at C:\IoT-ADK-AddonKit\Source-<arch>\Packages\Appx.MyUWPApp, and generates a customizations.xml file as well as a package xml file that is used to build the package.
+            </li>
+            <li>From the IoT Core Shell, build the package.
+                <blockquote class="c-blockquote">
+                    <p class="c-paragraph">buildpkg Appx.MyUWPApp</p>
+                </blockquote>
+                The package is built, appearing as C:\IoT-ADK-AddonKiT\Build\<arch>\pkgs\<your OEM name>.Appx.MyUWPApp.cab.
+            </li>
+        </ol>
+</section>
+<section>
+    <h3 class="c-subheading-3">Add your app package to the feature manifest</h3>
+    <ol class="c-list">
+        <li>Open your feature file at C:\IoT-ADK-AddonKit\Source-<arch>\Packages\OEMFM.xml</li>
+        <li>Create a new PackageFile section in the XML with your package file listed and give it a new FeatureID such as "OEM_MyUWPApp".
+            <strong class="c-badge f-small f-highlight">ADD CODE</strong>    
+        </li>
+    </ol>   
+</section>
+<section>
+    <h3 class="c-subheading-3">Update project configuration files</h3>
+    <ol class="c-list">
+        <li>Open your product's test configuration file at C:\IoT-ADK-AddonKit\Source-<arch>\Products\ProductsA\TestOEMInput.xml</li>
+        <li>Make sure both your OEMFM.xml and OEMCommonFM.xml feature manifests are listed in the AdditionalFMs section.
+            <strong class="c-badge f-small f-highlight">ADD CODE</strong>
+        </li>
+        <li>Change the features included in the product:
+            <ol class="c-list">
+                <li>Remove the sample test apps by adding comment tags.</li>
+                <li>Confirm that the OEM features - OEM_CustomCmd and OEM_ProvAuto - are present.</li>
+                <li>Add the FeatureID for your app package, e.g. OEM_MyUWPApp.</li>
+            </ol>
+            <strong class="c-badge f-small f-highlight">ADD CODE</strong>
+        </li>
+    </ol>   
+</section>
+<section>
+    <h3 class="c-subheading-3">Build and test the image</h3>
+    <p class="c-paragraph-3">Build and test the image using the same procedures from the previous step. After a short while, the device should start automatically and you should see your app.</p> 
+</section>

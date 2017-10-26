@@ -98,3 +98,108 @@ a.mscom-link.c-call-to-action.c-glyph {
     color:white; 
     font-size:18px
 }
+ .m-supplemental-nav>nav {
+    margin-top: 60px;
+}
+
+@media only screen and (min-width: 1084px){
+.m-typographic-intro.f-transparent {
+    height: 280px;
+}
+}
+.m-typographic-intro>div>div .c-subheading {
+    columns:1
+}
+.c-drawer .f-toggle:focus,
+.c-drawer>button:focus,
+.c-drawer>header .f-toggle:focus,
+.c-drawer>header>button:focus,
+.c-flipper:focus {
+    outline: #000 dashed 1px
+}
+  .m-product-placement-item .iconimagesheading li img.active {
+    display: none;
+  }
+  
+  .m-product-placement-item .iconimagesheading li img.inactive {
+    display: block;
+  }
+  
+ .m-product-placement-item .iconimagesheading li.active img.active {
+    display: block;
+  }
+  
+ .m-product-placement-item .iconimagesheading li.active img.inactive {
+    display: none;
+  }
+  
+  .m-product-placement-item .c-badge {
+    display: none;
+  }
+  
+  .m-product-placement-item .c-badge {
+    display: inline-block;
+    text-transform: uppercase;
+  }
+  
+  @media screen and (max-width: 767px) {
+   .m-product-placement-item ul.c-list {
+      height: auto !important;
+    }
+   }
+  
+   .m-product-placement-item ul.iconimagesheading {
+    float: none;
+    padding-top: 0px;
+    padding-left: 10px;
+  }
+  
+   .m-product-placement-item .svgimg {
+    height: 24px;
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+   .m-product-placement-item p.c-group {
+    margin-top: 15px;
+    height: 42px;
+  }
+  
+   .m-product-placement-item .iconimagesheading {
+    display: block;
+  }
+  
+   .m-product-placement-item .iconimagesheading .svgimg img.mscom-image {
+    width: 24px;
+    height: 24px;
+  }
+  
+   .m-product-placement-item .c-list {
+    clear: both;
+  }
+  
+  body  picture.c-image img[data-src] {
+    display: none;
+  }
+  
+  body  .m-product-placement-item .f-default-image:hover {
+    outline: none !important;
+  }
+    
+  body  .m-product-placement-item picture img {
+    height: auto !important;
+  }
+  
+   .m-product-placement-item.f-size-large .f-default-image {
+      background: none;
+  }
+ 
+    .iconimagesheading a:focus
+  {
+    outline: 1px dashed#000 !important;
+    display: inline-block;
+  }
+
+  .m-typographic-intro.f-transparent{
+    height:150px
+}
