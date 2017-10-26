@@ -50,17 +50,23 @@ PIXEL_VALUES Pixels[stripLen];
 // Sets the pixel color in our array
 void SetPixel(int pixel, BYTE Red, BYTE Green, BYTE Blue)
 {
-    if (pixel < stripLen)
+    if ((pixel < 0) || (pixel >= stripLen))
     {
-        Pixels[pixel].Red = Red | 0x80;
-        Pixels[pixel].Green = Green | 0x80;
-        Pixels[pixel].Blue = Blue | 0x80;
+        return;
     }
+    Pixels[pixel].Red = Red | 0x80;
+    Pixels[pixel].Green = Green | 0x80;
+    Pixels[pixel].Blue = Blue | 0x80;
 }
 
 // Sends the color of a pixel to the strip
 void ShiftPixel(int pixel)
 {
+    if ((pixel < 0) || (pixel >= stripLen))
+    {
+        return;
+    }
+
     PPIXEL_VALUES PixelValues = &Pixels[pixel];
     BYTE bit;
     int i;
