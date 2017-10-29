@@ -1,0 +1,207 @@
+---
+layout: getstarted-steps-prototype
+title: Windows 10 IoT Core Official Website | Developer Resource
+description: Windows 10 IoT Core for your Internet of Things. 
+keyword: windows iot, get started, home page, iot
+permalink: /en-US/GetStarted/Prototype/SelectDevice.htm
+lang: en-US
+---
+<style>
+.c-carousel.f-single-slide ul {
+     white-space: normal !important;
+}
+</style>
+<header data-grid="col-12">
+<h1  class="c-subheading-1">Select your device</h1>
+  <p data-grid="col-10" class="c-paragraph-3">
+		Microsoft and third parties provide developer kits to help bootstrap your product. The list below is a selection of these boards and developer kits to choose from when prototyping your device. Make sure the board you're using has updated firmware. If specified, the devices with Full Flash Update (FFU) available will make prototyping faster. 
+ </p>
+</header>
+<section data-grid="col-12">
+	<h2 data-m="test" data-grid="col-12" style="margin-top:12px;" class="c-subheading-2">Can't find a device? Add your device to the catalog.</h2>
+	<a href="#" data-js-dialog-show="flow-dialog-single-light-theme-preview" class="c-call-to-action c-glyph f-lightweight">
+		<span>Register your device to the catalog.</span>
+	</a>
+	<div class="c-dialog f-flow" id="flow-dialog-single-light-theme-preview" aria-hidden="true">
+		<div role="presentation" tabindex="-1"></div>
+		<div role="dialog" aria-label="Flow" tabindex="-1">
+			<button class="c-glyph glyph-cancel" data-js-dialog-hide aria-label="Close dialog" tabindex="0"></button>
+			<div role="document"> 
+				<h2>Register your device</h2>
+				<div>
+					<p class="c-paragraph">Want to showcase your device running Windows 10 IoT Core?<br> Contact us at <b>iotcatalog@microsoft.com</b> with the following information:</p>
+					<ol class="c-list">
+						<li>Name of the device</li> 
+						<li>A photo of the device</li> 
+						<li>A link which hosts the following information (Or a PDF document): 
+							<ul class="c-list"> 
+								<li>Website of manufacturer </li>
+								<li>Architecture of the device</li> 
+								<li>Any additional flashing information, firmware update, or special processes should be hosted on your website</li> 
+								<li>Your contact information </li>
+							</ul>
+						</li>
+						<li>A link to download the device Image (FFU)</li>
+						<li>A link to buy the device </li>
+					<ol>
+					<p>If you'd also like to certify your device through Azure IoT visit the <a href="https://catalog.azureiotsuite.com" class="c-hyperlink" target="_blank">Azure IoT catalog</a>. </p>
+				</div>
+				<div class="c-group">
+					<button class="c-button" type="submit" data-js-dialog-hide aria-label="Close dialog">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section data-grid="col-12">
+	<section data-grid="col-6"></section>
+	<section data-grid="col-4"  class="c-checkbox f-inline">
+			<div>
+				<div>
+					<label class="c-label">
+						<input aria-label="FFU available" type="checkbox" id="checkboxId1" name="checkboxId1" value="value1" aria-checked="false">
+						<span aria-hidden="true">FFU available</span>
+					</label>
+					<label class="c-label">
+						<input aria-label="No FFU available" type="checkbox" id="checkboxId2" name="checkboxId2" value="value2" aria-checked="false">
+						<span aria-hidden="true">No FFU available</span>
+					</label>
+				</div>
+			</div>
+	</section>
+	<section data-grid="col-2"></section>
+	</section>
+<section data-grid="col-12">
+<div data-grid="col-12">
+    <div class="c-carousel f-single-slide" role="region" aria-label="">
+        <button class="c-flipper f-previous" aria-hidden="true" tabindex="-1"></button>
+        <button class="c-flipper f-next" aria-hidden="true" tabindex="-1"></button>
+        <div itemscope itemtype="http://schema.org/ItemList">
+            <ul class="c-group"  id=location>
+		
+<script>
+	//ffu available checked by default
+	 $(document).ready(function() {
+		$("#checkboxId1").attr("checked", true);
+		$(".noFFUAvailable").hide();
+ 		$(".FFUAvailable").show();
+	 });
+
+	$('input[type="checkbox"]').change(function(){
+$(".noFFUAvailable").show();
+  $(".FFUAvailable").show();
+if($('#checkboxId1').is(":checked") && $('#checkboxId2').is(":checked"))  {
+}else if($('#checkboxId1').is(":checked"))  {
+	$(".noFFUAvailable").hide();
+} else if($('#checkboxId2').is(":checked"))  {
+	  $(".FFUAvailable").hide();
+} 
+ });
+ var data = '';
+$.get("https://catalog.azureiotsuite.com/api/devices/search/null", function(response){
+ 	alert("Data: " + response);
+	 data = response;
+});
+
+var windowsData={
+	"deviceList" : [
+		{
+			"title" : "Raspberry-Pi3",
+			"thumbnailUrl" : "{{site.baseurl}}/Resources/images/devices/RPi3_0.png",
+			"website" : "https://www.raspberrypi.org/products/raspberry-pi-3-model-b/",
+			"buyLink" :"https://www.raspberrypi.org/products/raspberry-pi-3-model-b/",
+			"download":"",
+			"starterKit" : "https://developer.microsoft.com/en-us/windows/iot/Docs/AdafruitMakerKit.htm"
+		},{
+			"title" : "Raspberry-Pi2",
+			"thumbnailUrl" : "{{site.baseurl}}/Resources/images/devices/RPi2_0.png",
+			"website" : "https://www.raspberrypi.org/products/raspberry-pi-2-model-b/",
+			"buyLink" :"https://www.raspberrypi.org/products/raspberry-pi-2-model-b/",
+			"download":"",
+			"starterKit" : "https://developer.microsoft.com/en-us/windows/iot/Docs/AdafruitMakerKit.htm"
+		},{
+			"title" : "MinnowBoard MAX",
+			"thumbnailUrl" : "{{site.baseurl}}/Resources/images/devices/MBM_0.png",
+			"website" : "https://minnowboard.org/",
+			"buyLink" :"https://minnowboard.org/get-a-board",
+			"download":"",
+			"starterKit" : ""
+		},{
+			"title" : "DragonBoard 410c",
+			"thumbnailUrl" : "{{site.baseurl}}/Resources/images/devices/DB410c.png",
+			"website" : "https://www.qualcomm.com/products/snapdragon/processors/410",
+			"buyLink" :"https://www.arrow.com/en/products/dragonboard410c/arrow-development-tools",
+			"download":"",
+			"starterKit" : ""
+		},{
+			"title" : "Intel Joule",
+			"thumbnailUrl" : "{{site.baseurl}}/Resources/images/devices/joule.png",
+			"website" : "https://software.intel.com/en-us/iot/hardware/joule/dev-kit",
+			"buyLink" :"https://www.newegg.com/Product/Product.aspx?Item=N82E16813121832",
+			"download":"",
+			"starterKit" : ""
+		},{
+			"title" : "Intel Compute Stick",
+			"thumbnailUrl" : "{{site.baseurl}}/Resources/images/devices/IntelComputeStick.PNG",
+			"website" : "https://www.intel.com/content/www/us/en/compute-stick/intel-compute-stick.html",
+			"buyLink" :"https://www.intel.com/buy/us/en/catalog/desktop/computesticks",
+			"download":"",
+			"starterKit" : ""
+		}
+	]
+}; 
+
+var p=1; 
+var trHTML = '';
+for (var i = 0; i <  windowsData.deviceList.length; i++) { 
+	var tile = '<section data-m="el' + p +'" data-grid="col-12" class="m-product-placement-item f-size-large context-device FFUAvailable" itemscope><a href="#"><div class="f-default-image" style="background-color: rgba(0, 0, 0, 0); outline: rgba(0,0,0,.1) solid 2px; box-shadow: 1px 1px 5px 0 #adadad; height:270px;">';
+	var head = '<h3 class="c-heading" style="padding-left:10px; padding-top: 10px;" itemprop="product name">'+ windowsData.deviceList[i].title +'</h3>';
+	var img = '<picture style="height:70%;"><source srcset="' + windowsData.deviceList[i].thumbnailUrl + '" media="(min-width:540px)"> <source srcset="' + windowsData.deviceList[i].thumbnailUrl + '" media="(min-width:0)"><img class="c-image" style="max-width:80%; max-height:70%;" srcset="'+ windowsData.deviceList[i].thumbnailUrl +'" src="'+ windowsData.deviceList[i].thumbnailUrl +'" alt="'+ windowsData.deviceList[i].title +'" onerror="handleImgError(this, \'large\')"> </picture>';
+	var info = '<ul class="iconimagesheading"><li class="svgimg active"><a class="mscom-link c-hyperlink" data-toggle="tooltip" aria-describedby="tooltip-0" aria-haspopup="true" href="' + windowsData.deviceList[i].website + '" aria-label="Device information" ms.interactiontype="4" ms.link_type="inlink" ms.title="Device Information"><img src="{{site.baseurl}}/Resources/images/get-started/info.png" class="mscom-image mscom-image tooltip active tooltipimage" alt="Device Information"  style="width:26px; height:29px; margin-top:-5px; margin-right:-4px;"></a><span id="tooltip-0" class="c-tooltip" role="tooltip" aria-hidden="true" style="left: 156.641px; top: 549.734px;">Device Information</span></li>';
+	var buy = '<li class="svgimg active"><a class="mscom-link c-hyperlink" data-toggle="tooltip" aria-describedby="tooltip-1" aria-haspopup="true" href="' + windowsData.deviceList[i].buyLink + '" aria-label="Buy the device" ms.interactiontype="4" ms.link_type="inlink" ms.title="Buy the device"><img src="{{site.baseurl}}/Resources/images/get-started/cart.png" class="mscom-image mscom-image tooltip active tooltipimage" alt="Buy Device" style="width:20px; height:20px;"></a><span id="tooltip-1" class="c-tooltip hook-hover" role="tooltip" aria-hidden="true">Buy the device</span></li>';
+	var download = '<li class="svgimg active"><a class="mscom-link c-hyperlink" data-toggle="tooltip" aria-describedby="tooltip-2" aria-haspopup="true" href="'+ windowsData.deviceList[i].buyLink+'" aria-label="Download" ms.interactiontype="4" ms.link_type="inlink" ms.title="windows ink"><img src="/content/Resources/images/get-started/download.png" class="mscom-image mscom-image tooltip active tooltipimage img-responsive" alt="Buy Device" style="width:14px; height:20px;"></a><span id="tooltip-2" class="c-tooltip hook-hover" role="tooltip" aria-hidden="true">Download the respective FFU.</span></li></ul>';
+	var banner = '';
+	if(windowsData.deviceList[i].starterKit != ""){
+		banner = '<div style="background-color: #0072c6; text-align: center; color: white; height: 20px; font-size: 15px;"><a href="'+ windowsData.deviceList[i].starterKit +'">Starter Kit Available</a></div>';
+	}	
+	trHTML += tile + head + img + info + buy + download + banner + '</div></a></section>' ;                           			
+	p++;
+}
+
+var repetitor = '';
+if(!data._results){
+	alert("API:404 error");
+}
+else{
+	for (var i = 0; i < data._results.devices.length; i++) {
+		var os = data._results.devices[i].operatingSystems;
+		for (var j = 0; j < os.length; j++) {
+			if(os[j]=="Windows IoT Core"){
+				for(var k = 0; k <  windowsData.deviceList.length; k++){
+					if(data._results.devices[i].title == windowsData.deviceList[k].title){
+						repetitor=1;
+					}
+				}
+				if(repetitor!=1)
+				{
+					var tile = '<section data-m="el' + p +'" data-grid="col-12" class="m-product-placement-item f-size-large context-device noFFUAvailable" itemscope><a href="#"><div class="f-default-image" style="background-color: rgba(0, 0, 0, 0); outline: rgba(0,0,0,.1) solid 2px; box-shadow: 1px 1px 5px 0 #adadad; height:270px;">';
+					var head = '<h3 class="c-heading" style="padding-left:10px; padding-top: 10px;" itemprop="product name">'+ data._results.devices[i].title +'</h3>';
+					var img = '<picture style="height:70%;"><source srcset="' + data._results.devices[i].thumbnailUrl + '" media="(min-width:540px)"> <source srcset="' + data._results.devices[i].thumbnailUrl + '" media="(min-width:0)"><img class="c-image" style="max-width:80%; max-height:70%;" srcset="'+ data._results.devices[i].thumbnailUrl +'" src="'+ data._results.devices[i].thumbnailUrl +'" alt="'+ data._results.devices[i].title +'" onerror="handleImgError(this, \'large\')"> </picture>';
+					var info = '<ul class="iconimagesheading"><li class="svgimg active"><a class="mscom-link c-hyperlink" data-toggle="tooltip" aria-describedby="tooltip-0" aria-haspopup="true" href="' + data._results.devices[i].specUrl + '" aria-label="Device information" ms.interactiontype="4" ms.link_type="inlink" ms.title="Device Information"><img src="{{site.baseurl}}/Resources/images/get-started/info.png" class="mscom-image mscom-image tooltip active tooltipimage" alt="Device Information" style="width:26px; height:29px; margin-top:-5px; margin-right:-4px;"></a><span id="tooltip-0" class="c-tooltip" role="tooltip" aria-hidden="true" style="left: 156.641px; top: 549.734px;">Device Information</span></li>';
+					var buy = '<li class="svgimg active"><a class="mscom-link c-hyperlink" data-toggle="tooltip" aria-describedby="tooltip-1" aria-haspopup="true" href="' + data._results.devices[i].buyLink + '" aria-label="Buy the device" ms.interactiontype="4" ms.link_type="inlink" ms.title="Buy the device"><img src="{{site.baseurl}}/Resources/images/get-started/cart.png" class="mscom-image mscom-image tooltip active tooltipimage" alt="Buy Device" style="width:20px; height:20px;"></a><span id="tooltip-1" class="c-tooltip hook-hover" role="tooltip" aria-hidden="true">Buy the device</span></li>';
+					var download = '<li class="svgimg active"><a class="mscom-link c-hyperlink" data-toggle="tooltip" aria-describedby="tooltip-2" aria-haspopup="true" href="'+ data._results.devices[i].buyLink+'" aria-label="Download" ms.interactiontype="4" ms.link_type="inlink" ms.title="windows ink"><img src="/content/Resources/images/get-started/download.png" class="mscom-image mscom-image tooltip active tooltipimage img-responsive" alt="Buy Device" style="width:14px; height:20px;"></a><span id="tooltip-2" class="c-tooltip hook-hover" role="tooltip" aria-hidden="true">Download the respective FFU.</span></li></ul>';
+					
+					trHTML += tile + head + img + info + buy + download +'</div></a></section>'; 
+					p++;
+				}
+				else {
+					repetitor=0;
+				}
+			}
+		}
+	}
+}
+trHTML += '</ul></div></div></div></section>';
+$('#location').append(trHTML);
+</script>
+	

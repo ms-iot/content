@@ -1,0 +1,87 @@
+{
+   "en-US":[
+      {
+        "parent":"Build a Prototype",
+        "children":[
+          {
+            "title":"1. Select your device",
+            "link":"/GetStarted/Prototype/SelectDevice.htm"
+          },
+          {
+            "title":"2. Set up your device",
+            "link":"/GetStarted/Prototype/SetupDevice.htm"
+          },
+           {
+            "title":"3. Get your tools",
+            "link":"/GetStarted/Prototype/GetTools.htm"
+          },
+          {
+            "title":"4. Write your app",
+            "link":"/GetStarted/Prototype/WriteApp.htm"
+          },
+          {
+            "title":"5. Connect to the cloud",
+            "link":"/GetStarted/Prototype/ConnectCloud.htm"
+          },
+          {
+            "title":"6. Next Steps",
+            "link":"/GetStarted/Prototype/NextSteps.htm"
+          }
+        ]
+      },
+      {
+        "parent":"Commercialize a Prototype",
+        "children":[
+          {
+            "title": "1. Select your platform",
+            "link": "/GetStarted/Commercialize/SelectPlatform.htm"
+          },
+          {
+            "title":"2. Get your imaging tools",
+            "link":"/GetStarted/Commercialize/GetImagingTools.htm"
+          },
+          {
+            "title":"3. Build your image",
+            "link":"/GetStarted/Commercialize/BuildImage.htm"
+          },
+          {
+            "title":"4. Add necessary drivers",
+            "link":"/GetStarted/Commercialize/AddDrivers.htm"
+          },
+		      {
+            "title":"5. Add your application",
+            "link":"/GetStarted/Commercialize/AddApplication.htm"
+          },
+		      {
+            "title":"6. Add a common package",
+            "link":"/GetStarted/Commercialize/AddCommonPackages.htm"
+          },
+		      {
+            "title":"7. Add a provisioning package",
+            "link":"/GetStarted/Commercialize/AddProvisionPackages.htm"
+          },
+		      {
+            "title":"8. Maintain updates",
+            "link":"/GetStarted/Commercialize/MaintainUpdates.htm"
+          },
+		      {
+            "title":"9. Register your device",
+            "link":"/GetStarted/Commercialize/RegisterDevice.htm"
+          },
+		      {
+            "title":"10. Accept commercial terms",
+            "link":"/GetStarted/Commercialize/CommercialTerms.htm"
+          },
+		      {
+            "title":"11. Manufacture your device",
+            "link":"/GetStarted/Commercialize/ManufactureDevice.htm"
+          },
+		      {
+            "title":"12. Manage your devices at scale",
+            "link":"/GetStarted/Commercialize/ManageDevice.htm"
+          }
+
+        ]
+      }
+   ]
+}

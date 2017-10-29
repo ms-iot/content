@@ -1,0 +1,73 @@
+---
+layout: getstarted-steps-commercialize
+title: Windows 10 IoT Core Official Website | Developer Resource
+description: Windows 10 IoT Core for your Internet of Things. 
+keyword: windows iot, get started, home page, iot
+permalink: /en-US/GetStarted/Commercialize/CommercialTermsForm.htm
+lang: en-US
+---
+
+<header data-grid="col-12">
+    <h1  class="c-subheading-1">Register</h1>
+    <p class="c-paragraph-3">To accept the Microsoft Commercial Terms of Use for Windows 10 IoT Core Runtime Image, please complete the form below.</p>
+</header>
+<section data-grid="col-12">
+    <label class="c-label" for="firstName">First name</label>
+    <input id="firstName" class="c-text-field" type="text" name="firstName" placeholder="Please enter a First Name" required> 
+    
+    <label class="c-label" for="firstName">Last name</label>
+    <input id="firstName" class="c-text-field" type="text" name="firstName" placeholder="Please enter a Last Name" required> 
+    
+    <label class="c-label" for="firstName">Microsoft Account Email</label>
+    <input id="firstName" class="c-text-field" type="text" name="firstName" placeholder="Please enter an Email Address" required> 
+    
+    <label class="c-label" for="firstName">Company name</label>
+    <input id="firstName" class="c-text-field" type="text" name="firstName" placeholder=""> 
+    
+    <label class="c-label" for="firstName">Company Industry</label>
+    <input id="firstName" class="c-text-field" type="text" name="firstName" placeholder=""> 
+    
+    <label class="c-label" for="firstName">Product enhancement suggestions</label>
+    <input id="firstName" class="c-text-field" type="text" name="firstName" placeholder=""> 
+    
+    <div class="pad-thin" id="addDevice" data-grid="col-12">
+        <div data-grid="col-11">
+            <h3  class="c-subheading-4">Add Device</h3>
+        </div>
+        <div data-grid="col-1">
+            <button id="AddButton" class="c-action-toggle c-glyph glyph-add f-toggle" data-toggled-label="add" data-toggled-glyph="glyph-add" aria-label="add" data-f-describedby="glyphOnlyadd"></button>
+            <span id="glyphOnlyadd" class="c-tooltip" role="tooltip" aria-hidden="true">add</span>
+        </div>
+        <div data-grid="col-12">
+            <hr class="c-divider">
+        </div>
+        
+       
+    </div>
+
+</section>
+
+<script>
+    $(document).ready(function(){
+      //$("#DeviceInfo").remove();
+      var addDevice = ' <div data-grid="col-12"><div data-grid="col-6"><label class="c-label" for="firstName">Device name</label><input id="firstName" class="c-text-field" type="text" name="firstName" placeholder=""><label class="c-label" for="firstName">Device Category</label><input id="firstName" class="c-text-field" type="text" name="firstName" placeholder=""><label class="c-label" for="firstName">CPU Architecture</label><input id="firstName" class="c-text-field" type="text" name="firstName" placeholder=""><label class="c-label" for="firstName">How many will be shipped?</label><input id="firstName" class="c-text-field" type="text" name="firstName" placeholder=""></div><div data-grid="col-6">       <label class="c-label" for="firstName">When will the product launch?</label><input id="firstName" class="c-text-field" type="text" name="firstName" placeholder=""><label class="c-label" for="firstName">Is the device connected to cloud services?</label><input id="firstName" class="c-text-field" type="text" name="firstName" placeholder=""><label class="c-label" for="firstName">Is the device headless?</label><input id="firstName" class="c-text-field" type="text" name="firstName" placeholder=""></div></div> <div data-grid="col-11" class="pad-thin"><hr class="c-divider"></div>'
+        $("#AddButton").click(function(){
+         
+            $("#addDevice").append(addDevice);
+         
+        });
+    });
+</script>
+
+<section class="pad-thin" data-grid="col-12">
+<div class="c-textarea">
+    <textarea id="default-textarea-6" class="f-scroll f-flex" name="textarea-default" rows="4">This is some sample text with a very long string of text that wraps and has a total of four lines as well as a scroll bar</textarea>
+</div>
+<div class="c-checkbox">
+    <label class="c-label">
+        <input aria-label="Control label (unselected)" type="checkbox" id="checkboxId1" name="checkboxId1" value="value1" aria-checked="false" required>
+        <span aria-hidden="true">Accept the Terms and conditions</span>
+    </label>
+</div>
+</section>
+<button name="button" class="c-button" type="submit">Submit</button>
