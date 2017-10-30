@@ -18,29 +18,62 @@ lang: en-US
     <ol class="c-list">
         <li>Create a few sample text files using Notepad and title them TestFile1.txt and TestFile2.txt.</li>
         <li>Run C:\IoT-ADK-AddonKit\IoTCoreShell as an administrator.</li>
-        <li>Create a working folder for the registry key and test files, e.g. `newcommonpkg Registry.FilesAndRegKeys`
+        <li>Create a working folder for the registry key and test files, 
+                <blockquote class="c-blockquote">
+                    <p class="c-paragraph">e.g. `newcommonpkg Registry.FilesAndRegKeys`</p>
+                </blockquote>
             <br>
-            The new folder will be at `C:\IoT-ADK-AddonKit\Common\Packages\Registry.FilesAndRegKeys\`
+            The new folder will be at 
+            <blockquote class="c-blockquote">
+                <p class="c-paragraph">C:\IoT-ADK-AddonKit\Common\Packages\Registry.FilesAndRegKeys\</p>
+            </blockquote>
         </li>
     </ol>   
 </section>
 <section>
     <h3 class="c-subheading-3">Add test files to the package</h3>
     <ol class="c-list">
-        <li>Copy your test files into the new folder at   C:\IoT-ADK-AddonKit\CommoPackages\Registry.FilesAndRegKeys\</li>
-        <li>Update the package definition file, C:\IoT-ADK-AddonKit\Common\Packages\Registry.FilesAndRegKeys\Registry.FilesAndRegKeys.pkg.xml
+        <li>Copy your test files into the new folder at 
+                <blockquote class="c-blockquote">
+                    <p class="c-paragraph">C:\IoT-ADK-AddonKit\CommoPackages\Registry.FilesAndRegKeys\</p>
+                </blockquote>
+                </li>
+        <li>Update the package definition file,
+                <blockquote class="c-blockquote">
+                    <p class="c-paragraph">C:\IoT-ADK-AddonKit\Common\Packages\Registry.FilesAndRegKeys\Registry.FilesAndRegKeys.pkg.xml</p>
+                </blockquote>
             <ol class="c-list">
                 <li>Remove the comment marks and instructions.</li>
                 <li>Update the values of RegKey to include a new KeyName, Name, and Value.</li>
                 <li>Update the File Source names to the test files. By default, the files land in C:\Windows]System. To change the destination location, add a DestinationDir and Name. Variables like $(runtime.root) are defined in C:\Program Files (x86(\Windows Kits \10\Tools\bin\i386\pkggen.cfg.xml.</li>
             </ol>
-            <strong class="c-badge f-small f-highlight">ADD CODE</strong>
+            <blockquote class="c-blockquote">
+                <xmp>
+ <OSComponent>
+    <RegKeys>   
+        <RegKey KeyName="$(hklm.software)\$(OEMNAME)\Test">  
+            <RegValue Name="StringValue" Value="Test string" Type="REG_SZ"/>  
+            <RegValue Name="DWordValue" Value="12AB34CD" Type="REG_DWORD"/>  
+            <RegValue Name="BinaryValue" Value="12,AB,CD,EF" Type="REG_BINARY"/>  
+        </RegKey>  
+        <RegKey KeyName="$(hklm.software)\$(OEMNAME)\EmptyKey"/>   
+    </RegKeys>   
+    <Files>   
+        <File Source="TestFile1.txt" />   
+        <File Source="TestFile2.txt" DestinationDir="$(runtime.root)\OEMInstall" Name="TestFile2.txt"/>    
+    </Files>   
+</OSComponent>   
+                </xmp>
+            </blockquote>
         </li>
         <li>From the IoT Core Shell, build the package.
             <blockquote class="c-blockquote">
                 <p class="c-paragraph">buildpkg Registry.FilesAndRegKeys</p>
             </blockquote>
-            The package is built, appearing as C:\IoT-ADK-AddonKit\Build\<arch>\pkgs\<your OEM name>.RegistryFilesAndRegKeys.cab.
+            The package is built, appearing as 
+            <blockquote class="c-blockquote">
+                <xmp>C:\IoT-ADK-AddonKit\Build\<arch>\pkgs\<your OEM name>.RegistryFilesAndRegKeys.cab</xmp>
+            </blockquote>
             <br>
             All packages that you build appear in your architecture-specific folder.
             <blockquote class="c-blockquote">
@@ -55,8 +88,25 @@ lang: en-US
 <section>
     <h3 class="c-subheading-3">Update your feature manifest</h3>
     <ol class="c-list">
-        <li>Open the common feature manifest file `C:\IoT-ADK-AddonKit\Common\Packages\OEMCommonFM.xml`</li>
-        <li>Create a new PackageFile section in the XML, with your package file listed and give it a new FeatureID, such as "OEM_FilesAndRegKeys".<strong class="c-badge f-small f-highlight">ADD CODE</strong></li>
+        <li>Open the common feature manifest file
+                <blockquote class="c-blockquote">
+                        <xmp>C:\IoT-ADK-AddonKit\Common\Packages\OEMCommonFM.xml</xmp>
+                </blockquote> 
+                </li>
+        <li>Create a new PackageFile section in the XML, with your package file listed and give it a new FeatureID, such as "OEM_FilesAndRegKeys".
+                <blockquote class="c-blockquote">
+                    <xmp>
+<Features>  
+    <OEM>  
+        <!-- Feature definitions below -->  
+        <PackageFile Path="%PKGBLD_DIR%" Name="%OEM_NAME%.Registry.FilesAndRegKeys.cab">  
+          <FeatureIDs>  
+            <FeatureID>OEM_FilesAndRegKeys</FeatureID>  
+          </FeatureIDs>  
+        </PackageFile> 
+                    </xmp>
+                </blockquote>
+             </li>
         <li>Run `Runbuildfm oemto` generate updated files in the MergedFMs folder. This must be done every time any time an FM file is modified. You'll now be able to add your files and registry keys to any of your products by adding a reference to this feature manifest and Feature ID.</li>
     </ol>   
 </section>
@@ -65,14 +115,25 @@ lang: en-US
     <ol class="c-list">
         <li>Create a new product folder.
             <blockquote class="c-blockquote">
-                <p class="c-paragraph"> newproduct ProductB <device-name> </p>
+                <xmp> newproduct ProductB <device-name> </xmp>
             </blockquote>
         </li>
-        <li>Update the test configuration file C:\IoT-ADK-AddonKit\Source-<arch>\Products\ProductB\TestOEMInput.xml.
+        <li>Update the test configuration file 
+            <blockquote class="c-blockquote"><xmp>C:\IoT-ADK-AddonKit\Source-<arch>\Products\ProductB\TestOEMInput.xml</xmp></blockquote>
             <blockquote class="c-blockquote">
                 <p class="c-paragraph">Note: Make sure the feature manifest OEMCommonFM.xml is included, removing comment marks if necessary.</p>
             </blockquote>
-            <strong class="c-badge f-small f-highlight">ADD CODE</strong>
+            <blockquote class="c-blockquote"><xmp>
+<AdditionalFMs>  
+           <!-- Including BSP feature manifest -->  
+           <AdditionalFM>%BLD_DIR%\MergedFMs\DeviceFM.xml</AdditionalFM>  
+           <!-- Including OEM feature manifest -->  
+           <AdditionalFM>%BLD_DIR%\MergedFMs\OEMCommonFM.xml</AdditionalFM>  
+           <AdditionalFM>%BLD_DIR%\MergedFMs\OEMFM.xml</AdditionalFM>  
+           <!-- Including the test features -->  
+           <AdditionalFM>%AKROOT%\FMFiles\<architecture>\IoTUAPNonProductionPartnerShareFM.xml</AdditionalFM>  
+        </AdditionalFMs>      
+            </xmp></blockquote>
         </li>
         <li>Update the features included in the product:
             <ol class="c-list">
@@ -80,7 +141,28 @@ lang: en-US
                 <li>Verify that the OEM features: OEM_CustomCmd and OEM_ProvAuto are present.</li>
                 <li>Add the FeatureID for your registry package, e.g. OEM_FilesAndRegKeys.</li>
             </ol>           
-            <strong class="c-badge f-small f-highlight">ADD CODE</strong>
+            <blockquote class="c-blockquote"><xmp>
+<Features>  
+          <Microsoft>  
+        ...  
+          
+        <!-- Sample Apps, remove this when you introduce OEM Apps -->  
+          <Feature>IOT_BERTHA</Feature>  
+          <Feature>IOT_ALLJOYN_APP</Feature>  
+          <Feature>IOT_NANORDPSERVER</Feature>  
+          <Feature>IOT_SHELL_HOTKEY_SUPPORT</Feature>  
+          <Feature>IOT_APPLICATIONS</Feature>  
+          <Feature>IOT_ENABLE_ADMIN</Feature>  
+          </Microsoft>  
+          <OEM>  
+            <!-- Include BSP Features -->  
+            <Feature>DEVICE_DRIVERS</Feature>  
+            <!-- Include OEM features -->  
+            <Feature>OEM_CustomCmd</Feature>  
+            <Feature>OEM_ProvAuto</Feature>  
+            <Feature>OEM_FilesAndRegKeys</Feature>  
+        </OEM>
+    </xmp></blockquote>
         </li>
     </ol>   
 </section>

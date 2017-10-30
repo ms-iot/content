@@ -31,48 +31,94 @@ lang: en-US
     <h3 class="c-subheading-3">Build a package for your driver</h3>
     <ol class="c-list">
         <li>Run C:\IoT-ADK-AddonKit\IoTCoreShell as an administrator.</li>
-        <li>Create the driver package using the .inf file as the base:`newdrypkg C:\gpiokmdfdemo\gpiokmdfdemo.inf Drivers.HelloBlinky`</li>
-        <li>Copy the file ACPITABL.dat to the new folder C:\IoT-ADK-AddonKit\Source-<arch>\Packages\Drivers.HelloBlinky\.</li>
+        <li>Create the driver package using the .inf file as the base:
+            <blockquote class="c-blockquote"><xmp>newdrypkg C:\gpiokmdfdemo\gpiokmdfdemo.inf Drivers.HelloBlinky</xmp></blockquote>
+        </li>
+        <li>Copy the file ACPITABL.dat to the new folder <blockquote class="c-blockquote"><xmp>C:\IoT-ADK-AddonKit\Source-<arch>\Packages\Drivers.HelloBlinky\</xmp></blockquote></li>
     </ol>
 </section>
 <section>
     <h3 class="c-subheading-3">Verify sample file location</h3>
     <ol class="c-list">
         <li>
-            <p class="c-paragraph-3">Update the driver's package definition file - C:\IoT-ADK-AddonKit\Source-<arch>\Packages\Drivers.HelloBlinky\Drivers.HelloBlinky.pkg.xml.</p>
+            <p class="c-paragraph-3">Update the driver's package definition file - <blockquote class="c-blockquote"><xmp>C:\IoT-ADK-AddonKit\Source-<arch>\Packages\Drivers.HelloBlinky\Drivers.HelloBlinky.pkg.xml</xmp></blockquote></p>
             <p class="c-paragraph-3">The default package definition file includes sample XML that you can modify to add your own driver files. If necessary, update the value of file source to point to your .SYS file and the ACPITABL.dat file (you don't need to add the .INF file). Add the DestinationDir of $(runtime.drviers).</p>                    
-            <code class="language-html">
-                    <strong class="c-badge f-small f-highlight">ADD CODE</strong>
-            </code>
+            <blockquote class="c-blockquote"><xmp>
+<Package xmlns="urn:Microsoft.WindowsPhone/PackageSchema.v8.00"   
+     Owner="$(OEMNAME)" OwnerType="OEM" ReleaseType="Production"   
+     Platform="<architecture>" Component="Drivers" SubComponent="HelloBlinky">   
+  <Components>   
+    <Driver InfSource="gpiokmdfdemo.inf">   
+      <Reference Source="gpiokmdfdemo.sys" />   
+      <Files>   
+        <File Source="gpiokmdfdemo.sys"    
+              DestinationDir="$(runtime.drivers)"    
+              Name="gpiokmdfdemo.sys" />   
+        <File Source="ACPITABL.dat"    
+              DestinationDir="$(runtime.system32)"    
+              Name="ACPITABL.dat" />   
+      </Files>   
+    </Driver>   
+  </Components>   
+</Package>   
+                </xmp></blockquote>
         </li>
         <li>
             <p class="c-paragraph-3">From the IoT Core Shell, build the package.</p>
             <blockquote class="c-blockquote">
                     <p class="c-paragraph">createpkg Drivers.HelloBlinky</p>
             </blockquote>
-            <p class="c-paragraph-3">The package is built, appearing as C:\IoT-ADK-AddonKit\Build\<arch>\pkgs\<your OEM name>.Drivers.HelloBlinky.cab.</p>
+            <p class="c-paragraph-3">The package is built, appearing as <blockquote class="c-blockquote"><xmp>C:\IoT-ADK-AddonKit\Build\<arch>\pkgs\<your OEM name>.Drivers.HelloBlinky.cab.</xmp></blockquote></p>
         </li>
     </ol>
 </section>
 <section>
-    <h3 class="c-subheading-3"> Start the IoT Core shell</h3>
+    <h3 class="c-subheading-3">Update your feature manifest</h3>
     <ol class="c-list">
-        <li>Open the architecture-specific feature manifest file. C:\IoT-ADK-AddonKit\Source-<arch>\Packages\OEMFM.xml.</li>
+        <li>Open the architecture-specific feature manifest file. <blockquote class="c-blockquote"><xmp>C:\IoT-ADK-AddonKit\Source-<arch>\Packages\OEMFM.xml</xmp></blockquote></li>
         <li>Create a new PackageFile section in the XML with your package file listed and give it a new FeatureID such as "OEM_DriverHelloBlinky".
-            <code class="language-html">
-                    <strong class="c-badge f-small f-highlight">ADD CODE</strong>
-            </code>
+                <blockquote class="c-blockquote"><xmp> 
+<PackageFile Path="%PKGBLD_DIR%" Name="%OEM_NAME%.Drivers.HelloBlinky.cab">  
+    <FeatureIDs> 
+        <FeatureID>OEM_DriverHelloBlinky</FeatureID>  
+    </FeatureIDs>  
+</PackageFile> 
+                </xmp></blockquote>
         </li>
-        <li>Run `buildfm bsp <device-name>` to generate updated files in the MergedFMs folder. This must be done every time any time an FM file is modified. You'll now be able to add your driver to your product by adding a reference to this feature manifest.</li>
+        <li> To generate updated files in the MergedFMs folder run - <blockquote class="c-blockquote"><xmp>buildfm bsp <device-name></xmp></blockquote> This must be done every time any time an FM file is modified. You'll now be able to add your driver to your product by adding a reference to this feature manifest.</li>
     </ol>
 </section>
 <section>
     <h3 class="c-subheading-3">Update configuration files</h3>
     <ol class="c-list">
-        <li>Open your product's test configuration file - C:\IoT-ADK-AddonKit\Source-<arch>\Products\ProudctA\TestOEMInput.xml.</li>
-        <li>2.	Make sure your feature manifest, DeviceFM.xml, is in the list of AdditionalFMs. Add it if it isn't already there:<strong class="c-badge f-small f-highlight">ADD CODE</strong></li>
-        <li>3.	Add the FeatureID for your driver.
-                <strong class="c-badge f-small f-highlight">ADD CODE</strong></li>       
+        <li>Open your product's test configuration file - <blockquote class="c-blockquote"><xmp>C:\IoT-ADK-AddonKit\Source-<arch>\Products\ProudctA\TestOEMInput.xml</xmp></blockquote></li>
+        <li>Make sure your feature manifest, DeviceFM.xml, is in the list of AdditionalFMs. Add it if it isn't already there:
+            <blockquote class="c-blockquote"><xmp>
+ <AdditionalFMs>  
+      <!-- Including BSP feature manifest -->  
+      <AdditionalFM>%BLD_DIR%\MergedFMs\DeviceFM.xml</AdditionalFM>  
+      <!-- Including OEM feature manifest -->  
+      <AdditionalFM>%BLD_DIR%\MergedFMs\OEMCommonFM.xml</AdditionalFM>  
+      <AdditionalFM>%BLD_DIR%\MergedFMs\OEMFM.xml</AdditionalFM>  
+       <!-- Including the test features -->  
+       <AdditionalFM>%AKROOT%\FMFiles\<architecture>\IoTUAPNonProductionPartnerShareFM.xml</AdditionalFM>  
+</AdditionalFMs>  
+                </xmp></blockquote>
+
+        </li>
+        <li>Add the FeatureID for your driver.
+                <blockquote class="c-blockquote"><xmp> 
+<OEM>  
+  <!-- Include BSP Features -->  
+  <Feature>DEVICE_DRIVERS</Feature>  
+  <!-- Include OEM features-->  
+  <Feature>OEM_CustomCmd</Feature>  
+  <Feature>OEM_ProvAuto</Feature>  
+  <Feature>OEM_FilesAndRegKeys</Feature>  
+  <Feature>OEM_DriverHelloBlinky</Feature>   
+</OEM> 
+                    </xmp></blockquote>
+        </li>       
     </ol>  
 </section>
 <section>

@@ -37,7 +37,7 @@ lang: en-US
 </section>
 <section>
     <h3 class="c-subheading-3">Copy customizations.xml into your product's prov folder</h3>
-    <p class="c-paragraph-3">Copy customizations.xml to `C:\IoT-ADK-AddonKit\Source-<arch>\Products\ProductB\prov`. You can also update this file with any other desired changes.</p>
+    <p class="c-paragraph-3">Copy customizations.xml to <blockquote class="c-blockquote"><xmp>C:\IoT-ADK-AddonKit\Source-<arch>\Products\ProductB\prov</xmp></blockquote> You can also update this file with any other desired changes.</p>
 </section>
 <section class="pad-thin">
     <h3 class="c-subheading-3">Add the auto-provisioning scripts to the feature manifest and product configuration file</h3>
@@ -49,23 +49,79 @@ lang: en-US
         </li>
         <li>Make sure the file source resolves correctly, where Prov.ppkg resolves to 
             <blockquote class="c-blockquote">
-                    <p class="c-paragraph">C:\IoT-ADK-AddonKit\Source-<arch>\Products\ProductB\prov\ProductBProv.ppkg</p>
+                    <xmp>C:\IoT-ADK-AddonKit\Source-<arch>\Products\ProductB\prov\ProductBProv.ppkg</xmp>
             </blockquote>
-            <strong class="c-badge f-small f-highlight">ADD CODE</strong>
+            <blockquote class="c-blockquote"><xmp>
+<?xml version="1.0" encoding="utf-8"?>  
+  <Package xmlns="urn:Microsoft.WindowsPhone/PackageSchema.v8.00"  
+    Owner="$(OEMNAME)"  
+    OwnerType="OEM"  
+    ReleaseType="Production"  
+    Platform="$(BSPARCH)"  
+    Component="Provisioning"  
+    SubComponent="Auto">  
+    <Components>  
+       <OSComponent>  
+       <Files>  
+        <!--  
+        Source : Provisioning is product specific, so copied from the Product directory  
+        Destination : Auto provisioning folder which is C:\Windows\Provisioning\Packages  
+        -->  
+        <File Source="$(PRJDIR)\Products\$(PROD)\prov\$(PROD)Prov.ppkg"  
+                DestinationDir="$(runtime.windows)\Provisioning\Packages" Name="ProvAuto.ppkg"/>  
+        </Files>  
+       </OSComponent>  
+    </Components>  
+</Package>      
+            </xmp></blockquote>
         </li>
-        <li>Make sure that the package definition file <b>%OEM_NAME%.Provisioning.Auto.cab</b> and the feature ID:OEM_ProvAuto are referenced In the common feature manifest, C:\IoT-ADK-AddonKit\Common\Packages\OEMCommonFM.xml.
-            <strong class="c-badge f-small f-highlight">ADD CODE</strong>
+        <li>Make sure that the package definition file <b>%OEM_NAME%.Provisioning.Auto.cab</b> and the feature ID:OEM_ProvAuto are referenced In the common feature manifest, C:\IoT-ADK-AddonKit\Common\Packages\OEMCommonFM.xml.     
+            <blockquote class="c-blockquote"><xmp>
+<PackageFile Path="%PKGBLD_DIR%" Name="%OEM_NAME%.Provisioning.Auto.cab">  
+      <FeatureIDs>  
+        <FeatureID>OEM_ProvAuto</FeatureID>  
+        <FeatureID>OEMCommon_ALL</FeatureID>  
+      </FeatureIDs>  
+    </PackageFile>      
+    ...  
+    <OEMFeatureGroups>  
+    <!-- Feature Constraints below -->  
+    <!-- This ensures that only one of the Provisioning package is included -->  
+      <FeatureGroup Constraint="ZeroOrOne">  
+        <FeatureIDs>  
+          <FeatureID>OEM_ProvAuto</FeatureID>  
+          <FeatureID>OEM_ProvManual</FeatureID>     
+            </xmp></blockquote>
         </li>
         <li>Update the test configuration file 
             <blockquote class="c-blockquote">
-                    <p class="c-paragraph">C:\IoT-ADK-AddonKit\Source-<ach>\Products\ProductB\TestOEMInput.xml</p>
+                    <xmp>C:\IoT-ADK-AddonKit\Source-<ach>\Products\ProductB\TestOEMInput.xml</xmp>
             </blockquote>
         </li>
         <li>Make sure the common feature manifest: OEMCommonFM.xml is included.
-            <strong class="c-badge f-small f-highlight">ADD CODE</strong>
+            <blockquote class="c-blockquote"><xmp>
+<AdditionalFMs>  
+<!-- Including BSP feature manifest -->  
+<AdditionalFM>%BLD_DIR%\MergedFMs\DeviceFM.xml</AdditionalFM>  
+<!-- Including OEM feature manifest -->  
+<AdditionalFM>%BLD_DIR%\MergedFMs\OEMCommonFM.xml</AdditionalFM>  
+<AdditionalFM>%BLD_DIR%\MergedFMs\OEMFM.xml</AdditionalFM>  
+<!-- Including the test features -->  
+<AdditionalFM>%AKROOT%\FMFiles\<architecture>\IoTUAPNonProductionPartnerShareFM.xml</AdditionalFM>  
+</AdditionalFMs>    
+            </xmp></blockquote>
         </li>
         <li>Make sure the feature OEM_ProvAuto is included. 
-            <strong class="c-badge f-small f-highlight">ADD CODE</strong>
+            <blockquote class="c-blockquote"><xmp>
+<OEM>  
+  <!-- Include BSP Features -->  
+  <Feature>DEVICE_DRIVERS</Feature>  
+  <!-- Include OEM features-->  
+  <Feature>OEM_CustomCmd</Feature>  
+  <Feature>OEM_ProvAuto</Feature>  
+  <Feature>OEM_FilesAndRegKeys</Feature>  
+</OEM>
+            </xmp></blockquote>
         </li>
     </ol>
 </section>
