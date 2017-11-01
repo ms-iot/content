@@ -54,17 +54,13 @@ lang: en-US
 	</div>
 </section>
 <section data-grid="col-12">
-	<section data-grid="col-6"></section>
-	<section data-grid="col-4"  class="c-checkbox f-inline">
+	<section data-grid="col-8"></section>
+	<section data-grid="col-2"  class="c-checkbox f-inline">
 			<div>
 				<div>
 					<label class="c-label">
 						<input aria-label="FFU available" type="checkbox" id="checkboxId1" name="checkboxId1" value="value1" aria-checked="false">
 						<span aria-hidden="true">FFU available</span>
-					</label>
-					<label class="c-label">
-						<input aria-label="No FFU available" type="checkbox" id="checkboxId2" name="checkboxId2" value="value2" aria-checked="false">
-						<span aria-hidden="true">No FFU available</span>
 					</label>
 				</div>
 			</div>
@@ -81,21 +77,19 @@ lang: en-US
 		
 <script>
 	//ffu available checked by default
-	 $(document).ready(function() {
+	/* $(document).ready(function() {
 		$("#checkboxId1").attr("checked", true);
 		$(".noFFUAvailable").hide();
  		$(".FFUAvailable").show();
 	 });
-
+*/
 	$('input[type="checkbox"]').change(function(){
 $(".noFFUAvailable").show();
   $(".FFUAvailable").show();
-if($('#checkboxId1').is(":checked") && $('#checkboxId2').is(":checked"))  {
-}else if($('#checkboxId1').is(":checked"))  {
+
+ if($('#checkboxId1').is(":checked"))  {
 	$(".noFFUAvailable").hide();
-} else if($('#checkboxId2').is(":checked"))  {
-	  $(".FFUAvailable").hide();
-} 
+}
  });
  var data = '';
 $.get("https://catalog.azureiotsuite.com/api/devices/search/null", function(response){
