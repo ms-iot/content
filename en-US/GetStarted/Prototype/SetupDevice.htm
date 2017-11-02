@@ -14,159 +14,165 @@ lang: en-US
 
 <section data-grid="col-12">
     <div data-grid="col-12" class="m-feature c-pivot">
-                <button class="c-flipper f-previous" aria-hidden="true" tabindex="-1"></button>
-                <header role="tablist" style="justify-content: normal;">
-                    <a role="tab" aria-controls="pivot-target-1" class="f-active x-hidden-focus" href="#" aria-selected="true" style="margin-left: 0px;">SD Card based device</a>
-                    <a role="tab" aria-controls="pivot-target-2" href="#" aria-selected="false" class="" tabindex="-1">eMMC Flash based device</a>
-                    <a role="tab" aria-controls="pivot-target-3" href="#" aria-selected="false" class="" tabindex="-1">Dragonboard</a>
-                    <a role="tab" aria-controls="pivot-target-4" href="#" aria-selected="false" class="" tabindex="-1">NOOBS</a>
-                </header>
-                <button class="c-flipper f-next" aria-hidden="true" tabindex="-1"></button>
-                <section role="tabpanel" id="pivot-target-1" aria-hidden="false">
-                    <section>
-                        <h3 class="c-heading-3">Flashing IoT Core</h3> 
-                        <p class="c-paragraph-3">The <a class="c-hyperlink" href="https://developer.microsoft.com/en-us/windows/iot/docs/iotdashboard">Windows 10 IoT Core Dashboard</a> is the best way to set up and connect to your Windows 10 IoT Core devices, all from your PC. You will use the Dashboard to flash IoT Core onto your device, and to access it once it is connected to your network and much more.</p>
-                        <p class="c-paragraph-3">By downloading and using the Windows 10 IoT Core Dashboard, you agree to the <a class="c-hyperlink" href="http://go.microsoft.com/fwlink/?LinkID=703960&clcid=0x4809">license terms</a> and <a class="c-hyperlink" href="https://privacy.microsoft.com/en-us/privacystatement">privacy statement</a> for Windows 10 IoT Core Dashboard.</p>
-                        <a href="http://go.microsoft.com/fwlink/?LinkID=708576" role="button" class="c-button f-primary">Download Dashboard</a>
-                        <ul class="c-list">
-                            <li>Insert a <a class="c-hyperlink" href="https://developer.microsoft.com/en-us/windows/iot/docs/hardwarecompatlist#Storage">compatible</a> micro-SD card into your device, then open the Dashboard and click on <b>Set up a new device</b> tab.</li>
-                            <li>Go through and populate the fields for <b>Device Type</b> and <b>OS Build</b>. </li>
-                            <blockquote class="c-blockquote">
-                            <p class="c-paragraph">NOTE: To use the Insider Preview version of IoT Core, select <b>Windows Insider Preview</b> from the <b>OS Build</b> dropdown box and sign in with your Insider Program credentials. Sign up for Windows Insider Preview <a class="c-hyperlink" href="https://insider.windows.com/">here</a>.</p>
-                            </blockquote>
-                            <li>Ensure that your SD card is selected in the <b>Drive</b> dropdown box.</li>
-                            <li>Enter a unique name for your device as well as an administrator password. </li>
-                            <blockquote class="c-blockquote">
-                            <p class="c-paragraph"> NOTE: The default name and password is <b>minwinpc</b> and <b>p@ssw0rd</b>. We recommend you change it. </p>
-                            </blockquote>
-                            <li>If available, choose a wireless network to which your device will connect.</li>
-                            <li>Click <b>Download and Install</b> after accepting the software license terms.</li>
-                            <li>Once the Dashboard has flashed the SD card, plug the card into your device, optionally plug in an HDMI display, and power on the device. After a few minutes you should see the IoT Core default application appear on the display.</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h3 class="c-heading-3">Connecting to network</h3>
-                        <blockquote class="c-blockquote">
-                        <p class="c-paragraph">NOTE: Skip this step if you've already connected your device to a network in Step 1.</p>
-                        </blockquote>
-                        <h4 style="padding-top:36px;" class="c-subheading-4">Wired</h4>
-                        <p class="c-paragraph-4">If the device comes with [an Ethernet port | USB Ethernet adapter support] to enable a wired connection, attach an Ethernet cable to connect it to your network.</p>
-                        <h4 style="padding-top:36px;" class="c-subheading-4">Wireless</h4>
-                        <p class="c-paragraph-4">If the device supports Wi-Fi connectivity and you've connected a display to it, follow these instructions:</p>
-                            <ul class="c-list">
-                                <li>In the IoT Core default application, click the <b>Settings</b> button next to the clock.</li>
-                                <li>On the Settings page, select <b>Network & Wi-Fi</b> via the menu on the left.</li>
-                                <li>Your device will begin scanning for wireless networks.</li>
-                                <li>Once your network appears in the list, select it and click <b>Connect.</b></li>
-                            </ul>
-                            <p class="c-paragraph-3">If you haven’t connected a display and would like to connect via Wi-Fi, follow these instructions instead:</p>
-                            <ul class="c-list">
-                                <li>In the Dashboard, click on the <b>My Devices</b> tab</li>
-                                <li>Find your unconfigured board from the list. Its name will begin with "AJ_" (e.g. AJ_58EA6C68).  If you don't see your board appear after a few minutes, try rebooting your board.</li>
-                                <li>Click on <b>Configure Device</b> and enter your network credentials. This will connect your board to the network. </li>
-                            </ul>
-                    </section>
-                    <section>
-                        <h3 class="c-heading-3">Connecting to your developer machine</h3>                        
-                        <h4 style="padding-top:36px;" class="c-subheading-4">Windows Device Portal</h4>
-                        <p class="c-paragraph-4">Use <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/deviceportal">Windows Device Portal</a> to connect to your device through a web browser. The device portal provides configuration and device management capabilities, as well as advanced diagnostic tools.  </p>
-                        <h4 style="padding-top:36px;" class="c-subheading-4"> Others</h4>
-                        <p class="c-paragraph-4">You also can use <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/powershell">PowerShell</a> to connect to your device through a command shell. You can also follow the <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/ssh">SSH</a> instructions to use SSH to connect to your device.</p>
-                        <blockquote class="c-blockquote">
-                        <p class="c-paragraph">It is highly recommended that you update the default password for the Administrator account. Instructions are included in the relevant documentation for <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/deviceportal">Windows Device Portal</a> or <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/powershell">Powershell</a>.</p>
-                        </blockquote>  
-                    </section>                 
-                </section>
-                <section role="tabpanel" id="pivot-target-2" aria-hidden="true">
-                    <section>
-                        <h3 class="c-heading-3">Flashing IoT Core</h3> 
-                        <p class="c-paragraph-3">The <a class="c-hyperlink" href="https://developer.microsoft.com/en-us/windows/iot/docs/iotdashboard">Windows 10 IoT Core Dashboard</a> is the best way to set up and connect to your Windows 10 IoT Core devices, all from your PC. You will use the Dashboard to flash IoT Core onto your device, and to access it once it is connected to your network and much more.</p>
-                        <p class="c-paragraph-3">By downloading and using the Windows 10 IoT Core Dashboard, you agree to the <a class="c-hyperlink" href="http://go.microsoft.com/fwlink/?LinkID=703960&clcid=0x4809">license terms</a> and <a class="c-hyperlink" href="https://privacy.microsoft.com/en-us/privacystatement">privacy statement</a> for Windows 10 IoT Core Dashboard.</p>
-                        <a href="http://go.microsoft.com/fwlink/?LinkID=708576" role="button" class="c-button f-primary">Download Dashboard</a>
-                        <ul class="c-list">
-                            <li>Insert a <a class="c-hyperlink" href="https://developer.microsoft.com/en-us/windows/iot/docs/hardwarecompatlist#Storage">compatible</a> micro-SD card into your device, then open the Dashboard and click on <b>Set up a new device</b> tab.</li>
-                            <li>Go through and populate the fields for <b>Device Type</b> and <b>OS Build</b>. </li>
-                            <blockquote class="c-blockquote">
-                            <p class="c-paragraph">NOTE: To use the Insider Preview version of IoT Core, select <b>Windows Insider Preview</b> from the <b>OS Build</b> dropdown box and sign in with your Insider Program credentials. Sign up for Windows Insider Preview <a class="c-hyperlink" href="https://insider.windows.com/">here</a>.</p>
-                            </blockquote>
-                            <li>Ensure that your SD card is selected in the <b>Drive</b> dropdown box.</li>
-                            <li>Enter a unique name for your device as well as an administrator password. </li>
-                            <blockquote class="c-blockquote">
-                            <p class="c-paragraph"> NOTE: The default name and password is <b>minwinpc</b> and <b>p@ssw0rd</b>. We recommend you change it. </p>
-                            </blockquote>
-                            <li>If available, choose a wireless network to which your device will connect.</li>
-                            <li>Click <b>Download and Install</b> after accepting the software license terms.</li>
-                            <li>Once the Dashboard has flashed the SD card, plug the card into your device, optionally plug in an HDMI display, and power on the device. After a few minutes you should see the IoT Core default application appear on the display.</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h3 class="c-heading-3">Connecting to network</h3>
-                        <blockquote class="c-blockquote">
-                        <p class="c-paragraph">NOTE: Skip this step if you've already connected your device to a network in Step 1.</p>
-                        </blockquote>
-                        <h4 style="padding-top:36px;" class="c-subheading-4">Wired</h4>
-                        <p class="c-paragraph-4">If the device comes with [an Ethernet port | USB Ethernet adapter support] to enable a wired connection, attach an Ethernet cable to connect it to your network.</p>
-                        <h4 style="padding-top:36px;" class="c-subheading-4">Wireless</h4>
-                        <p class="c-paragraph-4">If the device supports Wi-Fi connectivity and you've connected a display to it, follow these instructions:</p>
-                            <ul class="c-list">
-                                <li>In the IoT Core default application, click the <b>Settings</b> button next to the clock.</li>
-                                <li>On the Settings page, select <b>Network & Wi-Fi</b> via the menu on the left.</li>
-                                <li>Your device will begin scanning for wireless networks.</li>
-                                <li>Once your network appears in the list, select it and click <b>Connect.</b></li>
-                            </ul>
-                            <p class="c-paragraph-3">If you haven’t connected a display and would like to connect via Wi-Fi, follow these instructions instead:</p>
-                            <ul class="c-list">
-                                <li>In the Dashboard, click on the <b>My Devices</b> tab</li>
-                                <li>Find your unconfigured board from the list. Its name will begin with "AJ_" (e.g. AJ_58EA6C68).  If you don't see your board appear after a few minutes, try rebooting your board.</li>
-                                <li>Click on <b>Configure Device</b> and enter your network credentials. This will connect your board to the network. </li>
-                            </ul>
-                    </section>
-                    <section>
-                        <h3 class="c-heading-3">Connecting to your developer machine</h3>                        
-                        <h4 style="padding-top:36px;" class="c-subheading-4">Windows Device Portal</h4>
-                        <p class="c-paragraph-4">Use <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/deviceportal">Windows Device Portal</a> to connect to your device through a web browser. The device portal provides configuration and device management capabilities, as well as advanced diagnostic tools.  </p>
-                        <h4 style="padding-top:36px;" class="c-subheading-4"> Others</h4>
-                        <p class="c-paragraph-4">You also can use <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/powershell">PowerShell</a> to connect to your device through a command shell. You can also follow the <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/ssh">SSH</a> instructions to use SSH to connect to your device.</p>
-                        <blockquote class="c-blockquote">
-                        <p class="c-paragraph">It is highly recommended that you update the default password for the Administrator account. Instructions are included in the relevant documentation for <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/deviceportal">Windows Device Portal</a> or <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/powershell">Powershell</a>.</p>
-                        </blockquote>  
-                    </section>
-
-
-
-                </section>
-                <section role="tabpanel" id="pivot-target-3" aria-hidden="true">
-                    <h3 class="c-heading-3"></h3> 
-                        <p class="c-paragraph-3"></p>
-                        <strong class="c-badge f-small f-highlight">UNDER CONSTRUCTION</strong>
-                </section>
-                 <section role="tabpanel" id="pivot-target-4" aria-hidden="true">
-                    <section>
-                        <h3 class="c-heading-3">Flashing IoT Core</h3> 
-                        <p class="c-paragraph-3">To install Windows 10 IoT Core onto your boards (Raspberry Pi) using NOOBS, you'll need to have a micro SD card formatted with NOOBS. If you already have a SD card pre-imaged with NOOBS, you can skip to learning more about connecting to a network.</p>
-                        <p class="c-paragraph-3">Otherwise, you'll need to download the latest version of NOOBS from the <a class="c-hyperlink" href="https://downloads.raspberrypi.org/NOOBS_lite_latest">official NOOBS download</a>site.</p>
-                        <p class="c-paragraph-3">Once NOOBS has been downloaded, you must copy it onto your SD card. To do so, you'll need to mount your SD card onto your machine and format it. The <a class="c-hyperlink" href="https://www.sdcard.org/downloads/formatter_4/">SD Formatter 4.0 tool</a> is the suggested tool to use when formatting your SD card for NOOBS.</p>
-                        <p class="c-paragraph-3">Then, extract the NOOBS archive onto your newly formatted SD card. </p>
-                    </section>
-                    <section>
-                        <h3 class="c-heading-3">Connecting to network</h3>
-                        <p class="c-paragraph-3">Insert your NOOBS-ready micro SD card into your device. Ensure a monitor, keyboard, and mouse are connected. Connect your device to the Internet by Ethernet cable and boot your device. Otherwise, follow the on-screen instructions to connect to your wi-fi network.</p>
-                        <img class="c-image" src="{{site.baseurl}}/Resources/images/NOOBS/NOOBS on PI2 IoT Core.JPG" alt="">
-                        <p class="c-paragraph-3">Select Windows 10 IoT Core from the list of available options on the NOOBS screen, and then click install. NOOBS will ask you to confirm if you wish to overwrite the contents of the SD card before installing Windows 10 IoT Core. Unless you have data on the card you wish to save, press yes. This action cannot be undone.</p>
-                        <p class="c-paragraph-3">While we recommend selecting the IoT Core Insider build to receive the latest Windows builds, you can also select the official-release build of Windows. Once you've selected your build, you should get the following screen.</p>
-                        <img class="c-image" src="{{site.baseurl}}/Resources/images/NOOBS/noobs-downloading.jpg" alt="Using NOOBS to install Windows 10 IoT Core on a device">
-                        <p class="c-paragraph-3">After a few minutes, the installation should be complete and you will have rebooted into Windows 10 IoT Core.</p>                 
-                    </section>
-                    <section>
-                        <h3 class="c-heading-3">Connecting to your developer machine</h3>                        
-                        <h4 style="padding-top:36px;" class="c-subheading-4">Windows Device Portal</h4>
-                        <p class="c-paragraph-4">Use <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/deviceportal">Windows Device Portal</a> to connect to your device through a web browser. The device portal provides configuration and device management capabilities, as well as advanced diagnostic tools.  </p>
-                        <h4 style="padding-top:36px;" class="c-subheading-4"> Others</h4>
-                        <p class="c-paragraph-4">You also can use <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/powershell">PowerShell</a> to connect to your device through a command shell. You can also follow the <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/ssh">SSH</a> instructions to use SSH to connect to your device.</p>
-                        <blockquote class="c-blockquote">
-                        <p class="c-paragraph">It is highly recommended that you update the default password for the Administrator account. Instructions are included in the relevant documentation for <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/deviceportal">Windows Device Portal</a> or <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/powershell">Powershell</a>.</p>
-                        </blockquote>  
-                    </section>   
-                </section>
-            </div>  
+        <button class="c-flipper f-previous" aria-hidden="true" tabindex="-1"></button>
+        <header role="tablist" style="justify-content: normal;">
+            <a role="tab" aria-controls="pivot-target-1" class="f-active x-hidden-focus" href="#" aria-selected="true" style="margin-left: 0px;">SD Card based device</a>
+            <a role="tab" aria-controls="pivot-target-2" href="#" aria-selected="false" class="" tabindex="-1">eMMC Flash based device</a>
+            <a role="tab" aria-controls="pivot-target-3" href="#" aria-selected="false" class="" tabindex="-1">Dragonboard</a>
+            <a role="tab" aria-controls="pivot-target-4" href="#" aria-selected="false" class="" tabindex="-1">NOOBS</a>
+        </header>
+        <button class="c-flipper f-next" aria-hidden="true" tabindex="-1"></button>
+        <section role="tabpanel" id="pivot-target-1" aria-hidden="false">
+            <section>
+                <h3 class="c-heading-3">Flashing IoT Core</h3> 
+                <p class="c-paragraph-3">The <a class="c-hyperlink" href="https://developer.microsoft.com/en-us/windows/iot/docs/iotdashboard">Windows 10 IoT Core Dashboard</a> is the best way to set up and connect to your Windows 10 IoT Core devices, all from your PC. You will use the Dashboard to flash IoT Core onto your device, and to access it once it is connected to your network and much more.</p>
+                <p class="c-paragraph-3">By downloading and using the Windows 10 IoT Core Dashboard, you agree to the <a class="c-hyperlink" href="http://go.microsoft.com/fwlink/?LinkID=703960&clcid=0x4809">license terms</a> and <a class="c-hyperlink" href="https://privacy.microsoft.com/en-us/privacystatement">privacy statement</a> for Windows 10 IoT Core Dashboard.</p>
+                <a href="http://go.microsoft.com/fwlink/?LinkID=708576" role="button" class="c-button f-primary">Download Dashboard</a>
+                <ul class="c-list">
+                    <li>Insert a <a class="c-hyperlink" href="https://developer.microsoft.com/en-us/windows/iot/docs/hardwarecompatlist#Storage">compatible</a> micro-SD card into your device, then open the Dashboard and click on <b>Set up a new device</b> tab.</li>
+                    <li>Go through and populate the fields for <b>Device Type</b> and <b>OS Build</b>. </li>
+                    <blockquote class="c-blockquote">
+                    <p class="c-paragraph">NOTE: To use the Insider Preview version of IoT Core, select <b>Windows Insider Preview</b> from the <b>OS Build</b> dropdown box and sign in with your Insider Program credentials. Sign up for Windows Insider Preview <a class="c-hyperlink" href="https://insider.windows.com/">here</a>.</p>
+                    </blockquote>
+                    <li>Ensure that your SD card is selected in the <b>Drive</b> dropdown box.</li>
+                    <li>Enter a unique name for your device as well as an administrator password. </li>
+                    <blockquote class="c-blockquote">
+                    <p class="c-paragraph"> NOTE: The default name and password is <b>minwinpc</b> and <b>p@ssw0rd</b>. We recommend you change it. </p>
+                    </blockquote>
+                    <li>If available, choose a wireless network to which your device will connect.</li>
+                    <li>Click <b>Download and Install</b> after accepting the software license terms.</li>
+                    <li>Once the Dashboard has flashed the SD card, plug the card into your device, optionally plug in an HDMI display, and power on the device. After a few minutes you should see the IoT Core default application appear on the display.</li>
+                </ul>
+            </section>
+            <section>
+                <h3 class="c-heading-3">Connecting to network</h3>
+                <blockquote class="c-blockquote">
+                <p class="c-paragraph">NOTE: Skip this step if you've already connected your device to a network in Step 1.</p>
+                </blockquote>
+                <h4 style="padding-top:36px;" class="c-subheading-4">Wired</h4>
+                <p class="c-paragraph-4">If the device comes with [an Ethernet port | USB Ethernet adapter support] to enable a wired connection, attach an Ethernet cable to connect it to your network.</p>
+                <h4 style="padding-top:36px;" class="c-subheading-4">Wireless</h4>
+                <p class="c-paragraph-4">If the device supports Wi-Fi connectivity and you've connected a display to it, follow these instructions:</p>
+                    <ul class="c-list">
+                        <li>In the IoT Core default application, click the <b>Settings</b> button next to the clock.</li>
+                        <li>On the Settings page, select <b>Network & Wi-Fi</b> via the menu on the left.</li>
+                        <li>Your device will begin scanning for wireless networks.</li>
+                        <li>Once your network appears in the list, select it and click <b>Connect.</b></li>
+                    </ul>
+                    <p class="c-paragraph-3">If you haven’t connected a display and would like to connect via Wi-Fi, follow these instructions instead:</p>
+                    <ul class="c-list">
+                        <li>In the Dashboard, click on the <b>My Devices</b> tab</li>
+                        <li>Find your unconfigured board from the list. Its name will begin with "AJ_" (e.g. AJ_58EA6C68).  If you don't see your board appear after a few minutes, try rebooting your board.</li>
+                        <li>Click on <b>Configure Device</b> and enter your network credentials. This will connect your board to the network. </li>
+                    </ul>
+            </section>
+            <section>
+                <h3 class="c-heading-3">Connecting to your developer machine</h3>                        
+                <h4 style="padding-top:36px;" class="c-subheading-4">Windows Device Portal</h4>
+                <p class="c-paragraph-4">Use <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/deviceportal">Windows Device Portal</a> to connect to your device through a web browser. The device portal provides configuration and device management capabilities, as well as advanced diagnostic tools.  </p>
+                <h4 style="padding-top:36px;" class="c-subheading-4"> Others</h4>
+                <p class="c-paragraph-4">You also can use <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/powershell">PowerShell</a> to connect to your device through a command shell. You can also follow the <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/ssh">SSH</a> instructions to use SSH to connect to your device.</p>
+                <blockquote class="c-blockquote">
+                <p class="c-paragraph">It is highly recommended that you update the default password for the Administrator account. Instructions are included in the relevant documentation for <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/deviceportal">Windows Device Portal</a> or <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/powershell">Powershell</a>.</p>
+                </blockquote>  
+            </section>                 
+        </section>
+        <section role="tabpanel" id="pivot-target-2" aria-hidden="true">
+            <section>
+                <h3 class="c-heading-3">Flashing IoT Core</h3> 
+                <p class="c-paragraph-3">The <a class="c-hyperlink" href="https://developer.microsoft.com/en-us/windows/iot/docs/iotdashboard">Windows 10 IoT Core Dashboard</a> is the best way to set up and connect to your Windows 10 IoT Core devices, all from your PC. You will use the Dashboard to flash IoT Core onto your device, and to access it once it is connected to your network and much more.</p>
+                <p class="c-paragraph-3">By downloading and using the Windows 10 IoT Core Dashboard, you agree to the <a class="c-hyperlink" href="http://go.microsoft.com/fwlink/?LinkID=703960&clcid=0x4809">license terms</a> and <a class="c-hyperlink" href="https://privacy.microsoft.com/en-us/privacystatement">privacy statement</a> for Windows 10 IoT Core Dashboard.</p>
+                <a href="http://go.microsoft.com/fwlink/?LinkID=708576" role="button" class="c-button f-primary">Download Dashboard</a>
+                <ul class="c-list">
+                    <li>Insert a <a class="c-hyperlink" href="https://developer.microsoft.com/en-us/windows/iot/docs/hardwarecompatlist#Storage">compatible</a> micro-SD card into your device, then open the Dashboard and click on <b>Set up a new device</b> tab.</li>
+                    <li>Go through and populate the fields for <b>Device Type</b> and <b>OS Build</b>. </li>
+                    <blockquote class="c-blockquote">
+                    <p class="c-paragraph">NOTE: To use the Insider Preview version of IoT Core, select <b>Windows Insider Preview</b> from the <b>OS Build</b> dropdown box and sign in with your Insider Program credentials. Sign up for Windows Insider Preview <a class="c-hyperlink" href="https://insider.windows.com/">here</a>.</p>
+                    </blockquote>
+                    <li>Ensure that your SD card is selected in the <b>Drive</b> dropdown box.</li>
+                    <li>Enter a unique name for your device as well as an administrator password. </li>
+                    <blockquote class="c-blockquote">
+                    <p class="c-paragraph"> NOTE: The default name and password is <b>minwinpc</b> and <b>p@ssw0rd</b>. We recommend you change it. </p>
+                    </blockquote>
+                    <li>If available, choose a wireless network to which your device will connect.</li>
+                    <li>Click <b>Download and Install</b> after accepting the software license terms.</li>
+                    <li>Once the Dashboard has flashed the SD card, plug the card into your device, optionally plug in an HDMI display, and power on the device. After a few minutes you should see the IoT Core default application appear on the display.</li>
+                </ul>
+            </section>
+            <section>
+                <h3 class="c-heading-3">Connecting to network</h3>
+                <blockquote class="c-blockquote">
+                <p class="c-paragraph">NOTE: Skip this step if you've already connected your device to a network in Step 1.</p>
+                </blockquote>
+                <h4 style="padding-top:36px;" class="c-subheading-4">Wired</h4>
+                <p class="c-paragraph-4">If the device comes with [an Ethernet port | USB Ethernet adapter support] to enable a wired connection, attach an Ethernet cable to connect it to your network.</p>
+                <h4 style="padding-top:36px;" class="c-subheading-4">Wireless</h4>
+                <p class="c-paragraph-4">If the device supports Wi-Fi connectivity and you've connected a display to it, follow these instructions:</p>
+                    <ul class="c-list">
+                        <li>In the IoT Core default application, click the <b>Settings</b> button next to the clock.</li>
+                        <li>On the Settings page, select <b>Network & Wi-Fi</b> via the menu on the left.</li>
+                        <li>Your device will begin scanning for wireless networks.</li>
+                        <li>Once your network appears in the list, select it and click <b>Connect.</b></li>
+                    </ul>
+                    <p class="c-paragraph-3">If you haven’t connected a display and would like to connect via Wi-Fi, follow these instructions instead:</p>
+                    <ul class="c-list">
+                        <li>In the Dashboard, click on the <b>My Devices</b> tab</li>
+                        <li>Find your unconfigured board from the list. Its name will begin with "AJ_" (e.g. AJ_58EA6C68).  If you don't see your board appear after a few minutes, try rebooting your board.</li>
+                        <li>Click on <b>Configure Device</b> and enter your network credentials. This will connect your board to the network. </li>
+                    </ul>
+            </section>
+            <section>
+                <h3 class="c-heading-3">Connecting to your developer machine</h3>                        
+                <h4 style="padding-top:36px;" class="c-subheading-4">Windows Device Portal</h4>
+                <p class="c-paragraph-4">Use <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/deviceportal">Windows Device Portal</a> to connect to your device through a web browser. The device portal provides configuration and device management capabilities, as well as advanced diagnostic tools.  </p>
+                <h4 style="padding-top:36px;" class="c-subheading-4"> Others</h4>
+                <p class="c-paragraph-4">You also can use <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/powershell">PowerShell</a> to connect to your device through a command shell. You can also follow the <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/ssh">SSH</a> instructions to use SSH to connect to your device.</p>
+                <blockquote class="c-blockquote">
+                <p class="c-paragraph">It is highly recommended that you update the default password for the Administrator account. Instructions are included in the relevant documentation for <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/deviceportal">Windows Device Portal</a> or <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/powershell">Powershell</a>.</p>
+                </blockquote>  
+            </section>
+        </section>
+        <section role="tabpanel" id="pivot-target-3" aria-hidden="true">
+            <h3 class="c-heading-3"></h3> 
+                <p class="c-paragraph-3"></p>
+                <strong class="c-badge f-small f-highlight">UNDER CONSTRUCTION</strong>
+        </section>
+            <section role="tabpanel" id="pivot-target-4" aria-hidden="true">
+            <section>
+                <h3 class="c-heading-3">Flashing IoT Core</h3> 
+                <p class="c-paragraph-3">To install Windows 10 IoT Core onto your boards (Raspberry Pi) using NOOBS, you'll need to have a micro SD card formatted with NOOBS. If you already have a SD card pre-imaged with NOOBS, you can skip to learning more about connecting to a network.</p>
+                <p class="c-paragraph-3">Otherwise, you'll need to download the latest version of NOOBS from the <a class="c-hyperlink" href="https://downloads.raspberrypi.org/NOOBS_lite_latest">official NOOBS download</a>site.</p>
+                <p class="c-paragraph-3">Once NOOBS has been downloaded, you must copy it onto your SD card. To do so, you'll need to mount your SD card onto your machine and format it. The <a class="c-hyperlink" href="https://www.sdcard.org/downloads/formatter_4/">SD Formatter 4.0 tool</a> is the suggested tool to use when formatting your SD card for NOOBS.</p>
+                <p class="c-paragraph-3">Then, extract the NOOBS archive onto your newly formatted SD card. </p>
+            </section>
+            <section>
+                <h3 class="c-heading-3">Connecting to network</h3>
+                <p class="c-paragraph-3">Insert your NOOBS-ready micro SD card into your device. Ensure a monitor, keyboard, and mouse are connected. Connect your device to the Internet by Ethernet cable and boot your device. Otherwise, follow the on-screen instructions to connect to your wi-fi network.</p>
+                <img class="c-image" src="{{site.baseurl}}/Resources/images/NOOBS/NOOBS on PI2 IoT Core.JPG" alt="">
+                <p class="c-paragraph-3">Select Windows 10 IoT Core from the list of available options on the NOOBS screen, and then click install. NOOBS will ask you to confirm if you wish to overwrite the contents of the SD card before installing Windows 10 IoT Core. Unless you have data on the card you wish to save, press yes. This action cannot be undone.</p>
+                <p class="c-paragraph-3">While we recommend selecting the IoT Core Insider build to receive the latest Windows builds, you can also select the official-release build of Windows. Once you've selected your build, you should get the following screen.</p>
+                <img class="c-image" src="{{site.baseurl}}/Resources/images/NOOBS/noobs-downloading.jpg" alt="Using NOOBS to install Windows 10 IoT Core on a device">
+                <p class="c-paragraph-3">After a few minutes, the installation should be complete and you will have rebooted into Windows 10 IoT Core.</p>                 
+            </section>
+            <section>
+                <h3 class="c-heading-3">Connecting to your developer machine</h3>                        
+                <h4 style="padding-top:36px;" class="c-subheading-4">Windows Device Portal</h4>
+                <p class="c-paragraph-4">Use <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/deviceportal">Windows Device Portal</a> to connect to your device through a web browser. The device portal provides configuration and device management capabilities, as well as advanced diagnostic tools.  </p>
+                <h4 style="padding-top:36px;" class="c-subheading-4"> Others</h4>
+                <p class="c-paragraph-4">You also can use <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/powershell">PowerShell</a> to connect to your device through a command shell. You can also follow the <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/ssh">SSH</a> instructions to use SSH to connect to your device.</p>
+                <blockquote class="c-blockquote">
+                <p class="c-paragraph">It is highly recommended that you update the default password for the Administrator account. Instructions are included in the relevant documentation for <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/deviceportal">Windows Device Portal</a> or <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/docs/powershell">Powershell</a>.</p>
+                </blockquote>  
+            </section>   
+        </section>
+    </div>  
+</section>
+<section data-grid="col-12" class="pad-thin">
+	<div data-grid="col-4">
+	<a class="c-action-trigger c-glyph glyph-chevron-left" href="{{site.baseurl}}/{{page.lang}}/GetStarted/Prototype/SelectDevice.htm">Previous: Select your Device</a>
+	</div>
+	<div data-grid="col-6"></div>
+	<div data-grid="col-2">
+	<a class="c-action-trigger c-glyph-after glyph-chevron-right" href="{{site.baseurl}}/{{page.lang}}/GetStarted/Prototype/GetTools.htm">Next: Get your Tools</a>
+</div>
 </section>

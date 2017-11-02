@@ -203,3 +203,29 @@ a.mscom-link.c-call-to-action.c-glyph {
   .m-typographic-intro.f-transparent{
     height:150px
 }
+
+/* glyph after text */
+
+.c-glyph-after.glyph-chevron-right:after {
+    content: "";
+}
+.c-glyph-after:after {   
+    font-family: MWF-MDL2;
+    display: inline-block;
+}
+a.c-action-trigger.c-glyph-after:after {
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.c-glyph-after:after, .c-glyph-after:hover:after {
+    text-decoration: none;
+}
+
+*, :after {
+    box-sizing: inherit;
+}
+
+
