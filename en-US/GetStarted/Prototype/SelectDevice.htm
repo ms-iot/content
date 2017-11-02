@@ -54,52 +54,70 @@ lang: en-US
 	</div>
 </section>
 <section data-grid="col-12">
-	<section data-grid="col-8"></section>
+	<section data-grid="col-9"></section>
 	<section data-grid="col-2"  class="c-checkbox f-inline">
-			<div>
-				<div>
 					<label class="c-label">
 						<input aria-label="FFU available" type="checkbox" id="checkboxId1" name="checkboxId1" value="value1" aria-checked="false">
 						<span aria-hidden="true">FFU available</span>
 					</label>
-				</div>
-			</div>
 	</section>
-	<section data-grid="col-2"></section>
+	<section data-grid="col-1"></section>
 	</section>
 <section data-grid="col-12">
-<div data-grid="col-12">
-    <div class="c-carousel f-single-slide" role="region" aria-label="">
-        <button class="c-flipper f-previous" aria-hidden="true" tabindex="-1"></button>
-        <button class="c-flipper f-next" aria-hidden="true" tabindex="-1"></button>
-        <div itemscope itemtype="http://schema.org/ItemList">
-            <ul class="c-group"  id=location>
-		
-<script>
-	//ffu available checked by default
-	/* $(document).ready(function() {
-		$("#checkboxId1").attr("checked", true);
-		$(".noFFUAvailable").hide();
- 		$(".FFUAvailable").show();
-	 });
-*/
-	$('input[type="checkbox"]').change(function(){
-$(".noFFUAvailable").show();
-  $(".FFUAvailable").show();
+	<div data-grid="col-12">
+    	<div class="c-carousel f-single-slide" role="region" aria-label="">
+        	<button class="c-flipper f-previous" aria-hidden="true" tabindex="-1"></button>
+        	<button class="c-flipper f-next" aria-hidden="true" tabindex="-1"></button>
+        	<div itemscope itemtype="http://schema.org/ItemList">
+            	<ul class="c-group"  id=location>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
 
- if($('#checkboxId1').is(":checked"))  {
-	$(".noFFUAvailable").hide();
-}
- });
- var data = '';
-$.get("https://catalog.azureiotsuite.com/api/devices/search/null", function(response){
+<section>
+	<div data-grid="col-10"></div>
+	<div data-grid="col-2">
+	<a class="c-action-trigger c-glyph-after glyph-chevron-right" href="{{site.baseurl}}/{{page.lang}}/GetStarted/Prototype/SetupDevice.htm">Next: Set up your device</a>
+</div>
+</section>
+
+
+<script>
+
+$('input[type="checkbox"]').change(function(){
+
+	if($('#checkboxId1').is(":checked")){
+		$(".noFFUAvailable").hide();
+	}else{
+		$(".noFFUAvailable").show();
+		$(".FFUAvailable").show();
+	}
+});
+var data = '';
+$.get("https://device-catalog-test.azurewebsites.net/api/devices/search/null", function(response){
  	alert("Data: " + response);
-	 data = response;
+	data = response;
 });
 
 var windowsData={
 	"deviceList" : [
 		{
+			"title" : "DragonBoard 410c",
+			"thumbnailUrl" : "{{site.baseurl}}/Resources/images/devices/DB410c.png",
+			"website" : "https://www.qualcomm.com/products/snapdragon/processors/410",
+			"buyLink" :"https://www.arrow.com/en/products/dragonboard410c/arrow-development-tools",
+			"download":"",
+			"starterKit" : ""
+		},{
+			"title" : "MinnowBoard MAX",
+			"thumbnailUrl" : "{{site.baseurl}}/Resources/images/devices/MBM_0.png",
+			"website" : "https://minnowboard.org/",
+			"buyLink" :"https://minnowboard.org/get-a-board",
+			"download":"",
+			"starterKit" : ""
+		},{
 			"title" : "Raspberry-Pi3",
 			"thumbnailUrl" : "{{site.baseurl}}/Resources/images/devices/RPi3_0.png",
 			"website" : "https://www.raspberrypi.org/products/raspberry-pi-3-model-b/",
@@ -113,27 +131,6 @@ var windowsData={
 			"buyLink" :"https://www.raspberrypi.org/products/raspberry-pi-2-model-b/",
 			"download":"",
 			"starterKit" : "https://developer.microsoft.com/en-us/windows/iot/Docs/AdafruitMakerKit.htm"
-		},{
-			"title" : "MinnowBoard MAX",
-			"thumbnailUrl" : "{{site.baseurl}}/Resources/images/devices/MBM_0.png",
-			"website" : "https://minnowboard.org/",
-			"buyLink" :"https://minnowboard.org/get-a-board",
-			"download":"",
-			"starterKit" : ""
-		},{
-			"title" : "DragonBoard 410c",
-			"thumbnailUrl" : "{{site.baseurl}}/Resources/images/devices/DB410c.png",
-			"website" : "https://www.qualcomm.com/products/snapdragon/processors/410",
-			"buyLink" :"https://www.arrow.com/en/products/dragonboard410c/arrow-development-tools",
-			"download":"",
-			"starterKit" : ""
-		},{
-			"title" : "Intel Joule",
-			"thumbnailUrl" : "{{site.baseurl}}/Resources/images/devices/joule.png",
-			"website" : "https://software.intel.com/en-us/iot/hardware/joule/dev-kit",
-			"buyLink" :"https://www.newegg.com/Product/Product.aspx?Item=N82E16813121832",
-			"download":"",
-			"starterKit" : ""
 		},{
 			"title" : "Intel Compute Stick",
 			"thumbnailUrl" : "{{site.baseurl}}/Resources/images/devices/IntelComputeStick.PNG",
@@ -151,7 +148,7 @@ for (var i = 0; i <  windowsData.deviceList.length; i++) {
 	var tile = '<section data-m="el' + p +'" data-grid="col-12" class="m-product-placement-item f-size-large context-device FFUAvailable" itemscope><a href="#"><div class="f-default-image" style="background-color: rgba(0, 0, 0, 0); outline: rgba(0,0,0,.1) solid 2px; box-shadow: 1px 1px 5px 0 #adadad; height:270px;">';
 	var head = '<h3 class="c-heading" style="padding-left:10px; padding-top: 10px;" itemprop="product name">'+ windowsData.deviceList[i].title +'</h3>';
 	var img = '<picture style="height:70%;"><source srcset="' + windowsData.deviceList[i].thumbnailUrl + '" media="(min-width:540px)"> <source srcset="' + windowsData.deviceList[i].thumbnailUrl + '" media="(min-width:0)"><img class="c-image" style="max-width:80%; max-height:70%;" srcset="'+ windowsData.deviceList[i].thumbnailUrl +'" src="'+ windowsData.deviceList[i].thumbnailUrl +'" alt="'+ windowsData.deviceList[i].title +'" onerror="handleImgError(this, \'large\')"> </picture>';
-	var info = '<ul class="iconimagesheading"><li class="svgimg active"><a class="mscom-link c-hyperlink" data-toggle="tooltip" aria-describedby="tooltip-0" aria-haspopup="true" href="' + windowsData.deviceList[i].website + '" aria-label="Device information" ms.interactiontype="4" ms.link_type="inlink" ms.title="Device Information"><img src="{{site.baseurl}}/Resources/images/get-started/info.png" class="mscom-image mscom-image tooltip active tooltipimage" alt="Device Information"  style="width:26px; height:29px; margin-top:-5px; margin-right:-4px;"></a><span id="tooltip-0" class="c-tooltip" role="tooltip" aria-hidden="true" style="left: 156.641px; top: 549.734px;">Device Information</span></li>';
+	var info = '<ul class="iconimagesheading"><li class="svgimg active"><a class="mscom-link c-hyperlink" data-toggle="tooltip" aria-describedby="tooltip-0" aria-haspopup="true" href="' + windowsData.deviceList[i].website + '" aria-label="Device information" ms.interactiontype="4" ms.link_type="inlink" ms.title="Device Information"><img src="{{site.baseurl}}/Resources/images/get-started/info-icon.png" class="mscom-image mscom-image tooltip active tooltipimage" alt="Device Information"  style="width:26px; height:29px; margin-top:-5px; margin-right:-4px;"></a><span id="tooltip-0" class="c-tooltip" role="tooltip" aria-hidden="true" style="left: 156.641px; top: 549.734px;">Device Information</span></li>';
 	var buy = '<li class="svgimg active"><a class="mscom-link c-hyperlink" data-toggle="tooltip" aria-describedby="tooltip-1" aria-haspopup="true" href="' + windowsData.deviceList[i].buyLink + '" aria-label="Buy the device" ms.interactiontype="4" ms.link_type="inlink" ms.title="Buy the device"><img src="{{site.baseurl}}/Resources/images/get-started/cart.png" class="mscom-image mscom-image tooltip active tooltipimage" alt="Buy Device" style="width:20px; height:20px;"></a><span id="tooltip-1" class="c-tooltip hook-hover" role="tooltip" aria-hidden="true">Buy the device</span></li>';
 	var download = '<li class="svgimg active"><a class="mscom-link c-hyperlink" data-toggle="tooltip" aria-describedby="tooltip-2" aria-haspopup="true" href="'+ windowsData.deviceList[i].buyLink+'" aria-label="Download" ms.interactiontype="4" ms.link_type="inlink" ms.title="windows ink"><img src="/content/Resources/images/get-started/download.png" class="mscom-image mscom-image tooltip active tooltipimage img-responsive" alt="Buy Device" style="width:14px; height:20px;"></a><span id="tooltip-2" class="c-tooltip hook-hover" role="tooltip" aria-hidden="true">Download the respective FFU.</span></li></ul>';
 	var banner = '';
@@ -181,7 +178,7 @@ else{
 					var tile = '<section data-m="el' + p +'" data-grid="col-12" class="m-product-placement-item f-size-large context-device noFFUAvailable" itemscope><a href="#"><div class="f-default-image" style="background-color: rgba(0, 0, 0, 0); outline: rgba(0,0,0,.1) solid 2px; box-shadow: 1px 1px 5px 0 #adadad; height:270px;">';
 					var head = '<h3 class="c-heading" style="padding-left:10px; padding-top: 10px;" itemprop="product name">'+ data._results.devices[i].title +'</h3>';
 					var img = '<picture style="height:70%;"><source srcset="' + data._results.devices[i].thumbnailUrl + '" media="(min-width:540px)"> <source srcset="' + data._results.devices[i].thumbnailUrl + '" media="(min-width:0)"><img class="c-image" style="max-width:80%; max-height:70%;" srcset="'+ data._results.devices[i].thumbnailUrl +'" src="'+ data._results.devices[i].thumbnailUrl +'" alt="'+ data._results.devices[i].title +'" onerror="handleImgError(this, \'large\')"> </picture>';
-					var info = '<ul class="iconimagesheading"><li class="svgimg active"><a class="mscom-link c-hyperlink" data-toggle="tooltip" aria-describedby="tooltip-0" aria-haspopup="true" href="' + data._results.devices[i].specUrl + '" aria-label="Device information" ms.interactiontype="4" ms.link_type="inlink" ms.title="Device Information"><img src="{{site.baseurl}}/Resources/images/get-started/info.png" class="mscom-image mscom-image tooltip active tooltipimage" alt="Device Information" style="width:26px; height:29px; margin-top:-5px; margin-right:-4px;"></a><span id="tooltip-0" class="c-tooltip" role="tooltip" aria-hidden="true" style="left: 156.641px; top: 549.734px;">Device Information</span></li>';
+					var info = '<ul class="iconimagesheading"><li class="svgimg active"><a class="mscom-link c-hyperlink" data-toggle="tooltip" aria-describedby="tooltip-0" aria-haspopup="true" href="' + data._results.devices[i].specUrl + '" aria-label="Device information" ms.interactiontype="4" ms.link_type="inlink" ms.title="Device Information"><img src="{{site.baseurl}}/Resources/images/get-started/info-icon.png" class="mscom-image mscom-image tooltip active tooltipimage" alt="Device Information" style="width:26px; height:29px; margin-top:-5px; margin-right:-4px;"></a><span id="tooltip-0" class="c-tooltip" role="tooltip" aria-hidden="true" style="left: 156.641px; top: 549.734px;">Device Information</span></li>';
 					var buy = '<li class="svgimg active"><a class="mscom-link c-hyperlink" data-toggle="tooltip" aria-describedby="tooltip-1" aria-haspopup="true" href="' + data._results.devices[i].buyLink + '" aria-label="Buy the device" ms.interactiontype="4" ms.link_type="inlink" ms.title="Buy the device"><img src="{{site.baseurl}}/Resources/images/get-started/cart.png" class="mscom-image mscom-image tooltip active tooltipimage" alt="Buy Device" style="width:20px; height:20px;"></a><span id="tooltip-1" class="c-tooltip hook-hover" role="tooltip" aria-hidden="true">Buy the device</span></li>';
 					var download = '<li class="svgimg active"><a class="mscom-link c-hyperlink" data-toggle="tooltip" aria-describedby="tooltip-2" aria-haspopup="true" href="'+ data._results.devices[i].buyLink+'" aria-label="Download" ms.interactiontype="4" ms.link_type="inlink" ms.title="windows ink"><img src="/content/Resources/images/get-started/download.png" class="mscom-image mscom-image tooltip active tooltipimage img-responsive" alt="Buy Device" style="width:14px; height:20px;"></a><span id="tooltip-2" class="c-tooltip hook-hover" role="tooltip" aria-hidden="true">Download the respective FFU.</span></li></ul>';
 					
@@ -195,7 +192,6 @@ else{
 		}
 	}
 }
-trHTML += '</ul></div></div></div></section>';
 $('#location').append(trHTML);
 </script>
 	

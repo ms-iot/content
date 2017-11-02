@@ -20,8 +20,8 @@
             "link":"/GetStarted/Prototype/WriteApp.htm"
           },
           {
-            "title":"5. Connect to the cloud",
-            "link":"/GetStarted/Prototype/ConnectCloud.htm"
+            "title":"5. Connect to Azure",
+            "link":"/GetStarted/Prototype/ConnectAzure.htm"
           },
           {
             "title":"6. Next Steps",
@@ -75,12 +75,7 @@
 		      {
             "title":"11. Manufacture your device",
             "link":"/GetStarted/Commercialize/ManufactureDevice.htm"
-          },
-		      {
-            "title":"12. Manage your devices at scale",
-            "link":"/GetStarted/Commercialize/ManageDevice.htm"
           }
-
         ]
       }
    ]
