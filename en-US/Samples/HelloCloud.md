@@ -11,7 +11,7 @@ lang: en-US
 
 ## Getting started
 
-First, to deploy applications on Windows IoT Core, you’ll need to have Microsoft Visual Studio 2015 (or download the free Community edition here). You’ll also need an active Azure subscription (you can start with a free trial subscription), and then choose a free version of the Azure IoT Hub service.
+First, to deploy applications on Windows IoT Core, you’ll need to have Microsoft Visual Studio 2017 (or download the free Community edition here：https://www.visualstudio.com/downloads/). You’ll also need an active Azure subscription (you can start with a free trial subscription), and then choose a free version of the Azure IoT Hub service.
 
 To set up an instance of the IoT Hub, log on to the Azure Portal and click “New” on the jumpbar on the left, then “Internet of Things,” then “IoT Hub.” (The process is straightforward, but if you want additional pointers, there are great tips in this article). Be sure to choose “F1 –Free” pricing and scale tier. The free option provides one IoT Hub per subscription, which includes 10 devices and 3000 messages per day.
 
