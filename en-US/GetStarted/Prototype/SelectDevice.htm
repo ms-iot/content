@@ -145,7 +145,7 @@ var windowsData={
 };
 
 var p=1;
-var trHTML = '';
+var defaultList = '';
 for (var i = 0; i <  windowsData.deviceList.length; i++) { 
 	var tile = '<section data-m="el' + p +'" data-grid="col-12" class="m-product-placement-item f-size-large context-device FFUAvailable" itemscope><a href="#"><div class="f-default-image" style="background-color: rgba(0, 0, 0, 0); outline: rgba(0,0,0,.1) solid 2px; box-shadow: 1px 1px 5px 0 #adadad; height:270px;">';
 	var head = '<h3 class="c-heading" style="padding-left:10px; padding-top: 10px;" itemprop="product name">'+ windowsData.deviceList[i].title +'</h3>';
@@ -157,11 +157,13 @@ for (var i = 0; i <  windowsData.deviceList.length; i++) {
 	if(windowsData.deviceList[i].starterKit != ""){
 		banner = '<div style="background-color: #0072c6; text-align: center; color: white; height: 20px; font-size: 15px;"><a href="'+ windowsData.deviceList[i].starterKit +'">Starter Kit Available</a></div>';
 	}	
-	trHTML += tile + head + img + info + buy + download + banner + '</div></a></section>' ;                           			
+	defaultList += tile + head + img + info + buy + download + banner + '</div></a></section>' ;                           			
 	p++;
 }
+$('#location').append(defaultList);
 
 function azureDevices(data){
+	var deviceList='';
 	var repetitor = '';
 	if(!data._results){
 		alert("API:404 error");
@@ -185,7 +187,7 @@ function azureDevices(data){
 						var buy = '<li class="svgimg active"><a class="mscom-link c-hyperlink" data-toggle="tooltip" aria-describedby="tooltip-1" aria-haspopup="true" href="' + data._results.devices[i].buyLink + '" aria-label="Buy the device" ms.interactiontype="4" ms.link_type="inlink" ms.title="Buy the device"><img src="{{site.baseurl}}/Resources/images/get-started/cart.png" class="mscom-image mscom-image tooltip active tooltipimage" alt="Buy Device" style="width:20px; height:20px;"></a><span id="tooltip-1" class="c-tooltip hook-hover" role="tooltip" aria-hidden="true">Buy the device</span></li>';
 						var download = '<li class="svgimg active"><a class="mscom-link c-hyperlink" data-toggle="tooltip" aria-describedby="tooltip-2" aria-haspopup="true" href="'+ data._results.devices[i].buyLink+'" aria-label="Download" ms.interactiontype="4" ms.link_type="inlink" ms.title="windows ink"><img src="/content/Resources/images/get-started/download.png" class="mscom-image mscom-image tooltip active tooltipimage img-responsive" alt="Buy Device" style="width:14px; height:20px;"></a><span id="tooltip-2" class="c-tooltip hook-hover" role="tooltip" aria-hidden="true">Download the respective FFU.</span></li></ul>';
 						
-						trHTML += tile + head + img + info + buy + download +'</div></a></section>'; 
+						deviceList += tile + head + img + info + buy + download +'</div></a></section>'; 
 						p++;
 					}
 					else {
@@ -195,8 +197,7 @@ function azureDevices(data){
 			}
 		}
 	}
+	$('#location').append(deviceList);
 }
-
-$('#location').append(trHTML);
 </script>
 	
