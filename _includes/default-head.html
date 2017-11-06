@@ -12,16 +12,17 @@
     <link rel="icon" type="image/png" href="{{site.url}}/favicon.png" />
     <!--[if IE]><link rel="shortcut icon" href="{{site.url}}/favicon.ico"/><![endif]-->
 
-   
+    <script>
+        /*remove webcore from rendering on the page*/
+        var href = "https://assets.onestore.ms/cdnfiles/external/webcore/4.21.21/stylesheets/WebCore.4.21.21.ltr.light.min.css";
+        jQuery('link[rel=stylesheet][href="' + href + '"]').get(0).disabled = true
+    </script>
     <link rel="stylesheet" href="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/css/mwf-west-european-default.min.css" />
     <link href="{{site.baseurl}}/Resources/css/main-mwf.css" rel="stylesheet" />
-
     <link rel="stylesheet" type="text/css" href="https://assets.windowsphone.com/c87b935e-f679-4b69-9640-7afd04586278/custom-min.css" />
-    <!-- feedbacksock minified js -->
-
-      <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
+    
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/bootstrap/3.3.0/bootstrap.min.js"></script>
-
     <script type="text/javascript" src="https://assets.windowsphone.com/26cc6e61-fd0a-41b6-8e56-4bb8cb0c117d/feedbacksock-min.js"></script> 
     <script src="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/scripts/mwf-auto-init-main.var.min.js"></script>
     
