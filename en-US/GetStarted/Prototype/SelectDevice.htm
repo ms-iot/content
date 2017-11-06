@@ -79,10 +79,9 @@ lang: en-US
 <section>
 	<div data-grid="col-10"></div>
 	<div data-grid="col-2">
-	<a class="c-action-trigger c-glyph-after glyph-chevron-right" href="{{site.baseurl}}/{{page.lang}}/GetStarted/Prototype/SetupDevice.htm">Next: Set up your device</a>
-</div>
+		<a class="c-action-trigger c-glyph-after glyph-chevron-right" href="{{site.baseurl}}/{{page.lang}}/GetStarted/Prototype/SetupDevice.htm">Next: Set up your device</a>
+	</div>
 </section>
-
 
 <script>
 
@@ -96,10 +95,13 @@ $('input[type="checkbox"]').change(function(){
 	}
 });
 var data = '';
-$.get("https://device-catalog-test.azurewebsites.net/api/devices/search/null", function(response){
- 	alert("Data: " + response);
-	data = response;
-});
+$.ajax({
+        url: 'https://device-catalog-test.azurewebsites.net/api/devices/search/null',
+        success: function(response) {
+			alert("Data: " + response);
+			data = response;
+        }
+    });
 
 var windowsData={
 	"deviceList" : [
@@ -140,9 +142,9 @@ var windowsData={
 			"starterKit" : ""
 		}
 	]
-}; 
+};
 
-var p=1; 
+var p=1;
 var trHTML = '';
 for (var i = 0; i <  windowsData.deviceList.length; i++) { 
 	var tile = '<section data-m="el' + p +'" data-grid="col-12" class="m-product-placement-item f-size-large context-device FFUAvailable" itemscope><a href="#"><div class="f-default-image" style="background-color: rgba(0, 0, 0, 0); outline: rgba(0,0,0,.1) solid 2px; box-shadow: 1px 1px 5px 0 #adadad; height:270px;">';
