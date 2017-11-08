@@ -231,4 +231,17 @@ a.c-action-trigger.c-glyph-after:after {
     box-sizing: inherit;
 }
 
+.device-listing{
+    background-color: rgba(0, 0, 0, 0);
+    outline: rgba(0,0,0,.1) solid 2px;
+    box-shadow: 1px 1px 5px 0 #adadad;
+    height:270px !important;
+}
 
+.kit-banner{
+    background-color: #0072c6;
+    text-align: center;
+    color: white;
+    height: 20px;
+    font-size: 15px;
+}
