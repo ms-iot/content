@@ -20,7 +20,7 @@ back to RPi2 or RPi3 which then displays it on the screen.
 	- Pair Bluetooth with RPi2 or RPi3
 	- Plug the Bluetooth dongle into the RPi2 (RPi3 has Bluetooth built in)
 	- Plug the BlueSMIRF into the Uno, which will be connected to any PC; 
-	  Connection: Bluetooth TX->PC RX, Bluetooth RX->PC TX
+	  Connection: Bluetooth TX->Arduino Uno RX, Bluetooth RX->Arduino Uno TX
     - Follow the instructions to pair the Bluetooth with RPi2 or RPi3
 		Pin for Bluetooth pairing: 1234
  
