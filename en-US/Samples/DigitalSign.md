@@ -26,7 +26,7 @@ This is a headed sample.  To better understand what headed mode is and how to co
 
 ## Load the project in Visual Studio
 
-You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\DigitalSignageUAP`.  Make a copy of the DigitalSignageUAP folder on your disk and open the project from Visual Studio.
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\DigitalSign`.  Make a copy of the DigitalSign folder on your disk and open the project from Visual Studio.
 
 Make sure you set the 'Remote Debugging' setting to point to your Windows IoT device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/Samples/HelloWorld) if you need guidance.
 
