@@ -99,7 +99,6 @@ $.ajax({
         url: 'https://device-catalog-test.azurewebsites.net/api/devices/search/null',
         success: function(data) {
 			azureDevices(data);
-			alert("Data: " + data);
         }
     });
 
@@ -165,10 +164,7 @@ $('#location').append(defaultList);
 function azureDevices(data){
 	var deviceList='';
 	var repetitor = '';
-	if(!data._results){
-		alert("API:404 error");
-	}
-	else{
+	if(data._results){
 		for (var i = 0; i < data._results.devices.length; i++) {
 			var os = data._results.devices[i].operatingSystems;
 			for (var j = 0; j < os.length; j++) {

@@ -194,14 +194,17 @@ a.mscom-link.c-call-to-action.c-glyph {
       background: none;
   }
  
-    .iconimagesheading a:focus
-  {
+.iconimagesheading a:focus{
     outline: 1px dashed#000 !important;
     display: inline-block;
-  }
+}
 
-  .m-typographic-intro.f-transparent{
-    height:150px
+.m-getstarted-head{
+    height:150px;
+    background: #0067B8;
+}
+.m-getstarted-head>div{
+    color: #FFF; 
 }
 
 /* glyph after text */
