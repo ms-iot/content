@@ -1,6 +1,6 @@
 {
   "en-US-tags": [
-    "Introductory",
+    "Beginner",
     "Intermediate",
     "Advanced",
     "C#",
@@ -22,7 +22,7 @@
     {
       "name": "Difficulty",
       "tags": [
-        "Introductory",
+        "Beginner",
         "Intermediate",
         "Advanced"
       ]
@@ -67,13 +67,9 @@
       "title": "'Hello, world!'",
       "description": "Create and deploy your first Windows 10 IoT Core app",
       "link": [
-        "samples/HelloWorld.htm",
-        "samples/HelloWorldPython.htm",
-        "samples/HelloWorldNode.htm"
+        "samples/HelloWorld.htm"
       ],
       "link-text": [
-        "Hello World",
-        "Hello World",
         "Hello World"
       ],
       "lang": [
@@ -83,11 +79,9 @@
       ],
       "ranking": 0,
       "tags": [
-        "c#",
-        "python",
-        "node.js",
-        "beginner",
-        "foreground"
+        "C#",
+        "Beginner",
+        "Foreground"
       ]
     },
     {
@@ -100,7 +94,7 @@
       "tags": [
         "C#",
         "C++",
-        "Introductory",
+        "Beginner",
         "Foreground",
         "GPIO"
       ]
@@ -137,7 +131,7 @@
       "ranking": 0,
       "tags": [
         "C#",
-        "Introductory",
+        "Beginner",
         "Azure",
         "Foreground",
         "Background"
@@ -164,7 +158,7 @@
       "tags": [
         "C#",
         "Background",
-        "Introductory",
+        "Beginner",
         "GPIO"
       ]
     },
@@ -178,7 +172,7 @@
       "tags": [
         "C#",
         "Background",
-        "Introductory"
+        "Beginner"
       ]
     },
     {
@@ -190,7 +184,7 @@
       "ranking": 0,
       "tags": [
         "C#",
-        "Introductory",
+        "Beginner",
         "Foreground",
         "Azure"
       ]
@@ -218,7 +212,7 @@
       "tags": [
         "Bluetooth",
         "C#",
-        "Introductory"
+        "Beginner"
       ]
     },
     {
@@ -230,7 +224,7 @@
       "ranking": 0,
       "tags": [
         "C#",
-        "Introductory"
+        "Beginner"
       ]
     },
     {
@@ -357,7 +351,7 @@
       "lang": "C#",
       "ranking": 3,
       "tags": [
-        "Introductory",
+        "Beginner",
         "I2C",
         "C#"
       ]
@@ -398,7 +392,7 @@
       "ranking": 2,
       "tags": [
         "C#",
-        "Introductory",
+        "Beginner",
         "Foreground"
       ]
     },
@@ -411,7 +405,7 @@
       "ranking": 0,
       "tags": [
         "C++",
-        "Introductory",
+        "Beginner",
         "Foreground"
       ]
     },
@@ -423,7 +417,7 @@
       "lang": "C#",
       "ranking": 1,
       "tags": [
-        "Introductory",
+        "Beginner",
         "GPIO",
         "C#"
       ]
@@ -445,7 +439,7 @@
       ],
       "ranking": 3,
       "tags": [
-        "Introductory",
+        "Beginner",
         "C#",
         "GPIO",
         "Wiring",
@@ -460,7 +454,7 @@
       "lang": "C#",
       "ranking": 3,
       "tags": [
-        "Introductory",
+        "Beginner",
         "GPIO",
         "C#"
       ]
@@ -479,7 +473,7 @@
       ],
       "ranking": 3,
       "tags": [
-        "Introductory",
+        "Beginner",
         "SPI",
         "C#"
       ]
@@ -492,7 +486,7 @@
       "lang": "C#",
       "ranking": 3,
       "tags": [
-        "Introductory",
+        "Beginner",
         "SPI",
         "C#"
       ]
@@ -505,8 +499,8 @@
       "lang": "C++/CX",
       "ranking": 3,
       "tags": [
-        "c++",
-        "Intermediate",
+        "C++",
+        "Beginner",
         "SPI"
       ]
     },
@@ -532,7 +526,7 @@
       "tags": [
         "C#",
         "C++",
-        "Introductory"
+        "Beginner"
       ]
     },
     {
@@ -544,7 +538,7 @@
       "ranking": 0,
       "tags": [
         "C#",
-        "Introductory",
+        "Beginner",
         "Azure",
         "Foreground"
       ]
@@ -596,7 +590,7 @@
       "ranking": 3,
       "tags": [
         "Wiring",
-        "Introductory",
+        "Beginner",
         "GPIO",
         "Lightning"
       ]
@@ -610,7 +604,7 @@
       "ranking": 3,
       "tags": [
         "Wiring",
-        "Introductory"
+        "Beginner"
       ]
     },
     {
@@ -622,7 +616,7 @@
       "ranking": 3,
       "tags": [
         "Wiring",
-        "Introductory",
+        "Beginner",
         "GPIO"
       ]
     },
@@ -701,7 +695,7 @@
       "ranking": 10,
       "tags": [
         "Wiring",
-        "Introductory"
+        "Beginner"
       ]
     },
     {
@@ -732,7 +726,7 @@
       "ranking": 0,
       "tags": [
         "C#",
-        "Introductory",
+        "Beginner",
         "WiFi"
       ]
     },
@@ -750,9 +744,11 @@
       ]
     },
     {
-      "link": "samples/NFCForIoT.htm",
-      "link-text": "NFC for IoT",
+      "title": "NFC for IoT",
       "description": "How to use the NFC APIs on IoT Core.",
+      "link": "samples/NFCForIoT.htm",
+      "link-text": "Learn More",
+      "lang": "C#",
       "ranking": 10,
       "tags": [
         "Driver",        
