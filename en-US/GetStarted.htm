@@ -42,10 +42,6 @@ lang: en-US
               <img style="max-width:70%;" src="{{site.baseurl}}/Resources/images/DragonBoardIcon.png">
               <p class="text-caption" style="padding-top:25px">Dragonboard 410c</p>
           </li>
-          <li id="jouleButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('joule')">
-              <img style="max-width:70%;" src="{{site.baseurl}}/Resources/images/jouleIcon.png">
-              <p class="text-caption" style="padding-top:25px">Intel Joule</p>
-          </li>
           <li id="mbmButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('mbm')">
               <img style="max-width:75%;" src="{{site.baseurl}}/Resources/images/minnowboard-max.png">
               <p class="text-caption">Minnowboard Max</p>
@@ -132,7 +128,6 @@ lang: en-US
         unpressButton('#rpi2Button');
         unpressButton('#rpi3Button');
         unpressButton('#dragonboardButton');
-        unpressButton('#jouleButton');
         unpressButton('#computeStickButton');
         unpressButton('#mbmButton');
         unpressButton('#starterPackButton');
@@ -160,7 +155,6 @@ lang: en-US
               $('#getStartedCompletedSection').hide('fast');
               $('#comingSoonSection').hide('fast');             
               return;
-            case 'joule':
             case 'computeStick':
             case 'starterPack':  
                 pressButton(pressedButton);
@@ -222,10 +216,6 @@ lang: en-US
       var href = 'Docs/GetStarted/';
       
       switch (selectedBoard) {      
-        case 'joule':
-          // Joule is a special case. go directly to the joule page
-          window.location.href = 'Docs/GetStarted/joule/GetStartedStep1.htm';
-          return;
         case 'starterPack':
           // the kit is a special case. go directly to the Adafruit page
           window.location.href = 'Docs/AdafruitMakerKit.htm';
