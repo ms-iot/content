@@ -21,57 +21,10 @@
     <div class="col-xs-24">
     <h3>Update Your Device Firmware</h3>
     <ol class="inline-list "">
-      <li>Download the latest 32-Bit Release pre-built BIOS firmware from <a href="http://firmware.intel.com/projects/minnowboard-max"
-          target="_blank"> firmware.intel.com/projects/minnowboard-max </a> <br>For the current release, only 32 bit is supported,
-        however if you have a new board or are currently running the 64-bit firmware you will need to download <u>both</u>        the 64 and the 32 bit versions and use the 64 bit instructions below. </li>
-      <li>
-        Unzip the downloaded file and copy the following files to a FAT formatted USB stick
-        <ul>
-          <li>*.efi</li>
-          <li>*.bin</li>
-        </ul>
-      </li>
-      <li>Power off your MinnowBoard</li>
-      <li>Remove any SD cards and external hard drives</li>
-      <li>Plug in the USB stick to the MinnowBoard</li>
-      <li>Power on your MinnowBoard</li>
-      <li>
-        You should see the UEFI prompt. Run the following commands at the UEFI prompt:
-      </li>
-      <li>
-        <p>If your current firmware is 64 bit (this is how the MinnowBoard ships)</p>
-        <ul>
-            <kbd>fs0:</kbd><br/>
-            <kbd>.\MinnowBoard.MAX.FirmwareUpdateX64.efi _filename_.bin</kbd><br/>
-        </ul>
-        <p> If your current firmware is 32 bit (if you have already modified the original firmware to be 32 bit) </p>
-        <ul>
-            <kbd>fs0:</kbd><br/>
-            <kbd>.\MinnowBoard.MAX.FirmwareUpdateIA32.efi _filename_.bin</kbd>
-        </ul>
-        <p> e.g. </p>
-        <ul>
-            <kbd>Shell> fs0:</kbd><br/>
-            <kbd>fs0:\> .\MinnowBoard.MAX.FirmwareUpdateIA32.efi MinnowBoard.MAX.I32.079.R01.bin</kbd><br/>
-        </ul>
-        <p/>
-      </li>
-      <li>
-        The system should shut down automatically after the firmware update is complete.
-        <ul>
-          <li> NOTE: If you are not able to go to the fs0: partition, try a different flash drive. Certain flash drives won't
-            be bootable even after you copy efi/bin files.</li>
-        </ul>
-      </li>
+      <li>Install the latest 64-bit Firmware by following instructions from <a href="https://minnowboard.org/tutorials/updating-the-firmware/" target="_blank">the official Minnowboard site.</a></li> 
+      When you get to step 4 of the instructions, skip them and come back here for further details.
     </ol>
-    <p> You might wonder why you need to invoke 'MinnowBoard.MAX.FirmwareUpdateX64.efi' even if we're only supporting a 32 bit
-      version of Windows 10 IoT Core. The board usually comes with 64-bit firmware pre-installed on it. The bitness of the
-      EFI has to match the bitness of the current firmware. Additionally, the bitness of the bin file has to match the desired
-      bitness of the firmware after updating. So the first time you will likely need to use 64-bit EFI and 32-bit BIN. The
-      second time and every other time you need to use 32-bit EFI and 32-bit BIN. The reason the bitness of the firmware
-      has to match the bitness of the OS is that there is an EFI in the OS image that gets loaded to bootstrap the OS, and
-      that EFI has to be the same bitness as the firmware as well.
-    </p>
+
   </div>
 </div>
   <div class="row ">
