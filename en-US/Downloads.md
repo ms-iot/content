@@ -69,8 +69,8 @@ lang: en-US
           </div>
           <div class="col-md-6">
                <a class="downloadLink win-color-fg-primary" href="https://go.microsoft.com/fwlink/?linkid=846057">
-                <h3>Windows 10 IoT Core for MinnowBoard MAX</h3></a>
-                <p>Download Windows 10 IoT Core Creators Update ISO for MinnowBoard MAX</p>
+                <h3>Windows 10 IoT Core for MinnowBoard Turbot/MAX (x64)</h3></a>
+                <p>Download Windows 10 IoT Core Creators Update ISO for MinnowBoard Turbot/MAX (x64)</p>
                 <a href="https://go.microsoft.com/fwlink/?linkid=846057" class="downloadLink"><span>Download</span></a>   
           </div>
         </div>
