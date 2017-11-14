@@ -145,10 +145,6 @@ lang: en-US
                 $('#noobsButton').show();
                 $('#sdcardButton').show();
                 break;
-            case 'mbm':
-                $('#sdcardButton').show();
-                $('#noobsButton').hide();
-                break;
             case 'dragonboard':
               pressButton(pressedButton);
               $('#selectInstallSection').hide('fast');
@@ -156,6 +152,7 @@ lang: en-US
               $('#getStartedCompletedSection').hide('fast');
               $('#comingSoonSection').hide('fast');             
               return;
+            case 'mbm':
             case 'computeStick':
             case 'starterPack':  
                 pressButton(pressedButton);
@@ -225,9 +222,13 @@ lang: en-US
           // Intel Compute Stick is a special case. Go directly to the Intel Compute Stick page
           window.location.href = 'Docs/GetStarted/IntelComputeStick/GetStartedStep1.htm';
           return;
+        case 'mbm':
+        // Temporarily disable MBM insider preview
+        window.location.href = 'Docs/GetStarted/mbm/sdcard/stable/GetStartedStep1.htm';
+        return;
+
         case 'rpi2':
         case 'rpi3':
-        case 'mbm':
         case 'dragonboard':
           href += selectedBoard + '/';
           break;
