@@ -14,57 +14,28 @@ lang: en-US
       Jumpstart your project and explore in-depth samples.
     </h2>
     <p>
-      Our sample code lives on <a href="https://github.com/ms-iot/samples" target="_blank">GitHub</a>
+      Our sample code lives on <a href="https://github.com/Microsoft/Windows-iotcore-samples" target="_blank">GitHub</a>.
     </p>
   </header>
 </section>
 
-
-<section class="section spacer-20-bottom">
-  <div class="section-header">
-    <h2 class="section-title">New Samples</h2>
-  </div>
-  <div class="section-body">
-    <div class="row">
-      {% assign sortedInfo = (site.data._samples[page.lang] | sort: 'title') %}
-      {% for entry in sortedInfo %}
-        {% if entry.new %}
-          <div class="col-md-6" style="min-height: 320px;">
-            <p><span class="text-base">{{entry.title}}</span></p>
-            <p>{{entry.description}}</p>
-            <p>
-              {% if entry.link.first %}
-                {% for item in entry.link %}
-                  <a href="{{item}}">{{entry.lang[forloop.index0]}}</a>{% if forloop.rindex0 != 0 %}<br/>{% endif %}
-                {% endfor %}
-              {% else %}
-                <a href="{{entry.link}}">{% if entry.lang != 'N/A' %}{{entry.lang}}{% else %}{{entry.link-text}}{% endif %}</a>
-              {% endif %}
-            </p>
-            <p class="win-color-fg-secondary">
-              tags:
-              {% for item in entry.tags %}
-                {{item}}{% if forloop.rindex0 != 0 %}, {% endif %}
-              {% endfor %}
-            </p>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
+<body onload="myFunction()"></body>
+<script>
+  function myFunction(){
+    $(".tagBox").parent().hide();
+    $(".tagBtn").removeClass("active");
+    }
+</script>
 
 <section class="section">
-  <div class="section-header">
-    <h2 class="section-title">All Samples</h2>
-  </div>
   <div class="section-body">
     <div class="row">
       <div class="col-xs-24">
-        <div class="win-color-bg-10" style="padding: 16px">
+        <div class="win-color-bg-10" style="padding: 20px">
           <div class="row">
             <div class="col-xs-24 col-md-4">
               <h3>Filter by tags</h3>
+              <!--select/deselect buttons -->
               <div class="btn-group">
                 <button style="min-width: 0;" onclick="selectAllTags()">all</button>
                 <button style="min-width: 0;" onclick="deselectAllTags()">none</button>
@@ -87,21 +58,13 @@ lang: en-US
         </div>
       </div>
     </div>
+    <br>
     <div class="row spacer-32-top">
       {% assign sortedInfo = (site.data._samples[page.lang] | sort: 'title') %}
       {% for entry in sortedInfo %}
-        <div class="col-md-6" style="min-height: 400px;">
-          <p><span class="text-base">{{entry.title}}</span></p>
+        <div class="col-md-6" style="min-height:275px">
+          <p><span class="text-base"><a href="{{entry.link}}">{{entry.title}}</a></span></p>
           <p>{{entry.description}}</p>
-          <p>
-            {% if entry.link.first %}
-              {% for item in entry.link %}
-                <a href="{{item}}">{{entry.lang[forloop.index0]}}</a>{% if forloop.rindex0 != 0 %}<br/>{% endif %}
-              {% endfor %}
-            {% else %}
-              <a href="{{entry.link}}">{% if entry.lang != 'N/A' %}{{entry.lang}}{% else %}{{entry.link-text}}{% endif %}</a>
-            {% endif %}
-          </p>
           <p class="win-color-fg-secondary">
             tags:
             {% for item in entry.tags %}
@@ -119,8 +82,8 @@ lang: en-US
   </div>
 </section>
 
-
 <script>
+
   function toggleTag(tagname) {
     var spanTags = document.getElementsByClassName("tagBox");
     var isActive = $('#' + tagname).hasClass("active");
