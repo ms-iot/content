@@ -66,17 +66,9 @@
     {
       "title": "'Hello, world!'",
       "description": "Create and deploy your first Windows 10 IoT Core app",
-      "link": [
-        "samples/HelloWorld.htm"
-      ],
-      "link-text": [
-        "Hello World"
-      ],
-      "lang": [
-        "C#",
-        "Python",
-        "Node.js"
-      ],
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/HelloWorld",
+      "link-text": "Hello World",
+      "lang": "C#",
       "ranking": 0,
       "tags": [
         "C#",
@@ -87,9 +79,12 @@
     {
       "title": "'Hello, blinky!'",
       "description": "A 'Hello, world' sample to control an LED from a breadboard",
-      "link": "samples/HelloBlinky.htm",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/HelloBlinky",
       "link-text": "UI Blinky",
-      "lang": "C#/C++",
+      "lang": [ 
+        "C#",
+        "C++"
+        ],
       "ranking": 0,
       "tags": [
         "C#",
@@ -102,14 +97,8 @@
     {
       "title": "'Hello, blinky!' background service",
       "description": "Create an app with no UI that toggles an LED on devices running Windows 10 IoT Core",
-      "link": [
-        "samples/HelloBlinkyBackground.htm",
-        "samples/HelloBlinkyBackgroundWiring.htm"
-      ],
-      "link-text": [
-        "Blinky",
-        "Blinky"
-      ],
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/HelloBlinkyBackground",
+      "link-text": "Blinky",
       "lang": [
         "C#",
         "Wiring",
@@ -125,7 +114,7 @@
     {
       "title": "'Hello, Cloud!'",
       "description": "Create an app to talk to the Azure cloud using Azure IoT Hub",
-      "link": "samples/HelloCloud.htm",
+      "link": "https://github.com/ms-iot/samples/tree/master/Azure/HelloCloud",
       "link-text": "HelloCloud",
       "lang": "C#",
       "ranking": 0,
@@ -135,17 +124,6 @@
         "Azure",
         "Foreground",
         "Background"
-      ]
-    },
-{
-      "title": "App installer",
-      "description": "Install and deploy an app on Windows IoT Core",
-      "link": "samples/AppInstaller.htm",
-      "link-text": "Learn More",
-      "lang": "N/A",
-      "ranking": 0,
-      "tags": [
-        "Intermediate"
       ]
     },
     {
@@ -165,7 +143,7 @@
     {
       "title": "App Service Shared Notepad",
       "description": "Sample app service with 2 clients.  One client writes notepad messages.  The other client reads notepad messages and displays them.",
-      "link": "samples/AppServiceSharedNotepad.htm",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/AppServiceSharedNotepad",
       "link-text": "App Service Shared Notepad",
       "lang": "C#",
       "ranking": 0,
@@ -176,49 +154,9 @@
       ]
     },
     {
-      "title": "Azure weather station",
-      "description": "Build a weather station application to demonstrate the capabilities of Power BI and Azure Active Directory",
-      "link": "samples/AzureWeatherStation.htm",
-      "link-text": "Weather station",
-      "lang": "C#",
-      "ranking": 0,
-      "tags": [
-        "C#",
-        "Beginner",
-        "Foreground",
-        "Azure"
-      ]
-    },
-    {
-      "title": "Bluetooth low energy GATT",
-      "description": "Learn how to work with Bluetooth Low Energy devices using the GATT profile and a TI CC2541 SensorTag",
-      "link": "samples/BLEGatt.htm",
-      "link-text": "Bluetooth GATT",
-      "lang": "C#",
-      "ranking": 0,
-      "tags": [
-        "Bluetooth",
-        "C#",
-        "Intermediate"
-      ]
-    },
-    {
-      "title": "Bluetooth Serial",
-      "description": "Send and receive messages over Bluetooth serial",
-      "link": "samples/BTSerial.htm",
-      "link-text": "Bluetooth serial",
-      "lang": "C#",
-      "ranking": 0,
-      "tags": [
-        "Bluetooth",
-        "C#",
-        "Beginner"
-      ]
-    },
-    {
       "title": "Cognitive Services",
       "description": "Access and use the Cognitive Services API inside a C# UWP App",
-      "link": "samples/CognitiveServices.htm",
+      "link": "https://github.com/ms-iot/samples/tree/master/CognitiveServicesExample",
       "link-text": "Cognitive Services",
       "lang": "C#",
       "ranking": 0,
@@ -228,22 +166,9 @@
       ]
     },
     {
-      "title": "Device I/O controller",
-      "description": "Use <code>CreateFile()</code> and <code>DeviceIoControl()</code> to access custom devices from UWP.",
-      "link": "samples/CustomDeviceAccessor.htm",
-      "link-text": "Learn More",
-      "lang": "C++",
-      "ranking": 10,
-      "tags": [
-        "Driver",
-        "C++",
-        "Advanced"
-      ]
-    },
-    {
       "title": "Digital sign",
       "description": "Create a basic digital sign and learn how to work with multimedia",
-      "link": "samples/DigitalSign.htm",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/DigitalSign",
       "link-text": "Digital sign",
       "lang": "C#",
       "ranking": 10,
@@ -254,22 +179,9 @@
       ]
     },
     {
-      "title": "Driver sample",
-      "description": "Create and interact with a universal driver on devices running Windows 10 IoT Core",
-      "link": "samples/DriverLab.htm",
-      "link-text": "Driver Sample",
-      "lang": "C++",
-      "ranking": 20,
-      "tags": [
-        "Driver",        
-        "Advanced",
-        "C++"
-      ]
-    },
-    {
       "title": "External process launcher",
       "description": "Use <code>Windows.System.ProcessLauncher</code> API to launch external executable programs from your UWP app",
-      "link": "samples/ExternalProcessLauncher.htm",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/ExternalProcessLauncher",
       "link-text": "ProcessLauncher API Sample",
       "lang": "C#",
       "ranking": 10,
@@ -279,53 +191,17 @@
       ]
     },
     {
-      "title": "GPIO OneWire",
-      "description": "Create an app that uses GPIO to read from the DHT11, a temperature and humidity sensor that uses a single-wire protocol",
-      "link": "samples/GpioOneWire.htm",
-      "link-text": "GPIO OneWire",
-      "lang": "C++",
-      "ranking": 3,
-      "tags": [
-        "C++",
-        "Intermediate",
-        "GPIO"
-      ]
-    },
-    {
-      "title": "GpioTestTool",
-      "description": "A command line utility to access GPIO.",
-      "link": "samples/GpioTestTool.htm",
-      "link-text": "GpioTestTool",
-      "lang": "C++",
-      "ranking": 3,
-      "tags": [
-        "C++",
-        "Intermediate",
-        "GPIO"
-      ]
-    },
-    {
       "title": "IoT Core Default App",
       "description": "Create a UWP app that provides a device-management experience for Windows 10 IoT Core",
-      "link": "samples/IoTDefaultApp.htm",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTCoreDefaultApp",
       "link-text": "Iot Core Default App",
-      "lang": "C#",
+      "lang": [
+        "C#",
+        "C++"
+        ]
       "ranking": 1,
       "tags": [
         "C#",
-        "Intermediate",
-        "Foreground",
-      ]
-    },
-    {
-      "title": "IoT Home App",
-      "description": "Create a UWP app to demonstrate navigation between multiple app using protocol uri scheme",
-      "link": "samples/IoTHomeApp.htm",
-      "link-text": "Iot Home App",
-      "lang": "C++",
-      "ranking": 1,
-      "tags": [
-        "C++",
         "Intermediate",
         "Foreground"
       ]
@@ -340,13 +216,13 @@
       "tags": [
         "C++",
         "Intermediate",
-        "Foreground",
+        "Foreground"
       ]
     },
     {
       "title": "I2C accelerometer",
       "description": "Connect an accelerometer to your device and read data from it",
-      "link": "samples/I2CAccelerometer.htm",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/I2CAccelerometer",
       "link-text": "I2C Accelerometer",
       "lang": "C#",
       "ranking": 3,
@@ -357,36 +233,9 @@
       ]
     },
     {
-      "title": "I2C port expander",
-      "description": "Connect a port expander to read the status of a tactile switch and control an LED",
-      "link": "samples/I2CPortExpander.htm",
-      "link-text": "I2C Port Expander",
-      "lang": "C#",
-      "ranking": 20,
-      "tags": [
-        "Advanced",
-        "I2C",
-        "GPIO",
-        "C#"
-      ]
-    },
-    {
-      "title": "I2cTestTool",
-      "description": "A command line utility to access I2C.",
-      "link": "samples/I2cTestTool.htm",
-      "link-text": "I2cTestTool",
-      "lang": "C++/CX",
-      "ranking": 3,
-      "tags": [
-        "C++",
-        "Intermediate",
-        "I2C"
-      ]
-    },
-    {
       "title": "IoT browser",
       "description": "Create a simple web browser",
-      "link": "samples/IoTBrowser.htm",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTBrowser",
       "link-text": "IoT Browser",
       "lang": "C#",
       "ranking": 2,
@@ -399,7 +248,7 @@
     {
       "title": "OpenCV",
       "description": "Use OpenCV to run facial and body recognition on a photo",
-      "link": "samples/OpenCV.htm",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/OpenCVExample",
       "link-text": "OpenCV",
       "lang": "C++",
       "ranking": 0,
@@ -412,7 +261,7 @@
     {
       "title": "Push button",
       "description": "Make an LED blink with the push of a button",
-      "link": "samples/PushButton.htm",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/PushButton",
       "link-text": "Push Button",
       "lang": "C#",
       "ranking": 1,
@@ -425,14 +274,8 @@
     {
       "title": "Potentiometer sensor",
       "description": "Read values from a rotary potentiometer and output data to an LED",
-      "link": [
-        "samples/Potentiometer.htm",
-        "samples/PotentiometerWiring.htm"
-      ],
-      "link-text": [
-        "Potentiometer Sensor Sample",
-        "Potentiometer Sensor Sample"
-      ],
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/PotentiometerSensor",
+      "link-text": "Potentiometer Sensor Sample",
       "lang": [
         "C#",
         "Wiring"
@@ -449,7 +292,7 @@
     {
       "title": "RGB LED",
       "description": "Create an app that uses the Raspberry Pi 2 to toggle an RGB LED.",
-      "link": "samples/RGBLED.htm",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/RGBLED",
       "link-text": "RGB LED",
       "lang": "C#",
       "ranking": 3,
@@ -462,15 +305,9 @@
     {
       "title": "SPI accelerometer",
       "description": "Connect an accelerometer to your device and read data from it",
-      "link":[
-         "samples/SPIAccelerometer.htm",
-         "samples/SPIAccelerometer.htm"
-      ],
+      "link":"https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/SPIAccelerometer",
       "link-text": "SPI Accelerometer",
-      "lang": [
-        "C#",
-        "Python"
-      ],
+      "lang":"C#",
       "ranking": 3,
       "tags": [
         "Beginner",
@@ -481,7 +318,7 @@
     {
       "title": "SPI display",
       "description": "Write lines of text to an LED display",
-      "link": "samples/SPIDisplay.htm",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/SPIDisplay",
       "link-text": "SPI Display",
       "lang": "C#",
       "ranking": 3,
@@ -492,22 +329,9 @@
       ]
     },
     {
-      "title": "SpiTestTool",
-      "description": "A command line utility to access SPI.",
-      "link": "samples/SpiTestTool.htm",
-      "link-text": "SpiTestTool",
-      "lang": "C++/CX",
-      "ranking": 3,
-      "tags": [
-        "C++",
-        "Beginner",
-        "SPI"
-      ]
-    },
-    {
       "title": "Shift register",
       "description": "Connect an 8-bit serial-in, parallel-out shift register to your device to toggle eight LED's",
-      "link": "samples/ShiftRegister.htm",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/ShiftRegister",
       "link-text": "Shift Register",
       "lang": "C#",
       "ranking": 20,
@@ -519,7 +343,7 @@
     {
       "title": "Serial UART",
       "description": "Communicate between a desktop and an IoT device over a serial interface",
-      "link": "samples/SerialUART.htm",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/SerialUART",
       "link-text": "Serial UART",
       "lang": "C#/C++",
       "ranking": 3,
@@ -530,23 +354,9 @@
       ]
     },
     {
-      "title": "TPM Device Test",
-      "description": "Write an app that can authenticate to Azure while protecting the security-sensitive information on the device",
-      "link": "samples/TpmDeviceTest.htm",
-      "link-text": "TPMDeviceTeset",
-      "lang": "C#",
-      "ranking": 0,
-      "tags": [
-        "C#",
-        "Beginner",
-        "Azure",
-        "Foreground"
-      ]
-    },
-    {
       "title": "Video Capture",
       "description": "Create an app that records video to file, plays video from file.",
-      "link": "samples/VideoCapture.htm",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/VideoCaptureSample",
       "link-text": "Video Capture",
       "lang": "C#",
       "ranking": 0,
@@ -559,7 +369,7 @@
     {
       "title": "Webcam app",
       "description": "Create an app that initializes a web cam, takes pictures, and records video and audio.",
-      "link": "samples/WebcamApp.htm",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/WebcamApp",
       "link-text": "Webcam App",
       "lang": "C#",
       "ranking": 0,
@@ -570,140 +380,9 @@
       ]
     },
     {
-      "title": "OneNote cloud services",
-      "description": "Learn how to use http messages to GET and POST OneNote pages in Wiring",
-      "link": "samples/arduino-wiring/OneNote.htm",
-      "link-text": "OneNote API",
-      "lang": "Wiring",
-      "ranking": 0,
-      "tags": [
-        "Intermediate",
-        "Wiring",
-      ]
-    },
-    {
-      "title": "RGB pixel strip",
-      "description": "Learn how to use an RGB pixel strip in Wiring",
-      "link": "samples/arduino-wiring/RGBPixel.htm",
-      "link-text": "RGB Pixel",
-      "lang": "Wiring",
-      "ranking": 3,
-      "tags": [
-        "Wiring",
-        "Beginner",
-        "GPIO",
-        "Lightning"
-      ]
-    },
-    {
-      "title": "LCD text display",
-      "description": "Deploy and debug an Arduino Wiring sketch to control text on an LCD screen",
-      "link": "samples/arduino-wiring/LCDTextDisplay.htm",
-      "link-text": "LCD Screen",
-      "lang": "Wiring",
-      "ranking": 3,
-      "tags": [
-        "Wiring",
-        "Beginner"
-      ]
-    },
-    {
-      "title": "Stepper motor",
-      "description": "Deploy and debug an Arduino Wiring sketch to control a stepper motor",
-      "link": "samples/arduino-wiring/StepperMotor.htm",
-      "link-text": "Stepper Motor",
-      "lang": "Wiring",
-      "ranking": 3,
-      "tags": [
-        "Wiring",
-        "Beginner",
-        "GPIO"
-      ]
-    },
-
-    {
-      "title": "Lightning.Providers - Blinky background service",
-      "description": "Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
-      "link": [
-        "samples/HelloBlinkyBackgroundLightning.htm",
-      ],
-      "link-text": [
-        "Blinky Headless",
-      ],
-      "lang": [
-        "C#/C++",
-      ],
-      "ranking": 0,
-      "tags": [
-        "Intermediate",
-        "C#",
-        "C++",
-        "Lightning",
-      ]
-    },
-    {
-      "title": "Lightning.Providers - Blinky",
-      "description": "Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
-      "link": "samples/HelloBlinkyLightning.htm",
-      "link-text": "Blinky UI",
-      "lang": "C#/C++",
-      "ranking": 0,
-      "tags": [
-        "C#",
-        "C++",
-        "Intermediate",
-        "GPIO",
-        "Lightning"
-      ]
-    },
-    {
-      "title": "Lightning.Providers - Weather station ",
-      "description": "Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
-      "link": "samples/WeatherStationLightning.htm",
-      "link-text": "Weather Station",
-      "lang": "C#/C++",
-      "ranking": 0,
-      "tags": [
-        "C#",
-        "C++",
-        "Intermediate",
-        "Lightning",
-        "I2C"
-      ]
-    },
-    {
-      "title": "Lightning.Providers - SPI display ",
-      "description": "Demonstrating the use of Microsoft.IoT.Lightning.Providers in UWP apps",
-      "link": "samples/SPIDisplayLightning.htm",
-      "link-text": "SPI Display",
-      "lang": "C#/C++",
-      "ranking": 0,
-      "tags": [
-        "C#",
-        "C++",
-        "Intermediate",
-        "Lightning",
-        "SPI"
-      ]
-    },
-    {
-      "title": "DC motor controller",
-      "description": "Control DC motors using a Windows IoT Core enabled device!",
-      "link": "samples/arduino-wiring/DCMotor.htm",
-      "link-text": "DC Motors",
-      "lang": "Wiring",
-      "ranking": 10,
-      "tags": [
-        "Wiring",
-        "Beginner"
-      ]
-    },
-    {
       "title": "Memory status monitor",
       "description": "Create a console app that monitors memory usage on devices running Windows 10 IoT Core",
-      "link": [
-        "samples/MemoryStatus.htm",
-      ],
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/MemoryStatus",
       "link-text": [
         "Console App",
       ],
@@ -720,7 +399,7 @@
     {
       "title": "Wi-Fi connector",
       "description": "Discover and connect to a WiFi network from a UWP app using <code>Windows.Devices.WiFi.WiFiAdapter</code> API",
-      "link": "samples/WiFiConnector.htm",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/WiFiConnector",
       "link-text": "WiFi Connect Sample",
       "lang": "C#",
       "ranking": 0,
@@ -731,22 +410,9 @@
       ]
     },
     {
-      "title": "HID Injection driver",
-      "description": "Build a driver for IoT Core and use HID Injection to inject touch, keyboard or mouse events.",
-      "link": "samples/HidInjection.htm",
-      "link-text": "Learn More",
-      "lang": "C++",
-      "ranking": 10,
-      "tags": [
-        "Driver",
-        "C++",
-        "Advanced"
-      ]
-    },
-    {
       "title": "NFC for IoT",
       "description": "How to use the NFC APIs on IoT Core.",
-      "link": "samples/NFCForIoT.htm",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/NFCForIoT",
       "link-text": "Learn More",
       "lang": "C#",
       "ranking": 10,
@@ -759,7 +425,7 @@
     {
       "title": "Speech translator",
       "description": "Translate your speech to different languages.",
-      "link": "samples/SpeechTranslator.htm",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/SpeechTranslator",
       "link-text": "Learn More",
       "lang": "C#",
       "ranking": 10,
@@ -772,7 +438,7 @@
     {
       "title": "Temperature and force sensor",
       "description": "Control a basic temperature and force sensor.",
-      "link": "samples/TempForceSensor.htm",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/TempForceSensor",
       "link-text": "Learn More",
       "lang": "C#",
       "ranking": 10,

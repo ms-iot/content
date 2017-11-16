@@ -49,7 +49,7 @@ kit: Starter Pack for Windows 10 IoT Core on Raspberry Pi 2 or Pi 3
         <td>Download Windows 10 and Visual Studio</td>
       </tr>
       <tr>
-        <td><a href="{{site.baseurl}}/{{page.lang}}/Docs/KitSetupRPI">Setting up your Raspberry Pi 2 or Pi 3 Board</a></td>
+        <td><a href="https://developer.microsoft.com/en-us/windows/iot/Docs/GetStarted/rpi3/sdcard/insider/GetStartedStep1.htm">Setting up your Raspberry Pi 2 or Pi 3 Board</a></td>
         <td>Connect and program your Raspberry Pi 2 or Pi 3 board</td>
       </tr>
       <tr>
