@@ -16,7 +16,7 @@ In this sample, we will create and deploy the proverbial 1st app, "Hello, world!
 ### Set up your PC
 * Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
 * Install Visual Studio 2017.
-* Install the latest Node.js Tools for Windows IoT from [here](http://aka.ms/ntvsiotlatest).
+* Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases/tag/v1.5.7).
 
 
 ### Create a new Node.js (Windows Universal) project
