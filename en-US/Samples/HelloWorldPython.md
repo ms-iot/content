@@ -11,6 +11,8 @@ lang: en-US
 
 In this sample, we will create and deploy the proverbial 1st app, "Hello, world!" to any device running Windows 10 IoT Core.
 
+{% include note.html text="While deploying and running a Python UWP app is supported on Windows 10 IoT Core, debugging is currently a known issue for Windows 10 IoT Fall Creators Update (Build 16299) and Visual Studio 2017. We are looking into fixing this in a future release of Windows 10 IoT Core." %}
+
 ### Set up your PC
 
 * Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/GetStarted) to setup your device and PC.
