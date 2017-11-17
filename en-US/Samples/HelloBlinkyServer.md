@@ -10,8 +10,9 @@ lang: en-US
 
 # 'Hello, blinky!' web server
 
-We'll create a simple Python Blinky Web Server app and connect a LED to your Windows 10 IoT Core device (Raspberry Pi 2 or 3 or MinnowBoard Max).  Be aware that the GPIO APIs are
-only available on Windows 10 IoT Core, so this sample cannot run on your desktop.
+We'll create a simple Python Blinky Web Server app and connect a LED to your Windows 10 IoT Core device (Raspberry Pi 2 or 3 or MinnowBoard Max).  Be aware that the GPIO APIs are only available on Windows 10 IoT Core, so this sample cannot run on your desktop.
+
+{% include note.html text="While deploying and running a Python UWP app is supported on Windows 10 IoT Core, debugging is currently a known issue for Windows 10 IoT Fall Creators Update (Build 16299) and Visual Studio 2017. We are looking into fixing this in a future release of Windows 10 IoT Core." %}
 
 ### Set up your PC
 * Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/GetStarted) to setup your device and PC.

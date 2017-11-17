@@ -10,8 +10,10 @@ lang: en-US
 
 # Hello, blinky! background service
 
-We'll create a simple Python Blinky app and connect a LED to your Windows 10 IoT Core device (Raspberry Pi 2 or 3 or MinnowBoard Max).  Be aware that the GPIO APIs are
-only available on Windows IoT Core, so this sample cannot run on your desktop.
+We'll create a simple Python Blinky app and connect a LED to your Windows 10 IoT Core device (Raspberry Pi 2 or 3 or MinnowBoard Max).  Be aware that the GPIO APIs are only available on Windows IoT Core, so this sample cannot run on your desktop.
+
+
+{% include note.html text="While deploying and running a Python UWP app is supported on Windows 10 IoT Core, debugging is currently a known issue for Windows 10 IoT Fall Creators Update (Build 16299) and Visual Studio 2017. We are looking into fixing this in a future release of Windows 10 IoT Core." %}
 
 ### Set up your PC
 * Follow the instructions [here]({{site.baseurl}}/{{page.lang}}/GetStarted) to setup your device and PC.
@@ -73,13 +75,13 @@ Remember that we connected the other end of the LED to the 3.3 Volts power suppl
 
 ### Deploy Python app to your Windows 10 IoT Core device
 
-* Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm#python).
+Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/Docs/AppDeployment.htm#python).
 
-	**NOTE: For now, use device name in lieu of IP address.  If the device name is not unique, use `setcomputername` tool on the device to reset the device name and reboot.  Documentation for this can be found [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell)**
+{% include note.html text="For now, use device name in lieu of IP address.  If the device name is not unique, use `setcomputername` tool on the device to reset the device name and reboot.  Documentation for this can be found [here]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell)." %}
 
-* The Python app will deploy and start on the device.
+The Python app will deploy and start on the device.
 
-	**NOTE: Launching the debugger for Python can take a few minutes to connect and start debugging the remote Python.  If it takes more than a few minutes, there may be a problem with msvsmon on the remote device.  Please check the FAQ for any potential fixes/workarounds.**
+{% include note.html text="Launching the debugger for Python can take a few minutes to connect and start debugging the remote Python. If it takes more than a few minutes, there may be a problem with msvsmon on the remote device. Please check the FAQ for any potential fixes/workarounds." %}
 
 ### Questions/Suggestions
 
