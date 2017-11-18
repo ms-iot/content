@@ -16,118 +16,96 @@ lang: en-US
     <div data-grid="col-12" class="m-feature c-pivot">
         <button class="c-flipper f-previous" aria-hidden="true" tabindex="-1"></button>
         <header role="tablist" style="justify-content: normal;">
-            <a role="tab" aria-controls="pivot-target-1" class="f-active" href="#" aria-selected="true" style="margin-left: 0px;">SD Card based device</a>
-            <a role="tab" aria-controls="pivot-target-2" href="#" aria-selected="false" class="" tabindex="-1">eMMC Flash based device</a>
-            <a role="tab" aria-controls="pivot-target-3" href="#" aria-selected="false" class="" tabindex="-1">Dragonboard</a>
+            <a role="tab" aria-controls="pivot-target-1" class="f-active" href="#" aria-selected="true" style="margin-left: 0px;">SD card-based device</a>
+            <a role="tab" aria-controls="pivot-target-2" href="#" aria-selected="false" class="" tabindex="-1">eMMC (Intel devices)</a>
+            <a role="tab" aria-controls="pivot-target-3" href="#" aria-selected="false" class="" tabindex="-1">eMMC (Qualcomm devices)</a>
             <a role="tab" aria-controls="pivot-target-4" href="#" aria-selected="false" class="" tabindex="-1">NOOBS</a>
         </header>
         <button class="c-flipper f-next" aria-hidden="true" tabindex="-1"></button>
         <section role="tabpanel" id="pivot-target-1" aria-hidden="false">
             <section>
-                <blockquote class="c-blockquote">
-                    <p class="c-paragraph">NOTE: Applicable for devices like Raspberry Pi-2 & 3, MinnowBoard Max and Intel Compute stick. For Intel Compute stick, use Minnowboard Max FFU. You might have to download a few drivers (Wi-Fi/Bluetooth) externally.</p>
-                </blockquote>
+               <br><p class="c-paragraph-3">SD card-based devices include <b>Raspberry Pi 2 and Raspberry 3 boards</b>, <b>MinnowBoard Turbot/MAX boards</b>, and <b>Intel Compute Sticks</b>. For Intel Compute Sticks, use the Minnowboard Turbot/MAX FFU. You may also need to download a few drivers (Wi-Fi/Bluetooth) externally.
+                <br><br>
+            For any of these devices, please ensure that you have the <b>latest firmware update</b>. The latest firmware for Minnowboard Turbot/MAX boards can be found on <a class="c-hyperlink" href="https://minnowboard.org/tutorials/updating-the-firmware" target="_blank">the MinnowBoard website</a>. </p><br><br>
                 <h3 class="c-subheading-2">Flashing IoT Core</h3> 
                 <p class="c-paragraph-3">The <a class="c-hyperlink" href="https://developer.microsoft.com/en-us/windows/iot/docs/iotdashboard">Windows 10 IoT Core Dashboard</a> is the best way to set up and connect to your Windows 10 IoT Core devices, all from your PC. You will use the Dashboard to flash IoT Core onto your device, and to access it once it is connected to your network and much more.</p>
                 <p class="c-paragraph-3">By downloading and using the Windows 10 IoT Core Dashboard, you agree to the <a class="c-hyperlink" href="http://go.microsoft.com/fwlink/?LinkID=703960&clcid=0x4809">license terms</a> and <a class="c-hyperlink" href="https://privacy.microsoft.com/en-us/privacystatement">privacy statement</a> for Windows 10 IoT Core Dashboard.</p>
                 <a href="http://go.microsoft.com/fwlink/?LinkID=708576" role="button" class="c-button f-primary">Download Dashboard</a>
-                <ul class="c-list">
-                    <li>Insert a <a class="c-hyperlink" href="https://developer.microsoft.com/en-us/windows/iot/docs/hardwarecompatlist#Storage">compatible</a> micro-SD card into your device, then open the Dashboard and click on <b>Set up a new device</b> tab.</li>
-                    <li>Go through and populate the fields for <b>Device Type</b> and <b>OS Build</b>. </li>
+                    <p class="c-paragraph-3">1. Insert a <a class="c-hyperlink" href="https://developer.microsoft.com/en-us/windows/iot/docs/hardwarecompatlist#Storage">compatible</a> micro-SD card into your device, then open the Dashboard and click on <b>Set up a new device</b> tab.Go through and populate the fields for <b>Device Type</b> and <b>OS Build</b>.</p>
                     <blockquote class="c-blockquote">
                     <p class="c-paragraph">NOTE: To use the Insider Preview version of IoT Core, select <b>Windows Insider Preview</b> from the <b>OS Build</b> dropdown box and sign in with your Insider Program credentials. Sign up for Windows Insider Preview <a class="c-hyperlink" href="https://insider.windows.com/">here</a>.</p>
                     </blockquote>
-                    <li>Ensure that your SD card is selected in the <b>Drive</b> dropdown box.</li>
-                    <li>Enter a unique name for your device as well as an administrator password. </li>
+		    <br><br>
+		    <img src="{{site.baseurl}}/Resources/images/IoTDashboard/IoTDashboard-16299.jpg"> 
+		    <br><br>
+                    <p class="c-paragraph-3">2. Ensure that your SD card is selected in the <b>Drive</b>  dropdown box and enter a unique name for your device as well as an administrator password. If available, choose a wireless network to which your device will connect.</p>
                     <blockquote class="c-blockquote">
                     <p class="c-paragraph"> NOTE: The default name and password is <b>minwinpc</b> and <b>p@ssw0rd</b>. We recommend you change it. </p>
                     </blockquote>
-                    <li>If available, choose a wireless network to which your device will connect.</li>
-                    <li>Click <b>Download and Install</b> after accepting the software license terms.</li>
-                    <li>Once the Dashboard has flashed the SD card, plug the card into your device, optionally plug in an HDMI display, and power on the device. After a few minutes you should see the IoT Core default application appear on the display.</li>
-                </ul>
-            </section>
+                    <p class="c-paragraph-3">3. Click <b>Download and Install</b> after accepting the software license terms.Once the Dashboard has flashed the SD card, plug the card into your device, optionally plug in an HDMI display, and power on the device. After a few minutes you should see the IoT Core default application appear on the display.</p>
+            </section><br>
             {% include setup-steps.html%}         
         </section>
         <section role="tabpanel" id="pivot-target-2" aria-hidden="true">
             <section>
-                <blockquote class="c-blockquote">
-                    <p class="c-paragraph">NOTE: Applicable for devices like Intel Joule.</p>
-                </blockquote>
+                <br><p class="c-paragraph-3">eMMC flash-based devices include devices like the Intel Joule.</p><br><br>
+
                 <h3 class="c-subheading-2">Flashing IoT Core</h3> 
-                <ul class="c-list">
-                    <li>Download and install the <a href="https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit" class="c-hyperlink">Windows Assessment and Deployment Kit</a> that matches the Windows 10 version you noted at the top of this page.</li>
-                    <li>Insert a USB drive into your machine, then create a USB-bootable WinPE image on it by following these instructions:
+                <p class="c-paragraph-3">1. Download and install the <a href="https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit" class="c-hyperlink">Windows Assessment and Deployment Kit</a> that matches the Windows 10 version you noted at the top of this page.</p>
+                <p class="c-paragraph-3">2. Insert a USB drive into your machine, then create a USB-bootable WinPE image on it by following these instructions:</p>
                         <ul class="c-list">
                             <li>Start the Deployment and Imaging Tools Environment(DandISetEnv.bat) normally found in <b>C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools</b> as an administrator.</li>
                             <li>Create a working copy of the Windows PE files. Specify either x86, amd64, or arm:
                                 <blockquote class="c-blockquote">
-                                    <p class="c-paragraph">copype amd64 C:\WinPE_amd64</p>
+                                    <p class="c-paragraph"><xmp>copype amd64 C:\WinPE_amd64</xmp></p>
                                 </blockquote>
                             </li>
-                            <li>Install Windows PE to the USB flash drive, specifying the WinPE drive letter:
+                            <li>Install Windows PE to the USB flash drive, specifying the WinPE drive letter below. You can find more information <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-create-usb-bootable-drive" class="c-hyperlink">here</a>.    
                                 <blockquote class="c-blockquote">
-                                    <p class="c-paragraph">MakeWinPEMedia /UFD C:\WinPE_amd64 P:</p>
+                                    <p class="c-paragraph"><xmp>MakeWinPEMedia /UFD C:\WinPE_amd64 P:</xmp></p>
                                 </blockquote>
                             </li>
                         </ul>
-                        You can find more information <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-create-usb-bootable-drive" class="c-hyperlink">here</a>.   
-                    </li> 
-                    <li>Download the <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/downloads">Windows 10 IoT Core Image</a>, double-click on the downloaded ISO file, and locate the mounted Virtual CD-drive. This drive will contain an installer file (.msi); double-click on it. This creates a new directory on your PC under C:\Program Files (x86)\Microsoft IoT\FFU\ in which you should see an image file, "flash.ffu".</li>
-                    <li>Download, unzip and copy the <a class="c-hyperlink" href="{{site.baseurl}}/Resources/eMMCInstaller.zip">eMMC Installer script (eMMCInstaller.cmd)</a> to the USB device's root directory, along with the device's FFU.</li>
-                    <li>Connect the USB drive, mouse, and keyboard to the USB hub. Attach the HDMI display to your device, the device to the USB hub, and the power cord to the device.</li>
-                    <li>Go to the BIOS setup of the device. Select <b>Windows</b> as the Operating System, and set the device to boot from your USB drive.</li>
-                    <li>When the system reboots, you will see the WinPE command prompt. Switch the WinPE prompt to the USB drive. This is usually C: or D:, but you may need to try other drive letters.</li>
-                    <li>Run <b>eMMCInstaller.cmd</b>, which will install the IoT Core image to the device's eMMC memory. When it completes, press any key and run <b>wpeutil reboot</b>.</li>   
+                    <p class="c-paragraph-3">3. Download the <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/downloads">Windows 10 IoT Core Image</a>, double-click on the downloaded ISO file, and locate the mounted Virtual CD-drive. This drive will contain an installer file (.msi); double-click on it. This creates a new directory on your PC under C:\Program Files (x86)\Microsoft IoT\FFU\ in which you should see an image file, "flash.ffu".</p>
+                    <p class="c-paragraph-3">4. Download, unzip and copy the <a class="c-hyperlink" href="{{site.baseurl}}/Resources/eMMCInstaller.zip">eMMC Installer script (eMMCInstaller.cmd)</a> to the USB device's root directory, along with the device's FFU.</li>
+                    <p class="c-paragraph-3">5. Connect the USB drive, mouse, and keyboard to the USB hub. Attach the HDMI display to your device, the device to the USB hub, and the power cord to the device.</p>
+                    <p class="c-paragraph-3">6. Go to the BIOS setup of the device. Select <b>Windows</b> as the Operating System, and set the device to boot from your USB drive. When the system reboots, you will see the WinPE command prompt. Switch the WinPE prompt to the USB drive. This is usually C: or D:, but you may need to try other drive letters.</p>
+                    <p class="c-paragraph-3">7. Run <b>eMMCInstaller.cmd</b>, which will install the IoT Core image to the device's eMMC memory. When it completes, press any key and run <b>wpeutil reboot</b>. The system should boot into Windows 10 IoT Core, start the configuration process, and load the default application.</p>   
                     <blockquote class="c-blockquote">
-                    <p class="c-paragraph">NOTE:Make sure the device is now booting from the eMMC memory by entering the BIOS Setup again and switching the Boot Drive Order to load from the Hard Drive instead of from the USB Drive.</p>
+                    <p class="c-paragraph">NOTE: Make sure the device is now booting from the eMMC memory by entering the BIOS Setup again and switching the Boot Drive Order to load from the Hard Drive instead of from the USB Drive.</p>
                     </blockquote>
-                    <li>The system should boot into Windows 10 IoT Core, start the configuration process, and load the default application.</li>
-                </ul>
-            </section>
+            </section><br>
             {% include setup-steps.html%}
         </section>
         <section role="tabpanel" id="pivot-target-3" aria-hidden="true">
             <section>
+                <br>
                 <h3 class="c-subheading-2">Flashing IoT Core</h3> 
-                <ul class="c-list">
-                    <li>Download and install the Dragonboard Update Tool for your <a class="c-hyperlink" href="https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x86.zip">x86</a> or <a class="c-hyperlink" href="https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x64.zip">x64</a> machine.</li>
-                    <li>Download the <a href="http://go.microsoft.com/fwlink/?LinkId=733603" class="c-hyperlink">Windows 10 IoT Core Dragonboard FFU</a>; if you wish to run IoT Core's Insider Preview on the Dragonboard, you will need to have a Microsoft Account signed up for the Windows Insider Program.</li>
-                    <li>Double-click on the downloaded ISO file, and locate the mounted Virtual CD-drive. This drive will contain an installer file (.msi); double-click on it. This creates a new directory on your PC under C:\Program Files (x86)\Microsoft IoT\FFU\ in which you should see an image file, "flash.ffu".</li>
-                    <li>Ensure your dragonboard is in download mode by setting the first boot switch on the board to USB Boot, as shown below. Then, connect the Dragonboard and the host PC via a microUSB cable, then plug in the Dragonboard to a 12V (> 1A) power supply.</li>
-                    <img class="c-image" src="{{site.baseurl}}/Resources/images/SetupDB410c/dragonboard_usbboot.png" alt="Set dragonboard in download mode">
-                    <li>Start the Dragonboard Update Tool, which should detect that the Dragonboard is connected to your PC with a green circle.</li>
+                    <p class="c-paragraph-3">1. Download and install the Dragonboard Update Tool for your  <a class="c-hyperlink" href="https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x86.zip">x86</a> or  <a class="c-hyperlink" href="https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x64.zip">x64</a> machine.</p>
+                    <p class="c-paragraph-3">2. Download the <a href="http://go.microsoft.com/fwlink/?LinkId=733603" class="c-hyperlink">Windows 10 IoT Core Dragonboard FFU</a>; if you wish to run IoT Core's Insider Preview on the Dragonboard, you will need to have a Microsoft Account signed up for the Windows Insider Program.</p>
+                    <p class="c-paragraph-3">3. Double-click on the downloaded ISO file, and locate the mounted Virtual CD-drive. This drive will contain an installer file (.msi); double-click on it. This creates a new directory on your PC under C:\Program Files (x86)\Microsoft IoT\FFU\ in which you should see an image file, "flash.ffu".</p>
+                    <p class="c-paragraph-3">4. Ensure your dragonboard is in download mode by setting the first boot switch on the board to USB Boot, as shown below. Then, connect the Dragonboard and the host PC via a microUSB cable, then plug in the Dragonboard to a 12V (> 1A) power supply.</p><br>
+                    <img class="c-image" style="width:75%" src="{{site.baseurl}}/Resources/images/SetupDB410c/dragonboard_usbboot.png" alt="Set dragonboard in download mode">
+                    <p class="c-paragraph-3">5. Start the Dragonboard Update Tool, which should detect that the Dragonboard is connected to your PC with a green circle. "Browse" to the Dragonboard's FFU that you downloaded, then click the <b>Program</b> button.</p><br>
                     <img class="c-image" src="{{site.baseurl}}/Resources/images/SetupDB410c/DB410c_UpdateTool.png" alt="Dragonboard update tool">
-                    <li>"Browse" to the Dragonboard's FFU that you downloaded, then click the <b>Program</b> button.</li>
-                    <li>Once the download is complete, disconnect the power supply and microUSB cable from the board and toggle the USB Boot switch back to OFF.</li>
-                    <li>Connect an HDMI display, a mouse, and a keyboard to the Dragonboard and re-connect the power supply. After a few minutes you should see the IoT Core default application.</li>
-                    <img class="c-image" src="{{site.baseurl}}/Resources/images/SetupDB410c/DB410c_DefaultApp.jpg" alt="Dragonboard default app">
-                </ul>
-            </section>
+                    <p class="c-paragraph-3">6. Once the download is complete, disconnect the power supply and microUSB cable from the board and toggle the USB Boot switch back to OFF. Connect an HDMI display, a mouse, and a keyboard to the Dragonboard and re-connect the power supply. After a few minutes you should see the IoT Core default application.</p><br>
+                    <img class="c-image" style="width:75%" src="{{site.baseurl}}/Resources/images/SetupDB410c/DB410c_DefaultApp.jpg" alt="Dragonboard default app">
+            </section><br>
           {% include setup-steps.html%}
         </section>
             <section role="tabpanel" id="pivot-target-4" aria-hidden="true">
             <section>
-                <blockquote class="c-blockquote">
-                    <p class="c-paragraph">NOTE: Applicable for devices like Raspberry Pi-2 & 3.</p>
-                </blockquote>
+                <br><p class="c-paragraph-3">Devices that can be flashed using NOOBS include Raspberry Pi 2 and 3 boards.<br><br>
+                    To install Windows 10 IoT Core onto your boards (Raspberry Pi) using NOOBS, you'll need to have a micro SD card formatted with NOOBS. If you already have a SD card pre-imaged with NOOBS, you can skip to learning more about connecting to a network. Otherwise, you'll need to download the latest version of NOOBS from the <a class="c-hyperlink" href="https://downloads.raspberrypi.org/NOOBS_lite_latest">official NOOBS download</a> site.
+                </p><br><br>
                 <h3 class="c-subheading-2">Flashing IoT Core and connecting to a network</h3> 
-                <ul class="c-list">
-                    <li>To install Windows 10 IoT Core onto your boards (Raspberry Pi) using NOOBS, you'll need to have a micro SD card formatted with NOOBS. If you already have a SD card pre-imaged with NOOBS, you can skip to learning more about connecting to a network.</li>
-                    <li>Otherwise, you'll need to download the latest version of NOOBS from the <a class="c-hyperlink" href="https://downloads.raspberrypi.org/NOOBS_lite_latest">official NOOBS download</a> site.</li>
-                    <li>Once NOOBS has been downloaded, you must copy it onto your SD card. To do so, you'll need to mount your SD card onto your machine and format it. The <a class="c-hyperlink" href="https://www.sdcard.org/downloads/formatter_4/">SD Formatter 4.0 tool</a> is the suggested tool to use when formatting your SD card for NOOBS.</li>
-                    <li>Then, extract the NOOBS archive onto your newly formatted SD card.</li>
-                    <li>Insert your NOOBS-ready micro SD card into your device. Ensure a monitor, keyboard, and mouse are connected.</li>
-                    <li>Connect your device to the Internet by Ethernet cable and boot your device. Otherwise, follow the on-screen instructions to connect to your wi-fi network.</li>
-                    <li>Select Windows 10 IoT Core from the list of available options on the NOOBS screen, and then click install.
+                    <p class="c-paragraph-3">1. Download NOOBS and copy it onto your SD card. To do so, you'll need to mount your SD card onto your machine and format it. The <a class="c-hyperlink" href="https://www.sdcard.org/downloads/formatter_4/">SD Formatter 4.0 tool</a> is the suggested tool to use when formatting your SD card for NOOBS.</p>
+                    <p class="c-paragraph-3">2. Then, extract the NOOBS archive onto your newly formatted SD card. Insert your NOOBS-ready micro SD card into your device. Ensure a monitor, keyboard, and mouse are connected.</p>
+                    <p class="c-paragraph-3">3. Connect your device to the Internet by Ethernet cable and boot your device. Otherwise, follow the on-screen instructions to connect to your wi-fi network. Select Windows 10 IoT Core from the list of available options on the NOOBS screen, and then click install.</p><br>
                         <img class="c-image" src="{{site.baseurl}}/Resources/images/NOOBS/NOOBS on PI2 IoT Core.JPG" alt="Install Windows 10 IoT Core with NOOBS">
-                    </li>
-                    <li>NOOBS will ask you to confirm if you wish to overwrite the contents of the SD card before installing Windows 10 IoT Core. Unless you have data on the card you wish to save, press yes. This action cannot be undone.</li>
-                    <li>While we recommend selecting the IoT Core Insider build to receive the latest Windows builds, you can also select the official-release build of Windows.</li>
-                    <li>Once you've selected your build, you should get the following screen.
-                        <img class="c-image" src="{{site.baseurl}}/Resources/images/NOOBS/noobs-downloading.jpg" alt="Using NOOBS to install Windows 10 IoT Core on a device">    
-                    </li>
-                    <li>After a few minutes, the installation should be complete and you will have rebooted into Windows 10 IoT Core.</li>             
+                    <p class="c-paragraph-3">4. NOOBS will ask you to confirm if you wish to overwrite the contents of the SD card before installing Windows 10 IoT Core. Unless you have data on the card you wish to save, press yes. This action cannot be undone. While we recommend selecting the IoT Core Insider build to receive the latest Windows builds, you can also select the official-release build of Windows.</p>
+                    <p class="c-paragraph-3">5. Once you've selected your build, you should get the following screen. After a few minutes, the installation should be complete and you will have rebooted into Windows 10 IoT Core.</p><br>
+                        <img class="c-image" src="{{site.baseurl}}/Resources/images/NOOBS/noobs-downloading.jpg" alt="Using NOOBS to install Windows 10 IoT Core on a device"><br><br>    
             </section>
             <section>
                 <h3 class="c-subheading-2">Connecting to your developer machine</h3>                        
