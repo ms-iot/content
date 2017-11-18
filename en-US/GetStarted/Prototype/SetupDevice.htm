@@ -2,7 +2,7 @@
 layout: getstarted-steps-prototype
 title: Windows 10 IoT Core Official Website | Developer Resource
 description: Windows 10 IoT Core for your Internet of Things. 
-keyword: windows iot, get started, home page, iot
+keyword: windows iot, get started, setup device, iot, intel, qualcomm, NOOBS
 permalink: /en-US/GetStarted/Prototype/SetupDevice.htm
 lang: en-US
 ---
@@ -36,7 +36,7 @@ lang: en-US
                     <p class="c-paragraph">NOTE: To use the Insider Preview version of IoT Core, select <b>Windows Insider Preview</b> from the <b>OS Build</b> dropdown box and sign in with your Insider Program credentials. Sign up for Windows Insider Preview <a class="c-hyperlink" href="https://insider.windows.com/">here</a>.</p>
                     </blockquote>
 		    <br><br>
-		    <img src="{{site.baseurl}}/Resources/images/IoTDashboard/IoTDashboard-16299.jpg"> 
+		    <img class="c-image" style="width:75%" src="{{site.baseurl}}/Resources/images/IoTDashboard/IoTDashboard-16299.jpg"> 
 		    <br><br>
                     <p class="c-paragraph-3">2. Ensure that your SD card is selected in the <b>Drive</b>  dropdown box and enter a unique name for your device as well as an administrator password. If available, choose a wireless network to which your device will connect.</p>
                     <blockquote class="c-blockquote">
@@ -53,19 +53,15 @@ lang: en-US
                 <h3 class="c-subheading-2">Flashing IoT Core</h3> 
                 <p class="c-paragraph-3">1. Download and install the <a href="https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit" class="c-hyperlink">Windows Assessment and Deployment Kit</a> that matches the Windows 10 version you noted at the top of this page.</p>
                 <p class="c-paragraph-3">2. Insert a USB drive into your machine, then create a USB-bootable WinPE image on it by following these instructions:</p>
-                        <ul class="c-list">
-                            <li>Start the Deployment and Imaging Tools Environment(DandISetEnv.bat) normally found in <b>C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools</b> as an administrator.</li>
-                            <li>Create a working copy of the Windows PE files. Specify either x86, amd64, or arm:
+                           <p class="c-paragraph-3">Start the Deployment and Imaging Tools Environment(DandISetEnv.bat) normally found in <b>C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools</b> as an administrator. 
+				   Create a working copy of the Windows PE files. Specify either x86, amd64, or arm:</p>
                                 <blockquote class="c-blockquote">
                                     <p class="c-paragraph"><xmp>copype amd64 C:\WinPE_amd64</xmp></p>
                                 </blockquote>
-                            </li>
-                            <li>Install Windows PE to the USB flash drive, specifying the WinPE drive letter below. You can find more information <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-create-usb-bootable-drive" class="c-hyperlink">here</a>.    
+                 <p class="c-paragraph-3">Install Windows PE to the USB flash drive, specifying the WinPE drive letter below. You can find more information <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-create-usb-bootable-drive" class="c-hyperlink">here</a>.</p>    
                                 <blockquote class="c-blockquote">
                                     <p class="c-paragraph"><xmp>MakeWinPEMedia /UFD C:\WinPE_amd64 P:</xmp></p>
                                 </blockquote>
-                            </li>
-                        </ul>
                     <p class="c-paragraph-3">3. Download the <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/downloads">Windows 10 IoT Core Image</a>, double-click on the downloaded ISO file, and locate the mounted Virtual CD-drive. This drive will contain an installer file (.msi); double-click on it. This creates a new directory on your PC under C:\Program Files (x86)\Microsoft IoT\FFU\ in which you should see an image file, "flash.ffu".</p>
                     <p class="c-paragraph-3">4. Download, unzip and copy the <a class="c-hyperlink" href="{{site.baseurl}}/Resources/eMMCInstaller.zip">eMMC Installer script (eMMCInstaller.cmd)</a> to the USB device's root directory, along with the device's FFU.</li>
                     <p class="c-paragraph-3">5. Connect the USB drive, mouse, and keyboard to the USB hub. Attach the HDMI display to your device, the device to the USB hub, and the power cord to the device.</p>
