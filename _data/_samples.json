@@ -101,14 +101,14 @@
       "link-text": "Blinky",
       "lang": [
         "C#",
-        "Wiring",
+        "Wiring"
       ],
       "ranking": 0,
       "tags": [
         "Wiring",
         "Introductory",
         "Background",
-        "GPIO",
+        "GPIO"
       ]
     },
     {
@@ -383,12 +383,8 @@
       "title": "Memory status monitor",
       "description": "Create a console app that monitors memory usage on devices running Windows 10 IoT Core",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/MemoryStatus",
-      "link-text": [
-        "Console App",
-      ],
-      "lang": [
-        "C++",
-      ],
+      "link-text": "Console App",
+      "lang": "C++",
       "ranking": 10,
       "tags": [
         "C++",
@@ -417,7 +413,7 @@
       "lang": "C#",
       "ranking": 10,
       "tags": [
-        "Driver",        
+        "Driver",
         "C#",
         "Advanced"
       ]
