@@ -9,138 +9,125 @@ lang: en-US
 
 <header data-grid="col-12">
     <h1  class="c-subheading-1">Write your app</h1>
-    <p class="c-paragraph-3">Now that you have the tools you need, it's time to write your first app. IoT Core is a Universal  
-            Windows Platform (UWP)-centric OS and UWP apps are its primary app type. UWP apps are a  
-            common app platform across all versions of Windows 10 including Windows 10 IoT Core. The  
-            primary tool for writing UWP apps is Visual Studio. 
-      </p>
-      <p class="c-paragraph-3">For this section, pick either a C# or a C++ sample app to work with. Then we'll go over three parts  
-            to master: 1) Create a project, 2) Deploy a project, and 3) Debug a project.</p>
+    <p class="c-paragraph-3">Now that you have the tools you need, it's time to write your first app. IoT Core is a Universal Windows Platform (UWP)-centric OS and UWP apps are its primary app type. UWP apps are a common app platform across all versions of Windows 10 including Windows 10 IoT Core. The primary tool for writing UWP apps is Visual Studio.</p>
+    <p class="c-paragraph-3">For this section, pick either a C# or a C++ sample app to work with. Then we'll go over two parts to master: 1) Create a project 2) Deploy a project.</p>
 </header>
 
 <section class="pad-thin" data-grid="col-12">
-        <h3 class="c-subheading-2">Pick a Sample</h3>
-        <div class="c-pivot">
-                <button class="c-flipper f-previous" aria-hidden="true" tabindex="-1"></button>
-                <div role="tablist">
-                    <a class="f-active" role="tab" tabindex="0" aria-controls="Pivot1Target1">C++</a>
-                    <a role="tab" aria-controls="Pivot1Target2">C#</a>
-                </div>
-                <button class="c-flipper f-next" aria-hidden="true" tabindex="-1"></button>
-                <section class="pad-thin" data-grid="col-12" id="Pivot1Target1" role="tabpanel" aria-hidden="false">                   
-                    <div data-grid="col-4">
-                        <a href="{{site.baseurl}}/{{page.lang}}/Samples/HelloWorld" class="c-hyperlink">'Hello, world!'</a>
-                        <p class="c-paragraph-3">Deploy your first app.</p> 
-                    </div>
-                    <div data-grid="col-4">
-                            <a href="{{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky" class="c-hyperlink"> 'Hello, blinky!'</a>
-                        <p class="c-paragraph-3"> Control an LED from a breadboard.</p> 
-                    </div>
-                    <div data-grid="col-4">
-                            <a href="{{site.baseurl}}/{{page.lang}}/Samples/CognitiveServices" class="c-hyperlink"> Cognitive Services</a>
-                        <p class="c-paragraph-3">Accesss & use Cognitive Services API.</p> 
-                    </div>
-                </section>
-                <section class="pad-thin" data-grid="col-12" id="Pivot1Target2" role="tabpanel" aria-hidden="true">
-                        <div data-grid="col-4">
-                                <a href="{{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky" class="c-hyperlink"> 'Hello, blinky!'</a>
-                            <p class="c-paragraph-3">Control an LED from a breadboard.</p> 
-                        </div>
-                        <div data-grid="col-4">
-                                <a href="{{site.baseurl}}/{{page.lang}}/Samples/opencv" class="c-hyperlink">OpenCV</a>
-                                <p class="c-paragraph-3">Run facial & body recognition on photos.</p> 
-                            </div>
-                        <div data-grid="col-4">
-                                <a href="{{site.baseurl}}/{{page.lang}}/Samples/iotstartapp" class="c-hyperlink"> IoT Startup App</a>
-                            <p class="c-paragraph-3"> UWP Startup app to list and launch apps.</p> 
-                        </div>
-                </section>
+    <h3 class="c-subheading-2">Pick a Sample</h3>
+    <div class="c-pivot">
+        <button class="c-flipper f-previous" aria-hidden="true" tabindex="-1"></button>
+        <div role="tablist">
+            <a class="f-active" role="tab" tabindex="0" aria-controls="Pivot1Target1">C++</a>
+            <a role="tab" aria-controls="Pivot1Target2">C#</a>
+        </div>
+        <button class="c-flipper f-next" aria-hidden="true" tabindex="-1"></button>
+        <section class="pad-thin" data-grid="col-12" id="Pivot1Target1" role="tabpanel" aria-hidden="false">                   
+            <div data-grid="col-4">
+                <a href="{{site.baseurl}}/{{page.lang}}/Samples/HelloWorld" class="c-hyperlink">'Hello, world!'</a>
+                <p class="c-paragraph-3">Deploy your first app.</p> 
             </div>
-    </section> 
+            <div data-grid="col-4">
+                <a href="{{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky" class="c-hyperlink"> 'Hello, blinky!'</a>
+                <p class="c-paragraph-3"> Control an LED from a breadboard.</p> 
+            </div>
+            <div data-grid="col-4">
+                <a href="{{site.baseurl}}/{{page.lang}}/Samples/CognitiveServices" class="c-hyperlink"> Cognitive Services</a>
+                <p class="c-paragraph-3">Accesss & use Cognitive Services API.</p> 
+            </div>
+        </section>
+        <section class="pad-thin" data-grid="col-12" id="Pivot1Target2" role="tabpanel" aria-hidden="true">
+            <div data-grid="col-4">
+                <a href="{{site.baseurl}}/{{page.lang}}/Samples/HelloBlinky" class="c-hyperlink"> 'Hello, blinky!'</a>
+                <p class="c-paragraph-3">Control an LED from a breadboard.</p> 
+            </div>
+            <div data-grid="col-4">
+                <a href="{{site.baseurl}}/{{page.lang}}/Samples/opencv" class="c-hyperlink">OpenCV</a>
+                <p class="c-paragraph-3">Run facial & body recognition on photos.</p> 
+            </div>
+            <div data-grid="col-4">
+                <a href="{{site.baseurl}}/{{page.lang}}/Samples/iotstartapp" class="c-hyperlink"> IoT Startup App</a>
+                <p class="c-paragraph-3"> UWP Startup app to list and launch apps.</p> 
+            </div>
+        </section>
+    </div>
+</section> 
+
 <section class="pad-thin" data-grid="col-12">
     <h3 class="c-subheading-2">Create a project</h3>
     <p class="c-paragraph-3"> To create a project, start the Visual Studio IDE of your choice – we recommend Visual Studio 2017 – and create a new project from the file tab. In the New Project dialog, navigate to Universal and select the Blank App template</p>
     <br>
     <img class="c-image" src="{{site.baseurl}}/Resources/images/HelloWorld/new-cs-project-dialog.PNG" alt="Create a new project">
 </section>
+
 <section class="pad-thin" data-grid="col-12">
     <h3 class="c-subheading-2">Deploy a project</h3>
     <div class="c-pivot">
-                <button class="c-flipper f-previous" aria-hidden="true" tabindex="-1"></button>
-                <div role="tablist">
-                    <a class="f-active" role="tab" tabindex="0" aria-controls="Pivot2Target1">C++</a>
-                    <a role="tab" aria-controls="Pivot2Target2">C#</a>
-                </div>
-                <button class="c-flipper f-next" aria-hidden="true" tabindex="-1"></button>
-                <section id="Pivot2Target1" role="tabpanel" aria-hidden="false">                       
-                    <ol class="c-list">
-                            <li>With your application open in Visual Studio, set the architecture in the toolbar dropdown based on the device you're working with.</li>
-                            <li>In the Visual Studio toolbar, click on the <b>Local Machine</b> dropdown and select <b>Remote Machine</b>.</li>
-                            <li>Right click on your project in the <b>Solution Explorer</b> pane. Then select properties.</li>
-                            <li> Under <b>Configuration Properties -> Debugging</b>, modify the following fields:
-                                <ul class="c-list">
-                                <li><b>Machine Name:</b> If you previously used PowerShell to set a unique name for your device, enter the name in <b>Machine Name</b>. Otherwise, use the IP address of your device.</li> 
-                                <li><b>Authentication Mode:</b> Set this to <b>Universal (Unencrypted Protocol)</b>.</li>   
-                                </ul>
-                                Then hit the <b>Debug</b> button. </li>
-                    </ol>
-                    <img class="c-image" src="{{site.baseurl}}/Resources/images/HelloWorld/cs-debug-project-properties.PNG" alt="deploy app in C++">
-                </section>
-                <section id="Pivot2Target2" role="tabpanel" aria-hidden="true">                        
-                        <ol class="c-list">
-                                <li>With your application open in Visual Studio, set the architecture in the toolbar dropdown based on the device you're working with.</li>
-                                <li>In the Visual Studio toolbar, click on the <b>Local Machine</b> dropdown and select <b>Remote Machine</b>.</li>
-                                <li>At this point, Visual Studio will present the <b>Remote Connections</b> dialog. If you previously used PowerShell to set a unique name for your device, enter that name in <b>Address</b>. Otherwise, use the IP address of your device.</li>
-                                <li>Set the Authentication mode to <b>Universal (Unencrypted Protocol)</b>. Then hit the <b>Debug</b> button. </li>
-                        </ol>
-                    <img class="c-image" src="{{site.baseurl}}/Resources/images/HelloWorld/cs-remote-connections.PNG" alt="deploy app in C#">
-                </section>
-            </div>
+        <button class="c-flipper f-previous" aria-hidden="true" tabindex="-1"></button>
+        <div role="tablist">
+            <a class="f-active" role="tab" tabindex="0" aria-controls="Pivot2Target1">C++</a>
+            <a role="tab" aria-controls="Pivot2Target2">C#</a>
+        </div>
+        <button class="c-flipper f-next" aria-hidden="true" tabindex="-1"></button>
+        <section id="Pivot2Target1" role="tabpanel" aria-hidden="false">                       
+            <ol class="c-list">
+                <li>With your application open in Visual Studio, set the architecture in the toolbar dropdown based on the device you're working with.</li>
+                <li>In the Visual Studio toolbar, click on the <b>Local Machine</b> dropdown and select <b>Remote Machine</b>.</li>
+                <li>Right click on your project in the <b>Solution Explorer</b> pane. Then select properties.</li>
+                <li> Under <b>Configuration Properties -> Debugging</b>, modify the following fields:
+                    <ul class="c-list">
+                    <li><b>Machine Name:</b> If you previously used PowerShell to set a unique name for your device, enter the name in <b>Machine Name</b>. Otherwise, use the IP address of your device.</li> 
+                    <li><b>Authentication Mode:</b> Set this to <b>Universal (Unencrypted Protocol)</b>.</li>   
+                    </ul>
+                    Then hit the <b>Debug</b> button. 
+                </li>
+            </ol>
+            <img class="c-image" src="{{site.baseurl}}/Resources/images/HelloWorld/cs-debug-project-properties.PNG" alt="deploy app in C++">
         </section>
+        <section id="Pivot2Target2" role="tabpanel" aria-hidden="true">                        
+            <ol class="c-list">
+                <li>With your application open in Visual Studio, set the architecture in the toolbar dropdown based on the device you're working with.</li>
+                <li>In the Visual Studio toolbar, click on the <b>Local Machine</b> dropdown and select <b>Remote Machine</b>.</li>
+                <li>At this point, Visual Studio will present the <b>Remote Connections</b> dialog. If you previously used PowerShell to set a unique name for your device, enter that name in <b>Address</b>. Otherwise, use the IP address of your device.</li>
+                <li>Set the Authentication mode to <b>Universal (Unencrypted Protocol)</b>. Then hit the <b>Debug</b> button. </li>
+            </ol>
+            <img class="c-image" src="{{site.baseurl}}/Resources/images/HelloWorld/cs-remote-connections.PNG" alt="deploy app in C#">
+        </section>
+    </div>
+</section>
         
 <section class="pad-thin" data-grid="col-12">
-    <h3 class="c-subheading-2">Debug a project</h3>
-    <ol class="c-list">
-        <li>First, setup the IoT Core console application in Visual Studio. You can use your recently deployed app to copy your binaries or you can do this manually.</li>
-        <li>To start the remote debugger on your device, connect to the Windows Device Portal and go to the Debug settings section of the Portal. Click <b>Start</b> under <b>Visual Studio Remote Debugger</b>.</li>        
-        <li>The project configuration needs to be modified to enable deployment. To do this, navigate to the Configuration Manager from the Solution Configuration drop-down menu on the toolbar.</li>
-        <li>From the configuration manager, ensure that the Deploy checkbox is selected for your project configuration. Then hit the <b>Debug</b> button.</li>
-    </ol>
-    <p class="c-paragraph">And there you have it! Continue to the next step to learn how to connect your app to Azure, or visit the links below to learn more about writing apps.</p> 
-    <br>
-    <img class="c-image" src="{{site.baseurl}}/Resources/images/HelloWorld/config-manager.PNG" alt="Debug a project in VS">
-</section>
-<section class="pad-thin" data-grid="col-12">
     <h3 class="c-subheading-2">Additional Resources</h3>
-        <div data-grid="col-6">
-                <h2 class="c-subheading-3">Samples</h2>
-                <p class="c-paragraph">Explore our repository of Windows 10 IoT core samples.</p>
-                <a href="{{site.baseurl}}/{{page.lang}}/samples.htm" class="c-call-to-action c-glyph f-lightweight">
-                    <span>Explore Windows 10 IoT Core samples</span>
-                </a>
-            </div>
-            <div data-grid="col-6">
-                <h2 class="c-subheading-3">Documentation</h2>
-                <p class="c-paragraph">Learn more about how to write apps in our documentation.</p>
-                <a href="https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/buildingappsforiotcore" class="c-call-to-action c-glyph f-lightweight">
-                    <span>Learn more about writing apps</span>
-                </a>
-            </div>
-            <div data-grid="col-6">
-                <h2 class="c-subheading-3">Community Projects</h2>
-                <p class="c-paragraph">Discover projects that Hackster has developed and published.</p>
-                <a href="https://www.hackster.io/microsoft" class="c-call-to-action c-glyph f-lightweight">
-                    <span>Visit Microsoft on Hackster.io</span>
-                </a>
-            </div>
-            <div data-grid="col-6">
-                <h2 class="c-subheading-3">Videos</h2>
-                <p class="c-paragraph">Watch videos on developing for Windows 10 IoT Core.</p>
-                <a href="https://channel9.msdn.com/Search?term=windows%20iot%20core#pubDate=year&ch9Search&lang-en=en" class="c-call-to-action c-glyph f-lightweight">
-                    <span>Discover Windows 10 IoT Core videos on Channel 9</span>
-                </a>
-            </div>    
+    <div data-grid="col-6">
+            <h2 class="c-subheading-3">Samples</h2>
+            <p class="c-paragraph">Explore our repository of Windows 10 IoT core samples.</p>
+            <a href="{{site.baseurl}}/{{page.lang}}/samples.htm" class="c-call-to-action c-glyph f-lightweight">
+                <span>Explore Windows 10 IoT Core samples</span>
+            </a>
+    </div>
+    <div data-grid="col-6">
+        <h2 class="c-subheading-3">Documentation</h2>
+        <p class="c-paragraph">Learn more about how to write apps in our documentation.</p>
+        <a href="https://docs.microsoft.com/en-us/windows/iot-core/develop-your-app/buildingappsforiotcore" class="c-call-to-action c-glyph f-lightweight">
+            <span>Learn more about writing apps</span>
+        </a>
+    </div>
+    <div data-grid="col-6">
+        <h2 class="c-subheading-3">Community Projects</h2>
+        <p class="c-paragraph">Discover projects that Hackster has developed and published.</p>
+        <a href="https://www.hackster.io/microsoft" class="c-call-to-action c-glyph f-lightweight">
+            <span>Visit Microsoft on Hackster.io</span>
+        </a>
+    </div>
+    <div data-grid="col-6">
+        <h2 class="c-subheading-3">Videos</h2>
+        <p class="c-paragraph">Watch videos on developing for Windows 10 IoT Core.</p>
+        <a href="https://channel9.msdn.com/Search?term=windows%20iot%20core#pubDate=year&ch9Search&lang-en=en" class="c-call-to-action c-glyph f-lightweight">
+            <span>Discover Windows 10 IoT Core videos on Channel 9</span>
+        </a>
+    </div>    
 </section>
+
 <section data-grid="col-12" class="pad-thin">
     <div data-grid="col-4">
         <a class="c-action-trigger c-glyph glyph-chevron-left" href="{{site.baseurl}}/{{page.lang}}/GetStarted/Prototype/GetTools.htm">Previous: Get your tools</a>
