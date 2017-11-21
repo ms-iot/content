@@ -1,0 +1,129 @@
+---
+layout: getstarted-steps-commercialize
+title: Windows 10 IoT Core Official Website | Developer Resource
+description: Windows 10 IoT Core for your Internet of Things. 
+keyword: windows iot, get started, home page, iot
+permalink: /en-US/GetStarted/Commercialize/License/CommercialTermsForm.htm
+lang: en-US
+---
+<blockquote class="c-blockquote">
+        <p class="c-paragraph">Note: This section is under construction.</p>
+</blockquote>
+<header data-grid="col-12">
+    <h1  class="c-subheading-1">Register</h1>
+    <p class="c-paragraph-3">To accept the Microsoft Commercial Terms of Use for Windows 10 IoT Core Runtime Image, please complete the form below.</p>
+</header>
+<form class="partnerData" data-grid="col-12">
+    <label class="c-label" >First name</label>
+    <input id="firstName" class="c-text-field" type="text" name="FirstName" placeholder="Enter your first name" required> 
+
+    <label class="c-label">Last name</label>
+    <input id="lastName" class="c-text-field" type="text" name="LastName" placeholder="Enter your last name" required> 
+
+    <label class="c-label">Microsoft Account Email</label>
+    <input id="email" class="c-text-field" name="EmailAddress" type="email" oninvalid="setCustomValidity('Enter a valid email address')" placeholder="Enter your email address" required> 
+
+    <label class="c-label">Company name</label>
+    <input id="companyName" class="c-text-field" type="text" name="CompanyName"> 
+
+    <label class="c-label" >Company Industry</label><br>
+    <select name="CompanyIndustry" style="width: 296px;height: 36px;border: 1px solid rgba(0,0,0,.6);">
+        <option value="" selected disabled>Select company industry</option>
+        <option value="Retail">Retail</option>
+        <option value="Industrial automation">Industrial automation</option>
+        <option value="Healthcare">Healthcare</option>
+        <option value="Smart building">Smart building</option>
+        <option value="Energy">Energy</option>
+        <option value="Security and surveillance">Security and surveillance</option>
+    </select>
+
+    <div class="pad-thin" id="addDevice" data-grid="col-12">
+        <div data-grid="col-11">
+            <h3  class="c-subheading-4">Add Device</h3>
+        </div>
+        <div data-grid="col-1">
+            <button id="AddButton" class="c-action-toggle c-glyph glyph-add f-toggle" data-toggled-label="add more devices" data-toggled-glyph="glyph-add" aria-label="add more devices" data-f-describedby="glyphOnlyadd"></button>
+            <span id="glyphOnlyadd" class="c-tooltip" role="tooltip" aria-hidden="true">add more devices</span>
+        </div>
+        <div data-grid="col-12">
+            <hr class="c-divider">
+        </div>
+    </div>
+  
+    <div data-grid="col-12" class="pad-thin">
+        <embed data-grid="col-12" style="border-style:solid; border-width: 1px;" src="{{site.baseurl}}/Resources/documents/Commercial Terms of Use for Windows 10 IoT Core Runtime Image.pdf" height="200px" />
+    </div>
+    <div data-grid="col-12">
+        <div data-grid="col-6" class="c-checkbox">
+            <label class="c-label">
+                <input aria-label="Control label (unselected)" type="checkbox" id="agreement" value="check" aria-checked="false" required>
+                <span aria-hidden="true">Accept the Terms and conditions</span>
+            </label>
+        </div>                    
+        <div data-grid="col-6" class="x-type-right">
+            <a href="{{site.baseurl}}/Resources/documents/Commercial Terms of Use for Windows 10 IoT Core Runtime Image.pdf" class="c-action-trigger c-glyph glyph-download">Download the agreement</a>
+        </div>
+    </div>
+    <div data-grid="col-12">
+        <div id="submit"></div>
+    <button name="button" class="c-button" type="submit">Submit</button>
+    </div>
+</form>
+
+<script>
+    var deviceName = '<label class="c-label">Device name</label><input id="deviceName" class="c-text-field" type="text" name="deviceName">';
+    var cpuArch = '<label class="c-label">CPU Architecture</label><input id="CPUArch" class="c-text-field" type="text" name="CPUArch">';
+    var shippingNumber = '<label class="c-label" for="firstName">How many will be shipped?</label><input id="shippingNumber" class="c-text-field" type="text" name="shippingNumber">';
+    var deviceCategory='<label class="c-label">Device Category</label><br><select style="width: 296px;height: 36px;border: 1px solid rgba(0,0,0,.6);"><option value="" selected disabled>Select device category</option><option value="Gateway">Gateway</option><option value="Point of Sale">Point of Sale</option><option value="Kiosk">Kiosk</option><option value="Digital Sign">Digital Sign</option><option value="PLC">PLC</option><option value="HMI Controller">HMI Controller</option><option value="IP Camera">IP Camera</option><option value="Patient Monitor">Patient Monitor</option><option value="Other">Other</option></select>';
+    
+    var productLaunch = '<label class="c-label">When will the product launch?</label><input id="productLaunch" class="c-text-field" type="text" name="productLaunch">';
+    var cloudService = '<label class="c-label">Is the device connected to cloud services?</label><input id="cloudService" class="c-text-field" type="text" name="cloudService">';
+    var headless = '<label class="c-label">Is the device headless?</label><input id="headless" class="c-text-field" type="text" name="headless">';
+    var deviceInfo = '<div class="c-textarea"><label class="c-label" for="default-textarea-4">What are you building?</label><textarea class="f-scroll" name="textarea-default" rows="3" placeholder="Tell us more about the device."></textarea>'
+    
+    var newDevice = '<div data-grid="col-12"><br><h5 class="c-subheading-5" style="font-weight:500">Device details:</h5><div data-grid="col-6">'+ deviceName + cpuArch + shippingNumber + deviceCategory +'</div><div data-grid="col-6">'+ productLaunch + cloudService + headless + deviceInfo + '</div></div>';
+    
+    var systemFamily = ' <label class="c-label">System Family</label><input id="systemFamily" class="c-text-field" type="text" name="SystemFamily"> ';
+    var systemManufacturer = '<label class="c-label">System Manufacturer</label><input id="systemManufacturer" class="c-text-field" type="text" name="SystemManufacturer">';
+    var systemProductName = '<label class="c-label">System Product Name</label><input id="systemProductName" class="c-text-field" type="text" name="SystemProductName"> ';
+    var systemSKU =' <label class="c-label">System SKU</label><input id="systemSKU" class="c-text-field" type="text" name="SystemSKU">';
+    var baseboardProduct = ' <label class="c-label">Baseboard Product</label><input id="baseboardProduct" class="c-text-field" type="text" name="BaseboardProduct">';
+    
+    newDevice += '<div data-grid="col-12"><h5 class="c-subheading-5" style="font-weight:500">SMBIOS details:</h5><p class="c-paragraph-3">For more information, please visit the documentation for <a href="https://docs.microsoft.com/en-us/windows/iot-core/commercialize-your-device/oemlicenserequirements" class="c-hyperlink">OEM License Requirements.</a></p><div data-grid="col-6">'+ systemFamily + systemManufacturer + systemProductName +'</div><div data-grid="col-6">'+ systemSKU + baseboardProduct + '</div></div> <div data-grid="col-11" class="pad-thin"><hr class="c-divider"></div>';
+    
+
+    $("#AddButton").click(function(){
+        $("#addDevice").append(newDevice);
+    });
+    
+    function ConvertFormToJSON(form){
+        var array = jQuery(form).serializeArray();
+        var json = {};
+        
+        jQuery.each(array, function() {
+            json[this.name] = this.value || '';
+        });
+        
+        return json;
+    }
+    $('.partnerData').on('submit', function (e){
+        e.preventDefault();
+        var formData = this;
+        var jsonFormData = ConvertFormToJSON(formData);
+
+        $.ajax({
+        type: 'POST', 
+        contentType: 'application/json; charset=utf-8',
+        url: 'http://testeriot.azurewebsites.net/api/PartnerData', 
+        data:JSON.stringify(jsonFormData),
+        success: function(response) {
+            window.location.href = '{{site.baseurl}}/{{page.lang}}/GetStarted/Commercialize/License/CommercialTermsComplete.htm';
+            },
+        error: function(response){
+                var error='<h4 class="c-subheading-4" style="color:red;">Error : Registeration failed.</h4>';
+                $("#submit").append(error);
+            }
+        });
+    });
+
+    </script>

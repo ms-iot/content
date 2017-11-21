@@ -1,0 +1,200 @@
+---
+layout: getstarted-steps-commercialize
+title: Windows 10 IoT Core Official Website | Developer Resource
+description: Windows 10 IoT Core for your Internet of Things. 
+keyword: windows iot, get started, home page, iot
+permalink: /en-US/GetStarted/Commercialize/AddCommonPackages.htm
+lang: en-US
+---
+
+<header>
+    <h1  class="c-subheading-1">Add common packages</h1>
+    <p class="c-paragraph-3">Files and registry keys that you add to your image often won't be specific to an architecture. For these, we recommend creating a common package that you can use across all your device architectures.</p>
+    <p class="c-paragraph-3">We'll create test files and registry keys to the image and again package them up so that they can be serviced after they reach your customers. Then we'll add these to the common feature manifest (OEM CommonFM.xml), which is used in x86, x64, and ARM builds, and give it a new feature ID, OEM_FilesAndRegKeys.</p>
+    <p class="c-paragraph-3">For this portion of our guide, we'll start a new product - ProductB - so that later we can use the IoT sample app to get the IP address of our device and verify that our files and registry keys have made it.</p>
+</header>
+<section class="pad-thin">
+    <h3 class="c-subheading-3">Build a package for your test files</h3>
+    <ol class="c-list">
+        <li>Create a few sample text files using Notepad and title them TestFile1.txt and TestFile2.txt.</li>
+        <li>Run C:\IoT-ADK-AddonKit\IoTCoreShell as an administrator.</li>
+        <li>Create a working folder for the registry key and test files, 
+                <blockquote class="c-blockquote">
+                    <p class="c-paragraph">e.g. `newcommonpkg Registry.FilesAndRegKeys`</p>
+                </blockquote>
+            <br>
+            The new folder will be at 
+            <blockquote class="c-blockquote">
+                <p class="c-paragraph">C:\IoT-ADK-AddonKit\Common\Packages\Registry.FilesAndRegKeys\</p>
+            </blockquote>
+        </li>
+    </ol>   
+</section>
+<section>
+    <h3 class="c-subheading-3">Add test files to the package</h3>
+    <ol class="c-list">
+        <li>Copy your test files into the new folder at 
+                <blockquote class="c-blockquote">
+                    <p class="c-paragraph">C:\IoT-ADK-AddonKit\CommoPackages\Registry.FilesAndRegKeys\</p>
+                </blockquote>
+                </li>
+        <li>Update the package definition file,
+                <blockquote class="c-blockquote">
+                    <p class="c-paragraph">C:\IoT-ADK-AddonKit\Common\Packages\Registry.FilesAndRegKeys\Registry.FilesAndRegKeys.pkg.xml</p>
+                </blockquote>
+            <ol class="c-list">
+                <li>Remove the comment marks and instructions.</li>
+                <li>Update the values of RegKey to include a new KeyName, Name, and Value.</li>
+                <li>Update the File Source names to the test files. By default, the files land in C:\Windows]System. To change the destination location, add a DestinationDir and Name. Variables like $(runtime.root) are defined in C:\Program Files (x86(\Windows Kits \10\Tools\bin\i386\pkggen.cfg.xml.</li>
+            </ol>
+            <blockquote class="c-blockquote">
+                <xmp>
+ <OSComponent>
+    <RegKeys>   
+        <RegKey KeyName="$(hklm.software)\$(OEMNAME)\Test">  
+            <RegValue Name="StringValue" Value="Test string" Type="REG_SZ"/>  
+            <RegValue Name="DWordValue" Value="12AB34CD" Type="REG_DWORD"/>  
+            <RegValue Name="BinaryValue" Value="12,AB,CD,EF" Type="REG_BINARY"/>  
+        </RegKey>  
+        <RegKey KeyName="$(hklm.software)\$(OEMNAME)\EmptyKey"/>   
+    </RegKeys>   
+    <Files>   
+        <File Source="TestFile1.txt" />   
+        <File Source="TestFile2.txt" DestinationDir="$(runtime.root)\OEMInstall" Name="TestFile2.txt"/>    
+    </Files>   
+</OSComponent>   
+                </xmp>
+            </blockquote>
+        </li>
+        <li>From the IoT Core Shell, build the package.
+            <blockquote class="c-blockquote">
+                <p class="c-paragraph">buildpkg Registry.FilesAndRegKeys</p>
+            </blockquote>
+            The package is built, appearing as 
+            <blockquote class="c-blockquote">
+                <xmp>C:\IoT-ADK-AddonKit\Build\<arch>\pkgs\<your OEM name>.RegistryFilesAndRegKeys.cab</xmp>
+            </blockquote>
+            <br>
+            All packages that you build appear in your architecture-specific folder.
+            <blockquote class="c-blockquote">
+                <p class="c-paragraph">Tip: To quickly rebuild for another architecture, use settenv<arch>, then BuildPkgAll to rebuild everything for your other architecture.</p>
+            </blockquote>
+            <blockquote class="c-blockquote">
+                <p class="c-paragraph">Note: If you get the error, "The elementRegKeys in namespace 'urn:Microsoft.WindowsPhone/PackageSchema.v8.00' has incomplete content," remove the comments and instructions. If you don't want to include a reg key or a file, then remove these XML elements.</p>
+            </blockquote>
+        </li>
+    </ol>   
+</section>
+<section>
+    <h3 class="c-subheading-3">Update your feature manifest</h3>
+    <ol class="c-list">
+        <li>Open the common feature manifest file
+                <blockquote class="c-blockquote">
+                        <xmp>C:\IoT-ADK-AddonKit\Common\Packages\OEMCommonFM.xml</xmp>
+                </blockquote> 
+                </li>
+        <li>Create a new PackageFile section in the XML, with your package file listed and give it a new FeatureID, such as "OEM_FilesAndRegKeys".
+                <blockquote class="c-blockquote">
+                    <xmp>
+<Features>  
+    <OEM>  
+        <!-- Feature definitions below -->  
+        <PackageFile Path="%PKGBLD_DIR%" Name="%OEM_NAME%.Registry.FilesAndRegKeys.cab">  
+          <FeatureIDs>  
+            <FeatureID>OEM_FilesAndRegKeys</FeatureID>  
+          </FeatureIDs>  
+        </PackageFile> 
+                    </xmp>
+                </blockquote>
+             </li>
+        <li>Run `Runbuildfm oemto` generate updated files in the MergedFMs folder. This must be done every time any time an FM file is modified. You'll now be able to add your files and registry keys to any of your products by adding a reference to this feature manifest and Feature ID.</li>
+    </ol>   
+</section>
+<section>
+    <h3 class="c-subheading-3">Update your product configuration file</h3>
+    <ol class="c-list">
+        <li>Create a new product folder.
+            <blockquote class="c-blockquote">
+                <xmp> newproduct ProductB <device-name> </xmp>
+            </blockquote>
+        </li>
+        <li>Update the test configuration file 
+            <blockquote class="c-blockquote"><xmp>C:\IoT-ADK-AddonKit\Source-<arch>\Products\ProductB\TestOEMInput.xml</xmp></blockquote>
+            <blockquote class="c-blockquote">
+                <p class="c-paragraph">Note: Make sure the feature manifest OEMCommonFM.xml is included, removing comment marks if necessary.</p>
+            </blockquote>
+            <blockquote class="c-blockquote"><xmp>
+<AdditionalFMs>  
+           <!-- Including BSP feature manifest -->  
+           <AdditionalFM>%BLD_DIR%\MergedFMs\DeviceFM.xml</AdditionalFM>  
+           <!-- Including OEM feature manifest -->  
+           <AdditionalFM>%BLD_DIR%\MergedFMs\OEMCommonFM.xml</AdditionalFM>  
+           <AdditionalFM>%BLD_DIR%\MergedFMs\OEMFM.xml</AdditionalFM>  
+           <!-- Including the test features -->  
+           <AdditionalFM>%AKROOT%\FMFiles\<architecture>\IoTUAPNonProductionPartnerShareFM.xml</AdditionalFM>  
+        </AdditionalFMs>      
+            </xmp></blockquote>
+        </li>
+        <li>Update the features included in the product:
+            <ol class="c-list">
+                <li>Make sure the sample apps are included (especially the IOT_BERTHA app).</li>
+                <li>Verify that the OEM features: OEM_CustomCmd and OEM_ProvAuto are present.</li>
+                <li>Add the FeatureID for your registry package, e.g. OEM_FilesAndRegKeys.</li>
+            </ol>           
+            <blockquote class="c-blockquote"><xmp>
+<Features>  
+          <Microsoft>  
+        ...  
+          
+        <!-- Sample Apps, remove this when you introduce OEM Apps -->  
+          <Feature>IOT_BERTHA</Feature>  
+          <Feature>IOT_ALLJOYN_APP</Feature>  
+          <Feature>IOT_NANORDPSERVER</Feature>  
+          <Feature>IOT_SHELL_HOTKEY_SUPPORT</Feature>  
+          <Feature>IOT_APPLICATIONS</Feature>  
+          <Feature>IOT_ENABLE_ADMIN</Feature>  
+          </Microsoft>  
+          <OEM>  
+            <!-- Include BSP Features -->  
+            <Feature>DEVICE_DRIVERS</Feature>  
+            <!-- Include OEM features -->  
+            <Feature>OEM_CustomCmd</Feature>  
+            <Feature>OEM_ProvAuto</Feature>  
+            <Feature>OEM_FilesAndRegKeys</Feature>  
+        </OEM>
+    </xmp></blockquote>
+        </li>
+    </ol>   
+</section>
+<section>
+    <h3 class="c-subheading-3">Build and test the image</h3>
+    <ol class="c-list">
+        <li>After a short while, you should see the IoT test (Bertha) app which shows basic information about the image.</li>
+        <li>To see if your files made it, connect both your technician PC and the device to the same ethernet network.</li>
+        <li>On the test app, note the IP address.</li>
+        <li>On your technician PC, open File Explorer and type in the IP address of the device with a \\prefix and \c$ suffix: `\\10.100.0.100\c$`</li>
+        <li>Use the device name, the default Administrator account, and password to log on.</li>
+        <li>Check to see fi the files exist. Look for:
+            <blockquote class="c-blockquote">
+                <p class="c-paragraph">\10.100.0.100\c$\Windows\system32\TestFile1.txt</p>
+                <p class="c-paragraph">\\10.100.0.100\c$\OEMInstall\TestFile2.txt</p>
+            </blockquote>
+        </li>    
+    </ol>   
+</section>
+<section>
+    <h3 class="c-subheading-3">See if your registry keys exist</h3>
+    <p class="c-paragraph-3">On your technician PC, connect to your device using an SSH client such as PuTTY. From the command line in the SSH client, query the system for the registry key where Fabrikam is your OEM name. The registry tool should return your test values.</p>
+    <blockquote class="c-blockquote">
+        <p class="c-paragraph">reg query HKLM\Software\Fabrikam\Test</p>
+    </blockquote>
+</section>
+<section data-grid="col-12" class="pad-thin">
+    <div data-grid="col-4">
+        <a class="c-action-trigger c-glyph glyph-chevron-left" href="{{site.baseurl}}/{{page.lang}}/GetStarted/Commercialize/AddApplication.htm">Previous: Add your application</a>
+    </div>
+    <div data-grid="col-6"></div>
+    <div data-grid="col-2">
+        <a class="c-action-trigger c-glyph-after glyph-chevron-right" href="{{site.baseurl}}/{{page.lang}}/GetStarted/Commercialize/AddProvisionPackages.htm">Next: Add provisioning package</a>
+    </div>
+</section>
