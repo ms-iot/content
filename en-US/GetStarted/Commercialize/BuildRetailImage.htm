@@ -13,7 +13,7 @@ lang: en-US
 </header>
 
 <section class="pad-thin">
-    <h3 class="c-subheading-3">1. Build and create the image.</h3>
+    <h3 class="c-subheading-3">1. Get Code signing Certificate</h3>
     <p class="c-paragraph-3">Get a <a class="c-hyperlink" href="https://docs.microsoft.com/en-us/windows-hardware/drivers/dashboard/update-a-code-signing-certificate" target="_blank">code-signing certificate</a>. 
     Configure the cross-signing certificate to be used for retail signing. Edit setsignature.cmd file to set SIGNTOOL_OEM_SIGN:</p>
     
@@ -29,6 +29,7 @@ lang: en-US
     
     <blockquote class="c-blockquote"><xmp>retailsign on</xmp></blockquote>  
 
+    <h3 class="c-subheading-3">2. Build and create the image.</h3>
     <p class="c-paragraph-3">Rebuild all the packages so that they are retail signed.</p>
     
     <blockquote class="c-blockquote"><xmp>buildpkg all</xmp></blockquote>  
@@ -36,10 +37,10 @@ lang: en-US
     <p class="c-paragraph-3">If the BSP drivers/packages are test-signed, you need to rebuild them to have a retail signature. You can
     re-sign the cabs and its contents using:</p>
 
-    <blockquote class="c-blockquote"><xmp>re-signcabs.cmd \<srccabdir\> \<dstcabdir\></xmp></blockquote> 
+    <blockquote class="c-blockquote"><xmp>re-signcabs.cmd <srccabdir> <dstcabdir></xmp></blockquote> 
 
     <p class="c-paragraph-3">Build the image using</p>
-    <blockquote class="c-blockquote"><xmp>buildimage \<productname\> Retail</xmp> </blockquote>  
+    <blockquote class="c-blockquote"><xmp>buildimage <productname> Retail</xmp> </blockquote>  
     
     <p class="c-paragraph-3">In order to take your device to market, you'll need to agree to the terms and conditions associated with Windows 10 IoT Core.</p>
 
