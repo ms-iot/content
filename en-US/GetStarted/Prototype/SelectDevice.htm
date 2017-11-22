@@ -240,7 +240,7 @@ $('input[type="checkbox"]').change(function(){
 });
 
 $.ajax({
-        url: 'https://device-catalog-test.azurewebsites.net/api/devices/search/null',
+        url: 'https://device-catalog.azurewebsites.net/api/devices/search/null',
         success: function(data) {
 			azureDevices(data);
         }
