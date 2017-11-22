@@ -44,13 +44,13 @@ lang: en-US
 </section>
 <section class="pad-thin">
     <h3 class="c-subheading-3">5. Build your board supported package (BSP)</h3>
-    <p class="c-paragraph-3">Get your BSP packages for your platform and build them as per the instructions given by the bsp vendor. See <a href="https://docs.microsoft.com/en-us/windows/iot-core/build-your-image/createbsps">Windows 10 IoT Core BSP page</a> for info on available BSPs. </p>
+    <p class="c-paragraph-3">Get your BSP packages for your platform and build them as per the instructions given by the bsp vendor. See <a class="c-hyperlink" href="https://docs.microsoft.com/en-us/windows/iot-core/build-your-image/createbsps">Windows 10 IoT Core BSP page</a> for info on available BSPs. </p>
 </section>
 <br><section>
     <h3 class="c-subheading-3">6. Build an image</h3>
     <p class="c-paragraph-3">Eject any removable storage drives including the Micro SD card and any USB flash drives. Build a flashable test image using the default files. Test images include additional tools which will help to create test images using either signed or unsigned test packages.</p>
     <blockquote class="c-blockquote">
-            <p class="c-paragraph">buildimage \<productname\> test</p>
+            <p class="c-paragraph">buildimage productname test</p>
     </blockquote>
     <p class="c-paragraph-3">
             This builds an FFU file with your basic image.
