@@ -9,13 +9,13 @@ lang: en-US
 
 <header>
     <h1  class="c-subheading-1">Build your retail image</h1>
-    <p class="c-paragraph-3">With the customizations you've added, it's time to put them together and test them in a retail build.</p>
+    <p class="c-paragraph-3">With the customizations you've added, you can now put them together and test them in a retail build.</p>
 </header>
 
 <section class="pad-thin">
-    <h3 class="c-subheading-3">1. Build and create the image.</h3>
-    <p class="c-paragraph-3">Get a <a class="c-hyperlink" href="https://docs.microsoft.com/en-us/windows-hardware/drivers/dashboard/update-a-code-signing-certificate" target="_blank">code-signing certificate</a>. 
-    Configure the cross-signing certificate to be used for retail signing. Edit setsignature.cmd file to set SIGNTOOL_OEM_SIGN:</p>
+    <h3 class="c-subheading-3">1. Get a code-signing certificate.</h3>
+    <p class="c-paragraph-3">Get a <a class="c-hyperlink" href="https://docs.microsoft.com/en-us/windows-hardware/drivers/dashboard/update-a-code-signing-certificate" target="_blank">code signing certificate</a>.
+    Configure the cross-signing certificate to be used for retail signing. Edit the setsignature.cmd file to set SIGNTOOL_OEM_SIGN:</p>
     
     <blockquote class="c-blockquote"><xmp>set SIGNTOOL_OEM_SIGN=/s my /i "Issuer" /n "Subject" /ac "CrossCertRoot" /fd SHA256</xmp></blockquote>  
     
@@ -29,6 +29,7 @@ lang: en-US
     
     <blockquote class="c-blockquote"><xmp>retailsign on</xmp></blockquote>  
 
+    <h3 class="c-subheading-3">2. Build and create the image.</h3>
     <p class="c-paragraph-3">Rebuild all the packages so that they are retail signed.</p>
     
     <blockquote class="c-blockquote"><xmp>buildpkg all</xmp></blockquote>  
@@ -36,12 +37,12 @@ lang: en-US
     <p class="c-paragraph-3">If the BSP drivers/packages are test-signed, you need to rebuild them to have a retail signature. You can
     re-sign the cabs and its contents using:</p>
 
-    <blockquote class="c-blockquote"><xmp>re-signcabs.cmd \<srccabdir\> \<dstcabdir\></xmp></blockquote> 
+    <blockquote class="c-blockquote"><xmp>re-signcabs.cmd <srccabdir> <dstcabdir></xmp></blockquote> 
 
-    <p class="c-paragraph-3">Build the image using</p>
-    <blockquote class="c-blockquote"><xmp>buildimage \<productname\> Retail</xmp> </blockquote>  
+    <p class="c-paragraph-3">Build the image using:</p>
+    <blockquote class="c-blockquote"><xmp>buildimage <productname> Retail</xmp> </blockquote>    
     
-    <p class="c-paragraph-3">In order to take your device to market, you'll need to agree to the terms and conditions associated with Windows 10 IoT Core.</p>
+    <p class="c-paragraph-3">Now that you've built your retail image, you're ready to manufacture your device.</p>
 
     </section>
 
@@ -51,6 +52,6 @@ lang: en-US
     </div>
     <div data-grid="col-6"></div>
     <div data-grid="col-2">
-        <a class="c-action-trigger c-glyph-after glyph-chevron-right" href="{{site.baseurl}}/{{page.lang}}/GetStarted/Commercialize/CommercialTerms.htm">Next: Register your device</a>
+        <a class="c-action-trigger c-glyph-after glyph-chevron-right" href="{{site.baseurl}}/{{page.lang}}/GetStarted/Commercialize/ManufactureDevice.htm">Next: Manufacture your device</a>
     </div>
 </section>
