@@ -10,17 +10,17 @@ lang: en-US
 <header>
     <h1  class="c-subheading-1">Build your image</h1>
     <p class="c-paragraph-3">To get started, we'll create a basic IoT Core image, flash it to a micro SD card, and put it into a device to make sure that everything is working properly.</p>
-    <p class="c-paragraph-3">We'll create a product folder that represents our first design. For our first product design, we'll customize just enough for the IoT Core device to boot up and run the built-in OOBE app, which we should be able to see on an HDMI-compatible monitor.</p>
+    <p class="c-paragraph-3">We'll create a product folder that represents our first design. For our first design, we'll customize it just enough for the IoT Core device to boot up and run the built-in OOBE app, which we should be able to see on an HDMI-compatible monitor.</p>
 </header>
 <section class="pad-thin">
     <h3 class="c-subheading-3">1. Set your OEM name (one-time only)</h3>
-    <p class="c-paragraph-3">Open the file below in a text editor and modify it with your company name or name of choosing.</p>
+    <p class="c-paragraph-3">Open the file below in a text editor and modify it with your company name or other name of your choice.</p>
     <blockquote class="c-blockquote">
-            <p class="c-paragraph">C:\IoT-ADK-AddonKit\Tools\setOEM.cmd</p>
+            <p class="c-paragraph"><xmp>C:\IoT-ADK-AddonKit\Tools\setOEM.cmd</xmp></p>
     </blockquote>  
     <p class="c-paragraph-3">We've added this variable to help you create packages with names that are easy to differentiate from those provided by other manufactures you're working with.</p>
     <blockquote class="c-blockquote">
-            <p class="c-paragraph">set OEM_NAME=Fabrikam</p>
+            <p class="c-paragraph"><xmp>set OEM_NAME=Fabrikam</xmp></p>
     </blockquote>  
 </section>
 <section>
@@ -28,12 +28,12 @@ lang: en-US
     <p class="c-paragraph-3">In Windows Explorer, go to the folder where you installed the IoT Core ADK Add-Ons and open IoTCoreShell.cmd. It should prompt you to run as an administrator. The new value for OEM_NAME should appear when you start the tool.</p>
 </section>
 <section>
-    <h3 class="c-subheading-3">3. Install test certificates</h3>
+    <br><br><h3 class="c-subheading-3">3. Install test certificates</h3>
     <p class="c-paragraph-3">You only need to install certificates the first time you install the IoT ADK add-on kit. You'll use these to sign your test binaries. The certificates will be added to the root.</p>
     <blockquote class="c-blockquote">
-            <p class="c-paragraph">installoemcerts</p>
+            <p class="c-paragraph"><xmp>installoemcerts</xmp></p>
     </blockquote>
-    <a href="#" class="c-call-to-action c-glyph f-lightweight"><span>Learn more about setting up the signing environment</span></a>
+    <a href="https://msdn.microsoft.com/library/windows/hardware/dn756804" class="c-call-to-action c-glyph f-lightweight"><span>Learn more about setting up the signing environment</span></a>
 </section>
 <section class="pad-thin"> 
     <h3 class="c-subheading-3">4. Choose your architecture</h3>
@@ -44,13 +44,13 @@ lang: en-US
 </section>
 <section class="pad-thin">
     <h3 class="c-subheading-3">5. Build your board supported package (BSP)</h3>
-    <p class="c-paragraph-3">Get your BSP packages for your platform and build them as per the instructions given by the bsp vendor. See <a href="https://docs.microsoft.com/en-us/windows/iot-core/build-your-image/createbsps">Windows 10 IoT Core BSP page</a> for info on available BSPs. </p>
+    <p class="c-paragraph-3">Get the BSPs for your platform and build them as per the instructions given by the BSP vendor. See the <a class="c-hyperlink" href="https://docs.microsoft.com/en-us/windows/iot-core/build-your-image/createbsps">Windows 10 IoT Core BSP page</a> for info on available BSPs. </p>
 </section>
 <br><section>
     <h3 class="c-subheading-3">6. Build an image</h3>
     <p class="c-paragraph-3">Eject any removable storage drives including the Micro SD card and any USB flash drives. Build a flashable test image using the default files. Test images include additional tools which will help to create test images using either signed or unsigned test packages.</p>
     <blockquote class="c-blockquote">
-            <p class="c-paragraph">buildimage \<productname\> test</p>
+            <p class="c-paragraph"><xmp>buildimage ProductA test</xmp></p>
     </blockquote>
     <p class="c-paragraph-3">
             This builds an FFU file with your basic image.
@@ -59,6 +59,40 @@ lang: en-US
             <p class="c-paragraph">Note: If you get the error code 0x8007005 or 0x800705b4, unplug all external drives and try again. If this doesn't work, refer to the previous step and make sure everything's installed.</p>
     </blockquote>
 </section>
+
+<p class="c-paragraph-3">Now that you've built a basic image, you'll want to add different customizations to it before moving on to build your retail image. Follow the links below to learn how to add an app, driver, and more to your image.</p>
+
+<section data-grid="col-12" class="pad-medium">
+    <div data-grid="col-6">
+        <h2 class="c-subheading-3">Add an app</h2>
+        <p class="c-paragraph">Learn how to take an app and package it up for devices.</p>
+        <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/deploy-your-app-with-a-standard-board" target="_blank" class="c-call-to-action c-glyph f-lightweight">
+            <span>Learn more</span>
+        </a>
+    </div>
+    <div data-grid="col-6">
+        <h2 class="c-subheading-3">Add a file and registry</h2>
+        <p class="c-paragraph">Create a common package to use across different device architectures.</p>
+        <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/add-a-registry-setting-to-an-image" target="_blank"class="c-call-to-action c-glyph f-lightweight">
+            <span>Learn more</span>
+        </a>
+    </div>
+    <div data-grid="col-6">
+        <h2 class="c-subheading-3">Add networking and provisioning packages</h2>
+        <p class="c-paragraph">Create a package that contains sample Wi-Fi settings.</p>
+        <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/add-a-provisioning-package-to-an-image" target="_blank" class="c-call-to-action c-glyph f-lightweight">
+            <span>Learn more</span>
+        </a>
+    </div>
+    <div data-grid="col-6">
+        <h2 class="c-subheading-3">Add a driver</h2>
+        <p class="c-paragraph">Add a driver, package it up, and deploy it to a device.</p>
+        <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/add-a-driver-to-an-image" target="_blank" class="c-call-to-action c-glyph f-lightweight">
+            <span>Learn more</span>
+        </a>
+    </div>
+</section>
+
 <section data-grid="col-12" class="pad-thin">
     <div data-grid="col-4">
         <a class="c-action-trigger c-glyph glyph-chevron-left" href="{{site.baseurl}}/{{page.lang}}/GetStarted/Commercialize/GetImagingTools.htm">Previous: Get your imaging tools</a>
