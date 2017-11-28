@@ -19,12 +19,13 @@ lang: en-US
   </header>
 </section>
 
-<body onload="myFunction()"></body>
 <script>
-  function myFunction(){
+function init() {
     $(".tagBox").parent().hide();
     $(".tagBtn").removeClass("active");
-    }
+}
+
+window.addEventListener("load", init);
 </script>
 
 <section class="section">
