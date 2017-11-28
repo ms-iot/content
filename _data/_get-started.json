@@ -4,11 +4,11 @@
         "parent":"Build a Prototype",
         "children":[
           {
-            "title":"1. Select your device",
+            "title":"1. Explore devices",
             "link":"/GetStarted/Prototype/SelectDevice.htm"
           },
           {
-            "title":"2. Explore devices",
+            "title":"2. Set up your device",
             "link":"/GetStarted/Prototype/SetupDevice.htm"
           },
            {
