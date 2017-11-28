@@ -9,7 +9,7 @@ lang: en-US
 
 <header data-grid="col-12">
     <h1  class="c-subheading-1">Connect to Azure</h1>
-    <p class="c-paragraph-3">The Internet of Things is built on the cloud computing. Communicating with the cloud and deriving insight from data is an essential part of any IoT project. Now that you've built an IoT Core application, let's connect it to Azure.</p>
+    <p class="c-paragraph-3">The Internet of Things is built on cloud computing. Communicating with the cloud and deriving insight from data is an essential part of any IoT project. Now that you've built a Windows 10 IoT Core application, let's connect it to Azure.</p>
     <p class="c-paragraph-3">We'll be using <a class="c-hyperlink" href="https://azure.microsoft.com/en-us/services/iot-hub">Azure IoT Hub</a> to connect our device to the cloud. Here’s what you need to know:</p>
 </header>
 <section data-grid="col-12">
@@ -18,10 +18,10 @@ lang: en-US
         <li>Messaging is the primary method devices use to communicate with the cloud and each other. The message can be a command from the cloud to a device ("Take a picture"), data from a device to the cloud ("Here's the image data you requested"), and a host of other possibilities.</li>
         <li>Security is important. Our goal is for each message to be received and sent with no tampering in the middle; the data can contain information that must be encrypted.</li>
     </ul>
-    <p class="c-paragraph-3">To provision your prototype, you can use the IoT Core Dashboard, available on the <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/Downloads">downloads</a> page if you haven't yet downloaded it during the prototyping process.</p>
+    <p class="c-paragraph-3">To provision your prototype, you can use the Windows 10 IoT Core Dashboard, available on the <a class="c-hyperlink" href="{{site.baseurl}}/{{page.lang}}/Downloads">downloads</a> page if you haven't yet downloaded it during the prototyping process.</p>
     <p class="c-paragraph-3">The Dashboard produces an image of the OS and securely connects your device to Azure. This is done by associating the physical device with the device ID in the Azure IoT Hub and imprinting the device-specific shared access key to the device’s TPM.</p>
     <p class="c-paragraph-3">For devices that don’t have a TPM chip, the tool can install a software-emulated TPM. This does not provide security but allows you to develop your app using a prototyping device (such as Raspberry Pi 2 or 3) and have security “light up” on a device with the hardware TPM without having to change the app.</p>
-    <p class="c-paragraph-3">To connect your device to Azure, click on the <b>Connect to Azure</b> tab:</p>
+    <p class="c-paragraph-3">To connect your device to Azure, click on the <b>Connect to Azure</b> tab in the Dashboard:</p>
     </br>
     <img class="c-image" src="{{site.baseurl}}/Resources/images/cloud/Building_Secure_Apps_for_IoT_Core_Screen01.png" alt="Connect device to cloud">
 
@@ -31,7 +31,7 @@ lang: en-US
     <img class="c-image" src="{{site.baseurl}}/Resources/images/cloud/Building_Secure_Apps_for_IoT_Core_Screen02.png" alt="Provision your device to connect to Azure">
     
     <p class="c-paragraph-3">Now that you've provisioned your device, you're ready to connect your app to Azure. For this example, use the app you wrote in the previous section </p>
-    <p class="c-paragraph-3">Within your app, follow the instructions from the <a class="c-hyperlink" href="https://marketplace.visualstudio.com/items?itemName=MicrosoftIoT.ConnectedServiceforAzureIoTHub">Connected Services tool</a> to connect your project to Azure IoT Hub. The tool will generate two functions, SendDeviceToCloudMessageAsync and ReceiveCloudToDeviceMessageAsync that you can invoke anywhere in your app. You can modify these functions as you see fit. Use the first function to send messages to Azure, and the second to act on data the cloud sends to the device.</p>
+    <p class="c-paragraph-3">Within your app, follow the instructions from the <a class="c-hyperlink" href="https://marketplace.visualstudio.com/items?itemName=MicrosoftIoT.ConnectedServiceforAzureIoTHub">Connected Services tool</a> to connect your project to Azure IoT Hub. The tool will generate two functions, <b>SendDeviceToCloudMessageAsync</b> and <b>ReceiveCloudToDeviceMessageAsync</b> that you can invoke anywhere in your app. You can modify these functions as you see fit. Use the first function to send messages to Azure, and the second to act on data the cloud sends to the device.</p>
     <p class="c-paragraph-3">After successfully connecting your app to Azure using the IoT Dashboard, we'll challenge you to use Visual Studio to connect your app to the cloud. Follow the instructions in our <a class="c-hyperlink" href="https://blogs.windows.com/buildingapps/2015/12/09/windows-iot-core-and-azure-iot-hub-putting-the-i-in-iot/#fjuMz6c0ohJREqpB.97">Windows 10 IoT Core blog</a>.</p>
     <p class="c-paragraph-3">Microsoft offers libraries and tools that allow you to build your connected IoT applications that connect to Azure IoT Hub. It's easy to get started and scales up as your solution does. You can find the code for <a class="c-hyperlink" href="https://github.com/ms-iot/iot-core-azure-dm-client">Azure's Device Client Management</a> as well as <a class="c-hyperlink" href="https://github.com/ms-iot/iot-azure-dps-client">Azure's Device Provisioning Service</a> in GitHub. </p>
 </section>
