@@ -8,7 +8,7 @@
             "link":"/GetStarted/Prototype/SelectDevice.htm"
           },
           {
-            "title":"2. Set up your device",
+            "title":"2. Explore devices",
             "link":"/GetStarted/Prototype/SetupDevice.htm"
           },
            {
@@ -30,27 +30,27 @@
         ]
       },
       {
-        "parent":"Commercialize a Prototype",
+        "parent":"Commercialize a Device",
         "children":[
           {
-            "title":"1. Select your platform",
+            "title":"1. Accept commercial terms",
+            "link": "/GetStarted/Commercialize/CommercialTerms.htm"
+          },
+	  {
+            "title":"2. Select your platform",
             "link": "/GetStarted/Commercialize/SelectPlatform.htm"
           },
 	  {
-            "title":"2. Get your tools",
+            "title":"3. Get your tools",
             "link": "/GetStarted/Commercialize/GetImagingTools.htm"
           },
           {
-            "title":"3. Build your image",
+            "title":"4. Build your image",
             "link":"/GetStarted/Commercialize/BuildImage.htm"
           },
           {
-            "title":"4. Build your retail image",
+            "title":"5. Build your retail image",
             "link":"/GetStarted/Commercialize/BuildRetailImage.htm"
-          },
-          {
-            "title":"5. Register your device",
-            "link":"/GetStarted/Commercialize/CommercialTerms.htm"
           },
 	  {
             "title":"6. Manufacture your device",
