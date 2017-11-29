@@ -114,7 +114,7 @@
     {
       "title": "'Hello, Cloud!'",
       "description": "Create an app to talk to the Azure cloud using Azure IoT Hub",
-      "link": "https://github.com/ms-iot/samples/tree/master/Azure/HelloCloud",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/Azure/HelloCloud",
       "link-text": "HelloCloud",
       "lang": "C#",
       "ranking": 0,
@@ -129,7 +129,7 @@
     {
       "title": "App Service Blinky",
       "description": "Sample app service that allows one background application to control an LED as an app service, and the other background application to blink the LED.",
-      "link": "samples/AppServiceBlinky.htm",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/AppServiceBlinky",
       "link-text": "App Service Blinky",
       "lang": "C#",
       "ranking": 0,
@@ -312,6 +312,7 @@
       "tags": [
         "Beginner",
         "SPI",
+        "I2C",
         "C#"
       ]
     },
@@ -441,7 +442,7 @@
       "tags": [
         "C#",
         "Intermediate",
-        "GPIO",
+        "SPI",
         "I2C"
       ]
     }
