@@ -6,63 +6,63 @@ keyword: Windows IoT, Get Started, Home Page, IoT
 permalink: /en-US/iot.htm
 lang: en-US
 ---
-
-<script>
-    $(document).ready(function(){
-        $("#playVideo").click(function(){
-            var div = '<div class="m-feature" data-grid="col-12">';
-            var sec = '<section class="c-feature f-align-center c-video">';
-            var span = ' <span aria-hidden="true" itemprop="name">View the video "What is Windows 10 IoT Core"</span>';
-            var iframe = '<iframe id="iframe-video" src="https://www.youtube.com/embed/PV785U-g_KM?showinfo=0&amp;rel=0&amp;enablejsapi=1&autoplay=1" frameborder="0" allowfullscreen="true" }"></iframe>'
-           var close = ' </section></div>';
-           var final = div + sec + span + iframe + close;  
-            $("#videoImage").remove();
-            $("#heading").after(final);
-        });
-    });
-</script>
 <section>
     <div data-vg="mwf-wfb-feature-centeralign-with-Video-VG1" data-grid="container">
-        <div id="heading">
+        <div>
             <h1 class="c-heading-1 x-type-center">Windows 10 IoT Core</h1>
             <p class="c-subheading-1 x-type-center">The operating system built for your Internet of Things</p>
         </div>
-        <div id="videoImage" data-grid="col-12" class="m-feature m-video-trigger f-mask-40">
-            <picture>
-                <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width: 1779px)">
-                <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:1400px)">
-                <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:1084px)">
-                <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:768px)">
-                <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:540px)">
-                <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:0)">
-                <img srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" src="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" alt="Windows IoT Core video">
-            </picture>
-            <div>
-                <!-- min-width set to 0 to overwrite web-core style -->
-            <button style="min-width: 0;" type="button" class="c-glyph glyph-play" id="playVideo" aria-label="Play IoT video"></button>
-            </div>
-        </div>    
+        <div class="m-feature" data-grid="col-12">
+            <section class="c-feature f-align-center c-video">
+                <span aria-hidden="true" itemprop="name">View the video "What is Windows 10 IoT Core"</span>
+                <iframe id="iframe-video" src="https://www.youtube.com/embed/PV785U-g_KM?showinfo=0&amp;rel=0&amp;enablejsapi=1" frameborder="0" allowfullscreen="true" htmlcustomattributes="{'aria-label':'View the Windows 10 IoT Core video'}"></iframe>
+            </section>
+        </div>
         <div data-grid="col-12" class="pad-thin x-type-center">
             <a id="getStarted-action" class="mscom-link c-call-to-action c-glyph" aria-label="Get started with Windows 10 IoT Core" ms.title="get started" href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
         </div>
     </div>
 </section> 
-<section>
-    <div data-vg="mwf-wfb-banner-h2tag-VG1" data-grid="container" class="banner-divider-pad">
-        <div data-grid="col-12" class="m-banner">
-            <h2 class="c-heading-2 f-lean">
-                The power of Windows on your IoT devices
-            </h2>
-            <p class="c-paragraph-2">
-                Windows 10 IoT Core supports hundreds of devices running on ARM or x86/x64 architectures.
-            </p>
-            <a class="mscom-link c-call-to-action c-glyph" aria-label="LEARN MORE ABOUT WINDOWS 10 IoT CORE" ms.title="LEARN MORE ABOUT WINDOWS 10 IoT CORE" href="{{site.baseurl}}/{{page.lang}}/Docs/WhatsNew.htm">
-                Check out the latest features of Windows 10 IoT Core 
-            </a>
-        </div>
-    </div>
-</section>
+<br><br><br><br>
 <section class="pad-medium">
+<center><h2>Why Windows 10 IoT Core?</h2></center>
+<br>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-xs-24">
+    <center><br>
+    <img class="col-3-image" src="{{site.baseurl}}/Resources/images/WhyIoTCore/fast-icon.png" width="50%">
+    <h3>Faster time to market</h3><br>
+    <p>An end-to-end Microsoft solution to help you focus on creating, not only maintaining.</p>
+    </center>
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-24">
+    <center><br>
+    <img class="col-3-image" src="{{site.baseurl}}/Resources/images/WhyIoTCore/security-icon.png" width="50%">
+    <h3>Intelligent security</h3><br>
+    <p>Customizable security settings as well as intuitive device and app update services.</p>
+    </center>
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-24"
+>wind    <center><br>
+    <img class="col-3-image" src="{{site.baseurl}}/Resources/images/edge-icon.png" width="50%">
+    <h3>Intelligent edge</h3><br>
+    <p>Development is made easy with the familiar UWP as well as competitive market features.</p>
+    </center>
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-24">
+    <center><br>
+    <img class="col-3-image" src="{{site.baseurl}}/Resources/images/windows-icon.png" width="50%">
+    <h3>Cloud integration</h3><br>
+    <p>The best support for integrated Azure IoT as well as support for Azure IoT Edge. </p>
+    </center>
+  </div>
+</div>
+</section>
+<br><br><br><br>
+<section class="pad-medium">
+<center><h2>From prototype to market</h2><br>
+<p>Develop a prototype for your device and, when you're ready, commercialize it with us too.</p>
+
     <div id="mwf-wfb-2col-contentplacement1" data-vg="mwf-wfb-2col-contentplacement-VG1" data-grid="container">
         <div class="m-content-placement" data-grid="col-12">
             <div data-grid="col-12 pad-6x stack-2">
@@ -78,7 +78,6 @@ lang: en-US
                                 <img srcset="{{site.baseurl}}/Resources/images/Homepage/internVideo_491x276.png" src="{{site.baseurl}}/Resources/images/Homepage/internVideo_491x276.png" alt="IoT Core Walkthrough sample video">
                             </picture>  
                             </a>                   
-                            <strong class="c-badge f-small f-highlight">NEW</strong>
                             <h3 class="c-heading" >Windows 10 IoT Core Walkthrough</h3>
                             
                             <p class="c-paragraph">End-to-end IoT Core implementation to help you commercialize your product.</p>                   
@@ -97,7 +96,6 @@ lang: en-US
                                 <source srcset="{{site.baseurl}}/Resources/images/Homepage/Askey_491x276.png" media="(min-width:0)">
                                 <img srcset="" src="{{site.baseurl}}/Resources/images/Homepage/Askey_491x276.png" alt="Image of Askey Turbomate E1 running Windows 10 IoT Core.">
                             </picture>
-                            <strong class="c-badge f-small f-highlight">NEW</strong>
                             <h3 class="c-heading">Askey Turbomate E1</h3>
                             <p class="c-paragraph">Windows IoT Core powers this enterprise-ready wearable.</p>             
                         <a target="_blank" href="http://www.askey.com.tw/mobilecomputer7.html" class="c-call-to-action c-glyph">
@@ -109,134 +107,41 @@ lang: en-US
         </div>
     </div>
 </section>
-<section class="pad-thin">
-    <div id="mwf-wfb-2col-contentplacement1" data-vg="mwf-wfb-2col-contentplacement-VG1" data-grid="container">
-        <div class="m-feature remove-margin-top " data-grid="col-12">
-            <section class="c-feature f-align-left">
-                <picture>
-                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/01_485x273.png" media="(min-width: 1400px)">
-                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/01_380x214.png" media="(min-width: 1084px)">
-                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/01_321x180.png" media="(min-width: 768px)">
-                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/01_720x405.png" media="(min-width: 540px)">
-                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/01_491x276.png" media="(min-width:0)">
-                    <img class="mscom-image c-image"  style=" margin: 0 auto;" width="485" height="273" src="{{site.baseurl}}/Resources/images/Homepage/01_485x273.png" alt="Illustration of IoT Core Dashboard interacting with Azure and IoT Core run device.">
-                </picture>
-                <div>
-                    <h2 class="c-heading-3" style="text-align:center;">
-                        Fast-track your innovation with our Dev Tools for device setup, Azure connectivity and much more
-                    </h2>
-                </div>
-            </section>
-        </div>
-        <div class="m-feature remove-margin-top " data-grid="col-12">
-            <section class="c-feature f-align-right">
-                <picture>
-                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/02_485x273.png" media="(min-width: 1400px)">
-                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/02_380x214.png" media="(min-width: 1084px)">
-                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/02_321x180.png" media="(min-width: 768px)">
-                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/02_720x405.png" media="(min-width: 540px)">
-                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/02_491x276.png" media="(min-width:0)">
-                    <img class="mscom-image c-image"  style=" margin: 0 auto;" width="485" height="273" src="{{site.baseurl}}/Resources/images/Homepage/02_485x273.png" alt="Illustration depicting IoT Core supporting UWP applications in C++, C#, Python and Node JS.">
-                </picture>
-                <div>
-                    <h2 class="c-heading-3" style="text-align:center;">
-                        Use UWP to write applications that run on all your Windows devices, in the language you prefer
-                    </h2>
-                </div>
-            </section>
-        </div>
-        <div class="m-feature remove-margin-top " data-grid="col-12">
-            <section class="c-feature f-align-left">
-                <picture>
-                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/03_485x273.png" media="(min-width: 1400px)">
-                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/03_380x214.png" media="(min-width: 1084px)">
-                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/03_321x180.png" media="(min-width: 768px)">
-                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/03_720x405.png" media="(min-width: 540px)">
-                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/03_491x276.png" media="(min-width:0)">
-                    <img class="mscom-image c-image"  style=" margin: 0 auto;" width="485" height="273" src="{{site.baseurl}}/Resources/images/Homepage/03_485x273.png" alt="Illustration depicting remote deployment and debugging capability of IoT Core with Visual Studio.">
-                </picture>
-                <div>
-                    <h2 class="c-heading-3" style="text-align:center;">
-                        Deploy and debug applications remotely using Visual Studio
-                    </h2>
-                </div>
-            </section>
-        </div>
-        <div class="m-feature remove-margin-top " data-grid="col-12">
-            <section class="c-feature f-align-right">
-                <picture>
-                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/04_485x273.png" media="(min-width: 1400px)">
-                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/04_380x214.png" media="(min-width: 1084px)">
-                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/04_321x180.png" media="(min-width: 768px)">
-                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/04_720x405.png" media="(min-width: 540px)">
-                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/04_491x276.png" media="(min-width:0)">
-                    <img class="mscom-image c-image"  style="margin: 0 auto;" width="485" height="273" src="{{site.baseurl}}/Resources/images/Homepage/04_485x273.png" alt="Illustration depicting commercialization of devices with IoT Core.">
-                </picture>
-                <div>
-                    <h2 class="c-heading-3" style="text-align:center;">
-                        Use custom images to get your product to market quickly
-                    </h2>
-                </div>
-            </section>
-        </div>
-    </div>
-</section>
+<br><br><br><br>
+<section class="pad-medium">
+<center><h2>We're driving industry transformations</h2><br>
+<p>At any moment, Windows 10 IoT Core may be right under your nose.</p>
+<p>Explore the six industry verticals below to learn how people are using Windows 10 IoT Core.</p>
+</center>
+<br>
 <section>
     <div id="mwf-wfb-3col-contentplacement1" data-vg="mwf-wfb-3col-contentplacement-VG1" data-grid="container">
         <div class="m-content-placement" data-grid="col-12">
-            <div data-grid="col-12 stack-2" class="x-type-center">   
+            <div data-grid="col-12 stack-2" class="x-type-center">          
                     <div data-grid="col-4 pad-6x">
                         <section class="m-content-placement-item f-size-medium">
-                            <picture>
-                              <source srcset="{{site.baseurl}}/Resources/images/Homepage/secure_358x201.png" media="(min-width:1400px)" />
-                                <source srcset="{{site.baseurl}}/Resources/images/Homepage/secure_358x201.png" media="(min-width:1084px)" />
-                                <source srcset="{{site.baseurl}}/Resources/images/Homepage/secure_235x132.png" media="(min-width:540px)" />
-                                <source srcset="{{site.baseurl}}/Resources/images/Homepage/secure_514x161.png" media="(min-width:0px)" />
-                                <img src="{{site.baseurl}}/Resources/images/Homepage/secure_358x201.png" class="mscom-image c-image" alt="Security logo"  />
-                                  </picture>
-                            <h3 class="c-heading-4 f-lean" style="height: 56px;">Secure</h3>
-                            <p class="c-paragraph-2" style="height: 75px;">Protect your devices with enterprise-grade security.</p>
-                            <a class="mscom-link c-call-to-action c-glyph" aria-label="Information on how to enable enterprise-grade security on IoT Core devices" ms.title="Secure" href="{{site.baseurl}}/{{page.lang}}/docs/buildingsecuredevices.htm">
-                            <span>SECURE YOUR DEVICE</span>
-                            </a>
+                        <p><a href="https://www.hackster.io/projects/tags/energy+win10" target="_blank" role="button" class="c-button">Energy</a></p>
+                        <p><a href="https://www.hackster.io/projects/tags/industrial+automation+win10" target="_blank" role="button" class="c-button">Industrial Automation</a></p>
                         </section>
                     </div>
                     <div data-grid="col-4 pad-6x">
                         <section class="m-content-placement-item f-size-medium">
-                            <picture>
-                             <source srcset="{{site.baseurl}}/Resources/images/Homepage/manage_358x201.png" media="(min-width:1400px)" />
-                                <source srcset="{{site.baseurl}}/Resources/images/Homepage/manage_358x201.png" media="(min-width:1084px)" />
-                                <source srcset="{{site.baseurl}}/Resources/images/Homepage/manage_235x132.png" media="(min-width:540px)" />
-                                <source srcset="{{site.baseurl}}/Resources/images/Homepage/manage_514x161.png" media="(min-width:0px)" />
-                                <img src="{{site.baseurl}}/Resources/images/Homepage/manage_358x201.png" class="mscom-image c-image" alt="Manage logo" />
-                                  </picture>
-                            <h3 class="c-heading-4 f-lean" style="height: 56px;">Manage</h3>
-                            <p class="c-paragraph-2" style="height: 75px;">Manage devices with Azure Device Management.</p>
-                            <a class="mscom-link c-call-to-action c-glyph" aria-label="Information on how to manage IoT Core run devices using Azure Device Management" ms.title="Manage" href="{{site.baseurl}}/{{page.lang}}/docs/azuredm.htm">
-                            <span>MANAGE DEVICES REMOTELY</span>
-                            </a>
+                        <p><a href="https://www.hackster.io/projects/tags/healthcare+win10" target="_blank" role="button" class="c-button">Healthcare</a></p>
+                        <p><a href="https://www.hackster.io/projects/tags/smart+building+win10" target="_blank" role="button" class="c-button">Smart Building</a></p>
                         </section>
                     </div>
                     <div data-grid="col-4 pad-6x">
                         <section class="m-content-placement-item f-size-medium">
-                            <picture>
-                             <source srcset="{{site.baseurl}}/Resources/images/Homepage/control_358x201.png" media="(min-width:1400px)" />
-                                <source srcset="{{site.baseurl}}/Resources/images/Homepage/control_358x201.png" media="(min-width:1084px)" />
-                                <source srcset="{{site.baseurl}}/Resources/images/Homepage/control_235x132.png" media="(min-width:540px)" />
-                                <source srcset="{{site.baseurl}}/Resources/images/Homepage/control_514x161.png" media="(min-width:0px)" />
-                                <img src="{{site.baseurl}}/Resources/images/Homepage/control_358x201.png" class="mscom-image c-image" alt="Control logo" />
-                              </picture>
-                            <h3 class="c-heading-4 f-lean" style="height: 56px;">Control</h3>
-                            <p class="c-paragraph-2" style="height: 75px;">Set up custom updates to commercial devices.</p>
-                            <a target="_blank" class="mscom-link c-call-to-action c-glyph" aria-label="Details on how to control your device by setting up custom updates" ms.title="control" href="https://msdn.microsoft.com/windows/hardware/commercialize/service/iot/index">
-                            <span>SET UP UPDATES</span>
-                            </a>
+                        <p><a href="https://www.hackster.io/projects/tags/digital+signage+win10" target="_blank" role="button" class="c-button">Digital Signage</a></p>
+                        <p><a href="https://www.hackster.io/projects/tags/security+win10" target="_blank" role="button" class="c-button">Security</a></p>
                         </section>
-                    </div>      
+                    </div> 
             </div>
         </div>
     </div>
-</section>                    
+</section>
+</section>
+
 <section class="pad-medium">
     <div  data-grid="container">
         <div class="m-feature remove-margin-top" data-grid="col-12">
@@ -260,6 +165,7 @@ lang: en-US
         </div>
     </div>
 </section>
+<br><br>
 <section class="pad-medium">
     <div data-vg="mwf-hrule-VG" data-grid="container">
     <hr class="c-divider" />
@@ -268,90 +174,7 @@ lang: en-US
 <section>
     <div data-vg="mwf-wfb-banner-h2tag-VG1" data-grid="container" >
         <div data-grid="col-12" class="m-banner">
-            <h2 class="c-heading-2 f-lean">
-               Want to learn more about Windows 10 IoT?
-            </h2>
-            <p class="c-paragraph-2">
-                Windows 10 creates an Internet of Things that is productive, open, and immersive
-            </p>
-            <a target="_blank" class="mscom-link c-call-to-action c-glyph" aria-label="LEARN MORE ABOUT WINDOWS 10 IOT" ms.title="LEARN MORE ABOUT WINDOWS 10 IOT" href="https://www.microsoft.com/en-us/WindowsForBusiness/windows-iot">
-                LEARN MORE ABOUT WINDOWS 10 IOT
-            </a>
-        </div>
-    </div>
-</section>   
-<section class="pad-medium">
-    <div data-vg="mwf-hrule-VG" data-grid="container">
-    <hr class="c-divider" />
-    </div>
-</section>
-<section>
-    <div id="mwf-wfb-3col-contentplacement1" data-vg="mwf-wfb-3col-contentplacement-VG1" data-grid="container">
-        <div class="m-content-placement" data-grid="col-12">
-            <div data-grid="col-12 stack-2" class="x-type-center">          
-                    <div data-grid="col-4 pad-6x">
-                        <section class="m-content-placement-item f-size-medium">
-                            <picture>
-                                <source srcset="{{site.baseurl}}/Resources/images/Homepage/samples_358x201.png" media="(min-width:1400px)" />
-                                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/samples_358x201.png"  media="(min-width:1084px)" />
-                                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/samples_235x132.png"  media="(min-width:540px)" />
-                                    <source srcset="{{site.baseurl}}/Resources/images/Homepage/samples_514x161.png"  media="(min-width:0px)" />
-                                    <img src="{{site.baseurl}}/Resources/images/Homepage/samples_358x201.png" class="mscom-image c-image" alt="Samples logo" />
-                            </picture>
-                            <h3 class="c-heading-4 f-lean" style="height: 56px;">Samples</h3>
-                            <p class="c-paragraph-2" style="height: 75px;">Jumpstart your project and explore in-depth samples.</p>
-                            <a class="mscom-link c-call-to-action c-glyph" aria-label="Jumpstart your project and explore in-depth samplest" ms.title="Samples" href="{{site.baseurl}}/{{page.lang}}/Samples.htm">
-                            <span>EXPLORE SAMPLES</span>
-                            </a>
-                        </section>
-                    </div>
-                    <div data-grid="col-4 pad-6x">
-                        <section class="m-content-placement-item f-size-medium">
-                            <picture>
-                                <source srcset="{{site.baseurl}}/Resources/images/Homepage/documentation_358x201.png" media="(min-width:1400px)" />
-                                <source srcset="{{site.baseurl}}/Resources/images/Homepage/documentation_358x201.png" media="(min-width:1084px)" />
-                                <source srcset="{{site.baseurl}}/Resources/images/Homepage/documentation_235x132.png" media="(min-width:540px)" />
-                                <source srcset="{{site.baseurl}}/Resources/images/Homepage/documentation_514x161.png" media="(min-width:0px)" />
-                                <img src="{{site.baseurl}}/Resources/images/Homepage/documentation_358x201.png" class="mscom-image c-image" alt="Documentation logo" /> 
-                                  </picture>
-                            <h3 class="c-heading-4 f-lean" style="height: 56px;"> Documentation</h3>
-                            <p class="c-paragraph-2" style="height: 75px;">Learn how to build on Windows 10 IoT Core. </p>
-                            <a class="mscom-link c-call-to-action c-glyph" aria-label="Get step-by-step Windows 10 deployment guidance" ms.title="Documentation" href="{{site.baseurl}}/{{page.lang}}/Docs.htm">
-                            <span>LEARN MORE WITH DOCS</span>
-                            </a>
-                        </section>
-                    </div>
-                    <div data-grid="col-4 pad-6x">
-                        <section class="m-content-placement-item f-size-medium">
-                            <picture>
-                                <source srcset="{{site.baseurl}}/Resources/images/Homepage/community_358x201.png" media="(min-width:1400px)" />
-                                <source srcset="{{site.baseurl}}/Resources/images/Homepage/community_358x201.png" media="(min-width:1084px)" />
-                                <source srcset="{{site.baseurl}}/Resources/images/Homepage/community_235x132.png" media="(min-width:540px)" />
-                                <source srcset="{{site.baseurl}}/Resources/images/Homepage/community_514x161.png" media="(min-width:0px)" />
-                                <img src="{{site.baseurl}}/Resources/images/Homepage/community_358x201.png" class="mscom-image c-image" alt="Community logo"  />
-                            </picture>
-                            <h3 class="c-heading-4 f-lean" style="height: 56px;">Community</h3>
-                            <p class="c-paragraph-2" style="height: 75px;"> Collaborate with other IoT Core developers.</p>
-                            <a class="mscom-link c-call-to-action c-glyph" aria-label="Manage Windows 10 Enterprise" ms.title="Community" href="{{site.baseurl}}/{{page.lang}}/Community.htm">
-                            <span> GET CONNECTED</span>
-                            </a>
-                        </section>
-                    </div> 
-            </div>
-        </div>
-    </div>
-</section>
-<section class="pad-medium">
-    <div data-vg="mwf-hrule-VG" data-grid="container">
-    <hr class="c-divider" />
-    </div>
-</section>
-<section>
-    <div data-vg="mwf-wfb-banner-h2tag-VG1" data-grid="container" >
-        <div data-grid="col-12" class="m-banner">
-            <h2 class="c-heading-2 f-lean">
-               Start building with Windows 10 IoT Core today!
-            </h2>
+            <h2>Start building with Windows 10 IoT Core</h2>
         </div>
         <div data-grid="col-12" class="pad-thin x-type-center">
             <a id="getStarted-action" class="mscom-link c-call-to-action c-glyph" aria-label="Get started with Windows 10 IoT Core" ms.title="get started" href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
