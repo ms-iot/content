@@ -123,17 +123,17 @@ lang: en-US
         <div class="row">
           <div class="col-md-6">
             <h3>Firmware Update</h3>
-            <p>Download firmware components and updates for the MinnowBoard MAX reference board from Intel</p>
+            <p>Download firmware components and updates for the MinnowBoard MAX reference board from Intel.</p>
             <a href="http://firmware.intel.com/projects/minnowboard-max" target="_blank">Learn More</a>
           </div>
           <div class="col-md-6">
             <h3>Visual Studio 2017</h3>
-            <p>State of the art IDE, tools and services that you can use to create great IoT apps</p>
+            <p>State of the art IDE, tools and services that you can use to create great IoT apps.</p>
             <a href="https://www.visualstudio.com/downloads/" target="_blank">Learn More</a>
           </div>
           <div class="col-md-6">
             <h3>Windows Driver Kit 2017</h3>
-            <p>Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 10</p>
+            <p>Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 10.</p>
             <a href="https://msdn.microsoft.com/en-US/windows/hardware/hh852365.aspx" target="_blank">Learn More</a>
           </div>
           <div class="col-md-6">
@@ -145,13 +145,13 @@ lang: en-US
         <div class="row">  
           <div class="col-md-6">
             <h3>NTVS Bundle VS 2017</h3>
-            <p>Contains NTVS (Node.js Tools for Visual Studio) and an extension to support running Node.js on Windows 10 IoT Core</p>
+            <p>Contains NTVS (Node.js Tools for Visual Studio) and an extension to support running Node.js on Windows 10 IoT Core.</p>
             <a href="https://github.com/ms-iot/ntvsiot/releases" target="_blank">Learn More</a>
           </div>
           <div class="col-md-6">
             <h3>PTVS</h3>
-            <p>PTVS (Python Tools for Visual Studio) includes an extension to support running Python on Windows 10 IoT Core</p>
-            <a href="https://github.com/microsoft/ptvs/releases" target="_blank">Learn More</a>
+            <p>PTVS (Python Tools for Visual Studio) includes an extension to support running Python on Windows 10 IoT Core.</p>
+            <a href="https://github.com/ms-iot/python/releases/tag/v1.4Alpha" target="_blank">Learn More</a>
           </div>
         </div>
       </div>
