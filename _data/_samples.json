@@ -220,19 +220,6 @@
       ]
     },
     {
-      "title": "I2C accelerometer",
-      "description": "Connect an accelerometer to your device and read data from it",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/I2CAccelerometer",
-      "link-text": "I2C Accelerometer",
-      "lang": "C#",
-      "ranking": 3,
-      "tags": [
-        "Beginner",
-        "I2C",
-        "C#"
-      ]
-    },
-    {
       "title": "IoT browser",
       "description": "Create a simple web browser",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTBrowser",
@@ -303,7 +290,7 @@
       ]
     },
     {
-      "title": "SPI accelerometer",
+      "title": "Accelerometer",
       "description": "Connect an accelerometer to your device and read data from it",
       "link":"https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/SPIAccelerometer",
       "link-text": "SPI Accelerometer",
@@ -442,8 +429,7 @@
       "tags": [
         "C#",
         "Intermediate",
-        "SPI",
-        "I2C"
+        "SPI"
       ]
     }
   ]
