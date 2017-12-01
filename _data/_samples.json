@@ -292,8 +292,8 @@
     {
       "title": "Accelerometer",
       "description": "Connect an accelerometer to your device and read data from it",
-      "link":"https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/SPIAccelerometer",
-      "link-text": "SPI Accelerometer",
+      "link":"https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/Accelerometer",
+      "link-text": "Accelerometer",
       "lang":"C#",
       "ranking": 3,
       "tags": [
