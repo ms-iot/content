@@ -151,7 +151,7 @@ lang: en-US
           <div class="col-md-6">
             <h3>PTVS</h3>
             <p>PTVS (Python Tools for Visual Studio) includes an extension to support running Python on Windows 10 IoT Core.</p>
-            <a href="https://github.com/ms-iot/python/releases/tag/v1.4Alpha" target="_blank">Learn More</a>
+            <a href="https://github.com/ms-iot/python/releases/tag/v1.5Alpha" target="_blank">Learn More</a>
           </div>
         </div>
       </div>
