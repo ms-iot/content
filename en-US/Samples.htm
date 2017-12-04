@@ -19,14 +19,59 @@ lang: en-US
   </header>
 </section>
 
+<section class="section spacer-20-bottom">
+  <div class="section-header">    
+    <h2 class="section-title">Featured Samples</h2>   
+  </div>  
+  <div class="section-body">   
+    <div class="row"> 
+      {% assign sortedInfo = (site.data._samples[page.lang] | sort: 'title') %}   
+      {% for entry in sortedInfo %}   
+        {% if entry.new %}    
+          <div class="col-md-6" style="min-height: 320px;">   
+            <p><span class="text-base">{{entry.title}}</span></p>   
+            <p>{{entry.description}}</p>    
+            <p>   
+              {% if entry.link.first %}   
+                {% for item in entry.link %}    
+                  <a href="{{item}}">{{entry.lang[forloop.index0]}}</a>{% if forloop.rindex0 != 0 %}<br/>{% endif %}    
+                {% endfor %}    
+              {% else %}    
+                <a href="{{entry.link}}">{% if entry.lang != 'N/A' %}{{entry.lang}}{% else %}{{entry.link-text}}{% endif %}</a>   
+              {% endif %}   
+            </p>    
+            <p class="win-color-fg-secondary">    
+              tags:   
+              {% for item in entry.tags %}    
+                {{item}}{% if forloop.rindex0 != 0 %}, {% endif %}    
+              {% endfor %}    
+            </p>    
+          </div>    
+        {% endif %}   
+      {% endfor %}    
+    </div>    
+  </div>    
+</section>
+
 <script>
 function init() {
     $(".tagBox").parent().hide();
     $(".tagBtn").removeClass("active");
+    /*$(".tagBtn").attr("aria-pressed", "false").removeClass("active");
+    $(".tagBtn").attr("aria-pressed", "true").addClass("active");*/
 }
 
 window.addEventListener("load", init);
 </script>
+
+
+<!--<body onload="myFunction()"></body>
+<script>
+  function myFunction(){
+    $(".tagBox").parent().hide();
+    $(".tagBtn").removeClass("active");
+    }
+</script>-->
 
 <section class="section">
   <div class="section-body">
