@@ -33,9 +33,9 @@ lang: en-US
       <div class="section-body">
         <div class="col-md-12 col-xs-24" style="padding-right: 0px; padding-left: 0px;">
           <p><strong>Download Windows 10 IoT Core</strong><br/>
-          The IoT Dashboard is essential for all users wanting to get started.</p>
+          The IoT Dashboard is essential for all users wanting to get started.</p> 
+          <p>If you are planning to ship your device for commercial use, please ship with a custom FFU. To learn more, refer to our <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide" target="_blank">IoT Core Manufacturing Guide</a>.</p>
           <a class="btn btn-primary" href="http://go.microsoft.com/fwlink/?LinkID=708576"> Get Windows 10 IoT Core Dashboard </a><br><br>
-          <p>Note: If you are planning to ship your device for commercial use, please ship with a custom FFU. To learn more, visit the documentation for the <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/iot-core-manufacturing-guide" target="_blank">IoT Core Manufacturing Guide</a> </p>
           <p><span class="win-color-fg-secondary">By downloading and using the Windows 10 IoT Core Dashboard you agree to the <a href="http://go.microsoft.com/fwlink/?LinkID=703960&amp;clcid=0x4809"> license terms </a> and <a href="http://go.microsoft.com/fwlink/?LinkId=521839"> privacy statement </a> for Windows 10 IoT Core Dashboard.</span></p>
           <p><a href="/content/en-US/Docs/ReleaseNotesRTM"> Release notes </a></p>
         </div>
