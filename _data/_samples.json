@@ -127,6 +127,20 @@
       ]
     },
     {
+      "title": "Accelerometer",
+      "description": "Connect an accelerometer to your device and read data from it",
+      "link":"https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/Accelerometer",
+      "link-text": "Accelerometer",
+      "lang":"C#",
+      "ranking": 3,
+      "tags": [
+        "Beginner",
+        "SPI",
+        "I2C",
+        "C#"
+      ]
+    },
+    {
       "title": "App Service Blinky",
       "description": "Sample app service that allows one background application to control an LED as an app service, and the other background application to blink the LED.",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/AppServiceBlinky",
@@ -233,6 +247,19 @@
       ]
     },
     {
+      "title": "Memory status monitor",
+      "description": "Create a console app that monitors memory usage on devices running Windows 10 IoT Core",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/MemoryStatus",
+      "link-text": "Console App",
+      "lang": "C++",
+      "ranking": 10,
+      "tags": [
+        "C++",
+        "Intermediate",
+        "Console"
+      ]
+    },
+    {
       "title": "OpenCV",
       "description": "Use OpenCV to run facial and body recognition on a photo",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/OpenCVExample",
@@ -289,20 +316,7 @@
         "C#"
       ]
     },
-    {
-      "title": "Accelerometer",
-      "description": "Connect an accelerometer to your device and read data from it",
-      "link":"https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/Accelerometer",
-      "link-text": "Accelerometer",
-      "lang":"C#",
-      "ranking": 3,
-      "tags": [
-        "Beginner",
-        "SPI",
-        "I2C",
-        "C#"
-      ]
-    },
+
     {
       "title": "SPI display",
       "description": "Write lines of text to an LED display",
@@ -342,6 +356,20 @@
       ]
     },
     {
+      "title": "WebSocket Docker Interop",
+      "description": "Learn how to work with Windows containers on Windows 10 IoT Core and Windows IoT Enterprise.",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/ContainerWebSocket",
+      "link-text": "WebSocket Docker Interop",
+      "lang": "C#",
+      "ranking": 0,
+      "tags": [
+        "Advanced",
+        "Background",
+        "Console",
+        "C#"
+      ]
+    },
+    {
       "title": "Video Capture",
       "description": "Create an app that records video to file, plays video from file.",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/VideoCaptureSample",
@@ -368,19 +396,6 @@
       ]
     },
     {
-      "title": "Memory status monitor",
-      "description": "Create a console app that monitors memory usage on devices running Windows 10 IoT Core",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/MemoryStatus",
-      "link-text": "Console App",
-      "lang": "C++",
-      "ranking": 10,
-      "tags": [
-        "C++",
-        "Intermediate",
-        "Console"
-      ]
-    },
-    {
       "title": "Wi-Fi connector",
       "description": "Discover and connect to a WiFi network from a UWP app using <code>Windows.Devices.WiFi.WiFiAdapter</code> API",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/WiFiConnector",
@@ -391,6 +406,20 @@
         "C#",
         "Beginner",
         "WiFi"
+      ]
+    },
+    {
+      "title": "Windows NT Service for RPC",
+      "description": "Access privileged features for a UWP application using this sample.",
+      "link":"https://github.com/Microsoft/Windows-iotcore-samples/tree/Master/Samples/NTServiceRpc",
+      "link-text": "Windows NT",
+      "lang":"C++",
+      "ranking": 3,
+      "tags": [
+        "Foreground",
+        "Console",
+        "Driver",
+        "C++"
       ]
     },
     {
