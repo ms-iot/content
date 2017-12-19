@@ -9,7 +9,7 @@ lang: en-US
 
 <header>
     <h1  class="c-subheading-1">Build your image</h1>
-    <p class="c-paragraph-3">To get started, we'll create a basic IoT Core image, flash it to a micro SD card, and put it into a device to make sure that everything is working properly.</p>
+    <p class="c-paragraph-3">To get started, we'll create a basic IoT Core image and put it into a device to make sure that everything is working properly.</p>
     <p class="c-paragraph-3">We'll create a product folder that represents our first design. For our first design, we'll customize it just enough for the IoT Core device to boot up and run the built-in OOBE app, which we should be able to see on an HDMI-compatible monitor.</p>
 </header>
 <section class="pad-thin">
@@ -27,30 +27,47 @@ lang: en-US
     <h3 class="c-subheading-3">2. Start the IoT Core shell</h3>
     <p class="c-paragraph-3">In Windows Explorer, go to the folder where you installed the IoT Core ADK Add-Ons and open IoTCoreShell.cmd. It should prompt you to run as an administrator. The new value for OEM_NAME should appear when you start the tool.</p>
 </section>
+<section class="pad-thin"> 
+    <h3 class="c-subheading-3">3. Choose your architecture</h3>
+    <p class="c-paragraph-3">At the "Set Environment for Architecture" prompt, select 1 for ARM, 2 for x86 or 3 for x64 based on the architecture of the boards you'll be developing.</p>
+    <blockquote class="c-blockquote">
+            <p class="c-paragraph">Note: The launch tool sets the default architecture, and sets a version number for the design, which you can use for future updates. The first version number defaults to 10.0.0.0.</p>
+    </blockquote>
+</section>
 <section>
-    <br><br><h3 class="c-subheading-3">3. Install test certificates</h3>
+    <br><br><h3 class="c-subheading-3">4. Install test certificates</h3>
     <p class="c-paragraph-3">You only need to install certificates the first time you install the IoT ADK add-on kit. You'll use these to sign your test binaries. The certificates will be added to the root.</p>
     <blockquote class="c-blockquote">
             <p class="c-paragraph"><xmp>installoemcerts</xmp></p>
     </blockquote>
     <a href="https://msdn.microsoft.com/library/windows/hardware/dn756804" class="c-call-to-action c-glyph f-lightweight"><span>Learn more about setting up the signing environment</span></a>
 </section>
-<section class="pad-thin"> 
-    <h3 class="c-subheading-3">4. Choose your architecture</h3>
-    <p class="c-paragraph-3">At the "Set Environment for Architecture" prompt, select 1 for ARM, 2 for x86 or 3 for x64 based on the architecture of the boards you'll be developing.</p>
-    <blockquote class="c-blockquote">
-            <p class="c-paragraph">Note: The launch tool sets the default architecture, and sets a version number for the design, which you can use for future updates. The first version number defaults to 10.0.0.0.</p>
-    </blockquote>
-</section>
 <section class="pad-thin">
     <h3 class="c-subheading-3">5. Build your board supported package (BSP)</h3>
     <p class="c-paragraph-3">Get the BSPs for your platform and build them as per the instructions given by the BSP vendor. See the <a class="c-hyperlink" href="https://docs.microsoft.com/en-us/windows/iot-core/build-your-image/createbsps">Windows 10 IoT Core BSP page</a> for info on available BSPs. </p>
 </section>
+<section class="pad-thin">
+    <h3 class="c-subheading-3">6. Build packages</h3>
+    <p class="c-paragraph-3">From the IoT Core Shell, get your environment ready to create products by building all of the packages in the working folders.</p>
+        <blockquote class="c-blockquote">
+            <p class="c-paragraph"><xmp>buildpkg All</xmp></p>
+    </blockquote>
+</section>
+<section class="pad-thin">
+    <h3 class="c-subheading-3">7. Create a test project</h3>
+    <p class="c-paragraph-3">From the IoT Core Shell, create a new product folder that uses the BSP of your choice. This folder represents a new device we want to build, and contains sample customization files that we can use to start our project.</p>
+        <blockquote class="c-blockquote">
+            <p class="c-paragraph"><xmp>newproduct myProduct bspName</xmp></p>
+    </blockquote>
+        <blockquote class="c-blockquote">
+            <p class="c-paragraph">Note: The BSP name is the same as the folder name for the BSP.</p>
+    </blockquote>
+</section>
 <br><section>
-    <h3 class="c-subheading-3">6. Build an image</h3>
+    <h3 class="c-subheading-3">8. Build an image</h3>
     <p class="c-paragraph-3">Eject any removable storage drives including the Micro SD card and any USB flash drives. Build a flashable test image using the default files. Test images include additional tools which will help to create test images using either signed or unsigned test packages.</p>
     <blockquote class="c-blockquote">
-            <p class="c-paragraph"><xmp>buildimage ProductA test</xmp></p>
+            <p class="c-paragraph"><xmp>buildimage myProduct test</xmp></p>
     </blockquote>
     <p class="c-paragraph-3">
             This builds an FFU file with your basic image.
