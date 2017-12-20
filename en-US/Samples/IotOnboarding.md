@@ -24,10 +24,20 @@ Source code for the IoT Onboarding sample is available by downloading all IoT sa
 1. Install a clean O/S to your IoT Device.   If using IoT Dashboard, deselect the "Wi-Fi Network Connection" checkbox when preparing your SD Card.
 2. If your IoT Device needs an external Wi-Fi adapter, attach it now.
 3. Boot your IoT Device with the clean O/S install.
-4. For Windows 10 IoT builds 10.0.14393 or earlier, the IoT Onboarding sample must be replaced.  
+4. For some versions of Windows 10 IoT builds it may be necessary to configure the firewall to allow Inbound AllJoyn Connections.
+**Note:** Refer to [Network Type and Firewall Configuration](#Network-Type-and-Firewall-Configuration) for additional information
+
+    1. Temporarily connect your Iot Device to a wired LAN connection shared with your development system.
+    2. Open a powershell connection with your IoT Device and login as an administrator
+    3. From the powershell command line type the following:
+	 Set-NetFirewallRule -Name 'AllJoyn-Router-In-UDP' -Profile any
+	 Set-NetFirewallRule -Name 'AllJoyn-Router-In-TCP' -Profile any
+    4. Disconnect your IoT Device from the wired LAN connection.
+
+5. For Windows 10 IoT builds 10.0.14393 or earlier, the IoT Onboarding sample must be replaced.  
 **Note:** These steps are not required for newer Windows 10 IoT Builds.
 
-    1. Connect your Iot Device to a wired LAN connection shared with your development system.
+    1. Temporarily connect your Iot Device to a wired LAN connection shared with your development system.
     2. Copy or clone samples from [here](https://github.com/ms-iot/samples) to your development system.
     3. Build the IotOnboarding Solution (c:\samples\IotOnboarding\IotOnboarding.sln) for your Iot Device's platform (e.g. ARM, x86, x64).
     4. Deploy the IotOnboarding Solution to your IoT Device.
@@ -84,4 +94,16 @@ The Soft-AP created by the IotOnboarding application utilizes WPA2-PSK authentic
 
 #### Soft-AP and Wi-Fi Profiles
 The Soft-AP and AllJoyn Onboarding settings are ignored when a Wi-Fi profile is detected.  In theory, once a device has a Wi-Fi profile configured, there is no longer a need to Onboard the device.  This behavior can be changed by modifying the control logic in OnboardingService.cs.  For example, a hardware switch could be polled that re-enables the Soft-AP when a button is pressed.  To change the logic, replace the code that sets the "_state" variable to "OnboardingState.ConfiguredValidated" when a Wi-Fi profile is found.
+
+#### Network Type and Firewall Configuration
+Soft-AP networks default to "Public" network types.  This means that certain inbound connections will be blocked by the Windows Firewall and consequently the AllJoyn Onboarding Producer contained within the IotOnboarding sample will not be discoverd by an AllJoyn Consumer.  To ensure the AllJoyn Producer is discoverable it may be necessary to configure the Windows Firewall to allow UDP and TCP inbound connections for the specific AllJoyn ports.
+
+When embedding your own version of AllJoyn Onboarding in a commercial product, the firewall can be configured as part of your device's custom provisioning package (see [Adding A Provisioning Package to An Image](https://docs.microsoft.com/en-us/windows-hardware/manufacture/iot/add-a-provisioning-package-to-an-image) and the [firewall configuration](https://docs.microsoft.com/en-us/windows/configuration/wcd/wcd-firewallconfiguration) setting).
+
+
+
+
+
+
+
 
