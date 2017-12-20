@@ -223,7 +223,7 @@
     {
       "title": "Iot Onboarding (Wi-Fi Onboarding with AllJoyn)",
       "description": "Connect an IoT Device to a Wi-Fi network from a remote PC using AllJoyn",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTOnboarding",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/IoTOnboarding",
       "link-text": "WiFi Onboarding Sample",
       "lang": "C#",
       "ranking": 0,
