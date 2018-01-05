@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html>
     {% include default-head.html %}
-<body >
-   <div>
-        <main id="mainContent">
-            <section class="m-getstarted-head">
-            <div>
-                <h1 class="c-subheading-1">Get Started</h1>
-            </div>
-            </section>
-            <div data-grid="container" id="mainContent">     
+<body>
+    <main id="mainContent">
+        <section class="m-getstarted-head">
+            <h1 class="c-subheading-1">Get Started</h1>
+        </section>   
+        <section class="m-supplemental-nav" data-grid="col-3">
             {% include getStarted-sideNav.html %}
-            <section class="m-style-wrapper" data-grid="col-9">
-                {{ content }}  
-            </div>    
-            </section>
-        </main>
-        <div data-grid="col-12">
+        </section> 
+        <section data-grid="col-9">
+            {{ content }}  
+        </section>
+        <section data-grid="col-12">
             <hr class="c-divider f-pad-vertical-6x">
-        </div>
-        </div> 
+        </section>
+    </main>    
    {% include landing-footer.html %}
    {% include sock.html %}
 </body>
