@@ -27,10 +27,9 @@ lang: en-US
           <div class="row">
             <div class="col-xs-24 col-md-4">
               <h3>Filter by tags</h3>
-              <!--select/deselect buttons -->
+              <!--select/deselect button -->
               <div class="btn-group">
-                <button style="min-width: 0;" onclick="selectAllTags()">all</button>
-                <button style="min-width: 0;" onclick="deselectAllTags()">none</button>
+                <button class="selectAll btn active" data-toggle="button" aria-pressed="true" style="min-width: 0;" onclick="selectAllTags();" >Select all</button>
               </div>
             </div>
             <div class="col-xs-24 col-md-20">
@@ -91,12 +90,16 @@ lang: en-US
   }
 
   function selectAllTags() {
-    $(".tagBtn").attr("aria-pressed", "true").addClass("active");
-    $(".tagBox").parent().show();
+    if($(".selectAll").hasClass("active"))
+    {
+      $(".tagBtn").attr("aria-pressed", "false").removeClass("active");
+      $(".tagBox").parent().hide();
+    }
+    else
+    {
+      $(".tagBtn").attr("aria-pressed", "true").addClass("active");
+      $(".tagBox").parent().show();  
+    }
   }
 
-  function deselectAllTags() {
-    $(".tagBtn").attr("aria-pressed", "false").removeClass("active");
-    $(".tagBox").parent().hide();
-  }
 </script>
