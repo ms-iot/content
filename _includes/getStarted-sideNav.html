@@ -1,30 +1,28 @@
-<div class="m-supplemental-nav" data-grid="col-3">
+<nav>
     <nav>
-        <nav>
-        {% assign currentPage = page.url | split: '/' | last %}
-        {% assign parents = (site.data._get-started[page.lang] | default: site.data._get-started[en-US]) %}
-        {% for entry in parents %}
-           {% assign currentUi = 'collapsed' %}
-           {% for child in entry.children %}
-              {% assign temp = child.link | split: '/' | last %}
-              {% if currentPage == temp %}
-                {% assign currentUl = 'expanded' %}
-              {% endif %}
-           {% endfor %}
-            <button aria-controls="navTargetItem{{forloop.index}}" data-state="{{currentUi}}">
-                {{entry.parent}}
-            </button>
-            <nav id="navTargetItem{{forloop.index}}">    
-                {% for child in entry.children %}
-                {% assign childPage = child.link | split: '/' | last %}
-                    {% if currentPage == childPage %}          
-                    <a href="{{site.baseurl}}/{{page.lang}}{{child.link}}" class="f-active">{{child.title}}</a>
-                    {% else %}
-                    <a href="{{site.baseurl}}/{{page.lang}}{{child.link}}">{{child.title}}</a>
-                    {% endif %}
-                {% endfor %}
-            </nav>
+    {% assign currentPage = page.url | split: '/' | last %}
+    {% assign parents = (site.data._get-started[page.lang] | default: site.data._get-started[en-US]) %}
+    {% for entry in parents %}
+        {% assign currentUi = 'collapsed' %}
+        {% for child in entry.children %}
+            {% assign temp = child.link | split: '/' | last %}
+            {% if currentPage == temp %}
+            {% assign currentUl = 'expanded' %}
+            {% endif %}
         {% endfor %}
-       </nav>
+        <button aria-controls="navTargetItem{{forloop.index}}" data-state="{{currentUi}}">
+            {{entry.parent}}
+        </button>
+        <nav id="navTargetItem{{forloop.index}}">    
+            {% for child in entry.children %}
+            {% assign childPage = child.link | split: '/' | last %}
+                {% if currentPage == childPage %}          
+                <a href="{{site.baseurl}}/{{page.lang}}{{child.link}}" class="f-active">{{child.title}}</a>
+                {% else %}
+                <a href="{{site.baseurl}}/{{page.lang}}{{child.link}}">{{child.title}}</a>
+                {% endif %}
+            {% endfor %}
+        </nav>
+    {% endfor %}
     </nav>
-</div>  
+</nav>

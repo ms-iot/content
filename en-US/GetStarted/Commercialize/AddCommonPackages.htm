@@ -8,7 +8,7 @@ lang: en-US
 ---
 
 <header>
-    <h1  class="c-subheading-1">Add common packages</h1>
+    <h3 class="c-heading-3">Add common packages</h3>
     <p class="c-paragraph-3">Files and registry keys that you add to your image often won't be specific to an architecture. For these, we recommend creating a common package that you can use across all your device architectures.</p>
     <p class="c-paragraph-3">We'll create test files and registry keys to the image and again package them up so that they can be serviced after they reach your customers. Then we'll add these to the common feature manifest (OEM CommonFM.xml), which is used in x86, x64, and ARM builds, and give it a new feature ID, OEM_FilesAndRegKeys.</p>
     <p class="c-paragraph-3">For this portion of our guide, we'll start a new product - ProductB - so that later we can use the IoT sample app to get the IP address of our device and verify that our files and registry keys have made it.</p>
