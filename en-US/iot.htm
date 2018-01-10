@@ -25,12 +25,12 @@ lang: en-US
 </script>
 
 <section>
-    <div data-grid="pad-12x">
+    <div data-grid="col-12" class="x-type-center m-content-placement">
         <div id="heading">
-            <h1 class="c-heading-1 x-type-center">Windows 10 IoT Core</h1>
-            <p class="c-subheading-1 x-type-center">The operating system built for your Internet of Things</p>
+            <h1 class="c-heading-1">Windows 10 IoT Core</h1>
+            <p class="c-subheading-1">The operating system built for your Internet of Things</p>
         </div>
-        <div id="videoImage" data-grid="col-12" class="m-feature m-video-trigger f-mask-40">
+        <div id="videoImage" class="m-feature m-video-trigger">
             <picture>
                 <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width: 1779px)">
                 <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:1400px)">
@@ -42,22 +42,22 @@ lang: en-US
             </picture>
             <div  style="width:auto;">
                 <!-- min-width set to 0 to overwrite web-core style -->
-            <button style="min-width:0;" type="button" class="c-glyph glyph-play" id="playVideo" aria-label="Play IoT video"></button>
+                <button style="min-width:0;" type="button" class="c-glyph glyph-play" id="playVideo" aria-label="Play IoT video"></button>
             </div>
         </div>    
-        <div data-grid="col-12" class="pad-thin x-type-center">
-            <a id="getStarted-action" class="mscom-link c-call-to-action c-glyph" aria-label="Get started with Windows 10 IoT Core" ms.title="get started" href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
+        <div class="x-type-center">
+            <a id="getStarted-action" class="mscom-link pad-thin c-call-to-action c-glyph" aria-label="Get started with Windows 10 IoT Core" ms.title="get started" href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
         </div>
     </div>
 </section> 
 
 <section>
-    <div class="m-content-placement pad-thin" data-grid="col-12">
+    <div class="pad-thin m-content-placement" data-grid="col-12">
     <h3 class="c-heading-3 x-type-center">Why Windows 10 IoT Core?</h3>
     <div data-grid="col-12 stack-3">       
         <div data-grid="col-6 pad-6x">
             <div data-grid="col-6">
-                <section class="x-type-center">
+                <section class="x-type-center m-content-placement-item f-size-medium">
                     <picture>
                         <source srcset="{{site.baseurl}}/Resources/images/Homepage/fast-icon358x201.png" media="(min-width: 1400px)">
                         <source srcset="{{site.baseurl}}/Resources/images/Homepage/fast-icon279x157.png" media="(min-width: 1084px)">
@@ -73,7 +73,7 @@ lang: en-US
                 </section>
             </div>
             <div data-grid="col-6">
-                <section class="x-type-center">
+                <section class="x-type-center m-content-placement-item f-size-medium">
                     <picture>
                         <source srcset="{{site.baseurl}}/Resources/images/Homepage/security-icon358x201.png" media="(min-width: 1400px)">
                         <source srcset="{{site.baseurl}}/Resources/images/Homepage/security-icon279x157.png" media="(min-width: 1084px)">
@@ -91,7 +91,7 @@ lang: en-US
         </div>
         <div data-grid="col-6 pad-6x">
             <div data-grid="col-6">
-                <section class="x-type-center">
+                <section class="x-type-center m-content-placement-item f-size-medium">
                     <picture>
                         <source srcset="{{site.baseurl}}/Resources/images/Homepage/edge-icon358x201.png" media="(min-width: 1400px)">
                         <source srcset="{{site.baseurl}}/Resources/images/Homepage/edge-icon279x157.png" media="(min-width: 1084px)">
@@ -107,7 +107,7 @@ lang: en-US
                 </section>
             </div>
             <div data-grid="col-6">
-                <section class="x-type-center">
+                <section class="x-type-center m-content-placement-item f-size-medium">
                     <picture>
                         <source srcset="{{site.baseurl}}/Resources/images/Homepage/windows-icon358x201.png" media="(min-width: 1400px)">
                         <source srcset="{{site.baseurl}}/Resources/images/Homepage/windows-icon279x157.png" media="(min-width: 1084px)">
@@ -128,31 +128,31 @@ lang: en-US
 </section>
 
 <section>
-    <div data-grid="col-12" class="x-type-center m-content-placement pad-thin">
+    <div data-grid="col-12" class="x-type-center pad-thin m-content-placement">
         <h3 class="c-heading-3">We're driving industry transformations</h3>
         <div class="c-subheading-4">At any moment, Windows 10 IoT Core may be right under your nose.<br> Explore the six industry verticals below to learn how people are using Windows 10 IoT Core.</div>
         <div class="m-content-placement pad-thin" data-grid="col-12">
             <div data-grid="col-4">
-                <p><a href="https://www.hackster.io/projects/tags/energy+win10" target="_blank" role="button" class="c-button">Energy</a></p>
-                <p><a href="https://www.hackster.io/projects/tags/industrial+automation+win10" target="_blank" role="button" class="c-button">Industrial Automation</a></p>
+                <a href="https://www.hackster.io/projects/tags/energy+win10" target="_blank" role="button" class="c-button" style="width:170px;">Anchor as button</a><br>
+                <a href="https://www.hackster.io/projects/tags/industrial+automation+win10" target="_blank" role="button" class="c-button" style="width:170px;">Industrial Automation</a>
             </div>
             <div data-grid="col-4">  
-                <p><a href="https://www.hackster.io/projects/tags/healthcare+win10" target="_blank" role="button" class="c-button">Healthcare</a></p>
-                <p><a href="https://www.hackster.io/projects/tags/smart+building+win10" target="_blank" role="button" class="c-button">Smart Building</a></p>
+                <a href="https://www.hackster.io/projects/tags/healthcare+win10" target="_blank" role="button" class="c-button" style="width:170px;">Healthcare</a><br>
+                <a href="https://www.hackster.io/projects/tags/smart+building+win10" target="_blank" role="button" class="c-button" style="width:170px;">Smart Building</a>
             </div>
             <div data-grid="col-4">
-                <p><a href="https://www.hackster.io/projects/tags/digital+signage+win10" target="_blank" role="button" class="c-button">Digital Signage</a></p>
-                <p><a href="https://www.hackster.io/projects/tags/security+win10" target="_blank" role="button" class="c-button">Security</a></p>
+                <a href="https://www.hackster.io/projects/tags/digital+signage+win10" target="_blank" role="button" class="c-button" style="width:170px;">Digital Signage</a><br>
+                <a href="https://www.hackster.io/projects/tags/security+win10" target="_blank" role="button" class="c-button" style="width:170px;">Security</a>
             </div> 
         </div>
     </div>
 </section>
 
 <section>
-    <div class="pad-thin" data-grid="col-12">
+    <div class="pad-thin x-type-center m-content-placement" data-grid="col-12">
         <hr class="c-divider f-pad-top-6x">
-        <h3 class="c-heading-3 x-type-center">Start building with Windows 10 IoT Core</h3>
-        <div class="pad-thin x-type-center">
+        <h3 class="c-heading-3">Start building with Windows 10 IoT Core</h3>
+        <div class="pad-thin">
             <a id="getStarted-action" class="mscom-link c-call-to-action c-glyph" aria-label="Get started with Windows 10 IoT Core" ms.title="get started" href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
         </div>
         <hr class="c-divider f-pad-vertical-6x">
