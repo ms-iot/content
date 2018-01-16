@@ -22,7 +22,7 @@ lang: en-US
     });
 </script>
 
-<section>
+<!--<section>
     <div class="m-alert f-information" role="alert">
     <button class="c-action-trigger c-glyph glyph-cancel" aria-label="Close alert"></button>
     <div>
@@ -33,7 +33,7 @@ lang: en-US
         </p>
     </div>
     </div>
-</section>
+</section>-->
 
 <section>
     <div data-grid="col-12" class="x-type-center m-content-placement">
@@ -41,7 +41,76 @@ lang: en-US
             <h1 class="c-heading-1">Windows 10 IoT Core</h1>
             <p class="c-subheading-1">The operating system built for your Internet of Things</p>
         </div>
-        <div id="videoImage" class="m-feature m-video-trigger">
+
+		<!--begin carousel-->
+ <div class="c-carousel f-multi-slide f-auto-play m-feature" role="region" aria-label="Autoplay carousel" data-js-interval="6000">
+    <div class="c-group">
+        <div class="c-sequence-indicator" role="tablist">
+            <button role="tab" aria-selected="true" aria-label="View slide one" aria-controls="hero-slide-one" title="Slide one"></button>
+            <button role="tab" aria-selected="false" aria-label="View slide two" aria-controls="hero-slide-two" title="Slide two"></button>
+        </div>
+        <button class="c-action-toggle c-glyph glyph-play f-toggle" data-toggled-label="Pause" data-toggled-glyph="glyph-pause" aria-label="Play"></button>
+    </div>
+    <button class="c-flipper f-previous" aria-hidden="true" tabindex="-1"></button>
+    <button class="c-flipper f-next" aria-hidden="true" tabindex="-1"></button>
+    <div itemscope itemtype="http://schema.org/ItemList">
+        <ul>
+            <li id="hero-slide-one" data-f-theme="dark" class="f-active" role="tabpanel">
+                <section class="m-hero-item f-x-left f-y-center context-article theme-dark" itemscope itemtype="http://schema.org/Article">
+                    <picture>
+                        <source srcset="{{site.baseurl}}/Resources/images/Homepage/JCI-carousel1600x600.jpg" media="(min-width: 1779px)"> 
+                        <source srcset="{{site.baseurl}}/Resources/images/Homepage/JCI-carousel1600x600.jpg" media="(min-width: 1400px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/Homepage/JCI-carousel1259x472.jpg" media="(min-width: 1084px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/Homepage/JCI-carousel1083x609.jpg" media="(min-width:768px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/Homepage/JCI-carousel764x431.jpg" media="(min-width:540px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/Homepage/JCI-carousel539x303.jpg" media="(min-width:0)">
+                        <img srcset="{{site.baseurl}}/Resources/images/Homepage/JCI-carousel1259x472.jpg" src="{{site.baseurl}}/Resources/images/Homepage/JCI-carousel1259x472.jpg" alt="JCI Glas device">
+                    </picture>
+                    <div>
+                        <div>
+                        	<h1 class="c-heading">Smart thermostat receives award at CES 2018</h1>
+                            <p class="c-paragraph">Johnson Control's GLAS Thermostat, powered by Windows 10 IoT Core and Cortana, receives the 2018 CES Innovation Award Honoree designation.</p>
+
+                            <div>
+                                <a href="https://glas.johnsoncontrols.com/press/johnson-controls-glas-smart-thermostat-recognized-design-excellence-2018-ces-innovation-award-honoree-designation/" class="c-call-to-action c-glyph">
+                                    <span>LEARN MORE</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </li>
+            <li id="hero-slide-two" data-f-theme="dark" role="tabpanel">
+                <section class="m-hero-item f-x-left f-y-center context-article theme-dark" itemscope itemtype="http://schema.org/Article">
+                    <picture>
+                        <source srcset="{{site.baseurl}}/Resources/images/Homepage/misty-carousel1600x600.jpg" media="(min-width: 1779px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/Homepage/misty-carousel1600x600.jpg" media="(min-width: 1400px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/Homepage/misty-carousel1259x472.jpg" media="(min-width: 1084px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/Homepage/misty-carousel1083x609.jpg" media="(min-width:768px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/Homepage/misty-carousel764x431.jpg" media="(min-width:540px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/Homepage/JCI-carousel539x303.jpg" media="(min-width:0)">
+                        <img srcset="{{site.baseurl}}/Resources/images/Homepage/JCI-carousel1259x472.jpg" src="{{site.baseurl}}/Resources/images/Homepage/JCI-carousel1259x472.jpg" alt="Misty 1 from Misty Robotics">
+                    </picture>
+                    <div>
+                        <div>
+                        	<h1 class="c-heading">Windows IoT-powered robot showcased at CES</h1>
+                            <p class="c-paragraph">From the creators of Sphero, Misty Robotics is a robotics company that has launched Misty 1, a developer robot that runs on Windows IoT Core.</p>
+
+                            <div>
+                                <a href="https://www.youtube.com/watch?v=c2RB9xnbfBc" class="c-call-to-action c-glyph">
+                                    <span>WATCH THE VIDEO</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--mwf video with hero-->
+        <!--<div id="videoImage" class="m-feature m-video-trigger">
             <picture>
                 <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width: 1779px)">
                 <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:1400px)">
@@ -51,11 +120,12 @@ lang: en-US
                 <source srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" media="(min-width:0)">
                 <img srcset="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" src="{{site.baseurl}}/Resources/images/Homepage/heroImage.png" alt="Windows IoT Core video">
             </picture>
-            <div  style="width:auto;">
-                <!-- min-width set to 0 to overwrite web-core style -->
+            <div style="width:auto;">
+                 min-width set to 0 to overwrite web-core style
                 <button style="min-width:0;" type="button" class="c-glyph glyph-play" id="playVideo" aria-label="Play IoT video"></button>
             </div>
-        </div>    
+        </div>-->
+
         <div class="x-type-center">
             <a id="getStarted-action" class="mscom-link pad-thin c-call-to-action c-glyph" aria-label="Get started with Windows 10 IoT Core" ms.title="get started" href="{{site.baseurl}}/{{page.lang}}/GetStarted.htm">Get Started</a>
         </div>
