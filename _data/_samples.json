@@ -180,6 +180,31 @@
       ]
     },
     {
+      "title": "Companion App",
+      "description": "Create a simple app (for Windows Phone 10 or Android) that can configure your device's Wifi.",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/CompanionApp",
+      "link-text": "Companion App",
+      "lang": "C#",
+      "ranking": 0,
+      "tags": [
+        "C#",
+        "WiFi",
+        "Beginner"
+      ]
+    },
+    {
+      "title": "Custom Device Accessor",
+      "description": "Use CreateFile() and DeviceIoControl() to access custom devices from UWP.",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/CustomDeviceAccessor",
+      "link-text": "Custom Device Accessor",
+      "lang": "C++",
+      "ranking": 0,
+      "tags": [
+        "C++",
+        "Intermediate"
+      ]
+    },
+    {
       "title": "Digital sign",
       "description": "Create a basic digital sign and learn how to work with multimedia",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/DigitalSign",
@@ -194,9 +219,9 @@
     },
     {
       "title": "External process launcher",
-      "description": "Use <code>Windows.System.ProcessLauncher</code> API to launch external executable programs from your UWP app",
+      "description": "Use <code>Windows.System.ProcessLauncher</code> API to launch external executable programs from your UWP app.",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/ExternalProcessLauncher",
-      "link-text": "ProcessLauncher API Sample",
+      "link-text": "External process launcher",
       "lang": "C#",
       "ranking": 10,
       "tags": [
@@ -205,8 +230,63 @@
       ]
     },
     {
+      "title": "Foreground with Background App",
+      "description": "An example of building a foreground app and background app within the same APPX file.",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/ForegroundAppWithBackgroundApp",
+      "link-text": "Foreground with Background",
+      "lang": "C#",
+              "C++"
+      "ranking": 10,
+      "tags": [
+        "C#",
+        "C++",
+        "Intermediate",
+        "Foreground",
+        "Background",
+        "GPIO"
+      ]
+    },
+    {
+      "title": "GPIO OneWire",
+      "description": "Learn how to read from the DHT11 from a Universal Windows Application.",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/GpioOneWire",
+      "link-text": "GPIO OneWire",
+      "lang": "C++"
+      "ranking": 10,
+      "tags": [
+        "C++",
+        "Intermediate",
+        "GPIO"
+      ]
+    },
+    {
+      "title": "I2C Port Expander",
+      "description": "A sample that shows how to use a port expander to read the status of a tactile switch and control an LED.",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/I2cPortExpander",
+      "link-text": "I2C Port Expander",
+      "lang": "C#"
+      "ranking": 10,
+      "tags": [
+        "C#",
+        "Beginner",
+        "I2C"
+      ]
+    },
+     {
+      "title": "IoT Blockly",
+      "description": "A sample that shows how to leverage various pieces of open source software to create a 'block' development experience on Raspberry Pi.",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTBlockly",
+      "link-text": "IoT Blockly",
+      "lang": "C#"
+      "ranking": 10,
+      "tags": [
+        "C#",
+        "Beginner"
+      ]
+    },
+    {
       "title": "IoT Core Default App",
-      "description": "Create a UWP app that provides a device-management experience for Windows 10 IoT Core",
+      "description": "Create a UWP app that provides a device-management experience for Windows 10 IoT Core.",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTCoreDefaultApp",
       "link-text": "Iot Core Default App",
       "lang": [
@@ -221,7 +301,33 @@
       ]
     },
     {
-      "title": "Iot Onboarding (Wi-Fi Onboarding with AllJoyn)",
+      "title": "IoT Core Media Player",
+      "description": "A demonstration of how to play music from an IoT device.",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTCoreMediaPlayer",
+      "link-text": "IoT Core Media Player",
+      "lang": "C#",
+      "ranking": 1,
+      "tags": [
+        "C#",
+        "Beginner",
+        "Foreground"
+      ]
+    },
+    {
+      "title": "IoT Core Service",
+      "description": "A simple shared host service for Windows 10 IoT Core.",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTCoreService",
+      "link-text": "IoT Core Service",
+      "lang": "C++",
+      "ranking": 1,
+      "tags": [
+        "C++",
+        "Beginner",
+        "Foreground"
+      ]
+    },
+    {
+      "title": "IoT Onboarding (Wi-Fi Onboarding with AllJoyn)",
       "description": "Connect an IoT Device to a Wi-Fi network from a remote PC using AllJoyn",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/IoTOnboarding",
       "link-text": "WiFi Onboarding Sample",
@@ -247,7 +353,7 @@
       ]
     },
     {
-      "title": "IoT browser",
+      "title": "IoT Browser",
       "description": "Create a simple web browser",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTBrowser",
       "link-text": "IoT Browser",
@@ -424,7 +530,7 @@
     {
       "title": "Windows NT Service for RPC",
       "description": "Access privileged features for a UWP application using this sample.",
-      "link":"https://github.com/Microsoft/Windows-iotcore-samples/tree/Master/Samples/NTServiceRpc",
+      "link":"https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/NTServiceRpc",
       "link-text": "Windows NT",
       "lang":"C++",
       "ranking": 3,
