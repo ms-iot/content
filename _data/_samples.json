@@ -207,8 +207,7 @@
     {
       "title": "Digital sign",
       "description": "Create a basic digital sign and learn how to work with multimedia",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/DigitalSign",
-      "link-text": "Digital sign",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/DigitalSign",      "link-text": "Digital sign",
       "lang": "C#",
       "ranking": 10,
       "tags": [
@@ -231,7 +230,7 @@
     },
     {
       "title": "Foreground with Background App",
-,      "description": "An example of building a foreground app and background app within the same APPX file.",
+      "description": "An example of building a foreground app and background app within the same APPX file.",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/ForegroundAppWithBackgroundApp",
       "link-text": "Foreground with Background",
       "lang": [
