@@ -234,8 +234,7 @@
       "description": "An example of building a foreground app and background app within the same APPX file.",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/ForegroundAppWithBackgroundApp",
       "link-text": "Foreground with Background",
-      "lang": "C#",
-              "C++"
+      "lang": ["C#","C++"],
       "ranking": 10,
       "tags": [
         "C#",
@@ -251,7 +250,7 @@
       "description": "Learn how to read from the DHT11 from a Universal Windows Application.",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/GpioOneWire",
       "link-text": "GPIO OneWire",
-      "lang": "C++"
+      "lang": "C++",
       "ranking": 10,
       "tags": [
         "C++",
@@ -264,7 +263,7 @@
       "description": "A sample that shows how to use a port expander to read the status of a tactile switch and control an LED.",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/I2cPortExpander",
       "link-text": "I2C Port Expander",
-      "lang": "C#"
+      "lang": "C#",
       "ranking": 10,
       "tags": [
         "C#",
@@ -277,7 +276,7 @@
       "description": "A sample that shows how to leverage various pieces of open source software to create a 'block' development experience on Raspberry Pi.",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTBlockly",
       "link-text": "IoT Blockly",
-      "lang": "C#"
+      "lang": "C#",
       "ranking": 10,
       "tags": [
         "C#",
