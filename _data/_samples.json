@@ -234,8 +234,10 @@
       "description": "An example of building a foreground app and background app within the same APPX file.",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/ForegroundAppWithBackgroundApp",
       "link-text": "Foreground with Background",
-      "lang": "C#",
-              "C++"
+      "lang": [
+        "C#",
+        "C++"
+        ],
       "ranking": 10,
       "tags": [
         "C#",
