@@ -160,6 +160,7 @@
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/AppServiceSharedNotepad",
       "link-text": "App Service Shared Notepad",
       "lang": "C#",
+
       "ranking": 0,
       "tags": [
         "C#",
@@ -207,8 +208,7 @@
     {
       "title": "Digital sign",
       "description": "Create a basic digital sign and learn how to work with multimedia",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/DigitalSign",
-      "link-text": "Digital sign",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/DigitalSign",      "link-text": "Digital sign",
       "lang": "C#",
       "ranking": 10,
       "tags": [
@@ -253,7 +253,7 @@
       "description": "Learn how to read from the DHT11 from a Universal Windows Application.",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/GpioOneWire",
       "link-text": "GPIO OneWire",
-      "lang": "C++"
+      "lang": "C++",
       "ranking": 10,
       "tags": [
         "C++",
@@ -266,7 +266,7 @@
       "description": "A sample that shows how to use a port expander to read the status of a tactile switch and control an LED.",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/I2cPortExpander",
       "link-text": "I2C Port Expander",
-      "lang": "C#"
+      "lang": "C#",
       "ranking": 10,
       "tags": [
         "C#",
@@ -279,7 +279,7 @@
       "description": "A sample that shows how to leverage various pieces of open source software to create a 'block' development experience on Raspberry Pi.",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTBlockly",
       "link-text": "IoT Blockly",
-      "lang": "C#"
+      "lang": "C#",
       "ranking": 10,
       "tags": [
         "C#",
