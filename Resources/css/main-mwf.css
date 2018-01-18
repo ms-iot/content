@@ -247,9 +247,9 @@ a.c-action-trigger.c-glyph-after:after {
 }
 /*webcore and MWF on same page change*/
 button {
-    min-width: 0px; 
+    min-width: 0px !important; 
 }
 
 ul li {
-    margin-bottom: 0px;
+    margin-bottom: 0px !important;
 }
