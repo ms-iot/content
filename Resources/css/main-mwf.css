@@ -245,3 +245,11 @@ a.c-action-trigger.c-glyph-after:after {
     height: 20px;
     font-size: 15px;
 }
+/*webcore and MWF on same page change*/
+button {
+    min-width: 0px; 
+}
+
+ul li {
+    margin-bottom: 0px;
+}
