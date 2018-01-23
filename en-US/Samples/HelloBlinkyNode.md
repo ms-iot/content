@@ -15,6 +15,7 @@ This page will take you through the steps to blink an LED from a Node.js console
 [Hello blinky background service]({{site.baseurl}}/{{page.lang}}/Samples/HelloBlinkyBackgroundNode). 
 The difference is that we'll be using the win32 console version of Node.js (Chakra) and running it via command line.
 
+{% include note.html text="This sample only works with the Windows 10 IoT Core Anniversary Update (Build 14393) release with Visual Studio 2015 and does not currently work with any newer Windows releases or Visual Studio 2017. We are looking into adding Node.js support to UWP in a future release of Windows 10 IoT Core." %}
 
 ### Set up your hardware
 The hardware setup for this sample is the same as the C# 'Blinky' [sample]({{site.baseurl}}/{{page.lang}}/Samples/helloblinky).
@@ -88,5 +89,5 @@ Here's what the code above is doing:
   * Run `setx APPDATA c:\Users\Default\AppData\Roaming /M` to set the APPDATA environment variable permanantly.
   * Run `shutdown /r /t 0` to restart your device. When the device has booted you can now run `c:\NodejsChakra\npm.cmd`
 * If you get an error/crash when using a native addon with Node.js (Chakra), one of the reasons may be that the addon is using an API that's not supported on IoT Core.
-  You can use the [API Porting Tool]({{site.baseurl}}/{{page.lang}}/Docs/IoTAPIPortingTool) to find out.
+  You can use the [API Porting Tool]({{site.baseurl}}/{{page.lang}}/Docs/IoTCorePortingTool.htm) to find out.
 * While Node.js (Chakra) supports using the uwp npm package, the open source [Node.js (ChakraCore)](https://github.com/nodejs/node-chakracore) does not.  

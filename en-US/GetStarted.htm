@@ -1,277 +1,147 @@
 ---
-layout: default
-title: Get Started
-description: Begin with the set up or selection of a board, set up your development environment, and get started writing your first app.
-keyword: windows iot, get started, tutorial, iot
+layout: getstarted
+title: Windows 10 IoT Core Official Website | Developer Resource
+description: Windows 10 IoT Core for your Internet of Things. 
+keyword: windows iot, get started, home page, iot
 permalink: /en-US/GetStarted.htm
 lang: en-US
 ---
-
-<section class="section">
-  <header class="page-title-header remove-top-margin">
-    <h1 class="page-title">Get Started</h1>
-    <h2 class="page-subtitle">
-      The setup and installation steps are different based on what hardware you have.
-    </h2>
-    <p>Choose your hardware, installation media, and OS version.</p>
-  </header>
+<section>
+    <div class="m-content-placement" data-grid="col-12">
+        <h3 class="c-heading-3">Get started with Windows 10 IoT Core</h3>
+        <p class="c-paragraph-3">Bring the Internet of Things (IoT) to life with the power of Windows 10 IoT Core. If you're new to IoT Core, we'll help you get started. And if you're looking to bring a device to market, we'll show you how to commercialize it.</p>
+    </div>
 </section>
 
-<div class="sequence">
-  <div class="step">
-    <section id="selectBoardSection" class="section">
-      <header class="section-header">
-        <h2>Select your hardware</h2>
-        <p><a href="{{site.baseurl}}/{{page.lang}}/Explore/DeviceOptions">Help me choose a device</a></p>
-      </header>          
-      <div class="section-body">
-        <ul class="iot-getstarted-list">
-          <li id="starterPackButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('starterPack')">
-              <img style="max-width:50%;" src="{{site.baseurl}}/Resources/images/product.png">
-              <p class="text-caption" style="padding-top:25px">Raspberry Pi 2 Starter Pack</p>
-          </li>
-          <li id="rpi2Button" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('rpi2')">
-              <img style="max-width:40%; padding-top:10px" src="{{site.baseurl}}/Resources/images/RaspberryPiIcon.png">
-              <p class="text-caption" style="padding-top:25px">Raspberry Pi 2</p>
-          </li>
-          <li id="rpi3Button" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('rpi3')">
-              <img style="max-width:40%; padding-top:10px" src="{{site.baseurl}}/Resources/images/RaspberryPiIcon.png">
-              <p class="text-caption" style="padding-top:25px">Raspberry Pi 3</p>
-          </li>
-          <li id="dragonboardButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('dragonboard')">
-              <img style="max-width:70%;" src="{{site.baseurl}}/Resources/images/DragonBoardIcon.png">
-              <p class="text-caption" style="padding-top:25px">Dragonboard 410c</p>
-          </li>
-          <li id="jouleButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('joule')">
-              <img style="max-width:70%;" src="{{site.baseurl}}/Resources/images/jouleIcon.png">
-              <p class="text-caption" style="padding-top:25px">Intel Joule</p>
-          </li>
-          <li id="mbmButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('mbm')">
-              <img style="max-width:75%;" src="{{site.baseurl}}/Resources/images/minnowboard-max.png">
-              <p class="text-caption">Minnowboard Max</p>
-          </li>
-           <li id="computeStickButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="boardButtonClick('computeStick')">
-              <img style="max-width:100%;" src="{{site.baseurl}}/Resources/images/IntelComputeStick.png">
-              <p class="text-caption" style="padding-top:15px">Intel Compute Stick</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </div>
-  <div id="selectInstallSection" style="display:none" class="step">
-    <section class="section">
-      <header class="section-header">
-        <h2 style=" margin-top:0px">Select your installation media</h2>
-      </header>
-      <div class="section-body">
-        <ul class="iot-getstarted-list">
-          <li id="sdcardButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="hardwareButtonClick('sdcard')">
-              <img style="max-width:40%;" src="{{site.baseurl}}/Resources/images/sdcard.png">
-              <p class="text-caption" style="padding-top:15px">Install onto my blank microSD card</p>
-          </li>
-          <li id="noobsButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="hardwareButtonClick('noobs')">
-              <img style="max-width:50%;" src="{{site.baseurl}}/Resources/images/noobs.png">
-              <p class="text-caption" style="padding-top:25px">Install with NOOBS</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </div>
-  <div id="selectOSSection" style="display:none;" class="step">
-    <section class="section">
-      <header class="section-header">
-        <h2 style=" margin-top:0px">Select your OS version</h2>
-      </header>
-      <div class="section-body">
-        <ul class="iot-getstarted-list">
-          <li id="stableButton" class="win-color-border-20 win-color-bg-0  iot-getstarted-buttons" onclick="osButtonClick('stable')">
-            <img style="max-width:60%;" src="{{site.baseurl}}/Resources/images/windows.png">
-            <p class="text-caption" >Windows 10 IoT Core</p>
-          </li>
-          <li id="insiderButton" class="win-color-border-20 win-color-bg-0 iot-getstarted-buttons" onclick="osButtonClick('insider')">
-            <img style="max-width:60%;" src="{{site.baseurl}}/Resources/images/windows.png">
-            <p class="text-caption" >Windows 10 IoT Core Insider Preview</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </div>
-  <div id="getStartedCompletedSection" style="display:none" class="step">
-    <section class="section">
-      <div class="section-body">
-        <p> Continue the setup process by getting the tools and instructions you'll need to get up and running. </p>
-        <a id="getStartedNextButton" href="#" class="btn btn-primary" onclick="getStartedNextButtonClick()">Next</a>
-      </div>
-    </section>
-  </div>
-  <div id="comingSoonSection" style="display:none" class="step">
-    <section class="section">
-      <div class="section-body">
-        <p>The software for this device is coming soon. Thanks for your patience.</p>
-      </div>
-    </section>
-  </div>
+<section>
+<div class="m-content-placement" data-grid="col-12">
+    <div data-grid="col-12 pad-6x stack-2">
+        <div data-grid="col-6">
+            <section class="m-content-placement-item f-size-large">
+                <picture>
+                    <source srcset="{{site.baseurl}}/Resources/images/get-started/Build_Prototype_740x417.jpg" media="(min-width: 1400px)">
+                    <source srcset="{{site.baseurl}}/Resources/images/get-started/BuildPrototype_582x328.jpg" media="(min-width: 1084px)">
+                    <source srcset="{{site.baseurl}}/Resources/images/get-started/BuildPrototype_494x278.jpg" media="(min-width: 768px)">
+                    <source srcset="{{site.baseurl}}/Resources/images/get-started/BuildPrototype_720x405.jpg" media="(min-width: 540px)">
+                    <source srcset="{{site.baseurl}}/Resources/images/get-started/BuildPrototype_491x276.jpg" media="(min-width:0)">
+                    <img srcset="{{site.baseurl}}/Resources/images/get-started/BuildPrototype_491x276.jpg" src="{{site.baseurl}}/Resources/images/get-started/BuildPrototype_491x276.jpg" alt="Build prototype image">
+                </picture>
+                <div>
+                    <h4 class="c-heading-4">Build a prototype</h4>
+                    <p class="c-paragraph">Set up your device, write your first app, connect to Azure, and more.</p>
+                    <a href="{{site.baseurl}}/{{page.lang}}/GetStarted/Prototype/SelectDevice.htm" class="c-call-to-action c-glyph">
+                        <span>Start prototyping</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+        <div data-grid="col-6">
+            <section class="m-content-placement-item f-size-large">
+                <picture>
+                    <source srcset="{{site.baseurl}}/Resources/images/get-started/Commercialize_740x417.jpg" media="(min-width: 1400px)">
+                    <source srcset="{{site.baseurl}}/Resources/images/get-started/Commercialize_582x328.jpg" media="(min-width: 1084px)">
+                    <source srcset="{{site.baseurl}}/Resources/images/get-started/Commercialize_494x278.jpg" media="(min-width: 768px)">
+                    <source srcset="{{site.baseurl}}/Resources/images/get-started/Commercialize_720x405.jpg" media="(min-width: 540px)">
+                    <source srcset="{{site.baseurl}}/Resources/images/get-started/Commercialize_491x276.jpg" media="(min-width:0)">
+                    <img srcset="{{site.baseurl}}/Resources/images/get-started/Commercialize_491x276.jpg" src="{{site.baseurl}}/Resources/images/get-started/Commercialize_491x276.jpg" alt="Commercialize image">
+                </picture>
+                <div>
+                    <h4 class="c-heading-4">Commercialize a device</h4>
+                    <p class="c-paragraph">Ready to bring your device to market? We'll show you how.</p>
+                    <a href="{{site.baseurl}}/{{page.lang}}/GetStarted/Commercialize/SelectPlatform.htm" class="c-call-to-action c-glyph">
+                        <span>Start commercializing</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
 </div>
-<script>
-    var selectedBoard;
-    var selectedHardware;
-    var selectedOS;
+</section>
 
-    function pressButton(button) {
-        $(button).addClass('win-color-bg-20');
-        $(button).removeClass('win-color-bg-0');
-    }
-
-    function unpressButton(button) {
-        $(button).removeClass('win-color-bg-20');
-        $(button).addClass('win-color-bg-0');
-    }
-
-    function boardButtonClick(board) {
-        // untoggle all the buttons
-        unpressButton('#rpi2Button');
-        unpressButton('#rpi3Button');
-        unpressButton('#dragonboardButton');
-        unpressButton('#jouleButton');
-        unpressButton('#computeStickButton');
-        unpressButton('#mbmButton');
-        unpressButton('#starterPackButton');
-        unpressButton('#sdcardButton');
-        unpressButton('#noobsButton');
-        selectedBoard = board;
-        var pressedButton = '#' + board + 'Button';
-        switch (selectedBoard) {
-            case 'rpi2':
-                $('#noobsButton').show();
-                $('#sdcardButton').show();
-                break;
-            case 'rpi3':
-                $('#noobsButton').show();
-                $('#sdcardButton').show();
-                break;
-            case 'mbm':
-                $('#sdcardButton').show();
-                $('#noobsButton').hide();
-                break;
-            case 'dragonboard':
-              pressButton(pressedButton);
-              $('#selectInstallSection').hide('fast');
-              $('#selectOSSection').show('fast');
-              $('#getStartedCompletedSection').hide('fast');
-              $('#comingSoonSection').hide('fast');             
-              return;
-            case 'joule':
-            case 'computeStick':
-            case 'starterPack':  
-                pressButton(pressedButton);
-                $('#selectInstallSection').hide('fast');
-                $('#selectOSSection').hide('fast');
-                $('#getStartedCompletedSection').show('fast');
-                $('#comingSoonSection').hide('fast');
-                return;
-            
-        }
-
-        $('#selectInstallSection').show('fast');
-        $('#selectOSSection').hide('fast');
-        $('#getStartedCompletedSection').hide('fast');
-        $('#comingSoonSection').hide('fast');
-        pressButton(pressedButton);
-     }
-
-    function hardwareButtonClick(hardware) {
-        selectedHardware = hardware;
-
-        //untoggle all the buttons
-        unpressButton('#sdcardButton');
-        unpressButton('#noobsButton');
-        unpressButton('#stableButton');
-        unpressButton('#insiderButton');
-
-        switch(selectedHardware)
-        {
-            case 'noobs':
-                $('#selectOSSection').hide('fast');
-                $('#getStartedCompletedSection').show('fast');
-                $('#comingSoonSection').hide('fast');                
-                break;
-            case 'sdcard':
-                $('#selectOSSection').show('fast');
-                $('#stableButton').show('fast');                
-                $('#getStartedCompletedSection').hide('fast');
-                $('#comingSoonSection').hide('fast');
-                break;
-        }
-        var pressedButton = '#' + hardware + 'Button';
-        pressButton(pressedButton);
-    }
-
-    function osButtonClick(os) {
-        selectedOS = os;
-        
-        $('#getStartedCompletedSection').show('fast');     
-        var pressedButton = '#' + os + 'Button';
-
-        //untoggle all the buttons
-        unpressButton('#stableButton');
-        unpressButton('#insiderButton');
-        pressButton(pressedButton);
-    }
-
-    function getStartedNextButtonClick() {
-      var href = 'Docs/GetStarted/';
-      
-      switch (selectedBoard) {      
-        case 'joule':
-          // Joule is a special case. go directly to the joule page
-          window.location.href = 'Docs/GetStarted/joule/GetStartedStep1.htm';
-          return;
-        case 'starterPack':
-          // the kit is a special case. go directly to the Adafruit page
-          window.location.href = 'Docs/AdafruitMakerKit.htm';
-          return;
-        case 'computeStick':
-          // Intel Compute Stick is a special case. Go directly to the Intel Compute Stick page
-          window.location.href = 'Docs/GetStarted/IntelComputeStick/GetStartedStep1.htm';
-          return;
-        case 'rpi2':
-        case 'rpi3':
-        case 'mbm':
-        case 'dragonboard':
-          href += selectedBoard + '/';
-          break;
-        default:
-          return;
-        }
-      
-      switch(selectedHardware)
-      {
-        case 'noobs':
-          // noobs is a special case. go directly to the noobs page
-          window.location.href = 'Docs/GetStarted/noobs/GetStartedStep1.htm';
-          return;
-        case 'sdcard':
-          href += selectedHardware + '/';
-          break;
-        default:
-          if(selectedBoard == "dragonboard")
-          {
-            break;
-          }
-          return;
-      }
-
-      switch(selectedOS)
-      {
-        case 'stable':
-        case 'insider':
-          href += selectedOS + '/';
-          break;
-        default:
-          return;
-      }
-
-      href += 'GetStartedStep1.htm';
-      window.location.href = href;
-    }
-</script>
+<section>
+<div class="m-content-placement" data-grid="col-12">
+    <h3 class="c-heading-4">Additional Resources</h3>
+    <div data-grid="col-12 stack-3">       
+        <div data-grid="col-6 pad-6x">
+            <div data-grid="col-6">
+                <section class="m-content-placement-item f-size-medium">
+                    <picture>
+                        <source srcset="{{site.baseurl}}/Resources/images/get-started/Hackster_358x201.jpg" media="(min-width: 1400px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/get-started/Hackster_279x157.jpg" media="(min-width: 1084px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/get-started/Hackster_494x278.jpg" media="(min-width: 768px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/get-started/Hackster_348x195.jpg" media="(min-width: 540px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/get-started/Hackster_491x276.jpg" media="(min-width:0)">
+                        <img srcset="{{site.baseurl}}/Resources/images/get-started/Hackster_491x276.jpg" src="{{site.baseurl}}/Resources/images/get-started/Hackster_491x276.jpg" alt="Explore community projects on hackster.">
+                    </picture>
+                    <div>
+                        <h4 class="c-heading-4">Hackster</h4>
+                        <p class="c-paragraph">Explore community projects.</p>
+                        <a href="https://www.hackster.io/windowsiot" class="c-call-to-action c-glyph">
+                            <span>LEARN MORE</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+            <div data-grid="col-6">
+                <section class="m-content-placement-item f-size-medium">
+                    <picture>
+                        <source srcset="{{site.baseurl}}/Resources/images/get-started/InsiderLab_358x201.jpg" media="(min-width: 1400px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/get-started/InsiderLab_279x157.jpg" media="(min-width: 1084px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/get-started/InsiderLab_494x278.jpg" media="(min-width: 768px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/get-started/InsiderLab_348x195.jpg" media="(min-width: 540px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/get-started/InsiderLab_491x276.jpg" media="(min-width:0)">
+                        <img srcset="{{site.baseurl}}/Resources/images/get-started/InsiderLab_491x276.jpg" src="{{site.baseurl}}/Resources/images/get-started/InsiderLab_491x276.jpg" alt="Check out Microsoft's Insider Labs.">
+                    </picture>
+                    <div>
+                        <h4 class="c-heading-4">Insider Labs</h4>
+                        <p class="c-paragraph">Check out Microsoft's Insider Labs.</p>
+                        <a href="https://www.microsoftiotinsiderlabs.com" class="c-call-to-action c-glyph">
+                            <span>LEARN MORE</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div data-grid="col-6 pad-6x">
+            <div data-grid="col-6">
+                <section class="m-content-placement-item f-size-medium">
+                    <picture>
+                        <source srcset="{{site.baseurl}}/Resources/images/get-started/Azure_358x201.jpg" media="(min-width: 1400px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/get-started/Azure_279x157.jpg" media="(min-width: 1084px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/get-started/Azure_494x278.jpg" media="(min-width: 768px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/get-started/Azure_348x195.jpg" media="(min-width: 540px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/get-started/Azure_491x276.jpg" media="(min-width:0)">
+                        <img srcset="{{site.baseurl}}/Resources/images/get-started/Azure_491x276.jpg" src="{{site.baseurl}}/Resources/images/get-started/Azure_491x276.jpg" alt="Sign up for Azure IoT.">
+                    </picture>
+                    <div>
+                        <h4 class="c-heading-4">Azure IoT</h4>
+                        <p class="c-paragraph">Sign up for Azure IoT.</p>
+                        <a href="https://azure.microsoft.com/en-us/suites/iot-suite" class="c-call-to-action c-glyph">
+                            <span>LEARN MORE</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+            <div data-grid="col-6">
+                <section class="m-content-placement-item f-size-medium">
+                    <picture>
+                        <source srcset="{{site.baseurl}}/Resources/images/get-started/community_358x201.png" media="(min-width: 1400px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/get-started/community_279x157.png" media="(min-width: 1084px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/get-started/community_494x278.png" media="(min-width: 768px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/get-started/community_348x195.png" media="(min-width: 540px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/get-started/community_491x276.png" media="(min-width:0)">
+                        <img srcset="{{site.baseurl}}/Resources/images/get-started/community_491x276.png" src="{{site.baseurl}}/Resources/images/get-started/community_491x276.png" alt="Connect with our community.">
+                    </picture>
+                    <div>
+                        <h4 class="c-heading-4">Community</h4>
+                        <p class="c-paragraph">Connect with our community.</p>
+                        <a href="https://developer.microsoft.com/en-us/windows/iot/Community" class="c-call-to-action c-glyph">
+                            <span>LEARN MORE</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+</section>

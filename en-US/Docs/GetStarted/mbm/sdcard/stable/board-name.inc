@@ -1,1 +1,1 @@
-MinnowBoard Max
+MinnowBoard Turbot/Max

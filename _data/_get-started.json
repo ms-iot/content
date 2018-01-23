@@ -1,0 +1,62 @@
+{
+   "en-US":[
+      {
+        "parent":"Build a Prototype",
+        "children":[
+          {
+            "title":"1. Explore devices",
+            "link":"/GetStarted/Prototype/SelectDevice.htm"
+          },
+          {
+            "title":"2. Set up your device",
+            "link":"/GetStarted/Prototype/SetupDevice.htm"
+          },
+           {
+            "title":"3. Get your tools",
+            "link":"/GetStarted/Prototype/GetTools.htm"
+          },
+          {
+            "title":"4. Write your app",
+            "link":"/GetStarted/Prototype/WriteApp.htm"
+          },
+          {
+            "title":"5. Connect to Azure",
+            "link":"/GetStarted/Prototype/ConnectAzure.htm"
+          },
+          {
+            "title":"6. Next steps",
+            "link":"/GetStarted/Prototype/NextSteps.htm"
+          }
+        ]
+      },
+      {
+        "parent":"Commercialize a Device",
+        "children":[
+          {
+            "title":"1. Accept commercial terms",
+            "link": "/GetStarted/Commercialize/CommercialTerms.htm"
+          },
+	  {
+            "title":"2. Select your platform",
+            "link": "/GetStarted/Commercialize/SelectPlatform.htm"
+          },
+	  {
+            "title":"3. Get your tools",
+            "link": "/GetStarted/Commercialize/GetImagingTools.htm"
+          },
+          {
+            "title":"4. Build your image",
+            "link":"/GetStarted/Commercialize/BuildImage.htm"
+          },
+          {
+            "title":"5. Build your retail image",
+            "link":"/GetStarted/Commercialize/BuildRetailImage.htm"
+          },
+	  {
+            "title":"6. Manufacture your device",
+            "link":"/GetStarted/Commercialize/ManufactureDevice.htm"
+          }
+        ]
+      }
+   ]
+}

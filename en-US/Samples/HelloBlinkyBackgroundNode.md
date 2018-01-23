@@ -12,6 +12,7 @@ lang: en-US
 
 Create a blinky Node.js server that blinks an LED. 
 
+{% include note.html text="This sample only works with the Windows 10 IoT Core Anniversary Update (Build 14393) release with Visual Studio 2015 and does not currently work with any newer Windows releases or Visual Studio 2017. We are looking into adding Node.js support to UWP in a future release of Windows 10 IoT Core." %}
 
 ### Set up your PC
 * Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).

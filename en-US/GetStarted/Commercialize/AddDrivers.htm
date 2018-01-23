@@ -1,0 +1,145 @@
+---
+layout: getstarted-steps-commercialize
+title: Windows 10 IoT Core Official Website | Developer Resource
+description: Windows 10 IoT Core for your Internet of Things. 
+keyword: windows iot, get started, home page, iot
+permalink: /en-US/GetStarted/Commercialize/AddDrivers.htm
+lang: en-US
+---
+
+<header>
+    <h3 class="c-heading-3">Add necessary drivers</h3>
+    <p class="c-paragraph-3">In this lab, we'll add the sample driver <a href="https://developer.microsoft.com/en-us/windows/iot/samples/driverlab" class="c-hyperlink">Hello, Blinky!</a>, package it up, and deploy it Windows 10 IoT Core.</p>
+</header>
+<section class="pad-thin">
+    <h3 class="c-subheading-3">Check for similar drivers</h3>
+    <p class="c-paragraph-3">Before adding drivers, you may want to review your pre-built board support package (BSP) to make sure there's not already a similar driver. You can review the list of drivers in this file: \IoT-ADK-AddonKit\Source-arm\BSP\<device-name>\Packages\<DeviceFM>.xml.</p>
+    <p class="c-paragraph-3">If there's not an existing driver, you can add one. If there is a driver but it doesn't meet your needs, you'll need to replace the driver by creating a new BSP.</p>
+</section>
+<section class="pad-thin">
+    <h3 class="c-subheading-3">Create your test files</h3>
+    <p class="c-paragraph-3">Complete the exercises in the <a href="https://developer.microsoft.com/en-us/windows/iot/samples/driverlab1" class="c-hyperlink">Installing the Sample Driver Lab</a> to build the Hello, Blinky! App.</p>
+    <p class="c-paragraph-3">You'll create three files: </p>
+    <ul class="c-list">
+        <li>ACPITABL.dat</li>
+        <li>Gpiokmdfdemo.inf</li>
+        <li>Gpiokmdfdemo.sys</li>
+    </ul>
+    <p class="c-paragraph-3">You'll use these files to install the driver. You can also use your own IoT Core driver, so long as it doesn't conflict with the existing Board Support Package (BSP). Copy each of the files.</p>
+</section>
+<section class="pad-thin">
+    <h3 class="c-subheading-3">Build a package for your driver</h3>
+    <ol class="c-list">
+        <li>Run C:\IoT-ADK-AddonKit\IoTCoreShell as an administrator.</li>
+        <li>Create the driver package using the .inf file as the base:
+            <blockquote class="c-blockquote"><xmp>newdrypkg C:\gpiokmdfdemo\gpiokmdfdemo.inf Drivers.HelloBlinky</xmp></blockquote>
+        </li>
+        <li>Copy the file ACPITABL.dat to the new folder <blockquote class="c-blockquote"><xmp>C:\IoT-ADK-AddonKit\Source-<arch>\Packages\Drivers.HelloBlinky\</xmp></blockquote></li>
+    </ol>
+</section>
+<section>
+    <h3 class="c-subheading-3">Verify sample file location</h3>
+    <ol class="c-list">
+        <li>
+            <p class="c-paragraph-3">Update the driver's package definition file - <blockquote class="c-blockquote"><xmp>C:\IoT-ADK-AddonKit\Source-<arch>\Packages\Drivers.HelloBlinky\Drivers.HelloBlinky.pkg.xml</xmp></blockquote></p>
+            <p class="c-paragraph-3">The default package definition file includes sample XML that you can modify to add your own driver files. If necessary, update the value of file source to point to your .SYS file and the ACPITABL.dat file (you don't need to add the .INF file). Add the DestinationDir of $(runtime.drviers).</p>                    
+            <blockquote class="c-blockquote"><xmp>
+<Package xmlns="urn:Microsoft.WindowsPhone/PackageSchema.v8.00"   
+     Owner="$(OEMNAME)" OwnerType="OEM" ReleaseType="Production"   
+     Platform="<architecture>" Component="Drivers" SubComponent="HelloBlinky">   
+  <Components>   
+    <Driver InfSource="gpiokmdfdemo.inf">   
+      <Reference Source="gpiokmdfdemo.sys" />   
+      <Files>   
+        <File Source="gpiokmdfdemo.sys"    
+              DestinationDir="$(runtime.drivers)"    
+              Name="gpiokmdfdemo.sys" />   
+        <File Source="ACPITABL.dat"    
+              DestinationDir="$(runtime.system32)"    
+              Name="ACPITABL.dat" />   
+      </Files>   
+    </Driver>   
+  </Components>   
+</Package>   
+                </xmp></blockquote>
+        </li>
+        <li>
+            <p class="c-paragraph-3">From the IoT Core Shell, build the package.</p>
+            <blockquote class="c-blockquote">
+                    <p class="c-paragraph">createpkg Drivers.HelloBlinky</p>
+            </blockquote>
+            <p class="c-paragraph-3">The package is built, appearing as <blockquote class="c-blockquote"><xmp>C:\IoT-ADK-AddonKit\Build\<arch>\pkgs\<your OEM name>.Drivers.HelloBlinky.cab.</xmp></blockquote></p>
+        </li>
+    </ol>
+</section>
+<section>
+    <h3 class="c-subheading-3">Update your feature manifest</h3>
+    <ol class="c-list">
+        <li>Open the architecture-specific feature manifest file. <blockquote class="c-blockquote"><xmp>C:\IoT-ADK-AddonKit\Source-<arch>\Packages\OEMFM.xml</xmp></blockquote></li>
+        <li>Create a new PackageFile section in the XML with your package file listed and give it a new FeatureID such as "OEM_DriverHelloBlinky".
+                <blockquote class="c-blockquote"><xmp> 
+<PackageFile Path="%PKGBLD_DIR%" Name="%OEM_NAME%.Drivers.HelloBlinky.cab">  
+    <FeatureIDs> 
+        <FeatureID>OEM_DriverHelloBlinky</FeatureID>  
+    </FeatureIDs>  
+</PackageFile> 
+                </xmp></blockquote>
+        </li>
+        <li> To generate updated files in the MergedFMs folder run - <blockquote class="c-blockquote"><xmp>buildfm bsp <device-name></xmp></blockquote> This must be done every time any time an FM file is modified. You'll now be able to add your driver to your product by adding a reference to this feature manifest.</li>
+    </ol>
+</section>
+<section>
+    <h3 class="c-subheading-3">Update configuration files</h3>
+    <ol class="c-list">
+        <li>Open your product's test configuration file - <blockquote class="c-blockquote"><xmp>C:\IoT-ADK-AddonKit\Source-<arch>\Products\ProudctA\TestOEMInput.xml</xmp></blockquote></li>
+        <li>Make sure your feature manifest, DeviceFM.xml, is in the list of AdditionalFMs. Add it if it isn't already there:
+            <blockquote class="c-blockquote"><xmp>
+ <AdditionalFMs>  
+      <!-- Including BSP feature manifest -->  
+      <AdditionalFM>%BLD_DIR%\MergedFMs\DeviceFM.xml</AdditionalFM>  
+      <!-- Including OEM feature manifest -->  
+      <AdditionalFM>%BLD_DIR%\MergedFMs\OEMCommonFM.xml</AdditionalFM>  
+      <AdditionalFM>%BLD_DIR%\MergedFMs\OEMFM.xml</AdditionalFM>  
+       <!-- Including the test features -->  
+       <AdditionalFM>%AKROOT%\FMFiles\<architecture>\IoTUAPNonProductionPartnerShareFM.xml</AdditionalFM>  
+</AdditionalFMs>  
+                </xmp></blockquote>
+
+        </li>
+        <li>Add the FeatureID for your driver.
+                <blockquote class="c-blockquote"><xmp> 
+<OEM>  
+  <!-- Include BSP Features -->  
+  <Feature>DEVICE_DRIVERS</Feature>  
+  <!-- Include OEM features-->  
+  <Feature>OEM_CustomCmd</Feature>  
+  <Feature>OEM_ProvAuto</Feature>  
+  <Feature>OEM_FilesAndRegKeys</Feature>  
+  <Feature>OEM_DriverHelloBlinky</Feature>   
+</OEM> 
+                    </xmp></blockquote>
+        </li>       
+    </ol>  
+</section>
+<section>
+    <h3 class="c-subheading-3">Build and test the image</h3>
+    <p class="c-paragraph-3">Build and flash the image using the same procedures as earlier and check to see that your driver works using the procedures in the <a href="https://developer.microsoft.com/en-us/windows/iot/samples/driverlab3" class="c-hyperlink">Hello, Blinky! Lab</a>.</p>
+</section>
+<section class="pad-thin">
+    <h3 class="c-subheading-3">Secure your image</h3>
+    <p class="c-paragraph-3">Windows offers enterprise-grade security for both the hardware and software of IoT devices. These features include:</p>
+    <ul class="c-list">
+        <li><a href="https://docs.microsoft.com/en-us/windows/iot-core/secure-your-device/SecureBootAndBitLocker" class="c-hyperlink">Secure Boot, BitLocker, and Device Guard</a>: Provides protection for user data through encryption and locks out unknown binaries.</li>
+        <li><a href="https://docs.microsoft.com/en-us/windows/iot-core/secure-your-device/TPM" class="c-hyperlink">A TPM</a>: Isolates and protects your cryptographic keys to ensure you secure your device and Azure (among other benefits).</li>
+        <li><a href="https://docs.microsoft.com/en-us/windows/iot-core/secure-your-device/UnifiedWriteFilter" class="c-hyperlink">The Unified Write Filter</a>: Protects physical storage media from data writes to protect write-sensitive media.</li>
+    </ul>
+</section>
+<section data-grid="col-12" class="pad-thin">
+    <div data-grid="col-4">
+        <a class="c-action-trigger c-glyph glyph-chevron-left" href="{{site.baseurl}}/{{page.lang}}/GetStarted/Commercialize/BuildImage.htm">Previous: Build your image</a>
+    </div>
+    <div data-grid="col-6"></div>
+    <div data-grid="col-2">
+        <a class="c-action-trigger c-glyph-after glyph-chevron-right" href="{{site.baseurl}}/{{page.lang}}/GetStarted/Commercialize/AddApplication.htm">Next: Add your application</a>
+    </div>
+</section>

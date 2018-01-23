@@ -1,0 +1,121 @@
+---
+layout: getstarted-steps-commercialize
+title: Windows 10 IoT Core Official Website | Developer Resource
+description: Windows 10 IoT Core for your Internet of Things. 
+keyword: windows iot, get started, home page, iot
+permalink: /en-US/GetStarted/Commercialize/MaintainUpdates.htm
+lang: en-US
+---
+
+<header>
+        <h3 class="c-heading-3">Maintain updates</h3>
+        <p class="c-paragraph-3">OEM and enterprise customers using Windows 10 IoT Core Pro can take advantage of device management configuration service providers (CSPs) that allow some control over the device update process.</p>
+        <p class="c-paragraph-3">Device Management Policy can be set using either the Windows Imaging and Configuration Designer (ICD) tool or a mobile device management protocols. See the article on <a href="https://docs.microsoft.com/en-us/windows/client-management/mdm/index" class="c-hyperlink">Mobile Device Management</a> for more details on device management protocols.</p>
+</header>
+<section>
+        <h3 class="c-subheading-3">AllowAutoUpdate to turn updates on or off</h3>
+        <p class="c-paragraph-3">Updates for IoT Core can be turned off by setting the AllowAutoUpdate policy.</p>   
+        <ul class="c-list">
+                <li>If the AllowAutoUpdate policy is not configured, devices will get IoT Core updates as usual at 3 a.m.</li>
+                <li>If the AllowAutoUpdate policy it set to 5, automatic updates for IoT Core are turned off.</li>       
+        </ul>
+        <img class="c-image" src="{{site.baseurl}}/Resources/images/get-started/commercialize/AllowAutoUpdate.png" alt="Allow auto update">        
+</section>
+<section>
+        <h3 class="c-subheading-3">Deferring updates</h3>
+        <p class="c-paragraph-3">The AllowAutoUpdate policy can also control the timing of updates for IoT Core. Non-critical updates for IoT Core can be deferred for a maximum of 120 days by using Windows Server Update Services (WSUS). In this process, the devices are configured to use the WSUS server for update service instead of Windows Update. The IT admin gets IoT Core updates from the Microsoft Update Catalog and downloads the updates for later deployment.</p>   
+        <blockquote class="c-blockquote">
+                <p class="c-paragraph">Note: When a WSUS server is configured on an IoT Core device, the trigger to ping the server for updates is suppressed. </p>
+        </blockquote>
+        <ol class="c-list">To select IoT Core updates in the WSUS catalog site:
+                <li>On the <b>Windows ICD Start Page</b>, select the IoT Core project you'd like to modify.</li>
+                <li>Under <b>Available Customizations</b>, expand to <b>Runtime settings</b>, then Policies, and then Update.</li>    
+                <li>In the <b>Policies/Update</b> info pane, change the <b>UpdateServiceURL</b> to the address of the WSUS server that will be used. </li>          
+        </ol>
+        <img class="c-image" src="{{site.baseurl}}/Resources/images/get-started/commercialize/wsus.png" alt="Allow auto update to control update">   
+        <ol class="c-list">
+                <li>In the WSUS administrative console, select <b>Updates</b> and in the <b>Actions</b> pane, click Import Updates</b>.</li>
+                <li>A browser window will open at the Microsoft Update Catalog Web site.</li>    
+                <li>You can search this site for IoT Core updates by device, OEM, and firmware. When you find the ones you need, add them to your basket.</li>    
+                <li>Go to the basket and click <b>Import</b> to import your updates to the server. To download the updates directly without importing them, clear the Import directly into <b>Windows Server Update Services</b> checkbox and save the download.</li>      
+        </ol>     
+</section>
+<section>
+        <h3 class="c-subheading-3">OS Updates Only</h3>
+        <p class="c-paragraph-3">An IoT Core device can be set to receive OS updates from Microsoft and not OEM updates.</p> 
+        <p class="c-paragraph-3">For Windows 10, version 1607: Use IoT_GENERIC_POP in the OEMInput XML. You can no longer use the Intel.Generic.DeviceInfo.cab, this file has been removed.</p>
+        <img class="c-image" src="{{site.baseurl}}/Resources/images/get-started/commercialize/OsUpdates.png" alt="OS Updates">        
+</section>
+<section class="pad-thin">
+        <h2 class="c-subheading-2">Application Updates</h2>
+        <p class="c-paragraph-3">New for Windows 10, version 1607: OEMs and enterprise customers can deliver app updates to Windows 10 IoT Core devices by submitting updates to the Windows store. When your devices connect to the Internet, they periodically check for updates from the Windows Store and install the updates automatically.</p>      
+</section>
+<section>
+        <h3 class="c-subheading-3">Send updates to the Windows Store</h3>
+        <p class="c-paragraph-3">Create updates for your apps in the way that you create the original apps. It's ok to reuse the existing package names and even write over the old folder names and locations, but make sure to use a higher version number each time (e.g. 1.0.0.0 to 1.0.1.0). Back up your files first in case you'd like to revert the changes later.</p>
+        <p class="c-paragraph-3">We recommend that you test and track the update using the steps outlined in <a href="https://docs.microsoft.com/en-us/windows-hardware/service/iot/updating-iot-core-apps#Test_and_track_the_update" class="c-hyperlink">this article</a>. Finally, sign and submit the app package to the Windows Store. To learn more, read the documentation for <a href="https://docs.microsoft.com/en-us/windows/iot-core/commercialize-your-device/InstallingAndServicing" class="c-hyperlink">Installing and Servicing apps</a> on Windows 10 IoT Core.</p>   
+</section>
+<section>
+        <h3 class="c-subheading-3">Create an update package</h3>
+        <ol class="c-list">
+                <li>Create a working folder for your update package. Use a new version number. This version number will apply to all the packages in your projects.
+                        <blockquote class="c-blockquote">
+                                <p class="c-paragraph">newupdate Update1 10.0.0.1 </p>
+                        </blockquote>
+                </li>
+                <li>Update the app with changes and build the app using a new version number.</li>    
+                <li>Update the package information.
+                        <ol class="c-list">
+                                <li>Create a copy of the existing package under Update1\folder and then update that with the version number.</li>
+                                <li>Copy the new appx files to that directory.</li>    
+                                <li>Open C:/iot-adk-addonkit/Source-arm/ackages/Appx.HelloWorld/Appx.helloWorld.pkg.xml, and update the version numbering.</li>    
+                        </ol>                                 
+                </li>  
+                <li>Build the update package. The output goes to `C:\iot-adk-addonkit\Build\&lt;architecture&gt;\Update1`.
+                        <blockquote class="c-blockquote">
+                                <p class="c-paragraph">createupdatepkgs Update1</p>
+                        </blockquote>
+                </li>        
+        </ol>
+</section>
+<section>
+        <h3 class="c-subheading-3">Apply the update directly to the device</h3>
+        <ol class="c-list">
+                <li>Copy the .cab file to the device. You can do this using an FTP tool such as <a href="https://winscp.net/eng/index.php" class="c-hyperlink">WinSCP</a> or by copying the file directly to the device's drive (such as a micro SD card).</li>            
+                <li>On your technician PC, connect to your device using an SSH client such as <a href="http://the.earth.li/~sgtatham/putty/latest/x86/" class="c-hyperlink">PuTTY</a>. For example, use the IP address and port 22 to connect to the device, then login using the Administrator account and password. To learn more, read the documentation for SSH <a href="https://docs.microsoft.com/en-us/windows/iot-core/connect-your-device/SSH" class="c-hyperlink">here</a>.</li>         
+                <li>From the device command line, stage the update. You can repeat this step to stage multiple updates.
+                        <blockquote class="c-blockquote">
+                                <p class="c-paragraph">ApplyUpdate.exe -stage <DownloadedPackageName.cab> </p>
+                        </blockquote>
+                </li>   
+                <li>Commit the changes. This command also triggers the Windows Update process, installing any applicable updates.
+                        <blockquote class="c-blockquote">
+                                <p class="c-paragraph">ApplyUpdate.exe -commit</p>
+                        </blockquote>
+                </li>           
+        </ol>
+</section>
+<section>
+        <h3 class="c-subheading-3">Troubleshooting</h3>
+        <ul class="c-list">
+                <li>Error: A certificate chain could not be built to a trusted root authority. (0x800B010A). Signature verification failed. <br>Possible cause: Package version incorrect. Make sure the new version number is higher than the old version and try again.</li>         
+                <li>Error: Could not start update (0x8024A10F). <br> Possible cause: Windows Update is in progress. Try again after the current Windows Update is Completed.</li>   
+        </ul>
+</section>
+<section>
+        <h3 class="c-subheading-3">Keep track of versions</h3>
+        <p class="c-paragraph-3">Open `UpdateVersion.txt` to see descriptions of your packages. The createupdatepkgs tool updates this file when creating a new update.</p>
+</section>
+<section class="pad-thin">
+        <h2 class="c-subheading-2">Driver Updates</h2>
+        <p class="c-paragraph-3">Updating drivers on deployed devices on deployed devices is currently not possible. However, we're currently working on a solution to solve this problem.</p>
+</section>
+<section data-grid="col-12" class="pad-thin">
+    <div data-grid="col-4">
+        <a class="c-action-trigger c-glyph glyph-chevron-left" href="{{site.baseurl}}/{{page.lang}}/GetStarted/Commercialize/AddProvisionPackages.htm">Previous: Add provisioning packages</a>
+    </div>
+    <div data-grid="col-6"></div>
+    <div data-grid="col-2">
+        <a class="c-action-trigger c-glyph-after glyph-chevron-right" href="{{site.baseurl}}/{{page.lang}}/GetStarted/Commercialize/RegisterDevice.htm">Next: Register your device</a>
+    </div>
+</section>

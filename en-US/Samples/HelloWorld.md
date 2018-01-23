@@ -25,8 +25,8 @@ You need to make sure you have installed the Windows 10 IoT Core Project Templat
 3. Select the template **Blank App (Windows Universal)**.
 
     Remember to give a good name to your first app! In this example, we called the project 'HelloWorld'.
-
-    ![App Template Location]({{site.baseurl}}/Resources/images/HelloWorld/new-cs-project-dialog.PNG)
+    
+    ![App Template Location]({{site.baseurl}}/Resources/images/NewProject_VS2017.png)
 
 {% include note.html text="If this is the first project you create, Visual Studio will likely prompt you to enable <a href='https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx'>developer mode for Windows 10</a>." %}
      
@@ -40,7 +40,7 @@ Since the IoT extension SDK is not added to projects by default, we'll need to a
 
 ### Add content to MainPage.xaml
 ___
-Let's add some content to the MainPage. From Solution Explorer, select the **MainPage.xaml** file. We want to add a TextBox and a Button, to show some interaction. So we will edit the XAML file to add these elements. Locate the **<Grid>** tag in the XAML section of the designer, and add the following markup.  
+Let's add some content to the MainPage. From Solution Explorer, select the **MainPage.xaml** file. We want to add a TextBox and a Button, to show some interaction. So we will edit the XAML file to add these elements. Locate the **&lt;Grid&gt;** tag in the XAML section of the designer, and add the following markup.  
 
 {% highlight XML %}
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">

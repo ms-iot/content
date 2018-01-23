@@ -10,14 +10,16 @@ lang: en-US
 
 # Memory status monitor
 
-Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/{{page.lang}}/Samples/ConsoleApp)
+Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/{{page.lang}}/Samples/memorystatus)
+
+{% include note.html text="This sample only works with the Windows 10 IoT Core Anniversary Update (Build 14393) release with Visual Studio 2015 and does not currently work with any newer Windows releases or Visual Studio 2017. We are looking into adding Node.js support to UWP in a future release of Windows 10 IoT Core." %}
 
 ### Set up your PC
 * Install [Python 2.7](https://www.python.org/downloads/){:target="_blank"}.
 
 ### Copy Node.js to your Raspberry Pi 2 or 3
 * Download the zip file with ARM Node.js (ChakraCore) from [here](http://aka.ms/nodecc_arm) to your PC and extract the files (node.exe and chakracore.dll).
-* Use [Windows file sharing]({{site.baseurl}}/{{page.lang}}/Samples/SMB), [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell), 
+* Use [Windows file sharing]({{site.baseurl}}/{{page.lang}}/docs/windowsfilesharing), [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell), 
 or [SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH) to create `C:\Node.js (ChakraCore)` folder on your Raspberry Pi 2 or 3.
 * Copy node.exe and chakracore.dll to `C:\Node.js (ChakraCore)` on your Raspberry Pi 2 or 3.
 

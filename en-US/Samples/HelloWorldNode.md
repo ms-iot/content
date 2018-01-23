@@ -11,10 +11,12 @@ lang: en-US
 
 In this sample, we will create and deploy the proverbial 1st app, "Hello, world!" to any device running Windows 10 IoT Core.
 
+{% include note.html text="This sample only works with the Windows 10 IoT Core Anniversary Update (Build 14393) release with Visual Studio 2015 and does not currently work with any newer Windows releases or Visual Studio 2017. We are looking into adding Node.js support to UWP in a future release of Windows 10 IoT Core." %}
+
 ### Set up your PC
 * Install Windows 10 [with November update](http://windows.microsoft.com/en-us/windows-10/windows-update-faq).
 * Install Visual Studio 2017.
-* Install the latest Node.js Tools for Windows IoT from [here](http://aka.ms/ntvsiotlatest).
+* Install the latest Node.js Tools for Windows IoT from [here](https://github.com/ms-iot/ntvsiot/releases/tag/v1.5.7).
 
 
 ### Create a new Node.js (Windows Universal) project

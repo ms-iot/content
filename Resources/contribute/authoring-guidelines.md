@@ -2,24 +2,21 @@
 
 ## Guidelines
 
-When creating a new topic, or updating an exisitng one, there are a handful of things to keep in mind.
+When creating a new topic, or updating an existing one, there are a handful of things to keep in mind.
 
 1. **Creating a new topic:**
 
   When creating new content, please start with the following templates (view in *Raw* mode):
 
   * [Sample template](template/sample-template.md)
-  * [Documentation template](template/docs-template.md)
   
   **Be sure to add** your file to the correct index file:
   
   * Samples add to [_samples.json](/_data/_samples.json)
-  * Docs add to [_docs-index.json](/_data/_docs-index.json)
 
 2. **Save your files in the following directories**
 
   * Images: `content/Resources/images/<folder name>/<your filename>`
-  * Documentation: `content/en-US/Docs`
   * Samples: `content/en-US/Samples`
 
 **File naming rules**
@@ -139,7 +136,7 @@ Example: To start PowerShell as an administrator, right-click **Windows PowerShe
 Good metadata is an important factor in achieving good search results. The metadata for your .md markdown file should be located in a YAML block header at the top of the file.
 ```
 ---
-layout: docs
+layout: default
 title: Windows 10 IoT Core Dashboard
 description: The best way to download, install and configure Windows 10 IoT Core
 keyword: dashboard, Windows 10 IoT Core, download, install, configure

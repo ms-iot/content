@@ -26,9 +26,9 @@ For more information on setting everything up, refer to [our get started guide.]
 
 ### Load the project in Visual Studio  
   
-You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/tree/develop/WebCamSample/CS){:target="_blank"}. Make a copy of the folder on your disk and open the project from Visual Studio.  
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/tree/develop/WebcamApp/CS){:target="_blank"}. Make a copy of the folder on your disk and open the project from Visual Studio.  
 
-The code for the ProcessLauncher sample can be found under: <samples root folder>\ProcessLauncher\CS  
+The code for the ExternalProcessLauncher sample can be found under: <samples root folder>\ExternalProcessLauncher\CS  
  
 ### Deploy your app  
  
@@ -169,7 +169,7 @@ int main(int argc, char **argv)
 }
 {% endhighlight %}  
 
-The application has been added to the solution as a *console application*. To create your own console application, please refer to the [Console Application Sample]({{site.baseurl}}/{{page.lang}}/Samples/ConsoleApp).
+The application has been added to the solution as a *console application*. To create your own console application, please refer to the [Console Application Sample]({{site.baseurl}}/{{page.lang}}/Samples/memorystatus).
 
 To be able to find and invoke the SampleConsoleApplication exe at runtime, we need to package the output exe with the AppX. We've already added it to the sample application. However, to do the same in your own application, you can follow these steps:
 
@@ -213,7 +213,7 @@ To use the tool:
 
 * Clone or download a zip of the *Windows 10 IoT Utilities* from [GitHub](https://github.com/ms-iot/iot-utilities){:target="_blank"}
 * Open and build the solution under *ProcessLauncherWhitelist* 
-* Copy the executable to your device using [FTP]({{site.baseurl}}/{{page.lang}}/Samples/FTP){:target="_blank"}
+* Copy the executable to your device using [FTP]({{site.baseurl}}/{{page.lang}}/docs/ftp){:target="_blank"}
 * Run it on the device using [SSH]({{site.baseurl}}/{{page.lang}}/Docs/SSH){:target="_blank"} or [PowerShell]({{site.baseurl}}/{{page.lang}}/Docs/PowerShell){:target="_blank"}
 
 ![Proess Launcher Configuration ]({{site.baseurl}}/Resources/images/ProcessLauncherSample/ProcessLauncherWhiteListConfigTool.png)

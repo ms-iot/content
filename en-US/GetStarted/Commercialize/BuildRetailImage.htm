@@ -1,0 +1,57 @@
+---
+layout: getstarted-steps-commercialize
+title: Windows 10 IoT Core Official Website | Developer Resource
+description: Windows 10 IoT Core for your Internet of Things. 
+keyword: windows iot, get started, retail image, retail build, iot
+permalink: /en-US/GetStarted/Commercialize/BuildRetailImage.htm
+lang: en-US
+---
+
+<header>
+    <h3 class="c-heading-3">Build your retail image</h3>
+    <p class="c-paragraph-3">With the customizations you've added, you can now put them together and test them in a retail build.</p>
+</header>
+
+<section class="pad-thin">
+    <h3 class="c-subheading-3">1. Get a code-signing certificate.</h3>
+    <p class="c-paragraph-3">Get a <a class="c-hyperlink" href="https://docs.microsoft.com/en-us/windows-hardware/drivers/dashboard/update-a-code-signing-certificate" target="_blank">code signing certificate</a>.
+    Configure the cross-signing certificate to be used for retail signing. Edit the setsignature.cmd file to set SIGNTOOL_OEM_SIGN:</p>
+    
+    <blockquote class="c-blockquote"><xmp>set SIGNTOOL_OEM_SIGN=/s my /i "Issuer" /n "Subject" /ac "CrossCertRoot" /fd SHA256</xmp></blockquote>  
+    
+            <ul class="c-list">
+                    <li>Issuer: Issuer of the certificate (see Certificate -> Details -> Issuer).</li>
+                    <li>Subject: Subject in the certificate (see Certificate -> Details -> Subject).</li>
+                    <li>crossCertRoot: Microsoft-supplied Cross Certificate Root. Learn more <a class="c-hyperlink" href="https://docs.microsoft.com/en-us/windows-hardware/drivers/install/cross-certificates-for-kernel-mode-code-signing#cross-certificate-list" target="_blank">here</a>.
+            </ul>
+
+    <p class="c-paragraph-3">From the IoT Core Shell, enable retail signing.</p>
+    
+    <blockquote class="c-blockquote"><xmp>retailsign on</xmp></blockquote>  
+
+    <h3 class="c-subheading-3">2. Build and create the image.</h3>
+    <p class="c-paragraph-3">Rebuild all the packages so that they are retail signed.</p>
+    
+    <blockquote class="c-blockquote"><xmp>buildpkg all</xmp></blockquote>  
+
+    <p class="c-paragraph-3">If the BSP drivers/packages are test-signed, you need to rebuild them to have a retail signature. You can
+    re-sign the cabs and its contents using:</p>
+
+    <blockquote class="c-blockquote"><xmp>re-signcabs.cmd <srccabdir> <dstcabdir></xmp></blockquote> 
+
+    <p class="c-paragraph-3">Build the image using:</p>
+    <blockquote class="c-blockquote"><xmp>buildimage myProduct Retail</xmp> </blockquote>    
+    
+    <p class="c-paragraph-3">Now that you've built your retail image, you're ready to manufacture your device.</p>
+
+    </section>
+
+<section data-grid="col-12" class="pad-thin">
+    <div data-grid="col-4">
+        <a class="c-action-trigger c-glyph glyph-chevron-left" href="{{site.baseurl}}/{{page.lang}}/GetStarted/Commercialize/BuildImage.htm">Previous: Build your image</a>
+    </div>
+    <div data-grid="col-6"></div>
+    <div data-grid="col-2">
+        <a class="c-action-trigger c-glyph-after glyph-chevron-right" href="{{site.baseurl}}/{{page.lang}}/GetStarted/Commercialize/ManufactureDevice.htm">Next: Manufacture your device</a>
+    </div>
+</section>

@@ -11,7 +11,7 @@ kit: Adafruit Starter Pack for Windows 10 IoT Core on Raspberry Pi2
 <div class="row">
   <div class="col-xs-24">
     <ol class="breadcrumb">
-      <li><a href="{{site.baseurl}}/{{page.lang}}/AdafruitMakerKit">Overview of Starter Pack</a></li>
+      <li><a href="{{site.baseurl}}/{{page.lang}}/Docs/AdafruitMakerKit">Overview of Starter Pack</a></li>
       <li class="active">Weather Station</li>
     </ol>
     <header class="page-title-header remove-top-margin">

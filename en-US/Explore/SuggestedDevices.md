@@ -67,11 +67,11 @@
       <td>
         Wi-Fi 802.11 b/g/n
         <br>
-        10/100/1000 MBit/s Ethernet
+        10/100 MBit/s Ethernet
         <br>
         Bluetooth 4.1
       </td>
-      <td>10/100/1000 MBit/s Ethernet</td>
+      <td>10/100 MBit/s Ethernet</td>
       <td>10/100/1000 MBit/s Ethernet</td>
       <td>
         Wi-Fi 802.11 a/b/g/n

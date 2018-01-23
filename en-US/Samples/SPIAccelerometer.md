@@ -14,7 +14,9 @@ lang: en-US
 We'll connect an SPI accelerometer to your Raspberry Pi 2 or 3, MinnowBoard Max, or DragonBoard 410c and create a simple app to read data from it. We'll walk you through step-by-step, so no background knowledge of SPI is needed.
 However, if you're curious, SparkFun provides a great [tutorial on SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi){:target="_blank"}.
 
-This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here]({{site.baseurl}}/{{page.lang}}/Docs/HeadlessMode).
+This is a headed sample.  To better understand what headed mode is and how to configure your device to be headed, follow the instructions [here](https://docs.microsoft.com/en-us/windows/iot-core/learn-about-hardware/headlessmode).
+
+{% include note.html text="While deploying and running a Python UWP app is supported on Windows 10 IoT Core, debugging is currently a known issue for Windows 10 IoT Fall Creators Update (Build 16299) and Visual Studio 2017. We are looking into fixing this in a future release of Windows 10 IoT Core." %}
 
 ### Load the project in Visual Studio
 

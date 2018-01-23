@@ -76,7 +76,4 @@ Congratulations! You controlled one of the GPIO pins on your Windows IoT device.
 {% include samples/BlinkyCodeCS.md%}
 
 <div class="row lineTop">
-  <div class="text-right col-xs-24">
-    <h2 class="thin-header"><a href="{{site.baseurl}}/{{page.lang}}/Samples/WorldMapOfMakers">Next: Lesson 2 - Starter Projects</a></h2>
-  </div>
 </div>
