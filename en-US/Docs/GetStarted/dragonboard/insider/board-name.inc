@@ -1,1 +1,0 @@
-Dragonboard 410c

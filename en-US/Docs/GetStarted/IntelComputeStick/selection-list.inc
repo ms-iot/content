@@ -1,1 +1,0 @@
-Intel Compute Stick<br/>
