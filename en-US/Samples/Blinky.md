@@ -7,5 +7,4 @@ permalink: /en-US/Samples/Blinky.htm
 samplelink: https://github.com/ms-iot/samples/tree/develop/HelloBlinky
 lang: en-US
 ---
-
-{% include redirect.html url="/windows/iot/samples/HelloBlinky" %}
+{% include redirect.html url="https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/HelloBlinky" %}

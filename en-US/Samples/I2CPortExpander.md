@@ -7,4 +7,4 @@ permalink: /en-US/Samples/I2CPortExpander.htm
 samplelink: https://github.com/ms-iot/samples/tree/develop/I2cPortExpander/CS
 lang: en-US
 ---
-{% include redirect.html url="https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/I2cPortExpander" %}
+{% include redirect.html url="/windows/iot/samples" %}
