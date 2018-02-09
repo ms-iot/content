@@ -6,5 +6,4 @@ keyword: Network 3D Printer, Windows 10 IoT Core
 permalink: /en-US/win10/samples/3DPrintServer.htm
 lang: en-US
 ---
-
-{% include redirect.html url="/windows/iot/Docs/3DPrintServer" %}
+{% include redirect.html url="https://docs.microsoft.com/en-us/windows/iot-core/extend-your-app/3dprintserver" %}
