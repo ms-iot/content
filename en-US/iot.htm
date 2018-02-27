@@ -48,6 +48,7 @@ lang: en-US
         <div class="c-sequence-indicator" role="tablist">
             <button role="tab" aria-selected="true" aria-label="View slide one" aria-controls="hero-slide-one" title="Slide one"></button>
             <button role="tab" aria-selected="false" aria-label="View slide two" aria-controls="hero-slide-two" title="Slide two"></button>
+            <button role="tab" aria-selected="false" aria-label="View slide three" aria-controls="hero-slide-three" title="Slide three"></button>
         </div>
         <button class="c-action-toggle c-glyph glyph-play f-toggle" data-toggled-label="Pause" data-toggled-glyph="glyph-pause" aria-label="Play"></button>
     </div>
@@ -56,6 +57,31 @@ lang: en-US
     <div itemscope itemtype="http://schema.org/ItemList">
         <ul>
             <li id="hero-slide-one" data-f-theme="dark" class="f-active" role="tabpanel">
+                <section class="m-hero-item f-x-left f-y-center context-article theme-dark" itemscope itemtype="http://schema.org/Article">
+                    <picture>
+                        <source srcset="{{site.baseurl}}/Resources/images/Homepage/NXP-carousel1600x600.jpg" media="(min-width: 1779px)"> 
+                        <source srcset="{{site.baseurl}}/Resources/images/Homepage/NXP-carousel1600x600.jpg" media="(min-width: 1400px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/Homepage/NXP-carousel1259x472.jpg" media="(min-width: 1084px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/Homepage/NXP-carousel1083x609.jpg" media="(min-width:768px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/Homepage/NXP-carousel767x431.jpg" media="(min-width:540px)">
+                        <source srcset="{{site.baseurl}}/Resources/images/Homepage/NXP-carousel539x303.jpg" media="(min-width:0)">
+                        <img srcset="{{site.baseurl}}/Resources/images/Homepage/NXP-carousel1259x472.jpg" src="{{site.baseurl}}/Resources/images/Homepage/NXP-carousel1259x472.jpg" alt="NXP SoC boards">
+                    </picture>
+                    <div>
+                        <div>
+                            <h1 class="c-heading">Announcing our partnership with NXP Semiconductors</h1>
+                            <p class="c-paragraph">The private preview for Windows 10 IoT Core for NXP silicon, i.MX6 and i.MX7, is now available.</p>
+
+                            <div>
+                                <a href="aka.mx/iotnxp ">
+                                    <span>Sign up for private preview</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </li>
+            <li id="hero-slide-two" data-f-theme="dark" role="tabpanel">
                 <section class="m-hero-item f-x-left f-y-center context-article theme-dark" itemscope itemtype="http://schema.org/Article">
                     <picture>
                         <source srcset="{{site.baseurl}}/Resources/images/Homepage/JCI-carousel1600x600.jpg" media="(min-width: 1779px)"> 
@@ -80,7 +106,7 @@ lang: en-US
                     </div>
                 </section>
             </li>
-            <li id="hero-slide-two" data-f-theme="dark" role="tabpanel">
+            <li id="hero-slide-three" data-f-theme="dark" role="tabpanel">
                 <section class="m-hero-item f-x-left f-y-center context-article theme-dark" itemscope itemtype="http://schema.org/Article">
                     <picture>
                         <source srcset="{{site.baseurl}}/Resources/images/Homepage/misty-carousel1600x600.jpg" media="(min-width: 1779px)">
