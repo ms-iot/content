@@ -1,1 +1,0 @@
-Raspberry Pi 2 or 3

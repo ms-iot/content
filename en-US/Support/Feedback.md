@@ -6,3 +6,4 @@ keyword: windows iot, feedback, iot
 permalink: /en-US/Feedback.htm
 lang: en-US
 ---
+{% include redirect.html url="/windows/iot" %}

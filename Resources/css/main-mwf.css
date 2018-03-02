@@ -245,6 +245,7 @@ a.c-action-trigger.c-glyph-after:after {
     height: 20px;
     font-size: 15px;
 }
+
 /*webcore and MWF on same page change*/
 button {
     min-width: 0px !important; 
@@ -253,3 +254,48 @@ button {
 ul li {
     margin-bottom: 0px !important;
 }
+
+/* text padding for mosaic content */
+.c-mosaic-placement {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+/* font under video */
+.context-video .c-heading-5 {
+  font-size:17px;
+  font-weight:100;
+}
+
+/* tweaking card component css */
+.m-card-group.f-channel .c-card .c-card-content {
+    height: 225px;
+    padding:8%;
+}
+
+.m-card-group.f-channel .c-card.f-single .c-card-content{
+    height: 225px;
+    padding:8%;
+}
+
+@media screen and (min-width: 540px) {
+    .m-card-group.f-channel .c-card.f-single .c-card-content {
+        height:225px;
+        padding:8%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .m-card-group.f-channel .c-card.f-single:nth-last-child(-n + 2) .c-card-content {
+        height:225px;
+        padding:8%;
+    }
+}
+
+@media screen and (min-width: 1084px) {
+    .m-card-group.f-channel .c-card.f-single:nth-last-child(-n + 2) .c-card-content {
+        height: 225px;
+        padding:8%;
+    }
+}
+
