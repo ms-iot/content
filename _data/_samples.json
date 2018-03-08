@@ -171,7 +171,7 @@
     {
       "title": "Cognitive Services",
       "description": "Access and use the Cognitive Services API inside a C# UWP App",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/CognitiveServicesExample",
+      "link": "https://www.hackster.io/JiongShi/microsoft-cognitive-services-demo-on-windows-10-iot-core-4d846e",
       "link-text": "Cognitive Services",
       "lang": "C#",
       "ranking": 0,
