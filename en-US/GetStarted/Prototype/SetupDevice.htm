@@ -29,7 +29,7 @@ lang: en-US
                 <br><br>
             For any of these devices, please ensure that you have the <b>latest firmware update</b>. The latest 64-bit firmware for Minnowboard Turbot/MAX boards can be found on <a class="c-hyperlink" href="https://minnowboard.org/tutorials/updating-the-firmware" target="_blank">the MinnowBoard website</a> (skip step 4). </p><br><br>
                 <h3 class="c-subheading-2">Flashing IoT Core</h3> 
-                <p class="c-paragraph-3">1. Download the <a href="https://docs.microsoft.com/en-us/windows/iot-core/connect-your-device/iotdashboard" target="_blank">Windows 10 IoT Core Dashboard</a> from the <a href="https://developer.microsoft.com/en-us/windows/iot/Downloads" target="_blank">Downloads page</a>.</p> 
+                <p class="c-paragraph-3">1. Download the <a  class="c-hyperlink" href="https://docs.microsoft.com/en-us/windows/iot-core/connect-your-device/iotdashboard" target="_blank">Windows 10 IoT Core Dashboard</a> from the <a  class="c-hyperlink" href="https://developer.microsoft.com/en-us/windows/iot/Downloads" target="_blank">Downloads page</a>.</p> 
                     <p class="c-paragraph-3">2. Insert a <a class="c-hyperlink" href="https://developer.microsoft.com/en-us/windows/iot/docs/hardwarecompatlist#Storage">compatible</a> micro-SD card into your device, then open the Dashboard and click on the <b>Set up a new device</b> tab. Go through and populate the fields for <b>Device Type</b> and <b>OS Build</b>.</p>
                     <blockquote class="c-blockquote">
                     <p class="c-paragraph">NOTE: To use the Insider Preview version of Windows 10 IoT Core, select <b>Windows Insider Preview</b> from the <b>OS Build</b> dropdown box and sign in with your Insider Program credentials. If you aren't a Windows Insider, sign up for Windows Insider Preview <a class="c-hyperlink" href="https://insider.windows.com/">here</a>.</p>
@@ -51,7 +51,7 @@ lang: en-US
                 <p class="c-paragraph-3">Intel devices that use eMMC include the <b>Up Squared</b>. </p><br><br>
                 <h3 class="c-subheading-2">Flashing IoT Core</h3> 
                 <p class="c-paragraph-3">1. Download and install the <a href="https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit" class="c-hyperlink">Windows Assessment and Deployment Kit</a> with the correlating version of Windows 10 that you're running.</p>
-                <p class="c-paragraph-3">2. Insert a USB drive into your machine, then create a USB-bootable WinPE image on it by following these instructions:</p>
+                      <p class="c-paragraph-3">2. Insert a USB drive into your machine, then create a USB-bootable WinPE image on it by following these instructions:</p>
                         <ul class="c-list">
                             <li>Start the Deployment and Imaging Tools Environment(DandISetEnv.bat) normally found in <b>C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools</b> as an administrator.</li>
                             <li>Create a working copy of the Windows PE files. Specify either x86, amd64, or arm:
@@ -88,21 +88,42 @@ lang: en-US
                 <br><br><h2>eMMC (Qualcomm devices)</h2>
                 <p class="c-paragraph-3">Qualcomm devices that use eMMC include the <b>Dragonboard</b>. </p><br><br>
                 <h3 class="c-subheading-2">Flashing IoT Core</h3> 
-                    <p class="c-paragraph-3">1. Download and install the Dragonboard Update Tool for your  <a class="c-hyperlink" href="https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x86.zip">x86</a> or  <a class="c-hyperlink" href="https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x64.zip">x64</a> machine.</p>
-                    <p class="c-paragraph-3">2. Download the  <a href="http://go.microsoft.com/fwlink/?LinkId=733603" class="c-hyperlink">Windows 10 IoT Core Dragonboard FFU</a>.</p>
-
-                    <blockquote class="c-blockquote">
-                    <p class="c-paragraph">NOTE: To use the Insider Preview version of Windows 10 IoT Core, download it from the <a class="c-hyperlink" href="https://www.microsoft.com/en-us/software-download/windowsiot" target="_blank">Windows Insider site</a>. You will need sign in with your Insider Program credentials. If you aren't a Windows Insider, you can sign up for Windows Insider Preview <a class="c-hyperlink" href="https://insider.windows.com/">here</a>.</p>
-                    </blockquote>
-
-                    <p class="c-paragraph-3">3. Double-click on the downloaded ISO file, and locate the mounted Virtual CD-drive. This drive will contain an installer file (.msi); double-click on it. This creates a new directory on your PC under C:\Program Files (x86)\Microsoft IoT\FFU\ in which you should see an image file, "flash.ffu".</p>
-                    <p class="c-paragraph-3">4. Ensure your dragonboard is in download mode by setting the first boot switch on the board to USB Boot, as shown below. Then, connect the Dragonboard and the host PC via a microUSB cable, then plug in the Dragonboard to a 12V (> 1A) power supply.</p><br>
-                    <img class="c-image" style="width:75%" src="{{site.baseurl}}/Resources/images/SetupDB410c/dragonboard_usbboot.png" alt="Set dragonboard in download mode">
-                    <p class="c-paragraph-3">5. Start the Dragonboard Update Tool, which should detect that the Dragonboard is connected to your PC with a green circle. "Browse" to the Dragonboard's FFU that you downloaded, then click the <b>Program</b> button.</p><br>
-                    <img class="c-image" src="{{site.baseurl}}/Resources/images/SetupDB410c/DB410c_UpdateTool.png" alt="Dragonboard update tool">
-                    <p class="c-paragraph-3">6. Once the download is complete, disconnect the power supply and microUSB cable from the board and toggle the USB Boot switch back to  <b>OFF</b>. Connect an HDMI display, a mouse, and a keyboard to the Dragonboard and re-connect the power supply. After a few minutes you should see the Windows 10 IoT Core default application.</p><br>
-                    <img class="c-image" style="width:75%" src="{{site.baseurl}}/Resources/images/SetupDB410c/DB410c_DefaultApp.jpg" alt="Dragonboard default app">
-            </section><br>
+                <p class="c-paragraph-3">1. Download the <a  class="c-hyperlink" href="https://docs.microsoft.com/en-us/windows/iot-core/connect-your-device/iotdashboard" target="_blank">Windows 10 IoT Core Dashboard</a> from the <a  class="c-hyperlink" href="https://developer.microsoft.com/en-us/windows/iot/Downloads" target="_blank">Downloads page</a>.</p> 
+                <p class="c-paragraph-3">2. Open the Dashboard and click on the <b>Set up a new device</b> tab. Go through and populate the fields for <b>Device Type</b> and <b>OS Build</b>. You need to be signed in as an Insider to flash Dragonboard 410C.</p>
+                <img class="c-image" style="width:75%" src="{{site.baseurl}}/Resources/images/SetupDB410c/dragonboard_1.png" alt="Dragonboard 410C selected as the device to flash. Corresponding instructions to help you do the same.">
+                <blockquote class="c-blockquote">
+                <p class="c-paragraph">NOTE: To use the Insider Preview version of Windows 10 IoT Core, select <b>Windows Insider Preview</b> from the <b>OS Build</b> dropdown box and sign in with your Insider Program credentials. If you aren't a Windows Insider, sign up for Windows Insider Preview <a class="c-hyperlink" href="https://insider.windows.com/">here</a>.</p>
+                </blockquote>
+                <p class="c-paragraph-3">3. Connect the Qualcomm board to the developer machine using microUSB cable. Power on the Dragonboard to a 12V (> 1A) power supply.</p>
+                <p class="c-paragraph-3">4. Turn the Dragonboard in flash mode by pressing volume up (+) button while powering on the device. The device when headed displays the following image when in flash mode</p>
+                <blockquote class="c-blockquote">
+                    <p class="c-paragraph">NOTE: If you cannot get to flash mode try using the dragonboard tool to flash Windows 10 IoT Core image 17083 or later at least once (More information at end of document). This feature is available for Windows 10 IoT Core image 17083 and later.</p>
+                </blockquote>
+                <img class="c-image" style="width:50%; height:50%;"  src="{{site.baseurl}}/Resources/images/SetupDB410c/flash_mode2.png" alt="Headed view of dragonboard in flash mode">
+                <br>    
+                <p class="c-paragraph">5. Once in flash mode and connected to develper machine; the device will be visible on the Dashboard in dropdown. Select the appropriate device.</p>
+                <img class="c-image" style="width:75%" src="{{site.baseurl}}/Resources/images/SetupDB410c/dragonboard_2.png" alt="Device in flash mode visible on dashboard">
+            
+                <blockquote class="c-blockquote">
+                <p class="c-paragraph"> NOTE: The default name and password is <b>minwinpc</b> and <b>p@ssw0rd</b>. To best secure your device, we highly recommend you change this.</p>
+                </blockquote>
+                <p class="c-paragraph-3">6. Click  <b>Download and Install</b> after accepting the software license terms. Once the Dashboard has flashed the device, remove the microUSB connection and restart your device. After a few minutes you should see the IoT Core default application appear on the display.</p>
+                <br>
+                <h3 class="c-subheading-3">Dragonboard tool flashing when device does not get in to flash mode</h3>
+            
+                <p class="c-paragraph-3">1. Download and install the Dragonboard Update Tool for your  <a class="c-hyperlink" href="https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x86.zip">x86</a> or  <a class="c-hyperlink" href="https://developer.qualcomm.com/download/db410c/windows-10-iot-update-tool-dragonboard-410c-x64.zip">x64</a> machine.</p>
+                <p class="c-paragraph-3">2. Download the  <a href="http://go.microsoft.com/fwlink/?LinkId=733603" class="c-hyperlink">Windows 10 IoT Core Dragonboard FFU</a>.</p>
+                <blockquote class="c-blockquote">
+                <p class="c-paragraph">NOTE: To use the Insider Preview version of Windows 10 IoT Core, download it from the <a class="c-hyperlink" href="https://www.microsoft.com/en-us/software-download/windowsiot" target="_blank">Windows Insider site</a>. You will need sign in with your Insider Program credentials. If you aren't a Windows Insider, you can sign up for Windows Insider Preview <a class="c-hyperlink" href="https://insider.windows.com/">here</a>.</p>
+                </blockquote>
+                <p class="c-paragraph-3">3. Double-click on the downloaded ISO file, and locate the mounted Virtual CD-drive. This drive will contain an installer file (.msi); double-click on it. This creates a new directory on your PC under C:\Program Files (x86)\Microsoft IoT\FFU\ in which you should see an image file, "flash.ffu".</p>
+                <p class="c-paragraph-3">4. Ensure your dragonboard is in download mode by setting the first boot switch on the board to USB Boot, as shown below. Then, connect the Dragonboard and the host PC via a microUSB cable, then plug in the Dragonboard to a 12V (> 1A) power supply.</p><br>
+                <img class="c-image" style="width:75%" src="{{site.baseurl}}/Resources/images/SetupDB410c/dragonboard_usbboot.png" alt="Set dragonboard in download mode">
+                <p class="c-paragraph-3">5. Start the Dragonboard Update Tool, which should detect that the Dragonboard is connected to your PC with a green circle. "Browse" to the Dragonboard's FFU that you downloaded, then click the <b>Program</b> button.</p><br>
+                <img class="c-image" src="{{site.baseurl}}/Resources/images/SetupDB410c/DB410c_UpdateTool.png" alt="Dragonboard update tool">
+                <p class="c-paragraph-3">6. Once the download is complete, disconnect the power supply and microUSB cable from the board and toggle the USB Boot switch back to  <b>OFF</b>. Connect an HDMI display, a mouse, and a keyboard to the Dragonboard and re-connect the power supply. After a few minutes you should see the Windows 10 IoT Core default application.</p><br>
+                <img class="c-image" style="width:75%" src="{{site.baseurl}}/Resources/images/SetupDB410c/DB410c_DefaultApp.jpg" alt="Dragonboard default app">
+        </section><br>
           {% include setup-steps.html%}
         </section>
             <section role="tabpanel" id="pivot-target-4" aria-hidden="true">
