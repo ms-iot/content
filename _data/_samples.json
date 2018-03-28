@@ -66,7 +66,7 @@
     {
       "title": "'Hello, world!'",
       "description": "Create and deploy your first Windows 10 IoT Core app",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/HelloWorld",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/HelloWorld",
       "link-text": "Hello World",
       "lang": "C#",
       "ranking": 0,
@@ -79,7 +79,7 @@
     {
       "title": "'Hello, blinky!'",
       "description": "A 'Hello, world' sample to control an LED from a breadboard",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/HelloBlinky",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/HelloBlinky",
       "link-text": "UI Blinky",
       "lang": [ 
         "C#",
@@ -97,7 +97,7 @@
     {
       "title": "'Hello, blinky!' background service",
       "description": "Create an app with no UI that toggles an LED on devices running Windows 10 IoT Core",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/HelloBlinkyBackground",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/HelloBlinkyBackground",
       "link-text": "Blinky",
       "lang": [
         "C#",
@@ -114,7 +114,7 @@
     {
       "title": "'Hello, Cloud!'",
       "description": "Create an app to talk to the Azure cloud using Azure IoT Hub",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/Azure/HelloCloud",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/Azure/HelloCloud",
       "link-text": "HelloCloud",
       "lang": "C#",
       "ranking": 0,
@@ -129,7 +129,7 @@
     {
       "title": "Accelerometer",
       "description": "Connect an accelerometer to your device and read data from it",
-      "link":"https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/Accelerometer",
+      "link":"https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/Accelerometer",
       "link-text": "Accelerometer",
       "lang":"C#",
       "ranking": 3,
@@ -143,7 +143,7 @@
     {
       "title": "App Service Blinky",
       "description": "Sample app service that allows one background application to control an LED as an app service, and the other background application to blink the LED.",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/AppServiceBlinky",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/AppServiceBlinky",
       "link-text": "App Service Blinky",
       "lang": "C#",
       "ranking": 0,
@@ -157,7 +157,7 @@
     {
       "title": "App Service Shared Notepad",
       "description": "Sample app service with 2 clients.  One client writes notepad messages.  The other client reads notepad messages and displays them.",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/AppServiceSharedNotepad",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/AppServiceSharedNotepad",
       "link-text": "App Service Shared Notepad",
       "lang": "C#",
 
@@ -171,7 +171,7 @@
     {
       "title": "Cognitive Services",
       "description": "Access and use the Cognitive Services API inside a C# UWP App",
-      "link": "https://www.hackster.io/JiongShi/microsoft-cognitive-services-demo-on-windows-10-iot-core-4d846e",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/RPiCognitiveService",
       "link-text": "Cognitive Services",
       "lang": "C#",
       "ranking": 0,
@@ -183,7 +183,7 @@
     {
       "title": "Companion App",
       "description": "Create a simple app (for Windows Phone 10 or Android) that can configure your device's Wifi.",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/CompanionApp",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/CompanionApp",
       "link-text": "Companion App",
       "lang": "C#",
       "ranking": 0,
@@ -196,7 +196,7 @@
     {
       "title": "Custom Device Accessor",
       "description": "Use CreateFile() and DeviceIoControl() to access custom devices from UWP.",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/CustomDeviceAccessor",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/CustomDeviceAccessor",
       "link-text": "Custom Device Accessor",
       "lang": "C++",
       "ranking": 0,
@@ -208,7 +208,7 @@
     {
       "title": "Digital sign",
       "description": "Create a basic digital sign and learn how to work with multimedia",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/DigitalSign",      
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/DigitalSign",      
       "link-text": "Digital sign",
       "lang": "C#",
       "ranking": 10,
@@ -221,7 +221,7 @@
     {
       "title": "External process launcher",
       "description": "Use <code>Windows.System.ProcessLauncher</code> API to launch external executable programs from your UWP app.",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/ExternalProcessLauncher",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/ExternalProcessLauncher",
       "link-text": "External process launcher",
       "lang": "C#",
       "ranking": 10,
@@ -233,7 +233,7 @@
     {
       "title": "Foreground with Background App",
       "description": "An example of building a foreground app and background app within the same APPX file.",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/ForegroundAppWithBackgroundApp",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/ForegroundAppWithBackgroundApp",
       "link-text": "Foreground with Background",
       "lang": [
         "C#",
@@ -252,7 +252,7 @@
     {
       "title": "GPIO OneWire",
       "description": "Learn how to read from the DHT11 from a Universal Windows Application.",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/GpioOneWire",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/GpioOneWire",
       "link-text": "GPIO OneWire",
       "lang": "C++",
       "ranking": 10,
@@ -265,7 +265,7 @@
     {
       "title": "I2C Port Expander",
       "description": "A sample that shows how to use a port expander to read the status of a tactile switch and control an LED.",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/I2cPortExpander",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/I2cPortExpander",
       "link-text": "I2C Port Expander",
       "lang": "C#",
       "ranking": 10,
@@ -278,7 +278,7 @@
      {
       "title": "IoT Blockly",
       "description": "A sample that shows how to leverage various pieces of open source software to create a 'block' development experience on Raspberry Pi.",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/IoTBlockly",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTBlockly",
       "link-text": "IoT Blockly",
       "lang": "C#",
       "ranking": 10,
@@ -290,7 +290,7 @@
     {
       "title": "IoT Core Default App",
       "description": "Create a UWP app that provides a device-management experience for Windows 10 IoT Core.",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/IoTCoreDefaultApp",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTCoreDefaultApp",
       "link-text": "Iot Core Default App",
       "lang": [
         "C#",
@@ -306,7 +306,7 @@
     {
       "title": "IoT Core Media Player",
       "description": "A demonstration of how to play music from an IoT device.",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/IoTCoreMediaPlayer",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTCoreMediaPlayer",
       "link-text": "IoT Core Media Player",
       "lang": "C#",
       "ranking": 1,
@@ -319,7 +319,7 @@
     {
       "title": "IoT Core Service",
       "description": "A simple shared host service for Windows 10 IoT Core.",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/IoTCoreService",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTCoreService",
       "link-text": "IoT Core Service",
       "lang": "C++",
       "ranking": 1,
@@ -332,7 +332,7 @@
     {
       "title": "IoT Onboarding (Wi-Fi Onboarding with AllJoyn)",
       "description": "Connect an IoT Device to a Wi-Fi network from a remote PC using AllJoyn",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/IoTOnboarding",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTOnboarding",
       "link-text": "WiFi Onboarding Sample",
       "lang": "C#",
       "ranking": 0,
@@ -358,7 +358,7 @@
     {
       "title": "IoT Browser",
       "description": "Create a simple web browser",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/IoTBrowser",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/IoTBrowser",
       "link-text": "IoT Browser",
       "lang": "C#",
       "ranking": 2,
@@ -371,7 +371,7 @@
     {
       "title": "Memory status monitor",
       "description": "Create a console app that monitors memory usage on devices running Windows 10 IoT Core",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/MemoryStatus",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/MemoryStatus",
       "link-text": "Console App",
       "lang": "C++",
       "ranking": 10,
@@ -384,7 +384,7 @@
     {
       "title": "OpenCV",
       "description": "Use OpenCV to run facial and body recognition on a photo",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/OpenCVExample",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/OpenCVExample",
       "link-text": "OpenCV",
       "lang": "C++",
       "ranking": 0,
@@ -397,7 +397,7 @@
     {
       "title": "Push button",
       "description": "Make an LED blink with the push of a button",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/PushButton",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/PushButton",
       "link-text": "Push Button",
       "lang": "C#",
       "ranking": 1,
@@ -410,7 +410,7 @@
     {
       "title": "Potentiometer sensor",
       "description": "Read values from a rotary potentiometer and output data to an LED",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/PotentiometerSensor",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/PotentiometerSensor",
       "link-text": "Potentiometer Sensor Sample",
       "lang": [
         "C#",
@@ -428,7 +428,7 @@
     {
       "title": "RGB LED",
       "description": "Create an app that uses the Raspberry Pi 2 to toggle an RGB LED.",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/RGBLED",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/RGBLED",
       "link-text": "RGB LED",
       "lang": "C#",
       "ranking": 3,
@@ -442,7 +442,7 @@
     {
       "title": "SPI display",
       "description": "Write lines of text to an LED display",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/SPIDisplay",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/SPIDisplay",
       "link-text": "SPI Display",
       "lang": "C#",
       "ranking": 3,
@@ -455,7 +455,7 @@
     {
       "title": "Shift register",
       "description": "Connect an 8-bit serial-in, parallel-out shift register to your device to toggle eight LED's",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/ShiftRegister",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/ShiftRegister",
       "link-text": "Shift Register",
       "lang": "C#",
       "ranking": 20,
@@ -467,7 +467,7 @@
     {
       "title": "Serial UART",
       "description": "Communicate between a desktop and an IoT device over a serial interface",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/SerialUART",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/SerialUART",
       "link-text": "Serial UART",
       "lang": "C#/C++",
       "ranking": 3,
@@ -480,7 +480,7 @@
     {
       "title": "WebSocket Docker Interop",
       "description": "Learn how to work with Windows containers on Windows 10 IoT Core and Windows IoT Enterprise.",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/ContainerWebSocket",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/ContainerWebSocket",
       "link-text": "WebSocket Docker Interop",
       "lang": "C#",
       "ranking": 0,
@@ -494,7 +494,7 @@
     {
       "title": "Video Capture",
       "description": "Create an app that records video to file, plays video from file.",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/VideoCaptureSample",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/VideoCaptureSample",
       "link-text": "Video Capture",
       "lang": "C#",
       "ranking": 0,
@@ -507,7 +507,7 @@
     {
       "title": "Webcam app",
       "description": "Create an app that initializes a web cam, takes pictures, and records video and audio.",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/WebcamApp",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/WebcamApp",
       "link-text": "Webcam App",
       "lang": "C#",
       "ranking": 0,
@@ -520,7 +520,7 @@
     {
       "title": "Wi-Fi connector",
       "description": "Discover and connect to a WiFi network from a UWP app using <code>Windows.Devices.WiFi.WiFiAdapter</code> API",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/WiFiConnector",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/WiFiConnector",
       "link-text": "WiFi Connect Sample",
       "lang": "C#",
       "ranking": 0,
@@ -533,7 +533,7 @@
     {
       "title": "Windows NT Service for RPC",
       "description": "Access privileged features for a UWP application using this sample.",
-      "link":"https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/NTServiceRpc",
+      "link":"https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/NTServiceRpc",
       "link-text": "Windows NT",
       "lang":"C++",
       "ranking": 3,
@@ -547,7 +547,7 @@
     {
       "title": "NFC for IoT",
       "description": "How to use the NFC APIs on IoT Core.",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/NFCForIoT",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/NFCForIoT",
       "link-text": "Learn More",
       "lang": "C#",
       "ranking": 10,
@@ -560,7 +560,7 @@
     {
       "title": "Speech translator",
       "description": "Translate your speech to different languages.",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/SpeechTranslator",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/SpeechTranslator",
       "link-text": "Learn More",
       "lang": "C#",
       "ranking": 10,
@@ -573,7 +573,7 @@
     {
       "title": "Temperature and force sensor",
       "description": "Control a basic temperature and force sensor.",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/develop/Samples/TempForceSensor",
+      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/TempForceSensor",
       "link-text": "Learn More",
       "lang": "C#",
       "ranking": 10,
