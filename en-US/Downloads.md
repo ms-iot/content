@@ -6,7 +6,125 @@ keywords : setup windows 10 raspberry pi, download windows 10 raspberry pi 2, do
 permalink: /en-US/Downloads.htm
 lang: en-US
 ---
-<style>
+
+<section>
+    <div data-grid="col-12" class="x-type-center m-content-placement">
+        <div id="heading">
+            <h1 class="c-heading-1">Windows 10 Core Downloads</h1>
+            <!--<p class="c-subheading-1">The operating system built for your Internet of Things</p>-->
+        </div>
+
+<section class="m-feature f-align-left">
+    <picture>
+        <source srcset="{{site.baseurl}}/Resources/images/Homepage/MARKETING-800x450.jpg" media="(min-width: 1400px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Homepage/MARKETING-630x472.jpg" media="(min-width: 1084px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Homepage/MARKETING-542x406.jpg" media="(min-width: 768px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Homepage/MARKETING-767x288.jpg" media="(min-width: 540px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Homepage/MARKETING-539x201.jpg" media="(min-width:0)">
+        <img srcset="{{site.baseurl}}/Resources/images/Homepage/MARKETING-630x472.jpg" src="{{site.baseurl}}/Resources/images/Homepage/MARKETING-630x472.jpg" alt="Inside a retail store leveraging digital signage.">
+    </picture>
+    <div>
+        <h2 class="c-heading">Get your device running with the Windows 10 IoT Core Dashboard</h2>
+        <p class="c-paragraph">The Windows 10 IoT Dashboard makes flashing Windows 10 IoT Core onto your device simpler with a navigable UI. </p>
+        <a href="http://go.microsoft.com/fwlink/?LinkID=708576" class="c-call-to-action c-glyph">
+            <span>Download the Windows 10 IoT Core Dashboard</span>
+        </a>
+    </div>
+    <p><span class="win-color-fg-secondary">By downloading and using the Windows 10 IoT Core Dashboard you agree to the <a href="http://go.microsoft.com/fwlink/?LinkID=703960&amp;clcid=0x4809"> license terms </a> and <a href="http://go.microsoft.com/fwlink/?LinkId=521839"> privacy statement </a> for Windows 10 IoT Core Dashboard.</span></p>
+</section>
+<!--end marketing page promo-->
+
+<!--begin community page promo-->
+<section class="m-feature f-align-right">
+    <picture>
+        <source srcset="{{site.baseurl}}/Resources/images/Homepage/COMMUNITY-800x450.jpg" media="(min-width: 1400px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Homepage/COMMUNITY-630x472.jpg" media="(min-width: 1084px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Homepage/COMMUNITY-542x406.jpg" media="(min-width: 768px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Homepage/COMMUNITY-767x288.jpg" media="(min-width: 540px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Homepage/COMMUNITY-539x201.jpg" media="(min-width:0)">
+        <img srcset="{{site.baseurl}}/Resources/images/Homepage/COMMUNITY-630x472.jpg" src="{{site.baseurl}}/Resources/images/Homepage/COMMUNITY-630x472.jpg" alt="Johnson Controls device showing home statistics.">
+    </picture>
+    <div>
+        <h2 class="c-heading">Join the Windows Insider Program</h2>
+        <p class="c-paragraph">Get the most up-to-date images under development to try out new features. You'll need to sign up for the Windows Insider Program before downloading the Insider Preview.</p>
+        <a href="http://go.microsoft.com/fwlink/?LinkId=733603" class="c-call-to-action c-glyph">
+            <span>Get Insider Preview for Windows 10 IoT Core</span>
+        </a>
+    </div>
+</section>
+
+<div class="row">
+  <div class="col-xs-24">
+    <section class="section">
+      <div class="section-header">
+        <h3 class="section-title">Windows 10 IoT Core Builds</h3>
+      </div>
+      <div class="section-body">
+        <div class="row">
+          <div class="col-md-6">
+                <a class="downloadLink win-color-fg-primary" href="https://go.microsoft.com/fwlink/?LinkId=846058" >
+                <h3>Windows 10 IoT Core for Raspberry Pi 2 &amp; 3</h3></a>
+                <p>Download Windows 10 IoT Core Creators Update ISO for Raspberry Pi 2 &amp; 3.</p>
+                <a href="https://go.microsoft.com/fwlink/?LinkId=846058" class="downloadLink"><span>Download</span></a>       
+          </div>
+          <div class="col-md-6">
+            <a class="downloadLink win-color-fg-primary" href="https://go.microsoft.com/fwlink/?LinkId=846059">
+                <h3>Windows 10 IoT Core for Dragonboard 410c</h3></a>
+                <p>Download Windows 10 IoT Core Creators Update ISO for Dragonboard 410c board.</p>
+                <a href="https://go.microsoft.com/fwlink/?LinkId=846059" class="downloadLink"><span>Download</span></a>   
+          </div>
+          <div class="col-md-6">
+               <a class="downloadLink win-color-fg-primary" href="https://go.microsoft.com/fwlink/?linkid=846057">
+                <h3>Windows 10 IoT Core for MinnowBoard Turbot/MAX (x64)</h3></a>
+                <p>Download Windows 10 IoT Core Creators Update ISO for MinnowBoard Turbot/MAX (x64)</p>
+                <a href="https://go.microsoft.com/fwlink/?linkid=846057" class="downloadLink"><span>Download</span></a>   
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-24">
+    <section class="section">
+      <div class="section-header">
+        <h3 class="section-title">Other Downloads</h3>
+      </div>
+      <div class="section-body">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Firmware Update</h3>
+            <p>Download firmware components and updates for the MinnowBoard MAX reference board from Intel.</p>
+            <a href="http://firmware.intel.com/projects/minnowboard-max" target="_blank">Learn More</a>
+          </div>
+          <div class="col-md-6">
+            <h3>Visual Studio 2017</h3>
+            <p>State of the art IDE, tools and services that you can use to create great IoT apps.</p>
+            <a href="https://www.visualstudio.com/downloads/" target="_blank">Learn More</a>
+          </div>
+          <div class="col-md-6">
+            <h3>Windows Driver Kit 2017</h3>
+            <p>Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 10.</p>
+            <a href="https://msdn.microsoft.com/en-US/windows/hardware/hh852365.aspx" target="_blank">Learn More</a>
+          </div>
+          <div class="col-md-6">
+            <h3>Windows Developer Tools for Visual Studio</h3>
+            <p>Tools that integrate with Visual Studio 2017 and are required for developing for the Universal Windows App Platform.</p>
+            <a href="https://dev.windows.com/en-us/downloads" target="_blank">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<section>
+    <div class="pad-thin x-type-center m-content-placement" data-grid="col-12">
+    </div>
+</section>
+
+<!--<style>
   a.downloadLink:hover, a.downloadLink:hover h3  {
     color: #0067B7;
   }
@@ -157,6 +275,6 @@ lang: en-US
       </div>
     </section>
   </div>
-</div>
+</div>-->
 
 
