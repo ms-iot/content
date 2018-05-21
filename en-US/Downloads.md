@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Downloads | Windows 10 IoT Core for Raspberry Pi 2 / 3 | IoT Core Dashboard
+layout: landing
+title: Downloads | Windows 10 IoT Core
 description : Download Windows for IoT, Visual Studio, Software Development Kits or any of the other tools available on this page to get started developing for the Internet of Things today! 
 keywords : setup windows 10 raspberry pi, download windows 10 raspberry pi 2, download windows 10 raspberry pi 3, setup windows 10 dragonboard, setup windows 10 minnowboard max, windows 10 developer program, windows 10 iot core, internet of things, iot, download windows 10 iot core 
 permalink: /en-US/Downloads.htm
