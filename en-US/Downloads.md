@@ -13,6 +13,8 @@ lang: en-US
             <h1 class="c-heading-1">Windows 10 IoT Core Downloads</h1>
             <!--<p class="c-subheading-1">The operating system built for your Internet of Things</p>-->
         </div>
+    </div>
+</section>
 
 <section class="m-feature f-align-left">
     <picture>
@@ -29,8 +31,8 @@ lang: en-US
         <a href="http://go.microsoft.com/fwlink/?LinkID=708576" class="c-call-to-action c-glyph">
             <span>Download the Windows 10 IoT Core Dashboard</span>
         </a>
-    </div>
     <p>By downloading and using the Windows 10 IoT Core Dashboard you agree to the <a href="http://go.microsoft.com/fwlink/?LinkID=703960&amp;clcid=0x4809"> license terms </a> and <a href="http://go.microsoft.com/fwlink/?LinkId=521839"> privacy statement </a> for Windows 10 IoT Core Dashboard.</p>
+    </div>
 </section>
 <!--end marketing page promo-->
 
@@ -58,6 +60,7 @@ lang: en-US
 <br><br><br>
 
 <!--begin blogs-->
+
 <div data-grid="col-12">
     <h3 class="c-heading-3 x-type-center">Windows 10 IoT Core Builds</h3><br>
 <div class="m-card-group f-channel">
