@@ -60,6 +60,40 @@ lang: en-US
 <br><br><br>
 
 <!--begin blogs-->
+<div data-grid="col-12">
+    <h3 class="c-heading-3 x-type-center">Community Blog Posts</h3><br>
+    <p class="c-paragraph" style="text-align:center">Stay on top of our latest announcements for the Windows 10 IoT community.</p>
+<div class="m-card-group f-channel">
+    <div class="c-card f-single">
+        <div class="c-card-content">
+            <p class="c-heading-5" style="text-align: center"><a href="https://blogs.msdn.microsoft.com/devops/2018/03/07/devops-for-iot-with-win10-iot-core-uwp-and-vsts/" target="_blank">DevOps for IoT with Win10 IoT Core, UWP, and VSTS</p></a><br>
+            <p style="text-align: center">Pratap Lakshman</p>
+        </div>
+    </div>
+    <div class="c-card f-single">
+        <div class="c-card-content">
+            <p class="c-heading-5" style="text-align: center"><a href="https://blogs.windows.com/business/2018/02/27/microsoft-doubles-down-on-windows-10-iot-with-added-support/#l0XfUKmKrkyKd4AA.97" target="_blank">Microsoft doubles down on Windows 10 IoT with added support</p></a><br>
+            <p style="text-align: center">David Lemson</p>
+        </div>
+    </div>
+    <div class="c-card f-single">
+        <div class="c-card-content">
+            <p class="c-heading-5" style="text-align: center"><a href="https://blogs.windows.com/buildingapps/2017/10/05/windows-10-iot-enables-complete-iot-lifecycle/#7Y8Fw6Tx27JdIYzb.97" target="_blank">Windows 10 IoT enables the complete IoT lifecycle</p></a><br>
+            <p style="text-align: center">David Campbell</p>
+        </div>
+    </div>
+    <div class="c-card f-single">
+        <div class="c-card-content">
+            <p class="c-heading-5" style="text-align: center"><a href="https://blogs.windows.com/buildingapps/2017/04/07/managing-windows-iot-core-devices-azure-iot-hub/#lLZzgI2wMYO4U0k0.97" target="_blank">Managing Windows IoT Core devices with Azure IoT Hub</p></a><br>
+            <p style="text-align: center">Artur Laksberg</p>
+        </div>
+    </div>
+
+</div>
+</div>
+<!--end blogs-->
+
+<!--comment out
 
 <section>
 <div data-grid="col-12">
@@ -86,9 +120,7 @@ lang: en-US
 </div>
 </div>
 </section>
-<!--end blogs-->
 
-<!--
 <div class="row">
   <div class="col-xs-24">
     <section class="section">
@@ -120,9 +152,7 @@ lang: en-US
     </section>
   </div>
 </div>
--->
 
-<!--begin blogs-->
 <div data-grid="col-12">
     <h3 class="c-heading-3 x-type-center">Other Downloads</h3><br>
 <div class="m-card-group f-channel">
@@ -153,10 +183,8 @@ lang: en-US
 
 </div>
 </div>
-<!--end blogs-->
 
 
-<!--
 <div class="row">
   <div class="col-xs-24">
     <section class="section">
