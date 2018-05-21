@@ -61,6 +61,7 @@ lang: en-US
 
 <!--begin blogs-->
 
+<section>
 <div data-grid="col-12">
     <h3 class="c-heading-3 x-type-center">Windows 10 IoT Core Builds</h3><br>
 <div class="m-card-group f-channel">
@@ -84,6 +85,7 @@ lang: en-US
     </div>
 </div>
 </div>
+</section>
 <!--end blogs-->
 
 <!--
