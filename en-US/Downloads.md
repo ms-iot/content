@@ -7,7 +7,11 @@ permalink: /en-US/Downloads.htm
 lang: en-US
 ---
 
-<!--begin hero-->
+<div data-grid="col-12" class="m-area-heading">
+    <h2 class="c-heading">Windows 10 IoT Downloads</h2>
+</div>
+
+<!--begin hero
 <section data-grid="col-12" class="m-highlight-feature f-align-left" itemscope itemtype="https://schema.org/Product">
     <picture class="c-image">
         <source srcset="{{site.baseurl}}/Resources/images/Homepage/HERO-1600x600.jpg" media="(min-width: 1779px)">
@@ -23,16 +27,16 @@ lang: en-US
         <p class="c-paragraph">Grab the tools and downloads you need to get going with Windows 10 IoT.</p>
     </div>
 </section>
-<!--end hero-->
+end hero-->
 
 <section class="m-feature f-align-left">
     <picture>
-        <source srcset="{{site.baseurl}}/Resources/images/Homepage/MARKETING-800x450.jpg" media="(min-width: 1400px)">
-        <source srcset="{{site.baseurl}}/Resources/images/Homepage/MARKETING-630x472.jpg" media="(min-width: 1084px)">
-        <source srcset="{{site.baseurl}}/Resources/images/Homepage/MARKETING-542x406.jpg" media="(min-width: 768px)">
-        <source srcset="{{site.baseurl}}/Resources/images/Homepage/MARKETING-767x288.jpg" media="(min-width: 540px)">
-        <source srcset="{{site.baseurl}}/Resources/images/Homepage/MARKETING-539x201.jpg" media="(min-width:0)">
-        <img srcset="{{site.baseurl}}/Resources/images/Homepage/MARKETING-630x472.jpg" src="{{site.baseurl}}/Resources/images/Homepage/MARKETING-630x472.jpg" alt="Inside a retail store leveraging digital signage.">
+        <source srcset="{{site.baseurl}}/Resources/images/Downloads/DASHBOARD-800x450.jpg" media="(min-width: 1400px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Downloads/DASHBOARD-630x472.jpg" media="(min-width: 1084px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Downloads/DASHBOARD-542x406.jpg" media="(min-width: 768px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Downloads/DASHBOARD-767x288.jpg" media="(min-width: 540px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Downloads/DASHBOARD-539x201.jpg" media="(min-width:0)">
+        <img srcset="{{site.baseurl}}/Resources/images/Downloads/DASHBOARD-630x472.jpg" src="{{site.baseurl}}/Resources/images/Downloads/DASHBOARD-630x472.jpg" alt="Inside a retail store leveraging digital signage.">
     </picture>
     <div>
         <h2 class="c-heading">Get your device running with the Windows 10 IoT Core Dashboard</h2>
@@ -40,7 +44,7 @@ lang: en-US
         <a href="http://go.microsoft.com/fwlink/?LinkID=708576" class="c-call-to-action c-glyph">
             <span>Download the Windows 10 IoT Core Dashboard</span>
         </a>
-    <p>By downloading and using the Windows 10 IoT Core Dashboard you agree to the <a href="http://go.microsoft.com/fwlink/?LinkID=703960&amp;clcid=0x4809"> license terms </a> and <a href="http://go.microsoft.com/fwlink/?LinkId=521839"> privacy statement </a> for Windows 10 IoT Core Dashboard.</p>
+    <p><em>By downloading and using the Windows 10 IoT Core Dashboard you agree to the <a href="http://go.microsoft.com/fwlink/?LinkID=703960&amp;clcid=0x4809"> license terms </a> and <a href="http://go.microsoft.com/fwlink/?LinkId=521839"> privacy statement </a> for Windows 10 IoT Core Dashboard.</em></p>
     </div>
 </section>
 <!--end marketing page promo-->
@@ -50,12 +54,12 @@ lang: en-US
 <!--begin community page promo-->
 <section class="m-feature f-align-right">
     <picture>
-        <source srcset="{{site.baseurl}}/Resources/images/Homepage/COMMUNITY-800x450.jpg" media="(min-width: 1400px)">
-        <source srcset="{{site.baseurl}}/Resources/images/Homepage/COMMUNITY-630x472.jpg" media="(min-width: 1084px)">
-        <source srcset="{{site.baseurl}}/Resources/images/Homepage/COMMUNITY-542x406.jpg" media="(min-width: 768px)">
-        <source srcset="{{site.baseurl}}/Resources/images/Homepage/COMMUNITY-767x288.jpg" media="(min-width: 540px)">
-        <source srcset="{{site.baseurl}}/Resources/images/Homepage/COMMUNITY-539x201.jpg" media="(min-width:0)">
-        <img srcset="{{site.baseurl}}/Resources/images/Homepage/COMMUNITY-630x472.jpg" src="{{site.baseurl}}/Resources/images/Homepage/COMMUNITY-630x472.jpg" alt="Johnson Controls device showing home statistics.">
+        <source srcset="{{site.baseurl}}/Resources/images/Downloads/INSIDER-800x450.jpg" media="(min-width: 1400px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Downloads/INSIDER-630x472.jpg" media="(min-width: 1084px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Downloads/INSIDER-542x406.jpg" media="(min-width: 768px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Downloads/INSIDER-767x288.jpg" media="(min-width: 540px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Downloads/INSIDER-539x201.jpg" media="(min-width:0)">
+        <img srcset="{{site.baseurl}}/Resources/images/Downloads/INSIDER-630x472.jpg" src="{{site.baseurl}}/Resources/images/Downloads/INSIDER-630x472.jpg" alt="Johnson Controls device showing home statistics.">
     </picture>
     <div>
         <h2 class="c-heading">Join the Windows Insider Program</h2>
@@ -66,168 +70,106 @@ lang: en-US
     </div>
 </section>
 
-<br><br><br>
-
-<!--begin blogs-->
-<div data-grid="col-12">
-    <h3 class="c-heading-3 x-type-center">Community Blog Posts</h3><br>
-    <p class="c-paragraph" style="text-align:center">Stay on top of our latest announcements for the Windows 10 IoT community.</p>
-<div class="m-card-group f-channel">
-    <div class="c-card f-single">
-        <div class="c-card-content">
-            <p class="c-heading-5" style="text-align: center"><a href="https://blogs.msdn.microsoft.com/devops/2018/03/07/devops-for-iot-with-win10-iot-core-uwp-and-vsts/" target="_blank">DevOps for IoT with Win10 IoT Core, UWP, and VSTS</p></a><br>
-            <p style="text-align: center">Pratap Lakshman</p>
-        </div>
-    </div>
-    <div class="c-card f-single">
-        <div class="c-card-content">
-            <p class="c-heading-5" style="text-align: center"><a href="https://blogs.windows.com/business/2018/02/27/microsoft-doubles-down-on-windows-10-iot-with-added-support/#l0XfUKmKrkyKd4AA.97" target="_blank">Microsoft doubles down on Windows 10 IoT with added support</p></a><br>
-            <p style="text-align: center">David Lemson</p>
-        </div>
-    </div>
-    <div class="c-card f-single">
-        <div class="c-card-content">
-            <p class="c-heading-5" style="text-align: center"><a href="https://blogs.windows.com/buildingapps/2017/10/05/windows-10-iot-enables-complete-iot-lifecycle/#7Y8Fw6Tx27JdIYzb.97" target="_blank">Windows 10 IoT enables the complete IoT lifecycle</p></a><br>
-            <p style="text-align: center">David Campbell</p>
-        </div>
-    </div>
-    <div class="c-card f-single">
-        <div class="c-card-content">
-            <p class="c-heading-5" style="text-align: center"><a href="https://blogs.windows.com/buildingapps/2017/04/07/managing-windows-iot-core-devices-azure-iot-hub/#lLZzgI2wMYO4U0k0.97" target="_blank">Managing Windows IoT Core devices with Azure IoT Hub</p></a><br>
-            <p style="text-align: center">Artur Laksberg</p>
-        </div>
-    </div>
-
-</div>
-</div>
-<!--end blogs-->
-
-<!--comment out
-
 <section>
-<div data-grid="col-12">
-    <h3 class="c-heading-3 x-type-center">Windows 10 IoT Core Builds</h3><br>
-<div class="m-card-group f-channel">
-    <div class="c-card f-single">
-        <div class="c-card-content">
-            <p class="c-heading-5" style="text-align: center"><a href="https://go.microsoft.com/fwlink/?LinkId=846058" target="_blank">Windows 10 IoT Core for Raspberry Pi 2 &amp; 3</p></a><br>
-            <p style="text-align: center">Download Windows 10 IoT Core Creators Update ISO for Raspberry Pi 2 &amp; 3.</p>
-        </div>
+    <div class="pad-thin x-type-center m-content-placement" data-grid="col-12">
     </div>
-    <div class="c-card f-single">
-        <div class="c-card-content">
-            <p class="c-heading-5" style="text-align: center"><a href="https://go.microsoft.com/fwlink/?LinkId=846059" target="_blank">Windows 10 IoT Core for Dragonboard 410c</p></a><br>
-            <p style="text-align: center">Download Windows 10 IoT Core Creators Update ISO for Dragonboard 410c board.</p>
-        </div>
-    </div>
-    <div class="c-card f-single">
-        <div class="c-card-content">
-            <p class="c-heading-5" style="text-align: center"><a href="https://go.microsoft.com/fwlink/?linkid=846057" target="_blank">Windows 10 IoT Core for MinnowBoard Turbot/MAX (x64)</p></a><br>
-            <p style="text-align: center">Download Windows 10 IoT Core Creators Update ISO for MinnowBoard Turbot/MAX (x64)</p>
-        </div>
-    </div>
-</div>
-</div>
+</section>
+<section data-grid="col-12">
+    <h3 class="c-heading-3 x-type-center">Windows 10 IoT Core Builds</h3>
 </section>
 
-<div class="row">
-  <div class="col-xs-24">
-    <section class="section">
-      <div class="section-header">
-        <h3 class="section-title">Windows 10 IoT Core Builds</h3>
-      </div>
-      <div class="section-body">
-        <div class="row">
-          <div class="col-md-6">
-                <a class="downloadLink win-color-fg-primary" href="https://go.microsoft.com/fwlink/?LinkId=846058">
-                <h3>Windows 10 IoT Core for Raspberry Pi 2 &amp; 3</h3></a>
-                <p>Download Windows 10 IoT Core Creators Update ISO for Raspberry Pi 2 &amp; 3.</p>
-                <a href="https://go.microsoft.com/fwlink/?LinkId=846058" class="downloadLink"><span>Download</span></a>       
-          </div>
-          <div class="col-md-6">
-            <a class="downloadLink win-color-fg-primary" href="https://go.microsoft.com/fwlink/?LinkId=846059">
-                <h3>Windows 10 IoT Core for Dragonboard 410c</h3></a>
-                <p>Download Windows 10 IoT Core Creators Update ISO for Dragonboard 410c board.</p>
-                <a href="https://go.microsoft.com/fwlink/?LinkId=846059" class="downloadLink"><span>Download</span></a>   
-          </div>
-          <div class="col-md-6">
-               <a class="downloadLink win-color-fg-primary" href="https://go.microsoft.com/fwlink/?linkid=846057">
-                <h3>Windows 10 IoT Core for MinnowBoard Turbot/MAX (x64)</h3></a>
-                <p>Download Windows 10 IoT Core Creators Update ISO for MinnowBoard Turbot/MAX (x64)</p>
-                <a href="https://go.microsoft.com/fwlink/?linkid=846057" class="downloadLink"><span>Download</span></a>   
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-</div>
-
-<div data-grid="col-12">
-    <h3 class="c-heading-3 x-type-center">Other Downloads</h3><br>
+<center><div class="m-product-placement f-app" data-grid="col-12">
 <div class="m-card-group f-channel">
     <div class="c-card f-single">
+        <div class="card-heading">
+        </div>
         <div class="c-card-content">
-            <p class="c-heading-5" style="text-align: center"><a href="https://www.visualstudio.com/downloads/" target="_blank">Visual Studio 2017</p></a><br>
-            <p style="text-align: center">State of the art IDE, tools and services that you can use to create great IoT apps.</p>
+            <p class="c-heading-4" style="text-align: center"><a href="https://go.microsoft.com/fwlink/?LinkId=846058" target="_blank">Windows 10 IoT Core for Raspberry Pi</a></p><br>
+            <p class="c-heading-8" style="text-align: center">Download the Windows 10 IoT Core April 2018 release for the Raspberry Pi.</p>
         </div>
     </div>
     <div class="c-card f-single">
+        <div class="card-heading">
+        </div>
         <div class="c-card-content">
-            <p class="c-heading-5" style="text-align: center"><a href="https://msdn.microsoft.com/en-US/windows/hardware/hh852365.aspx" target="_blank">Windows Driver Kit 2017</p></a><br>
-            <p style="text-align: center">Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 10.</p>
+            <p class="c-heading-4" style="text-align: center"><a href="https://go.microsoft.com/fwlink/?LinkId=846059" target="_blank">Windows 10 IoT Core for DragonBoard 410c</a></p><br>
+            <p class="c-heading-8" style="text-align: center">Download the Windows 10 IoT Core April 2018 release for the DragonBoard 410c.</p>
         </div>
     </div>
     <div class="c-card f-single">
+        <div class="card-heading">
+        </div>
         <div class="c-card-content">
-            <p class="c-heading-5" style="text-align: center"><a href="https://dev.windows.com/en-us/downloads" target="_blank">Windows Developer Tools for Visual Studio</p></a><br>
-            <p style="text-align: center">Tools that integrate with Visual Studio 2017 and are required for developing for the Universal Windows App Platform.</p>
+            <p class="c-heading-4" style="text-align: center"><a href="https://go.microsoft.com/fwlink/?linkid=846057" target="_blank">Windows 10 IoT Core for MinnowBoard Max/Turbot</a></p><br>
+            <p class="c-heading-8" style="text-align: center">Download the Windows 10 IoT Core April 2018 release for the MinnowBoard Max/Turbot.</p>
+        </div>
+    </div>
+</div>
+</div></center>
+
+<br><br><br>
+
+<section data-grid="col-12">
+    <h3 class="c-heading-3 x-type-center">Previous Windows 10 IoT Core Releases</h3>
+</section>
+
+<center><div class="m-product-placement f-app" data-grid="col-12">
+<div class="m-card-group f-channel">
+    <div class="c-card f-single">
+        <div class="card-heading">
+        </div>
+        <div class="c-card-content">
+            <p class="c-heading-4" style="text-align: center"><a href="https://software-download.microsoft.com/download/pr/16299.15.170928-1534.rs3_release_amd64fre_IOTCORE_PACKAGES.iso" target="_blank">Fall Creators Update</a></p><br>
+            <p class="c-heading-8" style="text-align: center">Download the Fall Creators Update release.</p>
+        </div>
+    </div>
+</div>
+</div></center>
+
+<br><br><br>
+
+<section data-grid="col-12">
+    <h3 class="c-heading-3 x-type-center">Other Downloads</h3>
+</section>
+
+<center><div class="m-product-placement f-app" data-grid="col-12">
+<div class="m-card-group f-channel">
+    <div class="c-card f-single">
+        <div class="card-heading">
+        </div>
+        <div class="c-card-content">
+            <p class="c-heading-4" style="text-align: center"><a href="https://www.visualstudio.com/downloads/" target="_blank">Visual Studio 2017</a></p><br>
+            <p class="c-heading-8" style="text-align: center">State of the art IDE, tools and services that you can use to create great IoT apps.</p>
         </div>
     </div>
     <div class="c-card f-single">
+        <div class="card-heading">
+        </div>
         <div class="c-card-content">
-            <p class="c-heading-5" style="text-align: center"><a href="http://firmware.intel.com/projects/minnowboard-max" target="_blank">MinnowBoard Max/Turbot Firmware Update</p></a><br>
-            <p style="text-align: center">Download firmware components and updates for the MinnowBoard MAX/Turbot reference board from Intel.</p>
+            <p class="c-heading-4" style="text-align: center"><a href="https://msdn.microsoft.com/en-US/windows/hardware/hh852365.aspx" target="_blank">Windows Driver Kit 2017</a></p><br>
+            <p class="c-heading-8" style="text-align: center">Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 10.</p>
         </div>
     </div>
-
-</div>
-</div>
-
-
-<div class="row">
-  <div class="col-xs-24">
-    <section class="section">
-      <div class="section-header">
-        <h3 class="section-title">Other Downloads</h3>
-      </div>
-      <div class="section-body">
-        <div class="row">
-          <div class="col-md-6">
-            <h3>Firmware Update</h3>
-            <p>Download firmware components and updates for the MinnowBoard MAX reference board from Intel.</p>
-            <a href="http://firmware.intel.com/projects/minnowboard-max" target="_blank">Learn More</a>
-          </div>
-          <div class="col-md-6">
-            <h3>Visual Studio 2017</h3>
-            <p>State of the art IDE, tools and services that you can use to create great IoT apps.</p>
-            <a href="https://www.visualstudio.com/downloads/" target="_blank">Learn More</a>
-          </div>
-          <div class="col-md-6">
-            <h3>Windows Driver Kit 2017</h3>
-            <p>Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 10.</p>
-            <a href="https://msdn.microsoft.com/en-US/windows/hardware/hh852365.aspx" target="_blank">Learn More</a>
-          </div>
-          <div class="col-md-6">
-            <h3>Windows Developer Tools for Visual Studio</h3>
-            <p>Tools that integrate with Visual Studio 2017 and are required for developing for the Universal Windows App Platform.</p>
-            <a href="https://dev.windows.com/en-us/downloads" target="_blank">Learn More</a>
-          </div>
+    <div class="c-card f-single">
+        <div class="card-heading">
         </div>
-      </div>
-    </section>
-  </div>
+        <div class="c-card-content">
+            <p class="c-heading-4" style="text-align: center"><a href="https://dev.windows.com/en-us/downloads" target="_blank">Windows Developer Tools for Visual Studio</a></p><br>
+            <p class="c-heading-8" style="text-align: center">Tools that integrate with Visual Studio 2017 and are required for developing for the Universal Windows App Platform.</p>
+        </div>
+    </div>
+    <div class="c-card f-single">
+        <div class="card-heading">
+        </div>
+        <div class="c-card-content">
+            <p class="c-heading-4" style="text-align: center"><a href="http://firmware.intel.com/projects/minnowboard-max" target="_blank">MinnowBoard Max/Turbot Firmware Update</a></p><br>
+            <p class="c-heading-8" style="text-align: center">Download firmware components and updates for the MinnowBoard MAX/Turbot reference board from Intel.</p>
+        </div>
+    </div>
 </div>
--->
+</div></center>
+
+<br><br><br>
 
 <section>
     <div class="pad-thin x-type-center m-content-placement" data-grid="col-12">
