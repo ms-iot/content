@@ -36,7 +36,7 @@ end hero-->
         <source srcset="{{site.baseurl}}/Resources/images/Downloads/DASHBOARD-542x406.jpg" media="(min-width: 768px)">
         <source srcset="{{site.baseurl}}/Resources/images/Downloads/DASHBOARD-767x288.jpg" media="(min-width: 540px)">
         <source srcset="{{site.baseurl}}/Resources/images/Downloads/DASHBOARD-539x201.jpg" media="(min-width:0)">
-        <img srcset="{{site.baseurl}}/Resources/images/Downloads/DASHBOARD-630x472.jpg" src="{{site.baseurl}}/Resources/images/Downloads/DASHBOARD-630x472.jpg" alt="Inside a retail store leveraging digital signage.">
+        <img srcset="{{site.baseurl}}/Resources/images/Downloads/DASHBOARD-630x472.jpg" src="{{site.baseurl}}/Resources/images/Downloads/DASHBOARD-630x472.jpg" alt="Image of the Windows 10 IoT Core Dashboard.">
     </picture>
     <div>
         <h2 class="c-heading">Get your device running with the Windows 10 IoT Core Dashboard</h2>
@@ -59,7 +59,7 @@ end hero-->
         <source srcset="{{site.baseurl}}/Resources/images/Downloads/INSIDER-542x406.jpg" media="(min-width: 768px)">
         <source srcset="{{site.baseurl}}/Resources/images/Downloads/INSIDER-767x288.jpg" media="(min-width: 540px)">
         <source srcset="{{site.baseurl}}/Resources/images/Downloads/INSIDER-539x201.jpg" media="(min-width:0)">
-        <img srcset="{{site.baseurl}}/Resources/images/Downloads/INSIDER-630x472.jpg" src="{{site.baseurl}}/Resources/images/Downloads/INSIDER-630x472.jpg" alt="Johnson Controls device showing home statistics.">
+        <img srcset="{{site.baseurl}}/Resources/images/Downloads/INSIDER-630x472.jpg" src="{{site.baseurl}}/Resources/images/Downloads/INSIDER-630x472.jpg" alt="Image of Ninja Cat for Windows Insider Program.">
     </picture>
     <div>
         <h2 class="c-heading">Join the Windows Insider Program</h2>
