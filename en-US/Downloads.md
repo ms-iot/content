@@ -7,14 +7,23 @@ permalink: /en-US/Downloads.htm
 lang: en-US
 ---
 
-<section>
-    <div data-grid="col-12" class="x-type-center m-content-placement">
-        <div id="heading">
-            <h1 class="c-heading-1">Windows 10 IoT Core Downloads</h1>
-            <!--<p class="c-subheading-1">The operating system built for your Internet of Things</p>-->
-        </div>
+<!--begin hero-->
+<section data-grid="col-12" class="m-highlight-feature f-align-left" itemscope itemtype="https://schema.org/Product">
+    <picture class="c-image">
+        <source srcset="{{site.baseurl}}/Resources/images/Homepage/HERO-1600x600.jpg" media="(min-width: 1779px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Homepage/HERO-1600x600.jpg" media="(min-width:1400px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Homepage/HERO-1259x472.jpg" media="(min-width:1084px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Homepage/HERO-1083x609.jpg" media="(min-width:768px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Homepage/HERO-767x431.jpg" media="(min-width:540px)">
+        <source srcset="{{site.baseurl}}/Resources/images/Homepage/HERO-539x303.jpg" media="(min-width:0)">
+        <img srcset="{{site.baseurl}}/Resources/images/Homepage/HERO-1259x472.jpg" src="{{site.baseurl}}/Resources/images/Homepage/HERO-1259x472.jpg" alt="Man configures digital signage application that is running Windows 10 IoT Core and UWP.">
+    </picture>
+    <div>
+        <h2 class="c-heading">Windows 10 IoT Downloads</h2>
+        <p class="c-paragraph">Grab the tools and downloads you need to get going with Windows 10 IoT.</p>
     </div>
 </section>
+<!--end hero-->
 
 <section class="m-feature f-align-left">
     <picture>
