@@ -7,11 +7,20 @@ permalink: /en-US/Downloads.htm
 lang: en-US
 ---
 
-<div data-grid="col-12" class="m-area-heading">
-    <h2 class="c-heading">Windows 10 IoT Downloads</h2>
+<div data-grid="col-12" class="x-type-center m-content-placement">
+        <div id="heading">
+            <h1 class="c-heading-1">Windows 10 IoT Downloads</h1>
+            <p class="c-subheading-1">Grab the tools and software you need to get going with Windows 10 IoT.</p>
+        </div>
 </div>
 
-<!--begin hero
+<!--
+<div data-grid="col-12" class="m-area-heading">
+    <h1 class="c-heading">Windows 10 IoT Downloads</h1>
+    <h4 class="c-subheading">Grab the tools and software you need to get going with Windows 10 IoT.</h4>
+</div>
+
+
 <section data-grid="col-12" class="m-highlight-feature f-align-left" itemscope itemtype="https://schema.org/Product">
     <picture class="c-image">
         <source srcset="{{site.baseurl}}/Resources/images/Homepage/HERO-1600x600.jpg" media="(min-width: 1779px)">
@@ -49,7 +58,11 @@ end hero-->
 </section>
 <!--end marketing page promo-->
 
-<br><br><br>
+<section>
+    <div class="pad-thin x-type-center m-content-placement" data-grid="col-12">
+    </div>
+</section>
+
 
 <!--begin community page promo-->
 <section class="m-feature f-align-right">
@@ -78,7 +91,7 @@ end hero-->
     <h3 class="c-heading-3 x-type-center">Windows 10 IoT Core Builds</h3>
 </section>
 
-<center><div class="m-product-placement f-app" data-grid="col-12">
+<div class="m-product-placement f-app" data-grid="col-12">
 <div class="m-card-group f-channel">
     <div class="c-card f-single">
         <div class="card-heading">
@@ -105,15 +118,19 @@ end hero-->
         </div>
     </div>
 </div>
-</div></center>
+</div>
 
-<br><br><br>
+<section>
+    <div class="pad-thin x-type-center m-content-placement" data-grid="col-12">
+    </div>
+</section>
+
 
 <section data-grid="col-12">
     <h3 class="c-heading-3 x-type-center">Previous Windows 10 IoT Core Releases</h3>
 </section>
 
-<center><div class="m-product-placement f-app" data-grid="col-12">
+<div class="m-product-placement f-app" data-grid="col-12">
 <div class="m-card-group f-channel">
     <div class="c-card f-single">
         <div class="card-heading">
@@ -124,15 +141,18 @@ end hero-->
         </div>
     </div>
 </div>
-</div></center>
+</div>
 
-<br><br><br>
+<section>
+    <div class="pad-thin x-type-center m-content-placement" data-grid="col-12">
+    </div>
+</section>
 
 <section data-grid="col-12">
     <h3 class="c-heading-3 x-type-center">Other Downloads</h3>
 </section>
 
-<center><div class="m-product-placement f-app" data-grid="col-12">
+<div class="m-product-placement f-app" data-grid="col-12">
 <div class="m-card-group f-channel">
     <div class="c-card f-single">
         <div class="card-heading">
@@ -167,9 +187,7 @@ end hero-->
         </div>
     </div>
 </div>
-</div></center>
-
-<br><br><br>
+</div>
 
 <section>
     <div class="pad-thin x-type-center m-content-placement" data-grid="col-12">
