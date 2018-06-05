@@ -87,40 +87,24 @@ end hero-->
     <div class="pad-thin x-type-center m-content-placement" data-grid="col-12">
     </div>
 </section>
+
 <section data-grid="col-12">
     <h3 class="c-heading-3 x-type-center">Windows 10 IoT Core Builds</h3>
 </section>
 
-<div class="row">
-  <div class="col-xs-24">
-    <section class="section">
-      <div class="section-header">
-        <!--<h3 class="section-title">IoT Core ISO</h3>-->
-      </div>
-      <div class="section-body">
-        <div class="row">
-          <div class="col-md-6">
-                <a class="downloadLink win-color-fg-primary" href="https://go.microsoft.com/fwlink/?LinkId=846058">
-                <h3>Windows 10 IoT Core for Raspberry Pi 2 &amp; 3</h3></a><br>
-                <p>Download Windows 10 IoT Core Creators Update ISO for Raspberry Pi 2 &amp; 3.</p>
-                <a href="https://go.microsoft.com/fwlink/?LinkId=846058" class="downloadLink"><span>Download</span></a>       
-          </div>
-          <div class="col-md-6">
-            <a class="downloadLink win-color-fg-primary" href="https://go.microsoft.com/fwlink/?LinkId=846059">
-                <h3>Windows 10 IoT Core for Dragonboard 410c</h3></a><br>
-                <p>Download Windows 10 IoT Core Creators Update ISO for Dragonboard 410c board.</p>
-                <a href="https://go.microsoft.com/fwlink/?LinkId=846059" class="downloadLink"><span>Download</span></a>   
-          </div>
-          <div class="col-md-6">
-               <a class="downloadLink win-color-fg-primary" href="https://go.microsoft.com/fwlink/?linkid=846057">
-                <h3>Windows 10 IoT Core for MinnowBoard Turbot/MAX (x64)</h3></a><br>
-                <p>Download Windows 10 IoT Core Creators Update ISO for MinnowBoard Turbot/MAX (x64)</p>
-                <a href="https://go.microsoft.com/fwlink/?linkid=846057" class="downloadLink"><span>Download</span></a>   
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+<div data-grid="col-12 pad-6x stack-3" class="m-rich-content-block">
+    <div data-grid="col-3">
+        <h2 class="c-heading-4"><a href="https://go.microsoft.com/fwlink/?LinkId=846058" target="_blank">For Raspberry Pi 2 & 3</a></h2>
+        <p class="c-paragraph-1">Download the Windows 10 IoT Core Creators Update for Raspberry Pi 2 & 3.</p>
+    </div>
+    <div data-grid="col-3">
+        <h2 class="c-heading-4"><a href="https://go.microsoft.com/fwlink/?LinkId=846059" target="_blank">For DragonBoard 410c</a></h2>
+        <p class="c-paragraph-1">Download the Windows 10 IoT Core Creators Update for DragonBoard 410c.</p>
+    </div>
+    <div data-grid="col-3">
+        <h2 class="c-heading-4"><a href="https://go.microsoft.com/fwlink/?linkid=846057">For MinnowBoard Turbot/MAX (x64)</a></h2>
+        <p class="c-paragraph-1">Download the Windows 10 IoT Core Creators Update for MinnowBoard Turbot/MAX (x64).</p>
+    </div>
 </div>
 
 <section>
@@ -133,25 +117,12 @@ end hero-->
     <h3 class="c-heading-3 x-type-center">Previous Windows 10 IoT Core Releases</h3>
 </section>
 
-<div class="row">
-  <div class="col-xs-24">
-    <section class="section">
-      <div class="section-header">
-        <!--<h3 class="section-title">Other Downloads</h3>-->
-      </div>
-      <div class="section-body">
-        <div class="row">
-          <div class="col-md-6">
-            <h3>Fall Creators Update (RS3)</h3><br>
-            <p>Download firmware components and updates for the MinnowBoard MAX reference board from Intel.</p>
-            <a href="https://software-download.microsoft.com/download/pr/16299.15.170928-1534.rs3_release_amd64fre_IOTCORE_PACKAGES.iso" target="_blank">Download here</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+<div data-grid="col-12 pad-6x stack-3" class="m-rich-content-block">
+    <div data-grid="col-3">
+        <h2 class="c-heading-4"><a href="https://software-download.microsoft.com/download/pr/16299.15.170928-1534.rs3_release_amd64fre_IOTCORE_PACKAGES.iso" target="_blank">Fall Creators Update</a></h2>
+        <p class="c-paragraph-1">Download firmware components and updates for the MinnowBoard MAX reference board from Intel.</p>
+    </div>
 </div>
-
 
 <section>
     <div class="pad-thin x-type-center m-content-placement" data-grid="col-12">
@@ -162,39 +133,25 @@ end hero-->
     <h3 class="c-heading-3 x-type-center">Other Downloads</h3>
 </section>
 
-<div class="row">
-  <div class="col-xs-24">
-    <section class="section">
-      <div class="section-header">
-        <!--<h3 class="section-title">Other Downloads</h3>-->
-      </div>
-      <div class="section-body">
-        <div class="row">
-          <div class="col-md-6">
-            <h3>Firmware Update</h3><br>
-            <p>Download firmware components and updates for the MinnowBoard MAX reference board from Intel.</p>
-            <a href="http://firmware.intel.com/projects/minnowboard-max" target="_blank">Learn More</a>
-          </div>
-          <div class="col-md-6">
-            <h3>Visual Studio 2017</h3><br>
-            <p>State of the art IDE, tools and services that you can use to create great IoT apps.</p>
-            <a href="https://www.visualstudio.com/downloads/" target="_blank">Learn More</a>
-          </div>
-          <div class="col-md-6">
-            <h3>Windows Driver Kit 2017</h3><br>
-            <p>Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 10.</p>
-            <a href="https://msdn.microsoft.com/en-US/windows/hardware/hh852365.aspx" target="_blank">Learn More</a>
-          </div>
-          <div class="col-md-6">
-            <h3>Windows Developer Tools for Visual Studio</h3><br>
-            <p>Tools that integrate with Visual Studio 2017 and are required for developing for the Universal Windows App Platform.</p>
-            <a href="https://dev.windows.com/en-us/downloads" target="_blank">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+<div data-grid="col-12 pad-6x stack-3" class="m-rich-content-block">
+    <div data-grid="col-3">
+        <h2 class="c-heading-4"><a href="http://firmware.intel.com/projects/minnowboard-max" target="_blank">Firmware Update</a></h2>
+        <p class="c-paragraph-1">Download firmware components and updates for the MinnowBoard MAX reference board from Intel.</p>
+    </div>
+    <div data-grid="col-3">
+        <h2 class="c-heading-4"><a href="https://www.visualstudio.com/downloads/" target="_blank">Visual Studio 2017</a></h2>
+        <p class="c-paragraph-1">State of the art IDE, tools and services that you can use to create great IoT apps.</p>
+    </div>
+    <div data-grid="col-3">
+        <h2 class="c-heading-4"><a href="https://msdn.microsoft.com/en-US/windows/hardware/hh852365.aspx" target="_blank">Window Driver Kit 2017</a></h2>
+        <p class="c-paragraph-1">Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 10.</p>
+    </div>
+    <div data-grid="col-3">
+        <h2 class="c-heading-4"><a href="https://dev.windows.com/en-us/downloads" target="_blank">Windows Developer Tools for Visual Studio</a></h2>
+        <p class="c-paragraph-1">Tools that integrate with Visual Studio 2017 and are required for developing for the Universal Windows App Platform.</p>
+    </div>
 </div>
+
 
 <section>
     <div class="pad-thin x-type-center m-content-placement" data-grid="col-12">
