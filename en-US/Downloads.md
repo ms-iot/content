@@ -53,7 +53,7 @@ end hero-->
         <a href="http://go.microsoft.com/fwlink/?LinkID=708576" class="c-call-to-action c-glyph">
             <span>Download the Windows 10 IoT Core Dashboard</span>
         </a>
-    <p><em>By downloading and using the Windows 10 IoT Core Dashboard you agree to the <a href="http://go.microsoft.com/fwlink/?LinkID=703960&amp;clcid=0x4809"> license terms </a> and <a href="http://go.microsoft.com/fwlink/?LinkId=521839"> privacy statement </a> for Windows 10 IoT Core Dashboard.</em></p>
+    <p><em>By downloading and using the Windows 10 IoT Core Dashboard you agree to the <a class="c-hyperlink" href="http://go.microsoft.com/fwlink/?LinkID=703960&amp;clcid=0x4809"> license terms </a> and <a class="c-hyperlink" href="http://go.microsoft.com/fwlink/?LinkId=521839"> privacy statement </a> for Windows 10 IoT Core Dashboard.</em></p>
     </div>
 </section>
 <!--end marketing page promo-->
@@ -94,15 +94,15 @@ end hero-->
 
 <div data-grid="col-12 pad-6x stack-3" class="m-rich-content-block">
     <div data-grid="col-3">
-        <h2 class="c-heading-4"><a href="https://go.microsoft.com/fwlink/?LinkId=846058" target="_blank">For Raspberry Pi 2 & 3</a></h2>
+        <h2 class="c-heading-4"><a class="c-hyperlink" href="https://go.microsoft.com/fwlink/?LinkId=846058" target="_blank">For Raspberry Pi 2 & 3</a></h2>
         <p class="c-paragraph-1">Download the Windows 10 IoT Core Creators Update for Raspberry Pi 2 & 3.</p>
     </div>
     <div data-grid="col-3">
-        <h2 class="c-heading-4"><a href="https://go.microsoft.com/fwlink/?LinkId=846059" target="_blank">For DragonBoard 410c</a></h2>
+        <h2 class="c-heading-4"><a class="c-hyperlink" href="https://go.microsoft.com/fwlink/?LinkId=846059" target="_blank">For DragonBoard 410c</a></h2>
         <p class="c-paragraph-1">Download the Windows 10 IoT Core Creators Update for DragonBoard 410c.</p>
     </div>
     <div data-grid="col-3">
-        <h2 class="c-heading-4"><a href="https://go.microsoft.com/fwlink/?linkid=846057">For MinnowBoard Turbot/MAX (x64)</a></h2>
+        <h2 class="c-heading-4"><a class="c-hyperlink" href="https://go.microsoft.com/fwlink/?linkid=846057">For MinnowBoard Turbot/MAX (x64)</a></h2>
         <p class="c-paragraph-1">Download the Windows 10 IoT Core Creators Update for MinnowBoard Turbot/MAX (x64).</p>
     </div>
 </div>
@@ -119,7 +119,7 @@ end hero-->
 
 <div data-grid="col-12 pad-6x stack-3" class="m-rich-content-block">
     <div data-grid="col-3">
-        <h2 class="c-heading-4"><a href="https://software-download.microsoft.com/download/pr/16299.15.170928-1534.rs3_release_amd64fre_IOTCORE_PACKAGES.iso" target="_blank">Fall Creators Update</a></h2>
+        <h2 class="c-heading-4"><a class="c-hyperlink" href="https://software-download.microsoft.com/download/pr/16299.15.170928-1534.rs3_release_amd64fre_IOTCORE_PACKAGES.iso" target="_blank">Fall Creators Update</a></h2>
         <p class="c-paragraph-1">Download firmware components and updates for the MinnowBoard MAX reference board from Intel.</p>
     </div>
 </div>
@@ -135,19 +135,19 @@ end hero-->
 
 <div data-grid="col-12 pad-6x stack-3" class="m-rich-content-block">
     <div data-grid="col-3">
-        <h2 class="c-heading-4"><a href="http://firmware.intel.com/projects/minnowboard-max" target="_blank">Firmware Update</a></h2>
+        <h2 class="c-heading-4"><a class="c-hyperlink" href="http://firmware.intel.com/projects/minnowboard-max" target="_blank">Firmware Update</a></h2>
         <p class="c-paragraph-1">Download firmware components and updates for the MinnowBoard MAX reference board from Intel.</p>
     </div>
     <div data-grid="col-3">
-        <h2 class="c-heading-4"><a href="https://www.visualstudio.com/downloads/" target="_blank">Visual Studio 2017</a></h2>
+        <h2 class="c-heading-4"><a class="c-hyperlink" href="https://www.visualstudio.com/downloads/" target="_blank">Visual Studio 2017</a></h2>
         <p class="c-paragraph-1">State of the art IDE, tools and services that you can use to create great IoT apps.</p>
     </div>
     <div data-grid="col-3">
-        <h2 class="c-heading-4"><a href="https://msdn.microsoft.com/en-US/windows/hardware/hh852365.aspx" target="_blank">Window Driver Kit 2017</a></h2>
+        <h2 class="c-heading-4"><a class="c-hyperlink" href="https://msdn.microsoft.com/en-US/windows/hardware/hh852365.aspx" target="_blank">Window Driver Kit 2017</a></h2>
         <p class="c-paragraph-1">Provides an integrated development environment for creating efficient high quality drivers for devices running Windows 10.</p>
     </div>
     <div data-grid="col-3">
-        <h2 class="c-heading-4"><a href="https://dev.windows.com/en-us/downloads" target="_blank">Windows Developer Tools for Visual Studio</a></h2>
+        <h2 class="c-heading-4"><a class="c-hyperlink" href="https://dev.windows.com/en-us/downloads" target="_blank">Windows Developer Tools for Visual Studio</a></h2>
         <p class="c-paragraph-1">Tools that integrate with Visual Studio 2017 and are required for developing for the Universal Windows App Platform.</p>
     </div>
 </div>
