@@ -465,19 +465,6 @@
       ]
     },
     {
-      "title": "Serial UART",
-      "description": "Communicate between a desktop and an IoT device over a serial interface",
-      "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/SerialUART",
-      "link-text": "Serial UART",
-      "lang": "C#/C++",
-      "ranking": 3,
-      "tags": [
-        "C#",
-        "C++",
-        "Beginner"
-      ]
-    },
-    {
       "title": "WebSocket Docker Interop",
       "description": "Learn how to work with Windows containers on Windows 10 IoT Core and Windows IoT Enterprise.",
       "link": "https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/ContainerWebSocket",
