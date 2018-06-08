@@ -120,7 +120,7 @@ end hero-->
 <div data-grid="col-12 pad-6x stack-3" class="m-rich-content-block">
     <div data-grid="col-3">
         <h2 class="c-heading-4"><a class="c-hyperlink" href="https://software-download.microsoft.com/download/pr/16299.15.170928-1534.rs3_release_amd64fre_IOTCORE_PACKAGES.iso" target="_blank">Fall Creators Update</a></h2>
-        <p class="c-paragraph-1">Download firmware components and updates for the MinnowBoard MAX reference board from Intel.</p>
+        <p class="c-paragraph-1">Download the Fall Creators Update release of Windows 10 IoT Core.</p>
     </div>
 </div>
 
