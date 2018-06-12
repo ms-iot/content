@@ -89,21 +89,25 @@ end hero-->
 </section>
 
 <section data-grid="col-12">
-    <h3 class="c-heading-3 x-type-center">Windows 10 IoT Core Builds</h3>
+    <h3 class="c-heading-3 x-type-center">Latest Windows 10 IoT Core Builds</h3>
 </section>
 
 <div data-grid="col-12 pad-6x stack-3" class="m-rich-content-block">
     <div data-grid="col-3">
+        <h2 class="c-heading-4"><a class="c-hyperlink" href="https://www.microsoft.com/en-us/software-download/windows10iotcore" target="_blank">Windows 10 IoT Core Packages</a></h2>
+        <p class="c-paragraph-1">Download the Windows 10 April 2018 Update for OS packages (custom and commercial FFUs).</p>
+    </div>
+    <div data-grid="col-3">
         <h2 class="c-heading-4"><a class="c-hyperlink" href="https://go.microsoft.com/fwlink/?LinkId=846058" target="_blank">For Raspberry Pi 2 & 3</a></h2>
-        <p class="c-paragraph-1">Download the Windows 10 IoT Core Creators Update for Raspberry Pi 2 & 3.</p>
+        <p class="c-paragraph-1">Download the Windows 10 April 2018 Update for Raspberry Pi 2 & 3 (development-only prototype device FFUs).</p>
     </div>
     <div data-grid="col-3">
         <h2 class="c-heading-4"><a class="c-hyperlink" href="https://go.microsoft.com/fwlink/?LinkId=846059" target="_blank">For DragonBoard 410c</a></h2>
-        <p class="c-paragraph-1">Download the Windows 10 IoT Core Creators Update for DragonBoard 410c.</p>
+        <p class="c-paragraph-1">Download the Windows 10 April 2018 Update for DragonBoard 410c (development-only prototype device FFUs).</p>
     </div>
     <div data-grid="col-3">
-        <h2 class="c-heading-4"><a class="c-hyperlink" href="https://go.microsoft.com/fwlink/?linkid=846057">For MinnowBoard Turbot/MAX (x64)</a></h2>
-        <p class="c-paragraph-1">Download the Windows 10 IoT Core Creators Update for MinnowBoard Turbot/MAX (x64).</p>
+        <h2 class="c-heading-4"><a class="c-hyperlink" href="https://go.microsoft.com/fwlink/?linkid=846057" target="_blank">For MinnowBoard Turbot/MAX</a></h2>
+        <p class="c-paragraph-1">Download the Windows 10 IoT April 2018 Update for MinnowBoard Turbot/MAX (development-only prototype device FFUs).</p>
     </div>
 </div>
 
@@ -120,7 +124,7 @@ end hero-->
 <div data-grid="col-12 pad-6x stack-3" class="m-rich-content-block">
     <div data-grid="col-3">
         <h2 class="c-heading-4"><a class="c-hyperlink" href="https://software-download.microsoft.com/download/pr/16299.15.170928-1534.rs3_release_amd64fre_IOTCORE_PACKAGES.iso" target="_blank">Fall Creators Update</a></h2>
-        <p class="c-paragraph-1">Download the Fall Creators Update release of Windows 10 IoT Core.</p>
+        <p class="c-paragraph-1">Download the Fall Creators Update release of Windows 10 IoT Core (custom and commercial FFUs).</p>
     </div>
 </div>
 
